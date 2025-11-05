@@ -1,0 +1,1065 @@
+<!DOCTYPE html>
+<html lang="zh" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+    <title>游泳TSS计算器：训练负荷与PMC(CTL/ATL/TSB)</title>
+    <meta name="description" content="学习游泳训练压力分数(rTSS)计算和性能管理图指标(CTL、ATL、TSB)。科学地跟踪体能和疲劳。包含实例、每周TSS目标和减量策略。">
+    <meta name="author" content="Albert Arno">
+
+    
+    
+    <meta name="keywords" content="游泳TSS, rTSS计算器, 训练压力分数, CTL ATL TSB, 游泳PMC">
+    
+
+    
+    <link rel="canonical" href="https://run.analyticszone.app/zh/training-load/">
+
+    
+    
+    <meta property="article:published_time" content="2025-01-15T10:00:00Z">
+    <meta property="article:modified_time" content="2025-10-08T14:30:00Z">
+    <meta property="article:author" content="Albert Arno">
+    
+
+    
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://run.analyticszone.app/zh/training-load/">
+    <meta property="og:title" content="游泳TSS计算器：训练负荷与PMC(CTL/ATL/TSB)">
+    <meta property="og:description" content="学习游泳训练压力分数(rTSS)计算和性能管理图指标(CTL、ATL、TSB)。科学地跟踪体能和疲劳。包含实例、每周TSS目标和减量策略。">
+    
+    <meta property="og:image" content="https://run.analyticszone.app/assets/images/run-analytics-og.jpg">
+    
+    <meta property="og:locale" content="zh_CN">
+    <meta property="og:site_name" content="RunAnalytics - Running Analytics App | Critical Running Speed, TSS, CTL/ATL/TSB for iOS">
+
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://run.analyticszone.app/zh/training-load/">
+    <meta name="twitter:title" content="游泳TSS计算器：训练负荷与PMC(CTL/ATL/TSB)">
+    <meta name="twitter:description" content="学习游泳训练压力分数(rTSS)计算和性能管理图指标(CTL、ATL、TSB)。科学地跟踪体能和疲劳。包含实例、每周TSS目标和减量策略。">
+    
+    <meta name="twitter:image" content="https://run.analyticszone.app/assets/images/run-analytics-og.jpg">
+    
+
+    
+    
+    <link rel="alternate" hreflang="ca" href="https://run.analyticszone.app/ca/training-load/">
+    
+    <link rel="alternate" hreflang="en" href="https://run.analyticszone.app/en/training-load/">
+    
+    <link rel="alternate" hreflang="es" href="https://run.analyticszone.app/es/training-load/">
+    
+    <link rel="alternate" hreflang="fr" href="https://run.analyticszone.app/fr/training-load/">
+    
+    <link rel="alternate" hreflang="de" href="https://run.analyticszone.app/de/training-load/">
+    
+    <link rel="alternate" hreflang="zh" href="https://run.analyticszone.app/zh/training-load/">
+    
+    <link rel="alternate" hreflang="pt" href="https://run.analyticszone.app/pt/training-load/">
+    
+    <link rel="alternate" hreflang="ja" href="https://run.analyticszone.app/ja/training-load/">
+    
+    <link rel="alternate" hreflang="it" href="https://run.analyticszone.app/it/training-load/">
+    
+    <link rel="alternate" hreflang="nl" href="https://run.analyticszone.app/nl/training-load/">
+    
+    <link rel="alternate" hreflang="x-default" href="https://run.analyticszone.app/en/training-load/">
+
+    
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/icons/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/icons/apple-touch-icon.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#0066CC">
+
+    
+    <link rel="stylesheet" href="/assets/css/main.min.css">
+
+    
+    
+
+    
+    
+
+    
+    
+</head>
+<body>
+    
+    <a href="#main-content" class="skip-link">跳到内容</a>
+
+    
+    <header class="site-header">
+    <div class="container">
+        <div class="header-inner">
+            
+            <a href="/zh/" class="site-logo">
+                <picture>
+                    <source srcset="/assets/images/logo-dark.png" media="(prefers-color-scheme: dark)">
+                    <img src="/assets/images/logo.png" alt="RunAnalytics - Running Analytics App | Critical Running Speed, TSS, CTL/ATL/TSB for iOS" width="40" height="40">
+                </picture>
+                <span class="logo-text">RunAnalytics</span>
+            </a>
+
+            
+            <nav class="nav-primary" id="nav-primary" role="navigation" aria-label="Main navigation">
+                <ul>
+                    
+                    <li>
+                        
+                        
+                        <a href="/zh/"
+                           
+                           aria-current="">
+                            首页
+                        </a>
+                        
+                    </li>
+                    
+                    <li class="has-submenu">
+                        
+                        
+                        <button class="dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+                            学习
+                            <svg class="dropdown-icon" width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <polyline points="3 4.5 6 7.5 9 4.5"></polyline>
+                            </svg>
+                        </button>
+                        <ul class="submenu">
+                            
+                            <li>
+                                <a href="/zh/getting-started/"
+                                   
+                                   aria-current="">
+                                    入门指南
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/zh/crs/"
+                                   
+                                   aria-current="">
+                                    CRS
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/zh/training-zones/"
+                                   
+                                   aria-current="">
+                                    训练区间
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/zh/training-load/"
+                                   class="active"
+                                   aria-current="page">
+                                    训练负荷
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/zh/stss-calculator/"
+                                   
+                                   aria-current="">
+                                    sTSS计算器
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        
+                    </li>
+                    
+                    <li class="has-submenu">
+                        
+                        
+                        <button class="dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+                            科学
+                            <svg class="dropdown-icon" width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <polyline points="3 4.5 6 7.5 9 4.5"></polyline>
+                            </svg>
+                        </button>
+                        <ul class="submenu">
+                            
+                            <li>
+                                <a href="/zh/research/"
+                                   
+                                   aria-current="">
+                                    研究
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/zh/formulas/"
+                                   
+                                   aria-current="">
+                                    公式
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/zh/efficiency/"
+                                   
+                                   aria-current="">
+                                    效率
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/zh/stride-mechanics/"
+                                   
+                                   aria-current="">
+                                    步幅力学
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/zh/bibliography/"
+                                   
+                                   aria-current="">
+                                    参考文献
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        
+                    </li>
+                    
+                    <li>
+                        
+                        
+                        <a href="/zh/contact/"
+                           
+                           aria-current="">
+                            联系我们
+                        </a>
+                        
+                    </li>
+                    
+                </ul>
+
+                
+                <div class="search-container">
+                    <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.35-4.35"></path>
+                    </svg>
+                    <input
+                        type="search"
+                        id="site-search"
+                        class="search-input"
+                        aria-expanded="false"
+                        aria-haspopup="listbox"
+                        aria-autocomplete="list"
+                        autocomplete="off"
+                        spellcheck="false"
+                    />
+                    <div id="search-results" class="search-results hidden" role="region" aria-live="polite"></div>
+                </div>
+
+                
+                <select class="language-selector" id="language-select" aria-label="选择语言">
+                    
+                    <option value="ca" >
+                        Català
+                    </option>
+                    
+                    <option value="en" >
+                        English
+                    </option>
+                    
+                    <option value="es" >
+                        Español
+                    </option>
+                    
+                    <option value="fr" >
+                        Français
+                    </option>
+                    
+                    <option value="de" >
+                        Deutsch
+                    </option>
+                    
+                    <option value="zh" selected>
+                        中文
+                    </option>
+                    
+                    <option value="pt" >
+                        Português
+                    </option>
+                    
+                    <option value="ja" >
+                        日本語
+                    </option>
+                    
+                    <option value="it" >
+                        Italiano
+                    </option>
+                    
+                    <option value="nl" >
+                        Nederlands
+                    </option>
+                    
+                </select>
+            </nav>
+
+            
+            <button class="menu-toggle" id="menu-toggle" aria-label="切换菜单" aria-expanded="false" aria-controls="nav-primary">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </div>
+</header>
+
+    
+    <main id="main-content" class="main-content">
+        <section class="hero hero-small">
+    <div class="container">
+        <h1>跑步训练压力评分：TSS、CTL、ATL和TSB详解</h1>
+        <p class="lead">通过性能管理图表掌握跑步训练负荷</p>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container container-narrow">
+        <div class="callout callout-success">
+            <h3>🎯 要点总结：跑步训练压力评分</h3>
+            <ul>
+                <li><strong>训练压力评分(TSS)</strong>量化每次跑步对身体的影响程度，将强度和持续时间结合为单一指标</li>
+                <li><strong>CTL(慢性训练负荷)</strong>测量您通过42天持续跑步建立的长期体能</li>
+                <li><strong>ATL(急性训练负荷)</strong>跟踪过去7天训练产生的近期疲劳</li>
+                <li><strong>TSB(训练压力平衡)</strong>显示您的体能-疲劳平衡以及比赛准备状态或恢复需求</li>
+                <li>理解跑步训练负荷可防止过度训练，通过数据驱动的周期化优化表现时机</li>
+            </ul>
+            <p><em>基础：TSS计算需要您的<a href="/zh/crs/">临界跑步速度(CRS)</a>作为阈值参考点。</em></p>
+        </div>
+    </div>
+</section>
+
+<section class="section section-alt">
+    <div class="container container-narrow">
+        <h2>什么是跑步训练压力评分(TSS)？</h2>
+        <p class="lead">跑步训练压力评分方法回答了关键问题：<strong>那次训练有多困难？</strong>不仅仅是距离或时间，而是每次跑步对您身体施加的真实生理压力。</p>
+
+        <p>训练压力评分(TSS)系统由Andrew Coggan博士为自行车开发，已适配跑步，提供标准化方法将训练强度和持续时间量化为单一数字。对于跑者，我们使用基于相对于阈值配速的<strong>跑步训练压力评分(rTSS)</strong>。</p>
+
+        <div class="callout callout-info">
+            <h3>跑步的TSS标准</h3>
+            <p>在您的<a href="/zh/crs/">临界跑步速度(CRS)</a>或阈值配速下跑1小时 = <strong>100 TSS</strong></p>
+            <p>这种标准化允许跨训练、周和训练周期的比较。30分钟阈值跑 = ~50 TSS。2小时阈值跑 = ~200 TSS。</p>
+        </div>
+
+        <h3>跑步TSS vs 自行车TSS：关键差异</h3>
+        <p>虽然两项运动都使用TSS，但跑步训练负荷有独特特征：</p>
+
+        <table class="comparison-table">
+            <thead>
+                <tr>
+                    <th>方面</th>
+                    <th>自行车TSS</th>
+                    <th>跑步TSS (rTSS)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>主要输入</strong></td>
+                    <td>功率(瓦特)</td>
+                    <td>配速(分钟/公里或分钟/英里)</td>
+                </tr>
+                <tr>
+                    <td><strong>冲击压力</strong></td>
+                    <td>低(坐姿)</td>
+                    <td>高(地面接触力)</td>
+                </tr>
+                <tr>
+                    <td><strong>恢复需求</strong></td>
+                    <td>相同TSS下较低</td>
+                    <td>由于肌肉骨骼压力较高</td>
+                </tr>
+                <tr>
+                    <td><strong>每周训练量</strong></td>
+                    <td>500-800+ TSS典型</td>
+                    <td>300-500 TSS典型(相同体能水平)</td>
+                </tr>
+                <tr>
+                    <td><strong>公式</strong></td>
+                    <td>IF² × 持续时间 × 100</td>
+                    <td>IF² × 持续时间 × 100</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="callout callout-warning">
+            <h4>⚠️ 重要：跑步的更高冲击</h4>
+            <p>由于冲击力，相同TSS值在跑步中代表比自行车更多的身体压力。每周积累400 TSS的跑者体验到与每周600-700 TSS的自行车手相似的训练适应。跑步训练负荷必须考虑心血管和肌肉骨骼压力。</p>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <h2 class="text-center mb-xl">跑步训练压力评分(rTSS)计算</h2>
+
+        <div class="grid grid-2">
+            <div>
+                <h3>跑步TSS公式</h3>
+                <div class="formula-box">
+                    <div class="formula">
+                        rTSS = (IF²) × 持续时间(小时) × 100
+                    </div>
+                    <div class="formula-explanation">
+                        <p>其中强度因子(IF)为：</p>
+                        <div class="formula">
+                            IF = NGS / CRS
+                        </div>
+                        <p>标准化分级速度(NGS)考虑配速变化和海拔：</p>
+                        <div class="formula">
+                            NGS ≈ 平均跑步速度(地形调整)
+                        </div>
+                    </div>
+                </div>
+
+                <div class="callout callout-tip mt-md">
+                    <h4>📊 基于配速的简化方法</h4>
+                    <p>对于没有功率计的跑者，使用基于配速的计算：</p>
+                    <div class="formula">
+                        IF = 阈值配速 / 平均配速
+                    </div>
+                    <p><strong>示例：</strong>如果您的CRS配速是4:00/公里，您以4:20/公里跑步：</p>
+                    <p>IF = 4:00 / 4:20 = 240/260 = 0.923</p>
+                    <p><em>注意：更慢配速 = 更低IF(与速度计算相反)</em></p>
+                </div>
+            </div>
+
+            <div>
+                <h3>实例：节奏跑</h3>
+                <div class="example-box">
+                    <h4>跑者档案：</h4>
+                    <ul>
+                        <li>CRS配速：4:00/公里(15公里/小时)</li>
+                        <li>CRS：1小时阈值配速</li>
+                    </ul>
+
+                    <h4>训练数据：</h4>
+                    <ul>
+                        <li>总距离：10公里</li>
+                        <li>移动时间：43:20(0.722小时)</li>
+                        <li>平均配速：4:20/公里</li>
+                    </ul>
+
+                    <h4>步骤1：计算平均速度</h4>
+                    <div class="calculation">
+                        速度 = 10公里 / 0.722小时<br>
+                        速度 = <strong>13.85公里/小时</strong>
+                    </div>
+
+                    <h4>步骤2：计算IF(速度方法)</h4>
+                    <div class="calculation">
+                        IF = 13.85 / 15.0<br>
+                        IF = <strong>0.923</strong>
+                    </div>
+
+                    <h4>步骤3：计算IF(配速方法)</h4>
+                    <div class="calculation">
+                        IF = 240秒/公里 / 260秒/公里<br>
+                        IF = <strong>0.923</strong> ✓
+                    </div>
+
+                    <h4>步骤4：计算rTSS</h4>
+                    <div class="calculation">
+                        rTSS = (0.923²) × 0.722 × 100<br>
+                        rTSS = 0.852 × 0.722 × 100<br>
+                        rTSS = <strong>61.5</strong>
+                    </div>
+
+                    <p class="mt-md"><strong>解释：</strong>这次10公里阈值-10%配速的节奏跑产生了61.5 TSS——典型优质有氧训练的中等训练刺激。</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="intensity-guide mt-xl">
+            <h3>跑步TSS强度指南</h3>
+            <table class="intensity-table">
+                <thead>
+                    <tr>
+                        <th>TSS范围</th>
+                        <th>强度级别</th>
+                        <th>描述</th>
+                        <th>训练示例</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>&lt; 50</td>
+                        <td>轻松恢复</td>
+                        <td>轻松跑步，对话配速，主动休息</td>
+                        <td>30-45分钟轻松跑，恢复慢跑，步幅练习</td>
+                    </tr>
+                    <tr>
+                        <td>50-100</td>
+                        <td>中等训练</td>
+                        <td>典型日常训练量，有氧基础</td>
+                        <td>60-90分钟稳定跑，长距离轻松跑</td>
+                    </tr>
+                    <tr>
+                        <td>100-200</td>
+                        <td>困难训练</td>
+                        <td>包含节奏/阈值训练的优质训练</td>
+                        <td>90-120分钟含阈值间歇，渐进跑</td>
+                    </tr>
+                    <tr>
+                        <td>200-300</td>
+                        <td>非常困难</td>
+                        <td>含优质训练的长跑，比赛模拟</td>
+                        <td>2-3小时长跑，半马配速训练</td>
+                    </tr>
+                    <tr>
+                        <td>&gt; 300</td>
+                        <td>极限</td>
+                        <td>比赛日，超长距离项目</td>
+                        <td>马拉松比赛，50公里+超马，铁人三项跑步</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="callout callout-tip mt-lg">
+            <h3>📊 按跑步水平的每周TSS目标</h3>
+            <ul>
+                <li><strong>初学跑者：</strong>每周150-300 TSS(每周3-4次跑步)</li>
+                <li><strong>中级跑者：</strong>每周300-500 TSS(每周4-6次跑步)</li>
+                <li><strong>高级跑者：</strong>每周500-700 TSS(每周6-8次训练)</li>
+                <li><strong>精英跑者：</strong>每周700-900+ TSS(每周8-12次训练)</li>
+            </ul>
+            <p>这些积累到您的慢性训练负荷(CTL)，即下面解释的体能指标。</p>
+        </div>
+    </div>
+</section><se
+ction class="section section-alt">
+    <div class="container">
+        <h2 class="text-center mb-xl">理解跑者的CTL、ATL和TSB</h2>
+        <p class="text-center lead">性能管理图表(PMC)可视化三个相互关联的指标，讲述您跑步训练的完整故事：体能、疲劳和状态。</p>
+
+        <div class="pmc-overview">
+            <div class="grid grid-3">
+                <div class="pmc-metric">
+                    <div class="metric-icon">📈</div>
+                    <h3>CTL - 慢性训练负荷</h3>
+                    <div class="metric-value-label">您的体能</div>
+                    <p>每日TSS的42天指数加权平均。代表持续跑步产生的长期有氧体能和训练适应。</p>
+                    <div class="formula-small">
+                        今日CTL = 昨日CTL + (今日TSS - 昨日CTL) × (1/42)
+                    </div>
+                </div>
+
+                <div class="pmc-metric">
+                    <div class="metric-icon">⚡</div>
+                    <h3>ATL - 急性训练负荷</h3>
+                    <div class="metric-value-label">您的疲劳</div>
+                    <p>每日TSS的7天指数加权平均。捕捉过去一周训练产生的近期训练压力和累积疲劳。</p>
+                    <div class="formula-small">
+                        今日ATL = 昨日ATL + (今日TSS - 昨日ATL) × (1/7)
+                    </div>
+                </div>
+
+                <div class="pmc-metric">
+                    <div class="metric-icon">🎯</div>
+                    <h3>TSB - 训练压力平衡</h3>
+                    <div class="metric-value-label">您的状态</div>
+                    <p>昨日体能和疲劳的差值。指示表现准备状态或下次优质跑步或比赛前的休息需求。</p>
+                    <div class="formula-small">
+                        TSB = 昨日CTL - 昨日ATL
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <h2>CTL：您的跑步体能指标</h2>
+
+        <div class="grid grid-2">
+            <div>
+                <h3>CTL对跑者的意义</h3>
+                <p>CTL量化您的身体在过去6周<em>适应的</em>跑步训练负荷。跑步中更高的CTL意味着：</p>
+                <ul>
+                    <li>更大的有氧能力和跑步耐力</li>
+                    <li>处理更多训练量和强度的能力</li>
+                    <li>改善的神经肌肉和代谢适应</li>
+                    <li>更高的可持续跑步表现</li>
+                    <li>对地面接触力冲击压力的更好耐受性</li>
+                </ul>
+
+                <div class="callout callout-info">
+                    <h4>时间常数：42天</h4>
+                    <p>CTL的半衰期约为14.7天。42天后，单次训练影响的约36.8%(1/e)仍保留在您的体能计算中。</p>
+                    <p>这种缓慢衰减意味着跑步体能逐渐建立但也缓慢消退——在短期恢复休息期间防止去训练化。</p>
+                </div>
+            </div>
+
+            <div>
+                <h3>跑者的典型CTL值</h3>
+                <div class="levels-comparison">
+                    <div class="level-card-compact">
+                        <strong>初学跑者：</strong>
+                        <div class="value">15-35 CTL</div>
+                        <p>建立基础体能，每周3-4次跑步</p>
+                    </div>
+
+                    <div class="level-card-compact">
+                        <strong>中级跑者：</strong>
+                        <div class="value">35-60 CTL</div>
+                        <p>持续训练，每周4-6次跑步</p>
+                    </div>
+
+                    <div class="level-card-compact">
+                        <strong>高级跑者：</strong>
+                        <div class="value">60-85 CTL</div>
+                        <p>大训练量，每周6-8次训练</p>
+                    </div>
+
+                    <div class="level-card-compact">
+                        <strong>精英跑者：</strong>
+                        <div class="value">85-120+ CTL</div>
+                        <p>专业训练负荷，每周8-12+次训练</p>
+                    </div>
+                </div>
+
+                <div class="warning-box mt-md">
+                    <strong>⚠️ 跑者的CTL增长率限制</strong>
+                    <ul>
+                        <li><strong>初学者：</strong>每周+2-4 CTL</li>
+                        <li><strong>中级：</strong>每周+3-5 CTL</li>
+                        <li><strong>高级：</strong>每周+5-7 CTL</li>
+                    </ul>
+                    <p>显著超过这些速率会因跑步的高冲击压力而增加受伤风险。"10%法则"(每周训练量增加不超过10%)与这些CTL增长率一致。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section section-alt">
+    <div class="container">
+        <h2>ATL：您的跑步疲劳指标</h2>
+
+        <div class="content-split">
+            <div>
+                <p>ATL跟踪短期训练压力——过去一周跑步积累的疲劳。它在困难训练后快速上升，在休息期间快速下降，使其对管理优质训练间的恢复至关重要。</p>
+
+                <h3>跑步训练中的ATL动态</h3>
+                <ul>
+                    <li><strong>快速响应：</strong>7天时间常数(半衰期约2.4天)</li>
+                    <li><strong>尖峰模式：</strong>困难训练后跳跃，恢复日下降</li>
+                    <li><strong>恢复指标：</strong>下降的ATL = 跑步间疲劳消散</li>
+                    <li><strong>过度训练警告：</strong>长期升高的ATL表明恢复不足</li>
+                    <li><strong>冲击压力：</strong>跑步ATL反映心血管和肌肉骨骼疲劳</li>
+                </ul>
+
+                <div class="callout callout-science">
+                    <h4>🔬 跑步的体能-疲劳模型</h4>
+                    <p>每次跑步训练产生两种效果：</p>
+                    <ol>
+                        <li><strong>体能刺激</strong>(缓慢建立，持久)</li>
+                        <li><strong>疲劳</strong>(快速建立，快速消散)</li>
+                    </ol>
+                    <p>跑步表现 = 体能 - 疲劳。PMC可视化这个模型，为跑者实现科学周期化和最佳比赛时机。</p>
+                </div>
+            </div>
+
+            <div>
+                <h3>稳态时</h3>
+                <p>当跑步训练负荷每周保持一致时，CTL和ATL趋于一致：</p>
+                <div class="example-box">
+                    <h4>示例：持续每周400 TSS</h4>
+                    <div class="calculation">
+                        每日TSS ≈ 57<br>
+                        CTL接近 ~57<br>
+                        ATL接近 ~57<br>
+                        TSB接近 0
+                    </div>
+                    <p><strong>解释：</strong>体能和疲劳平衡。没有累积赤字或盈余——可持续的训练维持。</p>
+                </div>
+
+                <h3>构建阶段期间</h3>
+                <p>增加跑步量或强度时：</p>
+                <div class="example-box">
+                    <p>由于更短的时间常数，ATL比CTL上升<em>更快</em>。TSB变为负值(疲劳 > 体能)。这是正常和有效的——您正在施加过载以刺激跑步适应。</p>
+                </div>
+
+                <h3>比赛前减量期间</h3>
+                <p>比赛前减少训练负荷时：</p>
+                <div class="example-box">
+                    <p>ATL比CTL下降<em>更快</em>。TSB变为正值(体能 > 疲劳)。这是目标——在保持体能的同时以准备好表现的双腿到达比赛日。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <h2>TSB：您的体能-疲劳平衡和比赛准备状态</h2>
+
+        <p class="lead">TSB(训练压力平衡)是昨日体能(CTL)和昨日疲劳(ATL)的差值。对跑者来说，它指示您是新鲜还是疲劳，准备比赛还是需要恢复日。</p>
+
+        <div class="tsb-zones-container">
+            <h3>跑者的TSB解释指南</h3>
+            <table class="tsb-zones-table">
+                <thead>
+                    <tr>
+                        <th>TSB范围</th>
+                        <th>状态</th>
+                        <th>解释</th>
+                        <th>建议行动</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="tsb-critical">
+                        <td>&lt; -30</td>
+                        <td><strong>过度训练风险</strong></td>
+                        <td>极度疲劳。高受伤风险。</td>
+                        <td>立即需要恢复。减少训练量50%+。考虑休息日。</td>
+                    </tr>
+                    <tr class="tsb-training">
+                        <td>-20 到 -30</td>
+                        <td><strong>最佳训练阶段</strong></td>
+                        <td>有效过载。建立体能。</td>
+                        <td>继续计划。监测过度酸痛或疲劳迹象。</td>
+                    </tr>
+                    <tr class="tsb-moderate">
+                        <td>-10 到 -20</td>
+                        <td><strong>中等训练负荷</strong></td>
+                        <td>标准训练积累。</td>
+                        <td>正常训练。可以处理优质间歇或节奏训练。</td>
+                    </tr>
+                    <tr class="tsb-neutral">
+                        <td>-10 到 +15</td>
+                        <td><strong>过渡/维持</strong></td>
+                        <td>平衡状态。轻微疲劳或新鲜。</td>
+                        <td>适合B/C级比赛、测试或恢复周。</td>
+                    </tr>
+                    <tr class="tsb-fresh">
+                        <td>+15 到 +25</td>
+                        <td><strong>巅峰比赛状态</strong></td>
+                        <td>新鲜且健康。最佳表现窗口。</td>
+                        <td>A级优先比赛。预期巅峰跑步表现。</td>
+                    </tr>
+                    <tr class="tsb-very-fresh">
+                        <td>+25 到 +35</td>
+                        <td><strong>非常新鲜</strong></td>
+                        <td>高度休息。适合短距离比赛。</td>
+                        <td>5K-10K比赛、计时测试、田径项目。</td>
+                    </tr>
+                    <tr class="tsb-detraining">
+                        <td>&gt; +35</td>
+                        <td><strong>去训练化</strong></td>
+                        <td>因不活动失去体能。</td>
+                        <td>恢复训练。体能因长期休息而下降。</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="callout callout-tip mt-xl">
+            <h3>🎯 按跑步比赛距离的目标TSB</h3>
+            <ul>
+                <li><strong>5K/10K比赛：</strong>TSB +20到+30(7-10天减量获得新鲜度)</li>
+                <li><strong>半程马拉松：</strong>TSB +15到+25(10-14天减量)</li>
+                <li><strong>马拉松：</strong>TSB +10到+20(14-21天减量，减少训练量)</li>
+                <li><strong>超级马拉松(50K+)：</strong>TSB +5到+15(7-14天减量，保持训练量但降低强度)</li>
+            </ul>
+            <p><em>较短比赛需要更高TSB以获得速度/力量。较长比赛需要中等TSB以保持耐力。</em></p>
+        </div>
+    </div>
+</section><s
+ection class="section section-alt">
+    <div class="container container-narrow">
+        <h2>PMC示例：跑步训练阶段 → 减量 → 比赛</h2>
+
+        <div class="example-box">
+            <h3>12周马拉松训练周期</h3>
+
+            <h4>第1-3周：基础建设阶段</h4>
+            <ul>
+                <li>每周TSS：300 → 350 → 400</li>
+                <li>CTL：从40逐渐上升到48</li>
+                <li>ATL：跟踪每周负荷，波动45-60</li>
+                <li>TSB：轻微负值(-5到-15)，可管理的训练压力</li>
+                <li><strong>重点：</strong>有氧基础发展，轻松里程</li>
+            </ul>
+
+            <h4>第4-7周：构建阶段1</h4>
+            <ul>
+                <li>每周TSS：450 → 500 → 500 → 450(恢复周)</li>
+                <li>CTL：继续上升48 → 60</li>
+                <li>ATL：更高波动55-75</li>
+                <li>TSB：更负(-15到-25)，有效过载</li>
+                <li><strong>重点：</strong>添加节奏跑，阈值间歇</li>
+            </ul>
+
+            <h4>第8-11周：巅峰阶段</h4>
+            <ul>
+                <li>每周TSS：500 → 550 → 550 → 500</li>
+                <li>CTL：峰值约65</li>
+                <li>ATL：最高值65-80</li>
+                <li>TSB：最负(-20到-30)，最大体能刺激</li>
+                <li><strong>重点：</strong>含马拉松配速段的长跑，优质训练</li>
+            </ul>
+
+            <h4>第12周：恢复周</h4>
+            <ul>
+                <li>每周TSS：300(减少45%)</li>
+                <li>CTL：轻微下降到约63(体能保持)</li>
+                <li>ATL：快速下降到约50</li>
+                <li>TSB：上升到+5到+10(部分新鲜度)</li>
+                <li><strong>重点：</strong>恢复跑，吸收训练适应</li>
+            </ul>
+
+            <h4>第13-14周：减量+比赛周</h4>
+            <ul>
+                <li>第13周TSS：250，第14周TSS：120+比赛(约250总计)</li>
+                <li>CTL：温和下降到约60(最小体能损失)</li>
+                <li>ATL：快速下降到约35(疲劳消除)</li>
+                <li>TSB：在<strong>比赛日峰值+20到+25</strong></li>
+                <li><strong>结果：</strong>新鲜双腿，保持体能，准备巅峰马拉松表现</li>
+            </ul>
+        </div>
+
+        <div class="callout callout-success">
+            <h3>✅ 为什么减量对跑者有效</h3>
+            <p>不同的时间常数(CTL 42天，ATL 7天)创造了优化跑步表现的减量效果：</p>
+            <ul>
+                <li>ATL快速响应 → 跑步疲劳(心血管和肌肉骨骼)在7-10天内消失</li>
+                <li>CTL缓慢响应 → 有氧体能和跑步适应持续数周</li>
+                <li>结果：体能保持而疲劳和酸痛消失 = 巅峰比赛表现的新鲜双腿</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container container-narrow">
+        <h2>实用跑步训练负荷管理指南</h2>
+
+        <div class="guidelines-grid">
+            <div class="guideline-item">
+                <h3>1️⃣ 持续跟踪每日rTSS</h3>
+                <p>记录每次跑步的TSS以建立准确的CTL/ATL/TSB趋势。缺失数据会在体能曲线中产生空白。对所有跑步使用GPS手表数据或基于配速的计算。</p>
+            </div>
+
+            <div class="guideline-item">
+                <h3>2️⃣ 仔细监测CTL增长率</h3>
+                <p>逐渐增加CTL。对大多数跑者来说，每周3-5点的增长是可持续的。跳跃10+点会因跑步的冲击压力而招致过度训练和受伤。</p>
+            </div>
+
+            <div class="guideline-item">
+                <h3>3️⃣ 安排恢复周</h3>
+                <p>每3-4周，将跑步量减少30-40%一周。让TSB上升到-5到+10。这巩固体能适应并防止累积疲劳。</p>
+            </div>
+
+            <div class="guideline-item">
+                <h3>4️⃣ 安排比赛减量时机</h3>
+                <p>大多数距离在比赛日目标TSB +15到+25。根据比赛距离和当前TSB水平，在10-21天前开始减量。</p>
+            </div>
+
+            <div class="guideline-item">
+                <h3>5️⃣ 接受构建期间的负TSB</h3>
+                <p>构建阶段TSB -20到-25对跑者来说是正常和有效的。这意味着您正在施加训练刺激以适应，而没有过度的受伤风险。</p>
+            </div>
+
+            <div class="guideline-item">
+                <h3>6️⃣ 休息后逐渐重建CTL</h3>
+                <p>受伤或休赛期休息后，不要试图立即恢复到之前的CTL。以每周3-5 CTL点逐渐重建以避免再次受伤。</p>
+            </div>
+
+            <div class="guideline-item">
+                <h3>7️⃣ 倾听身体声音</h3>
+                <p>TSS指标是指南，不是绝对规则。尽管TSB数字良好，但持续酸痛、睡眠不佳或表现下降表明需要额外恢复。</p>
+            </div>
+
+            <div class="guideline-item">
+                <h3>8️⃣ 考虑非跑步压力</h3>
+                <p>生活压力、睡眠不佳和交叉训练影响恢复。即使跑步专项指标看起来良好，在高压力期间也要考虑降低TSS目标。</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section section-alt">
+    <div class="container container-narrow">
+        <h2>常见问题：跑步训练压力评分</h2>
+
+        <div class="faq-container">
+            <div class="faq-item">
+                <h3>没有功率计如何计算跑步TSS？</h3>
+                <p>使用基于配速的方法：通过将阈值配速除以跑步平均配速计算强度因子(IF)。然后应用公式：rTSS = (IF²) × 持续时间(小时) × 100。例如，如果您的阈值配速是4:00/公里，您以4:30/公里配速跑10公里，用时45分钟(0.75小时)：IF = 4:00/4:30 = 0.889，所以rTSS = (0.889²) × 0.75 × 100 = 59.2 TSS。</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>跑步TSS和自行车TSS有什么区别？</h3>
+                <p>两者都使用相同的IF²公式，但跑步TSS由于地面接触的冲击力代表更多的总身体压力。每周400 TSS的跑者体验到与每周600-700 TSS的自行车手相似的训练适应。跑步还使用配速/速度作为输入而不是功率瓦特，并且相同TSS值需要更多恢复时间。</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>马拉松训练的良好每周TSS是多少？</h3>
+                <p>马拉松训练的每周跑步TSS因经验而异：首次马拉松初学者：每周250-400 TSS；中级马拉松跑者：每周400-550 TSS；高级/竞技马拉松跑者：每周550-700+ TSS。巅峰周对高级跑者可能达到600-800 TSS，减量周降至200-300 TSS。</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>跑步TSS与游泳TSS有何不同？</h3>
+                <p>跑步TSS(rTSS)使用基于相对于阈值的配速/速度的IF²公式。游泳TSS(sTSS)使用IF³公式，因为水阻随速度立方增加。运动在恢复需求上也不同——跑步有高冲击压力需要更多恢复，而游泳是低冲击，恢复更快。每周训练量差异显著：跑者通常积累300-500 TSS，而相似体能水平的游泳者可能达到500-800+ TSS。</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>如何知道我的TSB是否准确？</h3>
+                <p>准确的TSB需要：(1)一致的TSS记录至少6-8周，(2)准确的<a href="/zh/crs/">CRS阈值测试</a>，(3)所有跑步训练的完整数据。如果TSB显示您新鲜(+15)但感觉疲劳，检查您的CRS是否过时或TSS计算是否遗漏了困难训练。TSB应该与您的感知恢复状态相关。</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>我可以使用心率而不是配速计算TSS吗？</h3>
+                <p>是的，但配速通常对跑步更准确。基于心率的TSS使用心率储备百分比计算IF。然而，心率受热量、咖啡因、压力和疲劳影响，可能给出不一致的TSS值。配速更直接反映跑步强度。如果使用心率，确保在一致条件下并定期与配速方法交叉验证。</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>坡道跑步如何影响TSS计算？</h3>
+                <p>坡道增加跑步的生理需求，但可能不会在配速中反映出来。理想情况下，使用考虑坡度的标准化分级速度(NGS)。如果不可用，可以手动调整：上坡段增加10-20%的TSS，下坡段减少5-10%。或者使用基于心率的计算，它自然考虑坡度的额外努力。</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>交叉训练如何适应TSS系统？</h3>
+                <p>不同运动有不同的TSS计算：自行车使用功率，游泳使用IF³公式，跑步使用配速。不要直接添加不同运动的TSS值——它们不等价。相反，分别跟踪每项运动或使用运动专项的恢复需求调整总负荷。例如，100 TSS跑步比100 TSS自行车需要更多恢复。</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>我应该多久重新测试一次CRS以获得准确的TSS？</h3>
+                <p>每6-8周重新测试您的<a href="/zh/crs/">CRS</a>以保持TSS计算准确。随着体能改善，您的阈值配速应该变快，影响所有后续的IF和TSS计算。过时的CRS导致不准确的TSS值，扭曲您的CTL/ATL/TSB趋势。在重大训练阶段后或感觉阈值配速发生变化时也要重新测试。</p>
+            </div>
+        </div>
+
+        <div class="callout callout-tip mt-xl">
+            <h3>🎯 开始使用跑步训练负荷</h3>
+            <p>准备优化您的跑步训练？</p>
+            <ul>
+                <li>首先<a href="/zh/crs/">测试您的CRS</a>以建立准确的阈值参考</li>
+                <li>开始记录每次跑步的TSS以建立基线CTL</li>
+                <li>使用<a href="/zh/">RunAnalytics应用</a>自动计算和跟踪所有训练负荷指标</li>
+                <li>专注于逐渐建立CTL，同时管理ATL以获得最佳恢复</li>
+            </ul>
+        </div>
+
+        <div class="mt-xl text-center">
+            <a href="/zh/crs/" class="btn btn-primary">测试您的CRS →</a>
+            <a href="/zh/" class="btn btn-secondary">下载RunAnalytics →</a>
+        </div>
+    </div>
+</section>
+    </main>
+
+    
+    <footer class="site-footer">
+    <div class="container">
+        <div class="footer-grid">
+            
+            <div>
+                <h3 class="mb-md">RunAnalytics - Running Analytics App | Critical Running Speed, TSS, CTL/ATL/TSB for iOS</h3>
+                <p class="text-secondary">Track Critical Running Speed, Training Stress Score, and performance metrics with RunAnalytics. Science-based iOS app for runners, triathletes &amp; coaches. 7-day free trial.</p>
+            </div>
+
+            
+            <div>
+                <h3 class="mb-md">首页</h3>
+                <ul class="footer-links">
+                    
+                    <li>
+                        <a href="/ca/">Català</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/en/">English</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/es/">Español</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/fr/">Français</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/de/">Deutsch</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/zh/">中文</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/pt/">Português</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ja/">日本語</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/it/">Italiano</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/nl/">Nederlands</a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+
+        
+        <div class="footer-bottom">
+            <p class="text-sm text-secondary">
+                &copy; 2025 RunAnalytics - Running Analytics App | Critical Running Speed, TSS, CTL/ATL/TSB for iOS. 保留所有权利
+            </p>
+            <ul class="footer-links">
+                <li><a href="/zh/privacy/">隐私政策</a></li>
+                <li><a href="/zh/terms/">服务条款</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+    
+    <div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="Cookie consent" aria-live="polite">
+    <div class="cookie-banner-content">
+        <div>
+            <p>本网站使用cookies来改善您的体验。</p>
+            <a href="/zh/privacy/" class="text-sm">了解更多</a>
+        </div>
+        <div class="cookie-banner-actions">
+            <button id="cookie-decline" class="btn btn-secondary btn-small">拒绝</button>
+            <button id="cookie-accept" class="btn btn-primary btn-small">接受</button>
+        </div>
+    </div>
+</div>
+
+    
+    <script src="/assets/js/main.min.js"></script>
+    <script src="/assets/js/cookie-consent.min.js"></script>
+    <script src="/assets/js/lazy-load.min.js"></script>
+
+    
+    <script src="/assets/js/fuse.min.js"></script>
+    <script src="/assets/js/search.min.js"></script>
+
+    
+    
+</body>
+</html>

@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+    <title>RunAnalytics入門 - 完全セットアップガイド | CRSテストチュートリアル</title>
+    <meta name="description" content="RunAnalytics完全セットアップガイド。CRSテストの実行、結果の入力、ワークアウトの追跡、rTSS、CTL/ATL/TSB指標の理解方法を学びます。初心者向けのステップバイステップチュートリアルとトラブルシューティング。7日間無料トライアル。">
+    <meta name="author" content="Albert Arno">
+
+    
+    
+    <meta name="keywords" content="RunAnalyticsガイド, CRSテストチュートリアル, 水泳アプリチュートリアル, RunAnalyticsの使い方, 水泳分析ガイド">
+    
+
+    
+    <link rel="canonical" href="https://run.analyticszone.app/ja/getting-started/">
+
+    
+    
+    <meta property="article:published_time" content="2025-10-08T10:00:00Z">
+    <meta property="article:modified_time" content="2025-10-08T14:30:00Z">
+    <meta property="article:author" content="Albert Arno">
+    
+
+    
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://run.analyticszone.app/ja/getting-started/">
+    <meta property="og:title" content="RunAnalytics入門 - 完全セットアップガイド | CRSテストチュートリアル">
+    <meta property="og:description" content="RunAnalytics完全セットアップガイド。CRSテストの実行、結果の入力、ワークアウトの追跡、rTSS、CTL/ATL/TSB指標の理解方法を学びます。初心者向けのステップバイステップチュートリアルとトラブルシューティング。7日間無料トライアル。">
+    
+    <meta property="og:image" content="https://run.analyticszone.app/assets/images/run-analytics-og.jpg">
+    
+    <meta property="og:locale" content="ja_JP">
+    <meta property="og:site_name" content="RunAnalytics - Running Analytics App | Critical Running Speed, TSS, CTL/ATL/TSB for iOS">
+
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://run.analyticszone.app/ja/getting-started/">
+    <meta name="twitter:title" content="RunAnalytics入門 - 完全セットアップガイド | CRSテストチュートリアル">
+    <meta name="twitter:description" content="RunAnalytics完全セットアップガイド。CRSテストの実行、結果の入力、ワークアウトの追跡、rTSS、CTL/ATL/TSB指標の理解方法を学びます。初心者向けのステップバイステップチュートリアルとトラブルシューティング。7日間無料トライアル。">
+    
+    <meta name="twitter:image" content="https://run.analyticszone.app/assets/images/run-analytics-og.jpg">
+    
+
+    
+    
+    <link rel="alternate" hreflang="ca" href="https://run.analyticszone.app/ca/getting-started/">
+    
+    <link rel="alternate" hreflang="en" href="https://run.analyticszone.app/en/getting-started/">
+    
+    <link rel="alternate" hreflang="es" href="https://run.analyticszone.app/es/getting-started/">
+    
+    <link rel="alternate" hreflang="fr" href="https://run.analyticszone.app/fr/getting-started/">
+    
+    <link rel="alternate" hreflang="de" href="https://run.analyticszone.app/de/getting-started/">
+    
+    <link rel="alternate" hreflang="zh" href="https://run.analyticszone.app/zh/getting-started/">
+    
+    <link rel="alternate" hreflang="pt" href="https://run.analyticszone.app/pt/getting-started/">
+    
+    <link rel="alternate" hreflang="ja" href="https://run.analyticszone.app/ja/getting-started/">
+    
+    <link rel="alternate" hreflang="it" href="https://run.analyticszone.app/it/getting-started/">
+    
+    <link rel="alternate" hreflang="nl" href="https://run.analyticszone.app/nl/getting-started/">
+    
+    <link rel="alternate" hreflang="x-default" href="https://run.analyticszone.app/en/getting-started/">
+
+    
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/icons/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/icons/apple-touch-icon.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#0066CC">
+
+    
+    <link rel="stylesheet" href="/assets/css/main.min.css">
+
+    
+    
+
+    
+    
+
+    
+    
+</head>
+<body>
+    
+    <a href="#main-content" class="skip-link">コンテンツへ</a>
+
+    
+    <header class="site-header">
+    <div class="container">
+        <div class="header-inner">
+            
+            <a href="/ja/" class="site-logo">
+                <picture>
+                    <source srcset="/assets/images/logo-dark.png" media="(prefers-color-scheme: dark)">
+                    <img src="/assets/images/logo.png" alt="RunAnalytics - Running Analytics App | Critical Running Speed, TSS, CTL/ATL/TSB for iOS" width="40" height="40">
+                </picture>
+                <span class="logo-text">RunAnalytics</span>
+            </a>
+
+            
+            <nav class="nav-primary" id="nav-primary" role="navigation" aria-label="Main navigation">
+                <ul>
+                    
+                    <li>
+                        
+                        
+                        <a href="/ja/"
+                           
+                           aria-current="">
+                            ホーム
+                        </a>
+                        
+                    </li>
+                    
+                    <li class="has-submenu">
+                        
+                        
+                        <button class="dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+                            学ぶ
+                            <svg class="dropdown-icon" width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <polyline points="3 4.5 6 7.5 9 4.5"></polyline>
+                            </svg>
+                        </button>
+                        <ul class="submenu">
+                            
+                            <li>
+                                <a href="/ja/getting-started/"
+                                   class="active"
+                                   aria-current="page">
+                                    はじめに
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/ja/crs/"
+                                   
+                                   aria-current="">
+                                    CRS
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/ja/training-zones/"
+                                   
+                                   aria-current="">
+                                    トレーニングゾーン
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/ja/training-load/"
+                                   
+                                   aria-current="">
+                                    トレーニング負荷
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/ja/stss-calculator/"
+                                   
+                                   aria-current="">
+                                    sTSS計算機
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        
+                    </li>
+                    
+                    <li class="has-submenu">
+                        
+                        
+                        <button class="dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+                            科学
+                            <svg class="dropdown-icon" width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <polyline points="3 4.5 6 7.5 9 4.5"></polyline>
+                            </svg>
+                        </button>
+                        <ul class="submenu">
+                            
+                            <li>
+                                <a href="/ja/research/"
+                                   
+                                   aria-current="">
+                                    研究
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/ja/formulas/"
+                                   
+                                   aria-current="">
+                                    数式
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/ja/efficiency/"
+                                   
+                                   aria-current="">
+                                    効率
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/ja/stride-mechanics/"
+                                   
+                                   aria-current="">
+                                    ストローク
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/ja/bibliography/"
+                                   
+                                   aria-current="">
+                                    参考文献
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        
+                    </li>
+                    
+                    <li>
+                        
+                        
+                        <a href="/ja/contact/"
+                           
+                           aria-current="">
+                            お問い合わせ
+                        </a>
+                        
+                    </li>
+                    
+                </ul>
+
+                
+                <div class="search-container">
+                    <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.35-4.35"></path>
+                    </svg>
+                    <input
+                        type="search"
+                        id="site-search"
+                        class="search-input"
+                        aria-expanded="false"
+                        aria-haspopup="listbox"
+                        aria-autocomplete="list"
+                        autocomplete="off"
+                        spellcheck="false"
+                    />
+                    <div id="search-results" class="search-results hidden" role="region" aria-live="polite"></div>
+                </div>
+
+                
+                <select class="language-selector" id="language-select" aria-label="言語を選択">
+                    
+                    <option value="ca" >
+                        Català
+                    </option>
+                    
+                    <option value="en" >
+                        English
+                    </option>
+                    
+                    <option value="es" >
+                        Español
+                    </option>
+                    
+                    <option value="fr" >
+                        Français
+                    </option>
+                    
+                    <option value="de" >
+                        Deutsch
+                    </option>
+                    
+                    <option value="zh" >
+                        中文
+                    </option>
+                    
+                    <option value="pt" >
+                        Português
+                    </option>
+                    
+                    <option value="ja" selected>
+                        日本語
+                    </option>
+                    
+                    <option value="it" >
+                        Italiano
+                    </option>
+                    
+                    <option value="nl" >
+                        Nederlands
+                    </option>
+                    
+                </select>
+            </nav>
+
+            
+            <button class="menu-toggle" id="menu-toggle" aria-label="メニュー切替" aria-expanded="false" aria-controls="nav-primary">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </div>
+</header>
+
+    
+    <main id="main-content" class="main-content">
+        <section class="hero hero-small">
+    <div class="container">
+        <h1>RunAnalyticsを始める</h1>
+        <p class="lead">ランニングパフォーマンス追跡、CRSテスト、トレーニング負荷分析の完全ガイド</p>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container container-narrow">
+        <div class="callout callout-info mb-xl">
+            <h2>データドリブンランニングへようこそ</h2>
+            <p>RunAnalyticsは、<strong>クリティカルランスピード（CRS）</strong>、<strong>トレーニングストレススコア（sTSS）</strong>、<strong>パフォーマンス管理チャート（PMC）</strong>指標を使用して、あなたのランニングワークアウトを実用的な洞察に変換します。このガイドでは、初期設定から高度なトレーニング負荷分析まで、4つの簡単なステップで説明します。</p>
+        </div>
+
+        <h2>クイックスタート（5分）</h2>
+
+        <div class="steps-container">
+            <div class="step-card">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>ダウンロード＆インストール</h3>
+                    <p>App StoreからRunAnalyticsをダウンロードし、Apple Healthへのアクセス許可を与えます。アプリは自動的にランニングワークアウトを同期します—手動ログは不要です。</p>
+                    <a href="https://apps.apple.com/app/runanalytics/id6737283749" class="btn btn-secondary btn-small mt-sm" target="_blank" rel="noopener">アプリをダウンロード →</a>
+                </div>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>CRSテストを実行</h3>
+                    <p>あなたのクリティカルランスピードを確立するために5Kと3Kのタイムトライアルを完了します。これはすべての指標の基盤です—CRSなしでは、sTSSとトレーニングゾーンを計算できません。</p>
+                    <a href="#css-test-guide" class="btn btn-secondary btn-small mt-sm">CRSテストプロトコル ↓</a>
+                </div>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>CRS結果を入力</h3>
+                    <p>アプリに5Kと3Kのタイムを入力します。RunAnalyticsはCRS、ペースゾーンを計算し、すべての指標をあなたの生理学に合わせてパーソナライズします。フィットネスが向上するにつれて6-8週間ごとに更新します。</p>
+                </div>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">4</div>
+                <div class="step-content">
+                    <h3>ワークアウト追跡を開始</h3>
+                    <p>Apple WatchとHealthアプリでランニングします。RunAnalyticsは自動的にワークアウトをインポートし、sTSSを計算し、CTL/ATL/TSBを更新し、進歩を追跡します。手動データ入力は不要です。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section section-alt" id="css-test-guide">
+    <div class="container">
+        <h2 class="mb-xl text-center">完全なCRSテストプロトコル</h2>
+
+        <div class="grid grid-2">
+            <div class="card">
+                <h3 class="card-title">📋 必要なもの</h3>
+                <div class="card-content">
+                    <ul>
+                        <li><strong>トラックアクセス:</strong> 25mまたは50mトラック（25yd可）</li>
+                        <li><strong>計時:</strong> ストップウォッチ、ペースクロック、またはApple Watch</li>
+                        <li><strong>ウォームアップ時間:</strong> テスト前15-20分</li>
+                        <li><strong>回復:</strong> トライアル間5-10分</li>
+                        <li><strong>努力:</strong> 最大持続可能ペース（全力スプリントではない）</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3 class="card-title">⏱️ テスト日の条件</h3>
+                <div class="card-content">
+                    <ul>
+                        <li><strong>休息:</strong> 24-48時間前にハードトレーニングなし</li>
+                        <li><strong>水分補給:</strong> 十分な水分補給、通常の食事</li>
+                        <li><strong>トラック温度:</strong> 26-28°Cが理想（非常に寒い/暖かいのを避ける）</li>
+                        <li><strong>時間帯:</strong> 通常最もよくトレーニングする時間</li>
+                        <li><strong>装備:</strong> トレーニングと同じ（ゴーグル、キャップ、スーツ）</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <h3 class="mt-3xl">ステップバイステップCRSテスト</h3>
+
+        <div class="protocol-timeline">
+            <div class="timeline-item">
+                <div class="timeline-marker">ウォームアップ</div>
+                <div class="timeline-content">
+                    <h4>15-20分</h4>
+                    <p>400-800mイージーランニング、ドリル、プログレッシブビルドアップ。ペースを上げて2-3×50を含める（60%、75%、85%の努力）。テスト前に2-3分休憩。</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-marker">トライアル1</div>
+                <div class="timeline-content">
+                    <h4>400m最大努力</h4>
+                    <p><strong>プッシュスタート</strong>（飛び込みなし）。全距離で維持できる最速ペースで400mを走る。これはスプリントではありません—ペースを調整してください。時間を<strong>mm:ss</strong>形式で記録（例：6:08）。</p>
+                    <div class="tip-box mt-sm">
+                        <strong>ペーシングのコツ:</strong> 均等な100mスプリットを目指す。後半200mは前半200m以下であるべき（ネガティブスプリットが理想）。
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-marker">回復</div>
+                <div class="timeline-content">
+                    <h4>5-10分</h4>
+                    <p><strong>重要フェーズ:</strong> イージーランニングまたは完全休息。心拍数が120 bpm以下に下がり、呼吸が完全に回復するまで待つ。不十分な回復 = 不正確なCRS。</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-marker">トライアル2</div>
+                <div class="timeline-content">
+                    <h4>200m最大努力</h4>
+                    <p><strong>プッシュスタート</strong>（飛び込みなし）。200mの最大持続可能努力。これは400mより100mあたりきつく感じるはず。時間を<strong>mm:ss</strong>形式で記録（例：2:30）。</p>
+                    <div class="tip-box mt-sm">
+                        <strong>検証チェック:</strong> 200mペース/100mは400mペース/100mより3-6秒速いはず。そうでなければ、回復が不十分またはペーシングがずれている。
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-marker">クールダウン</div>
+                <div class="timeline-content">
+                    <h4>10-15分</h4>
+                    <p>300-500mイージーランニング、ストレッチ。時間をすぐに記録—記憶に頼らない。</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="callout callout-warning mt-xl">
+            <h3>⚠️ よくあるCRSテストの間違い</h3>
+            <ul>
+                <li><strong>400mで速すぎるスタート:</strong> 失速を招き、不正確なCRSになる。均等ペーシングを使用。</li>
+                <li><strong>トライアル間の回復不足:</strong> 疲労が200mを遅くし、CRSを人為的に速くする → オーバートレーニングゾーン。</li>
+                <li><strong>飛び込みスタートの使用:</strong> 0.5-1.5秒の有利さを加え、計算を歪める。常に壁からプッシュ。</li>
+                <li><strong>疲労時のテスト:</strong> 24-48時間前の重いトレーニング負荷 = 抑制された結果。フレッシュな時にテスト。</li>
+                <li><strong>すぐに記録しない:</strong> 記憶は信頼できない。クールダウン前に時間を書き留める。</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container container-narrow">
+        <h2>Entering CRS Results in RunAnalytics</h2>
+
+        <div class="screenshot-guide">
+            <div class="step-item">
+                <h3>Step 1: Open CRS Settings</h3>
+                <p>In RunAnalytics app, go to <strong>Settings → Critical Run Speed</strong>. Tap "Perform CRS Test" or "Update CRS".</p>
+            </div>
+
+            <div class="step-item">
+                <h3>Step 2: Input Times</h3>
+                <p>Enter your 400m time (e.g., <code>6:08</code>) and 200m time (e.g., <code>2:30</code>). Use the exact format shown. Tap "Calculate".</p>
+            </div>
+
+            <div class="step-item">
+                <h3>Step 3: Review Results</h3>
+                <p>App displays:</p>
+                <ul>
+                    <li><strong>CRS speed:</strong> 0.917 m/s</li>
+                    <li><strong>CRS pace:</strong> 1:49/100m</li>
+                    <li><strong>Training zones:</strong> 7 personalized zones (Zone 1-7)</li>
+                    <li><strong>sTSS baseline:</strong> Now enabled for all workouts</li>
+                </ul>
+            </div>
+
+            <div class="step-item">
+                <h3>Step 4: Save & Sync</h3>
+                <p>Tap "Save CRS". The app immediately:</p>
+                <ul>
+                    <li>Recalculates training zones</li>
+                    <li>Retroactively updates sTSS for past 90 days</li>
+                    <li>Adjusts CTL/ATL/TSB calculations</li>
+                    <li>Enables zone-based workout analysis</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="callout callout-tip mt-xl">
+            <h3>💡 Pro Tip: Historical CRS Testing</h3>
+            <p>If you already know your CRS from previous tests, you can input those times directly. However, for most accurate results, perform a fresh test every 6-8 weeks. Your CRS should improve (get faster) as training progresses.</p>
+        </div>
+    </div>
+</section>
+
+<section class="section section-alt">
+    <div class="container">
+        <h2 class="mb-xl text-center">Understanding Your Metrics</h2>
+
+        <div class="grid grid-2">
+            <div class="card">
+                <h3 class="card-title">Critical Run Speed (CRS)</h3>
+                <div class="card-content">
+                    <p><strong>What it is:</strong> Your aerobic threshold pace—the fastest speed you can sustain for ~30 minutes without exhaustion.</p>
+                    <p><strong>What it means:</strong> CRS = 1:49/100m means you can hold 1:49 pace for sustained threshold efforts.</p>
+                    <p><strong>How to use:</strong> Basis for all training zones and sTSS calculation. Update every 6-8 weeks.</p>
+                    <a href="/en/crs/" class="btn btn-secondary btn-small mt-md">Learn CRS →</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3 class="card-title">Training Zones</h3>
+                <div class="card-content">
+                    <p><strong>What they are:</strong> 7 intensity ranges based on your CRS, from recovery (Zone 1) to sprint (Zone 7).</p>
+                    <p><strong>What they mean:</strong> Each zone targets specific physiological adaptations (aerobic base, threshold, VO₂max).</p>
+                    <p><strong>How to use:</strong> Follow zone prescriptions for structured training. App shows time-in-zone for each workout.</p>
+                    <a href="/en/training-zones/" class="btn btn-secondary btn-small mt-md">Training Zones →</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3 class="card-title">Running Training Stress Score (sTSS)</h3>
+                <div class="card-content">
+                    <p><strong>What it is:</strong> Quantified workout stress combining intensity and duration. 1 hour at CRS pace = 100 sTSS.</p>
+                    <p><strong>What it means:</strong> sTSS 50 = easy recovery, sTSS 100 = moderate, sTSS 200+ = very hard session.</p>
+                    <p><strong>How to use:</strong> Track daily/weekly sTSS to manage training load. Aim for 5-10 sTSS increase per week max.</p>
+                    <a href="/en/training-load/" class="btn btn-secondary btn-small mt-md">sTSS Guide →</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3 class="card-title">CTL / ATL / TSB</h3>
+                <div class="card-content">
+                    <p><strong>What they are:</strong></p>
+                    <ul>
+                        <li><strong>CTL:</strong> Chronic Training Load (fitness) - 42-day average sTSS</li>
+                        <li><strong>ATL:</strong> Acute Training Load (fatigue) - 7-day average sTSS</li>
+                        <li><strong>TSB:</strong> Training Stress Balance (form) = CTL - ATL</li>
+                    </ul>
+                    <p><strong>How to use:</strong> Positive TSB = fresh/tapered, negative TSB = fatigued. Race when TSB = +5 to +25.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="callout mt-xl">
+            <h3>📊 Your First Week Goals</h3>
+            <p>After entering CRS and completing 3-5 workouts:</p>
+            <ul>
+                <li><strong>Check sTSS values:</strong> Confirm they match effort perception (easy ~50, moderate ~100, hard ~150+)</li>
+                <li><strong>Review zone distribution:</strong> Are you spending 60-70% in Zone 2 (aerobic base)?</li>
+                <li><strong>Establish baseline CTL:</strong> Your first week's average sTSS becomes initial fitness baseline</li>
+                <li><strong>Identify patterns:</strong> Which workouts generate highest sTSS? Are you recovering adequately?</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container container-narrow">
+        <h2>Typical User Journey (First 8 Weeks)</h2>
+
+        <div class="journey-timeline">
+            <div class="journey-phase">
+                <h3>Week 1-2: Establish Baseline</h3>
+                <ul>
+                    <li>Perform CRS test and enter results</li>
+                    <li>Complete 3-5 normal training workouts</li>
+                    <li>Observe sTSS values and zone distribution</li>
+                    <li>Establish initial CTL (fitness level)</li>
+                    <li><strong>Goal:</strong> Understand metrics, no changes yet</li>
+                </ul>
+            </div>
+
+            <div class="journey-phase">
+                <h3>Week 3-4: Apply Zones</h3>
+                <ul>
+                    <li>Use CRS zones in workout planning</li>
+                    <li>Intentionally run Zone 2 for aerobic sets</li>
+                    <li>Track weekly sTSS totals (aim for consistency)</li>
+                    <li>Monitor TSB (should be slightly negative = training)</li>
+                    <li><strong>Goal:</strong> Train by zones, not feel</li>
+                </ul>
+            </div>
+
+            <div class="journey-phase">
+                <h3>Week 5-6: Progressive Overload</h3>
+                <ul>
+                    <li>Increase weekly sTSS by 5-10% from baseline</li>
+                    <li>Add 1 threshold (Zone 4) session per week</li>
+                    <li>CTL should gradually rise (fitness improving)</li>
+                    <li>ATL may spike on hard weeks (normal)</li>
+                    <li><strong>Goal:</strong> Controlled fitness progression</li>
+                </ul>
+            </div>
+
+            <div class="journey-phase">
+                <h3>Week 7-8: Retest & Adjust</h3>
+                <ul>
+                    <li>Perform second CRS test (should be faster)</li>
+                    <li>Update zones in app (pace improves)</li>
+                    <li>Compare CTL Week 1 vs Week 8 (should be +10-20)</li>
+                    <li>Review progress: Are times dropping? Feel easier?</li>
+                    <li><strong>Goal:</strong> Validate training effectiveness</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="callout callout-success mt-xl">
+            <h3>✅ Success Indicators</h3>
+            <p>After 8 weeks of structured training with RunAnalytics, you should see:</p>
+            <ul>
+                <li><strong>CRS improvement:</strong> 1-3% faster CRS pace (e.g., 1:49 → 1:47)</li>
+                <li><strong>CTL increase:</strong> +15-25 points (e.g., 30 → 50 CTL)</li>
+                <li><strong>Consistent sTSS:</strong> Weekly totals within 10-15% variance</li>
+                <li><strong>Better pacing:</strong> More even splits, better effort calibration</li>
+                <li><strong>Improved recovery:</strong> TSB cycles predictably (-10 to +5)</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="section section-alt">
+    <div class="container container-narrow">
+        <h2>Troubleshooting & FAQs</h2>
+
+        <div class="faq-item">
+            <h3>My sTSS seems too high/low for workout effort</h3>
+            <p><strong>Cause:</strong> CRS is outdated or inaccurate.</p>
+            <p><strong>Solution:</strong> Retest CRS. If you tested when fatigued or paced poorly, CRS will be wrong. A proper CRS test is critical for all downstream metrics.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>App shows "No CRS configured"</h3>
+            <p><strong>Cause:</strong> CRS test not completed or not saved.</p>
+            <p><strong>Solution:</strong> Go to Settings → Critical Run Speed → Perform Test. Enter both 5K and 3K times, then tap Save.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>Workouts not syncing from Apple Watch</h3>
+            <p><strong>Cause:</strong> Health app permissions not granted or workout not categorized as "Running".</p>
+            <p><strong>Solution:</strong> Check Settings → Privacy → Health → RunAnalytics → Allow Read for Workouts. Ensure Apple Watch workout type is "Track Run" or "Open Water Run".</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>CTL not increasing despite consistent training</h3>
+            <p><strong>Cause:</strong> sTSS totals too low or inconsistent frequency.</p>
+            <p><strong>Solution:</strong> CTL is 42-day exponentially weighted average. It rises slowly. Increase weekly sTSS by 5-10%, and maintain 4+ workouts/week for consistent CTL growth.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>How often should I retest CRS?</h3>
+            <p><strong>Recommendation:</strong> Every 6-8 weeks during base/build phases. Retest after illness, injury, long break, or when zones feel consistently too easy/hard.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>Can I use RunAnalytics for other strides?</h3>
+            <p><strong>Yes, with limitations:</strong> CRS is typically tested in freestyle. For IM/backstride/breaststride workouts, sTSS is calculated based on freestyle CRS. Consider performing stride-specific CRS tests for more accuracy.</p>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container container-narrow">
+        <h2>Next Steps</h2>
+
+        <div class="grid grid-3">
+            <div class="card">
+                <h3 class="card-title">Learn Training Zones</h3>
+                <div class="card-content">
+                    <p>Understand how to train in Zone 2 (aerobic base), Zone 4 (threshold), and Zone 5 (VO₂max) for specific adaptations.</p>
+                    <a href="/en/training-zones/" class="btn btn-secondary btn-small mt-md">Training Zones →</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3 class="card-title">Calculate sTSS</h3>
+                <div class="card-content">
+                    <p>Use our free sTSS calculator to understand training load before committing to workouts.</p>
+                    <a href="/en/stss-calculator/" class="btn btn-secondary btn-small mt-md">sTSS Calculator →</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3 class="card-title">Dive Deeper into Metrics</h3>
+                <div class="card-content">
+                    <p>Explore the science behind CRS, sTSS, CTL/ATL/TSB with peer-reviewed research references.</p>
+                    <a href="/en/research/" class="btn btn-secondary btn-small mt-md">Research →</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-xl text-center">
+            <p class="mb-md"><strong>Ready to start tracking?</strong></p>
+            <a href="https://apps.apple.com/app/runanalytics/id6737283749" class="btn btn-primary btn-large" target="_blank" rel="noopener">Download RunAnalytics Free</a>
+            <p class="mt-sm text-secondary">7-day free trial • No credit card required • iOS 16+</p>
+        </div>
+    </div>
+</section>
+    </main>
+
+    
+    <footer class="site-footer">
+    <div class="container">
+        <div class="footer-grid">
+            
+            <div>
+                <h3 class="mb-md">RunAnalytics - Running Analytics App | Critical Running Speed, TSS, CTL/ATL/TSB for iOS</h3>
+                <p class="text-secondary">Track Critical Running Speed, Training Stress Score, and performance metrics with RunAnalytics. Science-based iOS app for runners, triathletes &amp; coaches. 7-day free trial.</p>
+            </div>
+
+            
+            <div>
+                <h3 class="mb-md">ホーム</h3>
+                <ul class="footer-links">
+                    
+                    <li>
+                        <a href="/ca/">Català</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/en/">English</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/es/">Español</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/fr/">Français</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/de/">Deutsch</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/zh/">中文</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/pt/">Português</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ja/">日本語</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/it/">Italiano</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/nl/">Nederlands</a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+
+        
+        <div class="footer-bottom">
+            <p class="text-sm text-secondary">
+                &copy; 2025 RunAnalytics - Running Analytics App | Critical Running Speed, TSS, CTL/ATL/TSB for iOS. 全著作権所有
+            </p>
+            <ul class="footer-links">
+                <li><a href="/ja/privacy/">プライバシー</a></li>
+                <li><a href="/ja/terms/">利用規約</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+    
+    <div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="Cookie consent" aria-live="polite">
+    <div class="cookie-banner-content">
+        <div>
+            <p>このウェブサイトはクッキーを使用してユーザー体験を向上させています。</p>
+            <a href="/ja/privacy/" class="text-sm">詳細</a>
+        </div>
+        <div class="cookie-banner-actions">
+            <button id="cookie-decline" class="btn btn-secondary btn-small">拒否する</button>
+            <button id="cookie-accept" class="btn btn-primary btn-small">同意する</button>
+        </div>
+    </div>
+</div>
+
+    
+    <script src="/assets/js/main.min.js"></script>
+    <script src="/assets/js/cookie-consent.min.js"></script>
+    <script src="/assets/js/lazy-load.min.js"></script>
+
+    
+    <script src="/assets/js/fuse.min.js"></script>
+    <script src="/assets/js/search.min.js"></script>
+
+    
+    
+</body>
+</html>

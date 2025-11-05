@@ -1,0 +1,1240 @@
+<!DOCTYPE html>
+<html lang="zh" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+    <title>游泳性能公式：CRS、TSS、CTL/ATL计算</title>
+    <meta name="description" content="包含JavaScript代码示例的完整游泳性能公式。计算CRS、rTSS、CTL/ATL/TSB、Running Efficiency、划水率。为开发人员和教练提供的生产就绪实现。">
+    <meta name="author" content="Albert Arno">
+
+    
+    
+    <meta name="keywords" content="游泳公式, CRS公式, TSS计算, 游泳指标, JavaScript">
+    
+
+    
+    <link rel="canonical" href="https://run.analyticszone.app/zh/formulas/">
+
+    
+    
+    <meta property="article:published_time" content="2025-01-15T10:00:00Z">
+    <meta property="article:modified_time" content="2025-10-08T14:30:00Z">
+    <meta property="article:author" content="Albert Arno">
+    
+
+    
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://run.analyticszone.app/zh/formulas/">
+    <meta property="og:title" content="游泳性能公式：CRS、TSS、CTL/ATL计算">
+    <meta property="og:description" content="包含JavaScript代码示例的完整游泳性能公式。计算CRS、rTSS、CTL/ATL/TSB、Running Efficiency、划水率。为开发人员和教练提供的生产就绪实现。">
+    
+    <meta property="og:image" content="https://run.analyticszone.app/assets/images/run-analytics-og.jpg">
+    
+    <meta property="og:locale" content="zh_CN">
+    <meta property="og:site_name" content="RunAnalytics - Running Analytics App | Critical Running Speed, TSS, CTL/ATL/TSB for iOS">
+
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://run.analyticszone.app/zh/formulas/">
+    <meta name="twitter:title" content="游泳性能公式：CRS、TSS、CTL/ATL计算">
+    <meta name="twitter:description" content="包含JavaScript代码示例的完整游泳性能公式。计算CRS、rTSS、CTL/ATL/TSB、Running Efficiency、划水率。为开发人员和教练提供的生产就绪实现。">
+    
+    <meta name="twitter:image" content="https://run.analyticszone.app/assets/images/run-analytics-og.jpg">
+    
+
+    
+    
+    <link rel="alternate" hreflang="ca" href="https://run.analyticszone.app/ca/formulas/">
+    
+    <link rel="alternate" hreflang="en" href="https://run.analyticszone.app/en/formulas/">
+    
+    <link rel="alternate" hreflang="es" href="https://run.analyticszone.app/es/formulas/">
+    
+    <link rel="alternate" hreflang="fr" href="https://run.analyticszone.app/fr/formulas/">
+    
+    <link rel="alternate" hreflang="de" href="https://run.analyticszone.app/de/formulas/">
+    
+    <link rel="alternate" hreflang="zh" href="https://run.analyticszone.app/zh/formulas/">
+    
+    <link rel="alternate" hreflang="pt" href="https://run.analyticszone.app/pt/formulas/">
+    
+    <link rel="alternate" hreflang="ja" href="https://run.analyticszone.app/ja/formulas/">
+    
+    <link rel="alternate" hreflang="it" href="https://run.analyticszone.app/it/formulas/">
+    
+    <link rel="alternate" hreflang="nl" href="https://run.analyticszone.app/nl/formulas/">
+    
+    <link rel="alternate" hreflang="x-default" href="https://run.analyticszone.app/en/formulas/">
+
+    
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/icons/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/icons/apple-touch-icon.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#0066CC">
+
+    
+    <link rel="stylesheet" href="/assets/css/main.min.css">
+
+    
+    
+
+    
+    
+
+    
+    
+</head>
+<body>
+    
+    <a href="#main-content" class="skip-link">跳到内容</a>
+
+    
+    <header class="site-header">
+    <div class="container">
+        <div class="header-inner">
+            
+            <a href="/zh/" class="site-logo">
+                <picture>
+                    <source srcset="/assets/images/logo-dark.png" media="(prefers-color-scheme: dark)">
+                    <img src="/assets/images/logo.png" alt="RunAnalytics - Running Analytics App | Critical Running Speed, TSS, CTL/ATL/TSB for iOS" width="40" height="40">
+                </picture>
+                <span class="logo-text">RunAnalytics</span>
+            </a>
+
+            
+            <nav class="nav-primary" id="nav-primary" role="navigation" aria-label="Main navigation">
+                <ul>
+                    
+                    <li>
+                        
+                        
+                        <a href="/zh/"
+                           
+                           aria-current="">
+                            首页
+                        </a>
+                        
+                    </li>
+                    
+                    <li class="has-submenu">
+                        
+                        
+                        <button class="dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+                            学习
+                            <svg class="dropdown-icon" width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <polyline points="3 4.5 6 7.5 9 4.5"></polyline>
+                            </svg>
+                        </button>
+                        <ul class="submenu">
+                            
+                            <li>
+                                <a href="/zh/getting-started/"
+                                   
+                                   aria-current="">
+                                    入门指南
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/zh/crs/"
+                                   
+                                   aria-current="">
+                                    CRS
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/zh/training-zones/"
+                                   
+                                   aria-current="">
+                                    训练区间
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/zh/training-load/"
+                                   
+                                   aria-current="">
+                                    训练负荷
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/zh/stss-calculator/"
+                                   
+                                   aria-current="">
+                                    sTSS计算器
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        
+                    </li>
+                    
+                    <li class="has-submenu">
+                        
+                        
+                        <button class="dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+                            科学
+                            <svg class="dropdown-icon" width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <polyline points="3 4.5 6 7.5 9 4.5"></polyline>
+                            </svg>
+                        </button>
+                        <ul class="submenu">
+                            
+                            <li>
+                                <a href="/zh/research/"
+                                   
+                                   aria-current="">
+                                    研究
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/zh/formulas/"
+                                   class="active"
+                                   aria-current="page">
+                                    公式
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/zh/efficiency/"
+                                   
+                                   aria-current="">
+                                    效率
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/zh/stride-mechanics/"
+                                   
+                                   aria-current="">
+                                    步幅力学
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/zh/bibliography/"
+                                   
+                                   aria-current="">
+                                    参考文献
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        
+                    </li>
+                    
+                    <li>
+                        
+                        
+                        <a href="/zh/contact/"
+                           
+                           aria-current="">
+                            联系我们
+                        </a>
+                        
+                    </li>
+                    
+                </ul>
+
+                
+                <div class="search-container">
+                    <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.35-4.35"></path>
+                    </svg>
+                    <input
+                        type="search"
+                        id="site-search"
+                        class="search-input"
+                        aria-expanded="false"
+                        aria-haspopup="listbox"
+                        aria-autocomplete="list"
+                        autocomplete="off"
+                        spellcheck="false"
+                    />
+                    <div id="search-results" class="search-results hidden" role="region" aria-live="polite"></div>
+                </div>
+
+                
+                <select class="language-selector" id="language-select" aria-label="选择语言">
+                    
+                    <option value="ca" >
+                        Català
+                    </option>
+                    
+                    <option value="en" >
+                        English
+                    </option>
+                    
+                    <option value="es" >
+                        Español
+                    </option>
+                    
+                    <option value="fr" >
+                        Français
+                    </option>
+                    
+                    <option value="de" >
+                        Deutsch
+                    </option>
+                    
+                    <option value="zh" selected>
+                        中文
+                    </option>
+                    
+                    <option value="pt" >
+                        Português
+                    </option>
+                    
+                    <option value="ja" >
+                        日本語
+                    </option>
+                    
+                    <option value="it" >
+                        Italiano
+                    </option>
+                    
+                    <option value="nl" >
+                        Nederlands
+                    </option>
+                    
+                </select>
+            </nav>
+
+            
+            <button class="menu-toggle" id="menu-toggle" aria-label="切换菜单" aria-expanded="false" aria-controls="nav-primary">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </div>
+</header>
+
+    
+    <main id="main-content" class="main-content">
+        <section class="hero hero-small">
+<div class="container">
+<h1>Technical Reference &amp; Formulas</h1>
+<p class="lead">Complete Mathematical Implementation</p>
+</div>
+</section>
+<section class="section">
+<div class="container container-narrow">
+<h2>Implementation Guide</h2>
+<p class="lead">This page provides copy-paste formulas and step-by-step calculation methods for all RunAnalytics metrics. Use these for custom implementations, verification, or deeper understanding.</p>
+<div class="callout callout-warning">
+<h3>⚠️ Implementation Notes</h3>
+<ul>
+<li>All times should be converted to 秒 for calculations</li>
+<li>Running 配速 is inverse (higher % = slower 配速)</li>
+<li>Always validate inputs for reasonable ranges</li>
+<li>Handle edge cases (division by zero, negative values)</li>
+</ul>
+</div>
+</div>
+</section>
+<section class="section section-alt">
+<div class="container">
+<h2>Core Performance Metrics</h2>
+<div class="formula-card">
+<h3>Critical Run Speed (CRS)</h3>
+<div class="formula-content">
+<h4>Formula:</h4>
+<div class="formula-box-large">
+<div class="formula">
+                        CRS (m/s) = (D₂ - D₁) / (T₂ - T₁)
+                    </div>
+<div class="formula">CRS Pace/100m (秒) = (T₄₀₀ - T₂₀₀) / 2</div>
+</div>
+<div class="callout callout-info mt-lg">
+<h4>🧪 Interactive Calculator - Test the Formula</h4>
+<div class="calculator-grid">
+<div class="input-group">
+<label for="css-d1">Distance 1 (meters):</label>
+<input id="css-d1" max="1000" min="50" step="50" type="number" value="200"/>
+</div>
+<div class="input-group">
+<label for="css-t1">Time 1 (mm:ss):</label>
+<input id="css-t1" pattern="[0-9]{1,2}:[0-9]{2}" placeholder="2:30" type="text" value="2:30"/>
+</div>
+<div class="input-group">
+<label for="css-d2">Distance 2 (meters):</label>
+<input id="css-d2" max="2000" min="100" step="50" type="number" value="400"/>
+</div>
+<div class="input-group">
+<label for="css-t2">Time 2 (mm:ss):</label>
+<input id="css-t2" pattern="[0-9]{1,2}:[0-9]{2}" placeholder="6:08" type="text" value="6:08"/>
+</div>
+</div>
+<div class="calculator-result mt-md">
+<div class="result-label">CRS Pace per 100m:</div>
+<div class="result-value" id="css-result">1:49</div>
+</div>
+<div class="calculation-breakdown mt-md">
+<small>
+<strong>Calculation steps:</strong><br/>
+<span id="css-steps">
+                                CRS (m/s) = (400 - 200) / (368 - 150) = 0.917 m/s<br/>Pace/100m = 100 / 0.917 = 109 秒 = 1:49</span>
+</small>
+</div>
+</div>
+<h4 class="mt-xl">JavaScript Implementation:</h4>
+<pre><code>function calculateCRS(distance1, time1, distance2, time2) {
+  // Convert times to 秒 if needed
+  const t1 = typeof time1 === 'string' ? timeToSeconds(time1) : time1;
+  const t2 = typeof time2 === 'string' ? timeToSeconds(time2) : time2;
+
+  // Calculate CRS in m/s
+  const css_ms = (distance2 - distance1) / (t2 - t1);
+
+  // Calculate 配速 per 100m in 秒
+  const 配速_per_100m = 100 / css_ms;
+
+  // Convert to mm:ss format
+  const 分钟 = Math.floor(配速_per_100m / 60);
+  const 秒 = Math.round(配速_per_100m % 60);
+
+  return {
+    css_ms: css_ms,
+    配速_秒: 配速_per_100m,
+    配速_formatted: `${分钟}:${秒.toString().padStart(2, '0')}`
+  };
+}
+
+// Example usage:
+const result = calculateCRS(200, 150, 400, 368);
+// Returns: { css_ms: 0.917, 配速_秒: 109, 配速_formatted: "1:49" }</code></pre>
+<script>function timeToSecondsCRS(timeString) {
+                    const parts = timeString.split(':');
+                    return parseInt(parts[0]) * 60 + parseInt(parts[1]);
+                }
+
+                function 秒ToTimeCRS(秒) {
+                    const 分钟 = Math.floor(秒 / 60);
+                    const secs = Math.round(秒 % 60);
+                    return `${分钟}:${secs.toString().padStart(2, '0')}`;
+                }
+
+                function updateCRSCalculator() {
+                    try {
+                        const d1 = parseFloat(document.getElementById('css-d1').value);
+                        const t1Input = document.getElementById('css-t1').value;
+                        const d2 = parseFloat(document.getElementById('css-d2').value);
+                        const t2Input = document.getElementById('css-t2').value;
+
+                        if (!d1 || !t1Input || !d2 || !t2Input) return;
+
+                        const t1 = timeToSecondsCRS(t1Input);
+                        const t2 = timeToSecondsCRS(t2Input);
+
+                        const css_ms = (d2 - d1) / (t2 - t1);
+                        const 配速_per_100m = 100 / css_ms;
+                        const 配速_formatted = 秒ToTimeCRS(配速_per_100m);
+
+                        document.getElementById('css-result').textContent = 配速_formatted;
+                        document.getElementById('css-steps').innerHTML =
+                            `CRS (m/s) = (${d2} - ${d1}) / (${t2} - ${t1}) = ${css_ms.toFixed(3)} m/s<br>` +
+                            `Pace/100m = 100 / ${css_ms.toFixed(3)} = ${Math.round(配速_per_100m)} 秒 = ${配速_formatted}`;
+                    } catch (e) {
+                        console.error('CRS calculation error:', e);
+                    }
+                }
+
+                document.addEventListener('DOMContentLoaded', function() {
+                    document.getElementById('css-d1').addEventListener('input', updateCRSCalculator);
+                    document.getElementById('css-t1').addEventListener('input', updateCRSCalculator);
+                    document.getElementById('css-d2').addEventListener('input', updateCRSCalculator);
+                    document.getElementById('css-t2').addEventListener('input', updateCRSCalculator);
+                    updateCRSCalculator();
+                });</script>
+</div>
+</div>
+<div class="formula-card">
+<h3>Run 训练压力评分 (sTSS)</h3>
+<div class="formula-content">
+<h4>Complete Formula:</h4>
+<div class="formula-box-large">
+<div class="formula">sTSS = (IF³) × Duration (小时) × 100</div>
+<div class="formula">
+                        IF = NSS / FTP
+                    </div>
+<div class="formula">
+                        NSS = Total Distance / Total Time (m/min)
+                    </div>
+</div>
+<div class="callout callout-info mt-lg">
+<h4>🧪 Interactive Calculator - Test the Formula</h4>
+<div class="calculator-grid">
+<div class="input-group">
+<label for="stss-distance">Distance (meters):</label>
+<input id="stss-distance" max="10000" min="100" step="50" type="number" value="3000"/>
+</div>
+<div class="input-group">
+<label for="stss-duration">Duration (分钟):</label>
+<input id="stss-duration" max="300" min="1" step="1" type="number" value="55"/>
+</div>
+<div class="input-group">
+<label for="stss-css">CRS Pace (mm:ss per 100m):</label>
+<input id="stss-css" pattern="[0-9]{1,2}:[0-9]{2}" placeholder="1:33" type="text" value="1:33"/>
+</div>
+<div class="input-group">
+<label>FTP (calculated):</label>
+<input id="stss-ftp" readonly="" type="text" value="64.5 m/min"/>
+</div>
+</div>
+<div class="calculator-result mt-md">
+<div class="result-label">Calculated sTSS:</div>
+<div class="result-value" id="stss-result">55</div>
+</div>
+<div class="calculation-breakdown mt-md">
+<small>
+<strong>Calculation steps:</strong><br/>
+<span id="stss-steps">
+                                NSS = 3000m / 55min = 54.5 m/min<br/>
+                                FTP = 100 / (93/60) = 64.5 m/min<br/>
+                                IF = 54.5 / 64.5 = 0.845<br/>
+                                sTSS = 0.845³ × (55/60) × 100 = 55
+                            </span>
+</small>
+</div>
+</div>
+<h4 class="mt-xl">JavaScript Implementation:</h4>
+<pre><code>function calculateSTSS(distance, timeMinutes, ftpMetersPerMin) {
+  // Calculate Normalized Run Speed
+  const nss = distance / timeMinutes;
+
+  // Calculate Intensity Factor
+  const intensityFactor = nss / ftpMetersPerMin;
+
+  // Calculate 小时
+  const 小时 = timeMinutes / 60;
+
+  // Calculate sTSS using cubed intensity factor
+  const stss = Math.pow(intensityFactor, 3) * 小时 * 100;
+
+  return Math.round(stss);
+}
+
+// Example usage:
+const stss = calculateSTSS(3000, 55, 64.5);
+// Returns: 55
+
+// Helper: Convert CRS to FTP
+function cssToFTP(cssPacePer100mSeconds) {
+  // FTP in m/min = 100m / (配速 in 分钟)
+  return 100 / (cssPacePer100mSeconds / 60);
+}
+
+// Example: CRS of 1:33 (93 秒)
+const ftp = cssToFTP(93); // Returns: 64.5 m/min</code></pre>
+<script>// Time conversion helper
+                function timeToSeconds(timeString) {
+                    const parts = timeString.split(':');
+                    return parseInt(parts[0]) * 60 + parseInt(parts[1]);
+                }
+
+                // CRS to FTP conversion
+                function cssToFTP(cssPacePer100mSeconds) {
+                    return 100 / (cssPacePer100mSeconds / 60);
+                }
+
+                // sTSS calculation
+                function calculateSTSS(distance, timeMinutes, ftpMetersPerMin) {
+                    const nss = distance / timeMinutes;
+                    const intensityFactor = nss / ftpMetersPerMin;
+                    const 小时 = timeMinutes / 60;
+                    const stss = Math.pow(intensityFactor, 3) * 小时 * 100;
+                    return Math.round(stss);
+                }
+
+                // Update calculator
+                function updateSTSSCalculator() {
+                    try {
+                        const distance = parseFloat(document.getElementById('stss-distance').value);
+                        const duration = parseFloat(document.getElementById('stss-duration').value);
+                        const cssInput = document.getElementById('stss-css').value;
+
+                        // Validate inputs
+                        if (!distance || !duration || !cssInput) return;
+
+                        // Convert CRS to 秒
+                        const cssPaceSeconds = timeToSeconds(cssInput);
+
+                        // Calculate FTP
+                        const ftp = cssToFTP(cssPaceSeconds);
+
+                        // Calculate NSS
+                        const nss = distance / duration;
+
+                        // Calculate Intensity Factor
+                        const intensityFactor = nss / ftp;
+
+                        // Calculate sTSS
+                        const stss = calculateSTSS(distance, duration, ftp);
+
+                        // Update display
+                        document.getElementById('stss-ftp').value = ftp.toFixed(1) + ' m/min';
+                        document.getElementById('stss-result').textContent = stss;
+
+                        // Update calculation steps
+                        const 小时 = duration / 60;
+                        document.getElementById('stss-steps').innerHTML =
+                            `NSS = ${distance}m / ${duration}min = ${nss.toFixed(1)} m/min<br>` +
+                            `FTP = 100 / (${cssPaceSeconds}/60) = ${ftp.toFixed(1)} m/min<br>` +
+                            `IF = ${nss.toFixed(1)} / ${ftp.toFixed(1)} = ${intensityFactor.toFixed(3)}<br>` +
+                            `sTSS = ${intensityFactor.toFixed(3)}³ × (${duration}/60) × 100 = ${stss}`;
+                    } catch (e) {
+                        console.error('Calculation error:', e);
+                    }
+                }
+
+                // Add event listeners when page loads
+                document.addEventListener('DOMContentLoaded', function() {
+                    document.getElementById('stss-distance').addEventListener('input', updateSTSSCalculator);
+                    document.getElementById('stss-duration').addEventListener('input', updateSTSSCalculator);
+                    document.getElementById('stss-css').addEventListener('input', updateSTSSCalculator);
+
+                    // Initial calculation
+                    updateSTSSCalculator();
+                });</script>
+</div>
+</div>
+<div class="formula-card">
+<h3>跑步效率</h3>
+<div class="formula-content">
+<h4>Formula:</h4>
+<div class="formula-box-large">
+<div class="formula">跑步效率 = Kilometer Time (秒) + Stride Count</div>
+<div class="formula">
+                        Running Efficiency₂₅ = (Time × 25/Track Length) + (Strides × 25/Track Length)
+                    </div>
+</div>
+<div class="callout callout-info mt-lg">
+<h4>🧪 Interactive Calculator - Test the Formula</h4>
+<div class="calculator-grid">
+<div class="input-group">
+<label for="swolf-time">Kilometer Time (秒):</label>
+<input id="swolf-time" max="120" min="10" step="1" type="number" value="20"/>
+</div>
+<div class="input-group">
+<label for="swolf-strides">Stride Count:</label>
+<input id="swolf-strides" max="50" min="5" step="1" type="number" value="15"/>
+</div>
+<div class="input-group">
+<label for="swolf-track">Track Length (m):</label>
+<select id="swolf-track">
+<option selected="" value="25">25m</option>
+<option value="50">50m</option>
+</select>
+</div>
+</div>
+<div class="calculator-result mt-md">
+<div class="result-label">跑步效率 Score:</div>
+<div class="result-value" id="swolf-result">35</div>
+</div>
+<div class="calculation-breakdown mt-md">
+<small>
+<strong>Calculation:</strong><br/>
+<span id="swolf-steps">跑步效率 = 20s + 15 strides = 35</span>
+</small>
+</div>
+</div>
+<h4 class="mt-xl">JavaScript Implementation:</h4>
+<pre><code>function calculateRunning Efficiency(timeSeconds, strideCount) {
+  return timeSeconds + strideCount;
+}
+
+function calculateNormalizedRunning Efficiency(timeSeconds, strideCount, trackLength) {
+  const normalizedTime = timeSeconds * (25 / trackLength);
+  const normalizedStrides = strideCount * (25 / trackLength);
+  return normalizedTime + normalizedStrides;
+}
+
+// Example:
+const swolf = calculateRunning Efficiency(20, 15);
+// Returns: 35
+
+const swolf50m = calculateNormalizedRunning Efficiency(40, 30, 50);
+// Returns: 35 (normalized to 25m)</code></pre>
+<script>function updateRunning EfficiencyCalculator() {
+                    try {
+                        const time = parseFloat(document.getElementById('swolf-time').value);
+                        const strides = parseFloat(document.getElementById('swolf-strides').value);
+                        const trackLength = parseFloat(document.getElementById('swolf-track').value);
+
+                        if (!time || !strides) return;
+
+                        let swolf, steps;
+                        if (trackLength === 25) {
+                            swolf = time + strides;
+                            steps = `跑步效率 = ${time}s + ${strides} strides = ${swolf}`;
+                        } else {
+                            const normalizedTime = time * (25 / trackLength);
+                            const normalizedStrides = strides * (25 / trackLength);
+                            swolf = normalizedTime + normalizedStrides;
+                            steps = `Normalized Time = ${time} × (25/${trackLength}) = ${normalizedTime.toFixed(1)}s<br>` +
+                                   `Normalized Strides = ${strides} × (25/${trackLength}) = ${normalizedStrides.toFixed(1)}<br>` +
+                                   `Running Efficiency₂₅ = ${normalizedTime.toFixed(1)} + ${normalizedStrides.toFixed(1)} = ${swolf.toFixed(1)}`;
+                        }
+
+                        document.getElementById('swolf-result').textContent = swolf.toFixed(1);
+                        document.getElementById('swolf-steps').innerHTML = steps;
+                    } catch (e) {
+                        console.error('跑步效率 calculation error:', e);
+                    }
+                }
+
+                document.addEventListener('DOMContentLoaded', function() {
+                    document.getElementById('swolf-time').addEventListener('input', updateRunning EfficiencyCalculator);
+                    document.getElementById('swolf-strides').addEventListener('input', updateRunning EfficiencyCalculator);
+                    document.getElementById('swolf-track').addEventListener('change', updateRunning EfficiencyCalculator);
+                    updateRunning EfficiencyCalculator();
+                });</script>
+</div>
+</div>
+</div>
+</section>
+<section class="section">
+<div class="container">
+<h2>Stride Mechanics</h2>
+<div class="formula-card">
+<h3>Stride Rate (SR)</h3>
+<div class="formula-content">
+<h4>Formula:</h4>
+<div class="formula-box-large">
+<div class="formula">SR = 60 / Cycle Time (秒)</div>
+<div class="formula">SR = (Number of Strides / Time in 秒) × 60</div>
+</div>
+<div class="callout callout-info mt-lg">
+<h4>🧪 Interactive Calculator - Test the Formula</h4>
+<div class="calculator-grid">
+<div class="input-group">
+<label for="sr-strides">Stride Count:</label>
+<input id="sr-strides" max="100" min="1" step="1" type="number" value="30"/>
+</div>
+<div class="input-group">
+<label for="sr-time">Time (秒):</label>
+<input id="sr-time" max="180" min="1" step="1" type="number" value="25"/>
+</div>
+</div>
+<div class="calculator-result mt-md">
+<div class="result-label">Stride Rate (SPM):</div>
+<div class="result-value" id="sr-result">72</div>
+</div>
+<div class="calculation-breakdown mt-md">
+<small>
+<strong>Calculation:</strong><br/>
+<span id="sr-steps">
+                                SR = (30 / 25) × 60 = 72 SPM
+                            </span>
+</small>
+</div>
+</div>
+<h4 class="mt-xl">JavaScript Implementation:</h4>
+<pre><code>function calculateStrideRate(strideCount, timeSeconds) {
+  return (strideCount / timeSeconds) * 60;
+}
+
+// Example:
+const sr = calculateStrideRate(30, 25);
+// Returns: 72 SPM</code></pre>
+<script>
+                function updateSRCalculator() {
+                    try {
+                        const strides = parseFloat(document.getElementById('sr-strides').value);
+                        const time = parseFloat(document.getElementById('sr-time').value);
+
+                        if (!strides || !time) return;
+
+                        const sr = (strides / time) * 60;
+
+                        document.getElementById('sr-result').textContent = sr.toFixed(1);
+                        document.getElementById('sr-steps').innerHTML =
+                            `SR = (${strides} / ${time}) × 60 = ${sr.toFixed(1)} SPM`;
+                    } catch (e) {
+                        console.error('SR calculation error:', e);
+                    }
+                }
+
+                document.addEventListener('DOMContentLoaded', function() {
+                    document.getElementById('sr-strides').addEventListener('input', updateSRCalculator);
+                    document.getElementById('sr-time').addEventListener('input', updateSRCalculator);
+                    updateSRCalculator();
+                });
+                </script>
+</div>
+</div>
+<div class="formula-card">
+<h3>Distance Per Stride (DPS)</h3>
+<div class="formula-content">
+<h4>Formula:</h4>
+<div class="formula-box-large">
+<div class="formula">
+                        DPS = Distance / Stride Count
+                    </div>
+<div class="formula">
+                        DPS = Distance / (SR / 60)
+                    </div>
+</div>
+<h4>JavaScript Implementation:</h4>
+<pre><code>function calculateDPS(distance, strideCount, pushoffDistance = 0) {
+  const effectiveDistance = distance - pushoffDistance;
+  return effectiveDistance / strideCount;
+}
+
+// Example (25m track, 5m push-off):
+const dps = calculateDPS(25, 12, 5);
+// Returns: 1.67 m/stride
+
+// For multiple segments:
+const dps100m = calculateDPS(100, 48, 4 * 5);
+// Returns: 1.67 m/stride (4 segments × 5m push-off)</code></pre>
+</div>
+</div>
+<div class="formula-card">
+<h3>Velocity from SR and DPS</h3>
+<div class="formula-content">
+<h4>Formula:</h4>
+<div class="formula-box-large">
+<div class="formula">
+                        Velocity (m/s) = (SR / 60) × DPS
+                    </div>
+</div>
+<h4>JavaScript Implementation:</h4>
+<pre><code>function calculateVelocity(strideRate, dps) {
+  return (strideRate / 60) * dps;
+}
+
+// Example:
+const velocity = calculateVelocity(70, 1.6);
+// Returns: 1.87 m/s</code></pre>
+</div>
+</div>
+<div class="formula-card">
+<h3>Stride Index (SI)</h3>
+<div class="formula-content">
+<h4>Formula:</h4>
+<div class="formula-box-large">
+<div class="formula">
+                        SI = Velocity (m/s) × DPS (m/stride)
+                    </div>
+</div>
+<h4>JavaScript Implementation:</h4>
+<pre><code>function calculateStrideIndex(velocity, dps) {
+  return velocity * dps;
+}
+
+// Example:
+const si = calculateStrideIndex(1.5, 1.7);
+// Returns: 2.55</code></pre>
+</div>
+</div>
+</div>
+</section>
+<section class="section section-alt">
+<div class="container">
+<h2>Performance Management Chart (PMC)</h2>
+<div class="formula-card">
+<h3>CTL, ATL, TSB Calculations</h3>
+<div class="formula-content">
+<h4>Formulas:</h4>
+<div class="formula-box-large">
+<div class="formula">
+                        CTL today = CTL yesterday + (TSS today - CTL yesterday) × (1/42)
+                    </div>
+<div class="formula">
+                        ATL today = ATL yesterday + (TSS today - ATL yesterday) × (1/7)
+                    </div>
+<div class="formula">
+                        TSB = CTL yesterday - ATL yesterday
+                    </div>
+</div>
+<h4>JavaScript Implementation:</h4>
+<pre><code>function updateCTL(previousCTL, todayTSS) {
+  return previousCTL + (todayTSS - previousCTL) * (1/42);
+}
+
+function updateATL(previousATL, todayTSS) {
+  return previousATL + (todayTSS - previousATL) * (1/7);
+}
+
+function calculateTSB(yesterdayCTL, yesterdayATL) {
+  return yesterdayCTL - yesterdayATL;
+}
+
+// Calculate PMC for series of 训练s
+function calculatePMC(训练s) {
+  let CTL = 0, ATL = 0;
+  const results = [];
+
+  训练s.forEach(训练 =&gt; {
+    CTL = updateCTL(CTL, 训练.TSS);
+    ATL = updateATL(ATL, 训练.TSS);
+    const TSB = calculateTSB(CTL, ATL);
+
+    results.push({
+      date: 训练.date,
+      TSS: 训练.TSS,
+      CTL: Math.round(CTL * 10) / 10,
+      ATL: Math.round(ATL * 10) / 10,
+      TSB: Math.round(TSB * 10) / 10
+    });
+  });
+
+  return results;
+}
+
+// Example usage:
+const 训练s = [
+  { date: '2025-01-01', TSS: 50 },
+  { date: '2025-01-02', TSS: 60 },
+  { date: '2025-01-03', TSS: 45 },
+  // ... more 训练s
+];
+
+const pmc = calculatePMC(训练s);
+// Returns array with CTL, ATL, TSB for each day</code></pre>
+</div>
+</div>
+</div>
+</section>
+<section class="section">
+<div class="container">
+<h2>Advanced Calculations</h2>
+<div class="formula-card">
+<h3>CRS from Multiple Distances (Regression Method)</h3>
+<div class="formula-content">
+<h4>JavaScript Implementation:</h4>
+<pre><code>function calculateCRSRegression(distances, times) {
+  // Linear regression: distance = a + b*time
+  const n = distances.length;
+  const sumX = times.reduce((a, b) =&gt; a + b, 0);
+  const sumY = distances.reduce((a, b) =&gt; a + b, 0);
+  const sumXY = times.reduce((sum, x, i) =&gt; sum + x * distances[i], 0);
+  const sumXX = times.reduce((sum, x) =&gt; sum + x * x, 0);
+
+  const slope = (n * sumXY - sumX * sumY) / (n * sumXX - sumX * sumX);
+  const intercept = (sumY - slope * sumX) / n;
+
+  return {
+    css: slope, // Critical running velocity (m/s)
+    anaerobic_capacity: intercept // Anaerobic distance capacity (m)
+  };
+}
+
+// Example with multiple test distances:
+const distances = [100, 200, 400, 800];
+const times = [65, 150, 340, 720]; // in 秒
+const result = calculateCRSRegression(distances, times);
+// Returns: { css: 1.18, anaerobic_capacity: 15.3 }</code></pre>
+</div>
+</div>
+<div class="formula-card">
+<h3>Intensity Factor from Pace</h3>
+<div class="formula-content">
+<h4>JavaScript Implementation:</h4>
+<pre><code>function calculateIntensityFactor(actualPace100m, thresholdPace100m) {
+  // Convert 配速 to 速度 (m/s)
+  const actualSpeed = 100 / actualPace100m;
+  const thresholdSpeed = 100 / thresholdPace100m;
+  return actualSpeed / thresholdSpeed;
+}
+
+// Example:
+const if_value = calculateIntensityFactor(110, 93);
+// Returns: 0.845 (running at 84.5% of threshold)</code></pre>
+</div>
+</div>
+<div class="formula-card">
+<h3>Pace Consistency Analysis</h3>
+<div class="formula-content">
+<h4>JavaScript Implementation:</h4>
+<pre><code>function analyzePaceConsistency(segments) {
+  const 配速s = segments.map(kilometer =&gt; kilometer.distance / kilometer.time);
+  const avgPace = 配速s.reduce((a, b) =&gt; a + b) / 配速s.length;
+
+  const variance = 配速s.reduce((sum, 配速) =&gt;
+    sum + Math.pow(配速 - avgPace, 2), 0) / 配速s.length;
+  const stdDev = Math.sqrt(variance);
+  const coefficientOfVariation = (stdDev / avgPace) * 100;
+
+  return {
+    avgPace,
+    stdDev,
+    coefficientOfVariation,
+    consistency: coefficientOfVariation &lt; 5 ? "Excellent" :
+                 coefficientOfVariation &lt; 10 ? "Good" :
+                 coefficientOfVariation &lt; 15 ? "Moderate" : "Variable"
+  };
+}
+
+// Example:
+const segments = [
+  { distance: 100, time: 70 },
+  { distance: 100, time: 72 },
+  { distance: 100, time: 71 },
+  // ...
+];
+const analysis = analyzePaceConsistency(segments);
+// Returns: { avgPace: 1.41, stdDev: 0.02, coefficientOfVariation: 1.4, consistency: "Excellent" }</code></pre>
+</div>
+</div>
+<div class="formula-card">
+<h3>Fatigue Detection from Stride Count</h3>
+<div class="formula-content">
+<h4>JavaScript Implementation:</h4>
+<pre><code>function detectFatigue(segments) {
+  const firstThird = segments.slice(0, Math.floor(segments.length/3));
+  const lastThird = segments.slice(-Math.floor(segments.length/3));
+
+  const firstThirdAvg = firstThird.reduce((sum, kilometer) =&gt;
+    sum + kilometer.strideCount, 0) / firstThird.length;
+  const lastThirdAvg = lastThird.reduce((sum, kilometer) =&gt;
+    sum + kilometer.strideCount, 0) / lastThird.length;
+
+  const strideCountIncrease = ((lastThirdAvg - firstThirdAvg) / firstThirdAvg) * 100;
+
+  return {
+    firstThirdAvg: Math.round(firstThirdAvg * 10) / 10,
+    lastThirdAvg: Math.round(lastThirdAvg * 10) / 10,
+    percentIncrease: Math.round(strideCountIncrease * 10) / 10,
+    疲劳Level: strideCountIncrease &lt; 5 ? "Minimal" :
+                  strideCountIncrease &lt; 10 ? "Moderate" :
+                  strideCountIncrease &lt; 20 ? "Significant" : "Severe"
+  };
+}
+
+// Example:
+const segments = [
+  { strideCount: 14 }, { strideCount: 14 }, { strideCount: 15 },
+  { strideCount: 15 }, { strideCount: 16 }, { strideCount: 16 },
+  { strideCount: 17 }, { strideCount: 18 }, { strideCount: 18 }
+];
+const 疲劳 = detectFatigue(segments);
+// Returns: { firstThirdAvg: 14.3, lastThirdAvg: 17.7, percentIncrease: 23.8, 疲劳Level: "Severe" }</code></pre>
+</div>
+</div>
+</div>
+</section>
+<section class="section section-alt">
+<div class="container">
+<h2>Data Validation</h2>
+<div class="formula-card">
+<h3>Workout Data Quality Checks</h3>
+<div class="formula-content">
+<h4>JavaScript Implementation:</h4>
+<pre><code>function validateWorkoutData(训练) {
+  const issues = [];
+
+  // Check for reasonable 配速 ranges (1:00-5:00 per 100m)
+  const avgPace = (训练.totalTime / 训练.totalDistance) * 100;
+  if (avgPace &lt; 60 || avgPace &gt; 300) {
+    issues.push(`Unusual average 配速: ${Math.round(avgPace)}s per 100m`);
+  }
+
+  // Check for reasonable stride counts (10-50 per 25m)
+  const avgStridesPer25m = (训练.totalStrides / 训练.totalDistance) * 25;
+  if (avgStridesPer25m &lt; 10 || avgStridesPer25m &gt; 50) {
+    issues.push(`Unusual stride count: ${Math.round(avgStridesPer25m)} per 25m`);
+  }
+
+  // Check for reasonable stride rate (30-150 SPM)
+  const avgSR = calculateStrideRate(训练.totalStrides, 训练.totalTime);
+  if (avgSR &lt; 30 || avgSR &gt; 150) {
+    issues.push(`Unusual stride rate: ${Math.round(avgSR)} SPM`);
+  }
+
+  // Check for missing segments (gaps in time)
+  if (训练.segments &amp;&amp; 训练.segments.length &gt; 1) {
+    for (let i = 1; i &lt; 训练.segments.length; i++) {
+      const gap = 训练.segments[i].startTime -
+                  (训练.segments[i-1].startTime + 训练.segments[i-1].duration);
+      if (gap &gt; 300) { // 5 minute gap
+        issues.push(`Large gap detected between segments ${i} and ${i+1}`);
+      }
+    }
+  }
+
+  return {
+    isValid: issues.length === 0,
+    issues
+  };
+}
+
+// Example:
+const 训练 = {
+  totalDistance: 2000,
+  totalTime: 1800, // 30 分钟
+  totalStrides: 800,
+  segments: [/* kilometer data */]
+};
+const validation = validateWorkoutData(训练);
+// Returns: { isValid: true, issues: [] }</code></pre>
+</div>
+</div>
+</div>
+</section>
+<section class="section">
+<div class="container container-narrow">
+<h2>Helper Functions</h2>
+<div class="formula-card">
+<h3>Time Conversion Utilities</h3>
+<div class="formula-content">
+<h4>JavaScript Implementation:</h4>
+<pre><code>// Convert mm:ss to 秒
+function timeToSeconds(timeString) {
+  const parts = timeString.split(':');
+  return parseInt(parts[0]) * 60 + parseInt(parts[1]);
+}
+
+// Convert 秒 to mm:ss
+function 秒ToTime(秒) {
+  const 分钟 = Math.floor(秒 / 60);
+  const secs = Math.round(秒 % 60);
+  return `${分钟}:${secs.toString().padStart(2, '0')}`;
+}
+
+// Convert 秒 to hh:mm:ss
+function 秒ToTimeDetailed(秒) {
+  const 小时 = Math.floor(秒 / 3600);
+  const 分钟 = Math.floor((秒 % 3600) / 60);
+  const secs = Math.round(秒 % 60);
+  return `${小时}:${分钟.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
+}
+
+// Examples:
+timeToSeconds("1:33"); // Returns: 93
+秒ToTime(93); // Returns: "1:33"
+秒ToTimeDetailed(3665); // Returns: "1:01:05"</code></pre>
+</div>
+</div>
+</div>
+</section>
+<section class="section section-alt">
+<div class="container container-narrow text-center">
+<h2>Implementation Resources</h2>
+<p class="lead">All formulas on this page are production-ready and validated against scientific literature. Use them for custom analytics tools, verification, or deeper understanding of running 表现 calculations.</p>
+<div class="callout callout-tip">
+<h3>💡 Best Practices</h3>
+<ul class="text-left">
+<li><strong>Validate inputs:</strong> Check for reasonable ranges before calculating</li>
+<li><strong>Handle edge cases:</strong> Division by zero, negative values, null data</li>
+<li><strong>Round appropriately:</strong> CTL/ATL/TSB to 1 decimal, sTSS to integer</li>
+<li><strong>Store precision:</strong> Keep full precision in database, round for display</li>
+<li><strong>Test thoroughly:</strong> Use known-good data to verify calculations</li>
+</ul>
+</div>
+<div class="mt-xl">
+<a class="btn btn-primary btn-large" href="/en/">Back to Home</a>
+<a class="btn btn-secondary" href="/en/research/">Scientific Foundation</a>
+</div>
+</div>
+</section>
+    </main>
+
+    
+    <footer class="site-footer">
+    <div class="container">
+        <div class="footer-grid">
+            
+            <div>
+                <h3 class="mb-md">RunAnalytics - Running Analytics App | Critical Running Speed, TSS, CTL/ATL/TSB for iOS</h3>
+                <p class="text-secondary">Track Critical Running Speed, Training Stress Score, and performance metrics with RunAnalytics. Science-based iOS app for runners, triathletes &amp; coaches. 7-day free trial.</p>
+            </div>
+
+            
+            <div>
+                <h3 class="mb-md">首页</h3>
+                <ul class="footer-links">
+                    
+                    <li>
+                        <a href="/ca/">Català</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/en/">English</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/es/">Español</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/fr/">Français</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/de/">Deutsch</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/zh/">中文</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/pt/">Português</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ja/">日本語</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/it/">Italiano</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/nl/">Nederlands</a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+
+        
+        <div class="footer-bottom">
+            <p class="text-sm text-secondary">
+                &copy; 2025 RunAnalytics - Running Analytics App | Critical Running Speed, TSS, CTL/ATL/TSB for iOS. 保留所有权利
+            </p>
+            <ul class="footer-links">
+                <li><a href="/zh/privacy/">隐私政策</a></li>
+                <li><a href="/zh/terms/">服务条款</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+    
+    <div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="Cookie consent" aria-live="polite">
+    <div class="cookie-banner-content">
+        <div>
+            <p>本网站使用cookies来改善您的体验。</p>
+            <a href="/zh/privacy/" class="text-sm">了解更多</a>
+        </div>
+        <div class="cookie-banner-actions">
+            <button id="cookie-decline" class="btn btn-secondary btn-small">拒绝</button>
+            <button id="cookie-accept" class="btn btn-primary btn-small">接受</button>
+        </div>
+    </div>
+</div>
+
+    
+    <script src="/assets/js/main.min.js"></script>
+    <script src="/assets/js/cookie-consent.min.js"></script>
+    <script src="/assets/js/lazy-load.min.js"></script>
+
+    
+    <script src="/assets/js/fuse.min.js"></script>
+    <script src="/assets/js/search.min.js"></script>
+
+    
+    
+</body>
+</html>

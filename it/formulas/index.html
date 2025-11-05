@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+    <title>Formule di Prestazione della Corsa: Calcoli CRS, TSS, CTL/ATL</title>
+    <meta name="description" content="Formule complete di prestazione della corsa con esempi di codice. Calcola CRS, rTSS, CTL/ATL/TSB, efficienza. Per sviluppatori e allenatori.">
+    <meta name="author" content="Albert Arno">
+
+    
+    
+    <meta name="keywords" content="formule corsa, formula CRS, calcolo TSS, metriche corsa, JavaScript">
+    
+
+    
+    <link rel="canonical" href="https://run.analyticszone.app/it/formulas/">
+
+    
+    
+    <meta property="article:published_time" content="2025-01-15T10:00:00Z">
+    <meta property="article:modified_time" content="2025-10-08T14:30:00Z">
+    <meta property="article:author" content="Albert Arno">
+    
+
+    
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://run.analyticszone.app/it/formulas/">
+    <meta property="og:title" content="Formule di Prestazione della Corsa: Calcoli CRS, TSS, CTL/ATL">
+    <meta property="og:description" content="Formule complete di prestazione della corsa con esempi di codice. Calcola CRS, rTSS, CTL/ATL/TSB, efficienza. Per sviluppatori e allenatori.">
+    
+    <meta property="og:image" content="https://run.analyticszone.app/assets/images/run-analytics-og.jpg">
+    
+    <meta property="og:locale" content="it_IT">
+    <meta property="og:site_name" content="RunAnalytics - Running Analytics App | Critical Running Speed, TSS, CTL/ATL/TSB for iOS">
+
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://run.analyticszone.app/it/formulas/">
+    <meta name="twitter:title" content="Formule di Prestazione della Corsa: Calcoli CRS, TSS, CTL/ATL">
+    <meta name="twitter:description" content="Formule complete di prestazione della corsa con esempi di codice. Calcola CRS, rTSS, CTL/ATL/TSB, efficienza. Per sviluppatori e allenatori.">
+    
+    <meta name="twitter:image" content="https://run.analyticszone.app/assets/images/run-analytics-og.jpg">
+    
+
+    
+    
+    <link rel="alternate" hreflang="ca" href="https://run.analyticszone.app/ca/formulas/">
+    
+    <link rel="alternate" hreflang="en" href="https://run.analyticszone.app/en/formulas/">
+    
+    <link rel="alternate" hreflang="es" href="https://run.analyticszone.app/es/formulas/">
+    
+    <link rel="alternate" hreflang="fr" href="https://run.analyticszone.app/fr/formulas/">
+    
+    <link rel="alternate" hreflang="de" href="https://run.analyticszone.app/de/formulas/">
+    
+    <link rel="alternate" hreflang="zh" href="https://run.analyticszone.app/zh/formulas/">
+    
+    <link rel="alternate" hreflang="pt" href="https://run.analyticszone.app/pt/formulas/">
+    
+    <link rel="alternate" hreflang="ja" href="https://run.analyticszone.app/ja/formulas/">
+    
+    <link rel="alternate" hreflang="it" href="https://run.analyticszone.app/it/formulas/">
+    
+    <link rel="alternate" hreflang="nl" href="https://run.analyticszone.app/nl/formulas/">
+    
+    <link rel="alternate" hreflang="x-default" href="https://run.analyticszone.app/en/formulas/">
+
+    
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/icons/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/icons/apple-touch-icon.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#0066CC">
+
+    
+    <link rel="stylesheet" href="/assets/css/main.min.css">
+
+    
+    
+
+    
+    
+
+    
+    
+</head>
+<body>
+    
+    <a href="#main-content" class="skip-link">Vai al contenuto</a>
+
+    
+    <header class="site-header">
+    <div class="container">
+        <div class="header-inner">
+            
+            <a href="/it/" class="site-logo">
+                <picture>
+                    <source srcset="/assets/images/logo-dark.png" media="(prefers-color-scheme: dark)">
+                    <img src="/assets/images/logo.png" alt="RunAnalytics - Running Analytics App | Critical Running Speed, TSS, CTL/ATL/TSB for iOS" width="40" height="40">
+                </picture>
+                <span class="logo-text">RunAnalytics</span>
+            </a>
+
+            
+            <nav class="nav-primary" id="nav-primary" role="navigation" aria-label="Main navigation">
+                <ul>
+                    
+                    <li>
+                        
+                        
+                        <a href="/it/"
+                           
+                           aria-current="">
+                            Home
+                        </a>
+                        
+                    </li>
+                    
+                    <li class="has-submenu">
+                        
+                        
+                        <button class="dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+                            Impara
+                            <svg class="dropdown-icon" width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <polyline points="3 4.5 6 7.5 9 4.5"></polyline>
+                            </svg>
+                        </button>
+                        <ul class="submenu">
+                            
+                            <li>
+                                <a href="/it/getting-started/"
+                                   
+                                   aria-current="">
+                                    Inizia
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/it/crs/"
+                                   
+                                   aria-current="">
+                                    CRS
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/it/training-zones/"
+                                   
+                                   aria-current="">
+                                    Zone di Allenamento
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/it/training-load/"
+                                   
+                                   aria-current="">
+                                    Carico di Allenamento
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/it/stss-calculator/"
+                                   
+                                   aria-current="">
+                                    Calcolatore sTSS
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        
+                    </li>
+                    
+                    <li class="has-submenu">
+                        
+                        
+                        <button class="dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+                            Scienza
+                            <svg class="dropdown-icon" width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <polyline points="3 4.5 6 7.5 9 4.5"></polyline>
+                            </svg>
+                        </button>
+                        <ul class="submenu">
+                            
+                            <li>
+                                <a href="/it/research/"
+                                   
+                                   aria-current="">
+                                    Ricerca
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/it/formulas/"
+                                   class="active"
+                                   aria-current="page">
+                                    Formule
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/it/efficiency/"
+                                   
+                                   aria-current="">
+                                    Efficienza
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/it/stride-mechanics/"
+                                   
+                                   aria-current="">
+                                    Meccanica del Passo
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/it/bibliography/"
+                                   
+                                   aria-current="">
+                                    Bibliografia
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        
+                    </li>
+                    
+                    <li>
+                        
+                        
+                        <a href="/it/contact/"
+                           
+                           aria-current="">
+                            Contatto
+                        </a>
+                        
+                    </li>
+                    
+                </ul>
+
+                
+                <div class="search-container">
+                    <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.35-4.35"></path>
+                    </svg>
+                    <input
+                        type="search"
+                        id="site-search"
+                        class="search-input"
+                        aria-expanded="false"
+                        aria-haspopup="listbox"
+                        aria-autocomplete="list"
+                        autocomplete="off"
+                        spellcheck="false"
+                    />
+                    <div id="search-results" class="search-results hidden" role="region" aria-live="polite"></div>
+                </div>
+
+                
+                <select class="language-selector" id="language-select" aria-label="Seleziona lingua">
+                    
+                    <option value="ca" >
+                        Català
+                    </option>
+                    
+                    <option value="en" >
+                        English
+                    </option>
+                    
+                    <option value="es" >
+                        Español
+                    </option>
+                    
+                    <option value="fr" >
+                        Français
+                    </option>
+                    
+                    <option value="de" >
+                        Deutsch
+                    </option>
+                    
+                    <option value="zh" >
+                        中文
+                    </option>
+                    
+                    <option value="pt" >
+                        Português
+                    </option>
+                    
+                    <option value="ja" >
+                        日本語
+                    </option>
+                    
+                    <option value="it" selected>
+                        Italiano
+                    </option>
+                    
+                    <option value="nl" >
+                        Nederlands
+                    </option>
+                    
+                </select>
+            </nav>
+
+            
+            <button class="menu-toggle" id="menu-toggle" aria-label="Attiva/disattiva menu" aria-expanded="false" aria-controls="nav-primary">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </div>
+</header>
+
+    
+    <main id="main-content" class="main-content">
+        <section class="hero hero-small">
+    <div class="container">
+        <h1>Riferimento Tecnico e Formule</h1>
+        <p class="lead">Implementazione Matematica Completa</p>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container container-narrow">
+        <h2>Guida all'Implementazione</h2>
+        <p class="lead">Questa pagina fornisce formule copia-incolla e metodi di calcolo passo-passo per tutte le metriche RunAnalytics. Usale per implementazioni personalizzate, verifica, o comprensione più profonda.</p>
+
+        <div class="callout callout-warning">
+            <h3>⚠️ Note di Implementazione</h3>
+            <ul>
+                <li>Tutti i tempi dovrebbero essere convertiti in secondi per i calcoli</li>
+                <li>Il ritmo di corsa è inverso (% più alta = ritmo più lento)</li>
+                <li>Valida sempre gli input per range ragionevoli</li>
+                <li>Gestisci casi limite (divisione per zero, valori negativi)</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="section section-alt">
+    <div class="container">
+        <h2>Metriche Prestazioni Principali</h2>
+
+        <div class="formula-card">
+            <h3>Critical Run Speed (CRS)</h3>
+            <div class="formula-content">
+                <h4>Formula:</h4>
+                <div class="formula-box-large">
+                    <div class="formula">
+                        CRS (m/s) = (D₂ - D₁) / (T₂ - T₁)
+                    </div>
+                    <div class="formula">
+                        Ritmo CRS/100m (secondi) = (T₄₀₀ - T₂₀₀) / 2
+                    </div>
+                </div>
+
+                <div class="callout callout-info mt-lg">
+                    <h4>🧪 Calcolatore Interattivo - Testa la Formula</h4>
+                    <div class="calculator-grid">
+                        <div class="input-group">
+                            <label for="css-d1">Distanza 1 (metri):</label>
+                            <input type="number" id="css-d1" value="200" min="50" max="1000" step="50">
+                        </div>
+                        <div class="input-group">
+                            <label for="css-t1">Tempo 1 (mm:ss):</label>
+                            <input type="text" id="css-t1" value="2:30" placeholder="2:30" pattern="[0-9]{1,2}:[0-9]{2}">
+                        </div>
+                        <div class="input-group">
+                            <label for="css-d2">Distanza 2 (metri):</label>
+                            <input type="number" id="css-d2" value="400" min="100" max="2000" step="50">
+                        </div>
+                        <div class="input-group">
+                            <label for="css-t2">Tempo 2 (mm:ss):</label>
+                            <input type="text" id="css-t2" value="6:08" placeholder="6:08" pattern="[0-9]{1,2}:[0-9]{2}">
+                        </div>
+                        <div class="result-group">
+                            <button onclick="calculateCRS()" class="btn btn-primary">Calcola CRS</button>
+                            <div id="crs-result" class="result-display"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <h4>Implementazione JavaScript:</h4>
+                <div class="code-block">
+                    <pre><code>function calculateCRS(distance1, time1, distance2, time2) {
+    // Converti tempi in secondi se necessario
+    const t1_seconds = typeof time1 === 'string' ? timeToSeconds(time1) : time1;
+    const t2_seconds = typeof time2 === 'string' ? timeToSeconds(time2) : time2;
+    
+    // Calcola CRS in m/s
+    const crs_ms = (distance2 - distance1) / (t2_seconds - t1_seconds);
+    
+    // Converti in ritmo per 100m
+    const pace_per_100m = 100 / crs_ms;
+    
+    return {
+        crs_ms: crs_ms,
+        pace_per_100m: pace_per_100m,
+        pace_per_km: pace_per_100m * 10,
+        pace_per_mile: pace_per_100m * 16.09344
+    };
+}
+
+function timeToSeconds(timeString) {
+    const [minutes, seconds] = timeString.split(':').map(Number);
+    return minutes * 60 + seconds;
+}</code></pre>
+                </div>
+
+                <h4>Validazione Input:</h4>
+                <div class="code-block">
+                    <pre><code>function validateCRSInputs(d1, t1, d2, t2) {
+    // Controlla che d2 > d1
+    if (d2 <= d1) throw new Error("Distanza 2 deve essere maggiore di Distanza 1");
+    
+    // Controlla che t2 > t1
+    if (t2 <= t1) throw new Error("Tempo 2 deve essere maggiore di Tempo 1");
+    
+    // Controlla range ragionevoli
+    if (d1 < 50 || d1 > 2000) throw new Error("Distanza 1 fuori range (50-2000m)");
+    if (d2 < 100 || d2 > 5000) throw new Error("Distanza 2 fuori range (100-5000m)");
+    
+    // Controlla che i ritmi siano ragionevoli (non più lenti di 10 min/km)
+    const pace1 = t1 / (d1 / 1000);
+    const pace2 = t2 / (d2 / 1000);
+    if (pace1 > 600 || pace2 > 600) throw new Error("Ritmo troppo lento");
+    
+    return true;
+}</code></pre>
+                </div>
+            </div>
+        </div>
+
+        <div class="formula-card">
+            <h3>Training Stress Score (TSS)</h3>
+            <div class="formula-content">
+                <h4>Formula:</h4>
+                <div class="formula-box-large">
+                    <div class="formula">
+                        TSS = (Durata_secondi × IF²) / 36
+                    </div>
+                    <div class="formula">
+                        IF = Ritmo_Normalizzato / CRS_Ritmo
+                    </div>
+                </div>
+
+                <h4>Implementazione JavaScript:</h4>
+                <div class="code-block">
+                    <pre><code>function calculateTSS(duration_seconds, normalized_pace, crs_pace) {
+    // Calcola Intensity Factor (IF)
+    const intensity_factor = normalized_pace / crs_pace;
+    
+    // Calcola TSS
+    const tss = (duration_seconds * Math.pow(intensity_factor, 2)) / 36;
+    
+    return Math.round(tss);
+}
+
+function calculateNormalizedPace(paces, durations) {
+    // Per corse a ritmo costante, NP = ritmo medio
+    // Per corse con variazioni, usa media ponderata
+    let total_weighted_pace = 0;
+    let total_duration = 0;
+    
+    for (let i = 0; i < paces.length; i++) {
+        total_weighted_pace += paces[i] * durations[i];
+        total_duration += durations[i];
+    }
+    
+    return total_weighted_pace / total_duration;
+}</code></pre>
+                </div>
+            </div>
+        </div>
+
+        <div class="formula-card">
+            <h3>Zone di Allenamento</h3>
+            <div class="formula-content">
+                <h4>Formule Zone (basate su CRS):</h4>
+                <div class="formula-box-large">
+                    <div class="formula">
+                        Zona 1: > 129% CRS (Recupero Attivo)
+                    </div>
+                    <div class="formula">
+                        Zona 2: 114-129% CRS (Base Aerobica)
+                    </div>
+                    <div class="formula">
+                        Zona 3: 106-113% CRS (Aerobico)
+                    </div>
+                    <div class="formula">
+                        Zona 4: 100-105% CRS (Soglia)
+                    </div>
+                    <div class="formula">
+                        Zona 5: < 100% CRS (VO2max)
+                    </div>
+                </div>
+
+                <h4>Implementazione JavaScript:</h4>
+                <div class="code-block">
+                    <pre><code>function calculateTrainingZones(crs_pace_per_km) {
+    return {
+        zone1: {
+            name: "Recupero Attivo",
+            min_pace: crs_pace_per_km * 1.29,
+            max_pace: Infinity,
+            percentage: "129%+"
+        },
+        zone2: {
+            name: "Base Aerobica", 
+            min_pace: crs_pace_per_km * 1.14,
+            max_pace: crs_pace_per_km * 1.29,
+            percentage: "114-129%"
+        },
+        zone3: {
+            name: "Aerobico",
+            min_pace: crs_pace_per_km * 1.06,
+            max_pace: crs_pace_per_km * 1.13,
+            percentage: "106-113%"
+        },
+        zone4: {
+            name: "Soglia",
+            min_pace: crs_pace_per_km * 1.00,
+            max_pace: crs_pace_per_km * 1.05,
+            percentage: "100-105%"
+        },
+        zone5: {
+            name: "VO2max",
+            min_pace: 0,
+            max_pace: crs_pace_per_km * 1.00,
+            percentage: "<100%"
+        }
+    };
+}
+
+function getZoneForPace(pace, zones) {
+    for (const [zoneNum, zone] of Object.entries(zones)) {
+        if (pace >= zone.min_pace && pace <= zone.max_pace) {
+            return {
+                zone: zoneNum,
+                name: zone.name,
+                percentage: zone.percentage
+            };
+        }
+    }
+    return null;
+}</code></pre>
+                </div>
+            </div>
+        </div>
+
+        <div class="formula-card">
+            <h3>Performance Management Chart (PMC)</h3>
+            <div class="formula-content">
+                <h4>Formule:</h4>
+                <div class="formula-box-large">
+                    <div class="formula">
+                        CTL_oggi = CTL_ieri + (TSS_oggi - CTL_ieri) / 42
+                    </div>
+                    <div class="formula">
+                        ATL_oggi = ATL_ieri + (TSS_oggi - ATL_ieri) / 7
+                    </div>
+                    <div class="formula">
+                        TSB_oggi = CTL_ieri - ATL_oggi
+                    </div>
+                </div>
+
+                <h4>Implementazione JavaScript:</h4>
+                <div class="code-block">
+                    <pre><code>function calculatePMC(tss_history) {
+    let ctl = 0;
+    let atl = 0;
+    const pmc_data = [];
+    
+    for (let i = 0; i < tss_history.length; i++) {
+        const tss_today = tss_history[i] || 0;
+        
+        // Calcola CTL (Chronic Training Load) - 42 giorni
+        ctl = ctl + (tss_today - ctl) / 42;
+        
+        // Calcola ATL (Acute Training Load) - 7 giorni  
+        atl = atl + (tss_today - atl) / 7;
+        
+        // Calcola TSB (Training Stress Balance)
+        const tsb = ctl - atl;
+        
+        pmc_data.push({
+            date: i,
+            tss: tss_today,
+            ctl: Math.round(ctl * 10) / 10,
+            atl: Math.round(atl * 10) / 10,
+            tsb: Math.round(tsb * 10) / 10
+        });
+    }
+    
+    return pmc_data;
+}</code></pre>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <h2>Metriche Biomeccaniche</h2>
+
+        <div class="formula-card">
+            <h3>Meccanica del Passo</h3>
+            <div class="formula-content">
+                <h4>Formule:</h4>
+                <div class="formula-box-large">
+                    <div class="formula">
+                        Frequenza Passo (spm) = Passi / (Tempo_minuti / 2)
+                    </div>
+                    <div class="formula">
+                        Lunghezza Passo (m) = Distanza / Numero_Passi
+                    </div>
+                    <div class="formula">
+                        DPS = Distanza_per_Passo (metri)
+                    </div>
+                </div>
+
+                <h4>Implementazione JavaScript:</h4>
+                <div class="code-block">
+                    <pre><code>function calculateStrideMetrics(distance_m, duration_s, steps) {
+    // Calcola frequenza passo (passi per minuto)
+    const cadence = (steps / (duration_s / 60));
+    
+    // Calcola lunghezza passo
+    const stride_length = distance_m / steps;
+    
+    // Calcola DPS (Distance Per Stride)
+    const dps = stride_length;
+    
+    // Calcola velocità da cadenza e lunghezza passo
+    const speed_ms = (cadence / 60) * stride_length;
+    
+    return {
+        cadence: Math.round(cadence),
+        stride_length: Math.round(stride_length * 100) / 100,
+        dps: Math.round(dps * 100) / 100,
+        speed_ms: Math.round(speed_ms * 100) / 100
+    };
+}</code></pre>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section section-alt">
+    <div class="container">
+        <h2>Utilità e Conversioni</h2>
+
+        <div class="formula-card">
+            <h3>Conversioni Tempo e Ritmo</h3>
+            <div class="formula-content">
+                <h4>Implementazione JavaScript:</h4>
+                <div class="code-block">
+                    <pre><code>// Converti mm:ss in secondi
+function timeToSeconds(timeString) {
+    const parts = timeString.split(':');
+    if (parts.length === 2) {
+        return parseInt(parts[0]) * 60 + parseInt(parts[1]);
+    } else if (parts.length === 3) {
+        return parseInt(parts[0]) * 3600 + parseInt(parts[1]) * 60 + parseInt(parts[2]);
+    }
+    return 0;
+}
+
+// Converti secondi in mm:ss
+function secondsToTime(seconds) {
+    const mins = Math.floor(seconds / 60);
+    const secs = Math.floor(seconds % 60);
+    return `${mins}:${secs.toString().padStart(2, '0')}`;
+}
+
+// Converti ritmo per km in velocità m/s
+function paceToSpeed(pace_per_km_seconds) {
+    return 1000 / pace_per_km_seconds;
+}
+
+// Converti velocità m/s in ritmo per km
+function speedToPace(speed_ms) {
+    return 1000 / speed_ms;
+}
+
+// Converti miglia in km
+function milesToKm(miles) {
+    return miles * 1.609344;
+}
+
+// Converti km in miglia
+function kmToMiles(km) {
+    return km / 1.609344;
+}</code></pre>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+function calculateCRS() {
+    try {
+        const d1 = parseFloat(document.getElementById('css-d1').value);
+        const t1_str = document.getElementById('css-t1').value;
+        const d2 = parseFloat(document.getElementById('css-d2').value);
+        const t2_str = document.getElementById('css-t2').value;
+        
+        const t1 = timeToSeconds(t1_str);
+        const t2 = timeToSeconds(t2_str);
+        
+        if (d2 <= d1) {
+            throw new Error("Distanza 2 deve essere maggiore di Distanza 1");
+        }
+        if (t2 <= t1) {
+            throw new Error("Tempo 2 deve essere maggiore di Tempo 1");
+        }
+        
+        const crs_ms = (d2 - d1) / (t2 - t1);
+        const pace_per_100m = 100 / crs_ms;
+        const pace_per_km = pace_per_100m * 10;
+        
+        const result = `
+            <strong>Risultati CRS:</strong><br>
+            CRS: ${crs_ms.toFixed(2)} m/s<br>
+            Ritmo per 100m: ${secondsToTime(pace_per_100m)}<br>
+            Ritmo per km: ${secondsToTime(pace_per_km)}
+        `;
+        
+        document.getElementById('crs-result').innerHTML = result;
+        document.getElementById('crs-result').className = 'result-display success';
+        
+    } catch (error) {
+        document.getElementById('crs-result').innerHTML = `<strong>Errore:</strong> ${error.message}`;
+        document.getElementById('crs-result').className = 'result-display error';
+    }
+}
+
+function timeToSeconds(timeString) {
+    const parts = timeString.split(':');
+    if (parts.length === 2) {
+        return parseInt(parts[0]) * 60 + parseInt(parts[1]);
+    }
+    return 0;
+}
+
+function secondsToTime(seconds) {
+    const mins = Math.floor(seconds / 60);
+    const secs = Math.floor(seconds % 60);
+    return `${mins}:${secs.toString().padStart(2, '0')}`;
+}
+</script>
+    </main>
+
+    
+    <footer class="site-footer">
+    <div class="container">
+        <div class="footer-grid">
+            
+            <div>
+                <h3 class="mb-md">RunAnalytics - Running Analytics App | Critical Running Speed, TSS, CTL/ATL/TSB for iOS</h3>
+                <p class="text-secondary">Track Critical Running Speed, Training Stress Score, and performance metrics with RunAnalytics. Science-based iOS app for runners, triathletes &amp; coaches. 7-day free trial.</p>
+            </div>
+
+            
+            <div>
+                <h3 class="mb-md">Home</h3>
+                <ul class="footer-links">
+                    
+                    <li>
+                        <a href="/ca/">Català</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/en/">English</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/es/">Español</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/fr/">Français</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/de/">Deutsch</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/zh/">中文</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/pt/">Português</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ja/">日本語</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/it/">Italiano</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/nl/">Nederlands</a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+
+        
+        <div class="footer-bottom">
+            <p class="text-sm text-secondary">
+                &copy; 2025 RunAnalytics - Running Analytics App | Critical Running Speed, TSS, CTL/ATL/TSB for iOS. Tutti i diritti riservati
+            </p>
+            <ul class="footer-links">
+                <li><a href="/it/privacy/">Privacy</a></li>
+                <li><a href="/it/terms/">Termini</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+    
+    <div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="Cookie consent" aria-live="polite">
+    <div class="cookie-banner-content">
+        <div>
+            <p>Questo sito utilizza cookie per migliorare la tua esperienza.</p>
+            <a href="/it/privacy/" class="text-sm">Scopri di più</a>
+        </div>
+        <div class="cookie-banner-actions">
+            <button id="cookie-decline" class="btn btn-secondary btn-small">Rifiuta</button>
+            <button id="cookie-accept" class="btn btn-primary btn-small">Accetta</button>
+        </div>
+    </div>
+</div>
+
+    
+    <script src="/assets/js/main.min.js"></script>
+    <script src="/assets/js/cookie-consent.min.js"></script>
+    <script src="/assets/js/lazy-load.min.js"></script>
+
+    
+    <script src="/assets/js/fuse.min.js"></script>
+    <script src="/assets/js/search.min.js"></script>
+
+    
+    
+</body>
+</html>

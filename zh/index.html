@@ -1,0 +1,1118 @@
+<!DOCTYPE html>
+<html lang="zh" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+    <title>RunAnalytics：iOS游泳性能跟踪与分析应用</title>
+    <meta name="description" content="跟踪游泳指标，计算CRS和rTSS，通过专业分析来分析训练负荷。为竞技游泳运动员和铁人三项运动员提供免费计算器。7天免费试用。">
+    <meta name="author" content="Albert Arno">
+
+    
+    
+    <meta name="keywords" content="游泳跟踪应用, 游泳分析, CRS计算器, 游泳性能, rTSS">
+    
+
+    
+    <link rel="canonical" href="https://run.analyticszone.app/zh/">
+
+    
+    
+    <meta property="article:published_time" content="2025-01-15T10:00:00Z">
+    <meta property="article:modified_time" content="2025-10-08T14:30:00Z">
+    <meta property="article:author" content="Albert Arno">
+    
+
+    
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://run.analyticszone.app/zh/">
+    <meta property="og:title" content="RunAnalytics：iOS游泳性能跟踪与分析应用">
+    <meta property="og:description" content="跟踪游泳指标，计算CRS和rTSS，通过专业分析来分析训练负荷。为竞技游泳运动员和铁人三项运动员提供免费计算器。7天免费试用。">
+    
+    <meta property="og:image" content="https://run.analyticszone.app/assets/images/run-analytics-og.jpg">
+    
+    <meta property="og:locale" content="zh_CN">
+    <meta property="og:site_name" content="RunAnalytics - Running Analytics App | Critical Running Speed, TSS, CTL/ATL/TSB for iOS">
+
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://run.analyticszone.app/zh/">
+    <meta name="twitter:title" content="RunAnalytics：iOS游泳性能跟踪与分析应用">
+    <meta name="twitter:description" content="跟踪游泳指标，计算CRS和rTSS，通过专业分析来分析训练负荷。为竞技游泳运动员和铁人三项运动员提供免费计算器。7天免费试用。">
+    
+    <meta name="twitter:image" content="https://run.analyticszone.app/assets/images/run-analytics-og.jpg">
+    
+
+    
+    
+    <link rel="alternate" hreflang="ca" href="https://run.analyticszone.app/ca/">
+    
+    <link rel="alternate" hreflang="en" href="https://run.analyticszone.app/en/">
+    
+    <link rel="alternate" hreflang="es" href="https://run.analyticszone.app/es/">
+    
+    <link rel="alternate" hreflang="fr" href="https://run.analyticszone.app/fr/">
+    
+    <link rel="alternate" hreflang="de" href="https://run.analyticszone.app/de/">
+    
+    <link rel="alternate" hreflang="zh" href="https://run.analyticszone.app/zh/">
+    
+    <link rel="alternate" hreflang="pt" href="https://run.analyticszone.app/pt/">
+    
+    <link rel="alternate" hreflang="ja" href="https://run.analyticszone.app/ja/">
+    
+    <link rel="alternate" hreflang="it" href="https://run.analyticszone.app/it/">
+    
+    <link rel="alternate" hreflang="nl" href="https://run.analyticszone.app/nl/">
+    
+    <link rel="alternate" hreflang="x-default" href="https://run.analyticszone.app/en/">
+
+    
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/icons/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/icons/apple-touch-icon.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#0066CC">
+
+    
+    <link rel="stylesheet" href="/assets/css/main.min.css">
+
+    
+    
+
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "RunAnalytics - Running Analytics App | Critical Running Speed, TSS, CTL/ATL/TSB for iOS",
+      "url": "https://run.analyticszone.app",
+      "logo": "https://run.analyticszone.app/assets/images/logo.png",
+      "description": "Track Critical Running Speed, Training Stress Score, and performance metrics with RunAnalytics. Science-based iOS app for runners, triathletes &amp; coaches. 7-day free trial.",
+      "author": "Albert Arno",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "Customer Service",
+        "email": "analyticszone@onmedic.org"
+      },
+      "sameAs": [
+        "https://twitter.com/runanalytics",
+        "https://apps.apple.com/app/runanalytics/id6737283749"
+      ]
+    }
+    </script>
+
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "RunAnalytics",
+      "description": "Scientific running analytics app with Critical Run Speed (CRS), Training Stress Score (TSS), and CTL/ATL/TSB metrics. Privacy-first app processes all data locally on iPhone.",
+      "url": "https://run.analyticszone.app",
+      "applicationCategory": ["HealthApplication", "FitnessApplication"],
+      "operatingSystem": "iOS",
+      "softwareVersion": "Latest",
+      "author": {
+        "@type": "Organization",
+        "name": "Albert Arno"
+      },
+      "offers": [
+        {
+          "@type": "Offer",
+          "name": "Free Trial",
+          "description": "7-day free trial of RunAnalytics premium features",
+          "price": "0",
+          "priceCurrency": "EUR",
+          "category": "Trial Subscription",
+          "url": "https://apps.apple.com/app/runanalytics/id6737283749"
+        },
+        {
+          "@type": "Offer",
+          "name": "Monthly Subscription",
+          "description": "Monthly access to all RunAnalytics premium features",
+          "price": "3.99",
+          "priceCurrency": "EUR",
+          "billingDuration": "P1M",
+          "category": "Subscription",
+          "url": "https://apps.apple.com/app/runanalytics/id6737283749"
+        },
+        {
+          "@type": "Offer",
+          "name": "Annual Subscription",
+          "description": "Annual access to all RunAnalytics premium features at 18% discount",
+          "price": "39",
+          "priceCurrency": "EUR",
+          "billingDuration": "P1Y",
+          "category": "Subscription",
+          "url": "https://apps.apple.com/app/runanalytics/id6737283749"
+        }
+      ],
+      "downloadUrl": "https://apps.apple.com/app/runanalytics/id6737283749",
+      "featureList": [
+        "Critical Run Speed (CRS) calculation",
+        "Training Stress Score (TSS) tracking",
+        "CTL (Chronic Training Load) metrics",
+        "ATL (Acute Training Load) metrics",
+        "TSB (Training Stress Balance) indicators",
+        "7 personalized training zones",
+        "Kilometer-by-kilometer analysis",
+        "Weekly, monthly, and yearly comparisons",
+        "Running efficiency tracking",
+        "Personal records (PR) detection",
+        "Apple Health app integration",
+        "Export in JSON, CSV, HTML, PDF formats",
+        "100% local data processing",
+        "Privacy-first architecture",
+        "Native SwiftUI interface"
+      ],
+      "screenshot": [
+        "https://run.analyticszone.app/assets/images/screenshots/workouts-list.png",
+        "https://run.analyticszone.app/assets/images/screenshots/workout-detail.png",
+        "https://run.analyticszone.app/assets/images/screenshots/analytics.png",
+        "https://run.analyticszone.app/assets/images/screenshots/performance.png",
+        "https://run.analyticszone.app/assets/images/screenshots/training-zones.png",
+        "https://run.analyticszone.app/assets/images/screenshots/export-options.png"
+      ]
+    }
+    </script>
+
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      "name": "RunAnalytics",
+      "description": "Professional running analytics app with science-based metrics, personalized training zones, and privacy-first data processing",
+      "url": "https://run.analyticszone.app",
+      "image": "https://run.analyticszone.app/assets/images/logo.png",
+      "brand": {
+        "@type": "Brand",
+        "name": "RunAnalytics"
+      },
+      "category": "Fitness & Health Software",
+      "offers": {
+        "@type": "AggregateOffer",
+        "priceCurrency": "EUR",
+        "lowPrice": "0",
+        "highPrice": "39",
+        "offerCount": "3",
+        "offers": [
+          {
+            "@type": "Offer",
+            "name": "7-Day Free Trial",
+            "price": "0",
+            "priceCurrency": "EUR",
+            "url": "https://apps.apple.com/app/runanalytics/id6737283749"
+          },
+          {
+            "@type": "Offer",
+            "name": "Monthly Plan",
+            "price": "3.99",
+            "priceCurrency": "EUR",
+            "billingDuration": "P1M",
+            "url": "https://apps.apple.com/app/runanalytics/id6737283749"
+          },
+          {
+            "@type": "Offer",
+            "name": "Annual Plan",
+            "price": "39",
+            "priceCurrency": "EUR",
+            "billingDuration": "P1Y",
+            "url": "https://apps.apple.com/app/runanalytics/id6737283749"
+          }
+        ]
+      }
+    }
+    </script>
+
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How does RunAnalytics get my running data?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "RunAnalytics syncs with Apple Health to import running workouts recorded by any compatible device or app. This includes smart watches, fitness trackers, and manual entries. The app processes this data locally to calculate advanced metrics."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the CRS test and how do I perform it?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "CRS (Critical Run Speed) is a scientific protocol using 2 maximum effort runs: 5K and 3K with 10-20 minutes rest between. The app calculates your aerobic threshold from these times and automatically adjusts all training zones. Repeat every 6-8 weeks to track progress."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is my data uploaded to the cloud?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. RunAnalytics processes all data locally on your iPhone. There are no external servers, no cloud accounts, no data transfers. You control exports: generate JSON, CSV, HTML, or PDF files and share them however you want."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I use RunAnalytics for trail running?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. RunAnalytics works with any running workout in Apple Health, including trail running. The app adapts to available metrics whether you're on a track or trail, providing relevant analysis for each environment."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What's the difference between monthly and annual plans?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Both plans offer identical features: all metrics, unlimited zones, temporal comparisons, multiple exports, and free updates. The only difference is price: annual saves 18% (equivalent to €3.25/month vs €3.99/month)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I cancel my subscription anytime?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Subscriptions are managed through the App Store, so you can cancel anytime from Settings → [Your Name] → Subscriptions. If you cancel, you'll maintain access until the end of your current billing period."
+          }
+        }
+      ]
+    }
+    </script>
+
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://run.analyticszone.app/zh/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Running Analytics",
+          "item": "https://run.analyticszone.app/zh/#features"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Pricing",
+          "item": "https://run.analyticszone.app/zh/#pricing"
+        }
+      ]
+    }
+    </script>
+
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "RunAnalytics：iOS游泳性能跟踪与分析应用",
+      "description": "跟踪游泳指标，计算CRS和rTSS，通过专业分析来分析训练负荷。为竞技游泳运动员和铁人三项运动员提供免费计算器。7天免费试用。",
+      "url": "https://run.analyticszone.app/zh/",
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "RunAnalytics - Running Analytics App | Critical Running Speed, TSS, CTL/ATL/TSB for iOS",
+        "url": "https://run.analyticszone.app"
+      },
+      "mainEntity": {
+        "@type": "SoftwareApplication",
+        "name": "RunAnalytics"
+      }
+    }
+    </script>
+
+    
+
+    
+    
+
+    
+    
+</head>
+<body>
+    
+    <a href="#main-content" class="skip-link">跳到内容</a>
+
+    
+    <header class="site-header">
+    <div class="container">
+        <div class="header-inner">
+            
+            <a href="/zh/" class="site-logo">
+                <picture>
+                    <source srcset="/assets/images/logo-dark.png" media="(prefers-color-scheme: dark)">
+                    <img src="/assets/images/logo.png" alt="RunAnalytics - Running Analytics App | Critical Running Speed, TSS, CTL/ATL/TSB for iOS" width="40" height="40">
+                </picture>
+                <span class="logo-text">RunAnalytics</span>
+            </a>
+
+            
+            <nav class="nav-primary" id="nav-primary" role="navigation" aria-label="Main navigation">
+                <ul>
+                    
+                    <li>
+                        
+                        
+                        <a href="/zh/"
+                           
+                           aria-current="">
+                            首页
+                        </a>
+                        
+                    </li>
+                    
+                    <li class="has-submenu">
+                        
+                        
+                        <button class="dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+                            学习
+                            <svg class="dropdown-icon" width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <polyline points="3 4.5 6 7.5 9 4.5"></polyline>
+                            </svg>
+                        </button>
+                        <ul class="submenu">
+                            
+                            <li>
+                                <a href="/zh/getting-started/"
+                                   
+                                   aria-current="">
+                                    入门指南
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/zh/crs/"
+                                   
+                                   aria-current="">
+                                    CRS
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/zh/training-zones/"
+                                   
+                                   aria-current="">
+                                    训练区间
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/zh/training-load/"
+                                   
+                                   aria-current="">
+                                    训练负荷
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/zh/stss-calculator/"
+                                   
+                                   aria-current="">
+                                    sTSS计算器
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        
+                    </li>
+                    
+                    <li class="has-submenu">
+                        
+                        
+                        <button class="dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+                            科学
+                            <svg class="dropdown-icon" width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <polyline points="3 4.5 6 7.5 9 4.5"></polyline>
+                            </svg>
+                        </button>
+                        <ul class="submenu">
+                            
+                            <li>
+                                <a href="/zh/research/"
+                                   
+                                   aria-current="">
+                                    研究
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/zh/formulas/"
+                                   
+                                   aria-current="">
+                                    公式
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/zh/efficiency/"
+                                   
+                                   aria-current="">
+                                    效率
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/zh/stride-mechanics/"
+                                   
+                                   aria-current="">
+                                    步幅力学
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/zh/bibliography/"
+                                   
+                                   aria-current="">
+                                    参考文献
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        
+                    </li>
+                    
+                    <li>
+                        
+                        
+                        <a href="/zh/contact/"
+                           
+                           aria-current="">
+                            联系我们
+                        </a>
+                        
+                    </li>
+                    
+                </ul>
+
+                
+                <div class="search-container">
+                    <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.35-4.35"></path>
+                    </svg>
+                    <input
+                        type="search"
+                        id="site-search"
+                        class="search-input"
+                        aria-expanded="false"
+                        aria-haspopup="listbox"
+                        aria-autocomplete="list"
+                        autocomplete="off"
+                        spellcheck="false"
+                    />
+                    <div id="search-results" class="search-results hidden" role="region" aria-live="polite"></div>
+                </div>
+
+                
+                <select class="language-selector" id="language-select" aria-label="选择语言">
+                    
+                    <option value="ca" >
+                        Català
+                    </option>
+                    
+                    <option value="en" >
+                        English
+                    </option>
+                    
+                    <option value="es" >
+                        Español
+                    </option>
+                    
+                    <option value="fr" >
+                        Français
+                    </option>
+                    
+                    <option value="de" >
+                        Deutsch
+                    </option>
+                    
+                    <option value="zh" selected>
+                        中文
+                    </option>
+                    
+                    <option value="pt" >
+                        Português
+                    </option>
+                    
+                    <option value="ja" >
+                        日本語
+                    </option>
+                    
+                    <option value="it" >
+                        Italiano
+                    </option>
+                    
+                    <option value="nl" >
+                        Nederlands
+                    </option>
+                    
+                </select>
+            </nav>
+
+            
+            <button class="menu-toggle" id="menu-toggle" aria-label="切换菜单" aria-expanded="false" aria-controls="nav-primary">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </div>
+</header>
+
+    
+    <main id="main-content" class="main-content">
+        <!-- RunAnalytics App Landing Page - Homepage -->
+
+<!-- Hero Section with App Introduction -->
+<section class="app-hero">
+  <div class="container">
+    <div class="app-hero-content">
+      <div class="app-hero-text">
+        <div class="app-hero-badge">
+          <span>🏃</span>
+          <span>专业跑步分析</span>
+        </div>
+        <h1>智能训练，跑得更快</h1>
+        <p class="app-hero-subtitle">
+          隐私优先的iOS应用，提供科学的跑步性能指标、个性化训练区间和全面的性能跟踪。
+          所有数据在您的iPhone上本地处理，确保完整的数据隐私。
+        </p>
+        <div class="app-hero-cta">
+          <a href="https://apps.apple.com/app/runanalytics/id6737283749" class="btn btn-large btn-accent" target="_blank" rel="noopener">
+            在App Store下载
+          </a>
+          <a href="#features" class="btn btn-large btn-secondary">
+            探索功能
+          </a>
+        </div>
+        <p class="mt-6 text-sm-muted">
+          ✓ 7天免费试用 &nbsp;&nbsp; ✓ 无需注册账户 &nbsp;&nbsp; ✓ 100%本地数据
+        </p>
+      </div>
+      <div class="app-hero-mockup">
+        <div class="mockup-phone">
+          <img src="/assets/images/screenshots/workouts-list.png" alt="RunAnalytics iOS应用显示跑步训练列表，包含距离、配速和训练指标" width="400" height="auto" loading="eager" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Key Features Section -->
+<section id="features" class="app-features">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-badge">功能特色</div>
+      <h2 class="section-title">先进的跑步性能指标</h2>
+      <p class="section-subtitle">为各个水平的跑者设计的专业级跑步分析</p>
+    </div>
+    <div class="app-features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg class="icon" aria-hidden="true">
+            <use href="/assets/images/icons-sprite.svg#icon-chart"></use>
+          </svg>
+        </div>
+        <h3>科学跑步指标</h3>
+        <p><a href="/zh/crs/">临界跑步速度(CRS)</a>确定您的有氧阈值，支持<a href="/zh/training-load/">训练压力评分(TSS)</a>计算和<a href="/zh/training-load/#pmc">CTL/ATL/TSB性能跟踪</a>，基于经过验证的运动科学研究。</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg class="icon" aria-hidden="true">
+            <use href="/assets/images/icons-sprite.svg#icon-zones"></use>
+          </svg>
+        </div>
+        <h3>个性化训练区间</h3>
+        <p>7个根据您的临界跑步速度校准的<a href="/zh/training-zones-explained/">个性化跑步训练区间</a>。优化每次训练，用于恢复、<a href="/zh/base-building-phase/">有氧发展</a>、阈值训练或<a href="/zh/what-is-vo2max/">VO₂max</a>提升。</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg class="icon" aria-hidden="true">
+            <use href="/assets/images/icons-sprite.svg#icon-calendar"></use>
+          </svg>
+        </div>
+        <h3>性能对比</h3>
+        <p>周、月、年度时期对比，自动趋势检测和所有跑步性能指标的百分比变化。</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg class="icon" aria-hidden="true">
+            <use href="/assets/images/icons-sprite.svg#icon-shield"></use>
+          </svg>
+        </div>
+        <h3>完整隐私保护</h3>
+        <p>所有跑步数据在您的iOS设备上本地处理。无服务器、无云存储、无跟踪。您完全拥有和控制您的跑步分析数据。</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg class="icon" aria-hidden="true">
+            <use href="/assets/images/icons-sprite.svg#icon-export"></use>
+          </svg>
+        </div>
+        <h3>随处导出</h3>
+        <p>以JSON、CSV、HTML或PDF格式导出训练和跑步性能指标。兼容教练、电子表格和训练平台。</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg class="icon" aria-hidden="true">
+            <use href="/assets/images/icons-sprite.svg#icon-lightning"></use>
+          </svg>
+        </div>
+        <h3>即时性能</h3>
+        <p>采用本地优先架构，应用启动时间低于0.35秒。即时查看您的跑步分析，无需等待同步或下载。</p>
+      </div>
+    </div>
+  </div>
+</section>
+<
+!-- Screenshots Carousel -->
+<section class="app-screenshots">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-badge">应用截图</div>
+      <h2 class="section-title">查看RunAnalytics的实际应用</h2>
+      <p class="section-subtitle">为跑者设计的美观直观的iOS界面</p>
+    </div>
+    <div class="carousel-wrapper">
+      <button class="carousel-btn carousel-btn-prev" aria-label="上一张截图">
+        <svg aria-hidden="true">
+          <use href="/assets/images/icons-sprite.svg#icon-arrow-left"></use>
+        </svg>
+      </button>
+      <div class="screenshots-carousel" id="screenshotsCarousel">
+        <div class="screenshot-item">
+          <img src="/assets/images/screenshots/workouts-list.png" alt="RunAnalytics训练列表显示跑步训练、训练压力评分和训练区间" loading="lazy" />
+          <p class="screenshot-caption">训练概览</p>
+        </div>
+        <div class="screenshot-item">
+          <img src="/assets/images/screenshots/workout-detail.png" alt="详细的跑步训练分析，包含逐公里配速、跑步效率指标和心率数据" loading="lazy" />
+          <p class="screenshot-caption">逐公里分析</p>
+        </div>
+        <div class="screenshot-item">
+          <img src="/assets/images/screenshots/analytics.png" alt="RunAnalytics仪表板显示CTL、ATL和TSB性能管理图表及跑步性能指标" loading="lazy" />
+          <p class="screenshot-caption">高级性能指标</p>
+        </div>
+        <div class="screenshot-item">
+          <img src="/assets/images/screenshots/performance.png" alt="跑步性能趋势图显示临界跑步速度进展和训练负荷随时间变化" loading="lazy" />
+          <p class="screenshot-caption">性能趋势</p>
+        </div>
+        <div class="screenshot-item">
+          <img src="/assets/images/screenshots/training-zones.png" alt="基于临界跑步速度阈值的7个个性化跑步训练区间" loading="lazy" />
+          <p class="screenshot-caption">训练区间</p>
+        </div>
+        <div class="screenshot-item">
+          <img src="/assets/images/screenshots/export-options.png" alt="以JSON、CSV、HTML和PDF格式导出跑步数据供教练和分析使用" loading="lazy" />
+          <p class="screenshot-caption">导出选项</p>
+        </div>
+      </div>
+      <button class="carousel-btn carousel-btn-next" aria-label="下一张截图">
+        <svg aria-hidden="true">
+          <use href="/assets/images/icons-sprite.svg#icon-arrow-right"></use>
+        </svg>
+      </button>
+      <div class="carousel-dots" id="carouselDots" role="tablist" aria-label="截图导航"></div>
+    </div>
+  </div>
+</section>
+
+<!-- Scientific Metrics Section -->
+<section class="app-metrics">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-badge">基于科学</div>
+      <h2 class="section-title text-white">基于科学的跑步效率指标</h2>
+      <p class="section-subtitle text-white-90">
+        RunAnalytics将原始跑步数据转化为可操作的跑步性能指标，
+        使用经运动科学研究验证的训练压力评分、临界跑步速度和效率计算
+      </p>
+    </div>
+    <div class="metrics-grid">
+      <div class="metric-card">
+        <div class="metric-icon">🎯</div>
+        <div class="metric-label">阈值配速</div>
+        <h3 class="metric-name">CRS</h3>
+        <p class="metric-description">临界跑步速度 - 您的有氧阈值配速</p>
+      </div>
+      <div class="metric-card">
+        <div class="metric-icon">📊</div>
+        <div class="metric-label">训练负荷</div>
+        <h3 class="metric-name">TSS</h3>
+        <p class="metric-description">训练压力评分量化训练强度</p>
+      </div>
+      <div class="metric-card">
+        <div class="metric-icon">💪</div>
+        <div class="metric-label">体能</div>
+        <h3 class="metric-name">CTL</h3>
+        <p class="metric-description">慢性训练负荷 - 42天滚动平均</p>
+      </div>
+      <div class="metric-card">
+        <div class="metric-icon">😴</div>
+        <div class="metric-label">疲劳</div>
+        <h3 class="metric-name">ATL</h3>
+        <p class="metric-description">急性训练负荷 - 7天滚动平均</p>
+      </div>
+      <div class="metric-card">
+        <div class="metric-icon">⚖️</div>
+        <div class="metric-label">状态</div>
+        <h3 class="metric-name">TSB</h3>
+        <p class="metric-description">训练压力平衡指示准备状态</p>
+      </div>
+      <div class="metric-card">
+        <div class="metric-icon">⚡</div>
+        <div class="metric-label">效率</div>
+        <h3 class="metric-name">跑步效率</h3>
+        <p class="metric-description">步幅效率评分 - 越低越好</p>
+      </div>
+      <div class="metric-card">
+        <div class="metric-icon">🎯</div>
+        <div class="metric-label">区间</div>
+        <h3 class="metric-name">7个区间</h3>
+        <p class="metric-description">从恢复到冲刺的强度级别</p>
+      </div>
+      <div class="metric-card">
+        <div class="metric-icon">🏆</div>
+        <div class="metric-label">记录</div>
+        <h3 class="metric-name">个人最佳</h3>
+        <p class="metric-description">自动个人记录跟踪</p>
+      </div>
+    </div>
+  </div>
+</section><!-- Prici
+ng Section -->
+<section class="app-pricing">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-badge">价格</div>
+      <h2 class="section-title">简单透明的价格</h2>
+      <p class="section-subtitle">从7天免费试用开始。随时可以取消。</p>
+    </div>
+    <div class="pricing-grid">
+      <div class="pricing-card">
+        <div class="pricing-header">
+          <h3 class="pricing-name">月度订阅</h3>
+          <div class="pricing-price">
+            <span class="pricing-currency">€</span>
+            <span class="pricing-amount">3.99</span>
+            <span class="pricing-period">/月</span>
+          </div>
+          <p class="pricing-trial">7天免费试用</p>
+        </div>
+        <ul class="pricing-features">
+          <li>无限制训练同步</li>
+          <li>所有科学指标 (CRS, TSS, CTL/ATL/TSB)</li>
+          <li>7个个性化训练区间</li>
+          <li>周、月、年度对比</li>
+          <li>支持JSON、CSV、HTML和PDF导出</li>
+          <li>100%隐私保护，本地数据</li>
+          <li>所有未来更新</li>
+        </ul>
+      </div>
+      <div class="pricing-card featured" data-badge="最佳价值">
+        <div class="pricing-header">
+          <h3 class="pricing-name">年度订阅</h3>
+          <div class="pricing-price">
+            <span class="pricing-currency">€</span>
+            <span class="pricing-amount">39</span>
+            <span class="pricing-period">/年</span>
+          </div>
+          <p class="pricing-trial">节省€8.88/年 (18%折扣)</p>
+        </div>
+        <ul class="pricing-features">
+          <li>无限制训练同步</li>
+          <li>所有科学指标 (CRS, TSS, CTL/ATL/TSB)</li>
+          <li>7个个性化训练区间</li>
+          <li>周、月、年度对比</li>
+          <li>支持JSON、CSV、HTML和PDF导出</li>
+          <li>100%隐私保护，本地数据</li>
+          <li>所有未来更新</li>
+          <li><strong>仅€3.25/月</strong></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Benefits Section -->
+<section class="app-benefits">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-badge">为什么选择RunAnalytics</div>
+      <h2 class="section-title">为认真的运动员提供隐私优先的跑步分析</h2>
+      <p class="section-subtitle">专业的跑步性能指标，无复杂性</p>
+    </div>
+    <div class="benefits-grid">
+      <div class="benefit-item">
+        <div class="benefit-icon">🎯</div>
+        <div class="benefit-content">
+          <h3>CRS测试协议</h3>
+          <p>内置5K + 3K测试协议来确定您的临界跑步速度。每6-8周重复一次以跟踪进展并自动调整跑步训练区间。</p>
+        </div>
+      </div>
+      <div class="benefit-item">
+        <div class="benefit-icon">📱</div>
+        <div class="benefit-content">
+          <h3>原生iOS跑步应用</h3>
+          <p>使用SwiftUI构建，确保流畅性能和iOS集成。与Health应用无缝同步跑步分析，支持小组件和熟悉的Apple设计语言。</p>
+        </div>
+      </div>
+      <div class="benefit-item">
+        <div class="benefit-icon">🔬</div>
+        <div class="benefit-content">
+          <h3>基于研究的指标</h3>
+          <p>所有跑步性能指标基于同行评议的运动科学研究。CRS来自Wakayoshi等人的研究，训练压力评分采用IF³公式适配跑步，经过验证的CTL/ATL模型。</p>
+        </div>
+      </div>
+      <div class="benefit-item">
+        <div class="benefit-icon">👥</div>
+        <div class="benefit-content">
+          <h3>教练友好报告</h3>
+          <p>为教练导出详细的跑步分析报告。通过电子邮件分享HTML摘要，CSV用于电子表格分析，或PDF用于训练日志和性能记录。</p>
+        </div>
+      </div>
+      <div class="benefit-item">
+        <div class="benefit-icon">🌍</div>
+        <div class="benefit-content">
+          <h3>适用于任何地方</h3>
+          <p>田径或越野跑步，短跑或长距离。RunAnalytics将跑步效率指标适配到所有跑步类型，并自动检测训练特征。</p>
+        </div>
+      </div>
+      <div class="benefit-item">
+        <div class="benefit-icon">🚀</div>
+        <div class="benefit-content">
+          <h3>持续改进</h3>
+          <p>基于用户反馈定期更新新的跑步性能指标。最近的新增功能包括年度对比、个人记录跟踪和增强的导出选项。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section><!-- 
+FAQ Section -->
+<section class="section">
+  <div class="container container-narrow">
+    <div class="section-header">
+      <div class="section-badge">常见问题</div>
+      <h2 class="section-title">常见问题解答</h2>
+    </div>
+
+    <div class="feature-list">
+      <div class="feature-item">
+        <h3>这个跑步分析应用如何获取我的数据？</h3>
+        <p>RunAnalytics与Apple Health同步，导入任何兼容设备或应用记录的跑步训练。这包括智能手表、健身追踪器和手动输入。应用在本地处理这些数据以计算高级跑步性能指标。</p>
+      </div>
+
+      <div class="feature-item">
+        <h3>什么是临界跑步速度测试，如何执行？</h3>
+        <p>临界跑步速度(CRS)是一个科学协议，使用2次最大努力跑步：5K和3K，中间休息10-20分钟。应用从这些时间计算您的有氧阈值，并自动调整所有跑步训练区间。每6-8周重复一次以跟踪进展。</p>
+      </div>
+
+      <div class="feature-item">
+        <h3>我的跑步数据会上传到云端吗？</h3>
+        <p>不会。RunAnalytics在您的iPhone上本地处理所有跑步数据。没有外部服务器、没有云账户、没有数据传输。您控制导出：生成JSON、CSV、HTML或PDF文件包含您的跑步性能指标，并按您的意愿分享。</p>
+      </div>
+
+      <div class="feature-item">
+        <h3>我可以将这个跑步分析应用用于越野跑吗？</h3>
+        <p>可以。RunAnalytics适用于Apple Health中的任何跑步训练，包括越野跑。应用将跑步效率指标适配到可用数据，无论您在田径场还是越野，为每种环境提供相关的性能分析。</p>
+      </div>
+
+      <div class="feature-item">
+        <h3>月度和年度计划有什么区别？</h3>
+        <p>两个计划提供相同的功能：所有跑步性能指标、无限制训练区间、时间对比、多种导出和免费更新。唯一的区别是价格：年度订阅节省18%（相当于€3.25/月 vs €3.99/月）。</p>
+      </div>
+
+      <div class="feature-item">
+        <h3>我可以随时取消订阅吗？</h3>
+        <p>可以。订阅通过App Store管理，因此您可以随时从设置 → [您的姓名] → 订阅中取消。如果您取消，您将保持访问权限直到当前计费周期结束。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Final CTA Section -->
+<section class="app-cta-final">
+  <div class="container">
+    <h2>准备改变您的跑步表现吗？</h2>
+    <p>加入数千名使用科学跑步分析来提升表现的跑者。立即开始您的7天免费试用这款隐私优先的iOS跑步应用。</p>
+    <div class="app-hero-cta">
+      <a href="https://apps.apple.com/app/runanalytics/id6737283749" class="btn btn-large btn-accent" target="_blank" rel="noopener">
+        免费下载RunAnalytics
+      </a>
+      <a href="#features" class="btn btn-large btn-accent-outline">
+        了解更多
+      </a>
+    </div>
+    <p class="section-footer">
+      无需注册账户 • 随时可以取消 • 您的数据保留在您的设备上
+    </p>
+  </div>
+</section>
+
+<!-- Additional Information Links -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">了解更多跑步性能指标</h2>
+      <p class="section-subtitle">深入了解跑步分析背后的科学</p>
+    </div>
+    <div class="grid grid-3">
+      <div class="card">
+        <h3 class="card-title">临界跑步速度</h3>
+        <div class="card-content">
+          <p>了解临界跑步速度如何确定您的有氧阈值，以及为什么它对结构化训练至关重要。</p>
+          <a href="/zh/crs/" class="btn btn-secondary btn-small mt-md">了解CRS →</a>
+        </div>
+      </div>
+      <div class="card">
+        <h3 class="card-title">训练压力评分</h3>
+        <div class="card-content">
+          <p>发现TSS、CTL、ATL和TSB如何帮助您平衡训练压力、管理疲劳和优化性能。</p>
+          <a href="/zh/training-stress-score/" class="btn btn-secondary btn-small mt-md">探索TSS →</a>
+        </div>
+      </div>
+      <div class="card">
+        <h3 class="card-title">训练区间详解</h3>
+        <div class="card-content">
+          <p>5个训练区间的完整指南：恢复、有氧、节奏、阈值和VO2max，实现最佳训练。</p>
+          <a href="/zh/training-zones-explained/" class="btn btn-secondary btn-small mt-md">查看训练区间 →</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid grid-3 mt-lg">
+      <div class="card">
+        <h3 class="card-title">什么是VO2max？</h3>
+        <div class="card-content">
+          <p>了解VO2max、如何测试、按年龄的平均值，以及提高有氧能力的经过验证的方法。</p>
+          <a href="/zh/what-is-vo2max/" class="btn btn-secondary btn-small mt-md">理解VO2max →</a>
+        </div>
+      </div>
+      <div class="card">
+        <h3 class="card-title">马拉松周期化</h3>
+        <div class="card-content">
+          <p>掌握训练阶段：基础建设、构建、巅峰和减量，通过基于科学的计划实现马拉松成功。</p>
+          <a href="/zh/marathon-periodization/" class="btn btn-secondary btn-small mt-md">规划您的训练 →</a>
+        </div>
+      </div>
+      <div class="card">
+        <h3 class="card-title">80/20训练法则</h3>
+        <div class="card-content">
+          <p>发现精英跑者使用的经过验证的80%轻松、20%困难强度分配，以获得最佳结果。</p>
+          <a href="/zh/8020-training-rule/" class="btn btn-secondary btn-small mt-md">学习80/20 →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+    </main>
+
+    
+    <footer class="site-footer">
+    <div class="container">
+        <div class="footer-grid">
+            
+            <div>
+                <h3 class="mb-md">RunAnalytics - Running Analytics App | Critical Running Speed, TSS, CTL/ATL/TSB for iOS</h3>
+                <p class="text-secondary">Track Critical Running Speed, Training Stress Score, and performance metrics with RunAnalytics. Science-based iOS app for runners, triathletes &amp; coaches. 7-day free trial.</p>
+            </div>
+
+            
+            <div>
+                <h3 class="mb-md">首页</h3>
+                <ul class="footer-links">
+                    
+                    <li>
+                        <a href="/ca/">Català</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/en/">English</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/es/">Español</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/fr/">Français</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/de/">Deutsch</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/zh/">中文</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/pt/">Português</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ja/">日本語</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/it/">Italiano</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/nl/">Nederlands</a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+
+        
+        <div class="footer-bottom">
+            <p class="text-sm text-secondary">
+                &copy; 2025 RunAnalytics - Running Analytics App | Critical Running Speed, TSS, CTL/ATL/TSB for iOS. 保留所有权利
+            </p>
+            <ul class="footer-links">
+                <li><a href="/zh/privacy/">隐私政策</a></li>
+                <li><a href="/zh/terms/">服务条款</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+    
+    <div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="Cookie consent" aria-live="polite">
+    <div class="cookie-banner-content">
+        <div>
+            <p>本网站使用cookies来改善您的体验。</p>
+            <a href="/zh/privacy/" class="text-sm">了解更多</a>
+        </div>
+        <div class="cookie-banner-actions">
+            <button id="cookie-decline" class="btn btn-secondary btn-small">拒绝</button>
+            <button id="cookie-accept" class="btn btn-primary btn-small">接受</button>
+        </div>
+    </div>
+</div>
+
+    
+    <script src="/assets/js/main.min.js"></script>
+    <script src="/assets/js/cookie-consent.min.js"></script>
+    <script src="/assets/js/lazy-load.min.js"></script>
+
+    
+    <script src="/assets/js/fuse.min.js"></script>
+    <script src="/assets/js/search.min.js"></script>
+
+    
+    
+</body>
+</html>

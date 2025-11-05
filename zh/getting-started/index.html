@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="zh" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+    <title>RunAnalytics入门 - 完整设置指南 | CRS测试教程</title>
+    <meta name="description" content="RunAnalytics完整设置指南。学习如何进行CRS测试、输入结果、跟踪训练并理解rTSS、CTL/ATL/TSB指标。为初学者提供分步教程和故障排除。7天免费试用。">
+    <meta name="author" content="Albert Arno">
+
+    
+    
+    <meta name="keywords" content="RunAnalytics指南, CRS测试教程, 游泳应用教程, 如何使用RunAnalytics, 游泳分析指南">
+    
+
+    
+    <link rel="canonical" href="https://run.analyticszone.app/zh/getting-started/">
+
+    
+    
+    <meta property="article:published_time" content="2025-10-08T10:00:00Z">
+    <meta property="article:modified_time" content="2025-10-08T14:30:00Z">
+    <meta property="article:author" content="Albert Arno">
+    
+
+    
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://run.analyticszone.app/zh/getting-started/">
+    <meta property="og:title" content="RunAnalytics入门 - 完整设置指南 | CRS测试教程">
+    <meta property="og:description" content="RunAnalytics完整设置指南。学习如何进行CRS测试、输入结果、跟踪训练并理解rTSS、CTL/ATL/TSB指标。为初学者提供分步教程和故障排除。7天免费试用。">
+    
+    <meta property="og:image" content="https://run.analyticszone.app/assets/images/run-analytics-og.jpg">
+    
+    <meta property="og:locale" content="zh_CN">
+    <meta property="og:site_name" content="RunAnalytics - Running Analytics App | Critical Running Speed, TSS, CTL/ATL/TSB for iOS">
+
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://run.analyticszone.app/zh/getting-started/">
+    <meta name="twitter:title" content="RunAnalytics入门 - 完整设置指南 | CRS测试教程">
+    <meta name="twitter:description" content="RunAnalytics完整设置指南。学习如何进行CRS测试、输入结果、跟踪训练并理解rTSS、CTL/ATL/TSB指标。为初学者提供分步教程和故障排除。7天免费试用。">
+    
+    <meta name="twitter:image" content="https://run.analyticszone.app/assets/images/run-analytics-og.jpg">
+    
+
+    
+    
+    <link rel="alternate" hreflang="ca" href="https://run.analyticszone.app/ca/getting-started/">
+    
+    <link rel="alternate" hreflang="en" href="https://run.analyticszone.app/en/getting-started/">
+    
+    <link rel="alternate" hreflang="es" href="https://run.analyticszone.app/es/getting-started/">
+    
+    <link rel="alternate" hreflang="fr" href="https://run.analyticszone.app/fr/getting-started/">
+    
+    <link rel="alternate" hreflang="de" href="https://run.analyticszone.app/de/getting-started/">
+    
+    <link rel="alternate" hreflang="zh" href="https://run.analyticszone.app/zh/getting-started/">
+    
+    <link rel="alternate" hreflang="pt" href="https://run.analyticszone.app/pt/getting-started/">
+    
+    <link rel="alternate" hreflang="ja" href="https://run.analyticszone.app/ja/getting-started/">
+    
+    <link rel="alternate" hreflang="it" href="https://run.analyticszone.app/it/getting-started/">
+    
+    <link rel="alternate" hreflang="nl" href="https://run.analyticszone.app/nl/getting-started/">
+    
+    <link rel="alternate" hreflang="x-default" href="https://run.analyticszone.app/en/getting-started/">
+
+    
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/icons/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/icons/apple-touch-icon.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#0066CC">
+
+    
+    <link rel="stylesheet" href="/assets/css/main.min.css">
+
+    
+    
+
+    
+    
+
+    
+    
+</head>
+<body>
+    
+    <a href="#main-content" class="skip-link">跳到内容</a>
+
+    
+    <header class="site-header">
+    <div class="container">
+        <div class="header-inner">
+            
+            <a href="/zh/" class="site-logo">
+                <picture>
+                    <source srcset="/assets/images/logo-dark.png" media="(prefers-color-scheme: dark)">
+                    <img src="/assets/images/logo.png" alt="RunAnalytics - Running Analytics App | Critical Running Speed, TSS, CTL/ATL/TSB for iOS" width="40" height="40">
+                </picture>
+                <span class="logo-text">RunAnalytics</span>
+            </a>
+
+            
+            <nav class="nav-primary" id="nav-primary" role="navigation" aria-label="Main navigation">
+                <ul>
+                    
+                    <li>
+                        
+                        
+                        <a href="/zh/"
+                           
+                           aria-current="">
+                            首页
+                        </a>
+                        
+                    </li>
+                    
+                    <li class="has-submenu">
+                        
+                        
+                        <button class="dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+                            学习
+                            <svg class="dropdown-icon" width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <polyline points="3 4.5 6 7.5 9 4.5"></polyline>
+                            </svg>
+                        </button>
+                        <ul class="submenu">
+                            
+                            <li>
+                                <a href="/zh/getting-started/"
+                                   class="active"
+                                   aria-current="page">
+                                    入门指南
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/zh/crs/"
+                                   
+                                   aria-current="">
+                                    CRS
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/zh/training-zones/"
+                                   
+                                   aria-current="">
+                                    训练区间
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/zh/training-load/"
+                                   
+                                   aria-current="">
+                                    训练负荷
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/zh/stss-calculator/"
+                                   
+                                   aria-current="">
+                                    sTSS计算器
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        
+                    </li>
+                    
+                    <li class="has-submenu">
+                        
+                        
+                        <button class="dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+                            科学
+                            <svg class="dropdown-icon" width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <polyline points="3 4.5 6 7.5 9 4.5"></polyline>
+                            </svg>
+                        </button>
+                        <ul class="submenu">
+                            
+                            <li>
+                                <a href="/zh/research/"
+                                   
+                                   aria-current="">
+                                    研究
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/zh/formulas/"
+                                   
+                                   aria-current="">
+                                    公式
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/zh/efficiency/"
+                                   
+                                   aria-current="">
+                                    效率
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/zh/stride-mechanics/"
+                                   
+                                   aria-current="">
+                                    步幅力学
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/zh/bibliography/"
+                                   
+                                   aria-current="">
+                                    参考文献
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        
+                    </li>
+                    
+                    <li>
+                        
+                        
+                        <a href="/zh/contact/"
+                           
+                           aria-current="">
+                            联系我们
+                        </a>
+                        
+                    </li>
+                    
+                </ul>
+
+                
+                <div class="search-container">
+                    <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.35-4.35"></path>
+                    </svg>
+                    <input
+                        type="search"
+                        id="site-search"
+                        class="search-input"
+                        aria-expanded="false"
+                        aria-haspopup="listbox"
+                        aria-autocomplete="list"
+                        autocomplete="off"
+                        spellcheck="false"
+                    />
+                    <div id="search-results" class="search-results hidden" role="region" aria-live="polite"></div>
+                </div>
+
+                
+                <select class="language-selector" id="language-select" aria-label="选择语言">
+                    
+                    <option value="ca" >
+                        Català
+                    </option>
+                    
+                    <option value="en" >
+                        English
+                    </option>
+                    
+                    <option value="es" >
+                        Español
+                    </option>
+                    
+                    <option value="fr" >
+                        Français
+                    </option>
+                    
+                    <option value="de" >
+                        Deutsch
+                    </option>
+                    
+                    <option value="zh" selected>
+                        中文
+                    </option>
+                    
+                    <option value="pt" >
+                        Português
+                    </option>
+                    
+                    <option value="ja" >
+                        日本語
+                    </option>
+                    
+                    <option value="it" >
+                        Italiano
+                    </option>
+                    
+                    <option value="nl" >
+                        Nederlands
+                    </option>
+                    
+                </select>
+            </nav>
+
+            
+            <button class="menu-toggle" id="menu-toggle" aria-label="切换菜单" aria-expanded="false" aria-controls="nav-primary">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </div>
+</header>
+
+    
+    <main id="main-content" class="main-content">
+        <section class="hero hero-small">
+    <div class="container">
+        <h1>RunAnalytics入门指南</h1>
+        <p class="lead">跟踪跑步表现、CRS测试和训练负荷分析的完整指南</p>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container container-narrow">
+        <div class="callout callout-info mb-xl">
+            <h2>欢迎来到数据驱动跑步</h2>
+            <p>RunAnalytics使用<strong>临界跑步速度(CRS)</strong>、<strong>训练压力评分(sTSS)</strong>和<strong>性能管理图表(PMC)</strong>指标将您的跑步训练转化为可操作的见解。本指南将通过4个简单步骤带您从首次设置到高级训练负荷分析。</p>
+        </div>
+
+        <h2>快速开始(5分钟)</h2>
+
+        <div class="steps-container">
+            <div class="step-card">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>下载和安装</h3>
+                    <p>从App Store下载RunAnalytics并授权访问Apple Health。应用自动同步跑步训练——无需手动记录。</p>
+                    <a href="https://apps.apple.com/app/runanalytics/id6737283749" class="btn btn-secondary btn-small mt-sm" target="_blank" rel="noopener">下载应用 →</a>
+                </div>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>进行CRS测试</h3>
+                    <p>完成5K和3K计时测试以确定您的临界跑步速度。这是所有指标的基础——没有CRS，无法计算sTSS和训练区间。</p>
+                    <a href="#css-test-guide" class="btn btn-secondary btn-small mt-sm">CRS测试协议 ↓</a>
+                </div>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>输入CRS结果</h3>
+                    <p>在应用中输入您的5K和3K时间。RunAnalytics计算CRS、配速区间，并将所有指标个性化到您的生理特征。随着体能改善每6-8周更新。</p>
+                </div>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">4</div>
+                <div class="step-content">
+                    <h3>开始跟踪训练</h3>
+                    <p>使用Apple Watch和Health应用跑步。RunAnalytics自动导入训练，计算sTSS，更新CTL/ATL/TSB，并跟踪进展。无需手动数据输入。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section section-alt" id="css-test-guide">
+    <div class="container">
+        <h2 class="mb-xl text-center">完整CRS测试协议</h2>
+
+        <div class="grid grid-2">
+            <div class="card">
+                <h3 class="card-title">📋 您需要的</h3>
+                <div class="card-content">
+                    <ul>
+                        <li><strong>跑道使用权：</strong>25米或50米跑道(25码可接受)</li>
+                        <li><strong>计时：</strong>秒表、配速时钟或Apple Watch</li>
+                        <li><strong>热身时间：</strong>测试前15-20分钟</li>
+                        <li><strong>恢复：</strong>测试间5-10分钟</li>
+                        <li><strong>努力：</strong>最大可持续配速(非全力冲刺)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3 class="card-title">⏱️ 测试日条件</h3>
+                <div class="card-content">
+                    <ul>
+                        <li><strong>休息充分：</strong>测试前24-48小时无困难训练</li>
+                        <li><strong>水分充足：</strong>充分水合，正常饮食</li>
+                        <li><strong>跑道温度：</strong>26-28°C理想(避免极冷/热)</li>
+                        <li><strong>时间：</strong>您通常训练最佳的时间</li>
+                        <li><strong>装备：</strong>与训练相同(护目镜、泳帽、泳衣)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <h3 class="mt-3xl">分步CRS测试</h3>
+
+        <div class="protocol-timeline">
+            <div class="timeline-item">
+                <div class="timeline-marker">热身</div>
+                <div class="timeline-content">
+                    <h4>15-20分钟</h4>
+                    <p>400-800米轻松跑步、技术练习和渐进加速。包括2-3×50米递增配速(60%、75%、85%努力)。测试前休息2-3分钟。</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-marker">测试1</div>
+                <div class="timeline-content">
+                    <h4>400米最大努力</h4>
+                    <p><strong>推进式起跑</strong>(非跳水式)。以您能够在全程维持的最快配速跑400米。这不是冲刺——控制配速。以<strong>mm:ss</strong>格式记录时间(例如6:08)。</p>
+                    <div class="tip-box mt-sm">
+                        <strong>配速提示：</strong>目标均匀100米分段。后200米应该≤前200米(负分段理想)。
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-marker">恢复</div>
+                <div class="timeline-content">
+                    <h4>5-10分钟</h4>
+                    <p><strong>关键阶段：</strong>轻松跑步或完全休息。等待直到心率降至120 bpm以下且呼吸完全恢复。恢复不足 = CRS不准确。</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-marker">测试2</div>
+                <div class="timeline-content">
+                    <h4>200米最大努力</h4>
+                    <p><strong>推进式起跑</strong>(非跳水式)。200米最大可持续努力。这应该感觉每100米比400米更困难。以<strong>mm:ss</strong>格式记录时间(例如2:30)。</p>
+                    <div class="tip-box mt-sm">
+                        <strong>验证检查：</strong>200米配速/100米应该比400米配速/100米快3-6秒。如果不是，恢复不足或配速有误。
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-marker">放松</div>
+                <div class="timeline-content">
+                    <h4>10-15分钟</h4>
+                    <p>300-500米轻松跑步，拉伸。立即记录您的时间——不要相信记忆。</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="callout callout-warning mt-xl">
+            <h3>⚠️ 常见CRS测试错误</h3>
+            <ul>
+                <li><strong>400米起步过快：</strong>导致崩溃，CRS不准确。使用均匀配速。</li>
+                <li><strong>测试间恢复不足：</strong>疲劳减慢200米，使CRS人为过快 → 过度训练区间。</li>
+                <li><strong>使用跳水式起跑：</strong>增加0.5-1.5秒优势，扭曲计算。始终从池壁推进。</li>
+                <li><strong>疲劳时测试：</strong>24-48小时前大训练量 = 结果抑制。新鲜时测试。</li>
+                <li><strong>不立即记录：</strong>记忆不可靠。放松前写下时间。</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container container-narrow">
+        <h2>在RunAnalytics中输入CRS结果</h2>
+
+        <div class="screenshot-guide">
+            <div class="step-item">
+                <h3>步骤1：打开CRS设置</h3>
+                <p>在RunAnalytics应用中，转到<strong>设置 → 临界跑步速度</strong>。点击"进行CRS测试"或"更新CRS"。</p>
+            </div>
+
+            <div class="step-item">
+                <h3>步骤2：输入时间</h3>
+                <p>输入您的400米时间(例如<code>6:08</code>)和200米时间(例如<code>2:30</code>)。使用显示的确切格式。点击"计算"。</p>
+            </div>
+
+            <div class="step-item">
+                <h3>步骤3：查看结果</h3>
+                <p>应用显示：</p>
+                <ul>
+                    <li><strong>CRS速度：</strong>0.917 m/s</li>
+                    <li><strong>CRS配速：</strong>1:49/100米</li>
+                    <li><strong>训练区间：</strong>7个个性化区间(区间1-7)</li>
+                    <li><strong>sTSS基线：</strong>现在为所有训练启用</li>
+                </ul>
+            </div>
+
+            <div class="step-item">
+                <h3>步骤4：保存和同步</h3>
+                <p>点击"保存CRS"。应用立即：</p>
+                <ul>
+                    <li>重新计算训练区间</li>
+                    <li>追溯更新过去90天的sTSS</li>
+                    <li>调整CTL/ATL/TSB计算</li>
+                    <li>启用基于区间的训练分析</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="callout callout-tip mt-xl">
+            <h3>💡 专业提示：历史CRS测试</h3>
+            <p>如果您已经从之前的测试中知道CRS，可以直接输入那些时间。然而，为了最准确的结果，每6-8周进行新的测试。随着训练进展，您的CRS应该改善(变快)。</p>
+        </div>
+    </div>
+</section>
+    </main>
+
+    
+    <footer class="site-footer">
+    <div class="container">
+        <div class="footer-grid">
+            
+            <div>
+                <h3 class="mb-md">RunAnalytics - Running Analytics App | Critical Running Speed, TSS, CTL/ATL/TSB for iOS</h3>
+                <p class="text-secondary">Track Critical Running Speed, Training Stress Score, and performance metrics with RunAnalytics. Science-based iOS app for runners, triathletes &amp; coaches. 7-day free trial.</p>
+            </div>
+
+            
+            <div>
+                <h3 class="mb-md">首页</h3>
+                <ul class="footer-links">
+                    
+                    <li>
+                        <a href="/ca/">Català</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/en/">English</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/es/">Español</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/fr/">Français</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/de/">Deutsch</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/zh/">中文</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/pt/">Português</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ja/">日本語</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/it/">Italiano</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/nl/">Nederlands</a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+
+        
+        <div class="footer-bottom">
+            <p class="text-sm text-secondary">
+                &copy; 2025 RunAnalytics - Running Analytics App | Critical Running Speed, TSS, CTL/ATL/TSB for iOS. 保留所有权利
+            </p>
+            <ul class="footer-links">
+                <li><a href="/zh/privacy/">隐私政策</a></li>
+                <li><a href="/zh/terms/">服务条款</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+    
+    <div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="Cookie consent" aria-live="polite">
+    <div class="cookie-banner-content">
+        <div>
+            <p>本网站使用cookies来改善您的体验。</p>
+            <a href="/zh/privacy/" class="text-sm">了解更多</a>
+        </div>
+        <div class="cookie-banner-actions">
+            <button id="cookie-decline" class="btn btn-secondary btn-small">拒绝</button>
+            <button id="cookie-accept" class="btn btn-primary btn-small">接受</button>
+        </div>
+    </div>
+</div>
+
+    
+    <script src="/assets/js/main.min.js"></script>
+    <script src="/assets/js/cookie-consent.min.js"></script>
+    <script src="/assets/js/lazy-load.min.js"></script>
+
+    
+    <script src="/assets/js/fuse.min.js"></script>
+    <script src="/assets/js/search.min.js"></script>
+
+    
+    
+</body>
+</html>
