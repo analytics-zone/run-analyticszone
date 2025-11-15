@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+    <title>حاسبة TSS للجري المجانية - احسب نقاط إجهاد التدريب (rTSS)</title>
+    <meta name="description" content="حاسبة TSS مجانية الوحيدة للجري. احسب نقاط إجهاد التدريب لأي تمرين باستخدام سرعة CRS، المدة، والسرعة المتوسطة. تتضمن إرشادات TSS أسبوعية وشرح CTL/ATL/TSB.">
+    <meta name="author" content="Albert Arno">
+
+    
+    
+    <meta name="keywords" content="حاسبة TSS للجري, حاسبة rTSS, نقاط إجهاد التدريب, حمل تدريب الجري, TSS مجاني">
+    
+
+    
+    <link rel="canonical" href="https://run.analyticszone.app/ar/stss-calculator/">
+
+    
+    
+    <meta property="article:published_time" content="2025-01-15T10:00:00Z">
+    <meta property="article:modified_time" content="2025-11-15T14:30:00Z">
+    <meta property="article:author" content="Albert Arno">
+    
+
+    
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://run.analyticszone.app/ar/stss-calculator/">
+    <meta property="og:title" content="حاسبة TSS للجري المجانية - احسب نقاط إجهاد التدريب (rTSS)">
+    <meta property="og:description" content="حاسبة TSS مجانية الوحيدة للجري. احسب نقاط إجهاد التدريب لأي تمرين باستخدام سرعة CRS، المدة، والسرعة المتوسطة. تتضمن إرشادات TSS أسبوعية وشرح CTL/ATL/TSB.">
+    
+    <meta property="og:image" content="https://run.analyticszone.app/assets/images/run-analytics-og.jpg">
+    
+    <meta property="og:locale" content="ar_SA">
+    <meta property="og:site_name" content="RunAnalytics - Running Analytics App | Critical Running Speed, TSS, CTL/ATL/TSB for iOS">
+
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://run.analyticszone.app/ar/stss-calculator/">
+    <meta name="twitter:title" content="حاسبة TSS للجري المجانية - احسب نقاط إجهاد التدريب (rTSS)">
+    <meta name="twitter:description" content="حاسبة TSS مجانية الوحيدة للجري. احسب نقاط إجهاد التدريب لأي تمرين باستخدام سرعة CRS، المدة، والسرعة المتوسطة. تتضمن إرشادات TSS أسبوعية وشرح CTL/ATL/TSB.">
+    
+    <meta name="twitter:image" content="https://run.analyticszone.app/assets/images/run-analytics-og.jpg">
+    
+
+    
+    
+    <link rel="alternate" hreflang="af" href="https://run.analyticszone.app/af/stss-calculator/">
+    
+    <link rel="alternate" hreflang="ar" href="https://run.analyticszone.app/ar/stss-calculator/">
+    
+    <link rel="alternate" hreflang="ca" href="https://run.analyticszone.app/ca/stss-calculator/">
+    
+    <link rel="alternate" hreflang="en" href="https://run.analyticszone.app/en/stss-calculator/">
+    
+    <link rel="alternate" hreflang="es" href="https://run.analyticszone.app/es/stss-calculator/">
+    
+    <link rel="alternate" hreflang="fr" href="https://run.analyticszone.app/fr/stss-calculator/">
+    
+    <link rel="alternate" hreflang="de" href="https://run.analyticszone.app/de/stss-calculator/">
+    
+    <link rel="alternate" hreflang="hi" href="https://run.analyticszone.app/hi/stss-calculator/">
+    
+    <link rel="alternate" hreflang="zh" href="https://run.analyticszone.app/zh/stss-calculator/">
+    
+    <link rel="alternate" hreflang="pt" href="https://run.analyticszone.app/pt/stss-calculator/">
+    
+    <link rel="alternate" hreflang="ja" href="https://run.analyticszone.app/ja/stss-calculator/">
+    
+    <link rel="alternate" hreflang="it" href="https://run.analyticszone.app/it/stss-calculator/">
+    
+    <link rel="alternate" hreflang="nl" href="https://run.analyticszone.app/nl/stss-calculator/">
+    
+    <link rel="alternate" hreflang="x-default" href="https://run.analyticszone.app/en/stss-calculator/">
+
+    
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/icons/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/icons/apple-touch-icon.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#0066CC">
+
+    
+    <link rel="stylesheet" href="/assets/css/main.min.css">
+
+    
+    
+
+    
+    
+
+    
+    
+</head>
+<body>
+    
+    <a href="#main-content" class="skip-link">الانتقال إلى المحتوى</a>
+
+    
+    <header class="site-header">
+    <div class="container">
+        <div class="header-inner">
+            
+            <a href="/ar/" class="site-logo">
+                <picture>
+                    <source srcset="/assets/images/logo-dark.png" media="(prefers-color-scheme: dark)">
+                    <img src="/assets/images/logo.png" alt="RunAnalytics - Running Analytics App | Critical Running Speed, TSS, CTL/ATL/TSB for iOS" width="40" height="40">
+                </picture>
+                <span class="logo-text">RunAnalytics</span>
+            </a>
+
+            
+            <nav class="nav-primary" id="nav-primary" role="navigation" aria-label="Main navigation">
+                <ul>
+                    
+                    <li>
+                        
+                        
+                        <a href="/ar/"
+                           
+                           aria-current="">
+                            الرئيسية
+                        </a>
+                        
+                    </li>
+                    
+                    <li class="has-submenu">
+                        
+                        
+                        <button class="dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+                            تعلم
+                            <svg class="dropdown-icon" width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <polyline points="3 4.5 6 7.5 9 4.5"></polyline>
+                            </svg>
+                        </button>
+                        <ul class="submenu">
+                            
+                            <li>
+                                <a href="/ar/getting-started/"
+                                   
+                                   aria-current="">
+                                    البدء
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/ar/crs/"
+                                   
+                                   aria-current="">
+                                    CRS
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/ar/training-zones/"
+                                   
+                                   aria-current="">
+                                    مناطق التدريب
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/ar/training-load/"
+                                   
+                                   aria-current="">
+                                    حمل التدريب
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/ar/stss-calculator/"
+                                   class="active"
+                                   aria-current="page">
+                                    حاسبة sTSS
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        
+                    </li>
+                    
+                    <li class="has-submenu">
+                        
+                        
+                        <button class="dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+                            العلم
+                            <svg class="dropdown-icon" width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <polyline points="3 4.5 6 7.5 9 4.5"></polyline>
+                            </svg>
+                        </button>
+                        <ul class="submenu">
+                            
+                            <li>
+                                <a href="/ar/research/"
+                                   
+                                   aria-current="">
+                                    البحث
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/ar/formulas/"
+                                   
+                                   aria-current="">
+                                    الصيغ
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/ar/efficiency/"
+                                   
+                                   aria-current="">
+                                    الكفاءة
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/ar/stride-mechanics/"
+                                   
+                                   aria-current="">
+                                    ميكانيكا السباحة
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/ar/bibliography/"
+                                   
+                                   aria-current="">
+                                    المراجع
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        
+                    </li>
+                    
+                    <li>
+                        
+                        
+                        <a href="/ar/contact/"
+                           
+                           aria-current="">
+                            اتصل
+                        </a>
+                        
+                    </li>
+                    
+                </ul>
+
+                
+                <div class="search-container">
+                    <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.35-4.35"></path>
+                    </svg>
+                    <input
+                        type="search"
+                        id="site-search"
+                        class="search-input"
+                        aria-expanded="false"
+                        aria-haspopup="listbox"
+                        aria-autocomplete="list"
+                        autocomplete="off"
+                        spellcheck="false"
+                    />
+                    <div id="search-results" class="search-results hidden" role="region" aria-live="polite"></div>
+                </div>
+
+                
+                <select class="language-selector" id="language-select" aria-label="اختر اللغة">
+                    
+                    <option value="af" >
+                        Afrikaans
+                    </option>
+                    
+                    <option value="ar" selected>
+                        العربية
+                    </option>
+                    
+                    <option value="ca" >
+                        Català
+                    </option>
+                    
+                    <option value="en" >
+                        English
+                    </option>
+                    
+                    <option value="es" >
+                        Español
+                    </option>
+                    
+                    <option value="fr" >
+                        Français
+                    </option>
+                    
+                    <option value="de" >
+                        Deutsch
+                    </option>
+                    
+                    <option value="hi" >
+                        हिन्दी
+                    </option>
+                    
+                    <option value="zh" >
+                        中文
+                    </option>
+                    
+                    <option value="pt" >
+                        Português
+                    </option>
+                    
+                    <option value="ja" >
+                        日本語
+                    </option>
+                    
+                    <option value="it" >
+                        Italiano
+                    </option>
+                    
+                    <option value="nl" >
+                        Nederlands
+                    </option>
+                    
+                </select>
+            </nav>
+
+            
+            <button class="menu-toggle" id="menu-toggle" aria-label="تبديل القائمة" aria-expanded="false" aria-controls="nav-primary">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </div>
+</header>
+
+    
+    <main id="main-content" class="main-content">
+        <section class="hero hero-small">
+    <div class="container">
+        <h1>حاسبة TSS للجري المجانية</h1>
+        <p class="lead">احسب نقاط الإجهاد التدريبي للتمارين الرياضية للجري - حاسبة sTSS المجانية الوحيدة</p>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container container-narrow">
+        <div class="callout callout-info mb-xl">
+            <h2>ما هو TSS للجري (sTSS)؟</h2>
+            <p><strong>نقاط الإجهاد التدريبي للجري (sTSS)</strong> تحدد الحمل التدريبي لتمرين الجري من خلال الجمع بين الشدة والمدة. تم تكييفه من منهجية TSS لركوب الدراجات، باستخدام سرعة الجري الحرجة (CRS) كسرعة العتبة. تمرين لمدة ساعة واحدة بسرعة CRS = 100 sTSS.</p>
+        </div>
+
+        <h2 class="mt-3xl">حاسبة sTSS المجانية</h2>
+        <p class="lead mb-xl">احسب الإجهاد التدريبي لأي تمرين جري. يتطلب سرعة CRS الخاصة بك.</p>
+
+        <div class="css-calculator">
+            <form id="stssCalculatorForm">
+                <div class="calculator-inputs">
+                    <div class="form-group">
+                        <label for="cssPace" class="form-label">سرعة CRS الخاصة بك (دد:ثث لكل 100م)</label>
+                        <input
+                            type="text"
+                            id="cssPace"
+                            class="form-input"
+                            placeholder="1:49"
+                            pattern="[0-9]{1,2}:[0-5][0-9]"
+                            aria-required="true"
+                            aria-describedby="cssPace-help"
+                        />
+                        <small id="cssPace-help" class="form-help">سرعة العتبة الخاصة بك من اختبار CRS (مثال: 1:49)</small>
+                        <div class="form-error" id="cssPace-error"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="workoutDuration" class="form-label">مدة التمرين (دقائق)</label>
+                        <input
+                            type="number"
+                            id="workoutDuration"
+                            class="form-input"
+                            placeholder="60"
+                            min="1"
+                            max="300"
+                            aria-required="true"
+                            aria-describedby="duration-help"
+                        />
+                        <small id="duration-help" class="form-help">إجمالي وقت التمرين بما في ذلك الراحة (1-300 دقيقة)</small>
+                        <div class="form-error" id="duration-error"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="avgPace" class="form-label">متوسط سرعة التمرين (دد:ثث لكل 100م)</label>
+                        <input
+                            type="text"
+                            id="avgPace"
+                            class="form-input"
+                            placeholder="2:05"
+                            pattern="[0-9]{1,2}:[0-5][0-9]"
+                            aria-required="true"
+                            aria-describedby="pace-help"
+                        />
+                        <small id="pace-help" class="form-help">متوسط سرعتك أثناء التمرين (مثال: 2:05)</small>
+                        <div class="form-error" id="pace-error"></div>
+                    </div>
+
+                    <div class="calculator-buttons">
+                        <button type="submit" class="btn btn-primary" id="calculateStssBtn">احسب sTSS</button>
+                        <button type="reset" class="btn btn-ghost" id="resetStssBtn">مسح</button>
+                    </div>
+                </div>
+            </form>
+
+            <div class="calculator-results hidden" id="stssResults" aria-live="polite">
+                <h3>نقاط الإجهاد التدريبي الخاصة بك</h3>
+                <div class="results-summary">
+                    <div class="result-item">
+                        <div class="result-label">sTSS</div>
+                        <div class="css-result-value" id="stssValue">--</div>
+                    </div>
+                    <div class="result-item">
+                        <div class="result-label">عامل الشدة (IF)</div>
+                        <div class="css-result-value" id="intensityFactor">--</div>
+                    </div>
+                </div>
+
+                <div class="zones-result">
+                    <h4>تفسير الحمل التدريبي</h4>
+                    <p class="mb-md text-secondary" id="stssInterpretation">
+                        <!-- Filled by JavaScript -->
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="mt-3xl">كيف يتم حساب sTSS</h2>
+
+        <div class="formula-box">
+            <h3>الصيغة</h3>
+            <div class="formula">
+                sTSS = (المدة بالساعات) × (عامل الشدة)² × 100
+            </div>
+            <div class="formula-explanation">
+                <p>حيث:</p>
+                <ul>
+                    <li><strong>عامل الشدة (IF)</strong> = سرعة CRS / متوسط سرعة التمرين</li>
+                    <li><strong>المدة</strong> = إجمالي وقت التمرين بالساعات</li>
+                    <li><strong>سرعة CRS</strong> = سرعة العتبة الخاصة بك من اختبار CRS</li>
+                </ul>
+            </div>
+        </div>
+
+        <h3 class="mt-xl">مثال عملي</h3>
+        <div class="example-box">
+            <h4>تفاصيل التمرين:</h4>
+            <ul>
+                <li>سرعة CRS: <strong>1:49/100م</strong> (109 ثانية)</li>
+                <li>مدة التمرين: <strong>60 دقيقة</strong> (ساعة واحدة)</li>
+                <li>متوسط السرعة: <strong>2:05/100م</strong> (125 ثانية)</li>
+            </ul>
+
+            <h4>الخطوة 1: احسب عامل الشدة</h4>
+            <div class="calculation">
+                IF = سرعة CRS / سرعة التمرين<br>
+                IF = 109 / 125<br>
+                IF = <strong>0.872</strong>
+            </div>
+
+            <h4>الخطوة 2: احسب sTSS</h4>
+            <div class="calculation">
+                sTSS = 1.0 ساعة × (0.872)² × 100<br>
+                sTSS = 1.0 × 0.760 × 100<br>
+                sTSS = <strong>76</strong>
+            </div>
+
+            <p class="mt-md"><strong>التفسير:</strong> أنتج هذا التمرين لمدة 60 دقيقة بسرعة سهلة (أبطأ من CRS) 76 sTSS - حمل تدريبي معتدل مناسب لبناء القاعدة الهوائية.</p>
+        </div>
+
+        <h2 class="mt-3xl">فهم قيم sTSS</h2>
+
+        <div class="zones-table-container">
+            <table class="zones-table">
+                <thead>
+                    <tr>
+                        <th>نطاق sTSS</th>
+                        <th>الحمل التدريبي</th>
+                        <th>وقت التعافي</th>
+                        <th>مثال التمرين</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>&lt; 50</td>
+                        <td>منخفض</td>
+                        <td>نفس اليوم</td>
+                        <td>جري سهل لمدة 30 دقيقة، تدريبات تقنية</td>
+                    </tr>
+                    <tr>
+                        <td>50-100</td>
+                        <td>معتدل</td>
+                        <td>يوم واحد</td>
+                        <td>تحمل لمدة 60 دقيقة، سرعة ثابتة</td>
+                    </tr>
+                    <tr>
+                        <td>100-200</td>
+                        <td>عالٍ</td>
+                        <td>1-2 يوم</td>
+                        <td>مجموعات عتبة لمدة 90 دقيقة، فترات سرعة السباق</td>
+                    </tr>
+                    <tr>
+                        <td>200-300</td>
+                        <td>عالٍ جداً</td>
+                        <td>2-3 أيام</td>
+                        <td>تدريب شاق لمدة ساعتين، كتل عتبة متعددة</td>
+                    </tr>
+                    <tr>
+                        <td>&gt; 300</td>
+                        <td>شديد</td>
+                        <td>3+ أيام</td>
+                        <td>سباق طويل (&gt;2 ساعة)، تحمل فائق</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h2 class="mt-3xl">إرشادات sTSS الأسبوعية</h2>
+
+        <p class="mb-md">يعتمد sTSS الأسبوعي المستهدف على مستوى التدريب والأهداف الخاصة بك:</p>
+
+        <div class="grid grid-2 mb-xl">
+            <div class="card">
+                <h3 class="card-title">العدائون الترفيهيون</h3>
+                <div class="card-content">
+                    <p class="mb-sm"><strong>sTSS الأسبوعي:</strong> 150-300</p>
+                    <p>2-3 تمارين في الأسبوع، 50-100 sTSS لكل منها. التركيز على التقنية وبناء القاعدة الهوائية.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3 class="card-title">عدائو اللياقة / رياضيو الترياثلون</h3>
+                <div class="card-content">
+                    <p class="mb-sm"><strong>sTSS الأسبوعي:</strong> 300-500</p>
+                    <p>3-4 تمارين في الأسبوع، 75-125 sTSS لكل منها. مزيج من التحمل الهوائي وعمل العتبة.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3 class="card-title">العدائون التنافسيون الكبار</h3>
+                <div class="card-content">
+                    <p class="mb-sm"><strong>sTSS الأسبوعي:</strong> 500-800</p>
+                    <p>4-6 تمارين في الأسبوع، 80-150 sTSS لكل منها. تدريب منظم مع دورية.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3 class="card-title">العدائون النخبة / الجامعيون</h3>
+                <div class="card-content">
+                    <p class="mb-sm"><strong>sTSS الأسبوعي:</strong> 800-1200+</p>
+                    <p>8-12 تمرين في الأسبوع، أيام مزدوجة. حجم كبير مع إدارة التعافي حاسمة.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="callout callout-warning">
+            <h3>⚠️ ملاحظات مهمة</h3>
+            <ul>
+                <li><strong>يتطلب CRS دقيق:</strong> يجب أن يكون CRS الخاص بك حديثاً (تم اختباره خلال 6-8 أسابيع) للحصول على sTSS دقيق.</li>
+                <li><strong>حساب مبسط:</strong> تستخدم هذه الحاسبة متوسط السرعة. يستخدم sTSS المتقدم السرعة المدرجة المعيارية (NGP) والتي تأخذ في الاعتبار بنية الفترات.</li>
+                <li><strong>ليس لعمل التقنية:</strong> يقيس sTSS فقط الإجهاد التدريبي البدني، وليس تطوير المهارات.</li>
+                <li><strong>التباين الفردي:</strong> يشعر نفس sTSS بشكل مختلف لعدائين مختلفين. اضبط الإرشادات بناءً على تعافيك.</li>
+            </ul>
+        </div>
+
+        <h2 class="mt-3xl">لماذا يهم sTSS</h2>
+
+        <p class="mb-md">نقاط الإجهاد التدريبي هي الأساس لـ:</p>
+
+        <ul class="mb-xl">
+            <li><strong>CTL (الحمل التدريبي المزمن):</strong> مستوى لياقتك - متوسط مرجح أسياً لمدة 42 يوماً من sTSS اليومي</li>
+            <li><strong>ATL (الحمل التدريبي الحاد):</strong> إرهاقك - متوسط مرجح أسياً لمدة 7 أيام من sTSS اليومي</li>
+            <li><strong>TSB (توازن الإجهاد التدريبي):</strong> حالتك - TSB = CTL - ATL (إيجابي = منتعش، سلبي = متعب)</li>
+            <li><strong>الدورية:</strong> خطط مراحل التدريب (القاعدة، البناء، الذروة، التخفيف) باستخدام تطورات CTL المستهدفة</li>
+            <li><strong>إدارة التعافي:</strong> اعرف متى تدفع ومتى تستريح بناءً على TSB</li>
+        </ul>
+
+        <div class="callout callout-tip">
+            <h3>نصيحة محترف: تتبع CTL الخاص بك</h3>
+            <p>سجل sTSS اليومي في جدول بيانات أو سجل تدريب. احسب متوسط 42 يوماً (CTL) أسبوعياً. استهدف زيادة 5-10 نقاط CTL في الأسبوع خلال بناء القاعدة. حافظ على CTL أو قلله قليلاً أثناء التخفيف (1-2 أسبوع قبل السباق).</p>
+        </div>
+
+        <h2 class="mt-3xl">الأسئلة الشائعة</h2>
+
+        <div class="faq-section" itemscope itemtype="https://schema.org/FAQPage">
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name">ما هو TSS للجري (sTSS)؟</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                    <div itemprop="text">
+                        <p>نقاط الإجهاد التدريبي للجري (sTSS) هي مقياس يحدد الحمل التدريبي لتمرين الجري من خلال الجمع بين الشدة والمدة. تم تكييفه من منهجية TSS لركوب الدراجات، باستخدام سرعة الجري الحرجة (CRS) كسرعة العتبة. تمرين لمدة ساعة واحدة بسرعة CRS يساوي 100 sTSS.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name">كيف أحسب sTSS الخاص بي؟</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                    <div itemprop="text">
+                        <p>استخدم الحاسبة أعلاه بإدخال سرعة CRS الخاصة بك (من اختبار CRS)، إجمالي مدة التمرين، ومتوسط السرعة أثناء التمرين. الصيغة هي: sTSS = المدة (ساعات) × عامل الشدة² × 100، حيث عامل الشدة = سرعة CRS / متوسط سرعة التمرين.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name">هل أحتاج إلى CRS لحساب sTSS؟</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                    <div itemprop="text">
+                        <p>نعم، سرعة الجري الحرجة (CRS) الخاصة بك مطلوبة لحساب عامل الشدة، وهو أمر ضروري لحساب sTSS. يمثل CRS سرعة العتبة الخاصة بك ويجب اختباره كل 6-8 أسابيع. يمكنك العثور على CRS الخاص بك باستخدام <a href="/ar/crs/">حاسبة CRS</a>.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name">ما هي نقاط sTSS الجيدة لتمرين واحد؟</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                    <div itemprop="text">
+                        <p>يعتمد على شدة التمرين: عادة ما تسجل التمارين السهلة أقل من 50 sTSS، التمارين المعتدلة 50-100 sTSS، التمارين الشاقة 100-200 sTSS، والتمارين الشاقة جداً أكثر من 200 sTSS. تعتمد النقاط المناسبة على أهداف التدريب ومستوى اللياقة الحالي.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name">كم يجب أن أقوم بـ sTSS في الأسبوع؟</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                    <div itemprop="text">
+                        <p>تختلف أهداف sTSS الأسبوعية حسب المستوى: العدائون الترفيهيون: 150-300، عدائو اللياقة/رياضيو الترياثلون: 300-500، التنافسيون الكبار: 500-800، النخبة/الجامعيون: 800-1200+. ابدأ بشكل متحفظ وزد تدريجياً لتجنب الإفراط في التدريب.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name">هل TSS للجري هو نفسه TSS لركوب الدراجات؟</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                    <div itemprop="text">
+                        <p>المفهوم والصيغة هي نفسها، لكن sTSS تم تكييفه للجري. بدلاً من استخدام القوة (FTP) مثل TSS لركوب الدراجات، يستخدم sTSS السرعة مع CRS كعتبة. كلاهما يقيس الحمل التدريبي باستخدام المدة × عامل الشدة² × 100.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name">هل يمكنني استخدام sTSS لجميع خطوات الجري؟</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                    <div itemprop="text">
+                        <p>نعم، لكن يجب أن يكون CRS الخاص بك خاصاً بالخطوة. معظم العدائين يستخدمون CRS الحر لأنها الخطوة الأكثر تدريباً شيوعاً. إذا كنت تتدرب بشكل أساسي في خطوة أخرى، قم بإجراء اختبار CRS في تلك الخطوة واستخدم تلك السرعة لحساب sTSS.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name">ما الفرق بين sTSS و CTL/ATL/TSB؟</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                    <div itemprop="text">
+                        <p>يقيس sTSS الحمل التدريبي لتمرين واحد. CTL (الحمل التدريبي المزمن) هو لياقتك على المدى الطويل، ATL (الحمل التدريبي الحاد) هو إرهاقك الأخير، و TSB (توازن الإجهاد التدريبي) هو انتعاشك. تستخدم هذه المقاييس قيم sTSS مع مرور الوقت لتتبع حالة التدريب الخاصة بك. تعرف على المزيد في <a href="/ar/training-load/">دليل الحمل التدريبي</a>.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="mt-3xl">الموارد ذات الصلة</h2>
+
+        <div class="grid grid-3">
+            <div class="card">
+                <h3 class="card-title">اختبار CRS</h3>
+                <div class="card-content">
+                    <p>تحتاج إلى سرعة CRS الخاصة بك؟ استخدم حاسبة CRS المجانية مع أوقات اختبار 5K و 3K.</p>
+                    <a href="/ar/crs/" class="btn btn-secondary btn-small mt-md">حاسبة CRS →</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3 class="card-title">دليل الحمل التدريبي</h3>
+                <div class="card-content">
+                    <p>تعرف على CTL و ATL و TSB ومقاييس مخطط إدارة الأداء.</p>
+                    <a href="/ar/training-load/" class="btn btn-secondary btn-small mt-md">الحمل التدريبي →</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3 class="card-title">تطبيق RunAnalytics</h3>
+                <div class="card-content">
+                    <p>حساب تلقائي لـ sTSS لجميع التمارين. تتبع اتجاهات CTL/ATL/TSB مع مرور الوقت.</p>
+                    <a href="/ar/" class="btn btn-secondary btn-small mt-md">تعرف على المزيد →</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-xl text-center">
+            <p class="mb-md"><strong>تريد تتبع sTSS تلقائياً؟</strong></p>
+            <a href="https://apps.apple.com/es/app/runanalytics/id6754524015" class="btn btn-primary btn-large" target="_blank" rel="noopener">قم بتنزيل RunAnalytics مجاناً</a>
+        </div>
+    </div>
+</section>
+
+<script src="/assets/js/stss-calculator.min.js"></script>
+    </main>
+
+    
+    <footer class="site-footer">
+    <div class="container">
+        <div class="footer-grid">
+            
+            <div>
+                <h3 class="mb-md">RunAnalytics - Running Analytics App | Critical Running Speed, TSS, CTL/ATL/TSB for iOS</h3>
+                <p class="text-secondary">Track Critical Running Speed, Training Stress Score, and performance metrics with RunAnalytics. Science-based iOS app for runners, triathletes &amp; coaches. 7-day free trial.</p>
+            </div>
+
+            
+            <div>
+                <h3 class="mb-md">الرئيسية</h3>
+                <ul class="footer-links">
+                    
+                    <li>
+                        <a href="/af/">Afrikaans</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ar/">العربية</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ca/">Català</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/en/">English</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/es/">Español</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/fr/">Français</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/de/">Deutsch</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/hi/">हिन्दी</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/zh/">中文</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/pt/">Português</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ja/">日本語</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/it/">Italiano</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/nl/">Nederlands</a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+
+        
+        <div class="footer-bottom">
+            <p class="text-sm text-secondary">
+                &copy; 2025 RunAnalytics - Running Analytics App | Critical Running Speed, TSS, CTL/ATL/TSB for iOS. جميع الحقوق محفوظة
+            </p>
+            <ul class="footer-links">
+                <li><a href="/ar/privacy/">الخصوصية</a></li>
+                <li><a href="/ar/terms/">الشروط</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+    
+    <div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="Cookie consent" aria-live="polite">
+    <div class="cookie-banner-content">
+        <div>
+            <p>يستخدم هذا الموقع ملفات تعريف الارتباط لتحسين تجربتك.</p>
+            <a href="/ar/privacy/" class="text-sm">معرفة المزيد</a>
+        </div>
+        <div class="cookie-banner-actions">
+            <button id="cookie-decline" class="btn btn-secondary btn-small">رفض</button>
+            <button id="cookie-accept" class="btn btn-primary btn-small">قبول</button>
+        </div>
+    </div>
+</div>
+
+    
+    <script src="/assets/js/main.min.js"></script>
+    <script src="/assets/js/cookie-consent.min.js"></script>
+    <script src="/assets/js/lazy-load.min.js"></script>
+
+    
+    <script src="/assets/js/fuse.min.js"></script>
+    <script src="/assets/js/search.min.js"></script>
+
+    
+    
+</body>
+</html>

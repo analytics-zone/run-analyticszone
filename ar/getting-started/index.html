@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+    <title>البدء مع RunAnalytics - دليل الإعداد الكامل | دروس اختبار CRS</title>
+    <meta name="description" content="دليل إعداد RunAnalytics الكامل. تعلم كيفية إجراء اختبار CRS، إدخال النتائج، تتبع التمارين، وفهم إحصائيات rTSS، CTL/ATL/TSB. دروس خطوة بخطوة مع حل المشاكل للمبتدئين. تجربة مجانية لمدة 7 أيام.">
+    <meta name="author" content="Albert Arno">
+
+    
+    
+    <meta name="keywords" content="دليل RunAnalytics, دروس اختبار CRS, دروس تطبيق الجري, كيفية استخدام RunAnalytics, دليل تحليلات الجري">
+    
+
+    
+    <link rel="canonical" href="https://run.analyticszone.app/ar/getting-started/">
+
+    
+    
+    <meta property="article:published_time" content="2025-01-15T10:00:00Z">
+    <meta property="article:modified_time" content="2025-11-15T14:30:00Z">
+    <meta property="article:author" content="Albert Arno">
+    
+
+    
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://run.analyticszone.app/ar/getting-started/">
+    <meta property="og:title" content="البدء مع RunAnalytics - دليل الإعداد الكامل | دروس اختبار CRS">
+    <meta property="og:description" content="دليل إعداد RunAnalytics الكامل. تعلم كيفية إجراء اختبار CRS، إدخال النتائج، تتبع التمارين، وفهم إحصائيات rTSS، CTL/ATL/TSB. دروس خطوة بخطوة مع حل المشاكل للمبتدئين. تجربة مجانية لمدة 7 أيام.">
+    
+    <meta property="og:image" content="https://run.analyticszone.app/assets/images/run-analytics-og.jpg">
+    
+    <meta property="og:locale" content="ar_SA">
+    <meta property="og:site_name" content="RunAnalytics - Running Analytics App | Critical Running Speed, TSS, CTL/ATL/TSB for iOS">
+
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://run.analyticszone.app/ar/getting-started/">
+    <meta name="twitter:title" content="البدء مع RunAnalytics - دليل الإعداد الكامل | دروس اختبار CRS">
+    <meta name="twitter:description" content="دليل إعداد RunAnalytics الكامل. تعلم كيفية إجراء اختبار CRS، إدخال النتائج، تتبع التمارين، وفهم إحصائيات rTSS، CTL/ATL/TSB. دروس خطوة بخطوة مع حل المشاكل للمبتدئين. تجربة مجانية لمدة 7 أيام.">
+    
+    <meta name="twitter:image" content="https://run.analyticszone.app/assets/images/run-analytics-og.jpg">
+    
+
+    
+    
+    <link rel="alternate" hreflang="af" href="https://run.analyticszone.app/af/getting-started/">
+    
+    <link rel="alternate" hreflang="ar" href="https://run.analyticszone.app/ar/getting-started/">
+    
+    <link rel="alternate" hreflang="ca" href="https://run.analyticszone.app/ca/getting-started/">
+    
+    <link rel="alternate" hreflang="en" href="https://run.analyticszone.app/en/getting-started/">
+    
+    <link rel="alternate" hreflang="es" href="https://run.analyticszone.app/es/getting-started/">
+    
+    <link rel="alternate" hreflang="fr" href="https://run.analyticszone.app/fr/getting-started/">
+    
+    <link rel="alternate" hreflang="de" href="https://run.analyticszone.app/de/getting-started/">
+    
+    <link rel="alternate" hreflang="hi" href="https://run.analyticszone.app/hi/getting-started/">
+    
+    <link rel="alternate" hreflang="zh" href="https://run.analyticszone.app/zh/getting-started/">
+    
+    <link rel="alternate" hreflang="pt" href="https://run.analyticszone.app/pt/getting-started/">
+    
+    <link rel="alternate" hreflang="ja" href="https://run.analyticszone.app/ja/getting-started/">
+    
+    <link rel="alternate" hreflang="it" href="https://run.analyticszone.app/it/getting-started/">
+    
+    <link rel="alternate" hreflang="nl" href="https://run.analyticszone.app/nl/getting-started/">
+    
+    <link rel="alternate" hreflang="x-default" href="https://run.analyticszone.app/en/getting-started/">
+
+    
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/icons/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/icons/apple-touch-icon.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#0066CC">
+
+    
+    <link rel="stylesheet" href="/assets/css/main.min.css">
+
+    
+    
+
+    
+    
+
+    
+    
+</head>
+<body>
+    
+    <a href="#main-content" class="skip-link">الانتقال إلى المحتوى</a>
+
+    
+    <header class="site-header">
+    <div class="container">
+        <div class="header-inner">
+            
+            <a href="/ar/" class="site-logo">
+                <picture>
+                    <source srcset="/assets/images/logo-dark.png" media="(prefers-color-scheme: dark)">
+                    <img src="/assets/images/logo.png" alt="RunAnalytics - Running Analytics App | Critical Running Speed, TSS, CTL/ATL/TSB for iOS" width="40" height="40">
+                </picture>
+                <span class="logo-text">RunAnalytics</span>
+            </a>
+
+            
+            <nav class="nav-primary" id="nav-primary" role="navigation" aria-label="Main navigation">
+                <ul>
+                    
+                    <li>
+                        
+                        
+                        <a href="/ar/"
+                           
+                           aria-current="">
+                            الرئيسية
+                        </a>
+                        
+                    </li>
+                    
+                    <li class="has-submenu">
+                        
+                        
+                        <button class="dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+                            تعلم
+                            <svg class="dropdown-icon" width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <polyline points="3 4.5 6 7.5 9 4.5"></polyline>
+                            </svg>
+                        </button>
+                        <ul class="submenu">
+                            
+                            <li>
+                                <a href="/ar/getting-started/"
+                                   class="active"
+                                   aria-current="page">
+                                    البدء
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/ar/crs/"
+                                   
+                                   aria-current="">
+                                    CRS
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/ar/training-zones/"
+                                   
+                                   aria-current="">
+                                    مناطق التدريب
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/ar/training-load/"
+                                   
+                                   aria-current="">
+                                    حمل التدريب
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/ar/stss-calculator/"
+                                   
+                                   aria-current="">
+                                    حاسبة sTSS
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        
+                    </li>
+                    
+                    <li class="has-submenu">
+                        
+                        
+                        <button class="dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+                            العلم
+                            <svg class="dropdown-icon" width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <polyline points="3 4.5 6 7.5 9 4.5"></polyline>
+                            </svg>
+                        </button>
+                        <ul class="submenu">
+                            
+                            <li>
+                                <a href="/ar/research/"
+                                   
+                                   aria-current="">
+                                    البحث
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/ar/formulas/"
+                                   
+                                   aria-current="">
+                                    الصيغ
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/ar/efficiency/"
+                                   
+                                   aria-current="">
+                                    الكفاءة
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/ar/stride-mechanics/"
+                                   
+                                   aria-current="">
+                                    ميكانيكا السباحة
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/ar/bibliography/"
+                                   
+                                   aria-current="">
+                                    المراجع
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        
+                    </li>
+                    
+                    <li>
+                        
+                        
+                        <a href="/ar/contact/"
+                           
+                           aria-current="">
+                            اتصل
+                        </a>
+                        
+                    </li>
+                    
+                </ul>
+
+                
+                <div class="search-container">
+                    <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.35-4.35"></path>
+                    </svg>
+                    <input
+                        type="search"
+                        id="site-search"
+                        class="search-input"
+                        aria-expanded="false"
+                        aria-haspopup="listbox"
+                        aria-autocomplete="list"
+                        autocomplete="off"
+                        spellcheck="false"
+                    />
+                    <div id="search-results" class="search-results hidden" role="region" aria-live="polite"></div>
+                </div>
+
+                
+                <select class="language-selector" id="language-select" aria-label="اختر اللغة">
+                    
+                    <option value="af" >
+                        Afrikaans
+                    </option>
+                    
+                    <option value="ar" selected>
+                        العربية
+                    </option>
+                    
+                    <option value="ca" >
+                        Català
+                    </option>
+                    
+                    <option value="en" >
+                        English
+                    </option>
+                    
+                    <option value="es" >
+                        Español
+                    </option>
+                    
+                    <option value="fr" >
+                        Français
+                    </option>
+                    
+                    <option value="de" >
+                        Deutsch
+                    </option>
+                    
+                    <option value="hi" >
+                        हिन्दी
+                    </option>
+                    
+                    <option value="zh" >
+                        中文
+                    </option>
+                    
+                    <option value="pt" >
+                        Português
+                    </option>
+                    
+                    <option value="ja" >
+                        日本語
+                    </option>
+                    
+                    <option value="it" >
+                        Italiano
+                    </option>
+                    
+                    <option value="nl" >
+                        Nederlands
+                    </option>
+                    
+                </select>
+            </nav>
+
+            
+            <button class="menu-toggle" id="menu-toggle" aria-label="تبديل القائمة" aria-expanded="false" aria-controls="nav-primary">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </div>
+</header>
+
+    
+    <main id="main-content" class="main-content">
+        <section class="hero hero-small">
+    <div class="container">
+        <h1>البدء مع RunAnalytics</h1>
+        <p class="lead">دليلك الشامل لتتبع أداء الجري، واختبار CRS، وتحليلات حمل التدريب</p>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container container-narrow">
+        <div class="callout callout-info mb-xl">
+            <h2>مرحباً بك في الجري المعتمد على البيانات</h2>
+            <p>يحوّل RunAnalytics تمارين الجري الخاصة بك إلى رؤى قابلة للتنفيذ باستخدام <strong>السرعة الحرجة للجري (CRS)</strong>، و<strong>درجة الإجهاد التدريبي (sTSS)</strong>، ومقاييس <strong>مخطط إدارة الأداء (PMC)</strong>. سيأخذك هذا الدليل من الإعداد الأول إلى التحليل المتقدم لحمل التدريب في 4 خطوات بسيطة.</p>
+        </div>
+
+        <h2>البدء السريع (5 دقائق)</h2>
+
+        <div class="steps-container">
+            <div class="step-card">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>التنزيل والتثبيت</h3>
+                    <p>قم بتنزيل RunAnalytics من App Store ومنح الإذن للوصول إلى Apple Health. يقوم التطبيق بمزامنة تمارين الجري تلقائياً - لا حاجة للتسجيل اليدوي.</p>
+                    <a href="https://apps.apple.com/es/app/runanalytics/id6754524015" class="btn btn-secondary btn-small mt-sm" target="_blank" rel="noopener">تنزيل التطبيق →</a>
+                </div>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>إجراء اختبار CRS</h3>
+                    <p>أكمل محاكمة زمنية لمسافة 5 كم و3 كم لتحديد سرعتك الحرجة للجري. هذا هو أساس جميع المقاييس - بدون CRS، لا يمكن حساب sTSS ومناطق التدريب.</p>
+                    <a href="#css-test-guide" class="btn btn-secondary btn-small mt-sm">بروتوكول اختبار CRS ↓</a>
+                </div>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>إدخال نتائج CRS</h3>
+                    <p>أدخل أوقات 5 كم و3 كم في التطبيق. يحسب RunAnalytics قيمة CRS ومناطق السرعة ويُخصص جميع المقاييس وفقاً لفسيولوجيتك. قم بالتحديث كل 6-8 أسابيع مع تحسن اللياقة.</p>
+                </div>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">4</div>
+                <div class="step-content">
+                    <h3>بدء تتبع التمارين</h3>
+                    <p>اجرِ مع Apple Watch وتطبيق Health. يستورد RunAnalytics التمارين تلقائياً، ويحسب sTSS، ويحدّث CTL/ATL/TSB، ويتتبع التقدم. لا حاجة لإدخال البيانات يدوياً.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section section-alt" id="css-test-guide">
+    <div class="container">
+        <h2 class="mb-xl text-center">بروتوكول اختبار CRS الكامل</h2>
+
+        <div class="grid grid-2">
+            <div class="card">
+                <h3 class="card-title">📋 ما تحتاجه</h3>
+                <div class="card-content">
+                    <ul>
+                        <li><strong>الوصول إلى مضمار:</strong> مضمار 25م أو 50م (25 ياردة مقبول)</li>
+                        <li><strong>التوقيت:</strong> ساعة إيقاف، ساعة سرعة، أو Apple Watch</li>
+                        <li><strong>وقت الإحماء:</strong> 15-20 دقيقة قبل الاختبار</li>
+                        <li><strong>الاستشفاء:</strong> 5-10 دقائق بين المحاولات</li>
+                        <li><strong>الجهد:</strong> أقصى سرعة مستدامة (وليس سباق سريع كامل)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3 class="card-title">⏱️ ظروف يوم الاختبار</h3>
+                <div class="card-content">
+                    <ul>
+                        <li><strong>مرتاح:</strong> لا تدريب شاق 24-48 ساعة قبل الاختبار</li>
+                        <li><strong>رطب:</strong> رطوبة جيدة، أكل طبيعي</li>
+                        <li><strong>درجة حرارة المضمار:</strong> 26-28°م مثالية (تجنب البرد/الحرارة الشديدة)</li>
+                        <li><strong>وقت اليوم:</strong> عندما تتدرب عادةً بشكل أفضل</li>
+                        <li><strong>المعدات:</strong> نفس معدات التدريب (نظارات، قبعة، بدلة)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <h3 class="mt-3xl">اختبار CRS خطوة بخطوة</h3>
+
+        <div class="protocol-timeline">
+            <div class="timeline-item">
+                <div class="timeline-marker">الإحماء</div>
+                <div class="timeline-content">
+                    <h4>15-20 دقيقة</h4>
+                    <p>جري سهل 400-800م، تمارين، وبناء تدريجي. أضف 2-3×50 بسرعة متزايدة (60٪، 75٪، 85٪ جهد). استرح 2-3 دقائق قبل الاختبار.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-marker">المحاولة 1</div>
+                <div class="timeline-content">
+                    <h4>400م أقصى جهد</h4>
+                    <p><strong>انطلاقة دفع</strong> (لا غطس). اجرِ 400م بأسرع سرعة يمكنك الحفاظ عليها للمسافة الكاملة. هذا ليس سباقاً سريعاً - قسّم جهدك. سجّل الوقت بصيغة <strong>دد:ثث</strong> (مثال، 6:08).</p>
+                    <div class="tip-box mt-sm">
+                        <strong>نصيحة التقسيم:</strong> استهدف تقسيمات 100م متساوية. يجب أن تكون 200م الثانية ≤ 200م الأولى (التقسيم السلبي مثالي).
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-marker">الاستشفاء</div>
+                <div class="timeline-content">
+                    <h4>5-10 دقائق</h4>
+                    <p><strong>مرحلة حرجة:</strong> جري سهل أو راحة كاملة. انتظر حتى ينخفض معدل ضربات القلب إلى أقل من 120 نبضة/دقيقة والتنفس متعافٍ تماماً. الاستشفاء غير الكافي = CRS غير دقيق.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-marker">المحاولة 2</div>
+                <div class="timeline-content">
+                    <h4>200م أقصى جهد</h4>
+                    <p><strong>انطلاقة دفع</strong> (لا غطس). أقصى جهد مستدام لـ 200م. يجب أن يكون هذا أصعب لكل 100م من 400م. سجّل الوقت بصيغة <strong>دد:ثث</strong> (مثال، 2:30).</p>
+                    <div class="tip-box mt-sm">
+                        <strong>فحص التحقق:</strong> يجب أن تكون سرعة 200م/100م أسرع بـ 3-6 ثوانٍ من سرعة 400م/100م. إذا لم يكن كذلك، فالاستشفاء كان غير كافٍ أو التقسيم كان خاطئاً.
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-marker">التهدئة</div>
+                <div class="timeline-content">
+                    <h4>10-15 دقيقة</h4>
+                    <p>جري سهل 300-500م، تمدد. سجّل أوقاتك فوراً - لا تعتمد على الذاكرة.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="callout callout-warning mt-xl">
+            <h3>⚠️ أخطاء شائعة في اختبار CRS</h3>
+            <ul>
+                <li><strong>البدء سريعاً جداً في 400م:</strong> يؤدي إلى الانهيار، CRS غير دقيق. استخدم تقسيم متساوٍ.</li>
+                <li><strong>الاستشفاء غير الكافي بين المحاولات:</strong> التعب يبطئ 200م، مما يجعل CRS سريعاً بشكل مصطنع → مناطق مفرطة التدريب.</li>
+                <li><strong>استخدام انطلاقات الغطس:</strong> يضيف ميزة 0.5-1.5 ثانية، مما يشوه الحسابات. دائماً ادفع من الحائط.</li>
+                <li><strong>الاختبار عند التعب:</strong> حمل تدريب ثقيل 24-48 ساعة قبل = نتائج منخفضة. اختبر عندما تكون منتعشاً.</li>
+                <li><strong>عدم التسجيل فوراً:</strong> الذاكرة غير موثوقة. اكتب الأوقات قبل التهدئة.</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container container-narrow">
+        <h2>إدخال نتائج CRS في RunAnalytics</h2>
+
+        <div class="screenshot-guide">
+            <div class="step-item">
+                <h3>الخطوة 1: افتح إعدادات CRS</h3>
+                <p>في تطبيق RunAnalytics، اذهب إلى <strong>الإعدادات → السرعة الحرجة للجري</strong>. انقر "إجراء اختبار CRS" أو "تحديث CRS".</p>
+            </div>
+
+            <div class="step-item">
+                <h3>الخطوة 2: أدخل الأوقات</h3>
+                <p>أدخل وقتك لـ 400م (مثال، <code>6:08</code>) ووقت 200م (مثال، <code>2:30</code>). استخدم الصيغة المعروضة بالضبط. انقر "حساب".</p>
+            </div>
+
+            <div class="step-item">
+                <h3>الخطوة 3: راجع النتائج</h3>
+                <p>يعرض التطبيق:</p>
+                <ul>
+                    <li><strong>سرعة CRS:</strong> 0.917 م/ث</li>
+                    <li><strong>سرعة CRS:</strong> 1:49/100م</li>
+                    <li><strong>مناطق التدريب:</strong> 7 مناطق مخصصة (المنطقة 1-7)</li>
+                    <li><strong>خط أساس sTSS:</strong> ممكّن الآن لجميع التمارين</li>
+                </ul>
+            </div>
+
+            <div class="step-item">
+                <h3>الخطوة 4: الحفظ والمزامنة</h3>
+                <p>انقر "حفظ CRS". يقوم التطبيق فوراً بـ:</p>
+                <ul>
+                    <li>إعادة حساب مناطق التدريب</li>
+                    <li>تحديث sTSS بأثر رجعي لآخر 90 يوماً</li>
+                    <li>تعديل حسابات CTL/ATL/TSB</li>
+                    <li>تمكين تحليل التمرين المعتمد على المنطقة</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="callout callout-tip mt-xl">
+            <h3>💡 نصيحة احترافية: اختبار CRS التاريخي</h3>
+            <p>إذا كنت تعرف بالفعل CRS الخاص بك من اختبارات سابقة، يمكنك إدخال تلك الأوقات مباشرة. ومع ذلك، للحصول على نتائج أكثر دقة، قم بإجراء اختبار جديد كل 6-8 أسابيع. يجب أن يتحسن CRS الخاص بك (يصبح أسرع) مع تقدم التدريب.</p>
+        </div>
+    </div>
+</section>
+
+<section class="section section-alt">
+    <div class="container">
+        <h2 class="mb-xl text-center">فهم مقاييسك</h2>
+
+        <div class="grid grid-2">
+            <div class="card">
+                <h3 class="card-title">السرعة الحرجة للجري (CRS)</h3>
+                <div class="card-content">
+                    <p><strong>ما هو:</strong> سرعة عتبة الهوائية الخاصة بك - أسرع سرعة يمكنك الحفاظ عليها لمدة ~30 دقيقة دون إرهاق.</p>
+                    <p><strong>ما يعنيه:</strong> CRS = 1:49/100م يعني أنه يمكنك الحفاظ على سرعة 1:49 لجهود العتبة المستدامة.</p>
+                    <p><strong>كيفية الاستخدام:</strong> أساس لجميع مناطق التدريب وحساب sTSS. قم بالتحديث كل 6-8 أسابيع.</p>
+                    <a href="/ar/crs/" class="btn btn-secondary btn-small mt-md">تعرف على CRS →</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3 class="card-title">مناطق التدريب</h3>
+                <div class="card-content">
+                    <p><strong>ما هي:</strong> 7 نطاقات شدة تستند إلى CRS الخاص بك، من الاستشفاء (المنطقة 1) إلى السباق السريع (المنطقة 7).</p>
+                    <p><strong>ما تعنيه:</strong> كل منطقة تستهدف تكيفات فسيولوجية محددة (قاعدة هوائية، عتبة، VO₂max).</p>
+                    <p><strong>كيفية الاستخدام:</strong> اتبع وصفات المناطق للتدريب المنظم. يعرض التطبيق الوقت في المنطقة لكل تمرين.</p>
+                    <a href="/ar/training-zones/" class="btn btn-secondary btn-small mt-md">مناطق التدريب →</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3 class="card-title">درجة الإجهاد التدريبي للجري (sTSS)</h3>
+                <div class="card-content">
+                    <p><strong>ما هو:</strong> إجهاد التمرين الكمي الذي يجمع بين الشدة والمدة. ساعة واحدة بسرعة CRS = 100 sTSS.</p>
+                    <p><strong>ما يعنيه:</strong> sTSS 50 = استشفاء سهل، sTSS 100 = معتدل، sTSS 200+ = جلسة صعبة جداً.</p>
+                    <p><strong>كيفية الاستخدام:</strong> تتبع sTSS اليومي/الأسبوعي لإدارة حمل التدريب. استهدف زيادة 5-10 sTSS أسبوعياً كحد أقصى.</p>
+                    <a href="/ar/training-load/" class="btn btn-secondary btn-small mt-md">دليل sTSS →</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3 class="card-title">CTL / ATL / TSB</h3>
+                <div class="card-content">
+                    <p><strong>ما هي:</strong></p>
+                    <ul>
+                        <li><strong>CTL:</strong> حمل التدريب المزمن (اللياقة) - متوسط sTSS لـ 42 يوماً</li>
+                        <li><strong>ATL:</strong> حمل التدريب الحاد (التعب) - متوسط sTSS لـ 7 أيام</li>
+                        <li><strong>TSB:</strong> توازن إجهاد التدريب (الشكل) = CTL - ATL</li>
+                    </ul>
+                    <p><strong>كيفية الاستخدام:</strong> TSB إيجابي = منتعش/مخفف، TSB سلبي = متعب. تسابق عندما TSB = +5 إلى +25.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="callout mt-xl">
+            <h3>📊 أهداف أسبوعك الأول</h3>
+            <p>بعد إدخال CRS وإكمال 3-5 تمارين:</p>
+            <ul>
+                <li><strong>تحقق من قيم sTSS:</strong> تأكد من أنها تطابق إدراك الجهد (سهل ~50، معتدل ~100، صعب ~150+)</li>
+                <li><strong>راجع توزيع المنطقة:</strong> هل تقضي 60-70٪ في المنطقة 2 (قاعدة هوائية)؟</li>
+                <li><strong>حدد خط أساس CTL:</strong> متوسط sTSS لأسبوعك الأول يصبح خط أساس اللياقة الأولي</li>
+                <li><strong>حدد الأنماط:</strong> أي التمارين تولد أعلى sTSS؟ هل تتعافى بشكل كافٍ؟</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container container-narrow">
+        <h2>رحلة المستخدم النموذجية (الأسابيع الـ 8 الأولى)</h2>
+
+        <div class="journey-timeline">
+            <div class="journey-phase">
+                <h3>الأسبوع 1-2: تحديد الخط الأساسي</h3>
+                <ul>
+                    <li>إجراء اختبار CRS وإدخال النتائج</li>
+                    <li>إكمال 3-5 تمارين تدريب عادية</li>
+                    <li>ملاحظة قيم sTSS وتوزيع المنطقة</li>
+                    <li>تحديد CTL الأولي (مستوى اللياقة)</li>
+                    <li><strong>الهدف:</strong> فهم المقاييس، لا تغييرات بعد</li>
+                </ul>
+            </div>
+
+            <div class="journey-phase">
+                <h3>الأسبوع 3-4: تطبيق المناطق</h3>
+                <ul>
+                    <li>استخدام مناطق CRS في تخطيط التمرين</li>
+                    <li>الجري بشكل متعمد في المنطقة 2 للمجموعات الهوائية</li>
+                    <li>تتبع إجماليات sTSS الأسبوعية (استهدف الاتساق)</li>
+                    <li>مراقبة TSB (يجب أن يكون سلبياً قليلاً = تدريب)</li>
+                    <li><strong>الهدف:</strong> التدريب بالمناطق، وليس بالشعور</li>
+                </ul>
+            </div>
+
+            <div class="journey-phase">
+                <h3>الأسبوع 5-6: الحمل التدريجي</h3>
+                <ul>
+                    <li>زيادة sTSS الأسبوعي بنسبة 5-10٪ من الخط الأساسي</li>
+                    <li>إضافة جلسة عتبة واحدة (المنطقة 4) أسبوعياً</li>
+                    <li>يجب أن يرتفع CTL تدريجياً (تحسن اللياقة)</li>
+                    <li>قد يرتفع ATL في الأسابيع الصعبة (طبيعي)</li>
+                    <li><strong>الهدف:</strong> تقدم اللياقة المضبوط</li>
+                </ul>
+            </div>
+
+            <div class="journey-phase">
+                <h3>الأسبوع 7-8: إعادة الاختبار والتعديل</h3>
+                <ul>
+                    <li>إجراء اختبار CRS الثاني (يجب أن يكون أسرع)</li>
+                    <li>تحديث المناطق في التطبيق (تحسن السرعة)</li>
+                    <li>مقارنة CTL الأسبوع 1 مقابل الأسبوع 8 (يجب أن يكون +10-20)</li>
+                    <li>مراجعة التقدم: هل تنخفض الأوقات؟ هل تشعر بالسهولة؟</li>
+                    <li><strong>الهدف:</strong> التحقق من فعالية التدريب</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="callout callout-success mt-xl">
+            <h3>✅ مؤشرات النجاح</h3>
+            <p>بعد 8 أسابيع من التدريب المنظم مع RunAnalytics، يجب أن ترى:</p>
+            <ul>
+                <li><strong>تحسن CRS:</strong> سرعة CRS أسرع بنسبة 1-3٪ (مثال، 1:49 → 1:47)</li>
+                <li><strong>زيادة CTL:</strong> +15-25 نقطة (مثال، 30 → 50 CTL)</li>
+                <li><strong>sTSS متسق:</strong> إجماليات أسبوعية ضمن تباين 10-15٪</li>
+                <li><strong>تحسن التقسيم:</strong> تقسيمات أكثر تساوياً، معايرة جهد أفضل</li>
+                <li><strong>تحسن الاستشفاء:</strong> دورات TSB يمكن التنبؤ بها (-10 إلى +5)</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="section section-alt">
+    <div class="container container-narrow">
+        <h2>استكشاف الأخطاء والأسئلة الشائعة</h2>
+
+        <div class="faq-item">
+            <h3>sTSS الخاص بي يبدو مرتفعاً/منخفضاً جداً لجهد التمرين</h3>
+            <p><strong>السبب:</strong> CRS قديم أو غير دقيق.</p>
+            <p><strong>الحل:</strong> أعد اختبار CRS. إذا اختبرت عند التعب أو قسّمت بشكل سيئ، سيكون CRS خاطئاً. اختبار CRS المناسب حاسم لجميع المقاييس اللاحقة.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>التطبيق يعرض "لم يتم تكوين CRS"</h3>
+            <p><strong>السبب:</strong> اختبار CRS لم يكتمل أو لم يُحفظ.</p>
+            <p><strong>الحل:</strong> اذهب إلى الإعدادات → السرعة الحرجة للجري → إجراء اختبار. أدخل أوقات 5 كم و3 كم، ثم انقر حفظ.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>التمارين لا تتزامن من Apple Watch</h3>
+            <p><strong>السبب:</strong> أذونات تطبيق Health غير ممنوحة أو التمرين غير مصنف كـ "الجري".</p>
+            <p><strong>الحل:</strong> تحقق من الإعدادات → الخصوصية → الصحة → RunAnalytics → السماح بالقراءة للتمارين. تأكد من أن نوع تمرين Apple Watch هو "جري مضمار" أو "جري مياه مفتوحة".</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>CTL لا يزداد رغم التدريب المتسق</h3>
+            <p><strong>السبب:</strong> إجماليات sTSS منخفضة جداً أو تكرار غير متسق.</p>
+            <p><strong>الحل:</strong> CTL هو متوسط موزون أسياً لمدة 42 يوماً. يرتفع ببطء. زد sTSS الأسبوعي بنسبة 5-10٪، وحافظ على 4+ تمارين/أسبوع لنمو CTL متسق.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>كم مرة يجب أن أعيد اختبار CRS؟</h3>
+            <p><strong>التوصية:</strong> كل 6-8 أسابيع خلال مراحل القاعدة/البناء. أعد الاختبار بعد المرض، الإصابة، فترة راحة طويلة، أو عندما تشعر أن المناطق سهلة/صعبة باستمرار.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>هل يمكنني استخدام RunAnalytics لأنماط جري أخرى؟</h3>
+            <p><strong>نعم، مع قيود:</strong> عادة ما يُختبر CRS في الجري الحر. لتمارين IM/الظهر/الصدر، يُحسب sTSS بناءً على CRS للجري الحر. فكر في إجراء اختبارات CRS خاصة بالنمط للحصول على دقة أكبر.</p>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container container-narrow">
+        <h2>الخطوات التالية</h2>
+
+        <div class="grid grid-3">
+            <div class="card">
+                <h3 class="card-title">تعلم مناطق التدريب</h3>
+                <div class="card-content">
+                    <p>افهم كيفية التدريب في المنطقة 2 (قاعدة هوائية)، المنطقة 4 (عتبة)، والمنطقة 5 (VO₂max) للتكيفات المحددة.</p>
+                    <a href="/ar/training-zones/" class="btn btn-secondary btn-small mt-md">مناطق التدريب →</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3 class="card-title">احسب sTSS</h3>
+                <div class="card-content">
+                    <p>استخدم حاسبة sTSS المجانية لفهم حمل التدريب قبل الالتزام بالتمارين.</p>
+                    <a href="/ar/stss-calculator/" class="btn btn-secondary btn-small mt-md">حاسبة sTSS →</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3 class="card-title">تعمق في المقاييس</h3>
+                <div class="card-content">
+                    <p>استكشف العلم وراء CRS وsTSS وCTL/ATL/TSB مع مراجع بحث محكّمة.</p>
+                    <a href="/ar/research/" class="btn btn-secondary btn-small mt-md">البحث →</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-xl text-center">
+            <p class="mb-md"><strong>هل أنت مستعد لبدء التتبع؟</strong></p>
+            <a href="https://apps.apple.com/es/app/runanalytics/id6754524015" class="btn btn-primary btn-large" target="_blank" rel="noopener">تنزيل RunAnalytics مجاناً</a>
+            <p class="mt-sm text-secondary">تجربة مجانية لمدة 7 أيام • لا حاجة لبطاقة ائتمان • iOS 16+</p>
+        </div>
+    </div>
+</section>
+    </main>
+
+    
+    <footer class="site-footer">
+    <div class="container">
+        <div class="footer-grid">
+            
+            <div>
+                <h3 class="mb-md">RunAnalytics - Running Analytics App | Critical Running Speed, TSS, CTL/ATL/TSB for iOS</h3>
+                <p class="text-secondary">Track Critical Running Speed, Training Stress Score, and performance metrics with RunAnalytics. Science-based iOS app for runners, triathletes &amp; coaches. 7-day free trial.</p>
+            </div>
+
+            
+            <div>
+                <h3 class="mb-md">الرئيسية</h3>
+                <ul class="footer-links">
+                    
+                    <li>
+                        <a href="/af/">Afrikaans</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ar/">العربية</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ca/">Català</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/en/">English</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/es/">Español</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/fr/">Français</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/de/">Deutsch</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/hi/">हिन्दी</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/zh/">中文</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/pt/">Português</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ja/">日本語</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/it/">Italiano</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/nl/">Nederlands</a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+
+        
+        <div class="footer-bottom">
+            <p class="text-sm text-secondary">
+                &copy; 2025 RunAnalytics - Running Analytics App | Critical Running Speed, TSS, CTL/ATL/TSB for iOS. جميع الحقوق محفوظة
+            </p>
+            <ul class="footer-links">
+                <li><a href="/ar/privacy/">الخصوصية</a></li>
+                <li><a href="/ar/terms/">الشروط</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+    
+    <div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="Cookie consent" aria-live="polite">
+    <div class="cookie-banner-content">
+        <div>
+            <p>يستخدم هذا الموقع ملفات تعريف الارتباط لتحسين تجربتك.</p>
+            <a href="/ar/privacy/" class="text-sm">معرفة المزيد</a>
+        </div>
+        <div class="cookie-banner-actions">
+            <button id="cookie-decline" class="btn btn-secondary btn-small">رفض</button>
+            <button id="cookie-accept" class="btn btn-primary btn-small">قبول</button>
+        </div>
+    </div>
+</div>
+
+    
+    <script src="/assets/js/main.min.js"></script>
+    <script src="/assets/js/cookie-consent.min.js"></script>
+    <script src="/assets/js/lazy-load.min.js"></script>
+
+    
+    <script src="/assets/js/fuse.min.js"></script>
+    <script src="/assets/js/search.min.js"></script>
+
+    
+    
+</body>
+</html>
