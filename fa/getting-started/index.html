@@ -1,0 +1,1031 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+    <title>شروع کار با RunAnalytics - راهنمای نصب و CRS</title>
+    <meta name="description" content="راهنمای کامل RunAnalytics برای مبتدی‌ها. آموزش تست CRS، تنظیمات ردیابی تمرین، توضیح rTSS. راهنمای گام‌به‌گام + آزمایش رایگان ۷ روزه.">
+    <meta name="author" content="Albert Arno">
+
+    
+    
+    <meta name="keywords" content="راهنمای RunAnalytics, آموزش تست CRS, آموزش اپ دویدن, getting started, راهنمای تحلیل دویدن, نصب RunAnalytics">
+    
+
+    
+    <link rel="canonical" href="https://run.analyticszone.app/fa/getting-started/">
+
+    
+    
+    <meta property="article:published_time" content="2025-01-15T10:00:00Z">
+    <meta property="article:modified_time" content="2025-11-16T14:30:00Z">
+    <meta property="article:author" content="Albert Arno">
+    
+
+    
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://run.analyticszone.app/fa/getting-started/">
+    <meta property="og:title" content="شروع کار با RunAnalytics - راهنمای نصب و CRS">
+    <meta property="og:description" content="راهنمای کامل RunAnalytics برای مبتدی‌ها. آموزش تست CRS، تنظیمات ردیابی تمرین، توضیح rTSS. راهنمای گام‌به‌گام + آزمایش رایگان ۷ روزه.">
+    
+    <meta property="og:image" content="https://run.analyticszone.app/assets/images/run-analytics-og.jpg">
+    
+    <meta property="og:locale" content="fa_IR">
+    <meta property="og:site_name" content="RunAnalytics - Running Analytics App | Critical Running Speed, TSS, CTL/ATL/TSB for iOS">
+
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://run.analyticszone.app/fa/getting-started/">
+    <meta name="twitter:title" content="شروع کار با RunAnalytics - راهنمای نصب و CRS">
+    <meta name="twitter:description" content="راهنمای کامل RunAnalytics برای مبتدی‌ها. آموزش تست CRS، تنظیمات ردیابی تمرین، توضیح rTSS. راهنمای گام‌به‌گام + آزمایش رایگان ۷ روزه.">
+    
+    <meta name="twitter:image" content="https://run.analyticszone.app/assets/images/run-analytics-og.jpg">
+    
+
+    
+    
+    <link rel="alternate" hreflang="af" href="https://run.analyticszone.app/af/getting-started/">
+    
+    <link rel="alternate" hreflang="ar" href="https://run.analyticszone.app/ar/getting-started/">
+    
+    <link rel="alternate" hreflang="bn" href="https://run.analyticszone.app/bn/getting-started/">
+    
+    <link rel="alternate" hreflang="ca" href="https://run.analyticszone.app/ca/getting-started/">
+    
+    <link rel="alternate" hreflang="de" href="https://run.analyticszone.app/de/getting-started/">
+    
+    <link rel="alternate" hreflang="el" href="https://run.analyticszone.app/el/getting-started/">
+    
+    <link rel="alternate" hreflang="en" href="https://run.analyticszone.app/en/getting-started/">
+    
+    <link rel="alternate" hreflang="es" href="https://run.analyticszone.app/es/getting-started/">
+    
+    <link rel="alternate" hreflang="fa" href="https://run.analyticszone.app/fa/getting-started/">
+    
+    <link rel="alternate" hreflang="fi" href="https://run.analyticszone.app/fi/getting-started/">
+    
+    <link rel="alternate" hreflang="fr" href="https://run.analyticszone.app/fr/getting-started/">
+    
+    <link rel="alternate" hreflang="hi" href="https://run.analyticszone.app/hi/getting-started/">
+    
+    <link rel="alternate" hreflang="id" href="https://run.analyticszone.app/id/getting-started/">
+    
+    <link rel="alternate" hreflang="it" href="https://run.analyticszone.app/it/getting-started/">
+    
+    <link rel="alternate" hreflang="ja" href="https://run.analyticszone.app/ja/getting-started/">
+    
+    <link rel="alternate" hreflang="ko" href="https://run.analyticszone.app/ko/getting-started/">
+    
+    <link rel="alternate" hreflang="ms" href="https://run.analyticszone.app/ms/getting-started/">
+    
+    <link rel="alternate" hreflang="nl" href="https://run.analyticszone.app/nl/getting-started/">
+    
+    <link rel="alternate" hreflang="no" href="https://run.analyticszone.app/no/getting-started/">
+    
+    <link rel="alternate" hreflang="pl" href="https://run.analyticszone.app/pl/getting-started/">
+    
+    <link rel="alternate" hreflang="pt" href="https://run.analyticszone.app/pt/getting-started/">
+    
+    <link rel="alternate" hreflang="ru" href="https://run.analyticszone.app/ru/getting-started/">
+    
+    <link rel="alternate" hreflang="sv" href="https://run.analyticszone.app/sv/getting-started/">
+    
+    <link rel="alternate" hreflang="sw" href="https://run.analyticszone.app/sw/getting-started/">
+    
+    <link rel="alternate" hreflang="tl" href="https://run.analyticszone.app/tl/getting-started/">
+    
+    <link rel="alternate" hreflang="tr" href="https://run.analyticszone.app/tr/getting-started/">
+    
+    <link rel="alternate" hreflang="ur" href="https://run.analyticszone.app/ur/getting-started/">
+    
+    <link rel="alternate" hreflang="vi" href="https://run.analyticszone.app/vi/getting-started/">
+    
+    <link rel="alternate" hreflang="zh" href="https://run.analyticszone.app/zh/getting-started/">
+    
+    <link rel="alternate" hreflang="x-default" href="https://run.analyticszone.app/en/getting-started/">
+
+    
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/icons/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/icons/apple-touch-icon.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#0066CC">
+
+    
+    <link rel="stylesheet" href="/assets/css/main.min.css">
+
+    
+    
+
+    
+    
+
+    
+    
+</head>
+<body>
+    
+    <a href="#main-content" class="skip-link">رفتن به محتوا</a>
+
+    
+    <header class="site-header">
+    <div class="container">
+        <div class="header-inner">
+            
+            <a href="/fa/" class="site-logo">
+                <picture>
+                    
+                    <source srcset="/assets/images/logo-dark.webp" type="image/webp"
+                        media="(prefers-color-scheme: dark)">
+                    
+                    <source srcset="/assets/images/logo-dark.png" type="image/png" media="(prefers-color-scheme: dark)">
+                    
+                    <source srcset="/assets/images/logo.webp" type="image/webp">
+                    
+                    <img src="/assets/images/logo.png" alt="RunAnalytics - Running Analytics App | Critical Running Speed, TSS, CTL/ATL/TSB for iOS" width="40" height="40">
+                </picture>
+                <span class="logo-text">RunAnalytics</span>
+            </a>
+
+            
+            <nav class="nav-primary" id="nav-primary" role="navigation" aria-label="Main navigation">
+                <ul>
+                    
+                    <li>
+                        
+                        
+                        <a href="/fa/"  aria-current="">
+                            خانه
+                        </a>
+                        
+                        </li>
+                        
+                    <li class="has-submenu" >
+                        
+                        
+                        
+                        
+                        <span class="nav-label">یادگیری</span>
+                        
+                        <ul class="submenu">
+                            
+                            <li>
+                                <a href="/fa/getting-started/" class="active" 
+                                    aria-current="page">
+                                    شروع کنید
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/fa/crs/" 
+                                    aria-current="">
+                                    CRS
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/fa/training-zones/" 
+                                    aria-current="">
+                                    زون‌های تمرین
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/fa/training-load/" 
+                                    aria-current="">
+                                    بار تمرینی
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/fa/stss-calculator/" 
+                                    aria-current="">
+                                    ماشین‌حساب sTSS
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        
+                        </li>
+                        
+                    <li class="has-submenu" >
+                        
+                        
+                        
+                        
+                        <span class="nav-label">علم</span>
+                        
+                        <ul class="submenu">
+                            
+                            <li>
+                                <a href="/fa/research/" 
+                                    aria-current="">
+                                    تحقیقات
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/fa/formulas/" 
+                                    aria-current="">
+                                    فرمول‌ها
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/fa/efficiency/" 
+                                    aria-current="">
+                                    کارایی
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/fa/stride-mechanics/" 
+                                    aria-current="">
+                                    مکانیک گام
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/fa/bibliography/" 
+                                    aria-current="">
+                                    کتاب‌شناسی
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        
+                        </li>
+                        
+                    <li>
+                        
+                        
+                        <a href="/fa/contact/"  aria-current="">
+                            تماس
+                        </a>
+                        
+                        </li>
+                        
+                </ul>
+
+                
+                <div class="search-container">
+                    <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" aria-hidden="true">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.35-4.35"></path>
+                    </svg>
+                    <input type="search" id="site-search" class="search-input" aria-expanded="false"
+                        aria-haspopup="listbox" aria-autocomplete="list" autocomplete="off" spellcheck="false" />
+                    <div id="search-results" class="search-results hidden" role="region" aria-live="polite"></div>
+                </div>
+
+                
+                <select class="language-selector" id="language-select" aria-label="انتخاب زبان">
+                    
+                    <option value="af" >
+                        Afrikaans
+                    </option>
+                    
+                    <option value="ar" >
+                        العربية
+                    </option>
+                    
+                    <option value="bn" >
+                        বাংলা
+                    </option>
+                    
+                    <option value="ca" >
+                        Català
+                    </option>
+                    
+                    <option value="de" >
+                        Deutsch
+                    </option>
+                    
+                    <option value="el" >
+                        Ελληνικά
+                    </option>
+                    
+                    <option value="en" >
+                        English
+                    </option>
+                    
+                    <option value="es" >
+                        Español
+                    </option>
+                    
+                    <option value="fa" selected>
+                        فارسی
+                    </option>
+                    
+                    <option value="fi" >
+                        Suomi
+                    </option>
+                    
+                    <option value="fr" >
+                        Français
+                    </option>
+                    
+                    <option value="hi" >
+                        हिन्दी
+                    </option>
+                    
+                    <option value="id" >
+                        Bahasa Indonesia
+                    </option>
+                    
+                    <option value="it" >
+                        Italiano
+                    </option>
+                    
+                    <option value="ja" >
+                        日本語
+                    </option>
+                    
+                    <option value="ko" >
+                        한국어
+                    </option>
+                    
+                    <option value="ms" >
+                        Bahasa Melayu
+                    </option>
+                    
+                    <option value="nl" >
+                        Nederlands
+                    </option>
+                    
+                    <option value="no" >
+                        Norsk
+                    </option>
+                    
+                    <option value="pl" >
+                        Polski
+                    </option>
+                    
+                    <option value="pt" >
+                        Português
+                    </option>
+                    
+                    <option value="ru" >
+                        Русский
+                    </option>
+                    
+                    <option value="sv" >
+                        Svenska
+                    </option>
+                    
+                    <option value="sw" >
+                        Kiswahili
+                    </option>
+                    
+                    <option value="tl" >
+                        Tagalog
+                    </option>
+                    
+                    <option value="tr" >
+                        Türkçe
+                    </option>
+                    
+                    <option value="ur" >
+                        اردو
+                    </option>
+                    
+                    <option value="vi" >
+                        Tiếng Việt
+                    </option>
+                    
+                    <option value="zh" >
+                        中文
+                    </option>
+                    
+                </select>
+
+                
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode"
+                    title="Toggle dark/light mode">
+                    <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                    <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+
+                
+                
+                <a href="https://apps.apple.com/es/app/runanalytics/id6754524015" class="header-download-btn" target="_blank" rel="noopener"
+                    aria-label="Download on App Store">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                        fill="currentColor">
+                        <path
+                            d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z" />
+                    </svg>
+                    <span class="download-text">Download</span>
+                </a>
+                
+            </nav>
+
+            
+            <button class="menu-toggle" id="menu-toggle" aria-label="تغییر منو"
+                aria-expanded="false" aria-controls="nav-primary">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </div>
+</header>
+
+    
+    <main id="main-content" class="main-content">
+        <section class="hero hero-small">
+    <div class="container">
+        <h1>شروع کار با RunAnalytics</h1>
+        <p class="lead">راهنمای جامع شما برای ردیابی عملکرد دویدن، تست CRS و تحلیل بار تمرینی</p>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container container-narrow">
+        <div class="callout callout-info mb-xl">
+            <h2>به دویدن مبتنی بر داده خوش آمدید</h2>
+            <p>RunAnalytics تمرینات دویدن شما را به بینش‌های قابل اجرا با استفاده از شاخص‌های <strong>سرعت بحرانی دویدن (CRS)</strong>، <strong>امتیاز استرس تمرینی (sTSS)</strong> و <strong>نمودار مدیریت عملکرد (PMC)</strong> تبدیل می‌کند. این راهنما شما را از نصب اولیه تا تحلیل پیشرفته بار تمرینی در 4 مرحله ساده راهنمایی می‌کند.</p>
+        </div>
+
+        <h2>شروع سریع (5 دقیقه)</h2>
+
+        <div class="steps-container">
+            <div class="step-card">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>دانلود و نصب</h3>
+                    <p>RunAnalytics را از App Store دانلود کرده و اجازه دسترسی به Apple Health را بدهید. برنامه به صورت خودکار تمرینات دویدن را همگام‌سازی می‌کند—نیازی به ثبت دستی نیست.</p>
+                    <a href="https://apps.apple.com/es/app/runanalytics/id6754524015" class="btn btn-secondary btn-small mt-sm" target="_blank" rel="noopener">دانلود برنامه ←</a>
+                </div>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>انجام تست CRS</h3>
+                    <p>یک آزمون زمانی 5 کیلومتری و 3 کیلومتری را برای تعیین سرعت بحرانی دویدن خود انجام دهید. این پایه تمام شاخص‌هاست—بدون CRS، sTSS و نواحی تمرینی قابل محاسبه نیستند.</p>
+                    <a href="#css-test-guide" class="btn btn-secondary btn-small mt-sm">پروتکل تست CRS ↓</a>
+                </div>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>ورود نتایج CRS</h3>
+                    <p>زمان‌های 5 کیلومتری و 3 کیلومتری خود را در برنامه وارد کنید. RunAnalytics CRS، نواحی سرعت را محاسبه کرده و تمام شاخص‌ها را با فیزیولوژی شما شخصی‌سازی می‌کند. هر 6 تا 8 هفته با بهبود آمادگی، به‌روزرسانی کنید.</p>
+                </div>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">4</div>
+                <div class="step-content">
+                    <h3>شروع ردیابی تمرینات</h3>
+                    <p>با Apple Watch و برنامه Health دویدن کنید. RunAnalytics به صورت خودکار تمرینات را وارد کرده، sTSS را محاسبه می‌کند، CTL/ATL/TSB را به‌روزرسانی کرده و پیشرفت را ردیابی می‌کند. نیازی به ورود دستی داده نیست.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section section-alt" id="css-test-guide">
+    <div class="container">
+        <h2 class="mb-xl text-center">پروتکل کامل تست CRS</h2>
+
+        <div class="grid grid-2">
+            <div class="card">
+                <h3 class="card-title">📋 آنچه نیاز دارید</h3>
+                <div class="card-content">
+                    <ul>
+                        <li><strong>دسترسی به پیست:</strong> پیست 25 یا 50 متری (25 یاردی قابل قبول)</li>
+                        <li><strong>زمان‌سنجی:</strong> کرنومتر، ساعت سرعت، یا Apple Watch</li>
+                        <li><strong>زمان گرم کردن:</strong> 15 تا 20 دقیقه قبل از تست</li>
+                        <li><strong>بهبودی:</strong> 5 تا 10 دقیقه بین آزمایش‌ها</li>
+                        <li><strong>تلاش:</strong> سرعت حداکثر پایدار (نه اسپرینت تمام قدرت)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3 class="card-title">⏱️ شرایط روز تست</h3>
+                <div class="card-content">
+                    <ul>
+                        <li><strong>استراحت کافی:</strong> بدون تمرین سخت 24 تا 48 ساعت قبل</li>
+                        <li><strong>آبرسانی:</strong> آبرسانی خوب، تغذیه معمولی</li>
+                        <li><strong>دمای پیست:</strong> 26 تا 28 درجه سانتیگراد ایده‌آل (از سرما/گرمای شدید اجتناب کنید)</li>
+                        <li><strong>زمان روز:</strong> زمانی که معمولاً بهترین تمرین را دارید</li>
+                        <li><strong>تجهیزات:</strong> مشابه تمرین (عینک، کلاه، لباس)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <h3 class="mt-3xl">تست CRS گام به گام</h3>
+
+        <div class="protocol-timeline">
+            <div class="timeline-item">
+                <div class="timeline-marker">گرم کردن</div>
+                <div class="timeline-content">
+                    <h4>15 تا 20 دقیقه</h4>
+                    <p>دویدن آسان 400 تا 800 متری، حرکات فنی، و افزایش تدریجی سرعت. 2 تا 3 مرتبه 50 متر با سرعت افزایشی (60%، 75%، 85% تلاش) انجام دهید. 2 تا 3 دقیقه قبل از تست استراحت کنید.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-marker">آزمایش 1</div>
+                <div class="timeline-content">
+                    <h4>تلاش حداکثر 400 متر</h4>
+                    <p><strong>شروع فشاری</strong> (بدون شیرجه). 400 متر را با سریع‌ترین سرعتی که می‌توانید برای کل مسافت حفظ کنید بدوید. این یک اسپرینت نیست—سرعت خود را تنظیم کنید. زمان را به فرمت <strong>mm:ss</strong> ثبت کنید (مثلاً 6:08).</p>
+                    <div class="tip-box mt-sm">
+                        <strong>نکته تنظیم سرعت:</strong> هدف داشتن تقسیمات یکسان 100 متری. 200 متر دوم باید ≤ 200 متر اول باشد (تقسیم منفی ایده‌آل).
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-marker">بهبودی</div>
+                <div class="timeline-content">
+                    <h4>5 تا 10 دقیقه</h4>
+                    <p><strong>مرحله حیاتی:</strong> دویدن آسان یا استراحت کامل. صبر کنید تا ضربان قلب زیر 120 bpm برسد و تنفس کاملاً بهبود یابد. بهبودی ناکافی = CRS نادرست.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-marker">آزمایش 2</div>
+                <div class="timeline-content">
+                    <h4>تلاش حداکثر 200 متر</h4>
+                    <p><strong>شروع فشاری</strong> (بدون شیرجه). تلاش حداکثر پایدار برای 200 متر. این باید سخت‌تر از 400 متر به ازای هر 100 متر احساس شود. زمان را به فرمت <strong>mm:ss</strong> ثبت کنید (مثلاً 2:30).</p>
+                    <div class="tip-box mt-sm">
+                        <strong>بررسی اعتبارسنجی:</strong> سرعت 200 متر به ازای هر 100 متر باید 3 تا 6 ثانیه سریع‌تر از سرعت 400 متر به ازای هر 100 متر باشد. اگر نیست، بهبودی ناکافی بوده یا تنظیم سرعت اشتباه بوده است.
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-marker">سرد کردن</div>
+                <div class="timeline-content">
+                    <h4>10 تا 15 دقیقه</h4>
+                    <p>دویدن آسان 300 تا 500 متری، کشش. زمان‌های خود را فوراً ثبت کنید—به حافظه اعتماد نکنید.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="callout callout-warning mt-xl">
+            <h3>⚠️ اشتباهات رایج تست CRS</h3>
+            <ul>
+                <li><strong>شروع خیلی سریع در 400 متر:</strong> منجر به خستگی زودرس و CRS نادرست می‌شود. از تنظیم سرعت یکسان استفاده کنید.</li>
+                <li><strong>بهبودی ناکافی بین آزمایش‌ها:</strong> خستگی 200 متر را کند می‌کند و CRS را مصنوعی سریع می‌کند ← نواحی بیش‌تمرین.</li>
+                <li><strong>استفاده از شیرجه شروع:</strong> مزیت 0.5 تا 1.5 ثانیه‌ای می‌افزاید و محاسبات را منحرف می‌کند. همیشه از دیوار فشار دهید.</li>
+                <li><strong>تست در حالت خستگی:</strong> بار تمرینی سنگین 24 تا 48 ساعت قبل = نتایج پایین. در حالت تازه تست کنید.</li>
+                <li><strong>ثبت نکردن فوری:</strong> حافظه قابل اعتماد نیست. زمان‌ها را قبل از سرد کردن یادداشت کنید.</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container container-narrow">
+        <h2>ورود نتایج CRS در RunAnalytics</h2>
+
+        <div class="screenshot-guide">
+            <div class="step-item">
+                <h3>مرحله 1: باز کردن تنظیمات CRS</h3>
+                <p>در برنامه RunAnalytics، به <strong>تنظیمات ← سرعت بحرانی دویدن</strong> بروید. روی "انجام تست CRS" یا "به‌روزرسانی CRS" ضربه بزنید.</p>
+            </div>
+
+            <div class="step-item">
+                <h3>مرحله 2: ورود زمان‌ها</h3>
+                <p>زمان 400 متری خود (مثلاً <code>6:08</code>) و زمان 200 متری (مثلاً <code>2:30</code>) را وارد کنید. از فرمت دقیق نشان داده شده استفاده کنید. روی "محاسبه" ضربه بزنید.</p>
+            </div>
+
+            <div class="step-item">
+                <h3>مرحله 3: بررسی نتایج</h3>
+                <p>برنامه نمایش می‌دهد:</p>
+                <ul>
+                    <li><strong>سرعت CRS:</strong> 0.917 متر بر ثانیه</li>
+                    <li><strong>سرعت CRS:</strong> 1:49 به ازای هر 100 متر</li>
+                    <li><strong>نواحی تمرینی:</strong> 7 ناحیه شخصی‌سازی شده (ناحیه 1 تا 7)</li>
+                    <li><strong>خط پایه sTSS:</strong> اکنون برای تمام تمرینات فعال است</li>
+                </ul>
+            </div>
+
+            <div class="step-item">
+                <h3>مرحله 4: ذخیره و همگام‌سازی</h3>
+                <p>روی "ذخیره CRS" ضربه بزنید. برنامه فوراً:</p>
+                <ul>
+                    <li>نواحی تمرینی را دوباره محاسبه می‌کند</li>
+                    <li>sTSS را برای 90 روز گذشته به صورت بازگشتی به‌روزرسانی می‌کند</li>
+                    <li>محاسبات CTL/ATL/TSB را تنظیم می‌کند</li>
+                    <li>تحلیل تمرین مبتنی بر ناحیه را فعال می‌کند</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="callout callout-tip mt-xl">
+            <h3>💡 نکته حرفه‌ای: تست CRS تاریخی</h3>
+            <p>اگر از قبل CRS خود را از تست‌های قبلی می‌دانید، می‌توانید آن زمان‌ها را مستقیماً وارد کنید. با این حال، برای دقیق‌ترین نتایج، هر 6 تا 8 هفته یک تست تازه انجام دهید. CRS شما باید با پیشرفت تمرین بهبود یابد (سریع‌تر شود).</p>
+        </div>
+    </div>
+</section>
+
+<section class="section section-alt">
+    <div class="container">
+        <h2 class="mb-xl text-center">درک شاخص‌های شما</h2>
+
+        <div class="grid grid-2">
+            <div class="card">
+                <h3 class="card-title">سرعت بحرانی دویدن (CRS)</h3>
+                <div class="card-content">
+                    <p><strong>چیست:</strong> سرعت آستانه هوازی شما—سریع‌ترین سرعتی که می‌توانید برای حدود 30 دقیقه بدون خستگی حفظ کنید.</p>
+                    <p><strong>معنی آن:</strong> CRS = 1:49 به ازای هر 100 متر به این معنی است که می‌توانید سرعت 1:49 را برای تلاش‌های پایدار آستانه حفظ کنید.</p>
+                    <p><strong>چگونه استفاده کنیم:</strong> پایه تمام نواحی تمرینی و محاسبه sTSS. هر 6 تا 8 هفته به‌روزرسانی کنید.</p>
+                    <a href="/fa/crs/" class="btn btn-secondary btn-small mt-md">یادگیری CRS ←</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3 class="card-title">نواحی تمرینی</h3>
+                <div class="card-content">
+                    <p><strong>چیستند:</strong> 7 محدوده شدت بر اساس CRS شما، از بهبودی (ناحیه 1) تا اسپرینت (ناحیه 7).</p>
+                    <p><strong>معنی آنها:</strong> هر ناحیه سازگاری‌های فیزیولوژیکی خاصی را هدف قرار می‌دهد (پایه هوازی، آستانه، VO₂max).</p>
+                    <p><strong>چگونه استفاده کنیم:</strong> از تجویزهای ناحیه برای تمرین ساختاریافته پیروی کنید. برنامه زمان در ناحیه را برای هر تمرین نشان می‌دهد.</p>
+                    <a href="/fa/training-zones/" class="btn btn-secondary btn-small mt-md">نواحی تمرینی ←</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3 class="card-title">امتیاز استرس تمرینی دویدن (sTSS)</h3>
+                <div class="card-content">
+                    <p><strong>چیست:</strong> استرس تمرین کمی‌شده که شدت و مدت را ترکیب می‌کند. 1 ساعت در سرعت CRS = 100 sTSS.</p>
+                    <p><strong>معنی آن:</strong> sTSS 50 = بهبودی آسان، sTSS 100 = متوسط، sTSS 200+ = جلسه بسیار سخت.</p>
+                    <p><strong>چگونه استفاده کنیم:</strong> sTSS روزانه/هفتگی را برای مدیریت بار تمرینی ردیابی کنید. هدف افزایش حداکثر 5 تا 10 sTSS در هفته.</p>
+                    <a href="/fa/training-load/" class="btn btn-secondary btn-small mt-md">راهنمای sTSS ←</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3 class="card-title">CTL / ATL / TSB</h3>
+                <div class="card-content">
+                    <p><strong>چیستند:</strong></p>
+                    <ul>
+                        <li><strong>CTL:</strong> بار تمرینی مزمن (آمادگی) - میانگین 42 روزه sTSS</li>
+                        <li><strong>ATL:</strong> بار تمرینی حاد (خستگی) - میانگین 7 روزه sTSS</li>
+                        <li><strong>TSB:</strong> تعادل استرس تمرینی (فرم) = CTL - ATL</li>
+                    </ul>
+                    <p><strong>چگونه استفاده کنیم:</strong> TSB مثبت = تازه/کاهش یافته، TSB منفی = خسته. هنگام مسابقه TSB = +5 تا +25.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="callout mt-xl">
+            <h3>📊 اهداف هفته اول شما</h3>
+            <p>پس از ورود CRS و تکمیل 3 تا 5 تمرین:</p>
+            <ul>
+                <li><strong>بررسی مقادیر sTSS:</strong> تأیید کنید که با درک تلاش مطابقت دارند (آسان ~50، متوسط ~100، سخت ~150+)</li>
+                <li><strong>بررسی توزیع ناحیه:</strong> آیا 60 تا 70% در ناحیه 2 (پایه هوازی) می‌گذرانید؟</li>
+                <li><strong>ایجاد خط پایه CTL:</strong> میانگین sTSS هفته اول شما خط پایه اولیه آمادگی می‌شود</li>
+                <li><strong>شناسایی الگوها:</strong> کدام تمرینات بالاترین sTSS را تولید می‌کنند؟ آیا به اندازه کافی بهبود می‌یابید؟</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container container-narrow">
+        <h2>سفر معمول کاربر (8 هفته اول)</h2>
+
+        <div class="journey-timeline">
+            <div class="journey-phase">
+                <h3>هفته 1-2: ایجاد خط پایه</h3>
+                <ul>
+                    <li>انجام تست CRS و ورود نتایج</li>
+                    <li>تکمیل 3 تا 5 تمرین معمولی</li>
+                    <li>مشاهده مقادیر sTSS و توزیع ناحیه</li>
+                    <li>ایجاد CTL اولیه (سطح آمادگی)</li>
+                    <li><strong>هدف:</strong> درک شاخص‌ها، هنوز تغییری نیست</li>
+                </ul>
+            </div>
+
+            <div class="journey-phase">
+                <h3>هفته 3-4: اعمال نواحی</h3>
+                <ul>
+                    <li>استفاده از نواحی CRS در برنامه‌ریزی تمرین</li>
+                    <li>دویدن عمدی در ناحیه 2 برای ستهای هوازی</li>
+                    <li>ردیابی مجموع هفتگی sTSS (هدف ثبات)</li>
+                    <li>نظارت بر TSB (باید کمی منفی باشد = تمرین)</li>
+                    <li><strong>هدف:</strong> تمرین بر اساس نواحی، نه احساس</li>
+                </ul>
+            </div>
+
+            <div class="journey-phase">
+                <h3>هفته 5-6: اضافه‌بار تدریجی</h3>
+                <ul>
+                    <li>افزایش sTSS هفتگی 5 تا 10% از خط پایه</li>
+                    <li>افزودن 1 جلسه آستانه (ناحیه 4) در هفته</li>
+                    <li>CTL باید به تدریج افزایش یابد (آمادگی در حال بهبود)</li>
+                    <li>ATL ممکن است در هفته‌های سخت افزایش یابد (عادی)</li>
+                    <li><strong>هدف:</strong> پیشرفت کنترل‌شده آمادگی</li>
+                </ul>
+            </div>
+
+            <div class="journey-phase">
+                <h3>هفته 7-8: تست مجدد و تنظیم</h3>
+                <ul>
+                    <li>انجام تست دوم CRS (باید سریع‌تر باشد)</li>
+                    <li>به‌روزرسانی نواحی در برنامه (سرعت بهبود می‌یابد)</li>
+                    <li>مقایسه CTL هفته 1 در مقابل هفته 8 (باید +10 تا 20 باشد)</li>
+                    <li>بررسی پیشرفت: آیا زمان‌ها کاهش می‌یابند؟ آیا آسان‌تر احساس می‌شود؟</li>
+                    <li><strong>هدف:</strong> اعتبارسنجی اثربخشی تمرین</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="callout callout-success mt-xl">
+            <h3>✅ نشانگرهای موفقیت</h3>
+            <p>پس از 8 هفته تمرین ساختاریافته با RunAnalytics، باید این موارد را ببینید:</p>
+            <ul>
+                <li><strong>بهبود CRS:</strong> 1 تا 3% سرعت CRS سریع‌تر (مثلاً 1:49 ← 1:47)</li>
+                <li><strong>افزایش CTL:</strong> +15 تا 25 امتیاز (مثلاً 30 ← 50 CTL)</li>
+                <li><strong>sTSS ثابت:</strong> مجموع هفتگی با واریانس 10 تا 15%</li>
+                <li><strong>تنظیم سرعت بهتر:</strong> تقسیمات یکسان‌تر، کالیبراسیون تلاش بهتر</li>
+                <li><strong>بهبودی بهبود یافته:</strong> چرخه‌های TSB قابل پیش‌بینی (-10 تا +5)</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="section section-alt">
+    <div class="container container-narrow">
+        <h2>عیب‌یابی و سؤالات متداول</h2>
+
+        <div class="faq-item">
+            <h3>sTSS من برای تلاش تمرین خیلی بالا/پایین به نظر می‌رسد</h3>
+            <p><strong>علت:</strong> CRS قدیمی یا نادرست است.</p>
+            <p><strong>راه‌حل:</strong> CRS را دوباره تست کنید. اگر در حالت خستگی تست کرده‌اید یا تنظیم سرعت ضعیفی داشته‌اید، CRS اشتباه خواهد بود. یک تست مناسب CRS برای تمام شاخص‌های پایین‌دستی حیاتی است.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>برنامه "CRS پیکربندی نشده" را نشان می‌دهد</h3>
+            <p><strong>علت:</strong> تست CRS تکمیل نشده یا ذخیره نشده است.</p>
+            <p><strong>راه‌حل:</strong> به تنظیمات ← سرعت بحرانی دویدن ← انجام تست بروید. هر دو زمان 5 کیلومتری و 3 کیلومتری را وارد کرده، سپس روی ذخیره ضربه بزنید.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>تمرینات از Apple Watch همگام‌سازی نمی‌شوند</h3>
+            <p><strong>علت:</strong> مجوزهای برنامه Health اعطا نشده یا تمرین به عنوان "دویدن" دسته‌بندی نشده است.</p>
+            <p><strong>راه‌حل:</strong> تنظیمات ← حریم خصوصی ← سلامت ← RunAnalytics ← اجازه خواندن برای تمرینات را بررسی کنید. اطمینان حاصل کنید که نوع تمرین Apple Watch "دویدن پیست" یا "دویدن آب باز" است.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>CTL علیرغم تمرین مداوم افزایش نمی‌یابد</h3>
+            <p><strong>علت:</strong> مجموع sTSS خیلی پایین یا فرکانس ناپایدار.</p>
+            <p><strong>راه‌حل:</strong> CTL میانگین وزن‌دار نمایی 42 روزه است. به کندی افزایش می‌یابد. sTSS هفتگی را 5 تا 10% افزایش دهید و برای رشد مداوم CTL، 4 یا بیشتر تمرین در هفته را حفظ کنید.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>چند وقت یکبار باید CRS را دوباره تست کنم؟</h3>
+            <p><strong>توصیه:</strong> هر 6 تا 8 هفته در طول فازهای پایه/ساخت. پس از بیماری، آسیب، استراحت طولانی، یا زمانی که نواحی به طور مداوم خیلی آسان/سخت احساس می‌شوند، دوباره تست کنید.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>آیا می‌توانم از RunAnalytics برای سایر شناهای استفاده کنم؟</h3>
+            <p><strong>بله، با محدودیت‌ها:</strong> CRS معمولاً در فری‌استایل تست می‌شود. برای تمرینات IM/پشت/سینه، sTSS بر اساس CRS فری‌استایل محاسبه می‌شود. برای دقت بیشتر، انجام تست‌های CRS خاص شنا را در نظر بگیرید.</p>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container container-narrow">
+        <h2>مراحل بعدی</h2>
+
+        <div class="grid grid-3">
+            <div class="card">
+                <h3 class="card-title">یادگیری نواحی تمرینی</h3>
+                <div class="card-content">
+                    <p>درک چگونگی تمرین در ناحیه 2 (پایه هوازی)، ناحیه 4 (آستانه)، و ناحیه 5 (VO₂max) برای سازگاری‌های خاص.</p>
+                    <a href="/fa/training-zones/" class="btn btn-secondary btn-small mt-md">نواحی تمرینی ←</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3 class="card-title">محاسبه sTSS</h3>
+                <div class="card-content">
+                    <p>از ماشین‌حساب رایگان sTSS ما برای درک بار تمرینی قبل از تعهد به تمرینات استفاده کنید.</p>
+                    <a href="/fa/stss-calculator/" class="btn btn-secondary btn-small mt-md">ماشین‌حساب sTSS ←</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3 class="card-title">عمیق‌تر در شاخص‌ها</h3>
+                <div class="card-content">
+                    <p>علم پشت CRS، sTSS، CTL/ATL/TSB را با مراجع تحقیقاتی همتا-بررسی‌شده کاوش کنید.</p>
+                    <a href="/fa/research/" class="btn btn-secondary btn-small mt-md">تحقیقات ←</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-xl text-center">
+            <p class="mb-md"><strong>آماده شروع ردیابی هستید؟</strong></p>
+            <a href="https://apps.apple.com/es/app/runanalytics/id6754524015" class="btn btn-primary btn-large" target="_blank" rel="noopener">دانلود رایگان RunAnalytics</a>
+            <p class="mt-sm text-secondary">دوره آزمایشی 7 روزه • نیازی به کارت اعتباری نیست • iOS 16+</p>
+        </div>
+    </div>
+</section>
+    </main>
+
+    
+    <footer class="site-footer">
+    <div class="container">
+        <div class="footer-grid">
+            
+            <div>
+                <h3 class="mb-md">RunAnalytics - Running Analytics App | Critical Running Speed, TSS, CTL/ATL/TSB for iOS</h3>
+                <p class="text-secondary">Track Critical Running Speed, Training Stress Score, and performance metrics with RunAnalytics. Science-based iOS app for runners, triathletes &amp; coaches. 7-day free trial.</p>
+            </div>
+
+            
+            <div>
+                <h3 class="mb-md">خانه</h3>
+                <ul class="footer-links">
+                    
+                    <li>
+                        <a href="/af/">Afrikaans</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ar/">العربية</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/bn/">বাংলা</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ca/">Català</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/de/">Deutsch</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/el/">Ελληνικά</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/en/">English</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/es/">Español</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/fa/">فارسی</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/fi/">Suomi</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/fr/">Français</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/hi/">हिन्दी</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/id/">Bahasa Indonesia</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/it/">Italiano</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ja/">日本語</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ko/">한국어</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ms/">Bahasa Melayu</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/nl/">Nederlands</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/no/">Norsk</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/pl/">Polski</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/pt/">Português</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ru/">Русский</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/sv/">Svenska</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/sw/">Kiswahili</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/tl/">Tagalog</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/tr/">Türkçe</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ur/">اردو</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/vi/">Tiếng Việt</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/zh/">中文</a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+
+        
+        <div class="footer-bottom">
+            <p class="text-sm text-secondary">
+                &copy; 2025 RunAnalytics - Running Analytics App | Critical Running Speed, TSS, CTL/ATL/TSB for iOS. تمامی حقوق محفوظ است
+            </p>
+            <ul class="footer-links">
+                <li><a href="/fa/privacy/">حریم خصوصی</a></li>
+                <li><a href="/fa/terms/">شرایط</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+    
+    <div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="Cookie consent" aria-live="polite">
+    <div class="cookie-banner-content">
+        <div>
+            <p>این وب‌سایت از کوکی‌ها برای بهبود تجربه شما استفاده می‌کند.</p>
+            <a href="/fa/privacy/" class="text-sm">اطلاعات بیشتر</a>
+        </div>
+        <div class="cookie-banner-actions">
+            <button id="cookie-decline" class="btn btn-secondary btn-small">رد کردن</button>
+            <button id="cookie-accept" class="btn btn-primary btn-small">پذیرش</button>
+        </div>
+    </div>
+</div>
+
+    
+    <script src="/assets/js/main.min.js"></script>
+    <script src="/assets/js/cookie-consent.min.js"></script>
+    <script src="/assets/js/lazy-load.min.js"></script>
+
+    
+    <script src="/assets/js/fuse.min.js"></script>
+    <script src="/assets/js/search.min.js"></script>
+
+    
+    
+    <script src="/assets/js/analytics.min.js" data-ga-id="G-Y138VB4523"></script>
+    
+</body>
+</html>

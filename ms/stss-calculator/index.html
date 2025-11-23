@@ -1,0 +1,996 @@
+<!DOCTYPE html>
+<html lang="ms" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+    <title>Kalkulator TSS Larian Percuma - Kira Skor Tekanan Latihan (sTSS)</title>
+    <meta name="description" content="Kalkulator TSS larian percuma yang unik. Kira Skor Tekanan Latihan untuk setiap senaman menggunakan kadar CRS, tempoh, dan kadar purata. Termasuk garis panduan TSS mingguan dan penjelasan CTL/ATL/TSB.">
+    <meta name="author" content="Albert Arno">
+
+    
+    
+    <meta name="keywords" content="kalkulator TSS larian, kalkulator sTSS, skor tekanan latihan, beban latihan larian, TSS percuma">
+    
+
+    
+    <link rel="canonical" href="https://run.analyticszone.app/ms/stss-calculator/">
+
+    
+    
+    <meta property="article:published_time" content="2025-01-15T10:00:00Z">
+    <meta property="article:modified_time" content="2025-01-20T14:30:00Z">
+    <meta property="article:author" content="Albert Arno">
+    
+
+    
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://run.analyticszone.app/ms/stss-calculator/">
+    <meta property="og:title" content="Kalkulator TSS Larian Percuma - Kira Skor Tekanan Latihan (sTSS)">
+    <meta property="og:description" content="Kalkulator TSS larian percuma yang unik. Kira Skor Tekanan Latihan untuk setiap senaman menggunakan kadar CRS, tempoh, dan kadar purata. Termasuk garis panduan TSS mingguan dan penjelasan CTL/ATL/TSB.">
+    
+    <meta property="og:image" content="https://run.analyticszone.app/assets/images/run-analytics-og.jpg">
+    
+    <meta property="og:locale" content="ms_MY">
+    <meta property="og:site_name" content="RunAnalytics - Running Analytics App | Critical Running Speed, TSS, CTL/ATL/TSB for iOS">
+
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://run.analyticszone.app/ms/stss-calculator/">
+    <meta name="twitter:title" content="Kalkulator TSS Larian Percuma - Kira Skor Tekanan Latihan (sTSS)">
+    <meta name="twitter:description" content="Kalkulator TSS larian percuma yang unik. Kira Skor Tekanan Latihan untuk setiap senaman menggunakan kadar CRS, tempoh, dan kadar purata. Termasuk garis panduan TSS mingguan dan penjelasan CTL/ATL/TSB.">
+    
+    <meta name="twitter:image" content="https://run.analyticszone.app/assets/images/run-analytics-og.jpg">
+    
+
+    
+    
+    <link rel="alternate" hreflang="af" href="https://run.analyticszone.app/af/stss-calculator/">
+    
+    <link rel="alternate" hreflang="ar" href="https://run.analyticszone.app/ar/stss-calculator/">
+    
+    <link rel="alternate" hreflang="bn" href="https://run.analyticszone.app/bn/stss-calculator/">
+    
+    <link rel="alternate" hreflang="ca" href="https://run.analyticszone.app/ca/stss-calculator/">
+    
+    <link rel="alternate" hreflang="de" href="https://run.analyticszone.app/de/stss-calculator/">
+    
+    <link rel="alternate" hreflang="el" href="https://run.analyticszone.app/el/stss-calculator/">
+    
+    <link rel="alternate" hreflang="en" href="https://run.analyticszone.app/en/stss-calculator/">
+    
+    <link rel="alternate" hreflang="es" href="https://run.analyticszone.app/es/stss-calculator/">
+    
+    <link rel="alternate" hreflang="fa" href="https://run.analyticszone.app/fa/stss-calculator/">
+    
+    <link rel="alternate" hreflang="fi" href="https://run.analyticszone.app/fi/stss-calculator/">
+    
+    <link rel="alternate" hreflang="fr" href="https://run.analyticszone.app/fr/stss-calculator/">
+    
+    <link rel="alternate" hreflang="hi" href="https://run.analyticszone.app/hi/stss-calculator/">
+    
+    <link rel="alternate" hreflang="id" href="https://run.analyticszone.app/id/stss-calculator/">
+    
+    <link rel="alternate" hreflang="it" href="https://run.analyticszone.app/it/stss-calculator/">
+    
+    <link rel="alternate" hreflang="ja" href="https://run.analyticszone.app/ja/stss-calculator/">
+    
+    <link rel="alternate" hreflang="ko" href="https://run.analyticszone.app/ko/stss-calculator/">
+    
+    <link rel="alternate" hreflang="ms" href="https://run.analyticszone.app/ms/stss-calculator/">
+    
+    <link rel="alternate" hreflang="nl" href="https://run.analyticszone.app/nl/stss-calculator/">
+    
+    <link rel="alternate" hreflang="no" href="https://run.analyticszone.app/no/stss-calculator/">
+    
+    <link rel="alternate" hreflang="pl" href="https://run.analyticszone.app/pl/stss-calculator/">
+    
+    <link rel="alternate" hreflang="pt" href="https://run.analyticszone.app/pt/stss-calculator/">
+    
+    <link rel="alternate" hreflang="ru" href="https://run.analyticszone.app/ru/stss-calculator/">
+    
+    <link rel="alternate" hreflang="sv" href="https://run.analyticszone.app/sv/stss-calculator/">
+    
+    <link rel="alternate" hreflang="sw" href="https://run.analyticszone.app/sw/stss-calculator/">
+    
+    <link rel="alternate" hreflang="tl" href="https://run.analyticszone.app/tl/stss-calculator/">
+    
+    <link rel="alternate" hreflang="tr" href="https://run.analyticszone.app/tr/stss-calculator/">
+    
+    <link rel="alternate" hreflang="ur" href="https://run.analyticszone.app/ur/stss-calculator/">
+    
+    <link rel="alternate" hreflang="vi" href="https://run.analyticszone.app/vi/stss-calculator/">
+    
+    <link rel="alternate" hreflang="zh" href="https://run.analyticszone.app/zh/stss-calculator/">
+    
+    <link rel="alternate" hreflang="x-default" href="https://run.analyticszone.app/en/stss-calculator/">
+
+    
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/icons/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/icons/apple-touch-icon.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#0066CC">
+
+    
+    <link rel="stylesheet" href="/assets/css/main.min.css">
+
+    
+    
+
+    
+    
+
+    
+    
+</head>
+<body>
+    
+    <a href="#main-content" class="skip-link">Langkau ke kandungan</a>
+
+    
+    <header class="site-header">
+    <div class="container">
+        <div class="header-inner">
+            
+            <a href="/ms/" class="site-logo">
+                <picture>
+                    
+                    <source srcset="/assets/images/logo-dark.webp" type="image/webp"
+                        media="(prefers-color-scheme: dark)">
+                    
+                    <source srcset="/assets/images/logo-dark.png" type="image/png" media="(prefers-color-scheme: dark)">
+                    
+                    <source srcset="/assets/images/logo.webp" type="image/webp">
+                    
+                    <img src="/assets/images/logo.png" alt="RunAnalytics - Running Analytics App | Critical Running Speed, TSS, CTL/ATL/TSB for iOS" width="40" height="40">
+                </picture>
+                <span class="logo-text">RunAnalytics</span>
+            </a>
+
+            
+            <nav class="nav-primary" id="nav-primary" role="navigation" aria-label="Main navigation">
+                <ul>
+                    
+                    <li>
+                        
+                        
+                        <a href="/ms/"  aria-current="">
+                            Laman Utama
+                        </a>
+                        
+                        </li>
+                        
+                    <li class="has-submenu" >
+                        
+                        
+                        
+                        
+                        <span class="nav-label">Belajar</span>
+                        
+                        <ul class="submenu">
+                            
+                            <li>
+                                <a href="/ms/getting-started/" 
+                                    aria-current="">
+                                    Mulakan
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/ms/crs/" 
+                                    aria-current="">
+                                    CRS
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/ms/training-zones/" 
+                                    aria-current="">
+                                    Zon Latihan
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/ms/training-load/" 
+                                    aria-current="">
+                                    Beban Latihan
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/ms/stss-calculator/" class="active" 
+                                    aria-current="page">
+                                    Kalkulator sTSS
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        
+                        </li>
+                        
+                    <li class="has-submenu" >
+                        
+                        
+                        
+                        
+                        <span class="nav-label">Sains</span>
+                        
+                        <ul class="submenu">
+                            
+                            <li>
+                                <a href="/ms/research/" 
+                                    aria-current="">
+                                    Penyelidikan
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/ms/formulas/" 
+                                    aria-current="">
+                                    Formula
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/ms/efficiency/" 
+                                    aria-current="">
+                                    Kecekapan
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/ms/stride-mechanics/" 
+                                    aria-current="">
+                                    Mekanik Langkah
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/ms/bibliography/" 
+                                    aria-current="">
+                                    Bibliografi
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        
+                        </li>
+                        
+                    <li>
+                        
+                        
+                        <a href="/ms/contact/"  aria-current="">
+                            Hubungi
+                        </a>
+                        
+                        </li>
+                        
+                </ul>
+
+                
+                <div class="search-container">
+                    <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" aria-hidden="true">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.35-4.35"></path>
+                    </svg>
+                    <input type="search" id="site-search" class="search-input" aria-expanded="false"
+                        aria-haspopup="listbox" aria-autocomplete="list" autocomplete="off" spellcheck="false" />
+                    <div id="search-results" class="search-results hidden" role="region" aria-live="polite"></div>
+                </div>
+
+                
+                <select class="language-selector" id="language-select" aria-label="Pilih bahasa">
+                    
+                    <option value="af" >
+                        Afrikaans
+                    </option>
+                    
+                    <option value="ar" >
+                        العربية
+                    </option>
+                    
+                    <option value="bn" >
+                        বাংলা
+                    </option>
+                    
+                    <option value="ca" >
+                        Català
+                    </option>
+                    
+                    <option value="de" >
+                        Deutsch
+                    </option>
+                    
+                    <option value="el" >
+                        Ελληνικά
+                    </option>
+                    
+                    <option value="en" >
+                        English
+                    </option>
+                    
+                    <option value="es" >
+                        Español
+                    </option>
+                    
+                    <option value="fa" >
+                        فارسی
+                    </option>
+                    
+                    <option value="fi" >
+                        Suomi
+                    </option>
+                    
+                    <option value="fr" >
+                        Français
+                    </option>
+                    
+                    <option value="hi" >
+                        हिन्दी
+                    </option>
+                    
+                    <option value="id" >
+                        Bahasa Indonesia
+                    </option>
+                    
+                    <option value="it" >
+                        Italiano
+                    </option>
+                    
+                    <option value="ja" >
+                        日本語
+                    </option>
+                    
+                    <option value="ko" >
+                        한국어
+                    </option>
+                    
+                    <option value="ms" selected>
+                        Bahasa Melayu
+                    </option>
+                    
+                    <option value="nl" >
+                        Nederlands
+                    </option>
+                    
+                    <option value="no" >
+                        Norsk
+                    </option>
+                    
+                    <option value="pl" >
+                        Polski
+                    </option>
+                    
+                    <option value="pt" >
+                        Português
+                    </option>
+                    
+                    <option value="ru" >
+                        Русский
+                    </option>
+                    
+                    <option value="sv" >
+                        Svenska
+                    </option>
+                    
+                    <option value="sw" >
+                        Kiswahili
+                    </option>
+                    
+                    <option value="tl" >
+                        Tagalog
+                    </option>
+                    
+                    <option value="tr" >
+                        Türkçe
+                    </option>
+                    
+                    <option value="ur" >
+                        اردو
+                    </option>
+                    
+                    <option value="vi" >
+                        Tiếng Việt
+                    </option>
+                    
+                    <option value="zh" >
+                        中文
+                    </option>
+                    
+                </select>
+
+                
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode"
+                    title="Toggle dark/light mode">
+                    <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                    <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+
+                
+                
+                <a href="https://apps.apple.com/es/app/runanalytics/id6754524015" class="header-download-btn" target="_blank" rel="noopener"
+                    aria-label="Download on App Store">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                        fill="currentColor">
+                        <path
+                            d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z" />
+                    </svg>
+                    <span class="download-text">Download</span>
+                </a>
+                
+            </nav>
+
+            
+            <button class="menu-toggle" id="menu-toggle" aria-label="Togol menu"
+                aria-expanded="false" aria-controls="nav-primary">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </div>
+</header>
+
+    
+    <main id="main-content" class="main-content">
+        <section class="hero hero-small">
+    <div class="container">
+        <h1>Kalkulator TSS Larian Percuma</h1>
+        <p class="lead">Kira Skor Tekanan Latihan untuk senaman larian - Satu-satunya kalkulator sTSS percuma</p>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container container-narrow">
+        <div class="callout callout-info mb-xl">
+            <h2>Apa itu TSS Larian (sTSS)?</h2>
+            <p><strong>Skor Tekanan Latihan Larian (sTSS)</strong> mengukur beban latihan bagi senaman larian dengan menggabungkan keamatan dan tempoh. Ia diadaptasi daripada metodologi TSS basikal, menggunakan Kelajuan Larian Kritikal (CRS) anda sebagai rentak ambang. Senaman 1 jam pada rentak CRS = 100 sTSS.</p>
+        </div>
+
+        <h2 class="mt-3xl">Kalkulator sTSS Percuma</h2>
+        <p class="lead mb-xl">Kira tekanan latihan untuk mana-mana senaman larian. Memerlukan rentak CRS anda.</p>
+
+        <div class="css-calculator">
+            <form id="stssCalculatorForm">
+                <div class="calculator-inputs">
+                    <div class="form-group">
+                        <label for="cssPace" class="form-label">Rentak CRS Anda (mm:ss per 100m)</label>
+                        <input
+                            type="text"
+                            id="cssPace"
+                            class="form-input"
+                            placeholder="1:49"
+                            pattern="[0-9]{1,2}:[0-5][0-9]"
+                            aria-required="true"
+                            aria-describedby="cssPace-help"
+                        />
+                        <small id="cssPace-help" class="form-help">Rentak ambang anda dari ujian CRS (cth: 1:49)</small>
+                        <div class="form-error" id="cssPace-error"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="workoutDuration" class="form-label">Tempoh Senaman (minit)</label>
+                        <input
+                            type="number"
+                            id="workoutDuration"
+                            class="form-input"
+                            placeholder="60"
+                            min="1"
+                            max="300"
+                            aria-required="true"
+                            aria-describedby="duration-help"
+                        />
+                        <small id="duration-help" class="form-help">Jumlah masa senaman termasuk rehat (1-300 minit)</small>
+                        <div class="form-error" id="duration-error"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="avgPace" class="form-label">Rentak Purata Senaman (mm:ss per 100m)</label>
+                        <input
+                            type="text"
+                            id="avgPace"
+                            class="form-input"
+                            placeholder="2:05"
+                            pattern="[0-9]{1,2}:[0-5][0-9]"
+                            aria-required="true"
+                            aria-describedby="pace-help"
+                        />
+                        <small id="pace-help" class="form-help">Rentak purata anda semasa senaman (cth: 2:05)</small>
+                        <div class="form-error" id="pace-error"></div>
+                    </div>
+
+                    <div class="calculator-buttons">
+                        <button type="submit" class="btn btn-primary" id="calculateStssBtn">Kira sTSS</button>
+                        <button type="reset" class="btn btn-ghost" id="resetStssBtn">Kosongkan</button>
+                    </div>
+                </div>
+            </form>
+
+            <div class="calculator-results hidden" id="stssResults" aria-live="polite">
+                <h3>Skor Tekanan Latihan Anda</h3>
+                <div class="results-summary">
+                    <div class="result-item">
+                        <div class="result-label">sTSS</div>
+                        <div class="css-result-value" id="stssValue">--</div>
+                    </div>
+                    <div class="result-item">
+                        <div class="result-label">Faktor Keamatan (IF)</div>
+                        <div class="css-result-value" id="intensityFactor">--</div>
+                    </div>
+                </div>
+
+                <div class="zones-result">
+                    <h4>Tafsiran Beban Latihan</h4>
+                    <p class="mb-md text-secondary" id="stssInterpretation">
+                        <!-- Diisi oleh JavaScript -->
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="mt-3xl">Cara sTSS Dikira</h2>
+
+        <div class="formula-box">
+            <h3>Formula</h3>
+            <div class="formula">
+                sTSS = (Tempoh dalam jam) × (Faktor Keamatan)² × 100
+            </div>
+            <div class="formula-explanation">
+                <p>Di mana:</p>
+                <ul>
+                    <li><strong>Faktor Keamatan (IF)</strong> = Rentak CRS / Rentak Purata Senaman</li>
+                    <li><strong>Tempoh</strong> = Jumlah masa senaman dalam jam</li>
+                    <li><strong>Rentak CRS</strong> = Rentak ambang anda dari ujian CRS</li>
+                </ul>
+            </div>
+        </div>
+
+        <h3 class="mt-xl">Contoh Pengiraan</h3>
+        <div class="example-box">
+            <h4>Butiran Senaman:</h4>
+            <ul>
+                <li>Rentak CRS: <strong>1:49/100m</strong> (109 saat)</li>
+                <li>Tempoh Senaman: <strong>60 minit</strong> (1 jam)</li>
+                <li>Rentak Purata: <strong>2:05/100m</strong> (125 saat)</li>
+            </ul>
+
+            <h4>Langkah 1: Kira Faktor Keamatan</h4>
+            <div class="calculation">
+                IF = Rentak CRS / Rentak Senaman<br>
+                IF = 109 / 125<br>
+                IF = <strong>0.872</strong>
+            </div>
+
+            <h4>Langkah 2: Kira sTSS</h4>
+            <div class="calculation">
+                sTSS = 1.0 jam × (0.872)² × 100<br>
+                sTSS = 1.0 × 0.760 × 100<br>
+                sTSS = <strong>76</strong>
+            </div>
+
+            <p class="mt-md"><strong>Tafsiran:</strong> Senaman 60 minit ini pada rentak mudah (lebih perlahan daripada CRS) menjana 76 sTSS - beban latihan sederhana yang sesuai untuk pembinaan asas aerobik.</p>
+        </div>
+
+        <h2 class="mt-3xl">Memahami Nilai sTSS</h2>
+
+        <div class="zones-table-container">
+            <table class="zones-table">
+                <thead>
+                    <tr>
+                        <th>Julat sTSS</th>
+                        <th>Beban Latihan</th>
+                        <th>Masa Pemulihan</th>
+                        <th>Contoh Senaman</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>&lt; 50</td>
+                        <td>Rendah</td>
+                        <td>Hari yang sama</td>
+                        <td>Larian mudah 30-min, latihan teknik</td>
+                    </tr>
+                    <tr>
+                        <td>50-100</td>
+                        <td>Sederhana</td>
+                        <td>1 hari</td>
+                        <td>Ketahanan 60-min, rentak mantap</td>
+                    </tr>
+                    <tr>
+                        <td>100-200</td>
+                        <td>Tinggi</td>
+                        <td>1-2 hari</td>
+                        <td>Set ambang 90-min, selang rentak lumba</td>
+                    </tr>
+                    <tr>
+                        <td>200-300</td>
+                        <td>Sangat Tinggi</td>
+                        <td>2-3 hari</td>
+                        <td>Latihan keras 2 jam, berbilang blok ambang</td>
+                    </tr>
+                    <tr>
+                        <td>&gt; 300</td>
+                        <td>Ekstrem</td>
+                        <td>3+ hari</td>
+                        <td>Lumba panjang (&gt;2 jam), ultra-ketahanan</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h2 class="mt-3xl">Panduan sTSS Mingguan</h2>
+
+        <p class="mb-md">Sasaran sTSS mingguan bergantung pada tahap latihan dan matlamat anda:</p>
+
+        <div class="grid grid-2 mb-xl">
+            <div class="card">
+                <h3 class="card-title">Pelari Rekreasi</h3>
+                <div class="card-content">
+                    <p class="mb-sm"><strong>sTSS Mingguan:</strong> 150-300</p>
+                    <p>2-3 senaman seminggu, 50-100 sTSS setiap satu. Fokus pada teknik dan pembinaan asas aerobik.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3 class="card-title">Pelari Kecergasan / Triatlet</h3>
+                <div class="card-content">
+                    <p class="mb-sm"><strong>sTSS Mingguan:</strong> 300-500</p>
+                    <p>3-4 senaman seminggu, 75-125 sTSS setiap satu. Campuran ketahanan aerobik dan kerja ambang.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3 class="card-title">Pelari Masters Kompetitif</h3>
+                <div class="card-content">
+                    <p class="mb-sm"><strong>sTSS Mingguan:</strong> 500-800</p>
+                    <p>4-6 senaman seminggu, 80-150 sTSS setiap satu. Latihan berstruktur dengan periodisasi.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3 class="card-title">Pelari Elit / Kolej</h3>
+                <div class="card-content">
+                    <p class="mb-sm"><strong>sTSS Mingguan:</strong> 800-1200+</p>
+                    <p>8-12 senaman seminggu, sesi berganda harian. Jumlah tinggi dengan pengurusan pemulihan kritikal.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="callout callout-warning">
+            <h3>⚠️ Nota Penting</h3>
+            <ul>
+                <li><strong>Memerlukan CRS yang tepat:</strong> CRS anda mesti terkini (diuji dalam 6-8 minggu) untuk sTSS yang tepat.</li>
+                <li><strong>Pengiraan dipermudahkan:</strong> Kalkulator ini menggunakan rentak purata. sTSS lanjutan menggunakan Rentak Berperingkat Ternormal (NGP) yang mengambil kira struktur selang.</li>
+                <li><strong>Bukan untuk kerja teknik:</strong> sTSS hanya mengukur tekanan latihan fizikal, bukan pembangunan kemahiran.</li>
+                <li><strong>Variasi individu:</strong> sTSS yang sama terasa berbeza untuk pelari yang berbeza. Laraskan panduan berdasarkan pemulihan anda.</li>
+            </ul>
+        </div>
+
+        <h2 class="mt-3xl">Mengapa sTSS Penting</h2>
+
+        <p class="mb-md">Skor Tekanan Latihan adalah asas untuk:</p>
+
+        <ul class="mb-xl">
+            <li><strong>CTL (Beban Latihan Kronik):</strong> Tahap kecergasan anda - purata berwajaran eksponen 42 hari bagi sTSS harian</li>
+            <li><strong>ATL (Beban Latihan Akut):</strong> Keletihan anda - purata berwajaran eksponen 7 hari bagi sTSS harian</li>
+            <li><strong>TSB (Imbangan Tekanan Latihan):</strong> Bentuk anda - TSB = CTL - ATL (positif = segar, negatif = letih)</li>
+            <li><strong>Periodisasi:</strong> Rancang fasa latihan (asas, pembinaan, puncak, penguruangan) menggunakan perkembangan CTL sasaran</li>
+            <li><strong>Pengurusan Pemulihan:</strong> Tahu bila untuk tekan dan bila untuk berehat berdasarkan TSB</li>
+        </ul>
+
+        <div class="callout callout-tip">
+            <h3>Petua Pro: Jejaki CTL Anda</h3>
+            <p>Rekodkan sTSS harian dalam hamparan atau log latihan. Kira purata 42 hari (CTL) anda setiap minggu. Sasarkan peningkatan 5-10 mata CTL seminggu semasa pembinaan asas. Kekalkan atau kurangkan sedikit CTL semasa penguruangan (1-2 minggu sebelum lumba).</p>
+        </div>
+
+        <h2 class="mt-3xl">Soalan Lazim</h2>
+
+        <div class="faq-section" itemscope itemtype="https://schema.org/FAQPage">
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name">Apa itu TSS Larian (sTSS)?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                    <div itemprop="text">
+                        <p>Skor Tekanan Latihan Larian (sTSS) adalah metrik yang mengukur beban latihan bagi senaman larian dengan menggabungkan keamatan dan tempoh. Ia diadaptasi daripada metodologi TSS basikal, menggunakan Kelajuan Larian Kritikal (CRS) anda sebagai rentak ambang. Senaman selama 1 jam pada rentak CRS bersamaan dengan 100 sTSS.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name">Bagaimana saya mengira sTSS saya?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                    <div itemprop="text">
+                        <p>Gunakan kalkulator di atas dengan memasukkan rentak CRS anda (dari ujian CRS), jumlah tempoh senaman, dan rentak purata semasa senaman. Formulanya ialah: sTSS = Tempoh (jam) × Faktor Keamatan² × 100, di mana Faktor Keamatan = Rentak CRS / Rentak Purata Senaman.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name">Adakah saya memerlukan CRS untuk mengira sTSS?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                    <div itemprop="text">
+                        <p>Ya, Kelajuan Larian Kritikal (CRS) anda diperlukan untuk mengira Faktor Keamatan, yang penting untuk pengiraan sTSS. CRS mewakili rentak ambang anda dan perlu diuji setiap 6-8 minggu. Anda boleh mencari CRS anda menggunakan <a href="/ms/crs/">kalkulator CRS</a> kami.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name">Apakah skor sTSS yang baik untuk satu senaman?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                    <div itemprop="text">
+                        <p>Ia bergantung pada keamatan senaman: Senaman mudah biasanya mendapat skor di bawah 50 sTSS, senaman sederhana 50-100 sTSS, senaman berat 100-200 sTSS, dan senaman sangat berat melebihi 200 sTSS. Skor yang sesuai bergantung pada matlamat latihan dan tahap kecergasan semasa anda.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name">Berapa banyak sTSS yang patut saya lakukan seminggu?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                    <div itemprop="text">
+                        <p>Sasaran sTSS mingguan berbeza mengikut tahap: Pelari rekreasi: 150-300, Pelari kecergasan/Triatlet: 300-500, Masters kompetitif: 500-800, Elit/Kolej: 800-1200+. Mulakan secara konservatif dan tingkatkan secara beransur-ansur untuk mengelakkan latihan berlebihan.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name">Adakah TSS larian sama dengan TSS basikal?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                    <div itemprop="text">
+                        <p>Konsep dan formulanya adalah sama, tetapi sTSS diadaptasi untuk larian. Berbanding menggunakan kuasa (FTP) seperti TSS basikal, sTSS menggunakan rentak dengan CRS sebagai ambang. Kedua-duanya mengukur beban latihan menggunakan Tempoh × Faktor Keamatan² × 100.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name">Bolehkah saya gunakan sTSS untuk semua gaya larian?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                    <div itemprop="text">
+                        <p>Ya, tetapi CRS anda perlu khusus untuk gaya. Kebanyakan pelari menggunakan CRS bebas kerana ia adalah gaya yang paling biasa dilatih. Jika anda melatih terutamanya dalam gaya lain, lakukan ujian CRS dalam gaya tersebut dan gunakan rentak itu untuk pengiraan sTSS.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name">Apakah perbezaan antara sTSS dan CTL/ATL/TSB?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                    <div itemprop="text">
+                        <p>sTSS mengukur beban latihan bagi senaman tunggal. CTL (Beban Latihan Kronik) ialah kecergasan jangka panjang anda, ATL (Beban Latihan Akut) ialah keletihan terkini anda, dan TSB (Imbangan Tekanan Latihan) ialah kesegaran anda. Metrik ini menggunakan nilai sTSS dari masa ke masa untuk menjejak keadaan latihan anda. Ketahui lebih lanjut dalam <a href="/ms/training-load/">panduan Beban Latihan</a> kami.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="mt-3xl">Sumber Berkaitan</h2>
+
+        <div class="grid grid-3">
+            <div class="card">
+                <h3 class="card-title">Ujian CRS</h3>
+                <div class="card-content">
+                    <p>Perlukan rentak CRS anda? Gunakan kalkulator CRS percuma kami dengan masa ujian 5K dan 3K.</p>
+                    <a href="/ms/crs/" class="btn btn-secondary btn-small mt-md">Kalkulator CRS →</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3 class="card-title">Panduan Beban Latihan</h3>
+                <div class="card-content">
+                    <p>Ketahui tentang CTL, ATL, TSB dan metrik Carta Pengurusan Prestasi.</p>
+                    <a href="/ms/training-load/" class="btn btn-secondary btn-small mt-md">Beban Latihan →</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3 class="card-title">Aplikasi RunAnalytics</h3>
+                <div class="card-content">
+                    <p>Pengiraan sTSS automatik untuk semua senaman. Jejaki trend CTL/ATL/TSB dari masa ke masa.</p>
+                    <a href="/ms/" class="btn btn-secondary btn-small mt-md">Ketahui Lebih Lanjut →</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-xl text-center">
+            <p class="mb-md"><strong>Mahukan penjejakan sTSS automatik?</strong></p>
+            <a href="https://apps.apple.com/es/app/runanalytics/id6754524015" class="btn btn-primary btn-large" target="_blank" rel="noopener">Muat Turun RunAnalytics Percuma</a>
+        </div>
+    </div>
+</section>
+
+<script src="/assets/js/stss-calculator.min.js"></script>
+    </main>
+
+    
+    <footer class="site-footer">
+    <div class="container">
+        <div class="footer-grid">
+            
+            <div>
+                <h3 class="mb-md">RunAnalytics - Running Analytics App | Critical Running Speed, TSS, CTL/ATL/TSB for iOS</h3>
+                <p class="text-secondary">Track Critical Running Speed, Training Stress Score, and performance metrics with RunAnalytics. Science-based iOS app for runners, triathletes &amp; coaches. 7-day free trial.</p>
+            </div>
+
+            
+            <div>
+                <h3 class="mb-md">Laman Utama</h3>
+                <ul class="footer-links">
+                    
+                    <li>
+                        <a href="/af/">Afrikaans</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ar/">العربية</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/bn/">বাংলা</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ca/">Català</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/de/">Deutsch</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/el/">Ελληνικά</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/en/">English</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/es/">Español</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/fa/">فارسی</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/fi/">Suomi</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/fr/">Français</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/hi/">हिन्दी</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/id/">Bahasa Indonesia</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/it/">Italiano</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ja/">日本語</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ko/">한국어</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ms/">Bahasa Melayu</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/nl/">Nederlands</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/no/">Norsk</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/pl/">Polski</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/pt/">Português</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ru/">Русский</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/sv/">Svenska</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/sw/">Kiswahili</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/tl/">Tagalog</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/tr/">Türkçe</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ur/">اردو</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/vi/">Tiếng Việt</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/zh/">中文</a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+
+        
+        <div class="footer-bottom">
+            <p class="text-sm text-secondary">
+                &copy; 2025 RunAnalytics - Running Analytics App | Critical Running Speed, TSS, CTL/ATL/TSB for iOS. Hak cipta terpelihara
+            </p>
+            <ul class="footer-links">
+                <li><a href="/ms/privacy/">Privasi</a></li>
+                <li><a href="/ms/terms/">Terma</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+    
+    <div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="Cookie consent" aria-live="polite">
+    <div class="cookie-banner-content">
+        <div>
+            <p>Laman web ini menggunakan kuki untuk meningkatkan pengalaman anda.</p>
+            <a href="/ms/privacy/" class="text-sm">Ketahui lebih lanjut</a>
+        </div>
+        <div class="cookie-banner-actions">
+            <button id="cookie-decline" class="btn btn-secondary btn-small">Tolak</button>
+            <button id="cookie-accept" class="btn btn-primary btn-small">Terima</button>
+        </div>
+    </div>
+</div>
+
+    
+    <script src="/assets/js/main.min.js"></script>
+    <script src="/assets/js/cookie-consent.min.js"></script>
+    <script src="/assets/js/lazy-load.min.js"></script>
+
+    
+    <script src="/assets/js/fuse.min.js"></script>
+    <script src="/assets/js/search.min.js"></script>
+
+    
+    
+    <script src="/assets/js/analytics.min.js" data-ga-id="G-Y138VB4523"></script>
+    
+</body>
+</html>

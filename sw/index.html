@@ -1,0 +1,1332 @@
+<!DOCTYPE html>
+<html lang="sw" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+    <title>Uchambuzi wa Kukimbia wa Kibinafsi - CRS, TSS kwa iOS</title>
+    <meta name="description" content="Programu ya iOS ya kukimbia na uchambuzi wa hali ya juu. Fuatilia CRS, TSS kwa faragha. Maarifa ya kisayansi ya mafunzo kwa wakimbizi wa ushindani. Jaribio la siku 7 bure.">
+    <meta name="author" content="Albert Arno">
+
+    
+    
+    <meta name="keywords" content="programu ya uchambuzi wa kukimbia, vipimo vya utendaji wa kukimbia, programu ya iOS ya faragha kwanza, kikokotoo cha CRS, alama ya mfadhaiko wa mafunzo">
+    
+
+    
+    <link rel="canonical" href="https://run.analyticszone.app/sw/">
+
+    
+    
+    <meta property="article:published_time" content="2025-01-15T10:00:00Z">
+    <meta property="article:modified_time" content="2025-01-17T14:30:00Z">
+    <meta property="article:author" content="Albert Arno">
+    
+
+    
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://run.analyticszone.app/sw/">
+    <meta property="og:title" content="Uchambuzi wa Kukimbia wa Kibinafsi - CRS, TSS kwa iOS">
+    <meta property="og:description" content="Programu ya iOS ya kukimbia na uchambuzi wa hali ya juu. Fuatilia CRS, TSS kwa faragha. Maarifa ya kisayansi ya mafunzo kwa wakimbizi wa ushindani. Jaribio la siku 7 bure.">
+    
+    <meta property="og:image" content="https://run.analyticszone.app/assets/images/run-analytics-og.jpg">
+    
+    <meta property="og:locale" content="sw_KE">
+    <meta property="og:site_name" content="RunAnalytics - Running Analytics App | Critical Running Speed, TSS, CTL/ATL/TSB for iOS">
+
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://run.analyticszone.app/sw/">
+    <meta name="twitter:title" content="Uchambuzi wa Kukimbia wa Kibinafsi - CRS, TSS kwa iOS">
+    <meta name="twitter:description" content="Programu ya iOS ya kukimbia na uchambuzi wa hali ya juu. Fuatilia CRS, TSS kwa faragha. Maarifa ya kisayansi ya mafunzo kwa wakimbizi wa ushindani. Jaribio la siku 7 bure.">
+    
+    <meta name="twitter:image" content="https://run.analyticszone.app/assets/images/run-analytics-og.jpg">
+    
+
+    
+    
+    <link rel="alternate" hreflang="af" href="https://run.analyticszone.app/af/">
+    
+    <link rel="alternate" hreflang="ar" href="https://run.analyticszone.app/ar/">
+    
+    <link rel="alternate" hreflang="bn" href="https://run.analyticszone.app/bn/">
+    
+    <link rel="alternate" hreflang="ca" href="https://run.analyticszone.app/ca/">
+    
+    <link rel="alternate" hreflang="de" href="https://run.analyticszone.app/de/">
+    
+    <link rel="alternate" hreflang="el" href="https://run.analyticszone.app/el/">
+    
+    <link rel="alternate" hreflang="en" href="https://run.analyticszone.app/en/">
+    
+    <link rel="alternate" hreflang="es" href="https://run.analyticszone.app/es/">
+    
+    <link rel="alternate" hreflang="fa" href="https://run.analyticszone.app/fa/">
+    
+    <link rel="alternate" hreflang="fi" href="https://run.analyticszone.app/fi/">
+    
+    <link rel="alternate" hreflang="fr" href="https://run.analyticszone.app/fr/">
+    
+    <link rel="alternate" hreflang="hi" href="https://run.analyticszone.app/hi/">
+    
+    <link rel="alternate" hreflang="id" href="https://run.analyticszone.app/id/">
+    
+    <link rel="alternate" hreflang="it" href="https://run.analyticszone.app/it/">
+    
+    <link rel="alternate" hreflang="ja" href="https://run.analyticszone.app/ja/">
+    
+    <link rel="alternate" hreflang="ko" href="https://run.analyticszone.app/ko/">
+    
+    <link rel="alternate" hreflang="ms" href="https://run.analyticszone.app/ms/">
+    
+    <link rel="alternate" hreflang="nl" href="https://run.analyticszone.app/nl/">
+    
+    <link rel="alternate" hreflang="no" href="https://run.analyticszone.app/no/">
+    
+    <link rel="alternate" hreflang="pl" href="https://run.analyticszone.app/pl/">
+    
+    <link rel="alternate" hreflang="pt" href="https://run.analyticszone.app/pt/">
+    
+    <link rel="alternate" hreflang="ru" href="https://run.analyticszone.app/ru/">
+    
+    <link rel="alternate" hreflang="sv" href="https://run.analyticszone.app/sv/">
+    
+    <link rel="alternate" hreflang="sw" href="https://run.analyticszone.app/sw/">
+    
+    <link rel="alternate" hreflang="tl" href="https://run.analyticszone.app/tl/">
+    
+    <link rel="alternate" hreflang="tr" href="https://run.analyticszone.app/tr/">
+    
+    <link rel="alternate" hreflang="ur" href="https://run.analyticszone.app/ur/">
+    
+    <link rel="alternate" hreflang="vi" href="https://run.analyticszone.app/vi/">
+    
+    <link rel="alternate" hreflang="zh" href="https://run.analyticszone.app/zh/">
+    
+    <link rel="alternate" hreflang="x-default" href="https://run.analyticszone.app/en/">
+
+    
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/icons/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/icons/apple-touch-icon.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#0066CC">
+
+    
+    <link rel="stylesheet" href="/assets/css/main.min.css">
+
+    
+    
+
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "RunAnalytics - Running Analytics App | Critical Running Speed, TSS, CTL/ATL/TSB for iOS",
+      "url": "https://run.analyticszone.app",
+      "logo": "https://run.analyticszone.app/assets/images/logo.png",
+      "description": "Track Critical Running Speed, Training Stress Score, and performance metrics with RunAnalytics. Science-based iOS app for runners, triathletes &amp; coaches. 7-day free trial.",
+      "author": "Albert Arno",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "Customer Service",
+        "email": "analyticszone@onmedic.org"
+      },
+      "sameAs": [
+        "https://twitter.com/runanalytics",
+        "https://apps.apple.com/es/app/runanalytics/id6754524015"
+      ]
+    }
+    </script>
+
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "RunAnalytics",
+      "description": "Scientific running analytics app with Critical Run Speed (CRS), Training Stress Score (TSS), and CTL/ATL/TSB metrics. Privacy-first app processes all data locally on iPhone.",
+      "url": "https://run.analyticszone.app",
+      "applicationCategory": ["HealthApplication", "FitnessApplication"],
+      "operatingSystem": "iOS",
+      "softwareVersion": "Latest",
+      "author": {
+        "@type": "Organization",
+        "name": "Albert Arno"
+      },
+      "offers": [
+        {
+          "@type": "Offer",
+          "name": "Free Trial",
+          "description": "7-day free trial of RunAnalytics premium features",
+          "price": "0",
+          "priceCurrency": "EUR",
+          "category": "Trial Subscription",
+          "url": "https://apps.apple.com/es/app/runanalytics/id6754524015"
+        },
+        {
+          "@type": "Offer",
+          "name": "Monthly Subscription",
+          "description": "Monthly access to all RunAnalytics premium features",
+          "price": "3.99",
+          "priceCurrency": "EUR",
+          "billingDuration": "P1M",
+          "category": "Subscription",
+          "url": "https://apps.apple.com/es/app/runanalytics/id6754524015"
+        },
+        {
+          "@type": "Offer",
+          "name": "Annual Subscription",
+          "description": "Annual access to all RunAnalytics premium features at 18% discount",
+          "price": "39",
+          "priceCurrency": "EUR",
+          "billingDuration": "P1Y",
+          "category": "Subscription",
+          "url": "https://apps.apple.com/es/app/runanalytics/id6754524015"
+        }
+      ],
+      "downloadUrl": "https://apps.apple.com/es/app/runanalytics/id6754524015",
+      "featureList": [
+        "Critical Run Speed (CRS) calculation",
+        "Training Stress Score (TSS) tracking",
+        "CTL (Chronic Training Load) metrics",
+        "ATL (Acute Training Load) metrics",
+        "TSB (Training Stress Balance) indicators",
+        "7 personalized training zones",
+        "Kilometer-by-kilometer analysis",
+        "Weekly, monthly, and yearly comparisons",
+        "Running efficiency tracking",
+        "Personal records (PR) detection",
+        "Apple Health app integration",
+        "Export in JSON, CSV, HTML, PDF formats",
+        "100% local data processing",
+        "Privacy-first architecture",
+        "Native SwiftUI interface"
+      ],
+      "screenshot": [
+        "https://run.analyticszone.app/assets/images/screenshots/workouts-list.png",
+        "https://run.analyticszone.app/assets/images/screenshots/workout-detail.png",
+        "https://run.analyticszone.app/assets/images/screenshots/analytics.png",
+        "https://run.analyticszone.app/assets/images/screenshots/performance.png",
+        "https://run.analyticszone.app/assets/images/screenshots/training-zones.png",
+        "https://run.analyticszone.app/assets/images/screenshots/export-options.png"
+      ]
+    }
+    </script>
+
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      "name": "RunAnalytics",
+      "description": "Professional running analytics app with science-based metrics, personalized training zones, and privacy-first data processing",
+      "url": "https://run.analyticszone.app",
+      "image": "https://run.analyticszone.app/assets/images/logo.png",
+      "brand": {
+        "@type": "Brand",
+        "name": "RunAnalytics"
+      },
+      "category": "Fitness & Health Software",
+      "offers": {
+        "@type": "AggregateOffer",
+        "priceCurrency": "EUR",
+        "lowPrice": "0",
+        "highPrice": "39",
+        "offerCount": "3",
+        "offers": [
+          {
+            "@type": "Offer",
+            "name": "7-Day Free Trial",
+            "price": "0",
+            "priceCurrency": "EUR",
+            "url": "https://apps.apple.com/es/app/runanalytics/id6754524015"
+          },
+          {
+            "@type": "Offer",
+            "name": "Monthly Plan",
+            "price": "3.99",
+            "priceCurrency": "EUR",
+            "billingDuration": "P1M",
+            "url": "https://apps.apple.com/es/app/runanalytics/id6754524015"
+          },
+          {
+            "@type": "Offer",
+            "name": "Annual Plan",
+            "price": "39",
+            "priceCurrency": "EUR",
+            "billingDuration": "P1Y",
+            "url": "https://apps.apple.com/es/app/runanalytics/id6754524015"
+          }
+        ]
+      }
+    }
+    </script>
+
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How does RunAnalytics get my running data?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "RunAnalytics syncs with Apple Health to import running workouts recorded by any compatible device or app. This includes smart watches, fitness trackers, and manual entries. The app processes this data locally to calculate advanced metrics."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the CRS test and how do I perform it?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "CRS (Critical Run Speed) is a scientific protocol using 2 maximum effort runs: 5K and 3K with 10-20 minutes rest between. The app calculates your aerobic threshold from these times and automatically adjusts all training zones. Repeat every 6-8 weeks to track progress."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is my data uploaded to the cloud?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. RunAnalytics processes all data locally on your iPhone. There are no external servers, no cloud accounts, no data transfers. You control exports: generate JSON, CSV, HTML, or PDF files and share them however you want."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I use RunAnalytics for trail running?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. RunAnalytics works with any running workout in Apple Health, including trail running. The app adapts to available metrics whether you're on a track or trail, providing relevant analysis for each environment."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What's the difference between monthly and annual plans?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Both plans offer identical features: all metrics, unlimited zones, temporal comparisons, multiple exports, and free updates. The only difference is price: annual saves 18% (equivalent to €3.25/month vs €3.99/month)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I cancel my subscription anytime?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Subscriptions are managed through the App Store, so you can cancel anytime from Settings → [Your Name] → Subscriptions. If you cancel, you'll maintain access until the end of your current billing period."
+          }
+        }
+      ]
+    }
+    </script>
+
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://run.analyticszone.app/sw/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Running Analytics",
+          "item": "https://run.analyticszone.app/sw/#features"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Pricing",
+          "item": "https://run.analyticszone.app/sw/#pricing"
+        }
+      ]
+    }
+    </script>
+
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Uchambuzi wa Kukimbia wa Kibinafsi - CRS, TSS kwa iOS",
+      "description": "Programu ya iOS ya kukimbia na uchambuzi wa hali ya juu. Fuatilia CRS, TSS kwa faragha. Maarifa ya kisayansi ya mafunzo kwa wakimbizi wa ushindani. Jaribio la siku 7 bure.",
+      "url": "https://run.analyticszone.app/sw/",
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "RunAnalytics - Running Analytics App | Critical Running Speed, TSS, CTL/ATL/TSB for iOS",
+        "url": "https://run.analyticszone.app"
+      },
+      "mainEntity": {
+        "@type": "SoftwareApplication",
+        "name": "RunAnalytics"
+      }
+    }
+    </script>
+
+    
+
+    
+    
+
+    
+    
+</head>
+<body>
+    
+    <a href="#main-content" class="skip-link">Ruka kwenye maudhui</a>
+
+    
+    <header class="site-header">
+    <div class="container">
+        <div class="header-inner">
+            
+            <a href="/sw/" class="site-logo">
+                <picture>
+                    
+                    <source srcset="/assets/images/logo-dark.webp" type="image/webp"
+                        media="(prefers-color-scheme: dark)">
+                    
+                    <source srcset="/assets/images/logo-dark.png" type="image/png" media="(prefers-color-scheme: dark)">
+                    
+                    <source srcset="/assets/images/logo.webp" type="image/webp">
+                    
+                    <img src="/assets/images/logo.png" alt="RunAnalytics - Running Analytics App | Critical Running Speed, TSS, CTL/ATL/TSB for iOS" width="40" height="40">
+                </picture>
+                <span class="logo-text">RunAnalytics</span>
+            </a>
+
+            
+            <nav class="nav-primary" id="nav-primary" role="navigation" aria-label="Main navigation">
+                <ul>
+                    
+                    <li>
+                        
+                        
+                        <a href="/sw/"  aria-current="">
+                            Nyumbani
+                        </a>
+                        
+                        </li>
+                        
+                    <li class="has-submenu" >
+                        
+                        
+                        
+                        
+                        <span class="nav-label">Jifunze</span>
+                        
+                        <ul class="submenu">
+                            
+                            <li>
+                                <a href="/sw/getting-started/" 
+                                    aria-current="">
+                                    Kuanza
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/sw/crs/" 
+                                    aria-current="">
+                                    CRS
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/sw/training-zones/" 
+                                    aria-current="">
+                                    Maeneo ya Mafunzo
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/sw/training-load/" 
+                                    aria-current="">
+                                    Mzigo wa Mafunzo
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/sw/stss-calculator/" 
+                                    aria-current="">
+                                    Kikokotoo cha sTSS
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        
+                        </li>
+                        
+                    <li class="has-submenu" >
+                        
+                        
+                        
+                        
+                        <span class="nav-label">Sayansi</span>
+                        
+                        <ul class="submenu">
+                            
+                            <li>
+                                <a href="/sw/research/" 
+                                    aria-current="">
+                                    Utafiti
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/sw/formulas/" 
+                                    aria-current="">
+                                    Fomula
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/sw/efficiency/" 
+                                    aria-current="">
+                                    Ufanisi
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/sw/stride-mechanics/" 
+                                    aria-current="">
+                                    Mekanika ya Hatua
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/sw/bibliography/" 
+                                    aria-current="">
+                                    Marejeleo
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        
+                        </li>
+                        
+                    <li>
+                        
+                        
+                        <a href="/sw/contact/"  aria-current="">
+                            Wasiliana
+                        </a>
+                        
+                        </li>
+                        
+                </ul>
+
+                
+                <div class="search-container">
+                    <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" aria-hidden="true">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.35-4.35"></path>
+                    </svg>
+                    <input type="search" id="site-search" class="search-input" aria-expanded="false"
+                        aria-haspopup="listbox" aria-autocomplete="list" autocomplete="off" spellcheck="false" />
+                    <div id="search-results" class="search-results hidden" role="region" aria-live="polite"></div>
+                </div>
+
+                
+                <select class="language-selector" id="language-select" aria-label="Chagua lugha">
+                    
+                    <option value="af" >
+                        Afrikaans
+                    </option>
+                    
+                    <option value="ar" >
+                        العربية
+                    </option>
+                    
+                    <option value="bn" >
+                        বাংলা
+                    </option>
+                    
+                    <option value="ca" >
+                        Català
+                    </option>
+                    
+                    <option value="de" >
+                        Deutsch
+                    </option>
+                    
+                    <option value="el" >
+                        Ελληνικά
+                    </option>
+                    
+                    <option value="en" >
+                        English
+                    </option>
+                    
+                    <option value="es" >
+                        Español
+                    </option>
+                    
+                    <option value="fa" >
+                        فارسی
+                    </option>
+                    
+                    <option value="fi" >
+                        Suomi
+                    </option>
+                    
+                    <option value="fr" >
+                        Français
+                    </option>
+                    
+                    <option value="hi" >
+                        हिन्दी
+                    </option>
+                    
+                    <option value="id" >
+                        Bahasa Indonesia
+                    </option>
+                    
+                    <option value="it" >
+                        Italiano
+                    </option>
+                    
+                    <option value="ja" >
+                        日本語
+                    </option>
+                    
+                    <option value="ko" >
+                        한국어
+                    </option>
+                    
+                    <option value="ms" >
+                        Bahasa Melayu
+                    </option>
+                    
+                    <option value="nl" >
+                        Nederlands
+                    </option>
+                    
+                    <option value="no" >
+                        Norsk
+                    </option>
+                    
+                    <option value="pl" >
+                        Polski
+                    </option>
+                    
+                    <option value="pt" >
+                        Português
+                    </option>
+                    
+                    <option value="ru" >
+                        Русский
+                    </option>
+                    
+                    <option value="sv" >
+                        Svenska
+                    </option>
+                    
+                    <option value="sw" selected>
+                        Kiswahili
+                    </option>
+                    
+                    <option value="tl" >
+                        Tagalog
+                    </option>
+                    
+                    <option value="tr" >
+                        Türkçe
+                    </option>
+                    
+                    <option value="ur" >
+                        اردو
+                    </option>
+                    
+                    <option value="vi" >
+                        Tiếng Việt
+                    </option>
+                    
+                    <option value="zh" >
+                        中文
+                    </option>
+                    
+                </select>
+
+                
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode"
+                    title="Toggle dark/light mode">
+                    <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                    <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+
+                
+                
+                <a href="https://apps.apple.com/es/app/runanalytics/id6754524015" class="header-download-btn" target="_blank" rel="noopener"
+                    aria-label="Download on App Store">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                        fill="currentColor">
+                        <path
+                            d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z" />
+                    </svg>
+                    <span class="download-text">Download</span>
+                </a>
+                
+            </nav>
+
+            
+            <button class="menu-toggle" id="menu-toggle" aria-label="Badilisha menyu"
+                aria-expanded="false" aria-controls="nav-primary">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </div>
+</header>
+
+    
+    <main id="main-content" class="main-content">
+        <!-- RunAnalytics App Landing Page - Homepage -->
+
+<!-- Hero Section with App Introduction -->
+<section class="app-hero">
+  <div class="container">
+    <div class="app-hero-content">
+      <div class="app-hero-text">
+        <div class="app-hero-badge">
+          <span>🏃</span>
+          <span>Uchanganuzi wa Kukimbia wa Kitaaluma</span>
+        </div>
+        <h1>Fanya Mafunzo Kwa Akili, Kimbia Kwa Kasi</h1>
+        <p class="app-hero-subtitle">
+          Programu ya iOS inayoangazia faragha yenye vipimo vya kisayansi vya utendaji wa kukimbia, vikundi vya mafunzo vilivyobinafsishwa, na ufuatiliaji kamili wa utendaji.
+          Yote inachakatwa ndani ya kifaa chako cha iPhone kwa faragha kamili ya data.
+        </p>
+        <div class="app-hero-cta">
+          <a href="https://apps.apple.com/es/app/runanalytics/id6754524015" class="btn btn-large btn-accent" target="_blank" rel="noopener">
+            Pakua kwenye App Store
+          </a>
+          <a href="#features" class="btn btn-large btn-secondary">
+            Chunguza Vipengele
+          </a>
+        </div>
+        <p class="mt-6 text-sm-muted">
+          ✓ Jaribio la bure la siku 7 &nbsp;&nbsp; ✓ Hakuna akaunti inayohitajika &nbsp;&nbsp; ✓ Data 100% ya ndani
+        </p>
+      </div>
+      <div class="app-hero-mockup">
+        <div class="mockup-phone">
+          <img src="/assets/images/screenshots/workouts-list.png" alt="Programu ya RunAnalytics ya iOS inayoonyesha orodha ya mazoezi ya kukimbia yenye umbali, kasi, na vipimo vya mafunzo kwenye iPhone" width="400" height="auto" loading="eager" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Key Features Section -->
+<section id="features" class="app-features">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-badge">Vipengele</div>
+      <h2 class="section-title">Vipimo vya Juu vya Utendaji wa Kukimbia</h2>
+      <p class="section-subtitle">Uchanganuzi wa kukimbia wa kiwango cha kitaaluma ulioundwa kwa wakimbiaji wa kila kiwango</p>
+    </div>
+    <div class="app-features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg class="icon" aria-hidden="true">
+            <use href="/assets/images/icons-sprite.svg#icon-chart"></use>
+          </svg>
+        </div>
+        <h3>Vipimo vya Kisayansi vya Kukimbia</h3>
+        <p><a href="/sw/crs/">Kasi Muhimu ya Kukimbia (CRS)</a> inaamua kizingiti chako cha aerobiki, ikiwezesha hesabu ya <a href="/sw/training-load/">Alama ya Msongo wa Mafunzo (TSS)</a> na <a href="/sw/training-load/#pmc">ufuatiliaji wa utendaji wa CTL/ATL/TSB</a> kulingana na utafiti uliothibitishwa wa sayansi ya michezo.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg class="icon" aria-hidden="true">
+            <use href="/assets/images/icons-sprite.svg#icon-zones"></use>
+          </svg>
+        </div>
+        <h3>Vikundi vya Mafunzo Vilivyobinafsishwa</h3>
+        <p>Vikundi 7 vilivyobinafsishwa <a href="/sw/training-zones-explained/">vya mafunzo ya kukimbia</a> vilivyoratibiwa kulingana na kasi yako muhimu ya kukimbia. Boresha kila zoezi kwa ajili ya upoaji, <a href="/sw/base-building-phase/">maendeleo ya aerobiki</a>, mafunzo ya kizingiti, au uboreshaji wa <a href="/sw/what-is-vo2max/">VO₂max</a>.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg class="icon" aria-hidden="true">
+            <use href="/assets/images/icons-sprite.svg#icon-calendar"></use>
+          </svg>
+        </div>
+        <h3>Ulinganisho wa Utendaji</h3>
+        <p>Ulinganisho wa vipindi vya kila wiki, kila mwezi, na kila mwaka ukiwa na utambuzi wa kiotomatiki wa mwelekeo na mabadiliko ya asilimia kwa vipimo vyote vya utendaji wa kukimbia.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg class="icon" aria-hidden="true">
+            <use href="/assets/images/icons-sprite.svg#icon-shield"></use>
+          </svg>
+        </div>
+        <h3>Ulinzi Kamili wa Faragha</h3>
+        <p>Data yote ya kukimbia inachakatwa ndani ya kifaa chako cha iOS. Hakuna seva, hakuna hifadhi ya wingu, hakuna ufuatiliaji. Wewe unamiliki na kudhibiti uchanganuzi wako wa kukimbia kikamilifu.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg class="icon" aria-hidden="true">
+            <use href="/assets/images/icons-sprite.svg#icon-export"></use>
+          </svg>
+        </div>
+        <h3>Hamisha Popote</h3>
+        <p>Hamisha mazoezi na vipimo vya utendaji wa kukimbia katika muundo wa JSON, CSV, HTML, au PDF. Inafaa na wakofi, jedwali, na majukwaa ya mafunzo.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg class="icon" aria-hidden="true">
+            <use href="/assets/images/icons-sprite.svg#icon-lightning"></use>
+          </svg>
+        </div>
+        <h3>Utendaji wa Papo Hapo</h3>
+        <p>Kuzindua programu kwa chini ya sekunde 0.35 kwa usanifu wa ndani kwanza. Angalia uchanganuzi wako wa kukimbia papo hapo bila kusubiri usawazishaji au kupakua.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Screenshots Carousel -->
+<section class="app-screenshots">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-badge">Picha za Skrini</div>
+      <h2 class="section-title">Tazama RunAnalytics Katika Matendo</h2>
+      <p class="section-subtitle">Kiolesura cha iOS chenye urembo na rahisi kuelewa kilichoundwa kwa wakimbiaji</p>
+    </div>
+    <div class="carousel-wrapper">
+      <button class="carousel-btn carousel-btn-prev" aria-label="Picha ya skrini iliyotangulia">
+        <svg aria-hidden="true">
+          <use href="/assets/images/icons-sprite.svg#icon-arrow-left"></use>
+        </svg>
+      </button>
+      <div class="screenshots-carousel" id="screenshotsCarousel">
+        <div class="screenshot-item">
+          <img src="/assets/images/screenshots/workouts-list.png" alt="Orodha ya mazoezi ya RunAnalytics inayoonyesha vikao vya kukimbia vyenye alama ya msongo wa mafunzo na vikundi vya mafunzo" loading="lazy" />
+          <p class="screenshot-caption">Muhtasari wa Mazoezi</p>
+        </div>
+        <div class="screenshot-item">
+          <img src="/assets/images/screenshots/workout-detail.png" alt="Uchanganuzi wa kina wa zoezi la kukimbia ukiwa na kasi kwa kilomita-kwa-kilomita, vipimo vya ufanisi wa kukimbia na data ya mapigo ya moyo" loading="lazy" />
+          <p class="screenshot-caption">Uchanganuzi wa Kilomita-kwa-Kilomita</p>
+        </div>
+        <div class="screenshot-item">
+          <img src="/assets/images/screenshots/analytics.png" alt="Dashibodi ya RunAnalytics inayoonyesha chati ya usimamizi wa utendaji wa CTL, ATL, na TSB pamoja na vipimo vya utendaji wa kukimbia" loading="lazy" />
+          <p class="screenshot-caption">Vipimo vya Juu vya Utendaji</p>
+        </div>
+        <div class="screenshot-item">
+          <img src="/assets/images/screenshots/performance.png" alt="Chati ya mwenendo wa utendaji wa kukimbia inayoonyesha maendeleo ya kasi muhimu ya kukimbia na mzigo wa mafunzo kwa muda" loading="lazy" />
+          <p class="screenshot-caption">Mienendo ya Utendaji</p>
+        </div>
+        <div class="screenshot-item">
+          <img src="/assets/images/screenshots/training-zones.png" alt="Vikundi 7 vilivyobinafsishwa vya mafunzo ya kukimbia kulingana na kizingiti cha kasi muhimu ya kukimbia" loading="lazy" />
+          <p class="screenshot-caption">Vikundi vya Mafunzo</p>
+        </div>
+        <div class="screenshot-item">
+          <img src="/assets/images/screenshots/export-options.png" alt="Hamisha data ya kukimbia katika miundo ya JSON, CSV, HTML na PDF kwa wakofi na uchanganuzi" loading="lazy" />
+          <p class="screenshot-caption">Chaguo za Kuhamisha</p>
+        </div>
+      </div>
+      <button class="carousel-btn carousel-btn-next" aria-label="Picha ya skrini inayofuata">
+        <svg aria-hidden="true">
+          <use href="/assets/images/icons-sprite.svg#icon-arrow-right"></use>
+        </svg>
+      </button>
+      <div class="carousel-dots" id="carouselDots" role="tablist" aria-label="Urambazaji wa picha za skrini"></div>
+    </div>
+  </div>
+</section>
+
+<!-- Scientific Metrics Section -->
+<section class="app-metrics">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-badge">Kulingana na Sayansi</div>
+      <h2 class="section-title text-white">Vipimo vya Ufanisi wa Kukimbia Kulingana na Sayansi</h2>
+      <p class="section-subtitle text-white-90">
+        RunAnalytics inabadilisha data ghafi ya kukimbia kuwa vipimo vya utendaji wa kukimbia vinavyoweza kutumika
+        kwa kutumia alama ya msongo wa mafunzo, kasi muhimu ya kukimbia, na hesabu za ufanisi zilizothibitishwa na utafiti wa sayansi ya michezo
+      </p>
+    </div>
+    <div class="metrics-grid">
+      <div class="metric-card">
+        <div class="metric-icon">🎯</div>
+        <div class="metric-label">Kasi ya Kizingiti</div>
+        <h3 class="metric-name">CRS</h3>
+        <p class="metric-description">Kasi Muhimu ya Kukimbia - kasi yako ya kizingiti cha aerobiki</p>
+      </div>
+      <div class="metric-card">
+        <div class="metric-icon">📊</div>
+        <div class="metric-label">Mzigo wa Zoezi</div>
+        <h3 class="metric-name">TSS</h3>
+        <p class="metric-description">Alama ya Msongo wa Mafunzo inapima ukali wa zoezi</p>
+      </div>
+      <div class="metric-card">
+        <div class="metric-icon">💪</div>
+        <div class="metric-label">Ustawi</div>
+        <h3 class="metric-name">CTL</h3>
+        <p class="metric-description">Mzigo wa Mafunzo wa Muda Mrefu - wastani wa siku 42</p>
+      </div>
+      <div class="metric-card">
+        <div class="metric-icon">😴</div>
+        <div class="metric-label">Uchovu</div>
+        <h3 class="metric-name">ATL</h3>
+        <p class="metric-description">Mzigo wa Mafunzo wa Papo Hapo - wastani wa siku 7</p>
+      </div>
+      <div class="metric-card">
+        <div class="metric-icon">⚖️</div>
+        <div class="metric-label">Hali</div>
+        <h3 class="metric-name">TSB</h3>
+        <p class="metric-description">Usawa wa Msongo wa Mafunzo unaonyesha utayari</p>
+      </div>
+      <div class="metric-card">
+        <div class="metric-icon">⚡</div>
+        <div class="metric-label">Ufanisi</div>
+        <h3 class="metric-name">Ufanisi wa Kukimbia</h3>
+        <p class="metric-description">Alama ya ufanisi wa hatua - chini ni bora zaidi</p>
+      </div>
+      <div class="metric-card">
+        <div class="metric-icon">🎯</div>
+        <div class="metric-label">Vikundi</div>
+        <h3 class="metric-name">Vikundi 7</h3>
+        <p class="metric-description">Viwango vya ukali kutoka Upoaji hadi Mbio za Kasi</p>
+      </div>
+      <div class="metric-card">
+        <div class="metric-icon">🏆</div>
+        <div class="metric-label">Rekodi</div>
+        <h3 class="metric-name">PRs</h3>
+        <p class="metric-description">Ufuatiliaji wa kiotomatiki wa rekodi za kibinafsi</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Pricing Section -->
+<section class="app-pricing">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-badge">Bei</div>
+      <h2 class="section-title">Bei Rahisi na Wazi</h2>
+      <p class="section-subtitle">Anza na jaribio la bure la siku 7. Ghairi wakati wowote.</p>
+    </div>
+    <div class="pricing-grid">
+      <div class="pricing-card">
+        <div class="pricing-header">
+          <h3 class="pricing-name">Kila Mwezi</h3>
+          <div class="pricing-price">
+            <span class="pricing-currency">€</span>
+            <span class="pricing-amount">3.99</span>
+            <span class="pricing-period">/mwezi</span>
+          </div>
+          <p class="pricing-trial">Jaribio la bure la siku 7</p>
+        </div>
+        <ul class="pricing-features">
+          <li>Usawazishaji usiozuiwa wa mazoezi</li>
+          <li>Vipimo vyote vya kisayansi (CRS, TSS, CTL/ATL/TSB)</li>
+          <li>Vikundi 7 vilivyobinafsishwa vya mafunzo</li>
+          <li>Ulinganisho wa kila wiki, kila mwezi na kila mwaka</li>
+          <li>Hamisha katika JSON, CSV, HTML na PDF</li>
+          <li>Faragha 100%, data ya ndani</li>
+          <li>Masasisho yote ya baadaye</li>
+        </ul>
+      </div>
+      <div class="pricing-card featured" data-badge="Thamani Bora Zaidi">
+        <div class="pricing-header">
+          <h3 class="pricing-name">Kila Mwaka</h3>
+          <div class="pricing-price">
+            <span class="pricing-currency">€</span>
+            <span class="pricing-amount">39</span>
+            <span class="pricing-period">/mwaka</span>
+          </div>
+          <p class="pricing-trial">Okoa €8.88/mwaka (punguzo la 18%)</p>
+        </div>
+        <ul class="pricing-features">
+          <li>Usawazishaji usiozuiwa wa mazoezi</li>
+          <li>Vipimo vyote vya kisayansi (CRS, TSS, CTL/ATL/TSB)</li>
+          <li>Vikundi 7 vilivyobinafsishwa vya mafunzo</li>
+          <li>Ulinganisho wa kila wiki, kila mwezi na kila mwaka</li>
+          <li>Hamisha katika JSON, CSV, HTML na PDF</li>
+          <li>Faragha 100%, data ya ndani</li>
+          <li>Masasisho yote ya baadaye</li>
+          <li><strong>Tu €3.25/mwezi</strong></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Benefits Section -->
+<section class="app-benefits">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-badge">Kwa Nini RunAnalytics</div>
+      <h2 class="section-title">Uchanganuzi wa Kukimbia Unaoweka Faragha Kwanza kwa Wanariadha Wakubwa</h2>
+      <p class="section-subtitle">Vipimo vya kitaaluma vya utendaji wa kukimbia bila ugumu</p>
+    </div>
+    <div class="benefits-grid">
+      <div class="benefit-item">
+        <div class="benefit-icon">🎯</div>
+        <div class="benefit-content">
+          <h3>Itifaki ya Mtihani wa CRS</h3>
+          <p>Itifaki ya mtihani wa 5K + 3K iliyojengewa ndani ili kuamua kasi yako muhimu ya kukimbia. Rudia kila wiki 6-8 ili kufuatilia maendeleo na kurekebisha vikundi vya mafunzo ya kukimbia kiotomatiki.</p>
+        </div>
+      </div>
+      <div class="benefit-item">
+        <div class="benefit-icon">📱</div>
+        <div class="benefit-content">
+          <h3>Programu ya Asili ya iOS ya Kukimbia</h3>
+          <p>Imejengwa na SwiftUI kwa utendaji laini na uunganisho wa iOS. Usawazishaji wa programu ya Afya bila mshono kwa uchanganuzi wa kukimbia, msaada wa wijeti, na lugha ya muundo wa kawaida wa Apple.</p>
+        </div>
+      </div>
+      <div class="benefit-item">
+        <div class="benefit-icon">🔬</div>
+        <div class="benefit-content">
+          <h3>Vipimo Kulingana na Utafiti</h3>
+          <p>Vipimo vyote vya utendaji wa kukimbia vinategemea utafiti wa sayansi ya michezo uliokaguliwa na wenzao. CRS kutoka kwa Wakayoshi et al., alama ya msongo wa mafunzo iliyorekebisha kwa ajili ya kukimbia kwa fomula ya IF³, miundo ya CTL/ATL iliyothibitishwa.</p>
+        </div>
+      </div>
+      <div class="benefit-item">
+        <div class="benefit-icon">👥</div>
+        <div class="benefit-content">
+          <h3>Ripoti Zinazofaa kwa Wakofi</h3>
+          <p>Hamisha ripoti za kina za uchanganuzi wa kukimbia kwa wakofi. Shiriki muhtasari wa HTML kupitia barua pepe, CSV kwa uchanganuzi wa jedwali, au PDF kwa kumbukumbu za mafunzo na rekodi za utendaji.</p>
+        </div>
+      </div>
+      <div class="benefit-item">
+        <div class="benefit-icon">🌍</div>
+        <div class="benefit-content">
+          <h3>Inafanya Kazi Kila Mahali</h3>
+          <p>Kukimbia kwenye barabara au njia za milimani, mbio za kasi au umbali mrefu. RunAnalytics inarekebisha vipimo vya ufanisi wa kukimbia kwa aina zote za kukimbia na inagundua kiotomatiki sifa za zoezi.</p>
+        </div>
+      </div>
+      <div class="benefit-item">
+        <div class="benefit-icon">🚀</div>
+        <div class="benefit-content">
+          <h3>Inaboreshwa Daima</h3>
+          <p>Masasisho ya kawaida yenye vipimo vipya vya utendaji wa kukimbia kulingana na maoni ya watumiaji. Nyongeza za hivi karibuni ni pamoja na ulinganisho wa kila mwaka, ufuatiliaji wa rekodi za kibinafsi, na chaguo bora za kuhamisha.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="section">
+  <div class="container container-narrow">
+    <div class="section-header">
+      <div class="section-badge">Maswali Yanayoulizwa Mara kwa Mara</div>
+      <h2 class="section-title">Maswali Yanayoulizwa Mara kwa Mara</h2>
+    </div>
+
+    <div class="feature-list">
+      <div class="feature-item">
+        <h3>Programu hii ya uchanganuzi wa kukimbia inapataje data yangu?</h3>
+        <p>RunAnalytics inasawazisha na Apple Health ili kuingiza mazoezi ya kukimbia yaliyorekodiwa na kifaa au programu yoyote inayofaa. Hii ni pamoja na saa mahiri, vifuatiliaji vya ustawi, na maingizo ya mkono. Programu inachakata data hii ndani ili kuhesabu vipimo vya juu vya utendaji wa kukimbia.</p>
+      </div>
+
+      <div class="feature-item">
+        <h3>Mtihani wa kasi muhimu ya kukimbia ni nini na ninaufanyaje?</h3>
+        <p>Kasi muhimu ya kukimbia (CRS) ni itifaki ya kisayansi inayotumia mbio 2 za juhudi kamili: 5K na 3K na pumziko la dakika 10-20 kati yao. Programu inahesabu kizingiti chako cha aerobiki kutokana na nyakati hizi na inarekebisha kiotomatiki vikundi vyote vya mafunzo ya kukimbia. Rudia kila wiki 6-8 ili kufuatilia maendeleo.</p>
+      </div>
+
+      <div class="feature-item">
+        <h3>Je, data yangu ya kukimbia inapakiwa kwenye wingu?</h3>
+        <p>Hapana. RunAnalytics inachakata data yote ya kukimbia ndani ya iPhone yako. Hakuna seva za nje, hakuna akaunti za wingu, hakuna uhamishaji wa data. Wewe unadhibiti kuhamisha: tengeneza faili za JSON, CSV, HTML, au PDF zenye vipimo vyako vya utendaji wa kukimbia na uzishirikishe jinsi unavyotaka.</p>
+      </div>
+
+      <div class="feature-item">
+        <h3>Je, ninaweza kutumia programu hii ya uchanganuzi wa kukimbia kwa kukimbia kwenye njia za milimani?</h3>
+        <p>Ndiyo. RunAnalytics inafanya kazi na zoezi lolote la kukimbia katika Apple Health, ikiwa ni pamoja na kukimbia kwenye njia za milimani. Programu inarekebisha vipimo vya ufanisi wa kukimbia kwa data inayopatikana iwe uko kwenye barabara au njia za milimani, ikitoa uchanganuzi wa uhusika wa utendaji kwa kila mazingira.</p>
+      </div>
+
+      <div class="feature-item">
+        <h3>Ni tofauti gani kati ya mipango ya kila mwezi na kila mwaka?</h3>
+        <p>Mipango yote miwili inatoa vipengele sawa: vipimo vyote vya utendaji wa kukimbia, vikundi visiozuiwa vya mafunzo, ulinganisho wa muda, kuhamisha kwingi, na masasisho ya bure. Tofauti pekee ni bei: ya kila mwaka inakuokoa 18% (sawa na €3.25/mwezi dhidi ya €3.99/mwezi).</p>
+      </div>
+
+      <div class="feature-item">
+        <h3>Je, ninaweza kughairi usajili wangu wakati wowote?</h3>
+        <p>Ndiyo. Usajili unasimamiwa kupitia App Store, kwa hivyo unaweza kughairi wakati wowote kutoka kwenye Mipangilio → [Jina Lako] → Usajili. Ukighairi, utaendelea kuwa na ufikiaji hadi mwisho wa kipindi chako cha sasa cha malipo.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Final CTA Section -->
+<section class="app-cta-final">
+  <div class="container">
+    <h2>Uko Tayari Kubadilisha Utendaji Wako wa Kukimbia?</h2>
+    <p>Jiunge na maelfu ya wakimbiaji wanaotumia uchanganuzi wa kisayansi wa kukimbia ili kuboresha utendaji. Anza jaribio lako la bure la siku 7 la programu hii ya iOS inayoweka faragha kwanza leo.</p>
+    <div class="app-hero-cta">
+      <a href="https://apps.apple.com/es/app/runanalytics/id6754524015" class="btn btn-large btn-accent" target="_blank" rel="noopener">
+        Pakua RunAnalytics Bure
+      </a>
+      <a href="#features" class="btn btn-large btn-accent-outline">
+        Jifunze Zaidi
+      </a>
+    </div>
+    <p class="section-footer">
+      Hakuna akaunti inayohitajika • Ghairi wakati wowote • Data yako inabaki kwenye kifaa chako
+    </p>
+  </div>
+</section>
+
+<!-- Additional Information Links -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Jifunze Zaidi Kuhusu Vipimo vya Utendaji wa Kukimbia</h2>
+      <p class="section-subtitle">Jifunze zaidi kuhusu sayansi nyuma ya uchanganuzi wa kukimbia</p>
+    </div>
+    <div class="grid grid-3">
+      <div class="card">
+        <h3 class="card-title">Kasi Muhimu ya Kukimbia</h3>
+        <div class="card-content">
+          <p>Elewa jinsi kasi muhimu ya kukimbia inavyoamua kizingiti chako cha aerobiki na kwa nini ni muhimu kwa mafunzo yaliyoandaliwa.</p>
+          <a href="/sw/crs/" class="btn btn-secondary btn-small mt-md">Jifunze kuhusu CRS →</a>
+        </div>
+      </div>
+      <div class="card">
+        <h3 class="card-title">Alama ya Msongo wa Mafunzo</h3>
+        <div class="card-content">
+          <p>Gundua jinsi TSS, CTL, ATL, na TSB zinavyokusaidia kusawazisha msongo wa mafunzo, kudhibiti uchovu, na kuboresha utendaji.</p>
+          <a href="/sw/training-stress-score/" class="btn btn-secondary btn-small mt-md">Chunguza TSS →</a>
+        </div>
+      </div>
+      <div class="card">
+        <h3 class="card-title">Vikundi vya Mafunzo Vilivyoelezwa</h3>
+        <div class="card-content">
+          <p>Mwongozo kamili wa vikundi 5 vya mafunzo: upoaji, aerobiki, tempo, kizingiti, na VO2max kwa mafunzo bora.</p>
+          <a href="/sw/training-zones-explained/" class="btn btn-secondary btn-small mt-md">Angalia Vikundi vya Mafunzo →</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid grid-3 mt-lg">
+      <div class="card">
+        <h3 class="card-title">VO2max ni Nini?</h3>
+        <div class="card-content">
+          <p>Jifunze kuhusu VO2max, jinsi ya kuipima, thamani za wastani kwa umri, na njia zilizothibitishwa za kuboresha uwezo wako wa aerobiki.</p>
+          <a href="/sw/what-is-vo2max/" class="btn btn-secondary btn-small mt-md">Elewa VO2max →</a>
+        </div>
+      </div>
+      <div class="card">
+        <h3 class="card-title">Upangaji wa Awamu za Marathon</h3>
+        <div class="card-content">
+          <p>Shinda hatua za mafunzo: kujenga msingi, kujenga, kilele, na kupungua kwa mafanikio ya marathon na upangaji unaotegemea sayansi.</p>
+          <a href="/sw/marathon-periodization/" class="btn btn-secondary btn-small mt-md">Panga Mafunzo Yako →</a>
+        </div>
+      </div>
+      <div class="card">
+        <h3 class="card-title">Sheria ya Mafunzo ya 80/20</h3>
+        <div class="card-content">
+          <p>Gundua usambazaji wa ukali uliothibitishwa wa 80% rahisi, 20% ngumu unaotumiwa na wakimbiaji wa hali ya juu kwa matokeo bora.</p>
+          <a href="/sw/8020-training-rule/" class="btn btn-secondary btn-small mt-md">Jifunze 80/20 →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+    </main>
+
+    
+    <footer class="site-footer">
+    <div class="container">
+        <div class="footer-grid">
+            
+            <div>
+                <h3 class="mb-md">RunAnalytics - Running Analytics App | Critical Running Speed, TSS, CTL/ATL/TSB for iOS</h3>
+                <p class="text-secondary">Track Critical Running Speed, Training Stress Score, and performance metrics with RunAnalytics. Science-based iOS app for runners, triathletes &amp; coaches. 7-day free trial.</p>
+            </div>
+
+            
+            <div>
+                <h3 class="mb-md">Nyumbani</h3>
+                <ul class="footer-links">
+                    
+                    <li>
+                        <a href="/af/">Afrikaans</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ar/">العربية</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/bn/">বাংলা</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ca/">Català</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/de/">Deutsch</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/el/">Ελληνικά</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/en/">English</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/es/">Español</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/fa/">فارسی</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/fi/">Suomi</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/fr/">Français</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/hi/">हिन्दी</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/id/">Bahasa Indonesia</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/it/">Italiano</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ja/">日本語</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ko/">한국어</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ms/">Bahasa Melayu</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/nl/">Nederlands</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/no/">Norsk</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/pl/">Polski</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/pt/">Português</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ru/">Русский</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/sv/">Svenska</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/sw/">Kiswahili</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/tl/">Tagalog</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/tr/">Türkçe</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ur/">اردو</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/vi/">Tiếng Việt</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/zh/">中文</a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+
+        
+        <div class="footer-bottom">
+            <p class="text-sm text-secondary">
+                &copy; 2025 RunAnalytics - Running Analytics App | Critical Running Speed, TSS, CTL/ATL/TSB for iOS. Haki zote zimehifadhiwa
+            </p>
+            <ul class="footer-links">
+                <li><a href="/sw/privacy/">Faragha</a></li>
+                <li><a href="/sw/terms/">Masharti</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+    
+    <div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="Cookie consent" aria-live="polite">
+    <div class="cookie-banner-content">
+        <div>
+            <p>Tovuti hii inatumia vidakuzi ili kuboresha uzoefu wako.</p>
+            <a href="/sw/privacy/" class="text-sm">Jifunze zaidi</a>
+        </div>
+        <div class="cookie-banner-actions">
+            <button id="cookie-decline" class="btn btn-secondary btn-small">Kataa</button>
+            <button id="cookie-accept" class="btn btn-primary btn-small">Kubali</button>
+        </div>
+    </div>
+</div>
+
+    
+    <script src="/assets/js/main.min.js"></script>
+    <script src="/assets/js/cookie-consent.min.js"></script>
+    <script src="/assets/js/lazy-load.min.js"></script>
+
+    
+    <script src="/assets/js/fuse.min.js"></script>
+    <script src="/assets/js/search.min.js"></script>
+
+    
+    
+    <script src="/assets/js/analytics.min.js" data-ga-id="G-Y138VB4523"></script>
+    
+</body>
+</html>

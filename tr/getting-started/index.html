@@ -1,0 +1,1031 @@
+<!DOCTYPE html>
+<html lang="tr" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+    <title>RunAnalytics ile Başlangıç - Kapsamlı Kurulum Rehberi | CRS Test Eğitimi</title>
+    <meta name="description" content="Kapsamlı RunAnalytics kurulum rehberi. CRS testini nasıl yapacağınızı, sonuçları nasıl gireceğinizi, antrenmanları nasıl takip edeceğinizi ve sTSS, CTL/ATL/TSB metriklerini nasıl anlayacağınızı öğrenin. Yeni başlayanlar için adım adım eğitim ve sorun giderme. 7 günlük ücretsiz deneme.">
+    <meta name="author" content="Albert Arno">
+
+    
+    
+    <meta name="keywords" content="RunAnalytics rehberi, CRS test eğitimi, koşu uygulaması eğitimi, RunAnalytics nasıl kullanılır, koşu analitiği rehberi">
+    
+
+    
+    <link rel="canonical" href="https://run.analyticszone.app/tr/getting-started/">
+
+    
+    
+    <meta property="article:published_time" content="2025-01-15T10:00:00Z">
+    <meta property="article:modified_time" content="2025-11-16T14:30:00Z">
+    <meta property="article:author" content="Albert Arno">
+    
+
+    
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://run.analyticszone.app/tr/getting-started/">
+    <meta property="og:title" content="RunAnalytics ile Başlangıç - Kapsamlı Kurulum Rehberi | CRS Test Eğitimi">
+    <meta property="og:description" content="Kapsamlı RunAnalytics kurulum rehberi. CRS testini nasıl yapacağınızı, sonuçları nasıl gireceğinizi, antrenmanları nasıl takip edeceğinizi ve sTSS, CTL/ATL/TSB metriklerini nasıl anlayacağınızı öğrenin. Yeni başlayanlar için adım adım eğitim ve sorun giderme. 7 günlük ücretsiz deneme.">
+    
+    <meta property="og:image" content="https://run.analyticszone.app/assets/images/run-analytics-og.jpg">
+    
+    <meta property="og:locale" content="tr_TR">
+    <meta property="og:site_name" content="RunAnalytics - Running Analytics App | Critical Running Speed, TSS, CTL/ATL/TSB for iOS">
+
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://run.analyticszone.app/tr/getting-started/">
+    <meta name="twitter:title" content="RunAnalytics ile Başlangıç - Kapsamlı Kurulum Rehberi | CRS Test Eğitimi">
+    <meta name="twitter:description" content="Kapsamlı RunAnalytics kurulum rehberi. CRS testini nasıl yapacağınızı, sonuçları nasıl gireceğinizi, antrenmanları nasıl takip edeceğinizi ve sTSS, CTL/ATL/TSB metriklerini nasıl anlayacağınızı öğrenin. Yeni başlayanlar için adım adım eğitim ve sorun giderme. 7 günlük ücretsiz deneme.">
+    
+    <meta name="twitter:image" content="https://run.analyticszone.app/assets/images/run-analytics-og.jpg">
+    
+
+    
+    
+    <link rel="alternate" hreflang="af" href="https://run.analyticszone.app/af/getting-started/">
+    
+    <link rel="alternate" hreflang="ar" href="https://run.analyticszone.app/ar/getting-started/">
+    
+    <link rel="alternate" hreflang="bn" href="https://run.analyticszone.app/bn/getting-started/">
+    
+    <link rel="alternate" hreflang="ca" href="https://run.analyticszone.app/ca/getting-started/">
+    
+    <link rel="alternate" hreflang="de" href="https://run.analyticszone.app/de/getting-started/">
+    
+    <link rel="alternate" hreflang="el" href="https://run.analyticszone.app/el/getting-started/">
+    
+    <link rel="alternate" hreflang="en" href="https://run.analyticszone.app/en/getting-started/">
+    
+    <link rel="alternate" hreflang="es" href="https://run.analyticszone.app/es/getting-started/">
+    
+    <link rel="alternate" hreflang="fa" href="https://run.analyticszone.app/fa/getting-started/">
+    
+    <link rel="alternate" hreflang="fi" href="https://run.analyticszone.app/fi/getting-started/">
+    
+    <link rel="alternate" hreflang="fr" href="https://run.analyticszone.app/fr/getting-started/">
+    
+    <link rel="alternate" hreflang="hi" href="https://run.analyticszone.app/hi/getting-started/">
+    
+    <link rel="alternate" hreflang="id" href="https://run.analyticszone.app/id/getting-started/">
+    
+    <link rel="alternate" hreflang="it" href="https://run.analyticszone.app/it/getting-started/">
+    
+    <link rel="alternate" hreflang="ja" href="https://run.analyticszone.app/ja/getting-started/">
+    
+    <link rel="alternate" hreflang="ko" href="https://run.analyticszone.app/ko/getting-started/">
+    
+    <link rel="alternate" hreflang="ms" href="https://run.analyticszone.app/ms/getting-started/">
+    
+    <link rel="alternate" hreflang="nl" href="https://run.analyticszone.app/nl/getting-started/">
+    
+    <link rel="alternate" hreflang="no" href="https://run.analyticszone.app/no/getting-started/">
+    
+    <link rel="alternate" hreflang="pl" href="https://run.analyticszone.app/pl/getting-started/">
+    
+    <link rel="alternate" hreflang="pt" href="https://run.analyticszone.app/pt/getting-started/">
+    
+    <link rel="alternate" hreflang="ru" href="https://run.analyticszone.app/ru/getting-started/">
+    
+    <link rel="alternate" hreflang="sv" href="https://run.analyticszone.app/sv/getting-started/">
+    
+    <link rel="alternate" hreflang="sw" href="https://run.analyticszone.app/sw/getting-started/">
+    
+    <link rel="alternate" hreflang="tl" href="https://run.analyticszone.app/tl/getting-started/">
+    
+    <link rel="alternate" hreflang="tr" href="https://run.analyticszone.app/tr/getting-started/">
+    
+    <link rel="alternate" hreflang="ur" href="https://run.analyticszone.app/ur/getting-started/">
+    
+    <link rel="alternate" hreflang="vi" href="https://run.analyticszone.app/vi/getting-started/">
+    
+    <link rel="alternate" hreflang="zh" href="https://run.analyticszone.app/zh/getting-started/">
+    
+    <link rel="alternate" hreflang="x-default" href="https://run.analyticszone.app/en/getting-started/">
+
+    
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/icons/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/icons/apple-touch-icon.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#0066CC">
+
+    
+    <link rel="stylesheet" href="/assets/css/main.min.css">
+
+    
+    
+
+    
+    
+
+    
+    
+</head>
+<body>
+    
+    <a href="#main-content" class="skip-link">İçeriğe atla</a>
+
+    
+    <header class="site-header">
+    <div class="container">
+        <div class="header-inner">
+            
+            <a href="/tr/" class="site-logo">
+                <picture>
+                    
+                    <source srcset="/assets/images/logo-dark.webp" type="image/webp"
+                        media="(prefers-color-scheme: dark)">
+                    
+                    <source srcset="/assets/images/logo-dark.png" type="image/png" media="(prefers-color-scheme: dark)">
+                    
+                    <source srcset="/assets/images/logo.webp" type="image/webp">
+                    
+                    <img src="/assets/images/logo.png" alt="RunAnalytics - Running Analytics App | Critical Running Speed, TSS, CTL/ATL/TSB for iOS" width="40" height="40">
+                </picture>
+                <span class="logo-text">RunAnalytics</span>
+            </a>
+
+            
+            <nav class="nav-primary" id="nav-primary" role="navigation" aria-label="Main navigation">
+                <ul>
+                    
+                    <li>
+                        
+                        
+                        <a href="/tr/"  aria-current="">
+                            Ana Sayfa
+                        </a>
+                        
+                        </li>
+                        
+                    <li class="has-submenu" >
+                        
+                        
+                        
+                        
+                        <span class="nav-label">Öğren</span>
+                        
+                        <ul class="submenu">
+                            
+                            <li>
+                                <a href="/tr/getting-started/" class="active" 
+                                    aria-current="page">
+                                    Başlangıç
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/tr/crs/" 
+                                    aria-current="">
+                                    CRS
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/tr/training-zones/" 
+                                    aria-current="">
+                                    Antrenman Bölgeleri
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/tr/training-load/" 
+                                    aria-current="">
+                                    Antrenman Yükü
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/tr/stss-calculator/" 
+                                    aria-current="">
+                                    sTSS Hesaplayıcı
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        
+                        </li>
+                        
+                    <li class="has-submenu" >
+                        
+                        
+                        
+                        
+                        <span class="nav-label">Bilim</span>
+                        
+                        <ul class="submenu">
+                            
+                            <li>
+                                <a href="/tr/research/" 
+                                    aria-current="">
+                                    Araştırma
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/tr/formulas/" 
+                                    aria-current="">
+                                    Formüller
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/tr/efficiency/" 
+                                    aria-current="">
+                                    Verimlilik
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/tr/stride-mechanics/" 
+                                    aria-current="">
+                                    Kürek Mekaniği
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/tr/bibliography/" 
+                                    aria-current="">
+                                    Kaynakça
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        
+                        </li>
+                        
+                    <li>
+                        
+                        
+                        <a href="/tr/contact/"  aria-current="">
+                            İletişim
+                        </a>
+                        
+                        </li>
+                        
+                </ul>
+
+                
+                <div class="search-container">
+                    <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" aria-hidden="true">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.35-4.35"></path>
+                    </svg>
+                    <input type="search" id="site-search" class="search-input" aria-expanded="false"
+                        aria-haspopup="listbox" aria-autocomplete="list" autocomplete="off" spellcheck="false" />
+                    <div id="search-results" class="search-results hidden" role="region" aria-live="polite"></div>
+                </div>
+
+                
+                <select class="language-selector" id="language-select" aria-label="Dil seçin">
+                    
+                    <option value="af" >
+                        Afrikaans
+                    </option>
+                    
+                    <option value="ar" >
+                        العربية
+                    </option>
+                    
+                    <option value="bn" >
+                        বাংলা
+                    </option>
+                    
+                    <option value="ca" >
+                        Català
+                    </option>
+                    
+                    <option value="de" >
+                        Deutsch
+                    </option>
+                    
+                    <option value="el" >
+                        Ελληνικά
+                    </option>
+                    
+                    <option value="en" >
+                        English
+                    </option>
+                    
+                    <option value="es" >
+                        Español
+                    </option>
+                    
+                    <option value="fa" >
+                        فارسی
+                    </option>
+                    
+                    <option value="fi" >
+                        Suomi
+                    </option>
+                    
+                    <option value="fr" >
+                        Français
+                    </option>
+                    
+                    <option value="hi" >
+                        हिन्दी
+                    </option>
+                    
+                    <option value="id" >
+                        Bahasa Indonesia
+                    </option>
+                    
+                    <option value="it" >
+                        Italiano
+                    </option>
+                    
+                    <option value="ja" >
+                        日本語
+                    </option>
+                    
+                    <option value="ko" >
+                        한국어
+                    </option>
+                    
+                    <option value="ms" >
+                        Bahasa Melayu
+                    </option>
+                    
+                    <option value="nl" >
+                        Nederlands
+                    </option>
+                    
+                    <option value="no" >
+                        Norsk
+                    </option>
+                    
+                    <option value="pl" >
+                        Polski
+                    </option>
+                    
+                    <option value="pt" >
+                        Português
+                    </option>
+                    
+                    <option value="ru" >
+                        Русский
+                    </option>
+                    
+                    <option value="sv" >
+                        Svenska
+                    </option>
+                    
+                    <option value="sw" >
+                        Kiswahili
+                    </option>
+                    
+                    <option value="tl" >
+                        Tagalog
+                    </option>
+                    
+                    <option value="tr" selected>
+                        Türkçe
+                    </option>
+                    
+                    <option value="ur" >
+                        اردو
+                    </option>
+                    
+                    <option value="vi" >
+                        Tiếng Việt
+                    </option>
+                    
+                    <option value="zh" >
+                        中文
+                    </option>
+                    
+                </select>
+
+                
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode"
+                    title="Toggle dark/light mode">
+                    <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                    <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+
+                
+                
+                <a href="https://apps.apple.com/es/app/runanalytics/id6754524015" class="header-download-btn" target="_blank" rel="noopener"
+                    aria-label="Download on App Store">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                        fill="currentColor">
+                        <path
+                            d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z" />
+                    </svg>
+                    <span class="download-text">Download</span>
+                </a>
+                
+            </nav>
+
+            
+            <button class="menu-toggle" id="menu-toggle" aria-label="Menüyü değiştir"
+                aria-expanded="false" aria-controls="nav-primary">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </div>
+</header>
+
+    
+    <main id="main-content" class="main-content">
+        <section class="hero hero-small">
+    <div class="container">
+        <h1>RunAnalytics ile Başlangıç</h1>
+        <p class="lead">Koşu performansını izlemek, CRS testi yapmak ve antrenman yükü analitiği için kapsamlı rehberiniz</p>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container container-narrow">
+        <div class="callout callout-info mb-xl">
+            <h2>Veriye Dayalı Koşuya Hoş Geldiniz</h2>
+            <p>RunAnalytics, koşu antrenmanlarınızı <strong>Kritik Koşu Hızı (CRS)</strong>, <strong>Antrenman Stres Skoru (sTSS)</strong> ve <strong>Performans Yönetim Grafiği (PMC)</strong> metrikleri kullanarak eyleme dönüştürülebilir içgörülere çevirir. Bu rehber, ilk kurulumdan gelişmiş antrenman yükü analizine kadar 4 basit adımda ilerler.</p>
+        </div>
+
+        <h2>Hızlı Başlangıç (5 Dakika)</h2>
+
+        <div class="steps-container">
+            <div class="step-card">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>İndir ve Kur</h3>
+                    <p>RunAnalytics'i App Store'dan indirin ve Apple Health'e erişim izni verin. Uygulama koşu antrenmanlarını otomatik olarak senkronize eder—manuel kayıt gerekmez.</p>
+                    <a href="https://apps.apple.com/es/app/runanalytics/id6754524015" class="btn btn-secondary btn-small mt-sm" target="_blank" rel="noopener">Uygulamayı İndir →</a>
+                </div>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>CRS Testi Yapın</h3>
+                    <p>Kritik Koşu Hızınızı belirlemek için 5K ve 3K zaman denemesi yapın. Bu tüm metriklerin temelidir—CRS olmadan sTSS ve antrenman bölgeleri hesaplanamaz.</p>
+                    <a href="#css-test-guide" class="btn btn-secondary btn-small mt-sm">CRS Test Protokolü ↓</a>
+                </div>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>CRS Sonuçlarını Girin</h3>
+                    <p>5K ve 3K sürelerinizi uygulamaya girin. RunAnalytics CRS'yi, tempo bölgelerini hesaplar ve tüm metrikleri fizyolojinize göre kişiselleştirir. Kondisyon geliştikçe her 6-8 haftada bir güncelleyin.</p>
+                </div>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">4</div>
+                <div class="step-content">
+                    <h3>Antrenmanları İzlemeye Başlayın</h3>
+                    <p>Apple Watch ve Health uygulaması ile koşun. RunAnalytics antrenmanları otomatik olarak içe aktarır, sTSS'yi hesaplar, CTL/ATL/TSB'yi günceller ve ilerlemeyi takip eder. Manuel veri girişi gerekmez.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section section-alt" id="css-test-guide">
+    <div class="container">
+        <h2 class="mb-xl text-center">Kapsamlı CRS Test Protokolü</h2>
+
+        <div class="grid grid-2">
+            <div class="card">
+                <h3 class="card-title">📋 İhtiyacınız Olanlar</h3>
+                <div class="card-content">
+                    <ul>
+                        <li><strong>Pist erişimi:</strong> 25m veya 50m pist (25 yarda kabul edilebilir)</li>
+                        <li><strong>Zamanlama:</strong> Kronometre, tempo saati veya Apple Watch</li>
+                        <li><strong>Isınma süresi:</strong> Testten önce 15-20 dakika</li>
+                        <li><strong>Dinlenme:</strong> Denemeler arasında 5-10 dakika</li>
+                        <li><strong>Efor:</strong> Maksimum sürdürülebilir tempo (tam sprint değil)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3 class="card-title">⏱️ Test Günü Koşulları</h3>
+                <div class="card-content">
+                    <ul>
+                        <li><strong>Dinlenmiş:</strong> Testten 24-48 saat önce ağır antrenman yok</li>
+                        <li><strong>Hidrate:</strong> İyi hidrate olmuş, normal beslenme</li>
+                        <li><strong>Pist sıcaklığı:</strong> 26-28°C ideal (çok soğuk/sıcak ortamlardan kaçının)</li>
+                        <li><strong>Günün saati:</strong> Normalde en iyi antrenman yaptığınız zaman</li>
+                        <li><strong>Ekipman:</strong> Antrenman sırasındakiyle aynı (gözlük, bone, mayo)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <h3 class="mt-3xl">Adım Adım CRS Testi</h3>
+
+        <div class="protocol-timeline">
+            <div class="timeline-item">
+                <div class="timeline-marker">Isınma</div>
+                <div class="timeline-content">
+                    <h4>15-20 dakika</h4>
+                    <p>400-800m hafif koşu, teknik çalışmalar ve ilerleyici hızlanmalar. Artan tempoda 2-3×50 ekleyin (%60, %75, %85 efor). Testten önce 2-3 dakika dinlenin.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-marker">Deneme 1</div>
+                <div class="timeline-content">
+                    <h4>400m Maksimum Efor</h4>
+                    <p><strong>Duvara basarak başlayın</strong> (atlama yok). Tam mesafe boyunca sürdürebileceğiniz en hızlı tempoda 400m koşun. Bu bir sprint DEĞİLDİR—temponuzu ayarlayın. Zamanı <strong>dd:ss</strong> formatında kaydedin (örn. 6:08).</p>
+                    <div class="tip-box mt-sm">
+                        <strong>Tempo ipucu:</strong> Eşit 100m parkurları hedefleyin. İkinci 200m, ilk 200m'den ≤ olmalıdır (negatif split ideal).
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-marker">Dinlenme</div>
+                <div class="timeline-content">
+                    <h4>5-10 dakika</h4>
+                    <p><strong>KRİTİK AŞAMA:</strong> Hafif koşu veya tam dinlenme. Kalp atış hızı 120 bpm'in altına düşene ve nefes tamamen normale dönene kadar bekleyin. Yetersiz dinlenme = yanlış CRS.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-marker">Deneme 2</div>
+                <div class="timeline-content">
+                    <h4>200m Maksimum Efor</h4>
+                    <p><strong>Duvara basarak başlayın</strong> (atlama yok). 200m için maksimum sürdürülebilir efor. Bu, 100m başına 400m'den daha zor hissettirmeli. Zamanı <strong>dd:ss</strong> formatında kaydedin (örn. 2:30).</p>
+                    <div class="tip-box mt-sm">
+                        <strong>Doğrulama kontrolü:</strong> 200m tempo/100m, 400m tempo/100m'den 3-6 saniye daha hızlı olmalıdır. Değilse, dinlenme yetersizdi veya tempo yanlıştı.
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-marker">Soğuma</div>
+                <div class="timeline-content">
+                    <h4>10-15 dakika</h4>
+                    <p>300-500m hafif koşu, germe. Sürelerinizi hemen kaydedin—hafızaya güvenmeyin.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="callout callout-warning mt-xl">
+            <h3>⚠️ Yaygın CRS Test Hataları</h3>
+            <ul>
+                <li><strong>400m'de çok hızlı başlamak:</strong> Patlama yapar, yanlış CRS'ye neden olur. Eşit tempo kullanın.</li>
+                <li><strong>Denemeler arasında yetersiz dinlenme:</strong> Yorgunluk 200m'yi yavaşlatır, CRS'yi yapay olarak hızlı yapar → aşırı antrenman bölgeleri.</li>
+                <li><strong>Atlayarak başlamak:</strong> 0,5-1,5sn avantaj ekler, hesaplamaları bozar. Her zaman duvardan basın.</li>
+                <li><strong>Yorgunken test yapmak:</strong> Testten 24-48s önce ağır antrenman yükü = düşük sonuçlar. Dinlenmiş halde test yapın.</li>
+                <li><strong>Hemen kaydetmemek:</strong> Hafıza güvenilmez değildir. Soğumadan önce süreleri yazın.</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container container-narrow">
+        <h2>RunAnalytics'te CRS Sonuçlarını Girme</h2>
+
+        <div class="screenshot-guide">
+            <div class="step-item">
+                <h3>Adım 1: CRS Ayarlarını Açın</h3>
+                <p>RunAnalytics uygulamasında <strong>Ayarlar → Kritik Koşu Hızı</strong>'na gidin. "CRS Testi Yap" veya "CRS'yi Güncelle"ye dokunun.</p>
+            </div>
+
+            <div class="step-item">
+                <h3>Adım 2: Süreleri Girin</h3>
+                <p>400m sürenizi (örn. <code>6:08</code>) ve 200m sürenizi (örn. <code>2:30</code>) girin. Gösterilen formata tam olarak uyun. "Hesapla"ya dokunun.</p>
+            </div>
+
+            <div class="step-item">
+                <h3>Adım 3: Sonuçları İnceleyin</h3>
+                <p>Uygulama şunları gösterir:</p>
+                <ul>
+                    <li><strong>CRS hızı:</strong> 0,917 m/s</li>
+                    <li><strong>CRS temposu:</strong> 1:49/100m</li>
+                    <li><strong>Antrenman bölgeleri:</strong> 7 kişiselleştirilmiş bölge (Bölge 1-7)</li>
+                    <li><strong>sTSS temeli:</strong> Artık tüm antrenmanlar için etkin</li>
+                </ul>
+            </div>
+
+            <div class="step-item">
+                <h3>Adım 4: Kaydet ve Senkronize Et</h3>
+                <p>"CRS'yi Kaydet"e dokunun. Uygulama hemen:</p>
+                <ul>
+                    <li>Antrenman bölgelerini yeniden hesaplar</li>
+                    <li>Son 90 gün için sTSS'yi geriye dönük günceller</li>
+                    <li>CTL/ATL/TSB hesaplamalarını ayarlar</li>
+                    <li>Bölge tabanlı antrenman analizini etkinleştirir</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="callout callout-tip mt-xl">
+            <h3>💡 Profesyonel İpucu: Geçmiş CRS Testi</h3>
+            <p>Daha önceki testlerden CRS'nizi zaten biliyorsanız, bu süreleri doğrudan girebilirsiniz. Ancak en doğru sonuçlar için her 6-8 haftada bir yeni bir test yapın. Antrenman ilerledikçe CRS'niz gelişmeli (daha hızlı olmalı).</p>
+        </div>
+    </div>
+</section>
+
+<section class="section section-alt">
+    <div class="container">
+        <h2 class="mb-xl text-center">Metriklerinizi Anlamak</h2>
+
+        <div class="grid grid-2">
+            <div class="card">
+                <h3 class="card-title">Kritik Koşu Hızı (CRS)</h3>
+                <div class="card-content">
+                    <p><strong>Ne olduğu:</strong> Aerobik eşik temponuz—tükenmeden ~30 dakika boyunca sürdürebileceğiniz en hızlı hız.</p>
+                    <p><strong>Ne anlama geldiği:</strong> CRS = 1:49/100m, sürekli eşik çalışmaları için 1:49 temposunu tutabileceğiniz anlamına gelir.</p>
+                    <p><strong>Nasıl kullanılır:</strong> Tüm antrenman bölgeleri ve sTSS hesaplaması için temel. Her 6-8 haftada bir güncelleyin.</p>
+                    <a href="/tr/crs/" class="btn btn-secondary btn-small mt-md">CRS Hakkında →</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3 class="card-title">Antrenman Bölgeleri</h3>
+                <div class="card-content">
+                    <p><strong>Ne oldukları:</strong> CRS'nize dayalı 7 yoğunluk aralığı, toparlanmadan (Bölge 1) sprinte (Bölge 7) kadar.</p>
+                    <p><strong>Ne anlama geldikleri:</strong> Her bölge belirli fizyolojik adaptasyonları hedefler (aerobik taban, eşik, VO₂max).</p>
+                    <p><strong>Nasıl kullanılır:</strong> Yapılandırılmış antrenman için bölge reçetelerini takip edin. Uygulama her antrenman için bölgede geçirilen süreyi gösterir.</p>
+                    <a href="/tr/training-zones/" class="btn btn-secondary btn-small mt-md">Antrenman Bölgeleri →</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3 class="card-title">Koşu Antrenman Stres Skoru (sTSS)</h3>
+                <div class="card-content">
+                    <p><strong>Ne olduğu:</strong> Yoğunluk ve süreyi birleştiren ölçülmüş antrenman stresi. CRS temposunda 1 saat = 100 sTSS.</p>
+                    <p><strong>Ne anlama geldiği:</strong> sTSS 50 = hafif toparlanma, sTSS 100 = orta, sTSS 200+ = çok zor seans.</p>
+                    <p><strong>Nasıl kullanılır:</strong> Antrenman yükünü yönetmek için günlük/haftalık sTSS'yi takip edin. Hafta başına maksimum 5-10 sTSS artışı hedefleyin.</p>
+                    <a href="/tr/training-load/" class="btn btn-secondary btn-small mt-md">sTSS Rehberi →</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3 class="card-title">CTL / ATL / TSB</h3>
+                <div class="card-content">
+                    <p><strong>Ne oldukları:</strong></p>
+                    <ul>
+                        <li><strong>CTL:</strong> Kronik Antrenman Yükü (kondisyon) - 42 günlük ortalama sTSS</li>
+                        <li><strong>ATL:</strong> Akut Antrenman Yükü (yorgunluk) - 7 günlük ortalama sTSS</li>
+                        <li><strong>TSB:</strong> Antrenman Stres Dengesi (form) = CTL - ATL</li>
+                    </ul>
+                    <p><strong>Nasıl kullanılır:</strong> Pozitif TSB = dinç/zirve formunda, negatif TSB = yorgun. TSB = +5 ile +25 arasındayken yarışın.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="callout mt-xl">
+            <h3>📊 İlk Hafta Hedefleriniz</h3>
+            <p>CRS'yi girdikten ve 3-5 antrenman tamamladıktan sonra:</p>
+            <ul>
+                <li><strong>sTSS değerlerini kontrol edin:</strong> Efor algısıyla eşleştiklerini doğrulayın (kolay ~50, orta ~100, zor ~150+)</li>
+                <li><strong>Bölge dağılımını inceleyin:</strong> Zamanınızın %60-70'ini Bölge 2'de mi (aerobik taban) geçiriyorsunuz?</li>
+                <li><strong>Temel CTL belirleyin:</strong> İlk haftanızın ortalama sTSS'si başlangıç kondisyon temeli olur</li>
+                <li><strong>Kalıpları belirleyin:</strong> Hangi antrenmanlar en yüksek sTSS'yi üretir? Yeterince toparlanıyor musunuz?</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container container-narrow">
+        <h2>Tipik Kullanıcı Yolculuğu (İlk 8 Hafta)</h2>
+
+        <div class="journey-timeline">
+            <div class="journey-phase">
+                <h3>Hafta 1-2: Temel Oluşturma</h3>
+                <ul>
+                    <li>CRS testi yapın ve sonuçları girin</li>
+                    <li>3-5 normal antrenman çalışması tamamlayın</li>
+                    <li>sTSS değerlerini ve bölge dağılımını gözlemleyin</li>
+                    <li>Başlangıç CTL'sini (kondisyon seviyesi) belirleyin</li>
+                    <li><strong>Hedef:</strong> Metrikleri anlayın, henüz değişiklik yapmayın</li>
+                </ul>
+            </div>
+
+            <div class="journey-phase">
+                <h3>Hafta 3-4: Bölgeleri Uygulama</h3>
+                <ul>
+                    <li>Antrenman planlamasında CRS bölgelerini kullanın</li>
+                    <li>Aerobik setler için kasıtlı olarak Bölge 2'de koşun</li>
+                    <li>Haftalık sTSS toplamlarını takip edin (tutarlılık hedefleyin)</li>
+                    <li>TSB'yi izleyin (hafif negatif olmalı = antrenman)</li>
+                    <li><strong>Hedef:</strong> Hisse göre değil, bölgelere göre antrenman yapın</li>
+                </ul>
+            </div>
+
+            <div class="journey-phase">
+                <h3>Hafta 5-6: İlerleyici Aşırı Yükleme</h3>
+                <ul>
+                    <li>Haftalık sTSS'yi temelden %5-10 artırın</li>
+                    <li>Haftada 1 eşik (Bölge 4) seansı ekleyin</li>
+                    <li>CTL kademeli olarak yükselmeli (kondisyon gelişiyor)</li>
+                    <li>ATL zor haftalarda yükselebilir (normal)</li>
+                    <li><strong>Hedef:</strong> Kontrollü kondisyon ilerlemesi</li>
+                </ul>
+            </div>
+
+            <div class="journey-phase">
+                <h3>Hafta 7-8: Yeniden Test ve Ayarlama</h3>
+                <ul>
+                    <li>İkinci CRS testini yapın (daha hızlı olmalı)</li>
+                    <li>Uygulamada bölgeleri güncelleyin (tempo gelişir)</li>
+                    <li>Hafta 1 ile Hafta 8 CTL'sini karşılaştırın (+10-20 olmalı)</li>
+                    <li>İlerlemeyi gözden geçirin: Süreler düşüyor mu? Daha kolay hissediyor mu?</li>
+                    <li><strong>Hedef:</strong> Antrenman etkinliğini doğrulayın</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="callout callout-success mt-xl">
+            <h3>✅ Başarı Göstergeleri</h3>
+            <p>RunAnalytics ile 8 haftalık yapılandırılmış antrenmanın ardından şunları görmelisiniz:</p>
+            <ul>
+                <li><strong>CRS gelişimi:</strong> %1-3 daha hızlı CRS temposu (örn. 1:49 → 1:47)</li>
+                <li><strong>CTL artışı:</strong> +15-25 puan (örn. 30 → 50 CTL)</li>
+                <li><strong>Tutarlı sTSS:</strong> Haftalık toplamlar %10-15 varyans içinde</li>
+                <li><strong>Daha iyi tempo:</strong> Daha dengeli parkurlar, daha iyi efor kalibrasyonu</li>
+                <li><strong>Gelişmiş toparlanma:</strong> TSB tahmin edilebilir şekilde döngü yapar (-10 ile +5 arası)</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="section section-alt">
+    <div class="container container-narrow">
+        <h2>Sorun Giderme ve SSS</h2>
+
+        <div class="faq-item">
+            <h3>sTSS'm antrenman eforine göre çok yüksek/düşük görünüyor</h3>
+            <p><strong>Neden:</strong> CRS güncel değil veya yanlış.</p>
+            <p><strong>Çözüm:</strong> CRS'yi yeniden test edin. Yorgunken veya tempo yanlışken test yaptıysanız, CRS yanlış olacaktır. Düzgün bir CRS testi tüm sonraki metrikler için kritiktir.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>Uygulama "CRS yapılandırılmadı" gösteriyor</h3>
+            <p><strong>Neden:</strong> CRS testi tamamlanmadı veya kaydedilmedi.</p>
+            <p><strong>Çözüm:</strong> Ayarlar → Kritik Koşu Hızı → Test Yap'a gidin. Hem 5K hem 3K sürelerini girin, ardından Kaydet'e dokunun.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>Antrenmanlar Apple Watch'tan senkronize olmuyor</h3>
+            <p><strong>Neden:</strong> Health uygulaması izinleri verilmedi veya antrenman "Koşu" olarak sınıflandırılmadı.</p>
+            <p><strong>Çözüm:</strong> Ayarlar → Gizlilik → Sağlık → RunAnalytics → Antrenmanlar için Okuma İzni Ver'i kontrol edin. Apple Watch antrenman türünün "Pist Koşusu" veya "Açık Su Koşusu" olduğundan emin olun.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>Tutarlı antrenmana rağmen CTL artmıyor</h3>
+            <p><strong>Neden:</strong> sTSS toplamları çok düşük veya sıklık tutarsız.</p>
+            <p><strong>Çözüm:</strong> CTL, 42 günlük üssel ağırlıklı ortalamadır. Yavaş yükselir. Haftalık sTSS'yi %5-10 artırın ve tutarlı CTL büyümesi için haftada 4+ antrenman sürdürün.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>CRS'yi ne sıklıkla yeniden test etmeliyim?</h3>
+            <p><strong>Öneri:</strong> Taban/gelişim fazlarında her 6-8 haftada bir. Hastalık, sakatlık, uzun aranın ardından veya bölgeler sürekli çok kolay/zor hissettiriyorsa yeniden test edin.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>RunAnalytics'i diğer stiller için kullanabilir miyim?</h3>
+            <p><strong>Evet, sınırlamalarla:</strong> CRS tipik olarak serbest stilde test edilir. Karışık/sırtüstü/kurbağalama antrenmanları için sTSS, serbest stil CRS'sine göre hesaplanır. Daha fazla doğruluk için stile özgü CRS testleri yapmayı düşünün.</p>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container container-narrow">
+        <h2>Sonraki Adımlar</h2>
+
+        <div class="grid grid-3">
+            <div class="card">
+                <h3 class="card-title">Antrenman Bölgelerini Öğrenin</h3>
+                <div class="card-content">
+                    <p>Belirli adaptasyonlar için Bölge 2'de (aerobik taban), Bölge 4'te (eşik) ve Bölge 5'te (VO₂max) nasıl antrenman yapılacağını anlayın.</p>
+                    <a href="/tr/training-zones/" class="btn btn-secondary btn-small mt-md">Antrenman Bölgeleri →</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3 class="card-title">sTSS Hesaplayın</h3>
+                <div class="card-content">
+                    <p>Antrenmanlara başlamadan önce antrenman yükünü anlamak için ücretsiz sTSS hesaplayıcımızı kullanın.</p>
+                    <a href="/tr/stss-calculator/" class="btn btn-secondary btn-small mt-md">sTSS Hesaplayıcı →</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3 class="card-title">Metriklere Daha Derin Dalın</h3>
+                <div class="card-content">
+                    <p>Hakemli araştırma referanslarıyla CRS, sTSS, CTL/ATL/TSB'nin ardındaki bilimi keşfedin.</p>
+                    <a href="/tr/research/" class="btn btn-secondary btn-small mt-md">Araştırma →</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-xl text-center">
+            <p class="mb-md"><strong>İzlemeye başlamaya hazır mısınız?</strong></p>
+            <a href="https://apps.apple.com/es/app/runanalytics/id6754524015" class="btn btn-primary btn-large" target="_blank" rel="noopener">RunAnalytics'i Ücretsiz İndirin</a>
+            <p class="mt-sm text-secondary">7 günlük ücretsiz deneme • Kredi kartı gerekmez • iOS 16+</p>
+        </div>
+    </div>
+</section>
+    </main>
+
+    
+    <footer class="site-footer">
+    <div class="container">
+        <div class="footer-grid">
+            
+            <div>
+                <h3 class="mb-md">RunAnalytics - Running Analytics App | Critical Running Speed, TSS, CTL/ATL/TSB for iOS</h3>
+                <p class="text-secondary">Track Critical Running Speed, Training Stress Score, and performance metrics with RunAnalytics. Science-based iOS app for runners, triathletes &amp; coaches. 7-day free trial.</p>
+            </div>
+
+            
+            <div>
+                <h3 class="mb-md">Ana Sayfa</h3>
+                <ul class="footer-links">
+                    
+                    <li>
+                        <a href="/af/">Afrikaans</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ar/">العربية</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/bn/">বাংলা</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ca/">Català</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/de/">Deutsch</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/el/">Ελληνικά</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/en/">English</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/es/">Español</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/fa/">فارسی</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/fi/">Suomi</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/fr/">Français</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/hi/">हिन्दी</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/id/">Bahasa Indonesia</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/it/">Italiano</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ja/">日本語</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ko/">한국어</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ms/">Bahasa Melayu</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/nl/">Nederlands</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/no/">Norsk</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/pl/">Polski</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/pt/">Português</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ru/">Русский</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/sv/">Svenska</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/sw/">Kiswahili</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/tl/">Tagalog</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/tr/">Türkçe</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ur/">اردو</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/vi/">Tiếng Việt</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/zh/">中文</a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+
+        
+        <div class="footer-bottom">
+            <p class="text-sm text-secondary">
+                &copy; 2025 RunAnalytics - Running Analytics App | Critical Running Speed, TSS, CTL/ATL/TSB for iOS. Tüm hakları saklıdır
+            </p>
+            <ul class="footer-links">
+                <li><a href="/tr/privacy/">Gizlilik</a></li>
+                <li><a href="/tr/terms/">Şartlar</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+    
+    <div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="Cookie consent" aria-live="polite">
+    <div class="cookie-banner-content">
+        <div>
+            <p>Bu web sitesi deneyiminizi geliştirmek için çerezler kullanır.</p>
+            <a href="/tr/privacy/" class="text-sm">Daha fazla bilgi</a>
+        </div>
+        <div class="cookie-banner-actions">
+            <button id="cookie-decline" class="btn btn-secondary btn-small">Reddet</button>
+            <button id="cookie-accept" class="btn btn-primary btn-small">Kabul Et</button>
+        </div>
+    </div>
+</div>
+
+    
+    <script src="/assets/js/main.min.js"></script>
+    <script src="/assets/js/cookie-consent.min.js"></script>
+    <script src="/assets/js/lazy-load.min.js"></script>
+
+    
+    <script src="/assets/js/fuse.min.js"></script>
+    <script src="/assets/js/search.min.js"></script>
+
+    
+    
+    <script src="/assets/js/analytics.min.js" data-ga-id="G-Y138VB4523"></script>
+    
+</body>
+</html>

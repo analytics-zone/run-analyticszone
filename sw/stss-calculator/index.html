@@ -1,0 +1,996 @@
+<!DOCTYPE html>
+<html lang="sw" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+    <title>Kikokotoo cha sTSS: Kokotoa Swimming Training Stress Score</title>
+    <meta name="description" content="Kikokotoo cha bure cha Swimming Training Stress Score (sTSS). Kokotoa mzigo wa mafunzo kwa sessions za kuogelea na panga mafunzo yako kwa matokeo bora.">
+    <meta name="author" content="Albert Arno">
+
+    
+    
+    <meta name="keywords" content="kikokotoo cha sTSS, swimming training stress score, mzigo wa mafunzo ya kuogelea, TSS kwa kuogelea, mpangilio wa mafunzo">
+    
+
+    
+    <link rel="canonical" href="https://run.analyticszone.app/sw/stss-calculator/">
+
+    
+    
+    <meta property="article:published_time" content="2025-01-15T10:00:00Z">
+    <meta property="article:modified_time" content="2025-01-17T14:30:00Z">
+    <meta property="article:author" content="Albert Arno">
+    
+
+    
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://run.analyticszone.app/sw/stss-calculator/">
+    <meta property="og:title" content="Kikokotoo cha sTSS: Kokotoa Swimming Training Stress Score">
+    <meta property="og:description" content="Kikokotoo cha bure cha Swimming Training Stress Score (sTSS). Kokotoa mzigo wa mafunzo kwa sessions za kuogelea na panga mafunzo yako kwa matokeo bora.">
+    
+    <meta property="og:image" content="https://run.analyticszone.app/assets/images/run-analytics-og.jpg">
+    
+    <meta property="og:locale" content="sw_KE">
+    <meta property="og:site_name" content="RunAnalytics - Running Analytics App | Critical Running Speed, TSS, CTL/ATL/TSB for iOS">
+
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://run.analyticszone.app/sw/stss-calculator/">
+    <meta name="twitter:title" content="Kikokotoo cha sTSS: Kokotoa Swimming Training Stress Score">
+    <meta name="twitter:description" content="Kikokotoo cha bure cha Swimming Training Stress Score (sTSS). Kokotoa mzigo wa mafunzo kwa sessions za kuogelea na panga mafunzo yako kwa matokeo bora.">
+    
+    <meta name="twitter:image" content="https://run.analyticszone.app/assets/images/run-analytics-og.jpg">
+    
+
+    
+    
+    <link rel="alternate" hreflang="af" href="https://run.analyticszone.app/af/stss-calculator/">
+    
+    <link rel="alternate" hreflang="ar" href="https://run.analyticszone.app/ar/stss-calculator/">
+    
+    <link rel="alternate" hreflang="bn" href="https://run.analyticszone.app/bn/stss-calculator/">
+    
+    <link rel="alternate" hreflang="ca" href="https://run.analyticszone.app/ca/stss-calculator/">
+    
+    <link rel="alternate" hreflang="de" href="https://run.analyticszone.app/de/stss-calculator/">
+    
+    <link rel="alternate" hreflang="el" href="https://run.analyticszone.app/el/stss-calculator/">
+    
+    <link rel="alternate" hreflang="en" href="https://run.analyticszone.app/en/stss-calculator/">
+    
+    <link rel="alternate" hreflang="es" href="https://run.analyticszone.app/es/stss-calculator/">
+    
+    <link rel="alternate" hreflang="fa" href="https://run.analyticszone.app/fa/stss-calculator/">
+    
+    <link rel="alternate" hreflang="fi" href="https://run.analyticszone.app/fi/stss-calculator/">
+    
+    <link rel="alternate" hreflang="fr" href="https://run.analyticszone.app/fr/stss-calculator/">
+    
+    <link rel="alternate" hreflang="hi" href="https://run.analyticszone.app/hi/stss-calculator/">
+    
+    <link rel="alternate" hreflang="id" href="https://run.analyticszone.app/id/stss-calculator/">
+    
+    <link rel="alternate" hreflang="it" href="https://run.analyticszone.app/it/stss-calculator/">
+    
+    <link rel="alternate" hreflang="ja" href="https://run.analyticszone.app/ja/stss-calculator/">
+    
+    <link rel="alternate" hreflang="ko" href="https://run.analyticszone.app/ko/stss-calculator/">
+    
+    <link rel="alternate" hreflang="ms" href="https://run.analyticszone.app/ms/stss-calculator/">
+    
+    <link rel="alternate" hreflang="nl" href="https://run.analyticszone.app/nl/stss-calculator/">
+    
+    <link rel="alternate" hreflang="no" href="https://run.analyticszone.app/no/stss-calculator/">
+    
+    <link rel="alternate" hreflang="pl" href="https://run.analyticszone.app/pl/stss-calculator/">
+    
+    <link rel="alternate" hreflang="pt" href="https://run.analyticszone.app/pt/stss-calculator/">
+    
+    <link rel="alternate" hreflang="ru" href="https://run.analyticszone.app/ru/stss-calculator/">
+    
+    <link rel="alternate" hreflang="sv" href="https://run.analyticszone.app/sv/stss-calculator/">
+    
+    <link rel="alternate" hreflang="sw" href="https://run.analyticszone.app/sw/stss-calculator/">
+    
+    <link rel="alternate" hreflang="tl" href="https://run.analyticszone.app/tl/stss-calculator/">
+    
+    <link rel="alternate" hreflang="tr" href="https://run.analyticszone.app/tr/stss-calculator/">
+    
+    <link rel="alternate" hreflang="ur" href="https://run.analyticszone.app/ur/stss-calculator/">
+    
+    <link rel="alternate" hreflang="vi" href="https://run.analyticszone.app/vi/stss-calculator/">
+    
+    <link rel="alternate" hreflang="zh" href="https://run.analyticszone.app/zh/stss-calculator/">
+    
+    <link rel="alternate" hreflang="x-default" href="https://run.analyticszone.app/en/stss-calculator/">
+
+    
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/icons/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/icons/apple-touch-icon.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#0066CC">
+
+    
+    <link rel="stylesheet" href="/assets/css/main.min.css">
+
+    
+    
+
+    
+    
+
+    
+    
+</head>
+<body>
+    
+    <a href="#main-content" class="skip-link">Ruka kwenye maudhui</a>
+
+    
+    <header class="site-header">
+    <div class="container">
+        <div class="header-inner">
+            
+            <a href="/sw/" class="site-logo">
+                <picture>
+                    
+                    <source srcset="/assets/images/logo-dark.webp" type="image/webp"
+                        media="(prefers-color-scheme: dark)">
+                    
+                    <source srcset="/assets/images/logo-dark.png" type="image/png" media="(prefers-color-scheme: dark)">
+                    
+                    <source srcset="/assets/images/logo.webp" type="image/webp">
+                    
+                    <img src="/assets/images/logo.png" alt="RunAnalytics - Running Analytics App | Critical Running Speed, TSS, CTL/ATL/TSB for iOS" width="40" height="40">
+                </picture>
+                <span class="logo-text">RunAnalytics</span>
+            </a>
+
+            
+            <nav class="nav-primary" id="nav-primary" role="navigation" aria-label="Main navigation">
+                <ul>
+                    
+                    <li>
+                        
+                        
+                        <a href="/sw/"  aria-current="">
+                            Nyumbani
+                        </a>
+                        
+                        </li>
+                        
+                    <li class="has-submenu" >
+                        
+                        
+                        
+                        
+                        <span class="nav-label">Jifunze</span>
+                        
+                        <ul class="submenu">
+                            
+                            <li>
+                                <a href="/sw/getting-started/" 
+                                    aria-current="">
+                                    Kuanza
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/sw/crs/" 
+                                    aria-current="">
+                                    CRS
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/sw/training-zones/" 
+                                    aria-current="">
+                                    Maeneo ya Mafunzo
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/sw/training-load/" 
+                                    aria-current="">
+                                    Mzigo wa Mafunzo
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/sw/stss-calculator/" class="active" 
+                                    aria-current="page">
+                                    Kikokotoo cha sTSS
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        
+                        </li>
+                        
+                    <li class="has-submenu" >
+                        
+                        
+                        
+                        
+                        <span class="nav-label">Sayansi</span>
+                        
+                        <ul class="submenu">
+                            
+                            <li>
+                                <a href="/sw/research/" 
+                                    aria-current="">
+                                    Utafiti
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/sw/formulas/" 
+                                    aria-current="">
+                                    Fomula
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/sw/efficiency/" 
+                                    aria-current="">
+                                    Ufanisi
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/sw/stride-mechanics/" 
+                                    aria-current="">
+                                    Mekanika ya Hatua
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/sw/bibliography/" 
+                                    aria-current="">
+                                    Marejeleo
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        
+                        </li>
+                        
+                    <li>
+                        
+                        
+                        <a href="/sw/contact/"  aria-current="">
+                            Wasiliana
+                        </a>
+                        
+                        </li>
+                        
+                </ul>
+
+                
+                <div class="search-container">
+                    <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" aria-hidden="true">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.35-4.35"></path>
+                    </svg>
+                    <input type="search" id="site-search" class="search-input" aria-expanded="false"
+                        aria-haspopup="listbox" aria-autocomplete="list" autocomplete="off" spellcheck="false" />
+                    <div id="search-results" class="search-results hidden" role="region" aria-live="polite"></div>
+                </div>
+
+                
+                <select class="language-selector" id="language-select" aria-label="Chagua lugha">
+                    
+                    <option value="af" >
+                        Afrikaans
+                    </option>
+                    
+                    <option value="ar" >
+                        العربية
+                    </option>
+                    
+                    <option value="bn" >
+                        বাংলা
+                    </option>
+                    
+                    <option value="ca" >
+                        Català
+                    </option>
+                    
+                    <option value="de" >
+                        Deutsch
+                    </option>
+                    
+                    <option value="el" >
+                        Ελληνικά
+                    </option>
+                    
+                    <option value="en" >
+                        English
+                    </option>
+                    
+                    <option value="es" >
+                        Español
+                    </option>
+                    
+                    <option value="fa" >
+                        فارسی
+                    </option>
+                    
+                    <option value="fi" >
+                        Suomi
+                    </option>
+                    
+                    <option value="fr" >
+                        Français
+                    </option>
+                    
+                    <option value="hi" >
+                        हिन्दी
+                    </option>
+                    
+                    <option value="id" >
+                        Bahasa Indonesia
+                    </option>
+                    
+                    <option value="it" >
+                        Italiano
+                    </option>
+                    
+                    <option value="ja" >
+                        日本語
+                    </option>
+                    
+                    <option value="ko" >
+                        한국어
+                    </option>
+                    
+                    <option value="ms" >
+                        Bahasa Melayu
+                    </option>
+                    
+                    <option value="nl" >
+                        Nederlands
+                    </option>
+                    
+                    <option value="no" >
+                        Norsk
+                    </option>
+                    
+                    <option value="pl" >
+                        Polski
+                    </option>
+                    
+                    <option value="pt" >
+                        Português
+                    </option>
+                    
+                    <option value="ru" >
+                        Русский
+                    </option>
+                    
+                    <option value="sv" >
+                        Svenska
+                    </option>
+                    
+                    <option value="sw" selected>
+                        Kiswahili
+                    </option>
+                    
+                    <option value="tl" >
+                        Tagalog
+                    </option>
+                    
+                    <option value="tr" >
+                        Türkçe
+                    </option>
+                    
+                    <option value="ur" >
+                        اردو
+                    </option>
+                    
+                    <option value="vi" >
+                        Tiếng Việt
+                    </option>
+                    
+                    <option value="zh" >
+                        中文
+                    </option>
+                    
+                </select>
+
+                
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode"
+                    title="Toggle dark/light mode">
+                    <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                    <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+
+                
+                
+                <a href="https://apps.apple.com/es/app/runanalytics/id6754524015" class="header-download-btn" target="_blank" rel="noopener"
+                    aria-label="Download on App Store">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                        fill="currentColor">
+                        <path
+                            d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z" />
+                    </svg>
+                    <span class="download-text">Download</span>
+                </a>
+                
+            </nav>
+
+            
+            <button class="menu-toggle" id="menu-toggle" aria-label="Badilisha menyu"
+                aria-expanded="false" aria-controls="nav-primary">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </div>
+</header>
+
+    
+    <main id="main-content" class="main-content">
+        <section class="hero hero-small">
+    <div class="container">
+        <h1>Kikokotoo cha TSS cha Kukimbia Bure</h1>
+        <p class="lead">Kokotoa Alama ya Msukosuko wa Mazoezi kwa mazoezi ya kukimbia - Kikokotoo cha sTSS pekee cha bure</p>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container container-narrow">
+        <div class="callout callout-info mb-xl">
+            <h2>sTSS (TSS ya Kukimbia) ni nini?</h2>
+            <p><strong>Alama ya Msukosuko wa Mazoezi ya Kukimbia (sTSS)</strong> inapima mzigo wa mazoezi wa zoezi la kukimbia kwa kuchanganya ukali na muda. Imebinafsishwa kutoka kwa mbinu ya TSS ya kuendesha baiskeli, ikitumia Kasi yako Muhimu ya Kukimbia (CRS) kama kasi ya kizingiti. Zoezi la saa 1 kwa kasi ya CRS = 100 sTSS.</p>
+        </div>
+
+        <h2 class="mt-3xl">Kikokotoo cha sTSS Bure</h2>
+        <p class="lead mb-xl">Kokotoa msukosuko wa mazoezi kwa zoezi lolote la kukimbia. Inahitaji kasi yako ya CRS.</p>
+
+        <div class="css-calculator">
+            <form id="stssCalculatorForm">
+                <div class="calculator-inputs">
+                    <div class="form-group">
+                        <label for="cssPace" class="form-label">Kasi yako ya CRS (dd:ss kwa kila mita 100)</label>
+                        <input
+                            type="text"
+                            id="cssPace"
+                            class="form-input"
+                            placeholder="1:49"
+                            pattern="[0-9]{1,2}:[0-5][0-9]"
+                            aria-required="true"
+                            aria-describedby="cssPace-help"
+                        />
+                        <small id="cssPace-help" class="form-help">Kasi yako ya kizingiti kutoka kwa jaribio la CRS (mfano, 1:49)</small>
+                        <div class="form-error" id="cssPace-error"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="workoutDuration" class="form-label">Muda wa Zoezi (dakika)</label>
+                        <input
+                            type="number"
+                            id="workoutDuration"
+                            class="form-input"
+                            placeholder="60"
+                            min="1"
+                            max="300"
+                            aria-required="true"
+                            aria-describedby="duration-help"
+                        />
+                        <small id="duration-help" class="form-help">Jumla ya muda wa zoezi ikiwa ni pamoja na mapumziko (dakika 1-300)</small>
+                        <div class="form-error" id="duration-error"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="avgPace" class="form-label">Wastani wa Kasi ya Zoezi (dd:ss kwa kila mita 100)</label>
+                        <input
+                            type="text"
+                            id="avgPace"
+                            class="form-input"
+                            placeholder="2:05"
+                            pattern="[0-9]{1,2}:[0-5][0-9]"
+                            aria-required="true"
+                            aria-describedby="pace-help"
+                        />
+                        <small id="pace-help" class="form-help">Wastani wa kasi yako wakati wa zoezi (mfano, 2:05)</small>
+                        <div class="form-error" id="pace-error"></div>
+                    </div>
+
+                    <div class="calculator-buttons">
+                        <button type="submit" class="btn btn-primary" id="calculateStssBtn">Kokotoa sTSS</button>
+                        <button type="reset" class="btn btn-ghost" id="resetStssBtn">Futa</button>
+                    </div>
+                </div>
+            </form>
+
+            <div class="calculator-results hidden" id="stssResults" aria-live="polite">
+                <h3>Alama yako ya Msukosuko wa Mazoezi</h3>
+                <div class="results-summary">
+                    <div class="result-item">
+                        <div class="result-label">sTSS</div>
+                        <div class="css-result-value" id="stssValue">--</div>
+                    </div>
+                    <div class="result-item">
+                        <div class="result-label">Kipengele cha Ukali (IF)</div>
+                        <div class="css-result-value" id="intensityFactor">--</div>
+                    </div>
+                </div>
+
+                <div class="zones-result">
+                    <h4>Tafsiri ya Mzigo wa Mazoezi</h4>
+                    <p class="mb-md text-secondary" id="stssInterpretation">
+                        <!-- Filled by JavaScript -->
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="mt-3xl">Jinsi sTSS Inavyokokotolwa</h2>
+
+        <div class="formula-box">
+            <h3>Fomula</h3>
+            <div class="formula">
+                sTSS = (Muda kwa saa) × (Kipengele cha Ukali)² × 100
+            </div>
+            <div class="formula-explanation">
+                <p>Ambapo:</p>
+                <ul>
+                    <li><strong>Kipengele cha Ukali (IF)</strong> = Kasi ya CRS / Wastani wa Kasi ya Zoezi</li>
+                    <li><strong>Muda</strong> = Jumla ya muda wa zoezi kwa saa</li>
+                    <li><strong>Kasi ya CRS</strong> = Kasi yako ya kizingiti kutoka kwa jaribio la CRS</li>
+                </ul>
+            </div>
+        </div>
+
+        <h3 class="mt-xl">Mfano wa Kufanyiwa Kazi</h3>
+        <div class="example-box">
+            <h4>Maelezo ya Zoezi:</h4>
+            <ul>
+                <li>Kasi ya CRS: <strong>1:49/100m</strong> (sekunde 109)</li>
+                <li>Muda wa Zoezi: <strong>dakika 60</strong> (saa 1)</li>
+                <li>Wastani wa Kasi: <strong>2:05/100m</strong> (sekunde 125)</li>
+            </ul>
+
+            <h4>Hatua ya 1: Kokotoa Kipengele cha Ukali</h4>
+            <div class="calculation">
+                IF = Kasi ya CRS / Kasi ya Zoezi<br>
+                IF = 109 / 125<br>
+                IF = <strong>0.872</strong>
+            </div>
+
+            <h4>Hatua ya 2: Kokotoa sTSS</h4>
+            <div class="calculation">
+                sTSS = saa 1.0 × (0.872)² × 100<br>
+                sTSS = 1.0 × 0.760 × 100<br>
+                sTSS = <strong>76</strong>
+            </div>
+
+            <p class="mt-md"><strong>Tafsiri:</strong> Zoezi hili la dakika 60 kwa kasi ya urahisi (pole kuliko CRS) lilitoa 76 sTSS - mzigo wa kati wa mazoezi unaofaa kwa kujenga msingi wa hewa.</p>
+        </div>
+
+        <h2 class="mt-3xl">Kuelewa Thamani za sTSS</h2>
+
+        <div class="zones-table-container">
+            <table class="zones-table">
+                <thead>
+                    <tr>
+                        <th>Mwambaa wa sTSS</th>
+                        <th>Mzigo wa Mazoezi</th>
+                        <th>Muda wa Kupona</th>
+                        <th>Mfano wa Zoezi</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>&lt; 50</td>
+                        <td>Chini</td>
+                        <td>Siku ile ile</td>
+                        <td>Kukimbia rahisi kwa dakika 30, mazoezi ya ufundi</td>
+                    </tr>
+                    <tr>
+                        <td>50-100</td>
+                        <td>Wastani</td>
+                        <td>Siku 1</td>
+                        <td>Kudumu kwa dakika 60, kasi ya kudumu</td>
+                    </tr>
+                    <tr>
+                        <td>100-200</td>
+                        <td>Juu</td>
+                        <td>Siku 1-2</td>
+                        <td>Seti za kizingiti za dakika 90, vipindi vya kasi ya mashindano</td>
+                    </tr>
+                    <tr>
+                        <td>200-300</td>
+                        <td>Juu Sana</td>
+                        <td>Siku 2-3</td>
+                        <td>Mafunzo magumu ya saa 2, vilago vingi vya kizingiti</td>
+                    </tr>
+                    <tr>
+                        <td>&gt; 300</td>
+                        <td>Ya Kupindukia</td>
+                        <td>Siku 3+</td>
+                        <td>Mashindano marefu (&gt;saa 2), kudumu kwa kipimo kikubwa</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h2 class="mt-3xl">Miongozo ya sTSS ya Kila Wiki</h2>
+
+        <p class="mb-md">Lengo la sTSS la kila wiki linategemea kiwango chako cha mazoezi na malengo:</p>
+
+        <div class="grid grid-2 mb-xl">
+            <div class="card">
+                <h3 class="card-title">Wakimbizi wa Burudani</h3>
+                <div class="card-content">
+                    <p class="mb-sm"><strong>sTSS ya Kila Wiki:</strong> 150-300</p>
+                    <p>Mazoezi 2-3 kwa wiki, kila moja sTSS 50-100. Zingatia ufundi na kujenga msingi wa hewa.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3 class="card-title">Wakimbizi wa Afya / Wafanyakazi wa Triathlon</h3>
+                <div class="card-content">
+                    <p class="mb-sm"><strong>sTSS ya Kila Wiki:</strong> 300-500</p>
+                    <p>Mazoezi 3-4 kwa wiki, kila moja sTSS 75-125. Mchanganyiko wa kudumu kwa hewa na kazi ya kizingiti.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3 class="card-title">Wakimbizi Wazoefu wa Ushindani</h3>
+                <div class="card-content">
+                    <p class="mb-sm"><strong>sTSS ya Kila Wiki:</strong> 500-800</p>
+                    <p>Mazoezi 4-6 kwa wiki, kila moja sTSS 80-150. Mafunzo yaliyopangwa na utaratibu wa vipindi.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3 class="card-title">Wakimbizi wa Kiwango cha Juu / Chuo Kikuu</h3>
+                <div class="card-content">
+                    <p class="mb-sm"><strong>sTSS ya Kila Wiki:</strong> 800-1200+</p>
+                    <p>Mazoezi 8-12 kwa wiki, siku mbili kwa siku. Wingi mkubwa na usimamizi wa kupona ni muhimu.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="callout callout-warning">
+            <h3>⚠️ Vidokezo Muhimu</h3>
+            <ul>
+                <li><strong>Inahitaji CRS sahihi:</strong> CRS yako lazima iwe ya sasa (imejaribiwa ndani ya wiki 6-8) kwa sTSS sahihi.</li>
+                <li><strong>Mahesabu yaliyorahisishwa:</strong> Kikokotoo hiki kinatumia wastani wa kasi. sTSS ya kina inatumia Kasi ya Gredi Iliyokawaida (NGP) ambayo inazingatia muundo wa kipindi.</li>
+                <li><strong>Si kwa kazi ya ufundi:</strong> sTSS inapima tu msukosuko wa mafunzo ya kimwili, si maendeleo ya ujuzi.</li>
+                <li><strong>Tofauti ya mtu binafsi:</strong> sTSS sawa inahisi tofauti kwa wakimbizi tofauti. Rekebisha miongozo kulingana na uponyaji wako.</li>
+            </ul>
+        </div>
+
+        <h2 class="mt-3xl">Kwa Nini sTSS ni Muhimu</h2>
+
+        <p class="mb-md">Alama ya Msukosuko wa Mazoezi ni msingi wa:</p>
+
+        <ul class="mb-xl">
+            <li><strong>CTL (Mzigo wa Mazoezi wa Kiusumbufu):</strong> Kiwango chako cha afya - wastani wa siku 42 wenye uzito wa mazoezi ya sTSS ya kila siku</li>
+            <li><strong>ATL (Mzigo wa Mazoezi wa Haraka):</strong> Uchovu wako - wastani wa siku 7 wenye uzito wa mazoezi ya sTSS ya kila siku</li>
+            <li><strong>TSB (Usawa wa Msukosuko wa Mazoezi):</strong> Hali yako - TSB = CTL - ATL (chanya = safi, hasi = kuchoka)</li>
+            <li><strong>Utaratibu wa Vipindi:</strong> Panga awamu za mazoezi (msingi, kujenga, kilele, kupungua) kwa kutumia maendeleo ya CTL lengwa</li>
+            <li><strong>Usimamizi wa Kupona:</strong> Jua lini kusukuma na lini kupumzika kulingana na TSB</li>
+        </ul>
+
+        <div class="callout callout-tip">
+            <h3>Kidokezo cha Wataalamu: Fuatilia CTL yako</h3>
+            <p>Rekodi sTSS ya kila siku kwenye safu wima au kumbukumbu ya mafunzo. Kokotoa wastani wako wa siku 42 (CTL) kila wiki. Lengo ni kuongeza pointi 5-10 za CTL kwa wiki wakati wa kujenga msingi. Tunza au upunguze kidogo CTL wakati wa kupungua (wiki 1-2 kabla ya mashindano).</p>
+        </div>
+
+        <h2 class="mt-3xl">Maswali Yanayoulizwa Mara kwa Mara</h2>
+
+        <div class="faq-section" itemscope itemtype="https://schema.org/FAQPage">
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name">sTSS (TSS ya Kukimbia) ni nini?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                    <div itemprop="text">
+                        <p>Alama ya Msukosuko wa Mazoezi ya Kukimbia (sTSS) ni kipimo kinachopima mzigo wa mazoezi wa zoezi la kukimbia kwa kuchanganya ukali na muda. Imebinafsishwa kutoka kwa mbinu ya TSS ya kuendesha baiskeli, ikitumia Kasi yako Muhimu ya Kukimbia (CRS) kama kasi ya kizingiti. Zoezi la saa 1 kwa kasi ya CRS ni sawa na 100 sTSS.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name">Ninakokotoaje sTSS yangu?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                    <div itemprop="text">
+                        <p>Tumia kikokotoo hapo juu kwa kuingiza kasi yako ya CRS (kutoka kwa jaribio la CRS), jumla ya muda wa zoezi, na wastani wa kasi wakati wa zoezi. Fomula ni: sTSS = Muda (saa) × Kipengele cha Ukali² × 100, ambapo Kipengele cha Ukali = Kasi ya CRS / Wastani wa Kasi ya Zoezi.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name">Je, ninahitaji CRS kukokotoa sTSS?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                    <div itemprop="text">
+                        <p>Ndiyo, Kasi yako Muhimu ya Kukimbia (CRS) inahitajika kukokotoa Kipengele cha Ukali, ambayo ni muhimu kwa mahesabu ya sTSS. CRS inawakilisha kasi yako ya kizingiti na inapaswa kujaribiwa kila wiki 6-8. Unaweza kupata CRS yako kwa kutumia <a href="/sw/crs/">kikokotoo chetu cha CRS</a>.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name">Alama nzuri ya sTSS kwa zoezi moja ni nini?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                    <div itemprop="text">
+                        <p>Inategemea ukali wa zoezi: Mazoezi rahisi kwa kawaida hupata alama chini ya 50 sTSS, mazoezi ya wastani 50-100 sTSS, mazoezi magumu 100-200 sTSS, na mazoezi magumu sana zaidi ya 200 sTSS. Alama inayofaa inategemea malengo yako ya mafunzo na kiwango chako cha sasa cha afya.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name">Nifanye sTSS kiasi gani kwa wiki?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                    <div itemprop="text">
+                        <p>Malengo ya sTSS ya kila wiki yanatofautiana kulingana na kiwango: Wakimbizi wa burudani: 150-300, Wakimbizi wa afya/Wafanyakazi wa Triathlon: 300-500, Wazoefu wa Ushindani: 500-800, Wakimbizi wa Kiwango cha Juu/Chuo Kikuu: 800-1200+. Anza kwa tahadhari na uongeze polepole ili kuepuka kujifunza kupita kiasi.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name">Je, TSS ya kukimbia ni sawa na TSS ya kuendesha baiskeli?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                    <div itemprop="text">
+                        <p>Dhana na fomula ni sawa, lakini sTSS imebinafsishwa kwa kukimbia. Badala ya kutumia nguvu (FTP) kama TSS ya kuendesha baiskeli, sTSS inatumia kasi na CRS kama kizingiti. Zote mbili zinapima mzigo wa mazoezi kwa kutumia Muda × Kipengele cha Ukali² × 100.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name">Je, naweza kutumia sTSS kwa hatua zote za kukimbia?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                    <div itemprop="text">
+                        <p>Ndiyo, lakini CRS yako inapaswa kuwa maalum kwa hatua. Wakimbizi wengi wanatumia CRS ya uhuru kwa sababu ndio hatua inayofunzwa zaidi. Ikiwa unafunza hasa katika hatua nyingine, fanya jaribio la CRS katika hatua hiyo na utumie kasi hiyo kwa mahesabu ya sTSS.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name">Tofauti kati ya sTSS na CTL/ATL/TSB ni nini?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                    <div itemprop="text">
+                        <p>sTSS inapima mzigo wa mazoezi wa zoezi moja. CTL (Mzigo wa Mazoezi wa Kiusumbufu) ni afya yako ya muda mrefu, ATL (Mzigo wa Mazoezi wa Haraka) ni uchovu wako wa hivi karibuni, na TSB (Usawa wa Msukosuko wa Mazoezi) ni ubugarike wako. Vipimo hivi vinatumia thamani za sTSS kwa muda ili kufuatilia hali yako ya mafunzo. Jifunze zaidi katika <a href="/sw/training-load/">mwongozo wetu wa Mzigo wa Mazoezi</a>.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="mt-3xl">Rasilimali Zinazohusiana</h2>
+
+        <div class="grid grid-3">
+            <div class="card">
+                <h3 class="card-title">Jaribio la CRS</h3>
+                <div class="card-content">
+                    <p>Unahitaji kasi yako ya CRS? Tumia kikokotoo chetu cha bure cha CRS na nyakati za majaribio ya 5K na 3K.</p>
+                    <a href="/sw/crs/" class="btn btn-secondary btn-small mt-md">Kikokotoo cha CRS →</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3 class="card-title">Mwongozo wa Mzigo wa Mazoezi</h3>
+                <div class="card-content">
+                    <p>Jifunze kuhusu CTL, ATL, TSB na vipimo vya Chati ya Usimamizi wa Utendaji.</p>
+                    <a href="/sw/training-load/" class="btn btn-secondary btn-small mt-md">Mzigo wa Mazoezi →</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3 class="card-title">Programu ya RunAnalytics</h3>
+                <div class="card-content">
+                    <p>Mahesabu ya kiotomatiki ya sTSS kwa mazoezi yote. Fuatilia mienendo ya CTL/ATL/TSB kwa muda.</p>
+                    <a href="/sw/" class="btn btn-secondary btn-small mt-md">Jifunze Zaidi →</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-xl text-center">
+            <p class="mb-md"><strong>Unataka kufuatilia sTSS kiotomatiki?</strong></p>
+            <a href="https://apps.apple.com/es/app/runanalytics/id6754524015" class="btn btn-primary btn-large" target="_blank" rel="noopener">Pakua RunAnalytics Bure</a>
+        </div>
+    </div>
+</section>
+
+<script src="/assets/js/stss-calculator.min.js"></script>
+    </main>
+
+    
+    <footer class="site-footer">
+    <div class="container">
+        <div class="footer-grid">
+            
+            <div>
+                <h3 class="mb-md">RunAnalytics - Running Analytics App | Critical Running Speed, TSS, CTL/ATL/TSB for iOS</h3>
+                <p class="text-secondary">Track Critical Running Speed, Training Stress Score, and performance metrics with RunAnalytics. Science-based iOS app for runners, triathletes &amp; coaches. 7-day free trial.</p>
+            </div>
+
+            
+            <div>
+                <h3 class="mb-md">Nyumbani</h3>
+                <ul class="footer-links">
+                    
+                    <li>
+                        <a href="/af/">Afrikaans</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ar/">العربية</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/bn/">বাংলা</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ca/">Català</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/de/">Deutsch</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/el/">Ελληνικά</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/en/">English</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/es/">Español</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/fa/">فارسی</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/fi/">Suomi</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/fr/">Français</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/hi/">हिन्दी</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/id/">Bahasa Indonesia</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/it/">Italiano</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ja/">日本語</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ko/">한국어</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ms/">Bahasa Melayu</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/nl/">Nederlands</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/no/">Norsk</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/pl/">Polski</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/pt/">Português</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ru/">Русский</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/sv/">Svenska</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/sw/">Kiswahili</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/tl/">Tagalog</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/tr/">Türkçe</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ur/">اردو</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/vi/">Tiếng Việt</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/zh/">中文</a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+
+        
+        <div class="footer-bottom">
+            <p class="text-sm text-secondary">
+                &copy; 2025 RunAnalytics - Running Analytics App | Critical Running Speed, TSS, CTL/ATL/TSB for iOS. Haki zote zimehifadhiwa
+            </p>
+            <ul class="footer-links">
+                <li><a href="/sw/privacy/">Faragha</a></li>
+                <li><a href="/sw/terms/">Masharti</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+    
+    <div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="Cookie consent" aria-live="polite">
+    <div class="cookie-banner-content">
+        <div>
+            <p>Tovuti hii inatumia vidakuzi ili kuboresha uzoefu wako.</p>
+            <a href="/sw/privacy/" class="text-sm">Jifunze zaidi</a>
+        </div>
+        <div class="cookie-banner-actions">
+            <button id="cookie-decline" class="btn btn-secondary btn-small">Kataa</button>
+            <button id="cookie-accept" class="btn btn-primary btn-small">Kubali</button>
+        </div>
+    </div>
+</div>
+
+    
+    <script src="/assets/js/main.min.js"></script>
+    <script src="/assets/js/cookie-consent.min.js"></script>
+    <script src="/assets/js/lazy-load.min.js"></script>
+
+    
+    <script src="/assets/js/fuse.min.js"></script>
+    <script src="/assets/js/search.min.js"></script>
+
+    
+    
+    <script src="/assets/js/analytics.min.js" data-ga-id="G-Y138VB4523"></script>
+    
+</body>
+</html>

@@ -1,0 +1,1332 @@
+<!DOCTYPE html>
+<html lang="fi" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+    <title>Yksityinen Juoksuanalyysi - CRS, TSS Mittarit iOS:lle</title>
+    <meta name="description" content="Yksityinen iOS-juoksusovellus edistyneellä analytiikalla. Seuraa CRS, TSS mittarit paikallisesti. Tieteeseen perustuvia harjoitustietoja kilpailullisille juoksijoille. 7 päivän ilmainen kokeilu.">
+    <meta name="author" content="Albert Arno">
+
+    
+    
+    <meta name="keywords" content="juoksuanalyysi sovellus, juoksun suorituskyky mittarit, yksityisyys-ensiksi iOS sovellus, CRS laskin, harjoitusstressipisteet">
+    
+
+    
+    <link rel="canonical" href="https://run.analyticszone.app/fi/">
+
+    
+    
+    <meta property="article:published_time" content="2025-01-15T10:00:00Z">
+    <meta property="article:modified_time" content="2025-10-27T14:30:00Z">
+    <meta property="article:author" content="Albert Arno">
+    
+
+    
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://run.analyticszone.app/fi/">
+    <meta property="og:title" content="Yksityinen Juoksuanalyysi - CRS, TSS Mittarit iOS:lle">
+    <meta property="og:description" content="Yksityinen iOS-juoksusovellus edistyneellä analytiikalla. Seuraa CRS, TSS mittarit paikallisesti. Tieteeseen perustuvia harjoitustietoja kilpailullisille juoksijoille. 7 päivän ilmainen kokeilu.">
+    
+    <meta property="og:image" content="https://run.analyticszone.app/assets/images/run-analytics-og.jpg">
+    
+    <meta property="og:locale" content="fi_FI">
+    <meta property="og:site_name" content="RunAnalytics - Running Analytics App | Critical Running Speed, TSS, CTL/ATL/TSB for iOS">
+
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://run.analyticszone.app/fi/">
+    <meta name="twitter:title" content="Yksityinen Juoksuanalyysi - CRS, TSS Mittarit iOS:lle">
+    <meta name="twitter:description" content="Yksityinen iOS-juoksusovellus edistyneellä analytiikalla. Seuraa CRS, TSS mittarit paikallisesti. Tieteeseen perustuvia harjoitustietoja kilpailullisille juoksijoille. 7 päivän ilmainen kokeilu.">
+    
+    <meta name="twitter:image" content="https://run.analyticszone.app/assets/images/run-analytics-og.jpg">
+    
+
+    
+    
+    <link rel="alternate" hreflang="af" href="https://run.analyticszone.app/af/">
+    
+    <link rel="alternate" hreflang="ar" href="https://run.analyticszone.app/ar/">
+    
+    <link rel="alternate" hreflang="bn" href="https://run.analyticszone.app/bn/">
+    
+    <link rel="alternate" hreflang="ca" href="https://run.analyticszone.app/ca/">
+    
+    <link rel="alternate" hreflang="de" href="https://run.analyticszone.app/de/">
+    
+    <link rel="alternate" hreflang="el" href="https://run.analyticszone.app/el/">
+    
+    <link rel="alternate" hreflang="en" href="https://run.analyticszone.app/en/">
+    
+    <link rel="alternate" hreflang="es" href="https://run.analyticszone.app/es/">
+    
+    <link rel="alternate" hreflang="fa" href="https://run.analyticszone.app/fa/">
+    
+    <link rel="alternate" hreflang="fi" href="https://run.analyticszone.app/fi/">
+    
+    <link rel="alternate" hreflang="fr" href="https://run.analyticszone.app/fr/">
+    
+    <link rel="alternate" hreflang="hi" href="https://run.analyticszone.app/hi/">
+    
+    <link rel="alternate" hreflang="id" href="https://run.analyticszone.app/id/">
+    
+    <link rel="alternate" hreflang="it" href="https://run.analyticszone.app/it/">
+    
+    <link rel="alternate" hreflang="ja" href="https://run.analyticszone.app/ja/">
+    
+    <link rel="alternate" hreflang="ko" href="https://run.analyticszone.app/ko/">
+    
+    <link rel="alternate" hreflang="ms" href="https://run.analyticszone.app/ms/">
+    
+    <link rel="alternate" hreflang="nl" href="https://run.analyticszone.app/nl/">
+    
+    <link rel="alternate" hreflang="no" href="https://run.analyticszone.app/no/">
+    
+    <link rel="alternate" hreflang="pl" href="https://run.analyticszone.app/pl/">
+    
+    <link rel="alternate" hreflang="pt" href="https://run.analyticszone.app/pt/">
+    
+    <link rel="alternate" hreflang="ru" href="https://run.analyticszone.app/ru/">
+    
+    <link rel="alternate" hreflang="sv" href="https://run.analyticszone.app/sv/">
+    
+    <link rel="alternate" hreflang="sw" href="https://run.analyticszone.app/sw/">
+    
+    <link rel="alternate" hreflang="tl" href="https://run.analyticszone.app/tl/">
+    
+    <link rel="alternate" hreflang="tr" href="https://run.analyticszone.app/tr/">
+    
+    <link rel="alternate" hreflang="ur" href="https://run.analyticszone.app/ur/">
+    
+    <link rel="alternate" hreflang="vi" href="https://run.analyticszone.app/vi/">
+    
+    <link rel="alternate" hreflang="zh" href="https://run.analyticszone.app/zh/">
+    
+    <link rel="alternate" hreflang="x-default" href="https://run.analyticszone.app/en/">
+
+    
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/icons/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/icons/apple-touch-icon.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#0066CC">
+
+    
+    <link rel="stylesheet" href="/assets/css/main.min.css">
+
+    
+    
+
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "RunAnalytics - Running Analytics App | Critical Running Speed, TSS, CTL/ATL/TSB for iOS",
+      "url": "https://run.analyticszone.app",
+      "logo": "https://run.analyticszone.app/assets/images/logo.png",
+      "description": "Track Critical Running Speed, Training Stress Score, and performance metrics with RunAnalytics. Science-based iOS app for runners, triathletes &amp; coaches. 7-day free trial.",
+      "author": "Albert Arno",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "Customer Service",
+        "email": "analyticszone@onmedic.org"
+      },
+      "sameAs": [
+        "https://twitter.com/runanalytics",
+        "https://apps.apple.com/es/app/runanalytics/id6754524015"
+      ]
+    }
+    </script>
+
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "RunAnalytics",
+      "description": "Scientific running analytics app with Critical Run Speed (CRS), Training Stress Score (TSS), and CTL/ATL/TSB metrics. Privacy-first app processes all data locally on iPhone.",
+      "url": "https://run.analyticszone.app",
+      "applicationCategory": ["HealthApplication", "FitnessApplication"],
+      "operatingSystem": "iOS",
+      "softwareVersion": "Latest",
+      "author": {
+        "@type": "Organization",
+        "name": "Albert Arno"
+      },
+      "offers": [
+        {
+          "@type": "Offer",
+          "name": "Free Trial",
+          "description": "7-day free trial of RunAnalytics premium features",
+          "price": "0",
+          "priceCurrency": "EUR",
+          "category": "Trial Subscription",
+          "url": "https://apps.apple.com/es/app/runanalytics/id6754524015"
+        },
+        {
+          "@type": "Offer",
+          "name": "Monthly Subscription",
+          "description": "Monthly access to all RunAnalytics premium features",
+          "price": "3.99",
+          "priceCurrency": "EUR",
+          "billingDuration": "P1M",
+          "category": "Subscription",
+          "url": "https://apps.apple.com/es/app/runanalytics/id6754524015"
+        },
+        {
+          "@type": "Offer",
+          "name": "Annual Subscription",
+          "description": "Annual access to all RunAnalytics premium features at 18% discount",
+          "price": "39",
+          "priceCurrency": "EUR",
+          "billingDuration": "P1Y",
+          "category": "Subscription",
+          "url": "https://apps.apple.com/es/app/runanalytics/id6754524015"
+        }
+      ],
+      "downloadUrl": "https://apps.apple.com/es/app/runanalytics/id6754524015",
+      "featureList": [
+        "Critical Run Speed (CRS) calculation",
+        "Training Stress Score (TSS) tracking",
+        "CTL (Chronic Training Load) metrics",
+        "ATL (Acute Training Load) metrics",
+        "TSB (Training Stress Balance) indicators",
+        "7 personalized training zones",
+        "Kilometer-by-kilometer analysis",
+        "Weekly, monthly, and yearly comparisons",
+        "Running efficiency tracking",
+        "Personal records (PR) detection",
+        "Apple Health app integration",
+        "Export in JSON, CSV, HTML, PDF formats",
+        "100% local data processing",
+        "Privacy-first architecture",
+        "Native SwiftUI interface"
+      ],
+      "screenshot": [
+        "https://run.analyticszone.app/assets/images/screenshots/workouts-list.png",
+        "https://run.analyticszone.app/assets/images/screenshots/workout-detail.png",
+        "https://run.analyticszone.app/assets/images/screenshots/analytics.png",
+        "https://run.analyticszone.app/assets/images/screenshots/performance.png",
+        "https://run.analyticszone.app/assets/images/screenshots/training-zones.png",
+        "https://run.analyticszone.app/assets/images/screenshots/export-options.png"
+      ]
+    }
+    </script>
+
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      "name": "RunAnalytics",
+      "description": "Professional running analytics app with science-based metrics, personalized training zones, and privacy-first data processing",
+      "url": "https://run.analyticszone.app",
+      "image": "https://run.analyticszone.app/assets/images/logo.png",
+      "brand": {
+        "@type": "Brand",
+        "name": "RunAnalytics"
+      },
+      "category": "Fitness & Health Software",
+      "offers": {
+        "@type": "AggregateOffer",
+        "priceCurrency": "EUR",
+        "lowPrice": "0",
+        "highPrice": "39",
+        "offerCount": "3",
+        "offers": [
+          {
+            "@type": "Offer",
+            "name": "7-Day Free Trial",
+            "price": "0",
+            "priceCurrency": "EUR",
+            "url": "https://apps.apple.com/es/app/runanalytics/id6754524015"
+          },
+          {
+            "@type": "Offer",
+            "name": "Monthly Plan",
+            "price": "3.99",
+            "priceCurrency": "EUR",
+            "billingDuration": "P1M",
+            "url": "https://apps.apple.com/es/app/runanalytics/id6754524015"
+          },
+          {
+            "@type": "Offer",
+            "name": "Annual Plan",
+            "price": "39",
+            "priceCurrency": "EUR",
+            "billingDuration": "P1Y",
+            "url": "https://apps.apple.com/es/app/runanalytics/id6754524015"
+          }
+        ]
+      }
+    }
+    </script>
+
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How does RunAnalytics get my running data?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "RunAnalytics syncs with Apple Health to import running workouts recorded by any compatible device or app. This includes smart watches, fitness trackers, and manual entries. The app processes this data locally to calculate advanced metrics."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the CRS test and how do I perform it?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "CRS (Critical Run Speed) is a scientific protocol using 2 maximum effort runs: 5K and 3K with 10-20 minutes rest between. The app calculates your aerobic threshold from these times and automatically adjusts all training zones. Repeat every 6-8 weeks to track progress."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is my data uploaded to the cloud?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. RunAnalytics processes all data locally on your iPhone. There are no external servers, no cloud accounts, no data transfers. You control exports: generate JSON, CSV, HTML, or PDF files and share them however you want."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I use RunAnalytics for trail running?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. RunAnalytics works with any running workout in Apple Health, including trail running. The app adapts to available metrics whether you're on a track or trail, providing relevant analysis for each environment."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What's the difference between monthly and annual plans?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Both plans offer identical features: all metrics, unlimited zones, temporal comparisons, multiple exports, and free updates. The only difference is price: annual saves 18% (equivalent to €3.25/month vs €3.99/month)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I cancel my subscription anytime?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Subscriptions are managed through the App Store, so you can cancel anytime from Settings → [Your Name] → Subscriptions. If you cancel, you'll maintain access until the end of your current billing period."
+          }
+        }
+      ]
+    }
+    </script>
+
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://run.analyticszone.app/fi/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Running Analytics",
+          "item": "https://run.analyticszone.app/fi/#features"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Pricing",
+          "item": "https://run.analyticszone.app/fi/#pricing"
+        }
+      ]
+    }
+    </script>
+
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Yksityinen Juoksuanalyysi - CRS, TSS Mittarit iOS:lle",
+      "description": "Yksityinen iOS-juoksusovellus edistyneellä analytiikalla. Seuraa CRS, TSS mittarit paikallisesti. Tieteeseen perustuvia harjoitustietoja kilpailullisille juoksijoille. 7 päivän ilmainen kokeilu.",
+      "url": "https://run.analyticszone.app/fi/",
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "RunAnalytics - Running Analytics App | Critical Running Speed, TSS, CTL/ATL/TSB for iOS",
+        "url": "https://run.analyticszone.app"
+      },
+      "mainEntity": {
+        "@type": "SoftwareApplication",
+        "name": "RunAnalytics"
+      }
+    }
+    </script>
+
+    
+
+    
+    
+
+    
+    
+</head>
+<body>
+    
+    <a href="#main-content" class="skip-link">Siirry sisältöön</a>
+
+    
+    <header class="site-header">
+    <div class="container">
+        <div class="header-inner">
+            
+            <a href="/fi/" class="site-logo">
+                <picture>
+                    
+                    <source srcset="/assets/images/logo-dark.webp" type="image/webp"
+                        media="(prefers-color-scheme: dark)">
+                    
+                    <source srcset="/assets/images/logo-dark.png" type="image/png" media="(prefers-color-scheme: dark)">
+                    
+                    <source srcset="/assets/images/logo.webp" type="image/webp">
+                    
+                    <img src="/assets/images/logo.png" alt="RunAnalytics - Running Analytics App | Critical Running Speed, TSS, CTL/ATL/TSB for iOS" width="40" height="40">
+                </picture>
+                <span class="logo-text">RunAnalytics</span>
+            </a>
+
+            
+            <nav class="nav-primary" id="nav-primary" role="navigation" aria-label="Main navigation">
+                <ul>
+                    
+                    <li>
+                        
+                        
+                        <a href="/fi/"  aria-current="">
+                            Etusivu
+                        </a>
+                        
+                        </li>
+                        
+                    <li class="has-submenu" >
+                        
+                        
+                        
+                        
+                        <span class="nav-label">Opi</span>
+                        
+                        <ul class="submenu">
+                            
+                            <li>
+                                <a href="/fi/getting-started/" 
+                                    aria-current="">
+                                    Aloittaminen
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/fi/crs/" 
+                                    aria-current="">
+                                    CRS
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/fi/training-zones/" 
+                                    aria-current="">
+                                    Harjoitusalueet
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/fi/training-load/" 
+                                    aria-current="">
+                                    Harjoituskuorma
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/fi/stss-calculator/" 
+                                    aria-current="">
+                                    sTSS Laskin
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        
+                        </li>
+                        
+                    <li class="has-submenu" >
+                        
+                        
+                        
+                        
+                        <span class="nav-label">Tiede</span>
+                        
+                        <ul class="submenu">
+                            
+                            <li>
+                                <a href="/fi/research/" 
+                                    aria-current="">
+                                    Tutkimus
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/fi/formulas/" 
+                                    aria-current="">
+                                    Kaavat
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/fi/efficiency/" 
+                                    aria-current="">
+                                    Tehokkuus
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/fi/stride-mechanics/" 
+                                    aria-current="">
+                                    Askelmekanikka
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/fi/bibliography/" 
+                                    aria-current="">
+                                    Bibliografia
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        
+                        </li>
+                        
+                    <li>
+                        
+                        
+                        <a href="/fi/contact/"  aria-current="">
+                            Ota yhteyttä
+                        </a>
+                        
+                        </li>
+                        
+                </ul>
+
+                
+                <div class="search-container">
+                    <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" aria-hidden="true">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.35-4.35"></path>
+                    </svg>
+                    <input type="search" id="site-search" class="search-input" aria-expanded="false"
+                        aria-haspopup="listbox" aria-autocomplete="list" autocomplete="off" spellcheck="false" />
+                    <div id="search-results" class="search-results hidden" role="region" aria-live="polite"></div>
+                </div>
+
+                
+                <select class="language-selector" id="language-select" aria-label="Valitse kieli">
+                    
+                    <option value="af" >
+                        Afrikaans
+                    </option>
+                    
+                    <option value="ar" >
+                        العربية
+                    </option>
+                    
+                    <option value="bn" >
+                        বাংলা
+                    </option>
+                    
+                    <option value="ca" >
+                        Català
+                    </option>
+                    
+                    <option value="de" >
+                        Deutsch
+                    </option>
+                    
+                    <option value="el" >
+                        Ελληνικά
+                    </option>
+                    
+                    <option value="en" >
+                        English
+                    </option>
+                    
+                    <option value="es" >
+                        Español
+                    </option>
+                    
+                    <option value="fa" >
+                        فارسی
+                    </option>
+                    
+                    <option value="fi" selected>
+                        Suomi
+                    </option>
+                    
+                    <option value="fr" >
+                        Français
+                    </option>
+                    
+                    <option value="hi" >
+                        हिन्दी
+                    </option>
+                    
+                    <option value="id" >
+                        Bahasa Indonesia
+                    </option>
+                    
+                    <option value="it" >
+                        Italiano
+                    </option>
+                    
+                    <option value="ja" >
+                        日本語
+                    </option>
+                    
+                    <option value="ko" >
+                        한국어
+                    </option>
+                    
+                    <option value="ms" >
+                        Bahasa Melayu
+                    </option>
+                    
+                    <option value="nl" >
+                        Nederlands
+                    </option>
+                    
+                    <option value="no" >
+                        Norsk
+                    </option>
+                    
+                    <option value="pl" >
+                        Polski
+                    </option>
+                    
+                    <option value="pt" >
+                        Português
+                    </option>
+                    
+                    <option value="ru" >
+                        Русский
+                    </option>
+                    
+                    <option value="sv" >
+                        Svenska
+                    </option>
+                    
+                    <option value="sw" >
+                        Kiswahili
+                    </option>
+                    
+                    <option value="tl" >
+                        Tagalog
+                    </option>
+                    
+                    <option value="tr" >
+                        Türkçe
+                    </option>
+                    
+                    <option value="ur" >
+                        اردو
+                    </option>
+                    
+                    <option value="vi" >
+                        Tiếng Việt
+                    </option>
+                    
+                    <option value="zh" >
+                        中文
+                    </option>
+                    
+                </select>
+
+                
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode"
+                    title="Toggle dark/light mode">
+                    <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                    <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+
+                
+                
+                <a href="https://apps.apple.com/es/app/runanalytics/id6754524015" class="header-download-btn" target="_blank" rel="noopener"
+                    aria-label="Download on App Store">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                        fill="currentColor">
+                        <path
+                            d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z" />
+                    </svg>
+                    <span class="download-text">Download</span>
+                </a>
+                
+            </nav>
+
+            
+            <button class="menu-toggle" id="menu-toggle" aria-label="Vaihda valikko"
+                aria-expanded="false" aria-controls="nav-primary">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </div>
+</header>
+
+    
+    <main id="main-content" class="main-content">
+        <!-- RunAnalytics App Landing Page - Homepage -->
+
+<!-- Hero Section with App Introduction -->
+<section class="app-hero">
+  <div class="container">
+    <div class="app-hero-content">
+      <div class="app-hero-text">
+        <div class="app-hero-badge">
+          <span>🏃</span>
+          <span>Ammattimainen Juoksuanalyysi</span>
+        </div>
+        <h1>Harjoittele Älykkäämmin, Juokse Nopeammin</h1>
+        <p class="app-hero-subtitle">
+          Tietosuoja edellä -periaatteella toimiva iOS-sovellus tieteellisillä juoksun suorituskykymittareilla, henkilökohtaisilla harjoitusalueilla ja kattavalla suorituskyvyn seurannalla.
+          Kaikki käsitellään paikallisesti iPhonessasi täydellä tietosuojalla.
+        </p>
+        <div class="app-hero-cta">
+          <a href="https://apps.apple.com/es/app/runanalytics/id6754524015" class="btn btn-large btn-accent" target="_blank" rel="noopener">
+            Lataa App Storesta
+          </a>
+          <a href="#features" class="btn btn-large btn-secondary">
+            Tutustu Ominaisuuksiin
+          </a>
+        </div>
+        <p class="mt-6 text-sm-muted">
+          ✓ 7 päivän ilmainen kokeilu &nbsp;&nbsp; ✓ Ei tiliä tarvita &nbsp;&nbsp; ✓ 100% paikallinen data
+        </p>
+      </div>
+      <div class="app-hero-mockup">
+        <div class="mockup-phone">
+          <img src="/assets/images/screenshots/workouts-list.png" alt="RunAnalytics iOS-sovellus näyttää juoksuharjoitusluettelon etäisyyksineen, vauhteineen ja harjoitusmittareineen iPhonessa" width="400" height="auto" loading="eager" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Key Features Section -->
+<section id="features" class="app-features">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-badge">Ominaisuudet</div>
+      <h2 class="section-title">Edistyneet Juoksun Suorituskykymittarit</h2>
+      <p class="section-subtitle">Ammattiluokan juoksuanalytiikka suunniteltu juoksijoille kaikilla tasoilla</p>
+    </div>
+    <div class="app-features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg class="icon" aria-hidden="true">
+            <use href="/assets/images/icons-sprite.svg#icon-chart"></use>
+          </svg>
+        </div>
+        <h3>Tieteelliset Juoksumittarit</h3>
+        <p><a href="/fi/crs/">Kriittinen juoksunopeus (CRS)</a> määrittää aerobisen kynnyksen, mahdollistaen <a href="/fi/training-load/">harjoituskuorman pisteiden (TSS)</a> laskennan ja <a href="/fi/training-load/#pmc">CTL/ATL/TSB-suorituskyvyn seurannan</a> todistetun urheilutieteen tutkimuksen pohjalta.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg class="icon" aria-hidden="true">
+            <use href="/assets/images/icons-sprite.svg#icon-zones"></use>
+          </svg>
+        </div>
+        <h3>Henkilökohtaiset Harjoitusalueet</h3>
+        <p>7 henkilökohtaista <a href="/fi/training-zones-explained/">juoksun harjoitusaluetta</a> kalibroitu kriittisen juoksunopeuden mukaan. Optimoi jokainen harjoitus palautumista, <a href="/fi/base-building-phase/">aerobista kehitystä</a>, kynnystreeniä tai <a href="/fi/what-is-vo2max/">VO₂max</a>-parantamista varten.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg class="icon" aria-hidden="true">
+            <use href="/assets/images/icons-sprite.svg#icon-calendar"></use>
+          </svg>
+        </div>
+        <h3>Suorituskykyvertailut</h3>
+        <p>Viikko-, kuukausi- ja vuosijaksojen vertailut automaattisella trenditunnistuksella ja prosentuaalisilla muutoksilla kaikille juoksun suorituskykymittareille.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg class="icon" aria-hidden="true">
+            <use href="/assets/images/icons-sprite.svg#icon-shield"></use>
+          </svg>
+        </div>
+        <h3>Täydellinen Tietosuoja</h3>
+        <p>Kaikki juoksudata käsitellään paikallisesti iOS-laitteessasi. Ei palvelimia, ei pilvivarastointia, ei seurantaa. Omistat ja hallitset juoksuanalytiikkaasi täysin.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg class="icon" aria-hidden="true">
+            <use href="/assets/images/icons-sprite.svg#icon-export"></use>
+          </svg>
+        </div>
+        <h3>Vie Mihin Tahansa</h3>
+        <p>Vie harjoitukset ja juoksun suorituskykymittarit JSON-, CSV-, HTML- tai PDF-muodoissa. Yhteensopiva valmentajien, taulukoiden ja harjoitusalustojen kanssa.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg class="icon" aria-hidden="true">
+            <use href="/assets/images/icons-sprite.svg#icon-lightning"></use>
+          </svg>
+        </div>
+        <h3>Välitön Suorituskyky</h3>
+        <p>Alle 0,35 sekunnin sovelluslatauksella paikallinen arkkitehtuuri. Katso juoksuanalytiikkasi välittömästi ilman synkronointeja tai latauksia.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Screenshots Carousel -->
+<section class="app-screenshots">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-badge">Kuvakaappaukset</div>
+      <h2 class="section-title">Katso RunAnalytics Toiminnassa</h2>
+      <p class="section-subtitle">Kaunis, intuitiivinen iOS-käyttöliittymä juoksijoille suunniteltuna</p>
+    </div>
+    <div class="carousel-wrapper">
+      <button class="carousel-btn carousel-btn-prev" aria-label="Edellinen kuvakaappaus">
+        <svg aria-hidden="true">
+          <use href="/assets/images/icons-sprite.svg#icon-arrow-left"></use>
+        </svg>
+      </button>
+      <div class="screenshots-carousel" id="screenshotsCarousel">
+        <div class="screenshot-item">
+          <img src="/assets/images/screenshots/workouts-list.png" alt="RunAnalytics harjoitusluettelo näyttää juoksutreenit harjoituskuormapisteineen ja harjoitusalueineen" loading="lazy" />
+          <p class="screenshot-caption">Harjoitusten Yleiskatsaus</p>
+        </div>
+        <div class="screenshot-item">
+          <img src="/assets/images/screenshots/workout-detail.png" alt="Yksityiskohtainen juoksuharjoituksen analyysi kilometrikohtaisella vauhdilla, juoksun tehokkuusmittareilla ja sykkeellä" loading="lazy" />
+          <p class="screenshot-caption">Kilometrikohtainen Analyysi</p>
+        </div>
+        <div class="screenshot-item">
+          <img src="/assets/images/screenshots/analytics.png" alt="RunAnalytics-kojelauta näyttää CTL-, ATL- ja TSB-suorituskyvyn hallintakaavion juoksun suorituskykymittareineen" loading="lazy" />
+          <p class="screenshot-caption">Edistyneet Suorituskykymittarit</p>
+        </div>
+        <div class="screenshot-item">
+          <img src="/assets/images/screenshots/performance.png" alt="Juoksun suorituskykytrendikaavio näyttää kriittisen juoksunopeuden kehityksen ja harjoituskuorman ajan mittaan" loading="lazy" />
+          <p class="screenshot-caption">Suorituskykytrendit</p>
+        </div>
+        <div class="screenshot-item">
+          <img src="/assets/images/screenshots/training-zones.png" alt="7 henkilökohtaista juoksun harjoitusaluetta kriittiseen juoksunopeuteen perustuen" loading="lazy" />
+          <p class="screenshot-caption">Harjoitusalueet</p>
+        </div>
+        <div class="screenshot-item">
+          <img src="/assets/images/screenshots/export-options.png" alt="Vie juoksudata JSON-, CSV-, HTML- ja PDF-muodoissa valmentajia ja analysointia varten" loading="lazy" />
+          <p class="screenshot-caption">Vientivaihtoehdot</p>
+        </div>
+      </div>
+      <button class="carousel-btn carousel-btn-next" aria-label="Seuraava kuvakaappaus">
+        <svg aria-hidden="true">
+          <use href="/assets/images/icons-sprite.svg#icon-arrow-right"></use>
+        </svg>
+      </button>
+      <div class="carousel-dots" id="carouselDots" role="tablist" aria-label="Kuvakaappausten navigointi"></div>
+    </div>
+  </div>
+</section>
+
+<!-- Scientific Metrics Section -->
+<section class="app-metrics">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-badge">Tieteeseen Perustuva</div>
+      <h2 class="section-title text-white">Tieteeseen Perustuvat Juoksun Tehokkuusmittarit</h2>
+      <p class="section-subtitle text-white-90">
+        RunAnalytics muuntaa raa'an juoksudatan toimiviksi suorituskykymittareiksi
+        käyttäen harjoituskuormapisteitä, kriittistä juoksunopeutta ja tehokkuuslaskelmia, jotka on validoitu urheilutieteen tutkimuksissa
+      </p>
+    </div>
+    <div class="metrics-grid">
+      <div class="metric-card">
+        <div class="metric-icon">🎯</div>
+        <div class="metric-label">Kynnystaht</div>
+        <h3 class="metric-name">CRS</h3>
+        <p class="metric-description">Kriittinen juoksunopeus - aerobinen kynnysvauhti</p>
+      </div>
+      <div class="metric-card">
+        <div class="metric-icon">📊</div>
+        <div class="metric-label">Harjoituskuorma</div>
+        <h3 class="metric-name">TSS</h3>
+        <p class="metric-description">Harjoituskuormapisteet mittaavat harjoituksen intensiteettiä</p>
+      </div>
+      <div class="metric-card">
+        <div class="metric-icon">💪</div>
+        <div class="metric-label">Kunto</div>
+        <h3 class="metric-name">CTL</h3>
+        <p class="metric-description">Krooninen harjoituskuorma - 42 päivän liukuva keskiarvo</p>
+      </div>
+      <div class="metric-card">
+        <div class="metric-icon">😴</div>
+        <div class="metric-label">Väsymys</div>
+        <h3 class="metric-name">ATL</h3>
+        <p class="metric-description">Akuutti harjoituskuorma - 7 päivän liukuva keskiarvo</p>
+      </div>
+      <div class="metric-card">
+        <div class="metric-icon">⚖️</div>
+        <div class="metric-label">Muoto</div>
+        <h3 class="metric-name">TSB</h3>
+        <p class="metric-description">Harjoituskuorman tasapaino ilmaisee valmiuden</p>
+      </div>
+      <div class="metric-card">
+        <div class="metric-icon">⚡</div>
+        <div class="metric-label">Tehokkuus</div>
+        <h3 class="metric-name">Juoksun Tehokkuus</h3>
+        <p class="metric-description">Askelen tehokkuuspisteet - pienempi on parempi</p>
+      </div>
+      <div class="metric-card">
+        <div class="metric-icon">🎯</div>
+        <div class="metric-label">Alueet</div>
+        <h3 class="metric-name">7 Aluetta</h3>
+        <p class="metric-description">Palautumisesta sprinttiintensiteettiin</p>
+      </div>
+      <div class="metric-card">
+        <div class="metric-icon">🏆</div>
+        <div class="metric-label">Ennätykset</div>
+        <h3 class="metric-name">Henkilökohtaiset Ennätykset</h3>
+        <p class="metric-description">Automaattinen henkilökohtaisten ennätysten seuranta</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Pricing Section -->
+<section class="app-pricing">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-badge">Hinnoittelu</div>
+      <h2 class="section-title">Yksinkertainen, Läpinäkyvä Hinnoittelu</h2>
+      <p class="section-subtitle">Aloita 7 päivän ilmaisella kokeilulla. Peruuta milloin tahansa.</p>
+    </div>
+    <div class="pricing-grid">
+      <div class="pricing-card">
+        <div class="pricing-header">
+          <h3 class="pricing-name">Kuukausittain</h3>
+          <div class="pricing-price">
+            <span class="pricing-currency">€</span>
+            <span class="pricing-amount">3.99</span>
+            <span class="pricing-period">/kuukausi</span>
+          </div>
+          <p class="pricing-trial">7 päivän ilmainen kokeilu</p>
+        </div>
+        <ul class="pricing-features">
+          <li>Rajoittamaton harjoitusten synkronointi</li>
+          <li>Kaikki tieteelliset mittarit (CRS, TSS, CTL/ATL/TSB)</li>
+          <li>7 henkilökohtaista harjoitusaluetta</li>
+          <li>Viikko-, kuukausi- ja vuosivertailut</li>
+          <li>Vie JSON-, CSV-, HTML- ja PDF-muodoissa</li>
+          <li>100% tietosuoja, paikallinen data</li>
+          <li>Kaikki tulevat päivitykset</li>
+        </ul>
+      </div>
+      <div class="pricing-card featured" data-badge="Paras Arvo">
+        <div class="pricing-header">
+          <h3 class="pricing-name">Vuosittain</h3>
+          <div class="pricing-price">
+            <span class="pricing-currency">€</span>
+            <span class="pricing-amount">39</span>
+            <span class="pricing-period">/vuosi</span>
+          </div>
+          <p class="pricing-trial">Säästä €8.88/vuosi (18% alennus)</p>
+        </div>
+        <ul class="pricing-features">
+          <li>Rajoittamaton harjoitusten synkronointi</li>
+          <li>Kaikki tieteelliset mittarit (CRS, TSS, CTL/ATL/TSB)</li>
+          <li>7 henkilökohtaista harjoitusaluetta</li>
+          <li>Viikko-, kuukausi- ja vuosivertailut</li>
+          <li>Vie JSON-, CSV-, HTML- ja PDF-muodoissa</li>
+          <li>100% tietosuoja, paikallinen data</li>
+          <li>Kaikki tulevat päivitykset</li>
+          <li><strong>Vain €3.25/kuukausi</strong></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Benefits Section -->
+<section class="app-benefits">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-badge">Miksi RunAnalytics</div>
+      <h2 class="section-title">Tietosuoja Edellä -Juoksuanalytiikka Vakavasti Harjoitteleville Urheilijoille</h2>
+      <p class="section-subtitle">Ammattimainen juoksun suorituskyvyn mittaaminen ilman monimutkaisuutta</p>
+    </div>
+    <div class="benefits-grid">
+      <div class="benefit-item">
+        <div class="benefit-icon">🎯</div>
+        <div class="benefit-content">
+          <h3>CRS-testiprotokolla</h3>
+          <p>Sisäänrakennettu 5K + 3K -testiprotokolla kriittisen juoksunopeuden määrittämiseksi. Toista 6–8 viikon välein seurataksesi kehitystä ja säätääksesi juoksun harjoitusalueita automaattisesti.</p>
+        </div>
+      </div>
+      <div class="benefit-item">
+        <div class="benefit-icon">📱</div>
+        <div class="benefit-content">
+          <h3>Natiivi iOS-juoksusovellus</h3>
+          <p>Rakennettu SwiftUI:lla sujuvaa suorituskykyä ja iOS-integraatiota varten. Saumaton Health-sovelluksen synkronointi juoksuanalytiikkaa varten, widgettuki ja tuttu Applen muotoilukieli.</p>
+        </div>
+      </div>
+      <div class="benefit-item">
+        <div class="benefit-icon">🔬</div>
+        <div class="benefit-content">
+          <h3>Tutkimukseen Perustuvat Mittarit</h3>
+          <p>Kaikki juoksun suorituskykymittarit perustuvat vertaisarvioituun urheilutieteen tutkimukseen. CRS Wakayoshi et al.:n mukaan, harjoituskuormapisteet mukautettu juoksulle IF³-kaavalla, todistetut CTL/ATL-mallit.</p>
+        </div>
+      </div>
+      <div class="benefit-item">
+        <div class="benefit-icon">👥</div>
+        <div class="benefit-content">
+          <h3>Valmentajaystävälliset Raportit</h3>
+          <p>Vie yksityiskohtaiset juoksuanalytiikkaraportit valmentajille. Jaa HTML-yhteenvedot sähköpostilla, CSV-taulukkoanalyysiin tai PDF harjoituspäiväkirjoihin ja suorituskykyrekistereihin.</p>
+        </div>
+      </div>
+      <div class="benefit-item">
+        <div class="benefit-icon">🌍</div>
+        <div class="benefit-content">
+          <h3>Toimii Kaikkialla</h3>
+          <p>Rata- tai polkujuoksu, sprintit tai matka. RunAnalytics mukautuu juoksun tehokkuusmittarit kaikille juoksutyypeille ja tunnistaa automaattisesti harjoituksen ominaisuudet.</p>
+        </div>
+      </div>
+      <div class="benefit-item">
+        <div class="benefit-icon">🚀</div>
+        <div class="benefit-content">
+          <h3>Jatkuvasti Kehittyvä</h3>
+          <p>Säännölliset päivitykset uusilla juoksun suorituskykymittareilla käyttäjäpalautteen perusteella. Viimeisimmät lisäykset sisältävät vuosivertailut, henkilökohtaisten ennätysten seurannan ja parannetut vientivaihtoehdot.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="section">
+  <div class="container container-narrow">
+    <div class="section-header">
+      <div class="section-badge">UKK</div>
+      <h2 class="section-title">Usein Kysytyt Kysymykset</h2>
+    </div>
+
+    <div class="feature-list">
+      <div class="feature-item">
+        <h3>Miten tämä juoksuanalytiikkasovellus saa datani?</h3>
+        <p>RunAnalytics synkronoituu Apple Healthin kanssa tuodakseen juoksuharjoitukset, jotka on tallennettu millä tahansa yhteensopivalla laitteella tai sovelluksella. Tämä sisältää älykellot, kuntoiluseurantimet ja manuaaliset merkinnät. Sovellus käsittelee tämän datan paikallisesti laskeakseen edistyneet juoksun suorituskykymittarit.</p>
+      </div>
+
+      <div class="feature-item">
+        <h3>Mikä on kriittisen juoksunopeuden testi ja miten sen suoritan?</h3>
+        <p>Kriittinen juoksunopeus (CRS) on tieteellinen protokolla, jossa käytetään kahta maksimaalista juoksua: 5K ja 3K 10–20 minuutin palautumisella niiden välissä. Sovellus laskee aerobisen kynnyksen näistä ajoista ja säätää automaattisesti kaikki juoksun harjoitusalueet. Toista 6–8 viikon välein seurataksesi kehitystä.</p>
+      </div>
+
+      <div class="feature-item">
+        <h3>Lähetetäänkö juoksudatani pilveen?</h3>
+        <p>Ei. RunAnalytics käsittelee kaiken juoksudatan paikallisesti iPhonessasi. Ei ole ulkoisia palvelimia, pilvitilejä tai datan siirtoja. Sinä hallitset vientiä: luo JSON-, CSV-, HTML- tai PDF-tiedostoja juoksun suorituskykymittareinesi kanssa ja jaa ne haluamallasi tavalla.</p>
+      </div>
+
+      <div class="feature-item">
+        <h3>Voinko käyttää tätä juoksuanalytiikkasovellusta polkujuoksuun?</h3>
+        <p>Kyllä. RunAnalytics toimii minkä tahansa Apple Healthin juoksuharjoituksen kanssa, mukaan lukien polkujuoksu. Sovellus mukautuu juoksun tehokkuusmittarit saatavilla olevaan dataan olipa kyseessä rata- tai polkujuoksu, tarjoten relevantin suorituskykyanalyysin jokaiseen ympäristöön.</p>
+      </div>
+
+      <div class="feature-item">
+        <h3>Mikä on ero kuukausi- ja vuosisuunnitelmien välillä?</h3>
+        <p>Molemmat suunnitelmat tarjoavat identtiset ominaisuudet: kaikki juoksun suorituskykymittarit, rajoittamattomat harjoitusalueet, ajallinen vertailu, useita vientivaihtoehtoja ja ilmaiset päivitykset. Ainoa ero on hinta: vuosisuunnitelma säästää 18% (vastaa €3.25/kuukausi vs €3.99/kuukausi).</p>
+      </div>
+
+      <div class="feature-item">
+        <h3>Voinko peruuttaa tilaukseni milloin tahansa?</h3>
+        <p>Kyllä. Tilauksia hallitaan App Storen kautta, joten voit peruuttaa milloin tahansa kohdasta Asetukset → [Nimesi] → Tilaukset. Jos peruutat, säilytät pääsyn nykyisen laskutusjakson loppuun asti.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Final CTA Section -->
+<section class="app-cta-final">
+  <div class="container">
+    <h2>Valmis Muuttamaan Juoksusuorituskykysi?</h2>
+    <p>Liity tuhansiin juoksijoihin, jotka käyttävät tieteellistä juoksuanalytiikkaa suorituskyvyn parantamiseen. Aloita 7 päivän ilmainen kokeilu tästä tietosuoja edellä -periaatteella toimivasta iOS-juoksusovelluksesta tänään.</p>
+    <div class="app-hero-cta">
+      <a href="https://apps.apple.com/es/app/runanalytics/id6754524015" class="btn btn-large btn-accent" target="_blank" rel="noopener">
+        Lataa RunAnalytics Ilmaiseksi
+      </a>
+      <a href="#features" class="btn btn-large btn-accent-outline">
+        Lue Lisää
+      </a>
+    </div>
+    <p class="section-footer">
+      Ei tiliä tarvita • Peruuta milloin tahansa • Datasi pysyy laitteessasi
+    </p>
+  </div>
+</section>
+
+<!-- Additional Information Links -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Lue Lisää Juoksun Suorituskykymittareista</h2>
+      <p class="section-subtitle">Syväluotaa juoksuanalytiikan taustalla olevaa tiedettä</p>
+    </div>
+    <div class="grid grid-3">
+      <div class="card">
+        <h3 class="card-title">Kriittinen Juoksunopeus</h3>
+        <div class="card-content">
+          <p>Ymmärrä, miten kriittinen juoksunopeus määrittää aerobisen kynnyksen ja miksi se on ratkaisevan tärkeää rakennetulle harjoittelulle.</p>
+          <a href="/fi/crs/" class="btn btn-secondary btn-small mt-md">Lue Lisää CRS:stä →</a>
+        </div>
+      </div>
+      <div class="card">
+        <h3 class="card-title">Harjoituskuormapisteet</h3>
+        <div class="card-content">
+          <p>Selvitä, miten TSS, CTL, ATL ja TSB auttavat tasapainottamaan harjoituskuorman, hallitsemaan väsymystä ja optimoimaan suorituskykyä.</p>
+          <a href="/fi/training-stress-score/" class="btn btn-secondary btn-small mt-md">Tutustu TSS:ään →</a>
+        </div>
+      </div>
+      <div class="card">
+        <h3 class="card-title">Harjoitusalueet Selitettynä</h3>
+        <div class="card-content">
+          <p>Kattava opas viiteen harjoitusalueeseen: palautuminen, aerobinen, tempo, kynnys ja VO2max optimaalista harjoittelua varten.</p>
+          <a href="/fi/training-zones-explained/" class="btn btn-secondary btn-small mt-md">Katso Harjoitusalueet →</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid grid-3 mt-lg">
+      <div class="card">
+        <h3 class="card-title">Mikä on VO2max?</h3>
+        <div class="card-content">
+          <p>Opi VO2maxista, sen testaamisesta, keskiarvoista iän mukaan ja todistetusta menetelmistä parantaa aerobista kapasiteettiasi.</p>
+          <a href="/fi/what-is-vo2max/" class="btn btn-secondary btn-small mt-md">Ymmärrä VO2max →</a>
+        </div>
+      </div>
+      <div class="card">
+        <h3 class="card-title">Maratonin Jaksoitus</h3>
+        <div class="card-content">
+          <p>Hallitse harjoitteluvaiheet: peruskunnon rakentaminen, rakennus, huippu ja kavennus maratonmenestykseen tieteeseen perustuvalla suunnittelulla.</p>
+          <a href="/fi/marathon-periodization/" class="btn btn-secondary btn-small mt-md">Suunnittele Harjoittelusi →</a>
+        </div>
+      </div>
+      <div class="card">
+        <h3 class="card-title">80/20-harjoittelusääntö</h3>
+        <div class="card-content">
+          <p>Tutustu todistettuun 80% kevyt, 20% kova -intensiteettijakaumaan, jota huippujuoksijat käyttävät optimaalisiin tuloksiin.</p>
+          <a href="/fi/8020-training-rule/" class="btn btn-secondary btn-small mt-md">Opi 80/20 →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+    </main>
+
+    
+    <footer class="site-footer">
+    <div class="container">
+        <div class="footer-grid">
+            
+            <div>
+                <h3 class="mb-md">RunAnalytics - Running Analytics App | Critical Running Speed, TSS, CTL/ATL/TSB for iOS</h3>
+                <p class="text-secondary">Track Critical Running Speed, Training Stress Score, and performance metrics with RunAnalytics. Science-based iOS app for runners, triathletes &amp; coaches. 7-day free trial.</p>
+            </div>
+
+            
+            <div>
+                <h3 class="mb-md">Etusivu</h3>
+                <ul class="footer-links">
+                    
+                    <li>
+                        <a href="/af/">Afrikaans</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ar/">العربية</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/bn/">বাংলা</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ca/">Català</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/de/">Deutsch</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/el/">Ελληνικά</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/en/">English</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/es/">Español</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/fa/">فارسی</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/fi/">Suomi</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/fr/">Français</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/hi/">हिन्दी</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/id/">Bahasa Indonesia</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/it/">Italiano</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ja/">日本語</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ko/">한국어</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ms/">Bahasa Melayu</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/nl/">Nederlands</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/no/">Norsk</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/pl/">Polski</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/pt/">Português</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ru/">Русский</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/sv/">Svenska</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/sw/">Kiswahili</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/tl/">Tagalog</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/tr/">Türkçe</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ur/">اردو</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/vi/">Tiếng Việt</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/zh/">中文</a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+
+        
+        <div class="footer-bottom">
+            <p class="text-sm text-secondary">
+                &copy; 2025 RunAnalytics - Running Analytics App | Critical Running Speed, TSS, CTL/ATL/TSB for iOS. Kaikki oikeudet pidätetään
+            </p>
+            <ul class="footer-links">
+                <li><a href="/fi/privacy/">Tietosuoja</a></li>
+                <li><a href="/fi/terms/">Käyttöehdot</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+    
+    <div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="Cookie consent" aria-live="polite">
+    <div class="cookie-banner-content">
+        <div>
+            <p>Tämä verkkosivusto käyttää evästeitä parantaakseen käyttökokemustasi.</p>
+            <a href="/fi/privacy/" class="text-sm">Lue lisää</a>
+        </div>
+        <div class="cookie-banner-actions">
+            <button id="cookie-decline" class="btn btn-secondary btn-small">Hylkää</button>
+            <button id="cookie-accept" class="btn btn-primary btn-small">Hyväksy</button>
+        </div>
+    </div>
+</div>
+
+    
+    <script src="/assets/js/main.min.js"></script>
+    <script src="/assets/js/cookie-consent.min.js"></script>
+    <script src="/assets/js/lazy-load.min.js"></script>
+
+    
+    <script src="/assets/js/fuse.min.js"></script>
+    <script src="/assets/js/search.min.js"></script>
+
+    
+    
+    <script src="/assets/js/analytics.min.js" data-ga-id="G-Y138VB4523"></script>
+    
+</body>
+</html>

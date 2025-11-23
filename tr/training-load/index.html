@@ -1,0 +1,1272 @@
+<!DOCTYPE html>
+<html lang="tr" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+    <title>Koşu TSS Hesaplayıcı: Antrenman Yükü ve PMC (CTL/ATL/TSB)</title>
+    <meta name="description" content="Koşu Antrenman Stres Skoru (sTSS) hesaplama ve Performans Yönetim Grafiği metriklerini (CTL, ATL, TSB) öğrenin. Kondisyon ve yorgunluğu bilimsel olarak takip edin. Çözülmüş örnekler, haftalık TSS hedefleri ve azalma stratejileri dahil.">
+    <meta name="author" content="Albert Arno">
+
+    
+    
+    <meta name="keywords" content="koşu TSS, sTSS hesaplayıcı, antrenman stres skoru, CTL ATL TSB, koşu PMC, antrenman yükü yönetimi">
+    
+
+    
+    <link rel="canonical" href="https://run.analyticszone.app/tr/training-load/">
+
+    
+    
+    <meta property="article:published_time" content="2025-01-15T10:00:00Z">
+    <meta property="article:modified_time" content="2025-11-16T14:30:00Z">
+    <meta property="article:author" content="Albert Arno">
+    
+
+    
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://run.analyticszone.app/tr/training-load/">
+    <meta property="og:title" content="Koşu TSS Hesaplayıcı: Antrenman Yükü ve PMC (CTL/ATL/TSB)">
+    <meta property="og:description" content="Koşu Antrenman Stres Skoru (sTSS) hesaplama ve Performans Yönetim Grafiği metriklerini (CTL, ATL, TSB) öğrenin. Kondisyon ve yorgunluğu bilimsel olarak takip edin. Çözülmüş örnekler, haftalık TSS hedefleri ve azalma stratejileri dahil.">
+    
+    <meta property="og:image" content="https://run.analyticszone.app/assets/images/run-analytics-og.jpg">
+    
+    <meta property="og:locale" content="tr_TR">
+    <meta property="og:site_name" content="RunAnalytics - Running Analytics App | Critical Running Speed, TSS, CTL/ATL/TSB for iOS">
+
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://run.analyticszone.app/tr/training-load/">
+    <meta name="twitter:title" content="Koşu TSS Hesaplayıcı: Antrenman Yükü ve PMC (CTL/ATL/TSB)">
+    <meta name="twitter:description" content="Koşu Antrenman Stres Skoru (sTSS) hesaplama ve Performans Yönetim Grafiği metriklerini (CTL, ATL, TSB) öğrenin. Kondisyon ve yorgunluğu bilimsel olarak takip edin. Çözülmüş örnekler, haftalık TSS hedefleri ve azalma stratejileri dahil.">
+    
+    <meta name="twitter:image" content="https://run.analyticszone.app/assets/images/run-analytics-og.jpg">
+    
+
+    
+    
+    <link rel="alternate" hreflang="af" href="https://run.analyticszone.app/af/training-load/">
+    
+    <link rel="alternate" hreflang="ar" href="https://run.analyticszone.app/ar/training-load/">
+    
+    <link rel="alternate" hreflang="bn" href="https://run.analyticszone.app/bn/training-load/">
+    
+    <link rel="alternate" hreflang="ca" href="https://run.analyticszone.app/ca/training-load/">
+    
+    <link rel="alternate" hreflang="de" href="https://run.analyticszone.app/de/training-load/">
+    
+    <link rel="alternate" hreflang="el" href="https://run.analyticszone.app/el/training-load/">
+    
+    <link rel="alternate" hreflang="en" href="https://run.analyticszone.app/en/training-load/">
+    
+    <link rel="alternate" hreflang="es" href="https://run.analyticszone.app/es/training-load/">
+    
+    <link rel="alternate" hreflang="fa" href="https://run.analyticszone.app/fa/training-load/">
+    
+    <link rel="alternate" hreflang="fi" href="https://run.analyticszone.app/fi/training-load/">
+    
+    <link rel="alternate" hreflang="fr" href="https://run.analyticszone.app/fr/training-load/">
+    
+    <link rel="alternate" hreflang="hi" href="https://run.analyticszone.app/hi/training-load/">
+    
+    <link rel="alternate" hreflang="id" href="https://run.analyticszone.app/id/training-load/">
+    
+    <link rel="alternate" hreflang="it" href="https://run.analyticszone.app/it/training-load/">
+    
+    <link rel="alternate" hreflang="ja" href="https://run.analyticszone.app/ja/training-load/">
+    
+    <link rel="alternate" hreflang="ko" href="https://run.analyticszone.app/ko/training-load/">
+    
+    <link rel="alternate" hreflang="ms" href="https://run.analyticszone.app/ms/training-load/">
+    
+    <link rel="alternate" hreflang="nl" href="https://run.analyticszone.app/nl/training-load/">
+    
+    <link rel="alternate" hreflang="no" href="https://run.analyticszone.app/no/training-load/">
+    
+    <link rel="alternate" hreflang="pl" href="https://run.analyticszone.app/pl/training-load/">
+    
+    <link rel="alternate" hreflang="pt" href="https://run.analyticszone.app/pt/training-load/">
+    
+    <link rel="alternate" hreflang="ru" href="https://run.analyticszone.app/ru/training-load/">
+    
+    <link rel="alternate" hreflang="sv" href="https://run.analyticszone.app/sv/training-load/">
+    
+    <link rel="alternate" hreflang="sw" href="https://run.analyticszone.app/sw/training-load/">
+    
+    <link rel="alternate" hreflang="tl" href="https://run.analyticszone.app/tl/training-load/">
+    
+    <link rel="alternate" hreflang="tr" href="https://run.analyticszone.app/tr/training-load/">
+    
+    <link rel="alternate" hreflang="ur" href="https://run.analyticszone.app/ur/training-load/">
+    
+    <link rel="alternate" hreflang="vi" href="https://run.analyticszone.app/vi/training-load/">
+    
+    <link rel="alternate" hreflang="zh" href="https://run.analyticszone.app/zh/training-load/">
+    
+    <link rel="alternate" hreflang="x-default" href="https://run.analyticszone.app/en/training-load/">
+
+    
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/icons/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/icons/apple-touch-icon.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#0066CC">
+
+    
+    <link rel="stylesheet" href="/assets/css/main.min.css">
+
+    
+    
+
+    
+    
+
+    
+    
+</head>
+<body>
+    
+    <a href="#main-content" class="skip-link">İçeriğe atla</a>
+
+    
+    <header class="site-header">
+    <div class="container">
+        <div class="header-inner">
+            
+            <a href="/tr/" class="site-logo">
+                <picture>
+                    
+                    <source srcset="/assets/images/logo-dark.webp" type="image/webp"
+                        media="(prefers-color-scheme: dark)">
+                    
+                    <source srcset="/assets/images/logo-dark.png" type="image/png" media="(prefers-color-scheme: dark)">
+                    
+                    <source srcset="/assets/images/logo.webp" type="image/webp">
+                    
+                    <img src="/assets/images/logo.png" alt="RunAnalytics - Running Analytics App | Critical Running Speed, TSS, CTL/ATL/TSB for iOS" width="40" height="40">
+                </picture>
+                <span class="logo-text">RunAnalytics</span>
+            </a>
+
+            
+            <nav class="nav-primary" id="nav-primary" role="navigation" aria-label="Main navigation">
+                <ul>
+                    
+                    <li>
+                        
+                        
+                        <a href="/tr/"  aria-current="">
+                            Ana Sayfa
+                        </a>
+                        
+                        </li>
+                        
+                    <li class="has-submenu" >
+                        
+                        
+                        
+                        
+                        <span class="nav-label">Öğren</span>
+                        
+                        <ul class="submenu">
+                            
+                            <li>
+                                <a href="/tr/getting-started/" 
+                                    aria-current="">
+                                    Başlangıç
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/tr/crs/" 
+                                    aria-current="">
+                                    CRS
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/tr/training-zones/" 
+                                    aria-current="">
+                                    Antrenman Bölgeleri
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/tr/training-load/" class="active" 
+                                    aria-current="page">
+                                    Antrenman Yükü
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/tr/stss-calculator/" 
+                                    aria-current="">
+                                    sTSS Hesaplayıcı
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        
+                        </li>
+                        
+                    <li class="has-submenu" >
+                        
+                        
+                        
+                        
+                        <span class="nav-label">Bilim</span>
+                        
+                        <ul class="submenu">
+                            
+                            <li>
+                                <a href="/tr/research/" 
+                                    aria-current="">
+                                    Araştırma
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/tr/formulas/" 
+                                    aria-current="">
+                                    Formüller
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/tr/efficiency/" 
+                                    aria-current="">
+                                    Verimlilik
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/tr/stride-mechanics/" 
+                                    aria-current="">
+                                    Kürek Mekaniği
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/tr/bibliography/" 
+                                    aria-current="">
+                                    Kaynakça
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        
+                        </li>
+                        
+                    <li>
+                        
+                        
+                        <a href="/tr/contact/"  aria-current="">
+                            İletişim
+                        </a>
+                        
+                        </li>
+                        
+                </ul>
+
+                
+                <div class="search-container">
+                    <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" aria-hidden="true">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.35-4.35"></path>
+                    </svg>
+                    <input type="search" id="site-search" class="search-input" aria-expanded="false"
+                        aria-haspopup="listbox" aria-autocomplete="list" autocomplete="off" spellcheck="false" />
+                    <div id="search-results" class="search-results hidden" role="region" aria-live="polite"></div>
+                </div>
+
+                
+                <select class="language-selector" id="language-select" aria-label="Dil seçin">
+                    
+                    <option value="af" >
+                        Afrikaans
+                    </option>
+                    
+                    <option value="ar" >
+                        العربية
+                    </option>
+                    
+                    <option value="bn" >
+                        বাংলা
+                    </option>
+                    
+                    <option value="ca" >
+                        Català
+                    </option>
+                    
+                    <option value="de" >
+                        Deutsch
+                    </option>
+                    
+                    <option value="el" >
+                        Ελληνικά
+                    </option>
+                    
+                    <option value="en" >
+                        English
+                    </option>
+                    
+                    <option value="es" >
+                        Español
+                    </option>
+                    
+                    <option value="fa" >
+                        فارسی
+                    </option>
+                    
+                    <option value="fi" >
+                        Suomi
+                    </option>
+                    
+                    <option value="fr" >
+                        Français
+                    </option>
+                    
+                    <option value="hi" >
+                        हिन्दी
+                    </option>
+                    
+                    <option value="id" >
+                        Bahasa Indonesia
+                    </option>
+                    
+                    <option value="it" >
+                        Italiano
+                    </option>
+                    
+                    <option value="ja" >
+                        日本語
+                    </option>
+                    
+                    <option value="ko" >
+                        한국어
+                    </option>
+                    
+                    <option value="ms" >
+                        Bahasa Melayu
+                    </option>
+                    
+                    <option value="nl" >
+                        Nederlands
+                    </option>
+                    
+                    <option value="no" >
+                        Norsk
+                    </option>
+                    
+                    <option value="pl" >
+                        Polski
+                    </option>
+                    
+                    <option value="pt" >
+                        Português
+                    </option>
+                    
+                    <option value="ru" >
+                        Русский
+                    </option>
+                    
+                    <option value="sv" >
+                        Svenska
+                    </option>
+                    
+                    <option value="sw" >
+                        Kiswahili
+                    </option>
+                    
+                    <option value="tl" >
+                        Tagalog
+                    </option>
+                    
+                    <option value="tr" selected>
+                        Türkçe
+                    </option>
+                    
+                    <option value="ur" >
+                        اردو
+                    </option>
+                    
+                    <option value="vi" >
+                        Tiếng Việt
+                    </option>
+                    
+                    <option value="zh" >
+                        中文
+                    </option>
+                    
+                </select>
+
+                
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode"
+                    title="Toggle dark/light mode">
+                    <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                    <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+
+                
+                
+                <a href="https://apps.apple.com/es/app/runanalytics/id6754524015" class="header-download-btn" target="_blank" rel="noopener"
+                    aria-label="Download on App Store">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                        fill="currentColor">
+                        <path
+                            d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z" />
+                    </svg>
+                    <span class="download-text">Download</span>
+                </a>
+                
+            </nav>
+
+            
+            <button class="menu-toggle" id="menu-toggle" aria-label="Menüyü değiştir"
+                aria-expanded="false" aria-controls="nav-primary">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </div>
+</header>
+
+    
+    <main id="main-content" class="main-content">
+        <section class="hero hero-small">
+    <div class="container">
+        <h1>Koşu için Antrenman Stres Skoru: TSS, CTL, ATL ve TSB Açıklaması</h1>
+        <p class="lead">Performans Yönetim Grafikleri ile Koşu Antrenman Yükünde Ustalaşın</p>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container container-narrow">
+        <div class="callout callout-success">
+            <h3>🎯 Önemli Noktalar: Koşu için Antrenman Stres Skoru</h3>
+            <ul>
+                <li><strong>Antrenman Stres Skoru (TSS)</strong> her koşunun vücudunuzu ne kadar etkilediğini ölçer, yoğunluk ve süreyi tek bir metrikte birleştirir</li>
+                <li><strong>CTL (Kronik Antrenman Yükü)</strong> 42 günlük tutarlı koşuyla oluşturduğunuz uzun vadeli kondisyonunuzu ölçer</li>
+                <li><strong>ATL (Akut Antrenman Yükü)</strong> son 7 günlük antrenmanınızdan kaynaklanan yorgunluğu takip eder</li>
+                <li><strong>TSB (Antrenman Stres Dengesi)</strong> kondisyon-yorgunluk dengenizi ve yarışa hazır olup olmadığınızı veya toparlanma ihtiyacınızı gösterir</li>
+                <li>Koşu antrenman yükünü anlamak, aşırı antrenmanı önler ve veri odaklı periyotlaştırma yoluyla performans zamanlamasını optimize eder</li>
+            </ul>
+            <p><em>Temel: TSS hesaplamaları eşik referans noktası olarak <a href="/tr/crs/">Kritik Koşu Hızınızı (CRS)</a> gerektirir.</em></p>
+        </div>
+    </div>
+</section>
+
+<section class="section section-alt">
+    <div class="container container-narrow">
+        <h2>Koşu için Antrenman Stres Skoru (TSS) Nedir?</h2>
+        <p class="lead">Koşu antrenman stres skoru metodolojisi kritik soruyu yanıtlar: <strong>Bu antrenman ne kadar zorluydu?</strong> Sadece mesafe veya süre değil, her koşunun vücudunuza yüklediği gerçek fizyolojik stres.</p>
+
+        <p>Dr. Andrew Coggan tarafından bisiklet için geliştirilen Antrenman Stres Skoru (TSS) sistemi, antrenman yoğunluğu ve süresini tek bir sayıda ölçmek için standartlaştırılmış bir yöntem sağlamak üzere koşuya uyarlanmıştır. Koşucular için eşiğinize göre hıza dayalı <strong>Koşu Antrenman Stres Skoru (rTSS)</strong> kullanırız.</p>
+
+        <div class="callout callout-info">
+            <h3>Koşu için TSS Standardı</h3>
+            <p><a href="/tr/crs/">Kritik Koşu Hızınızda (CRS)</a> veya eşik tempoda bir saat = <strong>100 TSS</strong></p>
+            <p>Bu standardizasyon, antrenmanlar, haftalar ve antrenman döngüleri arasında karşılaştırma yapmanızı sağlar. 30 dakikalık eşik koşusu = ~50 TSS. 2 saatlik eşik koşusu = ~200 TSS.</p>
+        </div>
+
+        <h3>Koşu TSS'ye Karşı Bisiklet TSS: Temel Farklar</h3>
+        <p>Her iki spor da TSS kullanırken, koşu antrenman yükünün benzersiz özellikleri vardır:</p>
+
+        <table class="comparison-table">
+            <thead>
+                <tr>
+                    <th>Yön</th>
+                    <th>Bisiklet TSS</th>
+                    <th>Koşu TSS (rTSS)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Birincil Girdi</strong></td>
+                    <td>Güç (watt)</td>
+                    <td>Hız (dk/km veya dk/mil)</td>
+                </tr>
+                <tr>
+                    <td><strong>Darbe Stresi</strong></td>
+                    <td>Düşük (oturarak)</td>
+                    <td>Yüksek (yer teması kuvvetleri)</td>
+                </tr>
+                <tr>
+                    <td><strong>Toparlanma İhtiyacı</strong></td>
+                    <td>Aynı TSS için daha düşük</td>
+                    <td>Kas-iskelet stresi nedeniyle daha yüksek</td>
+                </tr>
+                <tr>
+                    <td><strong>Haftalık Hacim</strong></td>
+                    <td>500-800+ TSS tipik</td>
+                    <td>300-500 TSS tipik (aynı kondisyon seviyesi)</td>
+                </tr>
+                <tr>
+                    <td><strong>Formül</strong></td>
+                    <td>IF² × Süre × 100</td>
+                    <td>IF² × Süre × 100</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="callout callout-warning">
+            <h4>⚠️ Önemli: Koşunun Daha Yüksek Darbesi</h4>
+            <p>Aynı TSS değeri, darbe kuvvetleri nedeniyle koşuda bisikletten daha fazla fiziksel stres temsil eder. Haftada 400 TSS biriktiren bir koşucu, haftada 600-700 TSS'li bir bisikletçiye benzer antrenman adaptasyonu yaşar. Koşu antrenman yükü hem kardiyovasküler hem de kas-iskelet stresini hesaba katmalıdır.</p>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <h2 class="text-center mb-xl">Koşu Antrenman Stres Skoru (rTSS) Hesaplaması</h2>
+
+        <div class="grid grid-2">
+            <div>
+                <h3>Koşu TSS Formülü</h3>
+                <div class="formula-box">
+                    <div class="formula">
+                        rTSS = (IF²) × Süre (saat) × 100
+                    </div>
+                    <div class="formula-explanation">
+                        <p>Yoğunluk Faktörü (IF) şöyledir:</p>
+                        <div class="formula">
+                            IF = NGS / CRS
+                        </div>
+                        <p>Normalize Edilmiş Dereceli Hız (NGS), hız değişkenliğini ve yüksekliği hesaba katar:</p>
+                        <div class="formula">
+                            NGS ≈ Ortalama Koşu Hızı (araziye göre ayarlanmış)
+                        </div>
+                    </div>
+                </div>
+
+                <div class="callout callout-tip mt-md">
+                    <h4>📊 Hıza Dayalı Basitleştirilmiş Yöntem</h4>
+                    <p>Güç ölçeri olmayan koşucular için hıza dayalı hesaplama kullanın:</p>
+                    <div class="formula">
+                        IF = Eşik Temposu / Ortalama Tempo
+                    </div>
+                    <p><strong>Örnek:</strong> CRS tempnuz 4:00/km ve 4:20/km'de koşuyorsanız:</p>
+                    <p>IF = 4:00 / 4:20 = 240/260 = 0.923</p>
+                    <p><em>Not: Daha yavaş tempo = daha düşük IF (hız hesaplamasından ters)</em></p>
+                </div>
+            </div>
+
+            <div>
+                <h3>Çalışılmış Örnek: Tempo Koşusu</h3>
+                <div class="example-box">
+                    <h4>Koşucu Profili:</h4>
+                    <ul>
+                        <li>CRS Temposu: 4:00/km (15 km/sa)</li>
+                        <li>CRS: 1 saat için eşik temposu</li>
+                    </ul>
+
+                    <h4>Antrenman Verileri:</h4>
+                    <ul>
+                        <li>Toplam Mesafe: 10 km</li>
+                        <li>Hareket Süresi: 43:20 (0.722 saat)</li>
+                        <li>Ortalama Tempo: 4:20/km</li>
+                    </ul>
+
+                    <h4>Adım 1: Ortalama Hızı Hesaplayın</h4>
+                    <div class="calculation">
+                        Hız = 10km / 0.722sa<br>
+                        Hız = <strong>13.85 km/sa</strong>
+                    </div>
+
+                    <h4>Adım 2: IF'yi Hesaplayın (Hız Yöntemi)</h4>
+                    <div class="calculation">
+                        IF = 13.85 / 15.0<br>
+                        IF = <strong>0.923</strong>
+                    </div>
+
+                    <h4>Adım 3: IF'yi Hesaplayın (Tempo Yöntemi)</h4>
+                    <div class="calculation">
+                        IF = 240 sn/km / 260 sn/km<br>
+                        IF = <strong>0.923</strong> ✓
+                    </div>
+
+                    <h4>Adım 4: rTSS'yi Hesaplayın</h4>
+                    <div class="calculation">
+                        rTSS = (0.923²) × 0.722 × 100<br>
+                        rTSS = 0.852 × 0.722 × 100<br>
+                        rTSS = <strong>61.5</strong>
+                    </div>
+
+                    <p class="mt-md"><strong>Yorum:</strong> Eşik-%10 tempoda bu 10km tempo koşusu 61.5 TSS üretti—kaliteli aerobik seansların tipik orta düzey bir antrenman uyarısı.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="intensity-guide mt-xl">
+            <h3>Koşu TSS Yoğunluk Kılavuzları</h3>
+            <table class="intensity-table">
+                <thead>
+                    <tr>
+                        <th>TSS Aralığı</th>
+                        <th>Yoğunluk Seviyesi</th>
+                        <th>Açıklama</th>
+                        <th>Örnek Antrenmanlar</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>&lt; 50</td>
+                        <td>Kolay Toparlanma</td>
+                        <td>Hafif koşu, konuşma temposu, aktif dinlenme</td>
+                        <td>30-45dk kolay koşu, toparlanma koşusu, hızlanmalar</td>
+                    </tr>
+                    <tr>
+                        <td>50-100</td>
+                        <td>Orta Antrenman</td>
+                        <td>Tipik günlük antrenman hacmi, aerobik temel</td>
+                        <td>60-90dk sabit koşu, uzun kolay koşu</td>
+                    </tr>
+                    <tr>
+                        <td>100-200</td>
+                        <td>Zor Antrenman</td>
+                        <td>Tempo/eşik çalışması içeren kaliteli seanslar</td>
+                        <td>90-120dk eşik intervallerle, ilerlemeli koşular</td>
+                    </tr>
+                    <tr>
+                        <td>200-300</td>
+                        <td>Çok Zor</td>
+                        <td>Kaliteli uzun koşular, yarış simülasyonu</td>
+                        <td>2-3sa uzun koşular, yarı maraton tempo çalışması</td>
+                    </tr>
+                    <tr>
+                        <td>&gt; 300</td>
+                        <td>Ekstrem</td>
+                        <td>Yarış günü, ultra mesafe etkinlikleri</td>
+                        <td>Maraton yarışı, 50k+ ultralar, Ironman koşuları</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="callout callout-tip mt-lg">
+            <h3>📊 Koşu Seviyesine Göre Haftalık TSS Hedefleri</h3>
+            <ul>
+                <li><strong>Başlangıç Koşucuları:</strong> 150-300 TSS/hafta (haftada 3-4 koşu)</li>
+                <li><strong>Orta Seviye Koşucular:</strong> 300-500 TSS/hafta (haftada 4-6 koşu)</li>
+                <li><strong>İleri Seviye Koşucular:</strong> 500-700 TSS/hafta (haftada 6-8 seans)</li>
+                <li><strong>Elit Koşucular:</strong> 700-900+ TSS/hafta (haftada 8-12 seans)</li>
+            </ul>
+            <p>Bunlar, aşağıda açıklanan kondisyon metriği olan Kronik Antrenman Yükünüze (CTL) doğru birikir.</p>
+        </div>
+    </div>
+</section>
+
+<section class="section section-alt">
+    <div class="container">
+        <h2 class="text-center mb-xl">Koşucular için CTL, ATL ve TSB'yi Anlamak</h2>
+        <p class="text-center lead">Performans Yönetim Grafiği (PMC), koşu antrenmanınızın tam hikayesini anlatan üç birbirine bağlı metriği görselleştirir: kondisyon, yorgunluk ve form.</p>
+
+        <div class="pmc-overview">
+            <div class="grid grid-3">
+                <div class="pmc-metric">
+                    <div class="metric-icon">📈</div>
+                    <h3>CTL - Kronik Antrenman Yükü</h3>
+                    <div class="metric-value-label">KONDİSYONUNUZ</div>
+                    <p>Günlük TSS'nin 42 günlük üstel ağırlıklı ortalaması. Tutarlı koşudan gelen uzun vadeli aerobik kondisyon ve antrenman adaptasyonunu temsil eder.</p>
+                    <div class="formula-small">
+                        Bugün CTL = Dün CTL + (Bugün TSS - Dün CTL) × (1/42)
+                    </div>
+                </div>
+
+                <div class="pmc-metric">
+                    <div class="metric-icon">⚡</div>
+                    <h3>ATL - Akut Antrenman Yükü</h3>
+                    <div class="metric-value-label">YORGUNLUĞUNUZ</div>
+                    <p>Günlük TSS'nin 7 günlük üstel ağırlıklı ortalaması. Son haftanın koşusundan gelen son antrenman stresini ve birikmiş yorgunluğu yakalar.</p>
+                    <div class="formula-small">
+                        Bugün ATL = Dün ATL + (Bugün TSS - Dün ATL) × (1/7)
+                    </div>
+                </div>
+
+                <div class="pmc-metric">
+                    <div class="metric-icon">🎯</div>
+                    <h3>TSB - Antrenman Stres Dengesi</h3>
+                    <div class="metric-value-label">FORMUNUZ</div>
+                    <p>Dünün kondisyonu ile yorgunluğu arasındaki fark. Bir sonraki kaliteli koşu veya yarışınızdan önce performans sergilemeye hazır olup olmadığınızı veya dinlenme ihtiyacınızı gösterir.</p>
+                    <div class="formula-small">
+                        TSB = Dün CTL - Dün ATL
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <h2>CTL: Koşu Kondisyon Metriğiniz</h2>
+
+        <div class="grid grid-2">
+            <div>
+                <h3>CTL Koşucular için Neyi Temsil Eder</h3>
+                <p>CTL, vücudunuzun son 6 hafta boyunca <em>adapte olduğu</em> koşu antrenman yükünü ölçer. Koşuda daha yüksek bir CTL şu anlama gelir:</p>
+                <ul>
+                    <li>Daha fazla aerobik kapasite ve koşu dayanıklılığı</li>
+                    <li>Daha fazla antrenman hacmi ve yoğunluğu kaldırma yeteneği</li>
+                    <li>Gelişmiş nöromüsküler ve metabolik adaptasyonlar</li>
+                    <li>Daha yüksek sürdürülebilir koşu performansı</li>
+                    <li>Yer teması kuvvetlerinden gelen darbe stresine daha iyi tolerans</li>
+                </ul>
+
+                <div class="callout callout-info">
+                    <h4>Zaman Sabiti: 42 Gün</h4>
+                    <p>CTL'nin yarı ömrü ~14.7 gündür. 42 gün sonra, tek bir antrenmanın etkisinin yaklaşık %36.8'i (1/e) kondisyon hesaplamanızda kalır.</p>
+                    <p>Bu yavaş bozunma, koşu kondisyonunun kademeli olarak oluştuğu ancak yavaş solduğu anlamına gelir—kısa toparlanma molalarında antrenman kaybına karşı koruma sağlar.</p>
+                </div>
+            </div>
+
+            <div>
+                <h3>Koşucular için Tipik CTL Değerleri</h3>
+                <div class="levels-comparison">
+                    <div class="level-card-compact">
+                        <strong>Başlangıç Koşucuları:</strong>
+                        <div class="value">15-35 CTL</div>
+                        <p>Temel kondisyon oluşturma, haftada 3-4 koşu</p>
+                    </div>
+
+                    <div class="level-card-compact">
+                        <strong>Orta Seviye Koşucular:</strong>
+                        <div class="value">35-60 CTL</div>
+                        <p>Tutarlı antrenman, haftada 4-6 koşu</p>
+                    </div>
+
+                    <div class="level-card-compact">
+                        <strong>İleri Seviye Koşucular:</strong>
+                        <div class="value">60-85 CTL</div>
+                        <p>Yüksek hacim, haftada 6-8 seans</p>
+                    </div>
+
+                    <div class="level-card-compact">
+                        <strong>Elit Koşucular:</strong>
+                        <div class="value">85-120+ CTL</div>
+                        <p>Profesyonel antrenman yükü, haftada 8-12+ seans</p>
+                    </div>
+                </div>
+
+                <div class="warning-box mt-md">
+                    <strong>⚠️ Koşucular için CTL Artış Hızı Limitleri</strong>
+                    <ul>
+                        <li><strong>Başlangıç:</strong> Haftada +2-4 CTL</li>
+                        <li><strong>Orta Seviye:</strong> Haftada +3-5 CTL</li>
+                        <li><strong>İleri Seviye:</strong> Haftada +5-7 CTL</li>
+                    </ul>
+                    <p>Bu oranları önemli ölçüde aşmak, koşunun yüksek darbe stresi nedeniyle yaralanma riskini artırır. "%10 kuralı" (haftalık hacmi en fazla %10 artırma) bu CTL artış oranlarıyla uyumludur.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section section-alt">
+    <div class="container">
+        <h2>ATL: Koşu Yorgunluk Metriğiniz</h2>
+
+        <div class="content-split">
+            <div>
+                <p>ATL kısa vadeli antrenman stresini takip eder—son haftanın koşusunda biriken yorgunluk. Zor antrenmanlardan sonra hızla yükselir ve dinlenme sırasında hızla düşer, bu da kaliteli seanslar arasında toparlanmayı yönetmek için onu gerekli kılar.</p>
+
+                <h3>Koşu Antrenmanında ATL Dinamikleri</h3>
+                <ul>
+                    <li><strong>Hızlı Tepki:</strong> 7 günlük zaman sabiti (yarı ömür ~2.4 gün)</li>
+                    <li><strong>Sivri Desen:</strong> Zor seanslardan sonra zıplar, toparlanma günlerinde düşer</li>
+                    <li><strong>Toparlanma Göstergesi:</strong> Düşen ATL = koşular arasında dağılan yorgunluk</li>
+                    <li><strong>Aşırı Antrenman Uyarısı:</strong> Kronik olarak yüksek ATL yetersiz toparlanma önerir</li>
+                    <li><strong>Darbe Stresi:</strong> Koşu ATL'si hem kardiyovasküler hem de kas-iskelet yorgunluğunu yansıtır</li>
+                </ul>
+
+                <div class="callout callout-science">
+                    <h4>🔬 Koşu için Kondisyon-Yorgunluk Modeli</h4>
+                    <p>Her antrenman koşusu iki etki üretir:</p>
+                    <ol>
+                        <li><strong>Kondisyon uyarısı</strong> (yavaş oluşan, uzun süren)</li>
+                        <li><strong>Yorgunluk</strong> (hızlı oluşan, hızlı dağılan)</li>
+                    </ol>
+                    <p>Koşu Performansı = Kondisyon - Yorgunluk. PMC bu modeli görselleştirir, koşucular için bilimsel periyotlaştırma ve optimal yarış zamanlaması sağlar.</p>
+                </div>
+            </div>
+
+            <div>
+                <h3>Sabit Durumda</h3>
+                <p>Koşu antrenman yükü haftadan haftaya tutarlı olduğunda, CTL ve ATL birleşir:</p>
+                <div class="example-box">
+                    <h4>Örnek: Tutarlı olarak haftada 400 TSS</h4>
+                    <div class="calculation">
+                        Günlük TSS ≈ 57<br>
+                        CTL yaklaşık ~57'ye yaklaşır<br>
+                        ATL yaklaşık ~57'ye yaklaşır<br>
+                        TSB 0'a yaklaşır
+                    </div>
+                    <p><strong>Yorum:</strong> Kondisyon ve yorgunluk dengelidir. Biriken açık veya fazlalık yok—sürdürülebilir antrenman bakımı.</p>
+                </div>
+
+                <h3>Gelişim Aşamalarında</h3>
+                <p>Koşu hacmini veya yoğunluğunu artırırken:</p>
+                <div class="example-box">
+                    <p>ATL, daha kısa zaman sabiti nedeniyle CTL'den <em>daha hızlı</em> yükselir. TSB negatif olur (yorgunluk > kondisyon). Bu normaldir ve verimlirdir—koşu adaptasyonlarını uyarmak için aşırı yük uyguluyorsunuz.</p>
+                </div>
+
+                <h3>Yarışlar için Dinlenme Döneminde</h3>
+                <p>Yarışmadan önce antrenman yükünü azaltırken:</p>
+                <div class="example-box">
+                    <p>ATL, CTL'den <em>daha hızlı</em> düşer. TSB pozitif olur (kondisyon > yorgunluk). Bu hedeftir—kondisyonu korurken performans sergilemeye hazır taze bacaklarla yarış gününe varın.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <h2>TSB: Kondisyon-Yorgunluk Dengeniz ve Yarış Hazırlığınız</h2>
+
+        <p class="lead">TSB (Antrenman Stres Dengesi), dünün kondisyonu (CTL) ile dünün yorgunluğu (ATL) arasındaki farktır. Koşucular için taze mi yoksa yorgun mu olduğunuzu, yarışa hazır mı yoksa toparlanma günlerine ihtiyacınız olup olmadığını gösterir.</p>
+
+        <div class="tsb-zones-container">
+            <h3>Koşucular için TSB Yorumlama Kılavuzu</h3>
+            <table class="tsb-zones-table">
+                <thead>
+                    <tr>
+                        <th>TSB Aralığı</th>
+                        <th>Durum</th>
+                        <th>Yorum</th>
+                        <th>Önerilen Eylem</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="tsb-critical">
+                        <td>&lt; -30</td>
+                        <td><strong>Aşırı Antrenman Riski</strong></td>
+                        <td>Aşırı yorgunluk. Yüksek yaralanma riski.</td>
+                        <td>Acil toparlanma gerekli. Hacmi %50+ azaltın. Dinlenme günlerini düşünün.</td>
+                    </tr>
+                    <tr class="tsb-training">
+                        <td>-20 ila -30</td>
+                        <td><strong>Optimal Antrenman Bloğu</strong></td>
+                        <td>Verimli aşırı yük. Kondisyon oluşturma.</td>
+                        <td>Plana devam edin. Aşırı ağrı veya yorgunluk belirtileri için izleyin.</td>
+                    </tr>
+                    <tr class="tsb-moderate">
+                        <td>-10 ila -20</td>
+                        <td><strong>Orta Antrenman Yükü</strong></td>
+                        <td>Standart antrenman birikimi.</td>
+                        <td>Normal antrenman. Kaliteli interval veya tempo seanslarını kaldırabilir.</td>
+                    </tr>
+                    <tr class="tsb-neutral">
+                        <td>-10 ila +15</td>
+                        <td><strong>Geçiş/Bakım</strong></td>
+                        <td>Dengeli durum. Hafif yorgunluk veya tazelik.</td>
+                        <td>B/C yarışları, test veya toparlanma haftaları için iyi.</td>
+                    </tr>
+                    <tr class="tsb-fresh">
+                        <td>+15 ila +25</td>
+                        <td><strong>Zirve Yarış Formu</strong></td>
+                        <td>Taze ve formda. Optimal performans penceresi.</td>
+                        <td>A-öncelikli yarışlar. Zirve koşu performansı beklenir.</td>
+                    </tr>
+                    <tr class="tsb-very-fresh">
+                        <td>+25 ila +35</td>
+                        <td><strong>Çok Taze</strong></td>
+                        <td>Son derece dinlenmiş. Kısa yarışlar için iyi.</td>
+                        <td>5K-10K yarışları, zaman denemeleri, pist etkinlikleri.</td>
+                    </tr>
+                    <tr class="tsb-detraining">
+                        <td>&gt; +35</td>
+                        <td><strong>Antrenman Kaybı</strong></td>
+                        <td>Hareketsizlikten kondisyon kaybı.</td>
+                        <td>Antrenmana devam edin. Uzun dinlenmeden kondisyon düşüşü.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="callout callout-tip mt-xl">
+            <h3>🎯 Koşu Yarış Mesafesine Göre Hedef TSB</h3>
+            <ul>
+                <li><strong>5K/10K Yarışları:</strong> TSB +20 ila +30 (tazelik için 7-10 günlük dinlenme dönemi)</li>
+                <li><strong>Yarı Maraton:</strong> TSB +15 ila +25 (10-14 günlük dinlenme dönemi)</li>
+                <li><strong>Maraton:</strong> TSB +10 ila +20 (hacim azaltılarak 14-21 günlük dinlenme dönemi)</li>
+                <li><strong>Ultra Maraton (50K+):</strong> TSB +5 ila +15 (7-14 günlük dinlenme dönemi, hacmi koruyun ancak yoğunluğu azaltın)</li>
+            </ul>
+            <p><em>Daha kısa yarışlar hız/güç için daha yüksek TSB gerektirir. Daha uzun yarışlar dayanıklılığı korumak için orta TSB gerektirir.</em></p>
+        </div>
+    </div>
+</section>
+
+<section class="section section-alt">
+    <div class="container container-narrow">
+        <h2>PMC Örneği: Koşu Antrenman Bloğu → Dinlenme Dönemi → Yarış</h2>
+
+        <div class="example-box">
+            <h3>12 Haftalık Maraton Antrenman Döngüsü</h3>
+
+            <h4>Hafta 1-3: Temel Oluşturma Aşaması</h4>
+            <ul>
+                <li>Haftalık TSS: 300 → 350 → 400</li>
+                <li>CTL: 40'tan → 48'e kademeli yükselme</li>
+                <li>ATL: Haftalık yükü takip eder, 45-60 arası dalgalanır</li>
+                <li>TSB: Hafif negatif (-5 ila -15), yönetilebilir antrenman stresi</li>
+                <li><strong>Odak:</strong> Aerobik temel gelişimi, kolay kilometreler</li>
+            </ul>
+
+            <h4>Hafta 4-7: Gelişim Aşaması 1</h4>
+            <ul>
+                <li>Haftalık TSS: 450 → 500 → 500 → 450 (toparlanma haftası)</li>
+                <li>CTL: 48'den → 60'a yükselmeye devam eder</li>
+                <li>ATL: Daha yüksek dalgalanmalar 55-75</li>
+                <li>TSB: Daha negatif (-15 ila -25), verimli aşırı yük</li>
+                <li><strong>Odak:</strong> Tempo koşuları, eşik intervalleri ekleme</li>
+            </ul>
+
+            <h4>Hafta 8-11: Zirve Aşaması</h4>
+            <ul>
+                <li>Haftalık TSS: 500 → 550 → 550 → 500</li>
+                <li>CTL: ~65'te zirve yapar</li>
+                <li>ATL: En yüksek değerler 65-80</li>
+                <li>TSB: En negatif (-20 ila -30), maksimum kondisyon uyarısı</li>
+                <li><strong>Odak:</strong> Maraton tempo segmentlerli uzun koşular, kaliteli seanslar</li>
+            </ul>
+
+            <h4>Hafta 12: Toparlanma Haftası</h4>
+            <ul>
+                <li>Haftalık TSS: 300 (%45 azalma)</li>
+                <li>CTL: ~63'e hafif düşüş (kondisyon korunur)</li>
+                <li>ATL: Hızla ~50'ye düşer</li>
+                <li>TSB: +5 ila +10'a yükselir (kısmi tazelik)</li>
+                <li><strong>Odak:</strong> Toparlanma koşuları, antrenman adaptasyonlarını özümseme</li>
+            </ul>
+
+            <h4>Hafta 13-14: Dinlenme Dönemi + Yarış Haftası</h4>
+            <ul>
+                <li>Hafta 13 TSS: 250, Hafta 14 TSS: 120 + yarış (~250 toplam)</li>
+                <li>CTL: ~60'a yumuşak düşüş (minimum kondisyon kaybı)</li>
+                <li>ATL: ~35'e hızlı düşüş (yorgunluk elimine edildi)</li>
+                <li>TSB: Yarış gününde <strong>+20 ila +25'te</strong> zirve yapar</li>
+                <li><strong>Sonuç:</strong> Taze bacaklar, korunan kondisyon, zirve maraton performansı için hazır</li>
+            </ul>
+        </div>
+
+        <div class="callout callout-success">
+            <h3>✅ Dinlenme Dönemi Koşucular için Neden İşler</h3>
+            <p>Farklı zaman sabitleri (CTL için 42 gün, ATL için 7 gün) koşu performansını optimize eden dinlenme dönemi etkisi yaratır:</p>
+            <ul>
+                <li>ATL hızlı tepki verir → Koşu yorgunluğu (hem kardiyovasküler hem de kas-iskelet) 7-10 gün içinde kaybolur</li>
+                <li>CTL yavaş tepki verir → Aerobik kondisyon ve koşu adaptasyonları haftalarca devam eder</li>
+                <li>Sonuç: Kondisyon kalırken yorgunluk ve ağrı kaybolur = zirve yarış performansı için taze bacaklar</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container container-narrow">
+        <h2>Pratik Koşu Antrenman Yükü Yönetimi Kılavuzları</h2>
+
+        <div class="guidelines-grid">
+            <div class="guideline-item">
+                <h3>1️⃣ Günlük rTSS'yi Tutarlı Takip Edin</h3>
+                <p>Doğru CTL/ATL/TSB trendleri oluşturmak için her koşunun TSS'sini kaydedin. Eksik veri kondisyon eğrisinde boşluklar yaratır. Tüm koşular için GPS saat verilerini veya hıza dayalı hesaplamaları kullanın.</p>
+            </div>
+
+            <div class="guideline-item">
+                <h3>2️⃣ CTL Artış Hızını Dikkatle İzleyin</h3>
+                <p>CTL'yi kademeli olarak artırın. Çoğu koşucu için haftalık 3-5 puanlık artış sürdürülebilirdir. 10+ puan atlamak, koşunun darbe stresi nedeniyle aşırı antrenman ve yaralanmaya davet çıkarır.</p>
+            </div>
+
+            <div class="guideline-item">
+                <h3>3️⃣ Toparlanma Haftalarını Planlayın</h3>
+                <p>Her 3-4 haftada bir, koşu hacmini bir hafta %30-40 azaltın. TSB'nin -5 ila +10'a yükselmesine izin verin. Bu kondisyon adaptasyonlarını pekiştirir ve kümülatif yorgunluğu önler.</p>
+            </div>
+
+            <div class="guideline-item">
+                <h3>4️⃣ Yarış Dinlenme Döneminizi Zamanlayın</h3>
+                <p>Çoğu mesafe için yarış günü TSB +15 ila +25'i hedefleyin. Yarış mesafesine ve mevcut TSB seviyesine bağlı olarak 10-21 gün önceden dinlenme dönemine başlayın.</p>
+            </div>
+
+            <div class="guideline-item">
+                <h3>5️⃣ Gelişim Sırasında Negatif TSB'yi Kabul Edin</h3>
+                <p>Gelişim aşamalarında -20 ila -25 TSB normaldir ve verimlirdir. Bu, aşırı yaralanma riski olmaksızın adaptasyon için antrenman uyarısı uyguladığınız anlamına gelir.</p>
+            </div>
+
+            <div class="guideline-item">
+                <h3>6️⃣ Molalardan Sonra CTL'yi Kademeli Yeniden Oluşturun</h3>
+                <p>Sakatlık veya sezon dışı molalardan sonra, önceki CTL'yi hemen yeniden başlatmaya çalışmayın. Yeniden yaralanmayı önlemek için haftada 3-5 CTL puanıyla kademeli olarak yeniden oluşturun.</p>
+            </div>
+
+            <div class="guideline-item">
+                <h3>7️⃣ Vücudunuzu Dinleyin</h3>
+                <p>TSS metrikleri kılavuzdur, mutlak kurallar değil. İyi TSB sayılarına rağmen sürekli ağrı, kötü uyku veya düşen performans ek toparlanma ihtiyacını gösterir.</p>
+            </div>
+
+            <div class="guideline-item">
+                <h3>8️⃣ Koşu Dışı Stresi Hesaba Katın</h3>
+                <p>Yaşam stresi, kötü uyku ve çapraz antrenman toparlanmayı etkiler. Koşuya özgü metrikler iyi görünse bile yüksek stresli dönemlerde TSS hedeflerini azaltmayı düşünün.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section section-alt">
+    <div class="container container-narrow">
+        <h2>Sıkça Sorulan Sorular: Koşu için Antrenman Stres Skoru</h2>
+
+        <div class="faq-container">
+            <div class="faq-item">
+                <h3>Güç ölçer olmadan koşu için TSS'yi nasıl hesaplarım?</h3>
+                <p>Hıza dayalı yöntemi kullanın: Eşik temponuzu koşu için ortalama temponuza bölerek Yoğunluk Faktörünüzü (IF) hesaplayın. Ardından formülü uygulayın: rTSS = (IF²) × Süre (saat) × 100. Örneğin, eşik temponuz 4:00/km ve 45 dakikada (0.75 saat) 4:30/km tempoda 10km koşarsanız: IF = 4:00/4:30 = 0.889, dolayısıyla rTSS = (0.889²) × 0.75 × 100 = 59.2 TSS.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Koşu TSS ile bisiklet TSS arasındaki fark nedir?</h3>
+                <p>Her ikisi de aynı IF² formülünü kullanır, ancak koşu TSS yer temasından gelen darbe kuvvetleri nedeniyle daha fazla toplam fiziksel stresi temsil eder. Haftada 400 TSS'li bir koşucu, haftada 600-700 TSS'li bir bisikletçiye benzer antrenman adaptasyonu yaşar. Koşu ayrıca güç watt yerine hız/tempo girdi olarak kullanır ve aynı TSS değeri için daha fazla toparlanma süresi gerektirir.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Maraton antrenmanı için iyi bir haftalık TSS nedir?</h3>
+                <p>Maraton antrenmanı için haftalık koşu TSS deneyime göre değişir: İlk maratona hazırlanan başlangıç seviyesi: 250-400 TSS/hafta; Orta seviye maratoncular: 400-550 TSS/hafta; İleri/yarışmacı maratoncular: 550-700+ TSS/hafta. Zirve haftalar ileri koşucular için 600-800 TSS'ye ulaşabilir, dinlenme dönemi haftaları 200-300 TSS'ye düşer.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Koşu TSS yüzme TSS'sinden nasıl farklıdır?</h3>
+                <p>Koşu TSS (rTSS), eşiğe göre hız/tempoya dayalı IF² formülünü kullanır. Yüzme TSS (sTSS), su direnci hızla kübik olarak arttığı için IF³ formülünü kullanır. Sporlar toparlanma ihtiyaçlarında da farklılık gösterir—koşu daha fazla toparlanma gerektiren yüksek darbe stresine sahipken, yüzme daha hızlı toparlanma ile düşük darbedir. Haftalık hacimler önemli ölçüde farklılık gösterir: koşucular tipik olarak 300-500 TSS biriktirirken yüzücüler benzer kondisyon seviyelerinde 500-800+ TSS'ye ulaşabilir.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>10K yarışı için hangi TSB'yi hedeflemeliyim?</h3>
+                <p>10K yarışı için yarış gününde +20 ila +30 TSB hedefleyin. Bunu elde etmek için 7-10 günlük dinlenme dönemine başlayın. Daha yüksek TSB (daha fazla tazelik), hız ve gücün dayanıklılıktan daha önemli olduğu daha kısa yarışlar için faydalıdır. Nöromüsküler keskinliği korumak için biraz yoğunluk koruyarak 10 gün önceden hacmi azaltmaya başlayın.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Kritik Koşu Hızımı bilmiyorsam TSS kullanabilir miyim?</h3>
+                <p><a href="/tr/crs/">Kritik Koşu Hızınızı (CRS)</a> veya eşik temponuzu bilmek doğru TSS hesaplaması için gereklidir çünkü IF bu değere göre hesaplanır. CRS'nizi bilmiyorsanız, bir eşik testi yapın: ya 30 dakikalık tam güç zaman denemesi (ortalama tempo = CRS) ya da 8km yarış temposu. Alternatif olarak, son yarış sürelerini kullanarak tahmin edin: 10K temposu + 10-15 saniye/km yaklaşık CRS'yi verir.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>CTL'mi ne kadar hızlı artırmalıyım?</h3>
+                <p>Başlangıç seviyesi için haftada 2-4 puan, orta seviye koşucular için 3-5 puan ve ileri koşucular için maksimum 5-7 puan koşu CTL'sini artırın. Bu, haftalık kilometre artışları için "%10 kuralı" ile uyumludur ve yaralanma riskini en aza indirir. Bu oranları aşmak, kaslara, tendonlara ve kemiklere gelen koşunun yüksek darbe stresi nedeniyle aşırı antrenman ve yaralanma riskini önemli ölçüde artırır.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Antrenman sırasında negatif TSB ne anlama gelir?</h3>
+                <p>Negatif TSB, yorgunluğun (ATL) kondisyonu (CTL) aştığı anlamına gelir—son antrenmanlardan şu anda yorgunsunuz. Bu, gelişim aşamalarında normaldir ve verimlirdir. -15 ila -25 TSB verimli antrenman stresini gösterir. -30'un altındaki TSB aşırı antrenman riskini ve toparlanma ihtiyacını önerir. Gelişim sırasındaki negatif TSB kondisyon adaptasyonları için uyarı yaratırken dinlenme dönemlerindeki pozitif TSB performansa izin verir.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container container-narrow text-center">
+        <h2>Koşu Antrenman Yükünüzde Ustalaşın</h2>
+        <p class="lead">Koşu için antrenman stres skorunu anlamak, öznel antrenmanı objektif, veri odaklı performans optimizasyonuna dönüştürür. Performans Yönetim Grafiği üzerinden rTSS, CTL, ATL ve TSB'yi izleyerek, kondisyon ilerlemesi, yorgunluk yönetimi ve zirve yarış zamanlaması üzerinde hassas kontrol kazanırsınız.</p>
+
+        <p>CTL-ATL-TSB sistemi aşırı antrenmanı önler, toparlanma zamanlamasını optimize eder ve hedef yarışlara zirve performans için mükemmel kondisyon-yorgunluk dengesiyle varmanızı sağlar.</p>
+
+        <div class="mt-xl">
+            <a href="/tr/crs/" class="btn btn-secondary">← Kritik Koşu Hızı (CRS)</a>
+            <a href="/tr/efficiency/" class="btn btn-primary">Koşu Verimlilik Metrikleri →</a>
+        </div>
+    </div>
+</section>
+    </main>
+
+    
+    <footer class="site-footer">
+    <div class="container">
+        <div class="footer-grid">
+            
+            <div>
+                <h3 class="mb-md">RunAnalytics - Running Analytics App | Critical Running Speed, TSS, CTL/ATL/TSB for iOS</h3>
+                <p class="text-secondary">Track Critical Running Speed, Training Stress Score, and performance metrics with RunAnalytics. Science-based iOS app for runners, triathletes &amp; coaches. 7-day free trial.</p>
+            </div>
+
+            
+            <div>
+                <h3 class="mb-md">Ana Sayfa</h3>
+                <ul class="footer-links">
+                    
+                    <li>
+                        <a href="/af/">Afrikaans</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ar/">العربية</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/bn/">বাংলা</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ca/">Català</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/de/">Deutsch</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/el/">Ελληνικά</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/en/">English</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/es/">Español</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/fa/">فارسی</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/fi/">Suomi</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/fr/">Français</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/hi/">हिन्दी</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/id/">Bahasa Indonesia</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/it/">Italiano</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ja/">日本語</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ko/">한국어</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ms/">Bahasa Melayu</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/nl/">Nederlands</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/no/">Norsk</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/pl/">Polski</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/pt/">Português</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ru/">Русский</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/sv/">Svenska</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/sw/">Kiswahili</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/tl/">Tagalog</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/tr/">Türkçe</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ur/">اردو</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/vi/">Tiếng Việt</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/zh/">中文</a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+
+        
+        <div class="footer-bottom">
+            <p class="text-sm text-secondary">
+                &copy; 2025 RunAnalytics - Running Analytics App | Critical Running Speed, TSS, CTL/ATL/TSB for iOS. Tüm hakları saklıdır
+            </p>
+            <ul class="footer-links">
+                <li><a href="/tr/privacy/">Gizlilik</a></li>
+                <li><a href="/tr/terms/">Şartlar</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+    
+    <div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="Cookie consent" aria-live="polite">
+    <div class="cookie-banner-content">
+        <div>
+            <p>Bu web sitesi deneyiminizi geliştirmek için çerezler kullanır.</p>
+            <a href="/tr/privacy/" class="text-sm">Daha fazla bilgi</a>
+        </div>
+        <div class="cookie-banner-actions">
+            <button id="cookie-decline" class="btn btn-secondary btn-small">Reddet</button>
+            <button id="cookie-accept" class="btn btn-primary btn-small">Kabul Et</button>
+        </div>
+    </div>
+</div>
+
+    
+    <script src="/assets/js/main.min.js"></script>
+    <script src="/assets/js/cookie-consent.min.js"></script>
+    <script src="/assets/js/lazy-load.min.js"></script>
+
+    
+    <script src="/assets/js/fuse.min.js"></script>
+    <script src="/assets/js/search.min.js"></script>
+
+    
+    
+    <script src="/assets/js/analytics.min.js" data-ga-id="G-Y138VB4523"></script>
+    
+</body>
+</html>

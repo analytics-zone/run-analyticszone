@@ -1,0 +1,1272 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+    <title>ماشین‌حساب TSS دویدن: بار تمرینی و PMC (CTL/ATL/TSB)</title>
+    <meta name="description" content="یادگیری محاسبه امتیاز استرس تمرین (rTSS) و متریک‌های نمودار مدیریت عملکرد (CTL، ATL، TSB). ردیابی علمی آمادگی و خستگی. شامل مثال‌های کاربردی، اهداف TSS هفتگی و استراتژی‌های کاهش.">
+    <meta name="author" content="Albert Arno">
+
+    
+    
+    <meta name="keywords" content="TSS دویدن, ماشین‌حساب rTSS, training stress score, CTL ATL TSB, PMC دویدن, بار تمرینی">
+    
+
+    
+    <link rel="canonical" href="https://run.analyticszone.app/fa/training-load/">
+
+    
+    
+    <meta property="article:published_time" content="2025-01-15T10:00:00Z">
+    <meta property="article:modified_time" content="2025-11-16T14:30:00Z">
+    <meta property="article:author" content="Albert Arno">
+    
+
+    
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://run.analyticszone.app/fa/training-load/">
+    <meta property="og:title" content="ماشین‌حساب TSS دویدن: بار تمرینی و PMC (CTL/ATL/TSB)">
+    <meta property="og:description" content="یادگیری محاسبه امتیاز استرس تمرین (rTSS) و متریک‌های نمودار مدیریت عملکرد (CTL، ATL، TSB). ردیابی علمی آمادگی و خستگی. شامل مثال‌های کاربردی، اهداف TSS هفتگی و استراتژی‌های کاهش.">
+    
+    <meta property="og:image" content="https://run.analyticszone.app/assets/images/run-analytics-og.jpg">
+    
+    <meta property="og:locale" content="fa_IR">
+    <meta property="og:site_name" content="RunAnalytics - Running Analytics App | Critical Running Speed, TSS, CTL/ATL/TSB for iOS">
+
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://run.analyticszone.app/fa/training-load/">
+    <meta name="twitter:title" content="ماشین‌حساب TSS دویدن: بار تمرینی و PMC (CTL/ATL/TSB)">
+    <meta name="twitter:description" content="یادگیری محاسبه امتیاز استرس تمرین (rTSS) و متریک‌های نمودار مدیریت عملکرد (CTL، ATL، TSB). ردیابی علمی آمادگی و خستگی. شامل مثال‌های کاربردی، اهداف TSS هفتگی و استراتژی‌های کاهش.">
+    
+    <meta name="twitter:image" content="https://run.analyticszone.app/assets/images/run-analytics-og.jpg">
+    
+
+    
+    
+    <link rel="alternate" hreflang="af" href="https://run.analyticszone.app/af/training-load/">
+    
+    <link rel="alternate" hreflang="ar" href="https://run.analyticszone.app/ar/training-load/">
+    
+    <link rel="alternate" hreflang="bn" href="https://run.analyticszone.app/bn/training-load/">
+    
+    <link rel="alternate" hreflang="ca" href="https://run.analyticszone.app/ca/training-load/">
+    
+    <link rel="alternate" hreflang="de" href="https://run.analyticszone.app/de/training-load/">
+    
+    <link rel="alternate" hreflang="el" href="https://run.analyticszone.app/el/training-load/">
+    
+    <link rel="alternate" hreflang="en" href="https://run.analyticszone.app/en/training-load/">
+    
+    <link rel="alternate" hreflang="es" href="https://run.analyticszone.app/es/training-load/">
+    
+    <link rel="alternate" hreflang="fa" href="https://run.analyticszone.app/fa/training-load/">
+    
+    <link rel="alternate" hreflang="fi" href="https://run.analyticszone.app/fi/training-load/">
+    
+    <link rel="alternate" hreflang="fr" href="https://run.analyticszone.app/fr/training-load/">
+    
+    <link rel="alternate" hreflang="hi" href="https://run.analyticszone.app/hi/training-load/">
+    
+    <link rel="alternate" hreflang="id" href="https://run.analyticszone.app/id/training-load/">
+    
+    <link rel="alternate" hreflang="it" href="https://run.analyticszone.app/it/training-load/">
+    
+    <link rel="alternate" hreflang="ja" href="https://run.analyticszone.app/ja/training-load/">
+    
+    <link rel="alternate" hreflang="ko" href="https://run.analyticszone.app/ko/training-load/">
+    
+    <link rel="alternate" hreflang="ms" href="https://run.analyticszone.app/ms/training-load/">
+    
+    <link rel="alternate" hreflang="nl" href="https://run.analyticszone.app/nl/training-load/">
+    
+    <link rel="alternate" hreflang="no" href="https://run.analyticszone.app/no/training-load/">
+    
+    <link rel="alternate" hreflang="pl" href="https://run.analyticszone.app/pl/training-load/">
+    
+    <link rel="alternate" hreflang="pt" href="https://run.analyticszone.app/pt/training-load/">
+    
+    <link rel="alternate" hreflang="ru" href="https://run.analyticszone.app/ru/training-load/">
+    
+    <link rel="alternate" hreflang="sv" href="https://run.analyticszone.app/sv/training-load/">
+    
+    <link rel="alternate" hreflang="sw" href="https://run.analyticszone.app/sw/training-load/">
+    
+    <link rel="alternate" hreflang="tl" href="https://run.analyticszone.app/tl/training-load/">
+    
+    <link rel="alternate" hreflang="tr" href="https://run.analyticszone.app/tr/training-load/">
+    
+    <link rel="alternate" hreflang="ur" href="https://run.analyticszone.app/ur/training-load/">
+    
+    <link rel="alternate" hreflang="vi" href="https://run.analyticszone.app/vi/training-load/">
+    
+    <link rel="alternate" hreflang="zh" href="https://run.analyticszone.app/zh/training-load/">
+    
+    <link rel="alternate" hreflang="x-default" href="https://run.analyticszone.app/en/training-load/">
+
+    
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/icons/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/icons/apple-touch-icon.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#0066CC">
+
+    
+    <link rel="stylesheet" href="/assets/css/main.min.css">
+
+    
+    
+
+    
+    
+
+    
+    
+</head>
+<body>
+    
+    <a href="#main-content" class="skip-link">رفتن به محتوا</a>
+
+    
+    <header class="site-header">
+    <div class="container">
+        <div class="header-inner">
+            
+            <a href="/fa/" class="site-logo">
+                <picture>
+                    
+                    <source srcset="/assets/images/logo-dark.webp" type="image/webp"
+                        media="(prefers-color-scheme: dark)">
+                    
+                    <source srcset="/assets/images/logo-dark.png" type="image/png" media="(prefers-color-scheme: dark)">
+                    
+                    <source srcset="/assets/images/logo.webp" type="image/webp">
+                    
+                    <img src="/assets/images/logo.png" alt="RunAnalytics - Running Analytics App | Critical Running Speed, TSS, CTL/ATL/TSB for iOS" width="40" height="40">
+                </picture>
+                <span class="logo-text">RunAnalytics</span>
+            </a>
+
+            
+            <nav class="nav-primary" id="nav-primary" role="navigation" aria-label="Main navigation">
+                <ul>
+                    
+                    <li>
+                        
+                        
+                        <a href="/fa/"  aria-current="">
+                            خانه
+                        </a>
+                        
+                        </li>
+                        
+                    <li class="has-submenu" >
+                        
+                        
+                        
+                        
+                        <span class="nav-label">یادگیری</span>
+                        
+                        <ul class="submenu">
+                            
+                            <li>
+                                <a href="/fa/getting-started/" 
+                                    aria-current="">
+                                    شروع کنید
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/fa/crs/" 
+                                    aria-current="">
+                                    CRS
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/fa/training-zones/" 
+                                    aria-current="">
+                                    زون‌های تمرین
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/fa/training-load/" class="active" 
+                                    aria-current="page">
+                                    بار تمرینی
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/fa/stss-calculator/" 
+                                    aria-current="">
+                                    ماشین‌حساب sTSS
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        
+                        </li>
+                        
+                    <li class="has-submenu" >
+                        
+                        
+                        
+                        
+                        <span class="nav-label">علم</span>
+                        
+                        <ul class="submenu">
+                            
+                            <li>
+                                <a href="/fa/research/" 
+                                    aria-current="">
+                                    تحقیقات
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/fa/formulas/" 
+                                    aria-current="">
+                                    فرمول‌ها
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/fa/efficiency/" 
+                                    aria-current="">
+                                    کارایی
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/fa/stride-mechanics/" 
+                                    aria-current="">
+                                    مکانیک گام
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/fa/bibliography/" 
+                                    aria-current="">
+                                    کتاب‌شناسی
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        
+                        </li>
+                        
+                    <li>
+                        
+                        
+                        <a href="/fa/contact/"  aria-current="">
+                            تماس
+                        </a>
+                        
+                        </li>
+                        
+                </ul>
+
+                
+                <div class="search-container">
+                    <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" aria-hidden="true">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.35-4.35"></path>
+                    </svg>
+                    <input type="search" id="site-search" class="search-input" aria-expanded="false"
+                        aria-haspopup="listbox" aria-autocomplete="list" autocomplete="off" spellcheck="false" />
+                    <div id="search-results" class="search-results hidden" role="region" aria-live="polite"></div>
+                </div>
+
+                
+                <select class="language-selector" id="language-select" aria-label="انتخاب زبان">
+                    
+                    <option value="af" >
+                        Afrikaans
+                    </option>
+                    
+                    <option value="ar" >
+                        العربية
+                    </option>
+                    
+                    <option value="bn" >
+                        বাংলা
+                    </option>
+                    
+                    <option value="ca" >
+                        Català
+                    </option>
+                    
+                    <option value="de" >
+                        Deutsch
+                    </option>
+                    
+                    <option value="el" >
+                        Ελληνικά
+                    </option>
+                    
+                    <option value="en" >
+                        English
+                    </option>
+                    
+                    <option value="es" >
+                        Español
+                    </option>
+                    
+                    <option value="fa" selected>
+                        فارسی
+                    </option>
+                    
+                    <option value="fi" >
+                        Suomi
+                    </option>
+                    
+                    <option value="fr" >
+                        Français
+                    </option>
+                    
+                    <option value="hi" >
+                        हिन्दी
+                    </option>
+                    
+                    <option value="id" >
+                        Bahasa Indonesia
+                    </option>
+                    
+                    <option value="it" >
+                        Italiano
+                    </option>
+                    
+                    <option value="ja" >
+                        日本語
+                    </option>
+                    
+                    <option value="ko" >
+                        한국어
+                    </option>
+                    
+                    <option value="ms" >
+                        Bahasa Melayu
+                    </option>
+                    
+                    <option value="nl" >
+                        Nederlands
+                    </option>
+                    
+                    <option value="no" >
+                        Norsk
+                    </option>
+                    
+                    <option value="pl" >
+                        Polski
+                    </option>
+                    
+                    <option value="pt" >
+                        Português
+                    </option>
+                    
+                    <option value="ru" >
+                        Русский
+                    </option>
+                    
+                    <option value="sv" >
+                        Svenska
+                    </option>
+                    
+                    <option value="sw" >
+                        Kiswahili
+                    </option>
+                    
+                    <option value="tl" >
+                        Tagalog
+                    </option>
+                    
+                    <option value="tr" >
+                        Türkçe
+                    </option>
+                    
+                    <option value="ur" >
+                        اردو
+                    </option>
+                    
+                    <option value="vi" >
+                        Tiếng Việt
+                    </option>
+                    
+                    <option value="zh" >
+                        中文
+                    </option>
+                    
+                </select>
+
+                
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode"
+                    title="Toggle dark/light mode">
+                    <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                    <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+
+                
+                
+                <a href="https://apps.apple.com/es/app/runanalytics/id6754524015" class="header-download-btn" target="_blank" rel="noopener"
+                    aria-label="Download on App Store">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                        fill="currentColor">
+                        <path
+                            d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z" />
+                    </svg>
+                    <span class="download-text">Download</span>
+                </a>
+                
+            </nav>
+
+            
+            <button class="menu-toggle" id="menu-toggle" aria-label="تغییر منو"
+                aria-expanded="false" aria-controls="nav-primary">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </div>
+</header>
+
+    
+    <main id="main-content" class="main-content">
+        <section class="hero hero-small">
+    <div class="container">
+        <h1>امتیاز استرس تمرینی برای دویدن: توضیح TSS، CTL، ATL و TSB</h1>
+        <p class="lead">مدیریت بار تمرینی دویدن با نمودارهای مدیریت عملکرد</p>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container container-narrow">
+        <div class="callout callout-success">
+            <h3>🎯 نکات کلیدی: امتیاز استرس تمرینی برای دویدن</h3>
+            <ul>
+                <li><strong>امتیاز استرس تمرینی (TSS)</strong> میزان تأثیر هر جلسه دویدن بر بدن شما را با ترکیب شدت و مدت زمان در یک معیار واحد کمی می‌کند</li>
+                <li><strong>CTL (بار تمرینی مزمن)</strong> آمادگی جسمانی بلندمدت شما را که طی ۴۲ روز دویدن مداوم ایجاد شده است، اندازه‌گیری می‌کند</li>
+                <li><strong>ATL (بار تمرینی حاد)</strong> خستگی اخیر ناشی از ۷ روز گذشته تمرین را ردیابی می‌کند</li>
+                <li><strong>TSB (تعادل استرس تمرینی)</strong> تعادل آمادگی-خستگی شما و آمادگی برای مسابقه یا نیاز به بازیابی را نشان می‌دهد</li>
+                <li>درک بار تمرینی دویدن از تمرین بیش از حد جلوگیری می‌کند و زمان‌بندی عملکرد را از طریق دوره‌بندی مبتنی بر داده بهینه می‌سازد</li>
+            </ul>
+            <p><em>پایه: محاسبات TSS به <a href="/fa/crs/">سرعت بحرانی دویدن (CRS)</a> شما به عنوان نقطه مرجع آستانه نیاز دارند.</em></p>
+        </div>
+    </div>
+</section>
+
+<section class="section section-alt">
+    <div class="container container-narrow">
+        <h2>امتیاز استرس تمرینی (TSS) برای دویدن چیست؟</h2>
+        <p class="lead">روش‌شناسی امتیاز استرس تمرینی دویدن به سؤال مهم پاسخ می‌دهد: <strong>آن تمرین چقدر سخت بود؟</strong> نه فقط فاصله یا زمان، بلکه استرس فیزیولوژیکی واقعی که هر جلسه دویدن بر بدن شما وارد می‌کند.</p>
+
+        <p>سیستم امتیاز استرس تمرینی (TSS) که توسط دکتر اندرو کوگان برای دوچرخه‌سواری توسعه یافته است، برای دویدن تطبیق داده شده تا روشی استاندارد برای کمی‌سازی شدت و مدت تمرین در یک عدد واحد ارائه دهد. برای دوندگان، ما از <strong>امتیاز استرس تمرینی دویدن (rTSS)</strong> بر اساس سرعت نسبت به آستانه شما استفاده می‌کنیم.</p>
+
+        <div class="callout callout-info">
+            <h3>استاندارد TSS برای دویدن</h3>
+            <p>یک ساعت با <a href="/fa/crs/">سرعت بحرانی دویدن (CRS)</a> یا سرعت آستانه شما = <strong>۱۰۰ TSS</strong></p>
+            <p>این استانداردسازی امکان مقایسه را در تمرینات، هفته‌ها و چرخه‌های تمرینی فراهم می‌کند. یک دویدن آستانه ۳۰ دقیقه‌ای = حدود ۵۰ TSS. یک دویدن آستانه ۲ ساعته = حدود ۲۰۰ TSS.</p>
+        </div>
+
+        <h3>TSS دویدن در مقابل TSS دوچرخه‌سواری: تفاوت‌های کلیدی</h3>
+        <p>در حالی که هر دو ورزش از TSS استفاده می‌کنند، بار تمرینی دویدن ویژگی‌های منحصر به فردی دارد:</p>
+
+        <table class="comparison-table">
+            <thead>
+                <tr>
+                    <th>جنبه</th>
+                    <th>TSS دوچرخه‌سواری</th>
+                    <th>TSS دویدن (rTSS)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>ورودی اصلی</strong></td>
+                    <td>قدرت (وات)</td>
+                    <td>سرعت (دقیقه/کیلومتر یا دقیقه/مایل)</td>
+                </tr>
+                <tr>
+                    <td><strong>استرس ضربه</strong></td>
+                    <td>پایین (نشسته)</td>
+                    <td>بالا (نیروهای تماس زمین)</td>
+                </tr>
+                <tr>
+                    <td><strong>نیازهای بازیابی</strong></td>
+                    <td>کمتر برای همان TSS</td>
+                    <td>بیشتر به دلیل استرس اسکلتی-عضلانی</td>
+                </tr>
+                <tr>
+                    <td><strong>حجم هفتگی</strong></td>
+                    <td>۵۰۰-۸۰۰+ TSS معمول</td>
+                    <td>۳۰۰-۵۰۰ TSS معمول (همان سطح آمادگی)</td>
+                </tr>
+                <tr>
+                    <td><strong>فرمول</strong></td>
+                    <td>IF² × مدت زمان × ۱۰۰</td>
+                    <td>IF² × مدت زمان × ۱۰۰</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="callout callout-warning">
+            <h4>⚠️ مهم: ضربه بالاتر دویدن</h4>
+            <p>همان مقدار TSS در دویدن نسبت به دوچرخه‌سواری استرس فیزیکی بیشتری را نشان می‌دهد به دلیل نیروهای ضربه. دونده‌ای که ۴۰۰ TSS در هفته جمع می‌کند، سازگاری تمرینی مشابه دوچرخه‌سواری با ۶۰۰-۷۰۰ TSS در هفته را تجربه می‌کند. بار تمرینی دویدن باید هم استرس قلبی-عروقی و هم استرس اسکلتی-عضلانی را در نظر بگیرد.</p>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <h2 class="text-center mb-xl">محاسبه امتیاز استرس تمرینی دویدن (rTSS)</h2>
+
+        <div class="grid grid-2">
+            <div>
+                <h3>فرمول برای TSS دویدن</h3>
+                <div class="formula-box">
+                    <div class="formula">
+                        rTSS = (IF²) × مدت زمان (ساعت) × ۱۰۰
+                    </div>
+                    <div class="formula-explanation">
+                        <p>که ضریب شدت (IF) عبارت است از:</p>
+                        <div class="formula">
+                            IF = NGS / CRS
+                        </div>
+                        <p>سرعت درجه‌بندی شده نرمال (NGS) تغییرپذیری سرعت و ارتفاع را در نظر می‌گیرد:</p>
+                        <div class="formula">
+                            NGS ≈ سرعت متوسط دویدن (تنظیم شده برای زمین)
+                        </div>
+                    </div>
+                </div>
+
+                <div class="callout callout-tip mt-md">
+                    <h4>📊 روش ساده شده مبتنی بر سرعت</h4>
+                    <p>برای دوندگانی که پاورمتر ندارند، از محاسبه مبتنی بر سرعت استفاده کنید:</p>
+                    <div class="formula">
+                        IF = سرعت آستانه / سرعت متوسط
+                    </div>
+                    <p><strong>مثال:</strong> اگر سرعت CRS شما ۴:۰۰/کیلومتر است و شما با ۴:۲۰/کیلومتر می‌دوید:</p>
+                    <p>IF = ۴:۰۰ / ۴:۲۰ = ۲۴۰/۲۶۰ = ۰.۹۲۳</p>
+                    <p><em>توجه: سرعت کندتر = IF پایین‌تر (معکوس محاسبه سرعت)</em></p>
+                </div>
+            </div>
+
+            <div>
+                <h3>مثال کاربردی: دویدن تمپو</h3>
+                <div class="example-box">
+                    <h4>مشخصات دونده:</h4>
+                    <ul>
+                        <li>سرعت CRS: ۴:۰۰/کیلومتر (۱۵ کیلومتر/ساعت)</li>
+                        <li>CRS: سرعت آستانه برای ۱ ساعت</li>
+                    </ul>
+
+                    <h4>داده‌های تمرین:</h4>
+                    <ul>
+                        <li>مسافت کل: ۱۰ کیلومتر</li>
+                        <li>زمان حرکت: ۴۳:۲۰ (۰.۷۲۲ ساعت)</li>
+                        <li>سرعت متوسط: ۴:۲۰/کیلومتر</li>
+                    </ul>
+
+                    <h4>مرحله ۱: محاسبه سرعت متوسط</h4>
+                    <div class="calculation">
+                        سرعت = ۱۰ کیلومتر / ۰.۷۲۲ ساعت<br>
+                        سرعت = <strong>۱۳.۸۵ کیلومتر/ساعت</strong>
+                    </div>
+
+                    <h4>مرحله ۲: محاسبه IF (روش سرعت)</h4>
+                    <div class="calculation">
+                        IF = ۱۳.۸۵ / ۱۵.۰<br>
+                        IF = <strong>۰.۹۲۳</strong>
+                    </div>
+
+                    <h4>مرحله ۳: محاسبه IF (روش سرعت دویدن)</h4>
+                    <div class="calculation">
+                        IF = ۲۴۰ ثانیه/کیلومتر / ۲۶۰ ثانیه/کیلومتر<br>
+                        IF = <strong>۰.۹۲۳</strong> ✓
+                    </div>
+
+                    <h4>مرحله ۴: محاسبه rTSS</h4>
+                    <div class="calculation">
+                        rTSS = (۰.۹۲۳²) × ۰.۷۲۲ × ۱۰۰<br>
+                        rTSS = ۰.۸۵۲ × ۰.۷۲۲ × ۱۰۰<br>
+                        rTSS = <strong>۶۱.۵</strong>
+                    </div>
+
+                    <p class="mt-md"><strong>تفسیر:</strong> این دویدن تمپو ۱۰ کیلومتری با سرعت آستانه-۱۰٪، ۶۱.۵ TSS تولید کرد—یک محرک تمرینی متوسط معمول در جلسات هوازی با کیفیت.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="intensity-guide mt-xl">
+            <h3>راهنمای شدت TSS دویدن</h3>
+            <table class="intensity-table">
+                <thead>
+                    <tr>
+                        <th>محدوده TSS</th>
+                        <th>سطح شدت</th>
+                        <th>توضیحات</th>
+                        <th>نمونه تمرینات</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>&lt; ۵۰</td>
+                        <td>بازیابی آسان</td>
+                        <td>دویدن سبک، سرعت مکالمه، استراحت فعال</td>
+                        <td>دویدن آسان ۳۰-۴۵ دقیقه، آرام‌دویدن بازیابی، استرایدها</td>
+                    </tr>
+                    <tr>
+                        <td>۵۰-۱۰۰</td>
+                        <td>تمرین متوسط</td>
+                        <td>حجم تمرینی روزانه معمول، پایه هوازی</td>
+                        <td>دویدن ثابت ۶۰-۹۰ دقیقه، دویدن طولانی آسان</td>
+                    </tr>
+                    <tr>
+                        <td>۱۰۰-۲۰۰</td>
+                        <td>تمرین سخت</td>
+                        <td>جلسات با کیفیت با کار تمپو/آستانه</td>
+                        <td>۹۰-۱۲۰ دقیقه با اینتروال‌های آستانه، دویدن‌های پیشرونده</td>
+                    </tr>
+                    <tr>
+                        <td>۲۰۰-۳۰۰</td>
+                        <td>بسیار سخت</td>
+                        <td>دویدن‌های طولانی با کیفیت، شبیه‌سازی مسابقه</td>
+                        <td>دویدن‌های طولانی ۲-۳ ساعته، کار با سرعت نیم‌ماراتن</td>
+                    </tr>
+                    <tr>
+                        <td>&gt; ۳۰۰</td>
+                        <td>شدید</td>
+                        <td>روز مسابقه، رویدادهای فوق‌العاده طولانی</td>
+                        <td>مسابقه ماراتن، اولتراهای ۵۰ کیلومتری به بالا، دویدن‌های آیرونمن</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="callout callout-tip mt-lg">
+            <h3>📊 اهداف TSS هفتگی بر اساس سطح دویدن</h3>
+            <ul>
+                <li><strong>دوندگان مبتدی:</strong> ۱۵۰-۳۰۰ TSS در هفته (۳-۴ جلسه دویدن در هفته)</li>
+                <li><strong>دوندگان متوسط:</strong> ۳۰۰-۵۰۰ TSS در هفته (۴-۶ جلسه دویدن در هفته)</li>
+                <li><strong>دوندگان پیشرفته:</strong> ۵۰۰-۷۰۰ TSS در هفته (۶-۸ جلسه در هفته)</li>
+                <li><strong>دوندگان نخبه:</strong> ۷۰۰-۹۰۰+ TSS در هفته (۸-۱۲ جلسه در هفته)</li>
+            </ul>
+            <p>این‌ها به سمت بار تمرینی مزمن (CTL) شما جمع می‌شوند، معیار آمادگی که در زیر توضیح داده شده است.</p>
+        </div>
+    </div>
+</section>
+
+<section class="section section-alt">
+    <div class="container">
+        <h2 class="text-center mb-xl">درک CTL، ATL و TSB برای دوندگان</h2>
+        <p class="text-center lead">نمودار مدیریت عملکرد (PMC) سه معیار به هم پیوسته را تصویرسازی می‌کند که داستان کامل تمرین دویدن شما را بیان می‌کنند: آمادگی، خستگی و فرم.</p>
+
+        <div class="pmc-overview">
+            <div class="grid grid-3">
+                <div class="pmc-metric">
+                    <div class="metric-icon">📈</div>
+                    <h3>CTL - بار تمرینی مزمن</h3>
+                    <div class="metric-value-label">آمادگی جسمانی شما</div>
+                    <p>میانگین موزون نمایی ۴۲ روزه TSS روزانه. نشان‌دهنده آمادگی هوازی بلندمدت و سازگاری تمرینی ناشی از دویدن مداوم است.</p>
+                    <div class="formula-small">
+                        CTL امروز = CTL دیروز + (TSS امروز - CTL دیروز) × (۱/۴۲)
+                    </div>
+                </div>
+
+                <div class="pmc-metric">
+                    <div class="metric-icon">⚡</div>
+                    <h3>ATL - بار تمرینی حاد</h3>
+                    <div class="metric-value-label">خستگی شما</div>
+                    <p>میانگین موزون نمایی ۷ روزه TSS روزانه. استرس تمرینی اخیر و خستگی انباشته شده از هفته گذشته دویدن را ثبت می‌کند.</p>
+                    <div class="formula-small">
+                        ATL امروز = ATL دیروز + (TSS امروز - ATL دیروز) × (۱/۷)
+                    </div>
+                </div>
+
+                <div class="pmc-metric">
+                    <div class="metric-icon">🎯</div>
+                    <h3>TSB - تعادل استرس تمرینی</h3>
+                    <div class="metric-value-label">فرم شما</div>
+                    <p>تفاوت بین آمادگی دیروز و خستگی. آمادگی برای عملکرد یا نیاز به استراحت قبل از دویدن یا مسابقه با کیفیت بعدی شما را نشان می‌دهد.</p>
+                    <div class="formula-small">
+                        TSB = CTL دیروز - ATL دیروز
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <h2>CTL: معیار آمادگی دویدن شما</h2>
+
+        <div class="grid grid-2">
+            <div>
+                <h3>CTL برای دوندگان چه چیزی را نشان می‌دهد</h3>
+                <p>CTL بار تمرینی دویدنی را که بدن شما طی ۶ هفته گذشته <em>با آن سازگار شده</em> کمی می‌کند. CTL بالاتر در دویدن به معنای:</p>
+                <ul>
+                    <li>ظرفیت هوازی و استقامت دویدن بیشتر</li>
+                    <li>توانایی تحمل حجم و شدت تمرینی بیشتر</li>
+                    <li>بهبود سازگاری‌های عصبی-عضلانی و متابولیک</li>
+                    <li>عملکرد دویدن پایدار بالاتر</li>
+                    <li>تحمل بهتر استرس ضربه ناشی از نیروهای تماس زمین</li>
+                </ul>
+
+                <div class="callout callout-info">
+                    <h4>ثابت زمانی: ۴۲ روز</h4>
+                    <p>CTL نیمه‌عمر حدود ۱۴.۷ روزه دارد. پس از ۴۲ روز، تقریباً ۳۶.۸٪ (۱/e) از تأثیر یک تمرین واحد در محاسبه آمادگی شما باقی می‌ماند.</p>
+                    <p>این کاهش آهسته به این معنی است که آمادگی دویدن به تدریج ایجاد می‌شود اما همچنین به کندی محو می‌شود—محافظت در برابر کاهش آمادگی در طول استراحت‌های کوتاه بازیابی.</p>
+                </div>
+            </div>
+
+            <div>
+                <h3>مقادیر معمول CTL برای دوندگان</h3>
+                <div class="levels-comparison">
+                    <div class="level-card-compact">
+                        <strong>دوندگان مبتدی:</strong>
+                        <div class="value">۱۵-۳۵ CTL</div>
+                        <p>ایجاد آمادگی پایه، ۳-۴ جلسه دویدن در هفته</p>
+                    </div>
+
+                    <div class="level-card-compact">
+                        <strong>دوندگان متوسط:</strong>
+                        <div class="value">۳۵-۶۰ CTL</div>
+                        <p>تمرین مداوم، ۴-۶ جلسه دویدن در هفته</p>
+                    </div>
+
+                    <div class="level-card-compact">
+                        <strong>دوندگان پیشرفته:</strong>
+                        <div class="value">۶۰-۸۵ CTL</div>
+                        <p>حجم بالا، ۶-۸ جلسه در هفته</p>
+                    </div>
+
+                    <div class="level-card-compact">
+                        <strong>دوندگان نخبه:</strong>
+                        <div class="value">۸۵-۱۲۰+ CTL</div>
+                        <p>بار تمرینی حرفه‌ای، ۸-۱۲+ جلسه در هفته</p>
+                    </div>
+                </div>
+
+                <div class="warning-box mt-md">
+                    <strong>⚠️ محدودیت‌های نرخ افزایش CTL برای دوندگان</strong>
+                    <ul>
+                        <li><strong>مبتدیان:</strong> ۲-۴+ CTL در هفته</li>
+                        <li><strong>متوسط:</strong> ۳-۵+ CTL در هفته</li>
+                        <li><strong>پیشرفته:</strong> ۵-۷+ CTL در هفته</li>
+                    </ul>
+                    <p>فراتر رفتن از این نرخ‌ها به طور قابل توجهی خطر آسیب را افزایش می‌دهد به دلیل استرس ضربه بالای دویدن. "قانون ۱۰٪" (افزایش حجم هفتگی حداکثر ۱۰٪) با این نرخ‌های افزایش CTL همسو است.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section section-alt">
+    <div class="container">
+        <h2>ATL: معیار خستگی دویدن شما</h2>
+
+        <div class="content-split">
+            <div>
+                <p>ATL استرس تمرینی کوتاه‌مدت را ردیابی می‌کند—خستگی انباشته شده در هفته گذشته دویدن. پس از تمرین سخت به سرعت افزایش می‌یابد و در طول استراحت به سرعت کاهش می‌یابد، که آن را برای مدیریت بازیابی بین جلسات با کیفیت ضروری می‌کند.</p>
+
+                <h3>دینامیک ATL در تمرین دویدن</h3>
+                <ul>
+                    <li><strong>پاسخ سریع:</strong> ثابت زمانی ۷ روزه (نیمه‌عمر حدود ۲.۴ روز)</li>
+                    <li><strong>الگوی نوسانی:</strong> پس از جلسات سخت جهش می‌کند، در روزهای بازیابی کاهش می‌یابد</li>
+                    <li><strong>شاخص بازیابی:</strong> کاهش ATL = خستگی در حال از بین رفتن بین دویدن‌ها</li>
+                    <li><strong>هشدار تمرین بیش از حد:</strong> ATL مزمن بالا نشان‌دهنده بازیابی ناکافی است</li>
+                    <li><strong>استرس ضربه:</strong> ATL دویدن هم خستگی قلبی-عروقی و هم اسکلتی-عضلانی را منعکس می‌کند</li>
+                </ul>
+
+                <div class="callout callout-science">
+                    <h4>🔬 مدل آمادگی-خستگی برای دویدن</h4>
+                    <p>هر جلسه تمرین دویدن دو اثر ایجاد می‌کند:</p>
+                    <ol>
+                        <li><strong>محرک آمادگی</strong> (آهسته ساز، طولانی مدت)</li>
+                        <li><strong>خستگی</strong> (سریع ساز، سریع از بین رونده)</li>
+                    </ol>
+                    <p>عملکرد دویدن = آمادگی - خستگی. PMC این مدل را تصویرسازی می‌کند و دوره‌بندی علمی و زمان‌بندی بهینه مسابقه را برای دوندگان امکان‌پذیر می‌سازد.</p>
+                </div>
+            </div>
+
+            <div>
+                <h3>در حالت پایدار</h3>
+                <p>وقتی بار تمرینی دویدن هفته به هفته ثابت است، CTL و ATL همگرا می‌شوند:</p>
+                <div class="example-box">
+                    <h4>مثال: ۴۰۰ TSS در هفته به طور مداوم</h4>
+                    <div class="calculation">
+                        TSS روزانه ≈ ۵۷<br>
+                        CTL به حدود ۵۷ نزدیک می‌شود<br>
+                        ATL به حدود ۵۷ نزدیک می‌شود<br>
+                        TSB به ۰ نزدیک می‌شود
+                    </div>
+                    <p><strong>تفسیر:</strong> آمادگی و خستگی متعادل هستند. بدون کسری یا مازاد انباشته—حفظ تمرین پایدار.</p>
+                </div>
+
+                <h3>در طول فازهای ایجاد</h3>
+                <p>هنگام افزایش حجم یا شدت دویدن:</p>
+                <div class="example-box">
+                    <p>ATL <em>سریع‌تر</em> از CTL افزایش می‌یابد به دلیل ثابت زمانی کوتاه‌تر. TSB منفی می‌شود (خستگی > آمادگی). این طبیعی و مولد است—شما بار اضافی را برای تحریک سازگاری‌های دویدن اعمال می‌کنید.</p>
+                </div>
+
+                <h3>در طول کاهش تدریجی برای مسابقات</h3>
+                <p>هنگام کاهش بار تمرینی قبل از رقابت:</p>
+                <div class="example-box">
+                    <p>ATL <em>سریع‌تر</em> از CTL کاهش می‌یابد. TSB مثبت می‌شود (آمادگی > خستگی). این هدف است—در روز مسابقه با پاهای تازه و آماده برای عملکرد برسید در حالی که آمادگی را حفظ می‌کنید.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <h2>TSB: تعادل آمادگی-خستگی و آمادگی مسابقه شما</h2>
+
+        <p class="lead">TSB (تعادل استرس تمرینی) تفاوت بین آمادگی دیروز (CTL) و خستگی دیروز (ATL) است. برای دوندگان، نشان می‌دهد که آیا تازه یا خسته هستید، آماده مسابقه هستید یا نیاز به روزهای بازیابی دارید.</p>
+
+        <div class="tsb-zones-container">
+            <h3>راهنمای تفسیر TSB برای دوندگان</h3>
+            <table class="tsb-zones-table">
+                <thead>
+                    <tr>
+                        <th>محدوده TSB</th>
+                        <th>وضعیت</th>
+                        <th>تفسیر</th>
+                        <th>اقدام توصیه شده</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="tsb-critical">
+                        <td>&lt; -۳۰</td>
+                        <td><strong>خطر تمرین بیش از حد</strong></td>
+                        <td>خستگی شدید. خطر آسیب بالا.</td>
+                        <td>بازیابی فوری مورد نیاز. کاهش حجم ۵۰٪+. روزهای استراحت را در نظر بگیرید.</td>
+                    </tr>
+                    <tr class="tsb-training">
+                        <td>-۲۰ تا -۳۰</td>
+                        <td><strong>بلوک تمرینی بهینه</strong></td>
+                        <td>بار مولد. ایجاد آمادگی.</td>
+                        <td>برنامه را ادامه دهید. درد یا علائم خستگی بیش از حد را زیر نظر داشته باشید.</td>
+                    </tr>
+                    <tr class="tsb-moderate">
+                        <td>-۱۰ تا -۲۰</td>
+                        <td><strong>بار تمرینی متوسط</strong></td>
+                        <td>تجمع تمرینی استاندارد.</td>
+                        <td>تمرین عادی. می‌تواند جلسات اینتروال یا تمپو با کیفیت را تحمل کند.</td>
+                    </tr>
+                    <tr class="tsb-neutral">
+                        <td>-۱۰ تا +۱۵</td>
+                        <td><strong>انتقال/حفظ</strong></td>
+                        <td>حالت متعادل. خستگی یا تازگی خفیف.</td>
+                        <td>خوب برای مسابقات B/C، آزمایش یا هفته‌های بازیابی.</td>
+                    </tr>
+                    <tr class="tsb-fresh">
+                        <td>+۱۵ تا +۲۵</td>
+                        <td><strong>فرم اوج مسابقه</strong></td>
+                        <td>تازه و آماده. پنجره عملکرد بهینه.</td>
+                        <td>مسابقات با اولویت A. عملکرد اوج دویدن مورد انتظار.</td>
+                    </tr>
+                    <tr class="tsb-very-fresh">
+                        <td>+۲۵ تا +۳۵</td>
+                        <td><strong>بسیار تازه</strong></td>
+                        <td>بسیار استراحت کرده. خوب برای مسابقات کوتاه.</td>
+                        <td>مسابقات ۵ و ۱۰ کیلومتری، آزمون‌های زمانی، رویدادهای پیست.</td>
+                    </tr>
+                    <tr class="tsb-detraining">
+                        <td>&gt; +۳۵</td>
+                        <td><strong>کاهش آمادگی</strong></td>
+                        <td>از دست دادن آمادگی از عدم فعالیت.</td>
+                        <td>تمرین را از سر بگیرید. آمادگی در حال کاهش از استراحت طولانی.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="callout callout-tip mt-xl">
+            <h3>🎯 TSB هدف بر اساس فاصله مسابقه دویدن</h3>
+            <ul>
+                <li><strong>مسابقات ۵ و ۱۰ کیلومتری:</strong> TSB +۲۰ تا +۳۰ (کاهش تدریجی ۷-۱۰ روزه برای تازگی)</li>
+                <li><strong>نیم‌ماراتن:</strong> TSB +۱۵ تا +۲۵ (کاهش تدریجی ۱۰-۱۴ روزه)</li>
+                <li><strong>ماراتن:</strong> TSB +۱۰ تا +۲۰ (کاهش تدریجی ۱۴-۲۱ روزه با کاهش حجم)</li>
+                <li><strong>اولتراماراتن (۵۰ کیلومتر به بالا):</strong> TSB +۵ تا +۱۵ (کاهش تدریجی ۷-۱۴ روزه، حفظ حجم اما کاهش شدت)</li>
+            </ul>
+            <p><em>مسابقات کوتاه‌تر به TSB بالاتر برای سرعت/قدرت نیاز دارند. مسابقات طولانی‌تر به TSB متوسط برای حفظ استقامت نیاز دارند.</em></p>
+        </div>
+    </div>
+</section>
+
+<section class="section section-alt">
+    <div class="container container-narrow">
+        <h2>مثال PMC: بلوک تمرینی دویدن → کاهش تدریجی → مسابقه</h2>
+
+        <div class="example-box">
+            <h3>چرخه تمرین ماراتن ۱۲ هفته‌ای</h3>
+
+            <h4>هفته‌های ۱-۳: فاز ایجاد پایه</h4>
+            <ul>
+                <li>TSS هفتگی: ۳۰۰ → ۳۵۰ → ۴۰۰</li>
+                <li>CTL: به تدریج از ۴۰ → ۴۸ افزایش می‌یابد</li>
+                <li>ATL: بار هفتگی را ردیابی می‌کند، نوسان ۴۵-۶۰</li>
+                <li>TSB: منفی خفیف (-۵ تا -۱۵)، استرس تمرینی قابل مدیریت</li>
+                <li><strong>تمرکز:</strong> توسعه پایه هوازی، مایل‌های آسان</li>
+            </ul>
+
+            <h4>هفته‌های ۴-۷: فاز ایجاد ۱</h4>
+            <ul>
+                <li>TSS هفتگی: ۴۵۰ → ۵۰۰ → ۵۰۰ → ۴۵۰ (هفته بازیابی)</li>
+                <li>CTL: به افزایش ادامه می‌دهد ۴۸ → ۶۰</li>
+                <li>ATL: نوسانات بالاتر ۵۵-۷۵</li>
+                <li>TSB: منفی‌تر (-۱۵ تا -۲۵)، بار مولد</li>
+                <li><strong>تمرکز:</strong> افزودن دویدن‌های تمپو، اینتروال‌های آستانه</li>
+            </ul>
+
+            <h4>هفته‌های ۸-۱۱: فاز اوج</h4>
+            <ul>
+                <li>TSS هفتگی: ۵۰۰ → ۵۵۰ → ۵۵۰ → ۵۰۰</li>
+                <li>CTL: در حدود ۶۵ به اوج می‌رسد</li>
+                <li>ATL: بالاترین مقادیر ۶۵-۸۰</li>
+                <li>TSB: منفی‌ترین (-۲۰ تا -۳۰)، حداکثر محرک آمادگی</li>
+                <li><strong>تمرکز:</strong> دویدن‌های طولانی با بخش‌های سرعت ماراتن، جلسات با کیفیت</li>
+            </ul>
+
+            <h4>هفته ۱۲: هفته بازیابی</h4>
+            <ul>
+                <li>TSS هفتگی: ۳۰۰ (کاهش ۴۵٪)</li>
+                <li>CTL: افت خفیف به حدود ۶۳ (آمادگی حفظ شده)</li>
+                <li>ATL: به سرعت به حدود ۵۰ کاهش می‌یابد</li>
+                <li>TSB: به +۵ تا +۱۰ افزایش می‌یابد (تازگی جزئی)</li>
+                <li><strong>تمرکز:</strong> دویدن‌های بازیابی، جذب سازگاری‌های تمرینی</li>
+            </ul>
+
+            <h4>هفته ۱۳-۱۴: کاهش تدریجی + هفته مسابقه</h4>
+            <ul>
+                <li>هفته ۱۳ TSS: ۲۵۰، هفته ۱۴ TSS: ۱۲۰ + مسابقه (حدود ۲۵۰ کل)</li>
+                <li>CTL: کاهش ملایم به حدود ۶۰ (کاهش حداقلی آمادگی)</li>
+                <li>ATL: افت سریع به حدود ۳۵ (خستگی از بین رفته)</li>
+                <li>TSB: در <strong>روز مسابقه به +۲۰ تا +۲۵ می‌رسد</strong></li>
+                <li><strong>نتیجه:</strong> پاهای تازه، آمادگی حفظ شده، آماده برای عملکرد اوج ماراتن</li>
+            </ul>
+        </div>
+
+        <div class="callout callout-success">
+            <h3>✅ چرا کاهش تدریجی برای دوندگان کار می‌کند</h3>
+            <p>ثابت‌های زمانی متفاوت (۴۲ روز برای CTL، ۷ روز برای ATL) اثر کاهش تدریجی را ایجاد می‌کنند که عملکرد دویدن را بهینه می‌کند:</p>
+            <ul>
+                <li>ATL به سرعت پاسخ می‌دهد → خستگی دویدن (هم قلبی-عروقی و هم اسکلتی-عضلانی) در عرض ۷-۱۰ روز ناپدید می‌شود</li>
+                <li>CTL به آهستگی پاسخ می‌دهد → آمادگی هوازی و سازگاری‌های دویدن برای هفته‌ها باقی می‌مانند</li>
+                <li>نتیجه: آمادگی باقی می‌ماند در حالی که خستگی و دردهای عضلانی ناپدید می‌شوند = پاهای تازه برای عملکرد اوج مسابقه</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container container-narrow">
+        <h2>راهنمای عملی مدیریت بار تمرینی دویدن</h2>
+
+        <div class="guidelines-grid">
+            <div class="guideline-item">
+                <h3>1️⃣ rTSS روزانه را به طور مداوم ردیابی کنید</h3>
+                <p>TSS هر دویدن را ثبت کنید تا روندهای دقیق CTL/ATL/TSB ایجاد شود. داده‌های از دست رفته شکاف در منحنی آمادگی ایجاد می‌کنند. از داده‌های ساعت GPS یا محاسبات مبتنی بر سرعت برای همه دویدن‌ها استفاده کنید.</p>
+            </div>
+
+            <div class="guideline-item">
+                <h3>2️⃣ نرخ افزایش CTL را با دقت زیر نظر داشته باشید</h3>
+                <p>CTL را به تدریج افزایش دهید. افزایش هفتگی ۳-۵ امتیاز برای اکثر دوندگان پایدار است. جهش ۱۰+ امتیاز دعوت به تمرین بیش از حد و آسیب است به دلیل استرس ضربه دویدن.</p>
+            </div>
+
+            <div class="guideline-item">
+                <h3>3️⃣ هفته‌های بازیابی را برنامه‌ریزی کنید</h3>
+                <p>هر ۳-۴ هفته، حجم دویدن را ۳۰-۴۰٪ برای یک هفته کاهش دهید. بگذارید TSB به -۵ تا +۱۰ افزایش یابد. این سازگاری‌های آمادگی را تثبیت می‌کند و از خستگی تجمعی جلوگیری می‌کند.</p>
+            </div>
+
+            <div class="guideline-item">
+                <h3>4️⃣ کاهش تدریجی مسابقه خود را زمان‌بندی کنید</h3>
+                <p>TSB +۱۵ تا +۲۵ را در روز مسابقه برای اکثر فواصل هدف قرار دهید. کاهش تدریجی را ۱۰-۲۱ روز قبل بسته به فاصله مسابقه و سطح TSB فعلی شروع کنید.</p>
+            </div>
+
+            <div class="guideline-item">
+                <h3>5️⃣ TSB منفی را در طول ایجاد بپذیرید</h3>
+                <p>TSB در حدود -۲۰ تا -۲۵ در طول فازهای ایجاد طبیعی و مولد برای دوندگان است. این به معنای اعمال محرک تمرینی برای سازگاری بدون خطر آسیب بیش از حد است.</p>
+            </div>
+
+            <div class="guideline-item">
+                <h3>6️⃣ CTL را پس از استراحت به تدریج بازسازی کنید</h3>
+                <p>پس از آسیب یا استراحت خارج از فصل، سعی نکنید فوراً در CTL قبلی از سر بگیرید. به تدریج با ۳-۵ امتیاز CTL در هفته بازسازی کنید تا از آسیب مجدد جلوگیری کنید.</p>
+            </div>
+
+            <div class="guideline-item">
+                <h3>7️⃣ به بدن خود گوش دهید</h3>
+                <p>معیارهای TSS راهنما هستند، نه قوانین مطلق. درد مداوم، خواب ضعیف یا کاهش عملکرد علی‌رغم اعداد TSB خوب نشان‌دهنده نیاز به بازیابی بیشتر است.</p>
+            </div>
+
+            <div class="guideline-item">
+                <h3>8️⃣ استرس غیر دویدن را در نظر بگیرید</h3>
+                <p>استرس زندگی، خواب ضعیف و تمرین‌های متقاطع بر بازیابی تأثیر می‌گذارند. کاهش اهداف TSS را در دوره‌های پر استرس در نظر بگیرید حتی اگر معیارهای خاص دویدن خوب به نظر می‌رسند.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section section-alt">
+    <div class="container container-narrow">
+        <h2>سؤالات متداول: امتیاز استرس تمرینی برای دویدن</h2>
+
+        <div class="faq-container">
+            <div class="faq-item">
+                <h3>چگونه TSS را برای دویدن بدون پاورمتر محاسبه کنم؟</h3>
+                <p>از روش مبتنی بر سرعت استفاده کنید: ضریب شدت (IF) خود را با تقسیم سرعت آستانه بر سرعت متوسط دویدن محاسبه کنید. سپس فرمول را اعمال کنید: rTSS = (IF²) × مدت زمان (ساعت) × ۱۰۰. برای مثال، اگر سرعت آستانه شما ۴:۰۰/کیلومتر است و شما ۱۰ کیلومتر با سرعت ۴:۳۰/کیلومتر در ۴۵ دقیقه (۰.۷۵ ساعت) می‌دوید: IF = ۴:۰۰/۴:۳۰ = ۰.۸۸۹، بنابراین rTSS = (۰.۸۸۹²) × ۰.۷۵ × ۱۰۰ = ۵۹.۲ TSS.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>تفاوت بین TSS دویدن و TSS دوچرخه‌سواری چیست؟</h3>
+                <p>هر دو از فرمول IF² یکسان استفاده می‌کنند، اما TSS دویدن استرس فیزیکی کل بیشتری را به دلیل نیروهای ضربه ناشی از تماس زمین نشان می‌دهد. دونده‌ای با ۴۰۰ TSS در هفته سازگاری تمرینی مشابه دوچرخه‌سواری با ۶۰۰-۷۰۰ TSS در هفته را تجربه می‌کند. دویدن همچنین از سرعت به جای وات قدرت به عنوان ورودی استفاده می‌کند و برای همان مقدار TSS به زمان بازیابی بیشتری نیاز دارد.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>TSS هفتگی خوب برای تمرین ماراتن چقدر است؟</h3>
+                <p>TSS هفتگی دویدن برای تمرین ماراتن بر اساس تجربه متفاوت است: مبتدیان برای اولین ماراتن: ۲۵۰-۴۰۰ TSS در هفته؛ ماراتن‌دوهای متوسط: ۴۰۰-۵۵۰ TSS در هفته؛ ماراتن‌دوهای پیشرفته/رقابتی: ۵۵۰-۷۰۰+ TSS در هفته. هفته‌های اوج ممکن است برای دوندگان پیشرفته به ۶۰۰-۸۰۰ TSS برسد، با هفته‌های کاهش تدریجی که به ۲۰۰-۳۰۰ TSS کاهش می‌یابند.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>TSS دویدن با TSS شنا چه تفاوتی دارد؟</h3>
+                <p>TSS دویدن (rTSS) از فرمول IF² بر اساس سرعت نسبت به آستانه استفاده می‌کند. TSS شنا (sTSS) از فرمول IF³ استفاده می‌کند زیرا مقاومت آب به صورت مکعبی با سرعت افزایش می‌یابد. ورزش‌ها همچنین در نیازهای بازیابی متفاوت هستند—دویدن استرس ضربه بالایی دارد که به بازیابی بیشتری نیاز دارد، در حالی که شنا ضربه کم با بازیابی سریع‌تر است. حجم‌های هفتگی به طور قابل توجهی متفاوت است: دوندگان معمولاً ۳۰۰-۵۰۰ TSS جمع می‌کنند در حالی که شناگران ممکن است به ۵۰۰-۸۰۰+ TSS در سطوح آمادگی مشابه برسند.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>چه TSB را برای مسابقه ۱۰ کیلومتری هدف قرار دهم؟</h3>
+                <p>برای مسابقه ۱۰ کیلومتری، TSB در روز مسابقه را +۲۰ تا +۳۰ هدف قرار دهید. یک کاهش تدریجی ۷-۱۰ روزه را برای دستیابی به این شروع کنید. TSB بالاتر (تازگی بیشتر) برای مسابقات کوتاه‌تر که سرعت و قدرت بیشتر از استقامت اهمیت دارد، مفید است. حجم را ۱۰ روز قبل کاهش دهید در حالی که مقداری شدت را برای حفظ تیزی عصبی-عضلانی حفظ کنید.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>آیا می‌توانم از TSS استفاده کنم اگر سرعت بحرانی دویدن خود را نمی‌دانم؟</h3>
+                <p>دانستن <a href="/fa/crs/">سرعت بحرانی دویدن (CRS)</a> یا سرعت آستانه شما برای محاسبه دقیق TSS ضروری است زیرا IF نسبت به این مقدار محاسبه می‌شود. اگر CRS خود را نمی‌دانید، یک آزمون آستانه انجام دهید: یا یک آزمون زمانی تمام توان ۳۰ دقیقه‌ای (سرعت متوسط = CRS) یا سرعت مسابقه ۸ کیلومتری. به طور جایگزین، با استفاده از زمان‌های مسابقه اخیر تخمین بزنید: سرعت ۱۰ کیلومتر + ۱۰-۱۵ ثانیه/کیلومتر تقریباً CRS را نشان می‌دهد.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>چقدر سریع باید CTL خود را افزایش دهم؟</h3>
+                <p>CTL دویدن را ۲-۴ امتیاز در هفته برای مبتدیان، ۳-۵ امتیاز برای دوندگان متوسط و حداکثر ۵-۷ امتیاز برای دوندگان پیشرفته افزایش دهید. این با "قانون ۱۰٪" برای افزایش مسافت هفتگی همسو است و خطر آسیب را به حداقل می‌رساند. فراتر رفتن از این نرخ‌ها به طور قابل توجهی خطر تمرین بیش از حد و آسیب را افزایش می‌دهد به دلیل استرس ضربه بالای دویدن بر عضلات، تاندون‌ها و استخوان‌ها.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>TSB منفی در طول تمرین به چه معناست؟</h3>
+                <p>TSB منفی به این معنی است که خستگی (ATL) از آمادگی (CTL) فراتر رفته است—شما در حال حاضر از تمرین اخیر خسته هستید. این در طول فازهای ایجاد طبیعی و مولد است. TSB در حدود -۱۵ تا -۲۵ نشان‌دهنده استرس تمرینی مولد است. TSB زیر -۳۰ نشان‌دهنده خطر تمرین بیش از حد و نیاز به بازیابی است. TSB منفی در طول ایجاد محرک برای سازگاری‌های آمادگی را ایجاد می‌کند در حالی که TSB مثبت در طول کاهش تدریجی عملکرد را امکان‌پذیر می‌سازد.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container container-narrow text-center">
+        <h2>بار تمرینی دویدن خود را مدیریت کنید</h2>
+        <p class="lead">درک امتیاز استرس تمرینی برای دویدن، تمرین ذهنی را به بهینه‌سازی عملکرد عینی و مبتنی بر داده تبدیل می‌کند. با پایش rTSS، CTL، ATL و TSB از طریق نمودار مدیریت عملکرد، کنترل دقیقی بر پیشرفت آمادگی، مدیریت خستگی و زمان‌بندی اوج مسابقه به دست می‌آورید.</p>
+
+        <p>سیستم CTL-ATL-TSB از تمرین بیش از حد جلوگیری می‌کند، زمان‌بندی بازیابی را بهینه می‌کند و اطمینان می‌دهد که در مسابقات هدف با تعادل کامل آمادگی-خستگی برای عملکرد اوج می‌رسید.</p>
+
+        <div class="mt-xl">
+            <a href="/fa/crs/" class="btn btn-secondary">← سرعت بحرانی دویدن (CRS)</a>
+            <a href="/fa/efficiency/" class="btn btn-primary">معیارهای کارایی دویدن →</a>
+        </div>
+    </div>
+</section>
+    </main>
+
+    
+    <footer class="site-footer">
+    <div class="container">
+        <div class="footer-grid">
+            
+            <div>
+                <h3 class="mb-md">RunAnalytics - Running Analytics App | Critical Running Speed, TSS, CTL/ATL/TSB for iOS</h3>
+                <p class="text-secondary">Track Critical Running Speed, Training Stress Score, and performance metrics with RunAnalytics. Science-based iOS app for runners, triathletes &amp; coaches. 7-day free trial.</p>
+            </div>
+
+            
+            <div>
+                <h3 class="mb-md">خانه</h3>
+                <ul class="footer-links">
+                    
+                    <li>
+                        <a href="/af/">Afrikaans</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ar/">العربية</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/bn/">বাংলা</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ca/">Català</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/de/">Deutsch</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/el/">Ελληνικά</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/en/">English</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/es/">Español</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/fa/">فارسی</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/fi/">Suomi</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/fr/">Français</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/hi/">हिन्दी</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/id/">Bahasa Indonesia</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/it/">Italiano</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ja/">日本語</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ko/">한국어</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ms/">Bahasa Melayu</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/nl/">Nederlands</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/no/">Norsk</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/pl/">Polski</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/pt/">Português</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ru/">Русский</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/sv/">Svenska</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/sw/">Kiswahili</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/tl/">Tagalog</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/tr/">Türkçe</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ur/">اردو</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/vi/">Tiếng Việt</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/zh/">中文</a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+
+        
+        <div class="footer-bottom">
+            <p class="text-sm text-secondary">
+                &copy; 2025 RunAnalytics - Running Analytics App | Critical Running Speed, TSS, CTL/ATL/TSB for iOS. تمامی حقوق محفوظ است
+            </p>
+            <ul class="footer-links">
+                <li><a href="/fa/privacy/">حریم خصوصی</a></li>
+                <li><a href="/fa/terms/">شرایط</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+    
+    <div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="Cookie consent" aria-live="polite">
+    <div class="cookie-banner-content">
+        <div>
+            <p>این وب‌سایت از کوکی‌ها برای بهبود تجربه شما استفاده می‌کند.</p>
+            <a href="/fa/privacy/" class="text-sm">اطلاعات بیشتر</a>
+        </div>
+        <div class="cookie-banner-actions">
+            <button id="cookie-decline" class="btn btn-secondary btn-small">رد کردن</button>
+            <button id="cookie-accept" class="btn btn-primary btn-small">پذیرش</button>
+        </div>
+    </div>
+</div>
+
+    
+    <script src="/assets/js/main.min.js"></script>
+    <script src="/assets/js/cookie-consent.min.js"></script>
+    <script src="/assets/js/lazy-load.min.js"></script>
+
+    
+    <script src="/assets/js/fuse.min.js"></script>
+    <script src="/assets/js/search.min.js"></script>
+
+    
+    
+    <script src="/assets/js/analytics.min.js" data-ga-id="G-Y138VB4523"></script>
+    
+</body>
+</html>

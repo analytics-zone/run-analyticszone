@@ -1,0 +1,1929 @@
+<!DOCTYPE html>
+<html lang="tr" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+    <title>Koşu Antrenman Yükü Periyodizasyonu - TSS, CTL ve ATL Planlaması</title>
+    <meta name="description" content="Antrenman yükü periyodizasyonunu TSS, CTL ve ATL kullanarak öğrenin. Temel oluşturma, inşa ve azalma dönemlerini planlayın. Yarış için zirve performans elde etmek üzere antrenman yükünü optimize edin.">
+    <meta name="author" content="Albert Arno">
+
+    
+    
+    <meta name="keywords" content="antrenman periyodizasyonu, yük yönetimi, TSS planlama, CTL oluşturma, azalma stratejisi">
+    
+
+    
+    <link rel="canonical" href="https://run.analyticszone.app/tr/training-load-periodization/">
+
+    
+    
+    <meta property="article:published_time" content="2025-01-15T10:00:00Z">
+    <meta property="article:modified_time" content="2025-11-16T14:30:00Z">
+    <meta property="article:author" content="Albert Arno">
+    
+
+    
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://run.analyticszone.app/tr/training-load-periodization/">
+    <meta property="og:title" content="Koşu Antrenman Yükü Periyodizasyonu - TSS, CTL ve ATL Planlaması">
+    <meta property="og:description" content="Antrenman yükü periyodizasyonunu TSS, CTL ve ATL kullanarak öğrenin. Temel oluşturma, inşa ve azalma dönemlerini planlayın. Yarış için zirve performans elde etmek üzere antrenman yükünü optimize edin.">
+    
+    <meta property="og:image" content="https://run.analyticszone.app/assets/images/run-analytics-og.jpg">
+    
+    <meta property="og:locale" content="tr_TR">
+    <meta property="og:site_name" content="RunAnalytics - Running Analytics App | Critical Running Speed, TSS, CTL/ATL/TSB for iOS">
+
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://run.analyticszone.app/tr/training-load-periodization/">
+    <meta name="twitter:title" content="Koşu Antrenman Yükü Periyodizasyonu - TSS, CTL ve ATL Planlaması">
+    <meta name="twitter:description" content="Antrenman yükü periyodizasyonunu TSS, CTL ve ATL kullanarak öğrenin. Temel oluşturma, inşa ve azalma dönemlerini planlayın. Yarış için zirve performans elde etmek üzere antrenman yükünü optimize edin.">
+    
+    <meta name="twitter:image" content="https://run.analyticszone.app/assets/images/run-analytics-og.jpg">
+    
+
+    
+    
+    <link rel="alternate" hreflang="af" href="https://run.analyticszone.app/af/training-load-periodization/">
+    
+    <link rel="alternate" hreflang="ar" href="https://run.analyticszone.app/ar/training-load-periodization/">
+    
+    <link rel="alternate" hreflang="bn" href="https://run.analyticszone.app/bn/training-load-periodization/">
+    
+    <link rel="alternate" hreflang="ca" href="https://run.analyticszone.app/ca/training-load-periodization/">
+    
+    <link rel="alternate" hreflang="de" href="https://run.analyticszone.app/de/training-load-periodization/">
+    
+    <link rel="alternate" hreflang="el" href="https://run.analyticszone.app/el/training-load-periodization/">
+    
+    <link rel="alternate" hreflang="en" href="https://run.analyticszone.app/en/training-load-periodization/">
+    
+    <link rel="alternate" hreflang="es" href="https://run.analyticszone.app/es/training-load-periodization/">
+    
+    <link rel="alternate" hreflang="fa" href="https://run.analyticszone.app/fa/training-load-periodization/">
+    
+    <link rel="alternate" hreflang="fi" href="https://run.analyticszone.app/fi/training-load-periodization/">
+    
+    <link rel="alternate" hreflang="fr" href="https://run.analyticszone.app/fr/training-load-periodization/">
+    
+    <link rel="alternate" hreflang="hi" href="https://run.analyticszone.app/hi/training-load-periodization/">
+    
+    <link rel="alternate" hreflang="id" href="https://run.analyticszone.app/id/training-load-periodization/">
+    
+    <link rel="alternate" hreflang="it" href="https://run.analyticszone.app/it/training-load-periodization/">
+    
+    <link rel="alternate" hreflang="ja" href="https://run.analyticszone.app/ja/training-load-periodization/">
+    
+    <link rel="alternate" hreflang="ko" href="https://run.analyticszone.app/ko/training-load-periodization/">
+    
+    <link rel="alternate" hreflang="ms" href="https://run.analyticszone.app/ms/training-load-periodization/">
+    
+    <link rel="alternate" hreflang="nl" href="https://run.analyticszone.app/nl/training-load-periodization/">
+    
+    <link rel="alternate" hreflang="no" href="https://run.analyticszone.app/no/training-load-periodization/">
+    
+    <link rel="alternate" hreflang="pl" href="https://run.analyticszone.app/pl/training-load-periodization/">
+    
+    <link rel="alternate" hreflang="pt" href="https://run.analyticszone.app/pt/training-load-periodization/">
+    
+    <link rel="alternate" hreflang="ru" href="https://run.analyticszone.app/ru/training-load-periodization/">
+    
+    <link rel="alternate" hreflang="sv" href="https://run.analyticszone.app/sv/training-load-periodization/">
+    
+    <link rel="alternate" hreflang="sw" href="https://run.analyticszone.app/sw/training-load-periodization/">
+    
+    <link rel="alternate" hreflang="tl" href="https://run.analyticszone.app/tl/training-load-periodization/">
+    
+    <link rel="alternate" hreflang="tr" href="https://run.analyticszone.app/tr/training-load-periodization/">
+    
+    <link rel="alternate" hreflang="ur" href="https://run.analyticszone.app/ur/training-load-periodization/">
+    
+    <link rel="alternate" hreflang="vi" href="https://run.analyticszone.app/vi/training-load-periodization/">
+    
+    <link rel="alternate" hreflang="zh" href="https://run.analyticszone.app/zh/training-load-periodization/">
+    
+    <link rel="alternate" hreflang="x-default" href="https://run.analyticszone.app/en/training-load-periodization/">
+
+    
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/icons/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/icons/apple-touch-icon.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#0066CC">
+
+    
+    <link rel="stylesheet" href="/assets/css/main.min.css">
+
+    
+    
+
+    
+    
+
+    
+    
+</head>
+<body>
+    
+    <a href="#main-content" class="skip-link">İçeriğe atla</a>
+
+    
+    <header class="site-header">
+    <div class="container">
+        <div class="header-inner">
+            
+            <a href="/tr/" class="site-logo">
+                <picture>
+                    
+                    <source srcset="/assets/images/logo-dark.webp" type="image/webp"
+                        media="(prefers-color-scheme: dark)">
+                    
+                    <source srcset="/assets/images/logo-dark.png" type="image/png" media="(prefers-color-scheme: dark)">
+                    
+                    <source srcset="/assets/images/logo.webp" type="image/webp">
+                    
+                    <img src="/assets/images/logo.png" alt="RunAnalytics - Running Analytics App | Critical Running Speed, TSS, CTL/ATL/TSB for iOS" width="40" height="40">
+                </picture>
+                <span class="logo-text">RunAnalytics</span>
+            </a>
+
+            
+            <nav class="nav-primary" id="nav-primary" role="navigation" aria-label="Main navigation">
+                <ul>
+                    
+                    <li>
+                        
+                        
+                        <a href="/tr/"  aria-current="">
+                            Ana Sayfa
+                        </a>
+                        
+                        </li>
+                        
+                    <li class="has-submenu" >
+                        
+                        
+                        
+                        
+                        <span class="nav-label">Öğren</span>
+                        
+                        <ul class="submenu">
+                            
+                            <li>
+                                <a href="/tr/getting-started/" 
+                                    aria-current="">
+                                    Başlangıç
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/tr/crs/" 
+                                    aria-current="">
+                                    CRS
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/tr/training-zones/" 
+                                    aria-current="">
+                                    Antrenman Bölgeleri
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/tr/training-load/" 
+                                    aria-current="">
+                                    Antrenman Yükü
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/tr/stss-calculator/" 
+                                    aria-current="">
+                                    sTSS Hesaplayıcı
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        
+                        </li>
+                        
+                    <li class="has-submenu" >
+                        
+                        
+                        
+                        
+                        <span class="nav-label">Bilim</span>
+                        
+                        <ul class="submenu">
+                            
+                            <li>
+                                <a href="/tr/research/" 
+                                    aria-current="">
+                                    Araştırma
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/tr/formulas/" 
+                                    aria-current="">
+                                    Formüller
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/tr/efficiency/" 
+                                    aria-current="">
+                                    Verimlilik
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/tr/stride-mechanics/" 
+                                    aria-current="">
+                                    Kürek Mekaniği
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/tr/bibliography/" 
+                                    aria-current="">
+                                    Kaynakça
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        
+                        </li>
+                        
+                    <li>
+                        
+                        
+                        <a href="/tr/contact/"  aria-current="">
+                            İletişim
+                        </a>
+                        
+                        </li>
+                        
+                </ul>
+
+                
+                <div class="search-container">
+                    <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" aria-hidden="true">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.35-4.35"></path>
+                    </svg>
+                    <input type="search" id="site-search" class="search-input" aria-expanded="false"
+                        aria-haspopup="listbox" aria-autocomplete="list" autocomplete="off" spellcheck="false" />
+                    <div id="search-results" class="search-results hidden" role="region" aria-live="polite"></div>
+                </div>
+
+                
+                <select class="language-selector" id="language-select" aria-label="Dil seçin">
+                    
+                    <option value="af" >
+                        Afrikaans
+                    </option>
+                    
+                    <option value="ar" >
+                        العربية
+                    </option>
+                    
+                    <option value="bn" >
+                        বাংলা
+                    </option>
+                    
+                    <option value="ca" >
+                        Català
+                    </option>
+                    
+                    <option value="de" >
+                        Deutsch
+                    </option>
+                    
+                    <option value="el" >
+                        Ελληνικά
+                    </option>
+                    
+                    <option value="en" >
+                        English
+                    </option>
+                    
+                    <option value="es" >
+                        Español
+                    </option>
+                    
+                    <option value="fa" >
+                        فارسی
+                    </option>
+                    
+                    <option value="fi" >
+                        Suomi
+                    </option>
+                    
+                    <option value="fr" >
+                        Français
+                    </option>
+                    
+                    <option value="hi" >
+                        हिन्दी
+                    </option>
+                    
+                    <option value="id" >
+                        Bahasa Indonesia
+                    </option>
+                    
+                    <option value="it" >
+                        Italiano
+                    </option>
+                    
+                    <option value="ja" >
+                        日本語
+                    </option>
+                    
+                    <option value="ko" >
+                        한국어
+                    </option>
+                    
+                    <option value="ms" >
+                        Bahasa Melayu
+                    </option>
+                    
+                    <option value="nl" >
+                        Nederlands
+                    </option>
+                    
+                    <option value="no" >
+                        Norsk
+                    </option>
+                    
+                    <option value="pl" >
+                        Polski
+                    </option>
+                    
+                    <option value="pt" >
+                        Português
+                    </option>
+                    
+                    <option value="ru" >
+                        Русский
+                    </option>
+                    
+                    <option value="sv" >
+                        Svenska
+                    </option>
+                    
+                    <option value="sw" >
+                        Kiswahili
+                    </option>
+                    
+                    <option value="tl" >
+                        Tagalog
+                    </option>
+                    
+                    <option value="tr" selected>
+                        Türkçe
+                    </option>
+                    
+                    <option value="ur" >
+                        اردو
+                    </option>
+                    
+                    <option value="vi" >
+                        Tiếng Việt
+                    </option>
+                    
+                    <option value="zh" >
+                        中文
+                    </option>
+                    
+                </select>
+
+                
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode"
+                    title="Toggle dark/light mode">
+                    <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                    <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+
+                
+                
+                <a href="https://apps.apple.com/es/app/runanalytics/id6754524015" class="header-download-btn" target="_blank" rel="noopener"
+                    aria-label="Download on App Store">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                        fill="currentColor">
+                        <path
+                            d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z" />
+                    </svg>
+                    <span class="download-text">Download</span>
+                </a>
+                
+            </nav>
+
+            
+            <button class="menu-toggle" id="menu-toggle" aria-label="Menüyü değiştir"
+                aria-expanded="false" aria-controls="nav-primary">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </div>
+</header>
+
+    
+    <main id="main-content" class="main-content">
+        <section class="hero hero-small">
+    <div class="container">
+        <h1>Antrenman Yükü ve Periyodizasyon: Koşucular için Kapsamlı Kılavuz</h1>
+        <p class="lead">Performansı optimize etmek ve aşırı antrenmandan kaçınmak için antrenman stres skorunu, periyodizasyonu ve yük yönetimini ustaca kullanın</p>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container container-narrow">
+        <article itemscope itemtype="https://schema.org/Article">
+            <meta itemprop="headline" content="Antrenman Yükü ve Periyodizasyon: Koşucular için Kapsamlı Kılavuz">
+            <meta itemprop="description" content="Koşucular için antrenman yükü ve periyodizasyonda ustalaşın. Maraton antrenmanı ve sakatlık önleme için TSS, CTL, ATL ve TSB'ye dair eksiksiz kılavuz.">
+            <meta itemprop="datePublished" content="2025-01-20T10:00:00Z">
+            <meta itemprop="dateModified" content="2025-10-29T15:00:00Z">
+            <meta itemprop="author" content="RunAnalytics">
+
+            <div class="callout callout-success mb-xl">
+                <h2>Önemli Çıkarımlar: Koşucular için Antrenman Yükü</h2>
+                <ul class="key-points">
+                    <li><strong>Antrenman Stres Skoru (TSS)</strong>, her koşunun vücudunuzu ne kadar zorladığını ölçer—yoğunluğu ve süreyi tek bir uygulanabilir sayıya dönüştürür</li>
+                    <li><strong>CTL (Kronik Antrenman Yükü)</strong>, 42 günlük tutarlı antrenmanla oluşturduğunuz fitness seviyesini ölçer—uzun vadeli aerobik kapasitenizdir</li>
+                    <li><strong>ATL (Akut Antrenman Yükü)</strong>, son 7 günden kaynaklanan yorgunluğu izler—kısa vadeli antrenman stresiniz ve toparlanma ihtiyaçlarınızdır</li>
+                    <li><strong>TSB (Antrenman Stres Dengesi)</strong>, formunuzu ortaya çıkarır: fitness eksi yorgunluk, yarışa hazır olmanız ya da toparlanma ihtiyacınız anlamına gelir</li>
+                    <li><strong>Periyodizasyon</strong>, aşırı antrenmandan kaçınırken hedef yarışlar için zirve yapmak üzere antrenman döngüleri boyunca yük ilerlemesini yapılandırır</li>
+                    <li><a href="/tr/training-load/">Koşu antrenman yükünü</a> anlamak, koşucu sakatlıklarının 1 numaralı nedenini önler: çok fazlasını çok erken yapmak</li>
+                </ul>
+            </div>
+
+            <p class="lead">Neden bazı koşucular hızla fitness kazanırken diğerleri plato yapar veya sakatlanır? Cevap antrenman yükü yönetiminde yatıyor. Bu kapsamlı kılavuz, Antrenman Stres Skoru (TSS), Kronik Antrenman Yükü (CTL), Akut Antrenman Yükü (ATL) ve Antrenman Stres Dengesi (TSB)'nin öznel antrenmanı kantitatif, veriye dayalı performans optimizasyonuna nasıl dönüştürdüğünü ortaya koyuyor.</p>
+
+            <p>İster ilk maratonunuz için antrenman yapıyor olun, ister Boston kalifikasyonu peşinde koşuyor olun, ister ultra mesafe etkinliklerine hazırlanıyor olun, antrenman yükü ve periyodizasyonda ustalaşmak, zirve fitness'a ulaşmak ile yarış gününden önce tükenmek arasındaki farktır. Bu kılavuz, özellikle koşucular için—bisikletçiler veya triatletler için değil, çarpma stresinden, nöromüsküler yorgunluktan ve kas-iskelet sistem taleplerinden kaynaklanan benzersiz zorluklarla karşılaşan koşucular için—antrenman stres yönetimine dair en eksiksiz kaynağı sağlar.</p>
+
+            <p>Her koşu için TSS'yi nasıl hesaplayacağınızı, CTL'yi güvenle nasıl oluşturacağınızı, TSB sinyallerini nasıl yorumlayacağınızı, periyotlaştırılmış antrenman bloklarını nasıl yapılandıracağınızı, mükemmel daralmalar nasıl uygulayacağınızı ve verilerinizi gizli tutarken tüm süreci otomatikleştirmek için RunAnalytics'i nasıl kullanacağınızı öğreneceksiniz. Sonunda, elit antrenörlerin yaptığı gibi antrenman yükünü yönetme bilgisine sahip olacaksınız—hassasiyetle, amaçla ve kanıtlanmış sonuçlarla.</p>
+
+            <h2 id="understanding-training-load">Koşuda Antrenman Yükünü Anlamak</h2>
+
+            <p><strong>Antrenman yükü</strong>, antrenmanın vücudunuz üzerine uyguladığı kümülatif stresi ölçer. Basitçe mil veya saat saymaktan farklı olarak, antrenman yükü hem hacmi (ne kadar süre antrenman yaptığınız) hem de yoğunluğu (ne kadar sıkı antrenman yaptığınız) hesaba katar ve bu boyutları adaptasyon, yorgunluk ve sakatlık riskini öngören metriklere dönüştürür.</p>
+
+            <h3>Antrenman Yükünü Tanımlamak</h3>
+
+            <p>Her koşu aynı anda iki etki yaratır: <strong>fitness uyarısı</strong> ve <strong>yorgunluk birikimi</strong>. Antrenman yükü metrikleri bu ikiliği ölçer. 60 dakikalık kolay bir koşu orta düzeyde antrenman yükü oluşturur—aşırı yorgunluk olmadan fitness'ı sürdürmek için yeterli uyarı. Eşik aralıklarıyla 90 dakikalık uzun koşu yüksek antrenman yükü yaratır—önemli fitness uyarısı ancak toparlanma gerektiren önemli yorgunluk.</p>
+
+            <p>Etkili antrenmanın zorluğu, performansın düşmesine veya sakatlığın oluşmasına yol açacak kadar yorgunluk biriktirmeden adaptasyonu tetiklemek için yeterli yük uygulamakta yatar. Çok az yük gelişme sağlamaz. Çok fazla yük aşırı antrenman sendromuna yol açar. Optimum antrenman yükü, yorgunluğu yönetirken adaptasyonu maksimize eden dar bantta gezinir—ve bu bant antrenman geçmişine, genetiğe, toparlanma kapasitesine ve yaşam stresine bağlı olarak her koşucu için farklıdır.</p>
+
+            <h3>Antrenman Yükü Neden Önemlidir</h3>
+
+            <p>Antrenman yükünü yönetmek, yarışmacı koşucuların karşılaştığı üç kritik zorluğu çözer:</p>
+
+            <div class="application-grid">
+                <div class="application-item">
+                    <h3>🎯 Adaptasyonu Optimize Et</h3>
+                    <p>Kantitatif antrenman yükü, her antrenmanın antrenman planınıza katkıda bulunmasını sağlar. Çok kolay mı? Adapte olmazsınız. Çok sıkı mı? Ek fayda olmadan yorgunluk biriktirirsiniz. Hassas yük yönetimi sizi fitness'ın sürekli geliştiği adaptasyon bölgesinde tutar.</p>
+                </div>
+
+                <div class="application-item">
+                    <h3>🛡️ Aşırı Antrenmanı Önle</h3>
+                    <p>Koşu sakatlıklarının %80'i antrenman hatalarından—başta "çok fazlasını çok erken"—kaynaklanır. Antrenman yükü metrikleri, yorgunluk birikimi toparlanma kapasitesini aştığında erken uyarı sinyalleri sağlar ve sakatlık zorlamadan önce proaktif dinlenmeye olanak tanır.</p>
+                </div>
+
+                <div class="application-item">
+                    <h3>📈 Zirve Performansı Zamanla</h3>
+                    <p>Zirve yarış performansı taze bacaklar VE sürdürülen fitness gerektirir—antrenman yükü periyodizasyonuyla çözülen çelişkili hedefler. CTL, ATL ve TSB ilişkilerini anlamak, fitness'ı korurken yorgunluğu ortadan kaldıran hassas daralma sağlar.</p>
+                </div>
+            </div>
+
+            <h3>İç ve Dış Yük</h3>
+
+            <p>Egzersiz bilimi iki antrenman yükü kategorisi arasında ayrım yapar:</p>
+
+            <p><strong>Dış Yük</strong>, gerçekleştirdiğiniz işi ölçer: kat edilen mesafe, sürdürülen tempo, kazanılan yükselti, antrenman süresi. Bu metrikler objektiftir ve GPS saatlerle kolayca ölçülür. 5:00/km tempoda 200m yükselti kazanımıyla 10K koşu, kim gerçekleştirirse gerçekleştirsin belirli bir dış yükü temsil eder.</p>
+
+            <p><strong>İç Yük</strong>, dış işe karşı fizyolojik tepkinizi ölçer: kalp atış hızı yükselmesi, laktat üretimi, glikojen tükenmesi, hormonal bozulma, nöromüsküler yorgunluk. Aynı 10K koşu, fitness'ınıza bağlı olarak farklı iç yük üretir—elit koşucu için kolay ama acemi için yorucu.</p>
+
+            <p>TSS gibi etkili antrenman yükü metrikleri, bireysel eşiğinize (<a href="/tr/crs/">Kritik Koşu Hızı</a>) göre stresi hesaplayarak dış ve iç yükü birleştirir. Bu kişiselleştirme, antrenman yükünüzün genel iş yükünü değil, SİZİN fizyolojik tepkinizi yansıtmasını sağlar.</p>
+
+            <h3>Antrenman Yükü Nasıl Ölçülür</h3>
+
+            <p>Koşucuların antrenman yükünü ölçmek için birden fazla seçeneği vardır; basit RPE tabanlı skorlardan sofistike fizyolojik metriklere kadar uzanır:</p>
+
+            <ul>
+                <li><strong>Seans RPE (sRPE):</strong> Algılanan çabayı 1-10 arası derecelendirin, dakikayla çarpın = antrenman yükü. Basit ama oldukça öznel ve tutarsız.</li>
+                <li><strong>TRIMP (TRaining IMPulse):</strong> Zonlarda geçirilen süreyle ağırlıklandırılmış kalp atış hızı tabanlı hesaplama. RPE'den daha iyi ama HR monitörü gerektirir.</li>
+                <li><strong>Antrenman Stres Skoru (TSS):</strong> Yoğunluk² × Süre × 100, burada yoğunluk eşiğe göredir. Belirlenmiş <a href="/tr/crs/">CRS</a>'ye sahip koşucular için en doğru.</li>
+            </ul>
+
+            <p>Bu kılavuz, dayanıklılık sporlarında antrenman yükü yönetimi için en uygulanabilir ve bilimsel olarak doğrulanmış çerçeveyi sağladıkları için TSS tabanlı metriklere (TSS, CTL, ATL, TSB) odaklanır. TSS, tüm gelişmiş <a href="/tr/training-load/">koşu antrenman yükü</a> analizinin temelini oluşturur.</p>
+
+            <h2 id="training-stress-score">Koşucular için Antrenman Stres Skoru (TSS)</h2>
+
+            <p><strong>Antrenman Stres Skoru (TSS)</strong>, antrenman stresinin nihai tek sayılı özetini temsil eder. Yoğunluğu ve süreyi birleştirerek, TSS "bu koşu ne kadar zordu?" sorusunu koşuya özgü hem kardiyovasküler hem de kas-iskelet sistem taleplerini hesaba katan hassasiyetle ölçer.</p>
+
+            <h3>TSS Nedir?</h3>
+
+            <p>TSS, Dr. Andrew Coggan tarafından bisiklet için geliştirildi ancak rTSS (running Training Stress Score - koşu Antrenman Stres Skoru) olarak koşuya uyarlandı. Temel ilke: eşik temponuzda bir saat = 100 TSS. Bu standart, farklı süre ve yoğunluktaki antrenmanları ortak bir ölçekte karşılaştırmaya olanak tanır.</p>
+
+            <div class="callout callout-info">
+                <h3>🎯 TSS Standardizasyonu</h3>
+                <p>100 TSS temeli sezgisel ölçeklendirme sağlar:</p>
+                <ul>
+                    <li>Eşikte 30 dakika = ~50 TSS</li>
+                    <li>Eşikte 60 dakika = 100 TSS (tanım)</li>
+                    <li>Eşikte 120 dakika = 200 TSS</li>
+                    <li>Eşik yoğunluğunun %80'inde 60 dakika = ~64 TSS</li>
+                    <li>Eşik yoğunluğunun %110'unda 60 dakika = ~121 TSS</li>
+                </ul>
+            </div>
+
+            <h3>TSS Nasıl Hesaplanır</h3>
+
+            <p>TSS formülü matematiksel olarak yoğunluğu ve süreyi birleştirir:</p>
+
+            <div class="formula-box">
+                <div class="formula">
+                    TSS = (IF²) × Süre (saat) × 100
+                </div>
+                <div class="formula-explanation">
+                    <p><strong>Yoğunluk Faktörü (IF)</strong>, eşiğe göre çabayı temsil eder:</p>
+                    <div class="formula">
+                        IF = Normalize Tempo / CRS Temposu
+                    </div>
+                    <p>Tempo kullanan koşucular için (hızdan ters çevrilmiş): IF = CRS temposu / Ortalama tempo</p>
+                    <p>CRS temponuz 4:00/km ise ve 4:20/km'de koşarsanız: IF = 240/260 = 0.923</p>
+                </div>
+            </div>
+
+            <div class="example-box">
+                <h4>Uygulamalı Örnek: Tempo Koşusu TSS Hesaplaması</h4>
+                <p><strong>Koşucu Profili:</strong></p>
+                <ul>
+                    <li>CRS Temposu: 4:00/km (30 dakika için eşik temposu)</li>
+                    <li>CRS: 15 km/saat veya 240 saniye/km</li>
+                </ul>
+                <p><strong>Antrenman:</strong> 43:20'de 10km koşu (ortalama tempo 4:20/km = 260 san/km)</p>
+                <p><strong>Adım 1: IF'yi Hesaplayın</strong><br>
+                IF = 240 san/km ÷ 260 san/km = <strong>0.923</strong></p>
+                <p><strong>Adım 2: Süreyi Hesaplayın</strong><br>
+                43:20 = 43.33 dakika = <strong>0.722 saat</strong></p>
+                <p><strong>Adım 3: TSS'yi Hesaplayın</strong><br>
+                TSS = (0.923²) × 0.722 × 100<br>
+                TSS = 0.852 × 0.722 × 100 = <strong>61.5 TSS</strong></p>
+                <p><strong>Yorum:</strong> Bu tempo koşusu orta düzeyde antrenman uyarısı oluşturdu—kaliteli aerobik seansların tipik özelliği.</p>
+            </div>
+
+            <h3>TSS Değerlerini Yorumlamak</h3>
+
+            <p>Farklı TSS aralıklarının neyi temsil ettiğini anlamak, etkili antrenmanlar tasarlamaya ve haftalık antrenman yükünü yönetmeye yardımcı olur:</p>
+
+            <table class="intensity-table">
+                <thead>
+                    <tr>
+                        <th>TSS Aralığı</th>
+                        <th>Antrenman Türü</th>
+                        <th>Gerekli Toparlanma</th>
+                        <th>Örnek Antrenmanlar</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>&lt; 50</td>
+                        <td>Kolay Toparlanma</td>
+                        <td>< 24 saat</td>
+                        <td>30-45dk kolay koşu, toparlanma koşusu, hızlanmalar</td>
+                    </tr>
+                    <tr>
+                        <td>50-100</td>
+                        <td>Orta Antrenman</td>
+                        <td>24-36 saat</td>
+                        <td>60dk sabit koşu, kolay uzun koşu</td>
+                    </tr>
+                    <tr>
+                        <td>100-200</td>
+                        <td>Sıkı Antrenman</td>
+                        <td>36-48 saat</td>
+                        <td>Eşik çalışmasıyla 90dk, kaliteli uzun koşu</td>
+                    </tr>
+                    <tr>
+                        <td>200-300</td>
+                        <td>Çok Sıkı</td>
+                        <td>48-72 saat</td>
+                        <td>2-3 saat uzun koşular, yarı maraton tempo çalışması</td>
+                    </tr>
+                    <tr>
+                        <td>&gt; 300</td>
+                        <td>Ekstrem</td>
+                        <td>72+ saat</td>
+                        <td>Maraton yarışları, ultra mesafe etkinlikleri</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Antrenman Türüne Göre TSS Aralıkları</h3>
+
+            <p>Farklı antrenman seansları süreye ve yoğunluğa bağlı olarak öngörülebilir TSS aralıkları oluşturur:</p>
+
+            <ul>
+                <li><strong>Kolay Koşular (%60-75 çaba):</strong> 10km başına 8-15 TSS, 60-90 dakika için 40-75 TSS</li>
+                <li><strong>Uzun Koşular (konuşma temposu):</strong> 90-150 dakika sabit aerobik koşu için 100-200 TSS</li>
+                <li><strong>Tempo/Eşik Koşuları:</strong> Isınma/soğuma ile eşik yoğunluğunda 20-40 dakika için 80-150 TSS</li>
+                <li><strong>Aralık Seansları:</strong> Aralık uzunluğuna, yoğunluğuna ve toparlanma süresine bağlı olarak 100-180 TSS</li>
+                <li><strong>VO2max Antrenmanları:</strong> Yüksek yoğunluklu aralıklar için 90-140 TSS (eşikten daha kısa ama daha yüksek yoğunluk)</li>
+                <li><strong>Maraton Yarışları:</strong> 250-350+ TSS (uzun toparlanma gerektiren ekstrem stres)</li>
+            </ul>
+
+            <div class="callout callout-tip">
+                <h3>💡 Koşu ile Bisiklet TSS'si</h3>
+                <p>Aynı TSS değeri, çarpma kuvvetleri ve kas-iskelet sistem yüklemesi nedeniyle koşuda bisikletten DAHA FAZLA fiziksel stresi temsil eder. Haftada 400 TSS biriktiren bir koşucu, haftada 600-700 TSS'ye sahip bisikletçiye benzer antrenman adaptasyonu yaşar. Bisiklet hedeflerini değil, koşuya özgü TSS standartlarını kullanın. <a href="/tr/training-load/">Koşu TSS hesaplaması</a> hakkında daha fazla bilgi edinin.</p>
+            </div>
+
+            <h2 id="chronic-training-load">Kronik Antrenman Yükü (CTL): Fitness Seviyeniz</h2>
+
+            <p><strong>Kronik Antrenman Yükü (CTL)</strong>, son 42 gün boyunca günlük TSS'yi üstel ağırlıklandırmayla (yakın günler uzak günlerden biraz daha fazla sayılır) ortalamasını alarak uzun vadeli fitness'ınızı ölçer. CTL, vücudunuzun <em>adapte olduğu</em> antrenman yükünü temsil eder—tutarlı çalışmayla inşa edilen aerobik fitness temelinizdir.</p>
+
+            <h3>CTL Nedir?</h3>
+
+            <p>CTL temel soruyu yanıtlar: "Şu anda ne kadar formum?" Öznel hisler veya tek antrenman performanslarından farklı olarak, CTL vücudunuzun altı hafta boyunca başarıyla işlediği ve adapte olduğu birikmiş antrenman stresine dayalı objektif bir fitness metriği sağlar.</p>
+
+            <p>Daha yüksek CTL, daha fazla aerobik kapasite, gelişmiş koşu ekonomisi, geliştirilmiş toparlanma sistemleri ve antrenman stresine karşı artan dayanıklılık gösterir. CTL'si 80 olan bir koşucu, CTL'si 40 olan birini harap edecek haftalık antrenman yüklerini kaldırabilir—kardiyovasküler, metabolik ve kas-iskelet sistemleri kronik stres maruziyetine adapte olmuştur.</p>
+
+            <div class="callout callout-info">
+                <h3>🔬 Bilim: 42 Günlük Zaman Sabiti</h3>
+                <p>CTL, 42 günlük üstel ağırlıklı hareketli ortalama (EWMA) kullanır. Bu zaman sabiti fizyolojik adaptasyon zaman ölçeklerini yansıtır:</p>
+                <ul>
+                    <li>Kapiller yoğunluk değişiklikleri 4-6 hafta boyunca gerçekleşir</li>
+                    <li>Mitokondriyal biyogenez 3-6 hafta gerektirir</li>
+                    <li>Aerobik enzim adaptasyonları 4-8 hafta boyunca gelişir</li>
+                    <li>Nöromüsküler koordinasyon 4-12 hafta boyunca iyileşir</li>
+                </ul>
+                <p>42 günlük pencere, yakın antrenman değişikliklerini yansıtacak kadar duyarlı kalırken bu adaptasyonları yakalar.</p>
+            </div>
+
+            <h3>CTL Nasıl Hesaplanır</h3>
+
+            <p>CTL, dünün CTL'si ve bugünün TSS'sine göre günlük güncellenir:</p>
+
+            <div class="formula-box">
+                <div class="formula">
+                    CTL<sub>bugün</sub> = CTL<sub>dün</sub> + (TSS<sub>bugün</sub> - CTL<sub>dün</sub>) × (1/42)
+                </div>
+                <div class="formula-explanation">
+                    <p>Bu üstel ağırlıklandırma şu anlama gelir:</p>
+                    <ul>
+                        <li>Bugünün antrenmanı CTL'yi hemen %2.4 etkiler</li>
+                        <li>14 gün önceki antrenman hala ~%60 ağırlık katkısı yapar</li>
+                        <li>42 gün önceki antrenman ~%37 ağırlık katkısı yapar (1/e)</li>
+                        <li>60 günü aşkın antrenmanların minimum etkisi vardır (~%25)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="example-box">
+                <h4>CTL İnşa Örneği: 12 Haftalık Maraton Bloğu</h4>
+                <p><strong>Başlangıç Noktası:</strong> CTL = 45 (orta seviye koşucu, haftada 4 koşu, ~350 TSS/hafta)</p>
+                <p><strong>Hafta 1-4:</strong> 400 TSS/haftaya inşa et → CTL 52'ye yükselir</p>
+                <p><strong>Hafta 5-8:</strong> 500 TSS/haftaya inşa et → CTL 62'ye yükselir</p>
+                <p><strong>Hafta 9-11:</strong> 550 TSS/haftada zirve yap → CTL 68'e ulaşır</p>
+                <p><strong>Hafta 12:</strong> 300 TSS'ye daralt → CTL ~66'da kalır</p>
+                <p><strong>Sonuç:</strong> 12 hafta boyunca +21 CTL puanı = %47 fitness gelişimi</p>
+            </div>
+
+            <h3>CTL'yi Güvenle İnşa Etmek</h3>
+
+            <p>Her koşucu için kritik soru: "CTL'yi ne kadar hızlı güvenle artırabilirim?" Çok yavaş inşa etmek antrenman zamanını boşa harcar ve ilerlemeyi sınırlar. Çok hızlı inşa etmek adaptasyondan daha hızlı yorgunluk biriktirir ve sakatlığa, hastalığa veya aşırı antrenman sendromuna yol açar.</p>
+
+            <div class="warning-box">
+                <strong>⚠️ Koşucular için Güvenli CTL Rampa Oranları</strong>
+                <ul>
+                    <li><strong>Acemiler (CTL 15-35):</strong> Haftada maksimum +2-3 puan. Temel oluşturma sabır gerektirir.</li>
+                    <li><strong>Orta Seviye (CTL 35-60):</strong> Haftada +3-5 puan. Aşırı sakatlık riski olmadan tutarlı ilerleme.</li>
+                    <li><strong>İleri Seviye (CTL 60-85):</strong> İnşa fazlarında haftada +5-7 puan. Daha yüksek mutlak yük toleransı.</li>
+                    <li><strong>Elit (CTL 85-120+):</strong> Haftada +5-8 puan. Yıllarca süren antrenman güçlü adaptasyon sistemleri yaratır.</li>
+                </ul>
+                <p>Bu oranlar haftalık kilometre artışları için "%10 kuralı" ile uyumludur ve koşunun kaslar, tendonlar ve kemikler üzerindeki yüksek çarpma stresini yansıtır. Bu oranları aşmak sakatlık riskini önemli ölçüde artırır.</p>
+            </div>
+
+            <h3>Hedefe Göre CTL Hedefleri</h3>
+
+            <p>Uygun CTL, yarış mesafesi hedefinize, rekabet seviyenize ve antrenman geçmişinize bağlıdır:</p>
+
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Hedef Yarış</th>
+                        <th>Rekreasyonel</th>
+                        <th>Rekabetçi</th>
+                        <th>İleri Seviye</th>
+                        <th>Elit</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>5K/10K</strong></td>
+                        <td>30-45</td>
+                        <td>50-70</td>
+                        <td>70-90</td>
+                        <td>90-110</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Yarı Maraton</strong></td>
+                        <td>40-55</td>
+                        <td>60-80</td>
+                        <td>80-100</td>
+                        <td>100-120</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Maraton</strong></td>
+                        <td>50-65</td>
+                        <td>70-90</td>
+                        <td>90-110</td>
+                        <td>110-130+</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Ultra (50K+)</strong></td>
+                        <td>55-70</td>
+                        <td>75-95</td>
+                        <td>95-115</td>
+                        <td>115-140+</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p>Bu aralıklar tam antrenman inşalarından sonraki zirve CTL değerlerini temsil eder. Antrenman döngülerine hedefin 15-25 CTL puanı altında başlayın ve tutarlılığı sürdürürken ve yorgunluğu yönetirken güvenle inşa etmek için 12-20 haftaya izin verin.</p>
+
+            <h2 id="acute-training-load">Akut Antrenman Yükü (ATL): Yakın Döneminizin Yorgunluğu</h2>
+
+            <p><strong>Akut Antrenman Yükü (ATL)</strong>, son 7 gün boyunca günlük TSS'yi ortalamayarak kısa vadeli antrenman stresini izler. Yavaşça değişen CTL'nin aksine, ATL antrenmana hızla tepki verir—sıkı haftalarda sıçrar, toparlanma sırasında düşer. ATL mevcut yorgunluk seviyenizi ve toparlanma durumunuzu temsil eder.</p>
+
+            <h3>ATL Nedir?</h3>
+
+            <p>ATL, henüz tam olarak emilmemiş ve adapte olmamış yakın günlerde biriken antrenman stresini ölçer. ATL'yi "antrenman borcunuz" olarak düşünün—hala toparlanma kaynakları gerektiren gerçekleştirilmiş iş. Yüksek ATL, bir sonraki kaliteli seansınızdan önce dinlenme gerektiren birikmiş yorgunluğu gösterir.</p>
+
+            <p>7 günlük zaman sabiti akut toparlanma zaman ölçeklerini yansıtır. Çoğu koşucunun bireysel antrenmanlardan toparlanması için yoğunluğa bağlı olarak 24-72 saat gerekir. Bir haftalık antrenman stresi, günlük değişikliklere duyarlı kalırken bu akut pencereyi yakalar.</p>
+
+            <h3>ATL Nasıl Hesaplanır</h3>
+
+            <p>ATL, CTL ile aynı üstel ağırlıklandırma formülünü kullanır ancak 42 yerine 7 günlük zaman sabitiyle:</p>
+
+            <div class="formula-box">
+                <div class="formula">
+                    ATL<sub>bugün</sub> = ATL<sub>dün</sub> + (TSS<sub>bugün</sub> - ATL<sub>dün</sub>) × (1/7)
+                </div>
+                <div class="formula-explanation">
+                    <p>Daha kısa zaman sabiti ATL'yi daha duyarlı yapar:</p>
+                    <ul>
+                        <li>Bugünün antrenmanı ATL'yi hemen %14.3 etkiler</li>
+                        <li>3 gün önceki antrenman hala ~%65 ağırlık katkısı yapar</li>
+                        <li>7 gün önceki antrenman ~%37 ağırlık katkısı yapar (1/e)</li>
+                        <li>10 günü aşkın antrenmanların minimum etkisi vardır</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3>ATL'yi Yönetmek</h3>
+
+            <p>Etkili antrenman, uyarı ve toparlanmayı dengelemek için ATL'yi aktif olarak yönetmeyi gerektirir:</p>
+
+            <div class="application-grid">
+                <div class="application-item">
+                    <h3>📊 ATL Kalıpları</h3>
+                    <p><strong>İnşa Haftaları:</strong> Antrenman stresi biriktiğinizde ATL yükselir. Sıkı antrenman blokları sırasında rekabetçi koşucular için 60-80 ATL hedefi.</p>
+                    <p><strong>Toparlanma Haftaları:</strong> Hacmi azalttığınızda ATL düşer. Her 3-4 haftada bir, adaptasyonları pekiştirmek için ATL'nin %25-40 düşmesine izin verin.</p>
+                    <p><strong>Daralma:</strong> Yarış öncesi daralmalar sırasında ATL çöker (%50+ düşüş), yorgunluğun altında fitness'ı ortaya çıkarır.</p>
+                </div>
+
+                <div class="application-item">
+                    <h3>⚠️ Uyarı İşaretleri</h3>
+                    <p><strong>ATL > 100:</strong> Çok yüksek yorgunluk. Zirve haftalar sırasında elit koşucular için uygun ama çoğu için sürdürülemez.</p>
+                    <p><strong>ATL art arda 3+ hafta yükseliyor:</strong> Toparlanma olmadan yorgunluk birikimi. Sakatlık riski yüksek. Düşük hafta planlayın.</p>
+                    <p><strong>ATL ortalamanın %50 üzerinde sıçrama:</strong> Tek hafta aşırı yük. Aşırı antrenman sinyalleri için yakından izleyin.</p>
+                </div>
+
+                <div class="application-item">
+                    <h3>🎯 Optimum Aralıklar</h3>
+                    <p><strong>Bakım:</strong> ATL, CTL ile eşleşir (TSB sıfıra yakın). Süresiz sürdürülebilir.</p>
+                    <p><strong>İnşa:</strong> ATL, CTL'yi 10-20 puan aşar. Adaptasyonu uyaran üretken aşırı yükleme.</p>
+                    <p><strong>Toparlanma:</strong> ATL, CTL'nin 10-20 puan altında. Antrenman stresini emiyor, yorgunluğu dağıtıyor.</p>
+                </div>
+            </div>
+
+            <div class="example-box">
+                <h4>ATL Tepki Örneği: Sıkı Hafta + Toparlanma</h4>
+                <p><strong>Başlangıç Durumu:</strong> CTL = 60, ATL = 58, TSB = +2 (dengeli)</p>
+                <p><strong>Sıkı Hafta:</strong> 7 gün boyunca 550 TSS (günlük ortalama = 79 TSS)</p>
+                <ul>
+                    <li>ATL hızla yükselir: 58 → 65 → 70 → 74 → 77</li>
+                    <li>CTL yavaşça yükselir: 60 → 61 → 62 → 63 → 64</li>
+                    <li>TSB negatif olur: +2 → -4 → -8 → -11 → -13</li>
+                </ul>
+                <p><strong>Toparlanma Haftası:</strong> 7 gün boyunca 300 TSS (günlük ortalama = 43 TSS)</p>
+                <ul>
+                    <li>ATL hızla düşer: 77 → 72 → 67 → 62 → 58</li>
+                    <li>CTL yükselmeye devam eder: 64 → 65 → 65 → 66 → 66</li>
+                    <li>TSB pozitif olur: -13 → -7 → -2 → +4 → +8</li>
+                </ul>
+                <p><strong>Sonuç:</strong> Sıkı hafta aşırı yükleme yarattı (TSB -13). Toparlanma haftası fitness kazançlarını korurken yorgunluğu dağıttı (+6 CTL). Bu kalıp etkili periyodizasyonu tanımlar.</p>
+            </div>
+
+            <h2 id="training-stress-balance">Antrenman Stres Dengesi (TSB): Form ve Tazelik</h2>
+
+            <p><strong>Antrenman Stres Dengesi (TSB)</strong>, fitness'ınız (CTL) ile yorgunluğunuz (ATL) arasındaki farkı temsil eder. Bu tek sayı, taze mi yorgun mu olduğunuzu, yarışa hazır mı yoksa toparlanmaya mı ihtiyacınız olduğunu ortaya çıkarır. TSB, günlük antrenman kararları için en uygulanabilir metriktir.</p>
+
+            <h3>TSB Nedir?</h3>
+
+            <p>TSB, 1970'lerde egzersiz fizyologları tarafından keşfedilen fitness-yorgunluk ilişkisini ölçer: mevcut performans potansiyeliniz fitness eksi yorgunluğa eşittir. TSB pozitif olduğunda tazesiniz (fitness'e göre düşük yorgunluk)—yarışlar için ideal. TSB negatif olduğunda yorgunsunuz (yakın antrenman stresi mevcut fitness'ı aşıyor)—antrenman blokları sırasında normal ama ekstrem veya uzun sürüyorsa sorunludur.</p>
+
+            <h3>TSB Formülü: CTL - ATL</h3>
+
+            <p>Hesaplama zarif bir şekilde basittir:</p>
+
+            <div class="formula-box">
+                <div class="formula">
+                    TSB = CTL<sub>dün</sub> - ATL<sub>dün</sub>
+                </div>
+                <div class="formula-explanation">
+                    <p>Dünün değerlerini kullanmak (bugünün değil), aynı gün antrenmanlarının TSB'yi etkilemesini önler:</p>
+                    <ul>
+                        <li><strong>Pozitif TSB:</strong> Fitness > Yorgunluk. Tazesiniz ve performansa hazırsınız.</li>
+                        <li><strong>Sıfır TSB:</strong> Fitness = Yorgunluk. Dengeli bakım durumu.</li>
+                        <li><strong>Negatif TSB:</strong> Yorgunluk > Fitness. Antrenman stresi biriktirdiniz.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3>TSB Değerlerini Yorumlamak</h3>
+
+            <p>TSB aralıklarını anlamak hassas antrenman ve yarış kararları sağlar:</p>
+
+            <table class="tsb-zones-table">
+                <thead>
+                    <tr>
+                        <th>TSB Aralığı</th>
+                        <th>Durum</th>
+                        <th>Yorum</th>
+                        <th>Önerilen Eylem</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="tsb-critical">
+                        <td>&lt; -30</td>
+                        <td><strong>Aşırı Antrenman Riski</strong></td>
+                        <td>Ekstrem yorgunluk. Çok yüksek sakatlık riski. Performans düşüyor.</td>
+                        <td>Acil toparlanma gerekli. Hacmi %50+ azaltın veya dinlenme günleri alın. Semptomlar devam ederse tıbbi danışma düşünün.</td>
+                    </tr>
+                    <tr class="tsb-training">
+                        <td>-20 ile -30</td>
+                        <td><strong>Optimum Antrenman Bloğu</strong></td>
+                        <td>Üretken aşırı yükleme. Yönetilebilirken fitness uyarısını maksimize ediyor.</td>
+                        <td>Planla devam edin ama yakından izleyin. Aşırı ağrıya, kötü uykuya veya yükselen dinlenme nabzına dikkat edin.</td>
+                    </tr>
+                    <tr class="tsb-moderate">
+                        <td>-10 ile -20</td>
+                        <td><strong>Orta Antrenman Yükü</strong></td>
+                        <td>Standart antrenman birikimi. Çoğu antrenman haftası için uygun.</td>
+                        <td>Normal antrenman durumu. Arada uygun toparlanmayla kaliteli eşik veya aralık seansları kaldırabilir.</td>
+                    </tr>
+                    <tr class="tsb-neutral">
+                        <td>-10 ile +15</td>
+                        <td><strong>Geçiş/Bakım</strong></td>
+                        <td>Hafif yorgunluk veya tazelik ile dengeli durum. İyi denge.</td>
+                        <td>B/C öncelikli yarışlar, test antrenmanları veya aktif toparlanma haftaları için uygun. Bakım modu.</td>
+                    </tr>
+                    <tr class="tsb-fresh">
+                        <td>+15 ile +25</td>
+                        <td><strong>Zirve Yarış Formu</strong></td>
+                        <td>Taze ve formda. Önemli yarışlar için optimum performans penceresi.</td>
+                        <td>A-öncelikli yarışlar. Kişisel rekorlar veya sezon-en iyi performanslar bekleyin. Bu pencereyi antrenmanda harcamayın.</td>
+                    </tr>
+                    <tr class="tsb-very-fresh">
+                        <td>+25 ile +35</td>
+                        <td><strong>Çok Taze</strong></td>
+                        <td>Oldukça dinlenmiş. Daha kısa, hız odaklı etkinlikler için iyi.</td>
+                        <td>Dayanıklılık üzerinde hız ve gücün hakim olduğu 5K-10K yarışları, zaman denemeleri, pist etkinlikleri için en iyi.</td>
+                    </tr>
+                    <tr class="tsb-detraining">
+                        <td>&gt; +35</td>
+                        <td><strong>Antrenman Kaybı</strong></td>
+                        <td>Çok taze. Uzun hareketsizlik veya aşırı daralmadan fitness düşüyor.</td>
+                        <td>Antrenmana devam edin. Uyarı eksikliğinden fitness erozyona uğruyor. Daralmayı 2-3 haftadan uzatmayın.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Yarış Günü için TSB</h3>
+
+            <p>Yarış sabahı hedef TSB mesafeye göre değişir. Hız gerektiren daha kısa yarışlar daha yüksek TSB'ye (daha fazla tazelik) ihtiyaç duyar. Dayanıklılık gerektiren daha uzun yarışlar daha düşük TSB'yi tolere eder (biraz yorgunluk kabul edilebilir):</p>
+
+            <div class="callout callout-tip">
+                <h3>🎯 Koşu Mesafesine Göre Hedef TSB</h3>
+                <ul>
+                    <li><strong>5K Yarışları:</strong> TSB +25 ile +35 (tazelik ve hızı vurgulayan 7-10 günlük daralma)</li>
+                    <li><strong>10K Yarışları:</strong> TSB +20 ile +30 (güç ve hız için 10-12 günlük daralma)</li>
+                    <li><strong>Yarı Maraton:</strong> TSB +15 ile +25 (tazelik ile dayanıklılığı dengeleyen 10-14 günlük daralma)</li>
+                    <li><strong>Maraton:</strong> TSB +10 ile +20 (hacim azaltmalı ama biraz yükü koruyan 14-21 günlük daralma)</li>
+                    <li><strong>Ultra Maraton (50K+):</strong> TSB +5 ile +15 (7-14 günlük daralma, dayanıklılığı korumak için hacmi sürdür ama yoğunluğu azalt)</li>
+                </ul>
+                <p>Bu aralıklar yarış fizyolojisini yansıtır: daha kısa yarışlar nöromüsküler tazelik (daha yüksek TSB) gerektirirken, ultra mesafeler sürdürülen aerobik sistemler (orta TSB) gerektirir.</p>
+            </div>
+
+            <h2 id="periodization-fundamentals">Periyodizasyon: Yapılandırılmış Antrenman İlerlemesi</h2>
+
+            <p><strong>Periyodizasyon</strong>, yorgunluğu yönetirken ve aşırı antrenmandan kaçınırken önceden belirlenen zamanlarda zirve performans üretmek için tasarlanmış belirli fazlara (periyotlara) antrenmanın sistematik organizasyonudur. Rastgele antrenman veya sabit yoğunluk yerine, periyodizasyon adaptasyonu maksimize etmek için yük ilerlemesini yapılandırır.</p>
+
+            <h3>Periyodizasyon Nedir?</h3>
+
+            <p>Periyodizasyon, araştırmacıların planlı antrenman yükü çeşitliliğinin sabit antrenman stresine kıyasla üstün sonuçlar ürettiğini keşfettiği 1960'larda Doğu Avrupa spor biliminden ortaya çıktı. Temel ilke: zirve fitness'ı süresiz sürdüremezsiniz, ancak yapılandırılmış yük manipülasyonuyla fitness'ı öngörülebilir şekilde inşa edebilir ve zirveleri zamanlayabilirsiniz.</p>
+
+            <p>Koşucular için periyodizasyon üç kritik sorunu çözer:</p>
+
+            <ul>
+                <li><strong>Adaptasyon Platosu:</strong> Sabit antrenman stresi, vücudunuz adapte oldukça azalan getiriler üretir. Periyodizasyon adaptasyon platolarını önlemek için uyarıları çeşitlendirir.</li>
+                <li><strong>Aşırı Antrenman Riski:</strong> Sürekli yüksek yoğunluklu antrenman sakatlığa veya tükenmeye yol açan yorgunluk biriktirir. Periyodizasyon toparlanma fazlarını plana dahil eder.</li>
+                <li><strong>Yarış Zamanlaması:</strong> Yıl boyunca %100'de yarışamazsınız. Periyodizasyon, diğer zamanlarda daha düşük performansı kabul ederken hedef yarışlar için fitness'ı zirveye taşır.</li>
+            </ul>
+
+            <h3>Makrosiklus, Mezosiklus, Mikrosiklus</h3>
+
+            <p>Periyodizasyon, her biri belirli amaçlara hizmet eden üç zaman ölçeğinde çalışır:</p>
+
+            <div class="application-grid">
+                <div class="application-item">
+                    <h3>📅 Makrosiklus</h3>
+                    <p><strong>Süre:</strong> 16-52 hafta (sezon veya yıllık plan)</p>
+                    <p><strong>Amaç:</strong> Temel oluşturmadan yarış zirvesine ve toparlanmaya eksiksiz antrenman ilerlemesi</p>
+                    <p><strong>Örnek:</strong> 24 haftalık maraton antrenman planı veya iki maraton zirveli tam yıl antrenmanı (ilkbahar + sonbahar)</p>
+                </div>
+
+                <div class="application-item">
+                    <h3>🗓️ Mezosiklus</h3>
+                    <p><strong>Süre:</strong> 3-6 hafta (antrenman fazı veya bloğu)</p>
+                    <p><strong>Amaç:</strong> Belirli fizyolojik adaptasyonları hedefle (temel, inşa, zirve, daralma)</p>
+                    <p><strong>Örnek:</strong> Aerobik gelişime odaklanan 4 haftalık temel oluşturma mezosiklusu</p>
+                </div>
+
+                <div class="application-item">
+                    <h3>📆 Mikrosiklus</h3>
+                    <p><strong>Süre:</strong> 1 hafta (7 gün)</p>
+                    <p><strong>Amaç:</strong> Haftalık yapı içinde antrenman stresi ve toparlanmayı dengele</p>
+                    <p><strong>Örnek:</strong> Haftalık kalıp: sıkı Salı, kolay Çarşamba, uzun Cumartesi, toparlanma Pazar</p>
+                </div>
+            </div>
+
+            <h3>Lineer ve Lineer Olmayan Periyodizasyon</h3>
+
+            <p>İki birincil periyodizasyon modeli dayanıklılık antrenmanına hakim olur, her birinin farklı özellikleri ve uygulamaları vardır:</p>
+
+            <div class="comparison-table-container">
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Yön</th>
+                            <th>Lineer Periyodizasyon</th>
+                            <th>Lineer Olmayan (Dalgalı)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Yapı</strong></td>
+                            <td>Sıralı fazlar (temel → inşa → zirve → yarış)</td>
+                            <td>Haftalarda çeşitli antrenmanlar (Pazartesi eşik, Çarşamba VO2max, Cumartesi uzun koşu)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Yük İlerlemesi</strong></td>
+                            <td>Haftalar boyunca kademeli olarak artan hacim sonra yoğunluk</td>
+                            <td>Genel hacim kontrolüyle günlük değişken yoğunluk</td>
+                        </tr>
+                        <tr>
+                            <td><strong>En İyi Kullanım</strong></td>
+                            <td>Tek zirve yarışları (hedef maraton, şampiyonluk), acemiler</td>
+                            <td>Çoklu yarış zirveleri, deneyimli koşucular, fitness'ı sürdürme</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Avantajlar</strong></td>
+                            <td>Net ilerleme, temel oluşturma için mükemmel, öngörülebilir zirveler</td>
+                            <td>Can sıkıntısını önler, birden fazla sistemi eşzamanlı olarak ele alır, esnek</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Dezavantajlar</strong></td>
+                            <td>Tek odaklı fazlar sırasında belirli sistemlerin antrenman kaybı riski</td>
+                            <td>Daha fazla planlama gerektirir, mükemmel şekilde uygulaması daha zor, aşırı antrenman yapmak kolay</td>
+                        </tr>
+                        <tr>
+                            <td><strong>CTL Kalıbı</strong></td>
+                            <td>Belirgin daralmalı antrenman döngüsü boyunca sürekli yükseliş</td>
+                            <td>Çeşitli yoğunluktan haftalık dalgalanmalarla kademeli yükseliş</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3>Farklı Hedefler için Periyodizasyon</h3>
+
+            <p>Optimum periyodizasyon yapısı yarış mesafesine, rekabet seviyesine ve sezon yapısına bağlıdır:</p>
+
+            <ul>
+                <li><strong>Maraton Antrenmanı:</strong> Lineer periyodizasyon mükemmeldir. 12-20 hafta: temel fazı (hacim oluşturan 8-12 hafta), inşa fazı (yoğunluk ekleyen 4-6 hafta), zirve fazı (yarış simülasyonu 2-3 hafta), daralma (10-21 gün). Hedef CTL ilerlemesi: başlangıçtan zirveye +25 ile +35 puan.</li>
+                <li><strong>5K-10K Yarışları:</strong> Lineer olmayan periyodizasyon dayanıklılık oluştururken hızı korur. Haftalar içinde eşik, VO2max ve tempo çalışması değiştiren 8-12 haftalık döngüler. Daha kısa daralmalar (7-10 gün). Hedef CTL: döngü başına +15 ile +25 puan.</li>
+                <li><strong>Ultra Maraton:</strong> Yoğunluktan ziyade hacme vurgu yapan değiştirilmiş lineer. Uzatılmış temel fazlar (12-16 hafta), orta inşa yoğunluğu, daha uzun zirve fazı (3-4 hafta), minimal daralma (5-10 gün). Hedef CTL ilerlemesi: ekstrem hacmi yansıtan +30 ile +45 puan.</li>
+                <li><strong>Çoklu Yarış Sezonu:</strong> A-yarışlarından önce 3-4 haftalık mini-zirvelerle lineer olmayan temel bakımı. Yıl boyunca CTL'yi sürdürün (±10 puan dalgalanma), öncelikler öncesi 2-3 haftalık odaklı inşalar kullanın, yarış çabaları arasında 1-2 hafta toparlanın.</li>
+            </ul>
+
+            <h2 id="base-building-phase">Temel Oluşturma Fazı: Temel</h2>
+
+            <p><strong>Temel oluşturma</strong>, sonraki tüm antrenmanları destekleyen aerobik temeli kurar. Bu faz, sonraki yüksek yoğunluklu çalışmayı sakatlık olmadan emmek için gereken fizyolojik altyapıyı (mitokondri, kapiller, aerobik enzimler, kas-iskelet dayanıklılığı) geliştirerek yoğunluktan ziyade hacme öncelik verir.</p>
+
+            <h3>Temel Oluşturma Nedir?</h3>
+
+            <p>Temel faz <a href="/tr/training-zones/">Zon 2 koşusuna</a> odaklanır—aşırı yorgunluk olmadan dayanıklılık kapasitesini oluşturan konuşma temposu aerobik antrenman. Bu "sıkıcı" antrenman yoğunluk odaklı yaklaşımlarla elde edilmesi imkansız adaptasyonlar yaratır:</p>
+
+            <ul>
+                <li><strong>Mitokondriyal Yoğunluk:</strong> Aerobik enerji üreten daha fazla hücresel güç santrali</li>
+                <li><strong>Kapiller Ağlar:</strong> Çalışan kaslara artan oksijen dağıtımı</li>
+                <li><strong>Yağ Oksidasyonu:</strong> Yağ yakma yeteneği artırılmış, daha sıkı çabalar için glikojen korunmuş</li>
+                <li><strong>Tendon Gücü:</strong> Kolagen yeniden şekillenme bağ dokusunu güçlendirir</li>
+                <li><strong>Koşu Ekonomisi:</strong> Nöromüsküler kalıplar tekrarla daha verimli hale gelir</li>
+            </ul>
+
+            <h3>Temel Oluşturma Ne Kadar Sürer?</h3>
+
+            <p>Temel faz süresi antrenman geçmişine, başlangıç fitness'ına ve hedef yarış mesafesine bağlıdır:</p>
+
+            <div class="callout callout-info">
+                <h3>📊 Temel Oluşturma Süre Kılavuzları</h3>
+                <ul>
+                    <li><strong>Acemiler (yapılandırılmış antrenmana yeni):</strong> Minimum 12-16 hafta. Yoğunluk eklemeden önce aerobik temel oluştur.</li>
+                    <li><strong>Orta Seviye (1-3 yıl antrenman):</strong> 8-12 hafta. Sezon dışı veya toparlanma molalarından sonra temeli yeniden oluştur.</li>
+                    <li><strong>İleri Seviye (3+ yıl antrenman):</strong> 6-8 hafta. Yıl boyunca aerobik fitness sürdürdüğünüz için daha kısa temel fazlar.</li>
+                    <li><strong>Sakatlık Sonrası Dönüş:</strong> Ara süresine bağlı olarak 8-16 hafta. Yeniden sakatlığı önlemek için kademeli olarak yeniden inşa edin.</li>
+                </ul>
+                <p>Maratonlar ve ultralar, aşırı dayanıklılık talepleri nedeniyle 5K-10K antrenmanından daha uzun temel fazlar gerektirir.</p>
+            </div>
+
+            <h3>Temel Fazında Antrenman</h3>
+
+            <p>Temel oluşturma, yoğunluktan ziyade hacim ve sıklığa vurgu yapar. Hedef: uzun toparlanma gerektiren yorgunluk yaratmadan adaptasyonu uyaran aerobik yoğunluklarda zaman biriktirmek.</p>
+
+            <p><strong>Tipik Temel Hafta Yapısı:</strong></p>
+
+            <ul>
+                <li><strong>Kolay Koşular:</strong> Haftada 4-5 kez Zon 2 temposunda (konuşma). Her biri 40-90 dakika.</li>
+                <li><strong>Uzun Koşu:</strong> Hedef yarışa bağlı olarak 60 dakikadan 120-180+ dakikaya kademeli olarak ilerleyen haftada 1 kez.</li>
+                <li><strong>Hızlanmalar:</strong> Nöromüsküler koordinasyonu sürdürmek için kolay koşulardan sonra 5K temposunda 4-6×100m (haftada 2-3 kez).</li>
+                <li><strong>Sınırlı Yoğunluk:</strong> Her 7-10 günde bir tempo koşusu (isteğe bağlı) veya ara sıra progresyon koşuları (başlangıçtan 10-15 saniye daha hızlı bitir).</li>
+                <li><strong>Dinlenme Günleri:</strong> Acemiler için haftada 1-2, yüksek antrenman hacmi toleranslı ileri seviye koşucular için 0-1.</li>
+            </ul>
+
+            <p><strong>Haftalık TSS Hedefleri:</strong> Rekreasyonel koşucular için 300-450, rekabetçi için 450-600, ileri/elit için 600-800+. Yorgunluk sinyallerini izlerken TSS'yi kademeli olarak oluşturun (haftalık %5-10 artırın).</p>
+
+            <h3>Temel Oluşturma için CTL Hedefleri</h3>
+
+            <p>Temel faz CTL ilerlemesi kademeli ve sürdürülebilir olmalıdır. Temeli acele etmek uygun aerobik adaptasyon olmadan yorgunluk yaratır:</p>
+
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Koşucu Seviyesi</th>
+                        <th>Başlangıç CTL</th>
+                        <th>Hedef CTL (Temel Sonu)</th>
+                        <th>Haftalık Artış</th>
+                        <th>Süre</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Acemi</strong></td>
+                        <td>15-25</td>
+                        <td>35-45</td>
+                        <td>+2-3</td>
+                        <td>12-16 hafta</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Orta Seviye</strong></td>
+                        <td>30-45</td>
+                        <td>50-65</td>
+                        <td>+3-4</td>
+                        <td>8-12 hafta</td>
+                    </tr>
+                    <tr>
+                        <td><strong>İleri Seviye</strong></td>
+                        <td>50-65</td>
+                        <td>70-85</td>
+                        <td>+4-5</td>
+                        <td>6-10 hafta</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Elit</strong></td>
+                        <td>70-90</td>
+                        <td>95-115</td>
+                        <td>+5-7</td>
+                        <td>6-8 hafta</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="callout callout-warning">
+                <h3>⚠️ Kaçınılması Gereken Temel Oluşturma Hataları</h3>
+                <ul>
+                    <li><strong>Çok Sıkı Koşmak:</strong> Çoğu koşucu temel koşularını çok hızlı yapar. Zon 2 KOLAY hissettirmelidir. Konuşamıyorsanız, yavaşlayın.</li>
+                    <li><strong>Yoğunluğu Çok Erken Eklemek:</strong> Aralıklar veya tempo koşuları ekleme isteğine direnmek. Hacme odaklanın. Yoğunluk inşa fazında gelir.</li>
+                    <li><strong>Hacmi Çok Hızlı Artırmak:</strong> %10 kuralını izleyin. Haftalık 40km'den 60km'ye atlamak sakatlığı davet eder.</li>
+                    <li><strong>Dinlenme Günlerini Atlamak:</strong> Adaptasyon antrenmanda değil toparlanma sırasında gerçekleşir. Dinlenme üretken antrenman zamanıdır.</li>
+                    <li><strong>Yorgunluk Sinyallerini Görmezden Gelmek:</strong> Kalıcı ağrı, yükselen dinlenme nabzı, kötü uyku = sakatlık zorlamadan önce ekstra dinlenme günü alın.</li>
+                </ul>
+            </div>
+
+            <h2 id="build-peak-phases">İnşa ve Zirve Fazları</h2>
+
+            <p>Aerobik temel oluşturduktan sonra, <strong>inşa ve zirve fazları</strong> aerobik temeliniz üzerine yoğunluğu katmanlar. İnşa fazı laktat eşiğinizi yükseltmek için eşik ve tempo çalışması ekler. Zirve fazı vücudunuzu hedef etkinlik taleplerine hazırlamak için yarışa özgü antrenman içerir.</p>
+
+            <h3>İnşa Fazı: Yoğunluk Eklemek</h3>
+
+            <p>İnşa fazı saf hacim odağından yoğunluk artı hacme geçiş yapar. Hedef: önceki fazda oluşturulan aerobik temeli korurken laktat eşiğinizi yükseltmek ve vücudunuzun laktatı tamponlama ve temizleme yeteneğini geliştirmek.</p>
+
+            <p><strong>İnşa Fazı Özellikleri (4-6 hafta):</strong></p>
+
+            <ul>
+                <li><strong>Hacim:</strong> Temel fazdan koruyun veya hafifçe azaltın (%5-10 azalma kabul edilebilir)</li>
+                <li><strong>Yoğunluk:</strong> Haftada 1-2 kaliteli seans ekleyin (eşik koşuları, tempo aralıkları, progresif koşular)</li>
+                <li><strong>Antrenmanlar:</strong> Toplam 20-40 dakika iş için <a href="/tr/crs/">CRS temposunun</a> %96-100'ünde laktat eşik odağı</li>
+                <li><strong>TSS Dağılımı:</strong> %70 Zon 2 kolay koşu, %20 eşik çalışması (Zon 4), %10 toparlanma/hızlanmalar</li>
+                <li><strong>Haftalık TSS:</strong> Haftalık %5-8 artırın. Tipik: rekabetçi koşucular için 500-650, ileri seviye için 650-800+</li>
+            </ul>
+
+            <p><strong>Örnek İnşa Haftası:</strong></p>
+            <ul>
+                <li><strong>Pazartesi:</strong> 60 dk Zon 2 kolay (65 TSS)</li>
+                <li><strong>Salı:</strong> Isınma/soğuma + eşikte 4×1 mil (110 TSS)</li>
+                <li><strong>Çarşamba:</strong> 45 dk Zon 2 toparlanma (40 TSS)</li>
+                <li><strong>Perşembe:</strong> 75 dk Zon 2 sabit (85 TSS)</li>
+                <li><strong>Cuma:</strong> Dinlenme veya hızlanmalarla 30 dk kolay (25 TSS)</li>
+                <li><strong>Cumartesi:</strong> Isınma/soğuma + 25dk tempo koşusu (90 TSS)</li>
+                <li><strong>Pazar:</strong> 120 dk uzun koşu Zon 2 (135 TSS)</li>
+                <li><strong>Toplam:</strong> 550 TSS, TSB muhtemelen -15 ile -25 (üretken aşırı yükleme)</li>
+            </ul>
+
+            <h3>Zirve Fazı: Yarışa Özgü Antrenman</h3>
+
+            <p>Zirve fazı, yarış tempo çalışması ve yarışa özgü talepleri (maraton temposunda uzun koşular, 5K yarışları için VO2max aralıkları, parkur yarışları için araziye özgü antrenman) içererek yarış hazırlığını ince ayarlar.</p>
+
+            <p><strong>Zirve Fazı Özellikleri (2-4 hafta):</strong></p>
+
+            <ul>
+                <li><strong>Özgüllük:</strong> Antrenmanlar yarış taleplerini taklit eder (tempo, mesafe, arazi, koşullar)</li>
+                <li><strong>Hacim:</strong> Biriken yorgunluğu yönetmek için koruyun veya hafifçe azaltın</li>
+                <li><strong>Yoğunluk:</strong> Eşik çalışması VE yarış tempo çabaları karışımı</li>
+                <li><strong>Nitelik Nicellik Üzerine:</strong> Her antrenmanın net amacı var. "Gereksiz milleri" ortadan kaldırın.</li>
+                <li><strong>Zihinsel Hazırlık:</strong> Zirve antrenmanlarında yarış günü beslenmesini, tempoyu, ekipmanı uygulayın</li>
+            </ul>
+
+            <p><strong>Yarış Mesafesine Göre Zirve Fazı Örnekleri:</strong></p>
+
+            <ul>
+                <li><strong>Maraton:</strong> Maraton temposunda 10-15 mil ile 20 millik uzun koşular, hafta ortası 8-12 mil eşik koşuları</li>
+                <li><strong>Yarı Maraton:</strong> Yarı maraton temposunda 8-10 mil ile 15-16 millik uzun koşular, 6-8 mil tempo koşuları</li>
+                <li><strong>10K:</strong> 10K temposunda 4-6 mil ile 8-12 millik uzun koşular, eşik aralıkları (6×1 mil)</li>
+                <li><strong>5K:</strong> VO2max aralıkları (5K temposunda 5×1000m), yarış ritmini simüle eden sıçramalarla tempo koşuları</li>
+            </ul>
+
+            <h3>İnşa/Zirvede Yük Yönetimi</h3>
+
+            <p>İnşa ve zirve fazları, yüksek hacim VE yüksek yoğunluğu birleştirdiğiniz için en yüksek sakatlık riskini yaratır. Antrenman yükü yönetimi kritik hale gelir:</p>
+
+            <div class="warning-box">
+                <strong>⚠️ İnşa/Zirve Yük Yönetimi</strong>
+                <ul>
+                    <li><strong>TSB'yi İzleyin:</strong> Zirve haftalar sırasında -15 ile -25 TSB hedefleyin. -30'un altı = yüksek sakatlık/aşırı antrenman riski.</li>
+                    <li><strong>Toparlanma Haftalarını Planlayın:</strong> Her 3-4 haftada bir, bir hafta TSS'yi %30-40 azaltın. TSB'nin -5 ile +10'a yükselmesine izin verin.</li>
+                    <li><strong>Dinlenme Nabzını İzleyin:</strong> Yükselen dinlenme nabzı (taban çizgisinin 5+ atım üstü) yetersiz toparlanmayı önerir. Dinlenme günü ekleyin.</li>
+                    <li><strong>Nitelik Nicellik Üzerine:</strong> Aşırı yorgunken antrenmana zorlamak yerine atlamak daha iyidir. Bir kaçırılan seans zarar vermez; aşırı antrenmandan kaynaklanan sakatlık tüm antrenman döngüsünü raydan çıkarır.</li>
+                    <li><strong>48 Saat Kuralına Saygı Gösterin:</strong> Yüksek yoğunluklu seanslar arasında 48 saat bırakın. Pazartesi eşik + Çarşamba aralıklar + Cuma tempo = sakatlık tarifi.</li>
+                </ul>
+            </div>
+
+            <p><strong>İnşa/Zirve Fazları için CTL/ATL/TSB Hedefleri:</strong></p>
+
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Faz</th>
+                        <th>CTL Hedefi</th>
+                        <th>ATL Aralığı</th>
+                        <th>TSB Aralığı</th>
+                        <th>Durum</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>İnşa Fazı</strong></td>
+                        <td>Haftada 4-6 yükseliyor</td>
+                        <td>65-85</td>
+                        <td>-15 ile -25</td>
+                        <td>Üretken aşırı yükleme</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Toparlanma Haftası</strong></td>
+                        <td>Sabit veya +1-2</td>
+                        <td>50-65</td>
+                        <td>-5 ile +10</td>
+                        <td>Adaptasyonları pekiştirme</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Zirve Fazı</strong></td>
+                        <td>Sabit (döngünün en yükseği)</td>
+                        <td>70-90</td>
+                        <td>-20 ile -30</td>
+                        <td>Maksimum uyarı</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Daralma Öncesi Hafta</strong></td>
+                        <td>Hafif düşüş başlar</td>
+                        <td>65-80</td>
+                        <td>-15 ile -20</td>
+                        <td>Tazeliğe geçiş</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h2 id="taper-recovery">Daralma ve Toparlanma Stratejileri</h2>
+
+            <p><strong>Daralma</strong>, birikmiş yorgunluğu ortadan kaldırırken fitness'ı korumak için hedef yarışlardan önce antrenman hacmini ve yoğunluğunu azaltır. Uygun daralma iyi performanslar ile kişisel rekorlar arasındaki farktır—araştırmalar iyi yürütülen daraltmaların yarış gününde performansı %2-4 iyileştirdiğini gösteriyor.</p>
+
+            <h3>Zirve Performans için Daralma</h3>
+
+            <p>Daralma fizyolojisi CTL'nin (42 gün) ve ATL'nin (7 gün) farklı zaman sabitlerinden yararlanır. Antrenman yükünü önemli ölçüde azaltarak, ATL hızla düşer (yorgunluk hızla dağılır), CTL ise yavaş düşer (fitness devam eder). Sonuç: düşük yorgunlukla yüksek fitness = yarış için optimum TSB.</p>
+
+            <p><strong>Daralma İlkeleri:</strong></p>
+
+            <ul>
+                <li><strong>Hacmi Azalt, Yoğunluğu Koru:</strong> Kilometreyi %50-70 kes ama nöromüsküler keskinliği sürdürmek için biraz yoğunluk (kısa eşik çabaları, yarış tempo patlamaları) tut</li>
+                <li><strong>Sıklık Bakımı:</strong> "Paslanmış" hissetmekten kaçınmak için çoğu gün koşmaya devam edin (süreyi azaltın, sıklığı değil)</li>
+                <li><strong>Progresif Azalma:</strong> 10-21 gün boyunca kademeli daralma ani "çökme daraltmadan" daha iyi çalışır</li>
+                <li><strong>Bireysel Çeşitlilik:</strong> Bazı koşucular daha uzun daralmalara (ustalar, yüksek kilometreli antrenörler), diğerleri daha kısalara (genç koşucular, daha düşük haftalık hacim) ihtiyaç duyar</li>
+            </ul>
+
+            <h3>Yarış Mesafesine Göre Daralma Süresi</h3>
+
+            <p>Optimum daralma uzunluğu yarış mesafesi ve antrenman hacmiyle ilişkilidir:</p>
+
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Yarış Mesafesi</th>
+                        <th>Daralma Süresi</th>
+                        <th>Hacim Azaltma</th>
+                        <th>Hedef TSB</th>
+                        <th>Notlar</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>5K</strong></td>
+                        <td>7-10 gün</td>
+                        <td>%50-60</td>
+                        <td>+25 ile +35</td>
+                        <td>Tazelik ve hıza vurgu</td>
+                    </tr>
+                    <tr>
+                        <td><strong>10K</strong></td>
+                        <td>10-12 gün</td>
+                        <td>%55-65</td>
+                        <td>+20 ile +30</td>
+                        <td>Kısa dayanıklılıkla hızı dengele</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Yarı Maraton</strong></td>
+                        <td>10-14 gün</td>
+                        <td>%60-70</td>
+                        <td>+15 ile +25</td>
+                        <td>Orta tazelik, dayanıklılığı koru</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Maraton</strong></td>
+                        <td>14-21 gün</td>
+                        <td>%60-70</td>
+                        <td>+10 ile +20</td>
+                        <td>Daha uzun daralma, biraz hacmi koru</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Ultra (50K+)</strong></td>
+                        <td>7-14 gün</td>
+                        <td>%50-60</td>
+                        <td>+5 ile +15</td>
+                        <td>Daha kısa daralma, dayanıklılık sistemlerini koru</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Daralma için TSB Kullanımı</h3>
+
+            <p>TSB, daralma sırasında yeterince taze mi yoksa çok uzun mu dinlendiniz tahmin etme konusundaki varsayımları ortadan kaldırarak objektif geri bildirim sağlar:</p>
+
+            <div class="example-box">
+                <h4>Maraton Daraltma: TSB İlerleme Örneği</h4>
+                <p><strong>Yarıştan 3 Hafta Önce:</strong> CTL = 68, ATL = 85, TSB = -17 (zirve antrenman sonrasında)</p>
+                <p><strong>Hafta -3:</strong> 450 TSS'ye azalt (550'den)<br>
+                → CTL = 67, ATL = 72, TSB = -5 (yorgunluk düşüyor)</p>
+                <p><strong>Hafta -2:</strong> 300 TSS'ye azalt<br>
+                → CTL = 65, ATL = 55, TSB = +10 (taze oluyor)</p>
+                <p><strong>Hafta -1:</strong> 200 TSS'ye azalt (yarış haftası)<br>
+                → CTL = 63, ATL = 45, TSB = +18 (yarışa hazır)</p>
+                <p><strong>Yarış Günü:</strong> TSB = +18 = optimum maraton formu (taze ama antrenman kaybı yok)</p>
+            </div>
+
+            <p><strong>Daralma Sorun Giderme:</strong></p>
+
+            <ul>
+                <li><strong>TSB çok yavaş yükseliyor mu?</strong> Hacmi daha agresif azaltın. Mevcut haftadan ek %10-15 kesin.</li>
+                <li><strong>TSB +30'u aşıyor mu?</strong> Çok uzun veya çok sıkı daraltma yaptınız. Keskinliği sürdürmek için kısa tempo koşusu veya yarış tempo aralıkları ekleyin.</li>
+                <li><strong>Daralma sırasında "düz" hissetme?</strong> Düşük antrenman hacmine yaygın psikolojik tepki. Sürece güvenin. Bacaklar 3-5 gün dışarıda ağır hisseder ama yarış gününde keskin olur.</li>
+                <li><strong>Dinlenme nabzı düşüyor mu?</strong> İyi işaret. Başarılı daralma sırasında toparlanma tamamlanırken nabız tipik olarak 5-10 atım düşer.</li>
+            </ul>
+
+            <h3>Yarış Sonrası Toparlanma</h3>
+
+            <p>Hedef yarışlardan sonra toparlanma pazarlık konusu değildir. Yarış yapmak normal antrenmana devam etmeden önce uzun toparlanma gerektiren ekstrem akut stres (maratonlar için 300-400+ TSS) yaratır:</p>
+
+            <div class="callout callout-warning">
+                <h3>⚠️ Yarış Sonrası Toparlanma Kılavuzları</h3>
+                <ul>
+                    <li><strong>5K/10K:</strong> Kaliteli antrenman devam etmeden önce 3-7 gün kolay koşu veya dinlenme</li>
+                    <li><strong>Yarı Maraton:</strong> Eşik çalışmasından önce 7-10 gün kolay koşu, yüksek yoğunluktan önce 10-14 gün</li>
+                    <li><strong>Maraton:</strong> Minimum 14-21 gün kolay koşu. Bazı antrenörler yarış mili başına 1 gün toparlanma önerir (maraton için 26 gün)</li>
+                    <li><strong>Ultra (50K+):</strong> Mesafe ve arazigeye bağlı olarak 21-30+ gün. Kas-iskelet toparlanması kardiyovaskülerden daha uzun sürer</li>
+                </ul>
+                <p>Toparlanma sırasında, TSB +15 ile +25'e yükselene kadar haftada 200-350 TSS hedefleyin (normal antrenman yükünün %50-60'ı), sonra CTL'yi kademeli olarak yeniden inşa edin.</p>
+            </div>
+
+            <h2 id="common-mistakes">Antrenman Yükü Tuzaklarından Kaçınma</h2>
+
+            <p>Antrenman yükü kavramlarını entelektüel olarak anlamak, bunları başarıyla uygulamaktan farklıdır. Bu yaygın hatalar tüm seviyelerdeki koşucuların ilerlemesini raydan çıkarır:</p>
+
+            <h3>Aşırı Antrenman Sinyalleri</h3>
+
+            <p>Aşırı antrenman sendromu antrenman stresi kronik olarak toparlanma kapasitesini aştığında gelişir. Erken tespit, aylar süren toparlanma gerektiren tam teşekküllü aşırı antrenmana ilerlemeyi önler:</p>
+
+            <ul>
+                <li><strong>Performans Düşüşü:</strong> Yönetilebilir olan antrenmanlar zorlaşır. Tempolar aynı nabızda daha zor hisseder. Yarış süreleri durgunlaşır veya kötüleşir.</li>
+                <li><strong>Yükselen Dinlenme Nabzı:</strong> 3+ ardışık gün için taban çizgisinin 5-10+ atım üstünde sabah nabzı.</li>
+                <li><strong>Uyku Bozukluğu:</strong> Yeterli fırsat olmasına rağmen uykuya dalmakta zorluk, sık uyanma veya dinlendirmeyen uyku.</li>
+                <li><strong>Ruh Hali Değişiklikleri:</strong> Artmış tahriş, kaygı, depresyon veya antrenmana motivasyon kaybı.</li>
+                <li><strong>Kalıcı Ağrı:</strong> Kaslar antrenmanlardan 48+ saat sonra ağrılı kalır. Bacaklar kolay koşularda "ölü" hisseder.</li>
+                <li><strong>Hastalık Sıklığı:</strong> Sık sık soğuk algınlığına yakalanma veya normalden uzun süren semptomlar (bağışıklık bastırma).</li>
+                <li><strong>TSB Uyarısı:</strong> Performans düşerken 7+ ardışık gün için -30'un altında TSB.</li>
+            </ul>
+
+            <p><strong>Eylem:</strong> 3-7 tam dinlenme günü alın. 1-2 hafta önceki hacmin %50'sinde antrenmana devam edin. Semptomları izlerken kademeli olarak yeniden inşa edin.</p>
+
+            <h3>Çok Hızlı Rampalama</h3>
+
+            <p>En yaygın antrenman hatası: antrenman yükünü vücudunuzun adapte olabileceğinden daha hızlı artırmak. Bu şu şekilde tezahür eder:</p>
+
+            <ul>
+                <li><strong>CTL Sıçramaları:</strong> CTL'yi sürekli olarak haftada 8+ puan artırmak. Dokular strese yeterince hızlı adapte olamaz.</li>
+                <li><strong>Kilometre Sıçramaları:</strong> Haftalık 50km'den 70km'ye atlamak (%40 artış ve %10 kural maksimumu)</li>
+                <li><strong>Temeli Atlama:</strong> Aerobik temel oluşturmadan önce yoğunluk eklemek. CTL hala düşükken aralık koşmak.</li>
+                <li><strong>Toparlanma Haftası Yok:</strong> Planlanan düşük haftalar olmadan 5-6 hafta boyunca düz yük oluşturma.</li>
+            </ul>
+
+            <p><strong>Önleme:</strong> CTL rampa oranı limitlerini onaylayın (seviyeye bağlı olarak haftada +2-5 puan). Her 3-4 haftada bir toparlanma haftaları planlayın. Önemli yoğunluk eklemeden önce temeli tam olarak oluşturun.</p>
+
+            <h3>Toparlanmayı Görmezden Gelme</h3>
+
+            <p>Antrenman uyarısı antrenmanlar sırasında gerçekleşir, ancak adaptasyon toparlanma sırasında olur. Yaygın toparlanma hataları:</p>
+
+            <ul>
+                <li><strong>Kolay Gün Yok:</strong> Tüm seansları orta-sıkı yoğunlukta koşmak. Kaliteli uyarı olmadan yorgunluk oluşturan "gri bölge" antrenmanı.</li>
+                <li><strong>Yetersiz Uyku:</strong> Sürekli <7 saat almak. Uyku, büyüme hormonu zirve yaptığında ve doku onarımı gerçekleştiğinde.</li>
+                <li><strong>Beslenmeden Vazgeçme:</strong> Antrenmana yetersiz yakıt sağlama. Yetersiz protein veya karbonhidrat glikojen yenilemesini ve kas onarımını önler.</li>
+                <li><strong>Yaşam Stresi İhmali:</strong> Antrenman yükü planlarken iş stresi, aile stresi, seyahat veya hastalığı hesaba katmamak.</li>
+                <li><strong>İzin Günü Yok:</strong> Vücut adaptasyon için 1-2 tam dinlenme günü gerektiğinde haftada 7 gün koşmak.</li>
+            </ul>
+
+            <p><strong>Çözüm:</strong> Kolay günleri GERÇEKTENkolay yapın (sadece Zon 2). Uykuya öncelik verin (sıkı antrenman için 8+ saat). Haftada 1-2 tam dinlenme günü alın. Yüksek stresli yaşam dönemlerinde antrenman yükünü azaltın.</p>
+
+            <h2 id="runanalytics-tracking">RunAnalytics ile Antrenman Yükünü İzleme</h2>
+
+            <p><strong>RunAnalytics</strong>, tam gizliliği korurken antrenman yükü yönetiminin her yönünü otomatikleştirir. Verilerinizi harici sunuculara yükleyen bulut tabanlı platformların aksine, RunAnalytics her şeyi iPhone'unuzda yerel olarak işler—veri sahipliğinden ödün vermeden elit antrenör analitiğinin gücünü size verir.</p>
+
+            <h3>Gizlilik Öncelikli İzleme</h3>
+
+            <p>Antrenman verileriniz hassas bilgiler ortaya çıkarır: nerede yaşadığınız (GPS izleri), evinizden ne zaman uzakta olduğunuz (antrenman zamanlaması), fitness seviyeniz (performans metrikleri) ve sağlık durumunuz (kalp atış hızı, yorgunluk). RunAnalytics mimarisi bu verilerin hiçbir zaman cihazınızdan ayrılmamasını sağlar:</p>
+
+            <div class="callout callout-success">
+                <h3>🔒 RunAnalytics Gizlilik Özellikleri</h3>
+                <ul>
+                    <li><strong>Yerel İşleme:</strong> Tüm TSS, CTL, ATL, TSB hesaplamaları iPhone işlem gücü kullanılarak cihazda gerçekleşir</li>
+                    <li><strong>Bulut Yükleme Yok:</strong> Uygulama hiçbir zaman antrenman verilerini, GPS izlerini veya metrikleri harici sunuculara iletmez</li>
+                    <li><strong>Hesap Yok:</strong> Uygulamayı kullanmak için kayıt, giriş, e-posta veya kişisel bilgi gerekli değildir</li>
+                    <li><strong>Apple Health Entegrasyonu:</strong> Health uygulamasından antrenmanları okur (Apple'ın isteğe bağlı uçtan uca şifreli iCloud yedeğiyle yerel olarak sakladığı)</li>
+                    <li><strong>Tam Kontrol:</strong> Antrenörlerle paylaşmaya veya yedeklemeye SİZ karar verdiğinizde JSON, CSV, HTML veya PDF formatlarında veri dışa aktarın</li>
+                </ul>
+            </div>
+
+            <h3>Otomatik Hesaplamalar</h3>
+
+            <p>RunAnalytics manuel TSS hesaplamasını ve elektronik tablo izlemeyi ortadan kaldırır. Uygulama otomatik olarak:</p>
+
+            <ul>
+                <li><strong>TSS'yi Hesaplar:</strong> Her koşu eşik referansı olarak kişiselleştirilmiş <a href="/tr/crs/">Kritik Koşu Hızınız</a> kullanılarak işlenir. Tempo değişkenliği ve araziyi hesaba katar.</li>
+                <li><strong>CTL'yi Günlük Günceller:</strong> Her antrenmandan sonra güncellenen 42 günlük üstel ağırlıklı hareketli ortalama. Görsel grafikler fitness eğilimlerini gösterir.</li>
+                <li><strong>ATL'yi İzler:</strong> 7 günlük üstel ağırlıklı hareketli ortalama yakın yorgunluk birikimini ve toparlanma durumunu ortaya çıkarır.</li>
+                <li><strong>TSB'yi Hesaplar:</strong> Günlük hesaplanan form metriği taze mi (pozitif TSB) yoksa yorgun mu (negatif TSB) olduğunuzu gösterir.</li>
+                <li><strong>Eğilimleri İzler:</strong> Uzun vadeli CTL ilerlemesi, haftalık TSS toplamları ve aylık yük kalıpları sezgisel grafiklerle görselleştirilir.</li>
+            </ul>
+
+            <h3>Kişiselleştirilmiş Öneriler</h3>
+
+            <p>RunAnalytics sadece sayıları görüntülemez—mevcut antrenman durumunuza göre uygulanabilir rehberlik sağlar:</p>
+
+            <ul>
+                <li><strong>CTL Rampa Uyarıları:</strong> CTL artışları fitness seviyeniz için güvenli oranları aştığında uyarır, "çok fazlasını çok erken" sakatlıklarını önler.</li>
+                <li><strong>Toparlanma Önerileri:</strong> TSB optimum aralıkların altına düştüğünde veya dinlenme nabzı yükseldiğinde dinlenme veya kolay günler önerir.</li>
+                <li><strong>Daralma Rehberliği:</strong> Optimum yarış günü tazeliği için yarış tarihine ve mevcut CTL/TSB değerlerine göre daralmaya ne zaman başlanacağını önerir.</li>
+                <li><strong>Zon Güncellemeleri:</strong> Yeterli zaman geçtiğinde veya fitness değişiklikleri güncel olmayan zonları önerdiğinde CRS yeniden testi için sorar.</li>
+                <li><strong>Haftalık Planlama:</strong> Mevcut CTL'nize ve seçtiğiniz antrenman fazına (temel, inşa, zirve, toparlanma) göre hedef haftalık TSS aralıkları önerir.</li>
+            </ul>
+
+            <p>Tüm öneriler genel hazır tavsiyeler değil—SİZİN fizyolojinize, antrenman geçmişinize ve hedeflerinize adapte olur. RunAnalytics'i indirin ve tam veri gizliliğiyle kişiselleştirilmiş antrenman yükü yönetiminin gücünü deneyimleyin.</p>
+
+            <h2 id="practical-applications">Hepsini Bir Araya Getirme</h2>
+
+            <p>Teori ancak tutarlı bir şekilde uygulandığında değerli hale gelir. Bu pratik örnekler TSS, CTL, ATL ve TSB'nin günlük antrenman kararlarına nasıl entegre edileceğini gösterir:</p>
+
+            <h3>Örnek Antrenman Haftası</h3>
+
+            <p><strong>Koşucu Profili:</strong> Rekabetçi maratoncu, CTL = 65, 8 hafta sonra ilkbahar maratonuna inşa ediyor</p>
+
+            <div class="example-box">
+                <h4>Maratondan 6 Hafta Önce (İnşa Fazı)</h4>
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Gün</th>
+                            <th>Antrenman</th>
+                            <th>TSS</th>
+                            <th>Günlük Toplam</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Pazartesi</td>
+                            <td>60 dk Zon 2 kolay + 6×100m hızlanma</td>
+                            <td>70</td>
+                            <td>70</td>
+                        </tr>
+                        <tr>
+                            <td>Salı</td>
+                            <td>15dk ısınma + eşikte 5×1600m (2dk toparlanma) + 10dk soğuma</td>
+                            <td>125</td>
+                            <td>195</td>
+                        </tr>
+                        <tr>
+                            <td>Çarşamba</td>
+                            <td>45 dk Zon 2 toparlanma koşusu</td>
+                            <td>42</td>
+                            <td>237</td>
+                        </tr>
+                        <tr>
+                            <td>Perşembe</td>
+                            <td>80 dk Zon 2 sabit koşu</td>
+                            <td>90</td>
+                            <td>327</td>
+                        </tr>
+                        <tr>
+                            <td>Cuma</td>
+                            <td>Dinlenme günü (sadece mobilite çalışması)</td>
+                            <td>0</td>
+                            <td>327</td>
+                        </tr>
+                        <tr>
+                            <td>Cumartesi</td>
+                            <td>10dk ısınma + maraton temposunda 8 mil + 10dk soğuma</td>
+                            <td>115</td>
+                            <td>442</td>
+                        </tr>
+                        <tr>
+                            <td>Pazar</td>
+                            <td>2 saat Zon 2 uzun koşu</td>
+                            <td>140</td>
+                            <td>582</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p><strong>Hafta Özeti:</strong></p>
+                <ul>
+                    <li>Toplam Haftalık TSS: 582 (önceki haftanın 540'ından %8 artış)</li>
+                    <li>Başlangıç CTL: 65 → Bitiş CTL: 68 (+3 puan = güvenli ilerleme)</li>
+                    <li>Başlangıç TSB: -18 → Bitiş TSB: -22 (üretken antrenman yükü)</li>
+                    <li>Gelecek Hafta Planı: Son 3 haftalık inşadan önce TSB'nin -10'a yükselmesine izin vermek için 420 TSS'ye azalt (toparlanma haftası)</li>
+                </ul>
+            </div>
+
+            <h3>Aylık Yük Planlaması</h3>
+
+            <p><strong>12 Haftalık Maraton Antrenman Bloğu: CTL İlerleme Stratejisi</strong></p>
+
+            <ul>
+                <li><strong>Hafta 1-4 (Temel Uzatma):</strong>
+                    <ul>
+                        <li>Haftalık TSS: 450, 480, 500, 380 (toparlanma haftası)</li>
+                        <li>CTL İlerlemesi: 58 → 60 → 62 → 63 → 63</li>
+                        <li>Odak: Zon 2'de hacim, haftada bir eşik seansı</li>
+                    </ul>
+                </li>
+                <li><strong>Hafta 5-8 (İnşa Fazı 1):</strong>
+                    <ul>
+                        <li>Haftalık TSS: 520, 550, 570, 420 (toparlanma haftası)</li>
+                        <li>CTL İlerlemesi: 63 → 66 → 68 → 70 → 70</li>
+                        <li>Odak: Haftada iki kaliteli seans (eşik + maraton tempo çalışması)</li>
+                    </ul>
+                </li>
+                <li><strong>Hafta 9-11 (Zirve Fazı):</strong>
+                    <ul>
+                        <li>Haftalık TSS: 580, 600, 580</li>
+                        <li>CTL İlerlemesi: 70 → 73 → 75 → 75 (zirve)</li>
+                        <li>Odak: Yarış simülasyonu uzun koşular, eşik bakımı, yüksek hacim</li>
+                    </ul>
+                </li>
+                <li><strong>Hafta 12 (Daralma Öncesi):</strong>
+                    <ul>
+                        <li>Haftalık TSS: 450</li>
+                        <li>CTL İlerlemesi: 75 → 73</li>
+                        <li>Odak: Hacmi azaltmaya başla, yoğunluğu kısaca koru</li>
+                    </ul>
+                </li>
+                <li><strong>Hafta 13-14 (Daralma + Yarış):</strong>
+                    <ul>
+                        <li>Haftalık TSS: Hafta 13 = 300, Hafta 14 = 150 + yarış (~320 toplam)</li>
+                        <li>CTL İlerlemesi: 73 → 70 → 68</li>
+                        <li>TSB İlerlemesi: -20 → -10 → +5 → +15 (yarış günü)</li>
+                        <li>Odak: Antrenman kaybı olmadan tazelik, kısa yarış tempo çabaları, güven oluşturma</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <p><strong>Sonuç:</strong> 14 hafta boyunca +17 CTL puanı (%29 fitness artışı), maratona TSB +15 ile (optimum form) ulaşma, kişisel en iyi performansa hazır.</p>
+
+            <div class="callout callout-tip">
+                <h3>💡 Temel Antrenman Yükü İlkeleri</h3>
+                <ul>
+                    <li>Tutarlı antrenmanla CTL'yi kademeli olarak oluştur (çoğu koşucu için haftada 3-5 puan)</li>
+                    <li>İnşa fazları sırasında negatif TSB'yi (-15 ile -25) üretken yorgunluk olarak kabul et</li>
+                    <li>Kümülatif yorgunluğu önlemek için her 3-4 haftada bir toparlanma haftaları planla</li>
+                    <li>Daralma zamanlamasını ve yarış hazırlığını yönlendirmek için TSB'yi kullan (mesafeye bağlı olarak +10 ile +25 hedefle)</li>
+                    <li>Tek veri noktaları üzerinden eğilimleri izle—bir kötü antrenman aşırı antrenmana işaret etmez</li>
+                    <li>Objektif metrikleri (CTL/ATL/TSB) öznel geri bildirimle (ağrı, motivasyon, uyku kalitesi) birleştir</li>
+                    <li>Otomatik hesaplamalar ve içgörüler için RunAnalytics kullanarak <a href="/tr/training-load/">antrenman stresini sistematik olarak izle</a></li>
+                </ul>
+            </div>
+
+        </article>
+    </div>
+</section>
+
+<section class="section section-alt">
+    <div class="container container-narrow">
+        <h2>Sık Sorulan Sorular: Antrenman Yükü ve Periyodizasyon</h2>
+
+        <div class="faq-section" itemscope itemtype="https://schema.org/FAQPage">
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name">Koşuda Antrenman Stres Skoru (TSS) nedir?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                    <div itemprop="text">
+                        <p><strong>Antrenman Stres Skoru (TSS)</strong>, antrenman yoğunluğunu ve süresini toplam antrenman stresini temsil eden tek bir sayıda ölçer. (Yoğunluk Faktörü²) × Süre (saat) × 100 olarak hesaplanır, burada yoğunluk <a href="/tr/crs/">Kritik Koşu Hızınıza (CRS)</a> göredir. Tanım gereği eşik temposunda bir saat = 100 TSS. 60 dakikalık kolay koşu ~60-70 TSS üretirken, maraton yarışı 300-400+ TSS yaratır. TSS, farklı antrenmanların objektif karşılaştırmasını sağlar ve CTL/ATL/TSB hesaplamalarının temelini oluşturur.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name">Bir koşu için TSS nasıl hesaplanır?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                    <div itemprop="text">
+                        <p>Koşu TSS'sini şu formülü kullanarak hesaplayın: <strong>TSS = (IF²) × Süre (saat) × 100</strong>, burada Yoğunluk Faktörü (IF) = eşik temponuz bölü koşu için ortalama tempo. Örnek: CRS temponuz 4:00/km ise ve 4:20/km'de 43:20 dakikada (0.722 saat) 10km koşarsanız, o zaman IF = 240/260 = 0.923, dolayısıyla TSS = (0.923²) × 0.722 × 100 = 61.5 TSS. RunAnalytics bu hesaplamayı kişiselleştirilmiş CRS'nizi kullanarak her koşu için otomatikleştirir. Eksiksiz <a href="/tr/training-load/">TSS hesaplama metodolojisini</a> öğrenin.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name">Bir maratoncu için iyi bir CTL nedir?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                    <div itemprop="text">
+                        <p>Maraton yarışları için hedef CTL rekabet seviyenize bağlıdır: <strong>Rekreasyonel maratoncular:</strong> CTL 50-65; <strong>Rekabetçi (sub-3:30 hedefi):</strong> CTL 70-90; <strong>İleri Seviye (sub-3:00 hedefi):</strong> CTL 90-110; <strong>Elit koşucular:</strong> CTL 110-130+. Bunlar 12-20 haftalık inşalardan sonraki zirve CTL değerlerini temsil eder. Antrenmana hedefin 15-25 puan altında başlayın, haftada +3-5 CTL puanı inşa edin. Daha yüksek CTL daha fazla aerobik fitness ve maratona özgü antrenman hacmini kaldırma yeteneğini gösterir (rekabetçi koşucular için 80-120 km/hafta).</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name">Antrenmanda TSB ne anlama gelir?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                    <div itemprop="text">
+                        <p><strong>TSB (Antrenman Stres Dengesi)</strong> fitness (CTL) eksi yorgunluğa (ATL) eşittir ve taze mi yorgun mu olduğunuzu ortaya çıkarır. Pozitif TSB fitness'e göre düşük yorgunluk demektir—yarış için ideal. Negatif TSB birikmiş antrenman stresini gösterir—inşa fazları sırasında normal. TSB aralıkları: -30'un altı = aşırı antrenman riski; -20 ile -30 = optimum antrenman bloğu; -10 ile +15 = bakım; +15 ile +25 = zirve yarış formu; +35'in üstü = aşırı dinlenmeden antrenman kaybı. Antrenman yoğunluğunu ve daralma zamanlamasını yönlendirmek için TSB'yi kullanın. Maraton yarış günü için TSB +10 ile +20 hedefleyin.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name">CTL'mi ne kadar hızlı inşa etmeliyim?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                    <div itemprop="text">
+                        <p>Güvenli CTL rampa oranları mevcut fitness seviyenize bağlıdır: <strong>Acemiler (CTL 15-35):</strong> Haftada +2-3 puan; <strong>Orta Seviye (CTL 35-60):</strong> Haftada +3-5 puan; <strong>İleri Seviye (CTL 60-85):</strong> Haftada +5-7 puan; <strong>Elit (CTL 85+):</strong> İnşa fazları sırasında haftada +5-8 puan. Bu oranlar haftalık kilometre artışları için "%10 kuralı" ile uyumludur ve koşunun yüksek çarpma stresini yansıtır. Bu oranları aşmak sakatlık riskini önemli ölçüde artırır. Adaptasyonları pekiştirmek için her 3-4 haftada bir toparlanma haftaları planlayın (TSS'yi %30-40 azaltın). TSB'yi izleyin—sürekli -30'un altındaysa, çok hızlı inşa ediyorsunuz.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name">Yarış gününde hangi TSB'ye sahip olmalıyım?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                    <div itemprop="text">
+                        <p>Optimum yarış günü TSB mesafeye göre değişir: <strong>5K yarışları:</strong> TSB +25 ile +35 (hız için maksimum tazelik gerekir); <strong>10K:</strong> TSB +20 ile +30; <strong>Yarı Maraton:</strong> TSB +15 ile +25; <strong>Maraton:</strong> TSB +10 ile +20 (biraz dayanıklılık tutma gerekir); <strong>Ultra (50K+):</strong> TSB +5 ile +15 (minimal daralma aerobik sistemleri korur). Daha kısa yarışlar performans nöromüsküler güce bağlı olduğu için daha yüksek TSB gerektirir. Daha uzun yarışlar aerobik dayanıklılık daha önemli olduğu için daha düşük TSB'yi tolere eder. Hedef TSB aralığına ulaşmak için yarıştan 7-21 gün önce (maratonlar için daha uzun) daralmaya başlayın.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name">TSS koşu için doğru mu?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                    <div itemprop="text">
+                        <p>Evet, TSS eşik referansı olarak bireysel <a href="/tr/crs/">Kritik Koşu Hızınız</a> kullanılarak doğru şekilde hesaplandığında koşu antrenman stresini doğru bir şekilde ölçer. Araştırmalar TSS tabanlı antrenman yükü ile performans sonuçları arasında güçlü korelasyon (r > 0.85) gösterir. Ancak, koşu TSS'si çarpma kuvvetleri ve kas-iskelet yüklemesi nedeniyle aynı değerdeki bisiklet TSS'sinden DAHA FAZLA toplam fiziksel stresi temsil eder. Haftada 400 TSS biriktiren bir koşucu, haftada 600-700 TSS'ye sahip bir bisikletçiye benzer antrenman adaptasyonu yaşar. Değerleri yorumlarken koşuya özgü TSS standartlarını kullanın ve çarpma stresini hesaba katın. RunAnalytics koşuya özgü TSS hesaplamaları ve öneriler sağlar.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name">Fitness (CTL) oluşturmak ne kadar sürer?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                    <div itemprop="text">
+                        <p>Anlamlı CTL oluşturmak başlangıç fitness'ına ve hedeflere bağlı olarak 8-20 hafta gerektirir. <strong>Acemiler:</strong> CTL 20'den 40'a oluşturmak için 12-16 hafta (temel fitness oluşturma). <strong>Orta Seviye:</strong> CTL 45'ten 65'e oluşturmak için 12-16 hafta (maratona hazır fitness). <strong>İleri Seviye:</strong> CTL 65'ten 85'e oluşturmak için 12-14 hafta (rekabetçi yarış fitness'ı). CTL güvenli haftalık artışlarla (+3-5 puan/hafta) tutarlı antrenmana yanıt verir. CTL kazançlarını acele etmek sakatlığa veya aşırı antrenmana yol açar. Kademeli CTL ilerlemesi için yeterli zamanı olan antrenman döngüleri planlayın. Molalardan sonra (sakatlık, sezon dışı), önceki CTL'yi güvenle yeniden oluşturmak için 8-12 haftaya izin verin.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name">CTL ve ATL arasındaki fark nedir?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                    <div itemprop="text">
+                        <p><strong>CTL (Kronik Antrenman Yükü)</strong> uzun vadeli fitness'ı ölçer—vücudunuzun antrenman stresine yaptığı adaptasyonları temsil eden günlük TSS'nin 42 günlük üstel ağırlıklı ortalaması. <strong>ATL (Akut Antrenman Yükü)</strong> kısa vadeli yorgunluğu ölçer—toparlanma gerektiren yakın antrenman stresini temsil eden 7 günlük üstel ağırlıklı ortalama. CTL yavaşça değişir (inşa etmek için haftalar), ATL ise hızla değişir (sıkı haftalardan sonra sıçrar, toparlanma sırasında düşer). Aralarındaki ilişki (TSB = CTL - ATL) mevcut antrenman durumunuzu ortaya çıkarır. Düşük ATL ile yüksek CTL = formda ve taze (yarış için iyi). CTL'den daha hızlı yükselen ATL = üretken antrenman aşırı yüklemesi. Her iki metrik birlikte fitness ve yorgunluğun eksiksiz resmini sağlar.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name">TSS izlemeyle aşırı antrenman yapılabilir mi?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                    <div itemprop="text">
+                        <p>Evet, TSS/CTL/ATL/TSB izlemek aşırı antrenmayı önlemez—aşırı antrenman sendromuna ulaşmadan önce müdahale edebilmeniz için erken uyarı sinyalleri sağlar. Temel uyarı işaretleri: 7+ ardışık gün için -30'un altında TSB, güvenli rampa oranlarından daha hızlı artan CTL, yükselen dinlenme kalp atış hızı, iyi metriklere rağmen performans düşüşü veya kalıcı yorgunluk. TSS metrikleri kurallar değil araçlardır—bunları öznel geri bildirim (uyku kalitesi, motivasyon, ağrı) ve fizyolojik belirteçlerle (dinlenme nabzı, HRV) birleştirin. Metrikler dinlenme önerse ama harika hissediyorsanız, iyi olabilirsiniz. Metrikler iyi görünüyorsa ama korkunç hissediyorsanız, öznel geri bildirimi önceliklendirin. <a href="/tr/training-zones/">Zonlarla antrenman yükünü yönetme</a> hakkında daha fazla bilgi edinin.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name">RunAnalytics TSS'yi otomatik olarak hesaplar mı?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                    <div itemprop="text">
+                        <p>Evet, <strong>RunAnalytics manuel girdi olmadan her koşu için TSS, CTL, ATL ve TSB'yi otomatik olarak hesaplar</strong>. Uygulama Apple Health'ten antrenman verilerini okur, kişiselleştirilmiş CRS'nizi kullanarak Yoğunluk Faktörünü hesaplar, her koşu için TSS'yi hesaplar, CTL'yi (42 günlük ortalama) ve ATL'yi (7 günlük ortalama) günlük günceller ve mevcut formunuzu gösteren TSB'yi görüntüler. Tüm işlem iPhone'unuzda yerel olarak gerçekleşir—bulut yüklemesi yok, tam gizlilik. Görsel grafikler haftalar ve aylar boyunca fitness eğilimlerini gösterir. Uygulama ayrıca mevcut antrenman durumunuza göre toparlanma zamanlaması, daralma rehberliği ve CTL rampa oranı uyarıları için öneriler sağlar. Gizlilik öncelikli mimariyle otomatik antrenman yükü yönetimi için RunAnalytics'i indirin.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name">Koşu TSS'si bisiklet TSS'sinden nasıl farklıdır?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                    <div itemprop="text">
+                        <p>Koşu ve bisiklet TSS'si aynı IF² formülünü kullanır, ancak koşu TSS'si TSS puanı başına DAHA FAZLA toplam fiziksel stresi temsil eder: <strong>Çarpma Stresi:</strong> Koşu her adımda 2-3× vücut ağırlığı yer reaksiyon kuvvetleri oluşturur ve bisiklette olmayan kas-iskelet stresi yaratır. <strong>Toparlanma İhtiyaçları:</strong> Koşucular aynı TSS için daha fazla toparlanmaya ihtiyaç duyar—koşuda haftada 400 TSS ≈ benzer antrenman adaptasyonu için bisiklette haftada 600-700 TSS. <strong>Haftalık Hedefler:</strong> Koşucular tipik olarak haftada 300-500 TSS (rekreasyonel), 500-700 (rekabetçi), 700-900+ (elit) biriktirir, bisikletçiler benzer seviyelerde 800-1000+'ı aşabilir. <strong>Girdi Metriği:</strong> Koşu tempo/hız kullanır, bisiklet güç ölçer kullanır. Antrenman yükünü planlarken bisiklet hedeflerini değil koşuya özgü standartları kullanın.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container container-narrow">
+        <h2>Antrenman Yükünüz ve Periyodizasyonunuzda Ustalaşın</h2>
+
+        <p class="lead">Artık antrenman yükü yönetimi için eksiksiz çerçeveyi anlıyorsunuz: TSS her antrenmanın stresini ölçer, CTL uzun vadeli fitness'ınızı temsil eder, ATL yakın döneminizin yorgunluğunu izler ve TSB yarışa hazır olmanızı veya toparlanma ihtiyacınızı ortaya çıkarır. Periyodizasyon bu metrikleri yorgunluğu yönetirken sistematik olarak fitness oluşturan antrenman fazlarına yapılandırır.</p>
+
+        <p>Hedeflerine ulaşan koşucular ile plato yapan veya sakatla nanlar arasındaki fark genellikle antrenman yükü yönetimine iner. TSS, CTL, ATL ve TSB'de ustalaşarak, elit antrenörlerin antrenmanı optimize etmek için kullandığı veriye dayalı içgörüleri elde edersiniz—hassas yük ölçümü, objektif yorgunluk izleme ve bilimsel daralma zamanlaması.</p>
+
+        <div class="callout callout-success mt-xl">
+            <h3>🎯 Sonraki Adımlar: Antrenman Yükü Yönetimini Uygulayın</h3>
+            <ul>
+                <li><strong>CRS'nizi Hesaplayın:</strong> <a href="/tr/crs/">Ücretsiz CRS hesaplayıcımızı</a> kullanarak eşik temponuzu belirleyin—doğru TSS hesaplaması için temel</li>
+                <li><strong>Antrenman Zonlarını Öğrenin:</strong> <a href="/tr/training-zones/">Antrenman zonlarının</a> TSS ve yoğunluk tabanlı antrenmanla nasıl ilişkili olduğunu anlayın</li>
+                <li><strong>Performans Metriklerini Keşfedin:</strong> Antrenman yükünün <a href="/tr/running-performance-metrics/">VO2max, laktat eşiği ve koşu ekonomisi</a> ile nasıl bağlantılı olduğunu keşfedin</li>
+                <li><strong>RunAnalytics'i İndirin:</strong> <a href="/tr/">Gizlilik öncelikli iOS uygulamamızla</a> TSS/CTL/ATL/TSB izlemeyi otomatikleştirin (7 günlük ücretsiz deneme)</li>
+                <li><strong>Sezonunuzu Planlayın:</strong> Temel oluşturmadan yarış günü daraltmaya kadar periyodizasyon ilkelerini kullanarak bir sonraki antrenman döngünüzü yapılandırın</li>
+            </ul>
+        </div>
+
+        <div class="mt-xl text-center">
+            <a href="/tr/crs/" class="btn btn-primary btn-large">CRS'nizi Şimdi Hesaplayın →</a>
+            <a href="/tr/" class="btn btn-secondary btn-large">RunAnalytics'i İndirin →</a>
+        </div>
+
+        <p class="mt-xl text-center"><em>Daha akıllı antrenman yapın. Daha hızlı yarışın. Daha iyi toparlanın. RunAnalytics ile antrenman yükü yönetiminde ustalaşın—elit antrenör analitiğinin tam veri gizliliğiyle buluştuğu yer.</em></p>
+    </div>
+</section>
+    </main>
+
+    
+    <footer class="site-footer">
+    <div class="container">
+        <div class="footer-grid">
+            
+            <div>
+                <h3 class="mb-md">RunAnalytics - Running Analytics App | Critical Running Speed, TSS, CTL/ATL/TSB for iOS</h3>
+                <p class="text-secondary">Track Critical Running Speed, Training Stress Score, and performance metrics with RunAnalytics. Science-based iOS app for runners, triathletes &amp; coaches. 7-day free trial.</p>
+            </div>
+
+            
+            <div>
+                <h3 class="mb-md">Ana Sayfa</h3>
+                <ul class="footer-links">
+                    
+                    <li>
+                        <a href="/af/">Afrikaans</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ar/">العربية</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/bn/">বাংলা</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ca/">Català</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/de/">Deutsch</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/el/">Ελληνικά</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/en/">English</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/es/">Español</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/fa/">فارسی</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/fi/">Suomi</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/fr/">Français</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/hi/">हिन्दी</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/id/">Bahasa Indonesia</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/it/">Italiano</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ja/">日本語</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ko/">한국어</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ms/">Bahasa Melayu</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/nl/">Nederlands</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/no/">Norsk</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/pl/">Polski</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/pt/">Português</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ru/">Русский</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/sv/">Svenska</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/sw/">Kiswahili</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/tl/">Tagalog</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/tr/">Türkçe</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ur/">اردو</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/vi/">Tiếng Việt</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/zh/">中文</a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+
+        
+        <div class="footer-bottom">
+            <p class="text-sm text-secondary">
+                &copy; 2025 RunAnalytics - Running Analytics App | Critical Running Speed, TSS, CTL/ATL/TSB for iOS. Tüm hakları saklıdır
+            </p>
+            <ul class="footer-links">
+                <li><a href="/tr/privacy/">Gizlilik</a></li>
+                <li><a href="/tr/terms/">Şartlar</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+    
+    <div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="Cookie consent" aria-live="polite">
+    <div class="cookie-banner-content">
+        <div>
+            <p>Bu web sitesi deneyiminizi geliştirmek için çerezler kullanır.</p>
+            <a href="/tr/privacy/" class="text-sm">Daha fazla bilgi</a>
+        </div>
+        <div class="cookie-banner-actions">
+            <button id="cookie-decline" class="btn btn-secondary btn-small">Reddet</button>
+            <button id="cookie-accept" class="btn btn-primary btn-small">Kabul Et</button>
+        </div>
+    </div>
+</div>
+
+    
+    <script src="/assets/js/main.min.js"></script>
+    <script src="/assets/js/cookie-consent.min.js"></script>
+    <script src="/assets/js/lazy-load.min.js"></script>
+
+    
+    <script src="/assets/js/fuse.min.js"></script>
+    <script src="/assets/js/search.min.js"></script>
+
+    
+    
+    <script src="/assets/js/analytics.min.js" data-ga-id="G-Y138VB4523"></script>
+    
+</body>
+</html>
