@@ -450,23 +450,24 @@
     <main id="main-content" class="main-content">
         <section class="hero hero-small">
     <div class="container">
-        <h1>Technical Reference & Formulas</h1>
-        <p class="lead">Complete Mathematical Implementation</p>
+        <h1>기술 참조 및 공식</h1>
+        <p class="lead">완전한 수학적 구현</p>
     </div>
 </section>
 
 <section class="section">
     <div class="container container-narrow">
-        <h2>Implementation Guide</h2>
-        <p class="lead">This page provides copy-paste formulas and step-by-step calculation methods for all RunAnalytics metrics. Use these for custom implementations, verification, or deeper understanding.</p>
+        <h2>구현 가이드</h2>
+        <p class="lead">이 페이지는 모든 RunAnalytics 지표에 대한 복사-붙여넣기 가능한 공식과 단계별 계산 방법을 제공합니다. 사용자 정의 구현, 검증 또는 더 깊은 이해를 위해
+            사용하세요.</p>
 
         <div class="callout callout-warning">
-            <h3>⚠️ Implementation Notes</h3>
+            <h3>⚠️ 구현 참고 사항</h3>
             <ul>
-                <li>All times should be converted to seconds for calculations</li>
-                <li>Running pace is inverse (higher % = slower pace)</li>
-                <li>Always validate inputs for reasonable ranges</li>
-                <li>Handle edge cases (division by zero, negative values)</li>
+                <li>모든 시간은 계산을 위해 초 단위로 변환해야 합니다</li>
+                <li>러닝 페이스는 역수입니다 (높은 % = 느린 페이스)</li>
+                <li>항상 합리적인 범위에 대해 입력을 검증하세요</li>
+                <li>예외 상황을 처리하세요 (0으로 나누기, 음수 값)</li>
             </ul>
         </div>
     </div>
@@ -474,57 +475,59 @@
 
 <section class="section section-alt">
     <div class="container">
-        <h2>Core Performance Metrics</h2>
+        <h2>핵심 성과 지표</h2>
 
         <div class="formula-card">
-            <h3>Critical Run Speed (CRS)</h3>
+            <h3>크리티컬 러닝 스피드 (CRS)</h3>
             <div class="formula-content">
-                <h4>Formula:</h4>
+                <h4>공식:</h4>
                 <div class="formula-box-large">
                     <div class="formula">
                         CRS (m/s) = (D₂ - D₁) / (T₂ - T₁)
                     </div>
                     <div class="formula">
-                        CRS Pace/100m (seconds) = (T₄₀₀ - T₂₀₀) / 2
+                        CRS 페이스/100m (초) = (T₄₀₀ - T₂₀₀) / 2
                     </div>
                 </div>
 
                 <div class="callout callout-info mt-lg">
-                    <h4>🧪 Interactive Calculator - Test the Formula</h4>
+                    <h4>🧪 대화형 계산기 - 공식 테스트</h4>
                     <div class="calculator-grid">
                         <div class="input-group">
-                            <label for="css-d1">Distance 1 (meters):</label>
+                            <label for="css-d1">거리 1 (미터):</label>
                             <input type="number" id="css-d1" value="200" min="50" max="1000" step="50">
                         </div>
                         <div class="input-group">
-                            <label for="css-t1">Time 1 (mm:ss):</label>
-                            <input type="text" id="css-t1" value="2:30" placeholder="2:30" pattern="[0-9]{1,2}:[0-9]{2}">
+                            <label for="css-t1">시간 1 (분:초):</label>
+                            <input type="text" id="css-t1" value="2:30" placeholder="2:30"
+                                pattern="[0-9]{1,2}:[0-9]{2}">
                         </div>
                         <div class="input-group">
-                            <label for="css-d2">Distance 2 (meters):</label>
+                            <label for="css-d2">거리 2 (미터):</label>
                             <input type="number" id="css-d2" value="400" min="100" max="2000" step="50">
                         </div>
                         <div class="input-group">
-                            <label for="css-t2">Time 2 (mm:ss):</label>
-                            <input type="text" id="css-t2" value="6:08" placeholder="6:08" pattern="[0-9]{1,2}:[0-9]{2}">
+                            <label for="css-t2">시간 2 (분:초):</label>
+                            <input type="text" id="css-t2" value="6:08" placeholder="6:08"
+                                pattern="[0-9]{1,2}:[0-9]{2}">
                         </div>
                     </div>
                     <div class="calculator-result mt-md">
-                        <div class="result-label">CRS Pace per 100m:</div>
+                        <div class="result-label">CRS 페이스 (100m당):</div>
                         <div class="result-value" id="css-result">1:49</div>
                     </div>
                     <div class="calculation-breakdown mt-md">
                         <small>
-                            <strong>Calculation steps:</strong><br>
+                            <strong>계산 단계:</strong><br>
                             <span id="css-steps">
                                 CRS (m/s) = (400 - 200) / (368 - 150) = 0.917 m/s<br>
-                                Pace/100m = 100 / 0.917 = 109 seconds = 1:49
+                                페이스/100m = 100 / 0.917 = 109초 = 1:49
                             </span>
                         </small>
                     </div>
                 </div>
 
-                <h4 class="mt-xl">JavaScript Implementation:</h4>
+                <h4 class="mt-xl">JavaScript 구현:</h4>
                 <pre><code>function calculateCRS(distance1, time1, distance2, time2) {
   // Convert times to seconds if needed
   const t1 = typeof time1 === 'string' ? timeToSeconds(time1) : time1;
@@ -552,98 +555,99 @@ const result = calculateCRS(200, 150, 400, 368);
 // Returns: { css_ms: 0.917, pace_seconds: 109, pace_formatted: "1:49" }</code></pre>
 
                 <script>
-                function timeToSecondsCRS(timeString) {
-                    const parts = timeString.split(':');
-                    return parseInt(parts[0]) * 60 + parseInt(parts[1]);
-                }
-
-                function secondsToTimeCRS(seconds) {
-                    const minutes = Math.floor(seconds / 60);
-                    const secs = Math.round(seconds % 60);
-                    return `${minutes}:${secs.toString().padStart(2, '0')}`;
-                }
-
-                function updateCRSCalculator() {
-                    try {
-                        const d1 = parseFloat(document.getElementById('css-d1').value);
-                        const t1Input = document.getElementById('css-t1').value;
-                        const d2 = parseFloat(document.getElementById('css-d2').value);
-                        const t2Input = document.getElementById('css-t2').value;
-
-                        if (!d1 || !t1Input || !d2 || !t2Input) return;
-
-                        const t1 = timeToSecondsCRS(t1Input);
-                        const t2 = timeToSecondsCRS(t2Input);
-
-                        const css_ms = (d2 - d1) / (t2 - t1);
-                        const pace_per_100m = 100 / css_ms;
-                        const pace_formatted = secondsToTimeCRS(pace_per_100m);
-
-                        document.getElementById('css-result').textContent = pace_formatted;
-                        document.getElementById('css-steps').innerHTML =
-                            `CRS (m/s) = (${d2} - ${d1}) / (${t2} - ${t1}) = ${css_ms.toFixed(3)} m/s<br>` +
-                            `Pace/100m = 100 / ${css_ms.toFixed(3)} = ${Math.round(pace_per_100m)} seconds = ${pace_formatted}`;
-                    } catch (e) {
-                        console.error('CRS calculation error:', e);
+                    function timeToSecondsCRS(timeString) {
+                        const parts = timeString.split(':');
+                        return parseInt(parts[0]) * 60 + parseInt(parts[1]);
                     }
-                }
 
-                document.addEventListener('DOMContentLoaded', function() {
-                    document.getElementById('css-d1').addEventListener('input', updateCRSCalculator);
-                    document.getElementById('css-t1').addEventListener('input', updateCRSCalculator);
-                    document.getElementById('css-d2').addEventListener('input', updateCRSCalculator);
-                    document.getElementById('css-t2').addEventListener('input', updateCRSCalculator);
-                    updateCRSCalculator();
-                });
+                    function secondsToTimeCRS(seconds) {
+                        const minutes = Math.floor(seconds / 60);
+                        const secs = Math.round(seconds % 60);
+                        return `${minutes}:${secs.toString().padStart(2, '0')}`;
+                    }
+
+                    function updateCRSCalculator() {
+                        try {
+                            const d1 = parseFloat(document.getElementById('css-d1').value);
+                            const t1Input = document.getElementById('css-t1').value;
+                            const d2 = parseFloat(document.getElementById('css-d2').value);
+                            const t2Input = document.getElementById('css-t2').value;
+
+                            if (!d1 || !t1Input || !d2 || !t2Input) return;
+
+                            const t1 = timeToSecondsCRS(t1Input);
+                            const t2 = timeToSecondsCRS(t2Input);
+
+                            const css_ms = (d2 - d1) / (t2 - t1);
+                            const pace_per_100m = 100 / css_ms;
+                            const pace_formatted = secondsToTimeCRS(pace_per_100m);
+
+                            document.getElementById('css-result').textContent = pace_formatted;
+                            document.getElementById('css-steps').innerHTML =
+                                `CRS (m/s) = (${d2} - ${d1}) / (${t2} - ${t1}) = ${css_ms.toFixed(3)} m/s<br>` +
+                                `페이스/100m = 100 / ${css_ms.toFixed(3)} = ${Math.round(pace_per_100m)}초 = ${pace_formatted}`;
+                        } catch (e) {
+                            console.error('CRS calculation error:', e);
+                        }
+                    }
+
+                    document.addEventListener('DOMContentLoaded', function () {
+                        document.getElementById('css-d1').addEventListener('input', updateCRSCalculator);
+                        document.getElementById('css-t1').addEventListener('input', updateCRSCalculator);
+                        document.getElementById('css-d2').addEventListener('input', updateCRSCalculator);
+                        document.getElementById('css-t2').addEventListener('input', updateCRSCalculator);
+                        updateCRSCalculator();
+                    });
                 </script>
             </div>
         </div>
 
         <div class="formula-card">
-            <h3>Run Training Stress Score (sTSS)</h3>
+            <h3>러닝 훈련 스트레스 점수 (sTSS)</h3>
             <div class="formula-content">
-                <h4>Complete Formula:</h4>
+                <h4>전체 공식:</h4>
                 <div class="formula-box-large">
                     <div class="formula">
-                        sTSS = (IF³) × Duration (hours) × 100
+                        sTSS = (IF³) × 지속 시간 (시간) × 100
                     </div>
                     <div class="formula">
                         IF = NSS / FTP
                     </div>
                     <div class="formula">
-                        NSS = Total Distance / Total Time (m/min)
+                        NSS = 총 거리 / 총 시간 (m/min)
                     </div>
                 </div>
 
                 <div class="callout callout-info mt-lg">
-                    <h4>🧪 Interactive Calculator - Test the Formula</h4>
+                    <h4>🧪 대화형 계산기 - 공식 테스트</h4>
                     <div class="calculator-grid">
                         <div class="input-group">
-                            <label for="stss-distance">Distance (meters):</label>
+                            <label for="stss-distance">거리 (미터):</label>
                             <input type="number" id="stss-distance" value="3000" min="100" max="10000" step="50">
                         </div>
                         <div class="input-group">
-                            <label for="stss-duration">Duration (minutes):</label>
+                            <label for="stss-duration">지속 시간 (분):</label>
                             <input type="number" id="stss-duration" value="55" min="1" max="300" step="1">
                         </div>
                         <div class="input-group">
-                            <label for="stss-css">CRS Pace (mm:ss per 100m):</label>
-                            <input type="text" id="stss-css" value="1:33" placeholder="1:33" pattern="[0-9]{1,2}:[0-9]{2}">
+                            <label for="stss-css">CRS 페이스 (100m당 분:초):</label>
+                            <input type="text" id="stss-css" value="1:33" placeholder="1:33"
+                                pattern="[0-9]{1,2}:[0-9]{2}">
                         </div>
                         <div class="input-group">
-                            <label>FTP (calculated):</label>
+                            <label>FTP (계산됨):</label>
                             <input type="text" id="stss-ftp" readonly value="64.5 m/min">
                         </div>
                     </div>
                     <div class="calculator-result mt-md">
-                        <div class="result-label">Calculated sTSS:</div>
+                        <div class="result-label">계산된 sTSS:</div>
                         <div class="result-value" id="stss-result">55</div>
                     </div>
                     <div class="calculation-breakdown mt-md">
                         <small>
-                            <strong>Calculation steps:</strong><br>
+                            <strong>계산 단계:</strong><br>
                             <span id="stss-steps">
-                                NSS = 3000m / 55min = 54.5 m/min<br>
+                                NSS = 3000m / 55분 = 54.5 m/min<br>
                                 FTP = 100 / (93/60) = 64.5 m/min<br>
                                 IF = 54.5 / 64.5 = 0.845<br>
                                 sTSS = 0.845³ × (55/60) × 100 = 55
@@ -652,7 +656,7 @@ const result = calculateCRS(200, 150, 400, 368);
                     </div>
                 </div>
 
-                <h4 class="mt-xl">JavaScript Implementation:</h4>
+                <h4 class="mt-xl">JavaScript 구현:</h4>
                 <pre><code>function calculateSTSS(distance, timeMinutes, ftpMetersPerMin) {
   // Calculate Normalized Run Speed
   const nss = distance / timeMinutes;
@@ -683,106 +687,106 @@ function cssToFTP(cssPacePer100mSeconds) {
 const ftp = cssToFTP(93); // Returns: 64.5 m/min</code></pre>
 
                 <script>
-                // Time conversion helper
-                function timeToSeconds(timeString) {
-                    const parts = timeString.split(':');
-                    return parseInt(parts[0]) * 60 + parseInt(parts[1]);
-                }
-
-                // CRS to FTP conversion
-                function cssToFTP(cssPacePer100mSeconds) {
-                    return 100 / (cssPacePer100mSeconds / 60);
-                }
-
-                // sTSS calculation
-                function calculateSTSS(distance, timeMinutes, ftpMetersPerMin) {
-                    const nss = distance / timeMinutes;
-                    const intensityFactor = nss / ftpMetersPerMin;
-                    const hours = timeMinutes / 60;
-                    const stss = Math.pow(intensityFactor, 3) * hours * 100;
-                    return Math.round(stss);
-                }
-
-                // Update calculator
-                function updateSTSSCalculator() {
-                    try {
-                        const distance = parseFloat(document.getElementById('stss-distance').value);
-                        const duration = parseFloat(document.getElementById('stss-duration').value);
-                        const cssInput = document.getElementById('stss-css').value;
-
-                        // Validate inputs
-                        if (!distance || !duration || !cssInput) return;
-
-                        // Convert CRS to seconds
-                        const cssPaceSeconds = timeToSeconds(cssInput);
-
-                        // Calculate FTP
-                        const ftp = cssToFTP(cssPaceSeconds);
-
-                        // Calculate NSS
-                        const nss = distance / duration;
-
-                        // Calculate Intensity Factor
-                        const intensityFactor = nss / ftp;
-
-                        // Calculate sTSS
-                        const stss = calculateSTSS(distance, duration, ftp);
-
-                        // Update display
-                        document.getElementById('stss-ftp').value = ftp.toFixed(1) + ' m/min';
-                        document.getElementById('stss-result').textContent = stss;
-
-                        // Update calculation steps
-                        const hours = duration / 60;
-                        document.getElementById('stss-steps').innerHTML =
-                            `NSS = ${distance}m / ${duration}min = ${nss.toFixed(1)} m/min<br>` +
-                            `FTP = 100 / (${cssPaceSeconds}/60) = ${ftp.toFixed(1)} m/min<br>` +
-                            `IF = ${nss.toFixed(1)} / ${ftp.toFixed(1)} = ${intensityFactor.toFixed(3)}<br>` +
-                            `sTSS = ${intensityFactor.toFixed(3)}³ × (${duration}/60) × 100 = ${stss}`;
-                    } catch (e) {
-                        console.error('Calculation error:', e);
+                    // Time conversion helper
+                    function timeToSeconds(timeString) {
+                        const parts = timeString.split(':');
+                        return parseInt(parts[0]) * 60 + parseInt(parts[1]);
                     }
-                }
 
-                // Add event listeners when page loads
-                document.addEventListener('DOMContentLoaded', function() {
-                    document.getElementById('stss-distance').addEventListener('input', updateSTSSCalculator);
-                    document.getElementById('stss-duration').addEventListener('input', updateSTSSCalculator);
-                    document.getElementById('stss-css').addEventListener('input', updateSTSSCalculator);
+                    // CRS to FTP conversion
+                    function cssToFTP(cssPacePer100mSeconds) {
+                        return 100 / (cssPacePer100mSeconds / 60);
+                    }
 
-                    // Initial calculation
-                    updateSTSSCalculator();
-                });
+                    // sTSS calculation
+                    function calculateSTSS(distance, timeMinutes, ftpMetersPerMin) {
+                        const nss = distance / timeMinutes;
+                        const intensityFactor = nss / ftpMetersPerMin;
+                        const hours = timeMinutes / 60;
+                        const stss = Math.pow(intensityFactor, 3) * hours * 100;
+                        return Math.round(stss);
+                    }
+
+                    // Update calculator
+                    function updateSTSSCalculator() {
+                        try {
+                            const distance = parseFloat(document.getElementById('stss-distance').value);
+                            const duration = parseFloat(document.getElementById('stss-duration').value);
+                            const cssInput = document.getElementById('stss-css').value;
+
+                            // Validate inputs
+                            if (!distance || !duration || !cssInput) return;
+
+                            // Convert CRS to seconds
+                            const cssPaceSeconds = timeToSeconds(cssInput);
+
+                            // Calculate FTP
+                            const ftp = cssToFTP(cssPaceSeconds);
+
+                            // Calculate NSS
+                            const nss = distance / duration;
+
+                            // Calculate Intensity Factor
+                            const intensityFactor = nss / ftp;
+
+                            // Calculate sTSS
+                            const stss = calculateSTSS(distance, duration, ftp);
+
+                            // Update display
+                            document.getElementById('stss-ftp').value = ftp.toFixed(1) + ' m/min';
+                            document.getElementById('stss-result').textContent = stss;
+
+                            // Update calculation steps
+                            const hours = duration / 60;
+                            document.getElementById('stss-steps').innerHTML =
+                                `NSS = ${distance}m / ${duration}분 = ${nss.toFixed(1)} m/min<br>` +
+                                `FTP = 100 / (${cssPaceSeconds}/60) = ${ftp.toFixed(1)} m/min<br>` +
+                                `IF = ${nss.toFixed(1)} / ${ftp.toFixed(1)} = ${intensityFactor.toFixed(3)}<br>` +
+                                `sTSS = ${intensityFactor.toFixed(3)}³ × (${duration}/60) × 100 = ${stss}`;
+                        } catch (e) {
+                            console.error('Calculation error:', e);
+                        }
+                    }
+
+                    // Add event listeners when page loads
+                    document.addEventListener('DOMContentLoaded', function () {
+                        document.getElementById('stss-distance').addEventListener('input', updateSTSSCalculator);
+                        document.getElementById('stss-duration').addEventListener('input', updateSTSSCalculator);
+                        document.getElementById('stss-css').addEventListener('input', updateSTSSCalculator);
+
+                        // Initial calculation
+                        updateSTSSCalculator();
+                    });
                 </script>
             </div>
         </div>
 
         <div class="formula-card">
-            <h3>Running Efficiency</h3>
+            <h3>러닝 효율성 (Running Efficiency)</h3>
             <div class="formula-content">
-                <h4>Formula:</h4>
+                <h4>공식:</h4>
                 <div class="formula-box-large">
                     <div class="formula">
-                        Running Efficiency = Kilometer Time (seconds) + Stride Count
+                        러닝 효율성 = 킬로미터 시간 (초) + 스트라이드 수
                     </div>
                     <div class="formula">
-                        Running Efficiency₂₅ = (Time × 25/Track Length) + (Strides × 25/Track Length)
+                        러닝 효율성₂₅ = (시간 × 25/트랙 길이) + (스트라이드 × 25/트랙 길이)
                     </div>
                 </div>
 
                 <div class="callout callout-info mt-lg">
-                    <h4>🧪 Interactive Calculator - Test the Formula</h4>
+                    <h4>🧪 대화형 계산기 - 공식 테스트</h4>
                     <div class="calculator-grid">
                         <div class="input-group">
-                            <label for="swolf-time">Kilometer Time (seconds):</label>
+                            <label for="swolf-time">킬로미터 시간 (초):</label>
                             <input type="number" id="swolf-time" value="20" min="10" max="120" step="1">
                         </div>
                         <div class="input-group">
-                            <label for="swolf-strides">Stride Count:</label>
+                            <label for="swolf-strides">스트라이드 수:</label>
                             <input type="number" id="swolf-strides" value="15" min="5" max="50" step="1">
                         </div>
                         <div class="input-group">
-                            <label for="swolf-track">Track Length (m):</label>
+                            <label for="swolf-track">트랙 길이 (m):</label>
                             <select id="swolf-track">
                                 <option value="25" selected>25m</option>
                                 <option value="50">50m</option>
@@ -790,72 +794,72 @@ const ftp = cssToFTP(93); // Returns: 64.5 m/min</code></pre>
                         </div>
                     </div>
                     <div class="calculator-result mt-md">
-                        <div class="result-label">Running Efficiency Score:</div>
+                        <div class="result-label">러닝 효율성 점수:</div>
                         <div class="result-value" id="swolf-result">35</div>
                     </div>
                     <div class="calculation-breakdown mt-md">
                         <small>
-                            <strong>Calculation:</strong><br>
+                            <strong>계산:</strong><br>
                             <span id="swolf-steps">
-                                Running Efficiency = 20s + 15 strides = 35
+                                러닝 효율성 = 20초 + 15 스트라이드 = 35
                             </span>
                         </small>
                     </div>
                 </div>
 
-                <h4 class="mt-xl">JavaScript Implementation:</h4>
-                <pre><code>function calculateRunning Efficiency(timeSeconds, strideCount) {
+                <h4 class="mt-xl">JavaScript 구현:</h4>
+                <pre><code>function calculateRunningEfficiency(timeSeconds, strideCount) {
   return timeSeconds + strideCount;
 }
 
-function calculateNormalizedRunning Efficiency(timeSeconds, strideCount, trackLength) {
+function calculateNormalizedRunningEfficiency(timeSeconds, strideCount, trackLength) {
   const normalizedTime = timeSeconds * (25 / trackLength);
   const normalizedStrides = strideCount * (25 / trackLength);
   return normalizedTime + normalizedStrides;
 }
 
 // Example:
-const swolf = calculateRunning Efficiency(20, 15);
+const swolf = calculateRunningEfficiency(20, 15);
 // Returns: 35
 
-const swolf50m = calculateNormalizedRunning Efficiency(40, 30, 50);
+const swolf50m = calculateNormalizedRunningEfficiency(40, 30, 50);
 // Returns: 35 (normalized to 25m)</code></pre>
 
                 <script>
-                function updateRunning EfficiencyCalculator() {
-                    try {
-                        const time = parseFloat(document.getElementById('swolf-time').value);
-                        const strides = parseFloat(document.getElementById('swolf-strides').value);
-                        const trackLength = parseFloat(document.getElementById('swolf-track').value);
+                    function updateRunningEfficiencyCalculator() {
+                        try {
+                            const time = parseFloat(document.getElementById('swolf-time').value);
+                            const strides = parseFloat(document.getElementById('swolf-strides').value);
+                            const trackLength = parseFloat(document.getElementById('swolf-track').value);
 
-                        if (!time || !strides) return;
+                            if (!time || !strides) return;
 
-                        let swolf, steps;
-                        if (trackLength === 25) {
-                            swolf = time + strides;
-                            steps = `Running Efficiency = ${time}s + ${strides} strides = ${swolf}`;
-                        } else {
-                            const normalizedTime = time * (25 / trackLength);
-                            const normalizedStrides = strides * (25 / trackLength);
-                            swolf = normalizedTime + normalizedStrides;
-                            steps = `Normalized Time = ${time} × (25/${trackLength}) = ${normalizedTime.toFixed(1)}s<br>` +
-                                   `Normalized Strides = ${strides} × (25/${trackLength}) = ${normalizedStrides.toFixed(1)}<br>` +
-                                   `Running Efficiency₂₅ = ${normalizedTime.toFixed(1)} + ${normalizedStrides.toFixed(1)} = ${swolf.toFixed(1)}`;
+                            let swolf, steps;
+                            if (trackLength === 25) {
+                                swolf = time + strides;
+                                steps = `러닝 효율성 = ${time}초 + ${strides} 스트라이드 = ${swolf}`;
+                            } else {
+                                const normalizedTime = time * (25 / trackLength);
+                                const normalizedStrides = strides * (25 / trackLength);
+                                swolf = normalizedTime + normalizedStrides;
+                                steps = `정규화된 시간 = ${time} × (25/${trackLength}) = ${normalizedTime.toFixed(1)}초<br>` +
+                                    `정규화된 스트라이드 = ${strides} × (25/${trackLength}) = ${normalizedStrides.toFixed(1)}<br>` +
+                                    `러닝 효율성₂₅ = ${normalizedTime.toFixed(1)} + ${normalizedStrides.toFixed(1)} = ${swolf.toFixed(1)}`;
+                            }
+
+                            document.getElementById('swolf-result').textContent = swolf.toFixed(1);
+                            document.getElementById('swolf-steps').innerHTML = steps;
+                        } catch (e) {
+                            console.error('Running Efficiency calculation error:', e);
                         }
-
-                        document.getElementById('swolf-result').textContent = swolf.toFixed(1);
-                        document.getElementById('swolf-steps').innerHTML = steps;
-                    } catch (e) {
-                        console.error('Running Efficiency calculation error:', e);
                     }
-                }
 
-                document.addEventListener('DOMContentLoaded', function() {
-                    document.getElementById('swolf-time').addEventListener('input', updateRunning EfficiencyCalculator);
-                    document.getElementById('swolf-strides').addEventListener('input', updateRunning EfficiencyCalculator);
-                    document.getElementById('swolf-track').addEventListener('change', updateRunning EfficiencyCalculator);
-                    updateRunning EfficiencyCalculator();
-                });
+                    document.addEventListener('DOMContentLoaded', function () {
+                        document.getElementById('swolf-time').addEventListener('input', updateRunningEfficiencyCalculator);
+                        document.getElementById('swolf-strides').addEventListener('input', updateRunningEfficiencyCalculator);
+                        document.getElementById('swolf-track').addEventListener('change', updateRunningEfficiencyCalculator);
+                        updateRunningEfficiencyCalculator();
+                    });
                 </script>
             </div>
         </div>
@@ -864,40 +868,40 @@ const swolf50m = calculateNormalizedRunning Efficiency(40, 30, 50);
 
 <section class="section">
     <div class="container">
-        <h2>Stride Mechanics</h2>
+        <h2>스트라이드 역학</h2>
 
         <div class="formula-card">
-            <h3>Stride Rate (SR)</h3>
+            <h3>스트라이드 레이트 (SR)</h3>
             <div class="formula-content">
-                <h4>Formula:</h4>
+                <h4>공식:</h4>
                 <div class="formula-box-large">
                     <div class="formula">
-                        SR = 60 / Cycle Time (seconds)
+                        SR = 60 / 사이클 시간 (초)
                     </div>
                     <div class="formula">
-                        SR = (Number of Strides / Time in seconds) × 60
+                        SR = (스트라이드 수 / 시간(초)) × 60
                     </div>
                 </div>
 
                 <div class="callout callout-info mt-lg">
-                    <h4>🧪 Interactive Calculator - Test the Formula</h4>
+                    <h4>🧪 대화형 계산기 - 공식 테스트</h4>
                     <div class="calculator-grid">
                         <div class="input-group">
-                            <label for="sr-strides">Stride Count:</label>
+                            <label for="sr-strides">스트라이드 수:</label>
                             <input type="number" id="sr-strides" value="30" min="1" max="100" step="1">
                         </div>
                         <div class="input-group">
-                            <label for="sr-time">Time (seconds):</label>
+                            <label for="sr-time">시간 (초):</label>
                             <input type="number" id="sr-time" value="25" min="1" max="180" step="1">
                         </div>
                     </div>
                     <div class="calculator-result mt-md">
-                        <div class="result-label">Stride Rate (SPM):</div>
+                        <div class="result-label">스트라이드 레이트 (SPM):</div>
                         <div class="result-value" id="sr-result">72</div>
                     </div>
                     <div class="calculation-breakdown mt-md">
                         <small>
-                            <strong>Calculation:</strong><br>
+                            <strong>계산:</strong><br>
                             <span id="sr-steps">
                                 SR = (30 / 25) × 60 = 72 SPM
                             </span>
@@ -905,7 +909,7 @@ const swolf50m = calculateNormalizedRunning Efficiency(40, 30, 50);
                     </div>
                 </div>
 
-                <h4 class="mt-xl">JavaScript Implementation:</h4>
+                <h4 class="mt-xl">JavaScript 구현:</h4>
                 <pre><code>function calculateStrideRate(strideCount, timeSeconds) {
   return (strideCount / timeSeconds) * 60;
 }
@@ -915,46 +919,46 @@ const sr = calculateStrideRate(30, 25);
 // Returns: 72 SPM</code></pre>
 
                 <script>
-                function updateSRCalculator() {
-                    try {
-                        const strides = parseFloat(document.getElementById('sr-strides').value);
-                        const time = parseFloat(document.getElementById('sr-time').value);
+                    function updateSRCalculator() {
+                        try {
+                            const strides = parseFloat(document.getElementById('sr-strides').value);
+                            const time = parseFloat(document.getElementById('sr-time').value);
 
-                        if (!strides || !time) return;
+                            if (!strides || !time) return;
 
-                        const sr = (strides / time) * 60;
+                            const sr = (strides / time) * 60;
 
-                        document.getElementById('sr-result').textContent = sr.toFixed(1);
-                        document.getElementById('sr-steps').innerHTML =
-                            `SR = (${strides} / ${time}) × 60 = ${sr.toFixed(1)} SPM`;
-                    } catch (e) {
-                        console.error('SR calculation error:', e);
+                            document.getElementById('sr-result').textContent = sr.toFixed(1);
+                            document.getElementById('sr-steps').innerHTML =
+                                `SR = (${strides} / ${time}) × 60 = ${sr.toFixed(1)} SPM`;
+                        } catch (e) {
+                            console.error('SR calculation error:', e);
+                        }
                     }
-                }
 
-                document.addEventListener('DOMContentLoaded', function() {
-                    document.getElementById('sr-strides').addEventListener('input', updateSRCalculator);
-                    document.getElementById('sr-time').addEventListener('input', updateSRCalculator);
-                    updateSRCalculator();
-                });
+                    document.addEventListener('DOMContentLoaded', function () {
+                        document.getElementById('sr-strides').addEventListener('input', updateSRCalculator);
+                        document.getElementById('sr-time').addEventListener('input', updateSRCalculator);
+                        updateSRCalculator();
+                    });
                 </script>
             </div>
         </div>
 
         <div class="formula-card">
-            <h3>Distance Per Stride (DPS)</h3>
+            <h3>스트라이드당 거리 (DPS)</h3>
             <div class="formula-content">
-                <h4>Formula:</h4>
+                <h4>공식:</h4>
                 <div class="formula-box-large">
                     <div class="formula">
-                        DPS = Distance / Stride Count
+                        DPS = 거리 / 스트라이드 수
                     </div>
                     <div class="formula">
-                        DPS = Distance / (SR / 60)
+                        DPS = 거리 / (SR / 60)
                     </div>
                 </div>
 
-                <h4>JavaScript Implementation:</h4>
+                <h4>JavaScript 구현:</h4>
                 <pre><code>function calculateDPS(distance, strideCount, pushoffDistance = 0) {
   const effectiveDistance = distance - pushoffDistance;
   return effectiveDistance / strideCount;
@@ -971,16 +975,16 @@ const dps100m = calculateDPS(100, 48, 4 * 5);
         </div>
 
         <div class="formula-card">
-            <h3>Velocity from SR and DPS</h3>
+            <h3>SR과 DPS를 이용한 속도</h3>
             <div class="formula-content">
-                <h4>Formula:</h4>
+                <h4>공식:</h4>
                 <div class="formula-box-large">
                     <div class="formula">
-                        Velocity (m/s) = (SR / 60) × DPS
+                        속도 (m/s) = (SR / 60) × DPS
                     </div>
                 </div>
 
-                <h4>JavaScript Implementation:</h4>
+                <h4>JavaScript 구현:</h4>
                 <pre><code>function calculateVelocity(strideRate, dps) {
   return (strideRate / 60) * dps;
 }
@@ -992,16 +996,16 @@ const velocity = calculateVelocity(70, 1.6);
         </div>
 
         <div class="formula-card">
-            <h3>Stride Index (SI)</h3>
+            <h3>스트라이드 지수 (SI)</h3>
             <div class="formula-content">
-                <h4>Formula:</h4>
+                <h4>공식:</h4>
                 <div class="formula-box-large">
                     <div class="formula">
-                        SI = Velocity (m/s) × DPS (m/stride)
+                        SI = 속도 (m/s) × DPS (m/stride)
                     </div>
                 </div>
 
-                <h4>JavaScript Implementation:</h4>
+                <h4>JavaScript 구현:</h4>
                 <pre><code>function calculateStrideIndex(velocity, dps) {
   return velocity * dps;
 }
@@ -1016,25 +1020,25 @@ const si = calculateStrideIndex(1.5, 1.7);
 
 <section class="section section-alt">
     <div class="container">
-        <h2>Performance Management Chart (PMC)</h2>
+        <h2>성과 관리 차트 (PMC)</h2>
 
         <div class="formula-card">
-            <h3>CTL, ATL, TSB Calculations</h3>
+            <h3>CTL, ATL, TSB 계산</h3>
             <div class="formula-content">
-                <h4>Formulas:</h4>
+                <h4>공식:</h4>
                 <div class="formula-box-large">
                     <div class="formula">
-                        CTL today = CTL yesterday + (TSS today - CTL yesterday) × (1/42)
+                        오늘 CTL = 어제 CTL + (오늘 TSS - 어제 CTL) × (1/42)
                     </div>
                     <div class="formula">
-                        ATL today = ATL yesterday + (TSS today - ATL yesterday) × (1/7)
+                        오늘 ATL = 어제 ATL + (오늘 TSS - 어제 ATL) × (1/7)
                     </div>
                     <div class="formula">
-                        TSB = CTL yesterday - ATL yesterday
+                        TSB = 어제 CTL - 어제 ATL
                     </div>
                 </div>
 
-                <h4>JavaScript Implementation:</h4>
+                <h4>JavaScript 구현:</h4>
                 <pre><code>function updateCTL(previousCTL, todayTSS) {
   return previousCTL + (todayTSS - previousCTL) * (1/42);
 }
@@ -1086,14 +1090,14 @@ const pmc = calculatePMC(workouts);
 
 <section class="section">
     <div class="container">
-        <h2>Advanced Calculations</h2>
+        <h2>고급 계산</h2>
 
         <div class="formula-card">
-            <h3>CRS from Multiple Distances (Regression Method)</h3>
+            <h3>다중 거리에서의 CRS (회귀 방법)</h3>
             <div class="formula-content">
-                <h4>JavaScript Implementation:</h4>
+                <h4>JavaScript 구현:</h4>
                 <pre><code>function calculateCRSRegression(distances, times) {
-  // Linear regression: distance = a + b*time
+  // 선형 회귀: 거리 = a + b*시간
   const n = distances.length;
   const sumX = times.reduce((a, b) => a + b, 0);
   const sumY = distances.reduce((a, b) => a + b, 0);
@@ -1104,40 +1108,40 @@ const pmc = calculatePMC(workouts);
   const intercept = (sumY - slope * sumX) / n;
 
   return {
-    css: slope, // Critical running velocity (m/s)
-    anaerobic_capacity: intercept // Anaerobic distance capacity (m)
+    css: slope, // 임계 달리기 속도 (m/s)
+    anaerobic_capacity: intercept // 무산소 거리 용량 (m)
   };
 }
 
-// Example with multiple test distances:
+// 여러 테스트 거리 예시:
 const distances = [100, 200, 400, 800];
-const times = [65, 150, 340, 720]; // in seconds
+const times = [65, 150, 340, 720]; // 초 단위
 const result = calculateCRSRegression(distances, times);
 // Returns: { css: 1.18, anaerobic_capacity: 15.3 }</code></pre>
             </div>
         </div>
 
         <div class="formula-card">
-            <h3>Intensity Factor from Pace</h3>
+            <h3>페이스로부터의 강도 계수 (Intensity Factor)</h3>
             <div class="formula-content">
-                <h4>JavaScript Implementation:</h4>
+                <h4>JavaScript 구현:</h4>
                 <pre><code>function calculateIntensityFactor(actualPace100m, thresholdPace100m) {
-  // Convert pace to speed (m/s)
+  // 페이스를 속도(m/s)로 변환
   const actualSpeed = 100 / actualPace100m;
   const thresholdSpeed = 100 / thresholdPace100m;
   return actualSpeed / thresholdSpeed;
 }
 
-// Example:
+// 예시:
 const if_value = calculateIntensityFactor(110, 93);
-// Returns: 0.845 (running at 84.5% of threshold)</code></pre>
+// Returns: 0.845 (임계치의 84.5%로 달리는 중)</code></pre>
             </div>
         </div>
 
         <div class="formula-card">
-            <h3>Pace Consistency Analysis</h3>
+            <h3>페이스 일관성 분석</h3>
             <div class="formula-content">
-                <h4>JavaScript Implementation:</h4>
+                <h4>JavaScript 구현:</h4>
                 <pre><code>function analyzePaceConsistency(segments) {
   const paces = segments.map(kilometer => kilometer.distance / kilometer.time);
   const avgPace = paces.reduce((a, b) => a + b) / paces.length;
@@ -1157,7 +1161,7 @@ const if_value = calculateIntensityFactor(110, 93);
   };
 }
 
-// Example:
+// 예시:
 const segments = [
   { distance: 100, time: 70 },
   { distance: 100, time: 72 },
@@ -1170,9 +1174,9 @@ const analysis = analyzePaceConsistency(segments);
         </div>
 
         <div class="formula-card">
-            <h3>Fatigue Detection from Stride Count</h3>
+            <h3>스트라이드 수로 피로 감지</h3>
             <div class="formula-content">
-                <h4>JavaScript Implementation:</h4>
+                <h4>JavaScript 구현:</h4>
                 <pre><code>function detectFatigue(segments) {
   const firstThird = segments.slice(0, Math.floor(segments.length/3));
   const lastThird = segments.slice(-Math.floor(segments.length/3));
@@ -1194,7 +1198,7 @@ const analysis = analyzePaceConsistency(segments);
   };
 }
 
-// Example:
+// 예시:
 const segments = [
   { strideCount: 14 }, { strideCount: 14 }, { strideCount: 15 },
   { strideCount: 15 }, { strideCount: 16 }, { strideCount: 16 },
@@ -1209,40 +1213,40 @@ const fatigue = detectFatigue(segments);
 
 <section class="section section-alt">
     <div class="container">
-        <h2>Data Validation</h2>
+        <h2>데이터 검증</h2>
 
         <div class="formula-card">
-            <h3>Workout Data Quality Checks</h3>
+            <h3>운동 데이터 품질 확인</h3>
             <div class="formula-content">
-                <h4>JavaScript Implementation:</h4>
+                <h4>JavaScript 구현:</h4>
                 <pre><code>function validateWorkoutData(workout) {
   const issues = [];
 
-  // Check for reasonable pace ranges (1:00-5:00 per 100m)
+  // 합리적인 페이스 범위 확인 (100m당 1:00-5:00)
   const avgPace = (workout.totalTime / workout.totalDistance) * 100;
   if (avgPace < 60 || avgPace > 300) {
-    issues.push(`Unusual average pace: ${Math.round(avgPace)}s per 100m`);
+    issues.push(`비정상적인 평균 페이스: 100m당 ${Math.round(avgPace)}초`);
   }
 
-  // Check for reasonable stride counts (10-50 per 25m)
+  // 합리적인 스트라이드 수 확인 (25m당 10-50)
   const avgStridesPer25m = (workout.totalStrides / workout.totalDistance) * 25;
   if (avgStridesPer25m < 10 || avgStridesPer25m > 50) {
-    issues.push(`Unusual stride count: ${Math.round(avgStridesPer25m)} per 25m`);
+    issues.push(`비정상적인 스트라이드 수: 25m당 ${Math.round(avgStridesPer25m)}`);
   }
 
-  // Check for reasonable stride rate (30-150 SPM)
+  // 합리적인 스트라이드 레이트 확인 (30-150 SPM)
   const avgSR = calculateStrideRate(workout.totalStrides, workout.totalTime);
   if (avgSR < 30 || avgSR > 150) {
-    issues.push(`Unusual stride rate: ${Math.round(avgSR)} SPM`);
+    issues.push(`비정상적인 스트라이드 레이트: ${Math.round(avgSR)} SPM`);
   }
 
-  // Check for missing segments (gaps in time)
+  // 누락된 구간 확인 (시간 간격)
   if (workout.segments && workout.segments.length > 1) {
     for (let i = 1; i < workout.segments.length; i++) {
       const gap = workout.segments[i].startTime -
                   (workout.segments[i-1].startTime + workout.segments[i-1].duration);
-      if (gap > 300) { // 5 minute gap
-        issues.push(`Large gap detected between segments ${i} and ${i+1}`);
+      if (gap > 300) { // 5분 간격
+        issues.push(`구간 ${i}와 ${i+1} 사이에 큰 간격 감지`);
       }
     }
   }
@@ -1253,12 +1257,12 @@ const fatigue = detectFatigue(segments);
   };
 }
 
-// Example:
+// 예시:
 const workout = {
   totalDistance: 2000,
-  totalTime: 1800, // 30 minutes
+  totalTime: 1800, // 30분
   totalStrides: 800,
-  segments: [/* kilometer data */]
+  segments: [/* 킬로미터 데이터 */]
 };
 const validation = validateWorkoutData(workout);
 // Returns: { isValid: true, issues: [] }</code></pre>
@@ -1308,7 +1312,9 @@ secondsToTimeDetailed(3665); // Returns: "1:01:05"</code></pre>
 <section class="section section-alt">
     <div class="container container-narrow text-center">
         <h2>Implementation Resources</h2>
-        <p class="lead">All formulas on this page are production-ready and validated against scientific literature. Use them for custom analytics tools, verification, or deeper understanding of running performance calculations.</p>
+        <p class="lead">All formulas on this page are production-ready and validated against scientific literature. Use
+            them for custom analytics tools, verification, or deeper understanding of running performance calculations.
+        </p>
 
         <div class="callout callout-tip">
             <h3>💡 Best Practices</h3>
@@ -1461,6 +1467,19 @@ secondsToTimeDetailed(3665); // Returns: "1:01:05"</code></pre>
                     </li>
                     
                 </ul>
+            </div>
+
+            
+            <div>
+                <h3 class="mb-md">Download</h3>
+                <div class="footer-badges">
+                    <a href="https://apps.apple.com/es/app/runanalytics/id6754524015" class="app-store-badge" target="_blank" rel="noopener">
+                        <img src="/assets/images/badge-app-store.svg" alt="Download on the App Store" width="120" height="40">
+                    </a>
+                    <a href="" class="app-store-badge" target="_blank" rel="noopener">
+                        <img src="/assets/images/badge-google-play.svg" alt="Get it on Google Play" width="120" height="40">
+                    </a>
+                </div>
             </div>
         </div>
 
