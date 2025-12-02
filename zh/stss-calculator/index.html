@@ -447,100 +447,100 @@
     <main id="main-content" class="main-content">
         <section class="hero hero-small">
 <div class="container">
-<h1>Free Running TSS Calculator</h1>
-<p class="lead">Calculate 训练压力评分 for running 训练s - The 仅 free sTSS calculator</p>
+<h1>免费跑步 TSS 计算器</h1>
+<p class="lead">计算跑步训练的训练压力评分 - 唯一免费的 sTSS 计算器</p>
 </div>
 </section>
 <section class="section">
 <div class="container container-narrow">
 <div class="callout callout-info mb-xl">
-<h2>什么是 Running TSS (sTSS)?</h2>
-<p><strong>Running 训练压力评分 (sTSS)</strong>quantifies the 训练 load of a running 训练 by combining intensity and duration. It's adapted from cycling's TSS methodology, using your Critical Run Speed (CRS) as the threshold 配速. A 1-hour 训练 at CRS 配速 = 100 sTSS.</p>
+<h2>什么是跑步 TSS (sTSS)?</h2>
+<p><strong>跑步训练压力评分 (sTSS)</strong> 通过结合强度和持续时间来量化跑步训练的训练负荷。它改编自自行车的 TSS 方法,使用您的临界跑步速度 (CRS) 作为阈值配速。1 小时以 CRS 配速进行的训练 = 100 sTSS。</p>
 </div>
-<h2 class="mt-3xl">Free sTSS Calculator</h2>
-<p class="lead mb-xl">Calculate 训练 stress for any running 训练. Requires your CRS 配速.</p>
+<h2 class="mt-3xl">免费 sTSS 计算器</h2>
+<p class="lead mb-xl">计算任何跑步训练的训练压力。需要您的 CRS 配速。</p>
 <div class="css-calculator">
 <form id="stssCalculatorForm">
 <div class="calculator-inputs">
 <div class="form-group">
-<label class="form-label" for="cssPace">Your CRS Pace (mm:ss per 100m)</label>
+<label class="form-label" for="cssPace">您的 CRS 配速 (分:秒 / 100m)</label>
 <input aria-describedby="cssPace-help" aria-required="true" class="form-input" id="cssPace" pattern="[0-9]{1,2}:[0-5][0-9]" placeholder="1:49" type="text"/>
-<small class="form-help" id="cssPace-help">Your threshold 配速 from CRS test (e.g., 1:49)</small>
+<small class="form-help" id="cssPace-help">您来自 CRS 测试的阈值配速 (例如: 1:49)</small>
 <div class="form-error" id="cssPace-error"></div>
 </div>
 <div class="form-group">
-<label class="form-label" for="workoutDuration">Workout Duration (分钟)</label>
+<label class="form-label" for="workoutDuration">训练持续时间 (分钟)</label>
 <input aria-describedby="duration-help" aria-required="true" class="form-input" id="workoutDuration" max="300" min="1" placeholder="60" type="number"/>
-<small class="form-help" id="duration-help">Total 训练 time including rest (1-300 分钟)</small>
+<small class="form-help" id="duration-help">总训练时间包括休息 (1-300 分钟)</small>
 <div class="form-error" id="duration-error"></div>
 </div>
 <div class="form-group">
-<label class="form-label" for="avgPace">Average Workout Pace (mm:ss per 100m)</label>
+<label class="form-label" for="avgPace">平均训练配速 (分:秒 / 100m)</label>
 <input aria-describedby="pace-help" aria-required="true" class="form-input" id="avgPace" pattern="[0-9]{1,2}:[0-5][0-9]" placeholder="2:05" type="text"/>
-<small class="form-help" id="pace-help">Your average 配速 during the 训练 (e.g., 2:05)</small>
+<small class="form-help" id="pace-help">您在训练期间的平均配速 (例如: 2:05)</small>
 <div class="form-error" id="pace-error"></div>
 </div>
 <div class="calculator-buttons">
-<button class="btn btn-primary" id="calculateStssBtn" type="submit">Calculate sTSS</button>
-<button class="btn btn-ghost" id="resetStssBtn" type="reset">Clear</button>
+<button class="btn btn-primary" id="calculateStssBtn" type="submit">计算 sTSS</button>
+<button class="btn btn-ghost" id="resetStssBtn" type="reset">清除</button>
 </div>
 </div>
 </form>
 <div aria-live="polite" class="calculator-results hidden" id="stssResults">
-<h3>Your 训练压力评分</h3>
+<h3>您的训练压力评分</h3>
 <div class="results-summary">
 <div class="result-item">
 <div class="result-label">sTSS</div>
 <div class="css-result-value" id="stssValue">--</div>
 </div>
 <div class="result-item">
-<div class="result-label">Intensity Factor (IF)</div>
+<div class="result-label">强度因子 (IF)</div>
 <div class="css-result-value" id="intensityFactor">--</div>
 </div>
 </div>
 <div class="zones-result">
-<h4>Training Load Interpretation</h4>
+<h4>训练负荷解释</h4>
 <p class="mb-md text-secondary" id="stssInterpretation">
 <!-- Filled by JavaScript -->
 </p>
 </div>
 </div>
 </div>
-<h2 class="mt-3xl">How sTSS is Calculated</h2>
+<h2 class="mt-3xl">如何计算 sTSS</h2>
 <div class="formula-box">
-<h3>Formula</h3>
-<div class="formula">sTSS = (Duration in 小时) × (Intensity Factor)² × 100</div>
+<h3>公式</h3>
+<div class="formula">sTSS = (小时数) × (强度因子)² × 100</div>
 <div class="formula-explanation">
-<p>Where:</p>
+<p>其中:</p>
 <ul>
-<li><strong>Intensity Factor (IF)</strong> = CRS Pace / Average Workout Pace</li>
-<li><strong>Duration</strong>= Total 训练 time in 小时</li>
-<li><strong>CRS Pace</strong>= Your threshold 配速 from CRS test</li>
+<li><strong>强度因子 (IF)</strong> = CRS 配速 / 平均训练配速</li>
+<li><strong>持续时间</strong>= 总训练时间 (小时)</li>
+<li><strong>CRS 配速</strong>= 您来自 CRS 测试的阈值配速</li>
 </ul>
 </div>
 </div>
-<h3 class="mt-xl">Worked Example</h3>
+<h3 class="mt-xl">计算示例</h3>
 <div class="example-box">
-<h4>Workout Details:</h4>
+<h4>训练详情:</h4>
 <ul>
-<li>CRS Pace: <strong>1:49/100m</strong>(109 秒)</li>
-<li>Workout Duration: <strong>60 分钟</strong> (1 hour)</li>
-<li>Average Pace: <strong>2:05/100m</strong>(125 秒)</li>
+<li>CRS 配速: <strong>1:49/100m</strong>(109 秒)</li>
+<li>训练持续时间: <strong>60 分钟</strong> (1 小时)</li>
+<li>平均配速: <strong>2:05/100m</strong>(125 秒)</li>
 </ul>
-<h4>Step 1: Calculate Intensity Factor</h4>
+<h4>第 1 步: 计算强度因子</h4>
 <div class="calculation">
                 IF = CRS Pace / Workout Pace<br/>
                 IF = 109 / 125<br/>
                 IF = <strong>0.872</strong>
 </div>
-<h4>Step 2: Calculate sTSS</h4>
+<h4>第 2 步: 计算 sTSS</h4>
 <div class="calculation">sTSS = 1.0 小时 × (0.872)² × 100<br/>
                 sTSS = 1.0 × 0.760 × 100<br/>
                 sTSS = <strong>76</strong>
 </div>
-<p class="mt-md"><strong>Interpretation:</strong>This 60-minute 训练 at easy 配速 (slower than CRS) generated 76 sTSS - a moderate 训练 load suitable for aerobic 基础建设.</p>
+<p class="mt-md"><strong>解释:</strong> 这个 60 分钟以简单配速进行的训练 (比 CRS 慢) 产生了 76 sTSS - 一个中等训练负荷,适合有氧基础建设。</p>
 </div>
-<h2 class="mt-3xl">Understanding sTSS Values</h2>
+<h2 class="mt-3xl">理解 sTSS 值</h2>
 <div class="zones-table-container">
 <table class="zones-table">
 <thead>

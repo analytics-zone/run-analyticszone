@@ -447,361 +447,355 @@
     <main id="main-content" class="main-content">
         <section class="hero hero-small">
     <div class="container">
-        <h1>Free Running TSS Calculator</h1>
-        <p class="lead">Calculate Training Stress Score for running workouts - The only free sTSS calculator</p>
+        <h1>無料ランニングTSS計算機</h1>
+        <p class="lead">ランニングワークアウトのトレーニングストレススコアを計算 - 唯一の無料sTSS計算機</p>
     </div>
 </section>
 
 <section class="section">
     <div class="container container-narrow">
         <div class="callout callout-info mb-xl">
-            <h2>What is Running TSS (sTSS)?</h2>
-            <p><strong>Running Training Stress Score (sTSS)</strong> quantifies the training load of a running workout by combining intensity and duration. It's adapted from cycling's TSS methodology, using your Critical Run Speed (CRS) as the threshold pace. A 1-hour workout at CRS pace = 100 sTSS.</p>
+            <h2>ランニングTSS (sTSS) とは？</h2>
+            <p><strong>ランニングトレーニングストレススコア (sTSS)</strong>
+                は、強度と持続時間を組み合わせてランニングワークアウトのトレーニング負荷を定量化します。これはサイクリングのTSS方法論を適応させたもので、クリティカルランニングスピード (CRS)
+                を閾値ペースとして使用します。CRSペースでの1時間のワークアウト = 100 sTSS です。</p>
         </div>
 
-        <h2 class="mt-3xl">Free sTSS Calculator</h2>
-        <p class="lead mb-xl">Calculate training stress for any running workout. Requires your CRS pace.</p>
+        <h2 class="mt-3xl">無料sTSS計算機</h2>
+        <p class="lead mb-xl">あらゆるランニングワークアウトのトレーニングストレスを計算します。CRSペースが必要です。</p>
 
         <div class="css-calculator">
             <form id="stssCalculatorForm">
                 <div class="calculator-inputs">
                     <div class="form-group">
-                        <label for="cssPace" class="form-label">Your CRS Pace (mm:ss per 100m)</label>
-                        <input
-                            type="text"
-                            id="cssPace"
-                            class="form-input"
-                            placeholder="1:49"
-                            pattern="[0-9]{1,2}:[0-5][0-9]"
-                            aria-required="true"
-                            aria-describedby="cssPace-help"
-                        />
-                        <small id="cssPace-help" class="form-help">Your threshold pace from CRS test (e.g., 1:49)</small>
+                        <label for="cssPace" class="form-label">あなたのCRSペース (mm:ss / 100m)</label>
+                        <input type="text" id="cssPace" class="form-input" placeholder="1:49"
+                            pattern="[0-9]{1,2}:[0-5][0-9]" aria-required="true" aria-describedby="cssPace-help" />
+                        <small id="cssPace-help" class="form-help">CRSテストからの閾値ペース (例: 1:49)</small>
                         <div class="form-error" id="cssPace-error"></div>
                     </div>
 
                     <div class="form-group">
-                        <label for="workoutDuration" class="form-label">Workout Duration (minutes)</label>
-                        <input
-                            type="number"
-                            id="workoutDuration"
-                            class="form-input"
-                            placeholder="60"
-                            min="1"
-                            max="300"
-                            aria-required="true"
-                            aria-describedby="duration-help"
-                        />
-                        <small id="duration-help" class="form-help">Total workout time including rest (1-300 minutes)</small>
+                        <label for="workoutDuration" class="form-label">ワークアウト時間 (分)</label>
+                        <input type="number" id="workoutDuration" class="form-input" placeholder="60" min="1" max="300"
+                            aria-required="true" aria-describedby="duration-help" />
+                        <small id="duration-help" class="form-help">休憩を含む総ワークアウト時間 (1-300分)</small>
                         <div class="form-error" id="duration-error"></div>
                     </div>
 
                     <div class="form-group">
-                        <label for="avgPace" class="form-label">Average Workout Pace (mm:ss per 100m)</label>
-                        <input
-                            type="text"
-                            id="avgPace"
-                            class="form-input"
-                            placeholder="2:05"
-                            pattern="[0-9]{1,2}:[0-5][0-9]"
-                            aria-required="true"
-                            aria-describedby="pace-help"
-                        />
-                        <small id="pace-help" class="form-help">Your average pace during the workout (e.g., 2:05)</small>
+                        <label for="avgPace" class="form-label">平均ワークアウトペース (mm:ss / 100m)</label>
+                        <input type="text" id="avgPace" class="form-input" placeholder="2:05"
+                            pattern="[0-9]{1,2}:[0-5][0-9]" aria-required="true" aria-describedby="pace-help" />
+                        <small id="pace-help" class="form-help">ワークアウト中の平均ペース (例: 2:05)</small>
                         <div class="form-error" id="pace-error"></div>
                     </div>
 
                     <div class="calculator-buttons">
-                        <button type="submit" class="btn btn-primary" id="calculateStssBtn">Calculate sTSS</button>
-                        <button type="reset" class="btn btn-ghost" id="resetStssBtn">Clear</button>
+                        <button type="submit" class="btn btn-primary" id="calculateStssBtn">sTSSを計算</button>
+                        <button type="reset" class="btn btn-ghost" id="resetStssBtn">クリア</button>
                     </div>
                 </div>
             </form>
 
             <div class="calculator-results hidden" id="stssResults" aria-live="polite">
-                <h3>Your Training Stress Score</h3>
+                <h3>あなたのトレーニングストレススコア</h3>
                 <div class="results-summary">
                     <div class="result-item">
                         <div class="result-label">sTSS</div>
                         <div class="css-result-value" id="stssValue">--</div>
                     </div>
                     <div class="result-item">
-                        <div class="result-label">Intensity Factor (IF)</div>
+                        <div class="result-label">強度係数 (IF)</div>
                         <div class="css-result-value" id="intensityFactor">--</div>
                     </div>
                 </div>
 
                 <div class="zones-result">
-                    <h4>Training Load Interpretation</h4>
+                    <h4>トレーニング負荷の解釈</h4>
                     <p class="mb-md text-secondary" id="stssInterpretation">
-                        <!-- Filled by JavaScript -->
+                        <!-- JavaScriptによって入力されます -->
                     </p>
                 </div>
             </div>
         </div>
 
-        <h2 class="mt-3xl">How sTSS is Calculated</h2>
+        <h2 class="mt-3xl">sTSSの計算方法</h2>
 
         <div class="formula-box">
-            <h3>Formula</h3>
+            <h3>計算式</h3>
             <div class="formula">
-                sTSS = (Duration in hours) × (Intensity Factor)² × 100
+                sTSS = (時間単位の持続時間) × (強度係数)² × 100
             </div>
             <div class="formula-explanation">
-                <p>Where:</p>
+                <p>ここで：</p>
                 <ul>
-                    <li><strong>Intensity Factor (IF)</strong> = CRS Pace / Average Workout Pace</li>
-                    <li><strong>Duration</strong> = Total workout time in hours</li>
-                    <li><strong>CRS Pace</strong> = Your threshold pace from CRS test</li>
+                    <li><strong>強度係数 (IF)</strong> = CRSペース / 平均ワークアウトペース</li>
+                    <li><strong>持続時間</strong> = 時間単位の総ワークアウト時間</li>
+                    <li><strong>CRSペース</strong> = CRSテストからの閾値ペース</li>
                 </ul>
             </div>
         </div>
 
-        <h3 class="mt-xl">Worked Example</h3>
+        <h3 class="mt-xl">計算例</h3>
         <div class="example-box">
-            <h4>Workout Details:</h4>
+            <h4>ワークアウト詳細：</h4>
             <ul>
-                <li>CRS Pace: <strong>1:49/100m</strong> (109 seconds)</li>
-                <li>Workout Duration: <strong>60 minutes</strong> (1 hour)</li>
-                <li>Average Pace: <strong>2:05/100m</strong> (125 seconds)</li>
+                <li>CRSペース： <strong>1:49/100m</strong> (109秒)</li>
+                <li>ワークアウト時間： <strong>60分</strong> (1時間)</li>
+                <li>平均ペース： <strong>2:05/100m</strong> (125秒)</li>
             </ul>
 
-            <h4>Step 1: Calculate Intensity Factor</h4>
+            <h4>ステップ1：強度係数の計算</h4>
             <div class="calculation">
-                IF = CRS Pace / Workout Pace<br>
+                IF = CRSペース / ワークアウトペース<br>
                 IF = 109 / 125<br>
                 IF = <strong>0.872</strong>
             </div>
 
-            <h4>Step 2: Calculate sTSS</h4>
+            <h4>ステップ2：sTSSの計算</h4>
             <div class="calculation">
-                sTSS = 1.0 hours × (0.872)² × 100<br>
+                sTSS = 1.0 時間 × (0.872)² × 100<br>
                 sTSS = 1.0 × 0.760 × 100<br>
                 sTSS = <strong>76</strong>
             </div>
 
-            <p class="mt-md"><strong>Interpretation:</strong> This 60-minute workout at easy pace (slower than CRS) generated 76 sTSS - a moderate training load suitable for aerobic base building.</p>
+            <p class="mt-md"><strong>解釈：</strong> イージーペース（CRSより遅い）でのこの60分間のワークアウトは76 sTSSを生成しました -
+                有酸素ベース構築に適した中程度のトレーニング負荷です。</p>
         </div>
 
-        <h2 class="mt-3xl">Understanding sTSS Values</h2>
+        <h2 class="mt-3xl">sTSS値の理解</h2>
 
         <div class="zones-table-container">
             <table class="zones-table">
                 <thead>
                     <tr>
-                        <th>sTSS Range</th>
-                        <th>Training Load</th>
-                        <th>Recovery Time</th>
-                        <th>Example Workout</th>
+                        <th>sTSS範囲</th>
+                        <th>トレーニング負荷</th>
+                        <th>回復時間</th>
+                        <th>ワークアウト例</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td>&lt; 50</td>
-                        <td>Low</td>
-                        <td>Same day</td>
-                        <td>Easy 30-min run, technique drills</td>
+                        <td>低</td>
+                        <td>当日</td>
+                        <td>イージー30分ラン、テクニックドリル</td>
                     </tr>
                     <tr>
                         <td>50-100</td>
-                        <td>Moderate</td>
-                        <td>1 day</td>
-                        <td>60-min endurance, steady pace</td>
+                        <td>中</td>
+                        <td>1日</td>
+                        <td>60分持久走、ステディペース</td>
                     </tr>
                     <tr>
                         <td>100-200</td>
-                        <td>High</td>
-                        <td>1-2 days</td>
-                        <td>90-min threshold sets, race pace intervals</td>
+                        <td>高</td>
+                        <td>1-2日</td>
+                        <td>90分閾値セット、レースペースインターバル</td>
                     </tr>
                     <tr>
                         <td>200-300</td>
-                        <td>Very High</td>
-                        <td>2-3 days</td>
-                        <td>2-hour hard training, multiple threshold blocks</td>
+                        <td>非常に高</td>
+                        <td>2-3日</td>
+                        <td>2時間のハードトレーニング、複数の閾値ブロック</td>
                     </tr>
                     <tr>
                         <td>&gt; 300</td>
-                        <td>Extreme</td>
-                        <td>3+ days</td>
-                        <td>Long race (&gt;2 hours), ultra-endurance</td>
+                        <td>極度</td>
+                        <td>3日以上</td>
+                        <td>ロングレース（&gt;2時間）、ウルトラエンデュランス</td>
                     </tr>
                 </tbody>
             </table>
         </div>
 
-        <h2 class="mt-3xl">Weekly sTSS Guidelines</h2>
+        <h2 class="mt-3xl">週間sTSSガイドライン</h2>
 
-        <p class="mb-md">Target weekly sTSS depends on your training level and goals:</p>
+        <p class="mb-md">目標とする週間sTSSは、トレーニングレベルと目標によって異なります：</p>
 
         <div class="grid grid-2 mb-xl">
             <div class="card">
-                <h3 class="card-title">Recreational Runners</h3>
+                <h3 class="card-title">レクリエーションランナー</h3>
                 <div class="card-content">
-                    <p class="mb-sm"><strong>Weekly sTSS:</strong> 150-300</p>
-                    <p>2-3 workouts per week, 50-100 sTSS each. Focus on technique and building aerobic base.</p>
+                    <p class="mb-sm"><strong>週間sTSS：</strong> 150-300</p>
+                    <p>週2-3回のワークアウト、各50-100 sTSS。テクニックと有酸素ベースの構築に焦点を当てます。</p>
                 </div>
             </div>
 
             <div class="card">
-                <h3 class="card-title">Fitness Runners / Triathletes</h3>
+                <h3 class="card-title">フィットネスランナー / トライアスリート</h3>
                 <div class="card-content">
-                    <p class="mb-sm"><strong>Weekly sTSS:</strong> 300-500</p>
-                    <p>3-4 workouts per week, 75-125 sTSS each. Mix of aerobic endurance and threshold work.</p>
+                    <p class="mb-sm"><strong>週間sTSS：</strong> 300-500</p>
+                    <p>週3-4回のワークアウト、各75-125 sTSS。有酸素持久力と閾値ワークの混合。</p>
                 </div>
             </div>
 
             <div class="card">
-                <h3 class="card-title">Competitive Masters Runners</h3>
+                <h3 class="card-title">競技マスターズランナー</h3>
                 <div class="card-content">
-                    <p class="mb-sm"><strong>Weekly sTSS:</strong> 500-800</p>
-                    <p>4-6 workouts per week, 80-150 sTSS each. Structured training with periodization.</p>
+                    <p class="mb-sm"><strong>週間sTSS：</strong> 500-800</p>
+                    <p>週4-6回のワークアウト、各80-150 sTSS。ピリオダイゼーションを用いた構造化されたトレーニング。</p>
                 </div>
             </div>
 
             <div class="card">
-                <h3 class="card-title">Elite / Collegiate Runners</h3>
+                <h3 class="card-title">エリート / 大学ランナー</h3>
                 <div class="card-content">
-                    <p class="mb-sm"><strong>Weekly sTSS:</strong> 800-1200+</p>
-                    <p>8-12 workouts per week, double days. High volume with recovery management critical.</p>
+                    <p class="mb-sm"><strong>週間sTSS：</strong> 800-1200+</p>
+                    <p>週8-12回のワークアウト、ダブルデイ。回復管理が重要な高ボリューム。</p>
                 </div>
             </div>
         </div>
 
         <div class="callout callout-warning">
-            <h3>⚠️ Important Notes</h3>
+            <h3>⚠️ 重要な注意点</h3>
             <ul>
-                <li><strong>Requires accurate CRS:</strong> Your CRS must be current (tested within 6-8 weeks) for accurate sTSS.</li>
-                <li><strong>Simplified calculation:</strong> This calculator uses average pace. Advanced sTSS uses Normalized Graded Pace (NGP) which accounts for interval structure.</li>
-                <li><strong>Not for technique work:</strong> sTSS only measures physical training stress, not skill development.</li>
-                <li><strong>Individual variation:</strong> Same sTSS feels different for different runners. Adjust guidelines based on your recovery.</li>
+                <li><strong>正確なCRSが必要：</strong> 正確なsTSSのためには、CRSが最新（6-8週間以内にテスト済み）である必要があります。</li>
+                <li><strong>簡略化された計算：</strong> この計算機は平均ペースを使用します。高度なsTSSは、インターバル構造を考慮した正規化勾配ペース（NGP）を使用します。</li>
+                <li><strong>テクニックワーク用ではない：</strong> sTSSは身体的トレーニングストレスのみを測定し、スキル開発は測定しません。</li>
+                <li><strong>個人差：</strong> 同じsTSSでもランナーによって感じ方が異なります。回復に基づいてガイドラインを調整してください。</li>
             </ul>
         </div>
 
-        <h2 class="mt-3xl">Why sTSS Matters</h2>
+        <h2 class="mt-3xl">なぜsTSSが重要なのか</h2>
 
-        <p class="mb-md">Training Stress Score is the foundation for:</p>
+        <p class="mb-md">トレーニングストレススコアは以下の基盤となります：</p>
 
         <ul class="mb-xl">
-            <li><strong>CTL (Chronic Training Load):</strong> Your fitness level - 42-day exponentially weighted average of daily sTSS</li>
-            <li><strong>ATL (Acute Training Load):</strong> Your fatigue - 7-day exponentially weighted average of daily sTSS</li>
-            <li><strong>TSB (Training Stress Balance):</strong> Your form - TSB = CTL - ATL (positive = fresh, negative = fatigued)</li>
-            <li><strong>Periodization:</strong> Plan training phases (base, build, peak, taper) using target CTL progressions</li>
-            <li><strong>Recovery Management:</strong> Know when to push and when to rest based on TSB</li>
+            <li><strong>CTL (慢性トレーニング負荷)：</strong> あなたのフィットネスレベル - 毎日のsTSSの42日間の指数加重平均</li>
+            <li><strong>ATL (急性トレーニング負荷)：</strong> あなたの疲労 - 毎日のsTSSの7日間の指数加重平均</li>
+            <li><strong>TSB (トレーニングストレスバランス)：</strong> あなたのフォーム - TSB = CTL - ATL (正 = フレッシュ、負 = 疲労)</li>
+            <li><strong>ピリオダイゼーション：</strong> 目標CTLの進行を使用してトレーニングフェーズ（ベース、ビルド、ピーク、テーパー）を計画する</li>
+            <li><strong>回復管理：</strong> TSBに基づいていつプッシュし、いつ休むべきかを知る</li>
         </ul>
 
         <div class="callout callout-tip">
-            <h3>Pro Tip: Track Your CTL</h3>
-            <p>Record daily sTSS in a spreadsheet or training log. Calculate your 42-day average (CTL) weekly. Target 5-10 CTL points increase per week during base building. Maintain or slightly reduce CTL during taper (1-2 weeks before race).</p>
+            <h3>プロのヒント：CTLを追跡する</h3>
+            <p>毎日のsTSSをスプレッドシートやトレーニングログに記録します。毎週42日間の平均 (CTL) を計算します。ベース構築中は週に5-10
+                CTLポイントの増加を目指します。テーパー中（レースの1-2週間前）はCTLを維持するか、わずかに減らします。</p>
         </div>
 
-        <h2 class="mt-3xl">Frequently Asked Questions</h2>
+        <h2 class="mt-3xl">よくある質問</h2>
 
         <div class="faq-section" itemscope itemtype="https://schema.org/FAQPage">
             <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">What is Running TSS (sTSS)?</h3>
+                <h3 itemprop="name">ランニングTSS (sTSS) とは何ですか？</h3>
                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                     <div itemprop="text">
-                        <p>Running Training Stress Score (sTSS) is a metric that quantifies the training load of a running workout by combining both intensity and duration. It's adapted from cycling's TSS methodology, using your Critical Run Speed (CRS) as the threshold pace. A workout of 1 hour at CRS pace equals 100 sTSS.</p>
+                        <p>ランニングトレーニングストレススコア (sTSS)
+                            は、強度と持続時間の両方を組み合わせてランニングワークアウトのトレーニング負荷を定量化する指標です。これはサイクリングのTSS方法論を適応させたもので、クリティカルランニングスピード
+                            (CRS) を閾値ペースとして使用します。CRSペースでの1時間のワークアウトは100 sTSSに相当します。</p>
                     </div>
                 </div>
             </div>
 
             <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">How do I calculate my sTSS?</h3>
+                <h3 itemprop="name">sTSSをどのように計算しますか？</h3>
                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                     <div itemprop="text">
-                        <p>Use the calculator above by entering your CRS pace (from a CRS test), total workout duration, and average pace during the workout. The formula is: sTSS = Duration (hours) × Intensity Factor² × 100, where Intensity Factor = CRS Pace / Average Workout Pace.</p>
+                        <p>上記の計算機を使用して、CRSペース（CRSテストから）、総ワークアウト時間、およびワークアウト中の平均ペースを入力します。式は次のとおりです：sTSS = 時間 (時間) ×
+                            強度係数² × 100、ここで強度係数 = CRSペース / 平均ワークアウトペースです。</p>
                     </div>
                 </div>
             </div>
 
             <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">Do I need CRS to calculate sTSS?</h3>
+                <h3 itemprop="name">sTSSを計算するにはCRSが必要ですか？</h3>
                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                     <div itemprop="text">
-                        <p>Yes, your Critical Run Speed (CRS) is required to calculate the Intensity Factor, which is essential for sTSS calculation. CRS represents your threshold pace and should be tested every 6-8 weeks. You can find your CRS using our <a href="/ja/crs/">CRS calculator</a>.</p>
+                        <p>はい、sTSS計算に不可欠な強度係数を計算するには、クリティカルランニングスピード (CRS)
+                            が必要です。CRSはあなたの閾値ペースを表し、6-8週間ごとにテストする必要があります。<a
+                                href="/ja/crs/">CRS計算機</a>を使用してCRSを見つけることができます。</p>
                     </div>
                 </div>
             </div>
 
             <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">What's a good sTSS score for one workout?</h3>
+                <h3 itemprop="name">1回のワークアウトに適したsTSSスコアは何ですか？</h3>
                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                     <div itemprop="text">
-                        <p>It depends on workout intensity: Easy workouts typically score below 50 sTSS, moderate workouts 50-100 sTSS, hard workouts 100-200 sTSS, and very hard workouts above 200 sTSS. The appropriate score depends on your training goals and current fitness level.</p>
+                        <p>ワークアウトの強度によります：イージーワークアウトは通常50 sTSS未満、中程度のワークアウトは50-100 sTSS、ハードなワークアウトは100-200
+                            sTSS、非常にハードなワークアウトは200 sTSSを超えます。適切なスコアは、トレーニングの目標と現在のフィットネスレベルによって異なります。</p>
                     </div>
                 </div>
             </div>
 
             <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">How much sTSS should I do per week?</h3>
+                <h3 itemprop="name">週にどれくらいのsTSSを行うべきですか？</h3>
                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                     <div itemprop="text">
-                        <p>Weekly sTSS targets vary by level: Recreational runners: 150-300, Fitness runners/Triathletes: 300-500, Competitive Masters: 500-800, Elite/Collegiate: 800-1200+. Start conservatively and increase gradually to avoid overtraining.</p>
+                        <p>週間sTSS目標はレベルによって異なります：レクリエーションランナー：150-300、フィットネスランナー/トライアスリート：300-500、競技マスターズ：500-800、エリート/大学：800-1200+。オーバートレーニングを避けるために、保守的に開始し、徐々に増やしてください。
+                        </p>
                     </div>
                 </div>
             </div>
 
             <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">Is running TSS the same as cycling TSS?</h3>
+                <h3 itemprop="name">ランニングTSSはサイクリングTSSと同じですか？</h3>
                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                     <div itemprop="text">
-                        <p>The concept and formula are the same, but sTSS is adapted for running. Instead of using power (FTP) like cycling TSS, sTSS uses pace with CRS as the threshold. Both measure training load using Duration × Intensity Factor² × 100.</p>
+                        <p>概念と式は同じですが、sTSSはランニング用に適応されています。サイクリングTSSのようにパワー (FTP) を使用する代わりに、sTSSはCRSを閾値としてペースを使用します。どちらも
+                            持続時間 × 強度係数² × 100 を使用してトレーニング負荷を測定します。</p>
                     </div>
                 </div>
             </div>
 
             <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">Can I use sTSS for all run strides?</h3>
+                <h3 itemprop="name">すべてのランニングストライドにsTSSを使用できますか？</h3>
                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                     <div itemprop="text">
-                        <p>Yes, but your CRS should be stride-specific. Most runners use freestyle CRS since it's the most commonly trained stride. If you train primarily in another stride, perform a CRS test in that stride and use that pace for sTSS calculation.</p>
+                        <p>はい、ただしCRSはストライド固有であるべきです。ほとんどのランナーはフリースタイルCRSを使用します。これは最も一般的にトレーニングされるストライドだからです。主に別のストライドでトレーニングする場合は、そのストライドでCRSテストを実行し、そのペースをsTSS計算に使用してください。
+                        </p>
                     </div>
                 </div>
             </div>
 
             <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">What's the difference between sTSS and CTL/ATL/TSB?</h3>
+                <h3 itemprop="name">sTSSとCTL/ATL/TSBの違いは何ですか？</h3>
                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                     <div itemprop="text">
-                        <p>sTSS measures a single workout's training load. CTL (Chronic Training Load) is your long-term fitness, ATL (Acute Training Load) is your recent fatigue, and TSB (Training Stress Balance) is your freshness. These metrics use sTSS values over time to track your training state. Learn more in our <a href="/ja/training-load/">Training Load guide</a>.</p>
+                        <p>sTSSは単一のワークアウトのトレーニング負荷を測定します。CTL (慢性トレーニング負荷) は長期的なフィットネス、ATL (急性トレーニング負荷) は最近の疲労、TSB
+                            (トレーニングストレスバランス) はフレッシュさです。これらの指標は、トレーニング状態を追跡するために時間の経過とともにsTSS値を使用します。詳細は<a
+                                href="/ja/training-load/">トレーニング負荷ガイド</a>をご覧ください。</p>
                     </div>
                 </div>
             </div>
         </div>
 
-        <h2 class="mt-3xl">Related Resources</h2>
+        <h2 class="mt-3xl">関連リソース</h2>
 
         <div class="grid grid-3">
             <div class="card">
-                <h3 class="card-title">CRS Test</h3>
+                <h3 class="card-title">CRSテスト</h3>
                 <div class="card-content">
-                    <p>Need your CRS pace? Use our free CRS calculator with 5K and 3K test times.</p>
-                    <a href="/ja/crs/" class="btn btn-secondary btn-small mt-md">CRS Calculator →</a>
+                    <p>CRSペースが必要ですか？5Kと3Kのテストタイムで無料のCRS計算機を使用してください。</p>
+                    <a href="/ja/crs/" class="btn btn-secondary btn-small mt-md">CRS計算機 →</a>
                 </div>
             </div>
 
             <div class="card">
-                <h3 class="card-title">Training Load Guide</h3>
+                <h3 class="card-title">トレーニング負荷ガイド</h3>
                 <div class="card-content">
-                    <p>Learn about CTL, ATL, TSB and Performance Management Chart metrics.</p>
-                    <a href="/ja/training-load/" class="btn btn-secondary btn-small mt-md">Training Load →</a>
+                    <p>CTL、ATL、TSBおよびパフォーマンス管理チャートの指標について学びます。</p>
+                    <a href="/ja/training-load/" class="btn btn-secondary btn-small mt-md">トレーニング負荷 →</a>
                 </div>
             </div>
 
             <div class="card">
-                <h3 class="card-title">Run Analytics App</h3>
+                <h3 class="card-title">Run Analyticsアプリ</h3>
                 <div class="card-content">
-                    <p>Automatic sTSS calculation for all workouts. Track CTL/ATL/TSB trends over time.</p>
-                    <a href="/ja/" class="btn btn-secondary btn-small mt-md">Learn More →</a>
+                    <p>すべてのワークアウトの自動sTSS計算。時間の経過に伴うCTL/ATL/TSBトレンドを追跡します。</p>
+                    <a href="/ja/" class="btn btn-secondary btn-small mt-md">詳細を見る →</a>
                 </div>
             </div>
         </div>
 
         <div class="mt-xl text-center">
-            <p class="mb-md"><strong>Want automatic sTSS tracking?</strong></p>
-            <a href="https://apps.apple.com/es/app/runanalytics/id6754524015" class="btn btn-primary btn-large" target="_blank" rel="noopener">Download Run Analytics Free</a>
+            <p class="mb-md"><strong>自動sTSS追跡が必要ですか？</strong></p>
+            <a href="https://apps.apple.com/es/app/runanalytics/id6754524015" class="btn btn-primary btn-large" target="_blank" rel="noopener">Run
+                Analyticsを無料でダウンロード</a>
         </div>
     </div>
 </section>

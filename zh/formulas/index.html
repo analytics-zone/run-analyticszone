@@ -447,32 +447,32 @@
     <main id="main-content" class="main-content">
         <section class="hero hero-small">
 <div class="container">
-<h1>Technical Reference &amp; Formulas</h1>
-<p class="lead">Complete Mathematical Implementation</p>
+<h1>技术参考和公式</h1>
+<p class="lead">完整的数学实现</p>
 </div>
 </section>
 <section class="section">
 <div class="container container-narrow">
-<h2>Implementation Guide</h2>
-<p class="lead">This page provides copy-paste formulas and step-by-step calculation methods for all Run Analytics metrics. Use these for custom implementations, verification, or deeper understanding.</p>
+<h2>实现指南</h2>
+<p class="lead">本页面为所有Run Analytics指标提供即插即用的公式和分步计算方法。使用它们进行自定义实现、验证或更深入的理解。</p>
 <div class="callout callout-warning">
-<h3>⚠️ Implementation Notes</h3>
+<h3>⚠️ 实现说明</h3>
 <ul>
-<li>All times should be converted to 秒 for calculations</li>
-<li>Running 配速 is inverse (higher % = slower 配速)</li>
-<li>Always validate inputs for reasonable ranges</li>
-<li>Handle edge cases (division by zero, negative values)</li>
+<li>所有时间应转换为秒进行计算</li>
+<li>跑步配速是反比关系(更高% = 更慢配速)</li>
+<li>始终验证输入在合理范围内</li>
+<li>处理边界情况(除以零、负值)</li>
 </ul>
 </div>
 </div>
 </section>
 <section class="section section-alt">
 <div class="container">
-<h2>Core Performance Metrics</h2>
+<h2>核心性能指标</h2>
 <div class="formula-card">
-<h3>Critical Run Speed (CRS)</h3>
+<h3>临界跑步速度 (CRS)</h3>
 <div class="formula-content">
-<h4>Formula:</h4>
+<h4>公式:</h4>
 <div class="formula-box-large">
 <div class="formula">
                         CRS (m/s) = (D₂ - D₁) / (T₂ - T₁)
@@ -480,32 +480,32 @@
 <div class="formula">CRS Pace/100m (秒) = (T₄₀₀ - T₂₀₀) / 2</div>
 </div>
 <div class="callout callout-info mt-lg">
-<h4>🧪 Interactive Calculator - Test the Formula</h4>
+<h4>🧪 交互式计算器 - 测试公式</h4>
 <div class="calculator-grid">
 <div class="input-group">
-<label for="css-d1">Distance 1 (meters):</label>
+<label for="css-d1">距离 1 (米):</label>
 <input id="css-d1" max="1000" min="50" step="50" type="number" value="200"/>
 </div>
 <div class="input-group">
-<label for="css-t1">Time 1 (mm:ss):</label>
+<label for="css-t1">时间 1 (分:秒):</label>
 <input id="css-t1" pattern="[0-9]{1,2}:[0-9]{2}" placeholder="2:30" type="text" value="2:30"/>
 </div>
 <div class="input-group">
-<label for="css-d2">Distance 2 (meters):</label>
+<label for="css-d2">距离 2 (米):</label>
 <input id="css-d2" max="2000" min="100" step="50" type="number" value="400"/>
 </div>
 <div class="input-group">
-<label for="css-t2">Time 2 (mm:ss):</label>
+<label for="css-t2">时间 2 (分:秒):</label>
 <input id="css-t2" pattern="[0-9]{1,2}:[0-9]{2}" placeholder="6:08" type="text" value="6:08"/>
 </div>
 </div>
 <div class="calculator-result mt-md">
-<div class="result-label">CRS Pace per 100m:</div>
+<div class="result-label">每 100m 的 CRS 配速:</div>
 <div class="result-value" id="css-result">1:49</div>
 </div>
 <div class="calculation-breakdown mt-md">
 <small>
-<strong>Calculation steps:</strong><br/>
+<strong>计算步骤:</strong><br/>
 <span id="css-steps">
                                 CRS (m/s) = (400 - 200) / (368 - 150) = 0.917 m/s<br/>Pace/100m = 100 / 0.917 = 109 秒 = 1:49</span>
 </small>
@@ -596,32 +596,32 @@ const result = calculateCRS(200, 150, 400, 368);
                     </div>
 </div>
 <div class="callout callout-info mt-lg">
-<h4>🧪 Interactive Calculator - Test the Formula</h4>
+<h4>🧪 交互式计算器 - 测试公式</h4>
 <div class="calculator-grid">
 <div class="input-group">
-<label for="stss-distance">Distance (meters):</label>
+<label for="stss-distance">距离 (米):</label>
 <input id="stss-distance" max="10000" min="100" step="50" type="number" value="3000"/>
 </div>
 <div class="input-group">
-<label for="stss-duration">Duration (分钟):</label>
+<label for="stss-duration">持续时间 (分钟):</label>
 <input id="stss-duration" max="300" min="1" step="1" type="number" value="55"/>
 </div>
 <div class="input-group">
-<label for="stss-css">CRS Pace (mm:ss per 100m):</label>
+<label for="stss-css">CRS 配速 (分:秒 / 100m):</label>
 <input id="stss-css" pattern="[0-9]{1,2}:[0-9]{2}" placeholder="1:33" type="text" value="1:33"/>
 </div>
 <div class="input-group">
-<label>FTP (calculated):</label>
+<label>FTP (计算得出):</label>
 <input id="stss-ftp" readonly="" type="text" value="64.5 m/min"/>
 </div>
 </div>
 <div class="calculator-result mt-md">
-<div class="result-label">Calculated sTSS:</div>
+<div class="result-label">计算的 sTSS:</div>
 <div class="result-value" id="stss-result">55</div>
 </div>
 <div class="calculation-breakdown mt-md">
 <small>
-<strong>Calculation steps:</strong><br/>
+<strong>计算步骤:</strong><br/>
 <span id="stss-steps">
                                 NSS = 3000m / 55min = 54.5 m/min<br/>
                                 FTP = 100 / (93/60) = 64.5 m/min<br/>
@@ -743,18 +743,18 @@ const ftp = cssToFTP(93); // Returns: 64.5 m/min</code></pre>
                     </div>
 </div>
 <div class="callout callout-info mt-lg">
-<h4>🧪 Interactive Calculator - Test the Formula</h4>
+<h4>🧪 交互式计算器 - 测试公式</h4>
 <div class="calculator-grid">
 <div class="input-group">
-<label for="swolf-time">Kilometer Time (秒):</label>
+<label for="swolf-time">每公里时间 (秒):</label>
 <input id="swolf-time" max="120" min="10" step="1" type="number" value="20"/>
 </div>
 <div class="input-group">
-<label for="swolf-strides">Stride Count:</label>
+<label for="swolf-strides">步幅数:</label>
 <input id="swolf-strides" max="50" min="5" step="1" type="number" value="15"/>
 </div>
 <div class="input-group">
-<label for="swolf-track">Track Length (m):</label>
+<label for="swolf-track">跑道长度 (m):</label>
 <select id="swolf-track">
 <option selected="" value="25">25m</option>
 <option value="50">50m</option>
@@ -762,12 +762,12 @@ const ftp = cssToFTP(93); // Returns: 64.5 m/min</code></pre>
 </div>
 </div>
 <div class="calculator-result mt-md">
-<div class="result-label">跑步效率 Score:</div>
+<div class="result-label">跑步效率分数:</div>
 <div class="result-value" id="swolf-result">35</div>
 </div>
 <div class="calculation-breakdown mt-md">
 <small>
-<strong>Calculation:</strong><br/>
+<strong>计算:</strong><br/>
 <span id="swolf-steps">跑步效率 = 20s + 15 strides = 35</span>
 </small>
 </div>
@@ -829,34 +829,34 @@ const swolf50m = calculateNormalizedRunning Efficiency(40, 30, 50);
 </section>
 <section class="section">
 <div class="container">
-<h2>Stride Mechanics</h2>
+<h2>步幅力学</h2>
 <div class="formula-card">
-<h3>Stride Rate (SR)</h3>
+<h3>步幅频率 (SR)</h3>
 <div class="formula-content">
-<h4>Formula:</h4>
+<h4>公式:</h4>
 <div class="formula-box-large">
 <div class="formula">SR = 60 / Cycle Time (秒)</div>
 <div class="formula">SR = (Number of Strides / Time in 秒) × 60</div>
 </div>
 <div class="callout callout-info mt-lg">
-<h4>🧪 Interactive Calculator - Test the Formula</h4>
+<h4>🧪 交互式计算器 - 测试公式</h4>
 <div class="calculator-grid">
 <div class="input-group">
-<label for="sr-strides">Stride Count:</label>
+<label for="sr-strides">步幅数:</label>
 <input id="sr-strides" max="100" min="1" step="1" type="number" value="30"/>
 </div>
 <div class="input-group">
-<label for="sr-time">Time (秒):</label>
+<label for="sr-time">时间 (秒):</label>
 <input id="sr-time" max="180" min="1" step="1" type="number" value="25"/>
 </div>
 </div>
 <div class="calculator-result mt-md">
-<div class="result-label">Stride Rate (SPM):</div>
+<div class="result-label">步幅频率 (SPM):</div>
 <div class="result-value" id="sr-result">72</div>
 </div>
 <div class="calculation-breakdown mt-md">
 <small>
-<strong>Calculation:</strong><br/>
+<strong>计算:</strong><br/>
 <span id="sr-steps">
                                 SR = (30 / 25) × 60 = 72 SPM
                             </span>
@@ -898,9 +898,9 @@ const sr = calculateStrideRate(30, 25);
 </div>
 </div>
 <div class="formula-card">
-<h3>Distance Per Stride (DPS)</h3>
+<h3>每步距离 (DPS)</h3>
 <div class="formula-content">
-<h4>Formula:</h4>
+<h4>公式:</h4>
 <div class="formula-box-large">
 <div class="formula">
                         DPS = Distance / Stride Count
@@ -909,7 +909,7 @@ const sr = calculateStrideRate(30, 25);
                         DPS = Distance / (SR / 60)
                     </div>
 </div>
-<h4>JavaScript Implementation:</h4>
+<h4>JavaScript 实现:</h4>
 <pre><code>function calculateDPS(distance, strideCount, pushoffDistance = 0) {
   const effectiveDistance = distance - pushoffDistance;
   return effectiveDistance / strideCount;
@@ -925,9 +925,9 @@ const dps100m = calculateDPS(100, 48, 4 * 5);
 </div>
 </div>
 <div class="formula-card">
-<h3>Velocity from SR and DPS</h3>
+<h3>从 SR 和 DPS 计算速度</h3>
 <div class="formula-content">
-<h4>Formula:</h4>
+<h4>公式:</h4>
 <div class="formula-box-large">
 <div class="formula">
                         Velocity (m/s) = (SR / 60) × DPS
@@ -944,9 +944,9 @@ const velocity = calculateVelocity(70, 1.6);
 </div>
 </div>
 <div class="formula-card">
-<h3>Stride Index (SI)</h3>
+<h3>步幅指数 (SI)</h3>
 <div class="formula-content">
-<h4>Formula:</h4>
+<h4>公式:</h4>
 <div class="formula-box-large">
 <div class="formula">
                         SI = Velocity (m/s) × DPS (m/stride)
@@ -966,11 +966,11 @@ const si = calculateStrideIndex(1.5, 1.7);
 </section>
 <section class="section section-alt">
 <div class="container">
-<h2>Performance Management Chart (PMC)</h2>
+<h2>表现管理图表 (PMC)</h2>
 <div class="formula-card">
-<h3>CTL, ATL, TSB Calculations</h3>
+<h3>CTL, ATL, TSB 计算</h3>
 <div class="formula-content">
-<h4>Formulas:</h4>
+<h4>公式:</h4>
 <div class="formula-box-large">
 <div class="formula">
                         CTL today = CTL yesterday + (TSS today - CTL yesterday) × (1/42)
@@ -982,7 +982,7 @@ const si = calculateStrideIndex(1.5, 1.7);
                         TSB = CTL yesterday - ATL yesterday
                     </div>
 </div>
-<h4>JavaScript Implementation:</h4>
+<h4>JavaScript 实现:</h4>
 <pre><code>function updateCTL(previousCTL, todayTSS) {
   return previousCTL + (todayTSS - previousCTL) * (1/42);
 }
@@ -1033,11 +1033,11 @@ const pmc = calculatePMC(训练s);
 </section>
 <section class="section">
 <div class="container">
-<h2>Advanced Calculations</h2>
+<h2>高级计算</h2>
 <div class="formula-card">
-<h3>CRS from Multiple Distances (Regression Method)</h3>
+<h3>从多个距离计算 CRS (回归方法)</h3>
 <div class="formula-content">
-<h4>JavaScript Implementation:</h4>
+<h4>JavaScript 实现:</h4>
 <pre><code>function calculateCRSRegression(distances, times) {
   // Linear regression: distance = a + b*time
   const n = distances.length;
@@ -1063,9 +1063,9 @@ const result = calculateCRSRegression(distances, times);
 </div>
 </div>
 <div class="formula-card">
-<h3>Intensity Factor from Pace</h3>
+<h3>从配速计算强度因子</h3>
 <div class="formula-content">
-<h4>JavaScript Implementation:</h4>
+<h4>JavaScript 实现:</h4>
 <pre><code>function calculateIntensityFactor(actualPace100m, thresholdPace100m) {
   // Convert 配速 to 速度 (m/s)
   const actualSpeed = 100 / actualPace100m;
@@ -1079,9 +1079,9 @@ const if_value = calculateIntensityFactor(110, 93);
 </div>
 </div>
 <div class="formula-card">
-<h3>Pace Consistency Analysis</h3>
+<h3>配速一致性分析</h3>
 <div class="formula-content">
-<h4>JavaScript Implementation:</h4>
+<h4>JavaScript 实现:</h4>
 <pre><code>function analyzePaceConsistency(segments) {
   const 配速s = segments.map(kilometer =&gt; kilometer.distance / kilometer.time);
   const avgPace = 配速s.reduce((a, b) =&gt; a + b) / 配速s.length;
@@ -1113,9 +1113,9 @@ const analysis = analyzePaceConsistency(segments);
 </div>
 </div>
 <div class="formula-card">
-<h3>Fatigue Detection from Stride Count</h3>
+<h3>从步幅数检测疲劳</h3>
 <div class="formula-content">
-<h4>JavaScript Implementation:</h4>
+<h4>JavaScript 实现:</h4>
 <pre><code>function detectFatigue(segments) {
   const firstThird = segments.slice(0, Math.floor(segments.length/3));
   const lastThird = segments.slice(-Math.floor(segments.length/3));
@@ -1151,11 +1151,11 @@ const 疲劳 = detectFatigue(segments);
 </section>
 <section class="section section-alt">
 <div class="container">
-<h2>Data Validation</h2>
+<h2>数据验证</h2>
 <div class="formula-card">
-<h3>Workout Data Quality Checks</h3>
+<h3>训练数据质量检查</h3>
 <div class="formula-content">
-<h4>JavaScript Implementation:</h4>
+<h4>JavaScript 实现:</h4>
 <pre><code>function validateWorkoutData(训练) {
   const issues = [];
 
@@ -1209,11 +1209,11 @@ const validation = validateWorkoutData(训练);
 </section>
 <section class="section">
 <div class="container container-narrow">
-<h2>Helper Functions</h2>
+<h2>辅助函数</h2>
 <div class="formula-card">
-<h3>Time Conversion Utilities</h3>
+<h3>时间转换工具</h3>
 <div class="formula-content">
-<h4>JavaScript Implementation:</h4>
+<h4>JavaScript 实现:</h4>
 <pre><code>// Convert mm:ss to 秒
 function timeToSeconds(timeString) {
   const parts = timeString.split(':');
@@ -1245,21 +1245,21 @@ timeToSeconds("1:33"); // Returns: 93
 </section>
 <section class="section section-alt">
 <div class="container container-narrow text-center">
-<h2>Implementation Resources</h2>
-<p class="lead">All formulas on this page are production-ready and validated against scientific literature. Use them for custom analytics tools, verification, or deeper understanding of running 表现 calculations.</p>
+<h2>实现资源</h2>
+<p class="lead">本页面上的所有公式都已准备好用于生产环境，并针对科学文献进行了验证。使用它们进行自定义分析工具、验证或更深入地了解跑步表现计算。</p>
 <div class="callout callout-tip">
-<h3>💡 Best Practices</h3>
+<h3>💡 最佳实践</h3>
 <ul class="text-left">
-<li><strong>Validate inputs:</strong> Check for reasonable ranges before calculating</li>
-<li><strong>Handle edge cases:</strong> Division by zero, negative values, null data</li>
-<li><strong>Round appropriately:</strong> CTL/ATL/TSB to 1 decimal, sTSS to integer</li>
-<li><strong>Store precision:</strong> Keep full precision in database, round for display</li>
-<li><strong>Test thoroughly:</strong> Use known-good data to verify calculations</li>
+<li><strong>验证输入:</strong> 计算前检查合理的范围</li>
+<li><strong>处理边界情况:</strong> 除以零、负值、空值</li>
+<li><strong>适当舍入:</strong> CTL/ATL/TSB 到 1 位小数,sTSS 到整数</li>
+<li><strong>存储精度:</strong> 在数据库中保持全精度,显示时舍入</li>
+<li><strong>充分测试:</strong> 使用已知的正确数据验证计算</li>
 </ul>
 </div>
 <div class="mt-xl">
-<a class="btn btn-primary btn-large" href="/zh/">Back to Home</a>
-<a class="btn btn-secondary" href="/zh/research/">Scientific Foundation</a>
+<a class="btn btn-primary btn-large" href="/zh/">返回首页</a>
+<a class="btn btn-secondary" href="/zh/research/">科学基础</a>
 </div>
 </div>
 </section>

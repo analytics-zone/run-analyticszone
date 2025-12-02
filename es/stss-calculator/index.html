@@ -448,7 +448,8 @@
         <section class="hero hero-small">
     <div class="container">
         <h1>Calculadora Gratuita de TSS de Carrera</h1>
-        <p class="lead">Calcula Índice de Estrés de Entrenamiento para entrenamientos de carrera - La única calculadora sTSS gratuita</p>
+        <p class="lead">Calcula Índice de Estrés de Entrenamiento para entrenamientos de carrera - La única calculadora
+            sTSS gratuita</p>
     </div>
 </section>
 
@@ -456,83 +457,68 @@
     <div class="container container-narrow">
         <div class="callout callout-info mb-xl">
             <h2>¿Qué es TSS de Carrera (sTSS)?</h2>
-            <p><strong>El Índice de Estrés de Entrenamiento de Carrera (sTSS)</strong> cuantifica la carga de entrenamiento de un entrenamiento de carrera combinando intensidad y duración. Está adaptado de la metodología TSS de ciclismo, usando tu Velocidad Crítica de Carrera (CRS) como ritmo de umbral. Un entrenamiento de 1 hora al ritmo CRS = 100 sTSS.</p>
+            <p><strong>El Índice de Estrés de Entrenamiento de Carrera (sTSS)</strong> cuantifica la carga de
+                entrenamiento de un entrenamiento de carrera combinando intensidad y duración. Está adaptado de la
+                metodología TSS de ciclismo, usando tu Velocidad Crítica de Carrera (CRS) como ritmo de umbral. Un
+                entrenamiento de 1 hora al ritmo CRS = 100 sTSS.</p>
         </div>
 
         <h2 class="mt-3xl">Calculadora sTSS Gratuita</h2>
-        <p class="lead mb-xl">Calcula estrés de entrenamiento para cualquier entrenamiento de carrera. Requiere tu ritmo CRS.</p>
+        <p class="lead mb-xl">Calcula el estrés de entrenamiento para cualquier entrenamiento de carrera. Requiere tu
+            ritmo CRS.</p>
 
         <div class="css-calculator">
             <form id="stssCalculatorForm">
                 <div class="calculator-inputs">
                     <div class="form-group">
                         <label for="cssPace" class="form-label">Tu Ritmo CRS (mm:ss por 100m)</label>
-                        <input
-                            type="text"
-                            id="cssPace"
-                            class="form-input"
-                            placeholder="1:49"
-                            pattern="[0-9]{1,2}:[0-5][0-9]"
-                            aria-required="true"
-                            aria-describedby="cssPace-help"
-                        />
-                        <small id="cssPace-help" class="form-help">Tu ritmo de umbral de la prueba CRS (ej., 1:49)</small>
+                        <input type="text" id="cssPace" class="form-input" placeholder="1:49"
+                            pattern="[0-9]{1,2}:[0-5][0-9]" aria-required="true" aria-describedby="cssPace-help" />
+                        <small id="cssPace-help" class="form-help">Tu ritmo de umbral de la prueba CRS (ej.,
+                            1:49)</small>
                         <div class="form-error" id="cssPace-error"></div>
                     </div>
 
                     <div class="form-group">
                         <label for="workoutDuration" class="form-label">Duración del Entrenamiento (minutos)</label>
-                        <input
-                            type="number"
-                            id="workoutDuration"
-                            class="form-input"
-                            placeholder="60"
-                            min="1"
-                            max="300"
-                            aria-required="true"
-                            aria-describedby="duration-help"
-                        />
-                        <small id="duration-help" class="form-help">Total workout time including rest (1-300 minutes)</small>
+                        <input type="number" id="workoutDuration" class="form-input" placeholder="60" min="1" max="300"
+                            aria-required="true" aria-describedby="duration-help" />
+                        <small id="duration-help" class="form-help">Tiempo total de entrenamiento incluyendo descanso
+                            (1-300 minutos)</small>
                         <div class="form-error" id="duration-error"></div>
                     </div>
 
                     <div class="form-group">
-                        <label for="avgPace" class="form-label">Average Workout Pace (mm:ss per 100m)</label>
-                        <input
-                            type="text"
-                            id="avgPace"
-                            class="form-input"
-                            placeholder="2:05"
-                            pattern="[0-9]{1,2}:[0-5][0-9]"
-                            aria-required="true"
-                            aria-describedby="pace-help"
-                        />
-                        <small id="pace-help" class="form-help">Your average pace during the workout (e.g., 2:05)</small>
+                        <label for="avgPace" class="form-label">Ritmo Promedio de Entrenamiento (mm:ss por 100m)</label>
+                        <input type="text" id="avgPace" class="form-input" placeholder="2:05"
+                            pattern="[0-9]{1,2}:[0-5][0-9]" aria-required="true" aria-describedby="pace-help" />
+                        <small id="pace-help" class="form-help">Tu ritmo promedio durante el entrenamiento (ej.,
+                            2:05)</small>
                         <div class="form-error" id="pace-error"></div>
                     </div>
 
                     <div class="calculator-buttons">
-                        <button type="submit" class="btn btn-primary" id="calculateStssBtn">Calculate sTSS</button>
-                        <button type="reset" class="btn btn-ghost" id="resetStssBtn">Clear</button>
+                        <button type="submit" class="btn btn-primary" id="calculateStssBtn">Calcular sTSS</button>
+                        <button type="reset" class="btn btn-ghost" id="resetStssBtn">Limpiar</button>
                     </div>
                 </div>
             </form>
 
             <div class="calculator-results hidden" id="stssResults" aria-live="polite">
-                <h3>Your Training Stress Score</h3>
+                <h3>Tu Puntuación de Estrés de Entrenamiento</h3>
                 <div class="results-summary">
                     <div class="result-item">
                         <div class="result-label">sTSS</div>
                         <div class="css-result-value" id="stssValue">--</div>
                     </div>
                     <div class="result-item">
-                        <div class="result-label">Intensity Factor (IF)</div>
+                        <div class="result-label">Factor de Intensidad (IF)</div>
                         <div class="css-result-value" id="intensityFactor">--</div>
                     </div>
                 </div>
 
                 <div class="zones-result">
-                    <h4>Training Load Interpretation</h4>
+                    <h4>Interpretación de Carga de Entrenamiento</h4>
                     <p class="mb-md text-secondary" id="stssInterpretation">
                         <!-- Filled by JavaScript -->
                     </p>
@@ -540,268 +526,313 @@
             </div>
         </div>
 
-        <h2 class="mt-3xl">How sTSS is Calculated</h2>
+        <h2 class="mt-3xl">Cómo se Calcula el sTSS</h2>
 
         <div class="formula-box">
-            <h3>Formula</h3>
+            <h3>Fórmula</h3>
             <div class="formula">
-                sTSS = (Duration in hours) × (Intensity Factor)² × 100
+                sTSS = (Duración en horas) × (Factor de Intensidad)² × 100
             </div>
             <div class="formula-explanation">
-                <p>Where:</p>
+                <p>Donde:</p>
                 <ul>
-                    <li><strong>Intensity Factor (IF)</strong> = CRS Pace / Average Workout Pace</li>
-                    <li><strong>Duration</strong> = Total workout time in hours</li>
-                    <li><strong>CRS Pace</strong> = Your threshold pace from CRS test</li>
+                    <li><strong>Factor de Intensidad (IF)</strong> = Ritmo CRS / Ritmo Promedio de Entrenamiento</li>
+                    <li><strong>Duración</strong> = Tiempo total de entrenamiento en horas</li>
+                    <li><strong>Ritmo CRS</strong> = Tu ritmo de umbral de la prueba CRS</li>
                 </ul>
             </div>
         </div>
 
-        <h3 class="mt-xl">Worked Example</h3>
+        <h3 class="mt-xl">Ejemplo Práctico</h3>
         <div class="example-box">
-            <h4>Workout Details:</h4>
+            <h4>Detalles del Entrenamiento:</h4>
             <ul>
-                <li>CRS Pace: <strong>1:49/100m</strong> (109 seconds)</li>
-                <li>Workout Duration: <strong>60 minutes</strong> (1 hour)</li>
-                <li>Average Pace: <strong>2:05/100m</strong> (125 seconds)</li>
+                <li>Ritmo CRS: <strong>1:49/100m</strong> (109 segundos)</li>
+                <li>Duración del Entrenamiento: <strong>60 minutos</strong> (1 hora)</li>
+                <li>Ritmo Promedio: <strong>2:05/100m</strong> (125 segundos)</li>
             </ul>
 
-            <h4>Step 1: Calculate Intensity Factor</h4>
+            <h4>Paso 1: Calcular Factor de Intensidad</h4>
             <div class="calculation">
-                IF = CRS Pace / Workout Pace<br>
+                IF = Ritmo CRS / Ritmo de Entrenamiento<br>
                 IF = 109 / 125<br>
                 IF = <strong>0.872</strong>
             </div>
 
-            <h4>Step 2: Calculate sTSS</h4>
+            <h4>Paso 2: Calcular sTSS</h4>
             <div class="calculation">
-                sTSS = 1.0 hours × (0.872)² × 100<br>
+                sTSS = 1.0 horas × (0.872)² × 100<br>
                 sTSS = 1.0 × 0.760 × 100<br>
                 sTSS = <strong>76</strong>
             </div>
 
-            <p class="mt-md"><strong>Interpretation:</strong> This 60-minute workout at easy pace (slower than CRS) generated 76 sTSS - a moderate training load suitable for aerobic base building.</p>
+            <p class="mt-md"><strong>Interpretación:</strong> Este entrenamiento de 60 minutos a ritmo suave (más lento
+                que CRS) generó 76 sTSS - una carga de entrenamiento moderada adecuada para la construcción de base
+                aeróbica.</p>
         </div>
 
-        <h2 class="mt-3xl">Understanding sTSS Values</h2>
+        <h2 class="mt-3xl">Entendiendo los Valores sTSS</h2>
 
         <div class="zones-table-container">
             <table class="zones-table">
                 <thead>
                     <tr>
-                        <th>sTSS Range</th>
-                        <th>Training Load</th>
-                        <th>Recovery Time</th>
-                        <th>Example Workout</th>
+                        <th>Rango sTSS</th>
+                        <th>Carga de Entrenamiento</th>
+                        <th>Tiempo de Recuperación</th>
+                        <th>Ejemplo de Entrenamiento</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td>&lt; 50</td>
-                        <td>Low</td>
-                        <td>Same day</td>
-                        <td>Easy 30-min run, technique drills</td>
+                        <td>Baja</td>
+                        <td>Mismo día</td>
+                        <td>Carrera suave 30-min, técnica</td>
                     </tr>
                     <tr>
                         <td>50-100</td>
-                        <td>Moderate</td>
-                        <td>1 day</td>
-                        <td>60-min endurance, steady pace</td>
+                        <td>Moderada</td>
+                        <td>1 día</td>
+                        <td>60-min resistencia, ritmo constante</td>
                     </tr>
                     <tr>
                         <td>100-200</td>
-                        <td>High</td>
-                        <td>1-2 days</td>
-                        <td>90-min threshold sets, race pace intervals</td>
+                        <td>Alta</td>
+                        <td>1-2 días</td>
+                        <td>90-min umbral, intervalos ritmo carrera</td>
                     </tr>
                     <tr>
                         <td>200-300</td>
-                        <td>Very High</td>
-                        <td>2-3 days</td>
-                        <td>2-hour hard training, multiple threshold blocks</td>
+                        <td>Muy Alta</td>
+                        <td>2-3 días</td>
+                        <td>2-horas entrenamiento duro, bloques múltiples</td>
                     </tr>
                     <tr>
                         <td>&gt; 300</td>
-                        <td>Extreme</td>
-                        <td>3+ days</td>
-                        <td>Long race (&gt;2 hours), ultra-endurance</td>
+                        <td>Extrema</td>
+                        <td>3+ días</td>
+                        <td>Carrera larga (&gt;2 horas), ultra-resistencia</td>
                     </tr>
                 </tbody>
             </table>
         </div>
 
-        <h2 class="mt-3xl">Weekly sTSS Guidelines</h2>
+        <h2 class="mt-3xl">Pautas Semanales de sTSS</h2>
 
-        <p class="mb-md">Target weekly sTSS depends on your training level and goals:</p>
+        <p class="mb-md">El objetivo semanal de sTSS depende de tu nivel de entrenamiento y objetivos:</p>
 
         <div class="grid grid-2 mb-xl">
             <div class="card">
-                <h3 class="card-title">Recreational Runners</h3>
+                <h3 class="card-title">Corredores Recreativos</h3>
                 <div class="card-content">
-                    <p class="mb-sm"><strong>Weekly sTSS:</strong> 150-300</p>
-                    <p>2-3 workouts per week, 50-100 sTSS each. Focus on technique and building aerobic base.</p>
+                    <p class="mb-sm"><strong>sTSS Semanal:</strong> 150-300</p>
+                    <p>2-3 entrenamientos por semana, 50-100 sTSS cada uno. Enfoque en técnica y construcción de base
+                        aeróbica.</p>
                 </div>
             </div>
 
             <div class="card">
-                <h3 class="card-title">Fitness Runners / Triathletes</h3>
+                <h3 class="card-title">Corredores Fitness / Triatletas</h3>
                 <div class="card-content">
-                    <p class="mb-sm"><strong>Weekly sTSS:</strong> 300-500</p>
-                    <p>3-4 workouts per week, 75-125 sTSS each. Mix of aerobic endurance and threshold work.</p>
+                    <p class="mb-sm"><strong>sTSS Semanal:</strong> 300-500</p>
+                    <p>3-4 entrenamientos por semana, 75-125 sTSS cada uno. Mezcla de resistencia aeróbica y trabajo de
+                        umbral.</p>
                 </div>
             </div>
 
             <div class="card">
-                <h3 class="card-title">Competitive Masters Runners</h3>
+                <h3 class="card-title">Corredores Máster Competitivos</h3>
                 <div class="card-content">
-                    <p class="mb-sm"><strong>Weekly sTSS:</strong> 500-800</p>
-                    <p>4-6 workouts per week, 80-150 sTSS each. Structured training with periodization.</p>
+                    <p class="mb-sm"><strong>sTSS Semanal:</strong> 500-800</p>
+                    <p>4-6 entrenamientos por semana, 80-150 sTSS cada uno. Entrenamiento estructurado con
+                        periodización.</p>
                 </div>
             </div>
 
             <div class="card">
-                <h3 class="card-title">Elite / Collegiate Runners</h3>
+                <h3 class="card-title">Corredores Élite / Universitarios</h3>
                 <div class="card-content">
-                    <p class="mb-sm"><strong>Weekly sTSS:</strong> 800-1200+</p>
-                    <p>8-12 workouts per week, double days. High volume with recovery management critical.</p>
+                    <p class="mb-sm"><strong>sTSS Semanal:</strong> 800-1200+</p>
+                    <p>8-12 entrenamientos por semana, días dobles. Alto volumen con gestión de recuperación crítica.
+                    </p>
                 </div>
             </div>
         </div>
 
         <div class="callout callout-warning">
-            <h3>⚠️ Important Notes</h3>
+            <h3>⚠️ Notas Importantes</h3>
             <ul>
-                <li><strong>Requires accurate CRS:</strong> Your CRS must be current (tested within 6-8 weeks) for accurate sTSS.</li>
-                <li><strong>Simplified calculation:</strong> This calculator uses average pace. Advanced sTSS uses Normalized Graded Pace (NGP) which accounts for interval structure.</li>
-                <li><strong>Not for technique work:</strong> sTSS only measures physical training stress, not skill development.</li>
-                <li><strong>Individual variation:</strong> Same sTSS feels different for different runners. Adjust guidelines based on your recovery.</li>
+                <li><strong>Requiere CRS preciso:</strong> Tu CRS debe ser actual (probado dentro de 6-8 semanas) para
+                    sTSS preciso.</li>
+                <li><strong>Cálculo simplificado:</strong> Esta calculadora usa ritmo promedio. sTSS avanzado usa Ritmo
+                    Graduado Normalizado (NGP) que tiene en cuenta la estructura de intervalos.</li>
+                <li><strong>No para trabajo de técnica:</strong> sTSS solo mide estrés de entrenamiento físico, no
+                    desarrollo de habilidades.</li>
+                <li><strong>Variación individual:</strong> El mismo sTSS se siente diferente para diferentes corredores.
+                    Ajusta las pautas según tu recuperación.</li>
             </ul>
         </div>
 
-        <h2 class="mt-3xl">Why sTSS Matters</h2>
+        <h2 class="mt-3xl">Por Qué Importa el sTSS</h2>
 
-        <p class="mb-md">Training Stress Score is the foundation for:</p>
+        <p class="mb-md">La Puntuación de Estrés de Entrenamiento es la base para:</p>
 
         <ul class="mb-xl">
-            <li><strong>CTL (Chronic Training Load):</strong> Your fitness level - 42-day exponentially weighted average of daily sTSS</li>
-            <li><strong>ATL (Acute Training Load):</strong> Your fatigue - 7-day exponentially weighted average of daily sTSS</li>
-            <li><strong>TSB (Training Stress Balance):</strong> Your form - TSB = CTL - ATL (positive = fresh, negative = fatigued)</li>
-            <li><strong>Periodization:</strong> Plan training phases (base, build, peak, taper) using target CTL progressions</li>
-            <li><strong>Recovery Management:</strong> Know when to push and when to rest based on TSB</li>
+            <li><strong>CTL (Carga de Entrenamiento Crónica):</strong> Tu nivel de fitness - promedio ponderado
+                exponencial de 42 días de sTSS diario</li>
+            <li><strong>ATL (Carga de Entrenamiento Aguda):</strong> Tu fatiga - promedio ponderado exponencial de 7
+                días de sTSS diario</li>
+            <li><strong>TSB (Balance de Estrés de Entrenamiento):</strong> Tu forma - TSB = CTL - ATL (positivo =
+                fresco, negativo = fatigado)</li>
+            <li><strong>Periodización:</strong> Planificar fases de entrenamiento (base, construcción, pico, puesta a
+                punto) usando progresiones objetivo de CTL</li>
+            <li><strong>Gestión de Recuperación:</strong> Saber cuándo empujar y cuándo descansar basado en TSB</li>
         </ul>
 
         <div class="callout callout-tip">
-            <h3>Pro Tip: Track Your CTL</h3>
-            <p>Record daily sTSS in a spreadsheet or training log. Calculate your 42-day average (CTL) weekly. Target 5-10 CTL points increase per week during base building. Maintain or slightly reduce CTL during taper (1-2 weeks before race).</p>
+            <h3>Consejo Pro: Rastrea Tu CTL</h3>
+            <p>Registra el sTSS diario en una hoja de cálculo o registro de entrenamiento. Calcula tu promedio de 42
+                días (CTL) semanalmente. Apunta a un aumento de 5-10 puntos de CTL por semana durante la construcción de
+                base. Mantén o reduce ligeramente el CTL durante la puesta a punto (1-2 semanas antes de la carrera).
+            </p>
         </div>
 
-        <h2 class="mt-3xl">Frequently Asked Questions</h2>
+        <h2 class="mt-3xl">Preguntas Frecuentes</h2>
 
         <div class="faq-section" itemscope itemtype="https://schema.org/FAQPage">
             <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">What is Running TSS (sTSS)?</h3>
+                <h3 itemprop="name">¿Qué es el TSS de Carrera (sTSS)?</h3>
                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                     <div itemprop="text">
-                        <p>Running Training Stress Score (sTSS) is a metric that quantifies the training load of a running workout by combining both intensity and duration. It's adapted from cycling's TSS methodology, using your Critical Run Speed (CRS) as the threshold pace. A workout of 1 hour at CRS pace equals 100 sTSS.</p>
+                        <p>El Índice de Estrés de Entrenamiento de Carrera (sTSS) es una métrica que cuantifica la carga
+                            de entrenamiento de un entrenamiento de carrera combinando tanto la intensidad como la
+                            duración. Está adaptado de la metodología TSS de ciclismo, usando tu Velocidad Crítica de
+                            Carrera (CRS) como el ritmo de umbral. Un entrenamiento de 1 hora al ritmo CRS equivale a
+                            100 sTSS.</p>
                     </div>
                 </div>
             </div>
 
             <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">How do I calculate my sTSS?</h3>
+                <h3 itemprop="name">¿Cómo calculo mi sTSS?</h3>
                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                     <div itemprop="text">
-                        <p>Use the calculator above by entering your CRS pace (from a CRS test), total workout duration, and average pace during the workout. The formula is: sTSS = Duration (hours) × Intensity Factor² × 100, where Intensity Factor = CRS Pace / Average Workout Pace.</p>
+                        <p>Usa la calculadora de arriba ingresando tu ritmo CRS (de una prueba CRS), duración total del
+                            entrenamiento y ritmo promedio durante el entrenamiento. La fórmula es: sTSS = Duración
+                            (horas) × Factor de Intensidad² × 100, donde Factor de Intensidad = Ritmo CRS / Ritmo
+                            Promedio de Entrenamiento.</p>
                     </div>
                 </div>
             </div>
 
             <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">Do I need CRS to calculate sTSS?</h3>
+                <h3 itemprop="name">¿Necesito CRS para calcular sTSS?</h3>
                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                     <div itemprop="text">
-                        <p>Yes, your Critical Run Speed (CRS) is required to calculate the Intensity Factor, which is essential for sTSS calculation. CRS represents your threshold pace and should be tested every 6-8 weeks. You can find your CRS using our <a href="/es/crs/">CRS calculator</a>.</p>
+                        <p>Sí, tu Velocidad Crítica de Carrera (CRS) es requerida para calcular el Factor de Intensidad,
+                            que es esencial para el cálculo de sTSS. CRS representa tu ritmo de umbral y debe ser
+                            probado cada 6-8 semanas. Puedes encontrar tu CRS usando nuestra <a
+                                href="/es/crs/">calculadora CRS</a>.</p>
                     </div>
                 </div>
             </div>
 
             <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">What's a good sTSS score for one workout?</h3>
+                <h3 itemprop="name">¿Qué es una buena puntuación sTSS para un entrenamiento?</h3>
                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                     <div itemprop="text">
-                        <p>It depends on workout intensity: Easy workouts typically score below 50 sTSS, moderate workouts 50-100 sTSS, hard workouts 100-200 sTSS, and very hard workouts above 200 sTSS. The appropriate score depends on your training goals and current fitness level.</p>
+                        <p>Depende de la intensidad del entrenamiento: Los entrenamientos fáciles típicamente puntúan
+                            por debajo de 50 sTSS, entrenamientos moderados 50-100 sTSS, entrenamientos duros 100-200
+                            sTSS, y entrenamientos muy duros por encima de 200 sTSS. La puntuación apropiada depende de
+                            tus objetivos de entrenamiento y nivel de fitness actual.</p>
                     </div>
                 </div>
             </div>
 
             <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">How much sTSS should I do per week?</h3>
+                <h3 itemprop="name">¿Cuánto sTSS debo hacer por semana?</h3>
                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                     <div itemprop="text">
-                        <p>Weekly sTSS targets vary by level: Recreational runners: 150-300, Fitness runners/Triathletes: 300-500, Competitive Masters: 500-800, Elite/Collegiate: 800-1200+. Start conservatively and increase gradually to avoid overtraining.</p>
+                        <p>Los objetivos semanales de sTSS varían por nivel: Corredores recreativos: 150-300, Corredores
+                            Fitness/Triatletas: 300-500, Másters Competitivos: 500-800, Élite/Universitarios: 800-1200+.
+                            Comienza conservadoramente y aumenta gradualmente para evitar el sobreentrenamiento.</p>
                     </div>
                 </div>
             </div>
 
             <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">Is running TSS the same as cycling TSS?</h3>
+                <h3 itemprop="name">¿Es el TSS de carrera lo mismo que el TSS de ciclismo?</h3>
                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                     <div itemprop="text">
-                        <p>The concept and formula are the same, but sTSS is adapted for running. Instead of using power (FTP) like cycling TSS, sTSS uses pace with CRS as the threshold. Both measure training load using Duration × Intensity Factor² × 100.</p>
+                        <p>El concepto y la fórmula son los mismos, pero sTSS está adaptado para correr. En lugar de
+                            usar potencia (FTP) como el TSS de ciclismo, sTSS usa ritmo con CRS como el umbral. Ambos
+                            miden la carga de entrenamiento usando Duración × Factor de Intensidad² × 100.</p>
                     </div>
                 </div>
             </div>
 
             <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">Can I use sTSS for all run strides?</h3>
+                <h3 itemprop="name">¿Puedo usar sTSS para todas las zancadas de carrera?</h3>
                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                     <div itemprop="text">
-                        <p>Yes, but your CRS should be stride-specific. Most runners use freestyle CRS since it's the most commonly trained stride. If you train primarily in another stride, perform a CRS test in that stride and use that pace for sTSS calculation.</p>
+                        <p>Sí, pero tu CRS debe ser específico para la zancada. La mayoría de los corredores usan CRS de
+                            estilo libre ya que es la zancada más comúnmente entrenada. Si entrenas principalmente en
+                            otra zancada, realiza una prueba CRS en esa zancada y usa ese ritmo para el cálculo de sTSS.
+                        </p>
                     </div>
                 </div>
             </div>
 
             <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">What's the difference between sTSS and CTL/ATL/TSB?</h3>
+                <h3 itemprop="name">¿Cuál es la diferencia entre sTSS y CTL/ATL/TSB?</h3>
                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                     <div itemprop="text">
-                        <p>sTSS measures a single workout's training load. CTL (Chronic Training Load) is your long-term fitness, ATL (Acute Training Load) is your recent fatigue, and TSB (Training Stress Balance) is your freshness. These metrics use sTSS values over time to track your training state. Learn more in our <a href="/es/training-load/">Training Load guide</a>.</p>
+                        <p>sTSS mide la carga de entrenamiento de un solo entrenamiento. CTL (Carga de Entrenamiento
+                            Crónica) es tu fitness a largo plazo, ATL (Carga de Entrenamiento Aguda) es tu fatiga
+                            reciente, y TSB (Balance de Estrés de Entrenamiento) es tu frescura. Estas métricas usan
+                            valores sTSS a lo largo del tiempo para rastrear tu estado de entrenamiento. Aprende más en
+                            nuestra <a href="/es/training-load/">guía de Carga de Entrenamiento</a>.</p>
                     </div>
                 </div>
             </div>
         </div>
 
-        <h2 class="mt-3xl">Related Resources</h2>
+        <h2 class="mt-3xl">Recursos Relacionados</h2>
 
         <div class="grid grid-3">
             <div class="card">
-                <h3 class="card-title">CRS Test</h3>
+                <h3 class="card-title">Prueba CRS</h3>
                 <div class="card-content">
-                    <p>Need your CRS pace? Use our free CRS calculator with 5K and 3K test times.</p>
-                    <a href="/es/crs/" class="btn btn-secondary btn-small mt-md">CRS Calculator →</a>
+                    <p>¿Necesitas tu ritmo CRS? Usa nuestra calculadora CRS gratuita con tiempos de prueba de 5K y 3K.
+                    </p>
+                    <a href="/es/crs/" class="btn btn-secondary btn-small mt-md">Calculadora CRS →</a>
                 </div>
             </div>
 
             <div class="card">
-                <h3 class="card-title">Training Load Guide</h3>
+                <h3 class="card-title">Guía de Carga de Entrenamiento</h3>
                 <div class="card-content">
-                    <p>Learn about CTL, ATL, TSB and Performance Management Chart metrics.</p>
-                    <a href="/es/training-load/" class="btn btn-secondary btn-small mt-md">Training Load →</a>
+                    <p>Aprende sobre CTL, ATL, TSB y métricas del Gráfico de Gestión de Rendimiento.</p>
+                    <a href="/es/training-load/" class="btn btn-secondary btn-small mt-md">Carga de
+                        Entrenamiento →</a>
                 </div>
             </div>
 
             <div class="card">
-                <h3 class="card-title">Run Analytics App</h3>
+                <h3 class="card-title">App Run Analytics</h3>
                 <div class="card-content">
-                    <p>Automatic sTSS calculation for all workouts. Track CTL/ATL/TSB trends over time.</p>
-                    <a href="/es/" class="btn btn-secondary btn-small mt-md">Learn More →</a>
+                    <p>Cálculo automático de sTSS para todos los entrenamientos. Rastrea tendencias de CTL/ATL/TSB a lo
+                        largo del tiempo.</p>
+                    <a href="/es/" class="btn btn-secondary btn-small mt-md">Aprende Más →</a>
                 </div>
             </div>
         </div>
 
         <div class="mt-xl text-center">
-            <p class="mb-md"><strong>Want automatic sTSS tracking?</strong></p>
-            <a href="https://apps.apple.com/es/app/runanalytics/id6754524015" class="btn btn-primary btn-large" target="_blank" rel="noopener">Download Run Analytics Free</a>
+            <p class="mb-md"><strong>¿Quieres seguimiento automático de sTSS?</strong></p>
+            <a href="https://apps.apple.com/es/app/runanalytics/id6754524015" class="btn btn-primary btn-large" target="_blank"
+                rel="noopener">Descarga Run Analytics Gratis</a>
         </div>
     </div>
 </section>
