@@ -709,132 +709,414 @@ img[width][height] {
 
 <section class="section">
     <div class="container container-narrow">
-        <h1 class="mb-lg">Privacy Policy</h1>
+        <h1 class="mb-lg">Privacy Policy for Run Analytics</h1>
 
-        <p class="text-secondary mb-xl">Last updated: <strong>October 27, 2025</strong></p>
+        <p class="text-secondary mb-xl"><strong>Last Updated:</strong> January 10, 2025 | <strong>Effective
+                Date:</strong> January 10, 2025</p>
 
-        <div class="callout callout-success mb-xl">
-            <h2 class="mb-sm">Your Privacy is Protected</h2>
-            <p>
-                <strong>Run Analytics does not collect, store, or transmit any of your personal data.</strong> All data processing happens locally on your device.
+        <div class="mb-xl">
+            <h2 class="mb-md">Introduction</h2>
+            <p class="mb-md">
+                Run Analytics ("we," "our," or "the app") is committed to protecting your privacy. This Privacy Policy
+                explains how our mobile applications (iOS and Android) access, use, and protect health data from your
+                device.
             </p>
+            <div class="callout callout-info mb-md">
+                <p><strong>Key Privacy Principle:</strong> Run Analytics operates on a <strong>zero-server, local-only
+                        architecture</strong>. All health data accessed from Apple HealthKit (iOS) or Health Connect
+                    (Android) remains exclusively on your physical device and is never transmitted to external servers,
+                    cloud services, or third parties.</p>
+            </div>
         </div>
 
         <div class="mb-xl">
-            <h2 class="mb-md">Overview</h2>
+            <h2 class="mb-md">1. Health Data Access</h2>
             <p class="mb-md">
-                Run Analytics is designed with your privacy as a top priority. This Privacy Policy explains our commitment to protecting your personal information and data.
+                Run Analytics integrates with your device's native health platform to provide detailed running workout
+                analysis:
             </p>
-            <p class="mb-md">
-                <strong>In short: We don't collect your data because we don't need it.</strong> Everything you do in the app stays on your device.
-            </p>
-        </div>
 
-        <div class="mb-xl">
-            <h2 class="mb-md">Information We Do NOT Collect</h2>
-            <p class="mb-md">Run Analytics does not collect, transmit, or store:</p>
-            <ul class="mb-md">
-                <li>Personal information (name, email, phone number, etc.)</li>
-                <li>Running activity data (distance, pace, routes, times, etc.)</li>
-                <li>Health data (heart rate, calories, etc.)</li>
-                <li>Location data or GPS coordinates</li>
-                <li>Device information or identifiers</li>
-                <li>Usage statistics or analytics</li>
-                <li>Crash reports or diagnostics</li>
-                <li>Any other personal or sensitive information</li>
-            </ul>
-        </div>
-
-        <div class="mb-xl">
-            <h2 class="mb-md">How the App Works</h2>
+            <h3 class="mb-sm">1.1 iOS - Apple HealthKit Integration</h3>
             <p class="mb-md">
-                All calculations and data processing in Run Analytics happen <strong>entirely on your device</strong>:
+                On iOS devices, Run Analytics integrates with <strong>Apple HealthKit</strong> to access running workout
+                data. We request read-only access to:
             </p>
             <ul class="mb-md">
-                <li>Your running data is stored only in your device's local storage</li>
-                <li>All calculations (pace, splits, zones, etc.) are performed locally</li>
-                <li>No data is ever sent to our servers or any third-party services</li>
-                <li>No internet connection is required for the app to function</li>
+                <li><strong>Workout Sessions:</strong> Running exercise sessions with time and duration</li>
+                <li><strong>Distance:</strong> Total running distances</li>
+                <li><strong>Heart Rate:</strong> Heart rate data during workouts</li>
+                <li><strong>Active Energy:</strong> Calories burned during running sessions</li>
+                <li><strong>Step Count:</strong> Step data for cadence calculation</li>
             </ul>
-        </div>
-
-        <div class="mb-xl">
-            <h2 class="mb-md">Data Storage</h2>
             <p class="mb-md">
-                Any data you enter or generate in the app is stored exclusively on your device using iOS local storage mechanisms. This data remains under your complete control:
+                <strong>Apple HealthKit Compliance:</strong> Run Analytics adheres to all Apple HealthKit guidelines.
+                Your health data is processed entirely on your iOS device and never leaves it. We never share HealthKit
+                data with third parties, advertising platforms, or data brokers.
             </p>
+
+            <h3 class="mb-sm">1.2 Android - Health Connect Integration</h3>
+            <div class="table-responsive mb-md">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Health Data Type</th>
+                            <th>Permission</th>
+                            <th>Purpose</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Exercise Sessions</strong></td>
+                            <td><code>READ_EXERCISE</code></td>
+                            <td>To identify and import running workout sessions from Health Connect</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Distance Records</strong></td>
+                            <td><code>READ_DISTANCE</code></td>
+                            <td>To display key metrics such as total distance per run, splits, and calculate pace</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Heart Rate Records</strong></td>
+                            <td><code>READ_HEART_RATE</code></td>
+                            <td>To display heart rate charts, calculate average and maximum heart rate during workouts
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>Speed Records</strong></td>
+                            <td><code>READ_SPEED</code></td>
+                            <td>To calculate and display your running pace and pace zones</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Steps</strong></td>
+                            <td><code>READ_STEPS</code></td>
+                            <td>To calculate running cadence (steps per minute)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Calories Burned</strong></td>
+                            <td><code>READ_TOTAL_CALORIES_BURNED</code></td>
+                            <td>To provide comprehensive overview of energy expenditure during running sessions</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="mb-md">
+                <strong>Android Permissions:</strong> These permissions are requested during the app's first launch. You
+                can revoke these permissions at any time through Android Settings → Apps → Health Connect → Run
+                Analytics.
+            </p>
+
+            <h3 class="mb-sm">1.3 How We Use Health Data</h3>
+            <p class="mb-sm">All health data is used <strong>exclusively for the following purposes</strong>:</p>
             <ul class="mb-md">
-                <li>Your data stays on your device at all times</li>
-                <li>We cannot access your data</li>
-                <li>If you delete the app, all data is permanently removed from your device</li>
-                <li>Data is not synchronized to iCloud or any cloud service unless you explicitly enable iOS app backups</li>
+                <li><strong>Workout Display:</strong> Show your running sessions with detailed metrics (distance, time,
+                    pace, heart rate)</li>
+                <li><strong>Performance Analytics:</strong> Calculate pace zones, cadence analysis, Threshold Pace, and
+                    rTSS (Running Training Stress Score)</li>
+                <li><strong>Progress Tracking:</strong> Display performance trends, personal bests, and workout
+                    summaries</li>
+                <li><strong>Data Export:</strong> Allow you to export your workout data to CSV format for personal use
+                </li>
             </ul>
+
+            <h3 class="mb-sm">1.4 Data Storage</h3>
+            <div class="callout callout-success mb-md">
+                <h4 class="mb-sm">🔒 CRITICAL PRIVACY GUARANTEE:</h4>
+                <p class="mb-sm"><strong>All health data remains exclusively on your physical device.</strong></p>
+                <ul class="mb-0">
+                    <li><strong>iOS:</strong> Data is stored using iOS Core Data and UserDefaults (on-device only)</li>
+                    <li><strong>Android:</strong> Data is stored using Android Room Database (on-device SQLite)</li>
+                    <li><strong>NO data is uploaded to external servers</strong></li>
+                    <li><strong>NO data is transmitted over the internet</strong></li>
+                    <li><strong>NO cloud synchronization or backup of health data</strong></li>
+                    <li><strong>NO third-party access to your health data</strong></li>
+                </ul>
+            </div>
+            <p class="mb-md">
+                The only time data leaves your device is when <strong>YOU explicitly choose</strong> to export your
+                workouts to CSV format and share the file yourself.
+            </p>
         </div>
 
         <div class="mb-xl">
-            <h2 class="mb-md">Third-Party Services</h2>
-            <p class="mb-md">
-                Run Analytics does not use any third-party services, including:
-            </p>
+            <h2 class="mb-md">2. Permissions Required</h2>
+
+            <h3 class="mb-sm">2.1 iOS Permissions</h3>
             <ul class="mb-md">
-                <li>No analytics services (Google Analytics, Firebase, etc.)</li>
-                <li>No advertising networks</li>
-                <li>No crash reporting services</li>
-                <li>No social media integrations</li>
-                <li>No payment processors (the app is free)</li>
+                <li><strong>HealthKit Access:</strong> Read access to Workouts, Distance, Heart Rate, Active Energy, and
+                    Steps</li>
+                <li><strong>Photo Library (Optional):</strong> Only if you choose to save workout summaries as images
+                </li>
             </ul>
-        </div>
-
-        <div class="mb-xl">
-            <h2 class="mb-md">Permissions</h2>
             <p class="mb-md">
-                The app may request the following iOS permissions only if you choose to use specific features:
+                You can manage HealthKit permissions at any time in iOS Settings → Privacy & Security → Health → Run
+                Analytics.
             </p>
+
+            <h3 class="mb-sm">2.2 Android Permissions</h3>
             <ul class="mb-md">
-                <li><strong>HealthKit/Health App:</strong> Only if you choose to import workout data. All data remains on your device.</li>
-                <li><strong>Notifications:</strong> Only if you enable workout reminders. No data is sent outside your device.</li>
+                <li><code>android.permission.health.READ_EXERCISE</code></li>
+                <li><code>android.permission.health.READ_DISTANCE</code></li>
+                <li><code>android.permission.health.READ_HEART_RATE</code></li>
+                <li><code>android.permission.health.READ_SPEED</code></li>
+                <li><code>android.permission.health.READ_STEPS</code></li>
+                <li><code>android.permission.health.READ_TOTAL_CALORIES_BURNED</code></li>
+                <li><strong>Internet Access</strong> (<code>INTERNET</code>): Used only for displaying static in-app
+                    content and accessing subscription management (Google Play Billing). No health data is transmitted.
+                </li>
+                <li><strong>Foreground Service</strong> (<code>FOREGROUND_SERVICE</code>): For potential future
+                    background sync features (not currently implemented).</li>
+            </ul>
+        </div>
+
+        <div class="mb-xl">
+            <h2 class="mb-md">3. Data We Do NOT Collect</h2>
+            <p class="mb-sm">Run Analytics does <strong>NOT</strong> collect, store, or transmit:</p>
+            <ul class="mb-md">
+                <li>❌ Personal identification information (name, email, phone number)</li>
+                <li>❌ Device identifiers (IDFA on iOS, advertising ID on Android)</li>
+                <li>❌ Location data or GPS coordinates</li>
+                <li>❌ Usage analytics or app behavior tracking</li>
+                <li>❌ Crash reports or diagnostic data to external servers</li>
+                <li>❌ Any data through third-party SDKs or analytics services</li>
+            </ul>
+            <p class="mb-sm">We use <strong>zero third-party tracking libraries</strong> including:</p>
+            <ul class="mb-md">
+                <li>No Google Analytics / Firebase Analytics</li>
+                <li>No Facebook SDK</li>
+                <li>No advertising SDKs</li>
+                <li>No crash reporting services (Crashlytics, Sentry, etc.)</li>
+            </ul>
+        </div>
+
+        <div class="mb-xl">
+            <h2 class="mb-md">4. In-App Purchases and Subscriptions</h2>
+            <p class="mb-md">
+                Run Analytics offers optional in-app subscriptions managed through your device's native payment system:
+            </p>
+
+            <h3 class="mb-sm">4.1 iOS - App Store Subscriptions</h3>
+            <p class="mb-sm">When you purchase a subscription on iOS:</p>
+            <ul class="mb-md">
+                <li>Apple handles all payment processing through the App Store</li>
+                <li>We receive only the subscription status (active/inactive) through StoreKit</li>
+                <li>We do NOT have access to your payment information (credit card, billing address)</li>
+                <li>Subscription data is stored locally on your device</li>
+            </ul>
+            <p class="mb-sm">Manage subscriptions:</p>
+            <ul class="mb-md">
+                <li>iOS Settings → Your Name → Subscriptions → Run Analytics</li>
+                <li>Or within the app: Settings → Manage Subscription</li>
+            </ul>
+
+            <h3 class="mb-sm">4.2 Android - Google Play Billing</h3>
+            <p class="mb-sm">When you purchase a subscription on Android:</p>
+            <ul class="mb-md">
+                <li>Google Play handles all payment processing</li>
+                <li>We receive only the subscription status (active/inactive) through Google Play Billing API</li>
+                <li>We do NOT have access to your payment information (credit card, billing address)</li>
+                <li>Subscription data is stored locally on your device</li>
+            </ul>
+            <p class="mb-sm">Manage subscriptions:</p>
+            <ul class="mb-md">
+                <li>Google Play Store → Account → Subscriptions → Run Analytics</li>
+                <li>Or within the app: Settings → Manage Subscription</li>
+            </ul>
+        </div>
+
+        <div class="mb-xl">
+            <h2 class="mb-md">5. Data Retention and Deletion</h2>
+
+            <h3 class="mb-sm">5.1 Data Retention</h3>
+            <ul class="mb-md">
+                <li>Health data is stored on your device <strong>indefinitely</strong> until you manually delete it</li>
+                <li>Workout data is retained to provide historical performance tracking and analytics</li>
+            </ul>
+
+            <h3 class="mb-sm">5.2 Data Deletion</h3>
+            <p class="mb-sm">You can delete your data at any time:</p>
+
+            <p class="mb-sm"><strong>Method 1: Delete Individual Workouts</strong></p>
+            <ul class="mb-md">
+                <li>Open the workout detail screen</li>
+                <li>Tap the delete button (trash icon)</li>
+                <li>Confirm deletion</li>
+            </ul>
+
+            <p class="mb-sm"><strong>Method 2: Clear All App Data</strong></p>
+            <ul class="mb-md">
+                <li><strong>iOS:</strong> Delete and reinstall the app (all local data is removed)</li>
+                <li><strong>Android:</strong> Settings → Apps → Run Analytics → Storage → Clear data</li>
+            </ul>
+
+            <p class="mb-sm"><strong>Method 3: Uninstall the App</strong></p>
+            <ul class="mb-md">
+                <li>Uninstalling Run Analytics automatically deletes all local data</li>
+            </ul>
+
+            <p class="mb-sm"><strong>Method 4: Revoke Health Permissions</strong></p>
+            <ul class="mb-md">
+                <li><strong>iOS:</strong> Settings → Privacy & Security → Health → Run Analytics → Turn Off All
+                    Categories</li>
+                <li><strong>Android:</strong> Settings → Apps → Health Connect → Run Analytics → Revoke all permissions
+                </li>
+            </ul>
+        </div>
+
+        <div class="mb-xl">
+            <h2 class="mb-md">6. Data Security</h2>
+            <p class="mb-md">
+                We take data security seriously, even though all data remains on your device:
+            </p>
+
+            <h3 class="mb-sm">6.1 Security Measures</h3>
+            <ul class="mb-md">
+                <li><strong>iOS Security:</strong> All data stored using iOS Core Data is protected by iOS Keychain and
+                    device encryption. Data is protected when device is locked.</li>
+                <li><strong>Android Security:</strong> All data stored in Room Database is protected by Android's
+                    built-in security and app sandbox.</li>
+                <li><strong>No Network Transmission:</strong> Health data never leaves your device, eliminating
+                    transmission security risks</li>
+                <li><strong>App Sandboxing:</strong> iOS and Android app sandboxes prevent other apps from accessing Run
+                    Analytics data</li>
+                <li><strong>Secure Storage:</strong> Health data cannot be accessed without device authentication
+                    (passcode, Face ID, Touch ID, fingerprint, face unlock)</li>
+            </ul>
+
+            <h3 class="mb-sm">6.2 Your Responsibility</h3>
+            <p class="mb-sm">To protect your data:</p>
+            <ul class="mb-md">
+                <li>Keep your device locked with a strong passcode/biometric</li>
+                <li>Keep your OS updated with the latest security patches</li>
+                <li><strong>iOS:</strong> Do not jailbreak your device</li>
+                <li><strong>Android:</strong> Do not root your device</li>
+            </ul>
+        </div>
+
+        <div class="mb-xl">
+            <h2 class="mb-md">7. Data Sharing and Third Parties</h2>
+            <p class="mb-md">
+                <strong>Run Analytics does NOT share your health data with any third parties.</strong>
+            </p>
+
+            <h3 class="mb-sm">7.1 No Data Sharing</h3>
+            <ul class="mb-md">
+                <li>We do not sell your data</li>
+                <li>We do not share your data with advertisers</li>
+                <li>We do not provide your data to analytics companies</li>
+                <li>We do not integrate with social media platforms</li>
+            </ul>
+
+            <h3 class="mb-sm">7.2 CSV Export (User-Initiated Only)</h3>
+            <p class="mb-sm">The only way data leaves your device is when <strong>YOU</strong> explicitly:</p>
+            <ol class="mb-md">
+                <li>Navigate to Settings → Raw Data Export</li>
+                <li>Generate a CSV file</li>
+                <li>Choose to share the CSV file through your device's share menu (email, cloud storage, messaging apps)
+                </li>
+            </ol>
+            <p class="mb-md"><strong>This is entirely under your control.</strong></p>
+        </div>
+
+        <div class="mb-xl">
+            <h2 class="mb-md">8. Children's Privacy</h2>
+            <p class="mb-md">
+                Run Analytics does not knowingly collect data from children under 13 years of age. The app does not
+                request age information, but parents should supervise their children's use of health tracking
+                applications.
+            </p>
+            <p class="mb-md">
+                If you believe a child under 13 has used Run Analytics, please contact us, and we will assist in
+                ensuring all local data is deleted from the device.
+            </p>
+        </div>
+
+        <div class="mb-xl">
+            <h2 class="mb-md">9. International Data Transfers</h2>
+            <p class="mb-md">
+                <strong>Not Applicable.</strong> Since all health data remains exclusively on your device (iOS or
+                Android) and is never transmitted to servers, there are no international data transfers.
+            </p>
+        </div>
+
+        <div class="mb-xl">
+            <h2 class="mb-md">10. Your Rights (GDPR, CCPA Compliance)</h2>
+            <p class="mb-md">
+                Although Run Analytics does not collect personal data on servers, we respect your data privacy rights:
+            </p>
+
+            <h3 class="mb-sm">10.1 GDPR Rights (European Users)</h3>
+            <ul class="mb-md">
+                <li><strong>Right to Access:</strong> All your data is accessible within the app at any time</li>
+                <li><strong>Right to Deletion:</strong> Delete data using the methods described in Section 5.2</li>
+                <li><strong>Right to Portability:</strong> Export your data to CSV format (Settings → Raw Data Export)
+                </li>
+                <li><strong>Right to Restrict Processing:</strong> Revoke health permissions to stop new data access
+                </li>
+            </ul>
+
+            <h3 class="mb-sm">10.2 CCPA Rights (California Users)</h3>
+            <ul class="mb-md">
+                <li><strong>Right to Know:</strong> This policy discloses all data accessed and how it's used</li>
+                <li><strong>Right to Delete:</strong> Delete data using the methods described in Section 5.2</li>
+                <li><strong>Right to Opt-Out of Sale:</strong> Not applicable (we never sell data)</li>
+            </ul>
+        </div>
+
+        <div class="mb-xl">
+            <h2 class="mb-md">11. Changes to This Privacy Policy</h2>
+            <p class="mb-sm">We may update this Privacy Policy from time to time. When we make changes:</p>
+            <ul class="mb-md">
+                <li>The "Last Updated" date at the top of this policy will be revised</li>
+                <li>Significant changes will be announced within the app</li>
+                <li>Continued use of the app after changes constitutes acceptance of the updated policy</li>
             </ul>
             <p class="mb-md">
-                All permissions are optional and you can revoke them at any time through iOS Settings.
+                We recommend reviewing this policy periodically to stay informed about how we protect your privacy.
             </p>
         </div>
 
         <div class="mb-xl">
-            <h2 class="mb-md">Children's Privacy</h2>
-            <p class="mb-md">
-                Because we don't collect any data, Run Analytics is safe for users of all ages, including children under 13. However, we recommend parental guidance for all fitness activities.
-            </p>
-        </div>
-
-        <div class="mb-xl">
-            <h2 class="mb-md">Changes to This Privacy Policy</h2>
-            <p class="mb-md">
-                We may update this Privacy Policy from time to time to reflect changes in the app or legal requirements. Any changes will be posted on this page with an updated "Last updated" date.
-            </p>
-            <p class="mb-md">
-                <strong>Important:</strong> We will never change our core commitment to not collecting your data.
-            </p>
-        </div>
-
-        <div class="mb-xl">
-            <h2 class="mb-md">Contact Us</h2>
-            <p class="mb-md">
-                If you have any questions about this Privacy Policy or the app, please contact us through our <a href="/en/contact/">contact page</a>.
-            </p>
-        </div>
-
-        <div class="callout callout-info">
-            <h2 class="mb-sm">Summary</h2>
-            <p class="mb-sm">
-                <strong>Run Analytics is a privacy-first app.</strong> We believe your data belongs to you and should stay with you.
-            </p>
-            <ul>
-                <li>❌ No data collection</li>
-                <li>❌ No tracking or analytics</li>
-                <li>❌ No third-party services</li>
-                <li>✅ 100% local processing</li>
-                <li>✅ Complete control over your data</li>
+            <h2 class="mb-md">12. Contact Us</h2>
+            <p class="mb-sm">If you have questions, concerns, or requests regarding this Privacy Policy or your data
+                privacy:</p>
+            <ul class="mb-md">
+                <li><strong>Email:</strong> support@runanalytics.app</li>
+                <li><strong>Website:</strong> <a href="https://runanalytics.app">https://runanalytics.app</a></li>
             </ul>
+            <p class="mb-md">
+                <strong>Response Time:</strong> We aim to respond to all privacy inquiries within 7 business days.
+            </p>
+        </div>
+
+        <div class="mb-xl">
+            <h2 class="mb-md">13. Legal Compliance</h2>
+            <p class="mb-sm">Run Analytics complies with:</p>
+            <ul class="mb-md">
+                <li><strong>iOS:</strong> Apple App Store Review Guidelines, Apple HealthKit Guidelines</li>
+                <li><strong>Android:</strong> Google Play Developer Program Policies, Android Health Connect Guidelines
+                </li>
+                <li>General Data Protection Regulation (GDPR)</li>
+                <li>California Consumer Privacy Act (CCPA)</li>
+                <li>Children's Online Privacy Protection Act (COPPA)</li>
+            </ul>
+        </div>
+
+        <div class="callout callout-success">
+            <h2 class="mb-md">Summary</h2>
+            <p class="mb-sm"><strong>In Simple Terms:</strong></p>
+            <ul class="mb-sm">
+                <li>✅ <strong>What we access:</strong> Running workout data from Apple HealthKit (iOS) or Health Connect
+                    (Android)</li>
+                <li>✅ <strong>Where it's stored:</strong> Only on YOUR device (iOS Core Data or Android Room Database)
+                </li>
+                <li>✅ <strong>Where it goes:</strong> Nowhere. It never leaves your device.</li>
+                <li>✅ <strong>Who sees it:</strong> Only you.</li>
+                <li>✅ <strong>How to delete it:</strong> Clear app data or uninstall the app anytime.</li>
+            </ul>
+            <p class="mb-0">
+                <strong>Run Analytics is built privacy-first. Your running data is yours, and it stays on your
+                    device.</strong>
+            </p>
         </div>
     </div>
 </section>
