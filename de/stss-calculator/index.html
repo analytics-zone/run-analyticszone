@@ -20,7 +20,7 @@
     
     
     <meta property="article:published_time" content="2025-10-08T10:00:00Z">
-    <meta property="article:modified_time" content="2025-10-08T14:30:00Z">
+    <meta property="article:modified_time" content="2025-12-22T14:30:00Z">
     <meta property="article:author" content="Albert Arno">
     
 
@@ -413,7 +413,7 @@ img[width][height] {
         }
       },
       "datePublished": "2025-10-08",
-      "dateModified": "2025-10-08",
+      "dateModified": "2025-12-22",
       "mainEntityOfPage": {
         "@type": "WebPage",
         "@id": "https://run.analyticszone.app/de/stss-calculator/"
@@ -741,18 +741,22 @@ img[width][height] {
         <section class="hero hero-small">
     <div class="container">
         <h1>Kostenloser Lauf-TSS-Rechner</h1>
-        <p class="lead">Berechnen Sie den Training Stress Score für Laufworkouts - Der einzige kostenlose sTSS-Rechner</p>
+        <p class="lead">Berechnen Sie den Training Stress Score für Laufworkouts - Der einzige kostenlose rTSS-Rechner
+        </p>
     </div>
 </section>
 
 <section class="section">
     <div class="container container-narrow">
         <div class="callout callout-info mb-xl">
-            <h2>Was ist Lauf-TSS (sTSS)?</h2>
-            <p><strong>Running Training Stress Score (sTSS)</strong> quantifiziert die Trainingsbelastung eines Laufworkouts durch Kombination von Intensität und Dauer. Es ist aus der TSS-Methodik des Radfahrens adaptiert und verwendet Ihre Critical Run Speed (CRS) als Schwellentempo. Ein 1-Stunden-Workout im CRS-Tempo = 100 sTSS.</p>
+            <h2>Was ist Lauf-TSS (rTSS)?</h2>
+            <p><strong>Running Training Stress Score (rTSS)</strong> quantifiziert die Trainingsbelastung eines
+                Laufworkouts durch Kombination von Intensität und Dauer. Es ist aus der TSS-Methodik des Radfahrens
+                adaptiert und verwendet Ihre Critical Run Speed (CRS) als Schwellentempo. Ein 1-Stunden-Workout im
+                CRS-Tempo = 100 rTSS.</p>
         </div>
 
-        <h2 class="mt-3xl">Kostenloser sTSS-Rechner</h2>
+        <h2 class="mt-3xl">Kostenloser rTSS-Rechner</h2>
         <p class="lead mb-xl">Berechnen Sie den Trainingsstress für jedes Laufworkout. Erfordert Ihr CRS-Tempo.</p>
 
         <div class="css-calculator">
@@ -760,52 +764,33 @@ img[width][height] {
                 <div class="calculator-inputs">
                     <div class="form-group">
                         <label for="cssPace" class="form-label">Ihr CRS-Tempo (mm:ss pro 100m)</label>
-                        <input
-                            type="text"
-                            id="cssPace"
-                            class="form-input"
-                            placeholder="1:49"
-                            pattern="[0-9]{1,2}:[0-5][0-9]"
-                            aria-required="true"
-                            aria-describedby="cssPace-help"
-                        />
-                        <small id="cssPace-help" class="form-help">Ihr Schwellentempo aus dem CRS-Test (z.B. 1:49)</small>
+                        <input type="text" id="cssPace" class="form-input" placeholder="1:49"
+                            pattern="[0-9]{1,2}:[0-5][0-9]" aria-required="true" aria-describedby="cssPace-help" />
+                        <small id="cssPace-help" class="form-help">Ihr Schwellentempo aus dem CRS-Test (z.B.
+                            1:49)</small>
                         <div class="form-error" id="cssPace-error"></div>
                     </div>
 
                     <div class="form-group">
                         <label for="workoutDuration" class="form-label">Workout-Dauer (Minuten)</label>
-                        <input
-                            type="number"
-                            id="workoutDuration"
-                            class="form-input"
-                            placeholder="60"
-                            min="1"
-                            max="300"
-                            aria-required="true"
-                            aria-describedby="duration-help"
-                        />
-                        <small id="duration-help" class="form-help">Gesamte Workout-Zeit inkl. Pause (1-300 Minuten)</small>
+                        <input type="number" id="workoutDuration" class="form-input" placeholder="60" min="1" max="300"
+                            aria-required="true" aria-describedby="duration-help" />
+                        <small id="duration-help" class="form-help">Gesamte Workout-Zeit inkl. Pause (1-300
+                            Minuten)</small>
                         <div class="form-error" id="duration-error"></div>
                     </div>
 
                     <div class="form-group">
                         <label for="avgPace" class="form-label">Durchschnitts-Workout-Tempo (mm:ss pro 100m)</label>
-                        <input
-                            type="text"
-                            id="avgPace"
-                            class="form-input"
-                            placeholder="2:05"
-                            pattern="[0-9]{1,2}:[0-5][0-9]"
-                            aria-required="true"
-                            aria-describedby="pace-help"
-                        />
-                        <small id="pace-help" class="form-help">Ihr Durchschnittstempo während des Workouts (z.B. 2:05)</small>
+                        <input type="text" id="avgPace" class="form-input" placeholder="2:05"
+                            pattern="[0-9]{1,2}:[0-5][0-9]" aria-required="true" aria-describedby="pace-help" />
+                        <small id="pace-help" class="form-help">Ihr Durchschnittstempo während des Workouts (z.B.
+                            2:05)</small>
                         <div class="form-error" id="pace-error"></div>
                     </div>
 
                     <div class="calculator-buttons">
-                        <button type="submit" class="btn btn-primary" id="calculateStssBtn">sTSS berechnen</button>
+                        <button type="submit" class="btn btn-primary" id="calculateStssBtn">rTSS berechnen</button>
                         <button type="reset" class="btn btn-ghost" id="resetStssBtn">Löschen</button>
                     </div>
                 </div>
@@ -815,7 +800,7 @@ img[width][height] {
                 <h3>Ihr Training Stress Score</h3>
                 <div class="results-summary">
                     <div class="result-item">
-                        <div class="result-label">sTSS</div>
+                        <div class="result-label">rTSS</div>
                         <div class="css-result-value" id="stssValue">--</div>
                     </div>
                     <div class="result-item">
@@ -833,12 +818,12 @@ img[width][height] {
             </div>
         </div>
 
-        <h2 class="mt-3xl">Wie sTSS berechnet wird</h2>
+        <h2 class="mt-3xl">Wie rTSS berechnet wird</h2>
 
         <div class="formula-box">
             <h3>Formel</h3>
             <div class="formula">
-                sTSS = (Dauer in Stunden) × (Intensitätsfaktor)² × 100
+                rTSS = (Dauer in Stunden) × (Intensitätsfaktor)² × 100
             </div>
             <div class="formula-explanation">
                 <p>Wobei:</p>
@@ -866,23 +851,24 @@ img[width][height] {
                 IF = <strong>0,872</strong>
             </div>
 
-            <h4>Schritt 2: sTSS berechnen</h4>
+            <h4>Schritt 2: rTSS berechnen</h4>
             <div class="calculation">
-                sTSS = 1,0 Stunden × (0,872)² × 100<br>
-                sTSS = 1,0 × 0,760 × 100<br>
-                sTSS = <strong>76</strong>
+                rTSS = 1,0 Stunden × (0,872)² × 100<br>
+                rTSS = 1,0 × 0,760 × 100<br>
+                rTSS = <strong>76</strong>
             </div>
 
-            <p class="mt-md"><strong>Interpretation:</strong> Dieses 60-Minuten-Workout im lockeren Tempo (langsamer als CRS) erzeugte 76 sTSS - eine moderate Trainingsbelastung geeignet für aeroben Grundlagenaufbau.</p>
+            <p class="mt-md"><strong>Interpretation:</strong> Dieses 60-Minuten-Workout im lockeren Tempo (langsamer als
+                CRS) erzeugte 76 rTSS - eine moderate Trainingsbelastung geeignet für aeroben Grundlagenaufbau.</p>
         </div>
 
-        <h2 class="mt-3xl">sTSS-Werte verstehen</h2>
+        <h2 class="mt-3xl">rTSS-Werte verstehen</h2>
 
         <div class="zones-table-container">
             <table class="zones-table">
                 <thead>
                     <tr>
-                        <th>sTSS-Bereich</th>
+                        <th>rTSS-Bereich</th>
                         <th>Trainingsbelastung</th>
                         <th>Erholungszeit</th>
                         <th>Beispiel-Workout</th>
@@ -923,39 +909,39 @@ img[width][height] {
             </table>
         </div>
 
-        <h2 class="mt-3xl">Wöchentliche sTSS-Richtlinien</h2>
+        <h2 class="mt-3xl">Wöchentliche rTSS-Richtlinien</h2>
 
-        <p class="mb-md">Ziel-sTSS pro Woche hängt von Ihrem Trainingsniveau und Ihren Zielen ab:</p>
+        <p class="mb-md">Ziel-rTSS pro Woche hängt von Ihrem Trainingsniveau und Ihren Zielen ab:</p>
 
         <div class="grid grid-2 mb-xl">
             <div class="card">
                 <h3 class="card-title">Freizeitläufer</h3>
                 <div class="card-content">
-                    <p class="mb-sm"><strong>Wöchentliches sTSS:</strong> 150-300</p>
-                    <p>2-3 Workouts pro Woche, 50-100 sTSS jeweils. Fokus auf Technik und aeroben Grundlagenaufbau.</p>
+                    <p class="mb-sm"><strong>Wöchentliches rTSS:</strong> 150-300</p>
+                    <p>2-3 Workouts pro Woche, 50-100 rTSS jeweils. Fokus auf Technik und aeroben Grundlagenaufbau.</p>
                 </div>
             </div>
 
             <div class="card">
                 <h3 class="card-title">Fitness-Läufer / Triathleten</h3>
                 <div class="card-content">
-                    <p class="mb-sm"><strong>Wöchentliches sTSS:</strong> 300-500</p>
-                    <p>3-4 Workouts pro Woche, 75-125 sTSS jeweils. Mix aus aerober Ausdauer und Schwellenarbeit.</p>
+                    <p class="mb-sm"><strong>Wöchentliches rTSS:</strong> 300-500</p>
+                    <p>3-4 Workouts pro Woche, 75-125 rTSS jeweils. Mix aus aerober Ausdauer und Schwellenarbeit.</p>
                 </div>
             </div>
 
             <div class="card">
                 <h3 class="card-title">Wettkampf-Masters-Läufer</h3>
                 <div class="card-content">
-                    <p class="mb-sm"><strong>Wöchentliches sTSS:</strong> 500-800</p>
-                    <p>4-6 Workouts pro Woche, 80-150 sTSS jeweils. Strukturiertes Training mit Periodisierung.</p>
+                    <p class="mb-sm"><strong>Wöchentliches rTSS:</strong> 500-800</p>
+                    <p>4-6 Workouts pro Woche, 80-150 rTSS jeweils. Strukturiertes Training mit Periodisierung.</p>
                 </div>
             </div>
 
             <div class="card">
                 <h3 class="card-title">Elite / College-Läufer</h3>
                 <div class="card-content">
-                    <p class="mb-sm"><strong>Wöchentliches sTSS:</strong> 800-1200+</p>
+                    <p class="mb-sm"><strong>Wöchentliches rTSS:</strong> 800-1200+</p>
                     <p>8-12 Workouts pro Woche, doppelte Tage. Hohes Volumen, Erholungsmanagement kritisch.</p>
                 </div>
             </div>
@@ -964,74 +950,101 @@ img[width][height] {
         <div class="callout callout-warning">
             <h3>⚠️ Wichtige Hinweise</h3>
             <ul>
-                <li><strong>Erfordert genaues CRS:</strong> Ihr CRS muss aktuell sein (innerhalb 6-8 Wochen getestet) für genaues sTSS.</li>
-                <li><strong>Vereinfachte Berechnung:</strong> Dieser Rechner verwendet Durchschnittstempo. Fortgeschrittenes sTSS verwendet Normalized Graded Pace (NGP), das Intervallstruktur berücksichtigt.</li>
-                <li><strong>Nicht für Technikarbeit:</strong> sTSS misst nur physischen Trainingsstress, nicht Fähigkeitsentwicklung.</li>
-                <li><strong>Individuelle Variation:</strong> Gleiches sTSS fühlt sich für verschiedene Läufer unterschiedlich an. Passen Sie Richtlinien an Ihre Erholung an.</li>
+                <li><strong>Erfordert genaues CRS:</strong> Ihr CRS muss aktuell sein (innerhalb 6-8 Wochen getestet)
+                    für genaues rTSS.</li>
+                <li><strong>Vereinfachte Berechnung:</strong> Dieser Rechner verwendet Durchschnittstempo.
+                    Fortgeschrittenes rTSS verwendet Normalized Graded Pace (NGP), das Intervallstruktur berücksichtigt.
+                </li>
+                <li><strong>Nicht für Technikarbeit:</strong> rTSS misst nur physischen Trainingsstress, nicht
+                    Fähigkeitsentwicklung.</li>
+                <li><strong>Individuelle Variation:</strong> Gleiches rTSS fühlt sich für verschiedene Läufer
+                    unterschiedlich an. Passen Sie Richtlinien an Ihre Erholung an.</li>
             </ul>
         </div>
 
-        <h2 class="mt-3xl">Warum sTSS wichtig ist</h2>
+        <h2 class="mt-3xl">Warum rTSS wichtig ist</h2>
 
         <p class="mb-md">Training Stress Score ist die Grundlage für:</p>
 
         <ul class="mb-xl">
-            <li><strong>CTL (Chronic Training Load):</strong> Ihr Fitnessniveau - 42-Tage exponentiell gewichteter Durchschnitt des täglichen sTSS</li>
-            <li><strong>ATL (Acute Training Load):</strong> Ihre Ermüdung - 7-Tage exponentiell gewichteter Durchschnitt des täglichen sTSS</li>
-            <li><strong>TSB (Training Stress Balance):</strong> Ihre Form - TSB = CTL - ATL (positiv = frisch, negativ = ermüdet)</li>
-            <li><strong>Periodisierung:</strong> Planen Sie Trainingsphasen (Basis, Aufbau, Spitze, Tapering) mit Ziel-CTL-Progressionen</li>
-            <li><strong>Erholungsmanagement:</strong> Wissen Sie, wann Sie pushen und wann Sie ruhen sollten basierend auf TSB</li>
+            <li><strong>CTL (Chronic Training Load):</strong> Ihr Fitnessniveau - 42-Tage exponentiell gewichteter
+                Durchschnitt des täglichen rTSS</li>
+            <li><strong>ATL (Acute Training Load):</strong> Ihre Ermüdung - 7-Tage exponentiell gewichteter Durchschnitt
+                des täglichen rTSS</li>
+            <li><strong>TSB (Training Stress Balance):</strong> Ihre Form - TSB = CTL - ATL (positiv = frisch, negativ =
+                ermüdet)</li>
+            <li><strong>Periodisierung:</strong> Planen Sie Trainingsphasen (Basis, Aufbau, Spitze, Tapering) mit
+                Ziel-CTL-Progressionen</li>
+            <li><strong>Erholungsmanagement:</strong> Wissen Sie, wann Sie pushen und wann Sie ruhen sollten basierend
+                auf TSB</li>
         </ul>
 
         <div class="callout callout-tip">
             <h3>Profi-Tipp: Verfolgen Sie Ihr CTL</h3>
-            <p>Notieren Sie tägliches sTSS in einer Tabelle oder Trainingstagebuch. Berechnen Sie Ihren 42-Tage-Durchschnitt (CTL) wöchentlich. Ziel sind 5-10 CTL-Punkte Erhöhung pro Woche während des Grundlagenaufbaus. Halten oder reduzieren Sie CTL leicht während des Taperings (1-2 Wochen vor dem Rennen).</p>
+            <p>Notieren Sie tägliches rTSS in einer Tabelle oder Trainingstagebuch. Berechnen Sie Ihren
+                42-Tage-Durchschnitt (CTL) wöchentlich. Ziel sind 5-10 CTL-Punkte Erhöhung pro Woche während des
+                Grundlagenaufbaus. Halten oder reduzieren Sie CTL leicht während des Taperings (1-2 Wochen vor dem
+                Rennen).</p>
         </div>
 
         <h2 class="mt-3xl">Häufig gestellte Fragen</h2>
 
         <div class="faq-section" itemscope itemtype="https://schema.org/FAQPage">
             <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">Was ist Lauf-TSS (sTSS)?</h3>
+                <h3 itemprop="name">Was ist Lauf-TSS (rTSS)?</h3>
                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                     <div itemprop="text">
-                        <p>Running Training Stress Score (sTSS) ist eine Metrik, die die Trainingsbelastung eines Laufworkouts quantifiziert, indem sie sowohl Intensität als auch Dauer kombiniert. Es ist aus der TSS-Methodik des Radfahrens adaptiert und verwendet Ihre Critical Run Speed (CRS) als Schwellentempo. Ein Workout von 1 Stunde im CRS-Tempo entspricht 100 sTSS.</p>
+                        <p>Running Training Stress Score (rTSS) ist eine Metrik, die die Trainingsbelastung eines
+                            Laufworkouts quantifiziert, indem sie sowohl Intensität als auch Dauer kombiniert. Es ist
+                            aus der TSS-Methodik des Radfahrens adaptiert und verwendet Ihre Critical Run Speed (CRS)
+                            als Schwellentempo. Ein Workout von 1 Stunde im CRS-Tempo entspricht 100 rTSS.</p>
                     </div>
                 </div>
             </div>
 
             <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">Wie berechne ich mein sTSS?</h3>
+                <h3 itemprop="name">Wie berechne ich mein rTSS?</h3>
                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                     <div itemprop="text">
-                        <p>Verwenden Sie den obigen Rechner, indem Sie Ihr CRS-Tempo (aus einem CRS-Test), die Gesamtdauer des Workouts und das Durchschnittstempo während des Workouts eingeben. Die Formel lautet: sTSS = Dauer (Stunden) × Intensitätsfaktor² × 100, wobei Intensitätsfaktor = CRS-Tempo / Durchschnitts-Workout-Tempo.</p>
+                        <p>Verwenden Sie den obigen Rechner, indem Sie Ihr CRS-Tempo (aus einem CRS-Test), die
+                            Gesamtdauer des Workouts und das Durchschnittstempo während des Workouts eingeben. Die
+                            Formel lautet: rTSS = Dauer (Stunden) × Intensitätsfaktor² × 100, wobei Intensitätsfaktor =
+                            CRS-Tempo / Durchschnitts-Workout-Tempo.</p>
                     </div>
                 </div>
             </div>
 
             <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">Benötige ich CRS zur Berechnung von sTSS?</h3>
+                <h3 itemprop="name">Benötige ich CRS zur Berechnung von rTSS?</h3>
                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                     <div itemprop="text">
-                        <p>Ja, Ihre Critical Run Speed (CRS) ist erforderlich, um den Intensitätsfaktor zu berechnen, der für die sTSS-Berechnung unerlässlich ist. CRS repräsentiert Ihr Schwellentempo und sollte alle 6-8 Wochen getestet werden. Sie können Ihr CRS mit unserem <a href="/de/crs/">CRS-Rechner</a> ermitteln.</p>
+                        <p>Ja, Ihre Critical Run Speed (CRS) ist erforderlich, um den Intensitätsfaktor zu berechnen,
+                            der für die rTSS-Berechnung unerlässlich ist. CRS repräsentiert Ihr Schwellentempo und
+                            sollte alle 6-8 Wochen getestet werden. Sie können Ihr CRS mit unserem <a
+                                href="/de/crs/">CRS-Rechner</a> ermitteln.</p>
                     </div>
                 </div>
             </div>
 
             <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">Was ist ein guter sTSS-Wert für ein Workout?</h3>
+                <h3 itemprop="name">Was ist ein guter rTSS-Wert für ein Workout?</h3>
                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                     <div itemprop="text">
-                        <p>Es hängt von der Workout-Intensität ab: Leichte Workouts erreichen typischerweise unter 50 sTSS, moderate Workouts 50-100 sTSS, harte Workouts 100-200 sTSS und sehr harte Workouts über 200 sTSS. Der angemessene Wert hängt von Ihren Trainingszielen und Ihrem aktuellen Fitnessniveau ab.</p>
+                        <p>Es hängt von der Workout-Intensität ab: Leichte Workouts erreichen typischerweise unter 50
+                            rTSS, moderate Workouts 50-100 rTSS, harte Workouts 100-200 rTSS und sehr harte Workouts
+                            über 200 rTSS. Der angemessene Wert hängt von Ihren Trainingszielen und Ihrem aktuellen
+                            Fitnessniveau ab.</p>
                     </div>
                 </div>
             </div>
 
             <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">Wie viel sTSS sollte ich pro Woche machen?</h3>
+                <h3 itemprop="name">Wie viel rTSS sollte ich pro Woche machen?</h3>
                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                     <div itemprop="text">
-                        <p>Wöchentliche sTSS-Ziele variieren nach Niveau: Freizeitläufer: 150-300, Fitness-Läufer/Triathleten: 300-500, Wettkampf-Masters: 500-800, Elite/College: 800-1200+. Beginnen Sie konservativ und steigern Sie allmählich, um Übertraining zu vermeiden.</p>
+                        <p>Wöchentliche rTSS-Ziele variieren nach Niveau: Freizeitläufer: 150-300,
+                            Fitness-Läufer/Triathleten: 300-500, Wettkampf-Masters: 500-800, Elite/College: 800-1200+.
+                            Beginnen Sie konservativ und steigern Sie allmählich, um Übertraining zu vermeiden.</p>
                     </div>
                 </div>
             </div>
@@ -1040,25 +1053,34 @@ img[width][height] {
                 <h3 itemprop="name">Ist Lauf-TSS dasselbe wie Rad-TSS?</h3>
                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                     <div itemprop="text">
-                        <p>Das Konzept und die Formel sind gleich, aber sTSS ist für das Laufen angepasst. Anstatt Leistung (FTP) wie Rad-TSS zu verwenden, verwendet sTSS Tempo mit CRS als Schwelle. Beide messen Trainingsbelastung mit Dauer × Intensitätsfaktor² × 100.</p>
+                        <p>Das Konzept und die Formel sind gleich, aber rTSS ist für das Laufen angepasst. Anstatt
+                            Leistung (FTP) wie Rad-TSS zu verwenden, verwendet rTSS Tempo mit CRS als Schwelle. Beide
+                            messen Trainingsbelastung mit Dauer × Intensitätsfaktor² × 100.</p>
                     </div>
                 </div>
             </div>
 
             <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">Kann ich sTSS für alle Laufstile verwenden?</h3>
+                <h3 itemprop="name">Kann ich rTSS für alle Laufstile verwenden?</h3>
                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                     <div itemprop="text">
-                        <p>Ja, aber Ihr CRS sollte stilspezifisch sein. Die meisten Läufer verwenden Freestyle-CRS, da es der am häufigsten trainierte Stil ist. Wenn Sie hauptsächlich in einem anderen Stil trainieren, führen Sie einen CRS-Test in diesem Stil durch und verwenden Sie dieses Tempo für die sTSS-Berechnung.</p>
+                        <p>Ja, aber Ihr CRS sollte stilspezifisch sein. Die meisten Läufer verwenden Freestyle-CRS, da
+                            es der am häufigsten trainierte Stil ist. Wenn Sie hauptsächlich in einem anderen Stil
+                            trainieren, führen Sie einen CRS-Test in diesem Stil durch und verwenden Sie dieses Tempo
+                            für die rTSS-Berechnung.</p>
                     </div>
                 </div>
             </div>
 
             <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">Was ist der Unterschied zwischen sTSS und CTL/ATL/TSB?</h3>
+                <h3 itemprop="name">Was ist der Unterschied zwischen rTSS und CTL/ATL/TSB?</h3>
                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                     <div itemprop="text">
-                        <p>sTSS misst die Trainingsbelastung eines einzelnen Workouts. CTL (Chronic Training Load) ist Ihr langfristiges Fitnessniveau, ATL (Acute Training Load) ist Ihre jüngste Ermüdung, und TSB (Training Stress Balance) ist Ihre Frische. Diese Metriken verwenden sTSS-Werte im Zeitverlauf, um Ihren Trainingszustand zu verfolgen. Erfahren Sie mehr in unserem <a href="/de/training-load/">Training Load-Leitfaden</a>.</p>
+                        <p>rTSS misst die Trainingsbelastung eines einzelnen Workouts. CTL (Chronic Training Load) ist
+                            Ihr langfristiges Fitnessniveau, ATL (Acute Training Load) ist Ihre jüngste Ermüdung, und
+                            TSB (Training Stress Balance) ist Ihre Frische. Diese Metriken verwenden rTSS-Werte im
+                            Zeitverlauf, um Ihren Trainingszustand zu verfolgen. Erfahren Sie mehr in unserem <a
+                                href="/de/training-load/">Training Load-Leitfaden</a>.</p>
                     </div>
                 </div>
             </div>
@@ -1070,7 +1092,8 @@ img[width][height] {
             <div class="card">
                 <h3 class="card-title">CRS-Test</h3>
                 <div class="card-content">
-                    <p>Benötigen Sie Ihr CRS-Tempo? Verwenden Sie unseren kostenlosen CRS-Rechner mit 5K- und 3K-Testzeiten.</p>
+                    <p>Benötigen Sie Ihr CRS-Tempo? Verwenden Sie unseren kostenlosen CRS-Rechner mit 5K- und
+                        3K-Testzeiten.</p>
                     <a href="/de/crs/" class="btn btn-secondary btn-small mt-md">CRS-Rechner →</a>
                 </div>
             </div>
@@ -1086,15 +1109,17 @@ img[width][height] {
             <div class="card">
                 <h3 class="card-title">Run Analytics App</h3>
                 <div class="card-content">
-                    <p>Automatische sTSS-Berechnung für alle Workouts. Verfolgen Sie CTL/ATL/TSB-Trends im Zeitverlauf.</p>
+                    <p>Automatische rTSS-Berechnung für alle Workouts. Verfolgen Sie CTL/ATL/TSB-Trends im Zeitverlauf.
+                    </p>
                     <a href="/de/" class="btn btn-secondary btn-small mt-md">Mehr erfahren →</a>
                 </div>
             </div>
         </div>
 
         <div class="mt-xl text-center">
-            <p class="mb-md"><strong>Möchten Sie automatisches sTSS-Tracking?</strong></p>
-            <a href="https://apps.apple.com/es/app/runanalytics/id6754524015" class="btn btn-primary btn-large" target="_blank" rel="noopener">Run Analytics kostenlos herunterladen</a>
+            <p class="mb-md"><strong>Möchten Sie automatisches rTSS-Tracking?</strong></p>
+            <a href="https://apps.apple.com/es/app/runanalytics/id6754524015" class="btn btn-primary btn-large" target="_blank" rel="noopener">Run
+                Analytics kostenlos herunterladen</a>
         </div>
     </div>
 </section>

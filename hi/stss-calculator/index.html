@@ -20,7 +20,7 @@
     
     
     <meta property="article:published_time" content="2025-10-08T10:00:00Z">
-    <meta property="article:modified_time" content="2025-10-08T14:30:00Z">
+    <meta property="article:modified_time" content="2025-12-22T14:30:00Z">
     <meta property="article:author" content="Albert Arno">
     
 
@@ -413,7 +413,7 @@ img[width][height] {
         }
       },
       "datePublished": "2025-10-08",
-      "dateModified": "2025-10-08",
+      "dateModified": "2025-12-22",
       "mainEntityOfPage": {
         "@type": "WebPage",
         "@id": "https://run.analyticszone.app/hi/stss-calculator/"
@@ -740,82 +740,62 @@ img[width][height] {
     <main id="main-content" class="main-content">
         <section class="hero hero-small">
     <div class="container">
-        <h1>Free Running TSS Calculator</h1>
-        <p class="lead">Calculate Training Stress Score for running workouts - The only free sTSS calculator</p>
+        <h1>फ्री रनिंग TSS कैलकुलेटर</h1>
+        <p class="lead">रनिंग वर्कआउट का रनिंग स्ट्रेस स्कोर (rTSS) गणना करें — यह एकमात्र मुफ्त rTSS कैलकुलेटर है</p>
     </div>
 </section>
 
 <section class="section">
     <div class="container container-narrow">
         <div class="callout callout-info mb-xl">
-            <h2>What is Running TSS (sTSS)?</h2>
-            <p><strong>Running Training Stress Score (sTSS)</strong> quantifies the training load of a running workout by combining intensity and duration. It's adapted from cycling's TSS methodology, using your Critical Run Speed (CRS) as the threshold pace. A 1-hour workout at CRS pace = 100 sTSS.</p>
+            <h2>रनिंग TSS (rTSS) क्या है?</h2>
+            <p><strong>Running Training Stress Score (rTSS)</strong> किसी रनिंग वर्कआउट के ट्रेनिंग लोड को तीव्रता +
+                अवधि से मापता है। यह साइक्लिंग के TSS से अनुकूलित है और आपके Critical Run Speed (CRS) को थ्रेशोल्ड स्पीड
+                मानता है। CRS गति पर 1 घंटे का वर्कआउट = 100 rTSS।</p>
         </div>
 
-        <h2 class="mt-3xl">Free sTSS Calculator</h2>
-        <p class="lead mb-xl">Calculate training stress for any running workout. Requires your CRS pace.</p>
+        <h2 class="mt-3xl">मुफ्त rTSS कैलकुलेटर</h2>
+        <p class="lead mb-xl">किसी भी रनिंग वर्कआउट का ट्रेनिंग स्ट्रेस निकालें। इसके लिए आपका CRS पेस चाहिए।</p>
 
         <div class="css-calculator">
             <form id="stssCalculatorForm">
                 <div class="calculator-inputs">
                     <div class="form-group">
-                        <label for="cssPace" class="form-label">Your CRS Pace (mm:ss per 100m)</label>
-                        <input
-                            type="text"
-                            id="cssPace"
-                            class="form-input"
-                            placeholder="1:49"
-                            pattern="[0-9]{1,2}:[0-5][0-9]"
-                            aria-required="true"
-                            aria-describedby="cssPace-help"
-                        />
-                        <small id="cssPace-help" class="form-help">Your threshold pace from CRS test (e.g., 1:49)</small>
+                        <label for="cssPace" class="form-label">आपका CRS पेस (100m प्रति mm:ss)</label>
+                        <input type="text" id="cssPace" class="form-input" placeholder="1:49"
+                            pattern="[0-9]{1,2}:[0-5][0-9]" aria-required="true" aria-describedby="cssPace-help" />
+                        <small id="cssPace-help" class="form-help">CRS टेस्ट से आपका थ्रेशोल्ड पेस (उदा. 1:49)</small>
                         <div class="form-error" id="cssPace-error"></div>
                     </div>
 
                     <div class="form-group">
-                        <label for="workoutDuration" class="form-label">Workout Duration (minutes)</label>
-                        <input
-                            type="number"
-                            id="workoutDuration"
-                            class="form-input"
-                            placeholder="60"
-                            min="1"
-                            max="300"
-                            aria-required="true"
-                            aria-describedby="duration-help"
-                        />
-                        <small id="duration-help" class="form-help">Total workout time including rest (1-300 minutes)</small>
+                        <label for="workoutDuration" class="form-label">वर्कआउट अवधि (मिनट)</label>
+                        <input type="number" id="workoutDuration" class="form-input" placeholder="60" min="1" max="300"
+                            aria-required="true" aria-describedby="duration-help" />
+                        <small id="duration-help" class="form-help">आराम सहित कुल समय (1-300 मिनट)</small>
                         <div class="form-error" id="duration-error"></div>
                     </div>
 
                     <div class="form-group">
-                        <label for="avgPace" class="form-label">Average Workout Pace (mm:ss per 100m)</label>
-                        <input
-                            type="text"
-                            id="avgPace"
-                            class="form-input"
-                            placeholder="2:05"
-                            pattern="[0-9]{1,2}:[0-5][0-9]"
-                            aria-required="true"
-                            aria-describedby="pace-help"
-                        />
-                        <small id="pace-help" class="form-help">Your average pace during the workout (e.g., 2:05)</small>
+                        <label for="avgPace" class="form-label">औसत वर्कआउट पेस (100m प्रति mm:ss)</label>
+                        <input type="text" id="avgPace" class="form-input" placeholder="2:05"
+                            pattern="[0-9]{1,2}:[0-5][0-9]" aria-required="true" aria-describedby="pace-help" />
+                        <small id="pace-help" class="form-help">वर्कआउट के दौरान आपका औसत पेस (उदा. 2:05)</small>
                         <div class="form-error" id="pace-error"></div>
                     </div>
 
                     <div class="calculator-buttons">
-                        <button type="submit" class="btn btn-primary" id="calculateStssBtn">Calculate sTSS</button>
-                        <button type="reset" class="btn btn-ghost" id="resetStssBtn">Clear</button>
+                        <button type="submit" class="btn btn-primary" id="calculateStssBtn">rTSS निकालें</button>
+                        <button type="reset" class="btn btn-ghost" id="resetStssBtn">रीसेट</button>
                     </div>
                 </div>
             </form>
 
             <div class="calculator-results hidden" id="stssResults" aria-live="polite">
-                <h3>Your Training Stress Score</h3>
+                <h3>आपका ट्रेनिंग स्ट्रेस स्कोर</h3>
                 <div class="results-summary">
                     <div class="result-item">
-                        <div class="result-label">sTSS</div>
+                        <div class="result-label">rTSS</div>
                         <div class="css-result-value" id="stssValue">--</div>
                     </div>
                     <div class="result-item">
@@ -825,7 +805,7 @@ img[width][height] {
                 </div>
 
                 <div class="zones-result">
-                    <h4>Training Load Interpretation</h4>
+                    <h4>ट्रेनिंग लोड व्याख्या</h4>
                     <p class="mb-md text-secondary" id="stssInterpretation">
                         <!-- Filled by JavaScript -->
                     </p>
@@ -833,268 +813,281 @@ img[width][height] {
             </div>
         </div>
 
-        <h2 class="mt-3xl">How sTSS is Calculated</h2>
+        <h2 class="mt-3xl">rTSS कैसे निकाला जाता है</h2>
 
         <div class="formula-box">
-            <h3>Formula</h3>
+            <h3>फॉर्मूला</h3>
             <div class="formula">
-                sTSS = (Duration in hours) × (Intensity Factor)² × 100
+                rTSS = (अवधि घंटों में) × (Intensity Factor)² × 100
             </div>
             <div class="formula-explanation">
-                <p>Where:</p>
+                <p>जहाँ:</p>
                 <ul>
-                    <li><strong>Intensity Factor (IF)</strong> = CRS Pace / Average Workout Pace</li>
-                    <li><strong>Duration</strong> = Total workout time in hours</li>
-                    <li><strong>CRS Pace</strong> = Your threshold pace from CRS test</li>
+                    <li><strong>Intensity Factor (IF)</strong> = CRS पेस / औसत वर्कआउट पेस</li>
+                    <li><strong>Duration</strong> = कुल समय (घंटों में)</li>
+                    <li><strong>CRS पेस</strong> = आपके CRS टेस्ट का थ्रेशोल्ड पेस</li>
                 </ul>
             </div>
         </div>
 
-        <h3 class="mt-xl">Worked Example</h3>
+        <h3 class="mt-xl">उदाहरण</h3>
         <div class="example-box">
-            <h4>Workout Details:</h4>
+            <h4>वर्कआउट विवरण:</h4>
             <ul>
-                <li>CRS Pace: <strong>1:49/100m</strong> (109 seconds)</li>
-                <li>Workout Duration: <strong>60 minutes</strong> (1 hour)</li>
-                <li>Average Pace: <strong>2:05/100m</strong> (125 seconds)</li>
+                <li>CRS पेस: <strong>1:49/100m</strong> (109 सेकंड)</li>
+                <li>वर्कआउट अवधि: <strong>60 मिनट</strong> (1 घंटा)</li>
+                <li>औसत पेस: <strong>2:05/100m</strong> (125 सेकंड)</li>
             </ul>
 
-            <h4>Step 1: Calculate Intensity Factor</h4>
+            <h4>चरण 1: IF निकालें</h4>
             <div class="calculation">
-                IF = CRS Pace / Workout Pace<br>
+                IF = CRS पेस / वर्कआउट पेस<br>
                 IF = 109 / 125<br>
                 IF = <strong>0.872</strong>
             </div>
 
-            <h4>Step 2: Calculate sTSS</h4>
+            <h4>चरण 2: rTSS निकालें</h4>
             <div class="calculation">
-                sTSS = 1.0 hours × (0.872)² × 100<br>
-                sTSS = 1.0 × 0.760 × 100<br>
-                sTSS = <strong>76</strong>
+                rTSS = 1.0 × (0.872)² × 100<br>
+                rTSS = 1.0 × 0.760 × 100<br>
+                rTSS = <strong>76</strong>
             </div>
 
-            <p class="mt-md"><strong>Interpretation:</strong> This 60-minute workout at easy pace (slower than CRS) generated 76 sTSS - a moderate training load suitable for aerobic base building.</p>
+            <p class="mt-md"><strong>व्याख्या:</strong> CRS से धीमे पेस पर 60 मिनट का यह वर्कआउट 76 rTSS बनाता है —
+                एरोबिक बेस के लिए मध्यम लोड।</p>
         </div>
 
-        <h2 class="mt-3xl">Understanding sTSS Values</h2>
+        <h2 class="mt-3xl">rTSS मान समझें</h2>
 
         <div class="zones-table-container">
             <table class="zones-table">
                 <thead>
                     <tr>
-                        <th>sTSS Range</th>
-                        <th>Training Load</th>
-                        <th>Recovery Time</th>
-                        <th>Example Workout</th>
+                        <th>rTSS रेंज</th>
+                        <th>ट्रेनिंग लोड</th>
+                        <th>रिकवरी समय</th>
+                        <th>उदाहरण वर्कआउट</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td>&lt; 50</td>
-                        <td>Low</td>
-                        <td>Same day</td>
-                        <td>Easy 30-min run, technique drills</td>
+                        <td>कम</td>
+                        <td>उसी दिन</td>
+                        <td>आसान 30-मिनट रन, तकनीक ड्रिल</td>
                     </tr>
                     <tr>
                         <td>50-100</td>
-                        <td>Moderate</td>
-                        <td>1 day</td>
-                        <td>60-min endurance, steady pace</td>
+                        <td>मध्यम</td>
+                        <td>1 दिन</td>
+                        <td>60-मिनट एंड्यूरेंस, स्थिर पेस</td>
                     </tr>
                     <tr>
                         <td>100-200</td>
-                        <td>High</td>
-                        <td>1-2 days</td>
-                        <td>90-min threshold sets, race pace intervals</td>
+                        <td>उच्च</td>
+                        <td>1-2 दिन</td>
+                        <td>90-मिनट थ्रेशोल्ड सेट, रेस-पेस इंटरवल</td>
                     </tr>
                     <tr>
                         <td>200-300</td>
-                        <td>Very High</td>
-                        <td>2-3 days</td>
-                        <td>2-hour hard training, multiple threshold blocks</td>
+                        <td>बहुत उच्च</td>
+                        <td>2-3 दिन</td>
+                        <td>2 घंटे कड़ा प्रशिक्षण, कई थ्रेशोल्ड ब्लॉक</td>
                     </tr>
                     <tr>
                         <td>&gt; 300</td>
-                        <td>Extreme</td>
-                        <td>3+ days</td>
-                        <td>Long race (&gt;2 hours), ultra-endurance</td>
+                        <td>एक्सट्रीम</td>
+                        <td>3+ दिन</td>
+                        <td>लंबी रेस (&gt;2 घंटे), अल्ट्रा</td>
                     </tr>
                 </tbody>
             </table>
         </div>
 
-        <h2 class="mt-3xl">Weekly sTSS Guidelines</h2>
+        <h2 class="mt-3xl">साप्ताहिक rTSS गाइड</h2>
 
-        <p class="mb-md">Target weekly sTSS depends on your training level and goals:</p>
+        <p class="mb-md">लक्ष्य साप्ताहिक rTSS आपके स्तर/लक्ष्य पर निर्भर है:</p>
 
         <div class="grid grid-2 mb-xl">
             <div class="card">
-                <h3 class="card-title">Recreational Runners</h3>
+                <h3 class="card-title">मनोरंजक धावक</h3>
                 <div class="card-content">
-                    <p class="mb-sm"><strong>Weekly sTSS:</strong> 150-300</p>
-                    <p>2-3 workouts per week, 50-100 sTSS each. Focus on technique and building aerobic base.</p>
+                    <p class="mb-sm"><strong>साप्ताहिक rTSS:</strong> 150-300</p>
+                    <p>2-3 वर्कआउट, प्रत्येक 50-100 rTSS. फोकस: तकनीक + एरोबिक बेस।</p>
                 </div>
             </div>
 
             <div class="card">
-                <h3 class="card-title">Fitness Runners / Triathletes</h3>
+                <h3 class="card-title">फिटनेस धावक / ट्रायएथलीट</h3>
                 <div class="card-content">
-                    <p class="mb-sm"><strong>Weekly sTSS:</strong> 300-500</p>
-                    <p>3-4 workouts per week, 75-125 sTSS each. Mix of aerobic endurance and threshold work.</p>
+                    <p class="mb-sm"><strong>साप्ताहिक rTSS:</strong> 300-500</p>
+                    <p>3-4 वर्कआउट, 75-125 rTSS. एरोबिक + थ्रेशोल्ड मिश्रण।</p>
                 </div>
             </div>
 
             <div class="card">
-                <h3 class="card-title">Competitive Masters Runners</h3>
+                <h3 class="card-title">प्रतिस्पर्धी मास्टर्स</h3>
                 <div class="card-content">
-                    <p class="mb-sm"><strong>Weekly sTSS:</strong> 500-800</p>
-                    <p>4-6 workouts per week, 80-150 sTSS each. Structured training with periodization.</p>
+                    <p class="mb-sm"><strong>साप्ताहिक rTSS:</strong> 500-800</p>
+                    <p>4-6 वर्कआउट, 80-150 rTSS. पीरियडाइज्ड स्ट्रक्चर।</p>
                 </div>
             </div>
 
             <div class="card">
-                <h3 class="card-title">Elite / Collegiate Runners</h3>
+                <h3 class="card-title">एलीट / कॉलेजिएट</h3>
                 <div class="card-content">
-                    <p class="mb-sm"><strong>Weekly sTSS:</strong> 800-1200+</p>
-                    <p>8-12 workouts per week, double days. High volume with recovery management critical.</p>
+                    <p class="mb-sm"><strong>साप्ताहिक rTSS:</strong> 800-1200+</p>
+                    <p>8-12 वर्कआउट, डबल सेशन. उच्च वॉल्यूम में रिकवरी मैनेजमेंट महत्वपूर्ण।</p>
                 </div>
             </div>
         </div>
 
         <div class="callout callout-warning">
-            <h3>⚠️ Important Notes</h3>
+            <h3>⚠️ महत्वपूर्ण नोट्स</h3>
             <ul>
-                <li><strong>Requires accurate CRS:</strong> Your CRS must be current (tested within 6-8 weeks) for accurate sTSS.</li>
-                <li><strong>Simplified calculation:</strong> This calculator uses average pace. Advanced sTSS uses Normalized Graded Pace (NGP) which accounts for interval structure.</li>
-                <li><strong>Not for technique work:</strong> sTSS only measures physical training stress, not skill development.</li>
-                <li><strong>Individual variation:</strong> Same sTSS feels different for different runners. Adjust guidelines based on your recovery.</li>
+                <li><strong>सटीक CRS चाहिए:</strong> 6-8 हफ्तों में दोबारा टेस्ट करें</li>
+                <li><strong>सरलीकृत गणना:</strong> यहाँ औसत पेस उपयोग होता है; उन्नत rTSS NGP (Normalized Graded Pace)
+                    लेता है</li>
+                <li><strong>तकनीक लोड नहीं मापता:</strong> rTSS केवल शारीरिक लोड है</li>
+                <li><strong>व्यक्तिगत अंतर:</strong> समान sTSS अलग धावकों को अलग महसूस हो सकता है</li>
             </ul>
         </div>
 
-        <h2 class="mt-3xl">Why sTSS Matters</h2>
+        <h2 class="mt-3xl">rTSS क्यों मायने रखता है</h2>
 
-        <p class="mb-md">Training Stress Score is the foundation for:</p>
+        <p class="mb-md">ट्रेनिंग स्ट्रेस स्कोर इनका आधार है:</p>
 
         <ul class="mb-xl">
-            <li><strong>CTL (Chronic Training Load):</strong> Your fitness level - 42-day exponentially weighted average of daily sTSS</li>
-            <li><strong>ATL (Acute Training Load):</strong> Your fatigue - 7-day exponentially weighted average of daily sTSS</li>
-            <li><strong>TSB (Training Stress Balance):</strong> Your form - TSB = CTL - ATL (positive = fresh, negative = fatigued)</li>
-            <li><strong>Periodization:</strong> Plan training phases (base, build, peak, taper) using target CTL progressions</li>
-            <li><strong>Recovery Management:</strong> Know when to push and when to rest based on TSB</li>
+            <li><strong>CTL:</strong> 42-दिवसीय एक्सपोनेंशियली वेटेड औसत rTSS (फिटनेस)</li>
+            <li><strong>ATL:</strong> 7-दिवसीय वेटेड औसत rTSS (थकान)</li>
+            <li><strong>TSB:</strong> CTL - ATL (ताज़गी)</li>
+            <li><strong>पीरियडाइजेशन:</strong> बेस/बिल्ड/पीक/टेपर को CTL लक्ष्यों से प्लान करें</li>
+            <li><strong>रिकवरी मैनेजमेंट:</strong> TSB देख कर कब धक्का दें/आराम करें</li>
         </ul>
 
         <div class="callout callout-tip">
-            <h3>Pro Tip: Track Your CTL</h3>
-            <p>Record daily sTSS in a spreadsheet or training log. Calculate your 42-day average (CTL) weekly. Target 5-10 CTL points increase per week during base building. Maintain or slightly reduce CTL during taper (1-2 weeks before race).</p>
+            <h3>प्रो टिप: अपना CTL ट्रैक करें</h3>
+            <p>दैनिक rTSS लॉग करें, साप्ताहिक 42-दिवसीय औसत निकालें. बेस में हफ्ते-दर-हफ्ते 5-10 CTL पॉइंट बढ़ाएं; टेपर
+                में स्थिर/हल्का कम करें।</p>
         </div>
 
-        <h2 class="mt-3xl">Frequently Asked Questions</h2>
+        <h2 class="mt-3xl">अक्सर पूछे जाने वाले प्रश्न</h2>
 
         <div class="faq-section" itemscope itemtype="https://schema.org/FAQPage">
             <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">What is Running TSS (sTSS)?</h3>
+                <h3 itemprop="name">रनिंग TSS (rTSS) क्या है?</h3>
                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                     <div itemprop="text">
-                        <p>Running Training Stress Score (sTSS) is a metric that quantifies the training load of a running workout by combining both intensity and duration. It's adapted from cycling's TSS methodology, using your Critical Run Speed (CRS) as the threshold pace. A workout of 1 hour at CRS pace equals 100 sTSS.</p>
+                        <p>rTSS तीव्रता + अवधि से रनिंग वर्कआउट का लोड मापता है। यह साइक्लिंग के TSS जैसा है, बस पावर की
+                            जगह CRS पेस थ्रेशोल्ड है। CRS पेस पर 1 घंटा = 100 rTSS।</p>
                     </div>
                 </div>
             </div>
 
             <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">How do I calculate my sTSS?</h3>
+                <h3 itemprop="name">मैं rTSS कैसे निकालूं?</h3>
                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                     <div itemprop="text">
-                        <p>Use the calculator above by entering your CRS pace (from a CRS test), total workout duration, and average pace during the workout. The formula is: sTSS = Duration (hours) × Intensity Factor² × 100, where Intensity Factor = CRS Pace / Average Workout Pace.</p>
+                        <p>ऊपर कैलकुलेटर में CRS पेस, कुल अवधि, औसत पेस भरें। फॉर्मूला: rTSS = समय (घंटे) × IF² × 100,
+                            जहाँ IF = CRS पेस / औसत पेस।</p>
                     </div>
                 </div>
             </div>
 
             <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">Do I need CRS to calculate sTSS?</h3>
+                <h3 itemprop="name">CRS के बिना rTSS संभव है?</h3>
                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                     <div itemprop="text">
-                        <p>Yes, your Critical Run Speed (CRS) is required to calculate the Intensity Factor, which is essential for sTSS calculation. CRS represents your threshold pace and should be tested every 6-8 weeks. You can find your CRS using our <a href="/hi/crs/">CRS calculator</a>.</p>
+                        <p>नहीं। CRS आपका थ्रेशोल्ड पेस है और IF के लिए जरूरी है। हर 6-8 हफ्ते CRS टेस्ट करें या <a
+                                href="/hi/crs/">CRS कैलकुलेटर</a> से निकालें।</p>
                     </div>
                 </div>
             </div>
 
             <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">What's a good sTSS score for one workout?</h3>
+                <h3 itemprop="name">एक वर्कआउट का “अच्छा” rTSS कितना?</h3>
                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                     <div itemprop="text">
-                        <p>It depends on workout intensity: Easy workouts typically score below 50 sTSS, moderate workouts 50-100 sTSS, hard workouts 100-200 sTSS, and very hard workouts above 200 sTSS. The appropriate score depends on your training goals and current fitness level.</p>
+                        <p>वर्कआउट पर निर्भर: आसान &lt;50, मध्यम 50-100, कठिन 100-200, बहुत कठिन 200+. आपके
+                            लक्ष्य/फिटनेस के हिसाब से चुनें।</p>
                     </div>
                 </div>
             </div>
 
             <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">How much sTSS should I do per week?</h3>
+                <h3 itemprop="name">हफ्ते में कितना rTSS होना चाहिए?</h3>
                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                     <div itemprop="text">
-                        <p>Weekly sTSS targets vary by level: Recreational runners: 150-300, Fitness runners/Triathletes: 300-500, Competitive Masters: 500-800, Elite/Collegiate: 800-1200+. Start conservatively and increase gradually to avoid overtraining.</p>
+                        <p>मनोरंजक: 150-300; फिटनेस/ट्राय: 300-500; मास्टर्स: 500-800; एलीट: 800-1200+. धीरे-धीरे
+                            बढ़ाएं, ओवरट्रेनिंग से बचें।</p>
                     </div>
                 </div>
             </div>
 
             <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">Is running TSS the same as cycling TSS?</h3>
+                <h3 itemprop="name">क्या रनिंग TSS साइक्लिंग TSS जैसा ही है?</h3>
                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                     <div itemprop="text">
-                        <p>The concept and formula are the same, but sTSS is adapted for running. Instead of using power (FTP) like cycling TSS, sTSS uses pace with CRS as the threshold. Both measure training load using Duration × Intensity Factor² × 100.</p>
+                        <p>संकल्पना/फॉर्मूला वही, बस साइक्लिंग में FTP पावर, रनिंग में CRS पेस उपयोग होता है। दोनों
+                            Duration × IF² × 100 से लोड मापते हैं।</p>
                     </div>
                 </div>
             </div>
 
             <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">Can I use sTSS for all run strides?</h3>
+                <h3 itemprop="name">क्या सभी स्ट्रोक्स में rTSS कर सकता हूं?</h3>
                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                     <div itemprop="text">
-                        <p>Yes, but your CRS should be stride-specific. Most runners use freestyle CRS since it's the most commonly trained stride. If you train primarily in another stride, perform a CRS test in that stride and use that pace for sTSS calculation.</p>
+                        <p>हाँ, बस CRS स्ट्रोक-विशिष्ट रखें। अधिकांश लोग फ्रीस्टाइल CRS लेते हैं। किसी और स्ट्रोक में
+                            ट्रेनिंग करते हैं तो उसी स्ट्रोक का CRS टेस्ट लें।</p>
                     </div>
                 </div>
             </div>
 
             <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">What's the difference between sTSS and CTL/ATL/TSB?</h3>
+                <h3 itemprop="name">rTSS और CTL/ATL/TSB में फर्क?</h3>
                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                     <div itemprop="text">
-                        <p>sTSS measures a single workout's training load. CTL (Chronic Training Load) is your long-term fitness, ATL (Acute Training Load) is your recent fatigue, and TSB (Training Stress Balance) is your freshness. These metrics use sTSS values over time to track your training state. Learn more in our <a href="/hi/training-load/">Training Load guide</a>.</p>
+                        <p>rTSS एक वर्कआउट का लोड है। CTL (दीर्घकालिक फिटनेस), ATL (हाल की थकान), TSB (ताज़गी = CTL -
+                            ATL) समय के साथ rTSS से बनते हैं। अधिक जानें <a href="/hi/training-load/">ट्रेनिंग
+                                लोड गाइड</a> में।</p>
                     </div>
                 </div>
             </div>
         </div>
 
-        <h2 class="mt-3xl">Related Resources</h2>
+        <h2 class="mt-3xl">संबंधित संसाधन</h2>
 
         <div class="grid grid-3">
             <div class="card">
-                <h3 class="card-title">CRS Test</h3>
+                <h3 class="card-title">CRS टेस्ट</h3>
                 <div class="card-content">
-                    <p>Need your CRS pace? Use our free CRS calculator with 5K and 3K test times.</p>
-                    <a href="/hi/crs/" class="btn btn-secondary btn-small mt-md">CRS Calculator →</a>
+                    <p>CRS चाहिए? 5K/3K समय से मुफ्त कैलकुलेटर का उपयोग करें।</p>
+                    <a href="/hi/crs/" class="btn btn-secondary btn-small mt-md">CRS कैलकुलेटर →</a>
                 </div>
             </div>
 
             <div class="card">
-                <h3 class="card-title">Training Load Guide</h3>
+                <h3 class="card-title">ट्रेनिंग लोड गाइड</h3>
                 <div class="card-content">
-                    <p>Learn about CTL, ATL, TSB and Performance Management Chart metrics.</p>
-                    <a href="/hi/training-load/" class="btn btn-secondary btn-small mt-md">Training Load →</a>
+                    <p>CTL, ATL, TSB और परफॉर्मेंस मैनेजमेंट चार्ट समझें।</p>
+                    <a href="/hi/training-load/" class="btn btn-secondary btn-small mt-md">ट्रेनिंग लोड →</a>
                 </div>
             </div>
 
             <div class="card">
-                <h3 class="card-title">Run Analytics App</h3>
+                <h3 class="card-title">Run Analytics ऐप</h3>
                 <div class="card-content">
-                    <p>Automatic sTSS calculation for all workouts. Track CTL/ATL/TSB trends over time.</p>
-                    <a href="/hi/" class="btn btn-secondary btn-small mt-md">Learn More →</a>
+                    <p>सभी वर्कआउट के लिए ऑटो rTSS. CTL/ATL/TSB ट्रेंड ट्रैक करें।</p>
+                    <a href="/hi/" class="btn btn-secondary btn-small mt-md">और जानें →</a>
                 </div>
             </div>
         </div>
 
         <div class="mt-xl text-center">
-            <p class="mb-md"><strong>Want automatic sTSS tracking?</strong></p>
-            <a href="https://apps.apple.com/es/app/runanalytics/id6754524015" class="btn btn-primary btn-large" target="_blank" rel="noopener">Download Run Analytics Free</a>
+            <p class="mb-md"><strong>ऑटो rTSS ट्रैकिंग चाहते हैं?</strong></p>
+            <a href="https://apps.apple.com/es/app/runanalytics/id6754524015" class="btn btn-primary btn-large" target="_blank" rel="noopener">Run
+                Analytics मुफ़्त डाउनलोड करें</a>
         </div>
     </div>
 </section>

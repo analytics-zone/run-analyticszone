@@ -20,7 +20,7 @@
     
     
     <meta property="article:published_time" content="2025-10-08T10:00:00Z">
-    <meta property="article:modified_time" content="2025-10-08T14:30:00Z">
+    <meta property="article:modified_time" content="2025-12-22T14:30:00Z">
     <meta property="article:author" content="Albert Arno">
     
 
@@ -413,7 +413,7 @@ img[width][height] {
         }
       },
       "datePublished": "2025-10-08",
-      "dateModified": "2025-10-08",
+      "dateModified": "2025-12-22",
       "mainEntityOfPage": {
         "@type": "WebPage",
         "@id": "https://run.analyticszone.app/sv/stss-calculator/"
@@ -749,7 +749,9 @@ img[width][height] {
     <div class="container container-narrow">
         <div class="callout callout-info mb-xl">
             <h2>Vad är Löpnings-TSS (sTSS)?</h2>
-            <p><strong>Running Training Stress Score (sTSS)</strong> kvantifierar träningsbelastningen för ett löppass genom att kombinera intensitet och varaktighet. Det är anpassat från cyklingens TSS-metodik och använder din Critical Run Speed (CRS) som tröskelfart. Ett träningspass på 1 timme i CRS-tempo = 100 sTSS.</p>
+            <p><strong>Running Training Stress Score (sTSS)</strong> kvantifierar träningsbelastningen för ett löppass
+                genom att kombinera intensitet och varaktighet. Det är anpassat från cyklingens TSS-metodik och använder
+                din Critical Run Speed (CRS) som tröskelfart. Ett träningspass på 1 timme i CRS-tempo = 100 sTSS.</p>
         </div>
 
         <h2 class="mt-3xl">Gratis sTSS-kalkylator</h2>
@@ -759,48 +761,28 @@ img[width][height] {
             <form id="stssCalculatorForm">
                 <div class="calculator-inputs">
                     <div class="form-group">
-                        <label for="cssPace" class="form-label">Ditt CRS-tempo (mm:ss per 100m)</label>
-                        <input
-                            type="text"
-                            id="cssPace"
-                            class="form-input"
-                            placeholder="1:49"
-                            pattern="[0-9]{1,2}:[0-5][0-9]"
-                            aria-required="true"
-                            aria-describedby="cssPace-help"
-                        />
-                        <small id="cssPace-help" class="form-help">Ditt tröskeltempo från CRS-test (t.ex. 1:49)</small>
+                        <label for="cssPace" class="form-label">Ditt CRS-tempo (mm:ss per km)</label>
+                        <input type="text" id="cssPace" class="form-input" placeholder="4:15"
+                            pattern="[0-9]{1,2}:[0-5][0-9]" aria-required="true" aria-describedby="cssPace-help" />
+                        <small id="cssPace-help" class="form-help">Ditt tröskeltempo från CRS-test (t.ex. 4:15)</small>
                         <div class="form-error" id="cssPace-error"></div>
                     </div>
 
                     <div class="form-group">
                         <label for="workoutDuration" class="form-label">Träningspassets varaktighet (minuter)</label>
-                        <input
-                            type="number"
-                            id="workoutDuration"
-                            class="form-input"
-                            placeholder="60"
-                            min="1"
-                            max="300"
-                            aria-required="true"
-                            aria-describedby="duration-help"
-                        />
-                        <small id="duration-help" class="form-help">Total träningstid inklusive vila (1-300 minuter)</small>
+                        <input type="number" id="workoutDuration" class="form-input" placeholder="60" min="1" max="300"
+                            aria-required="true" aria-describedby="duration-help" />
+                        <small id="duration-help" class="form-help">Total träningstid inklusive vila (1-300
+                            minuter)</small>
                         <div class="form-error" id="duration-error"></div>
                     </div>
 
                     <div class="form-group">
-                        <label for="avgPace" class="form-label">Genomsnittligt träningspass (mm:ss per 100m)</label>
-                        <input
-                            type="text"
-                            id="avgPace"
-                            class="form-input"
-                            placeholder="2:05"
-                            pattern="[0-9]{1,2}:[0-5][0-9]"
-                            aria-required="true"
-                            aria-describedby="pace-help"
-                        />
-                        <small id="pace-help" class="form-help">Ditt genomsnittliga tempo under träningspasset (t.ex. 2:05)</small>
+                        <label for="avgPace" class="form-label">Genomsnittligt träningspass (mm:ss per km)</label>
+                        <input type="text" id="avgPace" class="form-input" placeholder="5:00"
+                            pattern="[0-9]{1,2}:[0-5][0-9]" aria-required="true" aria-describedby="pace-help" />
+                        <small id="pace-help" class="form-help">Ditt genomsnittliga tempo under träningspasset (t.ex.
+                            5:00)</small>
                         <div class="form-error" id="pace-error"></div>
                     </div>
 
@@ -838,7 +820,7 @@ img[width][height] {
         <div class="formula-box">
             <h3>Formel</h3>
             <div class="formula">
-                sTSS = (Varaktighet i timmar) × (Intensitetsfaktor)² × 100
+                sTSS = (Varaktighet i timmar) × (Intensitetsfaktor)³ × 100
             </div>
             <div class="formula-explanation">
                 <p>Där:</p>
@@ -854,26 +836,27 @@ img[width][height] {
         <div class="example-box">
             <h4>Träningspassets detaljer:</h4>
             <ul>
-                <li>CRS-tempo: <strong>1:49/100m</strong> (109 sekunder)</li>
-                <li>Träningspassets varaktighet: <strong>60 minuter</strong> (1 timme)</li>
-                <li>Genomsnittligt tempo: <strong>2:05/100m</strong> (125 sekunder)</li>
+                <li>CRS-tempo: <strong>4:15/km</strong> (255 sekunder)</li>
+                <li>Träningspassets varaktighet: <strong>50 minuter</strong> (0.833 timmar)</li>
+                <li>Genomsnittligt tempo: <strong>5:00/km</strong> (300 sekunder)</li>
             </ul>
 
             <h4>Steg 1: Beräkna intensitetsfaktor</h4>
             <div class="calculation">
                 IF = CRS-tempo / Träningspass<br>
-                IF = 109 / 125<br>
-                IF = <strong>0.872</strong>
+                IF = 255 / 300<br>
+                IF = <strong>0.850</strong>
             </div>
 
             <h4>Steg 2: Beräkna sTSS</h4>
             <div class="calculation">
-                sTSS = 1.0 timmar × (0.872)² × 100<br>
-                sTSS = 1.0 × 0.760 × 100<br>
-                sTSS = <strong>76</strong>
+                sTSS = 0.833 timmar × (0.850)³ × 100<br>
+                sTSS = 0.833 × 0.614 × 100<br>
+                sTSS = <strong>51</strong>
             </div>
 
-            <p class="mt-md"><strong>Tolkning:</strong> Detta 60-minuters träningspass i lugnt tempo (långsammare än CRS) genererade 76 sTSS - en måttlig träningsbelastning lämplig för aerob grundträning.</p>
+            <p class="mt-md"><strong>Tolkning:</strong> Detta 50-minuters träningspass i aerob zon (långsammare än CRS)
+                genererade 51 sTSS - en lämplig träningsbelastning för att bygga uthållighet.</p>
         </div>
 
         <h2 class="mt-3xl">Förstå sTSS-värden</h2>
@@ -964,10 +947,14 @@ img[width][height] {
         <div class="callout callout-warning">
             <h3>⚠️ Viktiga noteringar</h3>
             <ul>
-                <li><strong>Kräver exakt CRS:</strong> Ditt CRS måste vara aktuellt (testat inom 6-8 veckor) för korrekt sTSS.</li>
-                <li><strong>Förenklad beräkning:</strong> Denna kalkylator använder genomsnittligt tempo. Avancerad sTSS använder Normalized Graded Pace (NGP) som tar hänsyn till intervallstruktur.</li>
-                <li><strong>Inte för teknikarbete:</strong> sTSS mäter endast fysisk träningsbelastning, inte färdighetsutveckling.</li>
-                <li><strong>Individuell variation:</strong> Samma sTSS känns olika för olika löpare. Justera riktlinjer baserat på din återhämtning.</li>
+                <li><strong>Kräver exakt CRS:</strong> Ditt CRS måste vara aktuellt (testat inom 6-8 veckor) för korrekt
+                    sTSS.</li>
+                <li><strong>Förenklad beräkning:</strong> Denna kalkylator använder genomsnittligt tempo. Avancerad sTSS
+                    använder Normalized Graded Pace (NGP) som tar hänsyn till intervallstruktur.</li>
+                <li><strong>Inte för teknikarbete:</strong> sTSS mäter endast fysisk träningsbelastning, inte
+                    färdighetsutveckling.</li>
+                <li><strong>Individuell variation:</strong> Samma sTSS känns olika för olika löpare. Justera riktlinjer
+                    baserat på din återhämtning.</li>
             </ul>
         </div>
 
@@ -976,16 +963,23 @@ img[width][height] {
         <p class="mb-md">Training Stress Score är grunden för:</p>
 
         <ul class="mb-xl">
-            <li><strong>CTL (Chronic Training Load):</strong> Din fitnessnivå - 42-dagars exponentiellt viktat genomsnitt av daglig sTSS</li>
-            <li><strong>ATL (Acute Training Load):</strong> Din trötthet - 7-dagars exponentiellt viktat genomsnitt av daglig sTSS</li>
-            <li><strong>TSB (Training Stress Balance):</strong> Din form - TSB = CTL - ATL (positivt = pigg, negativt = trött)</li>
-            <li><strong>Periodisering:</strong> Planera träningsfaser (bas, uppbyggnad, peak, nedtrappning) med hjälp av CTL-mål</li>
-            <li><strong>Återhämtningshantering:</strong> Vet när du ska trycka på och när du ska vila baserat på TSB</li>
+            <li><strong>CTL (Chronic Training Load):</strong> Din fitnessnivå - 42-dagars exponentiellt viktat
+                genomsnitt av daglig sTSS</li>
+            <li><strong>ATL (Acute Training Load):</strong> Din trötthet - 7-dagars exponentiellt viktat genomsnitt av
+                daglig sTSS</li>
+            <li><strong>TSB (Training Stress Balance):</strong> Din form - TSB = CTL - ATL (positivt = pigg, negativt =
+                trött)</li>
+            <li><strong>Periodisering:</strong> Planera träningsfaser (bas, uppbyggnad, peak, nedtrappning) med hjälp av
+                CTL-mål</li>
+            <li><strong>Återhämtningshantering:</strong> Vet när du ska trycka på och när du ska vila baserat på TSB
+            </li>
         </ul>
 
         <div class="callout callout-tip">
             <h3>Proffstips: Följ din CTL</h3>
-            <p>Registrera daglig sTSS i ett kalkylblad eller träningslogg. Beräkna ditt 42-dagars genomsnitt (CTL) varje vecka. Sikta på 5-10 CTL-poängs ökning per vecka under basträning. Bibehåll eller minska CTL något under nedtrappning (1-2 veckor före tävling).</p>
+            <p>Registrera daglig sTSS i ett kalkylblad eller träningslogg. Beräkna ditt 42-dagars genomsnitt (CTL) varje
+                vecka. Sikta på 5-10 CTL-poängs ökning per vecka under basträning. Bibehåll eller minska CTL något under
+                nedtrappning (1-2 veckor före tävling).</p>
         </div>
 
         <h2 class="mt-3xl">Vanliga frågor</h2>
@@ -995,7 +989,10 @@ img[width][height] {
                 <h3 itemprop="name">Vad är Löpnings-TSS (sTSS)?</h3>
                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                     <div itemprop="text">
-                        <p>Running Training Stress Score (sTSS) är ett mått som kvantifierar träningsbelastningen för ett löppass genom att kombinera både intensitet och varaktighet. Det är anpassat från cyklingens TSS-metodik och använder din Critical Run Speed (CRS) som tröskelfart. Ett träningspass på 1 timme i CRS-tempo motsvarar 100 sTSS.</p>
+                        <p>Running Training Stress Score (sTSS) är ett mått som kvantifierar träningsbelastningen för
+                            ett löppass genom att kombinera både intensitet och varaktighet. Det är anpassat från
+                            cyklingens TSS-metodik och använder din Critical Run Speed (CRS) som tröskelfart. Ett
+                            träningspass på 1 timme i CRS-tempo motsvarar 100 sTSS.</p>
                     </div>
                 </div>
             </div>
@@ -1004,7 +1001,10 @@ img[width][height] {
                 <h3 itemprop="name">Hur beräknar jag min sTSS?</h3>
                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                     <div itemprop="text">
-                        <p>Använd kalkylatorn ovan genom att ange ditt CRS-tempo (från ett CRS-test), total träningsvaraktighet och genomsnittligt tempo under träningspasset. Formeln är: sTSS = Varaktighet (timmar) × Intensitetsfaktor² × 100, där Intensitetsfaktor = CRS-tempo / Genomsnittligt träningspass.</p>
+                        <p>Använd kalkylatorn ovan genom att ange ditt CRS-tempo (från ett CRS-test), total
+                            träningsvaraktighet och genomsnittligt tempo under träningspasset. Formeln är: sTSS =
+                            Varaktighet (timmar) × Intensitetsfaktor³ × 100, där Intensitetsfaktor = CRS-tempo /
+                            Genomsnittligt träningspass.</p>
                     </div>
                 </div>
             </div>
@@ -1013,7 +1013,9 @@ img[width][height] {
                 <h3 itemprop="name">Behöver jag CRS för att beräkna sTSS?</h3>
                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                     <div itemprop="text">
-                        <p>Ja, din Critical Run Speed (CRS) krävs för att beräkna intensitetsfaktorn, som är nödvändig för sTSS-beräkning. CRS representerar ditt tröskeltempo och bör testas var 6-8:e vecka. Du kan hitta ditt CRS med vår <a href="/sv/crs/">CRS-kalkylator</a>.</p>
+                        <p>Ja, din Critical Run Speed (CRS) krävs för att beräkna intensitetsfaktorn, som är nödvändig
+                            för sTSS-beräkning. CRS representerar ditt tröskeltempo och bör testas var 6-8:e vecka. Du
+                            kan hitta ditt CRS med vår <a href="/sv/crs/">CRS-kalkylator</a>.</p>
                     </div>
                 </div>
             </div>
@@ -1022,7 +1024,10 @@ img[width][height] {
                 <h3 itemprop="name">Vad är ett bra sTSS-värde för ett träningspass?</h3>
                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                     <div itemprop="text">
-                        <p>Det beror på träningspassets intensitet: Lätta träningspass får vanligtvis under 50 sTSS, måttliga träningspass 50-100 sTSS, hårda träningspass 100-200 sTSS och mycket hårda träningspass över 200 sTSS. Lämpligt värde beror på dina träningsmål och nuvarande fitnessnivå.</p>
+                        <p>Det beror på träningspassets intensitet: Lätta träningspass får vanligtvis under 50 sTSS,
+                            måttliga träningspass 50-100 sTSS, hårda träningspass 100-200 sTSS och mycket hårda
+                            träningspass över 200 sTSS. Lämpligt värde beror på dina träningsmål och nuvarande
+                            fitnessnivå.</p>
                     </div>
                 </div>
             </div>
@@ -1031,7 +1036,9 @@ img[width][height] {
                 <h3 itemprop="name">Hur mycket sTSS ska jag göra per vecka?</h3>
                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                     <div itemprop="text">
-                        <p>Veckovisa sTSS-mål varierar efter nivå: Motionslöpare: 150-300, Fitnesslöpare/Triathleter: 300-500, Tävlande veteraner: 500-800, Elit/College: 800-1200+. Börja försiktigt och öka gradvis för att undvika överträning.</p>
+                        <p>Veckovisa sTSS-mål varierar efter nivå: Motionslöpare: 150-300, Fitnesslöpare/Triathleter:
+                            300-500, Tävlande veteraner: 500-800, Elit/College: 800-1200+. Börja försiktigt och öka
+                            gradvis för att undvika överträning.</p>
                     </div>
                 </div>
             </div>
@@ -1040,16 +1047,22 @@ img[width][height] {
                 <h3 itemprop="name">Är löpnings-TSS samma som cykel-TSS?</h3>
                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                     <div itemprop="text">
-                        <p>Konceptet och formeln är desamma, men sTSS är anpassat för löpning. Istället för att använda effekt (FTP) som cykel-TSS, använder sTSS tempo med CRS som tröskel. Båda mäter träningsbelastning med Varaktighet × Intensitetsfaktor² × 100.</p>
+                        <p>Konceptet är detsamma, men sTSS är anpassat för löpning. Medan cykel-TSS använder effekt
+                            (FTP), använder sTSS tempo med CRS som tröskel. Dessutom används intensitetsfaktorn i kubik
+                            (IF³) för löpning p.g.a. dess biomekaniska påverkan, till skillnad från cyklingens kvadrat
+                            (IF²).</p>
                     </div>
                 </div>
             </div>
 
             <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">Kan jag använda sTSS för alla löpstilar?</h3>
+                <h3 itemprop="name">Kan jag använda sTSS för löpning på olika underlag?</h3>
                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                     <div itemprop="text">
-                        <p>Ja, men ditt CRS bör vara specifikt för löpstil. De flesta löpare använder freestyle CRS eftersom det är den vanligast tränade stilen. Om du tränar främst i en annan stil, utför ett CRS-test i den stilen och använd det tempot för sTSS-beräkning.</p>
+                        <p>Ja, men ditt CRS bör vara specifikt för underlaget det testades på. De flesta löpare använder
+                            ett CRS för väg eller bana. Om du springer mycket i terräng eller kuperad miljö kan
+                            siffrorna variera. Run Analytics-appen använder Normalized Graded Pace (NGP) för att
+                            kompensera för dessa faktorer.</p>
                     </div>
                 </div>
             </div>
@@ -1058,7 +1071,11 @@ img[width][height] {
                 <h3 itemprop="name">Vad är skillnaden mellan sTSS och CTL/ATL/TSB?</h3>
                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                     <div itemprop="text">
-                        <p>sTSS mäter ett enskilt träningspass träningsbelastning. CTL (Chronic Training Load) är din långsiktiga fitness, ATL (Acute Training Load) är din senaste trötthet, och TSB (Training Stress Balance) är din pigghet. Dessa mått använder sTSS-värden över tid för att spåra ditt träningstillstånd. Läs mer i vår <a href="/sv/training-load/">Träningsbelastningsguide</a>.</p>
+                        <p>sTSS mäter ett enskilt träningspass träningsbelastning. CTL (Chronic Training Load) är din
+                            långsiktiga fitness, ATL (Acute Training Load) är din senaste trötthet, och TSB (Training
+                            Stress Balance) är din pigghet. Dessa mått använder sTSS-värden över tid för att spåra ditt
+                            träningstillstånd. Läs mer i vår <a
+                                href="/sv/training-load/">Träningsbelastningsguide</a>.</p>
                     </div>
                 </div>
             </div>
@@ -1070,7 +1087,7 @@ img[width][height] {
             <div class="card">
                 <h3 class="card-title">CRS-test</h3>
                 <div class="card-content">
-                    <p>Behöver du ditt CRS-tempo? Använd vår gratis CRS-kalkylator med 5K- och 3K-testtider.</p>
+                    <p>Behöver du ditt CRS-tempo? Använd vår gratis CRS-kalkylator med 3600m- och 1200m-testtider.</p>
                     <a href="/sv/crs/" class="btn btn-secondary btn-small mt-md">CRS-kalkylator →</a>
                 </div>
             </div>
@@ -1079,7 +1096,8 @@ img[width][height] {
                 <h3 class="card-title">Träningsbelastningsguide</h3>
                 <div class="card-content">
                     <p>Lär dig om CTL, ATL, TSB och Performance Management Chart-mått.</p>
-                    <a href="/sv/training-load/" class="btn btn-secondary btn-small mt-md">Träningsbelastning →</a>
+                    <a href="/sv/training-load/" class="btn btn-secondary btn-small mt-md">Träningsbelastning
+                        →</a>
                 </div>
             </div>
 
@@ -1094,7 +1112,8 @@ img[width][height] {
 
         <div class="mt-xl text-center">
             <p class="mb-md"><strong>Vill du ha automatisk sTSS-spårning?</strong></p>
-            <a href="https://apps.apple.com/es/app/runanalytics/id6754524015" class="btn btn-primary btn-large" target="_blank" rel="noopener">Ladda ner Run Analytics gratis</a>
+            <a href="https://apps.apple.com/es/app/runanalytics/id6754524015" class="btn btn-primary btn-large" target="_blank"
+                rel="noopener">Ladda ner Run Analytics gratis</a>
         </div>
     </div>
 </section>

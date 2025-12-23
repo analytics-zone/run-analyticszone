@@ -20,7 +20,7 @@
     
     
     <meta property="article:published_time" content="2025-10-08T10:00:00Z">
-    <meta property="article:modified_time" content="2025-10-08T14:30:00Z">
+    <meta property="article:modified_time" content="2025-12-22T14:30:00Z">
     <meta property="article:author" content="Albert Arno">
     
 
@@ -413,7 +413,7 @@ img[width][height] {
         }
       },
       "datePublished": "2025-10-08",
-      "dateModified": "2025-10-08",
+      "dateModified": "2025-12-22",
       "mainEntityOfPage": {
         "@type": "WebPage",
         "@id": "https://run.analyticszone.app/id/stss-calculator/"
@@ -740,83 +740,66 @@ img[width][height] {
     <main id="main-content" class="main-content">
         <section class="hero hero-small">
     <div class="container">
-        <h1>Kalkulator TSS Lari Gratis</h1>
-        <p class="lead">Hitung Skor Beban Latihan untuk latihan lari - Satu-satunya kalkulator sTSS gratis</p>
+        <h1>Kalkulator rTSS Lari Gratis</h1>
+        <p class="lead">Hitung Skor Beban Latihan untuk latihan lari - Satu-satunya kalkulator rTSS gratis</p>
     </div>
 </section>
 
 <section class="section">
     <div class="container container-narrow">
         <div class="callout callout-info mb-xl">
-            <h2>Apa itu TSS Lari (sTSS)?</h2>
-            <p><strong>Skor Beban Latihan Lari (sTSS)</strong> mengukur beban latihan dari sesi lari dengan menggabungkan intensitas dan durasi. Ini diadaptasi dari metodologi TSS sepeda, menggunakan Kecepatan Lari Kritis (CRS) Anda sebagai pace ambang batas. Latihan 1 jam pada pace CRS = 100 sTSS.</p>
+            <h2>Apa itu Running Stress Score (rTSS)?</h2>
+            <p><strong>Running Stress Score (rTSS)</strong> mengukur beban latihan dari sesi lari dengan menggabungkan
+                intensitas dan durasi. Ini diadaptasi dari metodologi TSS sepeda, menggunakan Kecepatan Lari Kritis
+                (CRS) Anda sebagai pace ambang batas. Latihan 1 jam pada pace CRS = 100 rTSS.</p>
         </div>
 
-        <h2 class="mt-3xl">Kalkulator sTSS Gratis</h2>
+        <h2 class="mt-3xl">Kalkulator rTSS Gratis</h2>
         <p class="lead mb-xl">Hitung beban latihan untuk latihan lari apa pun. Memerlukan pace CRS Anda.</p>
 
         <div class="css-calculator">
-            <form id="stssCalculatorForm">
+            <form id="rtssCalculatorForm">
                 <div class="calculator-inputs">
                     <div class="form-group">
                         <label for="cssPace" class="form-label">Pace CRS Anda (mm:dd per 100m)</label>
-                        <input
-                            type="text"
-                            id="cssPace"
-                            class="form-input"
-                            placeholder="1:49"
-                            pattern="[0-9]{1,2}:[0-5][0-9]"
-                            aria-required="true"
-                            aria-describedby="cssPace-help"
-                        />
-                        <small id="cssPace-help" class="form-help">Pace ambang batas Anda dari tes CRS (contoh: 1:49)</small>
+                        <input type="text" id="cssPace" class="form-input" placeholder="1:49"
+                            pattern="[0-9]{1,2}:[0-5][0-9]" aria-required="true" aria-describedby="cssPace-help" />
+                        <small id="cssPace-help" class="form-help">Pace ambang batas Anda dari tes CRS (contoh:
+                            1:49)</small>
                         <div class="form-error" id="cssPace-error"></div>
                     </div>
 
                     <div class="form-group">
                         <label for="workoutDuration" class="form-label">Durasi Latihan (menit)</label>
-                        <input
-                            type="number"
-                            id="workoutDuration"
-                            class="form-input"
-                            placeholder="60"
-                            min="1"
-                            max="300"
-                            aria-required="true"
-                            aria-describedby="duration-help"
-                        />
-                        <small id="duration-help" class="form-help">Total waktu latihan termasuk istirahat (1-300 menit)</small>
+                        <input type="number" id="workoutDuration" class="form-input" placeholder="60" min="1" max="300"
+                            aria-required="true" aria-describedby="duration-help" />
+                        <small id="duration-help" class="form-help">Total waktu latihan termasuk istirahat (1-300
+                            menit)</small>
                         <div class="form-error" id="duration-error"></div>
                     </div>
 
                     <div class="form-group">
                         <label for="avgPace" class="form-label">Pace Rata-rata Latihan (mm:dd per 100m)</label>
-                        <input
-                            type="text"
-                            id="avgPace"
-                            class="form-input"
-                            placeholder="2:05"
-                            pattern="[0-9]{1,2}:[0-5][0-9]"
-                            aria-required="true"
-                            aria-describedby="pace-help"
-                        />
-                        <small id="pace-help" class="form-help">Pace rata-rata Anda selama latihan (contoh: 2:05)</small>
+                        <input type="text" id="avgPace" class="form-input" placeholder="2:05"
+                            pattern="[0-9]{1,2}:[0-5][0-9]" aria-required="true" aria-describedby="pace-help" />
+                        <small id="pace-help" class="form-help">Pace rata-rata Anda selama latihan (contoh:
+                            2:05)</small>
                         <div class="form-error" id="pace-error"></div>
                     </div>
 
                     <div class="calculator-buttons">
-                        <button type="submit" class="btn btn-primary" id="calculateStssBtn">Hitung sTSS</button>
-                        <button type="reset" class="btn btn-ghost" id="resetStssBtn">Hapus</button>
+                        <button type="submit" class="btn btn-primary" id="calculateRtssBtn">Hitung rTSS</button>
+                        <button type="reset" class="btn btn-ghost" id="resetRtssBtn">Hapus</button>
                     </div>
                 </div>
             </form>
 
-            <div class="calculator-results hidden" id="stssResults" aria-live="polite">
+            <div class="calculator-results hidden" id="rtssResults" aria-live="polite">
                 <h3>Skor Beban Latihan Anda</h3>
                 <div class="results-summary">
                     <div class="result-item">
-                        <div class="result-label">sTSS</div>
-                        <div class="css-result-value" id="stssValue">--</div>
+                        <div class="result-label">rTSS</div>
+                        <div class="css-result-value" id="rtssValue">--</div>
                     </div>
                     <div class="result-item">
                         <div class="result-label">Faktor Intensitas (IF)</div>
@@ -826,19 +809,19 @@ img[width][height] {
 
                 <div class="zones-result">
                     <h4>Interpretasi Beban Latihan</h4>
-                    <p class="mb-md text-secondary" id="stssInterpretation">
+                    <p class="mb-md text-secondary" id="rtssInterpretation">
                         <!-- Diisi oleh JavaScript -->
                     </p>
                 </div>
             </div>
         </div>
 
-        <h2 class="mt-3xl">Cara Menghitung sTSS</h2>
+        <h2 class="mt-3xl">Cara Menghitung rTSS</h2>
 
         <div class="formula-box">
             <h3>Rumus</h3>
             <div class="formula">
-                sTSS = (Durasi dalam jam) × (Faktor Intensitas)² × 100
+                rTSS = (Durasi dalam jam) × (Faktor Intensitas)² × 100
             </div>
             <div class="formula-explanation">
                 <p>Di mana:</p>
@@ -866,23 +849,24 @@ img[width][height] {
                 IF = <strong>0,872</strong>
             </div>
 
-            <h4>Langkah 2: Hitung sTSS</h4>
+            <h4>Langkah 2: Hitung rTSS</h4>
             <div class="calculation">
-                sTSS = 1,0 jam × (0,872)² × 100<br>
-                sTSS = 1,0 × 0,760 × 100<br>
-                sTSS = <strong>76</strong>
+                rTSS = 1,0 jam × (0,872)² × 100<br>
+                rTSS = 1,0 × 0,760 × 100<br>
+                rTSS = <strong>76</strong>
             </div>
 
-            <p class="mt-md"><strong>Interpretasi:</strong> Latihan 60 menit ini dengan pace santai (lebih lambat dari CRS) menghasilkan 76 sTSS - beban latihan sedang yang cocok untuk membangun dasar aerobik.</p>
+            <p class="mt-md"><strong>Interpretasi:</strong> Latihan 60 menit ini dengan pace santai (lebih lambat dari
+                CRS) menghasilkan 76 rTSS - beban latihan sedang yang cocok untuk membangun dasar aerobik.</p>
         </div>
 
-        <h2 class="mt-3xl">Memahami Nilai sTSS</h2>
+        <h2 class="mt-3xl">Memahami Nilai rTSS</h2>
 
         <div class="zones-table-container">
             <table class="zones-table">
                 <thead>
                     <tr>
-                        <th>Rentang sTSS</th>
+                        <th>Rentang rTSS</th>
                         <th>Beban Latihan</th>
                         <th>Waktu Pemulihan</th>
                         <th>Contoh Latihan</th>
@@ -923,40 +907,42 @@ img[width][height] {
             </table>
         </div>
 
-        <h2 class="mt-3xl">Panduan sTSS Mingguan</h2>
+        <h2 class="mt-3xl">Panduan rTSS Mingguan</h2>
 
-        <p class="mb-md">Target sTSS mingguan tergantung pada level latihan dan tujuan Anda:</p>
+        <p class="mb-md">Target rTSS mingguan tergantung pada level latihan dan tujuan Anda:</p>
 
         <div class="grid grid-2 mb-xl">
             <div class="card">
                 <h3 class="card-title">Pelari Rekreasi</h3>
                 <div class="card-content">
-                    <p class="mb-sm"><strong>sTSS Mingguan:</strong> 150-300</p>
-                    <p>2-3 latihan per minggu, 50-100 sTSS per sesi. Fokus pada teknik dan membangun dasar aerobik.</p>
+                    <p class="mb-sm"><strong>rTSS Mingguan:</strong> 150-300</p>
+                    <p>2-3 latihan per minggu, 50-100 rTSS per sesi. Fokus pada teknik dan membangun dasar aerobik.</p>
                 </div>
             </div>
 
             <div class="card">
                 <h3 class="card-title">Pelari Kebugaran / Triatlet</h3>
                 <div class="card-content">
-                    <p class="mb-sm"><strong>sTSS Mingguan:</strong> 300-500</p>
-                    <p>3-4 latihan per minggu, 75-125 sTSS per sesi. Kombinasi daya tahan aerobik dan latihan threshold.</p>
+                    <p class="mb-sm"><strong>rTSS Mingguan:</strong> 300-500</p>
+                    <p>3-4 latihan per minggu, 75-125 rTSS per sesi. Kombinasi daya tahan aerobik dan latihan threshold.
+                    </p>
                 </div>
             </div>
 
             <div class="card">
                 <h3 class="card-title">Pelari Kompetitif Master</h3>
                 <div class="card-content">
-                    <p class="mb-sm"><strong>sTSS Mingguan:</strong> 500-800</p>
-                    <p>4-6 latihan per minggu, 80-150 sTSS per sesi. Latihan terstruktur dengan periodisasi.</p>
+                    <p class="mb-sm"><strong>rTSS Mingguan:</strong> 500-800</p>
+                    <p>4-6 latihan per minggu, 80-150 rTSS per sesi. Latihan terstruktur dengan periodisasi.</p>
                 </div>
             </div>
 
             <div class="card">
                 <h3 class="card-title">Pelari Elite / Universitas</h3>
                 <div class="card-content">
-                    <p class="mb-sm"><strong>sTSS Mingguan:</strong> 800-1200+</p>
-                    <p>8-12 latihan per minggu, latihan ganda harian. Volume tinggi dengan manajemen pemulihan sangat penting.</p>
+                    <p class="mb-sm"><strong>rTSS Mingguan:</strong> 800-1200+</p>
+                    <p>8-12 latihan per minggu, latihan ganda harian. Volume tinggi dengan manajemen pemulihan sangat
+                        penting.</p>
                 </div>
             </div>
         </div>
@@ -964,101 +950,133 @@ img[width][height] {
         <div class="callout callout-warning">
             <h3>⚠️ Catatan Penting</h3>
             <ul>
-                <li><strong>Memerlukan CRS yang akurat:</strong> CRS Anda harus terkini (diuji dalam 6-8 minggu terakhir) untuk sTSS yang akurat.</li>
-                <li><strong>Perhitungan yang disederhanakan:</strong> Kalkulator ini menggunakan pace rata-rata. sTSS lanjutan menggunakan Normalized Graded Pace (NGP) yang memperhitungkan struktur interval.</li>
-                <li><strong>Bukan untuk latihan teknik:</strong> sTSS hanya mengukur beban latihan fisik, bukan pengembangan keterampilan.</li>
-                <li><strong>Variasi individual:</strong> sTSS yang sama terasa berbeda untuk pelari yang berbeda. Sesuaikan panduan berdasarkan pemulihan Anda.</li>
+                <li><strong>Memerlukan CRS yang akurat:</strong> CRS Anda harus terkini (diuji dalam 6-8 minggu
+                    terakhir) untuk rTSS yang akurat.</li>
+                <li><strong>Perhitungan yang disederhanakan:</strong> Kalkulator ini menggunakan pace rata-rata. rTSS
+                    lanjutan menggunakan Normalized Graded Pace (NGP) yang memperhitungkan struktur interval.</li>
+                <li><strong>Bukan untuk latihan teknik:</strong> rTSS hanya mengukur beban latihan fisik, bukan
+                    pengembangan keterampilan.</li>
+                <li><strong>Variasi individual:</strong> rTSS yang sama terasa berbeda untuk pelari yang berbeda.
+                    Sesuaikan panduan berdasarkan pemulihan Anda.</li>
             </ul>
         </div>
 
-        <h2 class="mt-3xl">Mengapa sTSS Penting</h2>
+        <h2 class="mt-3xl">Mengapa rTSS Penting</h2>
 
         <p class="mb-md">Skor Beban Latihan adalah fondasi untuk:</p>
 
         <ul class="mb-xl">
-            <li><strong>CTL (Chronic Training Load):</strong> Level kebugaran Anda - rata-rata tertimbang eksponensial 42 hari dari sTSS harian</li>
-            <li><strong>ATL (Acute Training Load):</strong> Kelelahan Anda - rata-rata tertimbang eksponensial 7 hari dari sTSS harian</li>
-            <li><strong>TSB (Training Stress Balance):</strong> Kondisi Anda - TSB = CTL - ATL (positif = segar, negatif = lelah)</li>
-            <li><strong>Periodisasi:</strong> Rencanakan fase latihan (dasar, pembangunan, puncak, taper) menggunakan target progresi CTL</li>
-            <li><strong>Manajemen Pemulihan:</strong> Ketahui kapan harus mendorong dan kapan harus istirahat berdasarkan TSB</li>
+            <li><strong>CTL (Chronic Training Load):</strong> Level kebugaran Anda - rata-rata tertimbang eksponensial
+                42 hari dari rTSS harian</li>
+            <li><strong>ATL (Acute Training Load):</strong> Kelelahan Anda - rata-rata tertimbang eksponensial 7 hari
+                dari rTSS harian</li>
+            <li><strong>TSB (Training Stress Balance):</strong> Kondisi Anda - TSB = CTL - ATL (positif = segar, negatif
+                = lelah)</li>
+            <li><strong>Periodisasi:</strong> Rencanakan fase latihan (dasar, pembangunan, puncak, taper) menggunakan
+                target progresi CTL</li>
+            <li><strong>Manajemen Pemulihan:</strong> Ketahui kapan harus mendorong dan kapan harus beristirahat
+                berdasarkan TSB</li>
         </ul>
 
         <div class="callout callout-tip">
             <h3>Tips Pro: Lacak CTL Anda</h3>
-            <p>Catat sTSS harian dalam spreadsheet atau log latihan. Hitung rata-rata 42 hari Anda (CTL) setiap minggu. Targetkan peningkatan 5-10 poin CTL per minggu selama pembangunan dasar. Pertahankan atau sedikit kurangi CTL selama taper (1-2 minggu sebelum lomba).</p>
+            <p>Catat rTSS harian dalam spreadsheet atau log latihan. Hitung rata-rata 42 hari Anda (CTL) setiap minggu.
+                Targetkan peningkatan 5-10 poin CTL per minggu selama pembangunan dasar. Pertahankan atau sedikit
+                kurangi CTL selama taper (1-2 minggu sebelum lomba).</p>
         </div>
 
         <h2 class="mt-3xl">Pertanyaan yang Sering Diajukan</h2>
 
         <div class="faq-section" itemscope itemtype="https://schema.org/FAQPage">
             <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">Apa itu TSS Lari (sTSS)?</h3>
+                <h3 itemprop="name">Apa itu Running Stress Score (rTSS)?</h3>
                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                     <div itemprop="text">
-                        <p>Skor Beban Latihan Lari (sTSS) adalah metrik yang mengukur beban latihan dari sesi lari dengan menggabungkan intensitas dan durasi. Ini diadaptasi dari metodologi TSS sepeda, menggunakan Kecepatan Lari Kritis (CRS) Anda sebagai pace ambang batas. Latihan 1 jam pada pace CRS sama dengan 100 sTSS.</p>
+                        <p>Running Stress Score (rTSS) adalah metrik yang mengukur beban latihan dari sesi lari dengan
+                            menggabungkan intensitas dan durasi. Ini diadaptasi dari metodologi TSS sepeda, menggunakan
+                            Kecepatan Lari Kritis (CRS) Anda sebagai pace ambang batas. Latihan 1 jam pada pace CRS sama
+                            dengan 100 rTSS.</p>
                     </div>
                 </div>
             </div>
 
             <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">Bagaimana cara menghitung sTSS saya?</h3>
+                <h3 itemprop="name">Bagaimana cara menghitung rTSS saya?</h3>
                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                     <div itemprop="text">
-                        <p>Gunakan kalkulator di atas dengan memasukkan pace CRS Anda (dari tes CRS), total durasi latihan, dan pace rata-rata selama latihan. Rumusnya adalah: sTSS = Durasi (jam) × Faktor Intensitas² × 100, di mana Faktor Intensitas = Pace CRS / Pace Rata-rata Latihan.</p>
+                        <p>Gunakan kalkulator di atas dengan memasukkan pace CRS Anda (dari tes CRS), total durasi
+                            latihan, dan pace rata-rata selama latihan. Rumusnya adalah: rTSS = Durasi (jam) × Faktor
+                            Intensitas² × 100, di mana Faktor Intensitas = Pace CRS / Pace Rata-rata Latihan.</p>
                     </div>
                 </div>
             </div>
 
             <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">Apakah saya perlu CRS untuk menghitung sTSS?</h3>
+                <h3 itemprop="name">Apakah saya perlu CRS untuk menghitung rTSS?</h3>
                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                     <div itemprop="text">
-                        <p>Ya, Kecepatan Lari Kritis (CRS) Anda diperlukan untuk menghitung Faktor Intensitas, yang penting untuk perhitungan sTSS. CRS mewakili pace ambang batas Anda dan harus diuji setiap 6-8 minggu. Anda dapat menemukan CRS Anda menggunakan <a href="/id/crs/">kalkulator CRS</a> kami.</p>
+                        <p>Ya, Kecepatan Lari Kritis (CRS) Anda diperlukan untuk menghitung Faktor Intensitas, yang
+                            penting untuk perhitungan rTSS. CRS mewakili pace ambang batas Anda dan harus diuji setiap
+                            6-8 minggu. Anda dapat menemukan CRS Anda menggunakan <a href="/id/crs/">kalkulator
+                                CRS</a> kami.</p>
                     </div>
                 </div>
             </div>
 
             <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">Berapa skor sTSS yang baik untuk satu latihan?</h3>
+                <h3 itemprop="name">Berapa skor rTSS yang baik untuk satu latihan?</h3>
                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                     <div itemprop="text">
-                        <p>Tergantung pada intensitas latihan: Latihan santai biasanya mendapat skor di bawah 50 sTSS, latihan sedang 50-100 sTSS, latihan berat 100-200 sTSS, dan latihan sangat berat di atas 200 sTSS. Skor yang tepat tergantung pada tujuan latihan dan level kebugaran Anda saat ini.</p>
+                        <p>Tergantung pada intensitas latihan: Latihan santai biasanya mendapat skor di bawah 50 rTSS,
+                            latihan sedang 50-100 rTSS, latihan berat 100-200 rTSS, dan latihan sangat berat di atas 200
+                            rTSS. Skor yang tepat tergantung pada tujuan latihan dan level kebugaran Anda saat ini.</p>
                     </div>
                 </div>
             </div>
 
             <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">Berapa banyak sTSS yang harus saya lakukan per minggu?</h3>
+                <h3 itemprop="name">Berapa banyak rTSS yang harus saya lakukan per minggu?</h3>
                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                     <div itemprop="text">
-                        <p>Target sTSS mingguan bervariasi berdasarkan level: Pelari rekreasi: 150-300, Pelari kebugaran/Triatlet: 300-500, Master kompetitif: 500-800, Elite/Universitas: 800-1200+. Mulai secara konservatif dan tingkatkan secara bertahap untuk menghindari overtraining.</p>
+                        <p>Target rTSS mingguan bervariasi berdasarkan level: Pelari rekreasi: 150-300, Pelari
+                            kebugaran/Triatlet: 300-500, Master kompetitif: 500-800, Elite/Universitas: 800-1200+. Mulai
+                            secara konservatif dan tingkatkan secara bertahap untuk menghindari overtraining.</p>
                     </div>
                 </div>
             </div>
 
             <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">Apakah TSS lari sama dengan TSS sepeda?</h3>
+                <h3 itemprop="name">Apakah rTSS lari sama dengan TSS sepeda?</h3>
                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                     <div itemprop="text">
-                        <p>Konsep dan rumusnya sama, tetapi sTSS diadaptasi untuk lari. Alih-alih menggunakan daya (FTP) seperti TSS sepeda, sTSS menggunakan pace dengan CRS sebagai ambang batas. Keduanya mengukur beban latihan menggunakan Durasi × Faktor Intensitas² × 100.</p>
+                        <p>Konsep dan rumusnya sama, tetapi rTSS diadaptasi untuk lari. Alih-alih menggunakan daya (FTP)
+                            seperti TSS sepeda, rTSS menggunakan pace dengan CRS sebagai ambang batas. Keduanya mengukur
+                            beban latihan menggunakan Durasi × Faktor Intensitas² × 100.</p>
                     </div>
                 </div>
             </div>
 
             <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">Bisakah saya menggunakan sTSS untuk semua gaya lari?</h3>
+                <h3 itemprop="name">Bisakah saya menggunakan rTSS untuk semua gaya lari?</h3>
                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                     <div itemprop="text">
-                        <p>Ya, tetapi CRS Anda harus spesifik untuk gaya tertentu. Sebagian besar pelari menggunakan CRS freestyle karena itu adalah gaya yang paling umum dilatih. Jika Anda melatih terutama dengan gaya lain, lakukan tes CRS dengan gaya tersebut dan gunakan pace itu untuk perhitungan sTSS.</p>
+                        <p>Ya, tetapi CRS Anda harus spesifik untuk gaya tertentu. Sebagian besar pelari menggunakan CRS
+                            freestyle karena itu adalah gaya yang paling umum dilatih. Jika Anda melatih terutama dengan
+                            gaya lain, lakukan tes CRS dengan gaya tersebut dan gunakan pace itu untuk perhitungan rTSS.
+                        </p>
                     </div>
                 </div>
             </div>
 
             <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">Apa perbedaan antara sTSS dan CTL/ATL/TSB?</h3>
+                <h3 itemprop="name">Apa perbedaan antara rTSS dan CTL/ATL/TSB?</h3>
                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                     <div itemprop="text">
-                        <p>sTSS mengukur beban latihan dari satu sesi. CTL (Chronic Training Load) adalah kebugaran jangka panjang Anda, ATL (Acute Training Load) adalah kelelahan terkini Anda, dan TSB (Training Stress Balance) adalah kesegaran Anda. Metrik ini menggunakan nilai sTSS dari waktu ke waktu untuk melacak kondisi latihan Anda. Pelajari lebih lanjut di <a href="/id/training-load/">panduan Beban Latihan</a> kami.</p>
+                        <p>rTSS mengukur beban latihan dari satu sesi. CTL (Chronic Training Load) adalah kebugaran
+                            jangka panjang Anda, ATL (Acute Training Load) adalah kelelahan terkini Anda, dan TSB
+                            (Training Stress Balance) adalah kesegaran Anda. Metrik ini menggunakan nilai rTSS dari
+                            waktu ke waktu untuk melacak kondisi latihan Anda. Pelajari lebih lanjut di <a
+                                href="/id/training-load/">panduan Beban Latihan</a> kami.</p>
                     </div>
                 </div>
             </div>
@@ -1086,15 +1104,16 @@ img[width][height] {
             <div class="card">
                 <h3 class="card-title">Aplikasi Run Analytics</h3>
                 <div class="card-content">
-                    <p>Perhitungan sTSS otomatis untuk semua latihan. Lacak tren CTL/ATL/TSB dari waktu ke waktu.</p>
+                    <p>Perhitungan rTSS otomatis untuk semua latihan. Lacak tren CTL/ATL/TSB dari waktu ke waktu.</p>
                     <a href="/id/" class="btn btn-secondary btn-small mt-md">Pelajari Lebih Lanjut →</a>
                 </div>
             </div>
         </div>
 
         <div class="mt-xl text-center">
-            <p class="mb-md"><strong>Ingin pelacakan sTSS otomatis?</strong></p>
-            <a href="https://apps.apple.com/es/app/runanalytics/id6754524015" class="btn btn-primary btn-large" target="_blank" rel="noopener">Unduh Run Analytics Gratis</a>
+            <p class="mb-md"><strong>Ingin pelacakan rTSS otomatis?</strong></p>
+            <a href="https://apps.apple.com/es/app/runanalytics/id6754524015" class="btn btn-primary btn-large" target="_blank"
+                rel="noopener">Unduh Run Analytics Gratis</a>
         </div>
     </div>
 </section>

@@ -20,7 +20,7 @@
     
     
     <meta property="article:published_time" content="2025-10-12T10:00:00Z">
-    <meta property="article:modified_time" content="2025-11-16T14:30:00Z">
+    <meta property="article:modified_time" content="2025-12-21T14:30:00Z">
     <meta property="article:author" content="Albert Arno">
     
 
@@ -413,7 +413,7 @@ img[width][height] {
         }
       },
       "datePublished": "2025-10-12",
-      "dateModified": "2025-11-16",
+      "dateModified": "2025-12-21",
       "mainEntityOfPage": {
         "@type": "WebPage",
         "@id": "https://run.analyticszone.app/ur/stss-calculator/"
@@ -749,7 +749,9 @@ img[width][height] {
     <div class="container container-narrow">
         <div class="callout callout-info mb-xl">
             <h2>رننگ TSS (sTSS) کیا ہے؟</h2>
-            <p><strong>رننگ ٹریننگ سٹریس سکور (sTSS)</strong> شدت اور دورانیہ کو یکجا کرتے ہوئے رننگ ورک آؤٹ کے ٹریننگ بوجھ کی مقدار بیان کرتا ہے۔ یہ سائیکلنگ کی TSS طریقہ کار سے اخذ کیا گیا ہے، جو آپ کی کریٹیکل رن سپیڈ (CRS) کو تھریشولڈ رفتار کے طور پر استعمال کرتا ہے۔ CRS رفتار پر 1 گھنٹے کی ورک آؤٹ = 100 sTSS۔</p>
+            <p><strong>رننگ ٹریننگ سٹریس سکور (sTSS)</strong> شدت اور دورانیہ کو یکجا کرتے ہوئے رننگ ورک آؤٹ کے ٹریننگ
+                بوجھ کی مقدار بیان کرتا ہے۔ یہ سائیکلنگ کی TSS طریقہ کار سے اخذ کیا گیا ہے، جو آپ کی کریٹیکل رن سپیڈ
+                (CRS) کو تھریشولڈ رفتار کے طور پر استعمال کرتا ہے۔ CRS رفتار پر 1 گھنٹے کی ورک آؤٹ = 100 sTSS۔</p>
         </div>
 
         <h2 class="mt-3xl">مفت sTSS کیلکولیٹر</h2>
@@ -759,48 +761,28 @@ img[width][height] {
             <form id="stssCalculatorForm">
                 <div class="calculator-inputs">
                     <div class="form-group">
-                        <label for="cssPace" class="form-label">آپ کی CRS رفتار (mm:ss فی 100m)</label>
-                        <input
-                            type="text"
-                            id="cssPace"
-                            class="form-input"
-                            placeholder="1:49"
-                            pattern="[0-9]{1,2}:[0-5][0-9]"
-                            aria-required="true"
-                            aria-describedby="cssPace-help"
-                        />
-                        <small id="cssPace-help" class="form-help">CRS ٹیسٹ سے آپ کی تھریشولڈ رفتار (مثال کے طور پر، 1:49)</small>
+                        <label for="cssPace" class="form-label">آپ کی CRS رفتار (mm:ss فی km)</label>
+                        <input type="text" id="cssPace" class="form-input" placeholder="4:15"
+                            pattern="[0-9]{1,2}:[0-5][0-9]" aria-required="true" aria-describedby="cssPace-help" />
+                        <small id="cssPace-help" class="form-help">CRS ٹیسٹ سے آپ کی تھریشولڈ رفتار (مثال کے طور پر،
+                            4:15)</small>
                         <div class="form-error" id="cssPace-error"></div>
                     </div>
 
                     <div class="form-group">
                         <label for="workoutDuration" class="form-label">ورک آؤٹ کی مدت (منٹ)</label>
-                        <input
-                            type="number"
-                            id="workoutDuration"
-                            class="form-input"
-                            placeholder="60"
-                            min="1"
-                            max="300"
-                            aria-required="true"
-                            aria-describedby="duration-help"
-                        />
+                        <input type="number" id="workoutDuration" class="form-input" placeholder="60" min="1" max="300"
+                            aria-required="true" aria-describedby="duration-help" />
                         <small id="duration-help" class="form-help">آرام سمیت کل ورک آؤٹ کا وقت (1-300 منٹ)</small>
                         <div class="form-error" id="duration-error"></div>
                     </div>
 
                     <div class="form-group">
-                        <label for="avgPace" class="form-label">اوسط ورک آؤٹ رفتار (mm:ss فی 100m)</label>
-                        <input
-                            type="text"
-                            id="avgPace"
-                            class="form-input"
-                            placeholder="2:05"
-                            pattern="[0-9]{1,2}:[0-5][0-9]"
-                            aria-required="true"
-                            aria-describedby="pace-help"
-                        />
-                        <small id="pace-help" class="form-help">ورک آؤٹ کے دوران آپ کی اوسط رفتار (مثال کے طور پر، 2:05)</small>
+                        <label for="avgPace" class="form-label">اوسط ورک آؤٹ رفتار (mm:ss فی km)</label>
+                        <input type="text" id="avgPace" class="form-input" placeholder="4:45"
+                            pattern="[0-9]{1,2}:[0-5][0-9]" aria-required="true" aria-describedby="pace-help" />
+                        <small id="pace-help" class="form-help">ورک آؤٹ کے دوران آپ کی اوسط رفتار (مثال کے طور پر،
+                            4:45)</small>
                         <div class="form-error" id="pace-error"></div>
                     </div>
 
@@ -854,26 +836,27 @@ img[width][height] {
         <div class="example-box">
             <h4>ورک آؤٹ کی تفصیلات:</h4>
             <ul>
-                <li>CRS رفتار: <strong>1:49/100m</strong> (109 سیکنڈ)</li>
+                <li>CRS رفتار: <strong>4:15/km</strong> (255 سیکنڈ)</li>
                 <li>ورک آؤٹ کی مدت: <strong>60 منٹ</strong> (1 گھنٹہ)</li>
-                <li>اوسط رفتار: <strong>2:05/100m</strong> (125 سیکنڈ)</li>
+                <li>اوسط رفتار: <strong>4:45/km</strong> (285 سیکنڈ)</li>
             </ul>
 
             <h4>مرحلہ 1: شدت کے عنصر کا حساب لگائیں</h4>
             <div class="calculation">
                 IF = CRS رفتار / ورک آؤٹ رفتار<br>
-                IF = 109 / 125<br>
-                IF = <strong>0.872</strong>
+                IF = 255 / 285<br>
+                IF = <strong>0.895</strong>
             </div>
 
             <h4>مرحلہ 2: sTSS کا حساب لگائیں</h4>
             <div class="calculation">
-                sTSS = 1.0 گھنٹے × (0.872)² × 100<br>
-                sTSS = 1.0 × 0.760 × 100<br>
-                sTSS = <strong>76</strong>
+                sTSS = 1.0 گھنٹے × (0.895)² × 100<br>
+                sTSS = 1.0 × 0.801 × 100<br>
+                sTSS = <strong>80</strong>
             </div>
 
-            <p class="mt-md"><strong>تشریح:</strong> آسان رفتار (CRS سے سست) پر یہ 60 منٹ کی ورک آؤٹ نے 76 sTSS پیدا کیا - ایروبک بنیاد بنانے کے لیے موزوں ایک اعتدال پسند ٹریننگ بوجھ۔</p>
+            <p class="mt-md"><strong>تشریح:</strong> آسان رفتار (CRS سے سست) پر یہ 60 منٹ کی ورک آؤٹ نے 80 sTSS پیدا کیا
+                - ایروبک بنیاد بنانے کے لیے موزوں ایک اعتدال پسند ٹریننگ بوجھ۔</p>
         </div>
 
         <h2 class="mt-3xl">sTSS اقدار کو سمجھنا</h2>
@@ -964,10 +947,14 @@ img[width][height] {
         <div class="callout callout-warning">
             <h3>⚠️ اہم نوٹس</h3>
             <ul>
-                <li><strong>درست CRS کی ضرورت ہے:</strong> درست sTSS کے لیے آپ کی CRS حالیہ ہونی چاہیے (6-8 ہفتوں کے اندر ٹیسٹ کی گئی)۔</li>
-                <li><strong>آسان حساب:</strong> یہ کیلکولیٹر اوسط رفتار استعمال کرتا ہے۔ جدید sTSS نارملائزڈ گریڈڈ پیس (NGP) استعمال کرتا ہے جو وقفے کی ساخت کو مدنظر رکھتا ہے۔</li>
-                <li><strong>تکنیک کے کام کے لیے نہیں:</strong> sTSS صرف جسمانی ٹریننگ سٹریس کی پیمائش کرتا ہے، مہارت کی ترقی کی نہیں۔</li>
-                <li><strong>انفرادی تغیر:</strong> ایک جیسا sTSS مختلف رنرز کے لیے مختلف محسوس ہوتا ہے۔ اپنی بحالی کی بنیاد پر رہنما خطوط کو ایڈجسٹ کریں۔</li>
+                <li><strong>درست CRS کی ضرورت ہے:</strong> درست sTSS کے لیے آپ کی CRS حالیہ ہونی چاہیے (6-8 ہفتوں کے
+                    اندر ٹیسٹ کی گئی)۔</li>
+                <li><strong>آسان حساب:</strong> یہ کیلکولیٹر اوسط رفتار استعمال کرتا ہے۔ جدید sTSS نارملائزڈ گریڈڈ پیس
+                    (NGP) استعمال کرتا ہے جو وقفے کی ساخت کو مدنظر رکھتا ہے۔</li>
+                <li><strong>تکنیک کے کام کے لیے نہیں:</strong> sTSS صرف جسمانی ٹریننگ سٹریس کی پیمائش کرتا ہے، مہارت کی
+                    ترقی کی نہیں۔</li>
+                <li><strong>انفرادی تغیر:</strong> ایک جیسا sTSS مختلف رنرز کے لیے مختلف محسوس ہوتا ہے۔ اپنی بحالی کی
+                    بنیاد پر رہنما خطوط کو ایڈجسٹ کریں۔</li>
             </ul>
         </div>
 
@@ -976,16 +963,21 @@ img[width][height] {
         <p class="mb-md">ٹریننگ سٹریس سکور ان کی بنیاد ہے:</p>
 
         <ul class="mb-xl">
-            <li><strong>CTL (کرونک ٹریننگ لوڈ):</strong> آپ کی فٹنس کی سطح - روزانہ sTSS کی 42 دن کی تیزی سے وزنی اوسط</li>
+            <li><strong>CTL (کرونک ٹریننگ لوڈ):</strong> آپ کی فٹنس کی سطح - روزانہ sTSS کی 42 دن کی تیزی سے وزنی اوسط
+            </li>
             <li><strong>ATL (ایکیوٹ ٹریننگ لوڈ):</strong> آپ کی تھکاوٹ - روزانہ sTSS کی 7 دن کی تیزی سے وزنی اوسط</li>
-            <li><strong>TSB (ٹریننگ سٹریس بیلنس):</strong> آپ کی شکل - TSB = CTL - ATL (مثبت = تازہ، منفی = تھکا ہوا)</li>
-            <li><strong>پیریڈائزیشن:</strong> ہدف CTL کی ترقی کا استعمال کرتے ہوئے ٹریننگ کے مراحل (بنیاد، تعمیر، چوٹی، ٹیپر) کی منصوبہ بندی</li>
+            <li><strong>TSB (ٹریننگ سٹریس بیلنس):</strong> آپ کی شکل - TSB = CTL - ATL (مثبت = تازہ، منفی = تھکا ہوا)
+            </li>
+            <li><strong>پیریڈائزیشن:</strong> ہدف CTL کی ترقی کا استعمال کرتے ہوئے ٹریننگ کے مراحل (بنیاد، تعمیر، چوٹی،
+                ٹیپر) کی منصوبہ بندی</li>
             <li><strong>بحالی کا انتظام:</strong> TSB کی بنیاد پر جانیں کہ کب زور دینا ہے اور کب آرام کرنا ہے</li>
         </ul>
 
         <div class="callout callout-tip">
             <h3>پرو ٹپ: اپنی CTL کو ٹریک کریں</h3>
-            <p>سپریڈ شیٹ یا ٹریننگ لاگ میں روزانہ sTSS ریکارڈ کریں۔ ہفتہ وار اپنی 42 دن کی اوسط (CTL) کا حساب لگائیں۔ بنیاد بنانے کے دوران ہفتے میں 5-10 CTL پوائنٹس میں اضافے کو نشانہ بنائیں۔ ٹیپر کے دوران CTL کو برقرار رکھیں یا تھوڑا کم کریں (ریس سے 1-2 ہفتے پہلے)۔</p>
+            <p>سپریڈ شیٹ یا ٹریننگ لاگ میں روزانہ sTSS ریکارڈ کریں۔ ہفتہ وار اپنی 42 دن کی اوسط (CTL) کا حساب لگائیں۔
+                بنیاد بنانے کے دوران ہفتے میں 5-10 CTL پوائنٹس میں اضافے کو نشانہ بنائیں۔ ٹیپر کے دوران CTL کو برقرار
+                رکھیں یا تھوڑا کم کریں (ریس سے 1-2 ہفتے پہلے)۔</p>
         </div>
 
         <h2 class="mt-3xl">اکثر پوچھے جانے والے سوالات</h2>
@@ -995,7 +987,10 @@ img[width][height] {
                 <h3 itemprop="name">رننگ TSS (sTSS) کیا ہے؟</h3>
                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                     <div itemprop="text">
-                        <p>رننگ ٹریننگ سٹریس سکور (sTSS) ایک میٹرک ہے جو شدت اور دورانیہ دونوں کو یکجا کرتے ہوئے رننگ ورک آؤٹ کے ٹریننگ بوجھ کی مقدار بیان کرتا ہے۔ یہ سائیکلنگ کی TSS طریقہ کار سے اخذ کیا گیا ہے، جو آپ کی کریٹیکل رن سپیڈ (CRS) کو تھریشولڈ رفتار کے طور پر استعمال کرتا ہے۔ CRS رفتار پر 1 گھنٹے کی ورک آؤٹ 100 sTSS کے برابر ہے۔</p>
+                        <p>رننگ ٹریننگ سٹریس سکور (sTSS) ایک میٹرک ہے جو شدت اور دورانیہ دونوں کو یکجا کرتے ہوئے رننگ
+                            ورک آؤٹ کے ٹریننگ بوجھ کی مقدار بیان کرتا ہے۔ یہ سائیکلنگ کی TSS طریقہ کار سے اخذ کیا گیا
+                            ہے، جو آپ کی کریٹیکل رن سپیڈ (CRS) کو تھریشولڈ رفتار کے طور پر استعمال کرتا ہے۔ CRS رفتار پر
+                            1 گھنٹے کی ورک آؤٹ 100 sTSS کے برابر ہے۔</p>
                     </div>
                 </div>
             </div>
@@ -1004,7 +999,9 @@ img[width][height] {
                 <h3 itemprop="name">میں اپنا sTSS کیسے شمار کروں؟</h3>
                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                     <div itemprop="text">
-                        <p>اپنی CRS رفتار (CRS ٹیسٹ سے)، کل ورک آؤٹ کی مدت، اور ورک آؤٹ کے دوران اوسط رفتار داخل کرکے اوپر دیا گیا کیلکولیٹر استعمال کریں۔ فارمولا یہ ہے: sTSS = مدت (گھنٹے) × شدت کا عنصر² × 100، جہاں شدت کا عنصر = CRS رفتار / اوسط ورک آؤٹ رفتار۔</p>
+                        <p>اپنی CRS رفتار (CRS ٹیسٹ سے)، کل ورک آؤٹ کی مدت، اور ورک آؤٹ کے دوران اوسط رفتار داخل کرکے
+                            اوپر دیا گیا کیلکولیٹر استعمال کریں۔ فارمولا یہ ہے: sTSS = مدت (گھنٹے) × شدت کا عنصر² × 100،
+                            جہاں شدت کا عنصر = CRS رفتار / اوسط ورک آؤٹ رفتار۔</p>
                     </div>
                 </div>
             </div>
@@ -1013,7 +1010,10 @@ img[width][height] {
                 <h3 itemprop="name">کیا مجھے sTSS شمار کرنے کے لیے CRS کی ضرورت ہے؟</h3>
                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                     <div itemprop="text">
-                        <p>ہاں، شدت کے عنصر کا حساب لگانے کے لیے آپ کی کریٹیکل رن سپیڈ (CRS) کی ضرورت ہے، جو sTSS کے حساب کتاب کے لیے ضروری ہے۔ CRS آپ کی تھریشولڈ رفتار کی نمائندگی کرتا ہے اور ہر 6-8 ہفتوں میں ٹیسٹ کیا جانا چاہیے۔ آپ ہمارے <a href="/ur/crs/">CRS کیلکولیٹر</a> کا استعمال کرتے ہوئے اپنا CRS تلاش کر سکتے ہیں۔</p>
+                        <p>ہاں، شدت کے عنصر کا حساب لگانے کے لیے آپ کی کریٹیکل رن سپیڈ (CRS) کی ضرورت ہے، جو sTSS کے
+                            حساب کتاب کے لیے ضروری ہے۔ CRS آپ کی تھریشولڈ رفتار کی نمائندگی کرتا ہے اور ہر 6-8 ہفتوں میں
+                            ٹیسٹ کیا جانا چاہیے۔ آپ ہمارے <a href="/ur/crs/">CRS کیلکولیٹر</a> کا استعمال کرتے ہوئے اپنا
+                            CRS تلاش کر سکتے ہیں۔</p>
                     </div>
                 </div>
             </div>
@@ -1022,7 +1022,9 @@ img[width][height] {
                 <h3 itemprop="name">ایک ورک آؤٹ کے لیے اچھا sTSS سکور کیا ہے؟</h3>
                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                     <div itemprop="text">
-                        <p>یہ ورک آؤٹ کی شدت پر منحصر ہے: آسان ورک آؤٹس عام طور پر 50 sTSS سے کم اسکور کرتے ہیں، اعتدال پسند ورک آؤٹس 50-100 sTSS، مشکل ورک آؤٹس 100-200 sTSS، اور بہت مشکل ورک آؤٹس 200 sTSS سے زیادہ۔ مناسب سکور آپ کے ٹریننگ کے اہداف اور موجودہ فٹنس کی سطح پر منحصر ہے۔</p>
+                        <p>یہ ورک آؤٹ کی شدت پر منحصر ہے: آسان ورک آؤٹس عام طور پر 50 sTSS سے کم اسکور کرتے ہیں، اعتدال
+                            پسند ورک آؤٹس 50-100 sTSS، مشکل ورک آؤٹس 100-200 sTSS، اور بہت مشکل ورک آؤٹس 200 sTSS سے
+                            زیادہ۔ مناسب سکور آپ کے ٹریننگ کے اہداف اور موجودہ فٹنس کی سطح پر منحصر ہے۔</p>
                     </div>
                 </div>
             </div>
@@ -1031,7 +1033,9 @@ img[width][height] {
                 <h3 itemprop="name">مجھے ہفتے میں کتنا sTSS کرنا چاہیے؟</h3>
                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                     <div itemprop="text">
-                        <p>ہفتہ وار sTSS کے اہداف سطح کے لحاظ سے مختلف ہوتے ہیں: تفریحی رنرز: 150-300، فٹنس رنرز/ٹرائیتھلیٹس: 300-500، مسابقتی ماسٹرز: 500-800، اعلیٰ/کالجیٹ: 800-1200+۔ محتاط طریقے سے شروع کریں اور زیادہ ٹریننگ سے بچنے کے لیے آہستہ آہستہ بڑھائیں۔</p>
+                        <p>ہفتہ وار sTSS کے اہداف سطح کے لحاظ سے مختلف ہوتے ہیں: تفریحی رنرز: 150-300، فٹنس
+                            رنرز/ٹرائیتھلیٹس: 300-500، مسابقتی ماسٹرز: 500-800، اعلیٰ/کالجیٹ: 800-1200+۔ محتاط طریقے سے
+                            شروع کریں اور زیادہ ٹریننگ سے بچنے کے لیے آہستہ آہستہ بڑھائیں۔</p>
                     </div>
                 </div>
             </div>
@@ -1040,16 +1044,20 @@ img[width][height] {
                 <h3 itemprop="name">کیا رننگ TSS سائیکلنگ TSS کی طرح ہے؟</h3>
                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                     <div itemprop="text">
-                        <p>تصور اور فارمولا ایک جیسے ہیں، لیکن sTSS کو رننگ کے لیے ڈھالا گیا ہے۔ سائیکلنگ TSS کی طرح طاقت (FTP) استعمال کرنے کے بجائے، sTSS تھریشولڈ کے طور پر CRS کے ساتھ رفتار استعمال کرتا ہے۔ دونوں مدت × شدت کا عنصر² × 100 کا استعمال کرتے ہوئے ٹریننگ بوجھ کی پیمائش کرتے ہیں۔</p>
+                        <p>تصور اور فارمولا ایک جیسے ہیں، لیکن sTSS کو رننگ کے لیے ڈھالا گیا ہے۔ سائیکلنگ TSS کی طرح
+                            طاقت (FTP) استعمال کرنے کے بجائے، sTSS تھریشولڈ کے طور پر CRS کے ساتھ رفتار استعمال کرتا ہے۔
+                            دونوں مدت × شدت کا عنصر² × 100 کا استعمال کرتے ہوئے ٹریننگ بوجھ کی پیمائش کرتے ہیں۔</p>
                     </div>
                 </div>
             </div>
 
             <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">کیا میں تمام رن سٹرائڈز کے لیے sTSS استعمال کر سکتا ہوں؟</h3>
+                <h3 itemprop="name">کیا sTSS خطہ یا پہاڑیوں کو مدنظر رکھتا ہے؟</h3>
                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                     <div itemprop="text">
-                        <p>ہاں، لیکن آپ کا CRS سٹرائڈ کے لحاظ سے مخصوص ہونا چاہیے۔ زیادہ تر رنرز فری سٹائل CRS استعمال کرتے ہیں کیونکہ یہ سب سے زیادہ عام طور پر تربیت یافتہ سٹرائڈ ہے۔ اگر آپ بنیادی طور پر کسی اور سٹرائڈ میں تربیت کرتے ہیں، تو اس سٹرائڈ میں CRS ٹیسٹ کریں اور sTSS کے حساب کتاب کے لیے اس رفتار کو استعمال کریں۔</p>
+                        <p>اوسط GPS رفتار پر مبنی معیاری sTSS پہاڑیوں کو مدنظر نہیں رکھتا ہے۔ ٹریل رننگ یا پہاڑی راستوں
+                            کے لیے، جدید ٹولز **نارملائزڈ گریڈڈ پیس (NGP)** یا ہارٹ ریٹ وقفے استعمال کرتے ہیں تاکہ
+                            ٹریننگ سٹریس کی زیادہ درست نمائندگی فراہم کی جا سکے۔</p>
                     </div>
                 </div>
             </div>
@@ -1058,7 +1066,11 @@ img[width][height] {
                 <h3 itemprop="name">sTSS اور CTL/ATL/TSB میں کیا فرق ہے؟</h3>
                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                     <div itemprop="text">
-                        <p>sTSS ایک واحد ورک آؤٹ کے ٹریننگ بوجھ کی پیمائش کرتا ہے۔ CTL (کرونک ٹریننگ لوڈ) آپ کی طویل مدتی فٹنس ہے، ATL (ایکیوٹ ٹریننگ لوڈ) آپ کی حالیہ تھکاوٹ ہے، اور TSB (ٹریننگ سٹریس بیلنس) آپ کی تازگی ہے۔ یہ میٹرکس وقت کے ساتھ sTSS کی قدروں کا استعمال کرتے ہوئے آپ کی ٹریننگ کی حالت کو ٹریک کرتے ہیں۔ ہماری <a href="/ur/training-load/">ٹریننگ لوڈ گائیڈ</a> میں مزید جانیں۔</p>
+                        <p>sTSS ایک واحد ورک آؤٹ کے ٹریننگ بوجھ کی پیمائش کرتا ہے۔ CTL (کرونک ٹریننگ لوڈ) آپ کی طویل
+                            مدتی فٹنس ہے، ATL (ایکیوٹ ٹریننگ لوڈ) آپ کی حالیہ تھکاوٹ ہے، اور TSB (ٹریننگ سٹریس بیلنس) آپ
+                            کی تازگی ہے۔ یہ میٹرکس وقت کے ساتھ sTSS کی قدروں کا استعمال کرتے ہوئے آپ کی ٹریننگ کی حالت
+                            کو ٹریک کرتے ہیں۔ ہماری <a href="/ur/training-load/">ٹریننگ لوڈ گائیڈ</a> میں مزید جانیں۔
+                        </p>
                     </div>
                 </div>
             </div>
@@ -1070,7 +1082,8 @@ img[width][height] {
             <div class="card">
                 <h3 class="card-title">CRS ٹیسٹ</h3>
                 <div class="card-content">
-                    <p>اپنی CRS رفتار کی ضرورت ہے؟ 5K اور 3K ٹیسٹ کے اوقات کے ساتھ ہمارا مفت CRS کیلکولیٹر استعمال کریں۔</p>
+                    <p>اپنی CRS رفتار کی ضرورت ہے؟ 5K اور 3K ٹیسٹ کے اوقات کے ساتھ ہمارا مفت CRS کیلکولیٹر استعمال کریں۔
+                    </p>
                     <a href="/ur/crs/" class="btn btn-secondary btn-small mt-md">CRS کیلکولیٹر →</a>
                 </div>
             </div>
@@ -1094,7 +1107,8 @@ img[width][height] {
 
         <div class="mt-xl text-center">
             <p class="mb-md"><strong>خودکار sTSS ٹریکنگ چاہتے ہیں؟</strong></p>
-            <a href="https://apps.apple.com/es/app/runanalytics/id6754524015" class="btn btn-primary btn-large" target="_blank" rel="noopener">Run Analytics مفت ڈاؤن لوڈ کریں</a>
+            <a href="https://apps.apple.com/es/app/runanalytics/id6754524015" class="btn btn-primary btn-large" target="_blank" rel="noopener">Run
+                Analytics مفت ڈاؤن لوڈ کریں</a>
         </div>
     </div>
 </section>

@@ -20,7 +20,7 @@
     
     
     <meta property="article:published_time" content="2025-01-15T10:00:00Z">
-    <meta property="article:modified_time" content="2025-10-08T14:30:00Z">
+    <meta property="article:modified_time" content="2025-12-22T14:30:00Z">
     <meta property="article:author" content="Albert Arno">
     
 
@@ -413,7 +413,7 @@ img[width][height] {
         }
       },
       "datePublished": "2025-01-15",
-      "dateModified": "2025-10-08",
+      "dateModified": "2025-12-22",
       "mainEntityOfPage": {
         "@type": "WebPage",
         "@id": "https://run.analyticszone.app/hi/formulas/"
@@ -893,12 +893,12 @@ const result = calculateCRS(200, 150, 400, 368);
         </div>
 
         <div class="formula-card">
-            <h3>रन ट्रेनिंग स्ट्रेस स्कोर (sTSS)</h3>
+            <h3>रन ट्रेनिंग स्ट्रेस स्कोर (rTSS)</h3>
             <div class="formula-content">
                 <h4>पूर्ण सूत्र:</h4>
                 <div class="formula-box-large">
                     <div class="formula">
-                        sTSS = (IF³) × Duration (hours) × 100
+                        rTSS = (IF²) × Duration (hours) × 100
                     </div>
                     <div class="formula">
                         IF = NSS / FTP
@@ -930,8 +930,8 @@ const result = calculateCRS(200, 150, 400, 368);
                         </div>
                     </div>
                     <div class="calculator-result mt-md">
-                        <div class="result-label">गणना की गई sTSS:</div>
-                        <div class="result-value" id="stss-result">55</div>
+                        <div class="result-label">गणना की गई rTSS:</div>
+                        <div class="result-value" id="stss-result">65</div>
                     </div>
                     <div class="calculation-breakdown mt-md">
                         <small>
@@ -940,7 +940,7 @@ const result = calculateCRS(200, 150, 400, 368);
                                 NSS = 3000m / 55min = 54.5 m/min<br>
                                 FTP = 100 / (93/60) = 64.5 m/min<br>
                                 IF = 54.5 / 64.5 = 0.845<br>
-                                sTSS = 0.845³ × (55/60) × 100 = 55
+                                rTSS = 0.845² × (55/60) × 100 = 65
                             </span>
                         </small>
                     </div>
@@ -957,8 +957,8 @@ const result = calculateCRS(200, 150, 400, 368);
   // Calculate hours
   const hours = timeMinutes / 60;
 
-  // Calculate sTSS using cubed intensity factor
-  const stss = Math.pow(intensityFactor, 3) * hours * 100;
+  // Calculate rTSS using squared intensity factor
+  const stss = Math.pow(intensityFactor, 2) * hours * 100;
 
   return Math.round(stss);
 }
@@ -988,12 +988,12 @@ const ftp = cssToFTP(93); // Returns: 64.5 m/min</code></pre>
                         return 100 / (cssPacePer100mSeconds / 60);
                     }
 
-                    // sTSS calculation
+                    // rTSS calculation
                     function calculateSTSS(distance, timeMinutes, ftpMetersPerMin) {
                         const nss = distance / timeMinutes;
                         const intensityFactor = nss / ftpMetersPerMin;
                         const hours = timeMinutes / 60;
-                        const stss = Math.pow(intensityFactor, 3) * hours * 100;
+                        const stss = Math.pow(intensityFactor, 2) * hours * 100;
                         return Math.round(stss);
                     }
 
@@ -1032,7 +1032,7 @@ const ftp = cssToFTP(93); // Returns: 64.5 m/min</code></pre>
                                 `NSS = ${distance}m / ${duration}min = ${nss.toFixed(1)} m/min<br>` +
                                 `FTP = 100 / (${cssPaceSeconds}/60) = ${ftp.toFixed(1)} m/min<br>` +
                                 `IF = ${nss.toFixed(1)} / ${ftp.toFixed(1)} = ${intensityFactor.toFixed(3)}<br>` +
-                                `sTSS = ${intensityFactor.toFixed(3)}³ × (${duration}/60) × 100 = ${stss}`;
+                                `rTSS = ${intensityFactor.toFixed(3)}² × (${duration}/60) × 100 = ${stss}`;
                         } catch (e) {
                             console.error('Calculation error:', e);
                         }

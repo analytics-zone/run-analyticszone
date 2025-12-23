@@ -20,7 +20,7 @@
     
     
     <meta property="article:published_time" content="2025-01-15T10:00:00Z">
-    <meta property="article:modified_time" content="2025-11-16T14:30:00Z">
+    <meta property="article:modified_time" content="2025-12-22T14:30:00Z">
     <meta property="article:author" content="Albert Arno">
     
 
@@ -413,7 +413,7 @@ img[width][height] {
         }
       },
       "datePublished": "2025-01-15",
-      "dateModified": "2025-11-16",
+      "dateModified": "2025-12-22",
       "mainEntityOfPage": {
         "@type": "WebPage",
         "@id": "https://run.analyticszone.app/id/privacy-first-running-analytics/"
@@ -833,7 +833,7 @@ img[width][height] {
                 <ol class="protocol-steps">
                     <li><strong>Penangkapan Data:</strong> iPhone atau jam GPS Anda merekam jejak GPS, detak jantung, kecepatan, irama, dan metrik latihan lainnya</li>
                     <li><strong>Unggah:</strong> Data latihan mentah ditransmisikan ke server perusahaan melalui koneksi internet—biasanya otomatis setelah setiap latihan</li>
-                    <li><strong>Pemrosesan Server:</strong> Infrastruktur cloud menghitung metrik analitik (sTSS, CTL/ATL, zona latihan, tren performa)</li>
+                    <li><strong>Pemrosesan Server:</strong> Infrastruktur cloud menghitung metrik analitik (rTSS, CTL/ATL, zona latihan, tren performa)</li>
                     <li><strong>Penyimpanan:</strong> Hasil yang diproses dan data mentah tetap di server perusahaan tanpa batas waktu (kecuali Anda menghapusnya secara manual)</li>
                     <li><strong>Pengambilan:</strong> Anda melihat data Anda dengan mengunduhnya dari server kembali ke perangkat atau browser web Anda</li>
                 </ol>
@@ -850,7 +850,7 @@ img[width][height] {
                 <ol>
                     <li><strong>Penangkapan Data:</strong> Data latihan direkam secara lokal oleh Apple Health atau diimpor dari file jam GPS</li>
                     <li><strong>Penyimpanan Lokal:</strong> Data tetap di iPhone Anda dalam database Apple Health (dienkripsi ketika menggunakan iCloud dengan enkripsi end-to-end diaktifkan)</li>
-                    <li><strong>Pemrosesan di Perangkat:</strong> Aplikasi analitik lari membaca data Health, menghitung <a href="/id/crs/">CRS</a>, <a href="/id/training-load/">sTSS, CTL/ATL/TSB</a>, <a href="/id/training-zones/">zona latihan</a>, dan metrik lainnya langsung di prosesor iPhone Anda</li>
+                    <li><strong>Pemrosesan di Perangkat:</strong> Aplikasi analitik lari membaca data Health, menghitung <a href="/id/crs/">CRS</a>, <a href="/id/training-load/">rTSS, CTL/ATL/TSB</a>, <a href="/id/training-zones/">zona latihan</a>, dan metrik lainnya langsung di prosesor iPhone Anda</li>
                     <li><strong>Hasil Lokal:</strong> Metrik yang dihitung tetap di perangkat Anda—tidak diperlukan unggahan untuk fungsi aplikasi</li>
                     <li><strong>Ekspor Opsional:</strong> ANDA memutuskan apakah/kapan mengekspor data, dalam format apa, dan siapa yang menerimanya</li>
                 </ol>
@@ -904,7 +904,7 @@ img[width][height] {
             <ul>
                 <li><strong><a href="/id/crs/">Kecepatan Lari Kritis (CRS)</a>:</strong> Kalkulasi ambang aerobik Anda diproses secara lokal menggunakan data tes Anda</li>
                 <li><strong><a href="/id/training-zones/">Zona Latihan</a>:</strong> Zona intensitas yang dipersonalisasi (Zona 1-7) berasal dari CRS sepenuhnya di perangkat</li>
-                <li><strong><a href="/id/training-load/">Training Stress Score (sTSS)</a>:</strong> Kuantifikasi intensitas latihan dihitung menggunakan referensi CRS lokal</li>
+                <li><strong><a href="/id/training-load/">Training Stress Score (rTSS)</a>:</strong> Kuantifikasi intensitas latihan dihitung menggunakan referensi CRS lokal</li>
                 <li><strong>Pelacakan CTL/ATL/TSB:</strong> Metrik Performance Management Chart (Chronic Training Load, Acute Training Load, Training Stress Balance) dihitung dari riwayat latihan lokal Anda</li>
                 <li><strong><a href="/id/running-performance-metrics/">Metrik Performa</a>:</strong> Estimasi VO2max, analisis kecepatan, dan tren efisiensi dianalisis di perangkat Anda</li>
                 <li><strong><a href="/id/running-efficiency-biomechanics/">Analisis Biomekanik</a>:</strong> Efisiensi langkah, ekonomi lari, dan metrik bentuk diproses secara lokal</li>
@@ -1087,7 +1087,7 @@ img[width][height] {
                 </table>
             </div>
 
-            <p><strong>Kesimpulan:</strong> Run Analytics menyediakan analitik pelatihan lanjutan (CRS, sTSS, CTL/ATL/TSB, zona yang dipersonalisasi) tanpa memerlukan unggahan data apa pun. Privasi dan fungsionalitas hidup berdampingan melalui arsitektur pemrosesan lokal.</p>
+            <p><strong>Kesimpulan:</strong> Run Analytics menyediakan analitik pelatihan lanjutan (CRS, rTSS, CTL/ATL/TSB, zona yang dipersonalisasi) tanpa memerlukan unggahan data apa pun. Privasi dan fungsionalitas hidup berdampingan melalui arsitektur pemrosesan lokal.</p>
 
             <h2 id="location-privacy">Melindungi Data Lokasi Anda</h2>
 
@@ -1359,7 +1359,7 @@ img[width][height] {
 
             <h3>Seberapa akurat analitik lokal tanpa AI cloud?</h3>
 
-            <p><strong>Akurasi bergantung pada metodologi, bukan lokasi.</strong> Aplikasi berbasis cloud tidak secara inheren memberikan akurasi yang lebih baik—mereka hanya memproses data di server jarak jauh alih-alih perangkat Anda. Run Analytics menggunakan formula yang divalidasi secara ilmiah yang sama untuk <a href="/id/crs/">CRS</a>, <a href="/id/training-load/">sTSS</a>, dan <a href="/id/training-zones/">zona latihan</a> seperti platform cloud. Kalkulasinya identik; mereka hanya berjalan di prosesor iPhone Anda. iPhone modern memberikan daya komputasi lebih dari seluruh server farm dari satu dekade lalu—pemrosesan lokal memberikan hasil instan tanpa kompromi akurasi.</p>
+            <p><strong>Akurasi bergantung pada metodologi, bukan lokasi.</strong> Aplikasi berbasis cloud tidak secara inheren memberikan akurasi yang lebih baik—mereka hanya memproses data di server jarak jauh alih-alih perangkat Anda. Run Analytics menggunakan formula yang divalidasi secara ilmiah yang sama untuk <a href="/id/crs/">CRS</a>, <a href="/id/training-load/">rTSS</a>, dan <a href="/id/training-zones/">zona latihan</a> seperti platform cloud. Kalkulasinya identik; mereka hanya berjalan di prosesor iPhone Anda. iPhone modern memberikan daya komputasi lebih dari seluruh server farm dari satu dekade lalu—pemrosesan lokal memberikan hasil instan tanpa kompromi akurasi.</p>
 
             <h3>Bisakah saya berbagi latihan secara pribadi dengan pelatih saya?</h3>
 
@@ -1385,7 +1385,7 @@ img[width][height] {
                 <h3>✅ Manfaat Analitik Lari Mengutamakan Privasi:</h3>
                 <ul>
                     <li><strong>Privasi Lengkap:</strong> Data latihan, jejak GPS, metrik detak jantung, dan tren performa Anda tidak pernah meninggalkan perangkat Anda</li>
-                    <li><strong>Fungsionalitas Penuh:</strong> <a href="/id/crs/">Tes CRS</a>, <a href="/id/training-zones/">zona latihan yang dipersonalisasi</a>, <a href="/id/training-load/">pelacakan sTSS/CTL/ATL/TSB</a>, dan analitik komprehensif—semua diproses secara lokal</li>
+                    <li><strong>Fungsionalitas Penuh:</strong> <a href="/id/crs/">Tes CRS</a>, <a href="/id/training-zones/">zona latihan yang dipersonalisasi</a>, <a href="/id/training-load/">pelacakan rTSS/CTL/ATL/TSB</a>, dan analitik komprehensif—semua diproses secara lokal</li>
                     <li><strong>Nol Akun:</strong> Tidak ada registrasi, tidak ada email, tidak ada kata sandi—mulai gunakan segera dengan anonimitas lengkap</li>
                     <li><strong>Kontrol Anda:</strong> Tentukan apa yang akan diekspor, kapan membagikannya, dan siapa yang menerimanya—kepemilikan data lengkap</li>
                     <li><strong>Patuh GDPR:</strong> Kepatuhan sempurna melalui arsitektur mengutamakan privasi—kami tidak dapat melanggar regulasi tentang data yang tidak kami kumpulkan</li>
@@ -1416,7 +1416,7 @@ img[width][height] {
                 <h3 itemprop="name">Bagaimana cara kerja pemrosesan lokal?</h3>
                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                     <div itemprop="text">
-                        <p><strong>Pemrosesan lokal</strong> berarti semua kalkulasi terjadi di prosesor iPhone Anda daripada server jarak jauh. Run Analytics membaca data latihan dari Apple Health (sudah disimpan secara lokal di perangkat Anda), melakukan kalkulasi untuk <a href="/id/crs/">CRS</a>, <a href="/id/training-load/">sTSS, CTL/ATL/TSB</a>, dan <a href="/id/training-zones/">zona latihan</a> menggunakan CPU iPhone Anda, dan menyimpan hasil dalam database lokal aplikasi. Tidak ada data yang ditransmisikan melalui internet untuk pemrosesan. iPhone modern memberikan daya komputasi lebih dari cukup untuk analitik canggih tanpa ketergantungan cloud. Hasil muncul secara instan karena tidak ada penundaan unggah/unduh.</p>
+                        <p><strong>Pemrosesan lokal</strong> berarti semua kalkulasi terjadi di prosesor iPhone Anda daripada server jarak jauh. Run Analytics membaca data latihan dari Apple Health (sudah disimpan secara lokal di perangkat Anda), melakukan kalkulasi untuk <a href="/id/crs/">CRS</a>, <a href="/id/training-load/">rTSS, CTL/ATL/TSB</a>, dan <a href="/id/training-zones/">zona latihan</a> menggunakan CPU iPhone Anda, dan menyimpan hasil dalam database lokal aplikasi. Tidak ada data yang ditransmisikan melalui internet untuk pemrosesan. iPhone modern memberikan daya komputasi lebih dari cukup untuk analitik canggih tanpa ketergantungan cloud. Hasil muncul secara instan karena tidak ada penundaan unggah/unduh.</p>
                     </div>
                 </div>
             </div>
@@ -1505,7 +1505,7 @@ img[width][height] {
             <p>Rasakan analitik lari lanjutan tanpa mengorbankan privasi Anda. Run Analytics membuktikan Anda dapat memiliki metrik latihan canggih DAN kontrol data lengkap:</p>
             <ul>
                 <li><strong>Tes CRS Anda:</strong> Ukur <a href="/id/crs/">Kecepatan Lari Kritis</a> dan tetapkan zona latihan yang dipersonalisasi—100% lokal di perangkat Anda</li>
-                <li><strong>Lacak Beban Latihan:</strong> Pantau <a href="/id/training-load/">sTSS, CTL, ATL, dan TSB</a> untuk mengoptimalkan stres latihan dan mencegah overtraining—semua dihitung secara pribadi</li>
+                <li><strong>Lacak Beban Latihan:</strong> Pantau <a href="/id/training-load/">rTSS, CTL, ATL, dan TSB</a> untuk mengoptimalkan stres latihan dan mencegah overtraining—semua dihitung secara pribadi</li>
                 <li><strong>Analisis Performa:</strong> Lacak <a href="/id/running-performance-metrics/">VO2max, kecepatan ambang, dan ekonomi lari</a> tanpa unggahan cloud</li>
                 <li><strong>Struktur Zona Latihan:</strong> Gunakan <a href="/id/training-zones-intensity/">7 zona latihan berbasis sains</a> untuk kontrol intensitas latihan yang presisi</li>
                 <li><strong>Unduh Run Analytics:</strong> <a href="/id/">Mulai uji coba gratis 7 hari Anda</a> dan rasakan analitik lari mengutamakan privasi hari ini</li>

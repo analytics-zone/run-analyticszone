@@ -20,7 +20,7 @@
     
     
     <meta property="article:published_time" content="2025-01-15T10:00:00Z">
-    <meta property="article:modified_time" content="2025-11-16T14:30:00Z">
+    <meta property="article:modified_time" content="2025-12-22T14:30:00Z">
     <meta property="article:author" content="Albert Arno">
     
 
@@ -413,7 +413,7 @@ img[width][height] {
         }
       },
       "datePublished": "2025-01-15",
-      "dateModified": "2025-11-16",
+      "dateModified": "2025-12-22",
       "mainEntityOfPage": {
         "@type": "WebPage",
         "@id": "https://run.analyticszone.app/tr/stss-calculator/"
@@ -741,71 +741,54 @@ img[width][height] {
         <section class="hero hero-small">
     <div class="container">
         <h1>Ücretsiz Koşu TSS Hesaplayıcı</h1>
-        <p class="lead">Koşu antrenmanları için Antrenman Stres Skorunu hesaplayın - Tek ücretsiz sTSS hesaplayıcı</p>
+        <p class="lead">Koşu antrenmanları için Antrenman Stres Skorunu hesaplayın - Tek ücretsiz rTSS hesaplayıcı</p>
     </div>
 </section>
 
 <section class="section">
     <div class="container container-narrow">
         <div class="callout callout-info mb-xl">
-            <h2>Koşu TSS (sTSS) Nedir?</h2>
-            <p><strong>Koşu Antrenman Stres Skoru (sTSS)</strong>, yoğunluk ve süreyi birleştirerek bir koşu antrenmanının yükünü ölçer. Bisikletin TSS metodolojisinden uyarlanmıştır ve eşik temposu olarak Kritik Koşu Hızınızı (CRS) kullanır. CRS temposunda 1 saatlik bir antrenman = 100 sTSS.</p>
+            <h2>Koşu TSS (rTSS) Nedir?</h2>
+            <p><strong>Koşu Antrenman Stres Skoru (rTSS)</strong>, yoğunluk ve süreyi birleştirerek bir koşu
+                antrenmanının yükünü ölçer. Bisikletin TSS metodolojisinden uyarlanmıştır ve eşik temposu olarak Kritik
+                Koşu Hızınızı (CRS) kullanır. CRS temposunda 1 saatlik bir antrenman = 100 rTSS.</p>
         </div>
 
-        <h2 class="mt-3xl">Ücretsiz sTSS Hesaplayıcı</h2>
-        <p class="lead mb-xl">Herhangi bir koşu antrenmanı için antrenman stresini hesaplayın. CRS temponuza ihtiyaç vardır.</p>
+        <h2 class="mt-3xl">Ücretsiz rTSS Hesaplayıcı</h2>
+        <p class="lead mb-xl">Herhangi bir koşu antrenmanı için antrenman stresini hesaplayın. CRS temponuza ihtiyaç
+            vardır.</p>
 
         <div class="css-calculator">
             <form id="stssCalculatorForm">
                 <div class="calculator-inputs">
                     <div class="form-group">
-                        <label for="cssPace" class="form-label">CRS Temponuz (dd:ss / 100m)</label>
-                        <input
-                            type="text"
-                            id="cssPace"
-                            class="form-input"
-                            placeholder="1:49"
-                            pattern="[0-9]{1,2}:[0-5][0-9]"
-                            aria-required="true"
-                            aria-describedby="cssPace-help"
-                        />
-                        <small id="cssPace-help" class="form-help">CRS testinden eşik temponuz (örn. 1:49)</small>
+                        <label for="cssPace" class="form-label">CRS Temponuz (dd:ss / km)</label>
+                        <input type="text" id="cssPace" class="form-input" placeholder="4:15"
+                            pattern="[0-9]{1,2}:[0-5][0-9]" aria-required="true" aria-describedby="cssPace-help" />
+                        <small id="cssPace-help" class="form-help">CRS testinden eşik temponuz (örn. 4:15)</small>
                         <div class="form-error" id="cssPace-error"></div>
                     </div>
 
                     <div class="form-group">
                         <label for="workoutDuration" class="form-label">Antrenman Süresi (dakika)</label>
-                        <input
-                            type="number"
-                            id="workoutDuration"
-                            class="form-input"
-                            placeholder="60"
-                            min="1"
-                            max="300"
-                            aria-required="true"
-                            aria-describedby="duration-help"
-                        />
-                        <small id="duration-help" class="form-help">Dinlenme dahil toplam antrenman süresi (1-300 dakika)</small>
+                        <input type="number" id="workoutDuration" class="form-input" placeholder="60" min="1" max="300"
+                            aria-required="true" aria-describedby="duration-help" />
+                        <small id="duration-help" class="form-help">Dinlenme dahil toplam antrenman süresi (1-300
+                            dakika)</small>
                         <div class="form-error" id="duration-error"></div>
                     </div>
 
                     <div class="form-group">
-                        <label for="avgPace" class="form-label">Ortalama Antrenman Temposu (dd:ss / 100m)</label>
-                        <input
-                            type="text"
-                            id="avgPace"
-                            class="form-input"
-                            placeholder="2:05"
-                            pattern="[0-9]{1,2}:[0-5][0-9]"
-                            aria-required="true"
-                            aria-describedby="pace-help"
-                        />
-                        <small id="pace-help" class="form-help">Antrenman sırasındaki ortalama temponuz (örn. 2:05)</small>
+                        <label for="avgPace" class="form-label">Ortalama Antrenman Temposu (dd:ss / km)</label>
+                        <input type="text" id="avgPace" class="form-input" placeholder="5:00"
+                            pattern="[0-9]{1,2}:[0-5][0-9]" aria-required="true" aria-describedby="pace-help" />
+                        <small id="pace-help" class="form-help">Antrenman sırasındaki ortalama temponuz (örn.
+                            5:00)</small>
                         <div class="form-error" id="pace-error"></div>
                     </div>
 
                     <div class="calculator-buttons">
-                        <button type="submit" class="btn btn-primary" id="calculateStssBtn">sTSS Hesapla</button>
+                        <button type="submit" class="btn btn-primary" id="calculateStssBtn">rTSS Hesapla</button>
                         <button type="reset" class="btn btn-ghost" id="resetStssBtn">Temizle</button>
                     </div>
                 </div>
@@ -815,7 +798,7 @@ img[width][height] {
                 <h3>Antrenman Stres Skorunuz</h3>
                 <div class="results-summary">
                     <div class="result-item">
-                        <div class="result-label">sTSS</div>
+                        <div class="result-label">rTSS</div>
                         <div class="css-result-value" id="stssValue">--</div>
                     </div>
                     <div class="result-item">
@@ -833,12 +816,12 @@ img[width][height] {
             </div>
         </div>
 
-        <h2 class="mt-3xl">sTSS Nasıl Hesaplanır</h2>
+        <h2 class="mt-3xl">rTSS Nasıl Hesaplanır</h2>
 
         <div class="formula-box">
             <h3>Formül</h3>
             <div class="formula">
-                sTSS = (Saat cinsinden süre) × (Yoğunluk Faktörü)² × 100
+                rTSS = (Saat cinsinden süre) × (Yoğunluk Faktörü)² × 100
             </div>
             <div class="formula-explanation">
                 <p>Burada:</p>
@@ -854,35 +837,36 @@ img[width][height] {
         <div class="example-box">
             <h4>Antrenman Detayları:</h4>
             <ul>
-                <li>CRS Temposu: <strong>1:49/100m</strong> (109 saniye)</li>
-                <li>Antrenman Süresi: <strong>60 dakika</strong> (1 saat)</li>
-                <li>Ortalama Tempo: <strong>2:05/100m</strong> (125 saniye)</li>
+                <li>CRS Temponu: <strong>4:15/km</strong> (255 saniye)</li>
+                <li>Antrenman Süresi: <strong>50 dakika</strong> (0.833 saat)</li>
+                <li>Ortalama Tempo: <strong>5:00/km</strong> (300 saniye)</li>
             </ul>
 
             <h4>Adım 1: Yoğunluk Faktörünü Hesaplayın</h4>
             <div class="calculation">
                 IF = CRS Temposu / Antrenman Temposu<br>
-                IF = 109 / 125<br>
-                IF = <strong>0.872</strong>
+                IF = 255 / 300<br>
+                IF = <strong>0.850</strong>
             </div>
 
-            <h4>Adım 2: sTSS'yi Hesaplayın</h4>
+            <h4>Adım 2: rTSS'yi Hesaplayın</h4>
             <div class="calculation">
-                sTSS = 1.0 saat × (0.872)² × 100<br>
-                sTSS = 1.0 × 0.760 × 100<br>
-                sTSS = <strong>76</strong>
+                rTSS = 0.833 saat × (0.850)² × 100<br>
+                rTSS = 0.833 × 0.7225 × 100<br>
+                rTSS = <strong>60</strong>
             </div>
 
-            <p class="mt-md"><strong>Yorum:</strong> Kolay tempoda (CRS'den daha yavaş) yapılan bu 60 dakikalık antrenman 76 sTSS üretti - aerobik temel oluşturma için uygun orta düzeyde bir antrenman yükü.</p>
+            <p class="mt-md"><strong>Yorum:</strong> Aerobik bölgede (CRS'den daha yavaş) yapılan bu 50 dakikalık koşu
+                60 rTSS üretti - dayanıklılık oluşturmak için uygun bir antrenman yükü.</p>
         </div>
 
-        <h2 class="mt-3xl">sTSS Değerlerini Anlamak</h2>
+        <h2 class="mt-3xl">rTSS Değerlerini Anlamak</h2>
 
         <div class="zones-table-container">
             <table class="zones-table">
                 <thead>
                     <tr>
-                        <th>sTSS Aralığı</th>
+                        <th>rTSS Aralığı</th>
                         <th>Antrenman Yükü</th>
                         <th>Toparlanma Süresi</th>
                         <th>Örnek Antrenman</th>
@@ -923,39 +907,39 @@ img[width][height] {
             </table>
         </div>
 
-        <h2 class="mt-3xl">Haftalık sTSS Önerileri</h2>
+        <h2 class="mt-3xl">Haftalık rTSS Önerileri</h2>
 
-        <p class="mb-md">Hedef haftalık sTSS, antrenman seviyenize ve hedeflerinize bağlıdır:</p>
+        <p class="mb-md">Hedef haftalık rTSS, antrenman seviyenize ve hedeflerinize bağlıdır:</p>
 
         <div class="grid grid-2 mb-xl">
             <div class="card">
                 <h3 class="card-title">Rekreasyonel Koşucular</h3>
                 <div class="card-content">
-                    <p class="mb-sm"><strong>Haftalık sTSS:</strong> 150-300</p>
-                    <p>Haftada 2-3 antrenman, her biri 50-100 sTSS. Teknik ve aerobik temel oluşturmaya odaklanın.</p>
+                    <p class="mb-sm"><strong>Haftalık rTSS:</strong> 150-300</p>
+                    <p>Haftada 2-3 antrenman, her biri 50-100 rTSS. Teknik ve aerobik temel oluşturmaya odaklanın.</p>
                 </div>
             </div>
 
             <div class="card">
                 <h3 class="card-title">Fitness Koşucuları / Triatletler</h3>
                 <div class="card-content">
-                    <p class="mb-sm"><strong>Haftalık sTSS:</strong> 300-500</p>
-                    <p>Haftada 3-4 antrenman, her biri 75-125 sTSS. Aerobik dayanıklılık ve eşik çalışması karışımı.</p>
+                    <p class="mb-sm"><strong>Haftalık rTSS:</strong> 300-500</p>
+                    <p>Haftada 3-4 antrenman, her biri 75-125 rTSS. Aerobik dayanıklılık ve eşik çalışması karışımı.</p>
                 </div>
             </div>
 
             <div class="card">
                 <h3 class="card-title">Yarışmacı Masters Koşucular</h3>
                 <div class="card-content">
-                    <p class="mb-sm"><strong>Haftalık sTSS:</strong> 500-800</p>
-                    <p>Haftada 4-6 antrenman, her biri 80-150 sTSS. Periyotlaştırma ile yapılandırılmış antrenman.</p>
+                    <p class="mb-sm"><strong>Haftalık rTSS:</strong> 500-800</p>
+                    <p>Haftada 4-6 antrenman, her biri 80-150 rTSS. Periyotlaştırma ile yapılandırılmış antrenman.</p>
                 </div>
             </div>
 
             <div class="card">
                 <h3 class="card-title">Elit / Üniversite Koşucuları</h3>
                 <div class="card-content">
-                    <p class="mb-sm"><strong>Haftalık sTSS:</strong> 800-1200+</p>
+                    <p class="mb-sm"><strong>Haftalık rTSS:</strong> 800-1200+</p>
                     <p>Haftada 8-12 antrenman, çift seanslar. Yüksek hacim, toparlanma yönetimi kritik.</p>
                 </div>
             </div>
@@ -964,74 +948,98 @@ img[width][height] {
         <div class="callout callout-warning">
             <h3>⚠️ Önemli Notlar</h3>
             <ul>
-                <li><strong>Doğru CRS gerektirir:</strong> Doğru sTSS için CRS'nizin güncel olması gerekir (son 6-8 hafta içinde test edilmiş).</li>
-                <li><strong>Basitleştirilmiş hesaplama:</strong> Bu hesaplayıcı ortalama tempo kullanır. Gelişmiş sTSS, interval yapısını hesaba katan Normalize Edilmiş Dereceli Tempo (NGP) kullanır.</li>
-                <li><strong>Teknik çalışma için değil:</strong> sTSS sadece fiziksel antrenman stresini ölçer, beceri gelişimini değil.</li>
-                <li><strong>Bireysel farklılık:</strong> Aynı sTSS farklı koşuculara farklı gelir. Önerileri toparlanmanıza göre ayarlayın.</li>
+                <li><strong>Doğru CRS gerektirir:</strong> Doğru rTSS için CRS'nizin güncel olması gerekir (son 6-8
+                    hafta içinde test edilmiş).</li>
+                <li><strong>Basitleştirilmiş hesaplama:</strong> Bu hesaplayıcı ortalama tempo kullanır. Gelişmiş rTSS,
+                    interval yapısını hesaba katan Normalize Edilmiş Dereceli Tempo (NGP) kullanır.</li>
+                <li><strong>Teknik çalışma için değil:</strong> rTSS sadece fiziksel antrenman stresini ölçer, beceri
+                    gelişimini değil.</li>
+                <li><strong>Bireysel farklılık:</strong> Aynı rTSS farklı koşuculara farklı gelir. Önerileri
+                    toparlanmanıza göre ayarlayın.</li>
             </ul>
         </div>
 
-        <h2 class="mt-3xl">sTSS Neden Önemlidir</h2>
+        <h2 class="mt-3xl">rTSS Neden Önemlidir</h2>
 
         <p class="mb-md">Antrenman Stres Skoru bunlar için temeldir:</p>
 
         <ul class="mb-xl">
-            <li><strong>CTL (Kronik Antrenman Yükü):</strong> Fitness seviyeniz - günlük sTSS'nin 42 günlük üssel ağırlıklı ortalaması</li>
-            <li><strong>ATL (Akut Antrenman Yükü):</strong> Yorgunluğunuz - günlük sTSS'nin 7 günlük üssel ağırlıklı ortalaması</li>
-            <li><strong>TSB (Antrenman Stres Dengesi):</strong> Forumunuz - TSB = CTL - ATL (pozitif = dinç, negatif = yorgun)</li>
-            <li><strong>Periyotlaştırma:</strong> Hedef CTL ilerlemelerini kullanarak antrenman fazlarını planlayın (temel, inşa, zirve, yavaşlama)</li>
+            <li><strong>CTL (Kronik Antrenman Yükü):</strong> Fitness seviyeniz - günlük rTSS'nin 42 günlük üssel
+                ağırlıklı ortalaması</li>
+            <li><strong>ATL (Akut Antrenman Yükü):</strong> Yorgunluğunuz - günlük rTSS'nin 7 günlük üssel ağırlıklı
+                ortalaması</li>
+            <li><strong>TSB (Antrenman Stres Dengesi):</strong> Forumunuz - TSB = CTL - ATL (pozitif = dinç, negatif =
+                yorgun)</li>
+            <li><strong>Periyotlaştırma:</strong> Hedef CTL ilerlemelerini kullanarak antrenman fazlarını planlayın
+                (temel, inşa, zirve, yavaşlama)</li>
             <li><strong>Toparlanma Yönetimi:</strong> TSB'ye göre ne zaman zorlamalı ne zaman dinlenmeli bilin</li>
         </ul>
 
         <div class="callout callout-tip">
             <h3>Profesyonel İpucu: CTL'nizi Takip Edin</h3>
-            <p>Günlük sTSS'yi bir elektronik tabloda veya antrenman günlüğünde kaydedin. 42 günlük ortalamanızı (CTL) haftalık hesaplayın. Temel oluşturma sırasında haftada 5-10 CTL puanı artış hedefleyin. Yavaşlama sırasında CTL'yi koruyun veya hafifçe azaltın (yarıştan 1-2 hafta önce).</p>
+            <p>Günlük rTSS'yi bir elektronik tabloda veya antrenman günlüğünde kaydedin. 42 günlük ortalamanızı (CTL)
+                haftalık hesaplayın. Temel oluşturma sırasında haftada 5-10 CTL puanı artış hedefleyin. Yavaşlama
+                sırasında CTL'yi koruyun veya hafifçe azaltın (yarıştan 1-2 hafta önce).</p>
         </div>
 
         <h2 class="mt-3xl">Sıkça Sorulan Sorular</h2>
 
         <div class="faq-section" itemscope itemtype="https://schema.org/FAQPage">
             <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">Koşu TSS (sTSS) Nedir?</h3>
+                <h3 itemprop="name">Koşu TSS (rTSS) Nedir?</h3>
                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                     <div itemprop="text">
-                        <p>Koşu Antrenman Stres Skoru (sTSS), hem yoğunluğu hem de süreyi birleştirerek bir koşu antrenmanının yükünü ölçen bir metriktir. Bisikletin TSS metodolojisinden uyarlanmıştır ve eşik temposu olarak Kritik Koşu Hızınızı (CRS) kullanır. CRS temposunda 1 saatlik antrenman 100 sTSS'ye eşittir.</p>
+                        <p>Koşu Antrenman Stres Skoru (rTSS), hem yoğunluğu hem de süreyi birleştirerek bir koşu
+                            antrenmanının yükünü ölçen bir metriktir. Bisikletin TSS metodolojisinden uyarlanmıştır ve
+                            eşik temposu olarak Kritik Koşu Hızınızı (CRS) kullanır. CRS temposunda 1 saatlik antrenman
+                            100 rTSS'ye eşittir.</p>
                     </div>
                 </div>
             </div>
 
             <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">sTSS'mi nasıl hesaplarım?</h3>
+                <h3 itemprop="name">rTSS'mi nasıl hesaplarım?</h3>
                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                     <div itemprop="text">
-                        <p>CRS temponuzu (bir CRS testinden), toplam antrenman süresini ve antrenman sırasındaki ortalama tempoyu girerek yukarıdaki hesaplayıcıyı kullanın. Formül şudur: sTSS = Süre (saat) × Yoğunluk Faktörü² × 100, burada Yoğunluk Faktörü = CRS Temposu / Ortalama Antrenman Temposu.</p>
+                        <p>CRS temponuzu (bir CRS testinden), toplam antrenman süresini ve antrenman sırasındaki
+                            ortalama tempoyu girerek yukarıdaki hesaplayıcıyı kullanın. Formül şudur: rTSS = Süre (saat)
+                            × Yoğunluk Faktörü² × 100, burada Yoğunluk Faktörü = CRS Temposu / Ortalama Antrenman
+                            Temposu.</p>
                     </div>
                 </div>
             </div>
 
             <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">sTSS hesaplamak için CRS'ye ihtiyacım var mı?</h3>
+                <h3 itemprop="name">rTSS hesaplamak için CRS'ye ihtiyacım var mı?</h3>
                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                     <div itemprop="text">
-                        <p>Evet, sTSS hesaplaması için gerekli olan Yoğunluk Faktörünü hesaplamak için Kritik Koşu Hızınız (CRS) gereklidir. CRS eşik temponuzu temsil eder ve her 6-8 haftada bir test edilmelidir. CRS'nizi <a href="/tr/crs/">CRS hesaplayıcımızı</a> kullanarak bulabilirsiniz.</p>
+                        <p>Evet, rTSS hesaplaması için gerekli olan Yoğunluk Faktörünü hesaplamak için Kritik Koşu
+                            Hızınız (CRS) gereklidir. CRS eşik temponuzu temsil eder ve her 6-8 haftada bir test
+                            edilmelidir. CRS'nizi <a href="/tr/crs/">CRS hesaplayıcımızı</a> kullanarak
+                            bulabilirsiniz.</p>
                     </div>
                 </div>
             </div>
 
             <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">Tek bir antrenman için iyi bir sTSS skoru nedir?</h3>
+                <h3 itemprop="name">Tek bir antrenman için iyi bir rTSS skoru nedir?</h3>
                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                     <div itemprop="text">
-                        <p>Antrenman yoğunluğuna bağlıdır: Kolay antrenmanlar genellikle 50 sTSS'nin altında, orta antrenmanlar 50-100 sTSS, sert antrenmanlar 100-200 sTSS ve çok sert antrenmanlar 200 sTSS'nin üzerinde puan alır. Uygun skor, antrenman hedeflerinize ve mevcut fitness seviyenize bağlıdır.</p>
+                        <p>Antrenman yoğunluğuna bağlıdır: Kolay antrenmanlar genellikle 50 rTSS'nin altında, orta
+                            antrenmanlar 50-100 rTSS, sert antrenmanlar 100-200 rTSS ve çok sert antrenmanlar 200
+                            rTSS'nin üzerinde puan alır. Uygun skor, antrenman hedeflerinize ve mevcut fitness
+                            seviyenize bağlıdır.</p>
                     </div>
                 </div>
             </div>
 
             <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">Haftada ne kadar sTSS yapmalıyım?</h3>
+                <h3 itemprop="name">Haftada ne kadar rTSS yapmalıyım?</h3>
                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                     <div itemprop="text">
-                        <p>Haftalık sTSS hedefleri seviyeye göre değişir: Rekreasyonel koşucular: 150-300, Fitness koşucuları/Triatletler: 300-500, Yarışmacı Masters: 500-800, Elit/Üniversite: 800-1200+. Aşırı antrenmanı önlemek için temkinli başlayın ve kademeli olarak artırın.</p>
+                        <p>Haftalık rTSS hedefleri seviyeye göre değişir: Rekreasyonel koşucular: 150-300, Fitness
+                            koşucuları/Triatletler: 300-500, Yarışmacı Masters: 500-800, Elit/Üniversite: 800-1200+.
+                            Aşırı antrenmanı önlemek için temkinli başlayın ve kademeli olarak artırın.</p>
                     </div>
                 </div>
             </div>
@@ -1040,25 +1048,35 @@ img[width][height] {
                 <h3 itemprop="name">Koşu TSS'si bisiklet TSS'si ile aynı mıdır?</h3>
                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                     <div itemprop="text">
-                        <p>Kavram ve formül aynıdır, ancak sTSS koşu için uyarlanmıştır. Bisiklet TSS'si gibi güç (FTP) kullanmak yerine, sTSS eşik olarak CRS ile tempoyu kullanır. Her ikisi de Süre × Yoğunluk Faktörü² × 100 kullanarak antrenman yükünü ölçer.</p>
+                        <p>Kavram aynıdır, ancak rTSS koşu için uyarlanmıştır. Bisiklet TSS'si güç (FTP) kullanırken,
+                            rTSS eşik olarak CRS ile tempoyu kullanır. Ayrıca koşu mekaniği ve vücut üzerindeki etkisi
+                            nedeniyle rTSS hesaplamasında yoğunluk faktörünün karesi (IF²) kullanılır, bu da bisikletin
+                            formülüyle (IF²) aynıdır.</p>
                     </div>
                 </div>
             </div>
 
             <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">sTSS'yi tüm koşu adımları için kullanabilir miyim?</h3>
+                <h3 itemprop="name">rTSS'yi farklı zeminlerde kullanabilir miyim?</h3>
                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                     <div itemprop="text">
-                        <p>Evet, ancak CRS'niz adıma özgü olmalıdır. Çoğu koşucu serbest stil CRS kullanır çünkü en yaygın antrenman yapılan adımdır. Öncelikle başka bir adımda antrenman yapıyorsanız, o adımda bir CRS testi yapın ve sTSS hesaplaması için o tempoyu kullanın.</p>
+                        <p>Evet, ancak CRS'niz test edildiği zemine özeldir. Çoğu koşucu yol veya pist CRS'si kullanır.
+                            Eğer sürekli patika veya çok eğimli arazilerde koşuyorsanız, sonuçlar biraz farklılık
+                            gösterebilir. Run Analytics uygulaması, bu farkları telafi etmek için Normalize Edilmiş
+                            Dereceli Tempo (NGP) kullanır.</p>
                     </div>
                 </div>
             </div>
 
             <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">sTSS ile CTL/ATL/TSB arasındaki fark nedir?</h3>
+                <h3 itemprop="name">rTSS ile CTL/ATL/TSB arasındaki fark nedir?</h3>
                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                     <div itemprop="text">
-                        <p>sTSS tek bir antrenmanın yükünü ölçer. CTL (Kronik Antrenman Yükü) uzun vadeli fitnessınızdır, ATL (Akut Antrenman Yükü) yakın zamandaki yorgunluğunuzdur ve TSB (Antrenman Stres Dengesi) dinçliğinizdir. Bu metrikler, antrenman durumunuzu takip etmek için zaman içindeki sTSS değerlerini kullanır. <a href="/tr/training-load/">Antrenman Yükü rehberimizde</a> daha fazla bilgi edinin.</p>
+                        <p>rTSS tek bir antrenmanın yükünü ölçer. CTL (Kronik Antrenman Yükü) uzun vadeli
+                            fitnessınızdır, ATL (Akut Antrenman Yükü) yakın zamandaki yorgunluğunuzdur ve TSB (Antrenman
+                            Stres Dengesi) dinçliğinizdir. Bu metrikler, antrenman durumunuzu takip etmek için zaman
+                            içindeki rTSS değerlerini kullanır. <a href="/tr/training-load/">Antrenman Yükü
+                                rehberimizde</a> daha fazla bilgi edinin.</p>
                     </div>
                 </div>
             </div>
@@ -1070,7 +1088,8 @@ img[width][height] {
             <div class="card">
                 <h3 class="card-title">CRS Testi</h3>
                 <div class="card-content">
-                    <p>CRS temponuza mı ihtiyacınız var? 5K ve 3K test süreleriyle ücretsiz CRS hesaplayıcımızı kullanın.</p>
+                    <p>CRS temponuza mı ihtiyacınız var? 3600m ve 1200m test süreleriyle ücretsiz CRS hesaplayıcımızı
+                        kullanın.</p>
                     <a href="/tr/crs/" class="btn btn-secondary btn-small mt-md">CRS Hesaplayıcı →</a>
                 </div>
             </div>
@@ -1086,15 +1105,17 @@ img[width][height] {
             <div class="card">
                 <h3 class="card-title">Run Analytics Uygulaması</h3>
                 <div class="card-content">
-                    <p>Tüm antrenmanlar için otomatik sTSS hesaplaması. Zaman içinde CTL/ATL/TSB trendlerini takip edin.</p>
+                    <p>Tüm antrenmanlar için otomatik rTSS hesaplaması. Zaman içinde CTL/ATL/TSB trendlerini takip edin.
+                    </p>
                     <a href="/tr/" class="btn btn-secondary btn-small mt-md">Daha Fazla Bilgi →</a>
                 </div>
             </div>
         </div>
 
         <div class="mt-xl text-center">
-            <p class="mb-md"><strong>Otomatik sTSS takibi mi istiyorsunuz?</strong></p>
-            <a href="https://apps.apple.com/es/app/runanalytics/id6754524015" class="btn btn-primary btn-large" target="_blank" rel="noopener">Run Analytics'i Ücretsiz İndirin</a>
+            <p class="mb-md"><strong>Otomatik rTSS takibi mi istiyorsunuz?</strong></p>
+            <a href="https://apps.apple.com/es/app/runanalytics/id6754524015" class="btn btn-primary btn-large" target="_blank" rel="noopener">Run
+                Analytics'i Ücretsiz İndirin</a>
         </div>
     </div>
 </section>

@@ -20,7 +20,7 @@
     
     
     <meta property="article:published_time" content="2025-01-15T10:00:00Z">
-    <meta property="article:modified_time" content="2025-01-17T14:30:00Z">
+    <meta property="article:modified_time" content="2025-12-22T14:30:00Z">
     <meta property="article:author" content="Albert Arno">
     
 
@@ -413,7 +413,7 @@ img[width][height] {
         }
       },
       "datePublished": "2025-01-15",
-      "dateModified": "2025-01-17",
+      "dateModified": "2025-12-22",
       "mainEntityOfPage": {
         "@type": "WebPage",
         "@id": "https://run.analyticszone.app/el/stss-calculator/"
@@ -741,71 +741,57 @@ img[width][height] {
         <section class="hero hero-small">
     <div class="container">
         <h1>Δωρεάν Υπολογιστής TSS Τρεξίματος</h1>
-        <p class="lead">Υπολογίστε το Σκορ Προπονητικής Καταπόνησης για προπονήσεις τρεξίματος - Ο μοναδικός δωρεάν υπολογιστής sTSS</p>
+        <p class="lead">Υπολογίστε το Running Stress Score για προπονήσεις τρεξίματος - Ο μοναδικός δωρεάν υπολογιστής
+            rTSS</p>
     </div>
 </section>
 
 <section class="section">
     <div class="container container-narrow">
         <div class="callout callout-info mb-xl">
-            <h2>Τι είναι το TSS Τρεξίματος (sTSS);</h2>
-            <p><strong>Το Σκορ Προπονητικής Καταπόνησης Τρεξίματος (sTSS)</strong> ποσοτικοποιεί το προπονητικό φορτίο μιας προπόνησης τρεξίματος συνδυάζοντας ένταση και διάρκεια. Προσαρμόζεται από τη μεθοδολογία TSS της ποδηλασίας, χρησιμοποιώντας την Κρίσιμη Ταχύτητα Τρεξίματος (CRS) ως ρυθμό κατωφλίου. Μια προπόνηση 1 ώρας σε ρυθμό CRS = 100 sTSS.</p>
+            <h2>Τι είναι το Running Stress Score (rTSS);</h2>
+            <p><strong>Running Stress Score (rTSS)</strong> ποσοτικοποιεί το προπονητικό φορτίο μιας προπόνησης
+                τρεξίματος συνδυάζοντας ένταση και διάρκεια. Προσαρμόζεται από τη μεθοδολογία TSS της ποδηλασίας,
+                χρησιμοποιώντας την Κρίσιμη Ταχύτητα Τρεξίματος (CRS) ως ρυθμό κατωφλίου. Μια προπόνηση 1 ώρας σε ρυθμό
+                CRS = 100 rTSS.</p>
         </div>
 
-        <h2 class="mt-3xl">Δωρεάν Υπολογιστής sTSS</h2>
-        <p class="lead mb-xl">Υπολογίστε την προπονητική καταπόνηση για οποιαδήποτε προπόνηση τρεξίματος. Απαιτείται ο ρυθμός CRS σας.</p>
+        <h2 class="mt-3xl">Δωρεάν Υπολογιστής rTSS</h2>
+        <p class="lead mb-xl">Υπολογίστε την προπονητική καταπόνηση για οποιαδήποτε προπόνηση τρεξίματος. Απαιτείται ο
+            ρυθμός CRS σας.</p>
 
         <div class="css-calculator">
             <form id="stssCalculatorForm">
                 <div class="calculator-inputs">
                     <div class="form-group">
-                        <label for="cssPace" class="form-label">Ο Ρυθμός CRS σας (λλ:δδ ανά 100μ)</label>
-                        <input
-                            type="text"
-                            id="cssPace"
-                            class="form-input"
-                            placeholder="1:49"
-                            pattern="[0-9]{1,2}:[0-5][0-9]"
-                            aria-required="true"
-                            aria-describedby="cssPace-help"
-                        />
-                        <small id="cssPace-help" class="form-help">Ο ρυθμός κατωφλίου σας από τη δοκιμή CRS (π.χ., 1:49)</small>
+                        <label for="cssPace" class="form-label">Ο Ρυθμός CRS σας (λλ:δδ ανά χλμ)</label>
+                        <input type="text" id="cssPace" class="form-input" placeholder="4:15"
+                            pattern="[0-9]{1,2}:[0-5][0-9]" aria-required="true" aria-describedby="cssPace-help" />
+                        <small id="cssPace-help" class="form-help">Ο ρυθμός κατωφλίου σας από τη δοκιμή CRS (π.χ.,
+                            4:15)</small>
                         <div class="form-error" id="cssPace-error"></div>
                     </div>
 
                     <div class="form-group">
                         <label for="workoutDuration" class="form-label">Διάρκεια Προπόνησης (λεπτά)</label>
-                        <input
-                            type="number"
-                            id="workoutDuration"
-                            class="form-input"
-                            placeholder="60"
-                            min="1"
-                            max="300"
-                            aria-required="true"
-                            aria-describedby="duration-help"
-                        />
-                        <small id="duration-help" class="form-help">Συνολικός χρόνος προπόνησης συμπεριλαμβανομένης της ανάπαυσης (1-300 λεπτά)</small>
+                        <input type="number" id="workoutDuration" class="form-input" placeholder="60" min="1" max="300"
+                            aria-required="true" aria-describedby="duration-help" />
+                        <small id="duration-help" class="form-help">Συνολικός χρόνος προπόνησης συμπεριλαμβανομένης της
+                            ανάπαυσης (1-300 λεπτά)</small>
                         <div class="form-error" id="duration-error"></div>
                     </div>
 
                     <div class="form-group">
-                        <label for="avgPace" class="form-label">Μέσος Ρυθμός Προπόνησης (λλ:δδ ανά 100μ)</label>
-                        <input
-                            type="text"
-                            id="avgPace"
-                            class="form-input"
-                            placeholder="2:05"
-                            pattern="[0-9]{1,2}:[0-5][0-9]"
-                            aria-required="true"
-                            aria-describedby="pace-help"
-                        />
-                        <small id="pace-help" class="form-help">Ο μέσος ρυθμός σας κατά τη διάρκεια της προπόνησης (π.χ., 2:05)</small>
+                        <label for="avgPace" class="form-label">Μέσος Ρυθμός Προπόνησης (λλ:δδ ανά χλμ)</label>
+                        <input type="text" id="avgPace" class="form-input" placeholder="4:45"
+                            pattern="[0-9]{1,2}:[0-5][0-9]" aria-required="true" aria-describedby="pace-help" />
+                        <small id="pace-help" class="form-help">Ο μέσος ρυθμός σας κατά τη διάρκεια της προπόνησης
+                            (π.χ., 4:45)</small>
                         <div class="form-error" id="pace-error"></div>
                     </div>
 
                     <div class="calculator-buttons">
-                        <button type="submit" class="btn btn-primary" id="calculateStssBtn">Υπολογισμός sTSS</button>
+                        <button type="submit" class="btn btn-primary" id="calculateStssBtn">Υπολογισμός rTSS</button>
                         <button type="reset" class="btn btn-ghost" id="resetStssBtn">Εκκαθάριση</button>
                     </div>
                 </div>
@@ -815,7 +801,7 @@ img[width][height] {
                 <h3>Το Σκορ Προπονητικής Καταπόνησης σας</h3>
                 <div class="results-summary">
                     <div class="result-item">
-                        <div class="result-label">sTSS</div>
+                        <div class="result-label">rTSS</div>
                         <div class="css-result-value" id="stssValue">--</div>
                     </div>
                     <div class="result-item">
@@ -833,12 +819,12 @@ img[width][height] {
             </div>
         </div>
 
-        <h2 class="mt-3xl">Πώς Υπολογίζεται το sTSS</h2>
+        <h2 class="mt-3xl">Πώς Υπολογίζεται το rTSS</h2>
 
         <div class="formula-box">
             <h3>Τύπος</h3>
             <div class="formula">
-                sTSS = (Διάρκεια σε ώρες) × (Συντελεστής Έντασης)² × 100
+                rTSS = (Διάρκεια σε ώρες) × (Συντελεστής Έντασης)² × 100
             </div>
             <div class="formula-explanation">
                 <p>Όπου:</p>
@@ -854,35 +840,36 @@ img[width][height] {
         <div class="example-box">
             <h4>Στοιχεία Προπόνησης:</h4>
             <ul>
-                <li>Ρυθμός CRS: <strong>1:49/100μ</strong> (109 δευτερόλεπτα)</li>
+                <li>Ρυθμός CRS: <strong>4:15/χλμ</strong> (255 δευτερόλεπτα)</li>
                 <li>Διάρκεια Προπόνησης: <strong>60 λεπτά</strong> (1 ώρα)</li>
-                <li>Μέσος Ρυθμός: <strong>2:05/100μ</strong> (125 δευτερόλεπτα)</li>
+                <li>Μέσος Ρυθμός: <strong>4:45/χλμ</strong> (285 δευτερόλεπτα)</li>
             </ul>
 
             <h4>Βήμα 1: Υπολογισμός Συντελεστή Έντασης</h4>
             <div class="calculation">
                 IF = Ρυθμός CRS / Ρυθμός Προπόνησης<br>
-                IF = 109 / 125<br>
-                IF = <strong>0.872</strong>
+                IF = 255 / 285<br>
+                IF = <strong>0.895</strong>
             </div>
 
-            <h4>Βήμα 2: Υπολογισμός sTSS</h4>
+            <h4>Βήμα 2: Υπολογισμός rTSS</h4>
             <div class="calculation">
-                sTSS = 1.0 ώρες × (0.872)² × 100<br>
-                sTSS = 1.0 × 0.760 × 100<br>
-                sTSS = <strong>76</strong>
+                rTSS = 1.0 ώρες × (0.895)² × 100<br>
+                rTSS = 1.0 × 0.801 × 100<br>
+                rTSS = <strong>80</strong>
             </div>
 
-            <p class="mt-md"><strong>Ερμηνεία:</strong> Αυτή η προπόνηση 60 λεπτών σε εύκολο ρυθμό (πιο αργό από το CRS) παρήγαγε 76 sTSS - ένα μέτριο προπονητικό φορτίο κατάλληλο για οικοδόμηση αερόβιας βάσης.</p>
+            <p class="mt-md"><strong>Ερμηνεία:</strong> Αυτή η προπόνηση 60 λεπτών σε εύκολο ρυθμό (πιο αργό από το CRS)
+                παρήγαγε 80 rTSS - ένα μέτριο προπονητικό φορτίο κατάλληλο για οικοδόμηση αερόβιας βάσης.</p>
         </div>
 
-        <h2 class="mt-3xl">Κατανόηση Τιμών sTSS</h2>
+        <h2 class="mt-3xl">Κατανόηση Τιμών rTSS</h2>
 
         <div class="zones-table-container">
             <table class="zones-table">
                 <thead>
                     <tr>
-                        <th>Εύρος sTSS</th>
+                        <th>Εύρος rTSS</th>
                         <th>Προπονητικό Φορτίο</th>
                         <th>Χρόνος Ανάκαμψης</th>
                         <th>Παράδειγμα Προπόνησης</th>
@@ -923,39 +910,41 @@ img[width][height] {
             </table>
         </div>
 
-        <h2 class="mt-3xl">Εβδομαδιαίες Οδηγίες sTSS</h2>
+        <h2 class="mt-3xl">Εβδομαδιαίες Οδηγίες rTSS</h2>
 
-        <p class="mb-md">Το στοχευόμενο εβδομαδιαίο sTSS εξαρτάται από το επίπεδο προπόνησης και τους στόχους σας:</p>
+        <p class="mb-md">Το στοχευόμενο εβδομαδιαίο rTSS εξαρτάται από το επίπεδο προπόνησης και τους στόχους σας:</p>
 
         <div class="grid grid-2 mb-xl">
             <div class="card">
                 <h3 class="card-title">Ερασιτέχνες Δρομείς</h3>
                 <div class="card-content">
-                    <p class="mb-sm"><strong>Εβδομαδιαίο sTSS:</strong> 150-300</p>
-                    <p>2-3 προπονήσεις την εβδομάδα, 50-100 sTSS η καθεμία. Επικέντρωση στην τεχνική και την οικοδόμηση αερόβιας βάσης.</p>
+                    <p class="mb-sm"><strong>Εβδομαδιαίο rTSS:</strong> 150-300</p>
+                    <p>2-3 προπονήσεις την εβδομάδα, 50-100 rTSS η καθεμία. Επικέντρωση στην τεχνική και την οικοδόμηση
+                        αερόβιας βάσης.</p>
                 </div>
             </div>
 
             <div class="card">
                 <h3 class="card-title">Δρομείς Φυσικής Κατάστασης / Τριαθλητές</h3>
                 <div class="card-content">
-                    <p class="mb-sm"><strong>Εβδομαδιαίο sTSS:</strong> 300-500</p>
-                    <p>3-4 προπονήσεις την εβδομάδα, 75-125 sTSS η καθεμία. Συνδυασμός αερόβιας αντοχής και εργασίας κατωφλίου.</p>
+                    <p class="mb-sm"><strong>Εβδομαδιαίο rTSS:</strong> 300-500</p>
+                    <p>3-4 προπονήσεις την εβδομάδα, 75-125 rTSS η καθεμία. Συνδυασμός αερόβιας αντοχής και εργασίας
+                        κατωφλίου.</p>
                 </div>
             </div>
 
             <div class="card">
                 <h3 class="card-title">Αγωνιστικοί Δρομείς Masters</h3>
                 <div class="card-content">
-                    <p class="mb-sm"><strong>Εβδομαδιαίο sTSS:</strong> 500-800</p>
-                    <p>4-6 προπονήσεις την εβδομάδα, 80-150 sTSS η καθεμία. Δομημένη προπόνηση με περιοδοποίηση.</p>
+                    <p class="mb-sm"><strong>Εβδομαδιαίο rTSS:</strong> 500-800</p>
+                    <p>4-6 προπονήσεις την εβδομάδα, 80-150 rTSS η καθεμία. Δομημένη προπόνηση με περιοδοποίηση.</p>
                 </div>
             </div>
 
             <div class="card">
                 <h3 class="card-title">Ελίτ / Πανεπιστημιακοί Δρομείς</h3>
                 <div class="card-content">
-                    <p class="mb-sm"><strong>Εβδομαδιαίο sTSS:</strong> 800-1200+</p>
+                    <p class="mb-sm"><strong>Εβδομαδιαίο rTSS:</strong> 800-1200+</p>
                     <p>8-12 προπονήσεις την εβδομάδα, διπλές μέρες. Υψηλός όγκος με κρίσιμη διαχείριση ανάκαμψης.</p>
                 </div>
             </div>
@@ -964,74 +953,101 @@ img[width][height] {
         <div class="callout callout-warning">
             <h3>⚠️ Σημαντικές Παρατηρήσεις</h3>
             <ul>
-                <li><strong>Απαιτεί ακριβές CRS:</strong> Το CRS σας πρέπει να είναι τρέχον (δοκιμασμένο εντός 6-8 εβδομάδων) για ακριβές sTSS.</li>
-                <li><strong>Απλοποιημένος υπολογισμός:</strong> Αυτός ο υπολογιστής χρησιμοποιεί μέσο ρυθμό. Το προηγμένο sTSS χρησιμοποιεί Κανονικοποιημένο Ρυθμό με Κλίση (NGP) που λαμβάνει υπόψη τη δομή διαστημάτων.</li>
-                <li><strong>Όχι για εργασία τεχνικής:</strong> Το sTSS μετρά μόνο τη σωματική προπονητική καταπόνηση, όχι την ανάπτυξη δεξιοτήτων.</li>
-                <li><strong>Ατομική διακύμανση:</strong> Το ίδιο sTSS αισθάνεται διαφορετικά σε διαφορετικούς δρομείς. Προσαρμόστε τις οδηγίες με βάση την ανάκαμψή σας.</li>
+                <li><strong>Απαιτεί ακριβές CRS:</strong> Το CRS σας πρέπει να είναι τρέχον (δοκιμασμένο εντός 6-8
+                    εβδομάδων) για ακριβές rTSS.</li>
+                <li><strong>Απλοποιημένος υπολογισμός:</strong> Αυτός ο υπολογιστής χρησιμοποιεί μέσο ρυθμό. Το
+                    προηγμένο rTSS χρησιμοποιεί Κανονικοποιημένο Ρυθμό με Κλίση (NGP) που λαμβάνει υπόψη τη δομή
+                    διαστημάτων.</li>
+                <li><strong>Όχι για εργασία τεχνικής:</strong> Το rTSS μετρά μόνο τη σωματική προπονητική καταπόνηση,
+                    όχι την ανάπτυξη δεξιοτήτων.</li>
+                <li><strong>Ατομική διακύμανση:</strong> Το ίδιο rTSS αισθάνεται διαφορετικά σε διαφορετικούς δρομείς.
+                    Προσαρμόστε τις οδηγίες με βάση την ανάκαμψή σας.</li>
             </ul>
         </div>
 
-        <h2 class="mt-3xl">Γιατί το sTSS Έχει Σημασία</h2>
+        <h2 class="mt-3xl">Γιατί το rTSS Έχει Σημασία</h2>
 
         <p class="mb-md">Το Σκορ Προπονητικής Καταπόνησης είναι το θεμέλιο για:</p>
 
         <ul class="mb-xl">
-            <li><strong>CTL (Χρόνιο Προπονητικό Φορτίο):</strong> Το επίπεδο φυσικής κατάστασής σας - εκθετικά σταθμισμένος μέσος όρος 42 ημερών του ημερήσιου sTSS</li>
-            <li><strong>ATL (Οξύ Προπονητικό Φορτίο):</strong> Η κόπωσή σας - εκθετικά σταθμισμένος μέσος όρος 7 ημερών του ημερήσιου sTSS</li>
-            <li><strong>TSB (Ισορροπία Προπονητικής Καταπόνησης):</strong> Η φόρμα σας - TSB = CTL - ATL (θετικό = φρέσκος, αρνητικό = κουρασμένος)</li>
-            <li><strong>Περιοδοποίηση:</strong> Σχεδιάστε φάσεις προπόνησης (βάση, οικοδόμηση, κορύφωση, μείωση) χρησιμοποιώντας στοχευμένες προόδους CTL</li>
-            <li><strong>Διαχείριση Ανάκαμψης:</strong> Γνωρίστε πότε να πιέσετε και πότε να ξεκουραστείτε βάσει του TSB</li>
+            <li><strong>CTL (Χρόνιο Προπονητικό Φορτίο):</strong> Το επίπεδο φυσικής κατάστασής σας - εκθετικά
+                σταθμισμένος μέσος όρος 42 ημερών του ημερήσιου rTSS</li>
+            <li><strong>ATL (Οξύ Προπονητικό Φορτίο):</strong> Η κόπωσή σας - εκθετικά σταθμισμένος μέσος όρος 7 ημερών
+                του ημερήσιου rTSS</li>
+            <li><strong>TSB (Ισορροπία Προπονητικής Καταπόνησης):</strong> Η φόρμα σας - TSB = CTL - ATL (θετικό =
+                φρέσκος, αρνητικό = κουρασμένος)</li>
+            <li><strong>Περιοδοποίηση:</strong> Σχεδιάστε φάσεις προπόνησης (βάση, οικοδόμηση, κορύφωση, μείωση)
+                χρησιμοποιώντας στοχευμένες προόδους CTL</li>
+            <li><strong>Διαχείριση Ανάκαμψης:</strong> Γνωρίστε πότε να πιέσετε και πότε να ξεκουραστείτε βάσει του TSB
+            </li>
         </ul>
 
         <div class="callout callout-tip">
             <h3>Συμβουλή Pro: Παρακολουθήστε το CTL σας</h3>
-            <p>Καταγράψτε το ημερήσιο sTSS σε ένα υπολογιστικό φύλλο ή ημερολόγιο προπόνησης. Υπολογίστε τον μέσο όρο 42 ημερών (CTL) εβδομαδιαία. Στοχεύστε αύξηση 5-10 πόντων CTL ανά εβδομάδα κατά την οικοδόμηση βάσης. Διατηρήστε ή μειώστε ελαφρά το CTL κατά τη μείωση (1-2 εβδομάδες πριν τον αγώνα).</p>
+            <p>Καταγράψτε το ημερήσιο rTSS σε ένα υπολογιστικό φύλλο ή ημερολόγιο προπόνησης. Υπολογίστε τον μέσο όρο 42
+                ημερών (CTL) εβδομαδιαία. Στοχεύστε αύξηση 5-10 πόντων CTL ανά εβδομάδα κατά την οικοδόμηση βάσης.
+                Διατηρήστε ή μειώστε ελαφρά το CTL κατά τη μείωση (1-2 εβδομάδες πριν τον αγώνα).</p>
         </div>
 
         <h2 class="mt-3xl">Συχνές Ερωτήσεις</h2>
 
         <div class="faq-section" itemscope itemtype="https://schema.org/FAQPage">
             <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">Τι είναι το TSS Τρεξίματος (sTSS);</h3>
+                <h3 itemprop="name">Τι είναι το Running Stress Score (rTSS);</h3>
                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                     <div itemprop="text">
-                        <p>Το Σκορ Προπονητικής Καταπόνησης Τρεξίματος (sTSS) είναι ένα μέτρο που ποσοτικοποιεί το προπονητικό φορτίο μιας προπόνησης τρεξίματος συνδυάζοντας τόσο την ένταση όσο και τη διάρκεια. Προσαρμόζεται από τη μεθοδολογία TSS της ποδηλασίας, χρησιμοποιώντας την Κρίσιμη Ταχύτητα Τρεξίματος (CRS) ως ρυθμό κατωφλίου. Μια προπόνηση 1 ώρας σε ρυθμό CRS ισούται με 100 sTSS.</p>
+                        <p>Running Stress Score (rTSS) είναι ένα μέτρο που ποσοτικοποιεί το προπονητικό φορτίο μιας
+                            προπόνησης τρεξίματος συνδυάζοντας τόσο την ένταση όσο και τη διάρκεια. Προσαρμόζεται από τη
+                            μεθοδολογία TSS της ποδηλασίας, χρησιμοποιώντας την Κρίσιμη Ταχύτητα Τρεξίματος (CRS) ως
+                            ρυθμό κατωφλίου. Μια προπόνηση 1 ώρας σε ρυθμό CRS ισούται με 100 rTSS.</p>
                     </div>
                 </div>
             </div>
 
             <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">Πώς υπολογίζω το sTSS μου;</h3>
+                <h3 itemprop="name">Πώς υπολογίζω το rTSS μου;</h3>
                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                     <div itemprop="text">
-                        <p>Χρησιμοποιήστε τον παραπάνω υπολογιστή εισάγοντας τον ρυθμό CRS σας (από δοκιμή CRS), τη συνολική διάρκεια προπόνησης και τον μέσο ρυθμό κατά τη διάρκεια της προπόνησης. Ο τύπος είναι: sTSS = Διάρκεια (ώρες) × Συντελεστής Έντασης² × 100, όπου Συντελεστής Έντασης = Ρυθμός CRS / Μέσος Ρυθμός Προπόνησης.</p>
+                        <p>Χρησιμοποιήστε τον παραπάνω υπολογιστή εισάγοντας τον ρυθμό CRS σας (από δοκιμή CRS), τη
+                            συνολική διάρκεια προπόνησης και τον μέσο ρυθμό κατά τη διάρκεια της προπόνησης. Ο τύπος
+                            είναι: rTSS = Διάρκεια (ώρες) × Συντελεστής Έντασης² × 100, όπου Συντελεστής Έντασης =
+                            Ρυθμός CRS / Μέσος Ρυθμός Προπόνησης.</p>
                     </div>
                 </div>
             </div>
 
             <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">Χρειάζομαι το CRS για να υπολογίσω το sTSS;</h3>
+                <h3 itemprop="name">Χρειάζομαι το CRS για να υπολογίσω το rTSS;</h3>
                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                     <div itemprop="text">
-                        <p>Ναι, η Κρίσιμη Ταχύτητα Τρεξίματος (CRS) σας απαιτείται για τον υπολογισμό του Συντελεστή Έντασης, ο οποίος είναι απαραίτητος για τον υπολογισμό του sTSS. Το CRS αντιπροσωπεύει τον ρυθμό κατωφλίου σας και πρέπει να δοκιμάζεται κάθε 6-8 εβδομάδες. Μπορείτε να βρείτε το CRS σας χρησιμοποιώντας τον <a href="/el/crs/">υπολογιστή CRS</a> μας.</p>
+                        <p>Ναι, η Κρίσιμη Ταχύτητα Τρεξίματος (CRS) σας απαιτείται για τον υπολογισμό του Συντελεστή
+                            Έντασης, ο οποίος είναι απαραίτητος για τον υπολογισμό του rTSS. Το CRS αντιπροσωπεύει τον
+                            ρυθμό κατωφλίου σας και πρέπει να δοκιμάζεται κάθε 6-8 εβδομάδες. Μπορείτε να βρείτε το CRS
+                            σας χρησιμοποιώντας τον <a href="/el/crs/">υπολογιστή CRS</a> μας.</p>
                     </div>
                 </div>
             </div>
 
             <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">Ποιο είναι ένα καλό σκορ sTSS για μία προπόνηση;</h3>
+                <h3 itemprop="name">Ποιο είναι ένα καλό σκορ rTSS για μία προπόνηση;</h3>
                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                     <div itemprop="text">
-                        <p>Εξαρτάται από την ένταση της προπόνησης: Οι εύκολες προπονήσεις τυπικά σκοράρουν κάτω από 50 sTSS, οι μέτριες προπονήσεις 50-100 sTSS, οι σκληρές προπονήσεις 100-200 sTSS και οι πολύ σκληρές προπονήσεις πάνω από 200 sTSS. Το κατάλληλο σκορ εξαρτάται από τους προπονητικούς στόχους και το τρέχον επίπεδο φυσικής κατάστασής σας.</p>
+                        <p>Εξαρτάται από την ένταση της προπόνησης: Οι εύκολες προπονήσεις τυπικά σκοράρουν κάτω από 50
+                            rTSS, οι μέτριες προπονήσεις 50-100 rTSS, οι σκληρές προπονήσεις 100-200 rTSS και οι πολύ
+                            σκληρές προπονήσεις πάνω από 200 rTSS. Το κατάλληλο σκορ εξαρτάται από τους προπονητικούς
+                            στόχους και το τρέχον επίπεδο φυσικής κατάστασής σας.</p>
                     </div>
                 </div>
             </div>
 
             <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">Πόσο sTSS πρέπει να κάνω την εβδομάδα;</h3>
+                <h3 itemprop="name">Πόσο rTSS πρέπει να κάνω την εβδομάδα;</h3>
                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                     <div itemprop="text">
-                        <p>Οι στόχοι εβδομαδιαίου sTSS διαφέρουν ανά επίπεδο: Ερασιτέχνες δρομείς: 150-300, Δρομείς φυσικής κατάστασης/Τριαθλητές: 300-500, Αγωνιστικοί Masters: 500-800, Ελίτ/Πανεπιστημιακοί: 800-1200+. Ξεκινήστε συντηρητικά και αυξήστε σταδιακά για να αποφύγετε την υπερπροπόνηση.</p>
+                        <p>Οι στόχοι εβδομαδιαίου rTSS διαφέρουν ανά επίπεδο: Ερασιτέχνες δρομείς: 150-300, Δρομείς
+                            φυσικής κατάστασης/Τριαθλητές: 300-500, Αγωνιστικοί Masters: 500-800, Ελίτ/Πανεπιστημιακοί:
+                            800-1200+. Ξεκινήστε συντηρητικά και αυξήστε σταδιακά για να αποφύγετε την υπερπροπόνηση.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -1040,25 +1056,36 @@ img[width][height] {
                 <h3 itemprop="name">Είναι το TSS τρεξίματος το ίδιο με το TSS ποδηλασίας;</h3>
                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                     <div itemprop="text">
-                        <p>Η έννοια και ο τύπος είναι ίδιοι, αλλά το sTSS είναι προσαρμοσμένο για το τρέξιμο. Αντί να χρησιμοποιεί ισχύ (FTP) όπως το TSS ποδηλασίας, το sTSS χρησιμοποιεί ρυθμό με το CRS ως κατώφλι. Και τα δύο μετρούν το προπονητικό φορτίο χρησιμοποιώντας Διάρκεια × Συντελεστής Έντασης² × 100.</p>
+                        <p>Η έννοια και ο τύπος είναι ίδιοι, αλλά το rTSS είναι προσαρμοσμένο για το τρέξιμο. Αντί να
+                            χρησιμοποιεί ισχύ (FTP) όπως το TSS ποδηλασίας, το rTSS χρησιμοποιεί ρυθμό με το CRS ως
+                            κατώφλι. Και τα δύο μετρούν το προπονητικό φορτίο χρησιμοποιώντας Διάρκεια × Συντελεστής
+                            Έντασης² × 100.</p>
                     </div>
                 </div>
             </div>
 
             <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">Μπορώ να χρησιμοποιήσω το sTSS για όλα τα στυλ τρεξίματος;</h3>
+                <h3 itemprop="name">Μπορώ να χρησιμοποιήσω το rTSS για όλα τα στυλ τρεξίματος;</h3>
                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                     <div itemprop="text">
-                        <p>Ναι, αλλά το CRS σας πρέπει να είναι συγκεκριμένο για το στυλ. Οι περισσότεροι δρομείς χρησιμοποιούν CRS ελεύθερου στυλ καθώς είναι το πιο συχνά προπονημένο στυλ. Εάν προπονείστε κυρίως σε άλλο στυλ, εκτελέστε δοκιμή CRS σε αυτό το στυλ και χρησιμοποιήστε αυτόν τον ρυθμό για τον υπολογισμό του sTSS.</p>
+                        <p>Ναι, το rTSS μπορεί να χρησιμοποιηθεί για όλες τις προπονήσεις τρεξίματος. Οι περισσότεροι
+                            δρομείς χρησιμοποιούν το CRS τους στο δρόμο ή το στίβο. Εάν προπονείστε κυρίως σε ανώμαλο
+                            έδαφος, μπορείτε να χρησιμοποιήσετε έναν προσαρμοσμένο ρυθμό κατωφλίου για μεγαλύτερη
+                            ακρίβεια.</p>
                     </div>
                 </div>
             </div>
 
             <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">Ποια είναι η διαφορά μεταξύ sTSS και CTL/ATL/TSB;</h3>
+                <h3 itemprop="name">Ποια είναι η διαφορά μεταξύ rTSS και CTL/ATL/TSB;</h3>
                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                     <div itemprop="text">
-                        <p>Το sTSS μετρά το προπονητικό φορτίο μιας μεμονωμένης προπόνησης. Το CTL (Χρόνιο Προπονητικό Φορτίο) είναι η μακροπρόθεσμη φυσική κατάστασή σας, το ATL (Οξύ Προπονητικό Φορτίο) είναι η πρόσφατη κόπωσή σας και το TSB (Ισορροπία Προπονητικής Καταπόνησης) είναι η φρεσκάδα σας. Αυτά τα μέτρα χρησιμοποιούν τις τιμές sTSS με την πάροδο του χρόνου για να παρακολουθήσουν την κατάσταση προπόνησής σας. Μάθετε περισσότερα στον <a href="/el/training-load/">οδηγό Προπονητικού Φορτίου</a> μας.</p>
+                        <p>Το rTSS μετρά το προπονητικό φορτίο μιας μεμονωμένης προπόνησης. Το CTL (Χρόνιο Προπονητικό
+                            Φορτίο) είναι η μακροπρόθεσμη φυσική κατάστασή σας, το ATL (Οξύ Προπονητικό Φορτίο) είναι η
+                            πρόσφατη κόπωσή σας και το TSB (Ισορροπία Προπονητικής Καταπόνησης) είναι η φρεσκάδα σας.
+                            Αυτά τα μέτρα χρησιμοποιούν τις τιμές rTSS με την πάροδο του χρόνου για να παρακολουθήσουν
+                            την κατάσταση προπόνησής σας. Μάθετε περισσότερα στον <a
+                                href="/el/training-load/">οδηγό Προπονητικού Φορτίου</a> μας.</p>
                     </div>
                 </div>
             </div>
@@ -1070,7 +1097,8 @@ img[width][height] {
             <div class="card">
                 <h3 class="card-title">Δοκιμή CRS</h3>
                 <div class="card-content">
-                    <p>Χρειάζεστε τον ρυθμό CRS σας; Χρησιμοποιήστε τον δωρεάν υπολογιστή CRS μας με χρόνους δοκιμής 5K και 3K.</p>
+                    <p>Χρειάζεστε τον ρυθμό CRS σας; Χρησιμοποιήστε τον δωρεάν υπολογιστή CRS μας με χρόνους δοκιμής 5K
+                        και 3K.</p>
                     <a href="/el/crs/" class="btn btn-secondary btn-small mt-md">Υπολογιστής CRS →</a>
                 </div>
             </div>
@@ -1079,22 +1107,25 @@ img[width][height] {
                 <h3 class="card-title">Οδηγός Προπονητικού Φορτίου</h3>
                 <div class="card-content">
                     <p>Μάθετε για τα μέτρα CTL, ATL, TSB και Διαγράμματος Διαχείρισης Απόδοσης.</p>
-                    <a href="/el/training-load/" class="btn btn-secondary btn-small mt-md">Προπονητικό Φορτίο →</a>
+                    <a href="/el/training-load/" class="btn btn-secondary btn-small mt-md">Προπονητικό Φορτίο
+                        →</a>
                 </div>
             </div>
 
             <div class="card">
                 <h3 class="card-title">Εφαρμογή Run Analytics</h3>
                 <div class="card-content">
-                    <p>Αυτόματος υπολογισμός sTSS για όλες τις προπονήσεις. Παρακολουθήστε τις τάσεις CTL/ATL/TSB με την πάροδο του χρόνου.</p>
+                    <p>Αυτόματος υπολογισμός rTSS για όλες τις προπονήσεις. Παρακολουθήστε τις τάσεις CTL/ATL/TSB με την
+                        πάροδο του χρόνου.</p>
                     <a href="/el/" class="btn btn-secondary btn-small mt-md">Μάθετε Περισσότερα →</a>
                 </div>
             </div>
         </div>
 
         <div class="mt-xl text-center">
-            <p class="mb-md"><strong>Θέλετε αυτόματη παρακολούθηση sTSS;</strong></p>
-            <a href="https://apps.apple.com/es/app/runanalytics/id6754524015" class="btn btn-primary btn-large" target="_blank" rel="noopener">Κατεβάστε το Run Analytics Δωρεάν</a>
+            <p class="mb-md"><strong>Θέλετε αυτόματη παρακολούθηση rTSS;</strong></p>
+            <a href="https://apps.apple.com/es/app/runanalytics/id6754524015" class="btn btn-primary btn-large" target="_blank"
+                rel="noopener">Κατεβάστε το Run Analytics Δωρεάν</a>
         </div>
     </div>
 </section>

@@ -20,7 +20,7 @@
     
     
     <meta property="article:published_time" content="2025-10-08T10:00:00Z">
-    <meta property="article:modified_time" content="2025-10-18T14:30:00Z">
+    <meta property="article:modified_time" content="2025-12-22T14:30:00Z">
     <meta property="article:author" content="Albert Arno">
     
 
@@ -413,7 +413,7 @@ img[width][height] {
         }
       },
       "datePublished": "2025-10-08",
-      "dateModified": "2025-10-18",
+      "dateModified": "2025-12-22",
       "mainEntityOfPage": {
         "@type": "WebPage",
         "@id": "https://run.analyticszone.app/no/stss-calculator/"
@@ -740,19 +740,21 @@ img[width][height] {
     <main id="main-content" class="main-content">
         <section class="hero hero-small">
     <div class="container">
-        <h1>Gratis Løpe-TSS-kalkulator</h1>
-        <p class="lead">Beregn treningsstress for løpeøkter - Den eneste gratis sTSS-kalkulatoren</p>
+        <h1>Gratis Løpe-rTSS-kalkulator</h1>
+        <p class="lead">Beregn treningsstress for løpeøkter - Den eneste gratis rTSS-kalkulatoren</p>
     </div>
 </section>
 
 <section class="section">
     <div class="container container-narrow">
         <div class="callout callout-info mb-xl">
-            <h2>Hva er Løpe-TSS (sTSS)?</h2>
-            <p><strong>Løpe-treningsstress (sTSS)</strong> kvantifiserer treningsbelastningen av en løpeøkt ved å kombinere intensitet og varighet. Det er tilpasset fra syklings TSS-metodikk, og bruker din Critical Run Speed (CRS) som terskeltempoet. En 1-times økt på CRS-tempo = 100 sTSS.</p>
+            <h2>Hva er Løpe-rTSS (rTSS)?</h2>
+            <p><strong>Løpestresscore (rTSS)</strong> kvantifiserer treningsbelastningen av en løpeøkt ved å kombinere
+                intensitet og varighet. Det er tilpasset fra syklings TSS-metodikk, og bruker din Critical Run Speed
+                (CRS) som terskeltempoet. En 1-times økt på CRS-tempo = 100 rTSS.</p>
         </div>
 
-        <h2 class="mt-3xl">Gratis sTSS-kalkulator</h2>
+        <h2 class="mt-3xl">Gratis rTSS-kalkulator</h2>
         <p class="lead mb-xl">Beregn treningsstress for enhver løpeøkt. Krever ditt CRS-tempo.</p>
 
         <div class="css-calculator">
@@ -760,52 +762,32 @@ img[width][height] {
                 <div class="calculator-inputs">
                     <div class="form-group">
                         <label for="cssPace" class="form-label">Ditt CRS-tempo (mm:ss per 100m)</label>
-                        <input
-                            type="text"
-                            id="cssPace"
-                            class="form-input"
-                            placeholder="1:49"
-                            pattern="[0-9]{1,2}:[0-5][0-9]"
-                            aria-required="true"
-                            aria-describedby="cssPace-help"
-                        />
+                        <input type="text" id="cssPace" class="form-input" placeholder="1:49"
+                            pattern="[0-9]{1,2}:[0-5][0-9]" aria-required="true" aria-describedby="cssPace-help" />
                         <small id="cssPace-help" class="form-help">Ditt terskeltempo fra CRS-test (f.eks. 1:49)</small>
                         <div class="form-error" id="cssPace-error"></div>
                     </div>
 
                     <div class="form-group">
                         <label for="workoutDuration" class="form-label">Øktens varighet (minutter)</label>
-                        <input
-                            type="number"
-                            id="workoutDuration"
-                            class="form-input"
-                            placeholder="60"
-                            min="1"
-                            max="300"
-                            aria-required="true"
-                            aria-describedby="duration-help"
-                        />
-                        <small id="duration-help" class="form-help">Total økttid inkludert hvile (1-300 minutter)</small>
+                        <input type="number" id="workoutDuration" class="form-input" placeholder="60" min="1" max="300"
+                            aria-required="true" aria-describedby="duration-help" />
+                        <small id="duration-help" class="form-help">Total økttid inkludert hvile (1-300
+                            minutter)</small>
                         <div class="form-error" id="duration-error"></div>
                     </div>
 
                     <div class="form-group">
                         <label for="avgPace" class="form-label">Gjennomsnittlig økttempo (mm:ss per 100m)</label>
-                        <input
-                            type="text"
-                            id="avgPace"
-                            class="form-input"
-                            placeholder="2:05"
-                            pattern="[0-9]{1,2}:[0-5][0-9]"
-                            aria-required="true"
-                            aria-describedby="pace-help"
-                        />
-                        <small id="pace-help" class="form-help">Ditt gjennomsnittlige tempo under økten (f.eks. 2:05)</small>
+                        <input type="text" id="avgPace" class="form-input" placeholder="2:05"
+                            pattern="[0-9]{1,2}:[0-5][0-9]" aria-required="true" aria-describedby="pace-help" />
+                        <small id="pace-help" class="form-help">Ditt gjennomsnittlige tempo under økten (f.eks.
+                            2:05)</small>
                         <div class="form-error" id="pace-error"></div>
                     </div>
 
                     <div class="calculator-buttons">
-                        <button type="submit" class="btn btn-primary" id="calculateStssBtn">Beregn sTSS</button>
+                        <button type="submit" class="btn btn-primary" id="calculateStssBtn">Beregn rTSS</button>
                         <button type="reset" class="btn btn-ghost" id="resetStssBtn">Tøm</button>
                     </div>
                 </div>
@@ -815,7 +797,7 @@ img[width][height] {
                 <h3>Din treningsstress</h3>
                 <div class="results-summary">
                     <div class="result-item">
-                        <div class="result-label">sTSS</div>
+                        <div class="result-label">rTSS</div>
                         <div class="css-result-value" id="stssValue">--</div>
                     </div>
                     <div class="result-item">
@@ -833,12 +815,12 @@ img[width][height] {
             </div>
         </div>
 
-        <h2 class="mt-3xl">Hvordan sTSS beregnes</h2>
+        <h2 class="mt-3xl">Hvordan rTSS beregnes</h2>
 
         <div class="formula-box">
             <h3>Formel</h3>
             <div class="formula">
-                sTSS = (Varighet i timer) × (Intensitetsfaktor)² × 100
+                rTSS = (Varighet i timer) × (Intensitetsfaktor)² × 100
             </div>
             <div class="formula-explanation">
                 <p>Hvor:</p>
@@ -866,23 +848,24 @@ img[width][height] {
                 IF = <strong>0.872</strong>
             </div>
 
-            <h4>Steg 2: Beregn sTSS</h4>
+            <h4>Steg 2: Beregn rTSS</h4>
             <div class="calculation">
-                sTSS = 1.0 timer × (0.872)² × 100<br>
-                sTSS = 1.0 × 0.760 × 100<br>
-                sTSS = <strong>76</strong>
+                rTSS = 1.0 timer × (0.872)² × 100<br>
+                rTSS = 1.0 × 0.760 × 100<br>
+                rTSS = <strong>76</strong>
             </div>
 
-            <p class="mt-md"><strong>Tolkning:</strong> Denne 60-minutters økten i rolig tempo (langsommere enn CRS) ga 76 sTSS - en moderat treningsbelastning egnet for å bygge aerob grunntrening.</p>
+            <p class="mt-md"><strong>Tolkning:</strong> Denne 60-minutters økten i rolig tempo (langsommere enn CRS) ga
+                76 rTSS - en moderat treningsbelastning egnet for å bygge aerob grunntrening.</p>
         </div>
 
-        <h2 class="mt-3xl">Forstå sTSS-verdier</h2>
+        <h2 class="mt-3xl">Forstå rTSS-verdier</h2>
 
         <div class="zones-table-container">
             <table class="zones-table">
                 <thead>
                     <tr>
-                        <th>sTSS-område</th>
+                        <th>rTSS-område</th>
                         <th>Treningsbelastning</th>
                         <th>Restitusjonstid</th>
                         <th>Eksempeløkt</th>
@@ -892,70 +875,64 @@ img[width][height] {
                     <tr>
                         <td>&lt; 50</td>
                         <td>Lav</td>
-                        <td>Samme dag</td>
-                        <td>Rolig 30-min løp, teknikk-driller</td>
+                        <td>&lt; 24 timer</td>
+                        <td>Restitusjonsløp, teknikkdrill</td>
                     </tr>
                     <tr>
-                        <td>50-100</td>
+                        <td>50 - 100</td>
                         <td>Moderat</td>
-                        <td>1 dag</td>
-                        <td>60-min utholdenhet, jevnt tempo</td>
+                        <td>24 timer</td>
+                        <td>Aerob grunntrening, rolig langtur</td>
                     </tr>
                     <tr>
-                        <td>100-200</td>
+                        <td>100 - 200</td>
                         <td>Høy</td>
-                        <td>1-2 dager</td>
-                        <td>90-min terskel-sett, konkurransetempo-intervaller</td>
+                        <td>24 - 48 timer</td>
+                        <td>Terskelintervaller, tempoøkt</td>
                     </tr>
                     <tr>
-                        <td>200-300</td>
+                        <td>&gt; 200</td>
                         <td>Svært høy</td>
-                        <td>2-3 dager</td>
-                        <td>2-timers hard trening, flere terskel-blokker</td>
-                    </tr>
-                    <tr>
-                        <td>&gt; 300</td>
-                        <td>Ekstrem</td>
-                        <td>3+ dager</td>
-                        <td>Langt løp (&gt;2 timer), ultra-utholdenhet</td>
+                        <td>&gt; 48 timer</td>
+                        <td>VO₂max intervaller, maraton-økt</td>
                     </tr>
                 </tbody>
             </table>
         </div>
 
-        <h2 class="mt-3xl">Ukentlige sTSS-retningslinjer</h2>
+        <h2 class="mt-3xl">Ukentlige rTSS-retningslinjer</h2>
 
-        <p class="mb-md">Ukentlig sTSS-mål avhenger av ditt treningsnivå og mål:</p>
+        <p class="mb-md">Ukentlig rTSS-mål avhenger av ditt treningsnivå og mål:</p>
 
         <div class="grid grid-2 mb-xl">
             <div class="card">
                 <h3 class="card-title">Mosjonister</h3>
                 <div class="card-content">
-                    <p class="mb-sm"><strong>Ukentlig sTSS:</strong> 150-300</p>
-                    <p>2-3 økter per uke, 50-100 sTSS hver. Fokus på teknikk og å bygge aerob grunntrening.</p>
+                    <p class="mb-sm"><strong>Ukentlig rTSS:</strong> 150-300</p>
+                    <p>2-3 økter per uke, 50-100 rTSS hver. Fokus på teknikk og å bygge aerob grunntrening.</p>
                 </div>
             </div>
 
             <div class="card">
                 <h3 class="card-title">Treningsløpere / Triatleter</h3>
                 <div class="card-content">
-                    <p class="mb-sm"><strong>Ukentlig sTSS:</strong> 300-500</p>
-                    <p>3-4 økter per uke, 75-125 sTSS hver. Blanding av aerob utholdenhet og terskelarbeid.</p>
+                    <p class="mb-sm"><strong>Ukentlig rTSS:</strong> 300-500</p>
+                    <p>3-4 økter per uke, 75-125 rTSS hver. Blanding av aerob utholdenhet og terskelarbeid.</p>
                 </div>
             </div>
 
             <div class="card">
                 <h3 class="card-title">Konkurranseløpere</h3>
                 <div class="card-content">
-                    <p class="mb-sm"><strong>Ukentlig sTSS:</strong> 500-800</p>
-                    <p>4-6 økter per uke, 80-150 sTSS hver. Strukturert trening med periodisering.</p>
+                    <p class="mb-sm"><strong>Ukentlig rTSS:</strong> 500-800</p>
+                    <p>4-6 økter per uke, 80-150 rTSS hver. Strukturert trening med periodisering.</p>
                 </div>
             </div>
 
             <div class="card">
                 <h3 class="card-title">Elite / Studentløpere</h3>
                 <div class="card-content">
-                    <p class="mb-sm"><strong>Ukentlig sTSS:</strong> 800-1200+</p>
+                    <p class="mb-sm"><strong>Ukentlig rTSS:</strong> 800-1200+</p>
                     <p>8-12 økter per uke, dobbeltøkter. Høyt volum med kritisk restitusjonsstyring.</p>
                 </div>
             </div>
@@ -964,28 +941,38 @@ img[width][height] {
         <div class="callout callout-warning">
             <h3>⚠️ Viktige merknader</h3>
             <ul>
-                <li><strong>Krever nøyaktig CRS:</strong> Din CRS må være oppdatert (testet innen 6-8 uker) for nøyaktig sTSS.</li>
-                <li><strong>Forenklet beregning:</strong> Denne kalkulatoren bruker gjennomsnittlig tempo. Avansert sTSS bruker Normalized Graded Pace (NGP) som tar hensyn til intervallstruktur.</li>
-                <li><strong>Ikke for teknikkarbeid:</strong> sTSS måler kun fysisk treningsstress, ikke ferdighetsutvikling.</li>
-                <li><strong>Individuell variasjon:</strong> Samme sTSS føles forskjellig for ulike løpere. Juster retningslinjene basert på din restitusjon.</li>
+                <li><strong>Krever nøyaktig CRS:</strong> Din CRS må være oppdatert (testet innen 6-8 uker) for nøyaktig
+                    rTSS.</li>
+                <li><strong>Forenklet beregning:</strong> Denne kalkulatoren bruker gjennomsnittlig tempo. Avansert rTSS
+                    bruker Normalized Graded Pace (NGP) som tar hensyn til intervallstruktur.</li>
+                <li><strong>Ikke for teknikkarbeid:</strong> rTSS måler kun fysisk treningsstress, ikke
+                    ferdighetsutvikling.</li>
+                <li><strong>Individuell variasjon:</strong> Samme rTSS føles forskjellig for ulike løpere. Juster
+                    retningslinjene basert på din restitusjon.</li>
             </ul>
         </div>
 
-        <h2 class="mt-3xl">Hvorfor sTSS er viktig</h2>
+        <h2 class="mt-3xl">Hvorfor rTSS er viktig</h2>
 
         <p class="mb-md">Treningsstress er grunnlaget for:</p>
 
         <ul class="mb-xl">
-            <li><strong>CTL (Chronic Training Load):</strong> Ditt kondisjonsnivå - 42-dagers eksponentielt vektet gjennomsnitt av daglig sTSS</li>
-            <li><strong>ATL (Acute Training Load):</strong> Din utmattelse - 7-dagers eksponentielt vektet gjennomsnitt av daglig sTSS</li>
-            <li><strong>TSB (Training Stress Balance):</strong> Din form - TSB = CTL - ATL (positiv = opplagt, negativ = utmattet)</li>
-            <li><strong>Periodisering:</strong> Planlegg treningsfaser (grunntrening, oppbygging, topping, nedtrapping) ved å bruke mål-CTL-progresjoner</li>
+            <li><strong>CTL (Chronic Training Load):</strong> Ditt kondisjonsnivå - 42-dagers eksponentielt vektet
+                gjennomsnitt av daglig rTSS</li>
+            <li><strong>ATL (Acute Training Load):</strong> Din utmattelse - 7-dagers eksponentielt vektet gjennomsnitt
+                av daglig rTSS</li>
+            <li><strong>TSB (Training Stress Balance):</strong> Din form - TSB = CTL - ATL (positiv = opplagt, negativ =
+                utmattet)</li>
+            <li><strong>Periodisering:</strong> Planlegg treningsfaser (grunntrening, oppbygging, topping, nedtrapping)
+                ved å bruke mål-CTL-progresjoner</li>
             <li><strong>Restitusjonsstyring:</strong> Vit når du skal presse på og når du skal hvile basert på TSB</li>
         </ul>
 
         <div class="callout callout-tip">
             <h3>Profftips: Spor din CTL</h3>
-            <p>Registrer daglig sTSS i et regneark eller treningslogg. Beregn ditt 42-dagers gjennomsnitt (CTL) ukentlig. Sikre mot 5-10 CTL-poeng økning per uke under grunntrening. Oppretthold eller reduser CTL litt under nedtrapping (1-2 uker før konkurranse).</p>
+            <p>Registrer daglig rTSS i et regneark eller treningslogg. Beregn ditt 42-dagers gjennomsnitt (CTL)
+                ukentlig. Sikre mot 5-10 CTL-poeng økning per uke under grunntrening. Oppretthold eller reduser CTL litt
+                under nedtrapping (1-2 uker før konkurranse).</p>
         </div>
 
         <h2 class="mt-3xl">Ofte stilte spørsmål</h2>
@@ -995,43 +982,54 @@ img[width][height] {
                 <h3 itemprop="name">Hva er Løpe-TSS (sTSS)?</h3>
                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                     <div itemprop="text">
-                        <p>Løpe-treningsstress (sTSS) er en metrikk som kvantifiserer treningsbelastningen av en løpeøkt ved å kombinere både intensitet og varighet. Det er tilpasset fra syklings TSS-metodikk, og bruker din Critical Run Speed (CRS) som terskeltempoet. En økt på 1 time på CRS-tempo tilsvarer 100 sTSS.</p>
+                        <p>Løpestresscore (rTSS) er en metrikk som kvantifiserer treningsbelastningen av en løpeøkt ved
+                            å kombinere både intensitet og varighet. Det er tilpasset fra syklings TSS-metodikk, og
+                            bruker din Critical Run Speed (CRS) som terskeltempoet. En økt på 1 time på CRS-tempo
+                            tilsvarer 100 rTSS.</p>
                     </div>
                 </div>
             </div>
 
             <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">Hvordan beregner jeg min sTSS?</h3>
+                <h3 itemprop="name">Hvordan beregner jeg min rTSS?</h3>
                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                     <div itemprop="text">
-                        <p>Bruk kalkulatoren ovenfor ved å skrive inn ditt CRS-tempo (fra en CRS-test), total øktvarighet, og gjennomsnittlig tempo under økten. Formelen er: sTSS = Varighet (timer) × Intensitetsfaktor² × 100, hvor Intensitetsfaktor = CRS-tempo / Gjennomsnittlig økttempo.</p>
+                        <p>Bruk kalkulatoren ovenfor ved å skrive inn ditt CRS-tempo (fra en CRS-test), total
+                            øktvarighet, og gjennomsnittlig tempo under økten. Formelen er: rTSS = Varighet (timer) ×
+                            Intensitetsfaktor² × 100, hvor Intensitetsfaktor = CRS-tempo / Gjennomsnittlig økttempo.</p>
                     </div>
                 </div>
             </div>
 
             <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">Trenger jeg CRS for å beregne sTSS?</h3>
+                <h3 itemprop="name">Trenger jeg CRS for å beregne rTSS?</h3>
                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                     <div itemprop="text">
-                        <p>Ja, din Critical Run Speed (CRS) er nødvendig for å beregne intensitetsfaktoren, som er essensiell for sTSS-beregning. CRS representerer ditt terskeltempo og bør testes hver 6-8. uke. Du kan finne din CRS ved å bruke vår <a href="/no/crs/">CRS-kalkulator</a>.</p>
+                        <p>Ja, din Critical Run Speed (CRS) er nødvendig for å beregne intensitetsfaktoren, som er
+                            essensiell for rTSS-beregning. CRS representerer ditt terskeltempo og bør testes hver 6-8.
+                            uke. Du kan finne din CRS ved å bruke vår <a href="/no/crs/">CRS-kalkulator</a>.</p>
                     </div>
                 </div>
             </div>
 
             <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">Hva er en god sTSS-score for én økt?</h3>
+                <h3 itemprop="name">Hva er en god rTSS-score for én økt?</h3>
                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                     <div itemprop="text">
-                        <p>Det avhenger av øktens intensitet: Rolige økter scorer typisk under 50 sTSS, moderate økter 50-100 sTSS, harde økter 100-200 sTSS, og svært harde økter over 200 sTSS. Den passende scoren avhenger av dine treningsmål og nåværende kondisjonsnivå.</p>
+                        <p>Det avhenger av øktens intensitet: Rolige økter scorer typisk under 50 rTSS, moderate økter
+                            50-100 rTSS, harde økter 100-200 rTSS, og svært harde økter over 200 rTSS. Den passende
+                            scoren avhenger av dine treningsmål og nåværende kondisjonsnivå.</p>
                     </div>
                 </div>
             </div>
 
             <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">Hvor mye sTSS bør jeg gjøre per uke?</h3>
+                <h3 itemprop="name">Hvor mye rTSS bør jeg gjøre per uke?</h3>
                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                     <div itemprop="text">
-                        <p>Ukentlige sTSS-mål varierer etter nivå: Mosjonister: 150-300, Treningsløpere/Triatleter: 300-500, Konkurranseløpere: 500-800, Elite/Studenter: 800-1200+. Start forsiktig og øk gradvis for å unngå overtrening.</p>
+                        <p>Ukentlige rTSS-mål varierer etter nivå: Mosjonister: 150-300, Treningsløpere/Triatleter:
+                            300-500, Konkurranseløpere: 500-800, Elite/Studenter: 800-1200+. Start forsiktig og øk
+                            gradvis for å unngå overtrening.</p>
                     </div>
                 </div>
             </div>
@@ -1040,25 +1038,33 @@ img[width][height] {
                 <h3 itemprop="name">Er løpe-TSS det samme som sykkel-TSS?</h3>
                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                     <div itemprop="text">
-                        <p>Konseptet og formelen er det samme, men sTSS er tilpasset for løping. I stedet for å bruke effekt (FTP) som sykkel-TSS, bruker sTSS tempo med CRS som terskel. Begge måler treningsbelastning ved å bruke Varighet × Intensitetsfaktor² × 100.</p>
+                        <p>Konseptet og formelen er det samme, men rTSS er tilpasset for løping. I stedet for å bruke
+                            effekt (FTP) som sykkel-TSS, bruker rTSS tempo med CRS som terskel. Begge måler
+                            treningsbelastning ved å bruke Varighet × Intensitetsfaktor² × 100.</p>
                     </div>
                 </div>
             </div>
 
             <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">Kan jeg bruke sTSS for alle løpestiler?</h3>
+                <h3 itemprop="name">Kan jeg bruke rTSS for alle løpestiler?</h3>
                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                     <div itemprop="text">
-                        <p>Ja, men din CRS bør være stilspesifikk. De fleste løpere bruker freestyle CRS siden det er den mest vanlige treningsstilen. Hvis du primært trener i en annen stil, utfør en CRS-test i den stilen og bruk det tempoet for sTSS-beregning.</p>
+                        <p>Ja, men din CRS bør være stilspesifikk. De fleste løpere bruker freestyle CRS siden det er
+                            den mest vanlige treningsstilen. Hvis du primært trener i en annen stil, utfør en CRS-test i
+                            den stilen og bruk det tempoet for rTSS-beregning.</p>
                     </div>
                 </div>
             </div>
 
             <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">Hva er forskjellen mellom sTSS og CTL/ATL/TSB?</h3>
+                <h3 itemprop="name">Hva er forskjellen mellom rTSS og CTL/ATL/TSB?</h3>
                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                     <div itemprop="text">
-                        <p>sTSS måler en enkelt økts treningsbelastning. CTL (Chronic Training Load) er din langsiktige kondisjon, ATL (Acute Training Load) er din nylige utmattelse, og TSB (Training Stress Balance) er din opplevelse av form. Disse metrikene bruker sTSS-verdier over tid for å spore din treningsstatus. Lær mer i vår <a href="/no/training-load/">Treningsbelastningsguide</a>.</p>
+                        <p>rTSS måler en enkelt økts treningsbelastning. CTL (Chronic Training Load) er din langsiktige
+                            kondisjon, ATL (Acute Training Load) er din nylige utmattelse, og TSB (Training Stress
+                            Balance) er din opplevelse av form. Disse metrikene bruker rTSS-verdier over tid for å spore
+                            din treningsstatus. Lær mer i vår <a
+                                href="/no/training-load/">Treningsbelastningsguide</a>.</p>
                     </div>
                 </div>
             </div>
@@ -1079,22 +1085,24 @@ img[width][height] {
                 <h3 class="card-title">Treningsbelastningsguide</h3>
                 <div class="card-content">
                     <p>Lær om CTL, ATL, TSB og metrikker for prestasjonsstyringsdiagram.</p>
-                    <a href="/no/training-load/" class="btn btn-secondary btn-small mt-md">Treningsbelastning →</a>
+                    <a href="/no/training-load/" class="btn btn-secondary btn-small mt-md">Treningsbelastning
+                        →</a>
                 </div>
             </div>
 
             <div class="card">
                 <h3 class="card-title">Run Analytics-appen</h3>
                 <div class="card-content">
-                    <p>Automatisk sTSS-beregning for alle økter. Spor CTL/ATL/TSB-trender over tid.</p>
+                    <p>Automatisk rTSS-beregning for alle økter. Spor CTL/ATL/TSB-trender over tid.</p>
                     <a href="/no/" class="btn btn-secondary btn-small mt-md">Lær mer →</a>
                 </div>
             </div>
         </div>
 
         <div class="mt-xl text-center">
-            <p class="mb-md"><strong>Vil du ha automatisk sTSS-sporing?</strong></p>
-            <a href="https://apps.apple.com/es/app/runanalytics/id6754524015" class="btn btn-primary btn-large" target="_blank" rel="noopener">Last ned Run Analytics gratis</a>
+            <p class="mb-md"><strong>Vil du ha automatisk rTSS-sporing?</strong></p>
+            <a href="https://apps.apple.com/es/app/runanalytics/id6754524015" class="btn btn-primary btn-large" target="_blank" rel="noopener">Last
+                ned Run Analytics gratis</a>
         </div>
     </div>
 </section>

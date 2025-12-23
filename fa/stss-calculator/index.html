@@ -20,7 +20,7 @@
     
     
     <meta property="article:published_time" content="2025-01-15T10:00:00Z">
-    <meta property="article:modified_time" content="2025-11-16T14:30:00Z">
+    <meta property="article:modified_time" content="2025-12-22T14:30:00Z">
     <meta property="article:author" content="Albert Arno">
     
 
@@ -413,7 +413,7 @@ img[width][height] {
         }
       },
       "datePublished": "2025-01-15",
-      "dateModified": "2025-11-16",
+      "dateModified": "2025-12-22",
       "mainEntityOfPage": {
         "@type": "WebPage",
         "@id": "https://run.analyticszone.app/fa/stss-calculator/"
@@ -749,7 +749,9 @@ img[width][height] {
     <div class="container container-narrow">
         <div class="callout callout-info mb-xl">
             <h2>sTSS دویدن چیست؟</h2>
-            <p><strong>امتیاز استرس تمرینی دویدن (sTSS)</strong> بار تمرینی یک جلسه دویدن را با ترکیب شدت و مدت زمان کمی‌سازی می‌کند. این شاخص برگرفته از روش TSS دوچرخه‌سواری است و از سرعت بحرانی دویدن (CRS) شما به عنوان سرعت آستانه استفاده می‌کند. یک تمرین 1 ساعته با سرعت CRS برابر با 100 sTSS است.</p>
+            <p><strong>امتیاز استرس تمرینی دویدن (sTSS)</strong> بار تمرینی یک جلسه دویدن را با ترکیب شدت و مدت زمان
+                کمی‌سازی می‌کند. این شاخص برگرفته از روش TSS دوچرخه‌سواری است و از سرعت بحرانی دویدن (CRS) شما به عنوان
+                سرعت آستانه استفاده می‌کند. یک تمرین 1 ساعته با سرعت CRS برابر با 100 sTSS است.</p>
         </div>
 
         <h2 class="mt-3xl">ماشین‌حساب رایگان sTSS</h2>
@@ -759,48 +761,26 @@ img[width][height] {
             <form id="stssCalculatorForm">
                 <div class="calculator-inputs">
                     <div class="form-group">
-                        <label for="cssPace" class="form-label">سرعت CRS شما (mm:ss به ازای هر 100 متر)</label>
-                        <input
-                            type="text"
-                            id="cssPace"
-                            class="form-input"
-                            placeholder="1:49"
-                            pattern="[0-9]{1,2}:[0-5][0-9]"
-                            aria-required="true"
-                            aria-describedby="cssPace-help"
-                        />
-                        <small id="cssPace-help" class="form-help">سرعت آستانه شما از تست CRS (مثال: 1:49)</small>
+                        <label for="cssPace" class="form-label">سرعت CRS شما (mm:ss به ازای هر کیلومتر)</label>
+                        <input type="text" id="cssPace" class="form-input" placeholder="4:15"
+                            pattern="[0-9]{1,2}:[0-5][0-9]" aria-required="true" aria-describedby="cssPace-help" />
+                        <small id="cssPace-help" class="form-help">سرعت آستانه شما از تست CRS (مثال: 4:15)</small>
                         <div class="form-error" id="cssPace-error"></div>
                     </div>
 
                     <div class="form-group">
                         <label for="workoutDuration" class="form-label">مدت زمان تمرین (دقیقه)</label>
-                        <input
-                            type="number"
-                            id="workoutDuration"
-                            class="form-input"
-                            placeholder="60"
-                            min="1"
-                            max="300"
-                            aria-required="true"
-                            aria-describedby="duration-help"
-                        />
+                        <input type="number" id="workoutDuration" class="form-input" placeholder="60" min="1" max="300"
+                            aria-required="true" aria-describedby="duration-help" />
                         <small id="duration-help" class="form-help">زمان کل تمرین شامل استراحت (1-300 دقیقه)</small>
                         <div class="form-error" id="duration-error"></div>
                     </div>
 
                     <div class="form-group">
-                        <label for="avgPace" class="form-label">میانگین سرعت تمرین (mm:ss به ازای هر 100 متر)</label>
-                        <input
-                            type="text"
-                            id="avgPace"
-                            class="form-input"
-                            placeholder="2:05"
-                            pattern="[0-9]{1,2}:[0-5][0-9]"
-                            aria-required="true"
-                            aria-describedby="pace-help"
-                        />
-                        <small id="pace-help" class="form-help">میانگین سرعت شما طی تمرین (مثال: 2:05)</small>
+                        <label for="avgPace" class="form-label">میانگین سرعت تمرین (mm:ss به ازای هر کیلومتر)</label>
+                        <input type="text" id="avgPace" class="form-input" placeholder="4:45"
+                            pattern="[0-9]{1,2}:[0-5][0-9]" aria-required="true" aria-describedby="pace-help" />
+                        <small id="pace-help" class="form-help">میانگین سرعت شما طی تمرین (مثال: 4:45)</small>
                         <div class="form-error" id="pace-error"></div>
                     </div>
 
@@ -843,9 +823,9 @@ img[width][height] {
             <div class="formula-explanation">
                 <p>که در آن:</p>
                 <ul>
-                    <li><strong>ضریب شدت (IF)</strong> = سرعت CRS / میانگین سرعت تمرین</li>
+                    <li><strong>ضریب شدت (IF)</strong> = سرعت آستانه / میانگین سرعت تمرین</li>
                     <li><strong>مدت زمان</strong> = زمان کل تمرین به ساعت</li>
-                    <li><strong>سرعت CRS</strong> = سرعت آستانه شما از تست CRS</li>
+                    <li><strong>سرعت آستانه (Threshold Speed)</strong> = حداکثر سرعت پایدار شما (CRS)</li>
                 </ul>
             </div>
         </div>
@@ -854,26 +834,27 @@ img[width][height] {
         <div class="example-box">
             <h4>جزئیات تمرین:</h4>
             <ul>
-                <li>سرعت CRS: <strong>1:49/100متر</strong> (109 ثانیه)</li>
+                <li>سرعت CRS: <strong>4:15/کیلومتر</strong> (255 ثانیه)</li>
                 <li>مدت زمان تمرین: <strong>60 دقیقه</strong> (1 ساعت)</li>
-                <li>میانگین سرعت: <strong>2:05/100متر</strong> (125 ثانیه)</li>
+                <li>میانگین سرعت: <strong>4:45/کیلومتر</strong> (285 ثانیه)</li>
             </ul>
 
             <h4>مرحله 1: محاسبه ضریب شدت</h4>
             <div class="calculation">
-                IF = سرعت CRS / سرعت تمرین<br>
-                IF = 109 / 125<br>
-                IF = <strong>0.872</strong>
+                IF = سرعت آستانه / سرعت تمرین<br>
+                IF = 255 / 285<br>
+                IF = <strong>0.895</strong>
             </div>
 
             <h4>مرحله 2: محاسبه sTSS</h4>
             <div class="calculation">
-                sTSS = 1.0 ساعت × (0.872)² × 100<br>
-                sTSS = 1.0 × 0.760 × 100<br>
-                sTSS = <strong>76</strong>
+                sTSS = 1.0 ساعت × (0.895)² × 100<br>
+                sTSS = 1.0 × 0.801 × 100<br>
+                sTSS = <strong>80</strong>
             </div>
 
-            <p class="mt-md"><strong>تفسیر:</strong> این تمرین 60 دقیقه‌ای با سرعت آسان (کندتر از CRS) امتیاز 76 sTSS تولید کرد - بار تمرینی متوسط مناسب برای ساخت پایه هوازی.</p>
+            <p class="mt-md"><strong>تفسیر:</strong> این تمرین 60 دقیقه‌ای با سرعت آسان امتیاز 80 sTSS تولید کرد - بار
+                تمرینی متوسط مناسب برای ساخت پایه هوازی.</p>
         </div>
 
         <h2 class="mt-3xl">درک مقادیر sTSS</h2>
@@ -964,10 +945,14 @@ img[width][height] {
         <div class="callout callout-warning">
             <h3>⚠️ نکات مهم</h3>
             <ul>
-                <li><strong>نیاز به CRS دقیق:</strong> CRS شما باید به‌روز باشد (تست‌شده در 6-8 هفته اخیر) برای دقت sTSS.</li>
-                <li><strong>محاسبه ساده‌شده:</strong> این ماشین‌حساب از میانگین سرعت استفاده می‌کند. sTSS پیشرفته از سرعت درجه‌بندی‌شده نرمال‌شده (NGP) استفاده می‌کند که ساختار اینتروال را در نظر می‌گیرد.</li>
-                <li><strong>نه برای کار تکنیک:</strong> sTSS فقط استرس تمرینی فیزیکی را اندازه‌گیری می‌کند، نه توسعه مهارت.</li>
-                <li><strong>تفاوت فردی:</strong> یک sTSS یکسان برای دوندگان مختلف متفاوت احساس می‌شود. راهنماها را بر اساس بازیابی خود تنظیم کنید.</li>
+                <li><strong>نیاز به CRS دقیق:</strong> CRS شما باید به‌روز باشد (تست‌شده در 6-8 هفته اخیر) برای دقت
+                    sTSS.</li>
+                <li><strong>محاسبه ساده‌شده:</strong> این ماشین‌حساب از میانگین سرعت استفاده می‌کند. sTSS پیشرفته از
+                    سرعت درجه‌بندی‌شده نرمال‌شده (NGP) استفاده می‌کند که ساختار اینتروال را در نظر می‌گیرد.</li>
+                <li><strong>نه برای کار تکنیک:</strong> sTSS فقط استرس تمرینی فیزیکی را اندازه‌گیری می‌کند، نه توسعه
+                    مهارت.</li>
+                <li><strong>تفاوت فردی:</strong> یک sTSS یکسان برای دوندگان مختلف متفاوت احساس می‌شود. راهنماها را بر
+                    اساس بازیابی خود تنظیم کنید.</li>
             </ul>
         </div>
 
@@ -979,13 +964,17 @@ img[width][height] {
             <li><strong>CTL (بار تمرینی مزمن):</strong> سطح آمادگی شما - میانگین وزن‌دار نمایی 42 روزه sTSS روزانه</li>
             <li><strong>ATL (بار تمرینی حاد):</strong> خستگی شما - میانگین وزن‌دار نمایی 7 روزه sTSS روزانه</li>
             <li><strong>TSB (تعادل استرس تمرینی):</strong> فرم شما - TSB = CTL - ATL (مثبت = سرحال، منفی = خسته)</li>
-            <li><strong>دوره‌بندی:</strong> برنامه‌ریزی فازهای تمرینی (پایه، ساخت، اوج، تیپر) با استفاده از پیشرفت CTL هدف</li>
-            <li><strong>مدیریت بازیابی:</strong> بدانید چه زمانی باید فشار بیاورید و چه زمانی باید استراحت کنید بر اساس TSB</li>
+            <li><strong>دوره‌بندی:</strong> برنامه‌ریزی فازهای تمرینی (پایه، ساخت، اوج، تیپر) با استفاده از پیشرفت CTL
+                هدف</li>
+            <li><strong>مدیریت بازیابی:</strong> بدانید چه زمانی باید فشار بیاورید و چه زمانی باید استراحت کنید بر اساس
+                TSB</li>
         </ul>
 
         <div class="callout callout-tip">
             <h3>نکته حرفه‌ای: CTL خود را ردیابی کنید</h3>
-            <p>sTSS روزانه را در یک صفحه‌گسترده یا دفتر تمرین ثبت کنید. میانگین 42 روزه خود (CTL) را هر هفته محاسبه کنید. هدف‌گذاری 5-10 امتیاز افزایش CTL در هفته در طول ساخت پایه. حفظ یا کاهش جزئی CTL در طول تیپر (1-2 هفته قبل از مسابقه).</p>
+            <p>sTSS روزانه را در یک صفحه‌گسترده یا دفتر تمرین ثبت کنید. میانگین 42 روزه خود (CTL) را هر هفته محاسبه
+                کنید. هدف‌گذاری 5-10 امتیاز افزایش CTL در هفته در طول ساخت پایه. حفظ یا کاهش جزئی CTL در طول تیپر (1-2
+                هفته قبل از مسابقه).</p>
         </div>
 
         <h2 class="mt-3xl">سوالات متداول</h2>
@@ -995,7 +984,10 @@ img[width][height] {
                 <h3 itemprop="name">TSS دویدن (sTSS) چیست؟</h3>
                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                     <div itemprop="text">
-                        <p>امتیاز استرس تمرینی دویدن (sTSS) شاخصی است که بار تمرینی یک جلسه دویدن را با ترکیب هم شدت و هم مدت زمان کمی‌سازی می‌کند. این شاخص برگرفته از روش TSS دوچرخه‌سواری است و از سرعت بحرانی دویدن (CRS) شما به عنوان سرعت آستانه استفاده می‌کند. یک تمرین 1 ساعته با سرعت CRS برابر با 100 sTSS است.</p>
+                        <p>امتیاز استرس تمرینی دویدن (sTSS) شاخصی است که بار تمرینی یک جلسه دویدن را با ترکیب هم شدت و
+                            هم مدت زمان کمی‌سازی می‌کند. این شاخص برگرفته از روش TSS دوچرخه‌سواری است و از سرعت بحرانی
+                            دویدن (CRS) شما به عنوان سرعت آستانه استفاده می‌کند. یک تمرین 1 ساعته با سرعت CRS برابر با
+                            100 sTSS است.</p>
                     </div>
                 </div>
             </div>
@@ -1004,7 +996,9 @@ img[width][height] {
                 <h3 itemprop="name">چگونه sTSS خود را محاسبه کنم؟</h3>
                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                     <div itemprop="text">
-                        <p>از ماشین‌حساب بالا با وارد کردن سرعت CRS (از تست CRS)، مدت زمان کل تمرین، و میانگین سرعت در طول تمرین استفاده کنید. فرمول این است: sTSS = مدت زمان (ساعت) × ضریب شدت² × 100، که در آن ضریب شدت = سرعت CRS / میانگین سرعت تمرین.</p>
+                        <p>از ماشین‌حساب بالا با وارد کردن سرعت CRS (از تست CRS)، مدت زمان کل تمرین، و میانگین سرعت در
+                            طول تمرین استفاده کنید. فرمول این است: sTSS = مدت زمان (ساعت) × ضریب شدت² × 100، که در آن
+                            ضریب شدت = سرعت آستانه / میانگین سرعت تمرین.</p>
                     </div>
                 </div>
             </div>
@@ -1013,7 +1007,9 @@ img[width][height] {
                 <h3 itemprop="name">آیا برای محاسبه sTSS به CRS نیاز دارم؟</h3>
                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                     <div itemprop="text">
-                        <p>بله، سرعت بحرانی دویدن (CRS) شما برای محاسبه ضریب شدت مورد نیاز است که برای محاسبه sTSS ضروری است. CRS نشان‌دهنده سرعت آستانه شماست و باید هر 6-8 هفته تست شود. می‌توانید CRS خود را با استفاده از <a href="/fa/crs/">ماشین‌حساب CRS</a> ما پیدا کنید.</p>
+                        <p>بله، سرعت بحرانی دویدن (CRS) شما برای محاسبه ضریب شدت مورد نیاز است که برای محاسبه sTSS ضروری
+                            است. CRS نشان‌دهنده سرعت آستانه شماست و باید هر 6-8 هفته تست شود. می‌توانید CRS خود را با
+                            استفاده از <a href="/fa/crs/">ماشین‌حساب CRS</a> ما پیدا کنید.</p>
                     </div>
                 </div>
             </div>
@@ -1022,7 +1018,9 @@ img[width][height] {
                 <h3 itemprop="name">امتیاز sTSS خوب برای یک تمرین چقدر است؟</h3>
                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                     <div itemprop="text">
-                        <p>به شدت تمرین بستگی دارد: تمرینات آسان معمولاً زیر 50 sTSS امتیاز می‌گیرند، تمرینات متوسط 50-100 sTSS، تمرینات سخت 100-200 sTSS، و تمرینات خیلی سخت بالای 200 sTSS. امتیاز مناسب به اهداف تمرینی و سطح آمادگی فعلی شما بستگی دارد.</p>
+                        <p>به شدت تمرین بستگی دارد: تمرینات آسان معمولاً زیر 50 sTSS امتیاز می‌گیرند، تمرینات متوسط
+                            50-100 sTSS، تمرینات سخت 100-200 sTSS، و تمرینات خیلی سخت بالای 200 sTSS. امتیاز مناسب به
+                            اهداف تمرینی و سطح آمادگی فعلی شما بستگی دارد.</p>
                     </div>
                 </div>
             </div>
@@ -1031,7 +1029,9 @@ img[width][height] {
                 <h3 itemprop="name">چقدر sTSS باید در هفته انجام دهم؟</h3>
                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                     <div itemprop="text">
-                        <p>اهداف sTSS هفتگی بر اساس سطح متفاوت است: دوندگان تفریحی: 150-300، دوندگان آمادگی/تری‌اتلون‌کاران: 300-500، مسترز رقابتی: 500-800، نخبه/دانشگاهی: 800-1200+. محافظه‌کارانه شروع کنید و به تدریج افزایش دهید تا از تمرین بیش از حد جلوگیری کنید.</p>
+                        <p>اهداف sTSS هفتگی بر اساس سطح متفاوت است: دوندگان تفریحی: 150-300، دوندگان
+                            آمادگی/تری‌اتلون‌کاران: 300-500، مسترز رقابتی: 500-800، نخبه/دانشگاهی: 800-1200+.
+                            محافظه‌کارانه شروع کنید و به تدریج افزایش دهید تا از تمرین بیش از حد جلوگیری کنید.</p>
                     </div>
                 </div>
             </div>
@@ -1040,7 +1040,9 @@ img[width][height] {
                 <h3 itemprop="name">آیا TSS دویدن همان TSS دوچرخه‌سواری است؟</h3>
                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                     <div itemprop="text">
-                        <p>مفهوم و فرمول یکسان هستند، اما sTSS برای دویدن تطبیق داده شده است. به جای استفاده از قدرت (FTP) مثل TSS دوچرخه‌سواری، sTSS از سرعت با CRS به عنوان آستانه استفاده می‌کند. هر دو بار تمرینی را با استفاده از مدت زمان × ضریب شدت² × 100 اندازه‌گیری می‌کنند.</p>
+                        <p>مفهوم و فرمول یکسان هستند، اما sTSS برای دویدن تطبیق داده شده است. به جای استفاده از قدرت
+                            (FTP) مثل TSS دوچرخه‌سواری، sTSS از سرعت با CRS به عنوان آستانه استفاده می‌کند. هر دو بار
+                            تمرینی را با استفاده از مدت زمان × ضریب شدت² × 100 اندازه‌گیری می‌کنند.</p>
                     </div>
                 </div>
             </div>
@@ -1049,7 +1051,9 @@ img[width][height] {
                 <h3 itemprop="name">آیا می‌توانم از sTSS برای همه گام‌های دویدن استفاده کنم؟</h3>
                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                     <div itemprop="text">
-                        <p>بله، اما CRS شما باید مخصوص گام باشد. بیشتر دوندگان از CRS آزاد استفاده می‌کنند چون رایج‌ترین گام تمرینی است. اگر عمدتاً در گام دیگری تمرین می‌کنید، تست CRS را در آن گام انجام دهید و از آن سرعت برای محاسبه sTSS استفاده کنید.</p>
+                        <p>بله، اما CRS شما باید مخصوص گام باشد. بیشتر دوندگان از CRS آزاد استفاده می‌کنند چون رایج‌ترین
+                            گام تمرینی است. اگر عمدتاً در گام دیگری تمرین می‌کنید، تست CRS را در آن گام انجام دهید و از
+                            آن سرعت برای محاسبه sTSS استفاده کنید.</p>
                     </div>
                 </div>
             </div>
@@ -1058,7 +1062,10 @@ img[width][height] {
                 <h3 itemprop="name">تفاوت بین sTSS و CTL/ATL/TSB چیست؟</h3>
                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                     <div itemprop="text">
-                        <p>sTSS بار تمرینی یک جلسه را اندازه‌گیری می‌کند. CTL (بار تمرینی مزمن) آمادگی بلندمدت شماست، ATL (بار تمرینی حاد) خستگی اخیر شماست، و TSB (تعادل استرس تمرینی) سرحالی شماست. این شاخص‌ها از مقادیر sTSS در طول زمان برای ردیابی وضعیت تمرینی شما استفاده می‌کنند. اطلاعات بیشتر در <a href="/fa/training-load/">راهنمای بار تمرینی</a> ما.</p>
+                        <p>sTSS بار تمرینی یک جلسه را اندازه‌گیری می‌کند. CTL (بار تمرینی مزمن) آمادگی بلندمدت شماست،
+                            ATL (بار تمرینی حاد) خستگی اخیر شماست، و TSB (تعادل استرس تمرینی) سرحالی شماست. این شاخص‌ها
+                            از مقادیر sTSS در طول زمان برای ردیابی وضعیت تمرینی شما استفاده می‌کنند. اطلاعات بیشتر در <a
+                                href="/fa/training-load/">راهنمای بار تمرینی</a> ما.</p>
                     </div>
                 </div>
             </div>
@@ -1094,7 +1101,8 @@ img[width][height] {
 
         <div class="mt-xl text-center">
             <p class="mb-md"><strong>ردیابی خودکار sTSS می‌خواهید؟</strong></p>
-            <a href="https://apps.apple.com/es/app/runanalytics/id6754524015" class="btn btn-primary btn-large" target="_blank" rel="noopener">دانلود رایگان Run Analytics</a>
+            <a href="https://apps.apple.com/es/app/runanalytics/id6754524015" class="btn btn-primary btn-large" target="_blank"
+                rel="noopener">دانلود رایگان Run Analytics</a>
         </div>
     </div>
 </section>

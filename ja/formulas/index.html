@@ -20,7 +20,7 @@
     
     
     <meta property="article:published_time" content="2025-01-15T10:00:00Z">
-    <meta property="article:modified_time" content="2025-10-08T14:30:00Z">
+    <meta property="article:modified_time" content="2025-12-22T14:30:00Z">
     <meta property="article:author" content="Albert Arno">
     
 
@@ -413,7 +413,7 @@ img[width][height] {
         }
       },
       "datePublished": "2025-01-15",
-      "dateModified": "2025-10-08",
+      "dateModified": "2025-12-22",
       "mainEntityOfPage": {
         "@type": "WebPage",
         "@id": "https://run.analyticszone.app/ja/formulas/"
@@ -892,12 +892,12 @@ const result = calculateCRS(200, 150, 400, 368);
         </div>
 
         <div class="formula-card">
-            <h3>ランニングトレーニングストレススコア (sTSS)</h3>
+            <h3>ランニングストレススコア (rTSS)</h3>
             <div class="formula-content">
                 <h4>完全な公式:</h4>
                 <div class="formula-box-large">
                     <div class="formula">
-                        sTSS = (IF³) × 時間 (時間) × 100
+                        rTSS = (IF²) × 時間 (時間) × 100
                     </div>
                     <div class="formula">
                         IF = NSS / FTP
@@ -930,7 +930,7 @@ const result = calculateCRS(200, 150, 400, 368);
                     </div>
                     <div class="calculator-result mt-md">
                         <div class="result-label">計算されたsTSS:</div>
-                        <div class="result-value" id="stss-result">55</div>
+                        <div class="result-value" id="stss-result">65</div>
                     </div>
                     <div class="calculation-breakdown mt-md">
                         <small>
@@ -939,14 +939,14 @@ const result = calculateCRS(200, 150, 400, 368);
                                 NSS = 3000m / 55分 = 54.5 m/分<br>
                                 FTP = 100 / (93/60) = 64.5 m/分<br>
                                 IF = 54.5 / 64.5 = 0.845<br>
-                                sTSS = 0.845³ × (55/60) × 100 = 55
+                                rTSS = 0.845² × (55/60) × 100 = 65
                             </span>
                         </small>
                     </div>
                 </div>
 
                 <h4 class="mt-xl">JavaScript実装:</h4>
-                <pre><code>function calculateSTSS(distance, timeMinutes, ftpMetersPerMin) {
+                <pre><code>function calculateRTSS(distance, timeMinutes, ftpMetersPerMin) {
   // 正規化ランニングスピード(NSS)を計算
   const nss = distance / timeMinutes;
 
@@ -956,15 +956,15 @@ const result = calculateCRS(200, 150, 400, 368);
   // 時間を計算
   const hours = timeMinutes / 60;
 
-  // 強度係数の3乗を使用してsTSSを計算
-  const stss = Math.pow(intensityFactor, 3) * hours * 100;
+  // 強度係数の2乗を使用してrTSSを計算
+  const rtss = Math.pow(intensityFactor, 2) * hours * 100;
 
-  return Math.round(stss);
+  return Math.round(rtss);
 }
 
 // 使用例:
-const stss = calculateSTSS(3000, 55, 64.5);
-// 戻り値: 55
+const rtss = calculateRTSS(3000, 55, 64.5);
+// 戻り値: 65
 
 // ヘルパー: CRSをFTPに変換
 function cssToFTP(cssPacePer100mSeconds) {
@@ -987,13 +987,13 @@ const ftp = cssToFTP(93); // 戻り値: 64.5 m/分</code></pre>
                         return 100 / (cssPacePer100mSeconds / 60);
                     }
 
-                    // sTSS計算
-                    function calculateSTSS(distance, timeMinutes, ftpMetersPerMin) {
+                    // rTSS計算
+                    function calculateRTSS(distance, timeMinutes, ftpMetersPerMin) {
                         const nss = distance / timeMinutes;
                         const intensityFactor = nss / ftpMetersPerMin;
                         const hours = timeMinutes / 60;
-                        const stss = Math.pow(intensityFactor, 3) * hours * 100;
-                        return Math.round(stss);
+                        const rtss = Math.pow(intensityFactor, 2) * hours * 100;
+                        return Math.round(rtss);
                     }
 
                     // 計算機の更新
@@ -1018,12 +1018,12 @@ const ftp = cssToFTP(93); // 戻り値: 64.5 m/分</code></pre>
                             // 強度係数を計算
                             const intensityFactor = nss / ftp;
 
-                            // sTSSを計算
-                            const stss = calculateSTSS(distance, duration, ftp);
+                            // rTSSを計算
+                            const rtss = calculateRTSS(distance, duration, ftp);
 
                             // 表示を更新
                             document.getElementById('stss-ftp').value = ftp.toFixed(1) + ' m/分';
-                            document.getElementById('stss-result').textContent = stss;
+                            document.getElementById('stss-result').textContent = rtss;
 
                             // 計算ステップを更新
                             const hours = duration / 60;
@@ -1031,7 +1031,7 @@ const ftp = cssToFTP(93); // 戻り値: 64.5 m/分</code></pre>
                                 `NSS = ${distance}m / ${duration}分 = ${nss.toFixed(1)} m/分<br>` +
                                 `FTP = 100 / (${cssPaceSeconds}/60) = ${ftp.toFixed(1)} m/分<br>` +
                                 `IF = ${nss.toFixed(1)} / ${ftp.toFixed(1)} = ${intensityFactor.toFixed(3)}<br>` +
-                                `sTSS = ${intensityFactor.toFixed(3)}³ × (${duration}/60) × 100 = ${stss}`;
+                                `rTSS = ${intensityFactor.toFixed(3)}² × (${duration}/60) × 100 = ${rtss}`;
                         } catch (e) {
                             console.error('Calculation error:', e);
                         }

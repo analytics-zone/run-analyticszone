@@ -20,7 +20,7 @@
     
     
     <meta property="article:published_time" content="2025-10-08T10:00:00Z">
-    <meta property="article:modified_time" content="2025-10-08T14:30:00Z">
+    <meta property="article:modified_time" content="2025-12-22T14:30:00Z">
     <meta property="article:author" content="Albert Arno">
     
 
@@ -413,7 +413,7 @@ img[width][height] {
         }
       },
       "datePublished": "2025-10-08",
-      "dateModified": "2025-10-08",
+      "dateModified": "2025-12-22",
       "mainEntityOfPage": {
         "@type": "WebPage",
         "@id": "https://run.analyticszone.app/nl/stss-calculator/"
@@ -741,18 +741,21 @@ img[width][height] {
         <section class="hero hero-small">
     <div class="container">
         <h1>Gratis Hardloop TSS Calculator</h1>
-        <p class="lead">Bereken Training Stress Score voor hardlooptrainingen - De enige gratis sTSS calculator</p>
+        <p class="lead">Bereken Running Stress Score voor hardlooptrainingen - De enige gratis rTSS calculator</p>
     </div>
 </section>
 
 <section class="section">
     <div class="container container-narrow">
         <div class="callout callout-info mb-xl">
-            <h2>Wat is Running TSS (sTSS)?</h2>
-            <p><strong>Running Training Stress Score (sTSS)</strong> kwantificeert de trainingsbelasting van een hardlooptraining door intensiteit en duur te combineren. Het is aangepast van de TSS-methodologie uit wielrennen, waarbij je Critical Run Speed (CRS) als drempelsnelheid wordt gebruikt. Een training van 1 uur op CRS-tempo = 100 sTSS.</p>
+            <h2>Wat is Running Stress Score (rTSS)?</h2>
+            <p><strong>Running Stress Score (rTSS)</strong> kwantificeert de trainingsbelasting van een hardlooptraining
+                door intensiteit en duur te combineren. Het is aangepast van de TSS-methodologie uit wielrennen, waarbij
+                je Critical Run Speed (CRS) als drempelsnelheid wordt gebruikt. Een training van 1 uur op CRS-tempo =
+                100 rTSS.</p>
         </div>
 
-        <h2 class="mt-3xl">Gratis sTSS Calculator</h2>
+        <h2 class="mt-3xl">Gratis rTSS Calculator</h2>
         <p class="lead mb-xl">Bereken de trainingsstress voor elke hardlooptraining. Vereist je CRS-tempo.</p>
 
         <div class="css-calculator">
@@ -760,52 +763,32 @@ img[width][height] {
                 <div class="calculator-inputs">
                     <div class="form-group">
                         <label for="cssPace" class="form-label">Je CRS Tempo (mm:ss per 100m)</label>
-                        <input
-                            type="text"
-                            id="cssPace"
-                            class="form-input"
-                            placeholder="1:49"
-                            pattern="[0-9]{1,2}:[0-5][0-9]"
-                            aria-required="true"
-                            aria-describedby="cssPace-help"
-                        />
+                        <input type="text" id="cssPace" class="form-input" placeholder="1:49"
+                            pattern="[0-9]{1,2}:[0-5][0-9]" aria-required="true" aria-describedby="cssPace-help" />
                         <small id="cssPace-help" class="form-help">Je drempeltempo uit CRS-test (bijv. 1:49)</small>
                         <div class="form-error" id="cssPace-error"></div>
                     </div>
 
                     <div class="form-group">
                         <label for="workoutDuration" class="form-label">Trainingsduur (minuten)</label>
-                        <input
-                            type="number"
-                            id="workoutDuration"
-                            class="form-input"
-                            placeholder="60"
-                            min="1"
-                            max="300"
-                            aria-required="true"
-                            aria-describedby="duration-help"
-                        />
-                        <small id="duration-help" class="form-help">Totale trainingstijd inclusief rust (1-300 minuten)</small>
+                        <input type="number" id="workoutDuration" class="form-input" placeholder="60" min="1" max="300"
+                            aria-required="true" aria-describedby="duration-help" />
+                        <small id="duration-help" class="form-help">Totale trainingstijd inclusief rust (1-300
+                            minuten)</small>
                         <div class="form-error" id="duration-error"></div>
                     </div>
 
                     <div class="form-group">
                         <label for="avgPace" class="form-label">Gemiddeld Trainingstempo (mm:ss per 100m)</label>
-                        <input
-                            type="text"
-                            id="avgPace"
-                            class="form-input"
-                            placeholder="2:05"
-                            pattern="[0-9]{1,2}:[0-5][0-9]"
-                            aria-required="true"
-                            aria-describedby="pace-help"
-                        />
-                        <small id="pace-help" class="form-help">Je gemiddelde tempo tijdens de training (bijv. 2:05)</small>
+                        <input type="text" id="avgPace" class="form-input" placeholder="2:05"
+                            pattern="[0-9]{1,2}:[0-5][0-9]" aria-required="true" aria-describedby="pace-help" />
+                        <small id="pace-help" class="form-help">Je gemiddelde tempo tijdens de training (bijv.
+                            2:05)</small>
                         <div class="form-error" id="pace-error"></div>
                     </div>
 
                     <div class="calculator-buttons">
-                        <button type="submit" class="btn btn-primary" id="calculateStssBtn">Bereken sTSS</button>
+                        <button type="submit" class="btn btn-primary" id="calculateStssBtn">Bereken rTSS</button>
                         <button type="reset" class="btn btn-ghost" id="resetStssBtn">Wissen</button>
                     </div>
                 </div>
@@ -815,7 +798,7 @@ img[width][height] {
                 <h3>Je Training Stress Score</h3>
                 <div class="results-summary">
                     <div class="result-item">
-                        <div class="result-label">sTSS</div>
+                        <div class="result-label">rTSS</div>
                         <div class="css-result-value" id="stssValue">--</div>
                     </div>
                     <div class="result-item">
@@ -833,12 +816,12 @@ img[width][height] {
             </div>
         </div>
 
-        <h2 class="mt-3xl">Hoe sTSS wordt Berekend</h2>
+        <h2 class="mt-3xl">Hoe rTSS wordt Berekend</h2>
 
         <div class="formula-box">
             <h3>Formule</h3>
             <div class="formula">
-                sTSS = (Duur in uren) × (Intensity Factor)² × 100
+                rTSS = (Duur in uren) × (Intensity Factor)² × 100
             </div>
             <div class="formula-explanation">
                 <p>Waarbij:</p>
@@ -866,23 +849,25 @@ img[width][height] {
                 IF = <strong>0.872</strong>
             </div>
 
-            <h4>Stap 2: Bereken sTSS</h4>
+            <h4>Stap 2: Bereken rTSS</h4>
             <div class="calculation">
-                sTSS = 1.0 uur × (0.872)² × 100<br>
-                sTSS = 1.0 × 0.760 × 100<br>
-                sTSS = <strong>76</strong>
+                rTSS = 1.0 uur × (0.872)² × 100<br>
+                rTSS = 1.0 × 0.760 × 100<br>
+                rTSS = <strong>76</strong>
             </div>
 
-            <p class="mt-md"><strong>Interpretatie:</strong> Deze 60 minuten durende training op rustig tempo (langzamer dan CRS) genereerde 76 sTSS - een matige trainingsbelasting geschikt voor het opbouwen van aerobe basis.</p>
+            <p class="mt-md"><strong>Interpretatie:</strong> Deze 60 minuten durende training op rustig tempo (langzamer
+                dan CRS) genereerde 76 rTSS - een matige trainingsbelasting geschikt voor het opbouwen van aerobe basis.
+            </p>
         </div>
 
-        <h2 class="mt-3xl">sTSS-Waarden Begrijpen</h2>
+        <h2 class="mt-3xl">rTSS-Waarden Begrijpen</h2>
 
         <div class="zones-table-container">
             <table class="zones-table">
                 <thead>
                     <tr>
-                        <th>sTSS Bereik</th>
+                        <th>rTSS Bereik</th>
                         <th>Trainingsbelasting</th>
                         <th>Hersteltijd</th>
                         <th>Voorbeeldtraining</th>
@@ -923,7 +908,7 @@ img[width][height] {
             </table>
         </div>
 
-        <h2 class="mt-3xl">Wekelijkse sTSS Richtlijnen</h2>
+        <h2 class="mt-3xl">Wekelijkse rTSS Richtlijnen</h2>
 
         <p class="mb-md">Doelwit wekelijkse sTSS hangt af van je trainingsniveau en doelen:</p>
 
@@ -931,31 +916,31 @@ img[width][height] {
             <div class="card">
                 <h3 class="card-title">Recreatieve Lopers</h3>
                 <div class="card-content">
-                    <p class="mb-sm"><strong>Wekelijkse sTSS:</strong> 150-300</p>
-                    <p>2-3 trainingen per week, 50-100 sTSS elk. Focus op techniek en opbouwen aerobe basis.</p>
+                    <p class="mb-sm"><strong>Wekelijkse rTSS:</strong> 150-300</p>
+                    <p>2-3 trainingen per week, 50-100 rTSS elk. Focus op techniek en opbouwen aerobe basis.</p>
                 </div>
             </div>
 
             <div class="card">
                 <h3 class="card-title">Fitness Lopers / Triatleten</h3>
                 <div class="card-content">
-                    <p class="mb-sm"><strong>Wekelijkse sTSS:</strong> 300-500</p>
-                    <p>3-4 trainingen per week, 75-125 sTSS elk. Mix van aerobe duurtraining en drempelwerk.</p>
+                    <p class="mb-sm"><strong>Wekelijkse rTSS:</strong> 300-500</p>
+                    <p>3-4 trainingen per week, 75-125 rTSS elk. Mix van aerobe duurtraining en drempelwerk.</p>
                 </div>
             </div>
 
             <div class="card">
                 <h3 class="card-title">Competitieve Masters Lopers</h3>
                 <div class="card-content">
-                    <p class="mb-sm"><strong>Wekelijkse sTSS:</strong> 500-800</p>
-                    <p>4-6 trainingen per week, 80-150 sTSS elk. Gestructureerde training met periodisering.</p>
+                    <p class="mb-sm"><strong>Wekelijkse rTSS:</strong> 500-800</p>
+                    <p>4-6 trainingen per week, 80-150 rTSS elk. Gestructureerde training met periodisering.</p>
                 </div>
             </div>
 
             <div class="card">
                 <h3 class="card-title">Elite / Universitaire Lopers</h3>
                 <div class="card-content">
-                    <p class="mb-sm"><strong>Wekelijkse sTSS:</strong> 800-1200+</p>
+                    <p class="mb-sm"><strong>Wekelijkse rTSS:</strong> 800-1200+</p>
                     <p>8-12 trainingen per week, dubbele dagen. Hoog volume met herstelmanagement cruciaal.</p>
                 </div>
             </div>
@@ -964,74 +949,98 @@ img[width][height] {
         <div class="callout callout-warning">
             <h3>⚠️ Belangrijke Opmerkingen</h3>
             <ul>
-                <li><strong>Vereist nauwkeurige CRS:</strong> Je CRS moet actueel zijn (getest binnen 6-8 weken) voor nauwkeurige sTSS.</li>
-                <li><strong>Vereenvoudigde berekening:</strong> Deze calculator gebruikt gemiddeld tempo. Geavanceerde sTSS gebruikt Normalized Graded Pace (NGP) die rekening houdt met intervalstructuur.</li>
-                <li><strong>Niet voor techniekwerk:</strong> sTSS meet alleen fysieke trainingsstress, geen vaardigheids­ontwikkeling.</li>
-                <li><strong>Individuele variatie:</strong> Dezelfde sTSS voelt anders voor verschillende lopers. Pas richtlijnen aan op basis van je herstel.</li>
+                <li><strong>Vereist nauwkeurige CRS:</strong> Je CRS moet actueel zijn (getest binnen 6-8 weken) voor
+                    nauwkeurige rTSS.</li>
+                <li><strong>Vereenvoudigde berekening:</strong> Deze calculator gebruikt gemiddeld tempo. Geavanceerde
+                    rTSS gebruikt Normalized Graded Pace (NGP) die rekening houdt met intervalstructuur.</li>
+                <li><strong>Niet voor techniekwerk:</strong> rTSS meet alleen fysieke trainingsstress, geen
+                    vaardigheids­ontwikkeling.</li>
+                <li><strong>Individuele variatie:</strong> Dezelfde sTSS voelt anders voor verschillende lopers. Pas
+                    richtlijnen aan op basis van je herstel.</li>
             </ul>
         </div>
 
-        <h2 class="mt-3xl">Waarom sTSS Belangrijk is</h2>
+        <h2 class="mt-3xl">Waarom rTSS Belangrijk is</h2>
 
         <p class="mb-md">Training Stress Score is de basis voor:</p>
 
         <ul class="mb-xl">
-            <li><strong>CTL (Chronic Training Load):</strong> Je fitnessniveau - 42-daags exponentieel gewogen gemiddelde van dagelijkse sTSS</li>
-            <li><strong>ATL (Acute Training Load):</strong> Je vermoeidheid - 7-daags exponentieel gewogen gemiddelde van dagelijkse sTSS</li>
-            <li><strong>TSB (Training Stress Balance):</strong> Je vorm - TSB = CTL - ATL (positief = fris, negatief = vermoeid)</li>
-            <li><strong>Periodisering:</strong> Plan trainingsfases (basis, opbouw, piek, taper) met doelgerichte CTL-progressies</li>
+            <li><strong>CTL (Chronic Training Load):</strong> Je fitnessniveau - 42-daags exponentieel gewogen
+                gemiddelde van dagelijkse rTSS</li>
+            <li><strong>ATL (Acute Training Load):</strong> Je vermoeidheid - 7-daags exponentieel gewogen gemiddelde
+                van dagelijkse rTSS</li>
+            <li><strong>TSB (Training Stress Balance):</strong> Je vorm - TSB = CTL - ATL (positief = fris, negatief =
+                vermoeid)</li>
+            <li><strong>Periodisering:</strong> Plan trainingsfases (basis, opbouw, piek, taper) met doelgerichte
+                CTL-progressies</li>
             <li><strong>Herstelmanagement:</strong> Weet wanneer te pushen en wanneer te rusten op basis van TSB</li>
         </ul>
 
         <div class="callout callout-tip">
             <h3>Pro Tip: Volg je CTL</h3>
-            <p>Noteer dagelijkse sTSS in een spreadsheet of trainingslogboek. Bereken wekelijks je 42-daags gemiddelde (CTL). Streef naar 5-10 CTL punten toename per week tijdens basisopbouw. Handhaaf of verminder CTL licht tijdens taper (1-2 weken voor wedstrijd).</p>
+            <p>Noteer dagelijkse rTSS in een spreadsheet of trainingslogboek. Bereken wekelijks je 42-daags gemiddelde
+                (CTL). Streef naar 5-10 CTL punten toename per week tijdens basisopbouw. Handhaaf of verminder CTL licht
+                tijdens taper (1-2 weken voor wedstrijd).</p>
         </div>
 
         <h2 class="mt-3xl">Veelgestelde Vragen</h2>
 
         <div class="faq-section" itemscope itemtype="https://schema.org/FAQPage">
             <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">Wat is Running TSS (sTSS)?</h3>
+                <h3 itemprop="name">Wat is Running Stress Score (rTSS)?</h3>
                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                     <div itemprop="text">
-                        <p>Running Training Stress Score (sTSS) is een metriek die de trainingsbelasting van een hardlooptraining kwantificeert door zowel intensiteit als duur te combineren. Het is aangepast van de TSS-methodologie uit wielrennen, waarbij je Critical Run Speed (CRS) als drempelsnelheid wordt gebruikt. Een training van 1 uur op CRS-tempo is gelijk aan 100 sTSS.</p>
+                        <p>Running Stress Score (rTSS) is een metriek die de trainingsbelasting van een hardlooptraining
+                            kwantificeert door zowel intensiteit als duur te combineren. Het is aangepast van de
+                            TSS-methodologie uit wielrennen, waarbij je Critical Run Speed (CRS) als drempelsnelheid
+                            wordt gebruikt. Een training van 1 uur op CRS-tempo is gelijk aan 100 rTSS.</p>
                     </div>
                 </div>
             </div>
 
             <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">Hoe bereken ik mijn sTSS?</h3>
+                <h3 itemprop="name">Hoe bereken ik mijn rTSS?</h3>
                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                     <div itemprop="text">
-                        <p>Gebruik bovenstaande calculator door je CRS-tempo (uit een CRS-test), totale trainingsduur en gemiddeld tempo tijdens de training in te voeren. De formule is: sTSS = Duur (uren) × Intensity Factor² × 100, waarbij Intensity Factor = CRS Tempo / Gemiddeld Trainingstempo.</p>
+                        <p>Gebruik bovenstaande calculator door je CRS-tempo (uit een CRS-test), totale trainingsduur en
+                            gemiddeld tempo tijdens de training in te voeren. De formule is: rTSS = Duur (uren) ×
+                            Intensity Factor² × 100, waarbij Intensity Factor = CRS Tempo / Gemiddeld Trainingstempo.
+                        </p>
                     </div>
                 </div>
             </div>
 
             <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">Heb ik CRS nodig om sTSS te berekenen?</h3>
+                <h3 itemprop="name">Heb ik CRS nodig om rTSS te berekenen?</h3>
                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                     <div itemprop="text">
-                        <p>Ja, je Critical Run Speed (CRS) is vereist om de Intensity Factor te berekenen, wat essentieel is voor sTSS-berekening. CRS vertegenwoordigt je drempeltempo en moet elke 6-8 weken getest worden. Je kunt je CRS vinden met onze <a href="/nl/crs/">CRS calculator</a>.</p>
+                        <p>Ja, je Critical Run Speed (CRS) is vereist om de Intensity Factor te berekenen, wat
+                            essentieel is voor rTSS-berekening. CRS vertegenwoordigt je drempeltempo en moet elke 6-8
+                            weken getest worden. Je kunt je CRS vinden met onze <a href="/nl/crs/">CRS calculator</a>.
+                        </p>
                     </div>
                 </div>
             </div>
 
             <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">Wat is een goede sTSS-score voor één training?</h3>
+                <h3 itemprop="name">Wat is een goede rTSS-score voor één training?</h3>
                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                     <div itemprop="text">
-                        <p>Het hangt af van de trainingsintensiteit: Rustige trainingen scoren meestal onder 50 sTSS, matige trainingen 50-100 sTSS, zware trainingen 100-200 sTSS, en zeer zware trainingen boven 200 sTSS. De juiste score hangt af van je trainingsdoelen en huidige fitnessniveau.</p>
+                        <p>Het hangt af van de trainingsintensiteit: Rustige trainingen scoren meestal onder 50 rTSS,
+                            matige trainingen 50-100 rTSS, zware trainingen 100-200 rTSS, and zeer zware trainingen
+                            boven 200 rTSS. De juiste score hangt af van je trainingsdoelen and huidige fitnessniveau.
+                        </p>
                     </div>
                 </div>
             </div>
 
             <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">Hoeveel sTSS moet ik per week doen?</h3>
+                <h3 itemprop="name">Hoeveel rTSS moet ik per week doen?</h3>
                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                     <div itemprop="text">
-                        <p>Wekelijkse sTSS-doelen variëren per niveau: Recreatieve lopers: 150-300, Fitness lopers/Triatleten: 300-500, Competitieve Masters: 500-800, Elite/Universitair: 800-1200+. Begin voorzichtig en verhoog geleidelijk om overtraining te vermijden.</p>
+                        <p>Wekelijkse rTSS-doelen variëren per niveau: Recreatieve lopers: 150-300, Fitness
+                            lopers/Triatleten: 300-500, Competitieve Masters: 500-800, Elite/Universitair: 800-1200+.
+                            Begin voorzichtig and verhoog geleidelijk om overtraining te vermijden.</p>
                     </div>
                 </div>
             </div>
@@ -1040,25 +1049,33 @@ img[width][height] {
                 <h3 itemprop="name">Is running TSS hetzelfde als cycling TSS?</h3>
                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                     <div itemprop="text">
-                        <p>Het concept en de formule zijn hetzelfde, maar sTSS is aangepast voor hardlopen. In plaats van vermogen (FTP) zoals bij cycling TSS te gebruiken, gebruikt sTSS tempo met CRS als drempel. Beide meten trainingsbelasting met Duur × Intensity Factor² × 100.</p>
+                        <p>Het concept and de formule zijn hetzelfde, maar rTSS is aangepast voor hardlopen. In plaats
+                            van vermogen (FTP) zoals bij cycling TSS te gebruiken, gebruikt rTSS tempo met CRS als
+                            drempel. Beide meten trainingsbelasting met Duur × Intensity Factor² × 100.</p>
                     </div>
                 </div>
             </div>
 
             <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">Kan ik sTSS gebruiken voor alle loopstijlen?</h3>
+                <h3 itemprop="name">Kan ik rTSS gebruiken voor alle loopstijlen?</h3>
                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                     <div itemprop="text">
-                        <p>Ja, maar je CRS moet specifiek zijn voor die stijl. De meeste lopers gebruiken freestyle CRS omdat dit de meest getrainde stijl is. Als je voornamelijk in een andere stijl traint, voer dan een CRS-test uit in die stijl en gebruik dat tempo voor sTSS-berekening.</p>
+                        <p>Ja, maar je CRS moet specifiek zijn voor die stijl. De meeste lopers gebruiken freestyle CRS
+                            omdat dit de meest getrainde stijl is. Als je voornamelijk in een andere stijl traint, voer
+                            dan een CRS-test uit in die stijl and gebruik dat tempo voor rTSS-berekening.</p>
                     </div>
                 </div>
             </div>
 
             <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">Wat is het verschil tussen sTSS en CTL/ATL/TSB?</h3>
+                <h3 itemprop="name">Wat is het verschil tussen rTSS en CTL/ATL/TSB?</h3>
                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                     <div itemprop="text">
-                        <p>sTSS meet de trainingsbelasting van één training. CTL (Chronic Training Load) is je lange-termijn fitness, ATL (Acute Training Load) is je recente vermoeidheid, en TSB (Training Stress Balance) is je frisheid. Deze metrieken gebruiken sTSS-waarden over tijd om je trainingsstatus te volgen. Leer meer in onze <a href="/nl/training-load/">Training Load gids</a>.</p>
+                        <p>rTSS meet de trainingsbelasting van één training. CTL (Chronic Training Load) is je
+                            lange-termijn fitness, ATL (Acute Training Load) is je recente vermoeidheid, and TSB
+                            (Training Stress Balance) is je frisheid. Deze metrieken gebruiken rTSS-waarden over tijd om
+                            je trainingsstatus te volgen. Leer meer in onze <a href="/nl/training-load/">Training Load
+                                gids</a>.</p>
                     </div>
                 </div>
             </div>
@@ -1086,15 +1103,16 @@ img[width][height] {
             <div class="card">
                 <h3 class="card-title">Run Analytics App</h3>
                 <div class="card-content">
-                    <p>Automatische sTSS-berekening voor alle trainingen. Volg CTL/ATL/TSB-trends over tijd.</p>
+                    <p>Automatische rTSS-berekening voor alle trainingen. Volg CTL/ATL/TSB-trends over tijd.</p>
                     <a href="/nl/" class="btn btn-secondary btn-small mt-md">Meer Informatie →</a>
                 </div>
             </div>
         </div>
 
         <div class="mt-xl text-center">
-            <p class="mb-md"><strong>Wil je automatische sTSS-tracking?</strong></p>
-            <a href="https://apps.apple.com/es/app/runanalytics/id6754524015" class="btn btn-primary btn-large" target="_blank" rel="noopener">Download Run Analytics Gratis</a>
+            <p class="mb-md"><strong>Wil je automatische rTSS-tracking?</strong></p>
+            <a href="https://apps.apple.com/es/app/runanalytics/id6754524015" class="btn btn-primary btn-large" target="_blank"
+                rel="noopener">Download Run Analytics Gratis</a>
         </div>
     </div>
 </section>
