@@ -1,0 +1,1585 @@
+<!DOCTYPE html>
+<html lang="kn" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+    <title>ಗೌಪ್ಯತೆ-ಮೊದಲ ಓಟದ ಅನಾಲಿಟಿಕ್ಸ್: ನಿಮ್ಮ ಡೇಟಾ, ನಿಮ್ಮ ಸಾಧನ | Run Analytics</title>
+    <meta name="description" content="100% ಸ್ಥಳೀಯ ಡೇಟಾ ಪ್ರಕ್ರಿಯೆಯೊಂದಿಗೆ ಗೌಪ್ಯತೆ-ಮೊದಲ ಓಟದ ಅನಾಲಿಟಿಕ್ಸ್. ಯಾವುದೇ ಕ್ಲೌಡ್ ಇಲ್ಲ, ಯಾವುದೇ ಟ್ರ್ಯಾಕಿಂಗ್ ಇಲ್ಲ, ಯಾವುದೇ ಖಾತೆ ಅಗತ್ಯವಿಲ್ಲ.">
+    <meta name="author" content="Albert Arno">
+
+    
+    
+    <meta name="keywords" content="ಗೌಪ್ಯತೆ ಓಟದ ಆ್ಯಪ್, ಸ್ಥಳೀಯ ಡೇಟಾ ಪ್ರಕ್ರಿಯೆ, ಯಾವುದೇ ಕ್ಲೌಡ್ ಅಪ್‌ಲೋಡ್ ಇಲ್ಲ, GDPR ಅನುಸರಣೆ, ಡೇಟಾ ಗೌಪ್ಯತೆ, ಓಟದ ಅನಾಲಿಟಿಕ್ಸ್">
+    
+
+    
+    <link rel="canonical" href="https://run.analyticszone.app/kn/privacy-first-running-analytics/">
+
+    
+    
+    <meta property="article:published_time" content="2026-01-05T10:00:00Z">
+    <meta property="article:modified_time" content="2026-01-05T14:30:00Z">
+    <meta property="article:author" content="Albert Arno">
+    
+
+    
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://run.analyticszone.app/kn/privacy-first-running-analytics/">
+    <meta property="og:title" content="ಗೌಪ್ಯತೆ-ಮೊದಲ ಓಟದ ಅನಾಲಿಟಿಕ್ಸ್: ನಿಮ್ಮ ಡೇಟಾ, ನಿಮ್ಮ ಸಾಧನ | Run Analytics">
+    <meta property="og:description" content="100% ಸ್ಥಳೀಯ ಡೇಟಾ ಪ್ರಕ್ರಿಯೆಯೊಂದಿಗೆ ಗೌಪ್ಯತೆ-ಮೊದಲ ಓಟದ ಅನಾಲಿಟಿಕ್ಸ್. ಯಾವುದೇ ಕ್ಲೌಡ್ ಇಲ್ಲ, ಯಾವುದೇ ಟ್ರ್ಯಾಕಿಂಗ್ ಇಲ್ಲ, ಯಾವುದೇ ಖಾತೆ ಅಗತ್ಯವಿಲ್ಲ.">
+    
+    <meta property="og:image" content="https://run.analyticszone.app/assets/images/og-image.svg">
+    
+    <meta property="og:locale" content="kn_IN">
+    <meta property="og:site_name" content="Run Analytics - Running Analytics App | Critical Running Speed, TSS, CTL/ATL/TSB for iOS">
+
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://run.analyticszone.app/kn/privacy-first-running-analytics/">
+    <meta name="twitter:title" content="ಗೌಪ್ಯತೆ-ಮೊದಲ ಓಟದ ಅನಾಲಿಟಿಕ್ಸ್: ನಿಮ್ಮ ಡೇಟಾ, ನಿಮ್ಮ ಸಾಧನ | Run Analytics">
+    <meta name="twitter:description" content="100% ಸ್ಥಳೀಯ ಡೇಟಾ ಪ್ರಕ್ರಿಯೆಯೊಂದಿಗೆ ಗೌಪ್ಯತೆ-ಮೊದಲ ಓಟದ ಅನಾಲಿಟಿಕ್ಸ್. ಯಾವುದೇ ಕ್ಲೌಡ್ ಇಲ್ಲ, ಯಾವುದೇ ಟ್ರ್ಯಾಕಿಂಗ್ ಇಲ್ಲ, ಯಾವುದೇ ಖಾತೆ ಅಗತ್ಯವಿಲ್ಲ.">
+    
+    <meta name="twitter:image" content="https://run.analyticszone.app/assets/images/og-image.svg">
+    
+
+    
+    
+    <link rel="alternate" hreflang="af" href="https://run.analyticszone.app/af/privacy-first-running-analytics/">
+    
+    <link rel="alternate" hreflang="am" href="https://run.analyticszone.app/am/privacy-first-running-analytics/">
+    
+    <link rel="alternate" hreflang="ar" href="https://run.analyticszone.app/ar/privacy-first-running-analytics/">
+    
+    <link rel="alternate" hreflang="bg" href="https://run.analyticszone.app/bg/privacy-first-running-analytics/">
+    
+    <link rel="alternate" hreflang="bn" href="https://run.analyticszone.app/bn/privacy-first-running-analytics/">
+    
+    <link rel="alternate" hreflang="ca" href="https://run.analyticszone.app/ca/privacy-first-running-analytics/">
+    
+    <link rel="alternate" hreflang="cs" href="https://run.analyticszone.app/cs/privacy-first-running-analytics/">
+    
+    <link rel="alternate" hreflang="da" href="https://run.analyticszone.app/da/privacy-first-running-analytics/">
+    
+    <link rel="alternate" hreflang="de" href="https://run.analyticszone.app/de/privacy-first-running-analytics/">
+    
+    <link rel="alternate" hreflang="el" href="https://run.analyticszone.app/el/privacy-first-running-analytics/">
+    
+    <link rel="alternate" hreflang="en" href="https://run.analyticszone.app/en/privacy-first-running-analytics/">
+    
+    <link rel="alternate" hreflang="es" href="https://run.analyticszone.app/es/privacy-first-running-analytics/">
+    
+    <link rel="alternate" hreflang="et" href="https://run.analyticszone.app/et/privacy-first-running-analytics/">
+    
+    <link rel="alternate" hreflang="fa" href="https://run.analyticszone.app/fa/privacy-first-running-analytics/">
+    
+    <link rel="alternate" hreflang="fi" href="https://run.analyticszone.app/fi/privacy-first-running-analytics/">
+    
+    <link rel="alternate" hreflang="fr" href="https://run.analyticszone.app/fr/privacy-first-running-analytics/">
+    
+    <link rel="alternate" hreflang="gu" href="https://run.analyticszone.app/gu/privacy-first-running-analytics/">
+    
+    <link rel="alternate" hreflang="ha" href="https://run.analyticszone.app/ha/privacy-first-running-analytics/">
+    
+    <link rel="alternate" hreflang="he" href="https://run.analyticszone.app/he/privacy-first-running-analytics/">
+    
+    <link rel="alternate" hreflang="hi" href="https://run.analyticszone.app/hi/privacy-first-running-analytics/">
+    
+    <link rel="alternate" hreflang="hr" href="https://run.analyticszone.app/hr/privacy-first-running-analytics/">
+    
+    <link rel="alternate" hreflang="hu" href="https://run.analyticszone.app/hu/privacy-first-running-analytics/">
+    
+    <link rel="alternate" hreflang="id" href="https://run.analyticszone.app/id/privacy-first-running-analytics/">
+    
+    <link rel="alternate" hreflang="is" href="https://run.analyticszone.app/is/privacy-first-running-analytics/">
+    
+    <link rel="alternate" hreflang="it" href="https://run.analyticszone.app/it/privacy-first-running-analytics/">
+    
+    <link rel="alternate" hreflang="ja" href="https://run.analyticszone.app/ja/privacy-first-running-analytics/">
+    
+    <link rel="alternate" hreflang="kn" href="https://run.analyticszone.app/kn/privacy-first-running-analytics/">
+    
+    <link rel="alternate" hreflang="ko" href="https://run.analyticszone.app/ko/privacy-first-running-analytics/">
+    
+    <link rel="alternate" hreflang="lt" href="https://run.analyticszone.app/lt/privacy-first-running-analytics/">
+    
+    <link rel="alternate" hreflang="lv" href="https://run.analyticszone.app/lv/privacy-first-running-analytics/">
+    
+    <link rel="alternate" hreflang="ms" href="https://run.analyticszone.app/ms/privacy-first-running-analytics/">
+    
+    <link rel="alternate" hreflang="my" href="https://run.analyticszone.app/my/privacy-first-running-analytics/">
+    
+    <link rel="alternate" hreflang="nb" href="https://run.analyticszone.app/nb/privacy-first-running-analytics/">
+    
+    <link rel="alternate" hreflang="nl" href="https://run.analyticszone.app/nl/privacy-first-running-analytics/">
+    
+    <link rel="alternate" hreflang="pl" href="https://run.analyticszone.app/pl/privacy-first-running-analytics/">
+    
+    <link rel="alternate" hreflang="pt" href="https://run.analyticszone.app/pt/privacy-first-running-analytics/">
+    
+    <link rel="alternate" hreflang="pt-br" href="https://run.analyticszone.app/pt-br/privacy-first-running-analytics/">
+    
+    <link rel="alternate" hreflang="ro" href="https://run.analyticszone.app/ro/privacy-first-running-analytics/">
+    
+    <link rel="alternate" hreflang="ru" href="https://run.analyticszone.app/ru/privacy-first-running-analytics/">
+    
+    <link rel="alternate" hreflang="sk" href="https://run.analyticszone.app/sk/privacy-first-running-analytics/">
+    
+    <link rel="alternate" hreflang="sl" href="https://run.analyticszone.app/sl/privacy-first-running-analytics/">
+    
+    <link rel="alternate" hreflang="sr" href="https://run.analyticszone.app/sr/privacy-first-running-analytics/">
+    
+    <link rel="alternate" hreflang="sv" href="https://run.analyticszone.app/sv/privacy-first-running-analytics/">
+    
+    <link rel="alternate" hreflang="sw" href="https://run.analyticszone.app/sw/privacy-first-running-analytics/">
+    
+    <link rel="alternate" hreflang="ta" href="https://run.analyticszone.app/ta/privacy-first-running-analytics/">
+    
+    <link rel="alternate" hreflang="te" href="https://run.analyticszone.app/te/privacy-first-running-analytics/">
+    
+    <link rel="alternate" hreflang="th" href="https://run.analyticszone.app/th/privacy-first-running-analytics/">
+    
+    <link rel="alternate" hreflang="tl" href="https://run.analyticszone.app/tl/privacy-first-running-analytics/">
+    
+    <link rel="alternate" hreflang="tr" href="https://run.analyticszone.app/tr/privacy-first-running-analytics/">
+    
+    <link rel="alternate" hreflang="uk" href="https://run.analyticszone.app/uk/privacy-first-running-analytics/">
+    
+    <link rel="alternate" hreflang="ur" href="https://run.analyticszone.app/ur/privacy-first-running-analytics/">
+    
+    <link rel="alternate" hreflang="vi" href="https://run.analyticszone.app/vi/privacy-first-running-analytics/">
+    
+    <link rel="alternate" hreflang="yo" href="https://run.analyticszone.app/yo/privacy-first-running-analytics/">
+    
+    <link rel="alternate" hreflang="zh" href="https://run.analyticszone.app/zh/privacy-first-running-analytics/">
+    
+    <link rel="alternate" hreflang="x-default" href="https://run.analyticszone.app/en/privacy-first-running-analytics/">
+
+    
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/icons/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/icons/apple-touch-icon.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#0066CC">
+    <meta name="robots" content="index, follow">
+
+    
+    <style>
+/* Critical CSS - Above the fold styles for fast LCP */
+:root {
+  --color-primary: #0066CC;
+  --color-text: #1a1a1a;
+  --color-text-muted: #666;
+  --color-bg: #ffffff;
+  --color-bg-alt: #f8f9fa;
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+}
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  color: var(--color-text);
+  background: var(--color-bg);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Skip link - Accessibility */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--color-primary);
+  color: #fff;
+  padding: 8px 16px;
+  z-index: 1000;
+  text-decoration: none;
+}
+.skip-link:focus {
+  top: 0;
+}
+
+/* Header - Critical for LCP */
+.site-header {
+  background: var(--color-bg);
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0.75rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.site-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: var(--color-text);
+  font-weight: 600;
+  font-size: 1.125rem;
+}
+
+.site-logo img, .site-logo svg {
+  width: 32px;
+  height: 32px;
+}
+
+/* Navigation */
+.main-nav {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .main-nav {
+    display: flex;
+    gap: 1.5rem;
+  }
+  .main-nav a {
+    color: var(--color-text);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9375rem;
+    transition: color 0.2s;
+  }
+  .main-nav a:hover {
+    color: var(--color-primary);
+  }
+}
+
+/* Mobile menu button */
+.menu-toggle {
+  display: flex;
+  background: none;
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .menu-toggle {
+    display: none;
+  }
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Main content */
+.main-content {
+  flex: 1;
+}
+
+/* Hero section - Critical for LCP */
+.hero {
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .hero {
+    padding: 4rem 2rem;
+  }
+}
+
+.hero h1 {
+  font-size: clamp(1.75rem, 5vw, 3rem);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  color: var(--color-text);
+}
+
+.hero .lead, .hero p {
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  color: var(--color-text-muted);
+  max-width: 700px;
+  margin: 0 auto 1.5rem;
+}
+
+/* Buttons - Critical for CTA */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: var(--radius-md);
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-primary {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: #0052a3;
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+}
+
+.btn-large {
+  padding: 1rem 2rem;
+  font-size: 1.125rem;
+}
+
+/* Utility classes */
+.hidden { display: none !important; }
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Images - prevent CLS with aspect-ratio */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+img[width][height] {
+  aspect-ratio: attr(width) / attr(height);
+}
+
+.lazy-image {
+  background: var(--color-bg-alt);
+  transition: opacity 0.3s;
+}
+
+.lazy-image:not(.loaded) {
+  opacity: 0;
+}
+
+.lazy-image.loaded {
+  opacity: 1;
+}
+
+/* App badges - fixed dimensions to prevent CLS */
+.app-badge img {
+  width: 140px;
+  height: 42px;
+}
+
+/* Logo - fixed dimensions */
+.site-logo img {
+  width: 32px;
+  height: 32px;
+}
+
+/* Reduce motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+</style>
+
+    
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+
+    
+    <link rel="preload" href="/assets/css/main.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/assets/css/main.min.css"></noscript>
+
+    
+    
+
+    
+    
+
+    
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "ಗೌಪ್ಯತೆ-ಮೊದಲ ಓಟದ ಅನಾಲಿಟಿಕ್ಸ್: ನಿಮ್ಮ ಡೇಟಾ, ನಿಮ್ಮ ಸಾಧನ | Run Analytics",
+      "description": "100% ಸ್ಥಳೀಯ ಡೇಟಾ ಪ್ರಕ್ರಿಯೆಯೊಂದಿಗೆ ಗೌಪ್ಯತೆ-ಮೊದಲ ಓಟದ ಅನಾಲಿಟಿಕ್ಸ್. ಯಾವುದೇ ಕ್ಲೌಡ್ ಇಲ್ಲ, ಯಾವುದೇ ಟ್ರ್ಯಾಕಿಂಗ್ ಇಲ್ಲ, ಯಾವುದೇ ಖಾತೆ ಅಗತ್ಯವಿಲ್ಲ.",
+      "author": {
+        "@type": "Person",
+        "name": "Albert Arno"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Run Analytics",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://run.analyticszone.app/assets/images/logo.png"
+        }
+      },
+      "datePublished": "2026-01-05",
+      "dateModified": "2026-01-05",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://run.analyticszone.app/kn/privacy-first-running-analytics/"
+      }
+    }
+    </script>
+    
+</head>
+<body>
+    
+    <a href="#main-content" class="skip-link">ವಿಷಯಕ್ಕೆ ಹೋಗಿ</a>
+
+    
+    <header class="site-header">
+    <div class="container">
+        <div class="header-inner">
+            
+            <a href="/kn/" class="site-logo">
+                <picture>
+                    <source srcset="/assets/images/logo-dark.png" type="image/png" media="(prefers-color-scheme: dark)">
+                    <img src="/assets/images/logo.png" alt="Run Analytics - Running Analytics App | Critical Running Speed, TSS, CTL/ATL/TSB for iOS" width="56" height="56">
+                </picture>
+                <span class="logo-text">Run Analytics</span>
+            </a>
+
+            
+            <nav class="nav-primary" id="nav-primary" role="navigation" aria-label="Main navigation">
+                <ul>
+                    
+                    <li>
+                        
+                        <a href="/kn/" 
+                            aria-current="">
+                            ಮುಖಪುಟ
+                        </a>
+                        
+                    </li>
+                    
+                    <li class="has-submenu">
+                        
+                        
+                        <a href="/kn/getting-started/" class="nav-label">ಕಲಿಯಿರಿ</a>
+                        
+                        <ul class="submenu">
+                            
+                            <li>
+                                <a href="/kn/getting-started/" 
+                                    aria-current="">
+                                    ಪ್ರಾರಂಭಿಸಿ
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/kn/crs/" 
+                                    aria-current="">
+                                    CRS
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/kn/training-zones/" 
+                                    aria-current="">
+                                    ತರಬೇತಿ ವಲಯಗಳು
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/kn/training-load/" 
+                                    aria-current="">
+                                    ತರಬೇತಿ ಹೊರೆ
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/kn/rtss-calculator/" 
+                                    aria-current="">
+                                    rTSS ಕ್ಯಾಲ್ಕುಲೇಟರ್
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        
+                    </li>
+                    
+                    <li class="has-submenu">
+                        
+                        
+                        <a href="/kn/research/" class="nav-label">ವಿಜ್ಞಾನ</a>
+                        
+                        <ul class="submenu">
+                            
+                            <li>
+                                <a href="/kn/research/" 
+                                    aria-current="">
+                                    ಸಂಶೋಧನೆ
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/kn/formulas/" 
+                                    aria-current="">
+                                    ಸೂತ್ರಗಳು
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/kn/efficiency/" 
+                                    aria-current="">
+                                    ದಕ್ಷತೆ
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/kn/stride-mechanics/" 
+                                    aria-current="">
+                                    ಹೆಜ್ಜೆ ಯಂತ್ರಶಾಸ್ತ್ರ
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="/kn/bibliography/" 
+                                    aria-current="">
+                                    ಗ್ರಂಥಸೂಚಿ
+                                </a>
+                            </li>
+                            
+                        </ul>
+                        
+                    </li>
+                    
+                    <li>
+                        
+                        <a href="/kn/contact/" 
+                            aria-current="">
+                            ಸಂಪರ್ಕಿಸಿ
+                        </a>
+                        
+                    </li>
+                    
+                </ul>
+
+                
+                <div class="search-container">
+                    <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" aria-hidden="true">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.35-4.35"></path>
+                    </svg>
+                    <input type="search" id="site-search" class="search-input" aria-expanded="false"
+                        aria-haspopup="listbox" aria-autocomplete="list" autocomplete="off" spellcheck="false" />
+                    <div id="search-results" class="search-results hidden" role="region" aria-live="polite"></div>
+                </div>
+
+                
+                <select class="language-selector" id="language-select" aria-label="ಭಾಷೆ ಆಯ್ಕೆಮಾಡಿ">
+                    
+                    <option value="af" >
+                        Afrikaans
+                    </option>
+                    
+                    <option value="am" >
+                        አማርኛ
+                    </option>
+                    
+                    <option value="ar" >
+                        العربية
+                    </option>
+                    
+                    <option value="bg" >
+                        Български
+                    </option>
+                    
+                    <option value="bn" >
+                        বাংলা
+                    </option>
+                    
+                    <option value="ca" >
+                        Català
+                    </option>
+                    
+                    <option value="cs" >
+                        Čeština
+                    </option>
+                    
+                    <option value="da" >
+                        Dansk
+                    </option>
+                    
+                    <option value="de" >
+                        Deutsch
+                    </option>
+                    
+                    <option value="el" >
+                        Ελληνικά
+                    </option>
+                    
+                    <option value="en" >
+                        English
+                    </option>
+                    
+                    <option value="es" >
+                        Español
+                    </option>
+                    
+                    <option value="et" >
+                        Eesti
+                    </option>
+                    
+                    <option value="fa" >
+                        فارسی
+                    </option>
+                    
+                    <option value="fi" >
+                        Suomi
+                    </option>
+                    
+                    <option value="fr" >
+                        Français
+                    </option>
+                    
+                    <option value="gu" >
+                        ગુજરાતી
+                    </option>
+                    
+                    <option value="ha" >
+                        Hausa
+                    </option>
+                    
+                    <option value="he" >
+                        עברית
+                    </option>
+                    
+                    <option value="hi" >
+                        हिन्दी
+                    </option>
+                    
+                    <option value="hr" >
+                        Hrvatski
+                    </option>
+                    
+                    <option value="hu" >
+                        Magyar
+                    </option>
+                    
+                    <option value="id" >
+                        Bahasa Indonesia
+                    </option>
+                    
+                    <option value="is" >
+                        Íslenska
+                    </option>
+                    
+                    <option value="it" >
+                        Italiano
+                    </option>
+                    
+                    <option value="ja" >
+                        日本語
+                    </option>
+                    
+                    <option value="kn" selected>
+                        ಕನ್ನಡ
+                    </option>
+                    
+                    <option value="ko" >
+                        한국어
+                    </option>
+                    
+                    <option value="lt" >
+                        Lietuvių
+                    </option>
+                    
+                    <option value="lv" >
+                        Latviešu
+                    </option>
+                    
+                    <option value="ms" >
+                        Bahasa Melayu
+                    </option>
+                    
+                    <option value="my" >
+                        မြန်မာစာ
+                    </option>
+                    
+                    <option value="nb" >
+                        Norsk Bokmål
+                    </option>
+                    
+                    <option value="nl" >
+                        Nederlands
+                    </option>
+                    
+                    <option value="pl" >
+                        Polski
+                    </option>
+                    
+                    <option value="pt" >
+                        Português
+                    </option>
+                    
+                    <option value="pt-br" >
+                        Português (Brasil)
+                    </option>
+                    
+                    <option value="ro" >
+                        Română
+                    </option>
+                    
+                    <option value="ru" >
+                        Русский
+                    </option>
+                    
+                    <option value="sk" >
+                        Slovenčina
+                    </option>
+                    
+                    <option value="sl" >
+                        Slovenščina
+                    </option>
+                    
+                    <option value="sr" >
+                        Srpski
+                    </option>
+                    
+                    <option value="sv" >
+                        Svenska
+                    </option>
+                    
+                    <option value="sw" >
+                        Kiswahili
+                    </option>
+                    
+                    <option value="ta" >
+                        தமிழ்
+                    </option>
+                    
+                    <option value="te" >
+                        తెలుగు
+                    </option>
+                    
+                    <option value="th" >
+                        ไทย
+                    </option>
+                    
+                    <option value="tl" >
+                        Tagalog
+                    </option>
+                    
+                    <option value="tr" >
+                        Türkçe
+                    </option>
+                    
+                    <option value="uk" >
+                        Українська
+                    </option>
+                    
+                    <option value="ur" >
+                        اردو
+                    </option>
+                    
+                    <option value="vi" >
+                        Tiếng Việt
+                    </option>
+                    
+                    <option value="yo" >
+                        Yorùbá
+                    </option>
+                    
+                    <option value="zh" >
+                        中文
+                    </option>
+                    
+                </select>
+
+                
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark/light mode">
+                    <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                    <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+
+                
+                
+                <a href="https://apps.apple.com/es/app/runanalytics/id6754524015" class="header-download-btn" target="_blank" rel="noopener"
+                    aria-label="Download on App Store">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/>
+                    </svg>
+                    <span class="download-text">Download</span>
+                </a>
+                
+            </nav>
+
+            
+            <button class="menu-toggle" id="menu-toggle" aria-label="ಮೆನು ಟಾಗಲ್"
+                aria-expanded="false" aria-controls="nav-primary">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </div>
+</header>
+
+    
+    
+
+
+    
+    <main id="main-content" class="main-content">
+        <section class="page-hero">
+    <div class="container">
+        <h1>ಗೌಪ್ಯತೆ-ಮೊದಲ ಓಟದ ಅನಾಲಿಟಿಕ್ಸ್: ನಿಮ್ಮ ಡೇಟಾ, ನಿಮ್ಮ ಸಾಧನ</h1>
+        <p class="lead">ನಿಮ್ಮ ಗೌಪ್ಯತೆಯನ್ನು ರಾಜಿ ಮಾಡಿಕೊಳ್ಳದೆ ಬುದ್ಧಿವಂತಿಕೆಯಿಂದ ತರಬೇತಿ ಪಡೆಯಿರಿ. ಸ್ಥಳೀಯ ಡೇಟಾ ಪ್ರಕ್ರಿಯೆಯು ನಿಮ್ಮ ಸ್ಥಳ, ಆರೋಗ್ಯ ಡೇಟಾ, ಮತ್ತು ವೈಯಕ್ತಿಕ ಮಾಹಿತಿಯನ್ನು ರಕ್ಷಿಸುವಾಗ ನಿಮ್ಮ ಓಟದ ಅನಾಲಿಟಿಕ್ಸ್ ಮೇಲೆ ಸಂಪೂರ್ಣ ನಿಯಂತ್ರಣವನ್ನು ಹೇಗೆ ನೀಡುತ್ತದೆ ಎಂಬುದನ್ನು ಕಂಡುಹಿಡಿಯಿರಿ.</p>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container container-narrow">
+        <div class="callout callout-success mb-xl">
+            <h2>ಪ್ರಮುಖ ಅಂಶಗಳು</h2>
+            <ul class="key-points">
+                <li><strong>ನಿಮ್ಮ ಡೇಟಾ ನಿಮ್ಮ ಜೀವನವನ್ನು ಬಹಿರಂಗಪಡಿಸುತ್ತದೆ:</strong> ಓಟದ ಆ್ಯಪ್‌ಗಳು GPS ಸ್ಥಳ (ಮನೆ/ಕೆಲಸ), ಆರೋಗ್ಯ ಮೆಟ್ರಿಕ್ಸ್, ಮತ್ತು ನೀವು ಮನೆಯಿಂದ ದೂರವಿರುವಾಗ ಬಹಿರಂಗಪಡಿಸುವ ತರಬೇತಿ ಮಾದರಿಗಳನ್ನು ಸಂಗ್ರಹಿಸುತ್ತವೆ</li>
+                <li><strong>ಕ್ಲೌಡ್ ಗೌಪ್ಯತೆ ಸಮಸ್ಯೆ:</strong> ಹೆಚ್ಚಿನ ಆ್ಯಪ್‌ಗಳು ನಿಮ್ಮ ಡೇಟಾವನ್ನು ಸರ್ವರ್‌ಗಳಿಗೆ ಅಪ್‌ಲೋಡ್ ಮಾಡುತ್ತವೆ, ಅನಿರ್ದಿಷ್ಟವಾಗಿ ಸಂಗ್ರಹಿಸುತ್ತವೆ, ಮತ್ತು ಮೂರನೇ ವ್ಯಕ್ತಿಗಳೊಂದಿಗೆ ಹಂಚಿಕೊಳ್ಳುತ್ತವೆ—ಅಪ್‌ಲೋಡ್ ನಂತರ ನಿಮಗೆ ಯಾವುದೇ ನಿಯಂತ್ರಣವಿಲ್ಲ</li>
+                <li><strong>ಗೌಪ್ಯತೆ-ಮೊದಲ ಪರಿಹಾರ:</strong> ಸ್ಥಳೀಯ ಡೇಟಾ ಪ್ರಕ್ರಿಯೆಯು ಎಲ್ಲಾ ಅನಾಲಿಟಿಕ್ಸ್ ಅನ್ನು ನಿಮ್ಮ ಸಾಧನದಲ್ಲಿ ಇಡುತ್ತದೆ—ಯಾವುದೇ ಕ್ಲೌಡ್ ಅಪ್‌ಲೋಡ್‌ಗಳಿಲ್ಲ, ಯಾವುದೇ ಖಾತೆಗಳಿಲ್ಲ, ಯಾವುದೇ ಟ್ರ್ಯಾಕಿಂಗ್ ಇಲ್ಲ</li>
+                <li><strong>Run Analytics ವ್ಯತ್ಯಾಸ:</strong> <a href="/kn/crs/">Critical Running Speed</a>, <a href="/kn/training-load/">TSS/CTL/ATL/TSB</a>, ಮತ್ತು <a href="/kn/training-zones/">ತರಬೇತಿ ವಲಯಗಳಿಗೆ</a> 100% ಸ್ಥಳೀಯ ಪ್ರಕ್ರಿಯೆ—ನಿಮ್ಮ ಓಟದ ಡೇಟಾ ನಿಮ್ಮ iPhone ಅನ್ನು ಎಂದಿಗೂ ಬಿಡುವುದಿಲ್ಲ</li>
+                <li><strong>ವಿನ್ಯಾಸದಿಂದ GDPR ಅನುಸರಣೆ:</strong> ಆ್ಯಪ್‌ಗಳು ಡೇಟಾ ಸಂಗ್ರಹಿಸದಿದ್ದಾಗ, ಅವು ಗೌಪ್ಯತೆ ಕಾನೂನುಗಳನ್ನು ಉಲ್ಲಂಘಿಸಲು ಸಾಧ್ಯವಿಲ್ಲ—ಗೌಪ್ಯತೆ-ಮೊದಲ ವಾಸ್ತುಶಿಲ್ಪದ ಮೂಲಕ ಸಂಪೂರ್ಣ ಅನುಸರಣೆ</li>
+            </ul>
+        </div>
+
+        <article itemscope itemtype="https://schema.org/Article">
+            <meta itemprop="headline" content="ಗೌಪ್ಯತೆ-ಮೊದಲ ಓಟದ ಅನಾಲಿಟಿಕ್ಸ್: ನಿಮ್ಮ ಡೇಟಾ, ನಿಮ್ಮ ಸಾಧನ">
+            <meta itemprop="description" content="100% ಸ್ಥಳೀಯ ಡೇಟಾ ಪ್ರಕ್ರಿಯೆಯೊಂದಿಗೆ ಗೌಪ್ಯತೆ-ಮೊದಲ ಓಟದ ಅನಾಲಿಟಿಕ್ಸ್. ಯಾವುದೇ ಕ್ಲೌಡ್ ಇಲ್ಲ, ಯಾವುದೇ ಟ್ರ್ಯಾಕಿಂಗ್ ಇಲ್ಲ, ಯಾವುದೇ ಖಾತೆ ಅಗತ್ಯವಿಲ್ಲ. ನಿಮ್ಮ ಓಟದ ಡೇಟಾ ನಿಮ್ಮ ಸಾಧನದಲ್ಲಿ ಉಳಿಯುತ್ತದೆ.">
+            <meta itemprop="datePublished" content="2026-01-05T10:00:00Z">
+            <meta itemprop="dateModified" content="2026-01-05T18:00:00Z">
+            <meta itemprop="author" content="Run Analytics">
+
+            <p class="lead">ನಿಮ್ಮ ಓಟದ ಡೇಟಾ ನಿಮ್ಮ ಜೀವನದ ಕಥೆಯನ್ನು ಹೇಳುತ್ತದೆ. GPS ಟ್ರ್ಯಾಕ್‌ಗಳು ನೀವು ಎಲ್ಲಿ ವಾಸಿಸುತ್ತೀರಿ ಮತ್ತು ಕೆಲಸ ಮಾಡುತ್ತೀರಿ ಎಂಬುದನ್ನು ಬಹಿರಂಗಪಡಿಸುತ್ತವೆ. ತರಬೇತಿ ಮಾದರಿಗಳು ನೀವು ಮನೆಯಿಂದ ದೂರವಿರುವಾಗ ತೋರಿಸುತ್ತವೆ. ಹೃದಯ ಬಡಿತ ಡೇಟಾ ನಿಮ್ಮ ಫಿಟ್‌ನೆಸ್ ಮಟ್ಟ ಮತ್ತು ಆರೋಗ್ಯ ಸ್ಥಿತಿಯನ್ನು ಬಹಿರಂಗಪಡಿಸುತ್ತದೆ.</p>
+
+            <h2 id="privacy-problem">ಓಟಗಾರರಿಗೆ ಗೌಪ್ಯತೆ ಏಕೆ ಮುಖ್ಯ</h2>
+
+            <p>ಓಟದ ಆ್ಯಪ್‌ಗಳು ಅಗತ್ಯ ತರಬೇತಿ ಸಾಧನಗಳಾಗಿವೆ, ಆದರೆ ಅವುಗಳ ಡೇಟಾ ಸಂಗ್ರಹಣೆ ಅಭ್ಯಾಸಗಳು ಹೆಚ್ಚಿನ ಓಟಗಾರರು ಸಂಪೂರ್ಣವಾಗಿ ಅರ್ಥಮಾಡಿಕೊಳ್ಳದ ಗಂಭೀರ ಗೌಪ್ಯತೆ ಕಾಳಜಿಗಳನ್ನು ಸೃಷ್ಟಿಸುತ್ತವೆ.</p>
+
+            <h3>ಓಟದ ಆ್ಯಪ್‌ಗಳು ಯಾವ ಡೇಟಾ ಸಂಗ್ರಹಿಸುತ್ತವೆ</h3>
+
+            <div class="warning-box">
+                <strong>⚠️ ಡೇಟಾ ಸಂಗ್ರಹಣೆ ವಾಸ್ತವ:</strong>
+                <ul>
+                    <li><strong>GPS ಸ್ಥಳ ಡೇಟಾ:</strong> ಪ್ರತಿ ಓಟದ ಪ್ರತಿ ಮೀಟರ್‌ಗೆ ನಿಖರ ನಿರ್ದೇಶಾಂಕಗಳು, ಮನೆ ವಿಳಾಸ, ಕೆಲಸದ ಸ್ಥಳ, ಆಗಾಗ್ಗೆ ಭೇಟಿ ನೀಡುವ ಸ್ಥಳಗಳು, ಮತ್ತು ನಿಯಮಿತ ಮಾರ್ಗಗಳನ್ನು ಬಹಿರಂಗಪಡಿಸುತ್ತವೆ</li>
+                    <li><strong>ತಾತ್ಕಾಲಿಕ ಮಾದರಿಗಳು:</strong> ವರ್ಕೌಟ್ ಸಮಯವು ದೈನಂದಿನ ವೇಳಾಪಟ್ಟಿಗಳನ್ನು ತೋರಿಸುತ್ತದೆ—ನೀವು ಯಾವಾಗ ಎದ್ದೇಳುತ್ತೀರಿ, ಯಾವಾಗ ಕೆಲಸದಲ್ಲಿದ್ದೀರಿ, ಯಾವಾಗ ಮನೆಯಿಂದ ದೂರವಿದ್ದೀರಿ</li>
+                    <li><strong>ಆರೋಗ್ಯ ಮೆಟ್ರಿಕ್ಸ್:</strong> ಹೃದಯ ಬಡಿತ ವಲಯಗಳು, ವಿಶ್ರಾಂತಿ ಹೃದಯ ಬಡಿತ, ಹೃದಯ ಬಡಿತ ವ್ಯತ್ಯಾಸ, ಮತ್ತು ಚೇತರಿಕೆ ಮಾದರಿಗಳು ಫಿಟ್‌ನೆಸ್ ಮಟ್ಟ ಮತ್ತು ಸಂಭಾವ್ಯ ವೈದ್ಯಕೀಯ ಪರಿಸ್ಥಿತಿಗಳನ್ನು ಬಹಿರಂಗಪಡಿಸುತ್ತವೆ</li>
+                    <li><strong>ಕಾರ್ಯಕ್ಷಮತೆ ಡೇಟಾ:</strong> ಪೇಸ್, ದೂರ, ಎತ್ತರ, ಕ್ಯಾಡೆನ್ಸ್, ಮತ್ತು ಪವರ್ ಮೆಟ್ರಿಕ್ಸ್ ಸಮಗ್ರ ಫಿಟ್‌ನೆಸ್ ಪ್ರೊಫೈಲ್‌ಗಳನ್ನು ಸೃಷ್ಟಿಸುತ್ತವೆ</li>
+                </ul>
+            </div>
+
+            <h2 id="local-vs-cloud">ಸ್ಥಳೀಯ vs ಕ್ಲೌಡ್ ಪ್ರಕ್ರಿಯೆಯನ್ನು ಅರ್ಥಮಾಡಿಕೊಳ್ಳುವುದು</h2>
+
+            <h3>ಕ್ಲೌಡ್-ಆಧಾರಿತ ಆ್ಯಪ್‌ಗಳು ಹೇಗೆ ಕೆಲಸ ಮಾಡುತ್ತವೆ</h3>
+
+            <div class="protocol-card">
+                <h3>📤 ಕ್ಲೌಡ್ ಪ್ರಕ್ರಿಯೆ ಹರಿವು:</h3>
+                <ol class="protocol-steps">
+                    <li><strong>ಡೇಟಾ ಕ್ಯಾಪ್ಚರ್:</strong> ನಿಮ್ಮ iPhone ಅಥವಾ GPS ವಾಚ್ GPS ಟ್ರ್ಯಾಕ್‌ಗಳು, ಹೃದಯ ಬಡಿತ, ಪೇಸ್, ಕ್ಯಾಡೆನ್ಸ್, ಮತ್ತು ಇತರ ವರ್ಕೌಟ್ ಮೆಟ್ರಿಕ್ಸ್ ಅನ್ನು ರೆಕಾರ್ಡ್ ಮಾಡುತ್ತದೆ</li>
+                    <li><strong>ಅಪ್‌ಲೋಡ್:</strong> ಕಚ್ಚಾ ವರ್ಕೌಟ್ ಡೇಟಾ ಇಂಟರ್ನೆಟ್ ಸಂಪರ್ಕದ ಮೂಲಕ ಕಂಪನಿ ಸರ್ವರ್‌ಗಳಿಗೆ ರವಾನೆಯಾಗುತ್ತದೆ</li>
+                    <li><strong>ಸರ್ವರ್ ಪ್ರಕ್ರಿಯೆ:</strong> ಕ್ಲೌಡ್ ಮೂಲಸೌಕರ್ಯವು ಅನಾಲಿಟಿಕ್ಸ್ ಮೆಟ್ರಿಕ್ಸ್ ಅನ್ನು ಲೆಕ್ಕಾಚಾರ ಮಾಡುತ್ತದೆ</li>
+                    <li><strong>ಸಂಗ್ರಹಣೆ:</strong> ಪ್ರಕ್ರಿಯೆಗೊಳಿಸಿದ ಫಲಿತಾಂಶಗಳು ಮತ್ತು ಕಚ್ಚಾ ಡೇಟಾ ಕಂಪನಿ ಸರ್ವರ್‌ಗಳಲ್ಲಿ ಅನಿರ್ದಿಷ್ಟವಾಗಿ ಉಳಿಯುತ್ತವೆ</li>
+                </ol>
+            </div>
+
+            <h3>ಸ್ಥಳೀಯ ಪ್ರಕ್ರಿಯೆ ಹೇಗೆ ಕೆಲಸ ಮಾಡುತ್ತದೆ</h3>
+
+            <div class="callout callout-success">
+                <h3>🔒 ಸ್ಥಳೀಯ ಪ್ರಕ್ರಿಯೆ ಹರಿವು:</h3>
+                <ol>
+                    <li><strong>ಡೇಟಾ ಕ್ಯಾಪ್ಚರ್:</strong> Apple Health ಅಥವಾ GPS ವಾಚ್ ಫೈಲ್‌ಗಳಿಂದ ಆಮದು ಮಾಡಿದ ವರ್ಕೌಟ್ ಡೇಟಾ ಸ್ಥಳೀಯವಾಗಿ ರೆಕಾರ್ಡ್ ಆಗುತ್ತದೆ</li>
+                    <li><strong>ಸ್ಥಳೀಯ ಸಂಗ್ರಹಣೆ:</strong> ಡೇಟಾ ನಿಮ್ಮ iPhone ನಲ್ಲಿ Apple Health ಡೇಟಾಬೇಸ್‌ನಲ್ಲಿ ಉಳಿಯುತ್ತದೆ</li>
+                    <li><strong>ಸಾಧನದಲ್ಲಿ ಪ್ರಕ್ರಿಯೆ:</strong> ಓಟದ ಅನಾಲಿಟಿಕ್ಸ್ ಆ್ಯಪ್ Health ಡೇಟಾವನ್ನು ಓದುತ್ತದೆ, <a href="/kn/crs/">CRS</a>, <a href="/kn/training-load/">rTSS, CTL/ATL/TSB</a>, <a href="/kn/training-zones/">ತರಬೇತಿ ವಲಯಗಳು</a>, ಮತ್ತು ಇತರ ಮೆಟ್ರಿಕ್ಸ್ ಅನ್ನು ನೇರವಾಗಿ ನಿಮ್ಮ iPhone ನ ಪ್ರೊಸೆಸರ್‌ನಲ್ಲಿ ಲೆಕ್ಕಾಚಾರ ಮಾಡುತ್ತದೆ</li>
+                    <li><strong>ಸ್ಥಳೀಯ ಫಲಿತಾಂಶಗಳು:</strong> ಲೆಕ್ಕಾಚಾರ ಮಾಡಿದ ಮೆಟ್ರಿಕ್ಸ್ ನಿಮ್ಮ ಸಾಧನದಲ್ಲಿ ಉಳಿಯುತ್ತವೆ—ಆ್ಯಪ್ ಕಾರ್ಯಕ್ಷಮತೆಗೆ ಯಾವುದೇ ಅಪ್‌ಲೋಡ್ ಅಗತ್ಯವಿಲ್ಲ</li>
+                    <li><strong>ಐಚ್ಛಿಕ ರಫ್ತು:</strong> ಡೇಟಾವನ್ನು ಯಾವಾಗ/ಹೇಗೆ ರಫ್ತು ಮಾಡಬೇಕು, ಯಾವ ಸ್ವರೂಪದಲ್ಲಿ, ಮತ್ತು ಯಾರು ಸ್ವೀಕರಿಸುತ್ತಾರೆ ಎಂಬುದನ್ನು ನೀವು ನಿರ್ಧರಿಸುತ್ತೀರಿ</li>
+                </ol>
+            </div>
+
+
+            <h2 id="runanalytics-privacy">Run Analytics ನಿಮ್ಮ ಗೌಪ್ಯತೆಯನ್ನು ಹೇಗೆ ರಕ್ಷಿಸುತ್ತದೆ</h2>
+
+            <p>Run Analytics ಮೊದಲಿನಿಂದಲೇ ಗೌಪ್ಯತೆ-ಮೊದಲ ವಾಸ್ತುಶಿಲ್ಪವನ್ನು ಅನುಷ್ಠಾನಗೊಳಿಸುತ್ತದೆ. ಪ್ರತಿ ವಿನ್ಯಾಸ ನಿರ್ಧಾರವು ಡೇಟಾ ರಕ್ಷಣೆ ಮತ್ತು ಬಳಕೆದಾರ ನಿಯಂತ್ರಣಕ್ಕೆ ಆದ್ಯತೆ ನೀಡುತ್ತದೆ.</p>
+
+            <h3>100% ಸ್ಥಳೀಯ ಡೇಟಾ ಪ್ರಕ್ರಿಯೆ</h3>
+
+            <p>ಎಲ್ಲಾ ಓಟದ ಅನಾಲಿಟಿಕ್ಸ್ ಲೆಕ್ಕಾಚಾರಗಳು ನಿಮ್ಮ iPhone ನಲ್ಲಿ ನಡೆಯುತ್ತವೆ:</p>
+
+            <ul>
+                <li><strong><a href="/kn/crs/">Critical Running Speed (CRS)</a>:</strong> ನಿಮ್ಮ ಏರೋಬಿಕ್ ಥ್ರೆಶೋಲ್ಡ್ ಲೆಕ್ಕಾಚಾರಗಳು ನಿಮ್ಮ ಪರೀಕ್ಷಾ ಡೇಟಾವನ್ನು ಬಳಸಿ ಸ್ಥಳೀಯವಾಗಿ ಪ್ರಕ್ರಿಯೆಗೊಳ್ಳುತ್ತವೆ</li>
+                <li><strong><a href="/kn/training-zones/">ತರಬೇತಿ ವಲಯಗಳು</a>:</strong> CRS ನಿಂದ ಪಡೆದ ವೈಯಕ್ತಿಕ ತೀವ್ರತೆ ವಲಯಗಳು (ವಲಯ 1-7) ಸಂಪೂರ್ಣವಾಗಿ ಸಾಧನದಲ್ಲಿ</li>
+                <li><strong><a href="/kn/training-load/">Training Stress Score (rTSS)</a>:</strong> ಸ್ಥಳೀಯ CRS ಉಲ್ಲೇಖವನ್ನು ಬಳಸಿ ಲೆಕ್ಕಾಚಾರ ಮಾಡಿದ ವರ್ಕೌಟ್ ತೀವ್ರತೆ ಪ್ರಮಾಣೀಕರಣ</li>
+                <li><strong>CTL/ATL/TSB ಟ್ರ್ಯಾಕಿಂಗ್:</strong> ನಿಮ್ಮ ಸ್ಥಳೀಯ ವರ್ಕೌಟ್ ಇತಿಹಾಸದಿಂದ ಲೆಕ್ಕಾಚಾರ ಮಾಡಿದ ಕಾರ್ಯಕ್ಷಮತೆ ನಿರ್ವಹಣೆ ಚಾರ್ಟ್ ಮೆಟ್ರಿಕ್ಸ್</li>
+            </ul>
+
+            <p>ಯಾವುದೇ ಲೆಕ್ಕಾಚಾರಕ್ಕೆ ಇಂಟರ್ನೆಟ್ ಸಂಪರ್ಕ ಅಗತ್ಯವಿಲ್ಲ. ಯಾವುದೇ ಡೇಟಾ Run Analytics ಸರ್ವರ್‌ಗಳಿಗೆ ರವಾನೆಯಾಗುವುದಿಲ್ಲ.</p>
+
+            <h3>ಯಾವುದೇ ಖಾತೆ ಅಗತ್ಯವಿಲ್ಲ</h3>
+
+            <div class="callout callout-info">
+                <h3>🚫 ನಾವು ಅಗತ್ಯವಿಲ್ಲದ್ದು:</h3>
+                <ul>
+                    <li><strong>ಯಾವುದೇ ನೋಂದಣಿ ಇಲ್ಲ:</strong> ಯಾವುದೇ ಸೈನ್-ಅಪ್ ಫಾರ್ಮ್‌ಗಳಿಲ್ಲ, ಯಾವುದೇ ವೈಯಕ್ತಿಕ ಮಾಹಿತಿ ಸಂಗ್ರಹಣೆ ಇಲ್ಲ</li>
+                    <li><strong>ಯಾವುದೇ ಇಮೇಲ್ ವಿಳಾಸವಿಲ್ಲ:</strong> ನಾವು ನಿಮ್ಮ ಇಮೇಲ್ ಅನ್ನು ಎಂದಿಗೂ ಕೇಳುವುದಿಲ್ಲ ಅಥವಾ ಸಂಗ್ರಹಿಸುವುದಿಲ್ಲ</li>
+                    <li><strong>ಯಾವುದೇ ಲಾಗಿನ್ ಇಲ್ಲ:</strong> ನಿರ್ವಹಿಸಲು ಅಥವಾ ಸಂಭಾವ್ಯವಾಗಿ ರಾಜಿ ಮಾಡಿಕೊಳ್ಳಲು ಯಾವುದೇ ಪಾಸ್‌ವರ್ಡ್‌ಗಳಿಲ್ಲ</li>
+                    <li><strong>ಯಾವುದೇ ಪ್ರೊಫೈಲ್ ಇಲ್ಲ:</strong> ನಿಮ್ಮ ಮಾಹಿತಿಯನ್ನು ಒಳಗೊಂಡಿರುವ ಯಾವುದೇ ಸಾರ್ವಜನಿಕ ಅಥವಾ ಖಾಸಗಿ ಪ್ರೊಫೈಲ್ ಇಲ್ಲ</li>
+                    <li><strong>ಯಾವುದೇ ಬಳಕೆದಾರಹೆಸರು ಇಲ್ಲ:</strong> ಸಂಪೂರ್ಣ ಅನಾಮಧೇಯತೆ—ನೀವು ಯಾರು ಎಂದು ನಮಗೆ ತಿಳಿದಿಲ್ಲ</li>
+                </ul>
+            </div>
+
+            <h3>ಯಾವುದೇ ಮೂರನೇ ವ್ಯಕ್ತಿ ಟ್ರ್ಯಾಕಿಂಗ್ ಇಲ್ಲ</h3>
+
+            <p>Run Analytics ಶೂನ್ಯ ಮೂರನೇ ವ್ಯಕ್ತಿ ಟ್ರ್ಯಾಕಿಂಗ್ ಅನ್ನು ಒಳಗೊಂಡಿದೆ:</p>
+
+            <ul>
+                <li><strong>ಯಾವುದೇ ಜಾಹೀರಾತು SDK ಗಳಿಲ್ಲ:</strong> ಯಾವುದೇ Facebook Pixel, Google Analytics, ಅಥವಾ ಜಾಹೀರಾತು ನೆಟ್‌ವರ್ಕ್ ಟ್ರ್ಯಾಕರ್‌ಗಳಿಲ್ಲ</li>
+                <li><strong>ಯಾವುದೇ ನಡವಳಿಕೆ ಅನಾಲಿಟಿಕ್ಸ್ ಇಲ್ಲ:</strong> ಯಾವುದೇ Mixpanel, Amplitude, ಅಥವಾ ಬಳಕೆ ಟ್ರ್ಯಾಕಿಂಗ್ ಸೇವೆಗಳಿಲ್ಲ</li>
+                <li><strong>ಯಾವುದೇ ಕ್ರ್ಯಾಶ್ ವರದಿ ಸೇವೆಗಳಿಲ್ಲ:</strong> ಸಾಧನ ಮಾಹಿತಿಯನ್ನು ರವಾನಿಸುವ ಯಾವುದೇ ಮೂರನೇ ವ್ಯಕ್ತಿ ಕ್ರ್ಯಾಶ್ ಅನಾಲಿಟಿಕ್ಸ್ ಇಲ್ಲ</li>
+                <li><strong>ಯಾವುದೇ ಸಾಮಾಜಿಕ ಮಾಧ್ಯಮ ಏಕೀಕರಣವಿಲ್ಲ:</strong> ಯಾವುದೇ "Facebook ನೊಂದಿಗೆ ಲಾಗಿನ್" ಅಥವಾ ಸಾಮಾಜಿಕ ಹಂಚಿಕೆ SDK ಗಳಿಲ್ಲ</li>
+            </ul>
+
+            <h2 id="competitor-comparison">ಓಟದ ಆ್ಯಪ್‌ಗಳ ಗೌಪ್ಯತೆ ಹೋಲಿಕೆ</h2>
+
+            <h3>Run Analytics: ವಿನ್ಯಾಸದಿಂದ ಗೌಪ್ಯತೆ-ಮೊದಲ</h3>
+
+            <div class="callout callout-success">
+                <h3>✅ Run Analytics ಗೌಪ್ಯತೆ ಮಾದರಿ:</h3>
+                <table class="comparison-table">
+                    <tbody>
+                        <tr>
+                            <th>ಅಂಶ</th>
+                            <th>Run Analytics ವಿಧಾನ</th>
+                            <th>ಗೌಪ್ಯತೆ ಪ್ರಯೋಜನ</th>
+                        </tr>
+                        <tr class="highlight-row">
+                            <td><strong>ಡೇಟಾ ಪ್ರಕ್ರಿಯೆ</strong></td>
+                            <td>ನಿಮ್ಮ iPhone ನಲ್ಲಿ 100% ಸ್ಥಳೀಯ</td>
+                            <td>ಶೂನ್ಯ ಡೇಟಾ ಅಪ್‌ಲೋಡ್—ವಿನ್ಯಾಸದಿಂದ ಸಂಪೂರ್ಣ ಗೌಪ್ಯತೆ</td>
+                        </tr>
+                        <tr class="highlight-row">
+                            <td><strong>ಖಾತೆ ಅಗತ್ಯ</strong></td>
+                            <td>ಯಾವುದೂ ಇಲ್ಲ—ಯಾವುದೇ ನೋಂದಣಿ ಇಲ್ಲ</td>
+                            <td>ಅನಾಮಧೇಯ ಬಳಕೆ—ನೀವು ಯಾರು ಎಂದು ನಮಗೆ ತಿಳಿದಿಲ್ಲ</td>
+                        </tr>
+                        <tr class="highlight-row">
+                            <td><strong>ಸ್ಥಳ ಡೇಟಾ</strong></td>
+                            <td>ನಿಮ್ಮ ಸಾಧನದಲ್ಲಿ Apple Health ನಲ್ಲಿ ಉಳಿಯುತ್ತದೆ</td>
+                            <td>ನಿಮ್ಮ ಹೊರತಾಗಿ ಯಾರಿಗೂ ಪ್ರವೇಶಿಸಬಹುದಾದ ಯಾವುದೇ ಸ್ಥಳ ಇತಿಹಾಸವಿಲ್ಲ</td>
+                        </tr>
+                        <tr class="highlight-row">
+                            <td><strong>ಸಾಮಾಜಿಕ ವೈಶಿಷ್ಟ್ಯಗಳು</strong></td>
+                            <td>ಯಾವುದೂ ಇಲ್ಲ—ಸಾಮಾಜಿಕಕ್ಕಿಂತ ಗೌಪ್ಯತೆ</td>
+                            <td>ಹಂಚಿಕೊಳ್ಳಲು ಯಾವುದೇ ಒತ್ತಡವಿಲ್ಲ, ಯಾವುದೇ ಸಾರ್ವಜನಿಕ ಒಡ್ಡುವಿಕೆ ಅಪಾಯವಿಲ್ಲ</td>
+                        </tr>
+                        <tr class="highlight-row">
+                            <td><strong>ಮೂರನೇ ವ್ಯಕ್ತಿ ಹಂಚಿಕೆ</strong></td>
+                            <td>ಅಸಾಧ್ಯ—ನಮ್ಮ ಬಳಿ ನಿಮ್ಮ ಡೇಟಾ ಇಲ್ಲ</td>
+                            <td>ಶೂನ್ಯ ಮೂರನೇ ವ್ಯಕ್ತಿ ಪ್ರವೇಶ ಅಪಾಯ</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h2 id="gdpr-compliance">GDPR ಮತ್ತು ನಿಮ್ಮ ಡೇಟಾ ಹಕ್ಕುಗಳು</h2>
+
+            <h3>Run Analytics ಹೇಗೆ ಅನುಸರಿಸುತ್ತದೆ</h3>
+
+            <div class="callout callout-info">
+                <h3>📜 ಗೌಪ್ಯತೆ-ಮೊದಲ ವಿನ್ಯಾಸದ ಮೂಲಕ GDPR ಅನುಸರಣೆ:</h3>
+                <ul>
+                    <li><strong>ಯಾವುದೇ ಡೇಟಾ ಸಂಗ್ರಹಣೆ = ಸಂಪೂರ್ಣ ಅನುಸರಣೆ:</strong> GDPR ವೈಯಕ್ತಿಕ ಡೇಟಾ ಪ್ರಕ್ರಿಯೆಯನ್ನು ನಿಯಂತ್ರಿಸುತ್ತದೆ—ಆ್ಯಪ್‌ಗಳು ಡೇಟಾ ಸಂಗ್ರಹಿಸದಿದ್ದಾಗ, ನಿಯಮಗಳು ಅನ್ವಯಿಸುವುದಿಲ್ಲ</li>
+                    <li><strong>ಯಾವುದೇ ಡೇಟಾ ವಿಷಯ ವಿನಂತಿಗಳ ಅಗತ್ಯವಿಲ್ಲ:</strong> ನಮ್ಮ ಬಳಿ ಇಲ್ಲದ ಡೇಟಾಗೆ ಪ್ರವೇಶ ವಿನಂತಿಸಲು ಸಾಧ್ಯವಿಲ್ಲ; ನಾವು ಎಂದಿಗೂ ಸಂಗ್ರಹಿಸದ ಡೇಟಾ ಅಳಿಸುವಿಕೆ ವಿನಂತಿಸಲು ಸಾಧ್ಯವಿಲ್ಲ</li>
+                    <li><strong>ಯಾವುದೇ ಒಪ್ಪಿಗೆ ಕಾರ್ಯವಿಧಾನಗಳಿಲ್ಲ:</strong> ಯಾವುದೇ ಟ್ರ್ಯಾಕಿಂಗ್ ಇಲ್ಲದಿದ್ದಾಗ ಕುಕೀ ಬ್ಯಾನರ್‌ಗಳು ಅಥವಾ ಒಪ್ಪಿಗೆ ಫಾರ್ಮ್‌ಗಳ ಅಗತ್ಯವಿಲ್ಲ</li>
+                    <li><strong>ಯಾವುದೇ ಉಲ್ಲಂಘನೆ ಅಧಿಸೂಚನೆ ಬಾಧ್ಯತೆಗಳಿಲ್ಲ:</strong> ನಮ್ಮ ಬಳಿ ಇಲ್ಲದ ಡೇಟಾವನ್ನು ಉಲ್ಲಂಘಿಸಲು ಸಾಧ್ಯವಿಲ್ಲ</li>
+                    <li><strong>ಯಾವುದೇ ಅಂತರರಾಷ್ಟ್ರೀಯ ವರ್ಗಾವಣೆ ಕಾಳಜಿಗಳಿಲ್ಲ:</strong> ಡೇಟಾ ನಿಮ್ಮ ಸಾಧನದಲ್ಲಿ ಉಳಿಯುತ್ತದೆ—ಯಾವುದೇ ಗಡಿ-ಪಾರ ಡೇಟಾ ವರ್ಗಾವಣೆಗಳಿಲ್ಲ</li>
+                </ul>
+            </div>
+
+
+            <h2 id="conclusion">ತೀರ್ಮಾನ: ರಾಜಿ ಇಲ್ಲದೆ ಗೌಪ್ಯತೆ</h2>
+
+            <p>ಬುದ್ಧಿವಂತಿಕೆಯಿಂದ ತರಬೇತಿ ಪಡೆಯಲು ಗೌಪ್ಯತೆಯನ್ನು ತ್ಯಾಗ ಮಾಡುವ ಅಗತ್ಯವಿಲ್ಲ. ಆಧುನಿಕ iPhone ಸಾಮರ್ಥ್ಯಗಳು ಸ್ಥಳೀಯ ಡೇಟಾ ಪ್ರಕ್ರಿಯೆಯ ಮೂಲಕ ಅತ್ಯಾಧುನಿಕ ಓಟದ ಅನಾಲಿಟಿಕ್ಸ್ ಅನ್ನು ಸಕ್ರಿಯಗೊಳಿಸುತ್ತವೆ—ನಿಮ್ಮ ಸೂಕ್ಷ್ಮ ಮಾಹಿತಿಯನ್ನು ನಿಮ್ಮ ವಿಶೇಷ ನಿಯಂತ್ರಣದಲ್ಲಿ ಇಟ್ಟುಕೊಂಡು ಕ್ಲೌಡ್-ಆಧಾರಿತ ಪ್ಲಾಟ್‌ಫಾರ್ಮ್‌ಗಳಂತೆಯೇ ಅದೇ ಮುಂದುವರಿದ ಮೆಟ್ರಿಕ್ಸ್ ಅನ್ನು ತಲುಪಿಸುತ್ತವೆ.</p>
+
+            <div class="callout callout-success">
+                <h3>✅ ಗೌಪ್ಯತೆ-ಮೊದಲ ಓಟದ ಅನಾಲಿಟಿಕ್ಸ್ ಪ್ರಯೋಜನಗಳು:</h3>
+                <ul>
+                    <li><strong>ಸಂಪೂರ್ಣ ಗೌಪ್ಯತೆ:</strong> ನಿಮ್ಮ ವರ್ಕೌಟ್ ಡೇಟಾ, GPS ಟ್ರ್ಯಾಕ್‌ಗಳು, ಹೃದಯ ಬಡಿತ ಮೆಟ್ರಿಕ್ಸ್, ಮತ್ತು ಕಾರ್ಯಕ್ಷಮತೆ ಪ್ರವೃತ್ತಿಗಳು ನಿಮ್ಮ ಸಾಧನವನ್ನು ಎಂದಿಗೂ ಬಿಡುವುದಿಲ್ಲ</li>
+                    <li><strong>ಪೂರ್ಣ ಕಾರ್ಯಕ್ಷಮತೆ:</strong> <a href="/kn/crs/">CRS ಪರೀಕ್ಷೆ</a>, <a href="/kn/training-zones/">ವೈಯಕ್ತಿಕ ತರಬೇತಿ ವಲಯಗಳು</a>, <a href="/kn/training-load/">rTSS/CTL/ATL/TSB ಟ್ರ್ಯಾಕಿಂಗ್</a>, ಮತ್ತು ಸಮಗ್ರ ಅನಾಲಿಟಿಕ್ಸ್—ಎಲ್ಲವೂ ಸ್ಥಳೀಯವಾಗಿ ಪ್ರಕ್ರಿಯೆಗೊಳ್ಳುತ್ತವೆ</li>
+                    <li><strong>ಶೂನ್ಯ ಖಾತೆಗಳು:</strong> ಯಾವುದೇ ನೋಂದಣಿ ಇಲ್ಲ, ಯಾವುದೇ ಇಮೇಲ್ ಇಲ್ಲ, ಯಾವುದೇ ಪಾಸ್‌ವರ್ಡ್‌ಗಳಿಲ್ಲ—ಸಂಪೂರ್ಣ ಅನಾಮಧೇಯತೆಯೊಂದಿಗೆ ತಕ್ಷಣ ಬಳಸಲು ಪ್ರಾರಂಭಿಸಿ</li>
+                    <li><strong>ನಿಮ್ಮ ನಿಯಂತ್ರಣ:</strong> ಏನನ್ನು ರಫ್ತು ಮಾಡಬೇಕು, ಯಾವಾಗ ಹಂಚಿಕೊಳ್ಳಬೇಕು, ಮತ್ತು ಯಾರು ಸ್ವೀಕರಿಸುತ್ತಾರೆ ಎಂಬುದನ್ನು ನಿರ್ಧರಿಸಿ—ಸಂಪೂರ್ಣ ಡೇಟಾ ಮಾಲೀಕತ್ವ</li>
+                    <li><strong>GDPR ಅನುಸರಣೆ:</strong> ಗೌಪ್ಯತೆ-ಮೊದಲ ವಾಸ್ತುಶಿಲ್ಪದ ಮೂಲಕ ಪರಿಪೂರ್ಣ ಅನುಸರಣೆ—ನಾವು ಸಂಗ್ರಹಿಸದ ಡೇಟಾದ ಮೇಲೆ ನಿಯಮಗಳನ್ನು ಉಲ್ಲಂಘಿಸಲು ಸಾಧ್ಯವಿಲ್ಲ</li>
+                    <li><strong>Apple ಏಕೀಕರಣ:</strong> HealthKit ಭದ್ರತೆ ಮತ್ತು ಎನ್‌ಕ್ರಿಪ್ಟೆಡ್ ಬ್ಯಾಕಪ್‌ಗಳು ಸೇರಿದಂತೆ iOS ಗೌಪ್ಯತೆ ವೈಶಿಷ್ಟ್ಯಗಳನ್ನು ಬಳಸಿಕೊಳ್ಳುತ್ತದೆ</li>
+                </ul>
+            </div>
+
+            <p>ಗೌಪ್ಯತೆ ಮತ್ತು ಕಾರ್ಯಕ್ಷಮತೆ ನಡುವಿನ ಆಯ್ಕೆ ತಪ್ಪು. Run Analytics ನೀವು ಎರಡನ್ನೂ ಹೊಂದಬಹುದು ಎಂದು ಸಾಬೀತುಪಡಿಸುತ್ತದೆ: ಸಂಪೂರ್ಣ ಗೌಪ್ಯತೆ ರಕ್ಷಣೆಯೊಂದಿಗೆ ಲೆಕ್ಕಾಚಾರ ಮಾಡಿದ ವೈಜ್ಞಾನಿಕವಾಗಿ ಮಾನ್ಯವಾದ ತರಬೇತಿ ಮೆಟ್ರಿಕ್ಸ್. ನಿಮ್ಮ ಡೇಟಾ, ನಿಮ್ಮ ಸಾಧನ, ನಿಮ್ಮ ಆಯ್ಕೆ.</p>
+        </article>
+    </div>
+</section>
+
+<section class="section section-alt">
+    <div class="container container-narrow">
+        <h2>ಗೌಪ್ಯತೆ FAQ ಗಳು</h2>
+
+        <div class="faq-section" itemscope itemtype="https://schema.org/FAQPage">
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name">Run Analytics ನಿಜವಾಗಿಯೂ ಖಾಸಗಿಯೇ?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                    <div itemprop="text">
+                        <p>ಹೌದು—ವಾಸ್ತುಶಿಲ್ಪ ವಿನ್ಯಾಸದ ಮೂಲಕ 100% ಖಾಸಗಿ. Run Analytics ಎಲ್ಲಾ ಡೇಟಾವನ್ನು ನಿಮ್ಮ iPhone ನಲ್ಲಿ ಸ್ಥಳೀಯವಾಗಿ ಪ್ರಕ್ರಿಯೆಗೊಳಿಸುತ್ತದೆ, ವರ್ಕೌಟ್ ಮಾಹಿತಿ, GPS ಟ್ರ್ಯಾಕ್‌ಗಳು, ಅಥವಾ ಆರೋಗ್ಯ ಮೆಟ್ರಿಕ್ಸ್ ಅನ್ನು ಬಾಹ್ಯ ಸರ್ವರ್‌ಗಳಿಗೆ ಎಂದಿಗೂ ಅಪ್‌ಲೋಡ್ ಮಾಡುವುದಿಲ್ಲ.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name">ಸ್ಥಳೀಯ ಪ್ರಕ್ರಿಯೆ ಹೇಗೆ ಕೆಲಸ ಮಾಡುತ್ತದೆ?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                    <div itemprop="text">
+                        <p><strong>ಸ್ಥಳೀಯ ಪ್ರಕ್ರಿಯೆ</strong> ಎಂದರೆ ಎಲ್ಲಾ ಲೆಕ್ಕಾಚಾರಗಳು ರಿಮೋಟ್ ಸರ್ವರ್‌ಗಳ ಬದಲಿಗೆ ನಿಮ್ಮ iPhone ನ ಪ್ರೊಸೆಸರ್‌ನಲ್ಲಿ ನಡೆಯುತ್ತವೆ. Run Analytics Apple Health ನಿಂದ ವರ್ಕೌಟ್ ಡೇಟಾವನ್ನು ಓದುತ್ತದೆ, ನಿಮ್ಮ iPhone ನ CPU ಬಳಸಿ <a href="/kn/crs/">CRS</a>, <a href="/kn/training-load/">rTSS, CTL/ATL/TSB</a>, ಮತ್ತು <a href="/kn/training-zones/">ತರಬೇತಿ ವಲಯಗಳಿಗೆ</a> ಲೆಕ್ಕಾಚಾರಗಳನ್ನು ನಿರ್ವಹಿಸುತ್ತದೆ.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name">Run Analytics ಯಾವ ಡೇಟಾ ಸಂಗ್ರಹಿಸುತ್ತದೆ?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                    <div itemprop="text">
+                        <p><strong>ಯಾವುದೂ ಇಲ್ಲ.</strong> Run Analytics ಶೂನ್ಯ ಡೇಟಾ ಸಂಗ್ರಹಿಸುತ್ತದೆ. ಆ್ಯಪ್ Apple Health ನಿಂದ ವರ್ಕೌಟ್ ಮಾಹಿತಿಯನ್ನು ಓದುತ್ತದೆ (ನಿಮ್ಮ ಸ್ಪಷ್ಟ ಅನುಮತಿಯೊಂದಿಗೆ) ಆದರೆ ಬಾಹ್ಯ ಸರ್ವರ್‌ಗಳಿಗೆ ರವಾನಿಸದೆ ಸ್ಥಳೀಯವಾಗಿ ಪ್ರಕ್ರಿಯೆಗೊಳಿಸುತ್ತದೆ.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name">Run Analytics ಬಳಸಲು ನನಗೆ ಖಾತೆ ಬೇಕೇ?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                    <div itemprop="text">
+                        <p>ಇಲ್ಲ—ಖಂಡಿತವಾಗಿಯೂ ಯಾವುದೇ ಖಾತೆ ಅಗತ್ಯವಿಲ್ಲ. App Store ನಿಂದ Run Analytics ಡೌನ್‌ಲೋಡ್ ಮಾಡಿ ಮತ್ತು ತಕ್ಷಣ ಬಳಸಲು ಪ್ರಾರಂಭಿಸಿ. ಯಾವುದೇ ನೋಂದಣಿ ಫಾರ್ಮ್‌ಗಳಿಲ್ಲ, ಯಾವುದೇ ಇಮೇಲ್ ಪರಿಶೀಲನೆ ಇಲ್ಲ, ಯಾವುದೇ ಪಾಸ್‌ವರ್ಡ್ ರಚನೆ ಇಲ್ಲ, ಯಾವುದೇ ಪ್ರೊಫೈಲ್ ಸೆಟಪ್ ಇಲ್ಲ.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <h3 itemprop="name">Run Analytics ನನ್ನ ಡೇಟಾವನ್ನು ಮಾರಾಟ ಮಾಡಬಹುದೇ?</h3>
+                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                    <div itemprop="text">
+                        <p><strong>ಅಸಾಧ್ಯ—ಮಾರಾಟ ಮಾಡಲು ನಮ್ಮ ಬಳಿ ನಿಮ್ಮ ಡೇಟಾ ಇಲ್ಲ.</strong> Run Analytics ನಿಮ್ಮ ವರ್ಕೌಟ್ ಡೇಟಾ, GPS ಟ್ರ್ಯಾಕ್‌ಗಳು, ಅಥವಾ ಆರೋಗ್ಯ ಮೆಟ್ರಿಕ್ಸ್ ಅನ್ನು ಸರ್ವರ್‌ಗಳಿಗೆ ಎಂದಿಗೂ ಅಪ್‌ಲೋಡ್ ಮಾಡುವುದಿಲ್ಲ. ಎಲ್ಲಾ ಪ್ರಕ್ರಿಯೆ ನಿಮ್ಮ iPhone ನಲ್ಲಿ ಸ್ಥಳೀಯವಾಗಿ ನಡೆಯುತ್ತದೆ.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    </main>
+
+    
+    <footer class="site-footer">
+    <div class="container">
+        
+        <div class="footer-top">
+            <div class="footer-brand-section">
+                <h2>Run Analytics</h2>
+                <p>Track Critical Running Speed, Training Stress Score, and performance metrics with Run Analytics. Science-based iOS app for runners, triathletes &amp; coaches. 7-day free trial.</p>
+            </div>
+            <div class="footer-download">
+                <h3 class="footer-heading">Download</h3>
+                <div class="footer-badges">
+                    
+                    <a href="https://apps.apple.com/es/app/runanalytics/id6754524015" target="_blank" rel="noopener" aria-label="Download on the App Store">
+                        <img src="/assets/images/badge-app-store.svg" alt="Download on the App Store" width="135" height="40" loading="lazy">
+                    </a>
+                    
+                    
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="footer-languages">
+            <h3 class="footer-heading">Available in</h3>
+            <div class="lang-grid">
+                
+                <a href="/af/"
+                   class="lang-link"
+                   hreflang="af"
+                   >
+                    Afrikaans
+                </a>
+                
+                <a href="/am/"
+                   class="lang-link"
+                   hreflang="am"
+                   >
+                    አማርኛ
+                </a>
+                
+                <a href="/ar/"
+                   class="lang-link"
+                   hreflang="ar"
+                   dir="rtl">
+                    العربية
+                </a>
+                
+                <a href="/bg/"
+                   class="lang-link"
+                   hreflang="bg"
+                   >
+                    Български
+                </a>
+                
+                <a href="/bn/"
+                   class="lang-link"
+                   hreflang="bn"
+                   >
+                    বাংলা
+                </a>
+                
+                <a href="/ca/"
+                   class="lang-link"
+                   hreflang="ca"
+                   >
+                    Català
+                </a>
+                
+                <a href="/cs/"
+                   class="lang-link"
+                   hreflang="cs"
+                   >
+                    Čeština
+                </a>
+                
+                <a href="/da/"
+                   class="lang-link"
+                   hreflang="da"
+                   >
+                    Dansk
+                </a>
+                
+                <a href="/de/"
+                   class="lang-link"
+                   hreflang="de"
+                   >
+                    Deutsch
+                </a>
+                
+                <a href="/el/"
+                   class="lang-link"
+                   hreflang="el"
+                   >
+                    Ελληνικά
+                </a>
+                
+                <a href="/en/"
+                   class="lang-link"
+                   hreflang="en"
+                   >
+                    English
+                </a>
+                
+                <a href="/es/"
+                   class="lang-link"
+                   hreflang="es"
+                   >
+                    Español
+                </a>
+                
+                <a href="/et/"
+                   class="lang-link"
+                   hreflang="et"
+                   >
+                    Eesti
+                </a>
+                
+                <a href="/fa/"
+                   class="lang-link"
+                   hreflang="fa"
+                   dir="rtl">
+                    فارسی
+                </a>
+                
+                <a href="/fi/"
+                   class="lang-link"
+                   hreflang="fi"
+                   >
+                    Suomi
+                </a>
+                
+                <a href="/fr/"
+                   class="lang-link"
+                   hreflang="fr"
+                   >
+                    Français
+                </a>
+                
+                <a href="/gu/"
+                   class="lang-link"
+                   hreflang="gu"
+                   >
+                    ગુજરાતી
+                </a>
+                
+                <a href="/ha/"
+                   class="lang-link"
+                   hreflang="ha"
+                   >
+                    Hausa
+                </a>
+                
+                <a href="/he/"
+                   class="lang-link"
+                   hreflang="he"
+                   dir="rtl">
+                    עברית
+                </a>
+                
+                <a href="/hi/"
+                   class="lang-link"
+                   hreflang="hi"
+                   >
+                    हिन्दी
+                </a>
+                
+                <a href="/hr/"
+                   class="lang-link"
+                   hreflang="hr"
+                   >
+                    Hrvatski
+                </a>
+                
+                <a href="/hu/"
+                   class="lang-link"
+                   hreflang="hu"
+                   >
+                    Magyar
+                </a>
+                
+                <a href="/id/"
+                   class="lang-link"
+                   hreflang="id"
+                   >
+                    Bahasa Indonesia
+                </a>
+                
+                <a href="/is/"
+                   class="lang-link"
+                   hreflang="is"
+                   >
+                    Íslenska
+                </a>
+                
+                <a href="/it/"
+                   class="lang-link"
+                   hreflang="it"
+                   >
+                    Italiano
+                </a>
+                
+                <a href="/ja/"
+                   class="lang-link"
+                   hreflang="ja"
+                   >
+                    日本語
+                </a>
+                
+                <a href="/kn/"
+                   class="lang-link active"
+                   hreflang="kn"
+                   >
+                    ಕನ್ನಡ
+                </a>
+                
+                <a href="/ko/"
+                   class="lang-link"
+                   hreflang="ko"
+                   >
+                    한국어
+                </a>
+                
+                <a href="/lt/"
+                   class="lang-link"
+                   hreflang="lt"
+                   >
+                    Lietuvių
+                </a>
+                
+                <a href="/lv/"
+                   class="lang-link"
+                   hreflang="lv"
+                   >
+                    Latviešu
+                </a>
+                
+                <a href="/ms/"
+                   class="lang-link"
+                   hreflang="ms"
+                   >
+                    Bahasa Melayu
+                </a>
+                
+                <a href="/my/"
+                   class="lang-link"
+                   hreflang="my"
+                   >
+                    မြန်မာစာ
+                </a>
+                
+                <a href="/nb/"
+                   class="lang-link"
+                   hreflang="nb"
+                   >
+                    Norsk Bokmål
+                </a>
+                
+                <a href="/nl/"
+                   class="lang-link"
+                   hreflang="nl"
+                   >
+                    Nederlands
+                </a>
+                
+                <a href="/pl/"
+                   class="lang-link"
+                   hreflang="pl"
+                   >
+                    Polski
+                </a>
+                
+                <a href="/pt/"
+                   class="lang-link"
+                   hreflang="pt"
+                   >
+                    Português
+                </a>
+                
+                <a href="/pt-br/"
+                   class="lang-link"
+                   hreflang="pt-br"
+                   >
+                    Português (Brasil)
+                </a>
+                
+                <a href="/ro/"
+                   class="lang-link"
+                   hreflang="ro"
+                   >
+                    Română
+                </a>
+                
+                <a href="/ru/"
+                   class="lang-link"
+                   hreflang="ru"
+                   >
+                    Русский
+                </a>
+                
+                <a href="/sk/"
+                   class="lang-link"
+                   hreflang="sk"
+                   >
+                    Slovenčina
+                </a>
+                
+                <a href="/sl/"
+                   class="lang-link"
+                   hreflang="sl"
+                   >
+                    Slovenščina
+                </a>
+                
+                <a href="/sr/"
+                   class="lang-link"
+                   hreflang="sr"
+                   >
+                    Srpski
+                </a>
+                
+                <a href="/sv/"
+                   class="lang-link"
+                   hreflang="sv"
+                   >
+                    Svenska
+                </a>
+                
+                <a href="/sw/"
+                   class="lang-link"
+                   hreflang="sw"
+                   >
+                    Kiswahili
+                </a>
+                
+                <a href="/ta/"
+                   class="lang-link"
+                   hreflang="ta"
+                   >
+                    தமிழ்
+                </a>
+                
+                <a href="/te/"
+                   class="lang-link"
+                   hreflang="te"
+                   >
+                    తెలుగు
+                </a>
+                
+                <a href="/th/"
+                   class="lang-link"
+                   hreflang="th"
+                   >
+                    ไทย
+                </a>
+                
+                <a href="/tl/"
+                   class="lang-link"
+                   hreflang="tl"
+                   >
+                    Tagalog
+                </a>
+                
+                <a href="/tr/"
+                   class="lang-link"
+                   hreflang="tr"
+                   >
+                    Türkçe
+                </a>
+                
+                <a href="/uk/"
+                   class="lang-link"
+                   hreflang="uk"
+                   >
+                    Українська
+                </a>
+                
+                <a href="/ur/"
+                   class="lang-link"
+                   hreflang="ur"
+                   dir="rtl">
+                    اردو
+                </a>
+                
+                <a href="/vi/"
+                   class="lang-link"
+                   hreflang="vi"
+                   >
+                    Tiếng Việt
+                </a>
+                
+                <a href="/yo/"
+                   class="lang-link"
+                   hreflang="yo"
+                   >
+                    Yorùbá
+                </a>
+                
+                <a href="/zh/"
+                   class="lang-link"
+                   hreflang="zh"
+                   >
+                    中文
+                </a>
+                
+            </div>
+        </div>
+
+        <div class="footer-divider"></div>
+
+        
+        <div class="footer-bottom">
+            <p class="copyright">
+                &copy; 2026 Run Analytics. ಎಲ್ಲಾ ಹಕ್ಕುಗಳನ್ನು ಕಾಯ್ದಿರಿಸಲಾಗಿದೆ
+            </p>
+            <ul class="footer-legal">
+                <li><a href="/kn/privacy/">ಗೌಪ್ಯತೆ</a></li>
+                <li><a href="/kn/terms/">ನಿಯಮಗಳು</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+    
+    <div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="Cookie consent" aria-live="polite">
+    <div class="cookie-banner-content">
+        <div>
+            <p>ಈ ವೆಬ್‌ಸೈಟ್ ನಿಮ್ಮ ಅನುಭವವನ್ನು ಸುಧಾರಿಸಲು ಕುಕೀಗಳನ್ನು ಬಳಸುತ್ತದೆ.</p>
+            <a href="/kn/privacy/" class="text-sm">ಇನ್ನಷ್ಟು ತಿಳಿಯಿರಿ</a>
+        </div>
+        <div class="cookie-banner-actions">
+            <button id="cookie-decline" class="btn btn-secondary btn-small">ನಿರಾಕರಿಸಿ</button>
+            <button id="cookie-accept" class="btn btn-primary btn-small">ಸ್ವೀಕರಿಸಿ</button>
+        </div>
+    </div>
+</div>
+
+    
+    <script src="/assets/js/core.min.js" defer></script>
+    <script src="/assets/js/search.min.js" defer></script>
+
+    
+    
+    <script src="/assets/js/analytics.min.js" data-ga-id="G-Y138VB4523" defer></script>
+    
+
+    
+    <script>if('serviceWorker' in navigator){navigator.serviceWorker.register('/sw.js')}</script>
+</body>
+</html>
