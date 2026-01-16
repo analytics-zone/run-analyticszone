@@ -920,23 +920,25 @@ img[width][height] {
     <main id="main-content" class="main-content">
         <section class="page-hero">
     <div class="container">
-        <h1>Tài Liệu Kỹ Thuật & Công Thức</h1>
-        <p class="lead">Triển Khai Toán Học Đầy Đủ</p>
+        <h1>Tham khảo Kỹ thuật & Công thức</h1>
+        <p class="lead">Triển khai Toán học Hoàn chỉnh</p>
     </div>
 </section>
 
 <section class="section">
     <div class="container container-narrow">
-        <h2>Hướng Dẫn Triển Khai</h2>
-        <p class="lead">Trang này cung cấp các công thức sao chép-dán và phương pháp tính toán từng bước cho tất cả các chỉ số Run Analytics. Sử dụng cho việc triển khai tùy chỉnh, xác minh hoặc hiểu sâu hơn.</p>
+        <h2>Hướng dẫn Triển khai</h2>
+        <p class="lead">Trang này cung cấp các công thức có thể sao chép và các phương pháp tính toán từng bước cho tất
+            cả các chỉ số Run Analytics. Sử dụng chúng cho các triển khai tùy chỉnh, xác minh hoặc hiểu sâu hơn về các
+            tính toán.</p>
 
         <div class="callout callout-warning">
-            <h3>⚠️ Lưu Ý Triển Khai</h3>
+            <h3>⚠️ Lưu ý Triển khai</h3>
             <ul>
                 <li>Tất cả thời gian nên được chuyển đổi sang giây để tính toán</li>
-                <li>Nhịp chạy là nghịch đảo (% cao hơn = nhịp chậm hơn)</li>
-                <li>Luôn xác thực đầu vào trong phạm vi hợp lý</li>
-                <li>Xử lý các trường hợp ngoại lệ (chia cho 0, giá trị âm)</li>
+                <li>Tính toán rTSS sử dụng Hệ số Cường độ bình phương (IF²)</li>
+                <li>Luôn xác thực đầu vào cho các phạm vi hợp lý</li>
+                <li>Xử lý các trường hợp biên (chia cho 0, giá trị âm)</li>
             </ul>
         </div>
     </div>
@@ -944,10 +946,10 @@ img[width][height] {
 
 <section class="section section-alt">
     <div class="container">
-        <h2>Chỉ Số Thành Tích Cốt Lõi</h2>
+        <h2>Các Chỉ số Hiệu suất Cốt lõi</h2>
 
         <div class="formula-card">
-            <h3>Tốc Độ Chạy Tới Hạn (CRS)</h3>
+            <h3>Tốc độ Chạy tới hạn (CRS)</h3>
             <div class="formula-content">
                 <h4>Công thức:</h4>
                 <div class="formula-box-large">
@@ -955,377 +957,346 @@ img[width][height] {
                         CRS (m/s) = (D₂ - D₁) / (T₂ - T₁)
                     </div>
                     <div class="formula">
-                        Nhịp CRS/100m (giây) = (T₄₀₀ - T₂₀₀) / 2
+                        Pace CRS (phút/km) = 16.667 / CRS (m/s)
                     </div>
                 </div>
 
                 <div class="callout callout-info mt-lg">
-                    <h4>🧪 Máy Tính Tương Tác - Kiểm Tra Công Thức</h4>
+                    <h4>🧪 Máy tính Tương tác - Thử nghiệm Công thức</h4>
                     <div class="calculator-grid">
                         <div class="input-group">
-                            <label for="crs-d1">Quãng đường 1 (mét):</label>
-                            <input type="number" id="crs-d1" value="200" min="50" max="1000" step="50">
+                            <label for="crs-d1">Khoảng cách 1 (mét):</label>
+                            <input type="number" id="crs-d1" value="1200" min="400" max="2000" step="100">
                         </div>
                         <div class="input-group">
                             <label for="crs-t1">Thời gian 1 (mm:ss):</label>
-                            <input type="text" id="crs-t1" value="2:30" placeholder="2:30" pattern="[0-9]{1,2}:[0-9]{2}">
+                            <input type="text" id="crs-t1" value="4:30" placeholder="4:30"
+                                pattern="[0-9]{1,2}:[0-9]{2}">
                         </div>
                         <div class="input-group">
-                            <label for="crs-d2">Quãng đường 2 (mét):</label>
-                            <input type="number" id="crs-d2" value="400" min="100" max="2000" step="50">
+                            <label for="crs-d2">Khoảng cách 2 (mét):</label>
+                            <input type="number" id="crs-d2" value="3600" min="2000" max="10000" step="100">
                         </div>
                         <div class="input-group">
                             <label for="crs-t2">Thời gian 2 (mm:ss):</label>
-                            <input type="text" id="crs-t2" value="6:08" placeholder="6:08" pattern="[0-9]{1,2}:[0-9]{2}">
+                            <input type="text" id="crs-t2" value="15:00" placeholder="15:00"
+                                pattern="[0-9]{1,2}:[0-9]{2}">
                         </div>
                     </div>
                     <div class="calculator-result mt-md">
-                        <div class="result-label">Nhịp CRS mỗi 100m:</div>
-                        <div class="result-value" id="crs-result">1:49</div>
+                        <div class="result-label">Pace CRS (phút/km):</div>
+                        <div class="result-value" id="crs-result">4:17</div>
                     </div>
                     <div class="calculation-breakdown mt-md">
                         <small>
                             <strong>Các bước tính toán:</strong><br>
                             <span id="crs-steps">
-                                CRS (m/s) = (400 - 200) / (368 - 150) = 0.917 m/s<br>
-                                Nhịp/100m = 100 / 0.917 = 109 giây = 1:49
+                                CRS (m/s) = (3600 - 1200) / (900 - 270) = 3.81 m/s<br>
+                                Pace (phút/km) = 1000 / 3.81 = 262 giây = 4:22
                             </span>
                         </small>
                     </div>
                 </div>
 
-                <h4 class="mt-xl">Triển Khai JavaScript:</h4>
+                <h4 class="mt-xl">Triển khai JavaScript:</h4>
                 <pre><code>function calculateCRS(distance1, time1, distance2, time2) {
-  // Convert times to seconds if needed
+  // Chuyển đổi thời gian sang giây
   const t1 = typeof time1 === 'string' ? timeToSeconds(time1) : time1;
   const t2 = typeof time2 === 'string' ? timeToSeconds(time2) : time2;
 
-  // Calculate CRS in m/s
-  const css_ms = (distance2 - distance1) / (t2 - t1);
+  // Tính toán vận tốc CRS bằng m/s
+  const crs_ms = (distance2 - distance1) / (t2 - t1);
 
-  // Calculate pace per 100m in seconds
-  const pace_per_100m = 100 / css_ms;
+  // Tính toán pace mỗi km bằng giây
+  const pace_per_km = 1000 / crs_ms;
 
-  // Convert to mm:ss format
-  const minutes = Math.floor(pace_per_100m / 60);
-  const seconds = Math.round(pace_per_100m % 60);
+  // Chuyển đổi sang định dạng mm:ss
+  const minutes = Math.floor(pace_per_km / 60);
+  const seconds = Math.round(pace_per_km % 60);
 
   return {
-    css_ms: css_ms,
-    pace_seconds: pace_per_100m,
+    velocity_ms: crs_ms,
+    pace_seconds: pace_per_km,
     pace_formatted: `${minutes}:${seconds.toString().padStart(2, '0')}`
   };
-}
-
-// Example usage:
-const result = calculateCRS(200, 150, 400, 368);
-// Returns: { css_ms: 0.917, pace_seconds: 109, pace_formatted: "1:49" }</code></pre>
+}</code></pre>
 
                 <script>
-                function timeToSecondsCRS(timeString) {
-                    const parts = timeString.split(':');
-                    return parseInt(parts[0]) * 60 + parseInt(parts[1]);
-                }
-
-                function secondsToTimeCRS(seconds) {
-                    const minutes = Math.floor(seconds / 60);
-                    const secs = Math.round(seconds % 60);
-                    return `${minutes}:${secs.toString().padStart(2, '0')}`;
-                }
-
-                function updateCRSCalculator() {
-                    try {
-                        const d1 = parseFloat(document.getElementById('crs-d1').value);
-                        const t1Input = document.getElementById('crs-t1').value;
-                        const d2 = parseFloat(document.getElementById('crs-d2').value);
-                        const t2Input = document.getElementById('crs-t2').value;
-
-                        if (!d1 || !t1Input || !d2 || !t2Input) return;
-
-                        const t1 = timeToSecondsCRS(t1Input);
-                        const t2 = timeToSecondsCRS(t2Input);
-
-                        const css_ms = (d2 - d1) / (t2 - t1);
-                        const pace_per_100m = 100 / css_ms;
-                        const pace_formatted = secondsToTimeCRS(pace_per_100m);
-
-                        document.getElementById('crs-result').textContent = pace_formatted;
-                        document.getElementById('crs-steps').innerHTML =
-                            `CRS (m/s) = (${d2} - ${d1}) / (${t2} - ${t1}) = ${css_ms.toFixed(3)} m/s<br>` +
-                            `Nhịp/100m = 100 / ${css_ms.toFixed(3)} = ${Math.round(pace_per_100m)} giây = ${pace_formatted}`;
-                    } catch (e) {
-                        console.error('CRS calculation error:', e);
+                    function timeToSecondsCRS(timeString) {
+                        const parts = timeString.split(':');
+                        if (parts.length === 1) return parseInt(parts[0]);
+                        return parseInt(parts[0]) * 60 + parseInt(parts[1]);
                     }
-                }
 
-                document.addEventListener('DOMContentLoaded', function() {
-                    document.getElementById('crs-d1').addEventListener('input', updateCRSCalculator);
-                    document.getElementById('crs-t1').addEventListener('input', updateCRSCalculator);
-                    document.getElementById('crs-d2').addEventListener('input', updateCRSCalculator);
-                    document.getElementById('crs-t2').addEventListener('input', updateCRSCalculator);
-                    updateCRSCalculator();
-                });
+                    function secondsToTimeCRS(seconds) {
+                        const minutes = Math.floor(seconds / 60);
+                        const secs = Math.round(seconds % 60);
+                        return `${minutes}:${secs.toString().padStart(2, '0')}`;
+                    }
+
+                    function updateCRSCalculator() {
+                        try {
+                            const d1 = parseFloat(document.getElementById('crs-d1').value);
+                            const t1Input = document.getElementById('crs-t1').value;
+                            const d2 = parseFloat(document.getElementById('crs-d2').value);
+                            const t2Input = document.getElementById('crs-t2').value;
+
+                            if (!d1 || !t1Input || !d2 || !t2Input) return;
+
+                            const t1 = timeToSecondsCRS(t1Input);
+                            const t2 = timeToSecondsCRS(t2Input);
+
+                            const crs_ms = (d2 - d1) / (t2 - t1);
+                            const pace_per_km = 1000 / crs_ms;
+                            const pace_formatted = secondsToTimeCRS(pace_per_km);
+
+                            document.getElementById('crs-result').textContent = pace_formatted;
+                            document.getElementById('crs-steps').innerHTML =
+                                `CRS (m/s) = (${d2} - ${d1}) / (${t2} - ${t1}) = ${crs_ms.toFixed(3)} m/s<br>` +
+                                `Pace (phút/km) = 1000 / ${crs_ms.toFixed(3)} = ${Math.round(pace_per_km)} giây = ${pace_formatted}`;
+                        } catch (e) {
+                            console.error('Lỗi tính toán CRS:', e);
+                        }
+                    }
+
+                    document.addEventListener('DOMContentLoaded', function () {
+                        document.getElementById('crs-d1').addEventListener('input', updateCRSCalculator);
+                        document.getElementById('crs-t1').addEventListener('input', updateCRSCalculator);
+                        document.getElementById('crs-d2').addEventListener('input', updateCRSCalculator);
+                        document.getElementById('crs-t2').addEventListener('input', updateCRSCalculator);
+                        updateCRSCalculator();
+                    });
                 </script>
             </div>
         </div>
 
         <div class="formula-card">
-            <h3>Điểm Căng Thẳng Tập Luyện Chạy (sTSS)</h3>
+            <h3>Điểm Căng thẳng Chạy bộ (rTSS)</h3>
             <div class="formula-content">
-                <h4>Công thức đầy đủ:</h4>
+                <h4>Công thức Hoàn chỉnh:</h4>
                 <div class="formula-box-large">
                     <div class="formula">
-                        sTSS = (IF³) × Thời lượng (giờ) × 100
+                        rTSS = (IF²) × Thời lượng (giờ) × 100
                     </div>
                     <div class="formula">
-                        IF = NSS / FTP
+                        IF = NSS / Tốc độ Ngưỡng
                     </div>
                     <div class="formula">
-                        NSS = Tổng quãng đường / Tổng thời gian (m/phút)
+                        NSS = Tổng Quãng đường / Tổng Thời gian (m/phút)
                     </div>
                 </div>
 
                 <div class="callout callout-info mt-lg">
-                    <h4>🧪 Máy Tính Tương Tác - Kiểm Tra Công Thức</h4>
+                    <h4>🧪 Máy tính Tương tác - Thử nghiệm Công thức</h4>
                     <div class="calculator-grid">
                         <div class="input-group">
                             <label for="rtss-distance">Quãng đường (mét):</label>
-                            <input type="number" id="rtss-distance" value="3000" min="100" max="10000" step="50">
+                            <input type="number" id="rtss-distance" value="5000" min="100" max="42195" step="100">
                         </div>
                         <div class="input-group">
                             <label for="rtss-duration">Thời lượng (phút):</label>
-                            <input type="number" id="rtss-duration" value="55" min="1" max="300" step="1">
+                            <input type="number" id="rtss-duration" value="25" min="1" max="600" step="1">
                         </div>
                         <div class="input-group">
-                            <label for="rtss-css">Nhịp CRS (mm:ss mỗi 100m):</label>
-                            <input type="text" id="rtss-css" value="1:33" placeholder="1:33" pattern="[0-9]{1,2}:[0-9]{2}">
+                            <label for="rtss-crs">Pace CRS (phút/km):</label>
+                            <input type="text" id="rtss-crs" value="4:15" placeholder="4:15"
+                                pattern="[0-9]{1,2}:[0-9]{2}">
                         </div>
                         <div class="input-group">
-                            <label>FTP (được tính):</label>
-                            <input type="text" id="rtss-threshold-speed" readonly value="64.5 m/phút">
+                            <label>Tốc độ Ngưỡng:</label>
+                            <input type="text" id="rtss-threshold-speed" readonly value="235.3 m/min">
                         </div>
                     </div>
                     <div class="calculator-result mt-md">
-                        <div class="result-label">sTSS được tính:</div>
-                        <div class="result-value" id="rtss-result">55</div>
+                        <div class="result-label">rTSS Tính toán:</div>
+                        <div class="result-value" id="rtss-result">31</div>
                     </div>
                     <div class="calculation-breakdown mt-md">
                         <small>
                             <strong>Các bước tính toán:</strong><br>
                             <span id="rtss-steps">
-                                NSS = 3000m / 55phút = 54.5 m/phút<br>
-                                FTP = 100 / (93/60) = 64.5 m/phút<br>
-                                IF = 54.5 / 64.5 = 0.845<br>
-                                sTSS = 0.845³ × (55/60) × 100 = 55
+                                NSS = 5000m / 25phút = 200 m/phút<br>
+                                FTP = 1000 / (255/60) = 235.3 m/phút<br>
+                                IF = 200 / 235.3 = 0.850<br>
+                                rTSS = 0.850² × (25/60) × 100 = 31
                             </span>
                         </small>
                     </div>
                 </div>
 
-                <h4 class="mt-xl">Triển Khai JavaScript:</h4>
-                <pre><code>function calculateSTSS(distance, timeMinutes, ftpMetersPerMin) {
-  // Calculate Normalized Run Speed
+                <h4 class="mt-xl">Triển khai JavaScript:</h4>
+                <pre><code>function calculateRTSS(distance, timeMinutes, ftpMetersPerMin) {
+  // Tính Tốc độ Chạy Chuẩn hóa (Normalized Run Speed)
   const nss = distance / timeMinutes;
 
-  // Calculate Intensity Factor
+  // Tính Hệ số Cường độ (Intensity Factor)
   const intensityFactor = nss / ftpMetersPerMin;
 
-  // Calculate hours
+  // Tính giờ
   const hours = timeMinutes / 60;
 
-  // Calculate sTSS using cubed intensity factor
-  const stss = Math.pow(intensityFactor, 3) * hours * 100;
+  // Tính rTSS sử dụng hệ số cường độ bình phương
+  const rtss = Math.pow(intensityFactor, 2) * hours * 100;
 
-  return Math.round(stss);
+  return Math.round(rtss);
 }
 
-// Example usage:
-const stss = calculateSTSS(3000, 55, 64.5);
-// Returns: 55
+// Ví dụ sử dụng:
+const rtss = calculateRTSS(3000, 55, 64.5);
+// Trả về: 65
 
-// Helper: Convert CRS to FTP
-function cssToFTP(crsPacePer100mSeconds) {
-  // FTP in m/min = 100m / (pace in minutes)
-  return 100 / (crsPacePer100mSeconds / 60);
+// Helper: Chuyển đổi Pace CRS sang Tốc độ Chạy (m/phút)
+function crsPaceToSpeed(crsPacePerKmSeconds) {
+  // Tốc độ m/phút = 1000m / (pace tính bằng phút)
+  return 1000 / (crsPacePerKmSeconds / 60);
 }
 
-// Example: CRS of 1:33 (93 seconds)
-const ftp = cssToFTP(93); // Returns: 64.5 m/min</code></pre>
+// Ví dụ: CRS là 4:15 (255 giây)
+const speed = crsPaceToSpeed(255); // Trả về: 235.3 m/phút</code></pre>
 
                 <script>
-                // Time conversion helper
-                function timeToSeconds(timeString) {
-                    const parts = timeString.split(':');
-                    return parseInt(parts[0]) * 60 + parseInt(parts[1]);
-                }
-
-                // CRS to FTP conversion
-                function cssToFTP(crsPacePer100mSeconds) {
-                    return 100 / (crsPacePer100mSeconds / 60);
-                }
-
-                // sTSS calculation
-                function calculateSTSS(distance, timeMinutes, ftpMetersPerMin) {
-                    const nss = distance / timeMinutes;
-                    const intensityFactor = nss / ftpMetersPerMin;
-                    const hours = timeMinutes / 60;
-                    const stss = Math.pow(intensityFactor, 3) * hours * 100;
-                    return Math.round(stss);
-                }
-
-                // Update calculator
-                function updateRTSSCalculator() {
-                    try {
-                        const distance = parseFloat(document.getElementById('rtss-distance').value);
-                        const duration = parseFloat(document.getElementById('rtss-duration').value);
-                        const cssInput = document.getElementById('rtss-css').value;
-
-                        // Validate inputs
-                        if (!distance || !duration || !cssInput) return;
-
-                        // Convert CRS to seconds
-                        const crsPaceSeconds = timeToSeconds(cssInput);
-
-                        // Calculate FTP
-                        const ftp = cssToFTP(crsPaceSeconds);
-
-                        // Calculate NSS
-                        const nss = distance / duration;
-
-                        // Calculate Intensity Factor
-                        const intensityFactor = nss / ftp;
-
-                        // Calculate sTSS
-                        const stss = calculateSTSS(distance, duration, ftp);
-
-                        // Update display
-                        document.getElementById('rtss-threshold-speed').value = ftp.toFixed(1) + ' m/phút';
-                        document.getElementById('rtss-result').textContent = stss;
-
-                        // Update calculation steps
-                        const hours = duration / 60;
-                        document.getElementById('rtss-steps').innerHTML =
-                            `NSS = ${distance}m / ${duration}phút = ${nss.toFixed(1)} m/phút<br>` +
-                            `FTP = 100 / (${crsPaceSeconds}/60) = ${ftp.toFixed(1)} m/phút<br>` +
-                            `IF = ${nss.toFixed(1)} / ${ftp.toFixed(1)} = ${intensityFactor.toFixed(3)}<br>` +
-                            `sTSS = ${intensityFactor.toFixed(3)}³ × (${duration}/60) × 100 = ${stss}`;
-                    } catch (e) {
-                        console.error('Calculation error:', e);
+                    // Tiện ích chuyển đổi thời gian
+                    function timeToSeconds(timeString) {
+                        const parts = timeString.split(':');
+                        return parseInt(parts[0]) * 60 + parseInt(parts[1]);
                     }
-                }
 
-                // Add event listeners when page loads
-                document.addEventListener('DOMContentLoaded', function() {
-                    document.getElementById('rtss-distance').addEventListener('input', updateRTSSCalculator);
-                    document.getElementById('rtss-duration').addEventListener('input', updateRTSSCalculator);
-                    document.getElementById('rtss-css').addEventListener('input', updateRTSSCalculator);
+                    // Chuyển đổi Pace CRS sang Tốc độ
+                    function crsPaceToSpeed(crsPacePerKmSeconds) {
+                        return 1000 / (crsPacePerKmSeconds / 60);
+                    }
 
-                    // Initial calculation
-                    updateRTSSCalculator();
-                });
+                    // Tính toán rTSS
+                    function calculateRTSS(distance, timeMinutes, ftpMetersPerMin) {
+                        const nss = distance / timeMinutes;
+                        const intensityFactor = nss / ftpMetersPerMin;
+                        const hours = timeMinutes / 60;
+                        const rtss = Math.pow(intensityFactor, 2) * hours * 100;
+                        return Math.round(rtss);
+                    }
+
+                    // Cập nhật máy tính
+                    function updateRTSSCalculator() {
+                        try {
+                            const distance = parseFloat(document.getElementById('rtss-distance').value);
+                            const duration = parseFloat(document.getElementById('rtss-duration').value);
+                            const crsInput = document.getElementById('rtss-crs').value;
+
+                            // Xác thực đầu vào
+                            if (!distance || !duration || !crsInput) return;
+
+                            // Chuyển đổi CRS sang giây
+                            const crsPaceSeconds = timeToSeconds(crsInput);
+
+                            // Tính Tốc độ (Ngưỡng)
+                            const thresholdSpeed = crsPaceToSpeed(crsPaceSeconds);
+
+                            // Tính NSS
+                            const nss = distance / duration;
+
+                            // Tính Hệ số Cường độ
+                            const intensityFactor = nss / thresholdSpeed;
+
+                            // Tính rTSS
+                            const rtss = calculateRTSS(distance, duration, thresholdSpeed);
+
+                            // Cập nhật hiển thị
+                            document.getElementById('rtss-threshold-speed').value = thresholdSpeed.toFixed(1) + ' m/phút';
+                            document.getElementById('rtss-result').textContent = rtss;
+
+                            // Cập nhật các bước tính toán
+                            const hours = duration / 60;
+                            document.getElementById('rtss-steps').innerHTML =
+                                `NSS = \${distance}m / \${duration}phút = \${nss.toFixed(1)} m/phút<br>` +
+                                `Tốc độ Ngưỡng = 1000 / (\${crsPaceSeconds}/60) = \${thresholdSpeed.toFixed(1)} m/phút<br>` +
+                                `IF = \${nss.toFixed(1)} / \${thresholdSpeed.toFixed(1)} = \${intensityFactor.toFixed(3)}<br>` +
+                                `rTSS = \${intensityFactor.toFixed(3)}² × (\${duration}/60) × 100 = \${rtss}`;
+                        } catch (e) {
+                            console.error('Lỗi tính toán:', e);
+                        }
+                    }
+
+                    // Thêm event listeners khi trang tải
+                    document.addEventListener('DOMContentLoaded', function () {
+                        document.getElementById('rtss-distance').addEventListener('input', updateRTSSCalculator);
+                        document.getElementById('rtss-duration').addEventListener('input', updateRTSSCalculator);
+                        document.getElementById('rtss-crs').addEventListener('input', updateRTSSCalculator);
+
+                        // Tính toán ban đầu
+                        updateRTSSCalculator();
+                    });
                 </script>
             </div>
         </div>
 
         <div class="formula-card">
-            <h3>Hiệu Suất Chạy</h3>
+            <h3>Hiệu quả Cơ sinh học: Tỷ lệ Dọc</h3>
             <div class="formula-content">
                 <h4>Công thức:</h4>
                 <div class="formula-box-large">
                     <div class="formula">
-                        Hiệu suất chạy = Thời gian km (giây) + Số bước chạy
-                    </div>
-                    <div class="formula">
-                        Hiệu suất chạy₂₅ = (Thời gian × 25/Chiều dài đường) + (Số bước × 25/Chiều dài đường)
+                        Tỷ lệ Dọc (%) = (Dao động Dọc ÷ Chiều dài Sải bước) × 100
                     </div>
                 </div>
 
                 <div class="callout callout-info mt-lg">
-                    <h4>🧪 Máy Tính Tương Tác - Kiểm Tra Công Thức</h4>
+                    <h4>🧪 Máy tính Tương tác - Thử nghiệm Công thức</h4>
                     <div class="calculator-grid">
                         <div class="input-group">
-                            <label for="rtss-time">Thời gian km (giây):</label>
-                            <input type="number" id="rtss-time" value="20" min="10" max="120" step="1">
+                            <label for="eff-oscillation">Dao động Dọc (cm):</label>
+                            <input type="number" id="eff-oscillation" value="8.5" min="3" max="25" step="0.1">
                         </div>
                         <div class="input-group">
-                            <label for="rtss-strides">Số bước chạy:</label>
-                            <input type="number" id="rtss-strides" value="15" min="5" max="50" step="1">
-                        </div>
-                        <div class="input-group">
-                            <label for="crs-track">Chiều dài đường (m):</label>
-                            <select id="crs-track">
-                                <option value="25" selected>400m</option>
-                                <option value="50">400m</option>
-                            </select>
+                            <label for="eff-stride">Chiều dài Sải bước (cm):</label>
+                            <input type="number" id="eff-stride" value="115" min="50" max="250" step="1">
                         </div>
                     </div>
                     <div class="calculator-result mt-md">
-                        <div class="result-label">Điểm hiệu suất chạy:</div>
-                        <div class="result-value" id="rtss-result">35</div>
+                        <div class="result-label">Tỷ lệ Dọc:</div>
+                        <div class="result-value" id="eff-result">7.4%</div>
                     </div>
                     <div class="calculation-breakdown mt-md">
                         <small>
                             <strong>Tính toán:</strong><br>
-                            <span id="rtss-steps">
-                                Hiệu suất chạy = 20s + 15 bước = 35
+                            <span id="eff-steps">
+                                Tỷ lệ Dọc = (8.5 / 115) × 100 = 7.4%
                             </span>
                         </small>
                     </div>
                 </div>
 
-                <h4 class="mt-xl">Triển Khai JavaScript:</h4>
-                <pre><code>function calculaterTSS Calculation(timeSeconds, strideCount) {
-  return timeSeconds + strideCount;
+                <h4 class="mt-xl">Triển khai JavaScript:</h4>
+                <pre><code>function calculateVerticalRatio(oscillationCm, strideLengthCm) {
+  return (oscillationCm / strideLengthCm) * 100;
 }
 
-function calculateNormalizedrTSS Calculation(timeSeconds, strideCount, trackLength) {
-  const normalizedTime = timeSeconds * (25 / trackLength);
-  const normalizedStrides = strideCount * (25 / trackLength);
-  return normalizedTime + normalizedStrides;
-}
-
-// Example:
-const rtss = calculaterTSS Calculation(20, 15);
-// Returns: 35
-
-const rtss400m = calculateNormalizedrTSS Calculation(40, 30, 50);
-// Returns: 35 (normalized to 400m)</code></pre>
+function calculateEfficiencyFactor(paceMetersPerMin, avgHeartRate) {
+  return paceMetersPerMin / avgHeartRate;
+}</code></pre>
 
                 <script>
-                function updaterTSS CalculationCalculator() {
-                    try {
-                        const time = parseFloat(document.getElementById('rtss-time').value);
-                        const strides = parseFloat(document.getElementById('rtss-strides').value);
-                        const trackLength = parseFloat(document.getElementById('crs-track').value);
+                    function updateEfficiencyCalculator() {
+                        try {
+                            const oscillation = parseFloat(document.getElementById('eff-oscillation').value);
+                            const stride = parseFloat(document.getElementById('eff-stride').value);
 
-                        if (!time || !strides) return;
+                            if (!oscillation || !stride) return;
 
-                        let rtss, steps;
-                        if (trackLength === 25) {
-                            rtss = time + strides;
-                            steps = `Hiệu suất chạy = ${time}s + ${strides} bước = ${rTSS}`;
-                        } else {
-                            const normalizedTime = time * (25 / trackLength);
-                            const normalizedStrides = strides * (25 / trackLength);
-                            rtss = normalizedTime + normalizedStrides;
-                            steps = `Thời gian chuẩn hóa = ${time} × (25/${trackLength}) = ${normalizedTime.toFixed(1)}s<br>` +
-                                   `Số bước chuẩn hóa = ${strides} × (25/${trackLength}) = ${normalizedStrides.toFixed(1)}<br>` +
-                                   `Hiệu suất chạy₂₅ = ${normalizedTime.toFixed(1)} + ${normalizedStrides.toFixed(1)} = ${rtss.toFixed(1)}`;
+                            const ratio = (oscillation / stride) * 100;
+
+                            document.getElementById('eff-result').textContent = ratio.toFixed(1) + '%';
+                            document.getElementById('eff-steps').innerHTML =
+                                `Tỷ lệ Dọc = (${oscillation} / ${stride}) × 100 = ${ratio.toFixed(1)}%`;
+                        } catch (e) {
+                            console.error('Lỗi tính toán hiệu quả:', e);
                         }
-
-                        document.getElementById('rtss-result').textContent = rtss.toFixed(1);
-                        document.getElementById('rtss-steps').innerHTML = steps;
-                    } catch (e) {
-                        console.error('rTSS Calculation calculation error:', e);
                     }
-                }
 
-                document.addEventListener('DOMContentLoaded', function() {
-                    document.getElementById('rtss-time').addEventListener('input', updaterTSS CalculationCalculator);
-                    document.getElementById('rtss-strides').addEventListener('input', updaterTSS CalculationCalculator);
-                    document.getElementById('crs-track').addEventListener('change', updaterTSS CalculationCalculator);
-                    updaterTSS CalculationCalculator();
-                });
+                    document.addEventListener('DOMContentLoaded', function () {
+                        document.getElementById('eff-oscillation').addEventListener('input', updateEfficiencyCalculator);
+                        document.getElementById('eff-stride').addEventListener('input', updateEfficiencyCalculator);
+                        updateEfficiencyCalculator();
+                    });
                 </script>
             </div>
         </div>
@@ -1334,114 +1305,110 @@ const rtss400m = calculateNormalizedrTSS Calculation(40, 30, 50);
 
 <section class="section">
     <div class="container">
-        <h2>Cơ Học Bước Chạy</h2>
+        <h2>Cơ học Sải bước</h2>
 
         <div class="formula-card">
-            <h3>Tần Số Bước Chạy (SR)</h3>
+            <h3>Tần suất Sải bước (SR)</h3>
             <div class="formula-content">
                 <h4>Công thức:</h4>
                 <div class="formula-box-large">
                     <div class="formula">
-                        SR = 60 / Thời gian chu kỳ (giây)
+                        SR = 60 / Thời gian Chu kỳ (giây)
                     </div>
                     <div class="formula">
-                        SR = (Số bước chạy / Thời gian tính bằng giây) × 60
+                        SR = (Số bước / Thời gian tính bằng giây) × 60
                     </div>
                 </div>
 
                 <div class="callout callout-info mt-lg">
-                    <h4>🧪 Máy Tính Tương Tác - Kiểm Tra Công Thức</h4>
+                    <h4>🧪 Máy tính Tương tác - Thử nghiệm Công thức</h4>
                     <div class="calculator-grid">
                         <div class="input-group">
-                            <label for="sr-strides">Số bước chạy:</label>
-                            <input type="number" id="sr-strides" value="30" min="1" max="100" step="1">
+                            <label for="sr-steps">Tổng số Bước:</label>
+                            <input type="number" id="sr-steps-count" value="180" min="1" max="10000" step="1">
                         </div>
                         <div class="input-group">
                             <label for="sr-time">Thời gian (giây):</label>
-                            <input type="number" id="sr-time" value="25" min="1" max="180" step="1">
+                            <input type="number" id="sr-time" value="60" min="1" max="3600" step="1">
                         </div>
                     </div>
                     <div class="calculator-result mt-md">
-                        <div class="result-label">Tần số bước chạy (SPM):</div>
-                        <div class="result-value" id="sr-result">72</div>
+                        <div class="result-label">Nhịp bước (SPM):</div>
+                        <div class="result-value" id="sr-result">180</div>
                     </div>
                     <div class="calculation-breakdown mt-md">
                         <small>
                             <strong>Tính toán:</strong><br>
-                            <span id="sr-steps">
-                                SR = (30 / 25) × 60 = 72 SPM
+                            <span id="sr-steps-breakdown">
+                                Nhịp bước = (180 / 60) × 60 = 180 SPM
                             </span>
                         </small>
                     </div>
                 </div>
 
-                <h4 class="mt-xl">Triển Khai JavaScript:</h4>
-                <pre><code>function calculateStrideRate(strideCount, timeSeconds) {
-  return (strideCount / timeSeconds) * 60;
+                <h4 class="mt-xl">Triển khai JavaScript:</h4>
+                <pre><code>function calculateCadence(stepCount, timeSeconds) {
+  return (stepCount / timeSeconds) * 60;
 }
 
-// Example:
-const sr = calculateStrideRate(30, 25);
-// Returns: 72 SPM</code></pre>
+// Ví dụ:
+const spm = calculateCadence(180, 60);
+// Trả về: 180 SPM</code></pre>
 
                 <script>
-                function updateSRCalculator() {
-                    try {
-                        const strides = parseFloat(document.getElementById('sr-strides').value);
-                        const time = parseFloat(document.getElementById('sr-time').value);
+                    function updateSRCalculator() {
+                        try {
+                            const strides = parseFloat(document.getElementById('sr-strides').value);
+                            const time = parseFloat(document.getElementById('sr-time').value);
 
-                        if (!strides || !time) return;
+                            if (!strides || !time) return;
 
-                        const sr = (strides / time) * 60;
+                            const sr = (strides / time) * 60;
 
-                        document.getElementById('sr-result').textContent = sr.toFixed(1);
-                        document.getElementById('sr-steps').innerHTML =
-                            `SR = (${strides} / ${time}) × 60 = ${sr.toFixed(1)} SPM`;
-                    } catch (e) {
-                        console.error('SR calculation error:', e);
+                            document.getElementById('sr-result').textContent = sr.toFixed(1);
+                            document.getElementById('sr-steps').innerHTML =
+                                `SR = (${strides} / ${time}) × 60 = ${sr.toFixed(1)} SPM`;
+                        } catch (e) {
+                            console.error('Lỗi tính toán SR:', e);
+                        }
                     }
-                }
 
-                document.addEventListener('DOMContentLoaded', function() {
-                    document.getElementById('sr-strides').addEventListener('input', updateSRCalculator);
-                    document.getElementById('sr-time').addEventListener('input', updateSRCalculator);
-                    updateSRCalculator();
-                });
+                    document.addEventListener('DOMContentLoaded', function () {
+                        document.getElementById('sr-strides').addEventListener('input', updateSRCalculator);
+                        document.getElementById('sr-time').addEventListener('input', updateSRCalculator);
+                        updateSRCalculator();
+                    });
                 </script>
             </div>
         </div>
 
         <div class="formula-card">
-            <h3>Khoảng Cách Mỗi Bước (DPS)</h3>
+            <h3>Chiều dài Sải bước</h3>
             <div class="formula-content">
                 <h4>Công thức:</h4>
                 <div class="formula-box-large">
                     <div class="formula">
-                        DPS = Quãng đường / Số bước chạy
+                        Chiều dài Sải bước = Quãng đường / (Số bước / 2)
                     </div>
                     <div class="formula">
-                        DPS = Quãng đường / (SR / 60)
+                        Chiều dài Sải bước = Vận tốc / (Nhịp bước / 120)
                     </div>
                 </div>
 
-                <h4>Triển Khai JavaScript:</h4>
-                <pre><code>function calculateDPS(distance, strideCount, pushoffDistance = 0) {
-  const effectiveDistance = distance - pushoffDistance;
-  return effectiveDistance / strideCount;
+                <h4>Triển khai JavaScript:</h4>
+                <pre><code>function calculateStrideLength(distanceMeters, stepCount) {
+  // Chiều dài sải bước là quãng đường / số cặp sải bước (trái+phải)
+  return distanceMeters / (stepCount / 2);
 }
 
-// Example (400m track, 5m push-off):
-const dps = calculateDPS(25, 12, 5);
-// Returns: 1.67 m/stride
-
-// For multiple segments:
-const dps100m = calculateDPS(100, 48, 4 * 5);
-// Returns: 1.67 m/stride (4 segments × 5m push-off)</code></pre>
+// Ví dụ (1000m, 800 bước):
+const strideLength = calculateStrideLength(1000, 800);
+// Trả về: 2.50 mét mỗi sải bước</code></pre>
             </div>
         </div>
 
         <div class="formula-card">
-            <h3>Vận Tốc từ SR và DPS</h3>
+            <h3>Vận tốc từ SR và DPS</h3>
             <div class="formula-content">
                 <h4>Công thức:</h4>
                 <div class="formula-box-large">
@@ -1450,35 +1417,35 @@ const dps100m = calculateDPS(100, 48, 4 * 5);
                     </div>
                 </div>
 
-                <h4>Triển Khai JavaScript:</h4>
+                <h4>Triển khai JavaScript:</h4>
                 <pre><code>function calculateVelocity(strideRate, dps) {
   return (strideRate / 60) * dps;
 }
 
-// Example:
+// Ví dụ:
 const velocity = calculateVelocity(70, 1.6);
-// Returns: 1.87 m/s</code></pre>
+// Trả về: 1.87 m/s</code></pre>
             </div>
         </div>
 
         <div class="formula-card">
-            <h3>Chỉ Số Bước Chạy (SI)</h3>
+            <h3>Chỉ số Sải bước (SI)</h3>
             <div class="formula-content">
                 <h4>Công thức:</h4>
                 <div class="formula-box-large">
                     <div class="formula">
-                        SI = Vận tốc (m/s) × DPS (m/bước)
+                        SI = Vận tốc (m/s) × DPS (m/sải)
                     </div>
                 </div>
 
-                <h4>Triển Khai JavaScript:</h4>
+                <h4>Triển khai JavaScript:</h4>
                 <pre><code>function calculateStrideIndex(velocity, dps) {
   return velocity * dps;
 }
 
-// Example:
+// Ví dụ:
 const si = calculateStrideIndex(1.5, 1.7);
-// Returns: 2.55</code></pre>
+// Trả về: 2.55</code></pre>
             </div>
         </div>
     </div>
@@ -1486,10 +1453,10 @@ const si = calculateStrideIndex(1.5, 1.7);
 
 <section class="section section-alt">
     <div class="container">
-        <h2>Biểu Đồ Quản Lý Thành Tích (PMC)</h2>
+        <h2>Biểu đồ Quản lý Hiệu suất (PMC)</h2>
 
         <div class="formula-card">
-            <h3>Tính Toán CTL, ATL, TSB</h3>
+            <h3>Tính toán CTL, ATL, TSB</h3>
             <div class="formula-content">
                 <h4>Công thức:</h4>
                 <div class="formula-box-large">
@@ -1504,7 +1471,7 @@ const si = calculateStrideIndex(1.5, 1.7);
                     </div>
                 </div>
 
-                <h4>Triển Khai JavaScript:</h4>
+                <h4>Triển khai JavaScript:</h4>
                 <pre><code>function updateCTL(previousCTL, todayTSS) {
   return previousCTL + (todayTSS - previousCTL) * (1/42);
 }
@@ -1517,7 +1484,7 @@ function calculateTSB(yesterdayCTL, yesterdayATL) {
   return yesterdayCTL - yesterdayATL;
 }
 
-// Calculate PMC for series of workouts
+// Tính PMC cho chuỗi bài tập
 function calculatePMC(workouts) {
   let ctl = 0, atl = 0;
   const results = [];
@@ -1539,16 +1506,16 @@ function calculatePMC(workouts) {
   return results;
 }
 
-// Example usage:
+// Ví dụ sử dụng:
 const workouts = [
   { date: '2025-01-01', tss: 50 },
   { date: '2025-01-02', tss: 60 },
   { date: '2025-01-03', tss: 45 },
-  // ... more workouts
+  // ... các bài tập khác
 ];
 
 const pmc = calculatePMC(workouts);
-// Returns array with CTL, ATL, TSB for each day</code></pre>
+// Trả về mảng với CTL, ATL, TSB cho mỗi ngày</code></pre>
             </div>
         </div>
     </div>
@@ -1556,14 +1523,14 @@ const pmc = calculatePMC(workouts);
 
 <section class="section">
     <div class="container">
-        <h2>Tính Toán Nâng Cao</h2>
+        <h2>Tính toán Nâng cao</h2>
 
         <div class="formula-card">
-            <h3>CRS từ Nhiều Quãng Đường (Phương Pháp Hồi Quy)</h3>
+            <h3>CRS từ Nhiều Quãng đường (Phương pháp Hồi quy)</h3>
             <div class="formula-content">
-                <h4>Triển Khai JavaScript:</h4>
+                <h4>Triển khai JavaScript:</h4>
                 <pre><code>function calculateCRSRegression(distances, times) {
-  // Linear regression: distance = a + b*time
+  // Hồi quy tuyến tính: distance = a + b*time
   const n = distances.length;
   const sumX = times.reduce((a, b) => a + b, 0);
   const sumY = distances.reduce((a, b) => a + b, 0);
@@ -1574,40 +1541,42 @@ const pmc = calculatePMC(workouts);
   const intercept = (sumY - slope * sumX) / n;
 
   return {
-    css: slope, // Critical running velocity (m/s)
-    anaerobic_capacity: intercept // Anaerobic distance capacity (m)
+    crs: slope, // Vận tốc chạy tới hạn (m/s)
+    anaerobic_capacity: intercept // Năng lực yếm khí (m)
   };
 }
 
-// Example with multiple test distances:
+// Ví dụ với nhiều quãng đường kiểm tra:
 const distances = [100, 200, 400, 800];
-const times = [65, 150, 340, 720]; // in seconds
+const times = [65, 150, 340, 720]; // bằng giây
 const result = calculateCRSRegression(distances, times);
-// Returns: { css: 1.18, anaerobic_capacity: 15.3 }</code></pre>
+// Trả về: { crs: 1.18, anaerobic_capacity: 15.3 }</code></pre>
             </div>
         </div>
 
         <div class="formula-card">
-            <h3>Hệ Số Cường Độ từ Nhịp</h3>
+            <h3>Hệ số Cường độ từ Pace</h3>
             <div class="formula-content">
-                <h4>Triển Khai JavaScript:</h4>
-                <pre><code>function calculateIntensityFactor(actualPace100m, thresholdPace100m) {
-  // Convert pace to speed (m/s)
-  const actualSpeed = 100 / actualPace100m;
-  const thresholdSpeed = 100 / thresholdPace100m;
-  return actualSpeed / thresholdSpeed;
+                <h4>Triển khai JavaScript:</h4>
+                <pre><code>function calculateIntensityFactor(actualPaceMinKm, thresholdPaceMinKm) {
+  // Chuyển đổi chuỗi pace "mm:ss" sang giây nếu cần
+  const actualSecs = typeof actualPaceMinKm === 'string' ? timeToSeconds(actualPaceMinKm) : actualPaceMinKm;
+  const thresholdSecs = typeof thresholdPaceMinKm === 'string' ? timeToSeconds(thresholdPaceMinKm) : thresholdPaceMinKm;
+
+  // IF là Tốc độ Ngưỡng / Tốc độ Thực tế (pace nhanh hơn = giá trị giây nhỏ hơn)
+  return thresholdSecs / actualSecs;
 }
 
-// Example:
-const if_value = calculateIntensityFactor(110, 93);
-// Returns: 0.845 (running at 84.5% of threshold)</code></pre>
+// Ví dụ:
+const if_value = calculateIntensityFactor("4:45", "4:15");
+// Trả về: 0.895 (chạy ở 89.5% ngưỡng)</code></pre>
             </div>
         </div>
 
         <div class="formula-card">
-            <h3>Phân Tích Độ Đồng Đều Nhịp</h3>
+            <h3>Phân tích Tính Nhất quán của Pace</h3>
             <div class="formula-content">
-                <h4>Triển Khai JavaScript:</h4>
+                <h4>Triển khai JavaScript:</h4>
                 <pre><code>function analyzePaceConsistency(segments) {
   const paces = segments.map(kilometer => kilometer.distance / kilometer.time);
   const avgPace = paces.reduce((a, b) => a + b) / paces.length;
@@ -1623,11 +1592,11 @@ const if_value = calculateIntensityFactor(110, 93);
     coefficientOfVariation,
     consistency: coefficientOfVariation < 5 ? "Xuất sắc" :
                  coefficientOfVariation < 10 ? "Tốt" :
-                 coefficientOfVariation < 15 ? "Trung bình" : "Biến đổi"
+                 coefficientOfVariation < 15 ? "Trung bình" : "Biến động"
   };
 }
 
-// Example:
+// Ví dụ:
 const segments = [
   { distance: 100, time: 70 },
   { distance: 100, time: 72 },
@@ -1635,43 +1604,37 @@ const segments = [
   // ...
 ];
 const analysis = analyzePaceConsistency(segments);
-// Returns: { avgPace: 1.41, stdDev: 0.02, coefficientOfVariation: 1.4, consistency: "Xuất sắc" }</code></pre>
+// Trả về: { avgPace: 1.41, stdDev: 0.02, coefficientOfVariation: 1.4, consistency: "Xuất sắc" }</code></pre>
             </div>
         </div>
 
         <div class="formula-card">
-            <h3>Phát Hiện Mệt Mỏi từ Số Bước Chạy</h3>
+            <h3>Phát hiện Mệt mỏi từ Hiệu quả Sải bước</h3>
             <div class="formula-content">
-                <h4>Triển Khai JavaScript:</h4>
+                <h4>Triển khai JavaScript:</h4>
                 <pre><code>function detectFatigue(segments) {
-  const firstThird = segments.slice(0, Math.floor(segments.length/3));
-  const lastThird = segments.slice(-Math.floor(segments.length/3));
+  // So sánh Tỷ lệ Dọc của đoạn đầu và đoạn cuối
+  const firstSegment = segments[0];
+  const lastSegment = segments[segments.length - 1];
 
-  const firstThirdAvg = firstThird.reduce((sum, kilometer) =>
-    sum + kilometer.strideCount, 0) / firstThird.length;
-  const lastThirdAvg = lastThird.reduce((sum, kilometer) =>
-    sum + kilometer.strideCount, 0) / lastThird.length;
-
-  const strideCountIncrease = ((lastThirdAvg - firstThirdAvg) / firstThirdAvg) * 100;
+  const ratioIncrease = lastSegment.verticalRatio - firstSegment.verticalRatio;
 
   return {
-    firstThirdAvg: Math.round(firstThirdAvg * 10) / 10,
-    lastThirdAvg: Math.round(lastThirdAvg * 10) / 10,
-    percentIncrease: Math.round(strideCountIncrease * 10) / 10,
-    fatigueLevel: strideCountIncrease < 5 ? "Tối thiểu" :
-                  strideCountIncrease < 10 ? "Trung bình" :
-                  strideCountIncrease < 20 ? "Đáng kể" : "Nghiêm trọng"
+    startRatio: firstSegment.verticalRatio,
+    endRatio: lastSegment.verticalRatio,
+    increase: Math.round(ratioIncrease * 10) / 10,
+    fatigueLevel: ratioIncrease < 0.2 ? "Tối thiểu" :
+                  ratioIncrease < 0.5 ? "Trung bình" :
+                  ratioIncrease < 1.0 ? "Đáng kể" : "Nghiêm trọng"
   };
 }
 
-// Example:
+// Ví dụ:
 const segments = [
-  { strideCount: 14 }, { strideCount: 14 }, { strideCount: 15 },
-  { strideCount: 15 }, { strideCount: 16 }, { strideCount: 16 },
-  { strideCount: 17 }, { strideCount: 18 }, { strideCount: 18 }
+  { verticalRatio: 7.2 }, { verticalRatio: 7.3 }, { verticalRatio: 8.1 }
 ];
 const fatigue = detectFatigue(segments);
-// Returns: { firstThirdAvg: 14.3, lastThirdAvg: 17.7, percentIncrease: 23.8, fatigueLevel: "Nghiêm trọng" }</code></pre>
+// Trả về: { startRatio: 7.2, endRatio: 8.1, increase: 0.9, fatigueLevel: "Đáng kể" }</code></pre>
             </div>
         </div>
     </div>
@@ -1679,40 +1642,39 @@ const fatigue = detectFatigue(segments);
 
 <section class="section section-alt">
     <div class="container">
-        <h2>Xác Thực Dữ Liệu</h2>
+        <h2>Xác thực Dữ liệu</h2>
 
         <div class="formula-card">
-            <h3>Kiểm Tra Chất Lượng Dữ Liệu Bài Tập</h3>
+            <h3>Kiểm tra Chất lượng Dữ liệu Bài tập</h3>
             <div class="formula-content">
-                <h4>Triển Khai JavaScript:</h4>
+                <h4>Triển khai JavaScript:</h4>
                 <pre><code>function validateWorkoutData(workout) {
   const issues = [];
 
-  // Check for reasonable pace ranges (1:00-5:00 per 100m)
-  const avgPace = (workout.totalTime / workout.totalDistance) * 100;
-  if (avgPace < 60 || avgPace > 300) {
-    issues.push(`Nhịp trung bình bất thường: ${Math.round(avgPace)}s mỗi 100m`);
+  // Kiểm tra phạm vi pace hợp lý (3:00-8:00 mỗi km)
+  const avgPaceSecs = workout.totalTime / (workout.totalDistance / 1000);
+  if (avgPaceSecs < 180 || avgPaceSecs > 480) {
+    issues.push(`Pace trung bình bất thường: ${Math.round(avgPaceSecs)}s mỗi km`);
   }
 
-  // Check for reasonable stride counts (10-50 per 400m)
-  const avgStridesPer400m = (workout.totalStrides / workout.totalDistance) * 25;
-  if (avgStridesPer400m < 10 || avgStridesPer400m > 50) {
-    issues.push(`Số bước bất thường: ${Math.round(avgStridesPer400m)} mỗi 400m`);
+  // Kiểm tra Tỷ lệ Dọc hợp lý (4% - 15%)
+  if (workout.avgVerticalRatio < 4 || workout.avgVerticalRatio > 15) {
+    issues.push(`Tỷ lệ Dọc bất thường: ${workout.avgVerticalRatio}%`);
   }
 
-  // Check for reasonable stride rate (30-150 SPM)
-  const avgSR = calculateStrideRate(workout.totalStrides, workout.totalTime);
-  if (avgSR < 30 || avgSR > 150) {
-    issues.push(`Tần số bước bất thường: ${Math.round(avgSR)} SPM`);
+  // Kiểm tra nhịp bước hợp lý (120-220 SPM)
+  const avgCadence = calculateCadence(workout.totalSteps, workout.totalTime);
+  if (avgCadence < 120 || avgCadence > 220) {
+    issues.push(`Nhịp bước bất thường: ${Math.round(avgCadence)} SPM`);
   }
 
-  // Check for missing segments (gaps in time)
+  // Kiểm tra các đoạn bị thiếu (khoảng trống thời gian)
   if (workout.segments && workout.segments.length > 1) {
     for (let i = 1; i < workout.segments.length; i++) {
       const gap = workout.segments[i].startTime -
                   (workout.segments[i-1].startTime + workout.segments[i-1].duration);
-      if (gap > 300) { // 5 minute gap
-        issues.push(`Phát hiện khoảng cách lớn giữa phân đoạn ${i} và ${i+1}`);
+      if (gap > 300) { // khoảng trống 5 phút
+        issues.push(`Phát hiện khoảng trống lớn giữa các đoạn ${i} và ${i+1}`);
       }
     }
   }
@@ -1723,15 +1685,15 @@ const fatigue = detectFatigue(segments);
   };
 }
 
-// Example:
+// Ví dụ:
 const workout = {
   totalDistance: 2000,
-  totalTime: 1800, // 30 minutes
+  totalTime: 1800, // 30 phút
   totalStrides: 800,
-  segments: [/* kilometer data */]
+  segments: [/* dữ liệu km */]
 };
 const validation = validateWorkoutData(workout);
-// Returns: { isValid: true, issues: [] }</code></pre>
+// Trả về: { isValid: true, issues: [] }</code></pre>
             </div>
         </div>
     </div>
@@ -1739,26 +1701,26 @@ const validation = validateWorkoutData(workout);
 
 <section class="section">
     <div class="container container-narrow">
-        <h2>Hàm Hỗ Trợ</h2>
+        <h2>Hàm Hỗ trợ</h2>
 
         <div class="formula-card">
-            <h3>Tiện Ích Chuyển Đổi Thời Gian</h3>
+            <h3>Tiện ích Chuyển đổi Thời gian</h3>
             <div class="formula-content">
-                <h4>Triển Khai JavaScript:</h4>
-                <pre><code>// Convert mm:ss to seconds
+                <h4>Triển khai JavaScript:</h4>
+                <pre><code>// Chuyển đổi mm:ss sang giây
 function timeToSeconds(timeString) {
   const parts = timeString.split(':');
   return parseInt(parts[0]) * 60 + parseInt(parts[1]);
 }
 
-// Convert seconds to mm:ss
+// Chuyển đổi giây sang mm:ss
 function secondsToTime(seconds) {
   const minutes = Math.floor(seconds / 60);
   const secs = Math.round(seconds % 60);
   return `${minutes}:${secs.toString().padStart(2, '0')}`;
 }
 
-// Convert seconds to hh:mm:ss
+// Chuyển đổi giây sang hh:mm:ss
 function secondsToTimeDetailed(seconds) {
   const hours = Math.floor(seconds / 3600);
   const minutes = Math.floor((seconds % 3600) / 60);
@@ -1766,10 +1728,10 @@ function secondsToTimeDetailed(seconds) {
   return `${hours}:${minutes.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
 }
 
-// Examples:
-timeToSeconds("1:33"); // Returns: 93
-secondsToTime(93); // Returns: "1:33"
-secondsToTimeDetailed(3665); // Returns: "1:01:05"</code></pre>
+// Ví dụ:
+timeToSeconds("1:33"); // Trả về: 93
+secondsToTime(93); // Trả về: "1:33"
+secondsToTimeDetailed(3665); // Trả về: "1:01:05"</code></pre>
             </div>
         </div>
     </div>
@@ -1777,23 +1739,26 @@ secondsToTimeDetailed(3665); // Returns: "1:01:05"</code></pre>
 
 <section class="section section-alt">
     <div class="container container-narrow text-center">
-        <h2>Tài Nguyên Triển Khai</h2>
-        <p class="lead">Tất cả các công thức trên trang này đều sẵn sàng cho sản xuất và được xác thực dựa trên tài liệu khoa học. Sử dụng chúng cho các công cụ phân tích tùy chỉnh, xác minh hoặc hiểu sâu hơn về tính toán thành tích chạy.</p>
+        <h2>Tài nguyên Triển khai</h2>
+        <p class="lead">Tất cả các công thức trên trang này đều sẵn sàng cho sản xuất và được xác thực dựa trên tài liệu
+            khoa học. Sử dụng chúng cho các công cụ phân tích tùy chỉnh, xác minh hoặc hiểu sâu hơn về các tính toán
+            hiệu suất chạy bộ.</p>
 
         <div class="callout callout-tip">
-            <h3>💡 Thực Hành Tốt Nhất</h3>
+            <h3>💡 Thực hành Tốt nhất</h3>
             <ul class="text-left">
-                <li><strong>Xác thực đầu vào:</strong> Kiểm tra phạm vi hợp lý trước khi tính toán</li>
-                <li><strong>Xử lý trường hợp ngoại lệ:</strong> Chia cho 0, giá trị âm, dữ liệu rỗng</li>
-                <li><strong>Làm tròn phù hợp:</strong> CTL/ATL/TSB đến 1 chữ số thập phân, sTSS đến số nguyên</li>
-                <li><strong>Lưu trữ độ chính xác:</strong> Giữ độ chính xác đầy đủ trong cơ sở dữ liệu, làm tròn khi hiển thị</li>
-                <li><strong>Kiểm tra kỹ lưỡng:</strong> Sử dụng dữ liệu đã biết tốt để xác minh tính toán</li>
+                <li><strong>Xác thực đầu vào:</strong> Kiểm tra các phạm vi hợp lý trước khi tính toán</li>
+                <li><strong>Xử lý trường hợp biên:</strong> Chia cho 0, giá trị âm, dữ liệu null</li>
+                <li><strong>Làm tròn phù hợp:</strong> CTL/ATL/TSB đến 1 chữ số thập phân, rTSS đến số nguyên</li>
+                <li><strong>Lưu trữ độ chính xác:</strong> Giữ độ chính xác đầy đủ trong cơ sở dữ liệu, làm tròn để hiển
+                    thị</li>
+                <li><strong>Kiểm tra kỹ lưỡng:</strong> Sử dụng dữ liệu tốt đã biết để xác minh tính toán</li>
             </ul>
         </div>
 
         <div class="mt-xl">
-            <a href="/vi/" class="btn btn-primary btn-large">Về Trang Chủ</a>
-            <a href="/vi/research/" class="btn btn-secondary">Nền Tảng Khoa Học</a>
+            <a href="/vi/" class="btn btn-primary btn-large">Quay lại Trang chủ</a>
+            <a href="/vi/research/" class="btn btn-secondary">Nền tảng Khoa học</a>
         </div>
     </div>
 </section>

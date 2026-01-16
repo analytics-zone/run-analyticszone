@@ -920,75 +920,77 @@ img[width][height] {
     <main id="main-content" class="main-content">
         <section class="page-hero">
     <div class="container">
-        <h1>Công Cụ Tính TSS Chạy Bộ Miễn Phí</h1>
-        <p class="lead">Tính điểm Training Stress Score cho buổi tập chạy - Công cụ tính rTSS miễn phí duy nhất</p>
+        <h1>Máy tính rTSS Chạy bộ Miễn phí</h1>
+        <p class="lead">Tính điểm Căng thẳng Tập luyện (Training Stress Score) cho các bài chạy - Máy tính rTSS miễn phí
+            duy nhất</p>
     </div>
 </section>
 
 <section class="section">
     <div class="container container-narrow">
         <div class="callout callout-info mb-xl">
-            <h2>What is Running rTSS (rTSS)?</h2>
-            <p><strong>Running Stress Score (rTSS)</strong> quantifies the training load of a running workout
-                by combining intensity and duration. It's adapted from cycling's TSS methodology, using your Critical
-                Run Speed (CRS) as the threshold pace. A 1-hour workout at CRS pace = 100 rTSS.</p>
+            <h2>rTSS Chạy bộ (rTSS) là gì?</h2>
+            <p><strong>Điểm Căng thẳng Chạy bộ (Running Stress Score - rTSS)</strong> định lượng tải tập luyện của một
+                bài chạy bằng cách kết hợp cường độ và thời gian. Nó được điều chỉnh từ phương pháp TSS của môn đạp xe,
+                sử dụng <a href="/vi/crs/">Tốc độ Chạy Tới hạn (CRS)</a> của bạn làm pace ngưỡng. Một bài chạy 1 giờ ở
+                pace CRS = 100 rTSS.</p>
         </div>
 
-        <h2 class="mt-3xl">Free rTSS Calculator</h2>
-        <p class="lead mb-xl">Calculate training stress for any running workout. Requires your CRS pace.</p>
+        <h2 class="mt-3xl">Máy tính rTSS Miễn phí</h2>
+        <p class="lead mb-xl">Tính toán căng thẳng tập luyện cho bất kỳ bài chạy nào. Yêu cầu pace CRS của bạn.</p>
 
         <div class="crs-calculator">
             <form id="rtssCalculatorForm">
                 <div class="calculator-inputs">
                     <div class="form-group">
-                        <label for="crsPace" class="form-label">Your CRS Pace (mm:ss per km)</label>
+                        <label for="crsPace" class="form-label">Pace CRS của Bạn (mm:ss mỗi km)</label>
                         <input type="text" id="crsPace" class="form-input" placeholder="4:15"
                             pattern="[0-9]{1,2}:[0-5][0-9]" aria-required="true" aria-describedby="crsPace-help" />
-                        <small id="crsPace-help" class="form-help">Your threshold pace from CRS test (e.g.,
+                        <small id="crsPace-help" class="form-help">Pace ngưỡng của bạn từ bài kiểm tra CRS (ví dụ:
                             4:15)</small>
                         <div class="form-error" id="crsPace-error"></div>
                     </div>
 
                     <div class="form-group">
-                        <label for="workoutDuration" class="form-label">Workout Duration (minutes)</label>
+                        <label for="workoutDuration" class="form-label">Thời gian Tập luyện (phút)</label>
                         <input type="number" id="workoutDuration" class="form-input" placeholder="60" min="1" max="300"
                             aria-required="true" aria-describedby="duration-help" />
-                        <small id="duration-help" class="form-help">Total workout time including rest (1-300
-                            minutes)</small>
+                        <small id="duration-help" class="form-help">Tổng thời gian tập luyện bao gồm nghỉ ngơi (1-300
+                            phút)</small>
                         <div class="form-error" id="duration-error"></div>
                     </div>
 
                     <div class="form-group">
-                        <label for="avgPace" class="form-label">Average Workout Pace (mm:ss per km)</label>
+                        <label for="avgPace" class="form-label">Pace Tập luyện Trung bình (mm:ss mỗi km)</label>
                         <input type="text" id="avgPace" class="form-input" placeholder="4:45"
                             pattern="[0-9]{1,2}:[0-5][0-9]" aria-required="true" aria-describedby="pace-help" />
-                        <small id="pace-help" class="form-help">Your average pace during the workout (e.g.,
+                        <small id="pace-help" class="form-help">Pace trung bình của bạn trong bài tập (ví dụ:
                             4:45)</small>
                         <div class="form-error" id="pace-error"></div>
                     </div>
 
                     <div class="calculator-buttons">
-                        <button type="submit" class="btn btn-primary" id="calculateRtssBtn">Calculate rTSS</button>
-                        <button type="reset" class="btn btn-ghost" id="resetRtssBtn">Clear</button>
+                        <button type="submit" class="btn btn-primary" id="calculateRtssBtn">Tính rTSS</button>
+                        <button type="reset" class="btn btn-ghost" id="resetRtssBtn">Xóa</button>
                     </div>
                 </div>
             </form>
 
             <div class="calculator-results hidden" id="rtssResults" aria-live="polite">
-                <h3>Your Training Stress Score</h3>
+                <h3>Điểm Căng thẳng Tập luyện của Bạn</h3>
                 <div class="results-summary">
                     <div class="result-item">
                         <div class="result-label">rTSS</div>
                         <div class="crs-result-value" id="rtssValue">--</div>
                     </div>
                     <div class="result-item">
-                        <div class="result-label">Intensity Factor (IF)</div>
+                        <div class="result-label">Hệ số Cường độ (IF)</div>
                         <div class="crs-result-value" id="intensityFactor">--</div>
                     </div>
                 </div>
 
                 <div class="zones-result">
-                    <h4>Training Load Interpretation</h4>
+                    <h4>Diễn giải Tải Tập luyện</h4>
                     <p class="mb-md text-secondary" id="rtssInterpretation">
                         <!-- Filled by JavaScript -->
                     </p>
@@ -996,300 +998,303 @@ img[width][height] {
             </div>
         </div>
 
-        <h2 class="mt-3xl">How rTSS is Calculated</h2>
+        <h2 class="mt-3xl">Cách Tính rTSS</h2>
 
         <div class="formula-box">
-            <h3>Formula</h3>
+            <h3>Công thức</h3>
             <div class="formula">
-                rTSS = (Duration in hours) × (Intensity Factor)² × 100
+                rTSS = (Thời gian tính bằng giờ) × (Hệ số Cường độ)² × 100
             </div>
             <div class="formula-explanation">
-                <p>Where:</p>
+                <p>Trong đó:</p>
                 <ul>
-                    <li><strong>Intensity Factor (IF)</strong> = CRS Pace / Average Workout Pace</li>
-                    <li><strong>Duration</strong> = Total workout time in hours</li>
-                    <li><strong>CRS Pace</strong> = Your threshold pace from CRS test</li>
+                    <li><strong>Hệ số Cường độ (IF)</strong> = Pace CRS / Pace Tập luyện Trung bình</li>
+                    <li><strong>Thời gian</strong> = Tổng thời gian tập luyện tính bằng giờ</li>
+                    <li><strong>Pace CRS</strong> = Pace ngưỡng từ bài kiểm tra CRS của bạn</li>
                 </ul>
             </div>
         </div>
 
-        <h3 class="mt-xl">Worked Example</h3>
+        <h3 class="mt-xl">Ví dụ Tính toán</h3>
         <div class="example-box">
-            <h4>Workout Details:</h4>
+            <h4>Chi tiết Bài tập:</h4>
             <ul>
-                <li>CRS Pace: <strong>4:15/km</strong> (255 seconds)</li>
-                <li>Workout Duration: <strong>60 minutes</strong> (1 hour)</li>
-                <li>Average Pace: <strong>4:45/km</strong> (285 seconds)</li>
+                <li>Pace CRS: <strong>4:15/km</strong> (255 giây)</li>
+                <li>Thời gian Tập luyện: <strong>60 phút</strong> (1 giờ)</li>
+                <li>Pace Trung bình: <strong>4:45/km</strong> (285 giây)</li>
             </ul>
 
-            <h4>Step 1: Calculate Intensity Factor</h4>
+            <h4>Bước 1: Tính Hệ số Cường độ</h4>
             <div class="calculation">
-                IF = CRS Pace / Workout Pace<br>
+                IF = Pace CRS / Pace Tập luyện<br>
                 IF = 255 / 285<br>
                 IF = <strong>0.895</strong>
             </div>
 
-            <h4>Step 2: Calculate rTSS</h4>
+            <h4>Bước 2: Tính rTSS</h4>
             <div class="calculation">
-                rTSS = 1.0 hours × (0.895)² × 100<br>
+                rTSS = 1.0 giờ × (0.895)² × 100<br>
                 rTSS = 1.0 × 0.801 × 100<br>
                 rTSS = <strong>80</strong>
             </div>
 
-            <p class="mt-md"><strong>Interpretation:</strong> This 60-minute workout at easy pace (slower than CRS)
-                generated 72 rTSS - a moderate training load suitable for aerobic base building.</p>
+            <p class="mt-md"><strong>Diễn giải:</strong> Bài tập 60 phút này ở pace nhẹ nhàng (chậm hơn CRS) tạo ra 80
+                rTSS - một mức tải tập luyện vừa phải phù hợp để xây dựng nền tảng hiếu khí.</p>
         </div>
 
-        <h2 class="mt-3xl">Understanding rTSS Values</h2>
+        <h2 class="mt-3xl">Hiểu về Các Giá trị rTSS</h2>
 
         <div class="zones-table-container">
             <table class="zones-table">
                 <thead>
                     <tr>
-                        <th>rTSS Range</th>
-                        <th>Training Load</th>
-                        <th>Recovery Time</th>
-                        <th>Example Workout</th>
+                        <th>Phạm vi rTSS</th>
+                        <th>Tải Tập luyện</th>
+                        <th>Thời gian Phục hồi</th>
+                        <th>Ví dụ Bài tập</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td>&lt; 50</td>
-                        <td>Low</td>
-                        <td>Same day</td>
-                        <td>Easy 30-min run, technique drills</td>
+                        <td>Thấp</td>
+                        <td>Cùng ngày</td>
+                        <td>Chạy nhẹ 30 phút, các bài kỹ thuật</td>
                     </tr>
                     <tr>
                         <td>50-100</td>
-                        <td>Moderate</td>
-                        <td>1 day</td>
-                        <td>60-min endurance, steady pace</td>
+                        <td>Trung bình</td>
+                        <td>1 ngày</td>
+                        <td>60 phút sức bền, pace ổn định</td>
                     </tr>
                     <tr>
                         <td>100-200</td>
-                        <td>High</td>
-                        <td>1-2 days</td>
-                        <td>90-min threshold sets, race pace intervals</td>
+                        <td>Cao</td>
+                        <td>1-2 ngày</td>
+                        <td>90 phút tổ hợp ngưỡng (threshold), biến tốc pace thi đấu</td>
                     </tr>
                     <tr>
                         <td>200-300</td>
-                        <td>Very High</td>
-                        <td>2-3 days</td>
-                        <td>2-hour hard training, multiple threshold blocks</td>
+                        <td>Rất Cao</td>
+                        <td>2-3 ngày</td>
+                        <td>2 giờ tập nặng, nhiều tổ hợp ngưỡng</td>
                     </tr>
                     <tr>
                         <td>&gt; 300</td>
-                        <td>Extreme</td>
-                        <td>3+ days</td>
-                        <td>Long race (&gt;2 hours), ultra-endurance</td>
+                        <td>Cực độ</td>
+                        <td>3+ ngày</td>
+                        <td>Đua dài (&gt;2 giờ), siêu bền (ultra-endurance)</td>
                     </tr>
                 </tbody>
             </table>
         </div>
 
-        <h2 class="mt-3xl">Weekly rTSS Guidelines</h2>
+        <h2 class="mt-3xl">Hướng dẫn rTSS Hàng tuần</h2>
 
-        <p class="mb-md">Target weekly rTSS depends on your training level and goals:</p>
+        <p class="mb-md">Mục tiêu rTSS hàng tuần phụ thuộc vào trình độ và mục tiêu tập luyện của bạn:</p>
 
         <div class="grid grid-2 mb-xl">
             <div class="card">
-                <h3 class="card-title">Recreational Runners</h3>
+                <h3 class="card-title">Người chạy Giải trí</h3>
                 <div class="card-content">
-                    <p class="mb-sm"><strong>Weekly rTSS:</strong> 150-300</p>
-                    <p>2-3 workouts per week, 50-100 rTSS each. Focus on technique and building aerobic base.</p>
+                    <p class="mb-sm"><strong>rTSS Hàng tuần:</strong> 150-300</p>
+                    <p>2-3 bài tập mỗi tuần, 50-100 rTSS mỗi bài. Tập trung vào kỹ thuật và xây dựng nền tảng hiếu khí.
+                    </p>
                 </div>
             </div>
 
             <div class="card">
-                <h3 class="card-title">Fitness Runners / Triathletes</h3>
+                <h3 class="card-title">Người chạy Fitness / Ba môn phối hợp</h3>
                 <div class="card-content">
-                    <p class="mb-sm"><strong>Weekly rTSS:</strong> 300-500</p>
-                    <p>3-4 workouts per week, 75-125 rTSS each. Mix of aerobic endurance and threshold work.</p>
+                    <p class="mb-sm"><strong>rTSS Hàng tuần:</strong> 300-500</p>
+                    <p>3-4 bài tập mỗi tuần, 75-125 rTSS mỗi bài. Kết hợp giữa sức bền hiếu khí và các bài ngưỡng.</p>
                 </div>
             </div>
 
             <div class="card">
-                <h3 class="card-title">Competitive Masters Runners</h3>
+                <h3 class="card-title">Người chạy Masters Cạnh tranh</h3>
                 <div class="card-content">
-                    <p class="mb-sm"><strong>Weekly rTSS:</strong> 500-800</p>
-                    <p>4-6 workouts per week, 80-150 rTSS each. Structured training with periodization.</p>
+                    <p class="mb-sm"><strong>rTSS Hàng tuần:</strong> 500-800</p>
+                    <p>4-6 bài tập mỗi tuần, 80-150 rTSS mỗi bài. Tập luyện có cấu trúc với phân kỳ.</p>
                 </div>
             </div>
 
             <div class="card">
-                <h3 class="card-title">Elite / Collegiate Runners</h3>
+                <h3 class="card-title">VĐV Ưu tú / Đại học</h3>
                 <div class="card-content">
-                    <p class="mb-sm"><strong>Weekly rTSS:</strong> 800-1200+</p>
-                    <p>8-12 workouts per week, double days. High volume with recovery management critical.</p>
+                    <p class="mb-sm"><strong>rTSS Hàng tuần:</strong> 800-1200+</p>
+                    <p>8-12 bài tập mỗi tuần, tập 2 buổi/ngày. Khối lượng cao với quản lý phục hồi là rất quan trọng.
+                    </p>
                 </div>
             </div>
         </div>
 
         <div class="callout callout-warning">
-            <h3>⚠️ Important Notes</h3>
+            <h3>⚠️ Lưu ý Quan trọng</h3>
             <ul>
-                <li><strong>Requires accurate CRS:</strong> Your CRS must be current (tested within 6-8 weeks) for
-                    accurate rTSS.</li>
-                <li><strong>Simplified calculation:</strong> This calculator uses average pace. Advanced rTSS uses
-                    Normalized Graded Pace (NGP) which accounts for interval structure.</li>
-                <li><strong>Not for technique work:</strong> rTSS only measures physical training stress, not skill
-                    development.</li>
-                <li><strong>Individual variation:</strong> Same rTSS feels different for different runners. Adjust
-                    guidelines based on your recovery.</li>
+                <li><strong>Yêu cầu CRS chính xác:</strong> CRS của bạn phải hiện hành (được kiểm tra trong vòng 6-8
+                    tuần) để rTSS chính xác.</li>
+                <li><strong>Tính toán đơn giản hóa:</strong> Máy tính này sử dụng pace trung bình. rTSS nâng cao sử dụng
+                    Pace Đã phân cấp Chuẩn hóa (NGP) có tính đến cấu trúc biến tốc.</li>
+                <li><strong>Không dành cho kỹ thuật:</strong> rTSS chỉ đo lường căng thẳng tập luyện thể chất, không đo
+                    lường sự phát triển kỹ năng.</li>
+                <li><strong>Biến thiên cá nhân:</strong> Cùng một rTSS cảm thấy khác nhau đối với các vận động viên khác
+                    nhau. Điều chỉnh hướng dẫn dựa trên sự phục hồi của bạn.</li>
             </ul>
         </div>
 
-        <h2 class="mt-3xl">Why rTSS Matters</h2>
+        <h2 class="mt-3xl">Tại sao rTSS Quan trọng</h2>
 
-        <p class="mb-md">Training Stress Score is the foundation for:</p>
+        <p class="mb-md">Điểm Căng thẳng Tập luyện là nền tảng cho:</p>
 
         <ul class="mb-xl">
-            <li><strong>CTL (Chronic Training Load):</strong> Your fitness level - 42-day exponentially weighted average
-                of daily rTSS</li>
-            <li><strong>ATL (Acute Training Load):</strong> Your fatigue - 7-day exponentially weighted average of daily
-                rTSS</li>
-            <li><strong>TSB (Training Stress Balance):</strong> Your form - TSB = CTL - ATL (positive = fresh, negative
-                = fatigued)</li>
-            <li><strong>Periodization:</strong> Plan training phases (base, build, peak, taper) using target CTL
-                progressions</li>
-            <li><strong>Recovery Management:</strong> Know when to push and when to rest based on TSB</li>
+            <li><strong>CTL (Cường độ Tập luyện Mãn tính):</strong> Mức độ thể lực của bạn - trung bình trọng số lũy
+                thừa 42 ngày của rTSS hàng ngày</li>
+            <li><strong>ATL (Cường độ Tập luyện Cấp tính):</strong> Sự mệt mỏi của bạn - trung bình trọng số lũy thừa 7
+                ngày của rTSS hàng ngày</li>
+            <li><strong>TSB (Cân bằng Căng thẳng Tập luyện):</strong> Phong độ của bạn - TSB = CTL - ATL (dương = sung
+                sức, âm = mệt mỏi)</li>
+            <li><strong>Phân kỳ:</strong> Lập kế hoạch các giai đoạn tập luyện (nền tảng, xây dựng, đỉnh cao, giảm khối
+                lượng) sử dụng các tiến trình CTL mục tiêu</li>
+            <li><strong>Quản lý Phục hồi:</strong> Biết khi nào nên đẩy mạnh và khi nào nên nghỉ ngơi dựa trên TSB</li>
         </ul>
 
         <div class="callout callout-tip">
-            <h3>Pro Tip: Track Your CTL</h3>
-            <p>Record daily rTSS in a spreadsheet or training log. Calculate your 42-day average (CTL) weekly. Target
-                5-10 CTL points increase per week during base building. Maintain or slightly reduce CTL during taper
-                (1-2 weeks before race).</p>
+            <h3>Mẹo Chuyên nghiệp: Theo dõi CTL của Bạn</h3>
+            <p>Ghi lại rTSS hàng ngày vào bảng tính hoặc nhật ký tập luyện. Tính trung bình 42 ngày (CTL) của bạn hàng
+                tuần. Mục tiêu tăng 5-10 điểm CTL mỗi tuần trong giai đoạn xây dựng nền tảng. Duy trì hoặc giảm nhẹ CTL
+                trong giai đoạn giảm khối lượng (taper) (1-2 tuần trước khi đua).</p>
         </div>
 
-        <h2 class="mt-3xl">Frequently Asked Questions</h2>
+        <h2 class="mt-3xl">Câu hỏi Thường gặp</h2>
 
         <div class="faq-section" itemscope itemtype="https://schema.org/FAQPage">
             <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">What is Running TSS (rTSS)?</h3>
+                <h3 itemprop="name">Runnning TSS (rTSS) là gì?</h3>
                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                     <div itemprop="text">
-                        <p>Running Training Stress Score (rTSS) is a metric that quantifies the training load of a
-                            running workout by combining both intensity and duration. It's adapted from cycling's TSS
-                            methodology, using your Critical Run Speed (CRS) as the threshold pace. A workout of 1 hour
-                            at CRS pace equals 100 rTSS.</p>
+                        <p>Điểm Căng thẳng Chạy bộ (Runnning Training Stress Score - rTSS) là một chỉ số định lượng tải
+                            tập luyện của một bài chạy bằng cách kết hợp cả cường độ và thời gian. Nó được điều chỉnh từ
+                            phương pháp TSS của môn đạp xe, sử dụng Tốc độ Chạy Tới hạn (CRS) của bạn làm pace ngưỡng.
+                            Một bài tập 1 giờ ở pace CRS tương đương với 100 rTSS.</p>
                     </div>
                 </div>
             </div>
 
             <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">How do I calculate my rTSS?</h3>
+                <h3 itemprop="name">Làm thế nào để tính rTSS của tôi?</h3>
                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                     <div itemprop="text">
-                        <p>Use the calculator above by entering your CRS pace (from a CRS test), total workout duration,
-                            and average pace during the workout. The formula is: rTSS = Duration (hours) × Intensity
-                            Factor³ × 100, where Intensity Factor = CRS Pace / Average Workout Pace.</p>
+                        <p>Sử dụng máy tính ở trên bằng cách nhập pace CRS của bạn (từ bài kiểm tra CRS), tổng thời gian
+                            tập luyện và pace trung bình trong bài tập. Công thức là: rTSS = Thời gian (giờ) × Hệ số
+                            Cường độ² × 100, trong đó Hệ số Cường độ = Pace CRS / Pace Tập luyện Trung bình.</p>
                     </div>
                 </div>
             </div>
 
             <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">Do I need CRS to calculate rTSS?</h3>
+                <h3 itemprop="name">Tôi có cần CRS để tính rTSS không?</h3>
                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                     <div itemprop="text">
-                        <p>Yes, your Critical Run Speed (CRS) is required to calculate the Intensity Factor, which is
-                            essential for rTSS calculation. CRS represents your threshold pace and should be tested
-                            every 6-8 weeks. You can find your CRS using our <a href="/vi/crs/">CRS
-                                calculator</a>.</p>
+                        <p>Có, Tốc độ Chạy Tới hạn (CRS) của bạn là bắt buộc để tính Hệ số Cường độ, yếu tố cần thiết
+                            cho tính toán rTSS. CRS đại diện cho pace ngưỡng của bạn và nên được kiểm tra mỗi 6-8 tuần.
+                            Bạn có thể tìm thấy CRS của mình bằng <a href="/vi/crs/">máy tính CRS</a> của chúng tôi.</p>
                     </div>
                 </div>
             </div>
 
             <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">What's a good rTSS score for one workout?</h3>
+                <h3 itemprop="name">Điểm rTSS tốt cho một bài tập là bao nhiêu?</h3>
                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                     <div itemprop="text">
-                        <p>It depends on workout intensity: Easy workouts typically score below 50 rTSS, moderate
-                            workouts 50-100 rTSS, hard workouts 100-200 rTSS, and very hard workouts above 200 rTSS. The
-                            appropriate score depends on your training goals and current fitness level.</p>
+                        <p>Nó phụ thuộc vào cường độ bài tập: Các bài tập nhẹ thường đạt điểm dưới 50 rTSS, bài tập
+                            trung bình 50-100 rTSS, bài tập nặng 100-200 rTSS, và bài tập rất nặng trên 200 rTSS. Điểm
+                            số phù hợp phụ thuộc vào mục tiêu tập luyện và mức độ thể lực hiện tại của bạn.</p>
                     </div>
                 </div>
             </div>
 
             <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">How much rTSS should I do per week?</h3>
+                <h3 itemprop="name">Tôi nên tập bao nhiêu rTSS mỗi tuần?</h3>
                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                     <div itemprop="text">
-                        <p>Weekly rTSS targets vary by level: Recreational runners: 150-300, Fitness
-                            runners/Triathletes: 300-500, Competitive Masters: 500-800, Elite/Collegiate: 800-1200+.
-                            Start conservatively and increase gradually to avoid overtraining.</p>
+                        <p>Mục tiêu rTSS hàng tuần thay đổi theo cấp độ: Người chạy Giải trí: 150-300, Người chạy
+                            Fitness/Ba môn phối hợp: 300-500, Masters Cạnh tranh: 500-800, Ưu tú/Đại học: 800-1200+. Bắt
+                            đầu một cách thận trọng và tăng dần để tránh tập luyện quá sức.</p>
                     </div>
                 </div>
             </div>
 
             <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">Is running TSS the same as cycling TSS?</h3>
+                <h3 itemprop="name">TSS chạy bộ có giống TSS đạp xe không?</h3>
                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                     <div itemprop="text">
-                        <p>The concept and formula are the same, but rTSS is adapted for running. Instead of using power
-                            (FTP) like cycling TSS, rTSS uses pace with CRS as the threshold. Both measure training load
-                            Duration × Intensity Factor² × 100.
-                        </p>
+                        <p>Khái niệm và công thức là giống nhau, nhưng rTSS được điều chỉnh cho chạy bộ. Thay vì sử dụng
+                            công suất (FTP) như TSS đạp xe, rTSS sử dụng pace với CRS là ngưỡng. Cả hai đều đo lường tải
+                            tập luyện = Thời gian × Hệ số Cường độ² × 100.</p>
                     </div>
                 </div>
             </div>
 
             <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">Does rTSS account for terrain or hills?</h3>
+                <h3 itemprop="name">rTSS có tính đến địa hình hoặc đồi dốc không?</h3>
                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                     <div itemprop="text">
-                        <p>Standard rTSS based on average GPS pace does not account for hills. For trail running or
-                            hilly routes, advanced tools use <strong>Normalized Graded Pace (NGP)</strong> or heart rate
-                            intervals to provide a more accurate representation of the training stress.</p>
+                        <p>rTSS tiêu chuẩn dựa trên pace GPS trung bình không tính đến đồi dốc. Đối với chạy đường mòn
+                            hoặc các tuyến đường nhiều đồi dốc, các công cụ nâng cao sử dụng <strong>Pace Đã phân cấp
+                                Chuẩn hóa (Normalized Graded Pace - NGP)</strong> hoặc các khoảng nhịp tim để cung cấp
+                            đại diện chính xác hơn về căng thẳng tập luyện.</p>
                     </div>
                 </div>
             </div>
 
             <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">What's the difference between rTSS and CTL/ATL/TSB?</h3>
+                <h3 itemprop="name">Sự khác biệt giữa rTSS và CTL/ATL/TSB là gì?</h3>
                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                     <div itemprop="text">
-                        <p>rTSS measures a single workout's training load. CTL (Chronic Training Load) is your long-term
-                            fitness, ATL (Acute Training Load) is your recent fatigue, and TSB (Training Stress Balance)
-                            is your freshness. These metrics use rTSS values over time to track your training state.
-                            Learn more in our <a href="/vi/training-load/">Training Load guide</a>.</p>
+                        <p>rTSS đo lường tải tập luyện của một bài tập đơn lẻ. CTL (Cường độ Tập luyện Mãn tính) là thể
+                            lực dài hạn của bạn, ATL (Cường độ Tập luyện Cấp tính) là sự mệt mỏi gần đây của bạn, và TSB
+                            (Cân bằng Căng thẳng Tập luyện) là phong độ của bạn. Các chỉ số này sử dụng giá trị rTSS
+                            theo thời gian để theo dõi trạng thái tập luyện của bạn. Tìm hiểu thêm trong <a
+                                href="/vi/training-load/">hướng dẫn Tải Tập luyện</a> của chúng tôi.</p>
                     </div>
                 </div>
             </div>
         </div>
 
-        <h2 class="mt-3xl">Related Resources</h2>
+        <h2 class="mt-3xl">Tài nguyên Liên quan</h2>
 
         <div class="grid grid-3">
             <div class="card">
-                <h3 class="card-title">CRS Test</h3>
+                <h3 class="card-title">Kiểm tra CRS</h3>
                 <div class="card-content">
-                    <p>Need your CRS pace? Use our free CRS calculator with 5K and 3K test times.</p>
-                    <a href="/vi/crs/" class="btn btn-secondary btn-small mt-md">CRS Calculator →</a>
+                    <p>Cần pace CRS của bạn? Sử dụng máy tính CRS miễn phí của chúng tôi với thời gian chạy thử 5K và
+                        3K.</p>
+                    <a href="/vi/crs/" class="btn btn-secondary btn-small mt-md">Máy tính CRS →</a>
                 </div>
             </div>
 
             <div class="card">
-                <h3 class="card-title">Training Load Guide</h3>
+                <h3 class="card-title">Hướng dẫn Tải Tập luyện</h3>
                 <div class="card-content">
-                    <p>Learn about CTL, ATL, TSB and Performance Management Chart metrics.</p>
-                    <a href="/vi/training-load/" class="btn btn-secondary btn-small mt-md">Training Load →</a>
+                    <p>Tìm hiểu về CTL, ATL, TSB và các chỉ số Biểu đồ Quản lý Hiệu suất.</p>
+                    <a href="/vi/training-load/" class="btn btn-secondary btn-small mt-md">Tải Tập luyện →</a>
                 </div>
             </div>
 
             <div class="card">
-                <h3 class="card-title">Run Analytics App</h3>
+                <h3 class="card-title">Ứng dụng Run Analytics</h3>
                 <div class="card-content">
-                    <p>Automatic rTSS calculation for all workouts. Track CTL/ATL/TSB trends over time.</p>
-                    <a href="/vi/" class="btn btn-secondary btn-small mt-md">Learn More →</a>
+                    <p>Tính toán rTSS tự động cho tất cả các bài tập. Theo dõi xu hướng CTL/ATL/TSB theo thời gian.</p>
+                    <a href="/vi/" class="btn btn-secondary btn-small mt-md">Tìm hiểu Thêm →</a>
                 </div>
             </div>
         </div>
 
         <div class="mt-xl text-center">
-            <p class="mb-md"><strong>Want automatic rTSS tracking?</strong></p>
-            <a href="https://apps.apple.com/us/app/run-analytics/id6754524015" class="btn btn-primary btn-large" target="_blank"
-                rel="noopener">Download Run Analytics Free</a>
+            <p class="mb-md"><strong>Muốn theo dõi rTSS tự động?</strong></p>
+            <a href="https://apps.apple.com/es/app/runanalytics/id6754524015" class="btn btn-primary btn-large"
+                target="_blank" rel="noopener">Tải xuống Run Analytics Miễn phí</a>
         </div>
     </div>
 </section>
