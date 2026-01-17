@@ -921,61 +921,64 @@ img[width][height] {
         <section class="page-hero">
     <div class="container">
         <h1>Libreng Running TSS Calculator</h1>
-        <p class="lead">Kalkulahin ang Training Stress Score para sa running workouts - Ang tanging libreng rTSS calculator</p>
+        <p class="lead">Kalkulahin ang Training Stress Score para sa running workouts - Ang tanging libreng rTSS
+            calculator</p>
     </div>
 </section>
 
 <section class="section">
     <div class="container container-narrow">
         <div class="callout callout-info mb-xl">
-            <h2>What is Running rTSS (rTSS)?</h2>
-            <p><strong>Running Stress Score (rTSS)</strong> quantifies the training load of a running workout
-                by combining intensity and duration. It's adapted from cycling's TSS methodology, using your Critical
-                Run Speed (CRS) as the threshold pace. A 1-hour workout at CRS pace = 100 rTSS.</p>
+            <h2>Ano ang Running rTSS (rTSS)?</h2>
+            <p>Ang <strong>Running Stress Score (rTSS)</strong> ay sumusukat sa training load ng isang running workout
+                sa pamamagitan ng pagsasama ng intensity at tagal. Ito ay hango sa TSS methodology ng cycling, gamit ang
+                iyong Critical
+                Run Speed (CRS) bilang threshold pace. Ang 1-oras na workout sa CRS pace = 100 rTSS.</p>
         </div>
 
-        <h2 class="mt-3xl">Free rTSS Calculator</h2>
-        <p class="lead mb-xl">Calculate training stress for any running workout. Requires your CRS pace.</p>
+        <h2 class="mt-3xl">Libreng rTSS Calculator</h2>
+        <p class="lead mb-xl">Kalkulahin ang training stress para sa anumang running workout. Kailangan ang iyong CRS
+            pace.</p>
 
         <div class="crs-calculator">
             <form id="rtssCalculatorForm">
                 <div class="calculator-inputs">
                     <div class="form-group">
-                        <label for="crsPace" class="form-label">Your CRS Pace (mm:ss per km)</label>
+                        <label for="crsPace" class="form-label">Ang Iyong CRS Pace (mm:ss kada km)</label>
                         <input type="text" id="crsPace" class="form-input" placeholder="4:15"
                             pattern="[0-9]{1,2}:[0-5][0-9]" aria-required="true" aria-describedby="crsPace-help" />
-                        <small id="crsPace-help" class="form-help">Your threshold pace from CRS test (e.g.,
+                        <small id="crsPace-help" class="form-help">Ang iyong threshold pace mula sa CRS test (hal.,
                             4:15)</small>
                         <div class="form-error" id="crsPace-error"></div>
                     </div>
 
                     <div class="form-group">
-                        <label for="workoutDuration" class="form-label">Workout Duration (minutes)</label>
+                        <label for="workoutDuration" class="form-label">Tagal ng Workout (minuto)</label>
                         <input type="number" id="workoutDuration" class="form-input" placeholder="60" min="1" max="300"
                             aria-required="true" aria-describedby="duration-help" />
-                        <small id="duration-help" class="form-help">Total workout time including rest (1-300
-                            minutes)</small>
+                        <small id="duration-help" class="form-help">Kabuuang oras ng workout kasama ang pahinga (1-300
+                            minuto)</small>
                         <div class="form-error" id="duration-error"></div>
                     </div>
 
                     <div class="form-group">
-                        <label for="avgPace" class="form-label">Average Workout Pace (mm:ss per km)</label>
+                        <label for="avgPace" class="form-label">Average Workout Pace (mm:ss kada km)</label>
                         <input type="text" id="avgPace" class="form-input" placeholder="4:45"
                             pattern="[0-9]{1,2}:[0-5][0-9]" aria-required="true" aria-describedby="pace-help" />
-                        <small id="pace-help" class="form-help">Your average pace during the workout (e.g.,
+                        <small id="pace-help" class="form-help">Ang iyong average pace sa workout (hal.,
                             4:45)</small>
                         <div class="form-error" id="pace-error"></div>
                     </div>
 
                     <div class="calculator-buttons">
-                        <button type="submit" class="btn btn-primary" id="calculateRtssBtn">Calculate rTSS</button>
-                        <button type="reset" class="btn btn-ghost" id="resetRtssBtn">Clear</button>
+                        <button type="submit" class="btn btn-primary" id="calculateRtssBtn">Kalkulahin ang rTSS</button>
+                        <button type="reset" class="btn btn-ghost" id="resetRtssBtn">I-clear</button>
                     </div>
                 </div>
             </form>
 
             <div class="calculator-results hidden" id="rtssResults" aria-live="polite">
-                <h3>Your Training Stress Score</h3>
+                <h3>Ang Iyong Training Stress Score</h3>
                 <div class="results-summary">
                     <div class="result-item">
                         <div class="result-label">rTSS</div>
@@ -988,7 +991,7 @@ img[width][height] {
                 </div>
 
                 <div class="zones-result">
-                    <h4>Training Load Interpretation</h4>
+                    <h4>Interpretasyon ng Training Load</h4>
                     <p class="mb-md text-secondary" id="rtssInterpretation">
                         <!-- Filled by JavaScript -->
                     </p>
@@ -996,7 +999,7 @@ img[width][height] {
             </div>
         </div>
 
-        <h2 class="mt-3xl">How rTSS is Calculated</h2>
+        <h2 class="mt-3xl">Paano Kinakalkula ang rTSS</h2>
 
         <div class="formula-box">
             <h3>Formula</h3>
@@ -1004,43 +1007,44 @@ img[width][height] {
                 rTSS = (Duration in hours) × (Intensity Factor)² × 100
             </div>
             <div class="formula-explanation">
-                <p>Where:</p>
+                <p>Kung saan:</p>
                 <ul>
                     <li><strong>Intensity Factor (IF)</strong> = CRS Pace / Average Workout Pace</li>
-                    <li><strong>Duration</strong> = Total workout time in hours</li>
-                    <li><strong>CRS Pace</strong> = Your threshold pace from CRS test</li>
+                    <li><strong>Duration</strong> = Kabuuang oras ng workout sa oras (hours)</li>
+                    <li><strong>CRS Pace</strong> = Ang iyong threshold pace mula sa CRS test</li>
                 </ul>
             </div>
         </div>
 
-        <h3 class="mt-xl">Worked Example</h3>
+        <h3 class="mt-xl">Halimbawa</h3>
         <div class="example-box">
-            <h4>Workout Details:</h4>
+            <h4>Detalye ng Workout:</h4>
             <ul>
                 <li>CRS Pace: <strong>4:15/km</strong> (255 seconds)</li>
-                <li>Workout Duration: <strong>60 minutes</strong> (1 hour)</li>
+                <li>Tagal ng Workout: <strong>60 minuto</strong> (1 oras)</li>
                 <li>Average Pace: <strong>4:45/km</strong> (285 seconds)</li>
             </ul>
 
-            <h4>Step 1: Calculate Intensity Factor</h4>
+            <h4>Step 1: Kalkulahin ang Intensity Factor</h4>
             <div class="calculation">
                 IF = CRS Pace / Workout Pace<br>
                 IF = 255 / 285<br>
                 IF = <strong>0.895</strong>
             </div>
 
-            <h4>Step 2: Calculate rTSS</h4>
+            <h4>Step 2: Kalkulahin ang rTSS</h4>
             <div class="calculation">
                 rTSS = 1.0 hours × (0.895)² × 100<br>
                 rTSS = 1.0 × 0.801 × 100<br>
                 rTSS = <strong>80</strong>
             </div>
 
-            <p class="mt-md"><strong>Interpretation:</strong> This 60-minute workout at easy pace (slower than CRS)
-                generated 72 rTSS - a moderate training load suitable for aerobic base building.</p>
+            <p class="mt-md"><strong>Interpretasyon:</strong> Ang 60-minutong workout na ito sa easy pace (mas mabagal
+                sa CRS)
+                ay nagresulta ng 72 rTSS - isang moderate training load na angkop para sa aerobic base building.</p>
         </div>
 
-        <h2 class="mt-3xl">Understanding rTSS Values</h2>
+        <h2 class="mt-3xl">Pag-unawa sa rTSS Values</h2>
 
         <div class="zones-table-container">
             <table class="zones-table">
@@ -1048,55 +1052,55 @@ img[width][height] {
                     <tr>
                         <th>rTSS Range</th>
                         <th>Training Load</th>
-                        <th>Recovery Time</th>
-                        <th>Example Workout</th>
+                        <th>Oras ng Recovery</th>
+                        <th>Halimbawang Workout</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td>&lt; 50</td>
-                        <td>Low</td>
-                        <td>Same day</td>
+                        <td>Low (Mababa)</td>
+                        <td>Parehong araw</td>
                         <td>Easy 30-min run, technique drills</td>
                     </tr>
                     <tr>
                         <td>50-100</td>
-                        <td>Moderate</td>
-                        <td>1 day</td>
+                        <td>Moderate (Katamtaman)</td>
+                        <td>1 araw</td>
                         <td>60-min endurance, steady pace</td>
                     </tr>
                     <tr>
                         <td>100-200</td>
-                        <td>High</td>
-                        <td>1-2 days</td>
+                        <td>High (Mataas)</td>
+                        <td>1-2 araw</td>
                         <td>90-min threshold sets, race pace intervals</td>
                     </tr>
                     <tr>
                         <td>200-300</td>
-                        <td>Very High</td>
-                        <td>2-3 days</td>
+                        <td>Very High (Napakataas)</td>
+                        <td>2-3 araw</td>
                         <td>2-hour hard training, multiple threshold blocks</td>
                     </tr>
                     <tr>
                         <td>&gt; 300</td>
-                        <td>Extreme</td>
-                        <td>3+ days</td>
+                        <td>Extreme (Matindi)</td>
+                        <td>3+ araw</td>
                         <td>Long race (&gt;2 hours), ultra-endurance</td>
                     </tr>
                 </tbody>
             </table>
         </div>
 
-        <h2 class="mt-3xl">Weekly rTSS Guidelines</h2>
+        <h2 class="mt-3xl">Mga Gabay sa Weekly rTSS</h2>
 
-        <p class="mb-md">Target weekly rTSS depends on your training level and goals:</p>
+        <p class="mb-md">Ang target na weekly rTSS ay depende sa iyong training level at goals:</p>
 
         <div class="grid grid-2 mb-xl">
             <div class="card">
                 <h3 class="card-title">Recreational Runners</h3>
                 <div class="card-content">
                     <p class="mb-sm"><strong>Weekly rTSS:</strong> 150-300</p>
-                    <p>2-3 workouts per week, 50-100 rTSS each. Focus on technique and building aerobic base.</p>
+                    <p>2-3 workouts kada linggo, 50-100 rTSS bawat isa. Focus sa technique at aerobic base.</p>
                 </div>
             </div>
 
@@ -1104,7 +1108,7 @@ img[width][height] {
                 <h3 class="card-title">Fitness Runners / Triathletes</h3>
                 <div class="card-content">
                     <p class="mb-sm"><strong>Weekly rTSS:</strong> 300-500</p>
-                    <p>3-4 workouts per week, 75-125 rTSS each. Mix of aerobic endurance and threshold work.</p>
+                    <p>3-4 workouts kada linggo, 75-125 rTSS bawat isa. Halu ng aerobic endurance at threshold work.</p>
                 </div>
             </div>
 
@@ -1112,7 +1116,7 @@ img[width][height] {
                 <h3 class="card-title">Competitive Masters Runners</h3>
                 <div class="card-content">
                     <p class="mb-sm"><strong>Weekly rTSS:</strong> 500-800</p>
-                    <p>4-6 workouts per week, 80-150 rTSS each. Structured training with periodization.</p>
+                    <p>4-6 workouts kada linggo, 80-150 rTSS bawat isa. Structured training na may periodization.</p>
                 </div>
             </div>
 
@@ -1120,151 +1124,81 @@ img[width][height] {
                 <h3 class="card-title">Elite / Collegiate Runners</h3>
                 <div class="card-content">
                     <p class="mb-sm"><strong>Weekly rTSS:</strong> 800-1200+</p>
-                    <p>8-12 workouts per week, double days. High volume with recovery management critical.</p>
+                    <p>8-12 workouts kada linggo, double days. High volume na kailangan ng maingat na recovery
+                        management.</p>
                 </div>
             </div>
         </div>
 
         <div class="callout callout-warning">
-            <h3>⚠️ Important Notes</h3>
+            <h3>⚠️ Mahahalagang Paalala</h3>
             <ul>
-                <li><strong>Requires accurate CRS:</strong> Your CRS must be current (tested within 6-8 weeks) for
-                    accurate rTSS.</li>
-                <li><strong>Simplified calculation:</strong> This calculator uses average pace. Advanced rTSS uses
-                    Normalized Graded Pace (NGP) which accounts for interval structure.</li>
-                <li><strong>Not for technique work:</strong> rTSS only measures physical training stress, not skill
-                    development.</li>
-                <li><strong>Individual variation:</strong> Same rTSS feels different for different runners. Adjust
-                    guidelines based on your recovery.</li>
+                <li><strong>Kailangan ng tumpak na CRS:</strong> Dapat updated ang iyong CRS (na-test sa loob ng 6-8
+                    linggo) para sa accurrate na rTSS.</li>
+                <li><strong>Simplipikadong kalkulasyon:</strong> Ang calculator na ito ay gumagamit ng average pace. Ang
+                    advanced rTSS ay gumagamit ng Normalized Graded Pace (NGP) para sa interval structure.</li>
+                <li><strong>Hindi para sa technique work:</strong> Sinusukat lang ng rTSS ang physical training stress,
+                    hindi ang skill development.</li>
+                <li><strong>Pagkakaiba-iba:</strong> Ang parehong rTSS ay iba ang pakiramdam sa bawat mananakbo.
+                    I-adjust ang guidelines base sa iyong recovery.</li>
             </ul>
         </div>
 
-        <h2 class="mt-3xl">Why rTSS Matters</h2>
+        <h2 class="mt-3xl">Bakit Mahalaga ang rTSS</h2>
 
-        <p class="mb-md">Training Stress Score is the foundation for:</p>
+        <p class="mb-md">Ang Training Stress Score ay ang pundasyon para sa:</p>
 
         <ul class="mb-xl">
-            <li><strong>CTL (Chronic Training Load):</strong> Your fitness level - 42-day exponentially weighted average
-                of daily rTSS</li>
-            <li><strong>ATL (Acute Training Load):</strong> Your fatigue - 7-day exponentially weighted average of daily
-                rTSS</li>
-            <li><strong>TSB (Training Stress Balance):</strong> Your form - TSB = CTL - ATL (positive = fresh, negative
-                = fatigued)</li>
-            <li><strong>Periodization:</strong> Plan training phases (base, build, peak, taper) using target CTL
-                progressions</li>
-            <li><strong>Recovery Management:</strong> Know when to push and when to rest based on TSB</li>
+            <li><strong>CTL (Chronic Training Load):</strong> Fitness level - 42-day average ng daily rTSS</li>
+            <li><strong>ATL (Acute Training Load):</strong> Fatigue (pagod) - 7-day average ng daily rTSS</li>
+            <li><strong>TSB (Training Stress Balance):</strong> Form (kondisyon) - TSB = CTL - ATL (positive = fresh,
+                negative = fatigued)</li>
+            <li><strong>Periodization:</strong> Pagplano ng training phases (base, build, peak, taper)</li>
+            <li><strong>Recovery Management:</strong> Pag-alam kung kailan dadagdagan o babawasan ang training</li>
         </ul>
 
-        <div class="callout callout-tip">
-            <h3>Pro Tip: Track Your CTL</h3>
-            <p>Record daily rTSS in a spreadsheet or training log. Calculate your 42-day average (CTL) weekly. Target
-                5-10 CTL points increase per week during base building. Maintain or slightly reduce CTL during taper
-                (1-2 weeks before race).</p>
-        </div>
-
-        <h2 class="mt-3xl">Frequently Asked Questions</h2>
+        <h2 class="mt-3xl">Mga Madalas Itanong (FAQ)</h2>
 
         <div class="faq-section" itemscope itemtype="https://schema.org/FAQPage">
             <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">What is Running TSS (rTSS)?</h3>
+                <h3 itemprop="name">Ano ang Running TSS (rTSS)?</h3>
                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                     <div itemprop="text">
-                        <p>Running Training Stress Score (rTSS) is a metric that quantifies the training load of a
-                            running workout by combining both intensity and duration. It's adapted from cycling's TSS
-                            methodology, using your Critical Run Speed (CRS) as the threshold pace. A workout of 1 hour
-                            at CRS pace equals 100 rTSS.</p>
+                        <p>Ang Running Training Stress Score (rTSS) ay isang sukatan ng training load ng isang running
+                            workout. Hango ito sa TSS ng cycling, gamit ang Critical Run Speed (CRS) bilang threshold
+                            pace.</p>
                     </div>
                 </div>
             </div>
 
             <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">How do I calculate my rTSS?</h3>
+                <h3 itemprop="name">Paano ko kakalkulahin ang aking rTSS?</h3>
                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                     <div itemprop="text">
-                        <p>Use the calculator above by entering your CRS pace (from a CRS test), total workout duration,
-                            and average pace during the workout. The formula is: rTSS = Duration (hours) × Intensity
-                            Factor³ × 100, where Intensity Factor = CRS Pace / Average Workout Pace.</p>
+                        <p>Gamitin ang calculator sa itaas. Ilagay ang iyong CRS pace, tagal ng workout, at average
+                            pace. Ang formula ay: rTSS = Duration (hours) × Intensity Factor³ × 100.</p>
                     </div>
                 </div>
             </div>
 
             <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">Do I need CRS to calculate rTSS?</h3>
+                <h3 itemprop="name">Kailangan ko ba ng CRS para makalkula ang rTSS?</h3>
                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                     <div itemprop="text">
-                        <p>Yes, your Critical Run Speed (CRS) is required to calculate the Intensity Factor, which is
-                            essential for rTSS calculation. CRS represents your threshold pace and should be tested
-                            every 6-8 weeks. You can find your CRS using our <a href="/tl/crs/">CRS
-                                calculator</a>.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">What's a good rTSS score for one workout?</h3>
-                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                    <div itemprop="text">
-                        <p>It depends on workout intensity: Easy workouts typically score below 50 rTSS, moderate
-                            workouts 50-100 rTSS, hard workouts 100-200 rTSS, and very hard workouts above 200 rTSS. The
-                            appropriate score depends on your training goals and current fitness level.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">How much rTSS should I do per week?</h3>
-                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                    <div itemprop="text">
-                        <p>Weekly rTSS targets vary by level: Recreational runners: 150-300, Fitness
-                            runners/Triathletes: 300-500, Competitive Masters: 500-800, Elite/Collegiate: 800-1200+.
-                            Start conservatively and increase gradually to avoid overtraining.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">Is running TSS the same as cycling TSS?</h3>
-                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                    <div itemprop="text">
-                        <p>The concept and formula are the same, but rTSS is adapted for running. Instead of using power
-                            (FTP) like cycling TSS, rTSS uses pace with CRS as the threshold. Both measure training load
-                            Duration × Intensity Factor² × 100.
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">Does rTSS account for terrain or hills?</h3>
-                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                    <div itemprop="text">
-                        <p>Standard rTSS based on average GPS pace does not account for hills. For trail running or
-                            hilly routes, advanced tools use <strong>Normalized Graded Pace (NGP)</strong> or heart rate
-                            intervals to provide a more accurate representation of the training stress.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">What's the difference between rTSS and CTL/ATL/TSB?</h3>
-                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                    <div itemprop="text">
-                        <p>rTSS measures a single workout's training load. CTL (Chronic Training Load) is your long-term
-                            fitness, ATL (Acute Training Load) is your recent fatigue, and TSB (Training Stress Balance)
-                            is your freshness. These metrics use rTSS values over time to track your training state.
-                            Learn more in our <a href="/tl/training-load/">Training Load guide</a>.</p>
+                        <p>Oo, kailangan ang Critical Run Speed (CRS) upang makuha ang Intensity Factor. Ang CRS ay
+                            dapat i-test bawat 6-8 linggo gamit ang aming <a href="/tl/crs/">CRS calculator</a>.</p>
                     </div>
                 </div>
             </div>
         </div>
 
-        <h2 class="mt-3xl">Related Resources</h2>
+        <h2 class="mt-3xl">Kaugnay na Resources</h2>
 
         <div class="grid grid-3">
             <div class="card">
                 <h3 class="card-title">CRS Test</h3>
                 <div class="card-content">
-                    <p>Need your CRS pace? Use our free CRS calculator with 5K and 3K test times.</p>
+                    <p>Kailangan ang CRS pace? Gamitin ang aming libreng CRS calculator.</p>
                     <a href="/tl/crs/" class="btn btn-secondary btn-small mt-md">CRS Calculator →</a>
                 </div>
             </div>
@@ -1272,7 +1206,7 @@ img[width][height] {
             <div class="card">
                 <h3 class="card-title">Training Load Guide</h3>
                 <div class="card-content">
-                    <p>Learn about CTL, ATL, TSB and Performance Management Chart metrics.</p>
+                    <p>Alamin ang tungkol sa CTL, ATL, TSB at Performance Management Chart.</p>
                     <a href="/tl/training-load/" class="btn btn-secondary btn-small mt-md">Training Load →</a>
                 </div>
             </div>
@@ -1280,16 +1214,16 @@ img[width][height] {
             <div class="card">
                 <h3 class="card-title">Run Analytics App</h3>
                 <div class="card-content">
-                    <p>Automatic rTSS calculation for all workouts. Track CTL/ATL/TSB trends over time.</p>
-                    <a href="/tl/" class="btn btn-secondary btn-small mt-md">Learn More →</a>
+                    <p>Automatic rTSS calculation para sa lahat ng workouts. I-track ang CTL trends.</p>
+                    <a href="/tl/" class="btn btn-secondary btn-small mt-md">Alamin Pa →</a>
                 </div>
             </div>
         </div>
 
         <div class="mt-xl text-center">
-            <p class="mb-md"><strong>Want automatic rTSS tracking?</strong></p>
+            <p class="mb-md"><strong>Gusto ng automatic rTSS tracking?</strong></p>
             <a href="https://apps.apple.com/us/app/run-analytics/id6754524015" class="btn btn-primary btn-large" target="_blank"
-                rel="noopener">Download Run Analytics Free</a>
+                rel="noopener">I-download ang Run Analytics nang Libre</a>
         </div>
     </div>
 </section>
