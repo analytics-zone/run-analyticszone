@@ -1086,747 +1086,831 @@ img[width][height] {
 <section class="section">
     <div class="container container-narrow">
         <div class="callout callout-success mb-xl">
-            <h2>Key Takeaways</h2>
+            <h2>핵심 요약</h2>
             <ul class="key-points">
-                <li><strong>Your Data Reveals Your Life:</strong> Running apps collect GPS location (home/work), health metrics, and training patterns that expose when you're away from home</li>
-                <li><strong>The Cloud Privacy Problem:</strong> Most apps upload your data to servers, store it indefinitely, and share it with third parties—you have no control after upload</li>
-                <li><strong>Privacy-First Solution:</strong> Local data processing keeps ALL analytics on your device—no cloud uploads, no accounts, no tracking</li>
-                <li><strong>Run Analytics Difference:</strong> 100% local processing for <a href="/ko/crs/">Critical Running Speed</a>, <a href="/ko/training-load/">TSS/CTL/ATL/TSB</a>, and <a href="/ko/training-zones/">training zones</a>—your running data never leaves your iPhone</li>
-                <li><strong>GDPR Compliance by Design:</strong> When apps don't collect data, they can't violate privacy laws—complete compliance through privacy-first architecture</li>
+                <li><strong>데이터는 당신의 삶을 드러냅니다:</strong> 러닝 앱은 GPS 위치(집/직장), 건강 지표, 훈련 패턴을 수집하여 당신이 언제 집을 비우는지 등을 노출할 수
+                    있습니다.</li>
+                <li><strong>클라우드 프라이버시 문제:</strong> 대부분의 앱은 데이터를 서버에 업로드하고 영구적으로 저장하며 제3자와 공유합니다. 업로드 후에는 데이터에 대한 통제권이
+                    사라집니다.</li>
+                <li><strong>프라이버시 우선 솔루션:</strong> 로컬 데이터 처리는 모든 분석을 당신의 디바이스에서 수행합니다. 클라우드 업로드, 계정 생성, 추적이 전혀 필요하지
+                    않습니다.</li>
+                <li><strong>Run Analytics의 차별점:</strong> <a href="/ko/crs/">임계 러닝 속도(CRS)</a>, <a
+                        href="/ko/training-load/">TSS/CTL/ATL/TSB</a>, <a href="/ko/training-zones/">훈련
+                        존</a> 등 모든 분석이 100% 로컬에서 처리됩니다. 당신의 데이터는 아이폰을 절대 떠나지 않습니다.</li>
+                <li><strong>설계 단계부터 반영된 GDPR 준수:</strong> 앱이 데이터를 수집하지 않으면 프라이버시 법을 위반할 수도 없습니다. 프라이버시 우선 아키텍처를 통해 완벽한
+                    법규 준수를 실현합니다.</li>
             </ul>
         </div>
 
         <article itemscope itemtype="https://schema.org/Article">
-            <meta itemprop="headline" content="Privacy-First Running Analytics: Your Data, Your Device">
-            <meta itemprop="description" content="Privacy-first running analytics with 100% local data processing. No cloud, no tracking, no account required. Your running data stays on your device.">
+            <meta itemprop="headline" content="프라이버시 우선 러닝 분석: 당신의 데이터, 당신의 기기">
+            <meta itemprop="description"
+                content="100% 로컬 데이터 처리를 구현한 프라이버시 우선 러닝 분석 앱입니다. 클라우드, 추적, 계정이 필요 없습니다. 당신의 러닝 데이터는 당신의 기기에만 머뭅니다.">
             <meta itemprop="datePublished" content="2025-01-15T10:00:00Z">
             <meta itemprop="dateModified" content="2025-10-29T18:00:00Z">
             <meta itemprop="author" content="Run Analytics">
 
-            <p class="lead">Your running data tells the story of your life. GPS tracks reveal where you live and work. Training patterns show when you're away from home. Heart rate data exposes your fitness level and health status. Most running apps collect all this information, upload it to cloud servers, and store it indefinitely—often sharing it with third parties you've never heard of.</p>
+            <p class="lead">당신의 러닝 데이터는 당신의 삶의 이야기를 담고 있습니다. GPS 기록은 당신이 어디에 살고 어디에서 일하는지를 보여줍니다. 훈련 패턴은 당신이 언제 집을 비우는지를
+                드러냅니다. 심박수 데이터는 당신의 체력 수준과 건강 상태를 노출합니다. 대부분의 러닝 앱은 이 모든 정보를 수집하여 클라우드 서버에 업로드하고 영구적으로 저장하며, 때로는 당신이 들어본
+                적도 없는 제3자와 공유하기도 합니다.</p>
 
-            <p>But training smart doesn't require sacrificing privacy. This comprehensive guide reveals the privacy problems with popular running apps, explains how local data processing works, and shows how privacy-first running analytics protects your sensitive information while delivering the advanced metrics competitive runners need.</p>
+            <p>하지만 똑똑하게 훈련하기 위해 프라이버시를 희생할 필요는 없습니다. 이 종합 가이드에서는 유명 러닝 앱들의 프라이버시 문제를 밝히고, 로컬 데이터 처리가 어떻게 작동하는지 설명하며,
+                프라이버시 우선 러닝 분석이 경쟁력 있는 러너들에게 필요한 고급 지표를 제공하면서 동시에 어떻게 민감한 정보를 보호하는지 보여줍니다.</p>
 
-            <h2 id="privacy-problem">Why Privacy Matters for Runners</h2>
+            <h2 id="privacy-problem">러너에게 프라이버시가 중요한 이유</h2>
 
-            <p>Running apps have become essential training tools, but their data collection practices create serious privacy concerns that most runners don't fully understand. Unlike casual app usage, running analytics reveal deeply personal information about your daily life, health status, and behavioral patterns.</p>
+            <p>러닝 앱은 필수적인 훈련 도구가 되었지만, 그들의 데이터 수집 방식은 대부분의 러너가 완전히 이해하지 못하는 심각한 프라이버시 문제를 야기합니다. 일반적인 앱 사용과 달리, 러닝 분석은
+                당신의 일상생활, 건강 상태 및 행동 패턴에 대한 매우 개인적인 정보를 드러냅니다.</p>
 
-            <h3>What Data Running Apps Collect</h3>
+            <h3>러닝 앱이 수집하는 데이터</h3>
 
-            <p>When you use a typical cloud-based running app, you're providing far more than just workout statistics:</p>
+            <p>일반적인 클라우드 기반 러닝 앱을 사용할 때, 당신은 단순한 운동 통계 이상의 훨씬 더 많은 정보를 제공하게 됩니다:</p>
 
             <div class="warning-box">
-                <strong>⚠️ Data Collection Reality:</strong>
+                <strong>⚠️ 데이터 수집의 현실:</strong>
                 <ul>
-                    <li><strong>GPS Location Data:</strong> Precise coordinates for every meter of every run, revealing home address, work location, frequently visited places, and regular routes</li>
-                    <li><strong>Temporal Patterns:</strong> Workout timing shows daily schedules—when you wake up, when you're at work, when you're away from home</li>
-                    <li><strong>Health Metrics:</strong> Heart rate zones, resting heart rate, heart rate variability, and recovery patterns expose fitness level and potentially medical conditions</li>
-                    <li><strong>Performance Data:</strong> Pace, distance, elevation, cadence, and power metrics create comprehensive fitness profiles</li>
-                    <li><strong>Device Information:</strong> Phone model, operating system, IP address, and usage patterns</li>
-                    <li><strong>Social Information:</strong> Name, email, profile photos, connections, and social interactions</li>
+                    <li><strong>GPS 위치 데이터:</strong> 모든 러닝의 매 미터마다 정확한 좌표를 기록하여 집 주소, 직장 위치, 자주 방문하는 장소 및 정기적인 경로를
+                        노출합니다.</li>
+                    <li><strong>시간적 패턴:</strong> 운동 시간대는 당신의 일일 일정(언제 일어나는지, 언제 직장에 있는지, 언제 집을 비우는지)을 보여줍니다.</li>
+                    <li><strong>건강 지표:</strong> 심박수 존, 안정시 심박수, 심박 변이도(HRV) 및 회복 패턴은 체력 수준과 잠재적인 건강 상태를 드러냅니다.</li>
+                    <li><strong>퍼포먼스 데이터:</strong> 페이스, 거리, 고도, 케이던스 및 파워 지표는 종합적인 체력 프로필을 생성합니다.</li>
+                    <li><strong>기기 정보:</strong> 휴대폰 모델, 운영 체제, IP 주소 및 사용 패턴이 수집됩니다.</li>
+                    <li><strong>소셜 정보:</strong> 이름, 이메일, 프로필 사진, 친구 관계 및 소셜 상호작용 정보가 포함됩니다.</li>
                 </ul>
             </div>
 
-            <p>This data doesn't exist in isolation. Combined together, these data points create a detailed profile of your life that goes far beyond "I ran 10K today."</p>
+            <p>이 데이터들은 각각 독립적으로 존재하지 않습니다. 이 지표들이 결합되면 "나는 오늘 10km를 뛰었다"는 사실을 훨씬 넘어서는 당신의 삶에 대한 상세한 프로필이 만들어집니다.</p>
 
-            <h3>How Your Data is Used</h3>
+            <h3>데이터 사용 방식</h3>
 
-            <p>Cloud-based running apps don't collect massive amounts of data purely to provide you with training analytics. Your information has commercial value:</p>
+            <p>클라우드 기반 러닝 앱들은 단순히 당신에게 훈련 분석을 제공하기 위해서만 막대한 양의 데이터를 수집하는 것이 아닙니다. 당신의 정보는 상업적 가치를 지닙니다:</p>
 
             <ul>
-                <li><strong>Third-Party Data Sharing:</strong> Many apps sell anonymized (or supposedly anonymized) workout data to advertisers, researchers, and data brokers. Even "anonymized" location data can be re-identified to individuals</li>
-                <li><strong>Targeted Advertising:</strong> Your fitness level, training patterns, and running goals inform advertising profiles used to target you with fitness products and services</li>
-                <li><strong>Insurance Risk Assessment:</strong> Health insurance companies increasingly seek fitness data. Some offer "discounts" for sharing activity tracking data—creating pressure to reveal information</li>
-                <li><strong>Corporate Intelligence:</strong> Aggregated workout data reveals employee fitness patterns, potentially influencing hiring or health insurance decisions</li>
-                <li><strong>Government Requests:</strong> Cloud-stored data can be subpoenaed for legal proceedings, revealing your location history or activity patterns</li>
+                <li><strong>제3자 데이터 공유:</strong> 많은 앱이 익명화(또는 익명화되었다고 주장하는) 운동 데이터를 광고주, 연구원 및 데이터 브로커에게 판매합니다. "익명화된"
+                    위치 데이터라도 개인을 재식별하는 것이 가능합니다.</li>
+                <li><strong>맞춤형 광고:</strong> 당신의 체력 수준, 훈련 패턴 및 러닝 목표는 당신에게 피트니스 제품과 서비스를 타겟팅하는 광고 프로필에 반영됩니다.</li>
+                <li><strong>보험 위험 평가:</strong> 건강 보험사들은 점점 더 피트니스 데이터를 요구하고 있습니다. 활동 추적 데이터 공유에 대한 "할인"을 제안하며 정보 공개를
+                    압박하기도 합니다.</li>
+                <li><strong>기업 정보 수집:</strong> 집계된 운동 데이터는 직원의 건강 패턴을 드러내어 채용이나 건강 보험 결정에 영향을 미칠 잠재적 위험이 있습니다.</li>
+                <li><strong>정부 요청:</strong> 클라우드에 저장된 데이터는 법적 절차를 위해 소환될 수 있으며, 당신의 위치 기록이나 활동 패턴을 노출할 수 있습니다.</li>
             </ul>
 
-            <h3>Real Privacy Incidents</h3>
+            <h3>실제 프라이버시 사고 사례</h3>
 
-            <p>Privacy concerns aren't theoretical—they've materialized in documented incidents:</p>
+            <p>프라이버시 우려는 이론적인 이야기가 아닙니다. 실제로 문서화된 여러 사고로 현실화되었습니다:</p>
 
             <div class="example-box">
-                <h4>Case Studies:</h4>
-                <p><strong>Strava Heat Map Incident (2018):</strong> Strava's aggregated activity heat map inadvertently revealed secret military base locations when soldiers' workouts traced perimeter patrol routes. The incident demonstrated how "anonymized" data can expose sensitive information.</p>
+                <h4>사례 연구:</h4>
+                <p><strong>Strava 히트 맵 사건 (2018):</strong> Strava의 집계된 활동 히트 맵이 군인들의 운동 경로를 통해 비밀 군사 기지의 위치를 본의 아니게 노출한
+                    사건입니다. 이 사건은 "익명화된" 데이터가 어떻게 민감한 정보를 노출할 수 있는지 보여주었습니다.</p>
 
-                <p><strong>Fitness App Data Breach (2021):</strong> A major fitness tracking platform suffered a data breach exposing millions of users' GPS tracks, email addresses, and health data. Years of workout history became publicly accessible.</p>
+                <p><strong>피트니스 앱 데이터 유출 (2021):</strong> 대형 피트니스 추적 플랫폼이 데이터 브리치를 겪어 수백만 사용자의 GPS 기록, 이메일 주소 및 건강 데이터가
+                    유출되었습니다. 수년간의 운동 기록이 공개적으로 액세스 가능해졌습니다.</p>
 
-                <p><strong>Location Stalking:</strong> Security researchers demonstrated how public workout data could be used to identify home addresses by finding route start/end points. This creates safety concerns, particularly for runners training alone.</p>
+                <p><strong>위치 스토킹:</strong> 보안 연구가들은 공개된 운동 데이터를 사용하여 경로의 시작/종료 지점을 찾아내 집 주소를 식별할 수 있음을 입증했습니다. 이는 특히 혼자
+                    훈련하는 러너들에게 안전상의 위협이 됩니다.</p>
 
-                <p><strong>GDPR Enforcement Actions:</strong> European privacy regulators have fined fitness apps for inadequate consent mechanisms, excessive data collection, and unclear privacy policies—highlighting widespread compliance failures.</p>
+                <p><strong>GDPR 집행 조치:</strong> 유럽의 프라이버시 규제 기관들은 부적절한 동의 절차, 과도한 데이터 수집 및 불투명한 프라이버시 정책을 이유로 피트니스 앱에
+                    벌금을 부과해 왔으며, 이는 광범위한 법규 준수 실패를 보여줍니다.</p>
             </div>
 
-            <p>These incidents reveal a fundamental problem: once you upload data to cloud servers, you lose control. Companies can change privacy policies, suffer breaches, be acquired by other companies, or face government data requests—and your historical data remains vulnerable regardless of your current privacy preferences.</p>
+            <p>이러한 사고들은 근본적인 문제를 드러냅니다. 일단 데이터를 클라우드 서버에 업로드하면 통제권을 잃게 된다는 점입니다. 기업은 프라이버시 정책을 변경할 수 있고, 해킹을 당할 수 있으며,
+                다른 회사에 인수되거나 정부의 데이터 요청을 받을 수 있습니다. 현재의 프라이버시 설정과 관계없이 당신의 과거 데이터는 계속 취약한 상태로 남게 됩니다.</p>
 
-            <h2 id="local-vs-cloud">Understanding Local vs Cloud Processing</h2>
+            <h2 id="local-vs-cloud">로컬 vs 클라우드 처리 이해하기</h2>
 
-            <p>The architectural choice between local and cloud data processing fundamentally determines your privacy posture. Understanding this distinction helps you make informed decisions about which running apps to trust with your sensitive information.</p>
+            <p>로컬 데이터 처리와 클라우드 데이터 처리 사이의 아키텍처 선택은 당신의 프라이버시 상태를 근본적으로 결정짓습니다. 이 차이를 이해하면 어떤 러닝 앱에 당신의 민감한 정보를 믿고 맡길지
+                현명한 결정을 내리는 데 도움이 됩니다.</p>
 
-            <h3>How Cloud-Based Apps Work</h3>
+            <h3>클라우드 기반 앱의 작동 방식</h3>
 
-            <p>Traditional running analytics platforms follow a centralized model:</p>
+            <p>전통적인 러닝 분석 플랫폼은 중앙 집중식 모델을 따릅니다:</p>
 
             <div class="protocol-card">
-                <h3>📤 Cloud Processing Flow:</h3>
+                <h3>📤 클라우드 처리 흐름:</h3>
                 <ol class="protocol-steps">
-                    <li><strong>Data Capture:</strong> Your iPhone or GPS watch records GPS tracks, heart rate, pace, cadence, and other workout metrics</li>
-                    <li><strong>Upload:</strong> Raw workout data transmits to company servers via internet connection—typically automatic after every workout</li>
-                    <li><strong>Server Processing:</strong> Cloud infrastructure calculates analytics metrics (rTSS, CTL/ATL, training zones, performance trends)</li>
-                    <li><strong>Storage:</strong> Processed results and raw data remain on company servers indefinitely (unless you manually delete)</li>
-                    <li><strong>Retrieval:</strong> You view your data by downloading it from servers back to your device or web browser</li>
+                    <li><strong>데이터 기록:</strong> 아이폰이나 GPS 워치가 GPS 경로, 심박수, 페이스, 케이던스 및 기타 운동 지표를 기록합니다.</li>
+                    <li><strong>업로드:</strong> 원시 운동 데이터가 인터넷 연결을 통해 회사의 서버로 전송됩니다. 보통 운동 직후 자동으로 수행됩니다.</li>
+                    <li><strong>서버 처리:</strong> 클라우드 인프라가 분석 지표(rTSS, CTL/ATL, 훈련 존, 퍼포먼스 트렌드)를 계산합니다.</li>
+                    <li><strong>저장:</strong> 처리된 결과와 원시 데이터는 수동으로 삭제하지 않는 한 회사의 서버에 영구적으로 남아 있습니다.</li>
+                    <li><strong>조회:</strong> 당신은 서버에서 자신의 장치나 웹 브라우저로 데이터를 다시 다운로드하여 확인합니다.</li>
                 </ol>
             </div>
 
-            <p>This architecture offers advantages for companies—centralized data enables social features, cross-device syncing, and machine learning across user populations. But it creates a critical privacy weakness: your data exists outside your control on corporate infrastructure.</p>
+            <p>이 아키텍처는 기업에 유리한 점이 있습니다. 중앙 집중식 데이터는 소셜 기능, 기기간 동기화, 사용자 그룹 전체를 대상으로 한 머신러닝을 가능하게 합니다. 하지만 이는 치명적인 프라이버시
+                취약점을 만듭니다. 당신의 데이터가 기업의 인프라 위에서 당신의 통제를 벗어난 곳에 존재하게 되기 때문입니다.</p>
 
-            <h3>How Local Processing Works</h3>
+            <h3>로컬 처리 작동 방식</h3>
 
-            <p>Privacy-first architecture inverts this model by processing data on your device:</p>
+            <p>프라이버시 우선 아키텍처는 당신의 기기에서 데이터를 처리함으로써 이 모델을 뒤집습니다:</p>
 
             <div class="callout callout-success">
-                <h3>🔒 Local Processing Flow:</h3>
+                <h3>🔒 로컬 처리 흐름:</h3>
                 <ol>
-                    <li><strong>Data Capture:</strong> Workout data recorded locally by Apple Health or imported from GPS watch files</li>
-                    <li><strong>Local Storage:</strong> Data remains on your iPhone in Apple Health database (encrypted when using iCloud with end-to-end encryption enabled)</li>
-                    <li><strong>On-Device Processing:</strong> Running analytics app reads Health data, calculates <a href="/ko/crs/">CRS</a>, <a href="/ko/training-load/">rTSS, CTL/ATL/TSB</a>, <a href="/ko/training-zones/">training zones</a>, and other metrics directly on your iPhone's processor</li>
-                    <li><strong>Local Results:</strong> Calculated metrics stay on your device—no upload required for app functionality</li>
-                    <li><strong>Optional Export:</strong> YOU decide if/when to export data, in what format, and who receives it</li>
+                    <li><strong>데이터 기록:</strong> 운동 데이터는 애플 건강(Apple Health)에 의해 로컬에 기록되거나 GPS 워치 파일에서 가져옵니다.</li>
+                    <li><strong>로컬 저장:</strong> 데이터는 아이폰의 애플 건강 데이터베이스에 남아 있습니다 (종단간 암호화가 활성화된 iCloud를 사용하는 경우 암호화되어
+                        보호됩니다).</li>
+                    <li><strong>온디바이스 처리:</strong> 러닝 분석 앱이 건강 데이터를 읽고, 아이폰의 프로세서에서 직접 <a href="/ko/crs/">CRS</a>, <a
+                            href="/ko/training-load/">rTSS, CTL/ATL/TSB</a>, <a href="/ko/training-zones/">훈련 존</a> 및 기타
+                        지표를 계산합니다.</li>
+                    <li><strong>로컬 결과:</strong> 계산된 지표는 당신의 기기에 머뭅니다. 앱의 기능을 위해 업로드가 필요하지 않습니다.</li>
+                    <li><strong>선택적 내보내기:</strong> 데이터를 언제, 어떤 형식으로 내보낼지, 그리고 누가 그것을 받을지는 오직 당신이 결정합니다.</li>
                 </ol>
             </div>
 
-            <p>This architecture means apps never possess your data—they process information already on your device and store results locally. No upload, no cloud storage, no corporate data possession.</p>
+            <p>이 아키텍처는 앱이 당신의 데이터를 소유하지 않음을 의미합니다. 앱은 이미 기기에 있는 정보를 처리하고 그 결과를 로컬에 저장할 뿐입니다. 업로드도, 클라우드 저장도, 기업의 데이터 점유도
+                없습니다.</p>
 
-            <h3>Benefits of Local Processing</h3>
+            <h3>로컬 처리의 장점</h3>
 
-            <p>Privacy-first architecture provides advantages beyond privacy alone:</p>
+            <p>프라이버시 우선 아키텍처는 프라이버시 그 이상의 장점을 제공합니다:</p>
 
             <div class="application-grid">
                 <div class="application-item">
-                    <h3>🛡️ Security Advantages</h3>
+                    <h3>🛡️ 보안상 이점</h3>
                     <ul>
-                        <li><strong>No Breach Risk:</strong> Data that doesn't reach servers can't be stolen in breaches</li>
-                        <li><strong>No Unauthorized Access:</strong> Company employees can't view your workout history</li>
-                        <li><strong>No Third-Party Sharing:</strong> Apps can't sell data they don't possess</li>
+                        <li><strong>유출 위험 없음:</strong> 서버에 도달하지 않은 데이터는 데이터 브리치로 도난당할 수 없습니다.</li>
+                        <li><strong>무단 액세스 차단:</strong> 회사 직원이라도 당신의 운동 기록을 볼 수 없습니다.</li>
+                        <li><strong>제3자 공유 불가:</strong> 앱이 소유하지 않은 데이터를 판매할 수는 없습니다.</li>
                     </ul>
                 </div>
 
                 <div class="application-item">
-                    <h3>⚡ Performance Benefits</h3>
+                    <h3>⚡ 성능상 이점</h3>
                     <ul>
-                        <li><strong>Instant Processing:</strong> No upload/download delays—calculations happen immediately</li>
-                        <li><strong>Offline Functionality:</strong> Full analytics work without internet connection</li>
-                        <li><strong>No Sync Issues:</strong> Data always available on your device</li>
+                        <li><strong>즉각적인 처리:</strong> 업로드/다운로드 지연 없이 계산이 즉시 이루어집니다.</li>
+                        <li><strong>오프라인 기능:</strong> 인터넷 연결 없이도 모든 분석 기능이 작동합니다.</li>
+                        <li><strong>동기화 문제 없음:</strong> 데이터는 항상 당신의 기기에서 즉시 사용할 수 있습니다.</li>
                     </ul>
                 </div>
 
                 <div class="application-item">
-                    <h3>✅ Control Advantages</h3>
+                    <h3>✅ 통제권 측면의 이점</h3>
                     <ul>
-                        <li><strong>Complete Ownership:</strong> You control deletion, export, and sharing</li>
-                        <li><strong>No Account Lock-in:</strong> Data isn't trapped in proprietary cloud systems</li>
-                        <li><strong>True Privacy:</strong> Not "we promise to protect your data" but "we never have your data"</li>
+                        <li><strong>완전한 소유권:</strong> 삭제, 내보내기 및 공유를 당신이 직접 제어합니다.</li>
+                        <li><strong>계정 종속 없음:</strong> 데이터가 폐쇄적인 대형 클라우드 시스템에 갇히지 않습니다.</li>
+                        <li><strong>진정한 프라이버시:</strong> "데이터를 보호하겠다고 약속합니다"가 아니라 "우리는 당신의 데이터를 아예 가지고 있지 않습니다"라는 원칙을
+                            따릅니다.</li>
                     </ul>
                 </div>
             </div>
 
-            <p>The privacy-first approach shifts the power dynamic: instead of trusting companies to protect your uploaded data, you retain complete control by never relinquishing possession in the first place.</p>
+            <p>프라이버시 우선 방식은 힘의 균형을 바꿉니다. 업로드된 데이터를 보호해달라고 기업을 믿는 대신, 애초에 점유권을 넘기지 않음으로써 당신이 완전한 통제권을 유지하게 됩니다.</p>
 
-            <h2 id="runanalytics-privacy">How Run Analytics Protects Your Privacy</h2>
+            <h2 id="runanalytics-privacy">Run Analytics가 프라이버시를 보호하는 방법</h2>
 
-            <p>Run Analytics implements privacy-first architecture from the ground up. Every design decision prioritizes data protection and user control, making privacy a core feature rather than an afterthought.</p>
+            <p>Run Analytics는 설계 단계부터 프라이버시 우선 아키텍처를 구현했습니다. 모든 설계 결정은 데이터 보호와 사용자 통제권을 최우선으로 하며, 프라이버시를 부가 기능이 아닌 핵심
+                가치로 다룹니다.</p>
 
-            <h3>100% Local Data Processing</h3>
+            <h3>100% 로컬 데이터 처리</h3>
 
-            <p>All running analytics calculations happen on your iPhone:</p>
+            <p>모든 러닝 분석 계산은 당신의 아이폰에서 이루어집니다:</p>
 
             <ul>
-                <li><strong><a href="/ko/crs/">Critical Running Speed (CRS)</a>:</strong> Your aerobic threshold calculations process locally using your test data</li>
-                <li><strong><a href="/ko/training-zones/">Training Zones</a>:</strong> Personalized intensity zones (Zone 1-7) derived from CRS entirely on-device</li>
-                <li><strong><a href="/ko/training-load/">Training Stress Score (rTSS)</a>:</strong> Workout intensity quantification calculated using local CRS reference</li>
-                <li><strong>CTL/ATL/TSB Tracking:</strong> Performance Management Chart metrics (Chronic Training Load, Acute Training Load, Training Stress Balance) computed from your local workout history</li>
-                <li><strong><a href="/ko/running-performance-metrics/">Performance Metrics</a>:</strong> VO2max estimates, pace analytics, and efficiency trends analyzed on your device</li>
-                <li><strong><a href="/ko/running-efficiency-biomechanics/">Biomechanics Analysis</a>:</strong> Stride efficiency, running economy, and form metrics processed locally</li>
+                <li><strong><a href="/ko/crs/">임계 러닝 속도 (CRS)</a>:</strong> 유산소 역치 계산이 당신의 테스트 데이터를 사용하여 로컬에서
+                    처리됩니다.</li>
+                <li><strong><a href="/ko/training-zones/">훈련 존</a>:</strong> CRS에서 파생된 개인별 강도 존(Zone 1-7) 설정이
+                    완전히 온디바이스에서 이루어집니다.</li>
+                <li><strong><a href="/ko/training-load/">러닝 트레이닝 스트레스 점수 (rTSS)</a>:</strong> 로컬 CRS 기준을 사용한 운동
+                    강도 수치화가 기기 내에서 계산됩니다.</li>
+                <li><strong>CTL/ATL/TSB 추적:</strong> 로컬 운동 기록을 바탕으로 한 퍼포먼스 관리 차트(PMC) 지표(만성 훈련 부하, 급성 훈련 부하, 훈련 스트레스
+                    균형)가 컴퓨팅됩니다.</li>
+                <li><strong><a href="/ko/running-performance-metrics/">퍼포먼스 지표</a>:</strong> VO2max 추정치, 페이스 분석
+                    및 효율성 트렌드가 기기에서 분석됩니다.</li>
+                <li><strong><a href="/ko/running-efficiency-biomechanics/">생체역학 분석</a>:</strong> 보폭 효율성, 러닝 경제성
+                    및 자세 지표가 로컬에서 처리됩니다.</li>
             </ul>
 
-            <p>No calculation requires internet connectivity. No data transmits to Run Analytics servers. No external processing infrastructure touches your information.</p>
+            <p>어떤 계산도 인터넷 연결을 필요로 하지 않습니다. 데이터는 Run Analytics 서버로 전송되지 않으며, 외부 프로세싱 인프라가 당신의 정보에 닿을 수 없습니다.</p>
 
-            <h3>No Account Required</h3>
+            <h3>계정 불필요</h3>
 
-            <p>Run Analytics eliminates the entire account infrastructure that creates privacy vulnerabilities:</p>
+            <p>Run Analytics는 프라이버시 취약점을 만드는 계정 시스템 자체를 제거했습니다:</p>
 
             <div class="callout callout-info">
-                <h3>🚫 What We DON'T Require:</h3>
+                <h3>🚫 우리가 요구하지 않는 것:</h3>
                 <ul>
-                    <li><strong>No Registration:</strong> No sign-up forms, no personal information collection</li>
-                    <li><strong>No Email Address:</strong> We never ask for or store your email</li>
-                    <li><strong>No Login:</strong> No passwords to manage or potentially compromise</li>
-                    <li><strong>No Profile:</strong> No public or private profile containing your information</li>
-                    <li><strong>No Username:</strong> Complete anonymity—we don't know who you are</li>
+                    <li><strong>등록 불필요:</strong> 가입 양식도, 개인 정보 수집도 없습니다.</li>
+                    <li><strong>이메일 주소 불필요:</strong> 우리는 당신의 이메일을 묻거나 저장하지 않습니다.</li>
+                    <li><strong>로그인 불필요:</strong> 관리하거나 유출될 위험이 있는 비밀번호가 없습니다.</li>
+                    <li><strong>프로필 없음:</strong> 당신의 정보를 담고 있는 공개 또는 비공개 프로필이 존재하지 않습니다.</li>
+                    <li><strong>사용자 이름 없음:</strong> 완전한 익명성이 보장됩니다. 우리는 당신이 누구인지 알지 못합니다.</li>
                 </ul>
             </div>
 
-            <p>This isn't just convenience—it's a privacy guarantee. Data breaches can't expose your account information when accounts don't exist. Identity theft becomes impossible when you never provided an identity.</p>
+            <p>이는 단순히 편리함을 위한 것이 아닙니다. 프라이버시 보장을 위한 조치입니다. 계정이 존재하지 않으면 데이터 브리치가 발생하더라도 당신의 계정 정보가 노출될 수 없습니다. 정체성을 제공하지
+                않으면 신원 도용 자체가 불가능해집니다.</p>
 
-            <h3>No Third-Party Tracking</h3>
+            <h3>제3자 추적 없음</h3>
 
-            <p>Many "free" apps monetize through tracking SDKs (Software Development Kits) from advertising networks and analytics platforms. These third-party libraries monitor app usage, link activity across apps, and build advertising profiles.</p>
+            <p>많은 "무료" 앱은 광고 네트워크와 분석 플랫폼의 추적 SDK(소프트웨어 개발 키트)를 통해 수익을 창출합니다. 이러한 제3자 라이브러리는 앱 사용을 모니터링하고, 여러 앱 간의 활동을
+                연결하며, 광고 프로필을 구축합니다.</p>
 
-            <p>Run Analytics contains ZERO third-party tracking:</p>
+            <p>Run Analytics에는 제3자 추적이 <strong>전혀</strong> 포함되어 있지 않습니다:</p>
 
             <ul>
-                <li><strong>No Advertising SDKs:</strong> No Facebook Pixel, Google Analytics, or ad network trackers</li>
-                <li><strong>No Behavioral Analytics:</strong> No Mixpanel, Amplitude, or usage tracking services</li>
-                <li><strong>No Crash Reporting Services:</strong> No third-party crash analytics that transmit device info</li>
-                <li><strong>No Social Media Integration:</strong> No "Login with Facebook" or social sharing SDKs</li>
+                <li><strong>광고 SDK 없음:</strong> Facebook Pixel, Google Analytics 또는 광고 네트워크 추적기가 없습니다.</li>
+                <li><strong>행동 분석 없음:</strong> Mixpanel, Amplitude 또는 사용량 추적 서비스가 없습니다.</li>
+                <li><strong>충돌 보고 서비스 없음:</strong> 기기 정보를 전송하는 제3자 오류 분석 서비스가 없습니다.</li>
+                <li><strong>소셜 미디어 연동 없음:</strong> "Facebook으로 로그인"이나 소셜 공유 SDK가 없습니다.</li>
             </ul>
 
-            <p>You can verify this by checking Apple's App Privacy labels for Run Analytics—they show exactly zero data collection categories, a rarity among running apps.</p>
+            <p>애플 앱스토어의 Run Analytics 프라이버시 라벨을 확인하여 이를 검증할 수 있습니다. 데이터 수집 카테고리가 '0'으로 표시되는 것은 러닝 앱 중 매우 드문 사례입니다.</p>
 
-            <h3>End-to-End Encryption for Backups</h3>
+            <h3>백업을 위한 종단간 암호화</h3>
 
-            <p>Your Run Analytics data resides in Apple Health, which offers optional iCloud backup with end-to-end encryption when you enable Advanced Data Protection:</p>
+            <p>Run Analytics 데이터는 애플 건강(Apple Health)에 저장됩니다. 사용자가 '고급 데이터 보호' 기능을 활성화한 경우, iCloud 백업 시 종단간 암호화가 적용됩니다:
+            </p>
 
             <div class="protocol-card">
-                <h3>🔐 Encrypted Backup Flow:</h3>
+                <h3>🔐 암호화된 백업 흐름:</h3>
                 <ol class="protocol-steps">
-                    <li><strong>Local Encryption:</strong> Health data encrypted on your iPhone before transmission</li>
-                    <li><strong>Encrypted Transfer:</strong> Data travels to iCloud over encrypted connection</li>
-                    <li><strong>Encrypted Storage:</strong> iCloud stores encrypted data—Apple cannot decrypt it</li>
-                    <li><strong>Key Control:</strong> Only devices with your credentials can decrypt backups</li>
+                    <li><strong>로컬 암호화:</strong> 전송 전 아이폰에서 건강 데이터가 암호화됩니다.</li>
+                    <li><strong>암호화된 전송:</strong> 암호화된 연결을 통해 데이터가 iCloud로 전달됩니다.</li>
+                    <li><strong>암호화된 저장:</strong> iCloud는 암호화된 데이터를 저장합니다. 애플조차 이를 복호화할 수 없습니다.</li>
+                    <li><strong>키 통제권:</strong> 당신의 인증 정보를 가진 기기만이 백업을 복호화할 수 있습니다.</li>
                 </ol>
             </div>
 
-            <p>This means even if you use iCloud backup for device migration or redundancy, your running analytics remain private—Apple can't access them, and neither can government requests without your device passcode.</p>
+            <p>즉, 기기 변경이나 백업을 위해 iCloud를 사용하더라도 당신의 러닝 분석 데이터는 비공개로 유지됩니다. 애플도 접근할 수 없으며, 당신의 기기 암호 없이는 정부의 요청으로도 데이터를
+                확인할 수 없습니다.</p>
 
-            <h2 id="competitor-comparison">Running Apps Privacy Comparison</h2>
+            <h2 id="competitor-comparison">러닝 앱 프라이버시 비교</h2>
 
-            <p>Not all running apps handle data the same way. Understanding differences between platforms helps you make informed privacy decisions.</p>
+            <p>모든 러닝 앱이 데이터를 동일하게 처리하는 것은 아닙니다. 플랫폼 간의 차이를 이해하면 정보에 입각한 프라이버시 결정을 내리는 데 도움이 됩니다.</p>
 
-            <h3>Strava: Social-First, Privacy-Last</h3>
+            <h3>Strava: 소셜 우선, 프라이버시 후순위</h3>
 
-            <p>Strava pioneered social fitness tracking, but its architecture prioritizes sharing over privacy:</p>
+            <p>Strava는 소셜 피트니스 추적의 선구자이지만, 그 아키텍처는 프라이버시보다 공유를 우선시합니다:</p>
 
             <div class="comparison-table-container">
                 <table class="comparison-table">
                     <tbody>
                         <tr>
-                            <th>Aspect</th>
-                            <th>Strava Approach</th>
-                            <th>Privacy Impact</th>
+                            <th>측면</th>
+                            <th>Strava의 방식</th>
+                            <th>프라이버시 영향</th>
                         </tr>
                         <tr>
-                            <td><strong>Data Processing</strong></td>
-                            <td>100% cloud-based server processing</td>
-                            <td>All workout data uploaded, stored indefinitely</td>
+                            <td><strong>데이터 처리</strong></td>
+                            <td>100% 클라우드 기반 서버 처리</td>
+                            <td>모든 운동 데이터가 업로드되고 영구 저장됨</td>
                         </tr>
                         <tr>
-                            <td><strong>Account Requirement</strong></td>
-                            <td>Mandatory registration with email</td>
-                            <td>Personal information tied to all activities</td>
+                            <td><strong>계정 요구사항</strong></td>
+                            <td>이메일을 통한 필수 가입</td>
+                            <td>개인 정보가 모든 활동과 연결됨</td>
                         </tr>
                         <tr>
-                            <td><strong>Location Data</strong></td>
-                            <td>Full GPS tracks stored on servers</td>
-                            <td>Comprehensive location history accessible to company</td>
+                            <td><strong>위치 데이터</strong></td>
+                            <td>전체 GPS 경로가 서버에 저장됨</td>
+                            <td>회사가 종합적인 위치 기록에 접근 가능</td>
                         </tr>
                         <tr>
-                            <td><strong>Social Features</strong></td>
-                            <td>Default public profiles, activity sharing</td>
-                            <td>Workouts visible to followers; opt-out requires configuration</td>
+                            <td><strong>소셜 기능</strong></td>
+                            <td>기본 설정이 공개 프로필 및 활동 공유</td>
+                            <td>팔로워에게 운동이 노출됨; 비공개 설정 필요</td>
                         </tr>
                         <tr>
-                            <td><strong>Third-Party Sharing</strong></td>
-                            <td>Data shared with partners and aggregated for research</td>
-                            <td>Limited control over downstream data usage</td>
+                            <td><strong>제3자 공유</strong></td>
+                            <td>파트너와 공유 및 연구용으로 집계됨</td>
+                            <td>다운스트림 데이터 사용에 대한 통제가 제한적임</td>
                         </tr>
                         <tr>
-                            <td><strong>Privacy Controls</strong></td>
-                            <td>Privacy zones hide start/end locations</td>
-                            <td>Mitigates but doesn't eliminate location exposure</td>
+                            <td><strong>프라이버시 설정</strong></td>
+                            <td>프라이버시 존으로 시작/종료 위치 숨김</td>
+                            <td>위치 노출을 완화하지만 완전히 제거하지는 못함</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
 
-            <p><strong>Bottom Line:</strong> Strava's social features require centralized cloud infrastructure, making true privacy impossible. While useful for competitive runners wanting social motivation, it's incompatible with privacy-first principles.</p>
+            <p><strong>요약:</strong> Strava의 소셜 기능은 중앙 집중식 클라우드 인프라를 필요로 하므로 진정한 의미의 프라이버시는 불가능합니다. 소셜 동기 부여를 원하는 러너에게는
+                유용하지만, 프라이버시 우선 원칙과는 거리가 있습니다.</p>
 
-            <h3>Garmin Connect: Cloud-Dependent</h3>
+            <h3>Garmin Connect: 클라우드 의존형</h3>
 
-            <p>Garmin provides comprehensive training analytics but relies entirely on cloud processing:</p>
-
-            <ul>
-                <li><strong>Server Dependency:</strong> All advanced analytics (Training Status, Training Load, VO2max trends) require Garmin's cloud platform</li>
-                <li><strong>Account Lock-in:</strong> Historical data stored exclusively on Garmin servers—difficult to export complete history</li>
-                <li><strong>GPS Track Storage:</strong> Every workout's GPS data uploaded and retained</li>
-                <li><strong>Third-Party Integrations:</strong> Garmin Connect shares data with numerous fitness platforms through API connections</li>
-                <li><strong>Limited Privacy Options:</strong> Can set activities to private but data still resides on Garmin infrastructure</li>
-            </ul>
-
-            <p><strong>Bottom Line:</strong> Garmin's ecosystem requires trusting the company with comprehensive workout history. No option for local-only analytics.</p>
-
-            <h3>Runalyze: Server-Based Processing</h3>
-
-            <p>Runalyze offers sophisticated training analytics but uses traditional cloud architecture:</p>
+            <p>Garmin은 종합적인 훈련 분석을 제공하지만 클라우드 처리에 완전히 의존합니다:</p>
 
             <ul>
-                <li><strong>Upload Required:</strong> All workout files (.fit, .tcx, .gpx) must be uploaded to Runalyze servers for analysis</li>
-                <li><strong>Server Storage:</strong> Complete workout database stored on Runalyze infrastructure</li>
-                <li><strong>Open Source Transparency:</strong> Code is open source, allowing privacy verification—a significant advantage</li>
-                <li><strong>Self-Hosting Option:</strong> Advanced users can host their own Runalyze instance for complete data control</li>
-                <li><strong>Limited Third-Party Sharing:</strong> Smaller platform with fewer partnership/data-sharing agreements</li>
+                <li><strong>서버 의존성:</strong> 모든 고급 분석(훈련 상태, 훈련 부하, VO2max 트렌드)을 위해 Garmin의 클라우드 플랫폼이 필요합니다.</li>
+                <li><strong>계정 종속:</strong> 과거 데이터가 Garmin 서버에만 저장되어 있어 전체 기록을 내보내기 어렵습니다.</li>
+                <li><strong>GPS 경로 저장:</strong> 모든 운동의 GPS 데이터가 업로드되고 보관됩니다.</li>
+                <li><strong>제3자 연동:</strong> Garmin Connect는 API 연결을 통해 수많은 피트니스 플랫폼과 데이터를 공유합니다.</li>
+                <li><strong>제한된 프라이버시 옵션:</strong> 활동을 비공개로 설정할 수 있지만 데이터는 여전히 Garmin의 인프라에 존재합니다.</li>
             </ul>
 
-            <p><strong>Bottom Line:</strong> Better privacy than commercial platforms due to open source model and self-hosting option, but standard hosted version still requires data upload.</p>
+            <p><strong>요약:</strong> Garmin 에코시스템을 사용하려면 회사가 당신의 종합적인 운동 기록을 보유하는 것에 동의해야 합니다. 로컬 전용 분석 옵션은 제공되지 않습니다.
+            </p>
 
-            <h3>Run Analytics: Privacy-First by Design</h3>
+            <h3>Runalyze: 서버 기반 처리</h3>
 
-            <p>Run Analytics takes a fundamentally different architectural approach:</p>
+            <p>Runalyze는 정교한 훈련 분석을 제공하지만 전통적인 클라우드 아키텍처를 사용합니다:</p>
+
+            <ul>
+                <li><strong>업로드 필수:</strong> 분석을 위해 모든 운동 파일(.fit, .tcx, .gpx)을 Runalyze 서버에 업로드해야 합니다.</li>
+                <li><strong>서버 저장:</strong> 전체 운동 데이터베이스가 Runalyze 인프라에 저장됩니다.</li>
+                <li><strong>오픈 소스 투명성:</strong> 코드가 오픈 소스로 공개되어 프라이버시 검증이 가능하다는 큰 장점이 있습니다.</li>
+                <li><strong>셀프 호스팅 옵션:</strong> 고급 사용자는 완전한 데이터 통제를 위해 직접 Runalyze 인스턴스를 호스팅할 수 있습니다.</li>
+                <li><strong>제한된 제3자 공유:</strong> 규모가 작은 플랫폼으로 파트너십이나 데이터 공유 계약이 적습니다.</li>
+            </ul>
+
+            <p><strong>요약:</strong> 오픈 소스 모델과 셀프 호스팅 옵션 덕분에 상업적 플랫폼보다는 프라이버시 측면에서 낫지만, 일반적인 호스팅 버전은 여전히 데이터 업로드를 필요로
+                합니다.</p>
+
+            <h3>Run Analytics: 설계부터 프라이버시 우선</h3>
+
+            <p>Run Analytics는 근본적으로 다른 아키텍처 접근 방식을 취합니다:</p>
 
             <div class="callout callout-success">
-                <h3>✅ Run Analytics Privacy Model:</h3>
+                <h3>✅ Run Analytics 프라이버시 모델:</h3>
                 <table class="comparison-table">
                     <tbody>
                         <tr>
-                            <th>Aspect</th>
-                            <th>Run Analytics Approach</th>
-                            <th>Privacy Benefit</th>
+                            <th>측면</th>
+                            <th>Run Analytics의 방식</th>
+                            <th>프라이버시 혜택</th>
                         </tr>
                         <tr class="highlight-row">
-                            <td><strong>Data Processing</strong></td>
-                            <td>100% local on your iPhone</td>
-                            <td>Zero data upload—complete privacy by design</td>
+                            <td><strong>데이터 처리</strong></td>
+                            <td>100% 당신의 아이폰에서 로컬 처리</td>
+                            <td>데이터 업로드 '0'—설계에 의한 완벽한 프라이버시</td>
                         </tr>
                         <tr class="highlight-row">
-                            <td><strong>Account Requirement</strong></td>
-                            <td>None—no registration</td>
-                            <td>Anonymous usage—we don't know who you are</td>
+                            <td><strong>계정 요구사항</strong></td>
+                            <td>없음—가입 절차 없음</td>
+                            <td>익명 사용—우리는 당신이 누구인지 알 수 없음</td>
                         </tr>
                         <tr class="highlight-row">
-                            <td><strong>Location Data</strong></td>
-                            <td>Stays in Apple Health on your device</td>
-                            <td>No location history accessible to anyone but you</td>
+                            <td><strong>위치 데이터</strong></td>
+                            <td>기기 내 애플 건강에만 머무름</td>
+                            <td>당신 외에는 아무도 위치 기록에 접근할 수 없음</td>
                         </tr>
                         <tr class="highlight-row">
-                            <td><strong>Social Features</strong></td>
-                            <td>None—privacy over social</td>
-                            <td>No pressure to share, no public exposure risk</td>
+                            <td><strong>소셜 기능</strong></td>
+                            <td>없음—소셜보다 프라이버시 우선</td>
+                            <td>공유 압박이나 공개 노출 위험이 없음</td>
                         </tr>
                         <tr class="highlight-row">
-                            <td><strong>Third-Party Sharing</strong></td>
-                            <td>Impossible—we don't have your data</td>
-                            <td>Zero third-party access risk</td>
+                            <td><strong>제3자 공유</strong></td>
+                            <td>불가능—우리는 데이터가 없음</td>
+                            <td>제3자 액세스 위험 '0'</td>
                         </tr>
                         <tr class="highlight-row">
-                            <td><strong>Privacy Controls</strong></td>
-                            <td>Complete—you control all data and exports</td>
-                            <td>Total ownership and control</td>
+                            <td><strong>프라이버시 제어</strong></td>
+                            <td>완전함—모든 데이터와 내보내기 제어</td>
+                            <td>완전한 데이터 소유권과 통제권 보장</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
 
-            <p><strong>Bottom Line:</strong> Run Analytics provides advanced training analytics (CRS, rTSS, CTL/ATL/TSB, personalized zones) without requiring any data upload. Privacy and functionality coexist through local processing architecture.</p>
+            <p><strong>요약:</strong> Run Analytics는 어떠한 데이터 업로드 없이도 고급 훈련 분석(CRS, rTSS, CTL/ATL/TSB, 개인화된 존)을 제공합니다. 로컬
+                처리 아키텍처를 통해 프라이버시와 강력한 기능을 동시에 실현했습니다.</p>
 
-            <h2 id="location-privacy">Protecting Your Location Data</h2>
+            <h2 id="location-privacy">위치 데이터 보호</h2>
 
-            <p>GPS tracks from running workouts create comprehensive location histories that reveal sensitive information about your life patterns, making location privacy crucial for runners.</p>
+            <p>러닝 워크아웃의 GPS 경로는 당신의 생활 패턴에 대한 민감한 정보를 노출하는 종합적인 위치 기록을 생성합니다. 따라서 러너에게 위치 프라이버시는 매우 중요합니다.</p>
 
-            <h3>The Risk of GPS Tracking</h3>
+            <h3>GPS 추적의 위험성</h3>
 
-            <p>Every GPS-tracked run creates a detailed location history that exposes:</p>
+            <p>GPS로 추적되는 모든 러닝은 다음을 노출하는 상세한 위치 기록을 생성합니다:</p>
 
             <div class="warning-box">
-                <strong>⚠️ Location Data Reveals:</strong>
+                <strong>⚠️ 위치 데이터가 노출하는 정보:</strong>
                 <ul>
-                    <li><strong>Home Address:</strong> Runs starting from the same location day after day identify where you live</li>
-                    <li><strong>Work Location:</strong> Lunchtime runs or routes starting from work expose employment location</li>
-                    <li><strong>Daily Routines:</strong> Regular routes and timing patterns show predictable behavioral habits</li>
-                    <li><strong>Absence Patterns:</strong> Gaps in home-based runs indicate when you're traveling or away</li>
-                    <li><strong>Social Connections:</strong> Runs with others can expose relationships and meeting locations</li>
-                    <li><strong>Private Locations:</strong> Medical facilities, places of worship, or other sensitive destinations</li>
+                    <li><strong>집 주소:</strong> 매일 같은 장소에서 시작되는 러닝은 당신이 어디에 살고 어디에서 일하는지를 식별합니다.</li>
+                    <li><strong>직장 위치:</strong> 점심 시간 러닝이나 직장에서 시작하는 경로는 직장 위치를 노출합니다.</li>
+                    <li><strong>일상적인 생활 패턴:</strong> 정기적인 경로와 시간 패턴은 예측 가능한 행동 습관을 보여줍니다.</li>
+                    <li><strong>부재 패턴:</strong> 집 근처에서의 러닝 기록이 중단되는 기간은 당신이 여행 중이거나 집을 비웠음을 나타냅니다.</li>
+                    <li><strong>소셜 관계:</strong> 다른 사람과 함께 뛰는 기록은 관계와 만남의 장소를 노출할 수 있습니다.</li>
+                    <li><strong>사적인 장소:</strong> 의료 시설, 종교 시설 또는 기타 민감한 목적지 방문 기록이 노출될 수 있습니다.</li>
                 </ul>
             </div>
 
-            <p>This information creates safety concerns—particularly for runners training alone—and privacy concerns about who has access to comprehensive movement history spanning years.</p>
+            <p>이 정보는 특히 혼자 훈련하는 러너들에게 안전상의 우려를 낳으며, 수년간의 광범위한 이동 경로 데이터에 누가 접근할 수 있는지에 대한 프라이버시 문제를 제기합니다.</p>
 
-            <h3>Privacy Zones and Safety</h3>
+            <h3>프라이버시 존과 안전</h3>
 
-            <p>Some running apps offer "privacy zones" that hide portions of GPS tracks near specified addresses:</p>
+            <p>일부 러닝 앱은 특정 주소 근처의 GPS 경로 일부를 숨기는 "프라이버시 존" 기능을 제공합니다:</p>
 
             <ul>
-                <li><strong>How They Work:</strong> Define circular zones (usually 200-500m radius) around sensitive locations; GPS track hidden within zone radius</li>
-                <li><strong>Limitations:</strong> Only hide data in public displays—full GPS data still uploaded to servers and accessible to company</li>
-                <li><strong>Configuration Burden:</strong> Requires manually identifying and configuring every sensitive location</li>
-                <li><strong>False Security:</strong> Creates impression of privacy while full data remains in cloud storage</li>
+                <li><strong>작동 방식:</strong> 민감한 위치 주변에 일정 반경(보통 200-500m)의 원형 구역을 설정합니다. 공개 지도에서는 해당 반경 내의 GPS 경로가
+                    숨겨집니다.</li>
+                <li><strong>한계:</strong> 오직 공개된 결과 화면에서만 데이터를 숨길 뿐입니다. 전체 GPS 데이터는 여전히 서버에 업로드되어 회사에서 접근할 수 있습니다.</li>
+                <li><strong>설정의 번거로움:</strong> 모든 민감한 위치를 수동으로 식별하고 설정해야 합니다.</li>
+                <li><strong>위장된 보안:</strong> 전체 데이터는 클라우드 저장소에 남아 있음에도 불구하고 프라이버시가 보호되고 있다는 착각을 불러일으킵니다.</li>
             </ul>
 
-            <p>Privacy zones provide partial protection but don't address the fundamental issue: once GPS data uploads to servers, complete location history exists outside your control.</p>
+            <p>프라이버시 존은 부분적인 보호를 제공하지만 근본적인 문제를 해결하지는 못합니다. 일단 GPS 데이터가 서버에 업로드되면, 전체 위치 기록은 당신의 통제 밖에서 존재하게 됩니다.</p>
 
-            <h3>Run Analytics Location Features</h3>
+            <h3>Run Analytics의 위치 정보 기능</h3>
 
-            <p>Run Analytics handles location data through Apple Health integration:</p>
+            <p>Run Analytics는 애플 건강(Apple Health) 연동을 통해 위치 데이터를 처리합니다:</p>
 
             <div class="callout callout-success">
-                <h3>🗺️ Location Privacy Features:</h3>
+                <h3>🗺️ 위치 프라이버시 기능:</h3>
                 <ul>
-                    <li><strong>No GPS Upload:</strong> Location data from workouts stays in Apple Health on your iPhone—never transmitted to Run Analytics servers</li>
-                    <li><strong>Apple Health Protection:</strong> iOS permissions require explicit authorization for app access to Health data</li>
-                    <li><strong>Selective Sharing:</strong> When exporting workout data, YOU choose whether to include GPS tracks or export summary statistics only</li>
-                    <li><strong>Local Route Analysis:</strong> <a href="/ko/training-zones/">Training zone</a> calculations don't require GPS data—use pace/heart rate from Health without location exposure</li>
-                    <li><strong>Complete Control:</strong> Delete workout location data from Apple Health anytime—removals immediately reflect in Run Analytics</li>
+                    <li><strong>GPS 업로드 없음:</strong> 워크아웃의 위치 데이터는 당신의 아이폰 내 애플 건강에만 머뭅니다. Run Analytics 서버로 절대 전송되지
+                        않습니다.</li>
+                    <li><strong>애플 건강 보호:</strong> iOS 권한 시스템은 앱이 건강 데이터에 접근하기 전에 당신의 명확한 승인을 요구합니다.</li>
+                    <li><strong>선택적 공유:</strong> 운동 데이터를 내보낼 때, GPS 경로를 포함할지 아니면 요약 통계만 내보낼지 <strong>당신</strong>이 직접 선택할
+                        수 있습니다.</li>
+                    <li><strong>로컬 경로 분석:</strong> <a href="/ko/training-zones/">훈련 존</a> 계산에는 GPS 데이터가 필수적이지
+                        않습니다. 위치 노출 없이 건강 데이터의 페이스/심박수 정보만 사용할 수 있습니다.</li>
+                    <li><strong>완전한 통제:</strong> 애플 건강에서 운동 위치 데이터를 언제든 삭제할 수 있으며, 삭제 즉시 Run Analytics 결과에도 반영됩니다.</li>
                 </ul>
             </div>
 
-            <p>This architecture means your location history remains under your exclusive control. Want to share a specific workout with your coach? Export just that workout. Want to analyze training trends without revealing routes? Export CSV data without GPS coordinates. Full flexibility, complete control.</p>
+            <p>이 아키텍처는 당신의 위치 기록이 오직 당신의 통제하에 있음을 의미합니다. 특정 워크아웃만 코치와 공유하고 싶으신가요? 해당 운동 데이터만 내보내면 됩니다. 이동 경로는 숨기고 훈련
+                트렌드만 분석하고 싶으신가요? GPS 좌표를 제외한 CSV 데이터를 내보낼 수 있습니다. 완전한 유연성과 완벽한 통제권을 제공합니다.</p>
 
-            <h2 id="gdpr-compliance">GDPR and Your Data Rights</h2>
+            <h2 id="gdpr-compliance">GDPR과 데이터 권리</h2>
 
-            <p>The European Union's General Data Protection Regulation (GDPR) establishes comprehensive data protection rights, and its principles apply globally as other jurisdictions adopt similar privacy laws.</p>
+            <p>유럽 연합의 일반 데이터 보호 규정(GDPR)은 포괄적인 데이터 보호 권리를 확립했으며, 다른 여러 국가에서도 유사한 프라이버시 법을 채택함에 따라 그 원칙이 전 세계적으로 적용되고
+                있습니다.</p>
 
-            <h3>What GDPR Guarantees</h3>
+            <h3>GDPR이 보장하는 권리</h3>
 
-            <p>GDPR grants individuals extensive rights over personal data:</p>
+            <p>GDPR은 개인에게 자신의 데이터에 대한 광범위한 권리를 부여합니다:</p>
 
             <ul>
-                <li><strong>Right to Access:</strong> Companies must provide copies of all data they hold about you</li>
-                <li><strong>Right to Rectification:</strong> Correct inaccurate personal data</li>
-                <li><strong>Right to Erasure ("Right to be Forgotten"):</strong> Require deletion of personal data under certain circumstances</li>
-                <li><strong>Right to Data Portability:</strong> Receive personal data in machine-readable format for transfer to another service</li>
-                <li><strong>Right to Object:</strong> Object to processing for marketing, profiling, or research purposes</li>
-                <li><strong>Right to Restrict Processing:</strong> Limit how companies use your data</li>
+                <li><strong>액세스 권리:</strong> 기업은 보유하고 있는 당신의 모든 데이터 사본을 제공해야 합니다.</li>
+                <li><strong>정정 권리:</strong> 부정확한 개인 정보를 수정할 수 있습니다.</li>
+                <li><strong>삭제 권리 ("잊힐 권리"):</strong> 특정 상황에서 개인 정보의 삭제를 요구할 수 있습니다.</li>
+                <li><strong>데이터 이식성 권리:</strong> 다른 서비스로의 전송을 위해 기계가 읽을 수 있는 형식으로 데이터를 받을 수 있습니다.</li>
+                <li><strong>반대 권리:</strong> 마케팅, 프로파일링 또는 연구 목적으로 데이터가 처리되는 것에 반대할 수 있습니다.</li>
+                <li><strong>처리 제한 권리:</strong> 기업이 당신의 데이터를 사용하는 방식을 제한할 수 있습니다.</li>
             </ul>
 
-            <p>These rights theoretically protect users, but enforcement depends on companies' compliance—and exercising rights often requires navigating complex procedures, waiting weeks for responses, and trusting companies to actually delete data from all systems including backups.</p>
+            <p>이러한 권리들은 이론적으로 사용자를 보호하지만, 실제 집행은 기업의 준수 여부에 달려 있습니다. 또한 권리를 행사하기 위해 복잡한 절차를 거치고 답변을 위해 수주일을 기다려야 하며, 회사가
+                백업을 포함한 모든 시스템에서 데이터를 실제로 삭제했는지를 신뢰해야만 합니다.</p>
 
-            <h3>How Run Analytics Complies</h3>
+            <h3>Run Analytics의 준수 방식</h3>
 
-            <p>Run Analytics achieves complete GDPR compliance through architectural simplicity:</p>
+            <p>Run Analytics는 단순한 아키텍처를 통해 완벽한 GDPR 준수를 실현합니다:</p>
 
             <div class="callout callout-info">
-                <h3>📜 GDPR Compliance Through Privacy-First Design:</h3>
+                <h3>📜 프라이버시 우선 설계를 통한 GDPR 준수:</h3>
                 <ul>
-                    <li><strong>No Data Collection = Complete Compliance:</strong> GDPR regulates processing of personal data—when apps don't collect data, regulations don't apply</li>
-                    <li><strong>No Data Subject Requests Required:</strong> Can't request access to data we don't have; can't request deletion of data we never collected</li>
-                    <li><strong>No Consent Mechanisms:</strong> No need for cookie banners or consent forms when there's no tracking</li>
-                    <li><strong>No Breach Notification Obligations:</strong> Can't breach data we don't possess</li>
-                    <li><strong>No International Transfer Concerns:</strong> Data stays on your device—no cross-border data transfers</li>
+                    <li><strong>데이터 수집 없음 = 완벽한 준수:</strong> GDPR은 '개인 정보의 처리'를 규제합니다. 앱이 데이터를 수집하지 않으면 관련 규제 대상 자체가 되지
+                        않습니다.</li>
+                    <li><strong>데이터 주체 요청 불필요:</strong> 우리에게 없는 데이터에 대한 액세스 요청을 할 수 없으며, 수집하지 않은 데이터의 삭제를 요청할 필요도 없습니다.
+                    </li>
+                    <li><strong>동의 절차 불필요:</strong> 추적 행위가 없으므로 쿠키 배너나 복잡한 동의 양식이 필요하지 않습니다.</li>
+                    <li><strong>침해 통지 의무 없음:</strong> 보유하지 않은 데이터는 유출될 수도 없습니다.</li>
+                    <li><strong>국제 전송 우려 없음:</strong> 데이터가 당신의 기기에만 머무르므로 국가 간 데이터 전송 문제가 발생하지 않습니다.</li>
                 </ul>
             </div>
 
-            <p>This isn't compliance through legal maneuvering—it's compliance through fundamental respect for privacy. The most secure data is data that never gets collected.</p>
+            <p>이는 법적 기술을 통한 준수가 아니라, 프라이버시에 대한 근본적인 존중을 통한 준수입니다. 가장 안전한 데이터는 수집되지 않은 데이터입니다.</p>
 
-            <h3>Exercising Your Rights</h3>
+            <h3>권리 행사</h3>
 
-            <p>With cloud-based running apps, exercising GDPR rights typically requires:</p>
+            <p>클라우드 기반 러닝 앱에서 GDPR 권리를 행사하려면 일반적으로 다음과 같은 과정을 거쳐야 합니다:</p>
 
             <div class="protocol-card">
-                <h3>📋 Typical GDPR Request Process:</h3>
+                <h3>📋 일반적인 GDPR 요청 프로세스:</h3>
                 <ol class="protocol-steps">
-                    <li><strong>Submit Request:</strong> Email privacy team or use account settings to request data access/deletion</li>
-                    <li><strong>Identity Verification:</strong> Provide proof of identity (for security)</li>
-                    <li><strong>Wait Period:</strong> Companies have 30 days to respond (extendable to 90 days)</li>
-                    <li><strong>Review Response:</strong> Receive data export or deletion confirmation</li>
-                    <li><strong>Hope for Actual Compliance:</strong> Trust that company actually deleted data from all systems, backups, and third-party processors</li>
+                    <li><strong>요청 제출:</strong> 프라이버시 팀에 이메일을 보내거나 계정 설정에서 데이터 액세스/삭제를 요청합니다.</li>
+                    <li><strong>본인 확인:</strong> 보안을 위해 신분 증명 서류를 제공합니다.</li>
+                    <li><strong>대기 기간:</strong> 기업은 답변을 위해 30일(최대 90일까지 연장 가능)의 시간을 갖습니다.</li>
+                    <li><strong>답변 검토:</strong> 데이터 내보내기 결과나 삭제 확인을 받습니다.</li>
+                    <li><strong>실제 준수 여부 확신:</strong> 회사가 모든 시스템, 백업 및 제3자 처리업체로부터 데이터를 실제로 삭제했기를 믿어야만 합니다.</li>
                 </ol>
             </div>
 
-            <p>With Run Analytics, you bypass this entire process: your data already resides exclusively on your device. Want to delete everything? Delete the app and your Apple Health workout data. Want to export? Use the app's export function anytime. Want to access historical data? It's all on your iPhone. Immediate, complete control without requesting permission from companies.</p>
+            <p>반면 Run Analytics를 사용하면 이 모든 번거로운 과정을 건너뛸 수 있습니다. 당신의 데이터는 이미 당신의 기기에만 존재합니다. 모든 것을 지우고 싶으신가요? 앱을 삭제하고 애플
+                건강에서 운동 데이터를 지우면 끝입니다. 내보내고 싶으신가요? 언제든 앱의 내보내기 기능을 사용하세요. 과거 기록을 보고 싶으신가요? 모두 당신의 아이폰에 들어 있습니다. 기업의 허락
+                없이도 즉각적이고 완전한 통제가 가능합니다.</p>
 
-            <h2 id="health-data-privacy">Protecting Your Health Information</h2>
+            <h2 id="health-data-privacy">건강 정보 보호</h2>
 
-            <p>Running performance data constitutes health information—heart rate metrics, fitness levels, and training patterns reveal your physical condition. This sensitivity demands special privacy considerations.</p>
+            <p>러닝 퍼포먼스 데이터는 건강 정보를 구성합니다. 심박수 지표, 체력 수준 및 훈련 패턴은 당신의 신체 상태를 직간접적으로 드러냅니다. 이러한 정보의 민감성 때문에 특별한 프라이버시 고려가
+                필요합니다.</p>
 
-            <h3>What Health Data Reveals</h3>
+            <h3>건강 데이터가 드러내는 정보</h3>
 
-            <p>Running analytics expose detailed health information:</p>
+            <p>러닝 분석은 다음과 같은 상세한 건강 정보를 노출할 수 있습니다:</p>
 
             <ul>
-                <li><strong>Cardiovascular Fitness:</strong> Heart rate data, VO2max estimates, and recovery patterns indicate cardiac health</li>
-                <li><strong>Performance Trends:</strong> Declining <a href="/ko/running-performance-metrics/">performance metrics</a> might signal illness, overtraining, or health issues</li>
-                <li><strong>Training Stress:</strong> <a href="/ko/training-load/">CTL/ATL/TSB tracking</a> reveals fatigue levels and recovery capacity</li>
-                <li><strong>Biomechanical Patterns:</strong> Stride asymmetries or efficiency changes might indicate injuries or physical limitations</li>
-                <li><strong>Behavioral Health:</strong> Disrupted training patterns or sudden changes can reflect stress, mental health, or life circumstances</li>
+                <li><strong>심혈관 건강 상태:</strong> 심박수 데이터, VO2max 추정치 및 회복 패턴은 심장 건강 상태를 나타냅니다.</li>
+                <li><strong>퍼포먼스 트렌드:</strong> <a href="/ko/running-performance-metrics/">퍼포먼스 지표</a>의 하락은 질병,
+                    오버트레이닝 또는 기타 건강 문제를 암시할 수 있습니다.</li>
+                <li><strong>훈련 스트레스:</strong> <a href="/ko/training-load/">CTL/ATL/TSB 추적</a>은 피로 수준과 회복 능력을
+                    보여줍니다.</li>
+                <li><strong>생체역학적 패턴:</strong> 보폭의 비대칭이나 효율성 변화는 부상이나 신체적 제약을 나타낼 수 있습니다.</li>
+                <li><strong>행동 건강:</strong> 훈련 패턴의 중단이나 갑작스러운 변화는 스트레스, 정신 건강 또는 일상의 급격한 변화를 반영할 수 있습니다.</li>
             </ul>
 
-            <h3>Insurance and Employment Concerns</h3>
+            <h3>보험 및 고용 관련 우려 사항</h3>
 
-            <p>Health data privacy isn't just about personal comfort—it has practical implications:</p>
+            <p>건강 데이터 프라이버시는 단순히 개인적인 심리적 안락함의 문제가 아니라 실제적인 영향을 미칩니다:</p>
 
             <div class="warning-box">
-                <strong>⚠️ Real-World Concerns:</strong>
+                <strong>⚠️ 현실적인 우려 사항:</strong>
                 <ul>
-                    <li><strong>Insurance Discrimination:</strong> Health insurers increasingly seek fitness data for "wellness programs." Poor fitness metrics could theoretically influence premiums or coverage decisions</li>
-                    <li><strong>Employment Screening:</strong> Some employers use fitness criteria for certain positions. Comprehensive health data could inform hiring decisions</li>
-                    <li><strong>Life Insurance Underwriting:</strong> Life insurance companies may request fitness tracking data during application process. Declining to share could trigger higher premiums</li>
-                    <li><strong>Medical Privacy:</strong> Running data showing sudden performance declines could reveal medical conditions you prefer to keep private</li>
-                    <li><strong>Legal Discovery:</strong> In litigation, opposing counsel may subpoena fitness app data to challenge injury claims or establish activity patterns</li>
+                    <li><strong>보험 차별:</strong> 건강 보험사들은 점점 더 "웰니스 프로그램"을 위해 피트니스 데이터를 요구하고 있습니다. 낮은 체력 지표는 이론적으로 보험료나
+                        보장 범위 결정에 영향을 미칠 수 있습니다.</li>
+                    <li><strong>채용 심사:</strong> 일부 고용주는 특정 직무에 대해 체력 기준을 적용합니다. 종합적인 건강 데이터는 채용 결정에 영향을 미칠 잠재적 위험이 있습니다.
+                    </li>
+                    <li><strong>생명보험 인수 심사:</strong> 생명보험사는 가입 과정에서 피트니스 추적 데이터 공유를 요청할 수 있습니다. 공유를 거부할 경우 보험료가 높아질 수도
+                        있습니다.</li>
+                    <li><strong>의료 프라이버시:</strong> 갑작스러운 기록 저하를 보여주는 러닝 데이터는 당신이 비공개로 유지하고 싶은 의료적 상태를 드러낼 수 있습니다.</li>
+                    <li><strong>법적 증거 개시:</strong> 소송 과정에서 상대측 변호인이 부상 주장을 반박하거나 활동 패턴을 확인하기 위해 피트니스 앱 데이터를 소환할 수 있습니다.
+                    </li>
                 </ul>
             </div>
 
-            <p>These scenarios aren't hypothetical—they're emerging realities as fitness tracking becomes ubiquitous and data-hungry industries seek any advantage.</p>
+            <p>이러한 시나리오는 가상의 이야기가 아닙니다. 피트니스 추적이 일상화되고 데이터에 굶주린 산업들이 조금이라도 유리한 고지를 점하려 함에 따라 나타나고 있는 현실입니다.</p>
 
-            <h3>Run Analytics Health Data Handling</h3>
+            <h3>Run Analytics의 건강 데이터 처리 방식</h3>
 
-            <p>Run Analytics protects health information through Apple Health integration and local processing:</p>
+            <p>Run Analytics는 애플 건강(Apple Health) 연동과 로컬 처리를 통해 건강 정보를 보호합니다:</p>
 
             <div class="callout callout-success">
-                <h3>💚 Health Data Protection:</h3>
+                <h3>💚 건강 데이터 보호 조치:</h3>
                 <ul>
-                    <li><strong>Apple HealthKit Framework:</strong> All health data accessed through Apple's secure Health framework with strict privacy controls</li>
-                    <li><strong>Granular Permissions:</strong> iOS requires explicit authorization for each data type (workouts, heart rate, etc.)—you control exactly what Run Analytics can access</li>
-                    <li><strong>Local Processing Only:</strong> Heart rate analysis, performance calculations, and health trends computed on-device</li>
-                    <li><strong>No Health Data Transmission:</strong> Your heart rate, VO2max estimates, and fitness metrics never leave your iPhone</li>
-                    <li><strong>Immediate Deletion:</strong> Remove app access to Health data anytime in iOS Settings—instantly revokes all access</li>
-                    <li><strong>Encrypted iCloud Backup:</strong> When using Advanced Data Protection, Health data backs up with end-to-end encryption</li>
+                    <li><strong>애플 HealthKit 프레임워크:</strong> 엄격한 프라이버시 제어 기능을 갖춘 애플의 보안 HealthKit 프레임워크를 통해 모든 건강 데이터에
+                        접근합니다.</li>
+                    <li><strong>세분화된 권한:</strong> iOS는 각 데이터 유형(운동, 심박수 등)에 대해 명확한 승인을 요구하며, 당신은 Run Analytics가 무엇에 접근할
+                        수 있는지 정확히 제어할 수 있습니다.</li>
+                    <li><strong>로컬 전용 처리:</strong> 심박수 분석, 퍼포먼스 계산 및 건강 트렌드 분석이 모두 온디바이스에서 이루어집니다.</li>
+                    <li><strong>건강 데이터 전송 없음:</strong> 심박수, VO2max 추정치 및 체력 지표는 당신의 아이폰을 절대 떠나지 않습니다.</li>
+                    <li><strong>즉각적인 권한 철회:</strong> iOS 설정에서 언제든지 앱의 건강 데이터 접근 권한을 제거할 수 있으며, 즉시 모든 접근이 차단됩니다.</li>
+                    <li><strong>암호화된 iCloud 백업:</strong> 고급 데이터 보호 기능을 사용할 때 건강 데이터는 종단간 암호화되어 백업됩니다.</li>
                 </ul>
             </div>
 
-            <p>This approach means your health information remains under the same strict privacy protections Apple applies to all Health data—with no additional exposure to third-party running app companies.</p>
+            <p>이러한 방식을 통해 당신의 건강 정보는 애플이 모든 건강 데이터에 적용하는 동일한 엄격한 프라이버시 보호를 받게 되며, 제3자 러닝 앱 회사에 정보를 추가로 노출할 위협이 없습니다.</p>
 
-            <h2 id="anonymous-analytics">Anonymous Running Analytics</h2>
+            <h2 id="anonymous-analytics">익명 러닝 분석</h2>
 
-            <p>True anonymity in running analytics requires eliminating all personal identifiers from the data collection and processing chain. Run Analytics achieves this through its no-account architecture.</p>
+            <p>러닝 분석에서 진정한 익명성을 보장하려면 데이터 수집 및 처리 과정 전체에서 개인 식별자를 제거해야 합니다. Run Analytics는 계정이 없는 아키텍처를 통해 이를 실현합니다.</p>
 
-            <h3>No Account, No Profile</h3>
+            <h3>계정 및 프로필 부재</h3>
 
-            <p>Most running apps begin with registration—creating an account that ties all future activity to your identity. Run Analytics eliminates this entirely:</p>
-
-            <ul>
-                <li><strong>Zero Registration:</strong> Download from App Store and start using immediately—no forms, no signup process</li>
-                <li><strong>No Personal Information:</strong> App never asks for name, email, date of birth, gender, or any identifying information</li>
-                <li><strong>No User ID:</strong> No internal user identification number linking data across sessions</li>
-                <li><strong>No Tracking Tokens:</strong> No device fingerprinting or unique identifiers for usage tracking</li>
-            </ul>
-
-            <h3>No Email Required</h3>
-
-            <p>Email addresses create permanent links between your identity and app usage. They enable:</p>
+            <p>대부분의 러닝 앱은 가입 절차부터 시작하며, 모든 활동을 당신의 신원과 연결하는 계정을 생성합니다. Run Analytics는 이를 완전히 제거했습니다:</p>
 
             <ul>
-                <li><strong>Cross-Platform Tracking:</strong> Email addresses link activity across apps and websites through advertising networks</li>
-                <li><strong>Data Broker Matching:</strong> Data brokers buy email-associated data to enrich profiles</li>
-                <li><strong>Marketing Lists:</strong> Email lists get sold, shared, or leaked to third parties</li>
-                <li><strong>Breach Exposure:</strong> Data breaches expose email addresses alongside workout data</li>
+                <li><strong>가입 불필요:</strong> 앱스토어에서 다운로드 후 즉시 사용을 시작할 수 있습니다. 양식도, 가입 절차도 없습니다.</li>
+                <li><strong>개인 정보 불필요:</strong> 앱은 이름, 이메일, 생년월일, 성별 또는 어떤 식별 정보도 묻지 않습니다.</li>
+                <li><strong>사용자 ID 없음:</strong> 세션 간 데이터를 연결하는 내부 사용자 식별 번호가 존재하지 않습니다.</li>
+                <li><strong>추적 토큰 없음:</strong> 사용량 추적을 위한 기기 핑거프린팅이나 고유 식별자를 사용하지 않습니다.</li>
             </ul>
 
-            <p>Run Analytics never requests email addresses—creating no identity linkage, no marketing lists, and no breach exposure risk.</p>
+            <p>당신이 앱을 사용할 때, 우리는 당신이 누구인지, 어디에 있는지, 얼마나 자주 뛰는지 알 수 있는 방법이 없습니다. 당신은 단지 우리 앱의 사본을 실행 중인 익명의 사용자일 뿐입니다.
+            </p>
 
-            <h3>Complete Anonymity</h3>
+            <h3>로컬 영구 저장 및 오프라인 기능</h3>
 
-            <p>The combination of no accounts, no tracking, and local processing creates genuine anonymity:</p>
+            <p>익명성은 데이터가 흐르는 방식과도 깊은 관련이 있습니다. Run Analytics는 오프라인 우선(Offline-First) 방식으로 작동합니다:</p>
 
             <div class="callout callout-info">
-                <h3>👤 Anonymous Usage Guarantees:</h3>
+                <h3>🔌 오프라인 분석 엔진:</h3>
                 <ul>
-                    <li><strong>We Don't Know You:</strong> Run Analytics has no idea who uses the app—no names, emails, or identifiers</li>
-                    <li><strong>Can't Build Profiles:</strong> Without user IDs, we can't create usage profiles or track behavior over time</li>
-                    <li><strong>Can't Be Hacked:</strong> Hackers can't steal data that doesn't exist on company servers</li>
-                    <li><strong>Can't Be Subpoenaed:</strong> Government or legal requests for user data return empty results—we don't have it</li>
-                    <li><strong>Can't Change Our Mind:</strong> Even if business practices changed, historical data doesn't exist to exploit</li>
+                    <li><strong>오프라인 계산:</strong> <a href="/ko/formulas/">모든 공식 (rTSS, CRS 등)</a>은 아이폰 내에서 로컬로
+                        연산됩니다. 인터넷 연결이 필요하지 않습니다.</li>
+                    <li><strong>로컬 저장:</strong> 과거 분석 결과와 훈련 트렌드는 기기 내부 데이터베이스에만 저장됩니다.</li>
+                    <li><strong>동기화 없음:</strong> 클라우드 서버와 데이터를 동기화하는 백그라운드 프로세스가 없습니다.</li>
+                    <li><strong>수동 내보내기:</strong> 데이터를 백업하거나 공유하고 싶다면, 시스템 수준의 공유 시트를 통해 <strong>당신</strong>이 직접 전송을
+                        실행해야 합니다.</li>
                 </ul>
             </div>
 
-            <p>This isn't anonymity through "we won't link data to you"—it's structural anonymity through "we can't link data to you because we don't have any."</p>
+            <p>데이터가 결코 당신의 기기를 떠나지 않으므로, 익명성은 정책적으로 '약속'되는 것이 아니라 기술적으로 '강제'됩니다.</p>
 
-            <h2 id="privacy-future">The Future of Privacy-First Fitness</h2>
+            <h3>투명성을 통한 검증</h3>
 
-            <p>Privacy-first running analytics represents an emerging trend as users become aware of data collection practices and demand alternatives that respect personal information.</p>
-
-            <h3>Growing User Awareness</h3>
-
-            <p>Multiple factors drive increasing privacy consciousness:</p>
+            <p>우리는 단순히 익명이라고 주장하는 대신, 사용자가 이를 직접 검증할 수 있는 환경을 제공합니다:</p>
 
             <ul>
-                <li><strong>High-Profile Breaches:</strong> Regular fitness app data breaches raise awareness of cloud storage risks</li>
-                <li><strong>GDPR Education:</strong> European privacy regulations have educated global user base about data rights</li>
-                <li><strong>Tracking Concerns:</strong> Growing awareness of how personal data fuels advertising and surveillance</li>
-                <li><strong>Social Media Fatigue:</strong> Users increasingly question whether constant data sharing serves their interests</li>
-                <li><strong>Generational Shift:</strong> Younger users show more skepticism toward data collection practices</li>
+                <li><strong>공개된 방법론:</strong> 우리의 <a href="/ko/research/">연구 기반</a>과 계산 공식은 투명하게 공개되어 있습니다. 검증을
+                    위해 데이터를 우리 서버로 보낼 필요가 없습니다.</li>
+                <li><strong>표준 파일 형식:</strong> 데이터 내보내기는 .FIT 및 .CSV와 같은 표준 형식을 사용하므로, 어떤 데이터가 포함되어 있는지 직접 확인할 수 있습니다.
+                </li>
+                <li><strong>로컬 디버깅:</strong> 앱 내의 모든 도구는 로컬에서 작동하므로, 기술적인 지식이 있는 사용자라면 네트워크 트래픽을 모니터링하여 데이터 전송이 발생하지 않음을
+                    확인할 수 있습니다.</li>
+                <li><strong>익명 지원 프로세스:</strong> 지원이 필요한 경우에도 개인 정보를 제공할 필요가 없습니다. 기술적인 문제 해결을 위해 익명화된 로그만 공유하면 됩니다.
+                </li>
             </ul>
 
-            <h3>Apple's Privacy Leadership</h3>
+            <p>이러한 투명성은 신뢰의 기초가 됩니다. 우리는 당신이 우리를 믿어주기를 바라지 않습니다. 대신 우리가 당신의 데이터를 가질 수 없도록 설계된 시스템을 확인하시기 바랍니다.</p>
 
-            <p>Apple's privacy initiatives create infrastructure for privacy-first apps:</p>
+            <p>이것은 "데이터를 당신과 연결하지 않겠다"는 정책적 약속을 통한 익명성이 아닙니다. "데이터 자체가 없기 때문에 당신과 연결하는 것이 불가능하다"는 아키텍처 구조를 통한 익명성입니다.
+            </p>
 
-            <div class="application-grid">
-                <div class="application-item">
-                    <h3>🍎 Apple Privacy Features</h3>
-                    <ul>
-                        <li><strong>App Privacy Labels:</strong> App Store nutrition labels show exactly what data apps collect</li>
-                        <li><strong>App Tracking Transparency:</strong> iOS requires explicit permission for cross-app tracking</li>
-                        <li><strong>Privacy Reports:</strong> Shows which apps access sensitive data and how frequently</li>
-                    </ul>
-                </div>
 
-                <div class="application-item">
-                    <h3>🔐 Platform Capabilities</h3>
-                    <ul>
-                        <li><strong>On-Device Processing:</strong> Neural Engine enables sophisticated local machine learning</li>
-                        <li><strong>HealthKit Security:</strong> Strict Health data access controls and encryption</li>
-                        <li><strong>Advanced Data Protection:</strong> End-to-end encryption for iCloud backups</li>
-                    </ul>
-                </div>
-
-                <div class="application-item">
-                    <h3>📱 Ecosystem Benefits</h3>
-                    <ul>
-                        <li><strong>Developer Tools:</strong> APIs enabling privacy-first app development</li>
-                        <li><strong>User Expectations:</strong> iOS users increasingly expect privacy-respecting apps</li>
-                        <li><strong>Competitive Advantage:</strong> Privacy becomes differentiator in App Store</li>
-                    </ul>
-                </div>
-            </div>
-
-            <p>This ecosystem evolution makes privacy-first running analytics not just possible but increasingly expected by iOS users who understand the platform's privacy commitments.</p>
-
-            <h3>Regulatory Trends</h3>
-
-            <p>Privacy regulations continue expanding globally:</p>
-
-            <ul>
-                <li><strong>GDPR (EU):</strong> Established gold standard for data protection, influencing global regulations</li>
-                <li><strong>CCPA/CPRA (California):</strong> California Consumer Privacy Act grants data rights to California residents</li>
-                <li><strong>LGPD (Brazil):</strong> Brazilian General Data Protection Law mirrors GDPR principles</li>
-                <li><strong>PIPEDA (Canada):</strong> Personal Information Protection and Electronic Documents Act</li>
-                <li><strong>Emerging Legislation:</strong> Dozens of countries and U.S. states considering comprehensive privacy laws</li>
-            </ul>
-
-            <p>Regulatory pressure incentivizes privacy-first design: apps that don't collect data face zero compliance burden compared to cloud-based alternatives navigating complex multi-jurisdiction requirements.</p>
-
-            <h2 id="privacy-faqs">Common Privacy Questions</h2>
-
-            <h3>How accurate are local analytics without cloud AI?</h3>
-
-            <p><strong>Accuracy depends on methodology, not location.</strong> Cloud-based apps don't inherently provide better accuracy—they simply process data on remote servers instead of your device. Run Analytics uses the same scientifically validated formulas for <a href="/ko/crs/">CRS</a>, <a href="/ko/training-load/">rTSS</a>, and <a href="/ko/training-zones/">training zones</a> as cloud platforms. The calculations are identical; they just run on your iPhone's processor. Modern iPhones deliver more computing power than entire server farms from a decade ago—local processing provides instant results without accuracy compromise.</p>
-
-            <h3>Can I share workouts privately with my coach?</h3>
-
-            <p><strong>Yes—YOU control sharing.</strong> Run Analytics provides flexible export options: export individual workouts or date ranges in JSON, CSV, HTML, or PDF formats. Send exported files to your coach via email, messaging apps, or cloud storage of your choice. Unlike cloud platforms where data automatically syncs to servers, you decide exactly what to share, when to share it, and who receives it. Your coach gets the workout data they need for analysis without gaining permanent access to your entire training history.</p>
-
-            <h3>What about backups if I lose my device?</h3>
-
-            <p><strong>Use iCloud Health backup with Advanced Data Protection.</strong> Apple Health backs up to iCloud when enabled, providing device migration and recovery. Enabling Advanced Data Protection adds end-to-end encryption—Apple can't decrypt your health data, only your authenticated devices can access it. When you set up a new iPhone and restore from iCloud backup, all your Health data (including workout history used by Run Analytics) transfers automatically. This provides redundancy without exposing data to third parties.</p>
-
-            <h3>What happens if I lose my device?</h3>
-
-            <p><strong>Standard iOS security protects your data.</strong> iPhones encrypt all data, including Health information. If you lose your device: (1) Remotely wipe it using Find My iPhone to completely erase data, or (2) The device remains locked with your passcode—data inaccessible to unauthorized users. If you had iCloud Health backup enabled, your new device restores all workout data. Without backup, data is lost—but that's the privacy tradeoff: complete control means complete responsibility. Consider enabling encrypted iCloud backups for redundancy.</p>
-
-            <h3>Can I export data for external analysis?</h3>
-
-            <p><strong>Yes—multiple format options.</strong> Run Analytics provides four export formats: (1) <strong>JSON</strong> for programmatic analysis and developer tools, (2) <strong>CSV</strong> for spreadsheet analysis in Excel/Numbers/Google Sheets, (3) <strong>HTML</strong> for readable reports with charts, and (4) <strong>PDF</strong> for coach sharing or printing. Choose specific date ranges, select which metrics to include, and export via iOS share sheet to any destination. Your data remains portable—no proprietary formats, no export restrictions, complete flexibility for whatever analysis tools you prefer.</p>
-
-            <h2 id="conclusion">Conclusion: Privacy Without Compromise</h2>
-
-            <p>Training smart doesn't require sacrificing privacy. Modern iPhone capabilities enable sophisticated running analytics through local data processing—delivering the same advanced metrics as cloud-based platforms while keeping your sensitive information under your exclusive control.</p>
-
-            <div class="callout callout-success">
-                <h3>✅ Privacy-First Running Analytics Benefits:</h3>
+            <div class="application-item">
+                <h3>📱 에코시스템의 혜택</h3>
                 <ul>
-                    <li><strong>Complete Privacy:</strong> Your workout data, GPS tracks, heart rate metrics, and performance trends never leave your device</li>
-                    <li><strong>Full Functionality:</strong> <a href="/ko/crs/">CRS testing</a>, <a href="/ko/training-zones/">personalized training zones</a>, <a href="/ko/training-load/">rTSS/CTL/ATL/TSB tracking</a>, and comprehensive analytics—all processed locally</li>
-                    <li><strong>Zero Accounts:</strong> No registration, no email, no passwords—start using immediately with complete anonymity</li>
-                    <li><strong>Your Control:</strong> Decide what to export, when to share it, and who receives it—complete data ownership</li>
-                    <li><strong>GDPR Compliant:</strong> Perfect compliance through privacy-first architecture—we can't violate regulations on data we don't collect</li>
-                    <li><strong>Apple Integration:</strong> Leverages iOS privacy features including HealthKit security and encrypted backups</li>
+                    <li><strong>개발 도구:</strong> 프라이버시 우선 앱 개발을 가능하게 하는 애플의 최신 API를 활용합니다.</li>
+                    <li><strong>사용자 기대치:</strong> iOS 사용자들은 플랫폼의 프라이버시 약속을 이해하며, 이를 존중하는 앱을 기대합니다.</li>
+                    <li><strong>경쟁 우위:</strong> 프라이버시는 앱스토어에서 다른 앱들과 차별화되는 핵심 요소입니다.</li>
                 </ul>
             </div>
+    </div>
 
-            <p>The choice between privacy and performance is false. Run Analytics proves you can have both: scientifically validated training metrics calculated with complete privacy protection. Your data, your device, your choice.</p>
-        </article>
+    <p>이러한 에코시스템의 진화는 프라이버시 우선 러닝 분석을 가능하게 할 뿐만 아니라, 플랫폼의 프라이버시 가치를 이해하는 iOS 사용자들에게 필수적인 요구 사항이 되고 있습니다.</p>
+
+    <h3>규제 트렌드</h3>
+
+    <p>프라이버시 규제는 전 세계적으로 계속 확장되고 있습니다:</p>
+
+    <ul>
+        <li><strong>GDPR (유럽 연합):</strong> 데이터 보호의 표준을 세웠으며, 전 세계 규제에 영향을 주고 있습니다.</li>
+        <li><strong>CCPA/CPRA (캘리포니아):</strong> 캘리포니아 주민에게 데이터 권리를 부여하는 소비자 프라이버시 법입니다.</li>
+        <li><strong>LGPD (브라질):</strong> GDPR 원칙을 반영한 브라질의 일반 데이터 보호법입니다.</li>
+        <li><strong>PIPEDA (캐나다):</strong> 개인 정보 보호 및 전자 문서에 관한 법률입니다.</li>
+        <li><strong>신흥 법안:</strong> 수많은 국가와 미국 주들이 포괄적인 프라이버시 법 도입을 검토 중입니다.</li>
+    </ul>
+
+    <p>이러한 규제 압력은 프라이버시 우선 설계를 장려합니다. 데이터를 수집하지 않는 앱은 복잡한 다국가 규제를 탐색해야 하는 클라우드 기반 앱과 달리 규제 준수 부담이 전혀 없습니다.</p>
+
+    <h2 id="privacy-faqs">일반적인 프라이버시 질문</h2>
+
+    <h3>클라우드 AI 없이 로컬 분석이 얼마나 정확한가요?</h3>
+
+    <p><strong>정확도는 분석 위치가 아닌 방법론에 달려 있습니다.</strong> 클라우드 기반 앱이 본질적으로 더 정확한 것은 아닙니다. 그들은 단지 당신의 기기 대신 원격 서버에서 데이터를 처리할
+        뿐입니다. Run Analytics는 클라우드 플랫폼과 동일하게 과학적으로 검증된 <a href="/ko/crs/">CRS</a>, <a
+            href="/ko/training-load/">rTSS</a> 및 <a href="/ko/training-zones/">훈련 존</a> 공식을 사용합니다. 계산
+        수식은 동일하며, 단지 당신의 아이폰 프로세서에서 실행될 뿐입니다. 현대의 아이폰은 10년 전의 서버 팜 전체보다 더 강력한 컴퓨팅 파워를 제공하므로, 로컬 처리는 정확도의 타협 없이 즉각적인 결과를
+        제공합니다.</p>
+
+    <h3>코치와 운동 정보를 비공개로 공유할 수 있나요?</h3>
+
+    <p><strong>네, 당신이 공유를 제어합니다.</strong> Run Analytics는 유연한 내보내기 옵션을 제공합니다. 개별 운동이나 특정 날짜 범위를 JSON, CSV, HTML 또는 PDF
+        형식으로 내보낼 수 있습니다. 내보낸 파일을 이메일, 메시지 앱 또는 원하는 클라우드 저장소를 통해 코치에게 보내세요. 데이터가 서버로 자동 동기화되는 클라우드 플랫폼과 달리, 당신이 무엇을, 언제,
+        누구와 공유할지 직접 결정합니다. 코치는 분석에 필요한 운동 데이터만 받게 되며, 당신의 전체 훈련 기록에 대한 영구적인 접근 권한을 갖지는 않습니다.</p>
+
+    <h3>기기를 분실했을 때 백업은 어떻게 되나요?</h3>
+
+    <p><strong>고급 데이터 보호 기능이 활성화된 iCloud 건강 백업을 사용하세요.</strong> 애플 건강은 활성화된 경우 iCloud에 백업되어 기기 이동 및 복구를 지원합니다. '고급 데이터
+        보호' 기능을 켜면 종단간 암호화가 추가됩니다. 애플도 당신의 건강 데이터를 복호화할 수 없으며, 당신의 인증된 기기만 접근할 수 있습니다. 새 아이폰을 설정하고 iCloud 백업에서 복원하면 Run
+        Analytics에서 사용하는 운동 기록을 포함한 모든 건강 데이터가 자동으로 전송됩니다. 이는 제3자에게 데이터를 노출하지 않고도 데이터 중복성을 제공합니다.</p>
+
+    <h3>기기를 분실하면 어떻게 되나요?</h3>
+
+    <p><strong>표준 iOS 보안 기능이 데이터를 보호합니다.</strong> 아이폰은 건강 정보를 포함한 모든 데이터를 암호화합니다. 기기를 분실한 경우: (1) '나의 iPhone 찾기'를 사용하여
+        데이터를 완전히 삭제하거나, (2) 기기가 패스코드(비밀번호)로 잠겨 있어 승인되지 않은 사용자는 데이터에 접근할 수 없습니다. iCloud 건강 백업을 활성화했다면 새 기기에서 모든 운동 데이터를
+        복구할 수 있습니다. 백업이 없다면 데이터가 유실되지만, 이것이 프라이버시의 장단점입니다. 완전한 통제권은 완전한 책임을 의미합니다. 중복성을 위해 암호화된 iCloud 백업을 활성화하는 것을
+        권장합니다.</p>
+
+    <h3>외부 분석을 위해 데이터를 내보낼 수 있나요?</h3>
+
+    <p><strong>네, 다양한 형식 옵션이 제공됩니다.</strong> Run Analytics는 네 가지 내보내기 형식을 지원합니다: (1) <strong>JSON</strong> (프로그래밍 분석 및
+        개발자 도구용), (2) <strong>CSV</strong> (Excel/Numbers/Google Sheets 스프레드시트 분석용), (3) <strong>HTML</strong> (차트가 포함된
+        읽기 쉬운 보고서용), (4) <strong>PDF</strong> (코치 공유 또는 인쇄용). 특정 날짜 범위를 선택하고 포함할 지표를 정한 뒤, iOS 공유 시트를 통해 원하는 곳으로 내보내세요.
+        당신의 데이터는 폐쇄적인 형식이나 내보내기 제한 없이 당신이 선호하는 어떤 분석 도구와도 완벽하게 호환됩니다.</p>
+
+    <h2 id="conclusion">결론: 타협 없는 프라이버시</h2>
+
+    <p>스마트한 훈련을 위해 프라이버시를 희생할 필요는 없습니다. 현대의 아이폰은 로컬 데이터 처리를 통해 정교한 러닝 분석을 수행할 수 있는 충분한 능력을 갖추고 있습니다. Run Analytics는 클라우드
+        기반 플랫폼과 동일한 수준의 고급 지표를 제공하면서도, 당신의 민감한 정보를 당신의 독점적인 통제 하에 안전하게 유지합니다.</p>
+
+    <div class="callout callout-success">
+        <h3>✅ 프라이버시 우선 러닝 분석의 혜택:</h3>
+        <ul>
+            <li><strong>완벽한 프라이버시:</strong> 운동 데이터, GPS 경로, 심박수 지표 및 퍼포먼스 트렌드가 당신의 기기를 절대 떠나지 않습니다.</li>
+            <li><strong>모든 기능 제공:</strong> <a href="/ko/crs/">CRS 테스트</a>, <a
+                    href="/ko/training-zones/">개인별 훈련 존</a>, <a
+                    href="/ko/training-load/">rTSS/CTL/ATL/TSB 추적</a> 등 모든 분석이 로컬에서 처리됩니다.</li>
+            <li><strong>계정 필요 없음:</strong> 가입도, 이메일도, 비밀번호도 필요 없습니다. 완전한 익명성으로 즉시 사용을 시작하세요.</li>
+            <li><strong>당신의 통제:</strong> 무엇을 내보낼지, 언제 공유할지, 누구에게 보낼지 직접 결정하세요. 완전한 데이터 소유권이 보장됩니다.</li>
+            <li><strong>GDPR 준수:</strong> 프라이버시 우선 아키텍처를 통한 완벽한 규제 준수 — 우리는 수집하지 않는 데이터로 규정을 위반할 수 없습니다.</li>
+            <li><strong>애플 에코시스템 통합:</strong> HealthKit 보안 및 암호화된 백업을 포함한 iOS의 강력한 프라이버시 기능을 활용합니다.</li>
+        </ul>
+    </div>
+
+    <p>프라이버시와 퍼포먼스 중 하나를 선택해야 한다는 것은 잘못된 믿음입니다. Run Analytics는 완벽한 프라이버시 보호 하에서도 과학적으로 검증된 훈련 지표를 얻을 수 있음을 증명합니다. 당신의
+        데이터, 당신의 기기, 당신의 선택입니다.</p>
+    </article>
     </div>
 </section>
 
 <section class="section section-alt">
     <div class="container container-narrow">
-        <h2>Privacy FAQs</h2>
+        <h2>프라이버시 FAQ</h2>
 
         <div class="faq-section" itemscope itemtype="https://schema.org/FAQPage">
             <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">Is Run Analytics really private?</h3>
+                <h3 itemprop="name">Run Analytics는 정말 프라이버시가 보장되나요?</h3>
                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                     <div itemprop="text">
-                        <p>Yes—100% private through architectural design. Run Analytics processes all data locally on your iPhone, never uploading workout information, GPS tracks, or health metrics to external servers. The app requires no account, collects no personal information, and contains zero third-party tracking SDKs. You can verify this by checking Apple's App Privacy labels, which show zero data collection categories. This isn't privacy through trust ("we promise to protect your data")—it's privacy through architecture ("we never have your data").</p>
+                        <p>네, 설계 단계부터 100% 프라이버시가 보장됩니다. Run Analytics는 모든 데이터를 아이폰 내에서 로컬로 처리하며, 운동 정보, GPS 경로 또는 건강
+                            지표를 외부 서버로 절대 업로드하지 않습니다. 앱은 계정을 요구하지 않고, 개인 정보를 수집하지 않으며, 제3자 추적 SDK를 전혀 포함하지 않습니다. 애플
+                            앱스토어의 프라이버시 라벨에서 데이터 수집 항목이 '0'인 것을 통해 이를 직접 확인할 수 있습니다. 이것은 "데이터를 잘 보호하겠다"는 약속이 아니라, "데이터
+                            자체를 가지지 않겠다"는 기술적 설계입니다.</p>
                     </div>
                 </div>
             </div>
 
             <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">How does local processing work?</h3>
+                <h3 itemprop="name">로컬 처리는 어떻게 작동하나요?</h3>
                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                     <div itemprop="text">
-                        <p><strong>Local processing</strong> means all calculations happen on your iPhone's processor rather than remote servers. Run Analytics reads workout data from Apple Health (already stored locally on your device), performs calculations for <a href="/ko/crs/">CRS</a>, <a href="/ko/training-load/">rTSS, CTL/ATL/TSB</a>, and <a href="/ko/training-zones/">training zones</a> using your iPhone's CPU, and stores results in the app's local database. No data transmits over the internet for processing. Modern iPhones deliver more than enough computing power for sophisticated analytics without cloud dependency. Results appear instantly because there's no upload/download delay.</p>
+                        <p><strong>로컬 처리</strong>란 모든 계산이 원격 서버가 아닌 당신의 아이폰 프로세서에서 직접 이루어짐을 의미합니다. Run Analytics는 기기에 이미
+                            저장된 애플 건강 데이터를 읽어와서 아이폰의 CPU를 사용해 <a href="/ko/crs/">CRS</a>, <a
+                                href="/ko/training-load/">rTSS, CTL/ATL/TSB</a>, 및 <a
+                                href="/ko/training-zones/">훈련 존</a>을 계산하고 그 결과를 로컬 데이터베이스에 저장합니다. 처리 과정에서 어떤
+                            데이터도 인터넷으로 전송되지 않습니다. 현대의 아이폰은 클라우드 도움 없이도 정교한 분석을 수행하기에 충분한 성능을 갖추고 있으며, 업로드/다운로드 지연이 없어
+                            결과가 즉시 나타납니다.</p>
                     </div>
                 </div>
             </div>
 
             <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">What data does Run Analytics collect?</h3>
+                <h3 itemprop="name">Run Analytics는 어떤 데이터를 수집하나요?</h3>
                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                     <div itemprop="text">
-                        <p><strong>None.</strong> Run Analytics collects zero data. The app reads workout information from Apple Health (with your explicit permission) but processes it locally without transmitting to external servers. No account means no email address collection. No tracking SDKs means no behavioral data collection. No analytics services means no usage statistics. No cloud processing means no workout uploads. The app literally doesn't have the technical capability to collect data—there are no server endpoints to receive it. Check the App Privacy label in the App Store for verification: zero data collection categories.</p>
+                        <p><strong>아무것도 수집하지 않습니다.</strong> Run Analytics는 수집하는 데이터가 전혀 없습니다. 앱은 당신의 승인을 받아 애플 건강 정보를
+                            읽지만, 이를 외부 서버로 전송하지 않고 로컬에서만 처리합니다. 계정이 없으므로 이메일 주소도 수집하지 않고, 추적 SDK가 없으므로 행동 데이터도 수집하지
+                            않습니다. 분석 서비스도 없으므로 사용 통계도 알 수 없습니다. 기술적으로 데이터를 받을 서버 엔드포인트 자체가 존재하지 않습니다. 앱스토어의 앱 프라이버시 라벨에서
+                            수집 항목이 '0'임을 확인해 보세요.</p>
                     </div>
                 </div>
             </div>
 
             <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">Do I need an account to use Run Analytics?</h3>
+                <h3 itemprop="name">Run Analytics를 사용하려면 계정이 필요한가요?</h3>
                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                     <div itemprop="text">
-                        <p>No—absolutely no account required. Download Run Analytics from the App Store and start using immediately. No registration forms, no email verification, no password creation, no profile setup. The app doesn't even have account infrastructure—there's no login screen because there's nothing to log into. This provides both convenience (instant access) and privacy (complete anonymity). Your usage remains entirely local to your device with no identity linkage to any external system.</p>
+                        <p>아니요, 계정은 전혀 필요하지 않습니다. 앱스토어에서 다운로드 후 즉시 사용 가능합니다. 가입 양식, 이메일 인증, 비밀번호 설정, 프로필 구축 과정이 아예 없습니다.
+                            앱 내에 계정 관련 시스템 자체가 존재하지 않으며, 이는 즉각적인 접근이라는 편리함과 완전한 익명성이라는 프라이버시 혜택을 동시에 제공합니다. 당신의 앱 사용은 오직
+                            당신의 기기 내에서만 이루어지며 어떤 외부 시스템과도 당신의 신원을 연결하지 않습니다.</p>
                     </div>
                 </div>
             </div>
 
             <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">Can Run Analytics sell my data?</h3>
+                <h3 itemprop="name">Run Analytics가 내 데이터를 판매할 수 있나요?</h3>
                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                     <div itemprop="text">
-                        <p><strong>Impossible—we don't have your data to sell.</strong> Run Analytics never uploads your workout data, GPS tracks, or health metrics to servers. All processing happens locally on your iPhone. Companies can only sell data they possess, and we possess zero user data. There's no database of user workouts, no server storage of GPS tracks, no collection of health information. This architectural decision makes data selling technically impossible, not just policy-prohibited. It's the strongest possible guarantee: we can't sell what we don't have.</p>
+                        <p><strong>불가능합니다. 우리에겐 판매할 당신의 데이터가 없습니다.</strong> Run Analytics는 운동 데이터, GPS 경로, 건강 지표를 서버에
+                            업로드하지 않습니다. 모든 처리는 로컬에서 이루어집니다. 기업은 자신들이 보유한 데이터만 판매할 수 있는데, 우리는 사용자 데이터를 전혀 보유하고 있지 않습니다.
+                            운동 기록 데이터베이스도, GPS 저장소도, 건강 정보 수집 체계도 없습니다. 단순히 정책적으로 금지된 것이 아니라, 아키텍처 상 기술적으로 불가능하도록 설계된 가장
+                            강력한 보증입니다.</p>
                     </div>
                 </div>
             </div>
 
             <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">Is my location data safe?</h3>
+                <h3 itemprop="name">내 위치 데이터는 안전한가요?</h3>
                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                     <div itemprop="text">
-                        <p>Yes—location data stays exclusively on your iPhone in Apple Health. Run Analytics never uploads GPS tracks or coordinates to external servers. The app can read location data from Health (with your permission) for calculating distance and pace, but all processing happens locally. GPS tracks remain under your control in Apple Health, protected by iOS encryption and access controls. When you export workout data, YOU choose whether to include location information or share summary statistics only. Complete location privacy through local-only architecture.</p>
+                        <p>네, 위치 데이터는 당신의 아이폰 내 애플 건강에만 저장됩니다. Run Analytics는 GPS 경로나 좌표를 외부 서버로 절대 업로드하지 않습니다. 앱은 거리와
+                            페이스 계산을 위해 건강 데이터에서 위치 정보를 읽을 수 있지만(당신의 허가 하에), 모든 처리는 기기 내에서만 수행됩니다. GPS 경로는 iOS 가상 암호화와 접근
+                            제어에 의해 보호됩니다. 운동 데이터를 내보낼 때도, 위치 정보를 포함할지 아니면 요약 수치만 공유할지 <strong>당신</strong>이 직접 선택할 수
+                            있습니다.</p>
                     </div>
                 </div>
             </div>
 
             <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">What about iCloud backups?</h3>
+                <h3 itemprop="name">iCloud 백업은 어떻게 되나요?</h3>
                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                     <div itemprop="text">
-                        <p>Apple Health data backs up to iCloud when you enable Health backup in iOS settings. For maximum privacy, enable <strong>Advanced Data Protection</strong>—this adds end-to-end encryption to Health backups, meaning Apple cannot decrypt your data (only your authenticated devices can access it). iCloud backup provides device recovery and migration without sacrificing privacy when properly configured. Run Analytics data stays within the Apple ecosystem's privacy protections—no separate cloud service, no third-party backup providers, complete integration with iOS security model.</p>
+                        <p>iOS 설정에서 건강 백업을 활성화하면 애플 건강 데이터가 iCloud에 백업됩니다. 최고의 프라이버시를 위해 <strong>'고급 데이터 보호'</strong>
+                            기능을 켜는 것이 좋습니다. 이 기능을 사용하면 건강 백업에 종단간 암호화가 적용되어 애플조차 데이터에 접근할 수 없으며 오직 인증된 당신의 기기에서만 복구할 수
+                            있습니다. Run Analytics 데이터는 별도의 클라우드 서비스나 제3자 백업 업체 없이 애플 하드웨어와 소프트웨어의 안전한 보안 모델 내에서 보호됩니다.</p>
                     </div>
                 </div>
             </div>
 
             <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">How is this different from Strava?</h3>
+                <h3 itemprop="name">Strava와는 어떻게 다른가요?</h3>
                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                     <div itemprop="text">
-                        <p><strong>Fundamentally different architectures:</strong> Strava requires uploading all workout data to their servers for processing—GPS tracks, heart rate, performance metrics all stored in Strava's cloud infrastructure. Strava requires account registration (email address), offers social features (public profiles), and shares data with third-party partners. Run Analytics processes everything locally on your iPhone, requires no account, uploads zero data, and offers no social features. Strava prioritizes social connectivity; Run Analytics prioritizes privacy. Both provide training analytics, but through completely opposite architectural approaches. See our <a href="#competitor-comparison">detailed comparison</a> above.</p>
+                        <p><strong>근본적인 아키텍처가 다릅니다:</strong> Strava는 분석을 위해 모든 운동 데이터(GPS, 심박수 등)를 서버로 업로드해야 하며 계정 등록이
+                            필수입니다. 또한 소셜 공유와 제3자 데이터 파트너십이 핵심 비즈니스 모델입니다. 반면 Run Analytics는 모든 것을 아이폰 로컬에서 처리하고, 계정을
+                            요구하지 않으며, 데이터를 업로드하지 않고, 소셜 기능을 제공하지 않습니다. Strava는 소셜 연결을, Run Analytics는 프라이버시를 최우선으로 합니다.
+                            위 섹션의 <a href="#competitor-comparison">상세 비교표</a>에서 더 자세한 내용을 확인하실 수 있습니다.</p>
                     </div>
                 </div>
             </div>
 
             <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">Does privacy reduce accuracy?</h3>
+                <h3 itemprop="name">프라이버시가 정확도를 떨어뜨리나요?</h3>
                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                     <div itemprop="text">
-                        <p>No—privacy-first architecture doesn't compromise accuracy. <a href="/ko/running-performance-metrics/">Performance metrics</a> depend on calculation methodology, not processing location. Run Analytics uses the same scientifically validated formulas for <a href="/ko/crs/">Critical Running Speed</a>, <a href="/ko/training-load/">Training Stress Score</a>, and training zone calculation as cloud-based platforms. The math is identical whether executed on remote servers or your iPhone—local processing just happens instantly without network delays. Modern iOS devices provide massive computing power for analytics that previously required server farms. Privacy and accuracy coexist perfectly through local processing.</p>
+                        <p>아니요, 프라이버시 우선 설계가 정확도를 타협하지 않습니다. <a href="/ko/running-performance-metrics/">퍼포먼스
+                                지표</a>는 처리 장소가 아니라 계산 방법론에 의해 결정됩니다. Run Analytics는 <a href="/ko/crs/">임계 러닝
+                                속도</a>, <a href="/ko/training-load/">훈련 스트레스 점수</a> 등 클라우드 앱과 동일한 과학적 수식을 사용하여
+                            결과를 도출합니다. 수학적 연산은 서버에서 하나 아이폰에서 하나 동일하며, 로컬 처리는 오히려 네트워크 지연 없이 결과를 보여줍니다. 현대의 기기 성능은 정교한
+                            분석을 수행하기에 차고 넘칩니다.</p>
                     </div>
                 </div>
             </div>
 
             <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">Can I export my data?</h3>
+                <h3 itemprop="name">내 데이터를 내보낼 수 있나요?</h3>
                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                     <div itemprop="text">
-                        <p>Yes—complete export flexibility. Run Analytics provides multiple export formats: <strong>JSON</strong> (for programmatic analysis), <strong>CSV</strong> (for spreadsheets), <strong>HTML</strong> (for readable reports), and <strong>PDF</strong> (for coach sharing). Choose specific date ranges, select which metrics to include, decide whether to include GPS data, and export via iOS share sheet to any destination (email, cloud storage, messaging apps). Your data remains portable with no proprietary formats or vendor lock-in. Export anytime for backup, coach sharing, or external analysis using whatever tools you prefer.</p>
+                        <p>네, 완벽한 내보내기 유연성을 제공합니다. Run Analytics는 <strong>JSON</strong>(프로그래밍용),
+                            <strong>CSV</strong>(스프레드시트용), <strong>HTML</strong>(읽기용 보고서), <strong>PDF</strong>(공유용) 등
+                            다양한 형식을 지원합니다. 특정 기간을 설정하고, 어떤 지표를 포함할지, GPS 데이터를 넣을지 여부를 모두 결정한 뒤 iOS 공유 시트를 통해 이메일이나 클라우드
+                            저장소 등으로 자유롭게 내보낼 수 있습니다. 데이터는 폐쇄적인 방식에 갇히지 않으며 언제든 원하는 도구에서 분석할 수 있습니다.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -1836,23 +1920,29 @@ img[width][height] {
 
 <section class="section">
     <div class="container container-narrow">
-        <h2>Take Control of Your Running Data Privacy</h2>
+        <h2>러닝 데이터 프라이버시를 직접 제어하세요</h2>
 
         <div class="callout callout-success">
-            <h3>Start Training with Complete Privacy</h3>
-            <p>Experience advanced running analytics without compromising your privacy. Run Analytics proves you can have sophisticated training metrics AND complete data control:</p>
+            <h3>완벽한 프라이버시와 함께 훈련을 시작하세요</h3>
+            <p>프라이버시를 희생하지 않고 고급 러닝 분석을 경험해 보세요. Run Analytics는 정교한 훈련 지표와 완벽한 데이터 제어권이 공존할 수 있음을 증명합니다.</p>
             <ul>
-                <li><strong>Test Your CRS:</strong> Measure <a href="/ko/crs/">Critical Running Speed</a> and establish personalized training zones—100% locally on your device</li>
-                <li><strong>Track Training Load:</strong> Monitor <a href="/ko/training-load/">rTSS, CTL, ATL, and TSB</a> to optimize training stress and prevent overtraining—all calculated privately</li>
-                <li><strong>Analyze Performance:</strong> Track <a href="/ko/running-performance-metrics/">VO2max, threshold pace, and running economy</a> without cloud uploads</li>
-                <li><strong>Structure Training Zones:</strong> Use <a href="/ko/training-zones-intensity/">7 science-based training zones</a> for precise workout intensity control</li>
-                <li><strong>Download Run Analytics:</strong> <a href="/ko/">Start your 7-day free trial</a> and experience privacy-first running analytics today</li>
+                <li><strong>나의 CRS 측정:</strong> <a href="/ko/crs/">임계 러닝 속도 (CRS)</a>를 측정하고 개인 맞춤형 훈련 존을 설정하세요 —
+                    100% 당신의 기기 로컬에서 처리됩니다.</li>
+                <li><strong>훈련 부하 추적:</strong> <a href="/ko/training-load/">rTSS, CTL, ATL 및 TSB</a>를 모니터링하여 훈련
+                    강도를 최적화하고 오버트레이닝을 방지하세요 — 모든 계산은 비공개로 수행됩니다.</li>
+                <li><strong>퍼포먼스 분석:</strong> <a href="/ko/running-performance-metrics/">VO2max, 임계 페이스 및 러닝
+                        이코노미</a>를 클라우드 업로드 없이 추적하세요.</li>
+                <li><strong>체계적인 훈련 존:</strong> 정밀한 운동 강도 제어를 위해 <a href="/ko/training-zones-intensity/">과학 기반의
+                        7단계 훈련 존</a>을 활용하세요.</li>
+                <li><strong>Run Analytics 다운로드:</strong> <a href="/ko/">7일 무료 체험을 시작</a>하고 오늘부터 프라이버시 우선 러닝 분석을
+                    경험해 보세요.</li>
             </ul>
         </div>
 
         <div class="mt-xl text-center">
-            <a href="https://apps.apple.com/es/app/runanalytics/id6754524015" class="btn btn-primary">Download Run Analytics (7-Day Free Trial) →</a>
-            <a href="/ko/crs/" class="btn btn-secondary">Calculate Your CRS →</a>
+            <a href="https://apps.apple.com/es/app/runanalytics/id6754524015" class="btn btn-primary">Run Analytics 다운로드
+                (7일 무료 체험) →</a>
+            <a href="/ko/crs/" class="btn btn-secondary">나의 CRS 계산하기 →</a>
         </div>
     </div>
 </section>

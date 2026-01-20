@@ -1135,24 +1135,24 @@ img[width][height] {
     
     <section class="page-hero">
     <div class="container">
-        <h1>기술 참조 및 공식</h1>
-        <p class="lead">완전한 수학적 구현</p>
+        <h1>기술 포인트 및 공식</h1>
+        <p class="lead">모든 지표의 수학적 구현 및 설명</p>
     </div>
 </section>
 
 <section class="section">
     <div class="container container-narrow">
         <h2>구현 가이드</h2>
-        <p class="lead">이 페이지는 모든 Run Analytics 지표에 대한 복사-붙여넣기 가능한 공식과 단계별 계산 방법을 제공합니다. 사용자 정의 구현, 검증 또는 더 깊은 이해를 위해
-            사용하세요.</p>
+        <p class="lead">이 페이지는 모든 러닝 분석 지표에 대한 복사-붙여넣기 가능한 공식과 단계별 계산 방법을 제공합니다. 사용자 정의 구현, 검증 또는 더 깊은 이해를 위해 이 가이드를
+            활용하세요.</p>
 
         <div class="callout callout-warning">
             <h3>⚠️ 구현 참고 사항</h3>
             <ul>
-                <li>모든 시간은 계산을 위해 초 단위로 변환해야 합니다</li>
-                <li>러닝 페이스는 역수입니다 (높은 % = 느린 페이스)</li>
-                <li>항상 합리적인 범위에 대해 입력을 검증하세요</li>
-                <li>예외 상황을 처리하세요 (0으로 나누기, 음수 값)</li>
+                <li>계산을 위해 모든 시간은 '초' 단위로 변환해야 합니다.</li>
+                <li>rTSS 계산은 강도 지수의 제곱(IF²)을 사용합니다.</li>
+                <li>입력값이 적절한 범위 내에 있는지 항상 확인하세요.</li>
+                <li>예외 케이스(0으로 나누기, 음수 값 등)를 처리해야 합니다.</li>
             </ul>
         </div>
     </div>
@@ -1160,10 +1160,10 @@ img[width][height] {
 
 <section class="section section-alt">
     <div class="container">
-        <h2>핵심 성과 지표</h2>
+        <h2>핵심 심폐 지표</h2>
 
         <div class="formula-card">
-            <h3>크리티컬 러닝 스피드 (CRS)</h3>
+            <h3>임계 러닝 속도 (Critical Run Speed, CRS)</h3>
             <div class="formula-content">
                 <h4>공식:</h4>
                 <div class="formula-box-large">
@@ -1171,7 +1171,7 @@ img[width][height] {
                         CRS (m/s) = (D₂ - D₁) / (T₂ - T₁)
                     </div>
                     <div class="formula">
-                        CRS 페이스/100m (초) = (T₄₀₀ - T₂₀₀) / 2
+                        CRS 페이스 (min/km) = 16.667 / CRS (m/s)
                     </div>
                 </div>
 
@@ -1180,68 +1180,65 @@ img[width][height] {
                     <div class="calculator-grid">
                         <div class="input-group">
                             <label for="crs-d1">거리 1 (미터):</label>
-                            <input type="number" id="crs-d1" value="200" min="50" max="1000" step="50">
+                            <input type="number" id="crs-d1" value="1200" min="400" max="2000" step="100">
                         </div>
                         <div class="input-group">
                             <label for="crs-t1">시간 1 (분:초):</label>
-                            <input type="text" id="crs-t1" value="2:30" placeholder="2:30"
+                            <input type="text" id="crs-t1" value="4:30" placeholder="4:30"
                                 pattern="[0-9]{1,2}:[0-9]{2}">
                         </div>
                         <div class="input-group">
                             <label for="crs-d2">거리 2 (미터):</label>
-                            <input type="number" id="crs-d2" value="400" min="100" max="2000" step="50">
+                            <input type="number" id="crs-d2" value="3600" min="2000" max="10000" step="100">
                         </div>
                         <div class="input-group">
                             <label for="crs-t2">시간 2 (분:초):</label>
-                            <input type="text" id="crs-t2" value="6:08" placeholder="6:08"
+                            <input type="text" id="crs-t2" value="15:00" placeholder="15:00"
                                 pattern="[0-9]{1,2}:[0-9]{2}">
                         </div>
                     </div>
                     <div class="calculator-result mt-md">
-                        <div class="result-label">CRS 페이스 (100m당):</div>
-                        <div class="result-value" id="crs-result">1:49</div>
+                        <div class="result-label">CRS 페이스 (min/km):</div>
+                        <div class="result-value" id="crs-result">4:17</div>
                     </div>
                     <div class="calculation-breakdown mt-md">
                         <small>
                             <strong>계산 단계:</strong><br>
                             <span id="crs-steps">
-                                CRS (m/s) = (400 - 200) / (368 - 150) = 0.917 m/s<br>
-                                페이스/100m = 100 / 0.917 = 109초 = 1:49
+                                CRS (m/s) = (3600 - 1200) / (900 - 270) = 3.81 m/s<br>
+                                페이스 (min/km) = 1000 / 3.81 = 262초 = 4:22
                             </span>
                         </small>
                     </div>
                 </div>
 
-                <h4 class="mt-xl">JavaScript 구현:</h4>
+                <h4 class="mt-xl">JavaScript 구현 예시:</h4>
                 <pre><code>function calculateCRS(distance1, time1, distance2, time2) {
-  // Convert times to seconds if needed
+  // 시간을 초 단위로 변환
   const t1 = typeof time1 === 'string' ? timeToSeconds(time1) : time1;
   const t2 = typeof time2 === 'string' ? timeToSeconds(time2) : time2;
 
-  // Calculate CRS in m/s
-  const css_ms = (distance2 - distance1) / (t2 - t1);
+  // CRS 속도(m/s) 계산
+  const crs_ms = (distance2 - distance1) / (t2 - t1);
 
-  // Calculate pace per 100m in seconds
-  const pace_per_100m = 100 / css_ms;
+  // km당 페이스(초) 계산
+  const pace_per_km = 1000 / crs_ms;
 
-  // Convert to mm:ss format
-  const minutes = Math.floor(pace_per_100m / 60);
-  const seconds = Math.round(pace_per_100m % 60);
+  // 분:초 형식으로 변환
+  const minutes = Math.floor(pace_per_km / 60);
+  const seconds = Math.round(pace_per_km % 60);
 
   return {
-    css_ms: css_ms,
-    pace_seconds: pace_per_100m,
+    velocity_ms: crs_ms,
+    pace_seconds: pace_per_km,
     pace_formatted: `${minutes}:${seconds.toString().padStart(2, '0')}`
   };
-}
-
-// Example usage:
-const result = calculateCRS(200, 150, 400, 368);
-// Returns: { css_ms: 0.917, pace_seconds: 109, pace_formatted: "1:49" }</code></pre>
+}</code></pre>
 
                 <script>
                     function timeToSecondsCRS(timeString) {
                         const parts = timeString.split(':');
+                        if (parts.length === 1) return parseInt(parts[0]);
                         return parseInt(parts[0]) * 60 + parseInt(parts[1]);
                     }
 
@@ -1263,14 +1260,14 @@ const result = calculateCRS(200, 150, 400, 368);
                             const t1 = timeToSecondsCRS(t1Input);
                             const t2 = timeToSecondsCRS(t2Input);
 
-                            const css_ms = (d2 - d1) / (t2 - t1);
-                            const pace_per_100m = 100 / css_ms;
-                            const pace_formatted = secondsToTimeCRS(pace_per_100m);
+                            const crs_ms = (d2 - d1) / (t2 - t1);
+                            const pace_per_km = 1000 / crs_ms;
+                            const pace_formatted = secondsToTimeCRS(pace_per_km);
 
                             document.getElementById('crs-result').textContent = pace_formatted;
                             document.getElementById('crs-steps').innerHTML =
-                                `CRS (m/s) = (${d2} - ${d1}) / (${t2} - ${t1}) = ${css_ms.toFixed(3)} m/s<br>` +
-                                `페이스/100m = 100 / ${css_ms.toFixed(3)} = ${Math.round(pace_per_100m)}초 = ${pace_formatted}`;
+                                `CRS (m/s) = (${d2} - ${d1}) / (${t2} - ${t1}) = ${crs_ms.toFixed(3)} m/s<br>` +
+                                `페이스 (min/km) = 1000 / ${crs_ms.toFixed(3)} = ${Math.round(pace_per_km)}초 = ${pace_formatted}`;
                         } catch (e) {
                             console.error('CRS calculation error:', e);
                         }
@@ -1288,7 +1285,7 @@ const result = calculateCRS(200, 150, 400, 368);
         </div>
 
         <div class="formula-card">
-            <h3>러닝 훈련 스트레스 점수 (rTSS)</h3>
+            <h3>러닝 부하 지수 (Running Stress Score, rTSS)</h3>
             <div class="formula-content">
                 <h4>전체 공식:</h4>
                 <div class="formula-box-large">
@@ -1296,10 +1293,10 @@ const result = calculateCRS(200, 150, 400, 368);
                         rTSS = (IF²) × 지속 시간 (시간) × 100
                     </div>
                     <div class="formula">
-                        IF = NSS / FTP
+                        IF = NSS / 임계 속도 (Threshold Speed)
                     </div>
                     <div class="formula">
-                        NSS = 총 거리 / 총 시간 (m/min)
+                        NSS = 총 이동 거리 / 총 소요 시간 (m/min)
                     </div>
                 </div>
 
@@ -1308,83 +1305,83 @@ const result = calculateCRS(200, 150, 400, 368);
                     <div class="calculator-grid">
                         <div class="input-group">
                             <label for="rtss-distance">거리 (미터):</label>
-                            <input type="number" id="rtss-distance" value="3000" min="100" max="10000" step="50">
+                            <input type="number" id="rtss-distance" value="5000" min="100" max="42195" step="100">
                         </div>
                         <div class="input-group">
                             <label for="rtss-duration">지속 시간 (분):</label>
-                            <input type="number" id="rtss-duration" value="55" min="1" max="300" step="1">
+                            <input type="number" id="rtss-duration" value="25" min="1" max="600" step="1">
                         </div>
                         <div class="input-group">
-                            <label for="rtss-css">CRS 페이스 (100m당 분:초):</label>
-                            <input type="text" id="rtss-css" value="1:33" placeholder="1:33"
+                            <label for="rtss-crs">CRS 페이스 (분:초):</label>
+                            <input type="text" id="rtss-crs" value="4:15" placeholder="4:15"
                                 pattern="[0-9]{1,2}:[0-9]{2}">
                         </div>
                         <div class="input-group">
-                            <label>FTP (계산됨):</label>
-                            <input type="text" id="rtss-threshold-speed" readonly value="64.5 m/min">
+                            <label>임계 속도 (Threshold):</label>
+                            <input type="text" id="rtss-threshold-speed" readonly value="235.3 m/min">
                         </div>
                     </div>
                     <div class="calculator-result mt-md">
                         <div class="result-label">계산된 rTSS:</div>
-                        <div class="result-value" id="rtss-result">55</div>
+                        <div class="result-value" id="rtss-result">31</div>
                     </div>
                     <div class="calculation-breakdown mt-md">
                         <small>
                             <strong>계산 단계:</strong><br>
                             <span id="rtss-steps">
-                                NSS = 3000m / 55분 = 54.5 m/min<br>
-                                FTP = 100 / (93/60) = 64.5 m/min<br>
-                                IF = 54.5 / 64.5 = 0.845<br>
-                                rTSS = 0.845² × (55/60) × 100 = 65
+                                NSS = 5000m / 25min = 200 m/min<br>
+                                FTP = 1000 / (255/60) = 235.3 m/min<br>
+                                IF = 200 / 235.3 = 0.850<br>
+                                rTSS = 0.850² × (25/60) × 100 = 31
                             </span>
                         </small>
                     </div>
                 </div>
 
-                <h4 class="mt-xl">JavaScript 구현:</h4>
-                <pre><code>function calculateSTSS(distance, timeMinutes, ftpMetersPerMin) {
-  // Calculate Normalized Run Speed
+                <h4 class="mt-xl">JavaScript 구현 예시:</h4>
+                <pre><code>function calculateRTSS(distance, timeMinutes, ftpMetersPerMin) {
+  // 정규화된 러닝 속도(NSS) 계산
   const nss = distance / timeMinutes;
 
-  // Calculate Intensity Factor
+  // 강도 지수(IF) 계산
   const intensityFactor = nss / ftpMetersPerMin;
 
-  // Calculate hours
+  // 시간을 시간(hour) 단위로 변환
   const hours = timeMinutes / 60;
 
-  // Calculate rTSS using squared intensity factor
+  // 제곱 강도 지수를 사용하여 rTSS 계산
   const rtss = Math.pow(intensityFactor, 2) * hours * 100;
 
   return Math.round(rtss);
 }
 
-// Example usage:
-const stss = calculateSTSS(3000, 55, 64.5);
-// Returns: 55
+// 사용 예시:
+const rtss = calculateRTSS(3000, 55, 64.5);
+// 결과값: 65
 
-// Helper: Convert CRS to FTP
-function cssToFTP(crsPacePer100mSeconds) {
-  // FTP in m/min = 100m / (pace in minutes)
-  return 100 / (crsPacePer100mSeconds / 60);
+// 헬퍼: CRS 페이스를 러닝 속도(m/min)로 변환
+function crsPaceToSpeed(crsPacePerKmSeconds) {
+  // m/min 속도 = 1000m / (페이스(분))
+  return 1000 / (crsPacePerKmSeconds / 60);
 }
 
-// Example: CRS of 1:33 (93 seconds)
-const ftp = cssToFTP(93); // Returns: 64.5 m/min</code></pre>
+// 예시: 4:15(255초)의 CRS 페이스
+const speed = crsPaceToSpeed(255); // 결과값: 235.3 m/min</code></pre>
 
                 <script>
-                    // Time conversion helper
+                    // 시간 변환 헬퍼
                     function timeToSeconds(timeString) {
                         const parts = timeString.split(':');
                         return parseInt(parts[0]) * 60 + parseInt(parts[1]);
                     }
 
-                    // CRS to FTP conversion
-                    function cssToFTP(crsPacePer100mSeconds) {
-                        return 100 / (crsPacePer100mSeconds / 60);
+                    // CRS 페이스를 속도로 변환
+                    function crsPaceToSpeed(crsPacePerKmSeconds) {
+                        return 1000 / (crsPacePerKmSeconds / 60);
                     }
 
-                    // sTSS calculation
-                    function calculateSTSS(distance, timeMinutes, ftpMetersPerMin) {
+                    // rTSS 계산
+                    function calculateRTSS(distance, timeMinutes, ftpMetersPerMin) {
                         const nss = distance / timeMinutes;
                         const intensityFactor = nss / ftpMetersPerMin;
                         const hours = timeMinutes / 60;
@@ -1392,54 +1389,54 @@ const ftp = cssToFTP(93); // Returns: 64.5 m/min</code></pre>
                         return Math.round(rtss);
                     }
 
-                    // Update calculator
+                    // 계산기 업데이트
                     function updateRTSSCalculator() {
                         try {
                             const distance = parseFloat(document.getElementById('rtss-distance').value);
                             const duration = parseFloat(document.getElementById('rtss-duration').value);
-                            const cssInput = document.getElementById('rtss-css').value;
+                            const crsInput = document.getElementById('rtss-crs').value;
 
-                            // Validate inputs
-                            if (!distance || !duration || !cssInput) return;
+                            // 입력값 검증
+                            if (!distance || !duration || !crsInput) return;
 
-                            // Convert CRS to seconds
-                            const crsPaceSeconds = timeToSeconds(cssInput);
+                            // CRS를 초 단위로 변환
+                            const crsPaceSeconds = timeToSeconds(crsInput);
 
-                            // Calculate FTP
-                            const ftp = cssToFTP(crsPaceSeconds);
+                            // 속도(임계점) 계산
+                            const thresholdSpeed = crsPaceToSpeed(crsPaceSeconds);
 
-                            // Calculate NSS
+                            // NSS 계산
                             const nss = distance / duration;
 
-                            // Calculate Intensity Factor
-                            const intensityFactor = nss / ftp;
+                            // 강도 지수(IF) 계산
+                            const intensityFactor = nss / thresholdSpeed;
 
-                            // Calculate sTSS
-                            const stss = calculateSTSS(distance, duration, ftp);
+                            // rTSS 계산
+                            const rtss = calculateRTSS(distance, duration, thresholdSpeed);
 
-                            // Update display
-                            document.getElementById('rtss-threshold-speed').value = ftp.toFixed(1) + ' m/min';
-                            document.getElementById('rtss-result').textContent = stss;
+                            // 디스플레이 업데이트
+                            document.getElementById('rtss-threshold-speed').value = thresholdSpeed.toFixed(1) + ' m/min';
+                            document.getElementById('rtss-result').textContent = rtss;
 
-                            // Update calculation steps
+                            // 계산 단계 업데이트
                             const hours = duration / 60;
                             document.getElementById('rtss-steps').innerHTML =
-                                `NSS = ${distance}m / ${duration}분 = ${nss.toFixed(1)} m/min<br>` +
-                                `FTP = 100 / (${crsPaceSeconds}/60) = ${ftp.toFixed(1)} m/min<br>` +
-                                `IF = ${nss.toFixed(1)} / ${ftp.toFixed(1)} = ${intensityFactor.toFixed(3)}<br>` +
-                                `rTSS = ${intensityFactor.toFixed(3)}² × (${duration}/60) × 100 = ${stss}`;
+                                `NSS = ${distance}m / ${duration}min = ${nss.toFixed(1)} m/min<br>` +
+                                `임계 속도 = 1000 / (${crsPaceSeconds}/60) = ${thresholdSpeed.toFixed(1)} m/min<br>` +
+                                `IF = ${nss.toFixed(1)} / ${thresholdSpeed.toFixed(1)} = ${intensityFactor.toFixed(3)}<br>` +
+                                `rTSS = ${intensityFactor.toFixed(3)}² × (${duration}/60) × 100 = ${rtss}`;
                         } catch (e) {
                             console.error('Calculation error:', e);
                         }
                     }
 
-                    // Add event listeners when page loads
+                    // 페이지 로드 시 이벤트 리스너 추가
                     document.addEventListener('DOMContentLoaded', function () {
                         document.getElementById('rtss-distance').addEventListener('input', updateRTSSCalculator);
                         document.getElementById('rtss-duration').addEventListener('input', updateRTSSCalculator);
-                        document.getElementById('rtss-css').addEventListener('input', updateRTSSCalculator);
+                        document.getElementById('rtss-crs').addEventListener('input', updateRTSSCalculator);
 
-                        // Initial calculation
+                        // 초기 계산 수행
                         updateRTSSCalculator();
                     });
                 </script>
@@ -1447,15 +1444,12 @@ const ftp = cssToFTP(93); // Returns: 64.5 m/min</code></pre>
         </div>
 
         <div class="formula-card">
-            <h3>러닝 효율성 (rTSS Calculation)</h3>
+            <h3>생체역학적 효율성: 수직 비율 (Vertical Ratio)</h3>
             <div class="formula-content">
                 <h4>공식:</h4>
                 <div class="formula-box-large">
                     <div class="formula">
-                        러닝 효율성 = 킬로미터 시간 (초) + 스트라이드 수
-                    </div>
-                    <div class="formula">
-                        러닝 효율성₂₅ = (시간 × 25/트랙 길이) + (스트라이드 × 25/트랙 길이)
+                        수직 비율 (%) = (수직 진동 ÷ 스트라이드 길이) × 100
                     </div>
                 </div>
 
@@ -1463,87 +1457,59 @@ const ftp = cssToFTP(93); // Returns: 64.5 m/min</code></pre>
                     <h4>🧪 대화형 계산기 - 공식 테스트</h4>
                     <div class="calculator-grid">
                         <div class="input-group">
-                            <label for="rtss-time">킬로미터 시간 (초):</label>
-                            <input type="number" id="rtss-time" value="20" min="10" max="120" step="1">
+                            <label for="eff-oscillation">수직 진동 (cm):</label>
+                            <input type="number" id="eff-oscillation" value="8.5" min="3" max="25" step="0.1">
                         </div>
                         <div class="input-group">
-                            <label for="rtss-strides">스트라이드 수:</label>
-                            <input type="number" id="rtss-strides" value="15" min="5" max="50" step="1">
-                        </div>
-                        <div class="input-group">
-                            <label for="crs-track">트랙 길이 (m):</label>
-                            <select id="crs-track">
-                                <option value="25" selected>400m</option>
-                                <option value="50">400m</option>
-                            </select>
+                            <label for="eff-stride">스트라이드 길이 (cm):</label>
+                            <input type="number" id="eff-stride" value="115" min="50" max="250" step="1">
                         </div>
                     </div>
                     <div class="calculator-result mt-md">
-                        <div class="result-label">러닝 효율성 점수:</div>
-                        <div class="result-value" id="rtss-result">35</div>
+                        <div class="result-label">수직 비율:</div>
+                        <div class="result-value" id="eff-result">7.4%</div>
                     </div>
                     <div class="calculation-breakdown mt-md">
                         <small>
                             <strong>계산:</strong><br>
-                            <span id="rtss-steps">
-                                러닝 효율성 = 20초 + 15 스트라이드 = 35
+                            <span id="eff-steps">
+                                수직 비율 = (8.5 / 115) × 100 = 7.4%
                             </span>
                         </small>
                     </div>
                 </div>
 
-                <h4 class="mt-xl">JavaScript 구현:</h4>
-                <pre><code>function calculateRTSS(timeSeconds, strideCount) {
-  return timeSeconds + strideCount;
+                <h4 class="mt-xl">JavaScript 구현 예시:</h4>
+                <pre><code>function calculateVerticalRatio(oscillationCm, strideLengthCm) {
+  return (oscillationCm / strideLengthCm) * 100;
 }
 
-function calculateNormalizedRTSS(timeSeconds, strideCount, trackLength) {
-  const normalizedTime = timeSeconds * (25 / trackLength);
-  const normalizedStrides = strideCount * (25 / trackLength);
-  return normalizedTime + normalizedStrides;
-}
-
-// Example:
-const rtss = calculateRTSS(20, 15);
-// Returns: 35
-
-const rtss400m = calculateNormalizedRTSS(40, 30, 50);
-// Returns: 35 (normalized to 400m)</code></pre>
+function calculateEfficiencyFactor(paceMetersPerMin, avgHeartRate) {
+  return paceMetersPerMin / avgHeartRate;
+}</code></pre>
 
                 <script>
-                    function updateRunningEfficiencyCalculator() {
+                    function updateEfficiencyCalculator() {
                         try {
-                            const time = parseFloat(document.getElementById('rtss-time').value);
-                            const strides = parseFloat(document.getElementById('rtss-strides').value);
-                            const trackLength = parseFloat(document.getElementById('crs-track').value);
+                            const oscillation = parseFloat(document.getElementById('eff-oscillation').value);
+                            const stride = parseFloat(document.getElementById('eff-stride').value);
 
-                            if (!time || !strides) return;
+                            if (!oscillation || !stride) return;
 
-                            let rtss, steps;
-                            if (trackLength === 25) {
-                                rtss = time + strides;
-                                steps = `러닝 효율성 = ${time}초 + ${strides} 스트라이드 = ${rTSS}`;
-                            } else {
-                                const normalizedTime = time * (25 / trackLength);
-                                const normalizedStrides = strides * (25 / trackLength);
-                                rtss = normalizedTime + normalizedStrides;
-                                steps = `정규화된 시간 = ${time} × (25/${trackLength}) = ${normalizedTime.toFixed(1)}초<br>` +
-                                    `정규화된 스트라이드 = ${strides} × (25/${trackLength}) = ${normalizedStrides.toFixed(1)}<br>` +
-                                    `러닝 효율성₂₅ = ${normalizedTime.toFixed(1)} + ${normalizedStrides.toFixed(1)} = ${rtss.toFixed(1)}`;
-                            }
+                            const ratio = (oscillation / stride) * 100;
 
-                            document.getElementById('rtss-result').textContent = rtss.toFixed(1);
-                            document.getElementById('rtss-steps').innerHTML = steps;
+                            document.getElementById('eff-result').textContent = ratio.toFixed(1) + '%';
+                            document.getElementById('eff-steps').innerHTML =
+                                `수직 비율 = (${oscillation} / ${stride}) × 100 = ${ratio.toFixed(1)}%`;
                         } catch (e) {
-                            console.error('rTSS Calculation calculation error:', e);
+                            console.error('Efficiency calculation error:', e);
                         }
                     }
 
                     document.addEventListener('DOMContentLoaded', function () {
-                        document.getElementById('rtss-time').addEventListener('input', updateRunningEfficiencyCalculator);
-                        document.getElementById('rtss-strides').addEventListener('input', updateRunningEfficiencyCalculator);
-                        document.getElementById('crs-track').addEventListener('change', updateRunningEfficiencyCalculator);
-                        updateRunningEfficiencyCalculator();
+                        document.getElementById('eff-oscillation').addEventListener('input', updateEfficiencyCalculator);
+                        document.getElementById('eff-stride').addEventListener('input', updateEfficiencyCalculator);
+                        updateEfficiencyCalculator();
                     });
                 </script>
             </div>
@@ -1553,10 +1519,10 @@ const rtss400m = calculateNormalizedRTSS(40, 30, 50);
 
 <section class="section">
     <div class="container">
-        <h2>스트라이드 역학</h2>
+        <h2>스트라이드 메커니즘 (Stride Mechanics)</h2>
 
         <div class="formula-card">
-            <h3>스트라이드 레이트 (SR)</h3>
+            <h3>스트라이드 비율 (Stride Rate, SR)</h3>
             <div class="formula-content">
                 <h4>공식:</h4>
                 <div class="formula-box-large">
@@ -1564,7 +1530,7 @@ const rtss400m = calculateNormalizedRTSS(40, 30, 50);
                         SR = 60 / 사이클 시간 (초)
                     </div>
                     <div class="formula">
-                        SR = (스트라이드 수 / 시간(초)) × 60
+                        SR = (스트라이드 횟수 / 시간(초)) × 60
                     </div>
                 </div>
 
@@ -1572,41 +1538,42 @@ const rtss400m = calculateNormalizedRTSS(40, 30, 50);
                     <h4>🧪 대화형 계산기 - 공식 테스트</h4>
                     <div class="calculator-grid">
                         <div class="input-group">
-                            <label for="sr-strides">스트라이드 수:</label>
-                            <input type="number" id="sr-strides" value="30" min="1" max="100" step="1">
+                            <label for="sr-steps-count">총 걸음 수:</label>
+                            <input type="number" id="sr-steps-count" value="180" min="1" max="10000" step="1">
                         </div>
                         <div class="input-group">
                             <label for="sr-time">시간 (초):</label>
-                            <input type="number" id="sr-time" value="25" min="1" max="180" step="1">
+                            <input type="number" id="sr-time" value="60" min="1" max="3600" step="1">
                         </div>
                     </div>
                     <div class="calculator-result mt-md">
-                        <div class="result-label">스트라이드 레이트 (SPM):</div>
-                        <div class="result-value" id="sr-result">72</div>
+                        <div class="result-label">케이던스 (SPM):</div>
+                        <div class="result-value" id="sr-result">180</div>
                     </div>
                     <div class="calculation-breakdown mt-md">
                         <small>
                             <strong>계산:</strong><br>
-                            <span id="sr-steps">
-                                SR = (30 / 25) × 60 = 72 SPM
+                            <span id="sr-steps-breakdown">
+                                케이던스 = (180 / 60) × 60 = 180 SPM
                             </span>
                         </small>
                     </div>
                 </div>
 
-                <h4 class="mt-xl">JavaScript 구현:</h4>
-                <pre><code>function calculateStrideRate(strideCount, timeSeconds) {
-  return (strideCount / timeSeconds) * 60;
+                <h4 class="mt-xl">JavaScript 구현 예시:</h4>
+                <pre><code>function calculateCadence(stepCount, timeSeconds) {
+  // 걸음 수와 시간을 바탕으로 분당 케이던스 계산
+  return (stepCount / timeSeconds) * 60;
 }
 
-// Example:
-const sr = calculateStrideRate(30, 25);
-// Returns: 72 SPM</code></pre>
+// 사용 예시:
+const spm = calculateCadence(180, 60);
+// 결과값: 180 SPM</code></pre>
 
                 <script>
                     function updateSRCalculator() {
                         try {
-                            const strides = parseFloat(document.getElementById('sr-strides').value);
+                            const strides = parseFloat(document.getElementById('sr-steps-count').value);
                             const time = parseFloat(document.getElementById('sr-time').value);
 
                             if (!strides || !time) return;
@@ -1614,15 +1581,15 @@ const sr = calculateStrideRate(30, 25);
                             const sr = (strides / time) * 60;
 
                             document.getElementById('sr-result').textContent = sr.toFixed(1);
-                            document.getElementById('sr-steps').innerHTML =
-                                `SR = (${strides} / ${time}) × 60 = ${sr.toFixed(1)} SPM`;
+                            document.getElementById('sr-steps-breakdown').innerHTML =
+                                `케이던스 = (${strides} / ${time}) × 60 = ${sr.toFixed(1)} SPM`;
                         } catch (e) {
                             console.error('SR calculation error:', e);
                         }
                     }
 
                     document.addEventListener('DOMContentLoaded', function () {
-                        document.getElementById('sr-strides').addEventListener('input', updateSRCalculator);
+                        document.getElementById('sr-steps-count').addEventListener('input', updateSRCalculator);
                         document.getElementById('sr-time').addEventListener('input', updateSRCalculator);
                         updateSRCalculator();
                     });
@@ -1631,36 +1598,32 @@ const sr = calculateStrideRate(30, 25);
         </div>
 
         <div class="formula-card">
-            <h3>스트라이드당 거리 (DPS)</h3>
+            <h3>스트라이드 길이 (Stride Length)</h3>
             <div class="formula-content">
                 <h4>공식:</h4>
                 <div class="formula-box-large">
                     <div class="formula">
-                        DPS = 거리 / 스트라이드 수
+                        스트라이드 길이 = 거리 / (걸음 수 / 2)
                     </div>
                     <div class="formula">
-                        DPS = 거리 / (SR / 60)
+                        스트라이드 길이 = 속도 / (케이던스 / 120)
                     </div>
                 </div>
 
-                <h4>JavaScript 구현:</h4>
-                <pre><code>function calculateDPS(distance, strideCount, pushoffDistance = 0) {
-  const effectiveDistance = distance - pushoffDistance;
-  return effectiveDistance / strideCount;
+                <h4>JavaScript 구현 예시:</h4>
+                <pre><code>function calculateStrideLength(distanceMeters, stepCount) {
+  // 스트라이드 길이는 거리 / 스트라이드 한 쌍(왼발+오른발)의 수
+  return distanceMeters / (stepCount / 2);
 }
 
-// Example (400m track, 5m push-off):
-const dps = calculateDPS(25, 12, 5);
-// Returns: 1.67 m/stride
-
-// For multiple segments:
-const dps100m = calculateDPS(100, 48, 4 * 5);
-// Returns: 1.67 m/stride (4 segments × 5m push-off)</code></pre>
+// 사용 예시 (1000m, 800걸음):
+const strideLength = calculateStrideLength(1000, 800);
+// 결과값: 스트라이드당 2.50미터</code></pre>
             </div>
         </div>
 
         <div class="formula-card">
-            <h3>SR과 DPS를 이용한 속도</h3>
+            <h3>SR과 DPS를 이용한 속도 계산</h3>
             <div class="formula-content">
                 <h4>공식:</h4>
                 <div class="formula-box-large">
@@ -1669,19 +1632,20 @@ const dps100m = calculateDPS(100, 48, 4 * 5);
                     </div>
                 </div>
 
-                <h4>JavaScript 구현:</h4>
+                <h4>JavaScript 구현 예시:</h4>
                 <pre><code>function calculateVelocity(strideRate, dps) {
+  // 스트라이드 비율과 한 걸음당 거리(DPS)를 이용해 속도(m/s) 계산
   return (strideRate / 60) * dps;
 }
 
-// Example:
+// 사용 예시:
 const velocity = calculateVelocity(70, 1.6);
-// Returns: 1.87 m/s</code></pre>
+// 결과값: 1.87 m/s</code></pre>
             </div>
         </div>
 
         <div class="formula-card">
-            <h3>스트라이드 지수 (SI)</h3>
+            <h3>스트라이드 인덱스 (Stride Index, SI)</h3>
             <div class="formula-content">
                 <h4>공식:</h4>
                 <div class="formula-box-large">
@@ -1690,14 +1654,15 @@ const velocity = calculateVelocity(70, 1.6);
                     </div>
                 </div>
 
-                <h4>JavaScript 구현:</h4>
+                <h4>JavaScript 구현 예시:</h4>
                 <pre><code>function calculateStrideIndex(velocity, dps) {
+  // 속도와 DPS를 곱해 스트라이드 인덱스 계산
   return velocity * dps;
 }
 
-// Example:
+// 사용 예시:
 const si = calculateStrideIndex(1.5, 1.7);
-// Returns: 2.55</code></pre>
+// 결과값: 2.55</code></pre>
             </div>
         </div>
     </div>
@@ -1705,7 +1670,7 @@ const si = calculateStrideIndex(1.5, 1.7);
 
 <section class="section section-alt">
     <div class="container">
-        <h2>성과 관리 차트 (PMC)</h2>
+        <h2>퍼포먼스 관리 차트 (PMC)</h2>
 
         <div class="formula-card">
             <h3>CTL, ATL, TSB 계산</h3>
@@ -1713,30 +1678,33 @@ const si = calculateStrideIndex(1.5, 1.7);
                 <h4>공식:</h4>
                 <div class="formula-box-large">
                     <div class="formula">
-                        오늘 CTL = 어제 CTL + (오늘 TSS - 어제 CTL) × (1/42)
+                        CTL오늘 = CTL어제 + (TSS오늘 - CTL어제) × (1/42)
                     </div>
                     <div class="formula">
-                        오늘 ATL = 어제 ATL + (오늘 TSS - 어제 ATL) × (1/7)
+                        ATL오늘 = ATL어제 + (TSS오늘 - ATL어제) × (1/7)
                     </div>
                     <div class="formula">
-                        TSB = 어제 CTL - 어제 ATL
+                        TSB = CTL어제 - ATL어제
                     </div>
                 </div>
 
-                <h4>JavaScript 구현:</h4>
+                <h4>JavaScript 구현 예시:</h4>
                 <pre><code>function updateCTL(previousCTL, todayTSS) {
+  // 42일 가중 평균을 이용한 만성 훈련 부하(CTL) 업데이트
   return previousCTL + (todayTSS - previousCTL) * (1/42);
 }
 
 function updateATL(previousATL, todayTSS) {
+  // 7일 가중 평균을 이용한 급성 훈련 부하(ATL) 업데이트
   return previousATL + (todayTSS - previousATL) * (1/7);
 }
 
 function calculateTSB(yesterdayCTL, yesterdayATL) {
+  // 어제의 CTL과 ATL의 차이로 훈련 스트레스 밸런스(TSB) 계산
   return yesterdayCTL - yesterdayATL;
 }
 
-// Calculate PMC for series of workouts
+// 워크아웃 시리즈에 대한 PMC 계산 함수
 function calculatePMC(workouts) {
   let ctl = 0, atl = 0;
   const results = [];
@@ -1758,16 +1726,16 @@ function calculatePMC(workouts) {
   return results;
 }
 
-// Example usage:
+// 사용 예시:
 const workouts = [
   { date: '2025-01-01', tss: 50 },
   { date: '2025-01-02', tss: 60 },
   { date: '2025-01-03', tss: 45 },
-  // ... more workouts
+  // ... 추가 워크아웃 데이터
 ];
 
 const pmc = calculatePMC(workouts);
-// Returns array with CTL, ATL, TSB for each day</code></pre>
+// 각 날짜별 CTL, ATL, TSB 결과 배열 반환</code></pre>
             </div>
         </div>
     </div>
@@ -1775,14 +1743,14 @@ const pmc = calculatePMC(workouts);
 
 <section class="section">
     <div class="container">
-        <h2>고급 계산</h2>
+        <h2>고급 분석 계산</h2>
 
         <div class="formula-card">
-            <h3>다중 거리에서의 CRS (회귀 방법)</h3>
+            <h3>다중 거리를 이용한 CRS 계산 (회귀 분석 방식)</h3>
             <div class="formula-content">
-                <h4>JavaScript 구현:</h4>
+                <h4>JavaScript 구현 예시:</h4>
                 <pre><code>function calculateCRSRegression(distances, times) {
-  // 선형 회귀: 거리 = a + b*시간
+  // 선형 회귀 분석: 거리 = a + b * 시간
   const n = distances.length;
   const sumX = times.reduce((a, b) => a + b, 0);
   const sumY = distances.reduce((a, b) => a + b, 0);
@@ -1793,40 +1761,42 @@ const pmc = calculatePMC(workouts);
   const intercept = (sumY - slope * sumX) / n;
 
   return {
-    css: slope, // 임계 달리기 속도 (m/s)
-    anaerobic_capacity: intercept // 무산소 거리 용량 (m)
+    crs: slope, // 임계 러닝 속도 (m/s)
+    anaerobic_capacity: intercept // 무산소 거리 능력 (m)
   };
 }
 
-// 여러 테스트 거리 예시:
+// 여러 테스트 거리를 이용한 사용 예시:
 const distances = [100, 200, 400, 800];
-const times = [65, 150, 340, 720]; // 초 단위
+const times = [65, 150, 340, 720]; // 초 단위 시간
 const result = calculateCRSRegression(distances, times);
-// Returns: { css: 1.18, anaerobic_capacity: 15.3 }</code></pre>
+// 결과값: { crs: 1.18, anaerobic_capacity: 15.3 }</code></pre>
             </div>
         </div>
 
         <div class="formula-card">
-            <h3>페이스로부터의 강도 계수 (Intensity Factor)</h3>
+            <h3>페이스를 이용한 강도 지수(IF) 계산</h3>
             <div class="formula-content">
-                <h4>JavaScript 구현:</h4>
-                <pre><code>function calculateIntensityFactor(actualPace100m, thresholdPace100m) {
-  // 페이스를 속도(m/s)로 변환
-  const actualSpeed = 100 / actualPace100m;
-  const thresholdSpeed = 100 / thresholdPace100m;
-  return actualSpeed / thresholdSpeed;
+                <h4>JavaScript 구현 예시:</h4>
+                <pre><code>function calculateIntensityFactor(actualPaceMinKm, thresholdPaceMinKm) {
+  // 필요 시 "mm:ss" 페이스 문자열을 초 단위로 변환
+  const actualSecs = typeof actualPaceMinKm === 'string' ? timeToSeconds(actualPaceMinKm) : actualPaceMinKm;
+  const thresholdSecs = typeof thresholdPaceMinKm === 'string' ? timeToSeconds(thresholdPaceMinKm) : thresholdPaceMinKm;
+
+  // IF = 임계 페이스 / 실제 페이스 (더 빠른 페이스는 더 작은 초 값을 가짐)
+  return thresholdSecs / actualSecs;
 }
 
-// 예시:
-const if_value = calculateIntensityFactor(110, 93);
-// Returns: 0.845 (임계치의 84.5%로 달리는 중)</code></pre>
+// 사용 예시:
+const if_value = calculateIntensityFactor("4:45", "4:15");
+// 결과값: 0.895 (임계점의 89.5% 강도로 러닝 중)</code></pre>
             </div>
         </div>
 
         <div class="formula-card">
             <h3>페이스 일관성 분석</h3>
             <div class="formula-content">
-                <h4>JavaScript 구현:</h4>
+                <h4>JavaScript 구현 예시:</h4>
                 <pre><code>function analyzePaceConsistency(segments) {
   const paces = segments.map(kilometer => kilometer.distance / kilometer.time);
   const avgPace = paces.reduce((a, b) => a + b) / paces.length;
@@ -1840,13 +1810,13 @@ const if_value = calculateIntensityFactor(110, 93);
     avgPace,
     stdDev,
     coefficientOfVariation,
-    consistency: coefficientOfVariation < 5 ? "Excellent" :
-                 coefficientOfVariation < 10 ? "Good" :
-                 coefficientOfVariation < 15 ? "Moderate" : "Variable"
+    consistency: coefficientOfVariation < 5 ? "매우 우수" :
+                 coefficientOfVariation < 10 ? "우수" :
+                 coefficientOfVariation < 15 ? "보통" : "기복 있음"
   };
 }
 
-// 예시:
+// 사용 예시:
 const segments = [
   { distance: 100, time: 70 },
   { distance: 100, time: 72 },
@@ -1854,43 +1824,37 @@ const segments = [
   // ...
 ];
 const analysis = analyzePaceConsistency(segments);
-// Returns: { avgPace: 1.41, stdDev: 0.02, coefficientOfVariation: 1.4, consistency: "Excellent" }</code></pre>
+// 결과값: { avgPace: 1.41, stdDev: 0.02, coefficientOfVariation: 1.4, consistency: "매우 우수" }</code></pre>
             </div>
         </div>
 
         <div class="formula-card">
-            <h3>스트라이드 수로 피로 감지</h3>
+            <h3>스트라이드 효율성을 통한 피로 감지</h3>
             <div class="formula-content">
-                <h4>JavaScript 구현:</h4>
+                <h4>JavaScript 구현 예시:</h4>
                 <pre><code>function detectFatigue(segments) {
-  const firstThird = segments.slice(0, Math.floor(segments.length/3));
-  const lastThird = segments.slice(-Math.floor(segments.length/3));
+  // 첫 번째 구간과 마지막 구간의 수직 비율 비교
+  const firstSegment = segments[0];
+  const lastSegment = segments[segments.length - 1];
 
-  const firstThirdAvg = firstThird.reduce((sum, kilometer) =>
-    sum + kilometer.strideCount, 0) / firstThird.length;
-  const lastThirdAvg = lastThird.reduce((sum, kilometer) =>
-    sum + kilometer.strideCount, 0) / lastThird.length;
-
-  const strideCountIncrease = ((lastThirdAvg - firstThirdAvg) / firstThirdAvg) * 100;
+  const ratioIncrease = lastSegment.verticalRatio - firstSegment.verticalRatio;
 
   return {
-    firstThirdAvg: Math.round(firstThirdAvg * 10) / 10,
-    lastThirdAvg: Math.round(lastThirdAvg * 10) / 10,
-    percentIncrease: Math.round(strideCountIncrease * 10) / 10,
-    fatigueLevel: strideCountIncrease < 5 ? "Minimal" :
-                  strideCountIncrease < 10 ? "Moderate" :
-                  strideCountIncrease < 20 ? "Significant" : "Severe"
+    startRatio: firstSegment.verticalRatio,
+    endRatio: lastSegment.verticalRatio,
+    increase: Math.round(ratioIncrease * 10) / 10,
+    fatigueLevel: ratioIncrease < 0.2 ? "최소" :
+                  ratioIncrease < 0.5 ? "보통" :
+                  ratioIncrease < 1.0 ? "상당함" : "심각함"
   };
 }
 
-// 예시:
+// 사용 예시:
 const segments = [
-  { strideCount: 14 }, { strideCount: 14 }, { strideCount: 15 },
-  { strideCount: 15 }, { strideCount: 16 }, { strideCount: 16 },
-  { strideCount: 17 }, { strideCount: 18 }, { strideCount: 18 }
+  { verticalRatio: 7.2 }, { verticalRatio: 7.3 }, { verticalRatio: 8.1 }
 ];
 const fatigue = detectFatigue(segments);
-// Returns: { firstThirdAvg: 14.3, lastThirdAvg: 17.7, percentIncrease: 23.8, fatigueLevel: "Severe" }</code></pre>
+// 결과값: { startRatio: 7.2, endRatio: 8.1, increase: 0.9, fatigueLevel: "상당함" }</code></pre>
             </div>
         </div>
     </div>
@@ -1898,40 +1862,39 @@ const fatigue = detectFatigue(segments);
 
 <section class="section section-alt">
     <div class="container">
-        <h2>데이터 검증</h2>
+        <h2>데이터 검증 (Data Validation)</h2>
 
         <div class="formula-card">
-            <h3>운동 데이터 품질 확인</h3>
+            <h3>워크아웃 데이터 품질 검사</h3>
             <div class="formula-content">
-                <h4>JavaScript 구현:</h4>
+                <h4>JavaScript 구현 예시:</h4>
                 <pre><code>function validateWorkoutData(workout) {
   const issues = [];
 
-  // 합리적인 페이스 범위 확인 (100m당 1:00-5:00)
-  const avgPace = (workout.totalTime / workout.totalDistance) * 100;
-  if (avgPace < 60 || avgPace > 300) {
-    issues.push(`비정상적인 평균 페이스: 100m당 ${Math.round(avgPace)}초`);
+  // 정상적인 페이스 범위 확인 (km당 3:00~8:00)
+  const avgPaceSecs = workout.totalTime / (workout.totalDistance / 1000);
+  if (avgPaceSecs < 180 || avgPaceSecs > 480) {
+    issues.push(`비정상적인 평균 페이스: km당 ${Math.round(avgPaceSecs)}초`);
   }
 
-  // 합리적인 스트라이드 수 확인 (400m당 10-50)
-  const avgStridesPer400m = (workout.totalStrides / workout.totalDistance) * 25;
-  if (avgStridesPer400m < 10 || avgStridesPer400m > 50) {
-    issues.push(`비정상적인 스트라이드 수: 400m당 ${Math.round(avgStridesPer400m)}`);
+  // 정상적인 수직 비율 범위 확인 (4% ~ 15%)
+  if (workout.avgVerticalRatio < 4 || workout.avgVerticalRatio > 15) {
+    issues.push(`비정상적인 평균 수직 비율: ${workout.avgVerticalRatio}%`);
   }
 
-  // 합리적인 스트라이드 레이트 확인 (30-150 SPM)
-  const avgSR = calculateStrideRate(workout.totalStrides, workout.totalTime);
-  if (avgSR < 30 || avgSR > 150) {
-    issues.push(`비정상적인 스트라이드 레이트: ${Math.round(avgSR)} SPM`);
+  // 정상적인 케이던스 범위 확인 (120~220 SPM)
+  const avgCadence = calculateCadence(workout.totalSteps, workout.totalTime);
+  if (avgCadence < 120 || avgCadence > 220) {
+    issues.push(`비정상적인 케이던스: ${Math.round(avgCadence)} SPM`);
   }
 
-  // 누락된 구간 확인 (시간 간격)
+  // 누락된 구간(시간 공백) 확인
   if (workout.segments && workout.segments.length > 1) {
     for (let i = 1; i < workout.segments.length; i++) {
       const gap = workout.segments[i].startTime -
                   (workout.segments[i-1].startTime + workout.segments[i-1].duration);
-      if (gap > 300) { // 5분 간격
-        issues.push(`구간 ${i}와 ${i+1} 사이에 큰 간격 감지`);
+      if (gap > 300) { // 5분 이상의 공백
+        issues.push(`구간 ${i}와 ${i+1} 사이에서 큰 시간 공백이 감지되었습니다.`);
       }
     }
   }
@@ -1942,15 +1905,15 @@ const fatigue = detectFatigue(segments);
   };
 }
 
-// 예시:
+// 사용 예시:
 const workout = {
   totalDistance: 2000,
   totalTime: 1800, // 30분
   totalStrides: 800,
-  segments: [/* 킬로미터 데이터 */]
+  segments: [/* 킬로미터별 데이터 */]
 };
 const validation = validateWorkoutData(workout);
-// Returns: { isValid: true, issues: [] }</code></pre>
+// 결과값: { isValid: true, issues: [] }</code></pre>
             </div>
         </div>
     </div>
@@ -1958,63 +1921,25 @@ const validation = validateWorkoutData(workout);
 
 <section class="section">
     <div class="container container-narrow">
-        <h2>Helper Functions</h2>
+        <h2>헬퍼 함수 (Helper Functions)</h2>
 
         <div class="formula-card">
-            <h3>Time Conversion Utilities</h3>
+            <h3>시간 변환 유틸리티</h3>
             <div class="formula-content">
-                <h4>JavaScript Implementation:</h4>
-                <pre><code>// Convert mm:ss to seconds
+                <h4>JavaScript 구현 예시:</h4>
+                <pre><code>// "mm:ss" 페이스를 초 단위로 변환
 function timeToSeconds(timeString) {
   const parts = timeString.split(':');
   return parseInt(parts[0]) * 60 + parseInt(parts[1]);
 }
 
-// Convert seconds to mm:ss
+// 초 단위를 "mm:ss" 형식으로 변환
 function secondsToTime(seconds) {
   const minutes = Math.floor(seconds / 60);
   const secs = Math.round(seconds % 60);
   return `${minutes}:${secs.toString().padStart(2, '0')}`;
-}
-
-// Convert seconds to hh:mm:ss
-function secondsToTimeDetailed(seconds) {
-  const hours = Math.floor(seconds / 3600);
-  const minutes = Math.floor((seconds % 3600) / 60);
-  const secs = Math.round(seconds % 60);
-  return `${hours}:${minutes.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
-}
-
-// Examples:
-timeToSeconds("1:33"); // Returns: 93
-secondsToTime(93); // Returns: "1:33"
-secondsToTimeDetailed(3665); // Returns: "1:01:05"</code></pre>
+}</code></pre>
             </div>
-        </div>
-    </div>
-</section>
-
-<section class="section section-alt">
-    <div class="container container-narrow text-center">
-        <h2>Implementation Resources</h2>
-        <p class="lead">All formulas on this page are production-ready and validated against scientific literature. Use
-            them for custom analytics tools, verification, or deeper understanding of running performance calculations.
-        </p>
-
-        <div class="callout callout-tip">
-            <h3>💡 Best Practices</h3>
-            <ul class="text-left">
-                <li><strong>Validate inputs:</strong> Check for reasonable ranges before calculating</li>
-                <li><strong>Handle edge cases:</strong> Division by zero, negative values, null data</li>
-                <li><strong>Round appropriately:</strong> CTL/ATL/TSB to 1 decimal, sTSS to integer</li>
-                <li><strong>Store precision:</strong> Keep full precision in database, round for display</li>
-                <li><strong>Test thoroughly:</strong> Use known-good data to verify calculations</li>
-            </ul>
-        </div>
-
-        <div class="mt-xl">
-            <a href="/ko/" class="btn btn-primary btn-large">Back to Home</a>
-            <a href="/ko/research/" class="btn btn-secondary">Scientific Foundation</a>
         </div>
     </div>
 </section>

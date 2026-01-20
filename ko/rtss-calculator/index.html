@@ -1135,75 +1135,71 @@ img[width][height] {
     
     <section class="page-hero">
     <div class="container">
-        <h1>무료 러닝 TSS 계산기</h1>
-        <p class="lead">러닝 워크아웃의 Training Stress Score를 계산하세요 — 무료 rTSS 계산기</p>
+        <h1>무료 러닝 rTSS 계산기</h1>
+        <p class="lead">러닝 워크아웃의 Training Stress Score를 계산하세요 — 유일한 무료 rTSS 계산기</p>
     </div>
 </section>
 
 <section class="section">
     <div class="container container-narrow">
         <div class="callout callout-info mb-xl">
-            <h2>What is Running rTSS (rTSS)?</h2>
-            <p><strong>Running Stress Score (rTSS)</strong> quantifies the training load of a running workout
-                by combining intensity and duration. It's adapted from cycling's TSS methodology, using your Critical
-                Run Speed (CRS) as the threshold pace. A 1-hour workout at CRS pace = 100 rTSS.</p>
+            <h2>러닝 rTSS(rTSS)란 무엇인가요?</h2>
+            <p><strong>러닝 스트레스 점수(rTSS)</strong>는 강도와 시간을 결합하여 러닝 워크아웃의 훈련 부하를 정량화합니다. 사이클링의 TSS 방법론을 변형하여, 임계 러닝
+                속도(CRS)를 역치 페이스로 사용합니다. CRS 페이스로 1시간 워크아웃 = 100 rTSS입니다.</p>
         </div>
 
-        <h2 class="mt-3xl">Free rTSS Calculator</h2>
-        <p class="lead mb-xl">Calculate training stress for any running workout. Requires your CRS pace.</p>
+        <h2 class="mt-3xl">무료 rTSS 계산기</h2>
+        <p class="lead mb-xl">모든 러닝 워크아웃에 대한 훈련 스트레스를 계산하세요. CRS 페이스가 필요합니다.</p>
 
         <div class="crs-calculator">
             <form id="rtssCalculatorForm">
                 <div class="calculator-inputs">
                     <div class="form-group">
-                        <label for="crsPace" class="form-label">Your CRS Pace (mm:ss per km)</label>
+                        <label for="crsPace" class="form-label">당신의 CRS 페이스 (km당 분:초)</label>
                         <input type="text" id="crsPace" class="form-input" placeholder="4:15"
                             pattern="[0-9]{1,2}:[0-5][0-9]" aria-required="true" aria-describedby="crsPace-help" />
-                        <small id="crsPace-help" class="form-help">Your threshold pace from CRS test (e.g.,
-                            4:15)</small>
+                        <small id="crsPace-help" class="form-help">CRS 테스트에서의 역치 페이스 (예: 4:15)</small>
                         <div class="form-error" id="crsPace-error"></div>
                     </div>
 
                     <div class="form-group">
-                        <label for="workoutDuration" class="form-label">Workout Duration (minutes)</label>
+                        <label for="workoutDuration" class="form-label">워크아웃 시간 (분)</label>
                         <input type="number" id="workoutDuration" class="form-input" placeholder="60" min="1" max="300"
                             aria-required="true" aria-describedby="duration-help" />
-                        <small id="duration-help" class="form-help">Total workout time including rest (1-300
-                            minutes)</small>
+                        <small id="duration-help" class="form-help">휴식을 포함한 총 워크아웃 시간 (1-300분)</small>
                         <div class="form-error" id="duration-error"></div>
                     </div>
 
                     <div class="form-group">
-                        <label for="avgPace" class="form-label">Average Workout Pace (mm:ss per km)</label>
+                        <label for="avgPace" class="form-label">워크아웃 평균 페이스 (km당 분:초)</label>
                         <input type="text" id="avgPace" class="form-input" placeholder="4:45"
                             pattern="[0-9]{1,2}:[0-5][0-9]" aria-required="true" aria-describedby="pace-help" />
-                        <small id="pace-help" class="form-help">Your average pace during the workout (e.g.,
-                            4:45)</small>
+                        <small id="pace-help" class="form-help">워크아웃 중 평균 페이스 (예: 4:45)</small>
                         <div class="form-error" id="pace-error"></div>
                     </div>
 
                     <div class="calculator-buttons">
-                        <button type="submit" class="btn btn-primary" id="calculateRtssBtn">Calculate rTSS</button>
-                        <button type="reset" class="btn btn-ghost" id="resetRtssBtn">Clear</button>
+                        <button type="submit" class="btn btn-primary" id="calculateRtssBtn">rTSS 계산하기</button>
+                        <button type="reset" class="btn btn-ghost" id="resetRtssBtn">초기화</button>
                     </div>
                 </div>
             </form>
 
             <div class="calculator-results hidden" id="rtssResults" aria-live="polite">
-                <h3>Your Training Stress Score</h3>
+                <h3>당신의 훈련 스트레스 점수</h3>
                 <div class="results-summary">
                     <div class="result-item">
                         <div class="result-label">rTSS</div>
                         <div class="crs-result-value" id="rtssValue">--</div>
                     </div>
                     <div class="result-item">
-                        <div class="result-label">Intensity Factor (IF)</div>
+                        <div class="result-label">강도 계수 (IF)</div>
                         <div class="crs-result-value" id="intensityFactor">--</div>
                     </div>
                 </div>
 
                 <div class="zones-result">
-                    <h4>Training Load Interpretation</h4>
+                    <h4>훈련 부하 해석</h4>
                     <p class="mb-md text-secondary" id="rtssInterpretation">
                         <!-- Filled by JavaScript -->
                     </p>
@@ -1211,300 +1207,281 @@ img[width][height] {
             </div>
         </div>
 
-        <h2 class="mt-3xl">How rTSS is Calculated</h2>
+        <h2 class="mt-3xl">rTSS 계산 방법</h2>
 
         <div class="formula-box">
-            <h3>Formula</h3>
+            <h3>공식</h3>
             <div class="formula">
-                rTSS = (Duration in hours) × (Intensity Factor)² × 100
+                rTSS = (시간 단위 지속 시간) × (강도 계수)² × 100
             </div>
             <div class="formula-explanation">
-                <p>Where:</p>
+                <p>여기서:</p>
                 <ul>
-                    <li><strong>Intensity Factor (IF)</strong> = CRS Pace / Average Workout Pace</li>
-                    <li><strong>Duration</strong> = Total workout time in hours</li>
-                    <li><strong>CRS Pace</strong> = Your threshold pace from CRS test</li>
+                    <li><strong>강도 계수 (IF)</strong> = CRS 페이스 / 워크아웃 평균 페이스</li>
+                    <li><strong>지속 시간</strong> = 시간 단위의 총 워크아웃 시간</li>
+                    <li><strong>CRS 페이스</strong> = CRS 테스트에서의 역치 페이스</li>
                 </ul>
             </div>
         </div>
 
-        <h3 class="mt-xl">Worked Example</h3>
+        <h3 class="mt-xl">계산 예시</h3>
         <div class="example-box">
-            <h4>Workout Details:</h4>
+            <h4>워크아웃 세부 정보:</h4>
             <ul>
-                <li>CRS Pace: <strong>4:15/km</strong> (255 seconds)</li>
-                <li>Workout Duration: <strong>60 minutes</strong> (1 hour)</li>
-                <li>Average Pace: <strong>4:45/km</strong> (285 seconds)</li>
+                <li>CRS 페이스: <strong>4:15/km</strong> (255초)</li>
+                <li>워크아웃 시간: <strong>60분</strong> (1시간)</li>
+                <li>평균 페이스: <strong>4:45/km</strong> (285초)</li>
             </ul>
 
-            <h4>Step 1: Calculate Intensity Factor</h4>
+            <h4>1단계: 강도 계수 계산</h4>
             <div class="calculation">
-                IF = CRS Pace / Workout Pace<br>
+                IF = CRS 페이스 / 워크아웃 페이스<br>
                 IF = 255 / 285<br>
                 IF = <strong>0.895</strong>
             </div>
 
-            <h4>Step 2: Calculate rTSS</h4>
+            <h4>2단계: rTSS 계산</h4>
             <div class="calculation">
-                rTSS = 1.0 hours × (0.895)² × 100<br>
+                rTSS = 1.0 시간 × (0.895)² × 100<br>
                 rTSS = 1.0 × 0.801 × 100<br>
                 rTSS = <strong>80</strong>
             </div>
 
-            <p class="mt-md"><strong>Interpretation:</strong> This 60-minute workout at easy pace (slower than CRS)
-                generated 72 rTSS - a moderate training load suitable for aerobic base building.</p>
+            <p class="mt-md"><strong>해석:</strong> 쉬운 페이스(CRS보다 느림)로 진행된 이 60분 워크아웃은 80 rTSS를 생성했습니다 - 유산소 기초 구축에 적합한 적당한
+                훈련 부하입니다.</p>
         </div>
 
-        <h2 class="mt-3xl">Understanding rTSS Values</h2>
+        <h2 class="mt-3xl">rTSS 값 이해하기</h2>
 
         <div class="zones-table-container">
             <table class="zones-table">
                 <thead>
                     <tr>
-                        <th>rTSS Range</th>
-                        <th>Training Load</th>
-                        <th>Recovery Time</th>
-                        <th>Example Workout</th>
+                        <th>rTSS 범위</th>
+                        <th>훈련 부하</th>
+                        <th>회복 시간</th>
+                        <th>워크아웃 예시</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td>&lt; 50</td>
-                        <td>Low</td>
-                        <td>Same day</td>
-                        <td>Easy 30-min run, technique drills</td>
+                        <td>낮음</td>
+                        <td>당일</td>
+                        <td>쉬운 30분 러닝, 기술 드릴</td>
                     </tr>
                     <tr>
                         <td>50-100</td>
-                        <td>Moderate</td>
-                        <td>1 day</td>
-                        <td>60-min endurance, steady pace</td>
+                        <td>중간</td>
+                        <td>1일</td>
+                        <td>60분 지구력, 꾸준한 페이스</td>
                     </tr>
                     <tr>
                         <td>100-200</td>
-                        <td>High</td>
-                        <td>1-2 days</td>
-                        <td>90-min threshold sets, race pace intervals</td>
+                        <td>높음</td>
+                        <td>1-2일</td>
+                        <td>90분 역치 세트, 레이스 페이스 인터벌</td>
                     </tr>
                     <tr>
                         <td>200-300</td>
-                        <td>Very High</td>
-                        <td>2-3 days</td>
-                        <td>2-hour hard training, multiple threshold blocks</td>
+                        <td>매우 높음</td>
+                        <td>2-3일</td>
+                        <td>2시간 강한 훈련, 다수의 역치 블록</td>
                     </tr>
                     <tr>
                         <td>&gt; 300</td>
-                        <td>Extreme</td>
-                        <td>3+ days</td>
-                        <td>Long race (&gt;2 hours), ultra-endurance</td>
+                        <td>극도로 높음</td>
+                        <td>3일 이상</td>
+                        <td>장거리 레이스(&gt;2시간), 울트라 지구력</td>
                     </tr>
                 </tbody>
             </table>
         </div>
 
-        <h2 class="mt-3xl">Weekly rTSS Guidelines</h2>
+        <h2 class="mt-3xl">주간 rTSS 가이드라인</h2>
 
-        <p class="mb-md">Target weekly rTSS depends on your training level and goals:</p>
+        <p class="mb-md">목표 주간 rTSS는 훈련 수준과 목표에 따라 다릅니다:</p>
 
         <div class="grid grid-2 mb-xl">
             <div class="card">
-                <h3 class="card-title">Recreational Runners</h3>
+                <h3 class="card-title">레크리에이션 러너</h3>
                 <div class="card-content">
-                    <p class="mb-sm"><strong>Weekly rTSS:</strong> 150-300</p>
-                    <p>2-3 workouts per week, 50-100 rTSS each. Focus on technique and building aerobic base.</p>
+                    <p class="mb-sm"><strong>주간 rTSS:</strong> 150-300</p>
+                    <p>주 2-3회 워크아웃, 각 50-100 rTSS. 기술과 유산소 기초 구축에 집중.</p>
                 </div>
             </div>
 
             <div class="card">
-                <h3 class="card-title">Fitness Runners / Triathletes</h3>
+                <h3 class="card-title">피트니스 러너 / 철인 3종 경기 선수</h3>
                 <div class="card-content">
-                    <p class="mb-sm"><strong>Weekly rTSS:</strong> 300-500</p>
-                    <p>3-4 workouts per week, 75-125 rTSS each. Mix of aerobic endurance and threshold work.</p>
+                    <p class="mb-sm"><strong>주간 rTSS:</strong> 300-500</p>
+                    <p>주 3-4회 워크아웃, 각 75-125 rTSS. 유산소 지구력과 역치 훈련의 혼합.</p>
                 </div>
             </div>
 
             <div class="card">
-                <h3 class="card-title">Competitive Masters Runners</h3>
+                <h3 class="card-title">경쟁적인 마스터즈 러너</h3>
                 <div class="card-content">
-                    <p class="mb-sm"><strong>Weekly rTSS:</strong> 500-800</p>
-                    <p>4-6 workouts per week, 80-150 rTSS each. Structured training with periodization.</p>
+                    <p class="mb-sm"><strong>주간 rTSS:</strong> 500-800</p>
+                    <p>주 4-6회 워크아웃, 각 80-150 rTSS. 주기화가 포함된 구조화된 훈련.</p>
                 </div>
             </div>
 
             <div class="card">
-                <h3 class="card-title">Elite / Collegiate Runners</h3>
+                <h3 class="card-title">엘리트 / 대학 러너</h3>
                 <div class="card-content">
-                    <p class="mb-sm"><strong>Weekly rTSS:</strong> 800-1200+</p>
-                    <p>8-12 workouts per week, double days. High volume with recovery management critical.</p>
+                    <p class="mb-sm"><strong>주간 rTSS:</strong> 800-1200+</p>
+                    <p>주 8-12회 워크아웃, 더블 데이. 높은 볼륨과 회복 관리가 중요함.</p>
                 </div>
             </div>
         </div>
 
         <div class="callout callout-warning">
-            <h3>⚠️ Important Notes</h3>
+            <h3>⚠️ 중요 참고 사항</h3>
             <ul>
-                <li><strong>Requires accurate CRS:</strong> Your CRS must be current (tested within 6-8 weeks) for
-                    accurate rTSS.</li>
-                <li><strong>Simplified calculation:</strong> This calculator uses average pace. Advanced rTSS uses
-                    Normalized Graded Pace (NGP) which accounts for interval structure.</li>
-                <li><strong>Not for technique work:</strong> rTSS only measures physical training stress, not skill
-                    development.</li>
-                <li><strong>Individual variation:</strong> Same rTSS feels different for different runners. Adjust
-                    guidelines based on your recovery.</li>
+                <li><strong>정확한 CRS 필요:</strong> 정확한 rTSS를 위해서는 CRS가 최신 상태(6-8주 내 테스트)여야 합니다.</li>
+                <li><strong>단순화된 계산:</strong> 이 계산기는 평균 페이스를 사용합니다. 고급 rTSS는 인터벌 구조를 고려하는 노멀라이즈드 그레이디드 페이스(NGP)를 사용합니다.
+                </li>
+                <li><strong>기술 훈련용 아님:</strong> rTSS는 신체적 훈련 스트레스만 측정하며, 기술 발달은 측정하지 않습니다.</li>
+                <li><strong>개인차:</strong> 동일한 rTSS라도 러너마다 다르게 느껴질 수 있습니다. 회복 상태에 따라 가이드라인을 조정하세요.</li>
             </ul>
         </div>
 
-        <h2 class="mt-3xl">Why rTSS Matters</h2>
+        <h2 class="mt-3xl">rTSS가 중요한 이유</h2>
 
-        <p class="mb-md">Training Stress Score is the foundation for:</p>
+        <p class="mb-md">훈련 스트레스 점수는 다음의 기초가 됩니다:</p>
 
         <ul class="mb-xl">
-            <li><strong>CTL (Chronic Training Load):</strong> Your fitness level - 42-day exponentially weighted average
-                of daily rTSS</li>
-            <li><strong>ATL (Acute Training Load):</strong> Your fatigue - 7-day exponentially weighted average of daily
-                rTSS</li>
-            <li><strong>TSB (Training Stress Balance):</strong> Your form - TSB = CTL - ATL (positive = fresh, negative
-                = fatigued)</li>
-            <li><strong>Periodization:</strong> Plan training phases (base, build, peak, taper) using target CTL
-                progressions</li>
-            <li><strong>Recovery Management:</strong> Know when to push and when to rest based on TSB</li>
+            <li><strong>CTL (만성 훈련 부하):</strong> 체력 수준 - 일일 rTSS의 42일 지수 가중 이동 평균</li>
+            <li><strong>ATL (급성 훈련 부하):</strong> 피로도 - 일일 rTSS의 7일 지수 가중 이동 평균</li>
+            <li><strong>TSB (훈련 스트레스 균형):</strong> 컨디션 - TSB = CTL - ATL (양수 = 신선함, 음수 = 피로함)</li>
+            <li><strong>주기화:</strong> 목표 CTL 진행을 사용하여 훈련 단계(기초, 강화, 피크, 테이퍼) 계획</li>
+            <li><strong>회복 관리:</strong> TSB를 기반으로 언제 밀어붙이고 언제 쉴지 파악</li>
         </ul>
 
         <div class="callout callout-tip">
-            <h3>Pro Tip: Track Your CTL</h3>
-            <p>Record daily rTSS in a spreadsheet or training log. Calculate your 42-day average (CTL) weekly. Target
-                5-10 CTL points increase per week during base building. Maintain or slightly reduce CTL during taper
-                (1-2 weeks before race).</p>
+            <h3>프로 팁: CTL 추적하기</h3>
+            <p>스프레드시트나 훈련 로그에 매일의 rTSS를 기록하세요. 매주 42일 평균(CTL)을 계산하세요. 기초 구축 기간 동안 주당 5-10 CTL 포인트 증가를 목표로 하세요. 테이퍼(레이스
+                1-2주 전) 기간 동안에는 CTL을 유지하거나 약간 줄이세요.</p>
         </div>
 
-        <h2 class="mt-3xl">Frequently Asked Questions</h2>
+        <h2 class="mt-3xl">자주 묻는 질문</h2>
 
         <div class="faq-section" itemscope itemtype="https://schema.org/FAQPage">
             <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">What is Running TSS (rTSS)?</h3>
+                <h3 itemprop="name">러닝 TSS(rTSS)란 무엇인가요?</h3>
                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                     <div itemprop="text">
-                        <p>Running Training Stress Score (rTSS) is a metric that quantifies the training load of a
-                            running workout by combining both intensity and duration. It's adapted from cycling's TSS
-                            methodology, using your Critical Run Speed (CRS) as the threshold pace. A workout of 1 hour
-                            at CRS pace equals 100 rTSS.</p>
+                        <p>러닝 훈련 스트레스 점수(rTSS)는 강도와 지속 시간을 모두 결합하여 러닝 워크아웃의 훈련 부하를 정량화하는 지표입니다. 사이클링의 TSS 방법론을 변형하여, 임계
+                            러닝 속도(CRS)를 역치 페이스로 사용합니다. CRS 페이스로 1시간 워크아웃은 100 rTSS와 같습니다.</p>
                     </div>
                 </div>
             </div>
 
             <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">How do I calculate my rTSS?</h3>
+                <h3 itemprop="name">rTSS를 어떻게 계산하나요?</h3>
                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                     <div itemprop="text">
-                        <p>Use the calculator above by entering your CRS pace (from a CRS test), total workout duration,
-                            and average pace during the workout. The formula is: rTSS = Duration (hours) × Intensity
-                            Factor³ × 100, where Intensity Factor = CRS Pace / Average Workout Pace.</p>
+                        <p>위의 계산기에 CRS 페이스(CRS 테스트에서 얻음), 총 워크아웃 시간, 워크아웃 평균 페이스를 입력하여 사용하세요. 공식은: rTSS = 시간(시간) × 강도
+                            계수² × 100이며, 여기서 강도 계수 = CRS 페이스 / 워크아웃 평균 페이스입니다.</p>
                     </div>
                 </div>
             </div>
 
             <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">Do I need CRS to calculate rTSS?</h3>
+                <h3 itemprop="name">rTSS를 계산하려면 CRS가 필요한가요?</h3>
                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                     <div itemprop="text">
-                        <p>Yes, your Critical Run Speed (CRS) is required to calculate the Intensity Factor, which is
-                            essential for rTSS calculation. CRS represents your threshold pace and should be tested
-                            every 6-8 weeks. You can find your CRS using our <a href="/ko/crs/">CRS
-                                calculator</a>.</p>
+                        <p>네, 강도 계수를 계산하려면 임계 러닝 속도(CRS) 또는 역치 페이스를 아는 것이 필수적입니다. CRS는 당신의 역치 페이스를 나타내며 6-8주마다 테스트해야
+                            합니다. <a href="/ko/crs/">CRS 계산기</a>를 사용하여 CRS를 찾을 수 있습니다.</p>
                     </div>
                 </div>
             </div>
 
             <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">What's a good rTSS score for one workout?</h3>
+                <h3 itemprop="name">한 번의 워크아웃에 좋은 rTSS 점수는 얼마인가요?</h3>
                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                     <div itemprop="text">
-                        <p>It depends on workout intensity: Easy workouts typically score below 50 rTSS, moderate
-                            workouts 50-100 rTSS, hard workouts 100-200 rTSS, and very hard workouts above 200 rTSS. The
-                            appropriate score depends on your training goals and current fitness level.</p>
+                        <p>워크아웃 강도에 따라 다릅니다: 쉬운 워크아웃은 일반적으로 50 rTSS 미만, 중간 강도는 50-100 rTSS, 힘든 워크아웃은 100-200 rTSS, 매우 힘든
+                            워크아웃은 200 rTSS 이상입니다. 적절한 점수는 훈련 목표와 현재 체력 수준에 따라 다릅니다.</p>
                     </div>
                 </div>
             </div>
 
             <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">How much rTSS should I do per week?</h3>
+                <h3 itemprop="name">주당 얼마의 rTSS를 해야 하나요?</h3>
                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                     <div itemprop="text">
-                        <p>Weekly rTSS targets vary by level: Recreational runners: 150-300, Fitness
-                            runners/Triathletes: 300-500, Competitive Masters: 500-800, Elite/Collegiate: 800-1200+.
-                            Start conservatively and increase gradually to avoid overtraining.</p>
+                        <p>주간 rTSS 목표는 수준에 따라 다릅니다: 레크리에이션 러너: 150-300, 피트니스 러너/철인 3종 경기 선수: 300-500, 경쟁적인 마스터즈:
+                            500-800, 엘리트/대학 선수: 800-1200+. 보수적으로 시작하여 오버트레이닝을 피하기 위해 점진적으로 늘리세요.</p>
                     </div>
                 </div>
             </div>
 
             <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">Is running TSS the same as cycling TSS?</h3>
+                <h3 itemprop="name">러닝 TSS는 사이클링 TSS와 같나요?</h3>
                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                     <div itemprop="text">
-                        <p>The concept and formula are the same, but rTSS is adapted for running. Instead of using power
-                            (FTP) like cycling TSS, rTSS uses pace with CRS as the threshold. Both measure training load
-                            Duration × Intensity Factor² × 100.
-                        </p>
+                        <p>개념과 공식은 같지만, rTSS는 러닝에 맞게 조정되었습니다. 사이클링 TSS처럼 파워(FTP)를 사용하는 대신, rTSS는 CRS를 역치로 하는 페이스를 사용합니다.
+                            둘 다 훈련 부하(시간 × 강도 계수² × 100)를 측정합니다.</p>
                     </div>
                 </div>
             </div>
 
             <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">Does rTSS account for terrain or hills?</h3>
+                <h3 itemprop="name">rTSS는 지형이나 언덕을 고려하나요?</h3>
                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                     <div itemprop="text">
-                        <p>Standard rTSS based on average GPS pace does not account for hills. For trail running or
-                            hilly routes, advanced tools use <strong>Normalized Graded Pace (NGP)</strong> or heart rate
-                            intervals to provide a more accurate representation of the training stress.</p>
+                        <p>평균 GPS 페이스에 기반한 표준 rTSS는 언덕을 고려하지 않습니다. 트레일 러닝이나 언덕이 많은 루트의 경우, 고급 도구는 <strong>노멀라이즈드 그레이디드
+                                페이스(NGP)</strong>나 심박수 구간 사용하여 훈련 스트레스를 더 정확하게 나타냅니다.</p>
                     </div>
                 </div>
             </div>
 
             <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">What's the difference between rTSS and CTL/ATL/TSB?</h3>
+                <h3 itemprop="name">rTSS와 CTL/ATL/TSB의 차이점은 무엇인가요?</h3>
                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                     <div itemprop="text">
-                        <p>rTSS measures a single workout's training load. CTL (Chronic Training Load) is your long-term
-                            fitness, ATL (Acute Training Load) is your recent fatigue, and TSB (Training Stress Balance)
-                            is your freshness. These metrics use rTSS values over time to track your training state.
-                            Learn more in our <a href="/ko/training-load/">Training Load guide</a>.</p>
+                        <p>rTSS는 단일 워크아웃의 훈련 부하를 측정합니다. CTL(만성 훈련 부하)은 장기적인 체력, ATL(급성 훈련 부하)은 최근의 피로, TSB(훈련 스트레스 균형)는
+                            신선도(컨디션)입니다. 이 지표들은 시간 경과에 따른 rTSS 값을 사용하여 훈련 상태를 추적합니다. <a
+                                href="/ko/training-load/">훈련 부하 가이드</a>에서 더 자세히 알아보세요.</p>
                     </div>
                 </div>
             </div>
         </div>
 
-        <h2 class="mt-3xl">Related Resources</h2>
+        <h2 class="mt-3xl">관련 리소스</h2>
 
         <div class="grid grid-3">
             <div class="card">
-                <h3 class="card-title">CRS Test</h3>
+                <h3 class="card-title">CRS 테스트</h3>
                 <div class="card-content">
-                    <p>Need your CRS pace? Use our free CRS calculator with 5K and 3K test times.</p>
-                    <a href="/ko/crs/" class="btn btn-secondary btn-small mt-md">CRS Calculator →</a>
+                    <p>CRS 페이스가 필요하신가요? 5K 및 3K 테스트 기록으로 무료 CRS 계산기를 사용하세요.</p>
+                    <a href="/ko/crs/" class="btn btn-secondary btn-small mt-md">CRS 계산기 →</a>
                 </div>
             </div>
 
             <div class="card">
-                <h3 class="card-title">Training Load Guide</h3>
+                <h3 class="card-title">훈련 부하 가이드</h3>
                 <div class="card-content">
-                    <p>Learn about CTL, ATL, TSB and Performance Management Chart metrics.</p>
-                    <a href="/ko/training-load/" class="btn btn-secondary btn-small mt-md">Training Load →</a>
+                    <p>CTL, ATL, TSB 및 퍼포먼스 관리 차트 지표에 대해 알아보세요.</p>
+                    <a href="/ko/training-load/" class="btn btn-secondary btn-small mt-md">훈련 부하 →</a>
                 </div>
             </div>
 
             <div class="card">
-                <h3 class="card-title">Run Analytics App</h3>
+                <h3 class="card-title">Run Analytics 앱</h3>
                 <div class="card-content">
-                    <p>Automatic rTSS calculation for all workouts. Track CTL/ATL/TSB trends over time.</p>
-                    <a href="/ko/" class="btn btn-secondary btn-small mt-md">Learn More →</a>
+                    <p>모든 워크아웃에 대한 자동 rTSS 계산. 시간 경과에 따른 CTL/ATL/TSB 추세를 추적하세요.</p>
+                    <a href="/ko/" class="btn btn-secondary btn-small mt-md">더 알아보기 →</a>
                 </div>
             </div>
         </div>
 
         <div class="mt-xl text-center">
-            <p class="mb-md"><strong>Want automatic rTSS tracking?</strong></p>
-            <a href="https://apps.apple.com/us/app/run-analytics/id6754524015" class="btn btn-primary btn-large" target="_blank"
-                rel="noopener">Download Run Analytics Free</a>
+            <p class="mb-md"><strong>자동 rTSS 추적을 원하시나요?</strong></p>
+            <a href="https://apps.apple.com/us/app/run-analytics/id6754524015" class="btn btn-primary btn-large" target="_blank" rel="noopener">Run
+                Analytics 무료 다운로드</a>
         </div>
     </div>
 </section>
