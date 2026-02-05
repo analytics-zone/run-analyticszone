@@ -506,7 +506,7 @@ img[width][height] {
   <link rel="dns-prefetch" href="https://www.googletagmanager.com">
 
   
-  <link rel="stylesheet" href="../../assets/css/main.min.css?v=e395be5c87fe">
+  <link rel="stylesheet" href="../../assets/css/main.min.css?v=8d54a979">
 
   
   
@@ -1203,7 +1203,7 @@ img[width][height] {
   
   <main id="main-content" class="main-content">
     
-    <section class="page-hero">
+<section class="page-hero">
     <div class="container">
         <h1>Referència Tècnica i Fórmules</h1>
         <p class="lead">Implementació Matemàtica Completa</p>
@@ -1213,15 +1213,17 @@ img[width][height] {
 <section class="section">
     <div class="container container-narrow">
         <h2>Guia d'Implementació</h2>
-        <p class="lead">Aquesta pàgina proporciona fórmules copiables i mètodes de càlcul pas a pas per a totes les mètriques de Run Analytics. Utilitza-les per a implementacions personalitzades, verificació o comprensió més profunda.</p>
+        <p class="lead">Aquesta pàgina proporciona fórmules "copy-paste" i mètodes de càlcul pas a pas per a totes les
+            mètriques de Run Analytics. Utilitza-les per a implementacions personalitzades, verificació o una comprensió
+            més profunda dels càlculs de rendiment.</p>
 
         <div class="callout callout-warning">
             <h3>⚠️ Notes d'Implementació</h3>
             <ul>
                 <li>Tots els temps s'han de convertir a segons per als càlculs</li>
-                <li>El ritme de running és invers (% més alt = ritme més lent)</li>
-                <li>Sempre valida les entrades per a rangs raonables</li>
-                <li>Gestiona casos extrems (divisió per zero, valors negatius)</li>
+                <li>El càlcul del rTSS utilitza el Factor d'Intensitat al quadrat (IF²)</li>
+                <li>Valida sempre les entrades per a rangs raonables</li>
+                <li>Gestiona els casos límit (divisió per zero, valors negatius)</li>
             </ul>
         </div>
     </div>
@@ -1229,10 +1231,10 @@ img[width][height] {
 
 <section class="section section-alt">
     <div class="container">
-        <h2>Mètriques de Rendiment Fonamentals</h2>
+        <h2>Mètriques de Rendiment Principals</h2>
 
         <div class="formula-card">
-            <h3>Critical Run Speed (CRS)</h3>
+            <h3>Velocitat Crítica de Carrera (CRS)</h3>
             <div class="formula-content">
                 <h4>Fórmula:</h4>
                 <div class="formula-box-large">
@@ -1240,7 +1242,7 @@ img[width][height] {
                         CRS (m/s) = (D₂ - D₁) / (T₂ - T₁)
                     </div>
                     <div class="formula">
-                        Ritme CRS/100m (segons) = (T₄₀₀ - T₂₀₀) / 2
+                        Ritme CRS (min/km) = 16.667 / CRS (m/s)
                     </div>
                 </div>
 
@@ -1249,31 +1251,33 @@ img[width][height] {
                     <div class="calculator-grid">
                         <div class="input-group">
                             <label for="crs-d1">Distància 1 (metres):</label>
-                            <input type="number" id="crs-d1" value="200" min="50" max="1000" step="50">
+                            <input type="number" id="crs-d1" value="1200" min="400" max="2000" step="100">
                         </div>
                         <div class="input-group">
                             <label for="crs-t1">Temps 1 (mm:ss):</label>
-                            <input type="text" id="crs-t1" value="2:30" placeholder="2:30" pattern="[0-9]{1,2}:[0-9]{2}">
+                            <input type="text" id="crs-t1" value="4:30" placeholder="4:30"
+                                pattern="[0-9]{1,2}:[0-9]{2}">
                         </div>
                         <div class="input-group">
                             <label for="crs-d2">Distància 2 (metres):</label>
-                            <input type="number" id="crs-d2" value="400" min="100" max="2000" step="50">
+                            <input type="number" id="crs-d2" value="3600" min="2000" max="10000" step="100">
                         </div>
                         <div class="input-group">
                             <label for="crs-t2">Temps 2 (mm:ss):</label>
-                            <input type="text" id="crs-t2" value="6:08" placeholder="6:08" pattern="[0-9]{1,2}:[0-9]{2}">
+                            <input type="text" id="crs-t2" value="15:00" placeholder="15:00"
+                                pattern="[0-9]{1,2}:[0-9]{2}">
                         </div>
                     </div>
                     <div class="calculator-result mt-md">
-                        <div class="result-label">Ritme CRS per 100m:</div>
-                        <div class="result-value" id="crs-result">1:49</div>
+                        <div class="result-label">Ritme CRS (min/km):</div>
+                        <div class="result-value" id="crs-result">4:17</div>
                     </div>
                     <div class="calculation-breakdown mt-md">
                         <small>
                             <strong>Passos del càlcul:</strong><br>
                             <span id="crs-steps">
-                                CRS (m/s) = (400 - 200) / (368 - 150) = 0.917 m/s<br>
-                                Ritme/100m = 100 / 0.917 = 109 segons = 1:49
+                                CRS (m/s) = (3600 - 1200) / (900 - 270) = 3.81 m/s<br>
+                                Ritme (min/km) = 1000 / 3.81 = 262 segons = 4:22
                             </span>
                         </small>
                     </div>
@@ -1281,89 +1285,86 @@ img[width][height] {
 
                 <h4 class="mt-xl">Implementació JavaScript:</h4>
                 <pre><code>function calculateCRS(distance1, time1, distance2, time2) {
-  // Convert times to seconds if needed
+  // Convert times to seconds
   const t1 = typeof time1 === 'string' ? timeToSeconds(time1) : time1;
   const t2 = typeof time2 === 'string' ? timeToSeconds(time2) : time2;
 
-  // Calculate CRS in m/s
-  const css_ms = (distance2 - distance1) / (t2 - t1);
+  // Calculate CRS velocity in m/s
+  const crs_ms = (distance2 - distance1) / (t2 - t1);
 
-  // Calculate pace per 100m in seconds
-  const pace_per_100m = 100 / css_ms;
+  // Calculate pace per km in seconds
+  const pace_per_km = 1000 / crs_ms;
 
   // Convert to mm:ss format
-  const minutes = Math.floor(pace_per_100m / 60);
-  const seconds = Math.round(pace_per_100m % 60);
+  const minutes = Math.floor(pace_per_km / 60);
+  const seconds = Math.round(pace_per_km % 60);
 
   return {
-    css_ms: css_ms,
-    pace_seconds: pace_per_100m,
+    velocity_ms: crs_ms,
+    pace_seconds: pace_per_km,
     pace_formatted: `${minutes}:${seconds.toString().padStart(2, '0')}`
   };
-}
-
-// Example usage:
-const result = calculateCRS(200, 150, 400, 368);
-// Returns: { css_ms: 0.917, pace_seconds: 109, pace_formatted: "1:49" }</code></pre>
+}</code></pre>
 
                 <script>
-                function timeToSecondsCRS(timeString) {
-                    const parts = timeString.split(':');
-                    return parseInt(parts[0]) * 60 + parseInt(parts[1]);
-                }
-
-                function secondsToTimeCRS(seconds) {
-                    const minutes = Math.floor(seconds / 60);
-                    const secs = Math.round(seconds % 60);
-                    return `${minutes}:${secs.toString().padStart(2, '0')}`;
-                }
-
-                function updateCRSCalculator() {
-                    try {
-                        const d1 = parseFloat(document.getElementById('crs-d1').value);
-                        const t1Input = document.getElementById('crs-t1').value;
-                        const d2 = parseFloat(document.getElementById('crs-d2').value);
-                        const t2Input = document.getElementById('crs-t2').value;
-
-                        if (!d1 || !t1Input || !d2 || !t2Input) return;
-
-                        const t1 = timeToSecondsCRS(t1Input);
-                        const t2 = timeToSecondsCRS(t2Input);
-
-                        const css_ms = (d2 - d1) / (t2 - t1);
-                        const pace_per_100m = 100 / css_ms;
-                        const pace_formatted = secondsToTimeCRS(pace_per_100m);
-
-                        document.getElementById('crs-result').textContent = pace_formatted;
-                        document.getElementById('crs-steps').innerHTML =
-                            `CRS (m/s) = (${d2} - ${d1}) / (${t2} - ${t1}) = ${css_ms.toFixed(3)} m/s<br>` +
-                            `Ritme/100m = 100 / ${css_ms.toFixed(3)} = ${Math.round(pace_per_100m)} segons = ${pace_formatted}`;
-                    } catch (e) {
-                        console.error('CRS calculation error:', e);
+                    function timeToSecondsCRS(timeString) {
+                        const parts = timeString.split(':');
+                        if (parts.length === 1) return parseInt(parts[0]);
+                        return parseInt(parts[0]) * 60 + parseInt(parts[1]);
                     }
-                }
 
-                document.addEventListener('DOMContentLoaded', function() {
-                    document.getElementById('crs-d1').addEventListener('input', updateCRSCalculator);
-                    document.getElementById('crs-t1').addEventListener('input', updateCRSCalculator);
-                    document.getElementById('crs-d2').addEventListener('input', updateCRSCalculator);
-                    document.getElementById('crs-t2').addEventListener('input', updateCRSCalculator);
-                    updateCRSCalculator();
-                });
+                    function secondsToTimeCRS(seconds) {
+                        const minutes = Math.floor(seconds / 60);
+                        const secs = Math.round(seconds % 60);
+                        return `${minutes}:${secs.toString().padStart(2, '0')}`;
+                    }
+
+                    function updateCRSCalculator() {
+                        try {
+                            const d1 = parseFloat(document.getElementById('crs-d1').value);
+                            const t1Input = document.getElementById('crs-t1').value;
+                            const d2 = parseFloat(document.getElementById('crs-d2').value);
+                            const t2Input = document.getElementById('crs-t2').value;
+
+                            if (!d1 || !t1Input || !d2 || !t2Input) return;
+
+                            const t1 = timeToSecondsCRS(t1Input);
+                            const t2 = timeToSecondsCRS(t2Input);
+
+                            const crs_ms = (d2 - d1) / (t2 - t1);
+                            const pace_per_km = 1000 / crs_ms;
+                            const pace_formatted = secondsToTimeCRS(pace_per_km);
+
+                            document.getElementById('crs-result').textContent = pace_formatted;
+                            document.getElementById('crs-steps').innerHTML =
+                                `CRS (m/s) = (${d2} - ${d1}) / (${t2} - ${t1}) = ${crs_ms.toFixed(3)} m/s<br>` +
+                                `Ritme (min/km) = 1000 / ${crs_ms.toFixed(3)} = ${Math.round(pace_per_km)} segons = ${pace_formatted}`;
+                        } catch (e) {
+                            console.error('CRS calculation error:', e);
+                        }
+                    }
+
+                    document.addEventListener('DOMContentLoaded', function () {
+                        document.getElementById('crs-d1').addEventListener('input', updateCRSCalculator);
+                        document.getElementById('crs-t1').addEventListener('input', updateCRSCalculator);
+                        document.getElementById('crs-d2').addEventListener('input', updateCRSCalculator);
+                        document.getElementById('crs-t2').addEventListener('input', updateCRSCalculator);
+                        updateCRSCalculator();
+                    });
                 </script>
             </div>
         </div>
 
         <div class="formula-card">
-            <h3>Run Training Stress Score (sTSS)</h3>
+            <h3>Puntuació d'Estrès de Carrera (rTSS)</h3>
             <div class="formula-content">
                 <h4>Fórmula Completa:</h4>
                 <div class="formula-box-large">
                     <div class="formula">
-                        sTSS = (IF³) × Durada (hores) × 100
+                        rTSS = (IF²) × Durada (hores) × 100
                     </div>
                     <div class="formula">
-                        IF = NSS / FTP
+                        IF = NSS / Velocitat Llindar
                     </div>
                     <div class="formula">
                         NSS = Distància Total / Temps Total (m/min)
@@ -1375,40 +1376,41 @@ const result = calculateCRS(200, 150, 400, 368);
                     <div class="calculator-grid">
                         <div class="input-group">
                             <label for="rtss-distance">Distància (metres):</label>
-                            <input type="number" id="rtss-distance" value="3000" min="100" max="10000" step="50">
+                            <input type="number" id="rtss-distance" value="5000" min="100" max="42195" step="100">
                         </div>
                         <div class="input-group">
                             <label for="rtss-duration">Durada (minuts):</label>
-                            <input type="number" id="rtss-duration" value="55" min="1" max="300" step="1">
+                            <input type="number" id="rtss-duration" value="25" min="1" max="600" step="1">
                         </div>
                         <div class="input-group">
-                            <label for="rtss-css">Ritme CRS (mm:ss per 100m):</label>
-                            <input type="text" id="rtss-css" value="1:33" placeholder="1:33" pattern="[0-9]{1,2}:[0-9]{2}">
+                            <label for="rtss-crs">Ritme CRS (min/km):</label>
+                            <input type="text" id="rtss-crs" value="4:15" placeholder="4:15"
+                                pattern="[0-9]{1,2}:[0-9]{2}">
                         </div>
                         <div class="input-group">
-                            <label>FTP (calculat):</label>
-                            <input type="text" id="rtss-threshold-speed" readonly value="64.5 m/min">
+                            <label>Velocitat Llindar:</label>
+                            <input type="text" id="rtss-threshold-speed" readonly value="235.3 m/min">
                         </div>
                     </div>
                     <div class="calculator-result mt-md">
-                        <div class="result-label">sTSS Calculat:</div>
-                        <div class="result-value" id="rtss-result">55</div>
+                        <div class="result-label">rTSS Calculat:</div>
+                        <div class="result-value" id="rtss-result">31</div>
                     </div>
                     <div class="calculation-breakdown mt-md">
                         <small>
                             <strong>Passos del càlcul:</strong><br>
                             <span id="rtss-steps">
-                                NSS = 3000m / 55min = 54.5 m/min<br>
-                                FTP = 100 / (93/60) = 64.5 m/min<br>
-                                IF = 54.5 / 64.5 = 0.845<br>
-                                sTSS = 0.845³ × (55/60) × 100 = 55
+                                NSS = 5000m / 25min = 200 m/min<br>
+                                FTP = 1000 / (255/60) = 235.3 m/min<br>
+                                IF = 200 / 235.3 = 0.850<br>
+                                rTSS = 0.850² × (25/60) × 100 = 31
                             </span>
                         </small>
                     </div>
                 </div>
 
                 <h4 class="mt-xl">Implementació JavaScript:</h4>
-                <pre><code>function calculateSTSS(distance, timeMinutes, ftpMetersPerMin) {
+                <pre><code>function calculateRTSS(distance, timeMinutes, ftpMetersPerMin) {
   // Calculate Normalized Run Speed
   const nss = distance / timeMinutes;
 
@@ -1418,110 +1420,107 @@ const result = calculateCRS(200, 150, 400, 368);
   // Calculate hours
   const hours = timeMinutes / 60;
 
-  // Calculate sTSS using cubed intensity factor
-  const stss = Math.pow(intensityFactor, 3) * hours * 100;
+  // Calculate rTSS using quadratic intensity factor
+  const rtss = Math.pow(intensityFactor, 2) * hours * 100;
 
-  return Math.round(stss);
+  return Math.round(rtss);
 }
 
 // Example usage:
-const stss = calculateSTSS(3000, 55, 64.5);
-// Returns: 55
+const rtss = calculateRTSS(3000, 55, 64.5);
+// Returns: 65
 
-// Helper: Convert CRS to FTP
-function cssToFTP(crsPacePer100mSeconds) {
-  // FTP in m/min = 100m / (pace in minutes)
-  return 100 / (crsPacePer100mSeconds / 60);
+// Helper: Convert CRS Pace to Running Speed (m/min)
+function crsPaceToSpeed(crsPacePerKmSeconds) {
+  // Speed in m/min = 1000m / (pace in minutes)
+  return 1000 / (crsPacePerKmSeconds / 60);
 }
 
-// Example: CRS of 1:33 (93 seconds)
-const ftp = cssToFTP(93); // Returns: 64.5 m/min</code></pre>
+// Example: CRS of 4:15 (255 seconds)
+const speed = crsPaceToSpeed(255); // Returns: 235.3 m/min</code></pre>
 
                 <script>
-                // Time conversion helper
-                function timeToSeconds(timeString) {
-                    const parts = timeString.split(':');
-                    return parseInt(parts[0]) * 60 + parseInt(parts[1]);
-                }
-
-                // CRS to FTP conversion
-                function cssToFTP(crsPacePer100mSeconds) {
-                    return 100 / (crsPacePer100mSeconds / 60);
-                }
-
-                // sTSS calculation
-                function calculateSTSS(distance, timeMinutes, ftpMetersPerMin) {
-                    const nss = distance / timeMinutes;
-                    const intensityFactor = nss / ftpMetersPerMin;
-                    const hours = timeMinutes / 60;
-                    const stss = Math.pow(intensityFactor, 3) * hours * 100;
-                    return Math.round(stss);
-                }
-
-                // Update calculator
-                function updateRTSSCalculator() {
-                    try {
-                        const distance = parseFloat(document.getElementById('rtss-distance').value);
-                        const duration = parseFloat(document.getElementById('rtss-duration').value);
-                        const cssInput = document.getElementById('rtss-css').value;
-
-                        // Validate inputs
-                        if (!distance || !duration || !cssInput) return;
-
-                        // Convert CRS to seconds
-                        const crsPaceSeconds = timeToSeconds(cssInput);
-
-                        // Calculate FTP
-                        const ftp = cssToFTP(crsPaceSeconds);
-
-                        // Calculate NSS
-                        const nss = distance / duration;
-
-                        // Calculate Intensity Factor
-                        const intensityFactor = nss / ftp;
-
-                        // Calculate sTSS
-                        const stss = calculateSTSS(distance, duration, ftp);
-
-                        // Update display
-                        document.getElementById('rtss-threshold-speed').value = ftp.toFixed(1) + ' m/min';
-                        document.getElementById('rtss-result').textContent = stss;
-
-                        // Update calculation steps
-                        const hours = duration / 60;
-                        document.getElementById('rtss-steps').innerHTML =
-                            `NSS = ${distance}m / ${duration}min = ${nss.toFixed(1)} m/min<br>` +
-                            `FTP = 100 / (${crsPaceSeconds}/60) = ${ftp.toFixed(1)} m/min<br>` +
-                            `IF = ${nss.toFixed(1)} / ${ftp.toFixed(1)} = ${intensityFactor.toFixed(3)}<br>` +
-                            `sTSS = ${intensityFactor.toFixed(3)}³ × (${duration}/60) × 100 = ${stss}`;
-                    } catch (e) {
-                        console.error('Calculation error:', e);
+                    // Time conversion helper
+                    function timeToSeconds(timeString) {
+                        const parts = timeString.split(':');
+                        return parseInt(parts[0]) * 60 + parseInt(parts[1]);
                     }
-                }
 
-                // Add event listeners when page loads
-                document.addEventListener('DOMContentLoaded', function() {
-                    document.getElementById('rtss-distance').addEventListener('input', updateRTSSCalculator);
-                    document.getElementById('rtss-duration').addEventListener('input', updateRTSSCalculator);
-                    document.getElementById('rtss-css').addEventListener('input', updateRTSSCalculator);
+                    // CRS Pace to Speed conversion
+                    function crsPaceToSpeed(crsPacePerKmSeconds) {
+                        return 1000 / (crsPacePerKmSeconds / 60);
+                    }
 
-                    // Initial calculation
-                    updateRTSSCalculator();
-                });
+                    // rTSS calculation
+                    function calculateRTSS(distance, timeMinutes, ftpMetersPerMin) {
+                        const nss = distance / timeMinutes;
+                        const intensityFactor = nss / ftpMetersPerMin;
+                        const hours = timeMinutes / 60;
+                        const rtss = Math.pow(intensityFactor, 2) * hours * 100;
+                        return Math.round(rtss);
+                    }
+
+                    // Update calculator
+                    function updateRTSSCalculator() {
+                        try {
+                            const distance = parseFloat(document.getElementById('rtss-distance').value);
+                            const duration = parseFloat(document.getElementById('rtss-duration').value);
+                            const crsInput = document.getElementById('rtss-crs').value;
+
+                            // Validate inputs
+                            if (!distance || !duration || !crsInput) return;
+
+                            // Convert CRS to seconds
+                            const crsPaceSeconds = timeToSeconds(crsInput);
+
+                            // Calculate Speed (Threshold)
+                            const thresholdSpeed = crsPaceToSpeed(crsPaceSeconds);
+
+                            // Calculate NSS
+                            const nss = distance / duration;
+
+                            // Calculate Intensity Factor
+                            const intensityFactor = nss / thresholdSpeed;
+
+                            // Calculate rTSS
+                            const rtss = calculateRTSS(distance, duration, thresholdSpeed);
+
+                            // Update display
+                            document.getElementById('rtss-threshold-speed').value = thresholdSpeed.toFixed(1) + ' m/min';
+                            document.getElementById('rtss-result').textContent = rtss;
+
+                            // Update calculation steps
+                            const hours = duration / 60;
+                            document.getElementById('rtss-steps').innerHTML =
+                                `NSS = \${distance}m / \${duration}min = \${nss.toFixed(1)} m/min<br>` +
+                                `Threshold Speed = 1000 / (\${crsPaceSeconds}/60) = \${thresholdSpeed.toFixed(1)} m/min<br>` +
+                                `IF = \${nss.toFixed(1)} / \${thresholdSpeed.toFixed(1)} = \${intensityFactor.toFixed(3)}<br>` +
+                                `rTSS = \${intensityFactor.toFixed(3)}² × (\${duration}/60) × 100 = \${rtss}`;
+                        } catch (e) {
+                            console.error('Calculation error:', e);
+                        }
+                    }
+
+                    // Add event listeners when page loads
+                    document.addEventListener('DOMContentLoaded', function () {
+                        document.getElementById('rtss-distance').addEventListener('input', updateRTSSCalculator);
+                        document.getElementById('rtss-duration').addEventListener('input', updateRTSSCalculator);
+                        document.getElementById('rtss-crs').addEventListener('input', updateRTSSCalculator);
+
+                        // Initial calculation
+                        updateRTSSCalculator();
+                    });
                 </script>
             </div>
         </div>
 
         <div class="formula-card">
-            <h3>rTSS Calculation</h3>
+            <h3>Eficiència Biomecànica: Ràtio Vertical</h3>
             <div class="formula-content">
                 <h4>Fórmula:</h4>
                 <div class="formula-box-large">
                     <div class="formula">
-                        rTSS Calculation = Temps del Llarg (segons) + Recompte de Zancades
-                    </div>
-                    <div class="formula">
-                        rTSS Calculation₂₅ = (Temps × 25/Quilòmetre Pista) + (Zancades × 25/Quilòmetre Pista)
+                        Ràtio Vertical (%) = (Oscil·lació Vertical ÷ Longitud Gambada) × 100
                     </div>
                 </div>
 
@@ -1529,88 +1528,60 @@ const ftp = cssToFTP(93); // Returns: 64.5 m/min</code></pre>
                     <h4>🧪 Calculadora Interactiva - Prova la Fórmula</h4>
                     <div class="calculator-grid">
                         <div class="input-group">
-                            <label for="rtss-time">Temps del llarg (segons):</label>
-                            <input type="number" id="rtss-time" value="20" min="10" max="120" step="1">
+                            <label for="eff-oscillation">Oscil·lació Vertical (cm):</label>
+                            <input type="number" id="eff-oscillation" value="8.5" min="3" max="25" step="0.1">
                         </div>
                         <div class="input-group">
-                            <label for="rtss-strides">Nombre de zancades:</label>
-                            <input type="number" id="rtss-strides" value="15" min="5" max="50" step="1">
-                        </div>
-                        <div class="input-group">
-                            <label for="crs-track">Quilòmetre pista (m):</label>
-                            <select id="crs-track">
-                                <option value="25" selected>400m</option>
-                                <option value="50">400m</option>
-                            </select>
+                            <label for="eff-stride">Longitud Gambada (cm):</label>
+                            <input type="number" id="eff-stride" value="115" min="50" max="250" step="1">
                         </div>
                     </div>
                     <div class="calculator-result mt-md">
-                        <div class="result-label">Puntuació rTSS Calculation:</div>
-                        <div class="result-value" id="rtss-result">35</div>
+                        <div class="result-label">Ràtio Vertical:</div>
+                        <div class="result-value" id="eff-result">7.4%</div>
                     </div>
                     <div class="calculation-breakdown mt-md">
                         <small>
                             <strong>Càlcul:</strong><br>
-                            <span id="rtss-steps">
-                                rTSS Calculation = 20s + 15 zancades = 35
+                            <span id="eff-steps">
+                                Ràtio Vertical = (8.5 / 115) × 100 = 7.4%
                             </span>
                         </small>
                     </div>
                 </div>
 
                 <h4 class="mt-xl">Implementació JavaScript:</h4>
-                <pre><code>function calculaterTSS Calculation(timeSeconds, strideCount) {
-  return timeSeconds + strideCount;
+                <pre><code>function calculateVerticalRatio(oscillationCm, strideLengthCm) {
+  return (oscillationCm / strideLengthCm) * 100;
 }
 
-function calculateNormalizedrTSS Calculation(timeSeconds, strideCount, trackLength) {
-  const normalizedTime = timeSeconds * (25 / trackLength);
-  const normalizedStrides = strideCount * (25 / trackLength);
-  return normalizedTime + normalizedStrides;
-}
-
-// Example:
-const rtss = calculaterTSS Calculation(20, 15);
-// Returns: 35
-
-const rtss400m = calculateNormalizedrTSS Calculation(40, 30, 50);
-// Returns: 35 (normalized to 400m)</code></pre>
+function calculateEfficiencyFactor(paceMetersPerMin, avgHeartRate) {
+  return paceMetersPerMin / avgHeartRate;
+}</code></pre>
 
                 <script>
-                function updaterTSS CalculationCalculator() {
-                    try {
-                        const time = parseFloat(document.getElementById('rtss-time').value);
-                        const strides = parseFloat(document.getElementById('rtss-strides').value);
-                        const trackLength = parseFloat(document.getElementById('crs-track').value);
+                    function updateEfficiencyCalculator() {
+                        try {
+                            const oscillation = parseFloat(document.getElementById('eff-oscillation').value);
+                            const stride = parseFloat(document.getElementById('eff-stride').value);
 
-                        if (!time || !strides) return;
+                            if (!oscillation || !stride) return;
 
-                        let rtss, steps;
-                        if (trackLength === 25) {
-                            rtss = time + strides;
-                            steps = `rTSS Calculation = ${time}s + ${strides} zancades = ${rTSS}`;
-                        } else {
-                            const normalizedTime = time * (25 / trackLength);
-                            const normalizedStrides = strides * (25 / trackLength);
-                            rtss = normalizedTime + normalizedStrides;
-                            steps = `Temps normalitzat = ${time} × (25/${trackLength}) = ${normalizedTime.toFixed(1)}s<br>` +
-                                   `Zancades normalitzades = ${strides} × (25/${trackLength}) = ${normalizedStrides.toFixed(1)}<br>` +
-                                   `rTSS Calculation₂₅ = ${normalizedTime.toFixed(1)} + ${normalizedStrides.toFixed(1)} = ${rtss.toFixed(1)}`;
+                            const ratio = (oscillation / stride) * 100;
+
+                            document.getElementById('eff-result').textContent = ratio.toFixed(1) + '%';
+                            document.getElementById('eff-steps').innerHTML =
+                                `Vertical Ratio = (${oscillation} / ${stride}) × 100 = ${ratio.toFixed(1)}%`;
+                        } catch (e) {
+                            console.error('Efficiency calculation error:', e);
                         }
-
-                        document.getElementById('rtss-result').textContent = rtss.toFixed(1);
-                        document.getElementById('rtss-steps').innerHTML = steps;
-                    } catch (e) {
-                        console.error('rTSS Calculation calculation error:', e);
                     }
-                }
 
-                document.addEventListener('DOMContentLoaded', function() {
-                    document.getElementById('rtss-time').addEventListener('input', updaterTSS CalculationCalculator);
-                    document.getElementById('rtss-strides').addEventListener('input', updaterTSS CalculationCalculator);
-                    document.getElementById('crs-track').addEventListener('change', updaterTSS CalculationCalculator);
-                    updaterTSS CalculationCalculator();
-                });
+                    document.addEventListener('DOMContentLoaded', function () {
+                        document.getElementById('eff-oscillation').addEventListener('input', updateEfficiencyCalculator);
+                        document.getElementById('eff-stride').addEventListener('input', updateEfficiencyCalculator);
+                        updateEfficiencyCalculator();
+                    });
                 </script>
             </div>
         </div>
@@ -1619,10 +1590,10 @@ const rtss400m = calculateNormalizedrTSS Calculation(40, 30, 50);
 
 <section class="section">
     <div class="container">
-        <h2>Mecànica de Zancada</h2>
+        <h2>Mecànica de Gambada</h2>
 
         <div class="formula-card">
-            <h3>Freqüència de Zancada (SR)</h3>
+            <h3>Cadència (Stride Rate - SR)</h3>
             <div class="formula-content">
                 <h4>Fórmula:</h4>
                 <div class="formula-box-large">
@@ -1630,7 +1601,7 @@ const rtss400m = calculateNormalizedrTSS Calculation(40, 30, 50);
                         SR = 60 / Temps de Cicle (segons)
                     </div>
                     <div class="formula">
-                        SR = (Nombre de Zancades / Temps en segons) × 60
+                        SR = (Nombre de Passos / Temps en segons) × 60
                     </div>
                 </div>
 
@@ -1638,95 +1609,91 @@ const rtss400m = calculateNormalizedrTSS Calculation(40, 30, 50);
                     <h4>🧪 Calculadora Interactiva - Prova la Fórmula</h4>
                     <div class="calculator-grid">
                         <div class="input-group">
-                            <label for="sr-strides">Nombre de zancades:</label>
-                            <input type="number" id="sr-strides" value="30" min="1" max="100" step="1">
+                            <label for="sr-steps">Passos Tostals:</label>
+                            <input type="number" id="sr-steps-count" value="180" min="1" max="10000" step="1">
                         </div>
                         <div class="input-group">
                             <label for="sr-time">Temps (segons):</label>
-                            <input type="number" id="sr-time" value="25" min="1" max="180" step="1">
+                            <input type="number" id="sr-time" value="60" min="1" max="3600" step="1">
                         </div>
                     </div>
                     <div class="calculator-result mt-md">
-                        <div class="result-label">Freqüència de Zancada (SPM):</div>
-                        <div class="result-value" id="sr-result">72</div>
+                        <div class="result-label">Cadència (SPM):</div>
+                        <div class="result-value" id="sr-result">180</div>
                     </div>
                     <div class="calculation-breakdown mt-md">
                         <small>
                             <strong>Càlcul:</strong><br>
-                            <span id="sr-steps">
-                                SR = (30 / 25) × 60 = 72 SPM
+                            <span id="sr-steps-breakdown">
+                                Cadència = (180 / 60) × 60 = 180 SPM
                             </span>
                         </small>
                     </div>
                 </div>
 
                 <h4 class="mt-xl">Implementació JavaScript:</h4>
-                <pre><code>function calculateStrideRate(strideCount, timeSeconds) {
-  return (strideCount / timeSeconds) * 60;
+                <pre><code>function calculateCadence(stepCount, timeSeconds) {
+  return (stepCount / timeSeconds) * 60;
 }
 
 // Example:
-const sr = calculateStrideRate(30, 25);
-// Returns: 72 SPM</code></pre>
+const spm = calculateCadence(180, 60);
+// Returns: 180 SPM</code></pre>
 
                 <script>
-                function updateSRCalculator() {
-                    try {
-                        const strides = parseFloat(document.getElementById('sr-strides').value);
-                        const time = parseFloat(document.getElementById('sr-time').value);
+                    function updateSRCalculator() {
+                        try {
+                            const strides = parseFloat(document.getElementById('sr-strides').value);
+                            const time = parseFloat(document.getElementById('sr-time').value);
 
-                        if (!strides || !time) return;
+                            if (!strides || !time) return;
 
-                        const sr = (strides / time) * 60;
+                            const sr = (strides / time) * 60;
 
-                        document.getElementById('sr-result').textContent = sr.toFixed(1);
-                        document.getElementById('sr-steps').innerHTML =
-                            `SR = (${strides} / ${time}) × 60 = ${sr.toFixed(1)} SPM`;
-                    } catch (e) {
-                        console.error('SR calculation error:', e);
+                            document.getElementById('sr-result').textContent = sr.toFixed(1);
+                            document.getElementById('sr-steps').innerHTML =
+                                `SR = (${strides} / ${time}) × 60 = ${sr.toFixed(1)} SPM`;
+                        } catch (e) {
+                            console.error('SR calculation error:', e);
+                        }
                     }
-                }
 
-                document.addEventListener('DOMContentLoaded', function() {
-                    document.getElementById('sr-strides').addEventListener('input', updateSRCalculator);
-                    document.getElementById('sr-time').addEventListener('input', updateSRCalculator);
-                    updateSRCalculator();
-                });
+                    document.addEventListener('DOMContentLoaded', function () {
+                        document.getElementById('sr-strides').addEventListener('input', updateSRCalculator);
+                        document.getElementById('sr-time').addEventListener('input', updateSRCalculator);
+                        updateSRCalculator();
+                    });
                 </script>
             </div>
         </div>
 
         <div class="formula-card">
-            <h3>Distància Per Zancada (DPS)</h3>
+            <h3>Longitud de Gambada</h3>
             <div class="formula-content">
                 <h4>Fórmula:</h4>
                 <div class="formula-box-large">
                     <div class="formula">
-                        DPS = Distància / Recompte de Zancades
+                        Longitud Gambada = Distància / (Nombre Passos / 2)
                     </div>
                     <div class="formula">
-                        DPS = Distància / (SR / 60)
+                        Longitud Gambada = Velocitat / (Cadència / 120)
                     </div>
                 </div>
 
                 <h4>Implementació JavaScript:</h4>
-                <pre><code>function calculateDPS(distance, strideCount, pushoffDistance = 0) {
-  const effectiveDistance = distance - pushoffDistance;
-  return effectiveDistance / strideCount;
+                <pre><code>function calculateStrideLength(distanceMeters, stepCount) {
+  // Stride length is distance / number of stride pairs (left+right)
+  return distanceMeters / (stepCount / 2);
 }
 
-// Example (400m track, 5m push-off):
-const dps = calculateDPS(25, 12, 5);
-// Returns: 1.67 m/stride
-
-// For multiple segments:
-const dps100m = calculateDPS(100, 48, 4 * 5);
-// Returns: 1.67 m/stride (4 segments × 5m push-off)</code></pre>
+// Example (1000m, 800 steps):
+const strideLength = calculateStrideLength(1000, 800);
+// Returns: 2.50 meters per stride</code></pre>
             </div>
         </div>
 
         <div class="formula-card">
-            <h3>Velocitat des de SR i DPS</h3>
+            <h3>Velocitat a partir de SR i DPS</h3>
             <div class="formula-content">
                 <h4>Fórmula:</h4>
                 <div class="formula-box-large">
@@ -1747,12 +1714,12 @@ const velocity = calculateVelocity(70, 1.6);
         </div>
 
         <div class="formula-card">
-            <h3>Índex de Zancada (SI)</h3>
+            <h3>Índex de Gambada (Stride Index - SI)</h3>
             <div class="formula-content">
                 <h4>Fórmula:</h4>
                 <div class="formula-box-large">
                     <div class="formula">
-                        SI = Velocitat (m/s) × DPS (m/zancada)
+                        SI = Velocitat (m/s) × DPS (m/stride)
                     </div>
                 </div>
 
@@ -1771,10 +1738,10 @@ const si = calculateStrideIndex(1.5, 1.7);
 
 <section class="section section-alt">
     <div class="container">
-        <h2>Performance Management Chart (PMC)</h2>
+        <h2>Gràfic de Gestió del Rendiment (PMC)</h2>
 
         <div class="formula-card">
-            <h3>Càlculs de CTL, ATL, TSB</h3>
+            <h3>Càlculs CTL, ATL, TSB</h3>
             <div class="formula-content">
                 <h4>Fórmules:</h4>
                 <div class="formula-box-large">
@@ -1844,7 +1811,7 @@ const pmc = calculatePMC(workouts);
         <h2>Càlculs Avançats</h2>
 
         <div class="formula-card">
-            <h3>CRS des de Múltiples Distàncies (Mètode de Regressió)</h3>
+            <h3>CRS de Múltiples Distàncies (Mètode Regressió)</h3>
             <div class="formula-content">
                 <h4>Implementació JavaScript:</h4>
                 <pre><code>function calculateCRSRegression(distances, times) {
@@ -1859,7 +1826,7 @@ const pmc = calculatePMC(workouts);
   const intercept = (sumY - slope * sumX) / n;
 
   return {
-    css: slope, // Critical running velocity (m/s)
+    crs: slope, // Critical running velocity (m/s)
     anaerobic_capacity: intercept // Anaerobic distance capacity (m)
   };
 }
@@ -1868,24 +1835,26 @@ const pmc = calculatePMC(workouts);
 const distances = [100, 200, 400, 800];
 const times = [65, 150, 340, 720]; // in seconds
 const result = calculateCRSRegression(distances, times);
-// Returns: { css: 1.18, anaerobic_capacity: 15.3 }</code></pre>
+// Returns: { crs: 1.18, anaerobic_capacity: 15.3 }</code></pre>
             </div>
         </div>
 
         <div class="formula-card">
-            <h3>Factor d'Intensitat des del Ritme</h3>
+            <h3>Factor d'Intensitat a partir del Ritme</h3>
             <div class="formula-content">
                 <h4>Implementació JavaScript:</h4>
-                <pre><code>function calculateIntensityFactor(actualPace100m, thresholdPace100m) {
-  // Convert pace to speed (m/s)
-  const actualSpeed = 100 / actualPace100m;
-  const thresholdSpeed = 100 / thresholdPace100m;
-  return actualSpeed / thresholdSpeed;
+                <pre><code>function calculateIntensityFactor(actualPaceMinKm, thresholdPaceMinKm) {
+  // Convert pace strings "mm:ss" to seconds if necessary
+  const actualSecs = typeof actualPaceMinKm === 'string' ? timeToSeconds(actualPaceMinKm) : actualPaceMinKm;
+  const thresholdSecs = typeof thresholdPaceMinKm === 'string' ? timeToSeconds(thresholdPaceMinKm) : thresholdPaceMinKm;
+
+  // IF is Threshold Pace / Actual Pace (faster pace = smaller seconds value)
+  return thresholdSecs / actualSecs;
 }
 
 // Example:
-const if_value = calculateIntensityFactor(110, 93);
-// Returns: 0.845 (running at 84.5% of threshold)</code></pre>
+const if_value = calculateIntensityFactor("4:45", "4:15");
+// Returns: 0.895 (running at 89.5% of threshold)</code></pre>
             </div>
         </div>
 
@@ -1907,8 +1876,8 @@ const if_value = calculateIntensityFactor(110, 93);
     stdDev,
     coefficientOfVariation,
     consistency: coefficientOfVariation < 5 ? "Excel·lent" :
-                 coefficientOfVariation < 10 ? "Bo" :
-                 coefficientOfVariation < 15 ? "Moderat" : "Variable"
+                 coefficientOfVariation < 10 ? "Bona" :
+                 coefficientOfVariation < 15 ? "Moderada" : "Variable"
   };
 }
 
@@ -1920,43 +1889,37 @@ const segments = [
   // ...
 ];
 const analysis = analyzePaceConsistency(segments);
-// Returns: { avgPace: 1.41, stdDev: 0.02, coefficientOfVariation: 1.4, consistency: "Excel·lent" }</code></pre>
+// Returns: { avgPace: 1.41, stdDev: 0.02, coefficientOfVariation: 1.4, consistency: "Excellent" }</code></pre>
             </div>
         </div>
 
         <div class="formula-card">
-            <h3>Detecció de Fatiga des del Recompte de Zancades</h3>
+            <h3>Detecció de Fatiga per Eficiència de Gambada</h3>
             <div class="formula-content">
                 <h4>Implementació JavaScript:</h4>
                 <pre><code>function detectFatigue(segments) {
-  const firstThird = segments.slice(0, Math.floor(segments.length/3));
-  const lastThird = segments.slice(-Math.floor(segments.length/3));
+  // Compare Vertical Ratio of first and last segments
+  const firstSegment = segments[0];
+  const lastSegment = segments[segments.length - 1];
 
-  const firstThirdAvg = firstThird.reduce((sum, kilometer) =>
-    sum + kilometer.strideCount, 0) / firstThird.length;
-  const lastThirdAvg = lastThird.reduce((sum, kilometer) =>
-    sum + kilometer.strideCount, 0) / lastThird.length;
-
-  const strideCountIncrease = ((lastThirdAvg - firstThirdAvg) / firstThirdAvg) * 100;
+  const ratioIncrease = lastSegment.verticalRatio - firstSegment.verticalRatio;
 
   return {
-    firstThirdAvg: Math.round(firstThirdAvg * 10) / 10,
-    lastThirdAvg: Math.round(lastThirdAvg * 10) / 10,
-    percentIncrease: Math.round(strideCountIncrease * 10) / 10,
-    fatigueLevel: strideCountIncrease < 5 ? "Mínima" :
-                  strideCountIncrease < 10 ? "Moderada" :
-                  strideCountIncrease < 20 ? "Significativa" : "Severa"
+    startRatio: firstSegment.verticalRatio,
+    endRatio: lastSegment.verticalRatio,
+    increase: Math.round(ratioIncrease * 10) / 10,
+    fatigueLevel: ratioIncrease < 0.2 ? "Mínima" :
+                  ratioIncrease < 0.5 ? "Moderada" :
+                  ratioIncrease < 1.0 ? "Significativa" : "Severa"
   };
 }
 
 // Example:
 const segments = [
-  { strideCount: 14 }, { strideCount: 14 }, { strideCount: 15 },
-  { strideCount: 15 }, { strideCount: 16 }, { strideCount: 16 },
-  { strideCount: 17 }, { strideCount: 18 }, { strideCount: 18 }
+  { verticalRatio: 7.2 }, { verticalRatio: 7.3 }, { verticalRatio: 8.1 }
 ];
 const fatigue = detectFatigue(segments);
-// Returns: { firstThirdAvg: 14.3, lastThirdAvg: 17.7, percentIncrease: 23.8, fatigueLevel: "Severa" }</code></pre>
+// Returns: { startRatio: 7.2, endRatio: 8.1, increase: 0.9, fatigueLevel: "Significant" }</code></pre>
             </div>
         </div>
     </div>
@@ -1967,28 +1930,27 @@ const fatigue = detectFatigue(segments);
         <h2>Validació de Dades</h2>
 
         <div class="formula-card">
-            <h3>Comprovacions de Qualitat de Dades d'Entrenament</h3>
+            <h3>Control de Qualitat de Dades d'Entrenament</h3>
             <div class="formula-content">
                 <h4>Implementació JavaScript:</h4>
                 <pre><code>function validateWorkoutData(workout) {
   const issues = [];
 
-  // Check for reasonable pace ranges (1:00-5:00 per 100m)
-  const avgPace = (workout.totalTime / workout.totalDistance) * 100;
-  if (avgPace < 60 || avgPace > 300) {
-    issues.push(`Ritme mitjà inusual: ${Math.round(avgPace)}s per 100m`);
+  // Check for reasonable pace ranges (3:00-8:00 per km)
+  const avgPaceSecs = workout.totalTime / (workout.totalDistance / 1000);
+  if (avgPaceSecs < 180 || avgPaceSecs > 480) {
+    issues.push(`Unusual average pace: ${Math.round(avgPaceSecs)}s per km`);
   }
 
-  // Check for reasonable stride counts (10-50 per 400m)
-  const avgStridesPer400m = (workout.totalStrides / workout.totalDistance) * 25;
-  if (avgStridesPer400m < 10 || avgStridesPer400m > 50) {
-    issues.push(`Recompte de zancades inusual: ${Math.round(avgStridesPer400m)} per 400m`);
+  // Check for reasonable Vertical Ratio (4% - 15%)
+  if (workout.avgVerticalRatio < 4 || workout.avgVerticalRatio > 15) {
+    issues.push(`Unusual Vertical Ratio: ${workout.avgVerticalRatio}%`);
   }
 
-  // Check for reasonable stride rate (30-150 SPM)
-  const avgSR = calculateStrideRate(workout.totalStrides, workout.totalTime);
-  if (avgSR < 30 || avgSR > 150) {
-    issues.push(`Freqüència de zancada inusual: ${Math.round(avgSR)} SPM`);
+  // Check for reasonable cadence (120-220 SPM)
+  const avgCadence = calculateCadence(workout.totalSteps, workout.totalTime);
+  if (avgCadence < 120 || avgCadence > 220) {
+    issues.push(`Unusual cadence: ${Math.round(avgCadence)} SPM`);
   }
 
   // Check for missing segments (gaps in time)
@@ -1997,7 +1959,7 @@ const fatigue = detectFatigue(segments);
       const gap = workout.segments[i].startTime -
                   (workout.segments[i-1].startTime + workout.segments[i-1].duration);
       if (gap > 300) { // 5 minute gap
-        issues.push(`Buit gran detectat entre llargs ${i} i ${i+1}`);
+        issues.push(`Large gap detected between segments ${i} and ${i+1}`);
       }
     }
   }
@@ -2024,7 +1986,7 @@ const validation = validateWorkoutData(workout);
 
 <section class="section">
     <div class="container container-narrow">
-        <h2>Funcions d'Ajuda</h2>
+        <h2>Funcions Auxiliars</h2>
 
         <div class="formula-card">
             <h3>Utilitats de Conversió de Temps</h3>
@@ -2063,26 +2025,28 @@ secondsToTimeDetailed(3665); // Returns: "1:01:05"</code></pre>
 <section class="section section-alt">
     <div class="container container-narrow text-center">
         <h2>Recursos d'Implementació</h2>
-        <p class="lead">Totes les fórmules d'aquesta pàgina estan preparades per a producció i validades contra literatura científica. Utilitza-les per a eines d'analítica personalitzades, verificació o comprensió més profunda dels càlculs de rendiment en running.</p>
+        <p class="lead">Totes les fórmules d'aquesta pàgina estan a punt per a producció i validades amb literatura
+            científica. Utilitza-les per a eines analítiques personalitzades, verificació o una comprensió més profunda
+            dels càlculs de rendiment.</p>
 
         <div class="callout callout-tip">
-            <h3>💡 Bones Pràctiques</h3>
+            <h3>💡 Millors Pràctiques</h3>
             <ul class="text-left">
-                <li><strong>Valida les entrades:</strong> Comprova rangs raonables abans de calcular</li>
-                <li><strong>Gestiona casos extrems:</strong> Divisió per zero, valors negatius, dades nul·les</li>
-                <li><strong>Arrodoneix adequadament:</strong> CTL/ATL/TSB a 1 decimal, sTSS a enter</li>
-                <li><strong>Emmagatzema precisió:</strong> Manté precisió completa a la base de dades, arrodoneix per a visualització</li>
-                <li><strong>Prova a fons:</strong> Utilitza dades conegudes per verificar càlculs</li>
+                <li><strong>Valida entrades:</strong> Comprova rangs raonables abans de calcular</li>
+                <li><strong>Gestiona casos límit:</strong> Divisió per zero, valors negatius, dades nulles</li>
+                <li><strong>Arrodoneix apropiadament:</strong> CTL/ATL/TSB a 1 decimal, rTSS a enter</li>
+                <li><strong>Preserva precisió:</strong> Guarda precisió completa a BD, arrodoneix per visualitzar</li>
+                <li><strong>Testeja exhaustivament:</strong> Utilitza dades conegudes per verificar càlculs</li>
             </ul>
         </div>
 
         <div class="mt-xl">
-            <a href="/ca/" class="btn btn-primary btn-large">Torna a l'Inici</a>
+            <a href="/ca/" class="btn btn-primary btn-large">Tornar a l'Inici</a>
             <a href="/ca/research/" class="btn btn-secondary">Fonament Científic</a>
         </div>
     </div>
 </section>
-    
+
   </main>
 
   
@@ -2435,8 +2399,8 @@ secondsToTimeDetailed(3665); // Returns: "1:01:05"</code></pre>
 </div>
 
   
-  <script src="../../assets/js/core.min.js?v=e395be5c87fe" defer></script>
-  <script src="../../assets/js/search.min.js?v=e395be5c87fe" defer></script>
+  <script src="../../assets/js/core.min.js?v=8d54a979" defer></script>
+  <script src="../../assets/js/search.min.js?v=8d54a979" defer></script>
   
 
   
