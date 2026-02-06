@@ -506,7 +506,7 @@ img[width][height] {
   <link rel="dns-prefetch" href="https://www.googletagmanager.com">
 
   
-  <link rel="stylesheet" href="../../assets/css/main.min.css?v=9136cb9b9c4a">
+  <link rel="stylesheet" href="../../assets/css/main.min.css?v=8aef43d1">
 
   
   
@@ -1204,86 +1204,78 @@ img[width][height] {
   <main id="main-content" class="main-content">
     
     <section class="page-hero">
-    <div class="container">
-        <h1>Technical Reference & Formulas</h1>
-        <p class="lead">Complete Mathematical Implementation</p>
-    </div>
+<div class="container">
+<h1>Technical Reference &amp; Formulas</h1>
+<p class="lead">Complete Mathematical Implementation</p>
+</div>
 </section>
-
 <section class="section">
-    <div class="container container-narrow">
-        <h2>Implementation Guide</h2>
-        <p class="lead">This page provides copy-paste formulas and step-by-step calculation methods for all Run
+<div class="container container-narrow">
+<h2>Implementation Guide</h2>
+<p class="lead">This page provides copy-paste formulas and step-by-step calculation methods for all Run
             Analytics metrics. Use these for custom implementations, verification, or deeper understanding.</p>
-
-        <div class="callout callout-warning">
-            <h3>⚠️ Implementation Notes</h3>
-            <ul>
-                <li>All times should be converted to seconds for calculations</li>
-                <li>rTSS calculation uses Intensity Factor squared (IF²)</li>
-                <li>Always validate inputs for reasonable ranges</li>
-                <li>Handle edge cases (division by zero, negative values)</li>
-            </ul>
-        </div>
-    </div>
+<div class="callout callout-warning">
+<h3>⚠️ Implementation Notes</h3>
+<ul>
+<li>All times should be converted to seconds for calculations</li>
+<li>rTSS calculation uses Intensity Factor squared (IF²)</li>
+<li>Always validate inputs for reasonable ranges</li>
+<li>Handle edge cases (division by zero, negative values)</li>
+</ul>
+</div>
+</div>
 </section>
-
 <section class="section section-alt">
-    <div class="container">
-        <h2>Core Performance Metrics</h2>
-
-        <div class="formula-card">
-            <h3>Critical Run Speed (CRS)</h3>
-            <div class="formula-content">
-                <h4>Formula:</h4>
-                <div class="formula-box-large">
-                    <div class="formula">
+<div class="container">
+<h2>Core Performance Metrics</h2>
+<div class="formula-card">
+<h3>Critical Run Speed (CRS)</h3>
+<div class="formula-content">
+<h4>Formula:</h4>
+<div class="formula-box-large">
+<div class="formula">
                         CRS (m/s) = (D₂ - D₁) / (T₂ - T₁)
                     </div>
-                    <div class="formula">
+<div class="formula">
                         CRS Pace (min/km) = 16.667 / CRS (m/s)
                     </div>
-                </div>
-
-                <div class="callout callout-info mt-lg">
-                    <h4>🧪 Interactive Calculator - Test the Formula</h4>
-                    <div class="calculator-grid">
-                        <div class="input-group">
-                            <label for="crs-d1">Distance 1 (meters):</label>
-                            <input type="number" id="crs-d1" value="1200" min="400" max="2000" step="100">
-                        </div>
-                        <div class="input-group">
-                            <label for="crs-t1">Time 1 (mm:ss):</label>
-                            <input type="text" id="crs-t1" value="4:30" placeholder="4:30"
-                                pattern="[0-9]{1,2}:[0-9]{2}">
-                        </div>
-                        <div class="input-group">
-                            <label for="crs-d2">Distance 2 (meters):</label>
-                            <input type="number" id="crs-d2" value="3600" min="2000" max="10000" step="100">
-                        </div>
-                        <div class="input-group">
-                            <label for="crs-t2">Time 2 (mm:ss):</label>
-                            <input type="text" id="crs-t2" value="15:00" placeholder="15:00"
-                                pattern="[0-9]{1,2}:[0-9]{2}">
-                        </div>
-                    </div>
-                    <div class="calculator-result mt-md">
-                        <div class="result-label">CRS Pace (min/km):</div>
-                        <div class="result-value" id="crs-result">4:17</div>
-                    </div>
-                    <div class="calculation-breakdown mt-md">
-                        <small>
-                            <strong>Calculation steps:</strong><br>
-                            <span id="crs-steps">
-                                CRS (m/s) = (3600 - 1200) / (900 - 270) = 3.81 m/s<br>
+</div>
+<div class="callout callout-info mt-lg">
+<h4>🧪 Interactive Calculator - Test the Formula</h4>
+<div class="calculator-grid">
+<div class="input-group">
+<label for="crs-d1">Distance 1 (meters):</label>
+<input id="crs-d1" max="2000" min="400" step="100" type="number" value="1200"/>
+</div>
+<div class="input-group">
+<label for="crs-t1">Time 1 (mm:ss):</label>
+<input id="crs-t1" pattern="[0-9]{1,2}:[0-9]{2}" placeholder="4:30" type="text" value="4:30"/>
+</div>
+<div class="input-group">
+<label for="crs-d2">Distance 2 (meters):</label>
+<input id="crs-d2" max="10000" min="2000" step="100" type="number" value="3600"/>
+</div>
+<div class="input-group">
+<label for="crs-t2">Time 2 (mm:ss):</label>
+<input id="crs-t2" pattern="[0-9]{1,2}:[0-9]{2}" placeholder="15:00" type="text" value="15:00"/>
+</div>
+</div>
+<div class="calculator-result mt-md">
+<div class="result-label">CRS Pace (min/km):</div>
+<div class="result-value" id="crs-result">4:17</div>
+</div>
+<div class="calculation-breakdown mt-md">
+<small>
+<strong>Calculation steps:</strong><br/>
+<span id="crs-steps">
+                                CRS (m/s) = (3600 - 1200) / (900 - 270) = 3.81 m/s<br/>
                                 Pace (min/km) = 1000 / 3.81 = 262 seconds = 4:22
                             </span>
-                        </small>
-                    </div>
-                </div>
-
-                <h4 class="mt-xl">JavaScript Implementation:</h4>
-                <pre><code>function calculateCRS(distance1, time1, distance2, time2) {
+</small>
+</div>
+</div>
+<h4 class="mt-xl">JavaScript Implementation:</h4>
+<pre><code>function calculateCRS(distance1, time1, distance2, time2) {
   // Convert times to seconds
   const t1 = typeof time1 === 'string' ? timeToSeconds(time1) : time1;
   const t2 = typeof time2 === 'string' ? timeToSeconds(time2) : time2;
@@ -1304,8 +1296,7 @@ img[width][height] {
     pace_formatted: `${minutes}:${seconds.toString().padStart(2, '0')}`
   };
 }</code></pre>
-
-                <script>
+<script>
                     function timeToSecondsCRS(timeString) {
                         const parts = timeString.split(':');
                         if (parts.length === 1) return parseInt(parts[0]);
@@ -1351,65 +1342,61 @@ img[width][height] {
                         updateCRSCalculator();
                     });
                 </script>
-            </div>
-        </div>
-
-        <div class="formula-card">
-            <h3>Running Stress Score (rTSS)</h3>
-            <div class="formula-content">
-                <h4>Complete Formula:</h4>
-                <div class="formula-box-large">
-                    <div class="formula">
+</div>
+</div>
+<div class="formula-card">
+<h3>Running Stress Score (rTSS)</h3>
+<div class="formula-content">
+<h4>Complete Formula:</h4>
+<div class="formula-box-large">
+<div class="formula">
                         rTSS = (IF²) × Duration (hours) × 100
                     </div>
-                    <div class="formula">
+<div class="formula">
                         IF = NSS / Threshold Speed
                     </div>
-                    <div class="formula">
+<div class="formula">
                         NSS = Total Distance / Total Time (m/min)
                     </div>
-                </div>
-
-                <div class="callout callout-info mt-lg">
-                    <h4>🧪 Interactive Calculator - Test the Formula</h4>
-                    <div class="calculator-grid">
-                        <div class="input-group">
-                            <label for="rtss-distance">Distance (meters):</label>
-                            <input type="number" id="rtss-distance" value="5000" min="100" max="42195" step="100">
-                        </div>
-                        <div class="input-group">
-                            <label for="rtss-duration">Duration (minutes):</label>
-                            <input type="number" id="rtss-duration" value="25" min="1" max="600" step="1">
-                        </div>
-                        <div class="input-group">
-                            <label for="rtss-crs">CRS Pace (min/km):</label>
-                            <input type="text" id="rtss-crs" value="4:15" placeholder="4:15"
-                                pattern="[0-9]{1,2}:[0-9]{2}">
-                        </div>
-                        <div class="input-group">
-                            <label>Threshold Speed:</label>
-                            <input type="text" id="rtss-threshold-speed" readonly value="235.3 m/min">
-                        </div>
-                    </div>
-                    <div class="calculator-result mt-md">
-                        <div class="result-label">Calculated rTSS:</div>
-                        <div class="result-value" id="rtss-result">31</div>
-                    </div>
-                    <div class="calculation-breakdown mt-md">
-                        <small>
-                            <strong>Calculation steps:</strong><br>
-                            <span id="rtss-steps">
-                                NSS = 5000m / 400min = 200 m/min<br>
-                                FTP = 1000 / (255/60) = 235.3 m/min<br>
-                                IF = 200 / 235.3 = 0.850<br>
+</div>
+<div class="callout callout-info mt-lg">
+<h4>🧪 Interactive Calculator - Test the Formula</h4>
+<div class="calculator-grid">
+<div class="input-group">
+<label for="rtss-distance">Distance (meters):</label>
+<input id="rtss-distance" max="42195" min="100" step="100" type="number" value="5000"/>
+</div>
+<div class="input-group">
+<label for="rtss-duration">Duration (minutes):</label>
+<input id="rtss-duration" max="600" min="1" step="1" type="number" value="25"/>
+</div>
+<div class="input-group">
+<label for="rtss-crs">CRS Pace (min/km):</label>
+<input id="rtss-crs" pattern="[0-9]{1,2}:[0-9]{2}" placeholder="4:15" type="text" value="4:15"/>
+</div>
+<div class="input-group">
+<label>Threshold Speed:</label>
+<input id="rtss-threshold-speed" readonly="" type="text" value="235.3 m/min"/>
+</div>
+</div>
+<div class="calculator-result mt-md">
+<div class="result-label">Calculated rTSS:</div>
+<div class="result-value" id="rtss-result">31</div>
+</div>
+<div class="calculation-breakdown mt-md">
+<small>
+<strong>Calculation steps:</strong><br/>
+<span id="rtss-steps">
+                                NSS = 5000m / 400min = 200 m/min<br/>
+                                FTP = 1000 / (255/60) = 235.3 m/min<br/>
+                                IF = 200 / 235.3 = 0.850<br/>
                                 rTSS = 0.850² × (25/60) × 100 = 31
                             </span>
-                        </small>
-                    </div>
-                </div>
-
-                <h4 class="mt-xl">JavaScript Implementation:</h4>
-                <pre><code>function calculateRTSS(distance, timeMinutes, ftpMetersPerMin) {
+</small>
+</div>
+</div>
+<h4 class="mt-xl">JavaScript Implementation:</h4>
+<pre><code>function calculateRTSS(distance, timeMinutes, ftpMetersPerMin) {
   // Calculate Normalized Run Speed
   const nss = distance / timeMinutes;
 
@@ -1437,8 +1424,7 @@ function crsPaceToSpeed(crsPacePerKmSeconds) {
 
 // Example: CRS of 4:15 (255 seconds)
 const speed = crsPaceToSpeed(255); // Returns: 235.3 m/min</code></pre>
-
-                <script>
+<script>
                     // Time conversion helper
                     function timeToSeconds(timeString) {
                         const parts = timeString.split(':');
@@ -1510,55 +1496,51 @@ const speed = crsPaceToSpeed(255); // Returns: 235.3 m/min</code></pre>
                         updateRTSSCalculator();
                     });
                 </script>
-            </div>
-        </div>
-
-        <div class="formula-card">
-            <h3>Biomechanical Efficiency: Vertical Ratio</h3>
-            <div class="formula-content">
-                <h4>Formula:</h4>
-                <div class="formula-box-large">
-                    <div class="formula">
+</div>
+</div>
+<div class="formula-card">
+<h3>Biomechanical Efficiency: Vertical Ratio</h3>
+<div class="formula-content">
+<h4>Formula:</h4>
+<div class="formula-box-large">
+<div class="formula">
                         Vertical Ratio (%) = (Vertical Oscillation ÷ Stride Length) × 100
                     </div>
-                </div>
-
-                <div class="callout callout-info mt-lg">
-                    <h4>🧪 Interactive Calculator - Test the Formula</h4>
-                    <div class="calculator-grid">
-                        <div class="input-group">
-                            <label for="eff-oscillation">Vertical Oscillation (cm):</label>
-                            <input type="number" id="eff-oscillation" value="8.5" min="3" max="25" step="0.1">
-                        </div>
-                        <div class="input-group">
-                            <label for="eff-stride">Stride Length (cm):</label>
-                            <input type="number" id="eff-stride" value="115" min="50" max="250" step="1">
-                        </div>
-                    </div>
-                    <div class="calculator-result mt-md">
-                        <div class="result-label">Vertical Ratio:</div>
-                        <div class="result-value" id="eff-result">7.4%</div>
-                    </div>
-                    <div class="calculation-breakdown mt-md">
-                        <small>
-                            <strong>Calculation:</strong><br>
-                            <span id="eff-steps">
+</div>
+<div class="callout callout-info mt-lg">
+<h4>🧪 Interactive Calculator - Test the Formula</h4>
+<div class="calculator-grid">
+<div class="input-group">
+<label for="eff-oscillation">Vertical Oscillation (cm):</label>
+<input id="eff-oscillation" max="25" min="3" step="0.1" type="number" value="8.5"/>
+</div>
+<div class="input-group">
+<label for="eff-stride">Stride Length (cm):</label>
+<input id="eff-stride" max="250" min="50" step="1" type="number" value="115"/>
+</div>
+</div>
+<div class="calculator-result mt-md">
+<div class="result-label">Vertical Ratio:</div>
+<div class="result-value" id="eff-result">7.4%</div>
+</div>
+<div class="calculation-breakdown mt-md">
+<small>
+<strong>Calculation:</strong><br/>
+<span id="eff-steps">
                                 Vertical Ratio = (8.5 / 115) × 100 = 7.4%
                             </span>
-                        </small>
-                    </div>
-                </div>
-
-                <h4 class="mt-xl">JavaScript Implementation:</h4>
-                <pre><code>function calculateVerticalRatio(oscillationCm, strideLengthCm) {
+</small>
+</div>
+</div>
+<h4 class="mt-xl">JavaScript Implementation:</h4>
+<pre><code>function calculateVerticalRatio(oscillationCm, strideLengthCm) {
   return (oscillationCm / strideLengthCm) * 100;
 }
 
 function calculateEfficiencyFactor(paceMetersPerMin, avgHeartRate) {
   return paceMetersPerMin / avgHeartRate;
 }</code></pre>
-
-                <script>
+<script>
                     function updateEfficiencyCalculator() {
                         try {
                             const oscillation = parseFloat(document.getElementById('eff-oscillation').value);
@@ -1582,64 +1564,59 @@ function calculateEfficiencyFactor(paceMetersPerMin, avgHeartRate) {
                         updateEfficiencyCalculator();
                     });
                 </script>
-            </div>
-        </div>
-    </div>
+</div>
+</div>
+</div>
 </section>
-
 <section class="section">
-    <div class="container">
-        <h2>Stride Mechanics</h2>
-
-        <div class="formula-card">
-            <h3>Stride Rate (SR)</h3>
-            <div class="formula-content">
-                <h4>Formula:</h4>
-                <div class="formula-box-large">
-                    <div class="formula">
+<div class="container">
+<h2>Stride Mechanics</h2>
+<div class="formula-card">
+<h3>Stride Rate (SR)</h3>
+<div class="formula-content">
+<h4>Formula:</h4>
+<div class="formula-box-large">
+<div class="formula">
                         SR = 60 / Cycle Time (seconds)
                     </div>
-                    <div class="formula">
+<div class="formula">
                         SR = (Number of Strides / Time in seconds) × 60
                     </div>
-                </div>
-
-                <div class="callout callout-info mt-lg">
-                    <h4>🧪 Interactive Calculator - Test the Formula</h4>
-                    <div class="calculator-grid">
-                        <div class="input-group">
-                            <label for="sr-steps">Total Steps:</label>
-                            <input type="number" id="sr-steps-count" value="180" min="1" max="10000" step="1">
-                        </div>
-                        <div class="input-group">
-                            <label for="sr-time">Time (seconds):</label>
-                            <input type="number" id="sr-time" value="60" min="1" max="3600" step="1">
-                        </div>
-                    </div>
-                    <div class="calculator-result mt-md">
-                        <div class="result-label">Cadence (SPM):</div>
-                        <div class="result-value" id="sr-result">180</div>
-                    </div>
-                    <div class="calculation-breakdown mt-md">
-                        <small>
-                            <strong>Calculation:</strong><br>
-                            <span id="sr-steps-breakdown">
+</div>
+<div class="callout callout-info mt-lg">
+<h4>🧪 Interactive Calculator - Test the Formula</h4>
+<div class="calculator-grid">
+<div class="input-group">
+<label for="sr-steps">Total Steps:</label>
+<input id="sr-steps-count" max="10000" min="1" step="1" type="number" value="180"/>
+</div>
+<div class="input-group">
+<label for="sr-time">Time (seconds):</label>
+<input id="sr-time" max="3600" min="1" step="1" type="number" value="60"/>
+</div>
+</div>
+<div class="calculator-result mt-md">
+<div class="result-label">Cadence (SPM):</div>
+<div class="result-value" id="sr-result">180</div>
+</div>
+<div class="calculation-breakdown mt-md">
+<small>
+<strong>Calculation:</strong><br/>
+<span id="sr-steps-breakdown">
                                 Cadence = (180 / 60) × 60 = 180 SPM
                             </span>
-                        </small>
-                    </div>
-                </div>
-
-                <h4 class="mt-xl">JavaScript Implementation:</h4>
-                <pre><code>function calculateCadence(stepCount, timeSeconds) {
+</small>
+</div>
+</div>
+<h4 class="mt-xl">JavaScript Implementation:</h4>
+<pre><code>function calculateCadence(stepCount, timeSeconds) {
   return (stepCount / timeSeconds) * 60;
 }
 
 // Example:
 const spm = calculateCadence(180, 60);
 // Returns: 180 SPM</code></pre>
-
-                <script>
+<script>
                     function updateSRCalculator() {
                         try {
                             const strides = parseFloat(document.getElementById('sr-strides').value);
@@ -1663,24 +1640,22 @@ const spm = calculateCadence(180, 60);
                         updateSRCalculator();
                     });
                 </script>
-            </div>
-        </div>
-
-        <div class="formula-card">
-            <h3>Stride Length</h3>
-            <div class="formula-content">
-                <h4>Formula:</h4>
-                <div class="formula-box-large">
-                    <div class="formula">
+</div>
+</div>
+<div class="formula-card">
+<h3>Stride Length</h3>
+<div class="formula-content">
+<h4>Formula:</h4>
+<div class="formula-box-large">
+<div class="formula">
                         Stride Length = Distance / (Step Count / 2)
                     </div>
-                    <div class="formula">
+<div class="formula">
                         Stride Length = Velocity / (Cadence / 120)
                     </div>
-                </div>
-
-                <h4>JavaScript Implementation:</h4>
-                <pre><code>function calculateStrideLength(distanceMeters, stepCount) {
+</div>
+<h4>JavaScript Implementation:</h4>
+<pre><code>function calculateStrideLength(distanceMeters, stepCount) {
   // Stride length is distance / number of stride pairs (left+right)
   return distanceMeters / (stepCount / 2);
 }
@@ -1688,75 +1663,68 @@ const spm = calculateCadence(180, 60);
 // Example (1000m, 800 steps):
 const strideLength = calculateStrideLength(1000, 800);
 // Returns: 2.50 meters per stride</code></pre>
-            </div>
-        </div>
-
-        <div class="formula-card">
-            <h3>Velocity from SR and DPS</h3>
-            <div class="formula-content">
-                <h4>Formula:</h4>
-                <div class="formula-box-large">
-                    <div class="formula">
+</div>
+</div>
+<div class="formula-card">
+<h3>Velocity from SR and DPS</h3>
+<div class="formula-content">
+<h4>Formula:</h4>
+<div class="formula-box-large">
+<div class="formula">
                         Velocity (m/s) = (SR / 60) × DPS
                     </div>
-                </div>
-
-                <h4>JavaScript Implementation:</h4>
-                <pre><code>function calculateVelocity(strideRate, dps) {
+</div>
+<h4>JavaScript Implementation:</h4>
+<pre><code>function calculateVelocity(strideRate, dps) {
   return (strideRate / 60) * dps;
 }
 
 // Example:
 const velocity = calculateVelocity(70, 1.6);
 // Returns: 1.87 m/s</code></pre>
-            </div>
-        </div>
-
-        <div class="formula-card">
-            <h3>Stride Index (SI)</h3>
-            <div class="formula-content">
-                <h4>Formula:</h4>
-                <div class="formula-box-large">
-                    <div class="formula">
+</div>
+</div>
+<div class="formula-card">
+<h3>Stride Index (SI)</h3>
+<div class="formula-content">
+<h4>Formula:</h4>
+<div class="formula-box-large">
+<div class="formula">
                         SI = Velocity (m/s) × DPS (m/stride)
                     </div>
-                </div>
-
-                <h4>JavaScript Implementation:</h4>
-                <pre><code>function calculateStrideIndex(velocity, dps) {
+</div>
+<h4>JavaScript Implementation:</h4>
+<pre><code>function calculateStrideIndex(velocity, dps) {
   return velocity * dps;
 }
 
 // Example:
 const si = calculateStrideIndex(1.5, 1.7);
 // Returns: 2.55</code></pre>
-            </div>
-        </div>
-    </div>
+</div>
+</div>
+</div>
 </section>
-
 <section class="section section-alt">
-    <div class="container">
-        <h2>Performance Management Chart (PMC)</h2>
-
-        <div class="formula-card">
-            <h3>CTL, ATL, TSB Calculations</h3>
-            <div class="formula-content">
-                <h4>Formulas:</h4>
-                <div class="formula-box-large">
-                    <div class="formula">
+<div class="container">
+<h2>Performance Management Chart (PMC)</h2>
+<div class="formula-card">
+<h3>CTL, ATL, TSB Calculations</h3>
+<div class="formula-content">
+<h4>Formulas:</h4>
+<div class="formula-box-large">
+<div class="formula">
                         CTL today = CTL yesterday + (TSS today - CTL yesterday) × (1/42)
                     </div>
-                    <div class="formula">
+<div class="formula">
                         ATL today = ATL yesterday + (TSS today - ATL yesterday) × (1/7)
                     </div>
-                    <div class="formula">
+<div class="formula">
                         TSB = CTL yesterday - ATL yesterday
                     </div>
-                </div>
-
-                <h4>JavaScript Implementation:</h4>
-                <pre><code>function updateCTL(previousCTL, todayTSS) {
+</div>
+<h4>JavaScript Implementation:</h4>
+<pre><code>function updateCTL(previousCTL, todayTSS) {
   return previousCTL + (todayTSS - previousCTL) * (1/42);
 }
 
@@ -1773,7 +1741,7 @@ function calculatePMC(workouts) {
   let ctl = 0, atl = 0;
   const results = [];
 
-  workouts.forEach(workout => {
+  workouts.forEach(workout =&gt; {
     ctl = updateCTL(ctl, workout.tss);
     atl = updateATL(atl, workout.tss);
     const tsb = calculateTSB(ctl, atl);
@@ -1800,26 +1768,24 @@ const workouts = [
 
 const pmc = calculatePMC(workouts);
 // Returns array with CTL, ATL, TSB for each day</code></pre>
-            </div>
-        </div>
-    </div>
+</div>
+</div>
+</div>
 </section>
-
 <section class="section">
-    <div class="container">
-        <h2>Advanced Calculations</h2>
-
-        <div class="formula-card">
-            <h3>CRS from Multiple Distances (Regression Method)</h3>
-            <div class="formula-content">
-                <h4>JavaScript Implementation:</h4>
-                <pre><code>function calculateCRSRegression(distances, times) {
+<div class="container">
+<h2>Advanced Calculations</h2>
+<div class="formula-card">
+<h3>CRS from Multiple Distances (Regression Method)</h3>
+<div class="formula-content">
+<h4>JavaScript Implementation:</h4>
+<pre><code>function calculateCRSRegression(distances, times) {
   // Linear regression: distance = a + b*time
   const n = distances.length;
-  const sumX = times.reduce((a, b) => a + b, 0);
-  const sumY = distances.reduce((a, b) => a + b, 0);
-  const sumXY = times.reduce((sum, x, i) => sum + x * distances[i], 0);
-  const sumXX = times.reduce((sum, x) => sum + x * x, 0);
+  const sumX = times.reduce((a, b) =&gt; a + b, 0);
+  const sumY = distances.reduce((a, b) =&gt; a + b, 0);
+  const sumXY = times.reduce((sum, x, i) =&gt; sum + x * distances[i], 0);
+  const sumXX = times.reduce((sum, x) =&gt; sum + x * x, 0);
 
   const slope = (n * sumXY - sumX * sumY) / (n * sumXX - sumX * sumX);
   const intercept = (sumY - slope * sumX) / n;
@@ -1835,14 +1801,13 @@ const distances = [100, 200, 400, 800];
 const times = [65, 150, 340, 720]; // in seconds
 const result = calculateCRSRegression(distances, times);
 // Returns: { crs: 1.18, anaerobic_capacity: 15.3 }</code></pre>
-            </div>
-        </div>
-
-        <div class="formula-card">
-            <h3>Intensity Factor from Pace</h3>
-            <div class="formula-content">
-                <h4>JavaScript Implementation:</h4>
-                <pre><code>function calculateIntensityFactor(actualPaceMinKm, thresholdPaceMinKm) {
+</div>
+</div>
+<div class="formula-card">
+<h3>Intensity Factor from Pace</h3>
+<div class="formula-content">
+<h4>JavaScript Implementation:</h4>
+<pre><code>function calculateIntensityFactor(actualPaceMinKm, thresholdPaceMinKm) {
   // Convert pace strings "mm:ss" to seconds if necessary
   const actualSecs = typeof actualPaceMinKm === 'string' ? timeToSeconds(actualPaceMinKm) : actualPaceMinKm;
   const thresholdSecs = typeof thresholdPaceMinKm === 'string' ? timeToSeconds(thresholdPaceMinKm) : thresholdPaceMinKm;
@@ -1854,18 +1819,17 @@ const result = calculateCRSRegression(distances, times);
 // Example:
 const if_value = calculateIntensityFactor("4:45", "4:15");
 // Returns: 0.895 (running at 89.5% of threshold)</code></pre>
-            </div>
-        </div>
+</div>
+</div>
+<div class="formula-card">
+<h3>Pace Consistency Analysis</h3>
+<div class="formula-content">
+<h4>JavaScript Implementation:</h4>
+<pre><code>function analyzePaceConsistency(segments) {
+  const paces = segments.map(kilometer =&gt; kilometer.distance / kilometer.time);
+  const avgPace = paces.reduce((a, b) =&gt; a + b) / paces.length;
 
-        <div class="formula-card">
-            <h3>Pace Consistency Analysis</h3>
-            <div class="formula-content">
-                <h4>JavaScript Implementation:</h4>
-                <pre><code>function analyzePaceConsistency(segments) {
-  const paces = segments.map(kilometer => kilometer.distance / kilometer.time);
-  const avgPace = paces.reduce((a, b) => a + b) / paces.length;
-
-  const variance = paces.reduce((sum, pace) =>
+  const variance = paces.reduce((sum, pace) =&gt;
     sum + Math.pow(pace - avgPace, 2), 0) / paces.length;
   const stdDev = Math.sqrt(variance);
   const coefficientOfVariation = (stdDev / avgPace) * 100;
@@ -1874,9 +1838,9 @@ const if_value = calculateIntensityFactor("4:45", "4:15");
     avgPace,
     stdDev,
     coefficientOfVariation,
-    consistency: coefficientOfVariation < 5 ? "Excellent" :
-                 coefficientOfVariation < 10 ? "Good" :
-                 coefficientOfVariation < 15 ? "Moderate" : "Variable"
+    consistency: coefficientOfVariation &lt; 5 ? "Excellent" :
+                 coefficientOfVariation &lt; 10 ? "Good" :
+                 coefficientOfVariation &lt; 15 ? "Moderate" : "Variable"
   };
 }
 
@@ -1889,14 +1853,13 @@ const segments = [
 ];
 const analysis = analyzePaceConsistency(segments);
 // Returns: { avgPace: 1.41, stdDev: 0.02, coefficientOfVariation: 1.4, consistency: "Excellent" }</code></pre>
-            </div>
-        </div>
-
-        <div class="formula-card">
-            <h3>Fatigue Detection from Stride Efficiency</h3>
-            <div class="formula-content">
-                <h4>JavaScript Implementation:</h4>
-                <pre><code>function detectFatigue(segments) {
+</div>
+</div>
+<div class="formula-card">
+<h3>Fatigue Detection from Stride Efficiency</h3>
+<div class="formula-content">
+<h4>JavaScript Implementation:</h4>
+<pre><code>function detectFatigue(segments) {
   // Compare Vertical Ratio of first and last segments
   const firstSegment = segments[0];
   const lastSegment = segments[segments.length - 1];
@@ -1907,9 +1870,9 @@ const analysis = analyzePaceConsistency(segments);
     startRatio: firstSegment.verticalRatio,
     endRatio: lastSegment.verticalRatio,
     increase: Math.round(ratioIncrease * 10) / 10,
-    fatigueLevel: ratioIncrease < 0.2 ? "Minimal" :
-                  ratioIncrease < 0.5 ? "Moderate" :
-                  ratioIncrease < 1.0 ? "Significant" : "Severe"
+    fatigueLevel: ratioIncrease &lt; 0.2 ? "Minimal" :
+                  ratioIncrease &lt; 0.5 ? "Moderate" :
+                  ratioIncrease &lt; 1.0 ? "Significant" : "Severe"
   };
 }
 
@@ -1919,45 +1882,43 @@ const segments = [
 ];
 const fatigue = detectFatigue(segments);
 // Returns: { startRatio: 7.2, endRatio: 8.1, increase: 0.9, fatigueLevel: "Significant" }</code></pre>
-            </div>
-        </div>
-    </div>
+</div>
+</div>
+</div>
 </section>
-
 <section class="section section-alt">
-    <div class="container">
-        <h2>Data Validation</h2>
-
-        <div class="formula-card">
-            <h3>Workout Data Quality Checks</h3>
-            <div class="formula-content">
-                <h4>JavaScript Implementation:</h4>
-                <pre><code>function validateWorkoutData(workout) {
+<div class="container">
+<h2>Data Validation</h2>
+<div class="formula-card">
+<h3>Workout Data Quality Checks</h3>
+<div class="formula-content">
+<h4>JavaScript Implementation:</h4>
+<pre><code>function validateWorkoutData(workout) {
   const issues = [];
 
   // Check for reasonable pace ranges (3:00-8:00 per km)
   const avgPaceSecs = workout.totalTime / (workout.totalDistance / 1000);
-  if (avgPaceSecs < 180 || avgPaceSecs > 480) {
+  if (avgPaceSecs &lt; 180 || avgPaceSecs &gt; 480) {
     issues.push(`Unusual average pace: ${Math.round(avgPaceSecs)}s per km`);
   }
 
   // Check for reasonable Vertical Ratio (4% - 15%)
-  if (workout.avgVerticalRatio < 4 || workout.avgVerticalRatio > 15) {
+  if (workout.avgVerticalRatio &lt; 4 || workout.avgVerticalRatio &gt; 15) {
     issues.push(`Unusual Vertical Ratio: ${workout.avgVerticalRatio}%`);
   }
 
   // Check for reasonable cadence (120-220 SPM)
   const avgCadence = calculateCadence(workout.totalSteps, workout.totalTime);
-  if (avgCadence < 120 || avgCadence > 220) {
+  if (avgCadence &lt; 120 || avgCadence &gt; 220) {
     issues.push(`Unusual cadence: ${Math.round(avgCadence)} SPM`);
   }
 
   // Check for missing segments (gaps in time)
-  if (workout.segments && workout.segments.length > 1) {
-    for (let i = 1; i < workout.segments.length; i++) {
+  if (workout.segments &amp;&amp; workout.segments.length &gt; 1) {
+    for (let i = 1; i &lt; workout.segments.length; i++) {
       const gap = workout.segments[i].startTime -
                   (workout.segments[i-1].startTime + workout.segments[i-1].duration);
-      if (gap > 300) { // 5 minute gap
+      if (gap &gt; 300) { // 5 minute gap
         issues.push(`Large gap detected between segments ${i} and ${i+1}`);
       }
     }
@@ -1978,20 +1939,18 @@ const workout = {
 };
 const validation = validateWorkoutData(workout);
 // Returns: { isValid: true, issues: [] }</code></pre>
-            </div>
-        </div>
-    </div>
+</div>
+</div>
+</div>
 </section>
-
 <section class="section">
-    <div class="container container-narrow">
-        <h2>Helper Functions</h2>
-
-        <div class="formula-card">
-            <h3>Time Conversion Utilities</h3>
-            <div class="formula-content">
-                <h4>JavaScript Implementation:</h4>
-                <pre><code>// Convert mm:ss to seconds
+<div class="container container-narrow">
+<h2>Helper Functions</h2>
+<div class="formula-card">
+<h3>Time Conversion Utilities</h3>
+<div class="formula-content">
+<h4>JavaScript Implementation:</h4>
+<pre><code>// Convert mm:ss to seconds
 function timeToSeconds(timeString) {
   const parts = timeString.split(':');
   return parseInt(parts[0]) * 60 + parseInt(parts[1]);
@@ -2016,34 +1975,31 @@ function secondsToTimeDetailed(seconds) {
 timeToSeconds("1:33"); // Returns: 93
 secondsToTime(93); // Returns: "1:33"
 secondsToTimeDetailed(3665); // Returns: "1:01:05"</code></pre>
-            </div>
-        </div>
-    </div>
+</div>
+</div>
+</div>
 </section>
-
 <section class="section section-alt">
-    <div class="container container-narrow text-center">
-        <h2>Implementation Resources</h2>
-        <p class="lead">All formulas on this page are production-ready and validated against scientific literature. Use
+<div class="container container-narrow text-center">
+<h2>Implementation Resources</h2>
+<p class="lead">All formulas on this page are production-ready and validated against scientific literature. Use
             them for custom analytics tools, verification, or deeper understanding of running performance calculations.
         </p>
-
-        <div class="callout callout-tip">
-            <h3>💡 Best Practices</h3>
-            <ul class="text-left">
-                <li><strong>Validate inputs:</strong> Check for reasonable ranges before calculating</li>
-                <li><strong>Handle edge cases:</strong> Division by zero, negative values, null data</li>
-                <li><strong>Round appropriately:</strong> CTL/ATL/TSB to 1 decimal, sTSS to integer</li>
-                <li><strong>Store precision:</strong> Keep full precision in database, round for display</li>
-                <li><strong>Test thoroughly:</strong> Use known-good data to verify calculations</li>
-            </ul>
-        </div>
-
-        <div class="mt-xl">
-            <a href="/he/" class="btn btn-primary btn-large">Back to Home</a>
-            <a href="/he/research/" class="btn btn-secondary">Scientific Foundation</a>
-        </div>
-    </div>
+<div class="callout callout-tip">
+<h3>💡 Best Practices</h3>
+<ul class="text-left">
+<li><strong>Validate inputs:</strong> Check for reasonable ranges before calculating</li>
+<li><strong>Handle edge cases:</strong> Division by zero, negative values, null data</li>
+<li><strong>Round appropriately:</strong> CTL/ATL/TSB to 1 decimal, sTSS to integer</li>
+<li><strong>Store precision:</strong> Keep full precision in database, round for display</li>
+<li><strong>Test thoroughly:</strong> Use known-good data to verify calculations</li>
+</ul>
+</div>
+<div class="mt-xl">
+<a class="btn btn-primary btn-large" href="/he/">Back to Home</a>
+<a class="btn btn-secondary" href="/he/research/">Scientific Foundation</a>
+</div>
+</div>
 </section>
     
   </main>
@@ -2062,21 +2018,21 @@ secondsToTimeDetailed(3665); // Returns: "1:01:05"</code></pre>
 
             
             <div class="footer-download">
-                <h3 class="footer-heading">Download</h3>
+                <h3 class="footer-heading">הורדה</h3>
                 <div class="footer-badges">
                     
                     <a href="https://apps.apple.com/us/app/run-analytics/id6754524015" target="_blank" rel="noopener"
-                        aria-label="Download on the App Store">
+                        aria-label="הורדה ב-App Store">
                         <img src="../../assets/images/badge-app-store.svg"
-                            alt="Download on the App Store" width="135"
+                            alt="הורדה ב-App Store" width="135"
                             height="40" loading="lazy">
                     </a>
                     
                     
                     <a href="https://play.google.com/store/apps/details?id=com.arnohealth.runanalytics" target="_blank" rel="noopener"
-                        aria-label="Get it on Google Play">
+                        aria-label="הורדה ב-Google Play">
                         <img src="../../assets/images/badge-google-play.svg"
-                            alt="Get it on Google Play" width="135"
+                            alt="הורדה ב-Google Play" width="135"
                             height="40" loading="lazy">
                     </a>
                     
@@ -2087,7 +2043,7 @@ secondsToTimeDetailed(3665); // Returns: "1:01:05"</code></pre>
 
         
         <div class="footer-languages">
-            <h3 class="footer-heading">Available in</h3>
+            <h3 class="footer-heading">זמין ב-</h3>
             <div class="lang-grid">
                 
                 <a href="/af/" class="lang-link"
@@ -2398,8 +2354,8 @@ secondsToTimeDetailed(3665); // Returns: "1:01:05"</code></pre>
 </div>
 
   
-  <script src="../../assets/js/core.min.js?v=9136cb9b9c4a" defer></script>
-  <script src="../../assets/js/search.min.js?v=9136cb9b9c4a" defer></script>
+  <script src="../../assets/js/core.min.js?v=8aef43d1" defer></script>
+  <script src="../../assets/js/search.min.js?v=8aef43d1" defer></script>
   
 
   

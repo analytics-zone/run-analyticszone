@@ -506,7 +506,7 @@ img[width][height] {
   <link rel="dns-prefetch" href="https://www.googletagmanager.com">
 
   
-  <link rel="stylesheet" href="../../assets/css/main.min.css?v=9136cb9b9c4a">
+  <link rel="stylesheet" href="../../assets/css/main.min.css?v=8aef43d1">
 
   
   
@@ -1204,381 +1204,326 @@ img[width][height] {
   <main id="main-content" class="main-content">
     
     <section class="page-hero">
-    <div class="container">
-        <h1>Ücretsiz Koşu TSS Hesaplayıcı</h1>
-        <p class="lead">Koşu antrenmanları için Antrenman Stres Skorunu hesaplayın - Tek ücretsiz rTSS hesaplayıcı</p>
-    </div>
+<div class="container">
+<h1>Ücretsiz Koşul TSS Hesaplayıcı</h1>
+<p class="lead">Koşu antrenmanları için Antrenman Stres Skorunu hesaplayın - Tek ücretsiz rTSS hesaplayıcı</p>
+</div>
 </section>
-
 <section class="section">
-    <div class="container container-narrow">
-        <div class="callout callout-info mb-xl">
-            <h2>What is Running rTSS (rTSS)?</h2>
-            <p><strong>Running Stress Score (rTSS)</strong> quantifies the training load of a running workout
-                by combining intensity and duration. It's adapted from cycling's TSS methodology, using your Critical
-                Run Speed (CRS) as the threshold pace. A 1-hour workout at CRS pace = 100 rTSS.</p>
-        </div>
-
-        <h2 class="mt-3xl">Free rTSS Calculator</h2>
-        <p class="lead mb-xl">Calculate training stress for any running workout. Requires your CRS pace.</p>
-
-        <div class="crs-calculator">
-            <form id="rtssCalculatorForm">
-                <div class="calculator-inputs">
-                    <div class="form-group">
-                        <label for="crsPace" class="form-label">Your CRS Pace (mm:ss per km)</label>
-                        <input type="text" id="crsPace" class="form-input" placeholder="4:15"
-                            pattern="[0-9]{1,2}:[0-5][0-9]" aria-required="true" aria-describedby="crsPace-help" />
-                        <small id="crsPace-help" class="form-help">Your threshold pace from CRS test (e.g.,
+<div class="container container-narrow">
+<div class="callout callout-info mb-xl">
+<h2>rTSS (rTSS) Çalıştırma Nedir?</h2>
+<p><strong>Koşu Stres Puanı (rTSS)</strong>koşu antrenmanının antrenman yükünü ölçer
+                yoğunluk ve süreyi birleştirerek. Critical'inizi kullanarak bisikletin TSS metodolojisinden uyarlanmıştır.
+                Eşik hızı olarak Koşu Hızını (CRS) seçin. CRS hızında 1 saatlik egzersiz = 100 rTSS.</p>
+</div>
+<h2 class="mt-3xl">Ücretsiz rTSS Hesap Makinesi</h2>
+<p class="lead mb-xl">Herhangi bir koşu antrenmanı için antrenman stresini hesaplayın. CRS hızınızı gerektirir.</p>
+<div class="crs-calculator">
+<form id="rtssCalculatorForm">
+<div class="calculator-inputs">
+<div class="form-group">
+<label class="form-label" for="crsPace">CRS Hızınız (mm:ss/km)</label>
+<input aria-describedby="crsPace-help" aria-required="true" class="form-input" id="crsPace" pattern="[0-9]{1,2}:[0-5][0-9]" placeholder="4:15" type="text"/>
+<small class="form-help" id="crsPace-help">CRS testindeki eşik temponuz (ör.
                             4:15)</small>
-                        <div class="form-error" id="crsPace-error"></div>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="workoutDuration" class="form-label">Workout Duration (minutes)</label>
-                        <input type="number" id="workoutDuration" class="form-input" placeholder="60" min="1" max="300"
-                            aria-required="true" aria-describedby="duration-help" />
-                        <small id="duration-help" class="form-help">Total workout time including rest (1-300
-                            minutes)</small>
-                        <div class="form-error" id="duration-error"></div>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="avgPace" class="form-label">Average Workout Pace (mm:ss per km)</label>
-                        <input type="text" id="avgPace" class="form-input" placeholder="4:45"
-                            pattern="[0-9]{1,2}:[0-5][0-9]" aria-required="true" aria-describedby="pace-help" />
-                        <small id="pace-help" class="form-help">Your average pace during the workout (e.g.,
+<div class="form-error" id="crsPace-error"></div>
+</div>
+<div class="form-group">
+<label class="form-label" for="workoutDuration">Egzersiz Süresi (dakika)</label>
+<input aria-describedby="duration-help" aria-required="true" class="form-input" id="workoutDuration" max="300" min="1" placeholder="60" type="number"/>
+<small class="form-help" id="duration-help">Dinlenme dahil toplam egzersiz süresi (1-300
+                            dakika)</small>
+<div class="form-error" id="duration-error"></div>
+</div>
+<div class="form-group">
+<label class="form-label" for="avgPace">Ortalama Egzersiz Hızı (mm:ss/km)</label>
+<input aria-describedby="pace-help" aria-required="true" class="form-input" id="avgPace" pattern="[0-9]{1,2}:[0-5][0-9]" placeholder="4:45" type="text"/>
+<small class="form-help" id="pace-help">Antrenman sırasındaki ortalama temponuz (ör.
                             4:45)</small>
-                        <div class="form-error" id="pace-error"></div>
-                    </div>
-
-                    <div class="calculator-buttons">
-                        <button type="submit" class="btn btn-primary" id="calculateRtssBtn">Calculate rTSS</button>
-                        <button type="reset" class="btn btn-ghost" id="resetRtssBtn">Clear</button>
-                    </div>
-                </div>
-            </form>
-
-            <div class="calculator-results hidden" id="rtssResults" aria-live="polite">
-                <h3>Your Training Stress Score</h3>
-                <div class="results-summary">
-                    <div class="result-item">
-                        <div class="result-label">rTSS</div>
-                        <div class="crs-result-value" id="rtssValue">--</div>
-                    </div>
-                    <div class="result-item">
-                        <div class="result-label">Intensity Factor (IF)</div>
-                        <div class="crs-result-value" id="intensityFactor">--</div>
-                    </div>
-                </div>
-
-                <div class="zones-result">
-                    <h4>Training Load Interpretation</h4>
-                    <p class="mb-md text-secondary" id="rtssInterpretation">
-                        <!-- Filled by JavaScript -->
-                    </p>
-                </div>
-            </div>
-        </div>
-
-        <h2 class="mt-3xl">How rTSS is Calculated</h2>
-
-        <div class="formula-box">
-            <h3>Formula</h3>
-            <div class="formula">
-                rTSS = (Duration in hours) × (Intensity Factor)² × 100
-            </div>
-            <div class="formula-explanation">
-                <p>Where:</p>
-                <ul>
-                    <li><strong>Intensity Factor (IF)</strong> = CRS Pace / Average Workout Pace</li>
-                    <li><strong>Duration</strong> = Total workout time in hours</li>
-                    <li><strong>CRS Pace</strong> = Your threshold pace from CRS test</li>
-                </ul>
-            </div>
-        </div>
-
-        <h3 class="mt-xl">Worked Example</h3>
-        <div class="example-box">
-            <h4>Workout Details:</h4>
-            <ul>
-                <li>CRS Pace: <strong>4:15/km</strong> (255 seconds)</li>
-                <li>Workout Duration: <strong>60 minutes</strong> (1 hour)</li>
-                <li>Average Pace: <strong>4:45/km</strong> (285 seconds)</li>
-            </ul>
-
-            <h4>Step 1: Calculate Intensity Factor</h4>
-            <div class="calculation">
-                IF = CRS Pace / Workout Pace<br>
-                IF = 255 / 285<br>
-                IF = <strong>0.895</strong>
-            </div>
-
-            <h4>Step 2: Calculate rTSS</h4>
-            <div class="calculation">
-                rTSS = 1.0 hours × (0.895)² × 100<br>
-                rTSS = 1.0 × 0.801 × 100<br>
-                rTSS = <strong>80</strong>
-            </div>
-
-            <p class="mt-md"><strong>Interpretation:</strong> This 60-minute workout at easy pace (slower than CRS)
-                generated 72 rTSS - a moderate training load suitable for aerobic base building.</p>
-        </div>
-
-        <h2 class="mt-3xl">Understanding rTSS Values</h2>
-
-        <div class="zones-table-container">
-            <table class="zones-table">
-                <thead>
-                    <tr>
-                        <th>rTSS Range</th>
-                        <th>Training Load</th>
-                        <th>Recovery Time</th>
-                        <th>Example Workout</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>&lt; 50</td>
-                        <td>Low</td>
-                        <td>Same day</td>
-                        <td>Easy 30-min run, technique drills</td>
-                    </tr>
-                    <tr>
-                        <td>50-100</td>
-                        <td>Moderate</td>
-                        <td>1 day</td>
-                        <td>60-min endurance, steady pace</td>
-                    </tr>
-                    <tr>
-                        <td>100-200</td>
-                        <td>High</td>
-                        <td>1-2 days</td>
-                        <td>90-min threshold sets, race pace intervals</td>
-                    </tr>
-                    <tr>
-                        <td>200-300</td>
-                        <td>Very High</td>
-                        <td>2-3 days</td>
-                        <td>2-hour hard training, multiple threshold blocks</td>
-                    </tr>
-                    <tr>
-                        <td>&gt; 300</td>
-                        <td>Extreme</td>
-                        <td>3+ days</td>
-                        <td>Long race (&gt;2 hours), ultra-endurance</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-
-        <h2 class="mt-3xl">Weekly rTSS Guidelines</h2>
-
-        <p class="mb-md">Target weekly rTSS depends on your training level and goals:</p>
-
-        <div class="grid grid-2 mb-xl">
-            <div class="card">
-                <h3 class="card-title">Recreational Runners</h3>
-                <div class="card-content">
-                    <p class="mb-sm"><strong>Weekly rTSS:</strong> 150-300</p>
-                    <p>2-3 workouts per week, 50-100 rTSS each. Focus on technique and building aerobic base.</p>
-                </div>
-            </div>
-
-            <div class="card">
-                <h3 class="card-title">Fitness Runners / Triathletes</h3>
-                <div class="card-content">
-                    <p class="mb-sm"><strong>Weekly rTSS:</strong> 300-500</p>
-                    <p>3-4 workouts per week, 75-125 rTSS each. Mix of aerobic endurance and threshold work.</p>
-                </div>
-            </div>
-
-            <div class="card">
-                <h3 class="card-title">Competitive Masters Runners</h3>
-                <div class="card-content">
-                    <p class="mb-sm"><strong>Weekly rTSS:</strong> 500-800</p>
-                    <p>4-6 workouts per week, 80-150 rTSS each. Structured training with periodization.</p>
-                </div>
-            </div>
-
-            <div class="card">
-                <h3 class="card-title">Elite / Collegiate Runners</h3>
-                <div class="card-content">
-                    <p class="mb-sm"><strong>Weekly rTSS:</strong> 800-1200+</p>
-                    <p>8-12 workouts per week, double days. High volume with recovery management critical.</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="callout callout-warning">
-            <h3>⚠️ Important Notes</h3>
-            <ul>
-                <li><strong>Requires accurate CRS:</strong> Your CRS must be current (tested within 6-8 weeks) for
-                    accurate rTSS.</li>
-                <li><strong>Simplified calculation:</strong> This calculator uses average pace. Advanced rTSS uses
-                    Normalized Graded Pace (NGP) which accounts for interval structure.</li>
-                <li><strong>Not for technique work:</strong> rTSS only measures physical training stress, not skill
-                    development.</li>
-                <li><strong>Individual variation:</strong> Same rTSS feels different for different runners. Adjust
-                    guidelines based on your recovery.</li>
-            </ul>
-        </div>
-
-        <h2 class="mt-3xl">Why rTSS Matters</h2>
-
-        <p class="mb-md">Training Stress Score is the foundation for:</p>
-
-        <ul class="mb-xl">
-            <li><strong>CTL (Chronic Training Load):</strong> Your fitness level - 42-day exponentially weighted average
-                of daily rTSS</li>
-            <li><strong>ATL (Acute Training Load):</strong> Your fatigue - 7-day exponentially weighted average of daily
-                rTSS</li>
-            <li><strong>TSB (Training Stress Balance):</strong> Your form - TSB = CTL - ATL (positive = fresh, negative
-                = fatigued)</li>
-            <li><strong>Periodization:</strong> Plan training phases (base, build, peak, taper) using target CTL
-                progressions</li>
-            <li><strong>Recovery Management:</strong> Know when to push and when to rest based on TSB</li>
-        </ul>
-
-        <div class="callout callout-tip">
-            <h3>Pro Tip: Track Your CTL</h3>
-            <p>Record daily rTSS in a spreadsheet or training log. Calculate your 42-day average (CTL) weekly. Target
-                5-10 CTL points increase per week during base building. Maintain or slightly reduce CTL during taper
-                (1-2 weeks before race).</p>
-        </div>
-
-        <h2 class="mt-3xl">Frequently Asked Questions</h2>
-
-        <div class="faq-section" itemscope itemtype="https://schema.org/FAQPage">
-            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">What is Running TSS (rTSS)?</h3>
-                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                    <div itemprop="text">
-                        <p>Running Training Stress Score (rTSS) is a metric that quantifies the training load of a
-                            running workout by combining both intensity and duration. It's adapted from cycling's TSS
-                            methodology, using your Critical Run Speed (CRS) as the threshold pace. A workout of 1 hour
-                            at CRS pace equals 100 rTSS.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">How do I calculate my rTSS?</h3>
-                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                    <div itemprop="text">
-                        <p>Use the calculator above by entering your CRS pace (from a CRS test), total workout duration,
-                            and average pace during the workout. The formula is: rTSS = Duration (hours) × Intensity
-                            Factor³ × 100, where Intensity Factor = CRS Pace / Average Workout Pace.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">Do I need CRS to calculate rTSS?</h3>
-                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                    <div itemprop="text">
-                        <p>Yes, your Critical Run Speed (CRS) is required to calculate the Intensity Factor, which is
-                            essential for rTSS calculation. CRS represents your threshold pace and should be tested
-                            every 6-8 weeks. You can find your CRS using our <a href="/tr/crs/">CRS
-                                calculator</a>.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">What's a good rTSS score for one workout?</h3>
-                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                    <div itemprop="text">
-                        <p>It depends on workout intensity: Easy workouts typically score below 50 rTSS, moderate
-                            workouts 50-100 rTSS, hard workouts 100-200 rTSS, and very hard workouts above 200 rTSS. The
-                            appropriate score depends on your training goals and current fitness level.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">How much rTSS should I do per week?</h3>
-                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                    <div itemprop="text">
-                        <p>Weekly rTSS targets vary by level: Recreational runners: 150-300, Fitness
-                            runners/Triathletes: 300-500, Competitive Masters: 500-800, Elite/Collegiate: 800-1200+.
-                            Start conservatively and increase gradually to avoid overtraining.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">Is running TSS the same as cycling TSS?</h3>
-                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                    <div itemprop="text">
-                        <p>The concept and formula are the same, but rTSS is adapted for running. Instead of using power
-                            (FTP) like cycling TSS, rTSS uses pace with CRS as the threshold. Both measure training load
-                            Duration × Intensity Factor² × 100.
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">Does rTSS account for terrain or hills?</h3>
-                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                    <div itemprop="text">
-                        <p>Standard rTSS based on average GPS pace does not account for hills. For trail running or
-                            hilly routes, advanced tools use <strong>Normalized Graded Pace (NGP)</strong> or heart rate
-                            intervals to provide a more accurate representation of the training stress.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">What's the difference between rTSS and CTL/ATL/TSB?</h3>
-                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                    <div itemprop="text">
-                        <p>rTSS measures a single workout's training load. CTL (Chronic Training Load) is your long-term
-                            fitness, ATL (Acute Training Load) is your recent fatigue, and TSB (Training Stress Balance)
-                            is your freshness. These metrics use rTSS values over time to track your training state.
-                            Learn more in our <a href="/tr/training-load/">Training Load guide</a>.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <h2 class="mt-3xl">Related Resources</h2>
-
-        <div class="grid grid-3">
-            <div class="card">
-                <h3 class="card-title">CRS Test</h3>
-                <div class="card-content">
-                    <p>Need your CRS pace? Use our free CRS calculator with 5K and 3K test times.</p>
-                    <a href="/tr/crs/" class="btn btn-secondary btn-small mt-md">CRS Calculator →</a>
-                </div>
-            </div>
-
-            <div class="card">
-                <h3 class="card-title">Training Load Guide</h3>
-                <div class="card-content">
-                    <p>Learn about CTL, ATL, TSB and Performance Management Chart metrics.</p>
-                    <a href="/tr/training-load/" class="btn btn-secondary btn-small mt-md">Training Load →</a>
-                </div>
-            </div>
-
-            <div class="card">
-                <h3 class="card-title">Run Analytics App</h3>
-                <div class="card-content">
-                    <p>Automatic rTSS calculation for all workouts. Track CTL/ATL/TSB trends over time.</p>
-                    <a href="/tr/" class="btn btn-secondary btn-small mt-md">Learn More →</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="mt-xl text-center">
-            <p class="mb-md"><strong>Want automatic rTSS tracking?</strong></p>
-            <a href="https://apps.apple.com/us/app/run-analytics/id6754524015" class="btn btn-primary btn-large" target="_blank"
-                rel="noopener">Download Run Analytics Free</a>
-        </div>
-    </div>
+<div class="form-error" id="pace-error"></div>
+</div>
+<div class="calculator-buttons">
+<button class="btn btn-primary" id="calculateRtssBtn" type="submit">rTSS'i hesaplayın</button>
+<button class="btn btn-ghost" id="resetRtssBtn" type="reset">Temizlemek</button>
+</div>
+</div>
+</form>
+<div aria-live="polite" class="calculator-results hidden" id="rtssResults">
+<h3>Antrenman Stres Puanınız</h3>
+<div class="results-summary">
+<div class="result-item">
+<div class="result-label">KORUMA14X</div>
+<div class="crs-result-value" id="rtssValue">--</div>
+</div>
+<div class="result-item">
+<div class="result-label">Yoğunluk Faktörü (IF)</div>
+<div class="crs-result-value" id="intensityFactor">--</div>
+</div>
+</div>
+<div class="zones-result">
+<h4>Eğitim Yükü Yorumlaması</h4>
+<p class="mb-md text-secondary" id="rtssInterpretation">
+JavaScript tarafından doldurulmuş
+</p>
+</div>
+</div>
+</div>
+<h2 class="mt-3xl">rTSS Nasıl Hesaplanır?</h2>
+<div class="formula-box">
+<h3>Formül</h3>
+<div class="formula">rTSS = (Saat cinsinden süre) × (Yoğunluk Faktörü)² × 100</div>
+<div class="formula-explanation">
+<p>Nerede:</p>
+<ul>
+<li><strong>Yoğunluk Faktörü (IF)</strong>= CRS Hızı / Ortalama Egzersiz Hızı</li>
+<li><strong>Süre</strong>= Saat cinsinden toplam egzersiz süresi</li>
+<li><strong>CRS Hız</strong>= CRS testindeki eşik temponuz</li>
+</ul>
+</div>
+</div>
+<h3 class="mt-xl">Çalışılan Örnek</h3>
+<div class="example-box">
+<h4>Antrenman Detayları:</h4>
+<ul>
+<li>CRS Hız:<strong>4:15/km</strong>(255 saniye)</li>
+<li>Egzersiz Süresi:<strong>60 dakika</strong>(1 saat)</li>
+<li>Ortalama Hız:<strong>4:45/km</strong>(285 saniye)</li>
+</ul>
+<h4>Adım 1: Yoğunluk Faktörünü Hesaplayın</h4>
+<div class="calculation">IF = CRS Hızı / Antrenman Hızı<br/>KORUMA15X = 255 / 285<br/>KORUMA15X =<strong>0.895</strong>
+</div>
+<h4>Adım 2: rTSS'i hesaplayın</h4>
+<div class="calculation">KORUMA14X = 1,0 saat × (0,895)² × 100<br/>KORUMA14X = 1,0 × 0,801 × 100<br/>KORUMA14X =<strong>80</strong>
+</div>
+<p class="mt-md"><strong>Tercüme:</strong>Kolay tempoda 60 dakikalık bu antrenman (CRS'ten daha yavaş)
+                72 rTSS oluşturdu - aerobik temel oluşturmaya uygun orta düzeyde bir antrenman yükü.</p>
+</div>
+<h2 class="mt-3xl">rTSS Değerlerini Anlamak</h2>
+<div class="zones-table-container">
+<table class="zones-table">
+<thead>
+<tr>
+<th>rTSS Serisi</th>
+<th>Eğitim Yükü</th>
+<th>İyileşme Süresi</th>
+<th>Örnek Egzersiz</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&lt; 50</td>
+<td>Düşük</td>
+<td>Aynı gün</td>
+<td>30 dakikalık kolay koşu, teknik çalışmalar</td>
+</tr>
+<tr>
+<td>50-100</td>
+<td>Ilıman</td>
+<td>1 gün</td>
+<td>60 dakikalık dayanıklılık, sabit tempo</td>
+</tr>
+<tr>
+<td>100-200</td>
+<td>Yüksek</td>
+<td>1-2 gün</td>
+<td>90 dakikalık eşik setleri, yarış temposu aralıkları</td>
+</tr>
+<tr>
+<td>200-300</td>
+<td>Çok Yüksek</td>
+<td>2-3 gün</td>
+<td>2 saatlik zorlu eğitim, çoklu eşik blokları</td>
+</tr>
+<tr>
+<td>&gt; 300</td>
+<td>Aşırı</td>
+<td>3+ gün</td>
+<td>Uzun yarış (&gt;2 saat), ultra dayanıklılık</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 class="mt-3xl">Haftalık rTSS Yönergeleri</h2>
+<p class="mb-md">Haftalık rTSS hedefi, egzersiz seviyenize ve hedeflerinize bağlıdır:</p>
+<div class="grid grid-2 mb-xl">
+<div class="card">
+<h3 class="card-title">Eğlence Amaçlı Koşucular</h3>
+<div class="card-content">
+<p class="mb-sm"><strong>Haftalık rTSS:</strong> 150-300</p>
+<p>Haftada 2-3 antrenman, her biri 50-100 rTSS. Tekniğe ve aerobik temel oluşturmaya odaklanın.</p>
+</div>
+</div>
+<div class="card">
+<h3 class="card-title">Fitness Koşucuları / Triatloncular</h3>
+<div class="card-content">
+<p class="mb-sm"><strong>Haftalık rTSS:</strong> 300-500</p>
+<p>Haftada 3-4 antrenman, her biri 75-125 rTSS. Aerobik dayanıklılık ve eşik çalışmasının karışımı.</p>
+</div>
+</div>
+<div class="card">
+<h3 class="card-title">Rekabetçi Usta Koşucular</h3>
+<div class="card-content">
+<p class="mb-sm"><strong>Haftalık rTSS:</strong> 500-800</p>
+<p>Haftada 4-6 antrenman, her biri 80-150 rTSS. Periyodikleştirme ile yapılandırılmış eğitim.</p>
+</div>
+</div>
+<div class="card">
+<h3 class="card-title">Elit / Üniversite Koşucuları</h3>
+<div class="card-content">
+<p class="mb-sm"><strong>Haftalık rTSS:</strong> 800-1200+</p>
+<p>Haftada 8-12 antrenman, iki gün. Kurtarma yönetimi kritik önem taşıyan yüksek hacim.</p>
+</div>
+</div>
+</div>
+<div class="callout callout-warning">
+<h3>⚠️ Önemli Notlar</h3>
+<ul>
+<li><strong>Doğru CRS gerektirir:</strong>CRS'iniz güncel olmalıdır (6-8 hafta içinde test edilmiş olmalıdır)
+                    doğru rTSS.</li>
+<li><strong>Basitleştirilmiş hesaplama:</strong>Bu hesap makinesi ortalama tempoyu kullanır. rTSS'in gelişmiş kullanımları
+                    Aralık yapısını hesaba katan Normalleştirilmiş Kademeli Hız (NGP).</li>
+<li><strong>Teknik çalışmalar için değil:</strong>rTSS beceriyi değil yalnızca fiziksel antrenman stresini ölçer
+                    gelişme.</li>
+<li><strong>Bireysel varyasyon:</strong>Aynı rTSS farklı koşucular için farklı hissettirir. Ayarla
+                    iyileşmenize dayalı yönergeler.</li>
+</ul>
+</div>
+<h2 class="mt-3xl">rTSS Neden Önemlidir?</h2>
+<p class="mb-md">Eğitim Stres Puanı aşağıdakilerin temelini oluşturur:</p>
+<ul class="mb-xl">
+<li><strong>CTL (Kronik Eğitim Yükü):</strong>Kondisyon düzeyiniz - 42 günlük üstel ağırlıklı ortalama
+                günlük rTSS</li>
+<li><strong>ATL (Akut Eğitim Yükü):</strong>Yorgunluğunuz - 7 günlük günlük üstel ağırlıklı ortalama
+                KORUMA14X</li>
+<li><strong>TSB (Egzersiz Stres Dengesi):</strong>Formunuz - TSB = CTL - ATL (pozitif = taze, negatif
+                = yorgun)</li>
+<li><strong>Periyodizasyon:</strong>Hedef CTL'i kullanarak eğitim aşamalarını (temel, oluşturma, zirve, azaltma) planlayın
+                ilerlemeler</li>
+<li><strong>Kurtarma Yönetimi:</strong>TSB'e göre ne zaman iteceğinizi ve ne zaman dinleneceğinizi bilin</li>
+</ul>
+<div class="callout callout-tip">
+<h3>Profesyonel İpucu: CTL'inizi Takip Edin</h3>
+<p>rTSS'i günlük olarak bir elektronik tabloya veya egzersiz günlüğüne kaydedin. Haftalık 42 günlük ortalamanızı (CTL) hesaplayın. Hedef
+                Üs inşası sırasında haftada 5-10 CTL puan artışı. Konikleştirme sırasında CTL'i koruyun veya biraz azaltın
+                (Yarıştan 1-2 hafta önce).</p>
+</div>
+<h2 class="mt-3xl">Sıkça Sorulan Sorular</h2>
+<div class="faq-section" itemscope="" itemtype="https://schema.org/FAQPage">
+<div class="faq-item" itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question">
+<h3 itemprop="name">TSS (rTSS) Çalıştırma Nedir?</h3>
+<div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer">
+<div itemprop="text">
+<p>Koşu Antrenmanı Stres Puanı (rTSS), bir koşu antrenmanının antrenman yükünü ölçen bir ölçümdür.
+                            hem yoğunluğu hem de süreyi birleştirerek koşu antrenmanı. Bisikletin TSS'inden uyarlanmıştır
+                            Kritik Koşu Hızınızı (CRS) eşik temposu olarak kullanan metodoloji. 1 saatlik antrenman
+                            CRS temposunda 100 rTSS'e eşittir.</p>
+</div>
+</div>
+</div>
+<div class="faq-item" itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question">
+<h3 itemprop="name">rTSS'imi nasıl hesaplarım?</h3>
+<div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer">
+<div itemprop="text">
+<p>CRS hızınızı (CRS testinden), toplam egzersiz sürenizi, toplam egzersiz sürenizi girerek yukarıdaki hesaplayıcıyı kullanın.
+                            ve egzersiz sırasındaki ortalama tempo. Formül şu şekildedir: rTSS = Süre (saat) × Yoğunluk
+                            Faktör³ × 100, burada Yoğunluk Faktörü = CRS Hız / Ortalama Egzersiz Hızı.</p>
+</div>
+</div>
+</div>
+<div class="faq-item" itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question">
+<h3 itemprop="name">rTSS'i hesaplamak için CRS'e ihtiyacım var mı?</h3>
+<div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer">
+<div itemprop="text">
+<p>Evet, Yoğunluk Faktörünü hesaplamak için Kritik Koşu Hızınız (CRS) gereklidir;
+                            rTSS hesaplaması için gereklidir. CRS eşik hızınızı temsil eder ve test edilmelidir
+                            her 6-8 haftada bir. CRS'inizi aşağıdakileri kullanarak bulabilirsiniz:<a href="/tr/crs/">KORUMA0X
+                                hesap makinesi</a>.</p>
+</div>
+</div>
+</div>
+<div class="faq-item" itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question">
+<h3 itemprop="name">Bir antrenman için iyi rTSS puanı nedir?</h3>
+<div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer">
+<div itemprop="text">
+<p>Egzersiz yoğunluğuna bağlıdır: Kolay egzersizler genellikle 50 rTSS'in altında, orta düzeyde puan alır
+                            antrenmanlar 50-100 rTSS, zorlu antrenmanlar 100-200 rTSS ve 200 rTSS'in üzerindeki çok zorlu antrenmanlar.
+                            Uygun puan, antrenman hedeflerinize ve mevcut kondisyon seviyenize bağlıdır.</p>
+</div>
+</div>
+</div>
+<div class="faq-item" itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question">
+<h3 itemprop="name">Haftada ne kadar rTSS yapmalıyım?</h3>
+<div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer">
+<div itemprop="text">
+<p>Haftalık rTSS hedefleri seviyeye göre değişir: Eğlence amaçlı koşucular: 150-300, Fitness
+                            koşucular/Triatloncular: 300-500, Rekabetçi Ustalar: 500-800, Elit/Üniversite: 800-1200+.
+                            Aşırı antrenmandan kaçınmak için muhafazakar bir şekilde başlayın ve yavaş yavaş artırın.</p>
+</div>
+</div>
+</div>
+<div class="faq-item" itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question">
+<h3 itemprop="name">TSS'i çalıştırmak TSS'i bisiklete bindirmekle aynı mıdır?</h3>
+<div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer">
+<div itemprop="text">
+<p>Konsept ve formül aynıdır ancak rTSS koşmaya uyarlanmıştır. Güç kullanmak yerine
+                            (FTP), bisiklet TSS gibi, rTSS de eşik olarak CRS ile tempoyu kullanır. Her ikisi de eğitim yükünü ölçer
+                            Süre × Yoğunluk Faktörü² × 100.</p>
+</div>
+</div>
+</div>
+<div class="faq-item" itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question">
+<h3 itemprop="name">rTSS araziyi veya tepeleri hesaba katıyor mu?</h3>
+<div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer">
+<div itemprop="text">
+<p>Ortalama GPS hızına dayalı standart rTSS, tepeleri hesaba katmaz. Patika koşusu için veya
+                            engebeli rotalar, gelişmiş araçların kullanımı<strong>Normalleştirilmiş Kademeli Hız (NGP)</strong>veya kalp atış hızı
+                            Antrenman stresinin daha doğru bir temsilini sağlamak için aralıklar.</p>
+</div>
+</div>
+</div>
+<div class="faq-item" itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question">
+<h3 itemprop="name">rTSS ve CTL/ATL/TSB arasındaki fark nedir?</h3>
+<div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer">
+<div itemprop="text">
+<p>rTSS tek bir antrenmanın antrenman yükünü ölçer. CTL (Kronik Eğitim Yükü) uzun vadeli çözümünüzdür
+                            kondisyon, ATL (Akut Antrenman Yükü) son zamanlardaki yorgunluğunuzdur ve TSB (Egzersiz Stres Dengesi)
+                            senin tazeliğindir. Bu ölçümler, egzersiz durumunuzu izlemek için zaman içindeki rTSS değerlerini kullanır.
+                            Daha fazla bilgi edinin<a href="/tr/training-load/">Eğitim Yükü kılavuzu</a>.</p>
+</div>
+</div>
+</div>
+</div>
+<h2 class="mt-3xl">İlgili Kaynaklar</h2>
+<div class="grid grid-3">
+<div class="card">
+<h3 class="card-title">CRS Testi</h3>
+<div class="card-content">
+<p>CRS hızınıza mı ihtiyacınız var? 5K ve 3K test sürelerine sahip ücretsiz CRS hesap makinemizi kullanın.</p>
+<a class="btn btn-secondary btn-small mt-md" href="/tr/crs/">CRS Hesap Makinesi →</a>
+</div>
+</div>
+<div class="card">
+<h3 class="card-title">Eğitim Yükü Kılavuzu</h3>
+<div class="card-content">
+<p>CTL, ATL, TSB ve Performans Yönetimi Tablosu ölçümleri hakkında bilgi edinin.</p>
+<a class="btn btn-secondary btn-small mt-md" href="/tr/training-load/">Eğitim Yükü →</a>
+</div>
+</div>
+<div class="card">
+<h3 class="card-title">Run Analytics Uygulaması</h3>
+<div class="card-content">
+<p>Tüm antrenmanlar için otomatik rTSS hesaplaması. CTL/ATL/TSB trendlerini zaman içinde izleyin.</p>
+<a class="btn btn-secondary btn-small mt-md" href="/tr/">Daha Fazla Bilgi Edinin →</a>
+</div>
+</div>
+</div>
+<div class="mt-xl text-center">
+<p class="mb-md"><strong>Otomatik rTSS takibi mi istiyorsunuz?</strong></p>
+<a class="btn btn-primary btn-large" href="https://apps.apple.com/us/app/run-analytics/id6754524015" rel="noopener" target="_blank">Run Analytics'i Ücretsiz İndirin</a>
+</div>
+</div>
 </section>
-
 <script src="../../assets/js/rtss-calculator.min.js"></script>
     
   </main>
@@ -1933,8 +1878,8 @@ img[width][height] {
 </div>
 
   
-  <script src="../../assets/js/core.min.js?v=9136cb9b9c4a" defer></script>
-  <script src="../../assets/js/search.min.js?v=9136cb9b9c4a" defer></script>
+  <script src="../../assets/js/core.min.js?v=8aef43d1" defer></script>
+  <script src="../../assets/js/search.min.js?v=8aef43d1" defer></script>
   
 
   
