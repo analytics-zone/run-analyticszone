@@ -1,246 +1,61 @@
-<!DOCTYPE html>
-<html lang="vi" dir="ltr">
-
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
-    rel="stylesheet">
-
-  
-  <title>Tốc Độ Chạy Tới Hạn (CRS) | Run Analytics - Running Analytics App |</title>
-  <meta name="description" content="Nền Tảng Của Huấn Luyện Chạy Bộ Dựa Trên Dữ Liệu. Tốc Độ Chạy Tới Hạn (CRS) | Run Analytics - Running Analytics App |">
-  <meta name="author" content="AnalyticsZone Team">
-
-  
-  
-  <meta name="keywords" content="critical running speed, CRS calculator, vùng tập chạy bộ, CRS test, pace ngưỡng">
-  
-
-  
-  <link rel="canonical" href="https://run.analyticszone.app/vi/crs/">
-
-  
-  
-  <meta property="article:published_time" content="2025-01-15T10:00:00Z">
-  <meta property="article:modified_time" content="2026-01-13T14:30:00Z">
-  <meta property="article:author" content="AnalyticsZone Team">
-  
-
-  
-  
-
-  
-  <meta property="og:type" content="article">
-  <meta property="og:url" content="https://run.analyticszone.app/vi/crs/">
-  <meta property="og:title" content="Tốc Độ Chạy Tới Hạn (CRS) | Run Analytics - Running Analytics App |">
-  <meta property="og:description" content="Nền Tảng Của Huấn Luyện Chạy Bộ Dựa Trên Dữ Liệu. Tốc Độ Chạy Tới Hạn (CRS) | Run Analytics - Running Analytics App |">
-  <meta property="og:image" content="https://run.analyticszone.app/assets/images/og-image.svg">
-  <meta property="og:locale" content="vi_VN">
-  <meta property="og:site_name" content="Run Analytics">
-
-  
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:url" content="https://run.analyticszone.app/vi/crs/">
-  <meta name="twitter:title" content="Tốc Độ Chạy Tới Hạn (CRS) | Run Analytics - Running Analytics App |">
-  <meta name="twitter:description" content="Nền Tảng Của Huấn Luyện Chạy Bộ Dựa Trên Dữ Liệu. Tốc Độ Chạy Tới Hạn (CRS) | Run Analytics - Running Analytics App |">
-  <meta name="twitter:image" content="https://run.analyticszone.app/assets/images/og-image.svg">
-  
-  <meta name="twitter:site" content="@runanalytics">
-  <meta name="twitter:creator" content="@runanalytics">
-  
-
-  
-  
-  <link rel="alternate" hreflang="af"
-    href="https://run.analyticszone.app/af/crs/">
-  
-  <link rel="alternate" hreflang="am"
-    href="https://run.analyticszone.app/am/crs/">
-  
-  <link rel="alternate" hreflang="ar"
-    href="https://run.analyticszone.app/ar/crs/">
-  
-  <link rel="alternate" hreflang="bg"
-    href="https://run.analyticszone.app/bg/crs/">
-  
-  <link rel="alternate" hreflang="bn"
-    href="https://run.analyticszone.app/bn/crs/">
-  
-  <link rel="alternate" hreflang="ca"
-    href="https://run.analyticszone.app/ca/crs/">
-  
-  <link rel="alternate" hreflang="cs"
-    href="https://run.analyticszone.app/cs/crs/">
-  
-  <link rel="alternate" hreflang="da"
-    href="https://run.analyticszone.app/da/crs/">
-  
-  <link rel="alternate" hreflang="de"
-    href="https://run.analyticszone.app/de/crs/">
-  
-  <link rel="alternate" hreflang="el"
-    href="https://run.analyticszone.app/el/crs/">
-  
-  <link rel="alternate" hreflang="en"
-    href="https://run.analyticszone.app/en/crs/">
-  
-  <link rel="alternate" hreflang="es"
-    href="https://run.analyticszone.app/es/crs/">
-  
-  <link rel="alternate" hreflang="et"
-    href="https://run.analyticszone.app/et/crs/">
-  
-  <link rel="alternate" hreflang="fa"
-    href="https://run.analyticszone.app/fa/crs/">
-  
-  <link rel="alternate" hreflang="fi"
-    href="https://run.analyticszone.app/fi/crs/">
-  
-  <link rel="alternate" hreflang="fr"
-    href="https://run.analyticszone.app/fr/crs/">
-  
-  <link rel="alternate" hreflang="gu"
-    href="https://run.analyticszone.app/gu/crs/">
-  
-  <link rel="alternate" hreflang="ha"
-    href="https://run.analyticszone.app/ha/crs/">
-  
-  <link rel="alternate" hreflang="he"
-    href="https://run.analyticszone.app/he/crs/">
-  
-  <link rel="alternate" hreflang="hi"
-    href="https://run.analyticszone.app/hi/crs/">
-  
-  <link rel="alternate" hreflang="hr"
-    href="https://run.analyticszone.app/hr/crs/">
-  
-  <link rel="alternate" hreflang="hu"
-    href="https://run.analyticszone.app/hu/crs/">
-  
-  <link rel="alternate" hreflang="id"
-    href="https://run.analyticszone.app/id/crs/">
-  
-  <link rel="alternate" hreflang="is"
-    href="https://run.analyticszone.app/is/crs/">
-  
-  <link rel="alternate" hreflang="it"
-    href="https://run.analyticszone.app/it/crs/">
-  
-  <link rel="alternate" hreflang="ja"
-    href="https://run.analyticszone.app/ja/crs/">
-  
-  <link rel="alternate" hreflang="km"
-    href="https://run.analyticszone.app/km/crs/">
-  
-  <link rel="alternate" hreflang="kn"
-    href="https://run.analyticszone.app/kn/crs/">
-  
-  <link rel="alternate" hreflang="ko"
-    href="https://run.analyticszone.app/ko/crs/">
-  
-  <link rel="alternate" hreflang="lt"
-    href="https://run.analyticszone.app/lt/crs/">
-  
-  <link rel="alternate" hreflang="lv"
-    href="https://run.analyticszone.app/lv/crs/">
-  
-  <link rel="alternate" hreflang="ms"
-    href="https://run.analyticszone.app/ms/crs/">
-  
-  <link rel="alternate" hreflang="my"
-    href="https://run.analyticszone.app/my/crs/">
-  
-  <link rel="alternate" hreflang="nb"
-    href="https://run.analyticszone.app/nb/crs/">
-  
-  <link rel="alternate" hreflang="nl"
-    href="https://run.analyticszone.app/nl/crs/">
-  
-  <link rel="alternate" hreflang="pl"
-    href="https://run.analyticszone.app/pl/crs/">
-  
-  <link rel="alternate" hreflang="pt"
-    href="https://run.analyticszone.app/pt/crs/">
-  
-  <link rel="alternate" hreflang="pt-br"
-    href="https://run.analyticszone.app/pt-br/crs/">
-  
-  <link rel="alternate" hreflang="ro"
-    href="https://run.analyticszone.app/ro/crs/">
-  
-  <link rel="alternate" hreflang="ru"
-    href="https://run.analyticszone.app/ru/crs/">
-  
-  <link rel="alternate" hreflang="sk"
-    href="https://run.analyticszone.app/sk/crs/">
-  
-  <link rel="alternate" hreflang="sl"
-    href="https://run.analyticszone.app/sl/crs/">
-  
-  <link rel="alternate" hreflang="sr"
-    href="https://run.analyticszone.app/sr/crs/">
-  
-  <link rel="alternate" hreflang="sv"
-    href="https://run.analyticszone.app/sv/crs/">
-  
-  <link rel="alternate" hreflang="sw"
-    href="https://run.analyticszone.app/sw/crs/">
-  
-  <link rel="alternate" hreflang="ta"
-    href="https://run.analyticszone.app/ta/crs/">
-  
-  <link rel="alternate" hreflang="te"
-    href="https://run.analyticszone.app/te/crs/">
-  
-  <link rel="alternate" hreflang="th"
-    href="https://run.analyticszone.app/th/crs/">
-  
-  <link rel="alternate" hreflang="tl"
-    href="https://run.analyticszone.app/tl/crs/">
-  
-  <link rel="alternate" hreflang="tr"
-    href="https://run.analyticszone.app/tr/crs/">
-  
-  <link rel="alternate" hreflang="uk"
-    href="https://run.analyticszone.app/uk/crs/">
-  
-  <link rel="alternate" hreflang="ur"
-    href="https://run.analyticszone.app/ur/crs/">
-  
-  <link rel="alternate" hreflang="vi"
-    href="https://run.analyticszone.app/vi/crs/">
-  
-  <link rel="alternate" hreflang="yo"
-    href="https://run.analyticszone.app/yo/crs/">
-  
-  <link rel="alternate" hreflang="zh"
-    href="https://run.analyticszone.app/zh/crs/">
-  
-  <link rel="alternate" hreflang="x-default"
-    href="https://run.analyticszone.app/en/crs/">
-
-  
-  <link rel="icon" type="image/png" sizes="32x32" href="../../assets/images/icons/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="../../assets/images/icons/favicon-16x16.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="../../assets/images/icons/apple-touch-icon.png">
-  <link rel="manifest" href="../../manifest.json">
-  <meta name="theme-color" content="#2563EB">
-  <meta name="robots" content="index, follow">
-
-  
-  
-  
-  <meta name="apple-itunes-app" content="app-id=6754524015">
-  
-
-  
-  <style>
+<!DOCTYPE html><html lang="vi" dir="ltr"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet"><title>Tốc Độ Chạy Tới Hạn (CRS) | Run Analytics - Running Analytics App |</title><meta name="description" content="Nền Tảng Của Huấn Luyện Chạy Bộ Dựa Trên Dữ Liệu. Tốc Độ Chạy Tới Hạn (CRS) | Run Analytics - Running Analytics App |"><meta name="author" content="AnalyticsZone Team"><meta name="keywords" content="critical running speed, CRS calculator, vùng tập chạy bộ, CRS test, pace ngưỡng"><link rel="canonical" href="https://run.analyticszone.app/vi/crs/"><meta property="article:published_time" content="2025-01-15T10:00:00Z"><meta property="article:modified_time" content="2026-01-13T14:30:00Z"><meta property="article:author" content="AnalyticsZone Team"><meta property="og:type" content="article"><meta property="og:url" content="https://run.analyticszone.app/vi/crs/"><meta property="og:title" content="Tốc Độ Chạy Tới Hạn (CRS) | Run Analytics - Running Analytics App |"><meta property="og:description" content="Nền Tảng Của Huấn Luyện Chạy Bộ Dựa Trên Dữ Liệu. Tốc Độ Chạy Tới Hạn (CRS) | Run Analytics - Running Analytics App |"><meta property="og:image" content="https://run.analyticszone.app/assets/images/og-image.svg"><meta property="og:locale" content="vi_VN"><meta property="og:site_name" content="Run Analytics"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:url" content="https://run.analyticszone.app/vi/crs/"><meta name="twitter:title" content="Tốc Độ Chạy Tới Hạn (CRS) | Run Analytics - Running Analytics App |"><meta name="twitter:description" content="Nền Tảng Của Huấn Luyện Chạy Bộ Dựa Trên Dữ Liệu. Tốc Độ Chạy Tới Hạn (CRS) | Run Analytics - Running Analytics App |"><meta name="twitter:image" content="https://run.analyticszone.app/assets/images/og-image.svg"><meta name="twitter:site" content="@runanalytics"><meta name="twitter:creator" content="@runanalytics"><link rel="alternate" hreflang="af"
+    href="https://run.analyticszone.app/af/crs/"><link rel="alternate" hreflang="am"
+    href="https://run.analyticszone.app/am/crs/"><link rel="alternate" hreflang="ar"
+    href="https://run.analyticszone.app/ar/crs/"><link rel="alternate" hreflang="bg"
+    href="https://run.analyticszone.app/bg/crs/"><link rel="alternate" hreflang="bn"
+    href="https://run.analyticszone.app/bn/crs/"><link rel="alternate" hreflang="ca"
+    href="https://run.analyticszone.app/ca/crs/"><link rel="alternate" hreflang="cs"
+    href="https://run.analyticszone.app/cs/crs/"><link rel="alternate" hreflang="da"
+    href="https://run.analyticszone.app/da/crs/"><link rel="alternate" hreflang="de"
+    href="https://run.analyticszone.app/de/crs/"><link rel="alternate" hreflang="el"
+    href="https://run.analyticszone.app/el/crs/"><link rel="alternate" hreflang="en"
+    href="https://run.analyticszone.app/en/crs/"><link rel="alternate" hreflang="es"
+    href="https://run.analyticszone.app/es/crs/"><link rel="alternate" hreflang="et"
+    href="https://run.analyticszone.app/et/crs/"><link rel="alternate" hreflang="fa"
+    href="https://run.analyticszone.app/fa/crs/"><link rel="alternate" hreflang="fi"
+    href="https://run.analyticszone.app/fi/crs/"><link rel="alternate" hreflang="fr"
+    href="https://run.analyticszone.app/fr/crs/"><link rel="alternate" hreflang="gu"
+    href="https://run.analyticszone.app/gu/crs/"><link rel="alternate" hreflang="ha"
+    href="https://run.analyticszone.app/ha/crs/"><link rel="alternate" hreflang="he"
+    href="https://run.analyticszone.app/he/crs/"><link rel="alternate" hreflang="hi"
+    href="https://run.analyticszone.app/hi/crs/"><link rel="alternate" hreflang="hr"
+    href="https://run.analyticszone.app/hr/crs/"><link rel="alternate" hreflang="hu"
+    href="https://run.analyticszone.app/hu/crs/"><link rel="alternate" hreflang="id"
+    href="https://run.analyticszone.app/id/crs/"><link rel="alternate" hreflang="is"
+    href="https://run.analyticszone.app/is/crs/"><link rel="alternate" hreflang="it"
+    href="https://run.analyticszone.app/it/crs/"><link rel="alternate" hreflang="ja"
+    href="https://run.analyticszone.app/ja/crs/"><link rel="alternate" hreflang="km"
+    href="https://run.analyticszone.app/km/crs/"><link rel="alternate" hreflang="kn"
+    href="https://run.analyticszone.app/kn/crs/"><link rel="alternate" hreflang="ko"
+    href="https://run.analyticszone.app/ko/crs/"><link rel="alternate" hreflang="lt"
+    href="https://run.analyticszone.app/lt/crs/"><link rel="alternate" hreflang="lv"
+    href="https://run.analyticszone.app/lv/crs/"><link rel="alternate" hreflang="ms"
+    href="https://run.analyticszone.app/ms/crs/"><link rel="alternate" hreflang="my"
+    href="https://run.analyticszone.app/my/crs/"><link rel="alternate" hreflang="nb"
+    href="https://run.analyticszone.app/nb/crs/"><link rel="alternate" hreflang="nl"
+    href="https://run.analyticszone.app/nl/crs/"><link rel="alternate" hreflang="pl"
+    href="https://run.analyticszone.app/pl/crs/"><link rel="alternate" hreflang="pt"
+    href="https://run.analyticszone.app/pt/crs/"><link rel="alternate" hreflang="pt-br"
+    href="https://run.analyticszone.app/pt-br/crs/"><link rel="alternate" hreflang="ro"
+    href="https://run.analyticszone.app/ro/crs/"><link rel="alternate" hreflang="ru"
+    href="https://run.analyticszone.app/ru/crs/"><link rel="alternate" hreflang="sk"
+    href="https://run.analyticszone.app/sk/crs/"><link rel="alternate" hreflang="sl"
+    href="https://run.analyticszone.app/sl/crs/"><link rel="alternate" hreflang="sr"
+    href="https://run.analyticszone.app/sr/crs/"><link rel="alternate" hreflang="sv"
+    href="https://run.analyticszone.app/sv/crs/"><link rel="alternate" hreflang="sw"
+    href="https://run.analyticszone.app/sw/crs/"><link rel="alternate" hreflang="ta"
+    href="https://run.analyticszone.app/ta/crs/"><link rel="alternate" hreflang="te"
+    href="https://run.analyticszone.app/te/crs/"><link rel="alternate" hreflang="th"
+    href="https://run.analyticszone.app/th/crs/"><link rel="alternate" hreflang="tl"
+    href="https://run.analyticszone.app/tl/crs/"><link rel="alternate" hreflang="tr"
+    href="https://run.analyticszone.app/tr/crs/"><link rel="alternate" hreflang="uk"
+    href="https://run.analyticszone.app/uk/crs/"><link rel="alternate" hreflang="ur"
+    href="https://run.analyticszone.app/ur/crs/"><link rel="alternate" hreflang="vi"
+    href="https://run.analyticszone.app/vi/crs/"><link rel="alternate" hreflang="yo"
+    href="https://run.analyticszone.app/yo/crs/"><link rel="alternate" hreflang="zh"
+    href="https://run.analyticszone.app/zh/crs/"><link rel="alternate" hreflang="x-default"
+    href="https://run.analyticszone.app/en/crs/"><link rel="icon" type="image/png" sizes="32x32" href="../../assets/images/icons/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="../../assets/images/icons/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="../../assets/images/icons/apple-touch-icon.png"><link rel="manifest" href="../../manifest.json"><meta name="theme-color" content="#2563EB"><meta name="robots" content="index, follow"><meta name="apple-itunes-app" content="app-id=6754524015"><style>
 /* Critical CSS - Above the fold styles for fast LCP */
 :root {
   --color-primary: #0066CC;
@@ -499,20 +314,7 @@ img[width][height] {
     transition-duration: 0.01ms !important;
   }
 }
-</style>
-
-  
-  <link rel="preconnect" href="https://www.googletagmanager.com">
-  <link rel="dns-prefetch" href="https://www.googletagmanager.com">
-
-  
-  <link rel="stylesheet" href="../../assets/css/main.min.css?v=8aef43d1">
-
-  
-  
-
-
-<script type="application/ld+json">
+</style><link rel="preconnect" href="https://www.googletagmanager.com"><link rel="dns-prefetch" href="https://www.googletagmanager.com"><link rel="stylesheet" href="../../assets/css/main.min.css?v=e899af207631"><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Organization",
@@ -547,10 +349,7 @@ img[width][height] {
     
   ]
 }
-</script>
-
-
-<script type="application/ld+json">
+</script><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "WebSite",
@@ -559,11 +358,7 @@ img[width][height] {
   "description": "Track Critical Running Speed, Training Stress Score, and performance metrics with Run Analytics. Science-based iOS app for runners, triathletes &amp; coaches. 7-day free trial.",
   "inLanguage": "vi"
 }
-</script>
-
-
-
-<script type="application/ld+json">
+</script><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
@@ -578,12 +373,7 @@ img[width][height] {
   },
   "downloadUrl": "https://apps.apple.com/us/app/run-analytics/id6754524015"
 }
-</script>
-
-
-
-
-<script type="application/ld+json">
+</script><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
@@ -612,11 +402,7 @@ img[width][height] {
     
   ]
 }
-</script>
-
-
-
-<script type="application/ld+json">
+</script><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "WebPage",
@@ -624,11 +410,7 @@ img[width][height] {
   "description": "Nền Tảng Của Huấn Luyện Chạy Bộ Dựa Trên Dữ Liệu. Tốc Độ Chạy Tới Hạn (CRS) | Run Analytics - Running Analytics App |",
   "url": "https://run.analyticszone.app/vi/crs/"
 }
-</script>
-
-
-
-<script type="application/ld+json">
+</script><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Article",
@@ -653,17 +435,7 @@ img[width][height] {
     "@id": "https://run.analyticszone.app/vi/crs/"
   }
 }
-</script>
-
-
-
-
-
-  
-  
-
-  
-  <script>
+</script><script>
     (function () {
       let theme = localStorage.getItem('theme');
       // Older builds could persist a per-subdomain `theme=light` value without a UI
@@ -677,1648 +449,471 @@ img[width][height] {
         document.documentElement.classList.add('dark-mode');
       }
     })();
-  </script>
-</head>
-
-<body>
-  
-  <a href="#main-content" class="skip-link">Chuyển đến nội dung</a>
-
-  
-  <header class="site-header">
-    <div class="container">
-        <div class="header-inner">
-            
-            <a href="/vi/" class="site-logo">
-                <picture>
-                    <source srcset="../../assets/images/logo-dark.png" type="image/png"
-                        media="(prefers-color-scheme: dark)">
-                    <img src="../../assets/images/logo.png" alt="Run Analytics - Running Analytics App | Critical Running Speed, TSS, CTL/ATL/TSB for iOS" width="56" height="56">
-                </picture>
-                <span class="logo-text">Run Analytics</span>
-            </a>
-
-            
-            <nav class="nav-primary" id="nav-primary" role="navigation" aria-label="Main navigation">
-                <div class="nav-group-left">
-                    <ul>
-                        
-                        <li>
-                            
-                            <a href="/vi/" 
+  </script></head><body><a href="#main-content" class="skip-link">Chuyển đến nội dung</a><header class="site-header"><div class="container"><div class="header-inner"><a href="/vi/" class="site-logo"><picture><source srcset="../../assets/images/logo-dark.png" type="image/png"
+                        media="(prefers-color-scheme: dark)"><img src="../../assets/images/logo.png" alt="Run Analytics - Running Analytics App | Critical Running Speed, TSS, CTL/ATL/TSB for iOS" width="56" height="56"></picture><span class="logo-text">Run Analytics</span></a><nav class="nav-primary" id="nav-primary" role="navigation" aria-label="Main navigation"><div class="nav-group-left"><ul><li><a href="/vi/" 
                                 aria-current="">
                                 Trang chủ
-                            </a>
-                            
-                            </li>
-                            
-                        <li class="has-submenu" >
-                            
-                            
-                            <a href="/vi/getting-started/" class="nav-label">Học tập</a>
-                            
-                            <ul class="submenu">
-                                
-                                <li>
-                                    <a href="/vi/getting-started/" 
+                            </a></li><li class="has-submenu" ><a href="/vi/getting-started/" class="nav-label">Học tập</a><ul class="submenu"><li><a href="/vi/getting-started/" 
                                         aria-current="">
                                         Bắt đầu
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/vi/crs/" class="active" 
+                                    </a></li><li><a href="/vi/crs/" class="active" 
                                         aria-current="page">
                                         CRS
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/vi/training-zones/" 
+                                    </a></li><li><a href="/vi/training-zones/" 
                                         aria-current="">
                                         Vùng tập luyện
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/vi/training-load/" 
+                                    </a></li><li><a href="/vi/training-load/" 
                                         aria-current="">
                                         Tải tập luyện
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/vi/rtss-calculator/" 
+                                    </a></li><li><a href="/vi/rtss-calculator/" 
                                         aria-current="">
                                         Máy tính rTSS
-                                    </a>
-                                </li>
-                                
-                            </ul>
-                            
-                            </li>
-                            
-                        <li class="has-submenu" >
-                            
-                            
-                            <a href="/vi/research/" class="nav-label">Khoa học</a>
-                            
-                            <ul class="submenu">
-                                
-                                <li>
-                                    <a href="/vi/research/" 
+                                    </a></li></ul></li><li class="has-submenu" ><a href="/vi/research/" class="nav-label">Khoa học</a><ul class="submenu"><li><a href="/vi/research/" 
                                         aria-current="">
                                         Nghiên cứu
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/vi/formulas/" 
+                                    </a></li><li><a href="/vi/formulas/" 
                                         aria-current="">
                                         Công thức
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/vi/efficiency/" 
+                                    </a></li><li><a href="/vi/efficiency/" 
                                         aria-current="">
                                         Hiệu quả
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/vi/stride-mechanics/" 
+                                    </a></li><li><a href="/vi/stride-mechanics/" 
                                         aria-current="">
                                         Cơ học sải bước
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/vi/bibliography/" 
+                                    </a></li><li><a href="/vi/bibliography/" 
                                         aria-current="">
                                         Thư mục
-                                    </a>
-                                </li>
-                                
-                            </ul>
-                            
-                            </li>
-                            
-                        <li>
-                            
-                            <a href="/vi/contact/" 
+                                    </a></li></ul></li><li><a href="/vi/contact/" 
                                 aria-current="">
                                 Liên hệ
-                            </a>
-                            
-                            </li>
-                            
-                    </ul>
-
-                    
-                    <div class="search-container">
-                        <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                            </a></li></ul><div class="search-container"><svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
                             viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                            <circle cx="11" cy="11" r="8"></circle>
-                            <path d="m21 21-4.35-4.35"></path>
-                        </svg>
-                        <input type="search" id="site-search" class="search-input" aria-expanded="false"
-                            aria-haspopup="listbox" aria-autocomplete="list" autocomplete="off" spellcheck="false" />
-                        <div id="search-results" class="search-results hidden" role="region" aria-live="polite"></div>
-                    </div>
-
-                    
-                    <select class="language-selector" id="language-select" aria-label="Chọn ngôn ngữ">
-                        
-                        <option value="af" >
+                            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.35-4.35"></path></svg><input type="search" id="site-search" class="search-input" aria-expanded="false"
+                            aria-haspopup="listbox" aria-autocomplete="list" autocomplete="off" spellcheck="false" /><div id="search-results" class="search-results hidden" role="region" aria-live="polite"></div></div><select class="language-selector" id="language-select" aria-label="Chọn ngôn ngữ"><option value="af" >
                             Afrikaans
-                        </option>
-                        
-                        <option value="am" >
+                        </option><option value="am" >
                             አማርኛ
-                        </option>
-                        
-                        <option value="ar" >
+                        </option><option value="ar" >
                             العربية
-                        </option>
-                        
-                        <option value="bg" >
+                        </option><option value="bg" >
                             Български
-                        </option>
-                        
-                        <option value="bn" >
+                        </option><option value="bn" >
                             বাংলা
-                        </option>
-                        
-                        <option value="ca" >
+                        </option><option value="ca" >
                             Català
-                        </option>
-                        
-                        <option value="cs" >
+                        </option><option value="cs" >
                             Čeština
-                        </option>
-                        
-                        <option value="da" >
+                        </option><option value="da" >
                             Dansk
-                        </option>
-                        
-                        <option value="de" >
+                        </option><option value="de" >
                             Deutsch
-                        </option>
-                        
-                        <option value="el" >
+                        </option><option value="el" >
                             Ελληνικά
-                        </option>
-                        
-                        <option value="en" >
+                        </option><option value="en" >
                             English
-                        </option>
-                        
-                        <option value="es" >
+                        </option><option value="es" >
                             Español
-                        </option>
-                        
-                        <option value="et" >
+                        </option><option value="et" >
                             Eesti
-                        </option>
-                        
-                        <option value="fa" >
+                        </option><option value="fa" >
                             فارسی
-                        </option>
-                        
-                        <option value="fi" >
+                        </option><option value="fi" >
                             Suomi
-                        </option>
-                        
-                        <option value="fr" >
+                        </option><option value="fr" >
                             Français
-                        </option>
-                        
-                        <option value="gu" >
+                        </option><option value="gu" >
                             ગુજરાતી
-                        </option>
-                        
-                        <option value="ha" >
+                        </option><option value="ha" >
                             Hausa
-                        </option>
-                        
-                        <option value="he" >
+                        </option><option value="he" >
                             עברית
-                        </option>
-                        
-                        <option value="hi" >
+                        </option><option value="hi" >
                             हिन्दी
-                        </option>
-                        
-                        <option value="hr" >
+                        </option><option value="hr" >
                             Hrvatski
-                        </option>
-                        
-                        <option value="hu" >
+                        </option><option value="hu" >
                             Magyar
-                        </option>
-                        
-                        <option value="id" >
+                        </option><option value="id" >
                             Bahasa Indonesia
-                        </option>
-                        
-                        <option value="is" >
+                        </option><option value="is" >
                             Íslenska
-                        </option>
-                        
-                        <option value="it" >
+                        </option><option value="it" >
                             Italiano
-                        </option>
-                        
-                        <option value="ja" >
+                        </option><option value="ja" >
                             日本語
-                        </option>
-                        
-                        <option value="km" >
+                        </option><option value="km" >
                             ភាសាខ្មែរ
-                        </option>
-                        
-                        <option value="kn" >
+                        </option><option value="kn" >
                             ಕನ್ನಡ
-                        </option>
-                        
-                        <option value="ko" >
+                        </option><option value="ko" >
                             한국어
-                        </option>
-                        
-                        <option value="lt" >
+                        </option><option value="lt" >
                             Lietuvių
-                        </option>
-                        
-                        <option value="lv" >
+                        </option><option value="lv" >
                             Latviešu
-                        </option>
-                        
-                        <option value="ms" >
+                        </option><option value="ms" >
                             Bahasa Melayu
-                        </option>
-                        
-                        <option value="my" >
+                        </option><option value="my" >
                             မြန်မာစာ
-                        </option>
-                        
-                        <option value="nb" >
+                        </option><option value="nb" >
                             Norsk Bokmål
-                        </option>
-                        
-                        <option value="nl" >
+                        </option><option value="nl" >
                             Nederlands
-                        </option>
-                        
-                        <option value="pl" >
+                        </option><option value="pl" >
                             Polski
-                        </option>
-                        
-                        <option value="pt" >
+                        </option><option value="pt" >
                             Português
-                        </option>
-                        
-                        <option value="pt-br" >
+                        </option><option value="pt-br" >
                             Português (Brasil)
-                        </option>
-                        
-                        <option value="ro" >
+                        </option><option value="ro" >
                             Română
-                        </option>
-                        
-                        <option value="ru" >
+                        </option><option value="ru" >
                             Русский
-                        </option>
-                        
-                        <option value="sk" >
+                        </option><option value="sk" >
                             Slovenčina
-                        </option>
-                        
-                        <option value="sl" >
+                        </option><option value="sl" >
                             Slovenščina
-                        </option>
-                        
-                        <option value="sr" >
+                        </option><option value="sr" >
                             Srpski
-                        </option>
-                        
-                        <option value="sv" >
+                        </option><option value="sv" >
                             Svenska
-                        </option>
-                        
-                        <option value="sw" >
+                        </option><option value="sw" >
                             Kiswahili
-                        </option>
-                        
-                        <option value="ta" >
+                        </option><option value="ta" >
                             தமிழ்
-                        </option>
-                        
-                        <option value="te" >
+                        </option><option value="te" >
                             తెలుగు
-                        </option>
-                        
-                        <option value="th" >
+                        </option><option value="th" >
                             ไทย
-                        </option>
-                        
-                        <option value="tl" >
+                        </option><option value="tl" >
                             Tagalog
-                        </option>
-                        
-                        <option value="tr" >
+                        </option><option value="tr" >
                             Türkçe
-                        </option>
-                        
-                        <option value="uk" >
+                        </option><option value="uk" >
                             Українська
-                        </option>
-                        
-                        <option value="ur" >
+                        </option><option value="ur" >
                             اردو
-                        </option>
-                        
-                        <option value="vi" selected>
+                        </option><option value="vi" selected>
                             Tiếng Việt
-                        </option>
-                        
-                        <option value="yo" >
+                        </option><option value="yo" >
                             Yorùbá
-                        </option>
-                        
-                        <option value="zh" >
+                        </option><option value="zh" >
                             中文
-                        </option>
-                        
-                    </select>
-                </div>
-
-                <div class="nav-group-right">
-                    
-
-
-                    
-                    <div class="header-app-buttons">
-                        
-                        
-                        <a href="https://apps.apple.com/us/app/run-analytics/id6754524015" class="header-download-btn" target="_blank"
-                            rel="noopener" aria-label="Download on App Store" title="Download on App Store">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                                fill="currentColor">
-                                <path
-                                    d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z" />
-                            </svg>
-                        </a>
-                        
-
-                        
-                        <a href="https://play.google.com/store/apps/details?id=com.arnohealth.runanalytics" class="header-download-btn" target="_blank"
-                            rel="noopener" aria-label="Get it on Google Play" title="Get it on Google Play">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                                fill="currentColor">
-                                <path
-                                    d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.92 20.16,13.19L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M16.81,8.88L14.54,11.15L6.05,2.66L16.81,8.88Z" />
-                            </svg>
-                        </a>
-                        
-                        
-                    </div>
-
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-
-                    
-                    <div class="suite-menu-container">
-                        <button class="suite-menu-toggle" id="suite-menu-toggle" aria-label="See other apps"
-                            aria-expanded="false">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        </option></select></div><div class="nav-group-right"><div class="header-app-buttons"><a href="https://apps.apple.com/us/app/run-analytics/id6754524015" class="header-download-btn" target="_blank"
+                            rel="noopener" aria-label="Download on App Store" title="Download on App Store"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="currentColor"><path
+                                    d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z" /></svg></a><a href="https://play.google.com/store/apps/details?id=com.arnohealth.runanalytics" class="header-download-btn" target="_blank"
+                            rel="noopener" aria-label="Get it on Google Play" title="Get it on Google Play"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="currentColor"><path
+                                    d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.92 20.16,13.19L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M16.81,8.88L14.54,11.15L6.05,2.66L16.81,8.88Z" /></svg></a></div><div class="suite-menu-container"><button class="suite-menu-toggle" id="suite-menu-toggle" aria-label="See other apps"
+                            aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round">
-                                <rect x="3" y="3" width="7" height="7"></rect>
-                                <rect x="14" y="3" width="7" height="7"></rect>
-                                <rect x="14" y="14" width="7" height="7"></rect>
-                                <rect x="3" y="14" width="7" height="7"></rect>
-                            </svg>
-                        </button>
-                        <div class="suite-dropdown hidden" id="suite-dropdown">
-                            <div class="suite-dropdown-header">Other AnalyticsZone Apps</div>
-                            <div class="suite-apps-grid">
-                                
-                                <a href="https://analyticszone.app" class="suite-app-link">AnalyticsZone</a>
-                                
-                                <a href="https://swim.analyticszone.app" class="suite-app-link">Swim Analytics</a>
-                                
-                                <a href="https://bike.analyticszone.app" class="suite-app-link">Bike Analytics</a>
-                                
-                                <a href="https://walk.analyticszone.app" class="suite-app-link">Walk Analytics</a>
-                                
-                                <a href="https://cardio.analyticszone.app" class="suite-app-link">Cardio Analytics</a>
-                                
-                                <a href="https://health.analyticszone.app" class="suite-app-link">Health Analytics</a>
-                                
-                                <a href="https://swimtrainer.analyticszone.app" class="suite-app-link">Swim Trainer</a>
-                                
-                            </div>
-                        </div>
-                    </div>
-                    
-                </div>
-            </nav>
-
-            
-            <button class="menu-toggle" id="menu-toggle" aria-label="Chuyển menu"
-                aria-expanded="false" aria-controls="nav-primary">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </div>
-    </div>
-</header>
-
-  
-  
-
-<nav class="breadcrumbs" aria-label="Breadcrumb">
-    <div class="container">
-        <ol>
-            
-            <li>
-                
-                <a href="/vi/">Trang chủ</a>
-                
-            </li>
-            
-            <li>
-                
-                <a href="/vi/getting-started/">Học tập</a>
-                
-            </li>
-            
-            <li>
-                
-                <span aria-current="page">CRS</span>
-                
-            </li>
-            
-        </ol>
-    </div>
-</nav>
-
-
-  
-  <main id="main-content" class="main-content">
-    
-    <section class="page-hero">
-    <div class="container">
-        <h1>Tốc độ Chạy tới hạn (CRS)</h1>
-        <p class="lead">Nền tảng của Huấn luyện Chạy bộ Dựa trên Dữ liệu</p>
-    </div>
-</section>
-
-<section class="section">
-    <div class="container container-narrow">
-        <div class="callout callout-success mb-xl">
-            <h2>Thông tin Quan trọng</h2>
-            <ul class="key-points">
-                <li><strong>Định nghĩa:</strong> Tốc độ chạy tới hạn (CRS) là tốc độ chạy bền tối đa của bạn—ngưỡng hiếu
-                    khí nơi bạn có thể duy trì nỗ lực trong hơn 30 phút.</li>
-                <li><strong>Cách Tính toán:</strong> Thực hiện các bài kiểm tra thời gian 1200m và 3600m, sau đó sử dụng
-                    mối quan hệ khoảng cách-thời gian tuyến tính để tìm độ dốc (CRS).</li>
-                <li><strong>Tầm quan trọng:</strong> CRS cho phép cá nhân hóa <a href="/vi/training-zones/">các vùng tập
+                                stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg></button><div class="suite-dropdown hidden" id="suite-dropdown"><div class="suite-dropdown-header">Other AnalyticsZone Apps</div><div class="suite-apps-grid"><a href="https://analyticszone.app" class="suite-app-link">AnalyticsZone</a><a href="https://swim.analyticszone.app" class="suite-app-link">Swim Analytics</a><a href="https://bike.analyticszone.app" class="suite-app-link">Bike Analytics</a><a href="https://walk.analyticszone.app" class="suite-app-link">Walk Analytics</a><a href="https://cardio.analyticszone.app" class="suite-app-link">Cardio Analytics</a><a href="https://health.analyticszone.app" class="suite-app-link">Health Analytics</a><a href="https://swimtrainer.analyticszone.app" class="suite-app-link">Swim Trainer</a></div></div></div></div></nav><button class="menu-toggle" id="menu-toggle" aria-label="Chuyển menu"
+                aria-expanded="false" aria-controls="nav-primary"><span></span><span></span><span></span></button></div></div></header><nav class="breadcrumbs" aria-label="Breadcrumb"><div class="container"><ol><li><a href="/vi/">Trang chủ</a></li><li><a href="/vi/getting-started/">Học tập</a></li><li><span aria-current="page">CRS</span></li></ol></div></nav><main id="main-content" class="main-content"><section class="page-hero"><div class="container"><h1>Tốc độ Chạy tới hạn (CRS)</h1><p class="lead">Nền tảng của Huấn luyện Chạy bộ Dựa trên Dữ liệu</p></div></section><section class="section"><div class="container container-narrow"><div class="callout callout-success mb-xl"><h2>Thông tin Quan trọng</h2><ul class="key-points"><li><strong>Định nghĩa:</strong> Tốc độ chạy tới hạn (CRS) là tốc độ chạy bền tối đa của bạn—ngưỡng hiếu
+                    khí nơi bạn có thể duy trì nỗ lực trong hơn 30 phút.</li><li><strong>Cách Tính toán:</strong> Thực hiện các bài kiểm tra thời gian 1200m và 3600m, sau đó sử dụng
+                    mối quan hệ khoảng cách-thời gian tuyến tính để tìm độ dốc (CRS).</li><li><strong>Tầm quan trọng:</strong> CRS cho phép cá nhân hóa <a href="/vi/training-zones/">các vùng tập
                         luyện</a>, tính toán <a href="/vi/training-load/">điểm TSS</a> chính xác và theo dõi thể lực một
-                    cách khách quan.</li>
-                <li><strong>Giá trị Điển hình:</strong> Vận động viên ưu tú: 18-22 giây/100m | Thi đấu: 22-26 giây/100m
-                    | Người chạy vì sức khỏe: 26-32 giây/100m.</li>
-                <li><strong>Tần suất Kiểm tra:</strong> Kiểm tra lại sau mỗi 6-8 tuần để cập nhật các vùng tập luyện khi
-                    ngưỡng tốc độ chạy của bạn được cải thiện.</li>
-            </ul>
-        </div>
-
-        <div class="callout callout-info mb-xl">
-            <h2>Tốc độ Chạy tới hạn là gì?</h2>
-            <p><strong>Tốc độ chạy tới hạn (CRS)</strong> là vận tốc chạy tối đa về mặt lý thuyết bạn có thể duy trì mà
+                    cách khách quan.</li><li><strong>Giá trị Điển hình:</strong> Vận động viên ưu tú: 18-22 giây/100m | Thi đấu: 22-26 giây/100m
+                    | Người chạy vì sức khỏe: 26-32 giây/100m.</li><li><strong>Tần suất Kiểm tra:</strong> Kiểm tra lại sau mỗi 6-8 tuần để cập nhật các vùng tập luyện khi
+                    ngưỡng tốc độ chạy của bạn được cải thiện.</li></ul></div><div class="callout callout-info mb-xl"><h2>Tốc độ Chạy tới hạn là gì?</h2><p><strong>Tốc độ chạy tới hạn (CRS)</strong> là vận tốc chạy tối đa về mặt lý thuyết bạn có thể duy trì mà
                 không bị kiệt sức. Nó đại diện cho nhịp độ chạy ở ngưỡng hiếu khí của bạn, thường ứng với mức lactate
                 trong máu là 4 mmol/L và có thể duy trì trong khoảng 30-60 phút. CRS được tính toán bằng cách sử dụng
                 hai bài kiểm tra nỗ lực tối đa (ví dụ: 1200m và 3600m) để xác định các vùng tập luyện cá nhân hóa nhằm
-                tối ưu hóa nhịp độ.</p>
-        </div>
-
-        <p class="lead">Tốc độ chạy tới hạn đại diện cho vận tốc chạy tối đa về mặt lý thuyết bạn có thể duy trì liên
+                tối ưu hóa nhịp độ.</p></div><p class="lead">Tốc độ chạy tới hạn đại diện cho vận tốc chạy tối đa về mặt lý thuyết bạn có thể duy trì liên
             tục mà không bị kiệt sức. Đó là ngưỡng hiếu khí của bạn—nơi cường độ tạo ra lactate bằng với mức đào thải
-            lactate.</p>
-
-        <div class="callout callout-info">
-            <h3>🎯 Ý nghĩa Sinh lý</h3>
-            <p>CRS tương ứng chặt chẽ với:</p>
-            <ul>
-                <li><strong>Ngưỡng Lactate 2 (LT2)</strong> - Ngưỡng thông khí thứ hai</li>
-                <li><strong>Trạng thái Lactate Ổn định Tối đa (MLSS)</strong> - Mức lactate bền vững cao nhất</li>
-                <li><strong>Nhịp độ Ngưỡng Chức năng (FTP)</strong> - Tương đương với FTP trong đạp xe</li>
-                <li><strong>~4 mmol/L lactate trong máu</strong> - Dấu hiệu OBLA truyền thống</li>
-            </ul>
-        </div>
-
-        <h3>Tại sao CRS lại Quan trọng</h3>
-        <p>Tốc độ chạy tới hạn là <strong>chỉ số nền tảng</strong> giúp mở khóa tất cả các phân tích tải lượng tập luyện
-            nâng cao:</p>
-        <ul>
-            <li><strong><a href="/vi/training-zones/">Các Vùng Tập luyện</a>:</strong> Cá nhân hóa các vùng cường độ dựa
-                trên sinh lý của bạn</li>
-            <li><strong><a href="/vi/training-load/">Tính toán rTSS</a>:</strong> Cho phép định lượng chính xác Điểm
-                Căng thẳng Tập luyện</li>
-            <li><strong><a href="/vi/training-load/">CTL/ATL/TSB</a>:</strong> Cần thiết cho các chỉ số của Biểu đồ Quản
-                lý Hiệu suất</li>
-            <li><strong>Theo dõi Tiến bộ:</strong> Thước đo khách quan về sự cải thiện thể lực hiếu khí</li>
-        </ul>
-
-        <div class="warning-box">
-            <strong>⚠️ Sự phụ thuộc Quan trọng:</strong> Nếu không có bài kiểm tra CRS hợp lệ, các chỉ số tải lượng tập
+            lactate.</p><div class="callout callout-info"><h3>🎯 Ý nghĩa Sinh lý</h3><p>CRS tương ứng chặt chẽ với:</p><ul><li><strong>Ngưỡng Lactate 2 (LT2)</strong> - Ngưỡng thông khí thứ hai</li><li><strong>Trạng thái Lactate Ổn định Tối đa (MLSS)</strong> - Mức lactate bền vững cao nhất</li><li><strong>Nhịp độ Ngưỡng Chức năng (FTP)</strong> - Tương đương với FTP trong đạp xe</li><li><strong>~4 mmol/L lactate trong máu</strong> - Dấu hiệu OBLA truyền thống</li></ul></div><h3>Tại sao CRS lại Quan trọng</h3><p>Tốc độ chạy tới hạn là <strong>chỉ số nền tảng</strong> giúp mở khóa tất cả các phân tích tải lượng tập luyện
+            nâng cao:</p><ul><li><strong><a href="/vi/training-zones/">Các Vùng Tập luyện</a>:</strong> Cá nhân hóa các vùng cường độ dựa
+                trên sinh lý của bạn</li><li><strong><a href="/vi/training-load/">Tính toán rTSS</a>:</strong> Cho phép định lượng chính xác Điểm
+                Căng thẳng Tập luyện</li><li><strong><a href="/vi/training-load/">CTL/ATL/TSB</a>:</strong> Cần thiết cho các chỉ số của Biểu đồ Quản
+                lý Hiệu suất</li><li><strong>Theo dõi Tiến bộ:</strong> Thước đo khách quan về sự cải thiện thể lực hiếu khí</li></ul><div class="warning-box"><strong>⚠️ Sự phụ thuộc Quan trọng:</strong> Nếu không có bài kiểm tra CRS hợp lệ, các chỉ số tải lượng tập
             luyện nâng cao (rTSS, CTL, ATL, TSB) sẽ không thể tính toán được. Một chỉ số CRS không chính xác sẽ làm sai
             lệch mọi phân tích tập luyện sau đó.
-        </div>
-
-        <div class="callout callout-primary mt-xl">
-            <h3>📱 Run Analytics Tự động hóa Mọi Phân tích Dựa trên CRS</h3>
-            <p>Mặc dù hướng dẫn này giải thích khoa học đằng sau CRS, nhưng <strong>Run Analytics sẽ tự động tính toán
+        </div><div class="callout callout-primary mt-xl"><h3>📱 Run Analytics Tự động hóa Mọi Phân tích Dựa trên CRS</h3><p>Mặc dù hướng dẫn này giải thích khoa học đằng sau CRS, nhưng <strong>Run Analytics sẽ tự động tính toán
                     và theo dõi Tốc độ Chạy tới hạn của bạn</strong> từ dữ liệu buổi tập—không yêu cầu tính toán thủ
-                công hay giao thức kiểm tra phức tạp.</p>
-            <p><strong>Ứng dụng xử lý:</strong></p>
-            <ul>
-                <li>Tự động phát hiện CRS từ dữ liệu tập luyện</li>
-                <li>Cập nhật vùng tập luyện cá nhân hóa khi CRS của bạn cải thiện</li>
-                <li>Theo dõi rTSS, CTL, ATL và TSB theo thời gian thực</li>
-                <li>Biểu đồ tiến trình CRS lịch sử</li>
-            </ul>
-            <p><a href="/vi/" class="btn btn-accent btn-small">Tải Run Analytics Miễn phí →</a></p>
-        </div>
-    </div>
-</section>
-
-<section class="section section-gray">
-    <div class="container container-narrow">
-        <h2>Tốc độ Chạy tới hạn so với các Chỉ số khác</h2>
-        <p class="lead">Hiểu được CRS so với các chỉ số hiệu suất chạy bộ khác sẽ giúp bạn chọn đúng thước đo cho mục
-            tiêu tập luyện của mình.</p>
-
-        <div class="comparison-table-container">
-            <table class="comparison-table">
-                <thead>
-                    <tr>
-                        <th>Chỉ số</th>
-                        <th>Đo lường cái gì</th>
-                        <th>Phương pháp Kiểm tra</th>
-                        <th>Thời gian duy trì</th>
-                        <th>Trường hợp sử dụng Tốt nhất</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr class="highlight-row">
-                        <td><strong>Tốc độ Chạy tới hạn (CRS)</strong></td>
-                        <td>Nhịp độ ngưỡng hiếu khí (4 mmol/L lactate)</td>
-                        <td>Kiểm tra thời gian 1200m + 3600m</td>
-                        <td>30-60 phút</td>
-                        <td>Các vùng tập luyện, tính TSS, chạy ngưỡng hiếu khí</td>
-                    </tr>
-                    <tr>
-                        <td><strong><a href="/vi/what-is-vo2max/">VO₂max</a></strong></td>
-                        <td>Khả năng hấp thụ oxy tối đa</td>
-                        <td><a href="/vi/vo2max-testing/">Kiểm tra phòng thí nghiệm hoặc nỗ lực tối đa 12 phút</a></td>
-                        <td>6-8 phút</td>
-                        <td>Mức độ thể lực tổng thể, các bài tập biến tốc cường độ cao</td>
-                    </tr>
-                    <tr>
-                        <td><strong><a href="/vi/lactate-threshold-testing/">Ngưỡng Lactate (LT)</a></strong>
-                        </td>
-                        <td>Điểm lactate bắt đầu tích tụ (2-4 mmol/L)</td>
-                        <td>Kiểm tra lactate trong máu tại phòng thí nghiệm</td>
-                        <td>30-60 phút</td>
-                        <td>Dự đoán nhịp độ đua, <a href="/vi/tempo-runs-zone3/">chạy tempo</a></td>
-                    </tr>
-                    <tr>
-                        <td><strong>Nhịp độ Ngưỡng Chức năng (FTP)</strong></td>
-                        <td>Nỗ lực nhịp độ tốt nhất trong 60 phút</td>
-                        <td>Kiểm tra thời gian 60 phút hoặc bài kiểm tra 20 phút</td>
-                        <td>60 phút</td>
-                        <td>Tập luyện sức bền, chạy ở nhịp độ marathon</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Nhịp độ Đua 5K</strong></td>
-                        <td>Nỗ lực đua duy trì</td>
-                        <td>Đua 5K hoặc kiểm tra thời gian</td>
-                        <td>15-25 phút</td>
-                        <td>Tập luyện chuyên biệt cho cuộc đua, chiến thuật nhịp độ</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-
-        <div class="callout callout-tip mt-lg">
-            <h3>Tại sao nên chọn CRS?</h3>
-            <p>Không giống như VO₂max (yêu cầu kiểm tra phòng thí nghiệm) hoặc ngưỡng lactate (yêu cầu lấy mẫu máu), tốc
+                công hay giao thức kiểm tra phức tạp.</p><p><strong>Ứng dụng xử lý:</strong></p><ul><li>Tự động phát hiện CRS từ dữ liệu tập luyện</li><li>Cập nhật vùng tập luyện cá nhân hóa khi CRS của bạn cải thiện</li><li>Theo dõi rTSS, CTL, ATL và TSB theo thời gian thực</li><li>Biểu đồ tiến trình CRS lịch sử</li></ul><p><a href="/vi/" class="btn btn-accent btn-small">Tải Run Analytics Miễn phí →</a></p></div></div></section><section class="section section-gray"><div class="container container-narrow"><h2>Tốc độ Chạy tới hạn so với các Chỉ số khác</h2><p class="lead">Hiểu được CRS so với các chỉ số hiệu suất chạy bộ khác sẽ giúp bạn chọn đúng thước đo cho mục
+            tiêu tập luyện của mình.</p><div class="comparison-table-container"><table class="comparison-table"><thead><tr><th>Chỉ số</th><th>Đo lường cái gì</th><th>Phương pháp Kiểm tra</th><th>Thời gian duy trì</th><th>Trường hợp sử dụng Tốt nhất</th></tr></thead><tbody><tr class="highlight-row"><td><strong>Tốc độ Chạy tới hạn (CRS)</strong></td><td>Nhịp độ ngưỡng hiếu khí (4 mmol/L lactate)</td><td>Kiểm tra thời gian 1200m + 3600m</td><td>30-60 phút</td><td>Các vùng tập luyện, tính TSS, chạy ngưỡng hiếu khí</td></tr><tr><td><strong><a href="/vi/what-is-vo2max/">VO₂max</a></strong></td><td>Khả năng hấp thụ oxy tối đa</td><td><a href="/vi/vo2max-testing/">Kiểm tra phòng thí nghiệm hoặc nỗ lực tối đa 12 phút</a></td><td>6-8 phút</td><td>Mức độ thể lực tổng thể, các bài tập biến tốc cường độ cao</td></tr><tr><td><strong><a href="/vi/lactate-threshold-testing/">Ngưỡng Lactate (LT)</a></strong></td><td>Điểm lactate bắt đầu tích tụ (2-4 mmol/L)</td><td>Kiểm tra lactate trong máu tại phòng thí nghiệm</td><td>30-60 phút</td><td>Dự đoán nhịp độ đua, <a href="/vi/tempo-runs-zone3/">chạy tempo</a></td></tr><tr><td><strong>Nhịp độ Ngưỡng Chức năng (FTP)</strong></td><td>Nỗ lực nhịp độ tốt nhất trong 60 phút</td><td>Kiểm tra thời gian 60 phút hoặc bài kiểm tra 20 phút</td><td>60 phút</td><td>Tập luyện sức bền, chạy ở nhịp độ marathon</td></tr><tr><td><strong>Nhịp độ Đua 5K</strong></td><td>Nỗ lực đua duy trì</td><td>Đua 5K hoặc kiểm tra thời gian</td><td>15-25 phút</td><td>Tập luyện chuyên biệt cho cuộc đua, chiến thuật nhịp độ</td></tr></tbody></table></div><div class="callout callout-tip mt-lg"><h3>Tại sao nên chọn CRS?</h3><p>Không giống như VO₂max (yêu cầu kiểm tra phòng thí nghiệm) hoặc ngưỡng lactate (yêu cầu lấy mẫu máu), tốc
                 độ chạy tới hạn có thể được đo trên bất kỳ đường chạy nào chỉ với đồng hồ bấm giờ. Nó cung cấp cùng loại
                 thông tin tập luyện như các bài kiểm tra phòng thí nghiệm đắt tiền trong khi lại thực tế để kiểm tra lại
                 thường xuyên sau mỗi 6-8 tuần. Tìm hiểu thêm về tất cả <a href="/vi/running-performance-tests/">các
-                    phương pháp kiểm tra hiệu suất chạy bộ</a> và khi nào nên sử dụng từng loại.</p>
-        </div>
-    </div>
-</section>
-
-<section class="section section-alt">
-    <div class="container">
-        <h2 class="text-center mb-xl">Giao thức Kiểm tra CRS</h2>
-        <div class="grid grid-2">
-            <div class="protocol-card">
-                <h3>📋 Giao thức Tiêu chuẩn</h3>
-                <ol class="protocol-steps">
-                    <li>
-                        <strong>Khởi động</strong>
-                        <p>15-20 phút chạy nhẹ nhàng, các bài tập khởi động động và 4-6 nhịp chạy biến tốc (strides) để
-                            chuẩn bị cho nỗ lực cường độ cao.</p>
-                    </li>
-                    <li>
-                        <strong>Kiểm tra Thời gian 1200m</strong>
-                        <p>Nỗ lực tối đa duy trì (3 vòng trên sân vận động 400m). Ghi lại tổng thời gian. Mục tiêu: nhịp
-                            độ trung bình nhanh nhất có thể.</p>
-                    </li>
-                    <li>
-                        <strong>Hồi phục Hoàn toàn</strong>
-                        <p><span class="highlight-text">15-30 phút</span> chạy bộ thả lỏng nhẹ nhàng hoặc đi bộ/nghỉ
-                            ngơi. Điều này cho phép đào thải lactate và hồi phục hệ hiếu khí.</p>
-                    </li>
-                    <li>
-                        <strong>Kiểm tra Thời gian 3600m</strong>
-                        <p>Nỗ lực tối đa (9 vòng trên sân vận động 400m). Duy trì nhịp độ ổn định. Có thể thực hiện vào
-                            một ngày khác nếu cần.</p>
-                    </li>
-                </ol>
-            </div>
-
-            <div class="protocol-card">
-                <h3>⚠️ Các lỗi Thường gặp</h3>
-                <div class="mistake-list">
-                    <div class="mistake-item">
-                        <h4>Hồi phục Không đủ</h4>
-                        <p><strong>Vấn đề:</strong> Sự mệt mỏi làm chậm thời gian chạy 3600m một cách giả tạo.</p>
-                        <p><strong>Kết quả:</strong> CRS tính toán được sẽ trở nên <em>nhanh hơn thực tế</em>, dẫn đến
-                            các vùng tập luyện bị quá tải.</p>
-                        <p><strong>Giải pháp:</strong> Nghỉ ngơi cho đến khi nhịp tim xuống dưới 120 bpm hoặc cho đến
-                            khi hơi thở hồi phục hoàn toàn.</p>
-                    </div>
-
-                    <div class="mistake-item">
-                        <h4>Phân phối Nhịp độ Kém ở bài 1200m</h4>
-                        <p><strong>Vấn đề:</strong> Bắt đầu quá nhanh gây ra tình trạng đuối sức trầm trọng ở đoạn sau.
-                        </p>
-                        <p><strong>Kết quả:</strong> Thời gian 1200m không phản ánh đúng nhịp độ bền thực tế.</p>
-                        <p><strong>Giải pháp:</strong> Đặt mục tiêu chạy đều các vòng hoặc chạy "negative split" (nửa
-                            sau nhanh hơn hoặc bằng nửa đầu).</p>
-                    </div>
-
-                    <div class="mistake-item">
-                        <h4>Điều kiện Không Đồng nhất</h4>
-                        <p><strong>Vấn đề:</strong> Kiểm tra trên các địa hình khác nhau hoặc trong điều kiện gió mạnh.
-                        </p>
-                        <p><strong>Giải pháp:</strong> Luôn kiểm tra trên đường chạy bằng phẳng trong điều kiện thời
-                            tiết tương tự để đảm bảo tính chính xác theo thời gian.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="callout callout-tip mt-xl">
-            <h3>🔄 Tần suất Kiểm tra lại</h3>
-            <p>Kiểm tra lại CRS sau mỗi <strong>6-8 tuần</strong> để cập nhật các vùng tập luyện khi thể lực cải thiện.
-                Các vùng tập luyện của bạn sẽ dần trở nên nhanh hơn khi bạn thích nghi với việc tập luyện.</p>
-        </div>
-    </div>
-</section>
-
-<section class="section">
-    <div class="container container-narrow">
-        <h2>Công thức Tính CRS</h2>
-
-        <div class="formula-box">
-            <h3>Công thức</h3>
-            <div class="formula">
+                    phương pháp kiểm tra hiệu suất chạy bộ</a> và khi nào nên sử dụng từng loại.</p></div></div></section><section class="section section-alt"><div class="container"><h2 class="text-center mb-xl">Giao thức Kiểm tra CRS</h2><div class="grid grid-2"><div class="protocol-card"><h3>📋 Giao thức Tiêu chuẩn</h3><ol class="protocol-steps"><li><strong>Khởi động</strong><p>15-20 phút chạy nhẹ nhàng, các bài tập khởi động động và 4-6 nhịp chạy biến tốc (strides) để
+                            chuẩn bị cho nỗ lực cường độ cao.</p></li><li><strong>Kiểm tra Thời gian 1200m</strong><p>Nỗ lực tối đa duy trì (3 vòng trên sân vận động 400m). Ghi lại tổng thời gian. Mục tiêu: nhịp
+                            độ trung bình nhanh nhất có thể.</p></li><li><strong>Hồi phục Hoàn toàn</strong><p><span class="highlight-text">15-30 phút</span> chạy bộ thả lỏng nhẹ nhàng hoặc đi bộ/nghỉ
+                            ngơi. Điều này cho phép đào thải lactate và hồi phục hệ hiếu khí.</p></li><li><strong>Kiểm tra Thời gian 3600m</strong><p>Nỗ lực tối đa (9 vòng trên sân vận động 400m). Duy trì nhịp độ ổn định. Có thể thực hiện vào
+                            một ngày khác nếu cần.</p></li></ol></div><div class="protocol-card"><h3>⚠️ Các lỗi Thường gặp</h3><div class="mistake-list"><div class="mistake-item"><h4>Hồi phục Không đủ</h4><p><strong>Vấn đề:</strong> Sự mệt mỏi làm chậm thời gian chạy 3600m một cách giả tạo.</p><p><strong>Kết quả:</strong> CRS tính toán được sẽ trở nên <em>nhanh hơn thực tế</em>, dẫn đến
+                            các vùng tập luyện bị quá tải.</p><p><strong>Giải pháp:</strong> Nghỉ ngơi cho đến khi nhịp tim xuống dưới 120 bpm hoặc cho đến
+                            khi hơi thở hồi phục hoàn toàn.</p></div><div class="mistake-item"><h4>Phân phối Nhịp độ Kém ở bài 1200m</h4><p><strong>Vấn đề:</strong> Bắt đầu quá nhanh gây ra tình trạng đuối sức trầm trọng ở đoạn sau.
+                        </p><p><strong>Kết quả:</strong> Thời gian 1200m không phản ánh đúng nhịp độ bền thực tế.</p><p><strong>Giải pháp:</strong> Đặt mục tiêu chạy đều các vòng hoặc chạy "negative split" (nửa
+                            sau nhanh hơn hoặc bằng nửa đầu).</p></div><div class="mistake-item"><h4>Điều kiện Không Đồng nhất</h4><p><strong>Vấn đề:</strong> Kiểm tra trên các địa hình khác nhau hoặc trong điều kiện gió mạnh.
+                        </p><p><strong>Giải pháp:</strong> Luôn kiểm tra trên đường chạy bằng phẳng trong điều kiện thời
+                            tiết tương tự để đảm bảo tính chính xác theo thời gian.</p></div></div></div></div><div class="callout callout-tip mt-xl"><h3>🔄 Tần suất Kiểm tra lại</h3><p>Kiểm tra lại CRS sau mỗi <strong>6-8 tuần</strong> để cập nhật các vùng tập luyện khi thể lực cải thiện.
+                Các vùng tập luyện của bạn sẽ dần trở nên nhanh hơn khi bạn thích nghi với việc tập luyện.</p></div></div></section><section class="section"><div class="container container-narrow"><h2>Công thức Tính CRS</h2><div class="formula-box"><h3>Công thức</h3><div class="formula">
                 CRS (m/s) = (D₂ - D₁) / (T₂ - T₁)
-            </div>
-            <div class="formula-explanation">
-                <p>Trong đó:</p>
-                <ul>
-                    <li>D₁ = Khoảng cách ngắn hơn (ví dụ: 1200 mét)</li>
-                    <li>D₂ = Khoảng cách dài hơn (ví dụ: 3600 mét)</li>
-                    <li>T₁ = Thời gian cho D₁ (tính bằng giây)</li>
-                    <li>T₂ = Thời gian cho D₂ (tính bằng giây)</li>
-                </ul>
-            </div>
-
-            <h3 class="mt-lg">Khái niệm Khoảng cách-Thời gian Đơn giản hóa</h3>
-            <p>CRS là độ dốc của đường biểu diễn khoảng cách so với thời gian cho hai hoặc nhiều nỗ lực tối đa.</p>
-        </div>
-
-        <h3>Ví dụ Minh họa</h3>
-        <div class="example-box">
-            <h4>Kết quả Kiểm tra:</h4>
-            <ul>
-                <li>Thời gian 3600m: <strong>14:24</strong> (864 giây)</li>
-                <li>Thời gian 1200m: <strong>4:12</strong> (252 giây)</li>
-            </ul>
-
-            <h4>Bước 1: Tính CRS theo m/s</h4>
-            <div class="calculation">
+            </div><div class="formula-explanation"><p>Trong đó:</p><ul><li>D₁ = Khoảng cách ngắn hơn (ví dụ: 1200 mét)</li><li>D₂ = Khoảng cách dài hơn (ví dụ: 3600 mét)</li><li>T₁ = Thời gian cho D₁ (tính bằng giây)</li><li>T₂ = Thời gian cho D₂ (tính bằng giây)</li></ul></div><h3 class="mt-lg">Khái niệm Khoảng cách-Thời gian Đơn giản hóa</h3><p>CRS là độ dốc của đường biểu diễn khoảng cách so với thời gian cho hai hoặc nhiều nỗ lực tối đa.</p></div><h3>Ví dụ Minh họa</h3><div class="example-box"><h4>Kết quả Kiểm tra:</h4><ul><li>Thời gian 3600m: <strong>14:24</strong> (864 giây)</li><li>Thời gian 1200m: <strong>4:12</strong> (252 giây)</li></ul><h4>Bước 1: Tính CRS theo m/s</h4><div class="calculation">
                 CRS = (3600 - 1200) / (864 - 252)<br>
                 CRS = 2400 / 612<br>
-                CRS = <strong>3.92 m/s</strong>
-            </div>
-
-            <h4>Bước 2: Chuyển đổi sang nhịp độ trên 100m</h4>
-            <div class="calculation">
+                CRS = <strong>3.92 m/s</strong></div><h4>Bước 2: Chuyển đổi sang nhịp độ trên 100m</h4><div class="calculation">
                 Nhịp độ = 100 / 3.92<br>
                 Nhịp độ = 25.5 giây<br>
                 Nhịp độ = <strong>25.5 giây mỗi 100m</strong> (4:15/km)
-            </div>
-        </div>
-
-        <h2 class="mt-3xl">Công cụ Tính Tốc độ Chạy tới hạn Miễn phí</h2>
-        <p class="lead">Tính toán tốc độ chạy tới hạn và các vùng tập luyện cá nhân hóa của bạn ngay lập tức với công cụ
-            tính CRS của chúng tôi.</p>
-
-        <div class="crs-calculator">
-            <form id="cssCalculatorForm">
-                <div class="calculator-inputs">
-                    <div class="form-group">
-                        <label for="timeLong" class="form-label">Thời gian Khoảng cách Dài (ví dụ: 3600m)
-                            (phút:giây)</label>
-                        <input type="text" id="timeLong" class="form-input" placeholder="14:24"
-                            pattern="[0-9]{1,2}:[0-5][0-9]" aria-required="true" aria-describedby="timeLong-help" />
-                        <small id="timeLong-help" class="form-help">Định dạng: phút:giây (ví dụ: 14:24)</small>
-                    </div>
-                    <div class="form-group">
-                        <label for="timeShort" class="form-label">Thời gian Khoảng cách Ngắn (ví dụ: 1200m)
-                            (phút:giây)</label>
-                        <input type="text" id="timeShort" class="form-input" placeholder="4:12"
-                            pattern="[0-9]{1,2}:[0-5][0-9]" aria-required="true" aria-describedby="timeShort-help" />
-                        <small id="timeShort-help" class="form-help">Định dạng: phút:giây (ví dụ: 4:12)</small>
-                    </div>
-                    <div class="calculator-buttons">
-                        <button type="submit" class="btn btn-primary" id="calculateBtn">Tính CRS</button>
-                        <button type="reset" class="btn btn-ghost" id="resetBtn">Xóa</button>
-                    </div>
-                </div>
-            </form>
-
-            <div class="calculator-results hidden" id="cssResults" aria-live="polite">
-                <h3>Kết quả của Bạn</h3>
-                <div class="results-summary">
-                    <div class="result-item">
-                        <div class="result-label">Tốc độ Chạy tới hạn</div>
-                        <div class="crs-result-value" id="crsValue">--</div>
-                    </div>
-                    <div class="result-item">
-                        <div class="result-label">Nhịp độ CRS trên 100m</div>
-                        <div class="crs-result-value" id="crsPace">--</div>
-                    </div>
-                </div>
-
-                <div class="zones-result">
-                    <h4>Vùng Tập luyện Cá nhân hóa của Bạn</h4>
-                    <p class="mb-md text-secondary">
+            </div></div><h2 class="mt-3xl">Công cụ Tính Tốc độ Chạy tới hạn Miễn phí</h2><p class="lead">Tính toán tốc độ chạy tới hạn và các vùng tập luyện cá nhân hóa của bạn ngay lập tức với công cụ
+            tính CRS của chúng tôi.</p><div class="crs-calculator"><form id="cssCalculatorForm"><div class="calculator-inputs"><div class="form-group"><label for="timeLong" class="form-label">Thời gian Khoảng cách Dài (ví dụ: 3600m)
+                            (phút:giây)</label><input type="text" id="timeLong" class="form-input" placeholder="14:24"
+                            pattern="[0-9]{1,2}:[0-5][0-9]" aria-required="true" aria-describedby="timeLong-help" /><small id="timeLong-help" class="form-help">Định dạng: phút:giây (ví dụ: 14:24)</small></div><div class="form-group"><label for="timeShort" class="form-label">Thời gian Khoảng cách Ngắn (ví dụ: 1200m)
+                            (phút:giây)</label><input type="text" id="timeShort" class="form-input" placeholder="4:12"
+                            pattern="[0-9]{1,2}:[0-5][0-9]" aria-required="true" aria-describedby="timeShort-help" /><small id="timeShort-help" class="form-help">Định dạng: phút:giây (ví dụ: 4:12)</small></div><div class="calculator-buttons"><button type="submit" class="btn btn-primary" id="calculateBtn">Tính CRS</button><button type="reset" class="btn btn-ghost" id="resetBtn">Xóa</button></div></div></form><div class="calculator-results hidden" id="cssResults" aria-live="polite"><h3>Kết quả của Bạn</h3><div class="results-summary"><div class="result-item"><div class="result-label">Tốc độ Chạy tới hạn</div><div class="crs-result-value" id="crsValue">--</div></div><div class="result-item"><div class="result-label">Nhịp độ CRS trên 100m</div><div class="crs-result-value" id="crsPace">--</div></div></div><div class="zones-result"><h4>Vùng Tập luyện Cá nhân hóa của Bạn</h4><p class="mb-md text-secondary">
                         Dựa trên chỉ số CRS của bạn, dưới đây là các vùng tập luyện tính theo nhịp độ trên 100m:
-                    </p>
-                    <div id="zonesTable"></div>
-                </div>
-            </div>
-
-            <div class="callout callout-tip mt-md">
-                <p><strong>💡 Theo dõi Tự động:</strong> Run Analytics tự động tính toán CRS từ dữ liệu tập luyện của
+                    </p><div id="zonesTable"></div></div></div><div class="callout callout-tip mt-md"><p><strong>💡 Theo dõi Tự động:</strong> Run Analytics tự động tính toán CRS từ dữ liệu tập luyện của
                     bạn và theo dõi nó theo thời gian—không cần kiểm tra hay tính toán thủ công. Ứng dụng cũng cập nhật
-                    các vùng tập luyện khi CRS của bạn cải thiện. <a href="/vi/">Tìm hiểu thêm →</a></p>
-            </div>
-        </div>
-
-        <h3 class="mt-xl">Lựa chọn khác: Bài kiểm tra 3 phút và 12 phút</h3>
-        <p>Một phương pháp thay thế phổ biến là chạy xa nhất có thể trong 3 phút và 12 phút. Hiệu số quãng đường chia
-            cho hiệu số thời gian sẽ cho ra chỉ số CRS của bạn.</p>
-    </div>
-</section>
-
-<section class="section section-alt">
-    <div class="container">
-        <h2 class="mb-xl">Các Vùng Tập luyện dựa trên Tốc độ Chạy tới hạn</h2>
-
-        <div class="callout callout-info">
-            <p><strong>Lưu ý:</strong> Trong chạy bộ, nhịp độ được đo bằng <em>thời gian trên khoảng cách</em>. Do đó,
+                    các vùng tập luyện khi CRS của bạn cải thiện. <a href="/vi/">Tìm hiểu thêm →</a></p></div></div><h3 class="mt-xl">Lựa chọn khác: Bài kiểm tra 3 phút và 12 phút</h3><p>Một phương pháp thay thế phổ biến là chạy xa nhất có thể trong 3 phút và 12 phút. Hiệu số quãng đường chia
+            cho hiệu số thời gian sẽ cho ra chỉ số CRS của bạn.</p></div></section><section class="section section-alt"><div class="container"><h2 class="mb-xl">Các Vùng Tập luyện dựa trên Tốc độ Chạy tới hạn</h2><div class="callout callout-info"><p><strong>Lưu ý:</strong> Trong chạy bộ, nhịp độ được đo bằng <em>thời gian trên khoảng cách</em>. Do đó,
                 <strong>phần trăm cao hơn = nhịp độ chậm hơn</strong>, và <strong>phần trăm thấp hơn = nhịp độ nhanh
                     hơn</strong>.
                 Điều này ngược lại với các môn thể thao dựa trên công suất như đạp xe, nơi % cao hơn = nỗ lực mạnh hơn.
                 Tìm hiểu thêm về <a href="/vi/training-zones/">cách sử dụng các vùng tập luyện này</a> một cách hiệu
                 quả.
-            </p>
-        </div>
-
-        <div class="zones-table-container">
-            <table class="zones-table">
-                <thead>
-                    <tr>
-                        <th>Vùng</th>
-                        <th>Tên gọi</th>
-                        <th>% Nhịp độ CRS</th>
-                        <th>Ví dụ cho CRS 1:40/100m</th>
-                        <th>RPE</th>
-                        <th>Mục đích Sinh lý</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr class="zone-1">
-                        <td><strong>1</strong></td>
-                        <td>Hồi phục</td>
-                        <td>&gt;120%</td>
-                        <td>&gt;30 giây/100m</td>
-                        <td>2-3/10</td>
-                        <td>Hồi phục tích cực, duy trì hiếu khí nhẹ</td>
-                    </tr>
-                    <tr class="zone-2">
-                        <td><strong>2</strong></td>
-                        <td>Nền tảng Hiếu khí</td>
-                        <td>108-120%</td>
-                        <td>27-30 giây/100m</td>
-                        <td>4-5/10</td>
-                        <td>Xây dựng khả năng hiếu khí, oxy hóa chất béo</td>
-                    </tr>
-                    <tr class="zone-3">
-                        <td><strong>3</strong></td>
-                        <td>Tempo</td>
-                        <td>102-108%</td>
-                        <td>25-27 giây/100m</td>
-                        <td>6-7/10</td>
-                        <td>Tập luyện nhịp độ marathon, sức bền cơ bắp</td>
-                    </tr>
-                    <tr class="zone-4">
-                        <td><strong>4</strong></td>
-                        <td>Ngưỡng (CRS)</td>
-                        <td>97-102%</td>
-                        <td>24-25 giây/100m</td>
-                        <td>7-8/10</td>
-                        <td>Cải thiện ngưỡng lactate</td>
-                    </tr>
-                    <tr class="zone-5">
-                        <td><strong>5</strong></td>
-                        <td>VO₂max</td>
-                        <td>&lt;97%</td>
-                        <td>&lt;24 giây/100m</td>
-                        <td>9-10/10</td>
-                        <td>Tập luyện biến tốc, phát triển VO₂max</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-
-        <div class="callout callout-tip mt-lg">
-            <h3>🎯 Lợi ích của việc Tập luyện theo Vùng</h3>
-            <p>Sử dụng các vùng dựa trên CRS sẽ chuyển đổi việc tập luyện dựa trên "cảm giác" chủ quan thành các buổi
-                tập khách quan, có thể lặp lại. Mỗi vùng nhắm đến những sự thích nghi sinh lý cụ thể:</p>
-            <ul>
-                <li><strong>Vùng 2:</strong> Xây dựng hệ thống hiếu khí (60-70% tổng lượng tập luyện hàng tuần)</li>
-                <li><strong>Vùng 3:</strong> Tăng cường hiệu quả nhịp độ đua (15-20% lượng tập luyện)</li>
-                <li><strong>Vùng 4:</strong> Đẩy ngưỡng lactate lên cao hơn (10-15% lượng tập luyện)</li>
-                <li><strong>Vùng 5:</strong> Phát triển tốc độ và công suất tối đa (5-10% lượng tập luyện)</li>
-            </ul>
-        </div>
-    </div>
-</section>
-
-<section class="section">
-    <div class="container container-narrow">
-        <h2>Giá trị Tốc độ Chạy tới hạn Điển hình theo Cấp độ</h2>
-
-        <div class="levels-comparison">
-            <div class="level-card">
-                <h3>🥇 Người chạy Đường dài Ưu tú</h3>
-                <div class="pace-value">5.0-5.5 m/s</div>
-                <div class="pace-equivalent">18-20 giây mỗi 100m</div>
-                <p>Nhịp độ 3:00-3:20 phút/km. Các vận động viên marathon chuyên nghiệp và người chạy cự ly trung bình ưu
-                    tú.</p>
-            </div>
-
-            <div class="level-card">
-                <h3>🏃 Người chạy Thi đấu</h3>
-                <div class="pace-value">4.0-5.0 m/s</div>
-                <div class="pace-equivalent">20-25 giây mỗi 100m</div>
-                <p>Nhịp độ 3:20-4:10 phút/km. Những người chạy câu lạc bộ mạnh mẽ, vận động viên marathon dưới 3:00, các
-                    vận động viên thi đấu theo nhóm tuổi.</p>
-            </div>
-
-            <div class="level-card">
-                <h3>👟 Người chạy vì Sức khỏe</h3>
-                <div class="pace-value">3.2-4.0 m/s</div>
-                <div class="pace-equivalent">25-31 giây mỗi 100m</div>
-                <p>Nhịp độ 4:10-5:10 phút/km. Duy trì tập luyện 3-5 ngày/tuần. Thời gian hoàn thành mục tiêu 5K -
-                    marathon tiêu chuẩn.</p>
-            </div>
-
-            <div class="level-card">
-                <h3>🌱 Người chạy đang Phát triển</h3>
-                <div class="pace-value">&lt;3.2 m/s</div>
-                <div class="pace-equivalent">&gt;31 giây mỗi 100m</div>
-                <p>Trên nhịp độ 5:10 phút/km. Đang xây dựng nền tảng hiếu khí và tăng quãng đường chạy hàng tuần một
-                    cách an toàn.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="section section-alt">
-    <div class="container container-narrow">
-        <h2>Xác thực Khoa học</h2>
-
-        <div class="research-highlight">
-            <h3>Wakayoshi và cộng sự (1992-1993) - Nghiên cứu Nền tảng</h3>
-            <p>Các nghiên cứu có ảnh hưởng lớn của Kohji Wakayoshi tại Đại học Osaka đã thiết lập CRS như một lựa chọn
-                thay thế thực tế và có giá trị cho việc kiểm tra lactate trong phòng thí nghiệm:</p>
-
-            <ul class="research-findings">
-                <li><strong>Mối tương quan mạnh mẽ với VO₂ ở ngưỡng yếm khí</strong> (r > 0.90)</li>
-                <li><strong>Dự đoán tuyệt vời về hiệu suất 10K và marathon</strong></li>
-                <li><strong>Tương ứng với Trạng thái Lactate Ổn định Tối đa (MLSS)</strong></li>
-                <li><strong>Độc lập với công suất yếm khí (W')</strong></li>
-            </ul>
-
-            <div class="citation">
-                <p><strong>Các bài báo quan trọng:</strong></p>
-                <ol>
-                    <li>Wakayoshi K, et al. (1992). "Determination and validity of critical velocity as an index of
+            </p></div><div class="zones-table-container"><table class="zones-table"><thead><tr><th>Vùng</th><th>Tên gọi</th><th>% Nhịp độ CRS</th><th>Ví dụ cho CRS 1:40/100m</th><th>RPE</th><th>Mục đích Sinh lý</th></tr></thead><tbody><tr class="zone-1"><td><strong>1</strong></td><td>Hồi phục</td><td>&gt;120%</td><td>&gt;30 giây/100m</td><td>2-3/10</td><td>Hồi phục tích cực, duy trì hiếu khí nhẹ</td></tr><tr class="zone-2"><td><strong>2</strong></td><td>Nền tảng Hiếu khí</td><td>108-120%</td><td>27-30 giây/100m</td><td>4-5/10</td><td>Xây dựng khả năng hiếu khí, oxy hóa chất béo</td></tr><tr class="zone-3"><td><strong>3</strong></td><td>Tempo</td><td>102-108%</td><td>25-27 giây/100m</td><td>6-7/10</td><td>Tập luyện nhịp độ marathon, sức bền cơ bắp</td></tr><tr class="zone-4"><td><strong>4</strong></td><td>Ngưỡng (CRS)</td><td>97-102%</td><td>24-25 giây/100m</td><td>7-8/10</td><td>Cải thiện ngưỡng lactate</td></tr><tr class="zone-5"><td><strong>5</strong></td><td>VO₂max</td><td>&lt;97%</td><td>&lt;24 giây/100m</td><td>9-10/10</td><td>Tập luyện biến tốc, phát triển VO₂max</td></tr></tbody></table></div><div class="callout callout-tip mt-lg"><h3>🎯 Lợi ích của việc Tập luyện theo Vùng</h3><p>Sử dụng các vùng dựa trên CRS sẽ chuyển đổi việc tập luyện dựa trên "cảm giác" chủ quan thành các buổi
+                tập khách quan, có thể lặp lại. Mỗi vùng nhắm đến những sự thích nghi sinh lý cụ thể:</p><ul><li><strong>Vùng 2:</strong> Xây dựng hệ thống hiếu khí (60-70% tổng lượng tập luyện hàng tuần)</li><li><strong>Vùng 3:</strong> Tăng cường hiệu quả nhịp độ đua (15-20% lượng tập luyện)</li><li><strong>Vùng 4:</strong> Đẩy ngưỡng lactate lên cao hơn (10-15% lượng tập luyện)</li><li><strong>Vùng 5:</strong> Phát triển tốc độ và công suất tối đa (5-10% lượng tập luyện)</li></ul></div></div></section><section class="section"><div class="container container-narrow"><h2>Giá trị Tốc độ Chạy tới hạn Điển hình theo Cấp độ</h2><div class="levels-comparison"><div class="level-card"><h3>🥇 Người chạy Đường dài Ưu tú</h3><div class="pace-value">5.0-5.5 m/s</div><div class="pace-equivalent">18-20 giây mỗi 100m</div><p>Nhịp độ 3:00-3:20 phút/km. Các vận động viên marathon chuyên nghiệp và người chạy cự ly trung bình ưu
+                    tú.</p></div><div class="level-card"><h3>🏃 Người chạy Thi đấu</h3><div class="pace-value">4.0-5.0 m/s</div><div class="pace-equivalent">20-25 giây mỗi 100m</div><p>Nhịp độ 3:20-4:10 phút/km. Những người chạy câu lạc bộ mạnh mẽ, vận động viên marathon dưới 3:00, các
+                    vận động viên thi đấu theo nhóm tuổi.</p></div><div class="level-card"><h3>👟 Người chạy vì Sức khỏe</h3><div class="pace-value">3.2-4.0 m/s</div><div class="pace-equivalent">25-31 giây mỗi 100m</div><p>Nhịp độ 4:10-5:10 phút/km. Duy trì tập luyện 3-5 ngày/tuần. Thời gian hoàn thành mục tiêu 5K -
+                    marathon tiêu chuẩn.</p></div><div class="level-card"><h3>🌱 Người chạy đang Phát triển</h3><div class="pace-value">&lt;3.2 m/s</div><div class="pace-equivalent">&gt;31 giây mỗi 100m</div><p>Trên nhịp độ 5:10 phút/km. Đang xây dựng nền tảng hiếu khí và tăng quãng đường chạy hàng tuần một
+                    cách an toàn.</p></div></div></div></section><section class="section section-alt"><div class="container container-narrow"><h2>Xác thực Khoa học</h2><div class="research-highlight"><h3>Wakayoshi và cộng sự (1992-1993) - Nghiên cứu Nền tảng</h3><p>Các nghiên cứu có ảnh hưởng lớn của Kohji Wakayoshi tại Đại học Osaka đã thiết lập CRS như một lựa chọn
+                thay thế thực tế và có giá trị cho việc kiểm tra lactate trong phòng thí nghiệm:</p><ul class="research-findings"><li><strong>Mối tương quan mạnh mẽ với VO₂ ở ngưỡng yếm khí</strong> (r > 0.90)</li><li><strong>Dự đoán tuyệt vời về hiệu suất 10K và marathon</strong></li><li><strong>Tương ứng với Trạng thái Lactate Ổn định Tối đa (MLSS)</strong></li><li><strong>Độc lập với công suất yếm khí (W')</strong></li></ul><div class="citation"><p><strong>Các bài báo quan trọng:</strong></p><ol><li>Wakayoshi K, et al. (1992). "Determination and validity of critical velocity as an index of
                         running performance in the competitive runner." <em>European Journal of Applied Physiology</em>,
-                        64(2), 153-157.</li>
-                    <li>Wakayoshi K, et al. (1992). "A simple method for determining critical speed as running fatigue
+                        64(2), 153-157.</li><li>Wakayoshi K, et al. (1992). "A simple method for determining critical speed as running fatigue
                         threshold in competitive running." <em>International Journal of Sports Medicine</em>, 13(5),
-                        367-371.</li>
-                    <li>Wakayoshi K, et al. (1993). "Does critical running velocity represent exercise intensity at
+                        367-371.</li><li>Wakayoshi K, et al. (1993). "Does critical running velocity represent exercise intensity at
                         maximal lactate steady state?" <em>European Journal of Applied Physiology</em>, 66(1), 90-95.
-                    </li>
-                </ol>
-            </div>
-        </div>
-
-        <div class="callout callout-science">
-            <h3>🔬 Tại sao Tốc độ Chạy tới hạn lại hiệu quả</h3>
-            <p>Tốc độ chạy tới hạn đại diện cho ranh giới giữa <strong>miền bài tập nặng và miền bài tập khắc
+                    </li></ol></div></div><div class="callout callout-science"><h3>🔬 Tại sao Tốc độ Chạy tới hạn lại hiệu quả</h3><p>Tốc độ chạy tới hạn đại diện cho ranh giới giữa <strong>miền bài tập nặng và miền bài tập khắc
                     nghiệt</strong>. Dưới mức CRS, việc sản sinh và đào thải lactate giữ được sự cân bằng—bạn có thể
                 chạy trong thời gian dài. Trên mức CRS, lactate tích tụ dần dần cho đến khi kiệt sức trong vòng 20-40
                 phút.
-            </p>
-            <p>Điều này làm cho CRS trở thành cường độ hoàn hảo cho:</p>
-            <ul>
-                <li>Thiết lập nhịp độ đua bền vững cho các sự kiện từ 5K đến marathon</li>
-                <li>Chỉ định <a href="/vi/training-zones/">tập luyện biến tốc ở ngưỡng</a></li>
-                <li>Theo dõi sự cải thiện thể lực hiếu khí theo thời gian</li>
-                <li>Tính toán <a href="/vi/training-load/">tải lượng tập luyện và nhu cầu hồi phục</a></li>
-            </ul>
-        </div>
-    </div>
-</section>
-
-<section class="section">
-    <div class="container container-narrow">
-        <h2 class="mt-3xl">Cách Kiểm tra Tốc độ Chạy tới hạn của Bạn</h2>
-
-        <div class="howto-section" itemscope itemtype="https://schema.org/HowTo">
-            <meta itemprop="name" content="Cách Kiểm tra Tốc độ Chạy tới hạn của Bạn">
-            <meta itemprop="description"
-                content="Làm theo giao thức từng bước này để đo chính xác Tốc độ Chạy tới hạn (CRS) của bạn nhằm tối ưu hóa nhịp độ tập luyện">
-
-            <div class="howto-step" itemprop="step" itemscope itemtype="https://schema.org/HowToStep">
-                <meta itemprop="position" content="1">
-                <h3 itemprop="name">Bước 1: Khởi động Đúng cách</h3>
-                <div itemprop="itemListElement" itemscope itemtype="https://schema.org/HowToDirection">
-                    <div itemprop="text">
-                        <p>Thực hiện 15-20 phút chạy nhẹ nhàng, các bài tập khởi động động và 4-6 nhịp chạy biến tốc.
-                            Điều này giúp chuẩn bị cơ bắp và hệ tim mạch cho nỗ lực tối đa.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="howto-step" itemprop="step" itemscope itemtype="https://schema.org/HowToStep">
-                <meta itemprop="position" content="2">
-                <h3 itemprop="name">Bước 2: Thực hiện Bài kiểm tra Thời gian 1200m</h3>
-                <div itemprop="itemListElement" itemscope itemtype="https://schema.org/HowToDirection">
-                    <div itemprop="text">
-                        <p>Chạy 1200 mét (3 vòng trên sân vận động 400m) với nỗ lực tối đa duy trì. Ghi lại thời gian
+            </p><p>Điều này làm cho CRS trở thành cường độ hoàn hảo cho:</p><ul><li>Thiết lập nhịp độ đua bền vững cho các sự kiện từ 5K đến marathon</li><li>Chỉ định <a href="/vi/training-zones/">tập luyện biến tốc ở ngưỡng</a></li><li>Theo dõi sự cải thiện thể lực hiếu khí theo thời gian</li><li>Tính toán <a href="/vi/training-load/">tải lượng tập luyện và nhu cầu hồi phục</a></li></ul></div></div></section><section class="section"><div class="container container-narrow"><h2 class="mt-3xl">Cách Kiểm tra Tốc độ Chạy tới hạn của Bạn</h2><div class="howto-section" itemscope itemtype="https://schema.org/HowTo"><meta itemprop="name" content="Cách Kiểm tra Tốc độ Chạy tới hạn của Bạn"><meta itemprop="description"
+                content="Làm theo giao thức từng bước này để đo chính xác Tốc độ Chạy tới hạn (CRS) của bạn nhằm tối ưu hóa nhịp độ tập luyện"><div class="howto-step" itemprop="step" itemscope itemtype="https://schema.org/HowToStep"><meta itemprop="position" content="1"><h3 itemprop="name">Bước 1: Khởi động Đúng cách</h3><div itemprop="itemListElement" itemscope itemtype="https://schema.org/HowToDirection"><div itemprop="text"><p>Thực hiện 15-20 phút chạy nhẹ nhàng, các bài tập khởi động động và 4-6 nhịp chạy biến tốc.
+                            Điều này giúp chuẩn bị cơ bắp và hệ tim mạch cho nỗ lực tối đa.</p></div></div></div><div class="howto-step" itemprop="step" itemscope itemtype="https://schema.org/HowToStep"><meta itemprop="position" content="2"><h3 itemprop="name">Bước 2: Thực hiện Bài kiểm tra Thời gian 1200m</h3><div itemprop="itemListElement" itemscope itemtype="https://schema.org/HowToDirection"><div itemprop="text"><p>Chạy 1200 mét (3 vòng trên sân vận động 400m) với nỗ lực tối đa duy trì. Ghi lại thời gian
                             chính xác đến từng giây. Tập trung duy trì cường độ cao và ổn định trong suốt bài kiểm tra.
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="howto-step" itemprop="step" itemscope itemtype="https://schema.org/HowToStep">
-                <meta itemprop="position" content="3">
-                <h3 itemprop="name">Bước 3: Hồi phục Hoàn toàn</h3>
-                <div itemprop="itemListElement" itemscope itemtype="https://schema.org/HowToDirection">
-                    <div itemprop="text">
-                        <p>Nghỉ ngơi từ 15-30 phút. Bạn có thể đi bộ hoặc chạy bộ cực chậm. Việc để nhịp tim giảm xuống
-                            và chân hồi phục đáng kể trước nỗ lực tiếp theo là rất quan trọng.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="howto-step" itemprop="step" itemscope itemtype="https://schema.org/HowToStep">
-                <meta itemprop="position" content="4">
-                <h3 itemprop="name">Bước 4: Thực hiện Bài kiểm tra Thời gian 3600m</h3>
-                <div itemprop="itemListElement" itemscope itemtype="https://schema.org/HowToDirection">
-                    <div itemprop="text">
-                        <p>Chạy 3600 mét (9 vòng trên sân vận động 400m) với nỗ lực tối đa. Đây là phần sức bền của bài
-                            kiểm tra. Duy trì nhịp độ nhanh nhất mà bạn có thể giữ trong suốt toàn bộ quãng đường.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="howto-step" itemprop="step" itemscope itemtype="https://schema.org/HowToStep">
-                <meta itemprop="position" content="5">
-                <h3 itemprop="name">Bước 5: Tính toán CRS của Bạn</h3>
-                <div itemprop="itemListElement" itemscope itemtype="https://schema.org/HowToDirection">
-                    <div itemprop="text">
-                        <p>Sử dụng công thức tuyến tính: (D2 - D1) / (T2 - T1). Ví dụ: (3600 - 1200) / (864 giây - 252
-                            giây) = 2400 / 612 = 3.92 m/s. Chuyển đổi sang nhịp độ: 100 / 3.92 = 25.5 giây/100m.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-        <h2>Ứng dụng Thực tế của Tốc độ Chạy tới hạn</h2>
-
-        <div class="application-grid">
-            <div class="application-item">
-                <h3>1️⃣ Mở khóa các Chỉ số Tải lượng Tập luyện</h3>
-                <p>Tốc độ chạy tới hạn là mẫu số trong cách tính Hệ số Cường độ cho <a href="/vi/training-load/">rTSS
+                        </p></div></div></div><div class="howto-step" itemprop="step" itemscope itemtype="https://schema.org/HowToStep"><meta itemprop="position" content="3"><h3 itemprop="name">Bước 3: Hồi phục Hoàn toàn</h3><div itemprop="itemListElement" itemscope itemtype="https://schema.org/HowToDirection"><div itemprop="text"><p>Nghỉ ngơi từ 15-30 phút. Bạn có thể đi bộ hoặc chạy bộ cực chậm. Việc để nhịp tim giảm xuống
+                            và chân hồi phục đáng kể trước nỗ lực tiếp theo là rất quan trọng.</p></div></div></div><div class="howto-step" itemprop="step" itemscope itemtype="https://schema.org/HowToStep"><meta itemprop="position" content="4"><h3 itemprop="name">Bước 4: Thực hiện Bài kiểm tra Thời gian 3600m</h3><div itemprop="itemListElement" itemscope itemtype="https://schema.org/HowToDirection"><div itemprop="text"><p>Chạy 3600 mét (9 vòng trên sân vận động 400m) với nỗ lực tối đa. Đây là phần sức bền của bài
+                            kiểm tra. Duy trì nhịp độ nhanh nhất mà bạn có thể giữ trong suốt toàn bộ quãng đường.</p></div></div></div><div class="howto-step" itemprop="step" itemscope itemtype="https://schema.org/HowToStep"><meta itemprop="position" content="5"><h3 itemprop="name">Bước 5: Tính toán CRS của Bạn</h3><div itemprop="itemListElement" itemscope itemtype="https://schema.org/HowToDirection"><div itemprop="text"><p>Sử dụng công thức tuyến tính: (D2 - D1) / (T2 - T1). Ví dụ: (3600 - 1200) / (864 giây - 252
+                            giây) = 2400 / 612 = 3.92 m/s. Chuyển đổi sang nhịp độ: 100 / 3.92 = 25.5 giây/100m.</p></div></div></div></div><h2>Ứng dụng Thực tế của Tốc độ Chạy tới hạn</h2><div class="application-grid"><div class="application-item"><h3>1️⃣ Mở khóa các Chỉ số Tải lượng Tập luyện</h3><p>Tốc độ chạy tới hạn là mẫu số trong cách tính Hệ số Cường độ cho <a href="/vi/training-load/">rTSS
                         (Điểm Căng thẳng Tập luyện Chạy bộ)</a>. Không có nó, bạn không thể định lượng mức độ căng thẳng
-                    của buổi tập hoặc theo dõi xu hướng thể lực/mệt mỏi.</p>
-            </div>
-
-            <div class="application-item">
-                <h3>2️⃣ Cá nhân hóa các Vùng Tập luyện</h3>
-                <p>Các biểu đồ nhịp độ chung không tính đến sinh lý cá nhân. <a href="/vi/training-zones/">Các vùng tập
+                    của buổi tập hoặc theo dõi xu hướng thể lực/mệt mỏi.</p></div><div class="application-item"><h3>2️⃣ Cá nhân hóa các Vùng Tập luyện</h3><p>Các biểu đồ nhịp độ chung không tính đến sinh lý cá nhân. <a href="/vi/training-zones/">Các vùng tập
                         luyện dựa trên CRS</a> đảm bảo mỗi người chạy đều tập luyện ở cường độ tối ưu cho việc chạy
-                    ngưỡng hiếu khí.</p>
-            </div>
-
-            <div class="application-item">
-                <h3>3️⃣ Theo dõi Tiến trình Thể lực</h3>
-                <p>Kiểm tra lại sau mỗi 6-8 tuần. Việc cải thiện tốc độ chạy tới hạn (nhịp độ nhanh hơn) cho thấy sự
+                    ngưỡng hiếu khí.</p></div><div class="application-item"><h3>3️⃣ Theo dõi Tiến trình Thể lực</h3><p>Kiểm tra lại sau mỗi 6-8 tuần. Việc cải thiện tốc độ chạy tới hạn (nhịp độ nhanh hơn) cho thấy sự
                     thích nghi hiếu khí thành công. CRS dậm chân tại chỗ cho thấy việc tập luyện cần được điều chỉnh.
-                </p>
-            </div>
-
-            <div class="application-item">
-                <h3>4️⃣ Dự đoán Hiệu suất Đua</h3>
-                <p>Nhịp độ CRS xấp xỉ nhịp độ ngưỡng bền vững của bạn. Sử dụng nó để đặt mục tiêu thực tế cho các sự
-                    kiện 5K, 10K và bán marathon.</p>
-            </div>
-
-            <div class="application-item">
-                <h3>5️⃣ Thiết kế các bài tập Ngưỡng</h3>
-                <p>Các bài tập CRS kinh điển: 10×400 @ nhịp độ CRS (nghỉ 60 giây), 4×1200 @ 98% CRS (nghỉ 90 giây). Giúp
-                    xây dựng khả năng đào thải lactate.</p>
-            </div>
-
-            <div class="application-item">
-                <h3>6️⃣ Tối ưu hóa Chiến lược Taper (Giảm khối lượng)</h3>
-                <p>Theo dõi CRS trước và sau giai đoạn taper. Một giai đoạn taper thành công sẽ duy trì hoặc cải thiện
-                    nhẹ chỉ số CRS trong khi làm giảm sự mệt mỏi (tăng chỉ số TSB).</p>
-            </div>
-        </div>
-
-        <h2 class="mt-3xl">Câu hỏi Thường gặp về Tốc độ Chạy tới hạn</h2>
-
-        <div class="faq-section" itemscope itemtype="https://schema.org/FAQPage">
-            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">Tốc độ chạy tới hạn (CRS) là gì?</h3>
-                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                    <div itemprop="text">
-                        <p>Tốc độ chạy tới hạn là nhịp độ chạy tối đa bạn có thể duy trì trong khoảng 30-60 phút mà
+                </p></div><div class="application-item"><h3>4️⃣ Dự đoán Hiệu suất Đua</h3><p>Nhịp độ CRS xấp xỉ nhịp độ ngưỡng bền vững của bạn. Sử dụng nó để đặt mục tiêu thực tế cho các sự
+                    kiện 5K, 10K và bán marathon.</p></div><div class="application-item"><h3>5️⃣ Thiết kế các bài tập Ngưỡng</h3><p>Các bài tập CRS kinh điển: 10×400 @ nhịp độ CRS (nghỉ 60 giây), 4×1200 @ 98% CRS (nghỉ 90 giây). Giúp
+                    xây dựng khả năng đào thải lactate.</p></div><div class="application-item"><h3>6️⃣ Tối ưu hóa Chiến lược Taper (Giảm khối lượng)</h3><p>Theo dõi CRS trước và sau giai đoạn taper. Một giai đoạn taper thành công sẽ duy trì hoặc cải thiện
+                    nhẹ chỉ số CRS trong khi làm giảm sự mệt mỏi (tăng chỉ số TSB).</p></div></div><h2 class="mt-3xl">Câu hỏi Thường gặp về Tốc độ Chạy tới hạn</h2><div class="faq-section" itemscope itemtype="https://schema.org/FAQPage"><div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><h3 itemprop="name">Tốc độ chạy tới hạn (CRS) là gì?</h3><div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div itemprop="text"><p>Tốc độ chạy tới hạn là nhịp độ chạy tối đa bạn có thể duy trì trong khoảng 30-60 phút mà
                             không bị kiệt sức. Nó đại diện cho ngưỡng hiếu khí của bạn—điểm mà quá trình sản sinh
                             lactate bằng với quá trình đào thải lactate (thường là 4 mmol/L lactate trong máu). CRS được
                             tính toán từ hai bài kiểm tra nỗ lực tối đa và phục vụ như nền tảng cho <a
                                 href="/vi/training-zones/">các vùng tập luyện</a> cá nhân hóa và <a
-                                href="/vi/training-load/">tính toán điểm TSS</a>.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">Làm cách nào để tính CRS của tôi?</h3>
-                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                    <div itemprop="text">
-                        <p>Để tính tốc độ chạy tới hạn của bạn: (1) Khởi động đúng cách, (2) Thực hiện bài kiểm tra thời
+                                href="/vi/training-load/">tính toán điểm TSS</a>.</p></div></div></div><div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><h3 itemprop="name">Làm cách nào để tính CRS của tôi?</h3><div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div itemprop="text"><p>Để tính tốc độ chạy tới hạn của bạn: (1) Khởi động đúng cách, (2) Thực hiện bài kiểm tra thời
                             gian 1200m nỗ lực tối đa, (3) Nghỉ 15-30 phút, (4) Thực hiện bài kiểm tra thời gian 3600m nỗ
                             lực tối đa, (5) Sử dụng công thức: <strong>CRS (m/s) = (D2 - D1) / (T2 - T1)</strong>.
                             Chuyển đổi kết quả sang nhịp độ trên mỗi 100m hoặc mỗi km. Sử dụng công cụ tính CRS miễn phí
-                            của chúng tôi ở trên để có kết quả tức thì.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">Tôi nên kiểm tra CRS bao lâu một lần?</h3>
-                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                    <div itemprop="text">
-                        <p>Kiểm tra lại tốc độ chạy tới hạn của bạn sau mỗi 6-8 tuần để cập nhật các vùng tập luyện khi
+                            của chúng tôi ở trên để có kết quả tức thì.</p></div></div></div><div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><h3 itemprop="name">Tôi nên kiểm tra CRS bao lâu một lần?</h3><div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div itemprop="text"><p>Kiểm tra lại tốc độ chạy tới hạn của bạn sau mỗi 6-8 tuần để cập nhật các vùng tập luyện khi
                             thể lực của bạn cải thiện. Việc kiểm tra thường xuyên hơn (mỗi 4 tuần) có thể phù hợp trong
                             các khối tập luyện cường độ cao, trong khi kiểm tra ít thường xuyên hơn (10-12 tuần) phù hợp
                             cho các giai đoạn duy trì. Nhịp độ ngưỡng chạy của bạn sẽ dần cải thiện khi tập luyện nhất
-                            quán, cho thấy sự thích nghi hiếu khí tích cực.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">CRS có giống với ngưỡng lactate hay FTP không?</h3>
-                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                    <div itemprop="text">
-                        <p>CRS rất giống nhưng không hoàn toàn đồng nhất. Tốc độ chạy tới hạn tương ứng với ngưỡng
+                            quán, cho thấy sự thích nghi hiếu khí tích cực.</p></div></div></div><div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><h3 itemprop="name">CRS có giống với ngưỡng lactate hay FTP không?</h3><div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div itemprop="text"><p>CRS rất giống nhưng không hoàn toàn đồng nhất. Tốc độ chạy tới hạn tương ứng với ngưỡng
                             lactate thứ hai (LT2, khoảng 4 mmol/L), cao hơn một chút so với ngưỡng lactate thứ nhất
                             (LT1, 2 mmol/L). Nó tương đương với Nhịp độ Ngưỡng Chức năng (FTP), nhưng FTP dựa trên nỗ
                             lực trong 60 phút trong khi CRS được tính từ các bài kiểm tra thời gian ngắn hơn. CRS thường
                             đại diện cho nhịp độ bền vững trong 30-40 phút, làm cho nó trở nên lý tưởng cho các bài tập
-                            chuẩn bị nhịp độ đua 5K và tập luyện ngưỡng.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">Chỉ số CRS bao nhiêu là tốt cho người mới bắt đầu?</h3>
-                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                    <div itemprop="text">
-                        <p>Đối với những người chạy đang phát triển, CRS điển hình là trên 31 giây/100m (>5:10 phút/km).
+                            chuẩn bị nhịp độ đua 5K và tập luyện ngưỡng.</p></div></div></div><div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><h3 itemprop="name">Chỉ số CRS bao nhiêu là tốt cho người mới bắt đầu?</h3><div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div itemprop="text"><p>Đối với những người chạy đang phát triển, CRS điển hình là trên 31 giây/100m (>5:10 phút/km).
                             Những người chạy vì sức khỏe thường đạt mức 25-31 giây/100m (4:10-5:10 phút/km). Đừng so
                             sánh bản thân với các vận động viên ưu tú—hãy tập trung vào việc cải thiện chỉ số CRS của
                             chính bạn thông qua tập luyện có cấu trúc. Mọi chỉ số CRS đều là điểm khởi đầu hợp lệ để tối
-                            ưu hóa nhịp độ.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">Tôi có thể sử dụng CRS để tập luyện marathon không?</h3>
-                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                    <div itemprop="text">
-                        <p>Có, nhưng cần có sự điều chỉnh. CRS đại diện cho nhịp độ bạn có thể duy trì trong 30-40 phút,
+                            ưu hóa nhịp độ.</p></div></div></div><div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><h3 itemprop="name">Tôi có thể sử dụng CRS để tập luyện marathon không?</h3><div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div itemprop="text"><p>Có, nhưng cần có sự điều chỉnh. CRS đại diện cho nhịp độ bạn có thể duy trì trong 30-40 phút,
                             mức này quá căng cho các cuộc đua marathon đầy đủ. Tuy nhiên, các vùng tập luyện dựa trên
                             CRS là công cụ tuyệt vời để chuẩn bị cho marathon: Vùng 2 xây dựng nền tảng hiếu khí, Vùng 3
                             phát triển sức bền chuyên biệt cho cuộc đua, và Vùng 4 (tại mức CRS) cải thiện ngưỡng
                             lactate của bạn. Nhịp độ marathon thường rơi vào khoảng 105-110% nhịp độ CRS của bạn (chậm
                             hơn mức ngưỡng). Hãy sử dụng CRS để cấu trúc quá trình tập luyện của bạn, chứ không phải làm
-                            nhịp độ đua marathon.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">Tại sao việc hồi phục giữa các bài kiểm tra lại quan trọng như vậy?</h3>
-                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                    <div itemprop="text">
-                        <p>Nếu bạn không hồi phục đủ giữa hai bài kiểm tra thời gian, sự mệt mỏi sẽ làm chậm thời gian
+                            nhịp độ đua marathon.</p></div></div></div><div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><h3 itemprop="name">Tại sao việc hồi phục giữa các bài kiểm tra lại quan trọng như vậy?</h3><div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div itemprop="text"><p>Nếu bạn không hồi phục đủ giữa hai bài kiểm tra thời gian, sự mệt mỏi sẽ làm chậm thời gian
                             thứ hai một cách giả tạo, khiến chỉ số tốc độ chạy tới hạn tính toán được có vẻ nhanh hơn
                             thực tế. Điều này dẫn đến các vùng tập luyện quá nặng một cách không cần thiết. Đảm bảo nghỉ
                             ít nhất 15-30 phút hoặc cân nhắc thực hiện các bài kiểm tra vào các ngày khác nhau trong
-                            cùng một tuần.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">Tôi có thể ước tính CRS từ thời gian đua thay vì làm bài kiểm tra không?</h3>
-                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                    <div itemprop="text">
-                        <p>Mặc dù bạn có thể ước tính CRS từ hiệu suất đua, nhưng kiểm tra trực tiếp vẫn chính xác hơn.
+                            cùng một tuần.</p></div></div></div><div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><h3 itemprop="name">Tôi có thể ước tính CRS từ thời gian đua thay vì làm bài kiểm tra không?</h3><div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div itemprop="text"><p>Mặc dù bạn có thể ước tính CRS từ hiệu suất đua, nhưng kiểm tra trực tiếp vẫn chính xác hơn.
                             Nếu bạn bắt buộc phải ước tính: hãy lấy thời gian chạy 10K tốt nhất gần đây của bạn và sử
                             dụng nhịp độ đó trên mỗi 100m trừ đi khoảng 1 giây, hoặc sử dụng 103-105% nhịp độ bán
                             marathon của bạn. Tuy nhiên, bài kiểm tra 1200m + 3600m sẽ cung cấp dữ liệu chính xác nhất
-                            cần thiết cho việc tập luyện hiệu quả.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="callout mt-2xl">
-            <h3>Áp dụng Kiến thức CRS của Bạn</h3>
-            <p>Bây giờ bạn đã hiểu về tốc độ chạy tới hạn, hãy thực hiện các bước tiếp theo để tối ưu hóa quá trình tập
-                luyện của mình:</p>
-            <ul>
-                <li><a href="/vi/training-load/">Tính Điểm Căng thẳng Tập luyện (TSS)</a> dựa trên CRS của bạn để định
-                    lượng cường độ buổi tập</li>
-                <li><a href="/vi/training-zones/">Khám phá 5 vùng tập luyện</a> và tìm hiểu cách cấu trúc các buổi tập
-                    cho những sự thích nghi cụ thể</li>
-                <li><a href="/vi/formulas/">Xem tất cả các công thức</a> được sử dụng trong Run Analytics để có sự minh
-                    bạch hoàn toàn</li>
-                <li><a href="/vi/">Tải Run Analytics</a> để tự động theo dõi CRS, TSS và các xu hướng hiệu suất</li>
-            </ul>
-        </div>
-
-        <div class="mt-xl text-center">
-            <a href="/vi/training-load/" class="btn btn-primary">Tìm hiểu về cách tính rTSS →</a>
-            <a href="/vi/formulas/" class="btn btn-secondary">Xem tất cả Công thức →</a>
-        </div>
-    </div>
-</section>
-    
-  </main>
-
-  
-  <footer class="site-footer">
-    <div class="container">
-        
-        <div class="footer-top">
-            <div class="footer-brand-section">
-                
-                <h2>Run Analytics</h2>
-                <p>Track Critical Running Speed, Training Stress Score, and performance metrics with Run Analytics. Science-based iOS app for runners, triathletes &amp; coaches. 7-day free trial.</p>
-                
-            </div>
-
-            
-            <div class="footer-download">
-                <h3 class="footer-heading">Download</h3>
-                <div class="footer-badges">
-                    
-                    <a href="https://apps.apple.com/us/app/run-analytics/id6754524015" target="_blank" rel="noopener"
-                        aria-label="Download on the App Store">
-                        <img src="../../assets/images/badge-app-store.svg"
+                            cần thiết cho việc tập luyện hiệu quả.</p></div></div></div></div><div class="callout mt-2xl"><h3>Áp dụng Kiến thức CRS của Bạn</h3><p>Bây giờ bạn đã hiểu về tốc độ chạy tới hạn, hãy thực hiện các bước tiếp theo để tối ưu hóa quá trình tập
+                luyện của mình:</p><ul><li><a href="/vi/training-load/">Tính Điểm Căng thẳng Tập luyện (TSS)</a> dựa trên CRS của bạn để định
+                    lượng cường độ buổi tập</li><li><a href="/vi/training-zones/">Khám phá 5 vùng tập luyện</a> và tìm hiểu cách cấu trúc các buổi tập
+                    cho những sự thích nghi cụ thể</li><li><a href="/vi/formulas/">Xem tất cả các công thức</a> được sử dụng trong Run Analytics để có sự minh
+                    bạch hoàn toàn</li><li><a href="/vi/">Tải Run Analytics</a> để tự động theo dõi CRS, TSS và các xu hướng hiệu suất</li></ul></div><div class="mt-xl text-center"><a href="/vi/training-load/" class="btn btn-primary">Tìm hiểu về cách tính rTSS →</a><a href="/vi/formulas/" class="btn btn-secondary">Xem tất cả Công thức →</a></div></div></section></main><footer class="site-footer"><div class="container"><div class="footer-top"><div class="footer-brand-section"><h2>Run Analytics</h2><p>Track Critical Running Speed, Training Stress Score, and performance metrics with Run Analytics. Science-based iOS app for runners, triathletes &amp; coaches. 7-day free trial.</p></div><div class="footer-download"><h3 class="footer-heading">Download</h3><div class="footer-badges"><a href="https://apps.apple.com/us/app/run-analytics/id6754524015" target="_blank" rel="noopener"
+                        aria-label="Download on the App Store"><img src="../../assets/images/badge-app-store.svg"
                             alt="Download on the App Store" width="135"
-                            height="40" loading="lazy">
-                    </a>
-                    
-                    
-                    <a href="https://play.google.com/store/apps/details?id=com.arnohealth.runanalytics" target="_blank" rel="noopener"
-                        aria-label="Get it on Google Play">
-                        <img src="../../assets/images/badge-google-play.svg"
+                            height="40" loading="lazy"></a><a href="https://play.google.com/store/apps/details?id=com.arnohealth.runanalytics" target="_blank" rel="noopener"
+                        aria-label="Get it on Google Play"><img src="../../assets/images/badge-google-play.svg"
                             alt="Get it on Google Play" width="135"
-                            height="40" loading="lazy">
-                    </a>
-                    
-                </div>
-            </div>
-            
-        </div>
-
-        
-        <div class="footer-languages">
-            <h3 class="footer-heading">Available in</h3>
-            <div class="lang-grid">
-                
-                <a href="/af/" class="lang-link"
+                            height="40" loading="lazy"></a></div></div></div><div class="footer-languages"><h3 class="footer-heading">Available in</h3><div class="lang-grid"><a href="/af/" class="lang-link"
                     hreflang="af" >
                     Afrikaans
-                </a>
-                
-                <a href="/am/" class="lang-link"
+                </a><a href="/am/" class="lang-link"
                     hreflang="am" >
                     አማርኛ
-                </a>
-                
-                <a href="/ar/" class="lang-link"
+                </a><a href="/ar/" class="lang-link"
                     hreflang="ar" dir="rtl" >
                     العربية
-                </a>
-                
-                <a href="/bg/" class="lang-link"
+                </a><a href="/bg/" class="lang-link"
                     hreflang="bg" >
                     Български
-                </a>
-                
-                <a href="/bn/" class="lang-link"
+                </a><a href="/bn/" class="lang-link"
                     hreflang="bn" >
                     বাংলা
-                </a>
-                
-                <a href="/ca/" class="lang-link"
+                </a><a href="/ca/" class="lang-link"
                     hreflang="ca" >
                     Català
-                </a>
-                
-                <a href="/cs/" class="lang-link"
+                </a><a href="/cs/" class="lang-link"
                     hreflang="cs" >
                     Čeština
-                </a>
-                
-                <a href="/da/" class="lang-link"
+                </a><a href="/da/" class="lang-link"
                     hreflang="da" >
                     Dansk
-                </a>
-                
-                <a href="/de/" class="lang-link"
+                </a><a href="/de/" class="lang-link"
                     hreflang="de" >
                     Deutsch
-                </a>
-                
-                <a href="/el/" class="lang-link"
+                </a><a href="/el/" class="lang-link"
                     hreflang="el" >
                     Ελληνικά
-                </a>
-                
-                <a href="/en/" class="lang-link"
+                </a><a href="/en/" class="lang-link"
                     hreflang="en" >
                     English
-                </a>
-                
-                <a href="/es/" class="lang-link"
+                </a><a href="/es/" class="lang-link"
                     hreflang="es" >
                     Español
-                </a>
-                
-                <a href="/et/" class="lang-link"
+                </a><a href="/et/" class="lang-link"
                     hreflang="et" >
                     Eesti
-                </a>
-                
-                <a href="/fa/" class="lang-link"
+                </a><a href="/fa/" class="lang-link"
                     hreflang="fa" dir="rtl" >
                     فارسی
-                </a>
-                
-                <a href="/fi/" class="lang-link"
+                </a><a href="/fi/" class="lang-link"
                     hreflang="fi" >
                     Suomi
-                </a>
-                
-                <a href="/fr/" class="lang-link"
+                </a><a href="/fr/" class="lang-link"
                     hreflang="fr" >
                     Français
-                </a>
-                
-                <a href="/gu/" class="lang-link"
+                </a><a href="/gu/" class="lang-link"
                     hreflang="gu" >
                     ગુજરાતી
-                </a>
-                
-                <a href="/ha/" class="lang-link"
+                </a><a href="/ha/" class="lang-link"
                     hreflang="ha" >
                     Hausa
-                </a>
-                
-                <a href="/he/" class="lang-link"
+                </a><a href="/he/" class="lang-link"
                     hreflang="he" dir="rtl" >
                     עברית
-                </a>
-                
-                <a href="/hi/" class="lang-link"
+                </a><a href="/hi/" class="lang-link"
                     hreflang="hi" >
                     हिन्दी
-                </a>
-                
-                <a href="/hr/" class="lang-link"
+                </a><a href="/hr/" class="lang-link"
                     hreflang="hr" >
                     Hrvatski
-                </a>
-                
-                <a href="/hu/" class="lang-link"
+                </a><a href="/hu/" class="lang-link"
                     hreflang="hu" >
                     Magyar
-                </a>
-                
-                <a href="/id/" class="lang-link"
+                </a><a href="/id/" class="lang-link"
                     hreflang="id" >
                     Bahasa Indonesia
-                </a>
-                
-                <a href="/is/" class="lang-link"
+                </a><a href="/is/" class="lang-link"
                     hreflang="is" >
                     Íslenska
-                </a>
-                
-                <a href="/it/" class="lang-link"
+                </a><a href="/it/" class="lang-link"
                     hreflang="it" >
                     Italiano
-                </a>
-                
-                <a href="/ja/" class="lang-link"
+                </a><a href="/ja/" class="lang-link"
                     hreflang="ja" >
                     日本語
-                </a>
-                
-                <a href="/km/" class="lang-link"
+                </a><a href="/km/" class="lang-link"
                     hreflang="km" >
                     ភាសាខ្មែរ
-                </a>
-                
-                <a href="/kn/" class="lang-link"
+                </a><a href="/kn/" class="lang-link"
                     hreflang="kn" >
                     ಕನ್ನಡ
-                </a>
-                
-                <a href="/ko/" class="lang-link"
+                </a><a href="/ko/" class="lang-link"
                     hreflang="ko" >
                     한국어
-                </a>
-                
-                <a href="/lt/" class="lang-link"
+                </a><a href="/lt/" class="lang-link"
                     hreflang="lt" >
                     Lietuvių
-                </a>
-                
-                <a href="/lv/" class="lang-link"
+                </a><a href="/lv/" class="lang-link"
                     hreflang="lv" >
                     Latviešu
-                </a>
-                
-                <a href="/ms/" class="lang-link"
+                </a><a href="/ms/" class="lang-link"
                     hreflang="ms" >
                     Bahasa Melayu
-                </a>
-                
-                <a href="/my/" class="lang-link"
+                </a><a href="/my/" class="lang-link"
                     hreflang="my" >
                     မြန်မာစာ
-                </a>
-                
-                <a href="/nb/" class="lang-link"
+                </a><a href="/nb/" class="lang-link"
                     hreflang="nb" >
                     Norsk Bokmål
-                </a>
-                
-                <a href="/nl/" class="lang-link"
+                </a><a href="/nl/" class="lang-link"
                     hreflang="nl" >
                     Nederlands
-                </a>
-                
-                <a href="/pl/" class="lang-link"
+                </a><a href="/pl/" class="lang-link"
                     hreflang="pl" >
                     Polski
-                </a>
-                
-                <a href="/pt/" class="lang-link"
+                </a><a href="/pt/" class="lang-link"
                     hreflang="pt" >
                     Português
-                </a>
-                
-                <a href="/pt-br/" class="lang-link"
+                </a><a href="/pt-br/" class="lang-link"
                     hreflang="pt-br" >
                     Português (Brasil)
-                </a>
-                
-                <a href="/ro/" class="lang-link"
+                </a><a href="/ro/" class="lang-link"
                     hreflang="ro" >
                     Română
-                </a>
-                
-                <a href="/ru/" class="lang-link"
+                </a><a href="/ru/" class="lang-link"
                     hreflang="ru" >
                     Русский
-                </a>
-                
-                <a href="/sk/" class="lang-link"
+                </a><a href="/sk/" class="lang-link"
                     hreflang="sk" >
                     Slovenčina
-                </a>
-                
-                <a href="/sl/" class="lang-link"
+                </a><a href="/sl/" class="lang-link"
                     hreflang="sl" >
                     Slovenščina
-                </a>
-                
-                <a href="/sr/" class="lang-link"
+                </a><a href="/sr/" class="lang-link"
                     hreflang="sr" >
                     Srpski
-                </a>
-                
-                <a href="/sv/" class="lang-link"
+                </a><a href="/sv/" class="lang-link"
                     hreflang="sv" >
                     Svenska
-                </a>
-                
-                <a href="/sw/" class="lang-link"
+                </a><a href="/sw/" class="lang-link"
                     hreflang="sw" >
                     Kiswahili
-                </a>
-                
-                <a href="/ta/" class="lang-link"
+                </a><a href="/ta/" class="lang-link"
                     hreflang="ta" >
                     தமிழ்
-                </a>
-                
-                <a href="/te/" class="lang-link"
+                </a><a href="/te/" class="lang-link"
                     hreflang="te" >
                     తెలుగు
-                </a>
-                
-                <a href="/th/" class="lang-link"
+                </a><a href="/th/" class="lang-link"
                     hreflang="th" >
                     ไทย
-                </a>
-                
-                <a href="/tl/" class="lang-link"
+                </a><a href="/tl/" class="lang-link"
                     hreflang="tl" >
                     Tagalog
-                </a>
-                
-                <a href="/tr/" class="lang-link"
+                </a><a href="/tr/" class="lang-link"
                     hreflang="tr" >
                     Türkçe
-                </a>
-                
-                <a href="/uk/" class="lang-link"
+                </a><a href="/uk/" class="lang-link"
                     hreflang="uk" >
                     Українська
-                </a>
-                
-                <a href="/ur/" class="lang-link"
+                </a><a href="/ur/" class="lang-link"
                     hreflang="ur" dir="rtl" >
                     اردو
-                </a>
-                
-                <a href="/vi/" class="lang-link active"
+                </a><a href="/vi/" class="lang-link active"
                     hreflang="vi" >
                     Tiếng Việt
-                </a>
-                
-                <a href="/yo/" class="lang-link"
+                </a><a href="/yo/" class="lang-link"
                     hreflang="yo" >
                     Yorùbá
-                </a>
-                
-                <a href="/zh/" class="lang-link"
+                </a><a href="/zh/" class="lang-link"
                     hreflang="zh" >
                     中文
-                </a>
-                
-            </div>
-        </div>
-
-        <div class="footer-divider"></div>
-
-        
-        <div class="footer-bottom">
-            <p class="copyright">
+                </a></div></div><div class="footer-divider"></div><div class="footer-bottom"><p class="copyright">
                 &copy; 2026 Run Analytics. Bản quyền được bảo lưu
-            </p>
-            <ul class="footer-legal">
-                <li><a href="/vi/privacy/">Quyền riêng tư</a></li>
-                <li><a href="/vi/terms/">Điều khoản</a></li>
-            </ul>
-        </div>
-    </div>
-</footer>
-
-  
-  <div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="Cookie consent" aria-live="polite">
-    <div class="cookie-banner-content">
-        <div>
-            <p>Trang web này sử dụng cookie để cải thiện trải nghiệm của bạn.</p>
-            <a href="/vi/privacy/" class="text-sm">Tìm hiểu thêm</a>
-        </div>
-        <div class="cookie-banner-actions">
-            <button id="cookie-decline" class="btn btn-secondary btn-small">Từ chối</button>
-            <button id="cookie-accept" class="btn btn-primary btn-small">Chấp nhận</button>
-        </div>
-    </div>
-</div>
-
-  
-  <script src="../../assets/js/core.min.js?v=8aef43d1" defer></script>
-  <script src="../../assets/js/search.min.js?v=8aef43d1" defer></script>
-  
-
-  
-  
-  <script src="../../assets/js/analytics.min.js" data-ga-id="G-Y138VB4523" defer></script>
-  
-
-  
-  <script>if ('serviceWorker' in navigator) { navigator.serviceWorker.register('../../sw.js') }</script>
-</body>
-
-</html>
+            </p><ul class="footer-legal"><li><a href="/vi/privacy/">Quyền riêng tư</a></li><li><a href="/vi/terms/">Điều khoản</a></li></ul></div></div></footer><div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="Cookie consent" aria-live="polite"><div class="cookie-banner-content"><div><p>Trang web này sử dụng cookie để cải thiện trải nghiệm của bạn.</p><a href="/vi/privacy/" class="text-sm">Tìm hiểu thêm</a></div><div class="cookie-banner-actions"><button id="cookie-decline" class="btn btn-secondary btn-small">Từ chối</button><button id="cookie-accept" class="btn btn-primary btn-small">Chấp nhận</button></div></div></div><script src="../../assets/js/core.min.js?v=e899af207631" defer></script><script src="../../assets/js/search.min.js?v=e899af207631" defer></script><script src="../../assets/js/analytics.min.js" data-ga-id="G-Y138VB4523" defer></script><script>if ('serviceWorker' in navigator) { navigator.serviceWorker.register('../../sw.js') }</script></body></html>

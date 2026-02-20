@@ -1,246 +1,61 @@
-<!DOCTYPE html>
-<html lang="th" dir="ltr">
-
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
-    rel="stylesheet">
-
-  
-  <title>เครื่องคำนวณ Running Efficiency: วัดประสิทธิภาพการว่ายน้ำ |...</title>
-  <meta name="description" content="เครื่องคำนวณ Running Efficiency (Run + Golf) วัดประสิทธิภาพการว่ายน้ำ คำนวณคะแนนของคุณ เปรียบเทียบมาตรฐานตามระดับ และใช้แบบฝึกหัดเพื่อปรับปรุง Running Efficiency...">
-  <meta name="author" content="AnalyticsZone Team">
-
-  
-  
-  <meta name="keywords" content="Running Efficiency, ประสิทธิภาพการว่ายน้ำ, ประสิทธิภาพจังหวะ, เศรษฐศาสตร์การว่ายน้ำ, เครื่องคำนวณ Running Efficiency">
-  
-
-  
-  <link rel="canonical" href="https://run.analyticszone.app/th/efficiency/">
-
-  
-  
-  <meta property="article:published_time" content="2025-01-15T10:00:00Z">
-  <meta property="article:modified_time" content="2026-01-12T14:30:00Z">
-  <meta property="article:author" content="AnalyticsZone Team">
-  
-
-  
-  
-
-  
-  <meta property="og:type" content="article">
-  <meta property="og:url" content="https://run.analyticszone.app/th/efficiency/">
-  <meta property="og:title" content="เครื่องคำนวณ Running Efficiency: วัดประสิทธิภาพการว่ายน้ำ |...">
-  <meta property="og:description" content="เครื่องคำนวณ Running Efficiency (Run + Golf) วัดประสิทธิภาพการว่ายน้ำ คำนวณคะแนนของคุณ เปรียบเทียบมาตรฐานตามระดับ และใช้แบบฝึกหัดเพื่อปรับปรุง Running Efficiency...">
-  <meta property="og:image" content="https://run.analyticszone.app/assets/images/og-image.svg">
-  <meta property="og:locale" content="th_TH">
-  <meta property="og:site_name" content="Run Analytics">
-
-  
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:url" content="https://run.analyticszone.app/th/efficiency/">
-  <meta name="twitter:title" content="เครื่องคำนวณ Running Efficiency: วัดประสิทธิภาพการว่ายน้ำ |...">
-  <meta name="twitter:description" content="เครื่องคำนวณ Running Efficiency (Run + Golf) วัดประสิทธิภาพการว่ายน้ำ คำนวณคะแนนของคุณ เปรียบเทียบมาตรฐานตามระดับ และใช้แบบฝึกหัดเพื่อปรับปรุง Running Efficiency...">
-  <meta name="twitter:image" content="https://run.analyticszone.app/assets/images/og-image.svg">
-  
-  <meta name="twitter:site" content="@runanalytics">
-  <meta name="twitter:creator" content="@runanalytics">
-  
-
-  
-  
-  <link rel="alternate" hreflang="af"
-    href="https://run.analyticszone.app/af/efficiency/">
-  
-  <link rel="alternate" hreflang="am"
-    href="https://run.analyticszone.app/am/efficiency/">
-  
-  <link rel="alternate" hreflang="ar"
-    href="https://run.analyticszone.app/ar/efficiency/">
-  
-  <link rel="alternate" hreflang="bg"
-    href="https://run.analyticszone.app/bg/efficiency/">
-  
-  <link rel="alternate" hreflang="bn"
-    href="https://run.analyticszone.app/bn/efficiency/">
-  
-  <link rel="alternate" hreflang="ca"
-    href="https://run.analyticszone.app/ca/efficiency/">
-  
-  <link rel="alternate" hreflang="cs"
-    href="https://run.analyticszone.app/cs/efficiency/">
-  
-  <link rel="alternate" hreflang="da"
-    href="https://run.analyticszone.app/da/efficiency/">
-  
-  <link rel="alternate" hreflang="de"
-    href="https://run.analyticszone.app/de/efficiency/">
-  
-  <link rel="alternate" hreflang="el"
-    href="https://run.analyticszone.app/el/efficiency/">
-  
-  <link rel="alternate" hreflang="en"
-    href="https://run.analyticszone.app/en/efficiency/">
-  
-  <link rel="alternate" hreflang="es"
-    href="https://run.analyticszone.app/es/efficiency/">
-  
-  <link rel="alternate" hreflang="et"
-    href="https://run.analyticszone.app/et/efficiency/">
-  
-  <link rel="alternate" hreflang="fa"
-    href="https://run.analyticszone.app/fa/efficiency/">
-  
-  <link rel="alternate" hreflang="fi"
-    href="https://run.analyticszone.app/fi/efficiency/">
-  
-  <link rel="alternate" hreflang="fr"
-    href="https://run.analyticszone.app/fr/efficiency/">
-  
-  <link rel="alternate" hreflang="gu"
-    href="https://run.analyticszone.app/gu/efficiency/">
-  
-  <link rel="alternate" hreflang="ha"
-    href="https://run.analyticszone.app/ha/efficiency/">
-  
-  <link rel="alternate" hreflang="he"
-    href="https://run.analyticszone.app/he/efficiency/">
-  
-  <link rel="alternate" hreflang="hi"
-    href="https://run.analyticszone.app/hi/efficiency/">
-  
-  <link rel="alternate" hreflang="hr"
-    href="https://run.analyticszone.app/hr/efficiency/">
-  
-  <link rel="alternate" hreflang="hu"
-    href="https://run.analyticszone.app/hu/efficiency/">
-  
-  <link rel="alternate" hreflang="id"
-    href="https://run.analyticszone.app/id/efficiency/">
-  
-  <link rel="alternate" hreflang="is"
-    href="https://run.analyticszone.app/is/efficiency/">
-  
-  <link rel="alternate" hreflang="it"
-    href="https://run.analyticszone.app/it/efficiency/">
-  
-  <link rel="alternate" hreflang="ja"
-    href="https://run.analyticszone.app/ja/efficiency/">
-  
-  <link rel="alternate" hreflang="km"
-    href="https://run.analyticszone.app/km/efficiency/">
-  
-  <link rel="alternate" hreflang="kn"
-    href="https://run.analyticszone.app/kn/efficiency/">
-  
-  <link rel="alternate" hreflang="ko"
-    href="https://run.analyticszone.app/ko/efficiency/">
-  
-  <link rel="alternate" hreflang="lt"
-    href="https://run.analyticszone.app/lt/efficiency/">
-  
-  <link rel="alternate" hreflang="lv"
-    href="https://run.analyticszone.app/lv/efficiency/">
-  
-  <link rel="alternate" hreflang="ms"
-    href="https://run.analyticszone.app/ms/efficiency/">
-  
-  <link rel="alternate" hreflang="my"
-    href="https://run.analyticszone.app/my/efficiency/">
-  
-  <link rel="alternate" hreflang="nb"
-    href="https://run.analyticszone.app/nb/efficiency/">
-  
-  <link rel="alternate" hreflang="nl"
-    href="https://run.analyticszone.app/nl/efficiency/">
-  
-  <link rel="alternate" hreflang="pl"
-    href="https://run.analyticszone.app/pl/efficiency/">
-  
-  <link rel="alternate" hreflang="pt"
-    href="https://run.analyticszone.app/pt/efficiency/">
-  
-  <link rel="alternate" hreflang="pt-br"
-    href="https://run.analyticszone.app/pt-br/efficiency/">
-  
-  <link rel="alternate" hreflang="ro"
-    href="https://run.analyticszone.app/ro/efficiency/">
-  
-  <link rel="alternate" hreflang="ru"
-    href="https://run.analyticszone.app/ru/efficiency/">
-  
-  <link rel="alternate" hreflang="sk"
-    href="https://run.analyticszone.app/sk/efficiency/">
-  
-  <link rel="alternate" hreflang="sl"
-    href="https://run.analyticszone.app/sl/efficiency/">
-  
-  <link rel="alternate" hreflang="sr"
-    href="https://run.analyticszone.app/sr/efficiency/">
-  
-  <link rel="alternate" hreflang="sv"
-    href="https://run.analyticszone.app/sv/efficiency/">
-  
-  <link rel="alternate" hreflang="sw"
-    href="https://run.analyticszone.app/sw/efficiency/">
-  
-  <link rel="alternate" hreflang="ta"
-    href="https://run.analyticszone.app/ta/efficiency/">
-  
-  <link rel="alternate" hreflang="te"
-    href="https://run.analyticszone.app/te/efficiency/">
-  
-  <link rel="alternate" hreflang="th"
-    href="https://run.analyticszone.app/th/efficiency/">
-  
-  <link rel="alternate" hreflang="tl"
-    href="https://run.analyticszone.app/tl/efficiency/">
-  
-  <link rel="alternate" hreflang="tr"
-    href="https://run.analyticszone.app/tr/efficiency/">
-  
-  <link rel="alternate" hreflang="uk"
-    href="https://run.analyticszone.app/uk/efficiency/">
-  
-  <link rel="alternate" hreflang="ur"
-    href="https://run.analyticszone.app/ur/efficiency/">
-  
-  <link rel="alternate" hreflang="vi"
-    href="https://run.analyticszone.app/vi/efficiency/">
-  
-  <link rel="alternate" hreflang="yo"
-    href="https://run.analyticszone.app/yo/efficiency/">
-  
-  <link rel="alternate" hreflang="zh"
-    href="https://run.analyticszone.app/zh/efficiency/">
-  
-  <link rel="alternate" hreflang="x-default"
-    href="https://run.analyticszone.app/en/efficiency/">
-
-  
-  <link rel="icon" type="image/png" sizes="32x32" href="../../assets/images/icons/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="../../assets/images/icons/favicon-16x16.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="../../assets/images/icons/apple-touch-icon.png">
-  <link rel="manifest" href="../../manifest.json">
-  <meta name="theme-color" content="#2563EB">
-  <meta name="robots" content="index, follow">
-
-  
-  
-  
-  <meta name="apple-itunes-app" content="app-id=6754524015">
-  
-
-  
-  <style>
+<!DOCTYPE html><html lang="th" dir="ltr"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet"><title>เครื่องคำนวณ Running Efficiency: วัดประสิทธิภาพการว่ายน้ำ |...</title><meta name="description" content="เครื่องคำนวณ Running Efficiency (Run + Golf) วัดประสิทธิภาพการว่ายน้ำ คำนวณคะแนนของคุณ เปรียบเทียบมาตรฐานตามระดับ และใช้แบบฝึกหัดเพื่อปรับปรุง Running Efficiency..."><meta name="author" content="AnalyticsZone Team"><meta name="keywords" content="Running Efficiency, ประสิทธิภาพการว่ายน้ำ, ประสิทธิภาพจังหวะ, เศรษฐศาสตร์การว่ายน้ำ, เครื่องคำนวณ Running Efficiency"><link rel="canonical" href="https://run.analyticszone.app/th/efficiency/"><meta property="article:published_time" content="2025-01-15T10:00:00Z"><meta property="article:modified_time" content="2026-01-12T14:30:00Z"><meta property="article:author" content="AnalyticsZone Team"><meta property="og:type" content="article"><meta property="og:url" content="https://run.analyticszone.app/th/efficiency/"><meta property="og:title" content="เครื่องคำนวณ Running Efficiency: วัดประสิทธิภาพการว่ายน้ำ |..."><meta property="og:description" content="เครื่องคำนวณ Running Efficiency (Run + Golf) วัดประสิทธิภาพการว่ายน้ำ คำนวณคะแนนของคุณ เปรียบเทียบมาตรฐานตามระดับ และใช้แบบฝึกหัดเพื่อปรับปรุง Running Efficiency..."><meta property="og:image" content="https://run.analyticszone.app/assets/images/og-image.svg"><meta property="og:locale" content="th_TH"><meta property="og:site_name" content="Run Analytics"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:url" content="https://run.analyticszone.app/th/efficiency/"><meta name="twitter:title" content="เครื่องคำนวณ Running Efficiency: วัดประสิทธิภาพการว่ายน้ำ |..."><meta name="twitter:description" content="เครื่องคำนวณ Running Efficiency (Run + Golf) วัดประสิทธิภาพการว่ายน้ำ คำนวณคะแนนของคุณ เปรียบเทียบมาตรฐานตามระดับ และใช้แบบฝึกหัดเพื่อปรับปรุง Running Efficiency..."><meta name="twitter:image" content="https://run.analyticszone.app/assets/images/og-image.svg"><meta name="twitter:site" content="@runanalytics"><meta name="twitter:creator" content="@runanalytics"><link rel="alternate" hreflang="af"
+    href="https://run.analyticszone.app/af/efficiency/"><link rel="alternate" hreflang="am"
+    href="https://run.analyticszone.app/am/efficiency/"><link rel="alternate" hreflang="ar"
+    href="https://run.analyticszone.app/ar/efficiency/"><link rel="alternate" hreflang="bg"
+    href="https://run.analyticszone.app/bg/efficiency/"><link rel="alternate" hreflang="bn"
+    href="https://run.analyticszone.app/bn/efficiency/"><link rel="alternate" hreflang="ca"
+    href="https://run.analyticszone.app/ca/efficiency/"><link rel="alternate" hreflang="cs"
+    href="https://run.analyticszone.app/cs/efficiency/"><link rel="alternate" hreflang="da"
+    href="https://run.analyticszone.app/da/efficiency/"><link rel="alternate" hreflang="de"
+    href="https://run.analyticszone.app/de/efficiency/"><link rel="alternate" hreflang="el"
+    href="https://run.analyticszone.app/el/efficiency/"><link rel="alternate" hreflang="en"
+    href="https://run.analyticszone.app/en/efficiency/"><link rel="alternate" hreflang="es"
+    href="https://run.analyticszone.app/es/efficiency/"><link rel="alternate" hreflang="et"
+    href="https://run.analyticszone.app/et/efficiency/"><link rel="alternate" hreflang="fa"
+    href="https://run.analyticszone.app/fa/efficiency/"><link rel="alternate" hreflang="fi"
+    href="https://run.analyticszone.app/fi/efficiency/"><link rel="alternate" hreflang="fr"
+    href="https://run.analyticszone.app/fr/efficiency/"><link rel="alternate" hreflang="gu"
+    href="https://run.analyticszone.app/gu/efficiency/"><link rel="alternate" hreflang="ha"
+    href="https://run.analyticszone.app/ha/efficiency/"><link rel="alternate" hreflang="he"
+    href="https://run.analyticszone.app/he/efficiency/"><link rel="alternate" hreflang="hi"
+    href="https://run.analyticszone.app/hi/efficiency/"><link rel="alternate" hreflang="hr"
+    href="https://run.analyticszone.app/hr/efficiency/"><link rel="alternate" hreflang="hu"
+    href="https://run.analyticszone.app/hu/efficiency/"><link rel="alternate" hreflang="id"
+    href="https://run.analyticszone.app/id/efficiency/"><link rel="alternate" hreflang="is"
+    href="https://run.analyticszone.app/is/efficiency/"><link rel="alternate" hreflang="it"
+    href="https://run.analyticszone.app/it/efficiency/"><link rel="alternate" hreflang="ja"
+    href="https://run.analyticszone.app/ja/efficiency/"><link rel="alternate" hreflang="km"
+    href="https://run.analyticszone.app/km/efficiency/"><link rel="alternate" hreflang="kn"
+    href="https://run.analyticszone.app/kn/efficiency/"><link rel="alternate" hreflang="ko"
+    href="https://run.analyticszone.app/ko/efficiency/"><link rel="alternate" hreflang="lt"
+    href="https://run.analyticszone.app/lt/efficiency/"><link rel="alternate" hreflang="lv"
+    href="https://run.analyticszone.app/lv/efficiency/"><link rel="alternate" hreflang="ms"
+    href="https://run.analyticszone.app/ms/efficiency/"><link rel="alternate" hreflang="my"
+    href="https://run.analyticszone.app/my/efficiency/"><link rel="alternate" hreflang="nb"
+    href="https://run.analyticszone.app/nb/efficiency/"><link rel="alternate" hreflang="nl"
+    href="https://run.analyticszone.app/nl/efficiency/"><link rel="alternate" hreflang="pl"
+    href="https://run.analyticszone.app/pl/efficiency/"><link rel="alternate" hreflang="pt"
+    href="https://run.analyticszone.app/pt/efficiency/"><link rel="alternate" hreflang="pt-br"
+    href="https://run.analyticszone.app/pt-br/efficiency/"><link rel="alternate" hreflang="ro"
+    href="https://run.analyticszone.app/ro/efficiency/"><link rel="alternate" hreflang="ru"
+    href="https://run.analyticszone.app/ru/efficiency/"><link rel="alternate" hreflang="sk"
+    href="https://run.analyticszone.app/sk/efficiency/"><link rel="alternate" hreflang="sl"
+    href="https://run.analyticszone.app/sl/efficiency/"><link rel="alternate" hreflang="sr"
+    href="https://run.analyticszone.app/sr/efficiency/"><link rel="alternate" hreflang="sv"
+    href="https://run.analyticszone.app/sv/efficiency/"><link rel="alternate" hreflang="sw"
+    href="https://run.analyticszone.app/sw/efficiency/"><link rel="alternate" hreflang="ta"
+    href="https://run.analyticszone.app/ta/efficiency/"><link rel="alternate" hreflang="te"
+    href="https://run.analyticszone.app/te/efficiency/"><link rel="alternate" hreflang="th"
+    href="https://run.analyticszone.app/th/efficiency/"><link rel="alternate" hreflang="tl"
+    href="https://run.analyticszone.app/tl/efficiency/"><link rel="alternate" hreflang="tr"
+    href="https://run.analyticszone.app/tr/efficiency/"><link rel="alternate" hreflang="uk"
+    href="https://run.analyticszone.app/uk/efficiency/"><link rel="alternate" hreflang="ur"
+    href="https://run.analyticszone.app/ur/efficiency/"><link rel="alternate" hreflang="vi"
+    href="https://run.analyticszone.app/vi/efficiency/"><link rel="alternate" hreflang="yo"
+    href="https://run.analyticszone.app/yo/efficiency/"><link rel="alternate" hreflang="zh"
+    href="https://run.analyticszone.app/zh/efficiency/"><link rel="alternate" hreflang="x-default"
+    href="https://run.analyticszone.app/en/efficiency/"><link rel="icon" type="image/png" sizes="32x32" href="../../assets/images/icons/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="../../assets/images/icons/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="../../assets/images/icons/apple-touch-icon.png"><link rel="manifest" href="../../manifest.json"><meta name="theme-color" content="#2563EB"><meta name="robots" content="index, follow"><meta name="apple-itunes-app" content="app-id=6754524015"><style>
 /* Critical CSS - Above the fold styles for fast LCP */
 :root {
   --color-primary: #0066CC;
@@ -499,20 +314,7 @@ img[width][height] {
     transition-duration: 0.01ms !important;
   }
 }
-</style>
-
-  
-  <link rel="preconnect" href="https://www.googletagmanager.com">
-  <link rel="dns-prefetch" href="https://www.googletagmanager.com">
-
-  
-  <link rel="stylesheet" href="../../assets/css/main.min.css?v=8aef43d1">
-
-  
-  
-
-
-<script type="application/ld+json">
+</style><link rel="preconnect" href="https://www.googletagmanager.com"><link rel="dns-prefetch" href="https://www.googletagmanager.com"><link rel="stylesheet" href="../../assets/css/main.min.css?v=e899af207631"><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Organization",
@@ -547,10 +349,7 @@ img[width][height] {
     
   ]
 }
-</script>
-
-
-<script type="application/ld+json">
+</script><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "WebSite",
@@ -559,11 +358,7 @@ img[width][height] {
   "description": "Track Critical Running Speed, Training Stress Score, and performance metrics with Run Analytics. Science-based iOS app for runners, triathletes &amp; coaches. 7-day free trial.",
   "inLanguage": "th"
 }
-</script>
-
-
-
-<script type="application/ld+json">
+</script><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
@@ -578,12 +373,7 @@ img[width][height] {
   },
   "downloadUrl": "https://apps.apple.com/us/app/run-analytics/id6754524015"
 }
-</script>
-
-
-
-
-<script type="application/ld+json">
+</script><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
@@ -612,11 +402,7 @@ img[width][height] {
     
   ]
 }
-</script>
-
-
-
-<script type="application/ld+json">
+</script><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "WebPage",
@@ -624,11 +410,7 @@ img[width][height] {
   "description": "เครื่องคำนวณ Running Efficiency (Run + Golf) วัดประสิทธิภาพการว่ายน้ำ คำนวณคะแนนของคุณ เปรียบเทียบมาตรฐานตามระดับ และใช้แบบฝึกหัดเพื่อปรับปรุง Running Efficiency...",
   "url": "https://run.analyticszone.app/th/efficiency/"
 }
-</script>
-
-
-
-<script type="application/ld+json">
+</script><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Article",
@@ -653,17 +435,7 @@ img[width][height] {
     "@id": "https://run.analyticszone.app/th/efficiency/"
   }
 }
-</script>
-
-
-
-
-
-  
-  
-
-  
-  <script>
+</script><script>
     (function () {
       let theme = localStorage.getItem('theme');
       // Older builds could persist a per-subdomain `theme=light` value without a UI
@@ -677,1588 +449,472 @@ img[width][height] {
         document.documentElement.classList.add('dark-mode');
       }
     })();
-  </script>
-</head>
-
-<body>
-  
-  <a href="#main-content" class="skip-link">ข้ามไปยังเนื้อหา</a>
-
-  
-  <header class="site-header">
-    <div class="container">
-        <div class="header-inner">
-            
-            <a href="/th/" class="site-logo">
-                <picture>
-                    <source srcset="../../assets/images/logo-dark.png" type="image/png"
-                        media="(prefers-color-scheme: dark)">
-                    <img src="../../assets/images/logo.png" alt="Run Analytics - Running Analytics App | Critical Running Speed, TSS, CTL/ATL/TSB for iOS" width="56" height="56">
-                </picture>
-                <span class="logo-text">Run Analytics</span>
-            </a>
-
-            
-            <nav class="nav-primary" id="nav-primary" role="navigation" aria-label="Main navigation">
-                <div class="nav-group-left">
-                    <ul>
-                        
-                        <li>
-                            
-                            <a href="/th/" 
+  </script></head><body><a href="#main-content" class="skip-link">ข้ามไปยังเนื้อหา</a><header class="site-header"><div class="container"><div class="header-inner"><a href="/th/" class="site-logo"><picture><source srcset="../../assets/images/logo-dark.png" type="image/png"
+                        media="(prefers-color-scheme: dark)"><img src="../../assets/images/logo.png" alt="Run Analytics - Running Analytics App | Critical Running Speed, TSS, CTL/ATL/TSB for iOS" width="56" height="56"></picture><span class="logo-text">Run Analytics</span></a><nav class="nav-primary" id="nav-primary" role="navigation" aria-label="Main navigation"><div class="nav-group-left"><ul><li><a href="/th/" 
                                 aria-current="">
                                 หน้าแรก
-                            </a>
-                            
-                            </li>
-                            
-                        <li class="has-submenu" >
-                            
-                            
-                            <a href="/th/getting-started/" class="nav-label">เรียนรู้</a>
-                            
-                            <ul class="submenu">
-                                
-                                <li>
-                                    <a href="/th/getting-started/" 
+                            </a></li><li class="has-submenu" ><a href="/th/getting-started/" class="nav-label">เรียนรู้</a><ul class="submenu"><li><a href="/th/getting-started/" 
                                         aria-current="">
                                         เริ่มต้น
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/th/crs/" 
+                                    </a></li><li><a href="/th/crs/" 
                                         aria-current="">
                                         CRS
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/th/training-zones/" 
+                                    </a></li><li><a href="/th/training-zones/" 
                                         aria-current="">
                                         โซนการฝึก
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/th/training-load/" 
+                                    </a></li><li><a href="/th/training-load/" 
                                         aria-current="">
                                         ภาระการฝึก
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/th/rtss-calculator/" 
+                                    </a></li><li><a href="/th/rtss-calculator/" 
                                         aria-current="">
                                         เครื่องคำนวณ rTSS
-                                    </a>
-                                </li>
-                                
-                            </ul>
-                            
-                            </li>
-                            
-                        <li class="has-submenu" >
-                            
-                            
-                            <a href="/th/research/" class="nav-label">วิทยาศาสตร์</a>
-                            
-                            <ul class="submenu">
-                                
-                                <li>
-                                    <a href="/th/research/" 
+                                    </a></li></ul></li><li class="has-submenu" ><a href="/th/research/" class="nav-label">วิทยาศาสตร์</a><ul class="submenu"><li><a href="/th/research/" 
                                         aria-current="">
                                         การวิจัย
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/th/formulas/" 
+                                    </a></li><li><a href="/th/formulas/" 
                                         aria-current="">
                                         สูตร
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/th/efficiency/" class="active" 
+                                    </a></li><li><a href="/th/efficiency/" class="active" 
                                         aria-current="page">
                                         ประสิทธิภาพ
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/th/stride-mechanics/" 
+                                    </a></li><li><a href="/th/stride-mechanics/" 
                                         aria-current="">
                                         กลศาสตร์การว่าย
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/th/bibliography/" 
+                                    </a></li><li><a href="/th/bibliography/" 
                                         aria-current="">
                                         บรรณานุกรม
-                                    </a>
-                                </li>
-                                
-                            </ul>
-                            
-                            </li>
-                            
-                        <li>
-                            
-                            <a href="/th/contact/" 
+                                    </a></li></ul></li><li><a href="/th/contact/" 
                                 aria-current="">
                                 ติดต่อ
-                            </a>
-                            
-                            </li>
-                            
-                    </ul>
-
-                    
-                    <div class="search-container">
-                        <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                            </a></li></ul><div class="search-container"><svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
                             viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                            <circle cx="11" cy="11" r="8"></circle>
-                            <path d="m21 21-4.35-4.35"></path>
-                        </svg>
-                        <input type="search" id="site-search" class="search-input" aria-expanded="false"
-                            aria-haspopup="listbox" aria-autocomplete="list" autocomplete="off" spellcheck="false" />
-                        <div id="search-results" class="search-results hidden" role="region" aria-live="polite"></div>
-                    </div>
-
-                    
-                    <select class="language-selector" id="language-select" aria-label="เลือกภาษา">
-                        
-                        <option value="af" >
+                            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.35-4.35"></path></svg><input type="search" id="site-search" class="search-input" aria-expanded="false"
+                            aria-haspopup="listbox" aria-autocomplete="list" autocomplete="off" spellcheck="false" /><div id="search-results" class="search-results hidden" role="region" aria-live="polite"></div></div><select class="language-selector" id="language-select" aria-label="เลือกภาษา"><option value="af" >
                             Afrikaans
-                        </option>
-                        
-                        <option value="am" >
+                        </option><option value="am" >
                             አማርኛ
-                        </option>
-                        
-                        <option value="ar" >
+                        </option><option value="ar" >
                             العربية
-                        </option>
-                        
-                        <option value="bg" >
+                        </option><option value="bg" >
                             Български
-                        </option>
-                        
-                        <option value="bn" >
+                        </option><option value="bn" >
                             বাংলা
-                        </option>
-                        
-                        <option value="ca" >
+                        </option><option value="ca" >
                             Català
-                        </option>
-                        
-                        <option value="cs" >
+                        </option><option value="cs" >
                             Čeština
-                        </option>
-                        
-                        <option value="da" >
+                        </option><option value="da" >
                             Dansk
-                        </option>
-                        
-                        <option value="de" >
+                        </option><option value="de" >
                             Deutsch
-                        </option>
-                        
-                        <option value="el" >
+                        </option><option value="el" >
                             Ελληνικά
-                        </option>
-                        
-                        <option value="en" >
+                        </option><option value="en" >
                             English
-                        </option>
-                        
-                        <option value="es" >
+                        </option><option value="es" >
                             Español
-                        </option>
-                        
-                        <option value="et" >
+                        </option><option value="et" >
                             Eesti
-                        </option>
-                        
-                        <option value="fa" >
+                        </option><option value="fa" >
                             فارسی
-                        </option>
-                        
-                        <option value="fi" >
+                        </option><option value="fi" >
                             Suomi
-                        </option>
-                        
-                        <option value="fr" >
+                        </option><option value="fr" >
                             Français
-                        </option>
-                        
-                        <option value="gu" >
+                        </option><option value="gu" >
                             ગુજરાતી
-                        </option>
-                        
-                        <option value="ha" >
+                        </option><option value="ha" >
                             Hausa
-                        </option>
-                        
-                        <option value="he" >
+                        </option><option value="he" >
                             עברית
-                        </option>
-                        
-                        <option value="hi" >
+                        </option><option value="hi" >
                             हिन्दी
-                        </option>
-                        
-                        <option value="hr" >
+                        </option><option value="hr" >
                             Hrvatski
-                        </option>
-                        
-                        <option value="hu" >
+                        </option><option value="hu" >
                             Magyar
-                        </option>
-                        
-                        <option value="id" >
+                        </option><option value="id" >
                             Bahasa Indonesia
-                        </option>
-                        
-                        <option value="is" >
+                        </option><option value="is" >
                             Íslenska
-                        </option>
-                        
-                        <option value="it" >
+                        </option><option value="it" >
                             Italiano
-                        </option>
-                        
-                        <option value="ja" >
+                        </option><option value="ja" >
                             日本語
-                        </option>
-                        
-                        <option value="km" >
+                        </option><option value="km" >
                             ភាសាខ្មែរ
-                        </option>
-                        
-                        <option value="kn" >
+                        </option><option value="kn" >
                             ಕನ್ನಡ
-                        </option>
-                        
-                        <option value="ko" >
+                        </option><option value="ko" >
                             한국어
-                        </option>
-                        
-                        <option value="lt" >
+                        </option><option value="lt" >
                             Lietuvių
-                        </option>
-                        
-                        <option value="lv" >
+                        </option><option value="lv" >
                             Latviešu
-                        </option>
-                        
-                        <option value="ms" >
+                        </option><option value="ms" >
                             Bahasa Melayu
-                        </option>
-                        
-                        <option value="my" >
+                        </option><option value="my" >
                             မြန်မာစာ
-                        </option>
-                        
-                        <option value="nb" >
+                        </option><option value="nb" >
                             Norsk Bokmål
-                        </option>
-                        
-                        <option value="nl" >
+                        </option><option value="nl" >
                             Nederlands
-                        </option>
-                        
-                        <option value="pl" >
+                        </option><option value="pl" >
                             Polski
-                        </option>
-                        
-                        <option value="pt" >
+                        </option><option value="pt" >
                             Português
-                        </option>
-                        
-                        <option value="pt-br" >
+                        </option><option value="pt-br" >
                             Português (Brasil)
-                        </option>
-                        
-                        <option value="ro" >
+                        </option><option value="ro" >
                             Română
-                        </option>
-                        
-                        <option value="ru" >
+                        </option><option value="ru" >
                             Русский
-                        </option>
-                        
-                        <option value="sk" >
+                        </option><option value="sk" >
                             Slovenčina
-                        </option>
-                        
-                        <option value="sl" >
+                        </option><option value="sl" >
                             Slovenščina
-                        </option>
-                        
-                        <option value="sr" >
+                        </option><option value="sr" >
                             Srpski
-                        </option>
-                        
-                        <option value="sv" >
+                        </option><option value="sv" >
                             Svenska
-                        </option>
-                        
-                        <option value="sw" >
+                        </option><option value="sw" >
                             Kiswahili
-                        </option>
-                        
-                        <option value="ta" >
+                        </option><option value="ta" >
                             தமிழ்
-                        </option>
-                        
-                        <option value="te" >
+                        </option><option value="te" >
                             తెలుగు
-                        </option>
-                        
-                        <option value="th" selected>
+                        </option><option value="th" selected>
                             ไทย
-                        </option>
-                        
-                        <option value="tl" >
+                        </option><option value="tl" >
                             Tagalog
-                        </option>
-                        
-                        <option value="tr" >
+                        </option><option value="tr" >
                             Türkçe
-                        </option>
-                        
-                        <option value="uk" >
+                        </option><option value="uk" >
                             Українська
-                        </option>
-                        
-                        <option value="ur" >
+                        </option><option value="ur" >
                             اردو
-                        </option>
-                        
-                        <option value="vi" >
+                        </option><option value="vi" >
                             Tiếng Việt
-                        </option>
-                        
-                        <option value="yo" >
+                        </option><option value="yo" >
                             Yorùbá
-                        </option>
-                        
-                        <option value="zh" >
+                        </option><option value="zh" >
                             中文
-                        </option>
-                        
-                    </select>
-                </div>
-
-                <div class="nav-group-right">
-                    
-
-
-                    
-                    <div class="header-app-buttons">
-                        
-                        
-                        <a href="https://apps.apple.com/us/app/run-analytics/id6754524015" class="header-download-btn" target="_blank"
-                            rel="noopener" aria-label="Download on App Store" title="Download on App Store">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                                fill="currentColor">
-                                <path
-                                    d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z" />
-                            </svg>
-                        </a>
-                        
-
-                        
-                        <a href="https://play.google.com/store/apps/details?id=com.arnohealth.runanalytics" class="header-download-btn" target="_blank"
-                            rel="noopener" aria-label="Get it on Google Play" title="Get it on Google Play">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                                fill="currentColor">
-                                <path
-                                    d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.92 20.16,13.19L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M16.81,8.88L14.54,11.15L6.05,2.66L16.81,8.88Z" />
-                            </svg>
-                        </a>
-                        
-                        
-                    </div>
-
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-
-                    
-                    <div class="suite-menu-container">
-                        <button class="suite-menu-toggle" id="suite-menu-toggle" aria-label="See other apps"
-                            aria-expanded="false">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        </option></select></div><div class="nav-group-right"><div class="header-app-buttons"><a href="https://apps.apple.com/us/app/run-analytics/id6754524015" class="header-download-btn" target="_blank"
+                            rel="noopener" aria-label="Download on App Store" title="Download on App Store"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="currentColor"><path
+                                    d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z" /></svg></a><a href="https://play.google.com/store/apps/details?id=com.arnohealth.runanalytics" class="header-download-btn" target="_blank"
+                            rel="noopener" aria-label="Get it on Google Play" title="Get it on Google Play"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="currentColor"><path
+                                    d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.92 20.16,13.19L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M16.81,8.88L14.54,11.15L6.05,2.66L16.81,8.88Z" /></svg></a></div><div class="suite-menu-container"><button class="suite-menu-toggle" id="suite-menu-toggle" aria-label="See other apps"
+                            aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round">
-                                <rect x="3" y="3" width="7" height="7"></rect>
-                                <rect x="14" y="3" width="7" height="7"></rect>
-                                <rect x="14" y="14" width="7" height="7"></rect>
-                                <rect x="3" y="14" width="7" height="7"></rect>
-                            </svg>
-                        </button>
-                        <div class="suite-dropdown hidden" id="suite-dropdown">
-                            <div class="suite-dropdown-header">Other AnalyticsZone Apps</div>
-                            <div class="suite-apps-grid">
-                                
-                                <a href="https://analyticszone.app" class="suite-app-link">AnalyticsZone</a>
-                                
-                                <a href="https://swim.analyticszone.app" class="suite-app-link">Swim Analytics</a>
-                                
-                                <a href="https://bike.analyticszone.app" class="suite-app-link">Bike Analytics</a>
-                                
-                                <a href="https://walk.analyticszone.app" class="suite-app-link">Walk Analytics</a>
-                                
-                                <a href="https://cardio.analyticszone.app" class="suite-app-link">Cardio Analytics</a>
-                                
-                                <a href="https://health.analyticszone.app" class="suite-app-link">Health Analytics</a>
-                                
-                                <a href="https://swimtrainer.analyticszone.app" class="suite-app-link">Swim Trainer</a>
-                                
-                            </div>
-                        </div>
-                    </div>
-                    
-                </div>
-            </nav>
-
-            
-            <button class="menu-toggle" id="menu-toggle" aria-label="สลับเมนู"
-                aria-expanded="false" aria-controls="nav-primary">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </div>
-    </div>
-</header>
-
-  
-  
-
-<nav class="breadcrumbs" aria-label="Breadcrumb">
-    <div class="container">
-        <ol>
-            
-            <li>
-                
-                <a href="/th/">หน้าแรก</a>
-                
-            </li>
-            
-            <li>
-                
-                <a href="/th/research/">วิทยาศาสตร์</a>
-                
-            </li>
-            
-            <li>
-                
-                <span aria-current="page">ประสิทธิภาพ</span>
-                
-            </li>
-            
-        </ol>
-    </div>
-</nav>
-
-
-  
-  <main id="main-content" class="main-content">
-    
-    <section class="page-hero">
-    <div class="container">
-        <h1>ตัวชี้วัดประสิทธิภาพการวิ่ง: วัดความประหยัดในการวิ่งของคุณ</h1>
-        <p class="lead">เจาะลึกความคุ้มค่าของท่าวิ่งและประสิทธิภาพการใช้ออกซิเจน เพื่อการวิ่งที่เร็วขึ้นโดยใช้แรงน้อยลง
-        </p>
-    </div>
-</section>
-
-<section class="section">
-    <div class="container container-narrow">
-        <div class="callout callout-success">
-            <h2>🎯 ประเด็นสำคัญ: ประสิทธิภาพการวิ่ง</h2>
-            <ul class="key-points">
-                <li><strong>ประสิทธิภาพการวิ่ง</strong> วัดได้จาก <strong>Vertical Ratio</strong> (เชิงชีวกลศาสตร์) และ
+                                stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg></button><div class="suite-dropdown hidden" id="suite-dropdown"><div class="suite-dropdown-header">Other AnalyticsZone Apps</div><div class="suite-apps-grid"><a href="https://analyticszone.app" class="suite-app-link">AnalyticsZone</a><a href="https://swim.analyticszone.app" class="suite-app-link">Swim Analytics</a><a href="https://bike.analyticszone.app" class="suite-app-link">Bike Analytics</a><a href="https://walk.analyticszone.app" class="suite-app-link">Walk Analytics</a><a href="https://cardio.analyticszone.app" class="suite-app-link">Cardio Analytics</a><a href="https://health.analyticszone.app" class="suite-app-link">Health Analytics</a><a href="https://swimtrainer.analyticszone.app" class="suite-app-link">Swim Trainer</a></div></div></div></div></nav><button class="menu-toggle" id="menu-toggle" aria-label="สลับเมนู"
+                aria-expanded="false" aria-controls="nav-primary"><span></span><span></span><span></span></button></div></div></header><nav class="breadcrumbs" aria-label="Breadcrumb"><div class="container"><ol><li><a href="/th/">หน้าแรก</a></li><li><a href="/th/research/">วิทยาศาสตร์</a></li><li><span aria-current="page">ประสิทธิภาพ</span></li></ol></div></nav><main id="main-content" class="main-content"><section class="page-hero"><div class="container"><h1>ตัวชี้วัดประสิทธิภาพการวิ่ง: วัดความประหยัดในการวิ่งของคุณ</h1><p class="lead">เจาะลึกความคุ้มค่าของท่าวิ่งและประสิทธิภาพการใช้ออกซิเจน เพื่อการวิ่งที่เร็วขึ้นโดยใช้แรงน้อยลง
+        </p></div></section><section class="section"><div class="container container-narrow"><div class="callout callout-success"><h2>🎯 ประเด็นสำคัญ: ประสิทธิภาพการวิ่ง</h2><ul class="key-points"><li><strong>ประสิทธิภาพการวิ่ง</strong> วัดได้จาก <strong>Vertical Ratio</strong> (เชิงชีวกลศาสตร์) และ
                     <strong>Efficiency Factor</strong> (เชิงแอโรบิก)
-                </li>
-                <li><strong>Vertical Ratio ยิ่งต่ำยิ่งดี</strong> –
-                    บ่งบอกว่าพลังงานถูกใช้เพื่อการเคลื่อนที่ไปข้างหน้ามากกว่าการกระดอนขึ้นลง</li>
-                <li><strong>นักวิ่งระดับอีลิทมีค่า Vertical Ratio < 6%</strong> ในขณะที่มือใหม่อาจสูงเกิน 10%</li>
-                <li><strong>Efficiency Factor (EF)</strong> ติดตามความเร็วต่ออัตราการเต้นของหัวใจ – ค่า EF
-                    ที่สูงขึ้นหมายถึงความประหยัดของระบบแอโรบิกที่ดีขึ้น</li>
-                <li><strong>การพัฒนาเห็นผลชัดใน 8-12 สัปดาห์</strong> จากการฝึกความแข็งแรง, การฝึกแรงระเบิด
-                    (Plyometrics) และการปรับเทคนิคอย่างต่อเนื่อง</li>
-            </ul>
-        </div>
-
-        <h2>ประสิทธิภาพการวิ่ง (Running Efficiency) คืออะไร?</h2>
-        <p class="lead">ประสิทธิภาพการวิ่งคือตัววัดความประหยัด (Economy) ในการเคลื่อนที่ผ่านพื้นที่
+                </li><li><strong>Vertical Ratio ยิ่งต่ำยิ่งดี</strong> –
+                    บ่งบอกว่าพลังงานถูกใช้เพื่อการเคลื่อนที่ไปข้างหน้ามากกว่าการกระดอนขึ้นลง</li><li><strong>นักวิ่งระดับอีลิทมีค่า Vertical Ratio < 6%</strong> ในขณะที่มือใหม่อาจสูงเกิน 10%</li><li><strong>Efficiency Factor (EF)</strong> ติดตามความเร็วต่ออัตราการเต้นของหัวใจ – ค่า EF
+                    ที่สูงขึ้นหมายถึงความประหยัดของระบบแอโรบิกที่ดีขึ้น</li><li><strong>การพัฒนาเห็นผลชัดใน 8-12 สัปดาห์</strong> จากการฝึกความแข็งแรง, การฝึกแรงระเบิด
+                    (Plyometrics) และการปรับเทคนิคอย่างต่อเนื่อง</li></ul></div><h2>ประสิทธิภาพการวิ่ง (Running Efficiency) คืออะไร?</h2><p class="lead">ประสิทธิภาพการวิ่งคือตัววัดความประหยัด (Economy) ในการเคลื่อนที่ผ่านพื้นที่
             โดยแบ่งออกเป็นสองหมวดหมู่หลัก: <strong>ประสิทธิภาพเชิงชีวกลศาสตร์ (Biomechanical Efficiency)</strong>
             คือการเคลื่อนไหวที่ถูกต้อง และ <strong>ประสิทธิภาพเชิงเมตาบอลิซึม (Metabolic Efficiency)</strong>
-            คือความคุ้มค่าในการใช้ออกซิเจน</p>
-
-        <p>การเข้าใจ <strong>ตัวชี้วัดประสิทธิภาพการวิ่ง</strong> จะช่วยให้คุณประเมินจุดบกพร่องของเทคนิค, ติดตามความล้า
+            คือความคุ้มค่าในการใช้ออกซิเจน</p><p>การเข้าใจ <strong>ตัวชี้วัดประสิทธิภาพการวิ่ง</strong> จะช่วยให้คุณประเมินจุดบกพร่องของเทคนิค, ติดตามความล้า
             และปรับปรุงกลไกการก้าวเท้าให้เหมาะสม งานวิจัยระบุว่าการพัฒนาความประหยัดในการวิ่งเพียง 5%
-            สามารถทำให้นักวิ่งทำเวลาได้เร็วขึ้นอย่างมากในระดับความเหนื่อยที่เท่าเดิม</p>
-
-        <div class="formula-box">
-            <h3>ตัวชี้วัดหลัก: Vertical Ratio (อัตราส่วนแนวดิ่ง)</h3>
-            <div class="formula">
+            สามารถทำให้นักวิ่งทำเวลาได้เร็วขึ้นอย่างมากในระดับความเหนื่อยที่เท่าเดิม</p><div class="formula-box"><h3>ตัวชี้วัดหลัก: Vertical Ratio (อัตราส่วนแนวดิ่ง)</h3><div class="formula">
                 Vertical Ratio (%) = (Vertical Oscillation ÷ Stride Length) × 100
-            </div>
-            <div class="formula-explanation">
-                <p><strong>ตัวอย่างการคำนวณ:</strong> หากค่าการกระดอนในแนวตั้ง (Vertical Oscillation) คือ 8 ซม.
-                    และระยะก้าว (Stride Length) คือ 125 ซม.:</p>
-                <div class="calculation">
-                    Vertical Ratio = (8 ÷ 125) × 100 = <strong>6.4%</strong>
-                </div>
-                <p><em>ค่านี้แสดงถึงประสิทธิภาพเชิงชีวกลศาสตร์ในระดับสูง ซึ่งพบได้ทั่วไปในนักวิ่งสายแข่ง</em></p>
-            </div>
-        </div>
-
-        <div class="callout callout-info">
-            <h3>ตัวชี้วัดระบบแอโรบิก: Efficiency Factor (EF)</h3>
-            <p><strong>Efficiency Factor</strong> หรือ "ความประหยัดของระบบแอโรบิก" คืออัตราส่วนระหว่างงานที่ได้ (เพซ)
-                ต่อพลังงานที่ใส่เข้าไป (อัตราการเต้นของหัวใจ)</p>
-            <div class="formula">
+            </div><div class="formula-explanation"><p><strong>ตัวอย่างการคำนวณ:</strong> หากค่าการกระดอนในแนวตั้ง (Vertical Oscillation) คือ 8 ซม.
+                    และระยะก้าว (Stride Length) คือ 125 ซม.:</p><div class="calculation">
+                    Vertical Ratio = (8 ÷ 125) × 100 = <strong>6.4%</strong></div><p><em>ค่านี้แสดงถึงประสิทธิภาพเชิงชีวกลศาสตร์ในระดับสูง ซึ่งพบได้ทั่วไปในนักวิ่งสายแข่ง</em></p></div></div><div class="callout callout-info"><h3>ตัวชี้วัดระบบแอโรบิก: Efficiency Factor (EF)</h3><p><strong>Efficiency Factor</strong> หรือ "ความประหยัดของระบบแอโรบิก" คืออัตราส่วนระหว่างงานที่ได้ (เพซ)
+                ต่อพลังงานที่ใส่เข้าไป (อัตราการเต้นของหัวใจ)</p><div class="formula">
                 EF = Normalized Pace (เมตร/นาที) ÷ อัตราการเต้นของหัวใจเฉลี่ย (bpm)
-            </div>
-            <p>ค่า EF ที่สูงขึ้นหมายถึงคุณเคลื่อนที่ได้ระยะทางมากขึ้นต่อหนึ่งการเต้นของหัวใจ
-                บ่งบอกถึงความแข็งแกร่งและประสิทธิภาพของระบบแอโรบิก</p>
-        </div>
-
-        <div class="callout callout-info">
-            <h3>ทำไมตัวชี้วัดเหล่านี้ถึงสำคัญ</h3>
-            <p>แม้ว่า <strong>Running Economy (RE)</strong> จะเป็นมาตรฐานระดับทองคำ (ที่ต้องวัดในแล็บด้วยการใช้ออกซิเจน)
+            </div><p>ค่า EF ที่สูงขึ้นหมายถึงคุณเคลื่อนที่ได้ระยะทางมากขึ้นต่อหนึ่งการเต้นของหัวใจ
+                บ่งบอกถึงความแข็งแกร่งและประสิทธิภาพของระบบแอโรบิก</p></div><div class="callout callout-info"><h3>ทำไมตัวชี้วัดเหล่านี้ถึงสำคัญ</h3><p>แม้ว่า <strong>Running Economy (RE)</strong> จะเป็นมาตรฐานระดับทองคำ (ที่ต้องวัดในแล็บด้วยการใช้ออกซิเจน)
                 แต่ Vertical Ratio และ EF คือเครื่องมือประเมินในภาคสนามที่ใช้งานได้จริง
                 นักวิ่งที่มีความประหยัดดีกว่าจะสามารถรักษาระดับความเร็วได้นานกว่าโดยไม่ล้า เหมาะสำหรับการแข่งตั้งแต่ระยะ
-                800 เมตรไปจนถึงมาราธอน</p>
-            <p>การติดตามตัวชี้วัดเหล่านี้คือการมอนิเตอร์พัฒนาการของกลไกการก้าว, พลังของระบบประสาทสั่งการกล้ามเนื้อ
-                และสมรรถภาพของระบบหัวใจและหลอดเลือดอย่างเป็นรูปธรรม</p>
-        </div>
-    </div>
-</section>
-
-<section class="section section-alt">
-    <div class="container">
-        <h2 class="text-center mb-xl">เกณฑ์มาตรฐานประสิทธิภาพการวิ่ง: เปรียบเทียบผลลัพธ์ของคุณ</h2>
-
-        <div class="grid grid-2">
-            <div>
-                <h3>เกณฑ์ชีวกลศาสตร์: Vertical Ratio</h3>
-                <div class="levels-comparison">
-                    <div class="level-card-compact">
-                        <strong>นักวิ่งระดับอีลิท (Elite)</strong>
-                        <div class="value">&lt; 6.0%</div>
-                        <p>การเคลื่อนที่ไปข้างหน้าอย่างยอดเยี่ยมโดยมีการสูญเสียในแนวตั้งน้อยที่สุด
-                            พบได้ทั่วไปในนักวิ่งอาชีพ</p>
-                    </div>
-                    <div class="level-card-compact">
-                        <strong>นักวิ่งสายแข่ง (Competitive)</strong>
-                        <div class="value">6.1% - 8.0%</div>
-                        <p>นักวิ่งชมรมที่ผ่านการฝึกฝนมาอย่างดี มีการรอบขาที่เป็นประสิทธิภาพและแกนกลางลำตัวที่มั่นคง</p>
-                    </div>
-                    <div class="level-card-compact">
-                        <strong>นักวิ่งเพื่อสุขภาพ (Fitness)</strong>
-                        <div class="value">8.1% - 10.0%</div>
-                        <p>นักวิ่งทั่วไปที่มีฟอร์มการวิ่งใช้ได้ แต่อาจมีการเสียพลังงานจากการกระดอนขึ้นลงมากเกินไป</p>
-                    </div>
-                    <div class="level-card-compact">
-                        <strong>ระดับที่ควรพัฒนาเทคนิค</strong>
-                        <div class="value">&gt; 10.0%</div>
-                        <p>พบได้บ่อยในนักวิ่งมือใหม่หรือเมื่อเกิดความล้า บ่งบอกถึงการวิ่งแบบ "กระโดด"
-                            หรือการก้าวเท้าที่สั้นเกินไป</p>
-                    </div>
-                </div>
-            </div>
-
-            <div>
-                <h3>การแปลผลตัวชี้วัดของคุณ</h3>
-                <div class="benchmark-interpretation">
-                    <p><strong>องค์ประกอบของความคุ้มค่า:</strong></p>
-                    <ul>
-                        <li><strong>Vertical Oscillation (การกระดอนแนวดิ่ง)</strong> สะท้อนว่าคุณตัวลอยขึ้นลงมากแค่ไหน
-                            (ค่ายิ่งต่ำมักจะดียิ่งกว่า)</li>
-                        <li><strong>Stride Length (ระยะก้าว)</strong> สะท้อนระยะทางในแนวราบที่คุณพุ่งไปได้ต่อหนึ่งก้าว
-                        </li>
-                        <li><strong>Vertical Ratio</strong> คือการรวมทั้งสองค่าเข้าด้วยกันเพื่อดูร้อยละของพลังงานที่
-                            "เสียไป" ในแนวดิ่ง</li>
-                    </ul>
-
-                    <div class="callout callout-warning">
-                        <h4>⚠️ ความสัมพันธ์กับความเร็ว</h4>
-                        <p>ตัวชี้วัดประสิทธิภาพจะเปลี่ยนไปตามเพซ เมื่อคุณวิ่งเร็วขึ้น
+                800 เมตรไปจนถึงมาราธอน</p><p>การติดตามตัวชี้วัดเหล่านี้คือการมอนิเตอร์พัฒนาการของกลไกการก้าว, พลังของระบบประสาทสั่งการกล้ามเนื้อ
+                และสมรรถภาพของระบบหัวใจและหลอดเลือดอย่างเป็นรูปธรรม</p></div></div></section><section class="section section-alt"><div class="container"><h2 class="text-center mb-xl">เกณฑ์มาตรฐานประสิทธิภาพการวิ่ง: เปรียบเทียบผลลัพธ์ของคุณ</h2><div class="grid grid-2"><div><h3>เกณฑ์ชีวกลศาสตร์: Vertical Ratio</h3><div class="levels-comparison"><div class="level-card-compact"><strong>นักวิ่งระดับอีลิท (Elite)</strong><div class="value">&lt; 6.0%</div><p>การเคลื่อนที่ไปข้างหน้าอย่างยอดเยี่ยมโดยมีการสูญเสียในแนวตั้งน้อยที่สุด
+                            พบได้ทั่วไปในนักวิ่งอาชีพ</p></div><div class="level-card-compact"><strong>นักวิ่งสายแข่ง (Competitive)</strong><div class="value">6.1% - 8.0%</div><p>นักวิ่งชมรมที่ผ่านการฝึกฝนมาอย่างดี มีการรอบขาที่เป็นประสิทธิภาพและแกนกลางลำตัวที่มั่นคง</p></div><div class="level-card-compact"><strong>นักวิ่งเพื่อสุขภาพ (Fitness)</strong><div class="value">8.1% - 10.0%</div><p>นักวิ่งทั่วไปที่มีฟอร์มการวิ่งใช้ได้ แต่อาจมีการเสียพลังงานจากการกระดอนขึ้นลงมากเกินไป</p></div><div class="level-card-compact"><strong>ระดับที่ควรพัฒนาเทคนิค</strong><div class="value">&gt; 10.0%</div><p>พบได้บ่อยในนักวิ่งมือใหม่หรือเมื่อเกิดความล้า บ่งบอกถึงการวิ่งแบบ "กระโดด"
+                            หรือการก้าวเท้าที่สั้นเกินไป</p></div></div></div><div><h3>การแปลผลตัวชี้วัดของคุณ</h3><div class="benchmark-interpretation"><p><strong>องค์ประกอบของความคุ้มค่า:</strong></p><ul><li><strong>Vertical Oscillation (การกระดอนแนวดิ่ง)</strong> สะท้อนว่าคุณตัวลอยขึ้นลงมากแค่ไหน
+                            (ค่ายิ่งต่ำมักจะดียิ่งกว่า)</li><li><strong>Stride Length (ระยะก้าว)</strong> สะท้อนระยะทางในแนวราบที่คุณพุ่งไปได้ต่อหนึ่งก้าว
+                        </li><li><strong>Vertical Ratio</strong> คือการรวมทั้งสองค่าเข้าด้วยกันเพื่อดูร้อยละของพลังงานที่
+                            "เสียไป" ในแนวดิ่ง</li></ul><div class="callout callout-warning"><h4>⚠️ ความสัมพันธ์กับความเร็ว</h4><p>ตัวชี้วัดประสิทธิภาพจะเปลี่ยนไปตามเพซ เมื่อคุณวิ่งเร็วขึ้น
                             ระยะก้าวจะยาวขึ้นและการกระดอนมักจะเปลี่ยนไป ค่า Vertical Ratio ที่ 7% ที่เพซ 4:00/กม.
-                            อาจจะยอดเยี่ยม แต่อาจจะรักษาไว้ได้ยากที่เพซ 6:00/กม.</p>
-                        <p><strong>วิธีที่แนะนำ:</strong> ติดตามประสิทธิภาพของคุณที่ระดับเพซเฉพาะเจาะจงที่ทดสอบซ้ำได้
-                            (เช่น เพซวิ่งสบาย หรือเพซเทรชโฮลด์) เพื่อดูการพัฒนาของเทคนิคที่แท้จริง</p>
-                    </div>
-                </div>
-
-                <div class="improvement-expectations">
-                    <table class="data-table">
-                        <tr>
-                            <th>ตัวชี้วัด</th>
-                            <th>เป้าหมายใน 8-12 สัปดาห์</th>
-                        </tr>
-                        <tr>
-                            <td>Vertical Ratio</td>
-                            <td>ลดลง 0.5% - 1.0%</td>
-                        </tr>
-                        <tr>
-                            <td>Efficiency Factor</td>
-                            <td>เพิ่มขึ้น 5% - 10%</td>
-                        </tr>
-                        <tr>
-                            <td>Ground Contact Time</td>
-                            <td>ลดลง 10-20ms</td>
-                        </tr>
-                    </table>
-                    <p><em>*อ้างอิงจากการฝึกความแข็งแรงและปรับเทคนิคอย่างสม่ำเสมอ (2-3 เซสชันต่อสัปดาห์)</em></p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="section">
-    <div class="container container-narrow">
-        <h2>วิธีปรับปรุงคะแนนประสิทธิภาพการวิ่งของคุณ</h2>
-        <p class="lead">การเพิ่ม <strong>คะแนนประสิทธิภาพ</strong> ต้องอาศัยการฝึกฝนที่เน้นกลไกการก้าว,
+                            อาจจะยอดเยี่ยม แต่อาจจะรักษาไว้ได้ยากที่เพซ 6:00/กม.</p><p><strong>วิธีที่แนะนำ:</strong> ติดตามประสิทธิภาพของคุณที่ระดับเพซเฉพาะเจาะจงที่ทดสอบซ้ำได้
+                            (เช่น เพซวิ่งสบาย หรือเพซเทรชโฮลด์) เพื่อดูการพัฒนาของเทคนิคที่แท้จริง</p></div></div><div class="improvement-expectations"><table class="data-table"><tr><th>ตัวชี้วัด</th><th>เป้าหมายใน 8-12 สัปดาห์</th></tr><tr><td>Vertical Ratio</td><td>ลดลง 0.5% - 1.0%</td></tr><tr><td>Efficiency Factor</td><td>เพิ่มขึ้น 5% - 10%</td></tr><tr><td>Ground Contact Time</td><td>ลดลง 10-20ms</td></tr></table><p><em>*อ้างอิงจากการฝึกความแข็งแรงและปรับเทคนิคอย่างสม่ำเสมอ (2-3 เซสชันต่อสัปดาห์)</em></p></div></div></div></div></section><section class="section"><div class="container container-narrow"><h2>วิธีปรับปรุงคะแนนประสิทธิภาพการวิ่งของคุณ</h2><p class="lead">การเพิ่ม <strong>คะแนนประสิทธิภาพ</strong> ต้องอาศัยการฝึกฝนที่เน้นกลไกการก้าว,
             ความประหยัดในการใช้ออกซิเจน และความคุ้มค่าเชิงชีวกลศาสตร์
-            นี่คือแนวทางที่เป็นระบบเพื่อลดค่าคะแนนและวิ่งได้อย่างประหยัดพลังงานมากขึ้น</p>
-
-        <div class="improvement-strategy">
-            <div class="strategy-item">
-                <h3>1. ปรับระยะก้าวและรอบขาให้เหมาะสม</h3>
-                <p>หัวใจสำคัญของ <strong>ประสิทธิภาพการก้าว</strong>
-                    คือการหาสมดุลที่เหมาะสมที่สุดระหว่างระยะก้าวและรอบขา (Cadence)</p>
-                <ul>
-                    <li><strong>เพิ่มระยะก้าว</strong> ผ่านการปรับท่าการดีดสะโพก (Hip Extension)
-                        และการถีบส่งที่แข็งแรงขึ้น</li>
-                    <li><strong>รักษารรอบขาที่ 170-180 ก้าว/นาที</strong> เพื่อประสิทธิภาพการใช้ออกซิเจนที่เหมาะสม</li>
-                    <li><strong>หลีกเลี่ยงการก้าวยาวเกินไป (Overstriding)</strong> –
-                        การวางเท้าเลยหน้าจุดศูนย์กลางตัวจะทำให้เสียพลังงาน</li>
-                    <li><strong>ฝึกการสัมผัสพื้นให้สั้นลง</strong> – นักวิ่งระดับอีลิทใช้เวลาสัมผัสพื้นน้อยกว่า 100ms
-                        ต่อก้าว</li>
-                </ul>
-                <div class="tip-box">
-                    <strong>เคล็ดลับด่วน:</strong> ใช้แอปเมโทรนอมตั้งจังหวะที่ 180 bpm ระหว่างวิ่งสบายๆ
+            นี่คือแนวทางที่เป็นระบบเพื่อลดค่าคะแนนและวิ่งได้อย่างประหยัดพลังงานมากขึ้น</p><div class="improvement-strategy"><div class="strategy-item"><h3>1. ปรับระยะก้าวและรอบขาให้เหมาะสม</h3><p>หัวใจสำคัญของ <strong>ประสิทธิภาพการก้าว</strong>
+                    คือการหาสมดุลที่เหมาะสมที่สุดระหว่างระยะก้าวและรอบขา (Cadence)</p><ul><li><strong>เพิ่มระยะก้าว</strong> ผ่านการปรับท่าการดีดสะโพก (Hip Extension)
+                        และการถีบส่งที่แข็งแรงขึ้น</li><li><strong>รักษารรอบขาที่ 170-180 ก้าว/นาที</strong> เพื่อประสิทธิภาพการใช้ออกซิเจนที่เหมาะสม</li><li><strong>หลีกเลี่ยงการก้าวยาวเกินไป (Overstriding)</strong> –
+                        การวางเท้าเลยหน้าจุดศูนย์กลางตัวจะทำให้เสียพลังงาน</li><li><strong>ฝึกการสัมผัสพื้นให้สั้นลง</strong> – นักวิ่งระดับอีลิทใช้เวลาสัมผัสพื้นน้อยกว่า 100ms
+                        ต่อก้าว</li></ul><div class="tip-box"><strong>เคล็ดลับด่วน:</strong> ใช้แอปเมโทรนอมตั้งจังหวะที่ 180 bpm ระหว่างวิ่งสบายๆ
                     เพื่อสร้างความคุ้นเคยกับรอบขาที่เหมาะสม วิธีนี้สามารถพัฒนาคะแนนประสิทธิภาพได้ 3-5 จุดภายใน 4 สัปดาห์
-                </div>
-            </div>
-
-            <div class="strategy-item">
-                <h3>2. พัฒนาความประหยัดในการวิ่งด้วยการฝึกความแข็งแรง</h3>
-                <p>งานวิจัยชี้ว่า <strong>Running Economy</strong> พัฒนาขึ้นได้ 3-8% จากการฝึกความแข็งแรงที่ตรงจุด
-                    ซึ่งส่งผลโดยตรงต่อการลดคะแนนประสิทธิภาพ</p>
-                <ul>
-                    <li><strong>การฝึก Plyometrics</strong> – เช่น Box Jumps, Single-leg Hops
-                        เพื่อเพิ่มความสามารถในการดีดตัว (Reactive Strength)</li>
-                    <li><strong>ความมั่นคงของแกนกลาง (Core Stability)</strong> – เช่น Planks
-                        เพื่อลดการสูญเสียพลังงานระหว่างเคลื่อนที่</li>
-                    <li><strong>ความแข็งแรงของน่อง</strong> – การเขย่งเท้าข้างเดียว (Calf Raises) ช่วยให้การถีบส่งมีพลัง
-                    </li>
-                    <li><strong>ความแข็งแรงของสะโพก</strong> – Glute Bridges ช่วยปรับปรุงกลไกการก้าวเท้าให้มั่นคง</li>
-                </ul>
-                <div class="tip-box">
-                    <strong>อ้างอิงงานวิจัย:</strong> Beattie et al. (2014) พบว่าการฝึก Plyometric 40 นาที สัปดาห์ละ 2
+                </div></div><div class="strategy-item"><h3>2. พัฒนาความประหยัดในการวิ่งด้วยการฝึกความแข็งแรง</h3><p>งานวิจัยชี้ว่า <strong>Running Economy</strong> พัฒนาขึ้นได้ 3-8% จากการฝึกความแข็งแรงที่ตรงจุด
+                    ซึ่งส่งผลโดยตรงต่อการลดคะแนนประสิทธิภาพ</p><ul><li><strong>การฝึก Plyometrics</strong> – เช่น Box Jumps, Single-leg Hops
+                        เพื่อเพิ่มความสามารถในการดีดตัว (Reactive Strength)</li><li><strong>ความมั่นคงของแกนกลาง (Core Stability)</strong> – เช่น Planks
+                        เพื่อลดการสูญเสียพลังงานระหว่างเคลื่อนที่</li><li><strong>ความแข็งแรงของน่อง</strong> – การเขย่งเท้าข้างเดียว (Calf Raises) ช่วยให้การถีบส่งมีพลัง
+                    </li><li><strong>ความแข็งแรงของสะโพก</strong> – Glute Bridges ช่วยปรับปรุงกลไกการก้าวเท้าให้มั่นคง</li></ul><div class="tip-box"><strong>อ้างอิงงานวิจัย:</strong> Beattie et al. (2014) พบว่าการฝึก Plyometric 40 นาที สัปดาห์ละ 2
                     ครั้ง พัฒนาความประหยัดในการวิ่งได้ถึง 4.2% ภายในเวลาเพียง 8 สัปดาห์
-                </div>
-            </div>
-
-            <div class="strategy-item">
-                <h3>3. เพิ่มประสิทธิภาพการใช้ออกซิเจน</h3>
-                <p><strong>ประสิทธิภาพการใช้ออกซิเจน</strong>
-                    ที่ดีขึ้นหมายถึงอัตราการเต้นของหัวใจที่ต่ำลงและความรู้สึกเหนื่อยที่ลดลงในเพซเท่าเดิม</p>
-                <ul>
-                    <li><strong>สร้างฐานแอโรบิก</strong> – ซ้อม 80% ของระยะทางรวมในระดับเพซวิ่งสบายที่พูดคุยได้</li>
-                    <li><strong>ซ้อมเพซเทมโป (Tempo Runs)</strong> – ความพยายามในระดับ Lactate Threshold
-                        ช่วยพัฒนาความประหยัด</li>
-                    <li><strong>ฝึกจังหวะการหายใจ</strong> – จังหวะหายใจเข้า:ออก แบบ 3:3 หรือ 2:2
-                        ช่วยลดภาระการใช้ออกซิเจน</li>
-                    <li><strong>พัฒนา VO₂max</strong> – การซ้อมแบบอินเทอร์วัลช่วยเพิ่มขีดความสามารถในการนำออกซิเจนไปใช้
-                    </li>
-                </ul>
-                <div class="tip-box">
-                    <strong>การซ้อม Threshold:</strong> การวิ่งเทมโปสัปดาห์ละครั้งที่เพซแข่งระยะ 15 กม. ถึง ฮาล์ฟมาราธอน
+                </div></div><div class="strategy-item"><h3>3. เพิ่มประสิทธิภาพการใช้ออกซิเจน</h3><p><strong>ประสิทธิภาพการใช้ออกซิเจน</strong>
+                    ที่ดีขึ้นหมายถึงอัตราการเต้นของหัวใจที่ต่ำลงและความรู้สึกเหนื่อยที่ลดลงในเพซเท่าเดิม</p><ul><li><strong>สร้างฐานแอโรบิก</strong> – ซ้อม 80% ของระยะทางรวมในระดับเพซวิ่งสบายที่พูดคุยได้</li><li><strong>ซ้อมเพซเทมโป (Tempo Runs)</strong> – ความพยายามในระดับ Lactate Threshold
+                        ช่วยพัฒนาความประหยัด</li><li><strong>ฝึกจังหวะการหายใจ</strong> – จังหวะหายใจเข้า:ออก แบบ 3:3 หรือ 2:2
+                        ช่วยลดภาระการใช้ออกซิเจน</li><li><strong>พัฒนา VO₂max</strong> – การซ้อมแบบอินเทอร์วัลช่วยเพิ่มขีดความสามารถในการนำออกซิเจนไปใช้
+                    </li></ul><div class="tip-box"><strong>การซ้อม Threshold:</strong> การวิ่งเทมโปสัปดาห์ละครั้งที่เพซแข่งระยะ 15 กม. ถึง ฮาล์ฟมาราธอน
                     จะช่วยเพิ่มความหนาแน่นของไมโตคอนเดรียและระบบกำจัดแล็กเทต
-                </div>
-            </div>
-
-            <div class="strategy-item">
-                <h3>4. ปรับจูนฟอร์มการวิ่งและชีวกลศาสตร์</h3>
-                <p>การปรับเปลี่ยนท่าวิ่งเพียงเล็กน้อยแต่ทำสม่ำเสมอ จะส่งผลรวมต่อประสิทธิภาพอย่างมหาศาล</p>
-                <ul>
-                    <li><strong>โน้มตัวไปข้างหน้าจากข้อเท้า</strong> – ใช้แรงโน้มถ่วงช่วยในการเคลื่อนที่ไปข้างหน้า</li>
-                    <li><strong>ผ่อนคลายร่างกายส่วนบน</strong> –
-                        ความเกร็งที่ไหล่และแขนคือการสูญเสียพลังงานโดยเปล่าประโยชน์</li>
-                    <li><strong>การลงเท้าแบบกลางเท้า (Mid-foot)</strong> – ช่วยลดแรงเบรกและเพิ่มประสิทธิภาพการส่งตัว
-                    </li>
-                    <li><strong>การแกว่งแขน</strong> – รักษาข้อศอกที่ 90 องศา แกว่งแขนจากระดับสะโพกถึงอก</li>
-                </ul>
-                <div class="tip-box">
-                    <strong>การวิเคราะห์วิดีโอ:</strong> ลองอัดวิดีโอตัวเองวิ่งจากด้านข้าง ตรวจเช็กอาการ Overstriding,
+                </div></div><div class="strategy-item"><h3>4. ปรับจูนฟอร์มการวิ่งและชีวกลศาสตร์</h3><p>การปรับเปลี่ยนท่าวิ่งเพียงเล็กน้อยแต่ทำสม่ำเสมอ จะส่งผลรวมต่อประสิทธิภาพอย่างมหาศาล</p><ul><li><strong>โน้มตัวไปข้างหน้าจากข้อเท้า</strong> – ใช้แรงโน้มถ่วงช่วยในการเคลื่อนที่ไปข้างหน้า</li><li><strong>ผ่อนคลายร่างกายส่วนบน</strong> –
+                        ความเกร็งที่ไหล่และแขนคือการสูญเสียพลังงานโดยเปล่าประโยชน์</li><li><strong>การลงเท้าแบบกลางเท้า (Mid-foot)</strong> – ช่วยลดแรงเบรกและเพิ่มประสิทธิภาพการส่งตัว
+                    </li><li><strong>การแกว่งแขน</strong> – รักษาข้อศอกที่ 90 องศา แกว่งแขนจากระดับสะโพกถึงอก</li></ul><div class="tip-box"><strong>การวิเคราะห์วิดีโอ:</strong> ลองอัดวิดีโอตัวเองวิ่งจากด้านข้าง ตรวจเช็กอาการ Overstriding,
                     การกระดอนขึ้นลงที่มากเกินไป หรือการแกว่งแขนตัดลำตัว ซึ่งล้วนเป็นตัวลดประสิทธิภาพการวิ่ง
-                </div>
-            </div>
-
-            <div class="strategy-item">
-                <h3>5. มอนิเตอร์ความล้าและการฟื้นฟู</h3>
-                <p>ความล้าคือตัวทำลายประสิทธิภาพ การซ้อมที่ชาญฉลาดคือการรักษาความประหยัดไปพร้อมกับการสร้างความฟิต</p>
-                <ul>
-                    <li><strong>ติดตามแนวโน้มประสิทธิภาพ</strong> – คะแนนที่แย่ลงระหว่างเวิร์กเอาต์คือสัญญาณของความล้า
-                    </li>
-                    <li><strong>การวิ่งเพื่อฟื้นฟู (Recovery Runs)</strong> –
-                        วันที่วิ่งเบาช่วยให้ร่างกายปรับตัวโดยไม่สะสมความล้าเพิ่มเติม</li>
-                    <li><strong>การนอนที่เพียงพอ</strong> – 7-9 ชั่วโมงต่อคืนเพื่อการฟื้นฟูฮอร์โมนที่เหมาะสม</li>
-                    <li><strong>โภชนาการ</strong> –
-                        การเติมพลังงานที่ถูกต้องช่วยป้องกันเทคนิคการวิ่งพังในช่วงท้ายของการวิ่งยาว</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="callout callout-success">
-            <h3>🎯 แผนพัฒนาประสิทธิภาพ 12 สัปดาห์</h3>
-            <ol>
-                <li><strong>สัปดาห์ที่ 1-4:</strong> สร้างพื้นฐาน – ติดตามค่า EF ในการวิ่งแบบสบาย เน้นรักษารอบขา 170-180
-                    ก้าว/นาที</li>
-                <li><strong>สัปดาห์ที่ 5-8:</strong> เน้นระบบประสาทและกล้ามเนื้อ – เสริม Plyometrics 2 ครั้ง/สัปดาห์
-                    และวิ่งสปรินต์ขึ้นเนินเพื่อสร้างพลัง</li>
-                <li><strong>สัปดาห์ที่ 9-12:</strong> การบูรณาการ – มุ่งเน้นลด Vertical Ratio
-                    ผ่านการฝึกความมั่งคงของแกนกลางและดริลท่าวิ่ง</li>
-            </ol>
-            <p><strong>ผลลัพธ์ที่คาดหวัง:</strong> การพัฒนาที่วัดผลได้ของความประหยัดระบบแอโรบิก (EF)
-                และความลื่นไหลเชิงชีวกลศาสตร์</p>
-        </div>
-    </div>
-</section>
-
-<section class="section section-alt">
-    <div class="container container-narrow">
-        <h2>ทำความเข้าใจวิทยาศาสตร์ของ Running Economy</h2>
-
-        <div class="science-content">
-            <p><strong>Running Economy (ความประหยัดในการวิ่ง)</strong> คือระดับพลังงาน (ออกซิเจนที่ใช้)
+                </div></div><div class="strategy-item"><h3>5. มอนิเตอร์ความล้าและการฟื้นฟู</h3><p>ความล้าคือตัวทำลายประสิทธิภาพ การซ้อมที่ชาญฉลาดคือการรักษาความประหยัดไปพร้อมกับการสร้างความฟิต</p><ul><li><strong>ติดตามแนวโน้มประสิทธิภาพ</strong> – คะแนนที่แย่ลงระหว่างเวิร์กเอาต์คือสัญญาณของความล้า
+                    </li><li><strong>การวิ่งเพื่อฟื้นฟู (Recovery Runs)</strong> –
+                        วันที่วิ่งเบาช่วยให้ร่างกายปรับตัวโดยไม่สะสมความล้าเพิ่มเติม</li><li><strong>การนอนที่เพียงพอ</strong> – 7-9 ชั่วโมงต่อคืนเพื่อการฟื้นฟูฮอร์โมนที่เหมาะสม</li><li><strong>โภชนาการ</strong> –
+                        การเติมพลังงานที่ถูกต้องช่วยป้องกันเทคนิคการวิ่งพังในช่วงท้ายของการวิ่งยาว</li></ul></div></div><div class="callout callout-success"><h3>🎯 แผนพัฒนาประสิทธิภาพ 12 สัปดาห์</h3><ol><li><strong>สัปดาห์ที่ 1-4:</strong> สร้างพื้นฐาน – ติดตามค่า EF ในการวิ่งแบบสบาย เน้นรักษารอบขา 170-180
+                    ก้าว/นาที</li><li><strong>สัปดาห์ที่ 5-8:</strong> เน้นระบบประสาทและกล้ามเนื้อ – เสริม Plyometrics 2 ครั้ง/สัปดาห์
+                    และวิ่งสปรินต์ขึ้นเนินเพื่อสร้างพลัง</li><li><strong>สัปดาห์ที่ 9-12:</strong> การบูรณาการ – มุ่งเน้นลด Vertical Ratio
+                    ผ่านการฝึกความมั่งคงของแกนกลางและดริลท่าวิ่ง</li></ol><p><strong>ผลลัพธ์ที่คาดหวัง:</strong> การพัฒนาที่วัดผลได้ของความประหยัดระบบแอโรบิก (EF)
+                และความลื่นไหลเชิงชีวกลศาสตร์</p></div></div></section><section class="section section-alt"><div class="container container-narrow"><h2>ทำความเข้าใจวิทยาศาสตร์ของ Running Economy</h2><div class="science-content"><p><strong>Running Economy (ความประหยัดในการวิ่ง)</strong> คือระดับพลังงาน (ออกซิเจนที่ใช้)
                 ที่จำเป็นในการรักษาระดับความเร็วหนึ่งๆ ไว้
                 มันคือหนึ่งในสามเสาหลักทางสรีรวิทยาที่เป็นตัวกำหนดสมรรถภาพการวิ่งระยะไกล ร่วมกับ VO₂max และ Lactate
-                Threshold</p>
-
-            <div class="callout callout-science">
-                <h3>🔬 งานวิจัยเกี่ยวกับ Running Economy</h3>
-                <p><strong>Costill et al. (1985)</strong> พิสูจน์ว่า Running Economy
+                Threshold</p><div class="callout callout-science"><h3>🔬 งานวิจัยเกี่ยวกับ Running Economy</h3><p><strong>Costill et al. (1985)</strong> พิสูจน์ว่า Running Economy
                     มีความสำคัญต่อสมรรถภาพการวิ่งระยะกลางมากกว่าค่า VO₂max นักวิ่งสองคนที่มี VO₂max
-                    เท่ากันอาจมีความประหยัดต่างกันได้ถึง 20-30% ซึ่งส่งผลโดยตรงต่อความเร็วในการแข่ง</p>
-
-                <p><strong>Barnes & Kilding (2015)</strong> วิเคราะห์งานวิจัยกว่า 60 ชิ้นและพบปัจจัยหลักที่ส่งผลต่อ
-                    Running Economy ได้แก่:</p>
-                <ul>
-                    <li>ประสิทธิภาพเชิงชีวกลศาสตร์ (กลไกการก้าว)</li>
-                    <li>ประสิทธิภาพเชิงเมตาบอลิซึม (ความสามารถในการใช้ออกซิเจน)</li>
-                    <li>คุณลักษณะของระบบประสาทและกล้ามเนื้อ (ประเภทเส้นใยกล้ามเนื้อ, ความตึงตัวของเอ็น)</li>
-                    <li>สัดส่วนและมวลร่างกาย</li>
-                </ul>
-
-                <p><strong>Saunders et al. (2004)</strong>
+                    เท่ากันอาจมีความประหยัดต่างกันได้ถึง 20-30% ซึ่งส่งผลโดยตรงต่อความเร็วในการแข่ง</p><p><strong>Barnes & Kilding (2015)</strong> วิเคราะห์งานวิจัยกว่า 60 ชิ้นและพบปัจจัยหลักที่ส่งผลต่อ
+                    Running Economy ได้แก่:</p><ul><li>ประสิทธิภาพเชิงชีวกลศาสตร์ (กลไกการก้าว)</li><li>ประสิทธิภาพเชิงเมตาบอลิซึม (ความสามารถในการใช้ออกซิเจน)</li><li>คุณลักษณะของระบบประสาทและกล้ามเนื้อ (ประเภทเส้นใยกล้ามเนื้อ, ความตึงตัวของเอ็น)</li><li>สัดส่วนและมวลร่างกาย</li></ul><p><strong>Saunders et al. (2004)</strong>
                     แสดงให้เห็นว่านักวิ่งระยะไกลระดับอีลิทมีความประหยัดดีกว่านักวิ่งชมรมทั่วไป 5-10% แม้จะมีค่า VO₂max
-                    เท่ากัน ความแตกต่างนี้เองคือตัวตัดสินชัยชนะในระดับสูง</p>
-            </div>
-
-            <h3>ความสัมพันธ์ระหว่างตัวชี้วัดประสิทธิภาพกับ Running Economy</h3>
-            <p>แม้การวัดความประหยัดโดยตรงต้องใช้แล็บตรวจวัดก๊าซหายใจ แต่ตัวชี้วัดในภาคสนามมีความสัมพันธ์อย่างใกล้ชิด:
-            </p>
-            <ul>
-                <li><strong>Vertical Ratio ที่ต่ำลง</strong> บ่งบอกร้อยละของพลังงานที่พุ่งไปข้างหน้ามากขึ้น
-                    สอดคล้องกับความประหยัด (RE) ที่ดีขึ้น</li>
-                <li><strong>Efficiency Factor (EF) ที่สูงขึ้น</strong>
-                    แสดงให้เห็นถึงประสิทธิภาพของระบบหัวใจและหลอดเลือดที่พัฒนาขึ้นในเวิร์กโหลดเดิม</li>
-                <li><strong>Vertical Ratio ที่นิ่งและมั่นคง</strong> แม้เหนื่อยสะสม
-                    บ่งบอกถึงความทนทานของระบบประสาทสั่งการกล้ามเนื้อ</li>
-            </ul>
-
-            <p>แม้เราจะเข้าถึงห้องแล็บไม่ได้ทุกวัน
+                    เท่ากัน ความแตกต่างนี้เองคือตัวตัดสินชัยชนะในระดับสูง</p></div><h3>ความสัมพันธ์ระหว่างตัวชี้วัดประสิทธิภาพกับ Running Economy</h3><p>แม้การวัดความประหยัดโดยตรงต้องใช้แล็บตรวจวัดก๊าซหายใจ แต่ตัวชี้วัดในภาคสนามมีความสัมพันธ์อย่างใกล้ชิด:
+            </p><ul><li><strong>Vertical Ratio ที่ต่ำลง</strong> บ่งบอกร้อยละของพลังงานที่พุ่งไปข้างหน้ามากขึ้น
+                    สอดคล้องกับความประหยัด (RE) ที่ดีขึ้น</li><li><strong>Efficiency Factor (EF) ที่สูงขึ้น</strong>
+                    แสดงให้เห็นถึงประสิทธิภาพของระบบหัวใจและหลอดเลือดที่พัฒนาขึ้นในเวิร์กโหลดเดิม</li><li><strong>Vertical Ratio ที่นิ่งและมั่นคง</strong> แม้เหนื่อยสะสม
+                    บ่งบอกถึงความทนทานของระบบประสาทสั่งการกล้ามเนื้อ</li></ul><p>แม้เราจะเข้าถึงห้องแล็บไม่ได้ทุกวัน
                 แต่การติดตามตัวชี้วัดเชิงชีวกลศาสตร์และแอโรบิกเหล่านี้ช่วยให้เราได้รับข้อมูลที่นำไปปรับปรุงการซ้อมได้จริงในทุกวัน
-            </p>
-        </div>
-    </div>
-</section>
-
-<section class="section">
-    <div class="container container-narrow">
-        <h2>การแปลผลรูปแบบประสิทธิภาพการวิ่งของคุณ</h2>
-
-        <div class="pattern-analysis">
-            <div class="pattern-item">
-                <h3>📉 Vertical Ratio ลดลง = กลไกการเคลื่อนไหวดีขึ้น</h3>
-                <p>เมื่อค่า Vertical Ratio ลดลง หมายความว่าคุณเสียพลังงานกับการกระดอนขึ้นลงน้อยลง
-                    และใช้พลังงานพุ่งไปข้างหน้ามากขึ้น นี่คือเป้าหมายหลักของการฝึกเทคนิคและความมั่นคงของแกนกลาง</p>
-                <div class="example-box">
-                    <strong>ตัวอย่าง:</strong> Vertical Ratio ลดจาก 9.2% → 8.5% → 7.8%
+            </p></div></div></section><section class="section"><div class="container container-narrow"><h2>การแปลผลรูปแบบประสิทธิภาพการวิ่งของคุณ</h2><div class="pattern-analysis"><div class="pattern-item"><h3>📉 Vertical Ratio ลดลง = กลไกการเคลื่อนไหวดีขึ้น</h3><p>เมื่อค่า Vertical Ratio ลดลง หมายความว่าคุณเสียพลังงานกับการกระดอนขึ้นลงน้อยลง
+                    และใช้พลังงานพุ่งไปข้างหน้ามากขึ้น นี่คือเป้าหมายหลักของการฝึกเทคนิคและความมั่นคงของแกนกลาง</p><div class="example-box"><strong>ตัวอย่าง:</strong> Vertical Ratio ลดจาก 9.2% → 8.5% → 7.8%
                     หลังจากฝึกช่วงล่างและแกนกลางอย่างต่อเนื่อง 10 สัปดาห์
-                </div>
-                <p><strong>สิ่งที่เกิดขึ้น:</strong> แกนกลางมั่นคงขึ้น, การดีดสะโพกดีขึ้น และลดแรงกระแทกที่พื้น
-                    (Mushing) ขณะก้าวเท้า</p>
-            </div>
-
-            <div class="pattern-item">
-                <h3>📈 Efficiency Factor เพิ่มขึ้น = ความประหยัดระบบแอโรบิกดีขึ้น</h3>
-                <p>ค่า EF ที่พุ่งขึ้นบ่งชี้ว่าคุณวิ่งเร็วขึ้นได้ในอัตราการเต้นของหัวใจเท่าเดิม
-                    หรือรักษาเพซเท่าเดิมได้ด้วยหัวใจที่เต้นช้าลง</p>
-                <div class="example-box">
-                    <strong>ตัวอย่าง:</strong> EF เพิ่มจาก 1.65 → 1.82
-                    บ่งบอกว่าร่างกายของคุณมีประสิทธิภาพในการใช้ออกซิเจนสูงขึ้น</strong>
-                </div>
-                <p><strong>สิ่งที่เกิดขึ้น:</strong> ความหนาแน่นของไมโตคอนเดรียเพิ่มขึ้น, การใช้ไขมันเป็นพลังงานดีขึ้น
-                    และการบีบตัวของหัวใจมีประสิทธิภาพมากขึ้น (Stroke Volume)</p>
-            </div>
-
-            <div class="pattern-item">
-                <h3>📊 อาการดีคัปปลิง (Decoupling - Pa/Hr)</h3>
-                <p>"Decoupling" คือสภาวะที่อัตราการเต้นของหัวใจสูงขึ้นเรื่อยๆ ในขณะที่รักษาเพซคงที่ (หรือค่า EF
-                    ลดต่ำลงระหว่างการวิ่งคงที่)</p>
-                <ul>
-                    <li><strong>เบี่ยงเบน &lt; 5%</strong> = ความฟิตของระบบแอโรบิกยอดเยี่ยมสำหรับระยะทางนั้นๆ</li>
-                    <li><strong>เบี่ยงเบน &gt; 5%</strong> =
-                        ความทนทานของระบบแอโรบิกยังไม่เพียงพอต่อระยะเวลาหรือระดับความหนักนั้น</li>
-                </ul>
-                <p><strong>คำแนะนำ:</strong> ติดตามค่า EF drift
-                    ระหว่างการวิ่งยาวเพื่อประเมินว่าความประหยัดของคุณยังคงที่อยู่หรือไม่ตลอดระยะทางไกลๆ</p>
-            </div>
-        </div>
-
-        <div class="callout callout-tip">
-            <h3>🎯 การประยุกต์ใช้ตัวชี้วัดประสิทธิภาพในการซ้อม</h3>
-            <ul>
-                <li><strong>เซสชันฝึกเทคนิค:</strong> มุ่งเป้าลดคะแนนประสิทธิภาพผ่านดริลท่าวิ่ง, การวิ่ง Strides
-                    และการโฟกัสชีวกลศาสตร์</li>
-                <li><strong>การมอนิเตอร์ความล้า:</strong> หากประสิทธิภาพแย่ลงระหว่างซ้อม คือสัญญาณว่าเทคนิคเริ่มพัง –
-                    ควรพักเพื่อฟื้นฟู</li>
-                <li><strong>สมดุลเพซ-ประสิทธิภาพ:</strong>
-                    หาเพซที่เร็วที่สุดที่คุณสามารถทำได้โดยที่คะแนนประสิทธิภาพไม่พุ่งเกิน 5 จุด</li>
-                <li><strong>การวัดผลดริล:</strong> วัดประสิทธิภาพก่อนและหลังทำเซตดริล
-                    เพื่อดูว่าเทคนิคส่งผลจริงต่อการวิ่งหรือไม่</li>
-                <li><strong>การควบคุมเพซแข่ง:</strong> ฝึกรักษาระดับประสิทธิภาพให้คงที่ตลอดระยะทางที่กำหนดสำหรับวันแข่ง
-                </li>
-            </ul>
-        </div>
-    </div>
-</section>
-
-<section class="section section-alt">
-    <div class="container container-narrow">
-        <h2>แนวทางปฏิบัติที่ดีที่สุดในการวัดผล</h2>
-
-        <div class="measurement-guidelines">
-            <div class="guideline-box">
-                <h3>📏 การนับก้าวเท้าอย่างแม่นยำ</h3>
-                <ul>
-                    <li>นับการลงเท้าทุกก้าว (ซ้าย + ขวา = 2 ก้าว)</li>
-                    <li>หรือนับเฉพาะเท้าข้างเดียวแล้วคูณสอง</li>
-                    <li>ใช้สนามวิ่งที่วัดระยะไว้แน่นอนหรือเซกเมนต์ GPS เดิมเพื่อความคงที่</li>
-                    <li>เริ่มนับหลังจากตั้งตัวได้แล้วช่วงก้าวแรกๆ</li>
-                    <li>นับต่อเนื่องจนถึงจุดหมายที่กำหนดไว้</li>
-                    <li>ฝึกนับระหว่างวอร์มอัพเพื่อให้ชำนาญ</li>
-                </ul>
-                <div class="tip-box">
-                    <strong>คำแนะนำ:</strong> ในสนาม 400 เมตร ลองนับเฉพาะการลงเท้าขวาให้ครบ 1 รอบ แล้วคูณสอง
+                </div><p><strong>สิ่งที่เกิดขึ้น:</strong> แกนกลางมั่นคงขึ้น, การดีดสะโพกดีขึ้น และลดแรงกระแทกที่พื้น
+                    (Mushing) ขณะก้าวเท้า</p></div><div class="pattern-item"><h3>📈 Efficiency Factor เพิ่มขึ้น = ความประหยัดระบบแอโรบิกดีขึ้น</h3><p>ค่า EF ที่พุ่งขึ้นบ่งชี้ว่าคุณวิ่งเร็วขึ้นได้ในอัตราการเต้นของหัวใจเท่าเดิม
+                    หรือรักษาเพซเท่าเดิมได้ด้วยหัวใจที่เต้นช้าลง</p><div class="example-box"><strong>ตัวอย่าง:</strong> EF เพิ่มจาก 1.65 → 1.82
+                    บ่งบอกว่าร่างกายของคุณมีประสิทธิภาพในการใช้ออกซิเจนสูงขึ้น</strong></div><p><strong>สิ่งที่เกิดขึ้น:</strong> ความหนาแน่นของไมโตคอนเดรียเพิ่มขึ้น, การใช้ไขมันเป็นพลังงานดีขึ้น
+                    และการบีบตัวของหัวใจมีประสิทธิภาพมากขึ้น (Stroke Volume)</p></div><div class="pattern-item"><h3>📊 อาการดีคัปปลิง (Decoupling - Pa/Hr)</h3><p>"Decoupling" คือสภาวะที่อัตราการเต้นของหัวใจสูงขึ้นเรื่อยๆ ในขณะที่รักษาเพซคงที่ (หรือค่า EF
+                    ลดต่ำลงระหว่างการวิ่งคงที่)</p><ul><li><strong>เบี่ยงเบน &lt; 5%</strong> = ความฟิตของระบบแอโรบิกยอดเยี่ยมสำหรับระยะทางนั้นๆ</li><li><strong>เบี่ยงเบน &gt; 5%</strong> =
+                        ความทนทานของระบบแอโรบิกยังไม่เพียงพอต่อระยะเวลาหรือระดับความหนักนั้น</li></ul><p><strong>คำแนะนำ:</strong> ติดตามค่า EF drift
+                    ระหว่างการวิ่งยาวเพื่อประเมินว่าความประหยัดของคุณยังคงที่อยู่หรือไม่ตลอดระยะทางไกลๆ</p></div></div><div class="callout callout-tip"><h3>🎯 การประยุกต์ใช้ตัวชี้วัดประสิทธิภาพในการซ้อม</h3><ul><li><strong>เซสชันฝึกเทคนิค:</strong> มุ่งเป้าลดคะแนนประสิทธิภาพผ่านดริลท่าวิ่ง, การวิ่ง Strides
+                    และการโฟกัสชีวกลศาสตร์</li><li><strong>การมอนิเตอร์ความล้า:</strong> หากประสิทธิภาพแย่ลงระหว่างซ้อม คือสัญญาณว่าเทคนิคเริ่มพัง –
+                    ควรพักเพื่อฟื้นฟู</li><li><strong>สมดุลเพซ-ประสิทธิภาพ:</strong>
+                    หาเพซที่เร็วที่สุดที่คุณสามารถทำได้โดยที่คะแนนประสิทธิภาพไม่พุ่งเกิน 5 จุด</li><li><strong>การวัดผลดริล:</strong> วัดประสิทธิภาพก่อนและหลังทำเซตดริล
+                    เพื่อดูว่าเทคนิคส่งผลจริงต่อการวิ่งหรือไม่</li><li><strong>การควบคุมเพซแข่ง:</strong> ฝึกรักษาระดับประสิทธิภาพให้คงที่ตลอดระยะทางที่กำหนดสำหรับวันแข่ง
+                </li></ul></div></div></section><section class="section section-alt"><div class="container container-narrow"><h2>แนวทางปฏิบัติที่ดีที่สุดในการวัดผล</h2><div class="measurement-guidelines"><div class="guideline-box"><h3>📏 การนับก้าวเท้าอย่างแม่นยำ</h3><ul><li>นับการลงเท้าทุกก้าว (ซ้าย + ขวา = 2 ก้าว)</li><li>หรือนับเฉพาะเท้าข้างเดียวแล้วคูณสอง</li><li>ใช้สนามวิ่งที่วัดระยะไว้แน่นอนหรือเซกเมนต์ GPS เดิมเพื่อความคงที่</li><li>เริ่มนับหลังจากตั้งตัวได้แล้วช่วงก้าวแรกๆ</li><li>นับต่อเนื่องจนถึงจุดหมายที่กำหนดไว้</li><li>ฝึกนับระหว่างวอร์มอัพเพื่อให้ชำนาญ</li></ul><div class="tip-box"><strong>คำแนะนำ:</strong> ในสนาม 400 เมตร ลองนับเฉพาะการลงเท้าขวาให้ครบ 1 รอบ แล้วคูณสอง
                     การฝึกจะทำให้นับก้าวได้เป็นอัตโนมัติ
-                </div>
-            </div>
-
-            <div class="guideline-box">
-                <h3>⏱️ การจับเวลาในการวิ่ง</h3>
-                <ul>
-                    <li>ใช้ความสามารถในการ Lap อัตโนมัติจากนาฬิกา GPS (Garmin, Apple Watch, Coros, Polar)</li>
-                    <li>หรือใช้การจับเวลาแบบ Manual ตามจุดมาร์กของสนาม</li>
-                    <li>รักษาระดับความพยายามให้คงที่ตลอดช่วงที่วัดผล</li>
-                    <li>บันทึกเวลาให้ละเอียดถึงระดับวินาที</li>
-                    <li>นาฬิการุ่นใหม่ๆ บางรุ่นสามารถคำนวณค่าก้าวเท้าให้อัตโนมัติ</li>
-                </ul>
-                <div class="tip-box">
-                    <strong>เครื่องมือเสริม:</strong> Garmin Running Dynamics, Stryd footpod และ Apple Watch
+                </div></div><div class="guideline-box"><h3>⏱️ การจับเวลาในการวิ่ง</h3><ul><li>ใช้ความสามารถในการ Lap อัตโนมัติจากนาฬิกา GPS (Garmin, Apple Watch, Coros, Polar)</li><li>หรือใช้การจับเวลาแบบ Manual ตามจุดมาร์กของสนาม</li><li>รักษาระดับความพยายามให้คงที่ตลอดช่วงที่วัดผล</li><li>บันทึกเวลาให้ละเอียดถึงระดับวินาที</li><li>นาฬิการุ่นใหม่ๆ บางรุ่นสามารถคำนวณค่าก้าวเท้าให้อัตโนมัติ</li></ul><div class="tip-box"><strong>เครื่องมือเสริม:</strong> Garmin Running Dynamics, Stryd footpod และ Apple Watch
                     สามารถคำนวณประสิทธิภาพจากข้อมูลก้าวและเพซได้ทันที
-                </div>
-            </div>
-
-            <div class="guideline-box">
-                <h3>🔄 การเปรียบเทียบข้อมูลที่สม่ำเสมอ</h3>
-                <ul>
-                    <li><strong>เส้นทางมาตรฐาน:</strong>
-                        ใช้เส้นทางเดิมหรือสนามวิ่งเดิมเพื่อให้ได้ข้อมูลเปรียบเทียบที่ถูกต้อง</li>
-                    <li><strong>เพซใกล้เคียงกัน:</strong> แยกเปรียบเทียบประสิทธิภาพระหว่างเพซวิ่งสบายกับเพซเทมโป</li>
-                    <li><strong>ความสดกับความล้า:</strong> บันทึกไว้เสมอว่าวัดผลตอนวอร์มอัพหรือกลางเวิร์กเอาต์</li>
-                    <li><strong>สภาพพื้นผิว:</strong> ข้อมูลบนเทรลกับถนนจะแตกต่างกันอย่างสิ้นเชิง</li>
-                    <li><strong>ติดตามรายสัปดาห์:</strong> ดูแนวโน้ม EF ตลอด 4 สัปดาห์เพื่อเห็นการพัฒนาที่แท้จริง</li>
-                </ul>
-            </div>
-
-            <div class="guideline-box">
-                <h3>📊 การบันทึกและวิเคราะห์ข้อมูล</h3>
-                <p>สร้างตารางง่ายๆ หรือใช้แอปพลิเคชันวิ่งในการแทร็ก:</p>
-                <ul>
-                    <li><strong>วันที่, ระยะทาง, เวลา, จำนวนก้าว, คะแนนประสิทธิภาพ</strong></li>
-                    <li>บันทึกเพซ (นาที/กม.)</li>
-                    <li>เพิ่มหมายเหตุเกี่ยวกับความล้า, สภาพอากาศ หรือจุดที่เน้นในเทคนิค</li>
-                    <li>คำนวณค่าเฉลี่ยประสิทธิภาพรายสัปดาห์</li>
-                    <li>วาดกราฟแนวโน้มทุกๆ 4 สัปดาห์</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="section">
-    <div class="container container-narrow">
-        <h2>ข้อจำกัดและสิ่งที่ควรพิจารณา</h2>
-
-        <div class="limitations-list">
-            <div class="limitation-item">
-                <h3>🚫 ไม่สามารถเปรียบเทียบระหว่างบุคคลได้โดยตรง</h3>
-                <p>ส่วนสูง, ความยาวขา และปัจจัยชีวกลศาสตร์ส่วนบุคคลทำให้จำนวนก้าวตามธรรมชาติแตกต่างกัน นักวิ่งที่สูง 185
+                </div></div><div class="guideline-box"><h3>🔄 การเปรียบเทียบข้อมูลที่สม่ำเสมอ</h3><ul><li><strong>เส้นทางมาตรฐาน:</strong>
+                        ใช้เส้นทางเดิมหรือสนามวิ่งเดิมเพื่อให้ได้ข้อมูลเปรียบเทียบที่ถูกต้อง</li><li><strong>เพซใกล้เคียงกัน:</strong> แยกเปรียบเทียบประสิทธิภาพระหว่างเพซวิ่งสบายกับเพซเทมโป</li><li><strong>ความสดกับความล้า:</strong> บันทึกไว้เสมอว่าวัดผลตอนวอร์มอัพหรือกลางเวิร์กเอาต์</li><li><strong>สภาพพื้นผิว:</strong> ข้อมูลบนเทรลกับถนนจะแตกต่างกันอย่างสิ้นเชิง</li><li><strong>ติดตามรายสัปดาห์:</strong> ดูแนวโน้ม EF ตลอด 4 สัปดาห์เพื่อเห็นการพัฒนาที่แท้จริง</li></ul></div><div class="guideline-box"><h3>📊 การบันทึกและวิเคราะห์ข้อมูล</h3><p>สร้างตารางง่ายๆ หรือใช้แอปพลิเคชันวิ่งในการแทร็ก:</p><ul><li><strong>วันที่, ระยะทาง, เวลา, จำนวนก้าว, คะแนนประสิทธิภาพ</strong></li><li>บันทึกเพซ (นาที/กม.)</li><li>เพิ่มหมายเหตุเกี่ยวกับความล้า, สภาพอากาศ หรือจุดที่เน้นในเทคนิค</li><li>คำนวณค่าเฉลี่ยประสิทธิภาพรายสัปดาห์</li><li>วาดกราฟแนวโน้มทุกๆ 4 สัปดาห์</li></ul></div></div></div></section><section class="section"><div class="container container-narrow"><h2>ข้อจำกัดและสิ่งที่ควรพิจารณา</h2><div class="limitations-list"><div class="limitation-item"><h3>🚫 ไม่สามารถเปรียบเทียบระหว่างบุคคลได้โดยตรง</h3><p>ส่วนสูง, ความยาวขา และปัจจัยชีวกลศาสตร์ส่วนบุคคลทำให้จำนวนก้าวตามธรรมชาติแตกต่างกัน นักวิ่งที่สูง 185
                     ซม. จะมีคะแนนประสิทธิภาพ (Vertical Ratio) ต่ำกว่านักวิ่งสูง 165 ซม.
-                    ในระดับความฟิตเดียวกันเนื่องจากระยะก้าวที่ยาวกว่า</p>
-                <p><strong>ทางออก:</strong> ใช้คะแนนประสิทธิภาพเพื่อติดตามพัฒนาการส่วนตัวเทียบกับตัวเองในอดีตเท่านั้น
-                </p>
-            </div>
-
-            <div class="limitation-item">
-                <h3>🚫 คะแนนรวมอาจบดบังการเปลี่ยนแปลงขององค์ประกอบย่อย</h3>
-                <p>คะแนนประสิทธิภาพเกิดจากการรวมสองตัวแปร คุณอาจพัฒนาระยะก้าวแต่ความเร็วลดลงเล็กน้อย
-                    ทำให้คะแนนรวมเท่าเดิม ทั้งที่เทคนิคเปลี่ยนไป</p>
-                <p><strong>ทางออก:</strong> วิเคราะห์ทั้งจำนวนก้าวและเวลาแยกกันควบคู่กันไปเสมอ เพื่อความเข้าใจที่แท้จริง
-                </p>
-            </div>
-
-            <div class="limitation-item">
-                <h3>🚫 ไม่ได้ปรับตามค่าเพซ (Not Pace-Normalized)</h3>
-                <p>Vertical Ratio และ EF จะเปลี่ยนไปตามความเร็ว ความเร็วที่สูงขึ้นมักทำให้ Vertical Ratio ดีขึ้น
-                    (ยืดตัวดีขึ้น) แต่อาจทำให้ EF ลดลงจากหัวใจที่เต้นสูงขึ้นแบบไม่เป็นเส้นตรง</p>
-                <p><strong>ทางออก:</strong> ติดตามประสิทธิภาพที่ระดับเพซเฉพาะเจาะจงที่ทดสอบซ้ำได้เสมอ</p>
-            </div>
-
-            <div class="limitation-item">
-                <h3>🚫 ปัจจัยสภาพแวดล้อมและความล้า</h3>
-                <p>ลม, อุณหภูมิ, ระดับน้ำในร่างกาย และความล้าสะสมจากการซ้อม ล้วนส่งผลต่อคะแนนโดยอิสระจากการเปลี่ยนเทคนิค
-                </p>
-                <p><strong>ทางออก:</strong> วัดประสิทธิภาพในสภาวะที่ใกล้เคียงกัน (เวลาเดิม, อากาศเดิม, ความสดเดิม)
-                    เพื่อความถูกต้องในการเปรียบเทียบ</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="section section-alt">
-    <div class="container container-narrow">
-        <h2>เวิร์กเอาต์สำหรับฝึกประสิทธิภาพการวิ่ง</h2>
-        <p>เวิร์กเอาต์เหล่านี้ออกแบบมาเพื่อมุ่งเน้นการพัฒนาประสิทธิภาพการก้าวและ Running Economy โดยเฉพาะ:</p>
-
-        <div class="drill-set">
-            <h3>🎯 ชุดปรับแต่ง Vertical Ratio ให้เหมาะสม</h3>
-            <div class="workout-box">
-                <h4>6 × 400 เมตร (พักด้วยการจ็อกกิ้ง 90 วินาที)</h4>
-                <ol>
-                    <li><strong>รอบที่ 1-2:</strong> วิ่งที่เพซสบาย ตรวจเช็กค่า Vertical Ratio พื้นฐาน</li>
-                    <li><strong>รอบที่ 3-4:</strong> โฟกัสที่ "การยืดตัววิ่ง" (Running Tall) และเกร็งแกนกลาง →
-                        ตั้งเป้าลด Vertical Ratio ลง 0.2%</li>
-                    <li><strong>รอบที่ 5-6:</strong> โฟกัสการดีดสะโพกและการถีบบส่งที่ทรงพลัง →
-                        เปรียบเทียบข้อมูลกับรอบที่ 3-4</li>
-                </ol>
-                <p><strong>เป้าหมาย:</strong> ระบุว่าเทคนิคใดช่วยให้คุณประหยัดพลังงาน (Vertical Ratio ต่ำสุด) ในเพซนั้นๆ
-                </p>
-            </div>
-        </div>
-
-        <div class="drill-set">
-            <h3>🏃 การทดสอบความสม่ำเสมอของประสิทธิภาพ</h3>
-            <div class="workout-box">
-                <h4>4 × 1,600 เมตร @ เพซเทมโป (พัก 2 นาที)</h4>
-                <p>ติดตาม Vertical Ratio และ EF ในแต่ละรอบ แล้ววิเคราะห์:</p>
-                <ul>
-                    <li>รอบไหนที่มี Vertical Ratio ต่ำที่สุด? (ชีวกลศาสตร์ประหยัดที่สุด)</li>
-                    <li>ค่า EF ลดลงเรื่อยๆ (หัวใจสูงขึ้น) ในเพซเดิมหรือไม่?</li>
-                    <li>Vertical Ratio พุ่งสูงขึ้นในรอบสุดท้ายแค่ไหน? (เทคนิคเริ่มพังเมื่อล้า)</li>
-                </ul>
-                <p><strong>เป้าหมาย:</strong> รักษา Vertical Ratio ให้อยู่ในช่วง ±0.2% ในทุกรอบ
-                    ความสม่ำเสมอบ่งบอกถึงความทนทานของเทคนิค</p>
-            </div>
-        </div>
-
-        <div class="drill-set">
-            <h3>🏃 อินเทอร์วัลเน้นฟอร์มการวิ่ง</h3>
-            <div class="workout-box">
-                <h4>10 × 400 เมตร (พักจ็อก 200 เมตร)</h4>
-                <p>สลับโฟกัสในแต่ละรอบ:</p>
-                <ul>
-                    <li><strong>รอบเลขคี่:</strong> โฟกัสการแตะพื้นที่รวดเร็ว ("เหมือนเหยียบถ่านร้อน") –
-                        ลดเวลาสัมผัสพื้น</li>
-                    <li><strong>รอบเลขคู่:</strong> โฟกัสการถีบส่งที่ทรงพลัง – ดันจากกล้ามเนื้อก้น ยืดสะโพกให้สุด</li>
-                </ul>
-                <p>บันทึกและเปรียบเทียบประสิทธิภาพของทั้งสองสไตล์</p>
-                <p><strong>เป้าหมาย:</strong> ค้นหาว่ารูปแบบการวิ่งใดที่ให้ประสิทธิภาพสูงสุดสำหรับสรีรวิทยาของคุณ</p>
-            </div>
-        </div>
-
-        <div class="drill-set">
-            <h3>💪 การเชื่อมโยงความแข็งแรงสู่ประสิทธิภาพ</h3>
-            <div class="workout-box">
-                <h4>การกระตุ้นกล้ามเนื้อก่อนวิ่ง + ทดสอบประสิทธิภาพ</h4>
-                <ol>
-                    <li>วอร์มอัพด้วยการวิ่งเบา 5 นาที</li>
-                    <li>วงจรประสานการทำงาน (Activation Circuit) ทำ 3 รอบ:
-                        <ul>
-                            <li>เขย่งน่องข้างเดียว 10 ครั้งต่อข้าง</li>
-                            <li>Glute Bridges 10 ครั้ง</li>
-                            <li>Plank 30 วินาที</li>
-                        </ul>
-                    </li>
-                    <li>วิ่งเบาต่อ 5 นาที</li>
-                    <li>วิ่ง 4 × 200 เมตร พร้อมวัดคะแนนประสิทธิภาพ</li>
-                </ol>
-                <p><strong>เป้าหมาย:</strong> เปรียบเทียบประสิทธิภาพของการวิ่งมีกับไม่มีการเตรียมพร้อมกล้ามเนื้อ
-                    นักวิ่งหลายคนเห็นคะแนนพัฒนาขึ้น 2-4 จุดหลังการเตรียมพร้อม</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="section">
-    <div class="container container-narrow">
-        <h2>คำถามที่พบบ่อย (FAQ)</h2>
-
-        <div class="faq-section" itemscope itemtype="https://schema.org/FAQPage">
-            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">ตัวชี้วัดประสิทธิภาพการวิ่งคืออะไร?</h3>
-                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                    <div itemprop="text">
-                        <p>ตัวชี้วัดประสิทธิภาพการวิ่งคือตัววัดความประหยัดในการเคลื่อนที่ของคุณ
+                    ในระดับความฟิตเดียวกันเนื่องจากระยะก้าวที่ยาวกว่า</p><p><strong>ทางออก:</strong> ใช้คะแนนประสิทธิภาพเพื่อติดตามพัฒนาการส่วนตัวเทียบกับตัวเองในอดีตเท่านั้น
+                </p></div><div class="limitation-item"><h3>🚫 คะแนนรวมอาจบดบังการเปลี่ยนแปลงขององค์ประกอบย่อย</h3><p>คะแนนประสิทธิภาพเกิดจากการรวมสองตัวแปร คุณอาจพัฒนาระยะก้าวแต่ความเร็วลดลงเล็กน้อย
+                    ทำให้คะแนนรวมเท่าเดิม ทั้งที่เทคนิคเปลี่ยนไป</p><p><strong>ทางออก:</strong> วิเคราะห์ทั้งจำนวนก้าวและเวลาแยกกันควบคู่กันไปเสมอ เพื่อความเข้าใจที่แท้จริง
+                </p></div><div class="limitation-item"><h3>🚫 ไม่ได้ปรับตามค่าเพซ (Not Pace-Normalized)</h3><p>Vertical Ratio และ EF จะเปลี่ยนไปตามความเร็ว ความเร็วที่สูงขึ้นมักทำให้ Vertical Ratio ดีขึ้น
+                    (ยืดตัวดีขึ้น) แต่อาจทำให้ EF ลดลงจากหัวใจที่เต้นสูงขึ้นแบบไม่เป็นเส้นตรง</p><p><strong>ทางออก:</strong> ติดตามประสิทธิภาพที่ระดับเพซเฉพาะเจาะจงที่ทดสอบซ้ำได้เสมอ</p></div><div class="limitation-item"><h3>🚫 ปัจจัยสภาพแวดล้อมและความล้า</h3><p>ลม, อุณหภูมิ, ระดับน้ำในร่างกาย และความล้าสะสมจากการซ้อม ล้วนส่งผลต่อคะแนนโดยอิสระจากการเปลี่ยนเทคนิค
+                </p><p><strong>ทางออก:</strong> วัดประสิทธิภาพในสภาวะที่ใกล้เคียงกัน (เวลาเดิม, อากาศเดิม, ความสดเดิม)
+                    เพื่อความถูกต้องในการเปรียบเทียบ</p></div></div></div></section><section class="section section-alt"><div class="container container-narrow"><h2>เวิร์กเอาต์สำหรับฝึกประสิทธิภาพการวิ่ง</h2><p>เวิร์กเอาต์เหล่านี้ออกแบบมาเพื่อมุ่งเน้นการพัฒนาประสิทธิภาพการก้าวและ Running Economy โดยเฉพาะ:</p><div class="drill-set"><h3>🎯 ชุดปรับแต่ง Vertical Ratio ให้เหมาะสม</h3><div class="workout-box"><h4>6 × 400 เมตร (พักด้วยการจ็อกกิ้ง 90 วินาที)</h4><ol><li><strong>รอบที่ 1-2:</strong> วิ่งที่เพซสบาย ตรวจเช็กค่า Vertical Ratio พื้นฐาน</li><li><strong>รอบที่ 3-4:</strong> โฟกัสที่ "การยืดตัววิ่ง" (Running Tall) และเกร็งแกนกลาง →
+                        ตั้งเป้าลด Vertical Ratio ลง 0.2%</li><li><strong>รอบที่ 5-6:</strong> โฟกัสการดีดสะโพกและการถีบบส่งที่ทรงพลัง →
+                        เปรียบเทียบข้อมูลกับรอบที่ 3-4</li></ol><p><strong>เป้าหมาย:</strong> ระบุว่าเทคนิคใดช่วยให้คุณประหยัดพลังงาน (Vertical Ratio ต่ำสุด) ในเพซนั้นๆ
+                </p></div></div><div class="drill-set"><h3>🏃 การทดสอบความสม่ำเสมอของประสิทธิภาพ</h3><div class="workout-box"><h4>4 × 1,600 เมตร @ เพซเทมโป (พัก 2 นาที)</h4><p>ติดตาม Vertical Ratio และ EF ในแต่ละรอบ แล้ววิเคราะห์:</p><ul><li>รอบไหนที่มี Vertical Ratio ต่ำที่สุด? (ชีวกลศาสตร์ประหยัดที่สุด)</li><li>ค่า EF ลดลงเรื่อยๆ (หัวใจสูงขึ้น) ในเพซเดิมหรือไม่?</li><li>Vertical Ratio พุ่งสูงขึ้นในรอบสุดท้ายแค่ไหน? (เทคนิคเริ่มพังเมื่อล้า)</li></ul><p><strong>เป้าหมาย:</strong> รักษา Vertical Ratio ให้อยู่ในช่วง ±0.2% ในทุกรอบ
+                    ความสม่ำเสมอบ่งบอกถึงความทนทานของเทคนิค</p></div></div><div class="drill-set"><h3>🏃 อินเทอร์วัลเน้นฟอร์มการวิ่ง</h3><div class="workout-box"><h4>10 × 400 เมตร (พักจ็อก 200 เมตร)</h4><p>สลับโฟกัสในแต่ละรอบ:</p><ul><li><strong>รอบเลขคี่:</strong> โฟกัสการแตะพื้นที่รวดเร็ว ("เหมือนเหยียบถ่านร้อน") –
+                        ลดเวลาสัมผัสพื้น</li><li><strong>รอบเลขคู่:</strong> โฟกัสการถีบส่งที่ทรงพลัง – ดันจากกล้ามเนื้อก้น ยืดสะโพกให้สุด</li></ul><p>บันทึกและเปรียบเทียบประสิทธิภาพของทั้งสองสไตล์</p><p><strong>เป้าหมาย:</strong> ค้นหาว่ารูปแบบการวิ่งใดที่ให้ประสิทธิภาพสูงสุดสำหรับสรีรวิทยาของคุณ</p></div></div><div class="drill-set"><h3>💪 การเชื่อมโยงความแข็งแรงสู่ประสิทธิภาพ</h3><div class="workout-box"><h4>การกระตุ้นกล้ามเนื้อก่อนวิ่ง + ทดสอบประสิทธิภาพ</h4><ol><li>วอร์มอัพด้วยการวิ่งเบา 5 นาที</li><li>วงจรประสานการทำงาน (Activation Circuit) ทำ 3 รอบ:
+                        <ul><li>เขย่งน่องข้างเดียว 10 ครั้งต่อข้าง</li><li>Glute Bridges 10 ครั้ง</li><li>Plank 30 วินาที</li></ul></li><li>วิ่งเบาต่อ 5 นาที</li><li>วิ่ง 4 × 200 เมตร พร้อมวัดคะแนนประสิทธิภาพ</li></ol><p><strong>เป้าหมาย:</strong> เปรียบเทียบประสิทธิภาพของการวิ่งมีกับไม่มีการเตรียมพร้อมกล้ามเนื้อ
+                    นักวิ่งหลายคนเห็นคะแนนพัฒนาขึ้น 2-4 จุดหลังการเตรียมพร้อม</p></div></div></div></section><section class="section"><div class="container container-narrow"><h2>คำถามที่พบบ่อย (FAQ)</h2><div class="faq-section" itemscope itemtype="https://schema.org/FAQPage"><div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><h3 itemprop="name">ตัวชี้วัดประสิทธิภาพการวิ่งคืออะไร?</h3><div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div itemprop="text"><p>ตัวชี้วัดประสิทธิภาพการวิ่งคือตัววัดความประหยัดในการเคลื่อนที่ของคุณ
                             ตัวชี้วัดในภาคสนามที่พบบ่อยที่สุดคือ <strong>Vertical Ratio</strong> (ชีวกลศาสตร์) และ
                             <strong>Efficiency Factor</strong> (แอโรบิก) สิ่งเหล่านี้บอกถึง "ราคาพลังงาน"
                             ที่คุณจ่ายไปเพื่อรักษาระดับความเร็ว
-                            การปรับปรุงจุดนี้จะช่วยให้คุณวิ่งได้เร็วขึ้นโดยเหนื่อยเท่าเดิม</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">จะคำนวณ Vertical Ratio และค่า EF ได้อย่างไร?</h3>
-                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                    <div itemprop="text">
-                        <p>นาฬิกาวิ่งสมัยใหม่ (เช่น Garmin ที่มีสายคาดหน้าอก, Apple Watch Ultra) จะคำนวณ Vertical Ratio
+                            การปรับปรุงจุดนี้จะช่วยให้คุณวิ่งได้เร็วขึ้นโดยเหนื่อยเท่าเดิม</p></div></div></div><div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><h3 itemprop="name">จะคำนวณ Vertical Ratio และค่า EF ได้อย่างไร?</h3><div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div itemprop="text"><p>นาฬิกาวิ่งสมัยใหม่ (เช่น Garmin ที่มีสายคาดหน้าอก, Apple Watch Ultra) จะคำนวณ Vertical Ratio
                             ให้อัตโนมัติจากค่าการกระดอนหารด้วยระยะก้าว ส่วนการคำนวณ Efficiency Factor (EF)
                             ให้เอาความเร็วเฉลี่ย (เมตร/นาที) หารด้วยอัตราการเต้นของหัวใจเฉลี่ย เช่น วิ่งที่ความเร็ว 250
-                            ม./นาที (เพซ 4:00) ด้วยหัวใจเฉลี่ย 150 bpm จะได้ EF เท่ากับ 1.67</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">ค่า Vertical Ratio ที่ดีควรเป็นเท่าไหร่?</h3>
-                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                    <div itemprop="text">
-                        <p>สำหรับนักวิ่งทั่วไป ค่าที่ต่ำกว่า 10% ถือว่าอยู่ในเกณฑ์ดี
+                            ม./นาที (เพซ 4:00) ด้วยหัวใจเฉลี่ย 150 bpm จะได้ EF เท่ากับ 1.67</p></div></div></div><div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><h3 itemprop="name">ค่า Vertical Ratio ที่ดีควรเป็นเท่าไหร่?</h3><div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div itemprop="text"><p>สำหรับนักวิ่งทั่วไป ค่าที่ต่ำกว่า 10% ถือว่าอยู่ในเกณฑ์ดี
                             ส่วนนักวิ่งระดับอีลิทมักจะรักษาค่าได้ต่ำกว่า 6.0% เนื่องจาก Vertical Ratio
                             คำนวณเป็นร้อยละเทียบกับระยะก้าว มันจึงเป็นค่าที่ปรับตามส่วนสูงของแต่ละคนมาให้แล้ว
-                            (Normalization) ทำให้ใช้เปรียบเทียบพัฒนาการได้ดี</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">ฉันสามารถเปรียบเทียบประสิทธิภาพการวิ่งกับเพื่อนได้หรือไม่?</h3>
-                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                    <div itemprop="text">
-                        <p>ได้ในระดับหนึ่ง เพราะ <strong>Vertical Ratio</strong>
+                            (Normalization) ทำให้ใช้เปรียบเทียบพัฒนาการได้ดี</p></div></div></div><div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><h3 itemprop="name">ฉันสามารถเปรียบเทียบประสิทธิภาพการวิ่งกับเพื่อนได้หรือไม่?</h3><div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div itemprop="text"><p>ได้ในระดับหนึ่ง เพราะ <strong>Vertical Ratio</strong>
                             ถูกออกแบบมาให้เป็นค่าร้อยละเพื่อความสะดวกในการเปรียบเทียบ อย่างไรก็ตาม สรีระเฉพาะตัว เช่น
                             ความยาวขาหรือประเภทเส้นใยกล้ามเนื้อยังคงส่งผล
                             จึงแนะนำให้ใช้เพื่อเปรียบเทียบพัฒนาการของตัวเองในช่วงเวลาต่างๆ
-                            จะให้ผลลัพธ์ที่มีความหมายที่สุด</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">Running Economy คืออะไรและเกี่ยวข้องกับประสิทธิภาพอย่างไร?</h3>
-                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                    <div itemprop="text">
-                        <p>Running Economy (RE) คือต้นทุนออกซิเจนในการรักษาเพซ ตัวชี้วัดอย่าง Vertical Ratio และ EF
+                            จะให้ผลลัพธ์ที่มีความหมายที่สุด</p></div></div></div><div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><h3 itemprop="name">Running Economy คืออะไรและเกี่ยวข้องกับประสิทธิภาพอย่างไร?</h3><div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div itemprop="text"><p>Running Economy (RE) คือต้นทุนออกซิเจนในการรักษาเพซ ตัวชี้วัดอย่าง Vertical Ratio และ EF
                             คือตัวแทนในการวัด RE ในภาคสนาม เมื่อค่าเหล่านี้ดีขึ้น (Vertical Ratio ต่ำลง หรือ EF สูงขึ้น)
-                            หมายความว่าคุณวิ่งได้อย่างมีประสิทธิภาพมากขึ้นในความรู้สึกที่เท่าเดิม</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">ค่า Vertical Ratio เปลี่ยนไปตามความเร็วหรือไม่?</h3>
-                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                    <div itemprop="text">
-                        <p>ใช่ เมื่อความเร็วสูงขึ้น ระยะก้าวจะยาวขึ้นเร็วกว่าการกระดอน ทำให้ Vertical Ratio ดีขึ้น
+                            หมายความว่าคุณวิ่งได้อย่างมีประสิทธิภาพมากขึ้นในความรู้สึกที่เท่าเดิม</p></div></div></div><div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><h3 itemprop="name">ค่า Vertical Ratio เปลี่ยนไปตามความเร็วหรือไม่?</h3><div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div itemprop="text"><p>ใช่ เมื่อความเร็วสูงขึ้น ระยะก้าวจะยาวขึ้นเร็วกว่าการกระดอน ทำให้ Vertical Ratio ดีขึ้น
                             (ต่ำลง) ซึ่งเป็นสัญญาณของการเคลื่อนที่ไปข้างหน้าอย่างมีประสิทธิภาพ อย่างไรก็ตาม
-                            หัวใจคุณจะเต้นสูงขึ้นด้วย ซึ่งอาจลดค่า EF ลง จึงควรเปรียบเทียบในเพซเดิมๆ เสมอ</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">ทำไมประสิทธิภาพถึงแย่ลงระหว่างการวิ่งนานๆ?</h3>
-                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                    <div itemprop="text">
-                        <p>เมื่อกล้ามเนื้อเหนื่อยล้า ความมั่นคงของแกนกลางจะลดลง ทำให้ตัว "กระดอน" มากขึ้น (Vertical
+                            หัวใจคุณจะเต้นสูงขึ้นด้วย ซึ่งอาจลดค่า EF ลง จึงควรเปรียบเทียบในเพซเดิมๆ เสมอ</p></div></div></div><div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><h3 itemprop="name">ทำไมประสิทธิภาพถึงแย่ลงระหว่างการวิ่งนานๆ?</h3><div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div itemprop="text"><p>เมื่อกล้ามเนื้อเหนื่อยล้า ความมั่นคงของแกนกลางจะลดลง ทำให้ตัว "กระดอน" มากขึ้น (Vertical
                             Ratio สูงขึ้น) และหัวใจต้องทำงานหนักขึ้นเพื่อรักษาเพซเดิม (EF ลดลง)
-                            การสังเกตอาการนี้ช่วยประเมินความทนทานของระบบแอโรบิกได้ดี</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">ต้องใช้เวลานานแค่ไหนในการพัฒนาประสิทธิภาพการวิ่ง?</h3>
-                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                    <div itemprop="text">
-                        <p>จากการฝึกสม่ำเสมอ คุณจะเห็นการพัฒนาของ EF ใน 4-6 สัปดาห์ และ Vertical Ratio ใน 8-12 สัปดาห์
+                            การสังเกตอาการนี้ช่วยประเมินความทนทานของระบบแอโรบิกได้ดี</p></div></div></div><div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><h3 itemprop="name">ต้องใช้เวลานานแค่ไหนในการพัฒนาประสิทธิภาพการวิ่ง?</h3><div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div itemprop="text"><p>จากการฝึกสม่ำเสมอ คุณจะเห็นการพัฒนาของ EF ใน 4-6 สัปดาห์ และ Vertical Ratio ใน 8-12 สัปดาห์
                             ประสิทธิภาพถูกสร้างขึ้นจากความแข็งแรง, การปรับท่าวิ่ง และการพัฒนาหัวใจ
-                            ส่วนความประหยัดระดับอีลิทนั้นอาจต้องใช้การสะสมชั่วโมงวิ่งนานหลายปี</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="section section-alt">
-    <div class="container container-narrow text-center">
-        <h2 class="mt-3xl">แหล่งข้อมูลที่เกี่ยวข้อง</h2>
-
-        <div class="related-articles">
-            <a href="/th/training-zones/" class="related-card">
-                <h3>คู่มือโซนการซ้อม</h3>
-                <p>เข้าใจโซนการซ้อมทั้ง 5 และเพิ่มประสิทธิภาพเวิร์กเอาต์เพื่อความประหยัดในการวิ่ง</p>
-            </a>
-
-            <a href="/th/crs/" class="related-card">
-                <h3>การทดสอบ Critical Run Speed (CRS)</h3>
-                <p>วัดระดับความเร็วเทรชโฮลด์เพื่อกำหนดโซนการซ้อมที่เหมาะสมสำหรับการพัฒนาประสิทธิภาพ</p>
-            </a>
-
-            <a href="/th/rtss-calculator/" class="related-card">
-                <h3>เครื่องคำนวณความเครียดการซ้อม (rTSS)</h3>
-                <p>ประเมินภาระการซ้อมและติดตามการปรับตัวของร่างกายเพื่อความประหยัดในการวิ่งที่ดีขึ้น</p>
-            </a>
-        </div>
-
-        <h2>สร้างประสิทธิภาพผ่านการฝึกฝนที่สม่ำเสมอ</h2>
-        <p class="lead">ประสิทธิภาพการวิ่งพัฒนาขึ้นอย่างค่อยเป็นค่อยไปผ่านการก้าวเท้าที่มีคุณภาพนับพันก้าว
-            การฝึกเทคนิคอย่างตั้งใจ และการพัฒนาที่อดทนของทั้งหัวใจและชีวกลศาสตร์</p>
-
-        <p>วัดประสิทธิภาพของคุณทุกสัปดาห์ ซ้อมอย่างมีเป้าหมาย และไว้ใจในกระบวนการ ความประหยัดในการวิ่งของคุณจะค่อยๆ
-            ดีขึ้น นำไปสู่เวลาที่เร็วขึ้นในระดับหัวใจที่ต่ำลง</p>
-
-        <div class="mt-xl">
-            <a href="/th/getting-started/" class="btn btn-primary">เริ่มต้นใช้งาน →</a>
-            <a href="/th/formulas/" class="btn btn-secondary">รวมสูตรคำนวณทั้งหมด</a>
-        </div>
-    </div>
-</section>
-    
-  </main>
-
-  
-  <footer class="site-footer">
-    <div class="container">
-        
-        <div class="footer-top">
-            <div class="footer-brand-section">
-                
-                <h2>Run Analytics</h2>
-                <p>Track Critical Running Speed, Training Stress Score, and performance metrics with Run Analytics. Science-based iOS app for runners, triathletes &amp; coaches. 7-day free trial.</p>
-                
-            </div>
-
-            
-            <div class="footer-download">
-                <h3 class="footer-heading">Download</h3>
-                <div class="footer-badges">
-                    
-                    <a href="https://apps.apple.com/us/app/run-analytics/id6754524015" target="_blank" rel="noopener"
-                        aria-label="Download on the App Store">
-                        <img src="../../assets/images/badge-app-store.svg"
+                            ส่วนความประหยัดระดับอีลิทนั้นอาจต้องใช้การสะสมชั่วโมงวิ่งนานหลายปี</p></div></div></div></div></div></section><section class="section section-alt"><div class="container container-narrow text-center"><h2 class="mt-3xl">แหล่งข้อมูลที่เกี่ยวข้อง</h2><div class="related-articles"><a href="/th/training-zones/" class="related-card"><h3>คู่มือโซนการซ้อม</h3><p>เข้าใจโซนการซ้อมทั้ง 5 และเพิ่มประสิทธิภาพเวิร์กเอาต์เพื่อความประหยัดในการวิ่ง</p></a><a href="/th/crs/" class="related-card"><h3>การทดสอบ Critical Run Speed (CRS)</h3><p>วัดระดับความเร็วเทรชโฮลด์เพื่อกำหนดโซนการซ้อมที่เหมาะสมสำหรับการพัฒนาประสิทธิภาพ</p></a><a href="/th/rtss-calculator/" class="related-card"><h3>เครื่องคำนวณความเครียดการซ้อม (rTSS)</h3><p>ประเมินภาระการซ้อมและติดตามการปรับตัวของร่างกายเพื่อความประหยัดในการวิ่งที่ดีขึ้น</p></a></div><h2>สร้างประสิทธิภาพผ่านการฝึกฝนที่สม่ำเสมอ</h2><p class="lead">ประสิทธิภาพการวิ่งพัฒนาขึ้นอย่างค่อยเป็นค่อยไปผ่านการก้าวเท้าที่มีคุณภาพนับพันก้าว
+            การฝึกเทคนิคอย่างตั้งใจ และการพัฒนาที่อดทนของทั้งหัวใจและชีวกลศาสตร์</p><p>วัดประสิทธิภาพของคุณทุกสัปดาห์ ซ้อมอย่างมีเป้าหมาย และไว้ใจในกระบวนการ ความประหยัดในการวิ่งของคุณจะค่อยๆ
+            ดีขึ้น นำไปสู่เวลาที่เร็วขึ้นในระดับหัวใจที่ต่ำลง</p><div class="mt-xl"><a href="/th/getting-started/" class="btn btn-primary">เริ่มต้นใช้งาน →</a><a href="/th/formulas/" class="btn btn-secondary">รวมสูตรคำนวณทั้งหมด</a></div></div></section></main><footer class="site-footer"><div class="container"><div class="footer-top"><div class="footer-brand-section"><h2>Run Analytics</h2><p>Track Critical Running Speed, Training Stress Score, and performance metrics with Run Analytics. Science-based iOS app for runners, triathletes &amp; coaches. 7-day free trial.</p></div><div class="footer-download"><h3 class="footer-heading">Download</h3><div class="footer-badges"><a href="https://apps.apple.com/us/app/run-analytics/id6754524015" target="_blank" rel="noopener"
+                        aria-label="Download on the App Store"><img src="../../assets/images/badge-app-store.svg"
                             alt="Download on the App Store" width="135"
-                            height="40" loading="lazy">
-                    </a>
-                    
-                    
-                    <a href="https://play.google.com/store/apps/details?id=com.arnohealth.runanalytics" target="_blank" rel="noopener"
-                        aria-label="Get it on Google Play">
-                        <img src="../../assets/images/badge-google-play.svg"
+                            height="40" loading="lazy"></a><a href="https://play.google.com/store/apps/details?id=com.arnohealth.runanalytics" target="_blank" rel="noopener"
+                        aria-label="Get it on Google Play"><img src="../../assets/images/badge-google-play.svg"
                             alt="Get it on Google Play" width="135"
-                            height="40" loading="lazy">
-                    </a>
-                    
-                </div>
-            </div>
-            
-        </div>
-
-        
-        <div class="footer-languages">
-            <h3 class="footer-heading">Available in</h3>
-            <div class="lang-grid">
-                
-                <a href="/af/" class="lang-link"
+                            height="40" loading="lazy"></a></div></div></div><div class="footer-languages"><h3 class="footer-heading">Available in</h3><div class="lang-grid"><a href="/af/" class="lang-link"
                     hreflang="af" >
                     Afrikaans
-                </a>
-                
-                <a href="/am/" class="lang-link"
+                </a><a href="/am/" class="lang-link"
                     hreflang="am" >
                     አማርኛ
-                </a>
-                
-                <a href="/ar/" class="lang-link"
+                </a><a href="/ar/" class="lang-link"
                     hreflang="ar" dir="rtl" >
                     العربية
-                </a>
-                
-                <a href="/bg/" class="lang-link"
+                </a><a href="/bg/" class="lang-link"
                     hreflang="bg" >
                     Български
-                </a>
-                
-                <a href="/bn/" class="lang-link"
+                </a><a href="/bn/" class="lang-link"
                     hreflang="bn" >
                     বাংলা
-                </a>
-                
-                <a href="/ca/" class="lang-link"
+                </a><a href="/ca/" class="lang-link"
                     hreflang="ca" >
                     Català
-                </a>
-                
-                <a href="/cs/" class="lang-link"
+                </a><a href="/cs/" class="lang-link"
                     hreflang="cs" >
                     Čeština
-                </a>
-                
-                <a href="/da/" class="lang-link"
+                </a><a href="/da/" class="lang-link"
                     hreflang="da" >
                     Dansk
-                </a>
-                
-                <a href="/de/" class="lang-link"
+                </a><a href="/de/" class="lang-link"
                     hreflang="de" >
                     Deutsch
-                </a>
-                
-                <a href="/el/" class="lang-link"
+                </a><a href="/el/" class="lang-link"
                     hreflang="el" >
                     Ελληνικά
-                </a>
-                
-                <a href="/en/" class="lang-link"
+                </a><a href="/en/" class="lang-link"
                     hreflang="en" >
                     English
-                </a>
-                
-                <a href="/es/" class="lang-link"
+                </a><a href="/es/" class="lang-link"
                     hreflang="es" >
                     Español
-                </a>
-                
-                <a href="/et/" class="lang-link"
+                </a><a href="/et/" class="lang-link"
                     hreflang="et" >
                     Eesti
-                </a>
-                
-                <a href="/fa/" class="lang-link"
+                </a><a href="/fa/" class="lang-link"
                     hreflang="fa" dir="rtl" >
                     فارسی
-                </a>
-                
-                <a href="/fi/" class="lang-link"
+                </a><a href="/fi/" class="lang-link"
                     hreflang="fi" >
                     Suomi
-                </a>
-                
-                <a href="/fr/" class="lang-link"
+                </a><a href="/fr/" class="lang-link"
                     hreflang="fr" >
                     Français
-                </a>
-                
-                <a href="/gu/" class="lang-link"
+                </a><a href="/gu/" class="lang-link"
                     hreflang="gu" >
                     ગુજરાતી
-                </a>
-                
-                <a href="/ha/" class="lang-link"
+                </a><a href="/ha/" class="lang-link"
                     hreflang="ha" >
                     Hausa
-                </a>
-                
-                <a href="/he/" class="lang-link"
+                </a><a href="/he/" class="lang-link"
                     hreflang="he" dir="rtl" >
                     עברית
-                </a>
-                
-                <a href="/hi/" class="lang-link"
+                </a><a href="/hi/" class="lang-link"
                     hreflang="hi" >
                     हिन्दी
-                </a>
-                
-                <a href="/hr/" class="lang-link"
+                </a><a href="/hr/" class="lang-link"
                     hreflang="hr" >
                     Hrvatski
-                </a>
-                
-                <a href="/hu/" class="lang-link"
+                </a><a href="/hu/" class="lang-link"
                     hreflang="hu" >
                     Magyar
-                </a>
-                
-                <a href="/id/" class="lang-link"
+                </a><a href="/id/" class="lang-link"
                     hreflang="id" >
                     Bahasa Indonesia
-                </a>
-                
-                <a href="/is/" class="lang-link"
+                </a><a href="/is/" class="lang-link"
                     hreflang="is" >
                     Íslenska
-                </a>
-                
-                <a href="/it/" class="lang-link"
+                </a><a href="/it/" class="lang-link"
                     hreflang="it" >
                     Italiano
-                </a>
-                
-                <a href="/ja/" class="lang-link"
+                </a><a href="/ja/" class="lang-link"
                     hreflang="ja" >
                     日本語
-                </a>
-                
-                <a href="/km/" class="lang-link"
+                </a><a href="/km/" class="lang-link"
                     hreflang="km" >
                     ភាសាខ្មែរ
-                </a>
-                
-                <a href="/kn/" class="lang-link"
+                </a><a href="/kn/" class="lang-link"
                     hreflang="kn" >
                     ಕನ್ನಡ
-                </a>
-                
-                <a href="/ko/" class="lang-link"
+                </a><a href="/ko/" class="lang-link"
                     hreflang="ko" >
                     한국어
-                </a>
-                
-                <a href="/lt/" class="lang-link"
+                </a><a href="/lt/" class="lang-link"
                     hreflang="lt" >
                     Lietuvių
-                </a>
-                
-                <a href="/lv/" class="lang-link"
+                </a><a href="/lv/" class="lang-link"
                     hreflang="lv" >
                     Latviešu
-                </a>
-                
-                <a href="/ms/" class="lang-link"
+                </a><a href="/ms/" class="lang-link"
                     hreflang="ms" >
                     Bahasa Melayu
-                </a>
-                
-                <a href="/my/" class="lang-link"
+                </a><a href="/my/" class="lang-link"
                     hreflang="my" >
                     မြန်မာစာ
-                </a>
-                
-                <a href="/nb/" class="lang-link"
+                </a><a href="/nb/" class="lang-link"
                     hreflang="nb" >
                     Norsk Bokmål
-                </a>
-                
-                <a href="/nl/" class="lang-link"
+                </a><a href="/nl/" class="lang-link"
                     hreflang="nl" >
                     Nederlands
-                </a>
-                
-                <a href="/pl/" class="lang-link"
+                </a><a href="/pl/" class="lang-link"
                     hreflang="pl" >
                     Polski
-                </a>
-                
-                <a href="/pt/" class="lang-link"
+                </a><a href="/pt/" class="lang-link"
                     hreflang="pt" >
                     Português
-                </a>
-                
-                <a href="/pt-br/" class="lang-link"
+                </a><a href="/pt-br/" class="lang-link"
                     hreflang="pt-br" >
                     Português (Brasil)
-                </a>
-                
-                <a href="/ro/" class="lang-link"
+                </a><a href="/ro/" class="lang-link"
                     hreflang="ro" >
                     Română
-                </a>
-                
-                <a href="/ru/" class="lang-link"
+                </a><a href="/ru/" class="lang-link"
                     hreflang="ru" >
                     Русский
-                </a>
-                
-                <a href="/sk/" class="lang-link"
+                </a><a href="/sk/" class="lang-link"
                     hreflang="sk" >
                     Slovenčina
-                </a>
-                
-                <a href="/sl/" class="lang-link"
+                </a><a href="/sl/" class="lang-link"
                     hreflang="sl" >
                     Slovenščina
-                </a>
-                
-                <a href="/sr/" class="lang-link"
+                </a><a href="/sr/" class="lang-link"
                     hreflang="sr" >
                     Srpski
-                </a>
-                
-                <a href="/sv/" class="lang-link"
+                </a><a href="/sv/" class="lang-link"
                     hreflang="sv" >
                     Svenska
-                </a>
-                
-                <a href="/sw/" class="lang-link"
+                </a><a href="/sw/" class="lang-link"
                     hreflang="sw" >
                     Kiswahili
-                </a>
-                
-                <a href="/ta/" class="lang-link"
+                </a><a href="/ta/" class="lang-link"
                     hreflang="ta" >
                     தமிழ்
-                </a>
-                
-                <a href="/te/" class="lang-link"
+                </a><a href="/te/" class="lang-link"
                     hreflang="te" >
                     తెలుగు
-                </a>
-                
-                <a href="/th/" class="lang-link active"
+                </a><a href="/th/" class="lang-link active"
                     hreflang="th" >
                     ไทย
-                </a>
-                
-                <a href="/tl/" class="lang-link"
+                </a><a href="/tl/" class="lang-link"
                     hreflang="tl" >
                     Tagalog
-                </a>
-                
-                <a href="/tr/" class="lang-link"
+                </a><a href="/tr/" class="lang-link"
                     hreflang="tr" >
                     Türkçe
-                </a>
-                
-                <a href="/uk/" class="lang-link"
+                </a><a href="/uk/" class="lang-link"
                     hreflang="uk" >
                     Українська
-                </a>
-                
-                <a href="/ur/" class="lang-link"
+                </a><a href="/ur/" class="lang-link"
                     hreflang="ur" dir="rtl" >
                     اردو
-                </a>
-                
-                <a href="/vi/" class="lang-link"
+                </a><a href="/vi/" class="lang-link"
                     hreflang="vi" >
                     Tiếng Việt
-                </a>
-                
-                <a href="/yo/" class="lang-link"
+                </a><a href="/yo/" class="lang-link"
                     hreflang="yo" >
                     Yorùbá
-                </a>
-                
-                <a href="/zh/" class="lang-link"
+                </a><a href="/zh/" class="lang-link"
                     hreflang="zh" >
                     中文
-                </a>
-                
-            </div>
-        </div>
-
-        <div class="footer-divider"></div>
-
-        
-        <div class="footer-bottom">
-            <p class="copyright">
+                </a></div></div><div class="footer-divider"></div><div class="footer-bottom"><p class="copyright">
                 &copy; 2026 Run Analytics. สงวนลิขสิทธิ์
-            </p>
-            <ul class="footer-legal">
-                <li><a href="/th/privacy/">ความเป็นส่วนตัว</a></li>
-                <li><a href="/th/terms/">เงื่อนไข</a></li>
-            </ul>
-        </div>
-    </div>
-</footer>
-
-  
-  <div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="Cookie consent" aria-live="polite">
-    <div class="cookie-banner-content">
-        <div>
-            <p>เว็บไซต์นี้ใช้คุกกี้เพื่อปรับปรุงประสบการณ์ของคุณ</p>
-            <a href="/th/privacy/" class="text-sm">เรียนรู้เพิ่มเติม</a>
-        </div>
-        <div class="cookie-banner-actions">
-            <button id="cookie-decline" class="btn btn-secondary btn-small">ปฏิเสธ</button>
-            <button id="cookie-accept" class="btn btn-primary btn-small">ยอมรับ</button>
-        </div>
-    </div>
-</div>
-
-  
-  <script src="../../assets/js/core.min.js?v=8aef43d1" defer></script>
-  <script src="../../assets/js/search.min.js?v=8aef43d1" defer></script>
-  
-
-  
-  
-  <script src="../../assets/js/analytics.min.js" data-ga-id="G-Y138VB4523" defer></script>
-  
-
-  
-  <script>if ('serviceWorker' in navigator) { navigator.serviceWorker.register('../../sw.js') }</script>
-</body>
-
-</html>
+            </p><ul class="footer-legal"><li><a href="/th/privacy/">ความเป็นส่วนตัว</a></li><li><a href="/th/terms/">เงื่อนไข</a></li></ul></div></div></footer><div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="Cookie consent" aria-live="polite"><div class="cookie-banner-content"><div><p>เว็บไซต์นี้ใช้คุกกี้เพื่อปรับปรุงประสบการณ์ของคุณ</p><a href="/th/privacy/" class="text-sm">เรียนรู้เพิ่มเติม</a></div><div class="cookie-banner-actions"><button id="cookie-decline" class="btn btn-secondary btn-small">ปฏิเสธ</button><button id="cookie-accept" class="btn btn-primary btn-small">ยอมรับ</button></div></div></div><script src="../../assets/js/core.min.js?v=e899af207631" defer></script><script src="../../assets/js/search.min.js?v=e899af207631" defer></script><script src="../../assets/js/analytics.min.js" data-ga-id="G-Y138VB4523" defer></script><script>if ('serviceWorker' in navigator) { navigator.serviceWorker.register('../../sw.js') }</script></body></html>

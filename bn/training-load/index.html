@@ -1,246 +1,61 @@
-<!DOCTYPE html>
-<html lang="bn" dir="ltr">
-
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
-    rel="stylesheet">
-
-  
-  <title>রানিংয়ের জন্য ট্রেনিং স্ট্রেস স্কোর: TSS, CTL, ATL এবং TSB ব্যাখ্যা</title>
-  <meta name="description" content="পারফরম্যান্স ম্যানেজমেন্ট চার্ট দিয়ে রানিং ট্রেনিং লোড আয়ত্ত করুন. রানিংয়ের জন্য ট্রেনিং স্ট্রেস স্কোর: TSS, CTL, ATL এবং TSB ব্যাখ্যা">
-  <meta name="author" content="AnalyticsZone Team">
-
-  
-  
-  <meta name="keywords" content="রানিং TSS, sTSS ক্যালকুলেটর, training stress score, CTL ATL TSB, রানিং PMC">
-  
-
-  
-  <link rel="canonical" href="https://run.analyticszone.app/bn/training-load/">
-
-  
-  
-  <meta property="article:published_time" content="2025-01-15T10:00:00Z">
-  <meta property="article:modified_time" content="2026-01-16T14:30:00Z">
-  <meta property="article:author" content="AnalyticsZone Team">
-  
-
-  
-  
-
-  
-  <meta property="og:type" content="article">
-  <meta property="og:url" content="https://run.analyticszone.app/bn/training-load/">
-  <meta property="og:title" content="রানিংয়ের জন্য ট্রেনিং স্ট্রেস স্কোর: TSS, CTL, ATL এবং TSB ব্যাখ্যা">
-  <meta property="og:description" content="পারফরম্যান্স ম্যানেজমেন্ট চার্ট দিয়ে রানিং ট্রেনিং লোড আয়ত্ত করুন. রানিংয়ের জন্য ট্রেনিং স্ট্রেস স্কোর: TSS, CTL, ATL এবং TSB ব্যাখ্যা">
-  <meta property="og:image" content="https://run.analyticszone.app/assets/images/og-image.svg">
-  <meta property="og:locale" content="bn_BD">
-  <meta property="og:site_name" content="Run Analytics">
-
-  
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:url" content="https://run.analyticszone.app/bn/training-load/">
-  <meta name="twitter:title" content="রানিংয়ের জন্য ট্রেনিং স্ট্রেস স্কোর: TSS, CTL, ATL এবং TSB ব্যাখ্যা">
-  <meta name="twitter:description" content="পারফরম্যান্স ম্যানেজমেন্ট চার্ট দিয়ে রানিং ট্রেনিং লোড আয়ত্ত করুন. রানিংয়ের জন্য ট্রেনিং স্ট্রেস স্কোর: TSS, CTL, ATL এবং TSB ব্যাখ্যা">
-  <meta name="twitter:image" content="https://run.analyticszone.app/assets/images/og-image.svg">
-  
-  <meta name="twitter:site" content="@runanalytics">
-  <meta name="twitter:creator" content="@runanalytics">
-  
-
-  
-  
-  <link rel="alternate" hreflang="af"
-    href="https://run.analyticszone.app/af/training-load/">
-  
-  <link rel="alternate" hreflang="am"
-    href="https://run.analyticszone.app/am/training-load/">
-  
-  <link rel="alternate" hreflang="ar"
-    href="https://run.analyticszone.app/ar/training-load/">
-  
-  <link rel="alternate" hreflang="bg"
-    href="https://run.analyticszone.app/bg/training-load/">
-  
-  <link rel="alternate" hreflang="bn"
-    href="https://run.analyticszone.app/bn/training-load/">
-  
-  <link rel="alternate" hreflang="ca"
-    href="https://run.analyticszone.app/ca/training-load/">
-  
-  <link rel="alternate" hreflang="cs"
-    href="https://run.analyticszone.app/cs/training-load/">
-  
-  <link rel="alternate" hreflang="da"
-    href="https://run.analyticszone.app/da/training-load/">
-  
-  <link rel="alternate" hreflang="de"
-    href="https://run.analyticszone.app/de/training-load/">
-  
-  <link rel="alternate" hreflang="el"
-    href="https://run.analyticszone.app/el/training-load/">
-  
-  <link rel="alternate" hreflang="en"
-    href="https://run.analyticszone.app/en/training-load/">
-  
-  <link rel="alternate" hreflang="es"
-    href="https://run.analyticszone.app/es/training-load/">
-  
-  <link rel="alternate" hreflang="et"
-    href="https://run.analyticszone.app/et/training-load/">
-  
-  <link rel="alternate" hreflang="fa"
-    href="https://run.analyticszone.app/fa/training-load/">
-  
-  <link rel="alternate" hreflang="fi"
-    href="https://run.analyticszone.app/fi/training-load/">
-  
-  <link rel="alternate" hreflang="fr"
-    href="https://run.analyticszone.app/fr/training-load/">
-  
-  <link rel="alternate" hreflang="gu"
-    href="https://run.analyticszone.app/gu/training-load/">
-  
-  <link rel="alternate" hreflang="ha"
-    href="https://run.analyticszone.app/ha/training-load/">
-  
-  <link rel="alternate" hreflang="he"
-    href="https://run.analyticszone.app/he/training-load/">
-  
-  <link rel="alternate" hreflang="hi"
-    href="https://run.analyticszone.app/hi/training-load/">
-  
-  <link rel="alternate" hreflang="hr"
-    href="https://run.analyticszone.app/hr/training-load/">
-  
-  <link rel="alternate" hreflang="hu"
-    href="https://run.analyticszone.app/hu/training-load/">
-  
-  <link rel="alternate" hreflang="id"
-    href="https://run.analyticszone.app/id/training-load/">
-  
-  <link rel="alternate" hreflang="is"
-    href="https://run.analyticszone.app/is/training-load/">
-  
-  <link rel="alternate" hreflang="it"
-    href="https://run.analyticszone.app/it/training-load/">
-  
-  <link rel="alternate" hreflang="ja"
-    href="https://run.analyticszone.app/ja/training-load/">
-  
-  <link rel="alternate" hreflang="km"
-    href="https://run.analyticszone.app/km/training-load/">
-  
-  <link rel="alternate" hreflang="kn"
-    href="https://run.analyticszone.app/kn/training-load/">
-  
-  <link rel="alternate" hreflang="ko"
-    href="https://run.analyticszone.app/ko/training-load/">
-  
-  <link rel="alternate" hreflang="lt"
-    href="https://run.analyticszone.app/lt/training-load/">
-  
-  <link rel="alternate" hreflang="lv"
-    href="https://run.analyticszone.app/lv/training-load/">
-  
-  <link rel="alternate" hreflang="ms"
-    href="https://run.analyticszone.app/ms/training-load/">
-  
-  <link rel="alternate" hreflang="my"
-    href="https://run.analyticszone.app/my/training-load/">
-  
-  <link rel="alternate" hreflang="nb"
-    href="https://run.analyticszone.app/nb/training-load/">
-  
-  <link rel="alternate" hreflang="nl"
-    href="https://run.analyticszone.app/nl/training-load/">
-  
-  <link rel="alternate" hreflang="pl"
-    href="https://run.analyticszone.app/pl/training-load/">
-  
-  <link rel="alternate" hreflang="pt"
-    href="https://run.analyticszone.app/pt/training-load/">
-  
-  <link rel="alternate" hreflang="pt-br"
-    href="https://run.analyticszone.app/pt-br/training-load/">
-  
-  <link rel="alternate" hreflang="ro"
-    href="https://run.analyticszone.app/ro/training-load/">
-  
-  <link rel="alternate" hreflang="ru"
-    href="https://run.analyticszone.app/ru/training-load/">
-  
-  <link rel="alternate" hreflang="sk"
-    href="https://run.analyticszone.app/sk/training-load/">
-  
-  <link rel="alternate" hreflang="sl"
-    href="https://run.analyticszone.app/sl/training-load/">
-  
-  <link rel="alternate" hreflang="sr"
-    href="https://run.analyticszone.app/sr/training-load/">
-  
-  <link rel="alternate" hreflang="sv"
-    href="https://run.analyticszone.app/sv/training-load/">
-  
-  <link rel="alternate" hreflang="sw"
-    href="https://run.analyticszone.app/sw/training-load/">
-  
-  <link rel="alternate" hreflang="ta"
-    href="https://run.analyticszone.app/ta/training-load/">
-  
-  <link rel="alternate" hreflang="te"
-    href="https://run.analyticszone.app/te/training-load/">
-  
-  <link rel="alternate" hreflang="th"
-    href="https://run.analyticszone.app/th/training-load/">
-  
-  <link rel="alternate" hreflang="tl"
-    href="https://run.analyticszone.app/tl/training-load/">
-  
-  <link rel="alternate" hreflang="tr"
-    href="https://run.analyticszone.app/tr/training-load/">
-  
-  <link rel="alternate" hreflang="uk"
-    href="https://run.analyticszone.app/uk/training-load/">
-  
-  <link rel="alternate" hreflang="ur"
-    href="https://run.analyticszone.app/ur/training-load/">
-  
-  <link rel="alternate" hreflang="vi"
-    href="https://run.analyticszone.app/vi/training-load/">
-  
-  <link rel="alternate" hreflang="yo"
-    href="https://run.analyticszone.app/yo/training-load/">
-  
-  <link rel="alternate" hreflang="zh"
-    href="https://run.analyticszone.app/zh/training-load/">
-  
-  <link rel="alternate" hreflang="x-default"
-    href="https://run.analyticszone.app/en/training-load/">
-
-  
-  <link rel="icon" type="image/png" sizes="32x32" href="../../assets/images/icons/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="../../assets/images/icons/favicon-16x16.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="../../assets/images/icons/apple-touch-icon.png">
-  <link rel="manifest" href="../../manifest.json">
-  <meta name="theme-color" content="#2563EB">
-  <meta name="robots" content="index, follow">
-
-  
-  
-  
-  <meta name="apple-itunes-app" content="app-id=6754524015">
-  
-
-  
-  <style>
+<!DOCTYPE html><html lang="bn" dir="ltr"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet"><title>রানিংয়ের জন্য ট্রেনিং স্ট্রেস স্কোর: TSS, CTL, ATL এবং TSB ব্যাখ্যা</title><meta name="description" content="পারফরম্যান্স ম্যানেজমেন্ট চার্ট দিয়ে রানিং ট্রেনিং লোড আয়ত্ত করুন. রানিংয়ের জন্য ট্রেনিং স্ট্রেস স্কোর: TSS, CTL, ATL এবং TSB ব্যাখ্যা"><meta name="author" content="AnalyticsZone Team"><meta name="keywords" content="রানিং TSS, sTSS ক্যালকুলেটর, training stress score, CTL ATL TSB, রানিং PMC"><link rel="canonical" href="https://run.analyticszone.app/bn/training-load/"><meta property="article:published_time" content="2025-01-15T10:00:00Z"><meta property="article:modified_time" content="2026-01-16T14:30:00Z"><meta property="article:author" content="AnalyticsZone Team"><meta property="og:type" content="article"><meta property="og:url" content="https://run.analyticszone.app/bn/training-load/"><meta property="og:title" content="রানিংয়ের জন্য ট্রেনিং স্ট্রেস স্কোর: TSS, CTL, ATL এবং TSB ব্যাখ্যা"><meta property="og:description" content="পারফরম্যান্স ম্যানেজমেন্ট চার্ট দিয়ে রানিং ট্রেনিং লোড আয়ত্ত করুন. রানিংয়ের জন্য ট্রেনিং স্ট্রেস স্কোর: TSS, CTL, ATL এবং TSB ব্যাখ্যা"><meta property="og:image" content="https://run.analyticszone.app/assets/images/og-image.svg"><meta property="og:locale" content="bn_BD"><meta property="og:site_name" content="Run Analytics"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:url" content="https://run.analyticszone.app/bn/training-load/"><meta name="twitter:title" content="রানিংয়ের জন্য ট্রেনিং স্ট্রেস স্কোর: TSS, CTL, ATL এবং TSB ব্যাখ্যা"><meta name="twitter:description" content="পারফরম্যান্স ম্যানেজমেন্ট চার্ট দিয়ে রানিং ট্রেনিং লোড আয়ত্ত করুন. রানিংয়ের জন্য ট্রেনিং স্ট্রেস স্কোর: TSS, CTL, ATL এবং TSB ব্যাখ্যা"><meta name="twitter:image" content="https://run.analyticszone.app/assets/images/og-image.svg"><meta name="twitter:site" content="@runanalytics"><meta name="twitter:creator" content="@runanalytics"><link rel="alternate" hreflang="af"
+    href="https://run.analyticszone.app/af/training-load/"><link rel="alternate" hreflang="am"
+    href="https://run.analyticszone.app/am/training-load/"><link rel="alternate" hreflang="ar"
+    href="https://run.analyticszone.app/ar/training-load/"><link rel="alternate" hreflang="bg"
+    href="https://run.analyticszone.app/bg/training-load/"><link rel="alternate" hreflang="bn"
+    href="https://run.analyticszone.app/bn/training-load/"><link rel="alternate" hreflang="ca"
+    href="https://run.analyticszone.app/ca/training-load/"><link rel="alternate" hreflang="cs"
+    href="https://run.analyticszone.app/cs/training-load/"><link rel="alternate" hreflang="da"
+    href="https://run.analyticszone.app/da/training-load/"><link rel="alternate" hreflang="de"
+    href="https://run.analyticszone.app/de/training-load/"><link rel="alternate" hreflang="el"
+    href="https://run.analyticszone.app/el/training-load/"><link rel="alternate" hreflang="en"
+    href="https://run.analyticszone.app/en/training-load/"><link rel="alternate" hreflang="es"
+    href="https://run.analyticszone.app/es/training-load/"><link rel="alternate" hreflang="et"
+    href="https://run.analyticszone.app/et/training-load/"><link rel="alternate" hreflang="fa"
+    href="https://run.analyticszone.app/fa/training-load/"><link rel="alternate" hreflang="fi"
+    href="https://run.analyticszone.app/fi/training-load/"><link rel="alternate" hreflang="fr"
+    href="https://run.analyticszone.app/fr/training-load/"><link rel="alternate" hreflang="gu"
+    href="https://run.analyticszone.app/gu/training-load/"><link rel="alternate" hreflang="ha"
+    href="https://run.analyticszone.app/ha/training-load/"><link rel="alternate" hreflang="he"
+    href="https://run.analyticszone.app/he/training-load/"><link rel="alternate" hreflang="hi"
+    href="https://run.analyticszone.app/hi/training-load/"><link rel="alternate" hreflang="hr"
+    href="https://run.analyticszone.app/hr/training-load/"><link rel="alternate" hreflang="hu"
+    href="https://run.analyticszone.app/hu/training-load/"><link rel="alternate" hreflang="id"
+    href="https://run.analyticszone.app/id/training-load/"><link rel="alternate" hreflang="is"
+    href="https://run.analyticszone.app/is/training-load/"><link rel="alternate" hreflang="it"
+    href="https://run.analyticszone.app/it/training-load/"><link rel="alternate" hreflang="ja"
+    href="https://run.analyticszone.app/ja/training-load/"><link rel="alternate" hreflang="km"
+    href="https://run.analyticszone.app/km/training-load/"><link rel="alternate" hreflang="kn"
+    href="https://run.analyticszone.app/kn/training-load/"><link rel="alternate" hreflang="ko"
+    href="https://run.analyticszone.app/ko/training-load/"><link rel="alternate" hreflang="lt"
+    href="https://run.analyticszone.app/lt/training-load/"><link rel="alternate" hreflang="lv"
+    href="https://run.analyticszone.app/lv/training-load/"><link rel="alternate" hreflang="ms"
+    href="https://run.analyticszone.app/ms/training-load/"><link rel="alternate" hreflang="my"
+    href="https://run.analyticszone.app/my/training-load/"><link rel="alternate" hreflang="nb"
+    href="https://run.analyticszone.app/nb/training-load/"><link rel="alternate" hreflang="nl"
+    href="https://run.analyticszone.app/nl/training-load/"><link rel="alternate" hreflang="pl"
+    href="https://run.analyticszone.app/pl/training-load/"><link rel="alternate" hreflang="pt"
+    href="https://run.analyticszone.app/pt/training-load/"><link rel="alternate" hreflang="pt-br"
+    href="https://run.analyticszone.app/pt-br/training-load/"><link rel="alternate" hreflang="ro"
+    href="https://run.analyticszone.app/ro/training-load/"><link rel="alternate" hreflang="ru"
+    href="https://run.analyticszone.app/ru/training-load/"><link rel="alternate" hreflang="sk"
+    href="https://run.analyticszone.app/sk/training-load/"><link rel="alternate" hreflang="sl"
+    href="https://run.analyticszone.app/sl/training-load/"><link rel="alternate" hreflang="sr"
+    href="https://run.analyticszone.app/sr/training-load/"><link rel="alternate" hreflang="sv"
+    href="https://run.analyticszone.app/sv/training-load/"><link rel="alternate" hreflang="sw"
+    href="https://run.analyticszone.app/sw/training-load/"><link rel="alternate" hreflang="ta"
+    href="https://run.analyticszone.app/ta/training-load/"><link rel="alternate" hreflang="te"
+    href="https://run.analyticszone.app/te/training-load/"><link rel="alternate" hreflang="th"
+    href="https://run.analyticszone.app/th/training-load/"><link rel="alternate" hreflang="tl"
+    href="https://run.analyticszone.app/tl/training-load/"><link rel="alternate" hreflang="tr"
+    href="https://run.analyticszone.app/tr/training-load/"><link rel="alternate" hreflang="uk"
+    href="https://run.analyticszone.app/uk/training-load/"><link rel="alternate" hreflang="ur"
+    href="https://run.analyticszone.app/ur/training-load/"><link rel="alternate" hreflang="vi"
+    href="https://run.analyticszone.app/vi/training-load/"><link rel="alternate" hreflang="yo"
+    href="https://run.analyticszone.app/yo/training-load/"><link rel="alternate" hreflang="zh"
+    href="https://run.analyticszone.app/zh/training-load/"><link rel="alternate" hreflang="x-default"
+    href="https://run.analyticszone.app/en/training-load/"><link rel="icon" type="image/png" sizes="32x32" href="../../assets/images/icons/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="../../assets/images/icons/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="../../assets/images/icons/apple-touch-icon.png"><link rel="manifest" href="../../manifest.json"><meta name="theme-color" content="#2563EB"><meta name="robots" content="index, follow"><meta name="apple-itunes-app" content="app-id=6754524015"><style>
 /* Critical CSS - Above the fold styles for fast LCP */
 :root {
   --color-primary: #0066CC;
@@ -499,20 +314,7 @@ img[width][height] {
     transition-duration: 0.01ms !important;
   }
 }
-</style>
-
-  
-  <link rel="preconnect" href="https://www.googletagmanager.com">
-  <link rel="dns-prefetch" href="https://www.googletagmanager.com">
-
-  
-  <link rel="stylesheet" href="../../assets/css/main.min.css?v=8aef43d1">
-
-  
-  
-
-
-<script type="application/ld+json">
+</style><link rel="preconnect" href="https://www.googletagmanager.com"><link rel="dns-prefetch" href="https://www.googletagmanager.com"><link rel="stylesheet" href="../../assets/css/main.min.css?v=e899af207631"><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Organization",
@@ -547,10 +349,7 @@ img[width][height] {
     
   ]
 }
-</script>
-
-
-<script type="application/ld+json">
+</script><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "WebSite",
@@ -559,11 +358,7 @@ img[width][height] {
   "description": "Track Critical Running Speed, Training Stress Score, and performance metrics with Run Analytics. Science-based iOS app for runners, triathletes &amp; coaches. 7-day free trial.",
   "inLanguage": "bn"
 }
-</script>
-
-
-
-<script type="application/ld+json">
+</script><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
@@ -578,12 +373,7 @@ img[width][height] {
   },
   "downloadUrl": "https://apps.apple.com/us/app/run-analytics/id6754524015"
 }
-</script>
-
-
-
-
-<script type="application/ld+json">
+</script><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
@@ -612,11 +402,7 @@ img[width][height] {
     
   ]
 }
-</script>
-
-
-
-<script type="application/ld+json">
+</script><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "WebPage",
@@ -624,11 +410,7 @@ img[width][height] {
   "description": "পারফরম্যান্স ম্যানেজমেন্ট চার্ট দিয়ে রানিং ট্রেনিং লোড আয়ত্ত করুন. রানিংয়ের জন্য ট্রেনিং স্ট্রেস স্কোর: TSS, CTL, ATL এবং TSB ব্যাখ্যা",
   "url": "https://run.analyticszone.app/bn/training-load/"
 }
-</script>
-
-
-
-<script type="application/ld+json">
+</script><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Article",
@@ -653,17 +435,7 @@ img[width][height] {
     "@id": "https://run.analyticszone.app/bn/training-load/"
   }
 }
-</script>
-
-
-
-
-
-  
-  
-
-  
-  <script>
+</script><script>
     (function () {
       let theme = localStorage.getItem('theme');
       // Older builds could persist a per-subdomain `theme=light` value without a UI
@@ -677,1601 +449,438 @@ img[width][height] {
         document.documentElement.classList.add('dark-mode');
       }
     })();
-  </script>
-</head>
-
-<body>
-  
-  <a href="#main-content" class="skip-link">কন্টেন্টে যান</a>
-
-  
-  <header class="site-header">
-    <div class="container">
-        <div class="header-inner">
-            
-            <a href="/bn/" class="site-logo">
-                <picture>
-                    <source srcset="../../assets/images/logo-dark.png" type="image/png"
-                        media="(prefers-color-scheme: dark)">
-                    <img src="../../assets/images/logo.png" alt="Run Analytics - Running Analytics App | Critical Running Speed, TSS, CTL/ATL/TSB for iOS" width="56" height="56">
-                </picture>
-                <span class="logo-text">Run Analytics</span>
-            </a>
-
-            
-            <nav class="nav-primary" id="nav-primary" role="navigation" aria-label="Main navigation">
-                <div class="nav-group-left">
-                    <ul>
-                        
-                        <li>
-                            
-                            <a href="/bn/" 
+  </script></head><body><a href="#main-content" class="skip-link">কন্টেন্টে যান</a><header class="site-header"><div class="container"><div class="header-inner"><a href="/bn/" class="site-logo"><picture><source srcset="../../assets/images/logo-dark.png" type="image/png"
+                        media="(prefers-color-scheme: dark)"><img src="../../assets/images/logo.png" alt="Run Analytics - Running Analytics App | Critical Running Speed, TSS, CTL/ATL/TSB for iOS" width="56" height="56"></picture><span class="logo-text">Run Analytics</span></a><nav class="nav-primary" id="nav-primary" role="navigation" aria-label="Main navigation"><div class="nav-group-left"><ul><li><a href="/bn/" 
                                 aria-current="">
                                 হোম
-                            </a>
-                            
-                            </li>
-                            
-                        <li class="has-submenu" >
-                            
-                            
-                            <a href="/bn/getting-started/" class="nav-label">শিখুন</a>
-                            
-                            <ul class="submenu">
-                                
-                                <li>
-                                    <a href="/bn/getting-started/" 
+                            </a></li><li class="has-submenu" ><a href="/bn/getting-started/" class="nav-label">শিখুন</a><ul class="submenu"><li><a href="/bn/getting-started/" 
                                         aria-current="">
                                         শুরু করুন
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/bn/crs/" 
+                                    </a></li><li><a href="/bn/crs/" 
                                         aria-current="">
                                         CRS
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/bn/training-zones/" 
+                                    </a></li><li><a href="/bn/training-zones/" 
                                         aria-current="">
                                         প্রশিক্ষণ জোন
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/bn/training-load/" class="active" 
+                                    </a></li><li><a href="/bn/training-load/" class="active" 
                                         aria-current="page">
                                         প্রশিক্ষণ লোড
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/bn/rtss-calculator/" 
+                                    </a></li><li><a href="/bn/rtss-calculator/" 
                                         aria-current="">
                                         rTSS ক্যালকুলেটর
-                                    </a>
-                                </li>
-                                
-                            </ul>
-                            
-                            </li>
-                            
-                        <li class="has-submenu" >
-                            
-                            
-                            <a href="/bn/research/" class="nav-label">বিজ্ঞান</a>
-                            
-                            <ul class="submenu">
-                                
-                                <li>
-                                    <a href="/bn/research/" 
+                                    </a></li></ul></li><li class="has-submenu" ><a href="/bn/research/" class="nav-label">বিজ্ঞান</a><ul class="submenu"><li><a href="/bn/research/" 
                                         aria-current="">
                                         গবেষণা
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/bn/formulas/" 
+                                    </a></li><li><a href="/bn/formulas/" 
                                         aria-current="">
                                         সূত্র
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/bn/efficiency/" 
+                                    </a></li><li><a href="/bn/efficiency/" 
                                         aria-current="">
                                         দক্ষতা
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/bn/stride-mechanics/" 
+                                    </a></li><li><a href="/bn/stride-mechanics/" 
                                         aria-current="">
                                         স্ট্রাইড মেকানিক্স
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/bn/bibliography/" 
+                                    </a></li><li><a href="/bn/bibliography/" 
                                         aria-current="">
                                         গ্রন্থপঞ্জি
-                                    </a>
-                                </li>
-                                
-                            </ul>
-                            
-                            </li>
-                            
-                        <li>
-                            
-                            <a href="/bn/contact/" 
+                                    </a></li></ul></li><li><a href="/bn/contact/" 
                                 aria-current="">
                                 যোগাযোগ
-                            </a>
-                            
-                            </li>
-                            
-                    </ul>
-
-                    
-                    <div class="search-container">
-                        <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                            </a></li></ul><div class="search-container"><svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
                             viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                            <circle cx="11" cy="11" r="8"></circle>
-                            <path d="m21 21-4.35-4.35"></path>
-                        </svg>
-                        <input type="search" id="site-search" class="search-input" aria-expanded="false"
-                            aria-haspopup="listbox" aria-autocomplete="list" autocomplete="off" spellcheck="false" />
-                        <div id="search-results" class="search-results hidden" role="region" aria-live="polite"></div>
-                    </div>
-
-                    
-                    <select class="language-selector" id="language-select" aria-label="ভাষা নির্বাচন করুন">
-                        
-                        <option value="af" >
+                            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.35-4.35"></path></svg><input type="search" id="site-search" class="search-input" aria-expanded="false"
+                            aria-haspopup="listbox" aria-autocomplete="list" autocomplete="off" spellcheck="false" /><div id="search-results" class="search-results hidden" role="region" aria-live="polite"></div></div><select class="language-selector" id="language-select" aria-label="ভাষা নির্বাচন করুন"><option value="af" >
                             Afrikaans
-                        </option>
-                        
-                        <option value="am" >
+                        </option><option value="am" >
                             አማርኛ
-                        </option>
-                        
-                        <option value="ar" >
+                        </option><option value="ar" >
                             العربية
-                        </option>
-                        
-                        <option value="bg" >
+                        </option><option value="bg" >
                             Български
-                        </option>
-                        
-                        <option value="bn" selected>
+                        </option><option value="bn" selected>
                             বাংলা
-                        </option>
-                        
-                        <option value="ca" >
+                        </option><option value="ca" >
                             Català
-                        </option>
-                        
-                        <option value="cs" >
+                        </option><option value="cs" >
                             Čeština
-                        </option>
-                        
-                        <option value="da" >
+                        </option><option value="da" >
                             Dansk
-                        </option>
-                        
-                        <option value="de" >
+                        </option><option value="de" >
                             Deutsch
-                        </option>
-                        
-                        <option value="el" >
+                        </option><option value="el" >
                             Ελληνικά
-                        </option>
-                        
-                        <option value="en" >
+                        </option><option value="en" >
                             English
-                        </option>
-                        
-                        <option value="es" >
+                        </option><option value="es" >
                             Español
-                        </option>
-                        
-                        <option value="et" >
+                        </option><option value="et" >
                             Eesti
-                        </option>
-                        
-                        <option value="fa" >
+                        </option><option value="fa" >
                             فارسی
-                        </option>
-                        
-                        <option value="fi" >
+                        </option><option value="fi" >
                             Suomi
-                        </option>
-                        
-                        <option value="fr" >
+                        </option><option value="fr" >
                             Français
-                        </option>
-                        
-                        <option value="gu" >
+                        </option><option value="gu" >
                             ગુજરાતી
-                        </option>
-                        
-                        <option value="ha" >
+                        </option><option value="ha" >
                             Hausa
-                        </option>
-                        
-                        <option value="he" >
+                        </option><option value="he" >
                             עברית
-                        </option>
-                        
-                        <option value="hi" >
+                        </option><option value="hi" >
                             हिन्दी
-                        </option>
-                        
-                        <option value="hr" >
+                        </option><option value="hr" >
                             Hrvatski
-                        </option>
-                        
-                        <option value="hu" >
+                        </option><option value="hu" >
                             Magyar
-                        </option>
-                        
-                        <option value="id" >
+                        </option><option value="id" >
                             Bahasa Indonesia
-                        </option>
-                        
-                        <option value="is" >
+                        </option><option value="is" >
                             Íslenska
-                        </option>
-                        
-                        <option value="it" >
+                        </option><option value="it" >
                             Italiano
-                        </option>
-                        
-                        <option value="ja" >
+                        </option><option value="ja" >
                             日本語
-                        </option>
-                        
-                        <option value="km" >
+                        </option><option value="km" >
                             ភាសាខ្មែរ
-                        </option>
-                        
-                        <option value="kn" >
+                        </option><option value="kn" >
                             ಕನ್ನಡ
-                        </option>
-                        
-                        <option value="ko" >
+                        </option><option value="ko" >
                             한국어
-                        </option>
-                        
-                        <option value="lt" >
+                        </option><option value="lt" >
                             Lietuvių
-                        </option>
-                        
-                        <option value="lv" >
+                        </option><option value="lv" >
                             Latviešu
-                        </option>
-                        
-                        <option value="ms" >
+                        </option><option value="ms" >
                             Bahasa Melayu
-                        </option>
-                        
-                        <option value="my" >
+                        </option><option value="my" >
                             မြန်မာစာ
-                        </option>
-                        
-                        <option value="nb" >
+                        </option><option value="nb" >
                             Norsk Bokmål
-                        </option>
-                        
-                        <option value="nl" >
+                        </option><option value="nl" >
                             Nederlands
-                        </option>
-                        
-                        <option value="pl" >
+                        </option><option value="pl" >
                             Polski
-                        </option>
-                        
-                        <option value="pt" >
+                        </option><option value="pt" >
                             Português
-                        </option>
-                        
-                        <option value="pt-br" >
+                        </option><option value="pt-br" >
                             Português (Brasil)
-                        </option>
-                        
-                        <option value="ro" >
+                        </option><option value="ro" >
                             Română
-                        </option>
-                        
-                        <option value="ru" >
+                        </option><option value="ru" >
                             Русский
-                        </option>
-                        
-                        <option value="sk" >
+                        </option><option value="sk" >
                             Slovenčina
-                        </option>
-                        
-                        <option value="sl" >
+                        </option><option value="sl" >
                             Slovenščina
-                        </option>
-                        
-                        <option value="sr" >
+                        </option><option value="sr" >
                             Srpski
-                        </option>
-                        
-                        <option value="sv" >
+                        </option><option value="sv" >
                             Svenska
-                        </option>
-                        
-                        <option value="sw" >
+                        </option><option value="sw" >
                             Kiswahili
-                        </option>
-                        
-                        <option value="ta" >
+                        </option><option value="ta" >
                             தமிழ்
-                        </option>
-                        
-                        <option value="te" >
+                        </option><option value="te" >
                             తెలుగు
-                        </option>
-                        
-                        <option value="th" >
+                        </option><option value="th" >
                             ไทย
-                        </option>
-                        
-                        <option value="tl" >
+                        </option><option value="tl" >
                             Tagalog
-                        </option>
-                        
-                        <option value="tr" >
+                        </option><option value="tr" >
                             Türkçe
-                        </option>
-                        
-                        <option value="uk" >
+                        </option><option value="uk" >
                             Українська
-                        </option>
-                        
-                        <option value="ur" >
+                        </option><option value="ur" >
                             اردو
-                        </option>
-                        
-                        <option value="vi" >
+                        </option><option value="vi" >
                             Tiếng Việt
-                        </option>
-                        
-                        <option value="yo" >
+                        </option><option value="yo" >
                             Yorùbá
-                        </option>
-                        
-                        <option value="zh" >
+                        </option><option value="zh" >
                             中文
-                        </option>
-                        
-                    </select>
-                </div>
-
-                <div class="nav-group-right">
-                    
-
-
-                    
-                    <div class="header-app-buttons">
-                        
-                        
-                        <a href="https://apps.apple.com/us/app/run-analytics/id6754524015" class="header-download-btn" target="_blank"
-                            rel="noopener" aria-label="Download on App Store" title="Download on App Store">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                                fill="currentColor">
-                                <path
-                                    d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z" />
-                            </svg>
-                        </a>
-                        
-
-                        
-                        <a href="https://play.google.com/store/apps/details?id=com.arnohealth.runanalytics" class="header-download-btn" target="_blank"
-                            rel="noopener" aria-label="Get it on Google Play" title="Get it on Google Play">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                                fill="currentColor">
-                                <path
-                                    d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.92 20.16,13.19L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M16.81,8.88L14.54,11.15L6.05,2.66L16.81,8.88Z" />
-                            </svg>
-                        </a>
-                        
-                        
-                    </div>
-
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-
-                    
-                    <div class="suite-menu-container">
-                        <button class="suite-menu-toggle" id="suite-menu-toggle" aria-label="See other apps"
-                            aria-expanded="false">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        </option></select></div><div class="nav-group-right"><div class="header-app-buttons"><a href="https://apps.apple.com/us/app/run-analytics/id6754524015" class="header-download-btn" target="_blank"
+                            rel="noopener" aria-label="Download on App Store" title="Download on App Store"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="currentColor"><path
+                                    d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z" /></svg></a><a href="https://play.google.com/store/apps/details?id=com.arnohealth.runanalytics" class="header-download-btn" target="_blank"
+                            rel="noopener" aria-label="Get it on Google Play" title="Get it on Google Play"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="currentColor"><path
+                                    d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.92 20.16,13.19L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M16.81,8.88L14.54,11.15L6.05,2.66L16.81,8.88Z" /></svg></a></div><div class="suite-menu-container"><button class="suite-menu-toggle" id="suite-menu-toggle" aria-label="See other apps"
+                            aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round">
-                                <rect x="3" y="3" width="7" height="7"></rect>
-                                <rect x="14" y="3" width="7" height="7"></rect>
-                                <rect x="14" y="14" width="7" height="7"></rect>
-                                <rect x="3" y="14" width="7" height="7"></rect>
-                            </svg>
-                        </button>
-                        <div class="suite-dropdown hidden" id="suite-dropdown">
-                            <div class="suite-dropdown-header">Other AnalyticsZone Apps</div>
-                            <div class="suite-apps-grid">
-                                
-                                <a href="https://analyticszone.app" class="suite-app-link">AnalyticsZone</a>
-                                
-                                <a href="https://swim.analyticszone.app" class="suite-app-link">Swim Analytics</a>
-                                
-                                <a href="https://bike.analyticszone.app" class="suite-app-link">Bike Analytics</a>
-                                
-                                <a href="https://walk.analyticszone.app" class="suite-app-link">Walk Analytics</a>
-                                
-                                <a href="https://cardio.analyticszone.app" class="suite-app-link">Cardio Analytics</a>
-                                
-                                <a href="https://health.analyticszone.app" class="suite-app-link">Health Analytics</a>
-                                
-                                <a href="https://swimtrainer.analyticszone.app" class="suite-app-link">Swim Trainer</a>
-                                
-                            </div>
-                        </div>
-                    </div>
-                    
-                </div>
-            </nav>
-
-            
-            <button class="menu-toggle" id="menu-toggle" aria-label="মেনু টগল করুন"
-                aria-expanded="false" aria-controls="nav-primary">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </div>
-    </div>
-</header>
-
-  
-  
-
-<nav class="breadcrumbs" aria-label="Breadcrumb">
-    <div class="container">
-        <ol>
-            
-            <li>
-                
-                <a href="/bn/">হোম</a>
-                
-            </li>
-            
-            <li>
-                
-                <a href="/bn/getting-started/">শিখুন</a>
-                
-            </li>
-            
-            <li>
-                
-                <span aria-current="page">প্রশিক্ষণ লোড</span>
-                
-            </li>
-            
-        </ol>
-    </div>
-</nav>
-
-
-  
-  <main id="main-content" class="main-content">
-    
-    <section class="page-hero">
-    <div class="container">
-        <h1>রানিংয়ের জন্য ট্রেনিং স্ট্রেস স্কোর: TSS, CTL, ATL এবং TSB ব্যাখ্যা</h1>
-        <p class="lead">পারফরম্যান্স ম্যানেজমেন্ট চার্ট দিয়ে রানিং ট্রেনিং লোড আয়ত্ত করুন</p>
-    </div>
-</section>
-
-<section class="section">
-    <div class="container container-narrow">
-        <div class="callout callout-success">
-            <h2>🎯 মূল তথ্য: রানিংয়ের জন্য ট্রেনিং স্ট্রেস স্কোর</h2>
-            <ul>
-                <li><strong>ট্রেনিং স্ট্রেস স্কোর (TSS)</strong> প্রতিটি রান আপনার শরীরে কতটা প্রভাব ফেলে তা নির্ধারণ
-                    করে, যেখানে তীব্রতা এবং সময়কালকে একটি একক মেট্রিকের মাধ্যমে প্রকাশ করা হয়।</li>
-                <li><strong>CTL (ক্রনিক ট্রেনিং লোড)</strong> ৪২ দিনের ধারাবাহিক রানিংয়ের মাধ্যমে গড়ে ওঠা আপনার
-                    দীর্ঘমেয়াদী ফিটনেস পরিমাপ করে।</li>
-                <li><strong>ATL (অ্যাকিউট ট্রেনিং লোড)</strong> গত ৭ দিনের ট্রেনিং থেকে তৈরি হওয়া সাম্প্রতিক ক্লান্তি
-                    ট্র্যাক করে।</li>
-                <li><strong>TSB (ট্রেনিং স্ট্রেস ব্যালেন্স)</strong> আপনার ফিটনেস ও ক্লান্তির ভারসাম্য এবং রেসের
-                    প্রস্তুতি বা রিকভারির প্রয়োজনীয়তা নির্দেশ করে।</li>
-                <li>রানিং ট্রেনিং লোড বোঝার মাধ্যমে ডেটা-চালিত পিরিওডাইজেশনের সাহায্যে ওভারট্রেনিং প্রতিরোধ এবং
-                    পারফরম্যান্স অপ্টিমাইজ করা সম্ভব হয়।</li>
-            </ul>
-            <p><em>ভিত্তি: TSS গণনার জন্য আপনার <a href="/bn/crs/">ক্রিটিক্যাল রানিং স্পিড (CRS)</a>-কে থ্রেশহোল্ড
-                    রেফারেন্স পয়েন্ট হিসেবে প্রয়োজন।</em></p>
-        </div>
-    </div>
-</section>
-
-<section class="section section-alt">
-    <div class="container container-narrow">
-        <h2>রানিংয়ের জন্য ট্রেনিং স্ট্রেস স্কোর (TSS) কী?</h2>
-        <p class="lead">রানিং ট্রেনিং স্ট্রেস স্কোর মেথডোলজি একটি গুরুত্বপূর্ণ প্রশ্নের উত্তর দেয়: <strong>আপনার
+                                stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg></button><div class="suite-dropdown hidden" id="suite-dropdown"><div class="suite-dropdown-header">Other AnalyticsZone Apps</div><div class="suite-apps-grid"><a href="https://analyticszone.app" class="suite-app-link">AnalyticsZone</a><a href="https://swim.analyticszone.app" class="suite-app-link">Swim Analytics</a><a href="https://bike.analyticszone.app" class="suite-app-link">Bike Analytics</a><a href="https://walk.analyticszone.app" class="suite-app-link">Walk Analytics</a><a href="https://cardio.analyticszone.app" class="suite-app-link">Cardio Analytics</a><a href="https://health.analyticszone.app" class="suite-app-link">Health Analytics</a><a href="https://swimtrainer.analyticszone.app" class="suite-app-link">Swim Trainer</a></div></div></div></div></nav><button class="menu-toggle" id="menu-toggle" aria-label="মেনু টগল করুন"
+                aria-expanded="false" aria-controls="nav-primary"><span></span><span></span><span></span></button></div></div></header><nav class="breadcrumbs" aria-label="Breadcrumb"><div class="container"><ol><li><a href="/bn/">হোম</a></li><li><a href="/bn/getting-started/">শিখুন</a></li><li><span aria-current="page">প্রশিক্ষণ লোড</span></li></ol></div></nav><main id="main-content" class="main-content"><section class="page-hero"><div class="container"><h1>রানিংয়ের জন্য ট্রেনিং স্ট্রেস স্কোর: TSS, CTL, ATL এবং TSB ব্যাখ্যা</h1><p class="lead">পারফরম্যান্স ম্যানেজমেন্ট চার্ট দিয়ে রানিং ট্রেনিং লোড আয়ত্ত করুন</p></div></section><section class="section"><div class="container container-narrow"><div class="callout callout-success"><h2>🎯 মূল তথ্য: রানিংয়ের জন্য ট্রেনিং স্ট্রেস স্কোর</h2><ul><li><strong>ট্রেনিং স্ট্রেস স্কোর (TSS)</strong> প্রতিটি রান আপনার শরীরে কতটা প্রভাব ফেলে তা নির্ধারণ
+                    করে, যেখানে তীব্রতা এবং সময়কালকে একটি একক মেট্রিকের মাধ্যমে প্রকাশ করা হয়।</li><li><strong>CTL (ক্রনিক ট্রেনিং লোড)</strong> ৪২ দিনের ধারাবাহিক রানিংয়ের মাধ্যমে গড়ে ওঠা আপনার
+                    দীর্ঘমেয়াদী ফিটনেস পরিমাপ করে।</li><li><strong>ATL (অ্যাকিউট ট্রেনিং লোড)</strong> গত ৭ দিনের ট্রেনিং থেকে তৈরি হওয়া সাম্প্রতিক ক্লান্তি
+                    ট্র্যাক করে।</li><li><strong>TSB (ট্রেনিং স্ট্রেস ব্যালেন্স)</strong> আপনার ফিটনেস ও ক্লান্তির ভারসাম্য এবং রেসের
+                    প্রস্তুতি বা রিকভারির প্রয়োজনীয়তা নির্দেশ করে।</li><li>রানিং ট্রেনিং লোড বোঝার মাধ্যমে ডেটা-চালিত পিরিওডাইজেশনের সাহায্যে ওভারট্রেনিং প্রতিরোধ এবং
+                    পারফরম্যান্স অপ্টিমাইজ করা সম্ভব হয়।</li></ul><p><em>ভিত্তি: TSS গণনার জন্য আপনার <a href="/bn/crs/">ক্রিটিক্যাল রানিং স্পিড (CRS)</a>-কে থ্রেশহোল্ড
+                    রেফারেন্স পয়েন্ট হিসেবে প্রয়োজন।</em></p></div></div></section><section class="section section-alt"><div class="container container-narrow"><h2>রানিংয়ের জন্য ট্রেনিং স্ট্রেস স্কোর (TSS) কী?</h2><p class="lead">রানিং ট্রেনিং স্ট্রেস স্কোর মেথডোলজি একটি গুরুত্বপূর্ণ প্রশ্নের উত্তর দেয়: <strong>আপনার
                 ওয়ার্কআউটটি কতটা কঠিন ছিল?</strong> এটি কেবল দূরত্ব বা সময় নয়, বরং প্রতিটি রান আপনার শরীরে প্রকৃত যে
-            ফিজিওলজিক্যাল স্ট্রেস তৈরি করে তা নির্ধারণ করে।</p>
-
-        <p>সাইক্লিংয়ের জন্য ডঃ অ্যান্ড্রু কগ্যান কর্তৃক উদ্ভাবিত ট্রেনিং স্ট্রেস স্কোর (TSS) পদ্ধতিটি রানিংয়ের জন্য
+            ফিজিওলজিক্যাল স্ট্রেস তৈরি করে তা নির্ধারণ করে।</p><p>সাইক্লিংয়ের জন্য ডঃ অ্যান্ড্রু কগ্যান কর্তৃক উদ্ভাবিত ট্রেনিং স্ট্রেস স্কোর (TSS) পদ্ধতিটি রানিংয়ের জন্য
             উপযোগী করা হয়েছে, যাতে ওয়ার্কআউটের তীব্রতা এবং সময়কালকে একটি একক সংখ্যার মাধ্যমে প্রকাশ করা যায়। রানারদের
             জন্য, আমরা আপনার থ্রেশহোল্ডের সাপেক্ষে পেসের ওপর ভিত্তি করে <strong>রানিং ট্রেনিং স্ট্রেস স্কোর
-                (rTSS)</strong> ব্যবহার করি।</p>
-
-        <div class="callout callout-info">
-            <h3>রানিংয়ের জন্য TSS স্ট্যান্ডার্ড</h3>
-            <p>আপনার <a href="/bn/crs/">ক্রিটিক্যাল রানিং স্পিড (CRS)</a> বা থ্রেশহোল্ড পেস-এ ১ ঘন্টার রান = <strong>১০০
-                    TSS</strong></p>
-            <p>এই স্ট্যান্ডার্ড মান নির্ধারণ বিভিন্ন ওয়ার্কআউট, সপ্তাহ এবং ট্রেনিং সাইকেলের মধ্যে তুলনা করার সুযোগ দেয়।
-                একটি ৩০ মিনিটের থ্রেশহোল্ড রান = ~৫০ TSS। একটি ২ ঘন্টার থ্রেশহোল্ড রান = ~২০০ TSS।</p>
-        </div>
-
-        <h3>রানিং TSS বনাম সাইক্লিং TSS: মূল পার্থক্য</h3>
-        <p>উভয় খেলায় TSS ব্যবহার করা হলেও, রানিং ট্রেনিং লোডের কিছু স্বতন্ত্র বৈশিষ্ট্য রয়েছে:</p>
-
-        <table class="comparison-table">
-            <thead>
-                <tr>
-                    <th>দিক</th>
-                    <th>সাইক্লিং TSS</th>
-                    <th>রানিং TSS (rTSS)</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><strong>প্রাথমিক ইনপুট</strong></td>
-                    <td>পাওয়ার (ওয়াট)</td>
-                    <td>পেস (মিনিট/কিমি বা মিনিট/মাইল)</td>
-                </tr>
-                <tr>
-                    <td><strong>ইমপ্যাক্ট স্ট্রেস</strong></td>
-                    <td>কম (বসে থাকা অবস্থায়)</td>
-                    <td>বেশি (মাটিতে পা রাখার আঘাত)</td>
-                </tr>
-                <tr>
-                    <td><strong>রিকভারির প্রয়োজন</strong></td>
-                    <td>একই TSS-এর জন্য কম</td>
-                    <td>মাসকুলোস্কেলিটাল স্ট্রেসের কারণে বেশি</td>
-                </tr>
-                <tr>
-                    <td><strong>সাপ্তাহিক ভলিউম</strong></td>
-                    <td>সাধারণত ৫০০-৮০০+ TSS</td>
-                    <td>সাধারণত ৩০০-৫০০ TSS (একই ফিটনেস লেভেলে)</td>
-                </tr>
-                <tr>
-                    <td><strong>সূত্র</strong></td>
-                    <td>IF² × সময়কাল × ১০০</td>
-                    <td>IF² × সময়কাল × ১০০</td>
-                </tr>
-            </tbody>
-        </table>
-
-        <div class="callout callout-warning">
-            <h4>⚠️ গুরুত্বপূর্ণ: রানিংয়ের উচ্চতর ইমপ্যাক্ট</h4>
-            <p>পা মাটিতে ফেলার ইমপ্যাক্ট ফোর্সের কারণে রানিংয়ের একই TSS মান সাইক্লিংয়ের চেয়ে শরীরের ওপরে বেশি ফিজিক্যাল
+                (rTSS)</strong> ব্যবহার করি।</p><div class="callout callout-info"><h3>রানিংয়ের জন্য TSS স্ট্যান্ডার্ড</h3><p>আপনার <a href="/bn/crs/">ক্রিটিক্যাল রানিং স্পিড (CRS)</a> বা থ্রেশহোল্ড পেস-এ ১ ঘন্টার রান = <strong>১০০
+                    TSS</strong></p><p>এই স্ট্যান্ডার্ড মান নির্ধারণ বিভিন্ন ওয়ার্কআউট, সপ্তাহ এবং ট্রেনিং সাইকেলের মধ্যে তুলনা করার সুযোগ দেয়।
+                একটি ৩০ মিনিটের থ্রেশহোল্ড রান = ~৫০ TSS। একটি ২ ঘন্টার থ্রেশহোল্ড রান = ~২০০ TSS।</p></div><h3>রানিং TSS বনাম সাইক্লিং TSS: মূল পার্থক্য</h3><p>উভয় খেলায় TSS ব্যবহার করা হলেও, রানিং ট্রেনিং লোডের কিছু স্বতন্ত্র বৈশিষ্ট্য রয়েছে:</p><table class="comparison-table"><thead><tr><th>দিক</th><th>সাইক্লিং TSS</th><th>রানিং TSS (rTSS)</th></tr></thead><tbody><tr><td><strong>প্রাথমিক ইনপুট</strong></td><td>পাওয়ার (ওয়াট)</td><td>পেস (মিনিট/কিমি বা মিনিট/মাইল)</td></tr><tr><td><strong>ইমপ্যাক্ট স্ট্রেস</strong></td><td>কম (বসে থাকা অবস্থায়)</td><td>বেশি (মাটিতে পা রাখার আঘাত)</td></tr><tr><td><strong>রিকভারির প্রয়োজন</strong></td><td>একই TSS-এর জন্য কম</td><td>মাসকুলোস্কেলিটাল স্ট্রেসের কারণে বেশি</td></tr><tr><td><strong>সাপ্তাহিক ভলিউম</strong></td><td>সাধারণত ৫০০-৮০০+ TSS</td><td>সাধারণত ৩০০-৫০০ TSS (একই ফিটনেস লেভেলে)</td></tr><tr><td><strong>সূত্র</strong></td><td>IF² × সময়কাল × ১০০</td><td>IF² × সময়কাল × ১০০</td></tr></tbody></table><div class="callout callout-warning"><h4>⚠️ গুরুত্বপূর্ণ: রানিংয়ের উচ্চতর ইমপ্যাক্ট</h4><p>পা মাটিতে ফেলার ইমপ্যাক্ট ফোর্সের কারণে রানিংয়ের একই TSS মান সাইক্লিংয়ের চেয়ে শরীরের ওপরে বেশি ফিজিক্যাল
                 স্ট্রেস সৃষ্টি করে। সপ্তাহে ৪০০ TSS অর্জনকারী একজন রানার প্রায় ১০০০-৬০০/৭০০ TSS অর্জনকারী একজন
                 সাইক্লিস্টের মতো ট্রেনিং অ্যাডাপ্টেশন অনুভব করেন। রানিং ট্রেনিং লোড ম্যানেজ করার সময় কার্ডিওভাসকুলার এবং
-                মাসকুলোস্কেলিটাল উভয় ধরনের স্ট্রেস বিবেচনা করা উচিত।</p>
-        </div>
-    </div>
-</section>
-
-<section class="section">
-    <div class="container">
-        <h2 class="text-center mb-xl">রানিং ট্রেনিং স্ট্রেস স্কোর (rTSS) গণনা</h2>
-
-        <div class="grid grid-2">
-            <div>
-                <h3>রানিং TSS-এর সূত্র</h3>
-                <div class="formula-box">
-                    <div class="formula">
+                মাসকুলোস্কেলিটাল উভয় ধরনের স্ট্রেস বিবেচনা করা উচিত।</p></div></div></section><section class="section"><div class="container"><h2 class="text-center mb-xl">রানিং ট্রেনিং স্ট্রেস স্কোর (rTSS) গণনা</h2><div class="grid grid-2"><div><h3>রানিং TSS-এর সূত্র</h3><div class="formula-box"><div class="formula">
                         rTSS = (IF²) × সময়কাল (ঘন্টা) × ১০০
-                    </div>
-                    <div class="formula-explanation">
-                        <p>যেখানে ইনটেনসিটি ফ্যাক্টর (IF) হলো:</p>
-                        <div class="formula">
+                    </div><div class="formula-explanation"><p>যেখানে ইনটেনসিটি ফ্যাক্টর (IF) হলো:</p><div class="formula">
                             IF = NGS / CRS
-                        </div>
-                        <p>নরমালাইজড গ্রেডেড স্পিড (NGS) পেসের পরিবর্তন এবং উচ্চতা পরিবর্তনের হিসেব রাখে:</p>
-                        <div class="formula">
+                        </div><p>নরমালাইজড গ্রেডেড স্পিড (NGS) পেসের পরিবর্তন এবং উচ্চতা পরিবর্তনের হিসেব রাখে:</p><div class="formula">
                             NGS ≈ গড় রানিং গতি (ভূখণ্ড অনুযায়ী সমন্বয় করা)
-                        </div>
-                    </div>
-                </div>
-
-                <div class="callout callout-tip mt-md">
-                    <h4>📊 পেস-ভিত্তিক সহজ পদ্ধতি</h4>
-                    <p>পাওয়ার মিটার নেই এমন রানারদের জন্য পেস-ভিত্তিক গণনা পদ্ধতি ব্যবহার করুন:</p>
-                    <div class="formula">
+                        </div></div></div><div class="callout callout-tip mt-md"><h4>📊 পেস-ভিত্তিক সহজ পদ্ধতি</h4><p>পাওয়ার মিটার নেই এমন রানারদের জন্য পেস-ভিত্তিক গণনা পদ্ধতি ব্যবহার করুন:</p><div class="formula">
                         IF = থ্রেশহোল্ড পেস / গড় পেস
-                    </div>
-                    <p><strong>উদাহরণ:</strong> যদি আপনার CRS পেস ৪:০০/কিমি হয় এবং আপনি ৪:২০/কিমি পেস-এ দৌড়ান:</p>
-                    <p>IF = ৪:০০ / ৪:২০ = ২৪০/২৬০ = ০.৯২৩</p>
-                    <p><em>দ্রষ্টব্য: ধীর পেস = কম IF (গতির তুলনায় এটি বিপরীত)</em></p>
-                </div>
-            </div>
-
-            <div>
-                <h3>ব্যবহারিক উদাহরণ: টেম্পো রান</h3>
-                <div class="example-box">
-                    <h4>রানার প্রোফাইল:</h4>
-                    <ul>
-                        <li>CRS পেস: ৪:০০/কিমি (১৫ কিমি/ঘন্টা)</li>
-                        <li>CRS: ১ ঘন্টার জন্য থ্রেশহোল্ড পেস</li>
-                    </ul>
-
-                    <h4>ওয়ার্কআউট ডেটা:</h4>
-                    <ul>
-                        <li>মোট দূরত্ব: ১০ কিমি</li>
-                        <li>মুভিং টাইম: ৪৩:২০ (০.৭২২ ঘন্টা)</li>
-                        <li>গড় পেস: ৪:২০/কিমি</li>
-                    </ul>
-
-                    <h4>ধাপ ১: গড় গতি গণনা করুন</h4>
-                    <div class="calculation">
+                    </div><p><strong>উদাহরণ:</strong> যদি আপনার CRS পেস ৪:০০/কিমি হয় এবং আপনি ৪:২০/কিমি পেস-এ দৌড়ান:</p><p>IF = ৪:০০ / ৪:২০ = ২৪০/২৬০ = ০.৯২৩</p><p><em>দ্রষ্টব্য: ধীর পেস = কম IF (গতির তুলনায় এটি বিপরীত)</em></p></div></div><div><h3>ব্যবহারিক উদাহরণ: টেম্পো রান</h3><div class="example-box"><h4>রানার প্রোফাইল:</h4><ul><li>CRS পেস: ৪:০০/কিমি (১৫ কিমি/ঘন্টা)</li><li>CRS: ১ ঘন্টার জন্য থ্রেশহোল্ড পেস</li></ul><h4>ওয়ার্কআউট ডেটা:</h4><ul><li>মোট দূরত্ব: ১০ কিমি</li><li>মুভিং টাইম: ৪৩:২০ (০.৭২২ ঘন্টা)</li><li>গড় পেস: ৪:২০/কিমি</li></ul><h4>ধাপ ১: গড় গতি গণনা করুন</h4><div class="calculation">
                         গতি = ১০কিমি / ০.৭২২ঘন্টা<br>
-                        গতি = <strong>১৩.৮৫ কিমি/ঘন্টা</strong>
-                    </div>
-
-                    <h4>ধাপ ২: IF গণনা করুন (গতি পদ্ধতি)</h4>
-                    <div class="calculation">
+                        গতি = <strong>১৩.৮৫ কিমি/ঘন্টা</strong></div><h4>ধাপ ২: IF গণনা করুন (গতি পদ্ধতি)</h4><div class="calculation">
                         IF = ১৩.৮৫ / ১৫.০<br>
-                        IF = <strong>০.৯২৩</strong>
-                    </div>
-
-                    <h4>ধাপ ৩: IF গণনা করুন (পেস পদ্ধতি)</h4>
-                    <div class="calculation">
+                        IF = <strong>০.৯২৩</strong></div><h4>ধাপ ৩: IF গণনা করুন (পেস পদ্ধতি)</h4><div class="calculation">
                         IF = ২৪০ সে/কিমি / ২৬০ সে/কিমি<br>
                         IF = <strong>০.৯২৩</strong> ✓
-                    </div>
-
-                    <h4>ধাপ ৪: rTSS গণনা করুন</h4>
-                    <div class="calculation">
+                    </div><h4>ধাপ ৪: rTSS গণনা করুন</h4><div class="calculation">
                         rTSS = (০.৯২৩²) × ০.৭২২ × ১০০<br>
                         rTSS = ০.৮৫২ × ০.৭২২ × ১০০<br>
-                        rTSS = <strong>৬১.৫</strong>
-                    </div>
-
-                    <p class="mt-md"><strong>ব্যাখ্যা:</strong> থ্রেশহোল্ডের তুলনায় ১০% ধীর গতির এই ১০ কিমি টেম্পো রানটি
-                        ৬১.৫ TSS তৈরি করেছে—যা একটি মানসম্মত অ্যারোবিক সেশনের সাধারণ ট্রেনিং স্টিমুলাস।</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="intensity-guide mt-xl">
-            <h3>রানিং TSS ইনটেনসিটি গাইডলাইন</h3>
-            <table class="intensity-table">
-                <thead>
-                    <tr>
-                        <th>TSS রেঞ্জ</th>
-                        <th>তীব্রতার স্তর</th>
-                        <th>বিবরণ</th>
-                        <th>ওয়ার্কআউটের উদাহরণ</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>&lt; ৫০</td>
-                        <td>সহজ রিকভারি</td>
-                        <td>হালকা রানিং, কথা বলার মতো গতি, অ্যাক্টিভ রেস্ট</td>
-                        <td>৩০-৪৫ মিনিট সহজ রান, রিকভারি জগিং, স্ট্রাইডস</td>
-                    </tr>
-                    <tr>
-                        <td>৫০-১০০</td>
-                        <td>মাঝারি ট্রেনিং</td>
-                        <td>সাধারণ দৈনন্দিন ট্রেনিং ভলিউম, অ্যারোবিক বেস</td>
-                        <td>৬০-৯০ মিনিট স্বাভাবিক রান, লং ইজি রান</td>
-                    </tr>
-                    <tr>
-                        <td>১০০-২০০</td>
-                        <td>কঠিন ট্রেনিং</td>
-                        <td>টেম্পো/থ্রেশহোল্ড কাজ সহ গুরুত্বপূর্ণ সেশন</td>
-                        <td>থ্রেশহোল্ড ইন্টারভ্যাল সহ ৯০-১২০ মিনিট, প্রগ্রেসিভ রান</td>
-                    </tr>
-                    <tr>
-                        <td>২০০-৩০০</td>
-                        <td>খুব কঠিন</td>
-                        <td>লং রানের সাথে কোয়ালিটি কাজ, রেস সিমুলেশন</td>
-                        <td>২-৩ ঘন্টা লং রান, হাফ ম্যারাথন পেস কাজ</td>
-                    </tr>
-                    <tr>
-                        <td>&gt; ৩০০</td>
-                        <td>চরম (Extreme)</td>
-                        <td>রেস ডে, আল্ট্রা-ডিস্ট্যান্স ইভেন্ট</td>
-                        <td>ম্যারাথন রেস, ৫০কিমি+ আল্ট্রা, আয়রনম্যান রান</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-
-        <div class="callout callout-tip mt-lg">
-            <h3>📊 রানিং লেভেল অনুযায়ী সাপ্তাহিক TSS লক্ষ্যমাত্রা</h3>
-            <ul>
-                <li><strong>নতুন রানার:</strong> ১৫০-৩০০ TSS/সপ্তাহ (৩-৪টি রান/সপ্তাহ)</li>
-                <li><strong>মাঝারি রানার:</strong> ৩০০-৫০০ TSS/সপ্তাহ (৪-৬টি রান/সপ্তাহ)</li>
-                <li><strong>উন্নত রানার:</strong> ৫০০-৭০০ TSS/সপ্তাহ (৬-৮টি সেশন/সপ্তাহ)</li>
-                <li><strong>এলিট রানার:</strong> ৭০০-৯০০+ TSS/সপ্তাহ (৮-১২টি সেশন/সপ্তাহ)</li>
-            </ul>
-            <p>এগুলি আপনার ক্রনিক ট্রেনিং লোড (CTL)-এর সাথে যুক্ত হয় যা নিচে ব্যাখ্যা করা হয়েছে।</p>
-        </div>
-    </div>
-</section>
-
-<section class="section section-alt">
-    <div class="container">
-        <h2 class="text-center mb-xl">রানারদের জন্য CTL, ATL এবং TSB বোঝা</h2>
-        <p class="text-center lead">পারফরম্যান্স ম্যানেজমেন্ট চার্ট (PMC) তিনটি আন্তঃসংযুক্ত মেট্রিক দৃশ্যমান করে যা
-            আপনার রানিং ট্রেনিংয়ের সম্পূর্ণ চিত্র তুলে ধরে: ফিটনেস, ক্লান্তি এবং ফর্ম।</p>
-
-        <div class="pmc-overview">
-            <div class="grid grid-3">
-                <div class="pmc-metric">
-                    <div class="metric-icon">📈</div>
-                    <h3>CTL - ক্রনিক ট্রেনিং লোড</h3>
-                    <div class="metric-value-label">আপনার ফিটনেস (FITNESS)</div>
-                    <p>দৈনিক TSS-এর একটি ৪২-দিনের এক্সপোনেনশিয়ালি ওয়েটেড এভারেজ। এটি ধারাবাহিক রানিংয়ের মাধ্যমে গড়ে ওঠা
-                        দীর্ঘমেয়াদী অ্যারোবিক ফিটনেস এবং ট্রেনিং অ্যাডাপ্টেশন উপস্থাপন করে।</p>
-                    <div class="formula-small">
+                        rTSS = <strong>৬১.৫</strong></div><p class="mt-md"><strong>ব্যাখ্যা:</strong> থ্রেশহোল্ডের তুলনায় ১০% ধীর গতির এই ১০ কিমি টেম্পো রানটি
+                        ৬১.৫ TSS তৈরি করেছে—যা একটি মানসম্মত অ্যারোবিক সেশনের সাধারণ ট্রেনিং স্টিমুলাস।</p></div></div></div><div class="intensity-guide mt-xl"><h3>রানিং TSS ইনটেনসিটি গাইডলাইন</h3><table class="intensity-table"><thead><tr><th>TSS রেঞ্জ</th><th>তীব্রতার স্তর</th><th>বিবরণ</th><th>ওয়ার্কআউটের উদাহরণ</th></tr></thead><tbody><tr><td>&lt; ৫০</td><td>সহজ রিকভারি</td><td>হালকা রানিং, কথা বলার মতো গতি, অ্যাক্টিভ রেস্ট</td><td>৩০-৪৫ মিনিট সহজ রান, রিকভারি জগিং, স্ট্রাইডস</td></tr><tr><td>৫০-১০০</td><td>মাঝারি ট্রেনিং</td><td>সাধারণ দৈনন্দিন ট্রেনিং ভলিউম, অ্যারোবিক বেস</td><td>৬০-৯০ মিনিট স্বাভাবিক রান, লং ইজি রান</td></tr><tr><td>১০০-২০০</td><td>কঠিন ট্রেনিং</td><td>টেম্পো/থ্রেশহোল্ড কাজ সহ গুরুত্বপূর্ণ সেশন</td><td>থ্রেশহোল্ড ইন্টারভ্যাল সহ ৯০-১২০ মিনিট, প্রগ্রেসিভ রান</td></tr><tr><td>২০০-৩০০</td><td>খুব কঠিন</td><td>লং রানের সাথে কোয়ালিটি কাজ, রেস সিমুলেশন</td><td>২-৩ ঘন্টা লং রান, হাফ ম্যারাথন পেস কাজ</td></tr><tr><td>&gt; ৩০০</td><td>চরম (Extreme)</td><td>রেস ডে, আল্ট্রা-ডিস্ট্যান্স ইভেন্ট</td><td>ম্যারাথন রেস, ৫০কিমি+ আল্ট্রা, আয়রনম্যান রান</td></tr></tbody></table></div><div class="callout callout-tip mt-lg"><h3>📊 রানিং লেভেল অনুযায়ী সাপ্তাহিক TSS লক্ষ্যমাত্রা</h3><ul><li><strong>নতুন রানার:</strong> ১৫০-৩০০ TSS/সপ্তাহ (৩-৪টি রান/সপ্তাহ)</li><li><strong>মাঝারি রানার:</strong> ৩০০-৫০০ TSS/সপ্তাহ (৪-৬টি রান/সপ্তাহ)</li><li><strong>উন্নত রানার:</strong> ৫০০-৭০০ TSS/সপ্তাহ (৬-৮টি সেশন/সপ্তাহ)</li><li><strong>এলিট রানার:</strong> ৭০০-৯০০+ TSS/সপ্তাহ (৮-১২টি সেশন/সপ্তাহ)</li></ul><p>এগুলি আপনার ক্রনিক ট্রেনিং লোড (CTL)-এর সাথে যুক্ত হয় যা নিচে ব্যাখ্যা করা হয়েছে।</p></div></div></section><section class="section section-alt"><div class="container"><h2 class="text-center mb-xl">রানারদের জন্য CTL, ATL এবং TSB বোঝা</h2><p class="text-center lead">পারফরম্যান্স ম্যানেজমেন্ট চার্ট (PMC) তিনটি আন্তঃসংযুক্ত মেট্রিক দৃশ্যমান করে যা
+            আপনার রানিং ট্রেনিংয়ের সম্পূর্ণ চিত্র তুলে ধরে: ফিটনেস, ক্লান্তি এবং ফর্ম।</p><div class="pmc-overview"><div class="grid grid-3"><div class="pmc-metric"><div class="metric-icon">📈</div><h3>CTL - ক্রনিক ট্রেনিং লোড</h3><div class="metric-value-label">আপনার ফিটনেস (FITNESS)</div><p>দৈনিক TSS-এর একটি ৪২-দিনের এক্সপোনেনশিয়ালি ওয়েটেড এভারেজ। এটি ধারাবাহিক রানিংয়ের মাধ্যমে গড়ে ওঠা
+                        দীর্ঘমেয়াদী অ্যারোবিক ফিটনেস এবং ট্রেনিং অ্যাডাপ্টেশন উপস্থাপন করে।</p><div class="formula-small">
                         CTL আজ = CTL গতকাল + (TSS আজ - CTL গতকাল) × (১/৪২)
-                    </div>
-                </div>
-
-                <div class="pmc-metric">
-                    <div class="metric-icon">⚡</div>
-                    <h3>ATL - অ্যাকিউট ট্রেনিং লোড</h3>
-                    <div class="metric-value-label">আপনার ক্লান্তি (FATIGUE)</div>
-                    <p>দৈনিক TSS-এর একটি ৭-দিনের এক্সপোনেনশিয়ালি ওয়েটেড এভারেজ। এটি গত সপ্তাহের রানিং থেকে তৈরি হওয়া
-                        সাম্প্রতিক ট্রেনিং স্ট্রেস এবং সঞ্চিত ক্লান্তি প্রকাশ করে।</p>
-                    <div class="formula-small">
+                    </div></div><div class="pmc-metric"><div class="metric-icon">⚡</div><h3>ATL - অ্যাকিউট ট্রেনিং লোড</h3><div class="metric-value-label">আপনার ক্লান্তি (FATIGUE)</div><p>দৈনিক TSS-এর একটি ৭-দিনের এক্সপোনেনশিয়ালি ওয়েটেড এভারেজ। এটি গত সপ্তাহের রানিং থেকে তৈরি হওয়া
+                        সাম্প্রতিক ট্রেনিং স্ট্রেস এবং সঞ্চিত ক্লান্তি প্রকাশ করে।</p><div class="formula-small">
                         ATL আজ = ATL গতকাল + (TSS আজ - ATL গতকাল) × (১/৭)
-                    </div>
-                </div>
-
-                <div class="pmc-metric">
-                    <div class="metric-icon">🎯</div>
-                    <h3>TSB - ট্রেনিং স্ট্রেস ব্যালেন্স</h3>
-                    <div class="metric-value-label">আপনার ফর্ম (FORM)</div>
-                    <p>গতকালের ফিটনেস এবং ক্লান্তির মধ্যে পার্থক্য। এটি আপনার পরবর্তী কোয়ালিটি রান বা রেসের আগে পারফর্ম
-                        করার প্রস্তুতি অথবা বিশ্রামের প্রয়োজনীয়তা নির্দেশ করে।</p>
-                    <div class="formula-small">
+                    </div></div><div class="pmc-metric"><div class="metric-icon">🎯</div><h3>TSB - ট্রেনিং স্ট্রেস ব্যালেন্স</h3><div class="metric-value-label">আপনার ফর্ম (FORM)</div><p>গতকালের ফিটনেস এবং ক্লান্তির মধ্যে পার্থক্য। এটি আপনার পরবর্তী কোয়ালিটি রান বা রেসের আগে পারফর্ম
+                        করার প্রস্তুতি অথবা বিশ্রামের প্রয়োজনীয়তা নির্দেশ করে।</p><div class="formula-small">
                         TSB = CTL গতকাল - ATL গতকাল
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="section">
-    <div class="container">
-        <h2>CTL: আপনার রানিং ফিটনেস মেট্রিক</h2>
-
-        <div class="grid grid-2">
-            <div>
-                <h3>রানারদের জন্য CTL যা উপস্থাপন করে</h3>
-                <p>CTL আপনার শরীর গত ৬ সপ্তাহে যে রানিং ট্রেনিং লোডের সাথে <em>মানিয়ে নিয়েছে</em> তার পরিমাণ নির্ধারণ
-                    করে। রানিংয়ের ক্ষেত্রে উচ্চতর CTL এর অর্থ হলো:</p>
-                <ul>
-                    <li>উন্নত অ্যারোবিক ক্ষমতা এবং রানিং এন্ডুরেন্স</li>
-                    <li>অধিক ট্রেনিং ভলিউম এবং তীব্রতা সহ্য করার ক্ষমতা</li>
-                    <li>উন্নত নিউরোমাসকুলার এবং মেটাবলিক অ্যাডাপ্টেশন</li>
-                    <li>টেকসই এবং উচ্চতর রানিং পারফরম্যান্স</li>
-                    <li>পা মাটিতে ফেলার ইমপ্যাক্ট ফোর্সের প্রতি উন্নত সহনশীলতা</li>
-                </ul>
-
-                <div class="callout callout-info">
-                    <h4>টাইম কনস্ট্যান্ট: ৪২ দিন</h4>
-                    <p>CTL-এর হাফ-লাইফ হলো ~১৪.৭ দিন। ৪২ দিন পর একটি নির্দিষ্ট সেশনের প্রভাবের প্রায় ৩৬.৮% (১/e) আপনার
-                        ফিটনেস গণনায় অবশিষ্ট থাকে।</p>
-                    <p>এই ধীরগতিতে কমে যাওয়ার অর্থ হলো রানিং ফিটনেস যেমন ধীরে ধীরে তৈরি হয়, তেমনি এটি চট করে কমে যায়
-                        না—যা সংক্ষিপ্ত রিকভারি বিরতির সময় ফিটনেস বজায় রাখতে সাহায্য করে।</p>
-                </div>
-            </div>
-
-            <div>
-                <h3>রানারদের জন্য সাধারণ CTL মান</h3>
-                <div class="levels-comparison">
-                    <div class="level-card-compact">
-                        <strong>নতুন রানার:</strong>
-                        <div class="value">১৫-৩৫ CTL</div>
-                        <p>বেস ফিটনেস তৈরি করা হচ্ছে, ৩-৪টি রান/সপ্তাহ</p>
-                    </div>
-
-                    <div class="level-card-compact">
-                        <strong>মাঝারি রানার:</strong>
-                        <div class="value">৩৫-৬০ CTL</div>
-                        <p>ধারাবাহিক ট্রেনিং, ৪-৬টি রান/সপ্তাহ</p>
-                    </div>
-
-                    <div class="level-card-compact">
-                        <strong>উন্নত রানার:</strong>
-                        <div class="value">৬০-৮৫ CTL</div>
-                        <p>উচ্চ ভলিউম ট্রেনিং, ৬-৮টি সেশন/সপ্তাহ</p>
-                    </div>
-
-                    <div class="level-card-compact">
-                        <strong>এলিট রানার:</strong>
-                        <div class="value">৮৫-১২০+ CTL</div>
-                        <p>প্রফেশনাল লেভেল ট্রেনিং লোড, ৮-১২+ সেশন/সপ্তাহ</p>
-                    </div>
-                </div>
-
-                <div class="warning-box mt-md">
-                    <strong>⚠️ রানারদের জন্য CTL র‍্যাম্প রেট লিমিট</strong>
-                    <ul>
-                        <li><strong>নতুন রানার:</strong> সপ্তাহে +২-৪ CTL</li>
-                        <li><strong>মাঝারি রানার:</strong> সপ্তাহে +৩-৫ CTL</li>
-                        <li><strong>উন্নত রানার:</strong> সপ্তাহে +৫-৭ CTL</li>
-                    </ul>
-                    <p>রানিংয়ের উচ্চ ইমপ্যাক্ট স্ট্রেসের কারণে এই হার অতিক্রম করলে ইনজুরির ঝুঁকি উল্লেখযোগ্যভাবে বৃদ্ধি
+                    </div></div></div></div></div></section><section class="section"><div class="container"><h2>CTL: আপনার রানিং ফিটনেস মেট্রিক</h2><div class="grid grid-2"><div><h3>রানারদের জন্য CTL যা উপস্থাপন করে</h3><p>CTL আপনার শরীর গত ৬ সপ্তাহে যে রানিং ট্রেনিং লোডের সাথে <em>মানিয়ে নিয়েছে</em> তার পরিমাণ নির্ধারণ
+                    করে। রানিংয়ের ক্ষেত্রে উচ্চতর CTL এর অর্থ হলো:</p><ul><li>উন্নত অ্যারোবিক ক্ষমতা এবং রানিং এন্ডুরেন্স</li><li>অধিক ট্রেনিং ভলিউম এবং তীব্রতা সহ্য করার ক্ষমতা</li><li>উন্নত নিউরোমাসকুলার এবং মেটাবলিক অ্যাডাপ্টেশন</li><li>টেকসই এবং উচ্চতর রানিং পারফরম্যান্স</li><li>পা মাটিতে ফেলার ইমপ্যাক্ট ফোর্সের প্রতি উন্নত সহনশীলতা</li></ul><div class="callout callout-info"><h4>টাইম কনস্ট্যান্ট: ৪২ দিন</h4><p>CTL-এর হাফ-লাইফ হলো ~১৪.৭ দিন। ৪২ দিন পর একটি নির্দিষ্ট সেশনের প্রভাবের প্রায় ৩৬.৮% (১/e) আপনার
+                        ফিটনেস গণনায় অবশিষ্ট থাকে।</p><p>এই ধীরগতিতে কমে যাওয়ার অর্থ হলো রানিং ফিটনেস যেমন ধীরে ধীরে তৈরি হয়, তেমনি এটি চট করে কমে যায়
+                        না—যা সংক্ষিপ্ত রিকভারি বিরতির সময় ফিটনেস বজায় রাখতে সাহায্য করে।</p></div></div><div><h3>রানারদের জন্য সাধারণ CTL মান</h3><div class="levels-comparison"><div class="level-card-compact"><strong>নতুন রানার:</strong><div class="value">১৫-৩৫ CTL</div><p>বেস ফিটনেস তৈরি করা হচ্ছে, ৩-৪টি রান/সপ্তাহ</p></div><div class="level-card-compact"><strong>মাঝারি রানার:</strong><div class="value">৩৫-৬০ CTL</div><p>ধারাবাহিক ট্রেনিং, ৪-৬টি রান/সপ্তাহ</p></div><div class="level-card-compact"><strong>উন্নত রানার:</strong><div class="value">৬০-৮৫ CTL</div><p>উচ্চ ভলিউম ট্রেনিং, ৬-৮টি সেশন/সপ্তাহ</p></div><div class="level-card-compact"><strong>এলিট রানার:</strong><div class="value">৮৫-১২০+ CTL</div><p>প্রফেশনাল লেভেল ট্রেনিং লোড, ৮-১২+ সেশন/সপ্তাহ</p></div></div><div class="warning-box mt-md"><strong>⚠️ রানারদের জন্য CTL র‍্যাম্প রেট লিমিট</strong><ul><li><strong>নতুন রানার:</strong> সপ্তাহে +২-৪ CTL</li><li><strong>মাঝারি রানার:</strong> সপ্তাহে +৩-৫ CTL</li><li><strong>উন্নত রানার:</strong> সপ্তাহে +৫-৭ CTL</li></ul><p>রানিংয়ের উচ্চ ইমপ্যাক্ট স্ট্রেসের কারণে এই হার অতিক্রম করলে ইনজুরির ঝুঁকি উল্লেখযোগ্যভাবে বৃদ্ধি
                         পায়। বিখ্যাত "১০% নিয়ম" (সাপ্তাহিক ভলিউম ১০% এর বেশি না বাড়ানো) এই CTL র‍্যাম্প রেটের সাথে
-                        সামঞ্জস্যপূর্ণ।</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="section section-alt">
-    <div class="container">
-        <h2>ATL: আপনার রানিং ক্লান্তি মেট্রিক</h2>
-
-        <div class="content-split">
-            <div>
-                <p>ATL স্বল্পমেয়াদী ট্রেনিং স্ট্রেস—অর্থাৎ গত এক সপ্তাহে সঞ্চিত ক্লান্তি ট্র্যাক করে। কঠোর ট্রেনিংয়ের পর
+                        সামঞ্জস্যপূর্ণ।</p></div></div></div></div></section><section class="section section-alt"><div class="container"><h2>ATL: আপনার রানিং ক্লান্তি মেট্রিক</h2><div class="content-split"><div><p>ATL স্বল্পমেয়াদী ট্রেনিং স্ট্রেস—অর্থাৎ গত এক সপ্তাহে সঞ্চিত ক্লান্তি ট্র্যাক করে। কঠোর ট্রেনিংয়ের পর
                     এটি দ্রুত বৃদ্ধি পায় এবং বিশ্রামের সময় দ্রুত কমে যায়, যা কোয়ালিটি সেশনগুলোর মধ্যে রিকভারি ম্যানেজ
-                    করার জন্য অপরিহার্য।</p>
-
-                <h3>রানিং ট্রেনিংয়ে ATL ডায়নামিক্স</h3>
-                <ul>
-                    <li><strong>দ্রুত প্রতিক্রিয়া:</strong> ৭-দিনের টাইম কনস্ট্যান্ট (হাফ-লাইফ ~২.৪ দিন)</li>
-                    <li><strong>সূচালো প্যাটার্ন:</strong> কঠিন সেশনের পরে বৃদ্ধি এবং রিকভারি দিনগুলিতে দ্রুত হ্রাস</li>
-                    <li><strong>রিকভারি নির্দেশক:</strong> ATL কমে যাওয়া মানে রানের মাঝখানের ক্লান্তি দূর হওয়া</li>
-                    <li><strong>ওভারট্রেনিং সতর্কতা:</strong> একটানা উচ্চ ATL অপর্যাপ্ত রিকভারি নির্দেশ করে</li>
-                    <li><strong>ইমপ্যাক্ট স্ট্রেস:</strong> রানিং ATL কার্ডিওভাসকুলার এবং মাসকুলোস্কেলিটাল উভয় ক্লান্তি
-                        প্রতিফলিত করে</li>
-                </ul>
-
-                <div class="callout callout-science">
-                    <h4>🔬 রানিংয়ের জন্য ফিটনেস-ক্লান্তি মডেল</h4>
-                    <p>প্রতিটি ট্রেনিং রান দুটি প্রভাব তৈরি করে:</p>
-                    <ol>
-                        <li><strong>ফিটনেস স্টিমুলাস</strong> (ধীরগতিতে তৈরি হয়, দীর্ঘস্থায়ী)</li>
-                        <li><strong>ক্লান্তি</strong> (দ্রুত তৈরি হয়, দ্রুত দূর হয়)</li>
-                    </ol>
-                    <p>রানিং পারফরম্যান্স = ফিটনেস - ক্লান্তি। PMC এই মডেলটিকে দৃশ্যমান করে, যা রানারদের জন্য বৈজ্ঞানিক
-                        পিরিওডাইজেশন এবং রেসের জন্য উপযুক্ত সময় নির্ধারণে সহায়তা করে।</p>
-                </div>
-            </div>
-
-            <div>
-                <h3>স্থিতিশীল অবস্থায় (Steady State)</h3>
-                <p>যখন সপ্তাহে রানিং ট্রেনিং লোড একই থাকে, তখন CTL এবং ATL একটি বিন্দুতে মিলিত হয়:</p>
-                <div class="example-box">
-                    <h4>উদাহরণ: ধারাবাহিকভাবে সপ্তাহে ৪০০ TSS</h4>
-                    <div class="calculation">
+                    করার জন্য অপরিহার্য।</p><h3>রানিং ট্রেনিংয়ে ATL ডায়নামিক্স</h3><ul><li><strong>দ্রুত প্রতিক্রিয়া:</strong> ৭-দিনের টাইম কনস্ট্যান্ট (হাফ-লাইফ ~২.৪ দিন)</li><li><strong>সূচালো প্যাটার্ন:</strong> কঠিন সেশনের পরে বৃদ্ধি এবং রিকভারি দিনগুলিতে দ্রুত হ্রাস</li><li><strong>রিকভারি নির্দেশক:</strong> ATL কমে যাওয়া মানে রানের মাঝখানের ক্লান্তি দূর হওয়া</li><li><strong>ওভারট্রেনিং সতর্কতা:</strong> একটানা উচ্চ ATL অপর্যাপ্ত রিকভারি নির্দেশ করে</li><li><strong>ইমপ্যাক্ট স্ট্রেস:</strong> রানিং ATL কার্ডিওভাসকুলার এবং মাসকুলোস্কেলিটাল উভয় ক্লান্তি
+                        প্রতিফলিত করে</li></ul><div class="callout callout-science"><h4>🔬 রানিংয়ের জন্য ফিটনেস-ক্লান্তি মডেল</h4><p>প্রতিটি ট্রেনিং রান দুটি প্রভাব তৈরি করে:</p><ol><li><strong>ফিটনেস স্টিমুলাস</strong> (ধীরগতিতে তৈরি হয়, দীর্ঘস্থায়ী)</li><li><strong>ক্লান্তি</strong> (দ্রুত তৈরি হয়, দ্রুত দূর হয়)</li></ol><p>রানিং পারফরম্যান্স = ফিটনেস - ক্লান্তি। PMC এই মডেলটিকে দৃশ্যমান করে, যা রানারদের জন্য বৈজ্ঞানিক
+                        পিরিওডাইজেশন এবং রেসের জন্য উপযুক্ত সময় নির্ধারণে সহায়তা করে।</p></div></div><div><h3>স্থিতিশীল অবস্থায় (Steady State)</h3><p>যখন সপ্তাহে রানিং ট্রেনিং লোড একই থাকে, তখন CTL এবং ATL একটি বিন্দুতে মিলিত হয়:</p><div class="example-box"><h4>উদাহরণ: ধারাবাহিকভাবে সপ্তাহে ৪০০ TSS</h4><div class="calculation">
                         দৈনিক TSS ≈ ৫৭<br>
                         CTL প্রায় ~৫৭ এর কাছাকাছি পৌঁছাবে<br>
                         ATL প্রায় ~৫৭ এর কাছাকাছি পৌঁছাবে<br>
                         TSB ০ এর কাছাকাছি থাকবে
-                    </div>
-                    <p><strong>ব্যাখ্যা:</strong> ফিটনেস এবং ক্লান্তি ভারসাম্যপূর্ণ অবস্থায় রয়েছে। কোনো বাড়তি সঞ্চয় বা
-                        ঘাটতি নেই—এটি টেকসই ট্রেনিং মেইনটেন্যান্স নির্দেশ করে।</p>
-                </div>
-
-                <h3>বিল্ড ফেজ বা প্রস্তুতির সময়</h3>
-                <p>রানিং ভলিউম বা তীব্রতা বাড়ানোর সময়:</p>
-                <div class="example-box">
-                    <p>টাইম কনস্ট্যান্ট ছোট হওয়ার কারণে ATL, CTL-এর চেয়ে <em>দ্রুত</em> বৃদ্ধি পায়। TSB ঋণাত্মক হয়ে যায়
+                    </div><p><strong>ব্যাখ্যা:</strong> ফিটনেস এবং ক্লান্তি ভারসাম্যপূর্ণ অবস্থায় রয়েছে। কোনো বাড়তি সঞ্চয় বা
+                        ঘাটতি নেই—এটি টেকসই ট্রেনিং মেইনটেন্যান্স নির্দেশ করে।</p></div><h3>বিল্ড ফেজ বা প্রস্তুতির সময়</h3><p>রানিং ভলিউম বা তীব্রতা বাড়ানোর সময়:</p><div class="example-box"><p>টাইম কনস্ট্যান্ট ছোট হওয়ার কারণে ATL, CTL-এর চেয়ে <em>দ্রুত</em> বৃদ্ধি পায়। TSB ঋণাত্মক হয়ে যায়
                         (ক্লান্তি > ফিটনেস)। এটি স্বাভাবিক এবং উৎপাদনশীল—অ্যাডাপ্টেশন স্টিমুলেট করার জন্য আপনি ওভারলোড
-                        প্রয়োগ করছেন।</p>
-                </div>
-
-                <h3>রেসের আগের টেপার পিরিয়ডে</h3>
-                <p>প্রতিযোগিতার আগে ট্রেনিং লোড কমানোর সময়:</p>
-                <div class="example-box">
-                    <p>ATL, CTL-এর চেয়ে <em>দ্রুত</em> কমে যায়। TSB ধনাত্মক হয়ে যায় (ফিটনেস > ক্লান্তি)। এটাই লক্ষ্য—রেস
-                        ডে-তে সতেজ হয়ে নামা এবং ফিটনেস বজায় রেখে পারফর্ম করার জন্য প্রস্তুত হওয়া।</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="section">
-    <div class="container">
-        <h2>TSB: আপনার ফিটনেস-ক্লান্তি ভারসাম্য এবং রেসের প্রস্তুতি</h2>
-
-        <p class="lead">TSB (ট্রেনিং স্ট্রেস ব্যালেন্স) হলো গতকালের ফিটনেস (CTL) এবং গতকালের ক্লান্তির (ATL) মধ্যকার
+                        প্রয়োগ করছেন।</p></div><h3>রেসের আগের টেপার পিরিয়ডে</h3><p>প্রতিযোগিতার আগে ট্রেনিং লোড কমানোর সময়:</p><div class="example-box"><p>ATL, CTL-এর চেয়ে <em>দ্রুত</em> কমে যায়। TSB ধনাত্মক হয়ে যায় (ফিটনেস > ক্লান্তি)। এটাই লক্ষ্য—রেস
+                        ডে-তে সতেজ হয়ে নামা এবং ফিটনেস বজায় রেখে পারফর্ম করার জন্য প্রস্তুত হওয়া।</p></div></div></div></div></section><section class="section"><div class="container"><h2>TSB: আপনার ফিটনেস-ক্লান্তি ভারসাম্য এবং রেসের প্রস্তুতি</h2><p class="lead">TSB (ট্রেনিং স্ট্রেস ব্যালেন্স) হলো গতকালের ফিটনেস (CTL) এবং গতকালের ক্লান্তির (ATL) মধ্যকার
             পার্থক্য। রানারদের জন্য এটি নির্দেশ করে যে আপনি সতেজ নাকি ক্লান্ত, রেসের জন্য প্রস্তুত নাকি আপনার রিকভারি
-            দিন প্রয়োজন।</p>
-
-        <div class="tsb-zones-container">
-            <h3>রানারদের জন্য TSB ব্যাখ্যা নির্দেশিকা</h3>
-            <table class="tsb-zones-table">
-                <thead>
-                    <tr>
-                        <th>TSB রেঞ্জ</th>
-                        <th>অবস্থা (Status)</th>
-                        <th>ব্যাখ্যা</th>
-                        <th>সুপারিশকৃত পদক্ষেপ</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr class="tsb-critical">
-                        <td>&lt; -৩০</td>
-                        <td><strong>ওভারট্রেনিং ঝুঁকি</strong></td>
-                        <td>চরম ক্লান্তি। ইনজুরির প্রবল ঝুঁকি।</td>
-                        <td>অবিলম্বে রিকভারি প্রয়োজন। ভলিউম ৫০%+ কমিয়ে দিন। বিশ্রামের কথা ভাবুন।</td>
-                    </tr>
-                    <tr class="tsb-training">
-                        <td>-২০ থেকে -৩০</td>
-                        <td><strong>উপযুক্ত ট্রেনিং ব্লক</strong></td>
-                        <td>প্রোডাক্টিভ ওভারলোড। ফিটনেস তৈরি হচ্ছে।</td>
-                        <td>পরিকল্পনা অনুযায়ী কাজ চালিয়ে যান। অতিরিক্ত ব্যথার লক্ষণ পর্যবেক্ষণ করুন।</td>
-                    </tr>
-                    <tr class="tsb-moderate">
-                        <td>-১০ থেকে -২০</td>
-                        <td><strong>মাঝারি ট্রেনিং লোড</strong></td>
-                        <td>সাধারণ ট্রেনিং সঞ্চয়।</td>
-                        <td>স্বাভাবিক ট্রেনিং। কোয়ালিটি ইন্টারভ্যাল বা টেম্পো সেশন করা সম্ভব।</td>
-                    </tr>
-                    <tr class="tsb-neutral">
-                        <td>-১০ থেকে +১৫</td>
-                        <td><strong>ট্রানজিশন/মেইনটেন্যান্স</strong></td>
-                        <td>ভারসাম্যপূর্ণ অবস্থা। হালকা ক্লান্তি বা সতেজতা।</td>
-                        <td>বি/সি ক্যাটাগরি রেস, টেস্টিং বা রিকভারি সপ্তাহের জন্য ভালো।</td>
-                    </tr>
-                    <tr class="tsb-fresh">
-                        <td>+১৫ থেকে +২৫</td>
-                        <td><strong>পিক রেস ফর্ম</strong></td>
-                        <td>সতেজ এবং ফিট। সেরা পারফরম্যান্স উইন্ডো।</td>
-                        <td>প্রধান (A-priority) রেস। সেরা রানিং পারফরম্যান্সের প্রত্যাশা।</td>
-                    </tr>
-                    <tr class="tsb-very-fresh">
-                        <td>+২৫ থেকে +৩৫</td>
-                        <td><strong>অত্যন্ত সতেজ</strong></td>
-                        <td>উচ্চমাত্রার বিশ্রাম। ছোট রেসের জন্য ভালো।</td>
-                        <td>৫কিমি-১০কিমি রেস, টাইম ট্রায়াল বা ট্র্যাক ইভেন্ট।</td>
-                    </tr>
-                    <tr class="tsb-detraining">
-                        <td>&gt; +৩৫</td>
-                        <td><strong>ডি-ট্রেনিং</strong></td>
-                        <td>অলসতার কারণে ফিটনেস কমে যাচ্ছে।</td>
-                        <td>পুনরায় ট্রেনিং শুরু করুন। দীর্ঘ বিশ্রামের ফলে ফিটনেস হ্রাস পাচ্ছে।</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-
-        <div class="callout callout-tip mt-xl">
-            <h3>🎯 রেসের দূরত্ব অনুযায়ী লক্ষ্যমাত্রা TSB</h3>
-            <ul>
-                <li><strong>৫কিমি/১০কিমি রেস:</strong> TSB +২০ থেকে +৩০ (সতেজতার জন্য ৭-১০ দিনের টেপার)</li>
-                <li><strong>হাফ ম্যারাথন:</strong> TSB +১৫ থেকে +২৫ (১০-১৪ দিনের টেপার)</li>
-                <li><strong>ম্যারাথন:</strong> TSB +১০ থেকে +২০ (ভলিউম কমিয়ে ১৪-২১ দিনের টেপার)</li>
-                <li><strong>আল্ট্রা ম্যারাথন (৫০কিমি+):</strong> TSB +৫ থেকে +১৫ (৭-১৪ দিনের টেপার, ইনটেনসিটি কমিয়ে
-                    ভলিউম বজায় রাখুন)</li>
-            </ul>
-            <p><em>ছোট রেসের জন্য গতি/পাওয়ারের জন্য উচ্চ TSB প্রয়োজন। দীর্ঘ রেসের জন্য এন্ডুরেন্স বজায় রাখতে মাঝারি TSB
-                    প্রয়োজন।</em></p>
-        </div>
-    </div>
-</section>
-
-<section class="section section-alt">
-    <div class="container container-narrow">
-        <h2>PMC উদাহরণ: রানিং ট্রেনিং ব্লক → টেপার → রেস</h2>
-
-        <div class="example-box">
-            <h3>১২-সপ্তাহের ম্যারাথন ট্রেনিং সাইকেল</h3>
-
-            <h4>সপ্তাহ ১-৩: বেস বিল্ডিং ফেজ</h4>
-            <ul>
-                <li>সাপ্তাহিক TSS: ৩০০ → ৩৫০ → ৪০০</li>
-                <li>CTL: ধীরে ধীরে বৃদ্ধি পাচ্ছে ৪০ → ৪৮</li>
-                <li>ATL: লোড অনুযায়ী উঠানামা করছে ৪৫-৬০</li>
-                <li>TSB: সামান্য ঋণাত্মক (-৫ থেকে -১৫), নিয়ন্ত্রণযোগ্য ট্রেনিং স্ট্রেস</li>
-                <li><strong>মূল ফোকাস:</strong> অ্যারোবিক বেস উন্নয়ন, সহজ কিলোমিটার জমা করা</li>
-            </ul>
-
-            <h4>সপ্তাহ ৪-৭: বিল্ড ফেজ ১</h4>
-            <ul>
-                <li>সাপ্তাহিক TSS: ৪৫০ → ৫০০ → ৫০০ → ৪৫০ (রিকভারি সপ্তাহ)</li>
-                <li>CTL: বৃদ্ধি অব্যাহত ৪৮ → ৬০</li>
-                <li>ATL: উচ্চতর উঠানামা ৫৫-৭৫</li>
-                <li>TSB: আরও বেশি ঋণাত্মক (-১৫ থেকে -২৫), প্রোডাক্টিভ ওভারলোড</li>
-                <li><strong>মূল ফোকাস:</strong> টেম্পো রান এবং থ্রেশহোল্ড ইন্টারভ্যাল যোগ করা</li>
-            </ul>
-
-            <h4>সপ্তাহ ৮-১১: পিক ফেজ</h4>
-            <ul>
-                <li>সাপ্তাহিক TSS: ৫০০ → ৫৫০ → ৫৫০ → ৫০০</li>
-                <li>CTL: চূড়ায় পৌঁছাচ্ছে ~৬৫</li>
-                <li>ATL: সর্বোচ্চ মান ৬৫-৮০</li>
-                <li>TSB: সর্বোচ্চ ঋণাত্মক (-২০ থেকে -৩০), সর্বোচ্চ ফিটনেস স্টিমুলাস</li>
-                <li><strong>মূল ফোকাস:</strong> ম্যারাথোন পেস সেগমেন্ট সহ লং রান, কোয়ালিটি সেশন</li>
-            </ul>
-
-            <h4>সপ্তাহ ১২: রিকভারি সপ্তাহ</h4>
-            <ul>
-                <li>সাপ্তাহিক TSS: ৩০০ (৪৫% হ্রাস)</li>
-                <li>CTL: সামান্য কমে ~৬৩ (ফিটনেস বজায় আছে)</li>
-                <li>ATL: দ্রুত কমে ~৫০</li>
-                <li>TSB: বৃদ্ধি পেয়ে +৫ থেকে +১০ (আংশিক সতেজতা)</li>
-                <li><strong>মূল ফোকাস:</strong> রিকভারি রান, ট্রেনিং অ্যাডাপ্টেশন শরীরকে গ্রহণ করতে দেওয়া</li>
-            </ul>
-
-            <h4>সপ্তাহ ১৩-১৪: টেপার + রেস সপ্তাহ</h4>
-            <ul>
-                <li>১৩তম সপ্তাহের TSS: ২৫০, ১৪তম সপ্তাহের TSS: ১২০ + রেস (~মোট ২৫০)</li>
-                <li>CTL: ধীরে ধীরে কমে ~৬০ (ফিটনেস সামান্য হ্রাস)</li>
-                <li>ATL: দ্রুত নেমে ~৩৫ (ক্লান্তি দূর হয়েছে)</li>
-                <li>TSB: <strong>রেস ডে-তে +২০ থেকে +২৫ এ পৌঁছাচ্ছে</strong></li>
-                <li><strong>ফলাফল:</strong> সতেজ পা, বজায় রাখা ফিটনেস—সেরা ম্যারাথন পারফরম্যান্সের জন্য প্রস্তুত</li>
-            </ul>
-        </div>
-
-        <div class="callout callout-success">
-            <h3>✅ রানারদের জন্য কেন টেপার কার্যকর</h3>
-            <p>ভিন্ন টাইম কনস্ট্যান্ট (CTL-এর জন্য ৪২ দিন, ATL-এর জন্য ৭ দিন) টেপার ইফেক্ট তৈরি করে যা রানিং
-                পারফরম্যান্স অপ্টিমাইজ করে:</p>
-            <ul>
-                <li>ATL দ্রুত রেসপন্স করে → রানিং ক্লান্তি (কার্ডিওভাসকুলার এবং মাসকুলোস্কেলিটাল উভয়ই) ৭-১০ দিনের মধ্যে
-                    দূর হয়</li>
-                <li>CTL ধীরগতিতে রেসপন্স করে → অ্যারোবিক ফিটনেস এবং অ্যাডাপ্টেশন কয়েক সপ্তাহ ধরে বজায় থাকে</li>
-                <li>ফলাফল: সতেজতা ফিরে আসে এবং ব্যথা দূর হয় কিন্তু ফিটনেস বজায় থাকে = সেরা রেস পারফরম্যান্স</li>
-            </ul>
-        </div>
-    </div>
-</section>
-
-<section class="section">
-    <div class="container container-narrow">
-        <h2>রানিং ট্রেনিং লোড ম্যানেজমেন্টের ব্যবহারিক নির্দেশিকা</h2>
-
-        <div class="guidelines-grid">
-            <div class="guideline-item">
-                <h3>১️⃣ নিয়মিত দৈনিক rTSS ট্র্যাক করুন</h3>
-                <p>সঠিক CTL/ATL/TSB ট্রেন্ড তৈরির জন্য প্রতিটি রানের TSS লিপিবদ্ধ করুন। বাদ পড়া ডেটা ফিটনেস কার্ভে ফাঁক
-                    তৈরি করে। GPS ওয়াচ ডেটা বা পেস-ভিত্তিক গণনা সব রানের জন্য ব্যবহার করুন।</p>
-            </div>
-
-            <div class="guideline-item">
-                <h3>২️⃣ CTL র‍্যাম্প রেট সাবধানতার সাথে পর্যবেক্ষণ করুন</h3>
-                <p>ধীরে ধীরে CTL বাড়ান। অধিকাংশ রানারের জন্য সপ্তাহে ৩-৫ পয়েন্ট বৃদ্ধি টেকসই। ১০+ পয়েন্ট বাড়িয়ে দিলে
-                    রানিংয়ের ইমপ্যাক্ট স্ট্রেসের কারণে ওভারট্রেনিং এবং ইনজুরি হতে পারে।</p>
-            </div>
-
-            <div class="guideline-item">
-                <h3>৩️⃣ রিকভারি সপ্তাহের পরিকল্পনা রাখুন</h3>
-                <p>প্রতি ৩-৪ সপ্তাহ অন্তর এক সপ্তাহের জন্য রানিং ভলিউম ৩০-৪০% কমিয়ে দিন। TSB-কে -৫ থেকে +১০ পর্যন্ত উঠতে
-                    দিন। এটি ফিটনেস অ্যাডাপ্টেশন পাকাপোক্ত করে এবং ক্লান্তি প্রতিরোধ করে।</p>
-            </div>
-
-            <div class="guideline-item">
-                <h3>৪️⃣ আপনার রেস টেপার সময় নির্ধারণ করুন</h3>
-                <p>অধিকাংশ দূরত্বের রেসের জন্য রেস ডে-তে TSB +১৫ থেকে +২৫ লক্ষ্য রাখুন। রেসের দূরত্ব এবং বর্তমান TSB
-                    লেভেলের ওপর ভিত্তি করে ১০-২১ দিন আগে টেপার শুরু করুন।</p>
-            </div>
-
-            <div class="guideline-item">
-                <h3>৫️⃣ বিল্ড ফেজে ঋণাত্মক TSB গ্রহণ করুন</h3>
-                <p>প্রস্তুতির সময় -২০ থেকে -২৫ TSB থাকা রানারদের জন্য স্বাভাবিক এবং উৎপাদনশীল। এর অর্থ হলো আপনি ইনজুরির
-                    ঝুঁকি ছাড়াই অ্যাডাপ্টেশনের জন্য ট্রেনিং স্টিমুলাস প্রয়োগ করছেন।</p>
-            </div>
-
-            <div class="guideline-item">
-                <h3>৬️⃣ বিরতির পর ধীরে ধীরে CTL পুনর্গঠন করুন</h3>
-                <p>ইনজুরি বা অফ-সিজন বিরতির পর সাথে সাথেই আগের CTL-এ ফেরার চেষ্টা করবেন না। ইনজুরি এড়াতে সপ্তাহে ৩-৫ CTL
-                    পয়েন্ট হারে ধীরে ধীরে পুনরায় শুরু করুন।</p>
-            </div>
-
-            <div class="guideline-item">
-                <h3>৭️⃣ আপনার শরীরের কথা শুনুন</h3>
-                <p>TSS মেট্রিকগুলো নির্দেশনামাত্র, কোনো চূড়ান্ত নিয়ম নয়। TSB ভালো থাকা সত্ত্বেও যদি ক্রমাগত ব্যথা, ঘুমের
-                    অভাব বা পারফরম্যান্স হ্রাস পায়, তবে অতিরিক্ত রিকভারির কথা ভাবুন।</p>
-            </div>
-
-            <div class="guideline-item">
-                <h3>৮️⃣ রানিং বহির্ভূত স্ট্রেস বিবেচনা করুন</h3>
-                <p>জীবনের ধকল, ঘুমের অভাব এবং ক্রস-ট্রেনিং রিকভারিকে প্রভাবিত করে। হাই-স্ট্রেস পিরিয়ডের সময় TSS
-                    লক্ষ্যমাত্রা কিছুটা কমিয়ে দিন, এমনকি রানিং মেট্রিকগুলো ভালো থাকলেও।</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="section section-alt">
-    <div class="container container-narrow">
-        <h2>সচরাচর জিজ্ঞাসিত প্রশ্নাবলী: রানিংয়ের জন্য ট্রেনিং স্ট্রেস স্কোর</h2>
-
-        <div class="faq-container">
-            <div class="faq-item">
-                <h3>পাওয়ার মিটার ছাড়া কীভাবে রানিং TSS গণনা করব?</h3>
-                <p>পেস-ভিত্তিক পদ্ধতি ব্যবহার করুন: আপনার থ্রেশহোল্ড পেস-কে রানের গড় পেস দিয়ে ভাগ করে ইনটেনসিটি ফ্যাক্টর
+            দিন প্রয়োজন।</p><div class="tsb-zones-container"><h3>রানারদের জন্য TSB ব্যাখ্যা নির্দেশিকা</h3><table class="tsb-zones-table"><thead><tr><th>TSB রেঞ্জ</th><th>অবস্থা (Status)</th><th>ব্যাখ্যা</th><th>সুপারিশকৃত পদক্ষেপ</th></tr></thead><tbody><tr class="tsb-critical"><td>&lt; -৩০</td><td><strong>ওভারট্রেনিং ঝুঁকি</strong></td><td>চরম ক্লান্তি। ইনজুরির প্রবল ঝুঁকি।</td><td>অবিলম্বে রিকভারি প্রয়োজন। ভলিউম ৫০%+ কমিয়ে দিন। বিশ্রামের কথা ভাবুন।</td></tr><tr class="tsb-training"><td>-২০ থেকে -৩০</td><td><strong>উপযুক্ত ট্রেনিং ব্লক</strong></td><td>প্রোডাক্টিভ ওভারলোড। ফিটনেস তৈরি হচ্ছে।</td><td>পরিকল্পনা অনুযায়ী কাজ চালিয়ে যান। অতিরিক্ত ব্যথার লক্ষণ পর্যবেক্ষণ করুন।</td></tr><tr class="tsb-moderate"><td>-১০ থেকে -২০</td><td><strong>মাঝারি ট্রেনিং লোড</strong></td><td>সাধারণ ট্রেনিং সঞ্চয়।</td><td>স্বাভাবিক ট্রেনিং। কোয়ালিটি ইন্টারভ্যাল বা টেম্পো সেশন করা সম্ভব।</td></tr><tr class="tsb-neutral"><td>-১০ থেকে +১৫</td><td><strong>ট্রানজিশন/মেইনটেন্যান্স</strong></td><td>ভারসাম্যপূর্ণ অবস্থা। হালকা ক্লান্তি বা সতেজতা।</td><td>বি/সি ক্যাটাগরি রেস, টেস্টিং বা রিকভারি সপ্তাহের জন্য ভালো।</td></tr><tr class="tsb-fresh"><td>+১৫ থেকে +২৫</td><td><strong>পিক রেস ফর্ম</strong></td><td>সতেজ এবং ফিট। সেরা পারফরম্যান্স উইন্ডো।</td><td>প্রধান (A-priority) রেস। সেরা রানিং পারফরম্যান্সের প্রত্যাশা।</td></tr><tr class="tsb-very-fresh"><td>+২৫ থেকে +৩৫</td><td><strong>অত্যন্ত সতেজ</strong></td><td>উচ্চমাত্রার বিশ্রাম। ছোট রেসের জন্য ভালো।</td><td>৫কিমি-১০কিমি রেস, টাইম ট্রায়াল বা ট্র্যাক ইভেন্ট।</td></tr><tr class="tsb-detraining"><td>&gt; +৩৫</td><td><strong>ডি-ট্রেনিং</strong></td><td>অলসতার কারণে ফিটনেস কমে যাচ্ছে।</td><td>পুনরায় ট্রেনিং শুরু করুন। দীর্ঘ বিশ্রামের ফলে ফিটনেস হ্রাস পাচ্ছে।</td></tr></tbody></table></div><div class="callout callout-tip mt-xl"><h3>🎯 রেসের দূরত্ব অনুযায়ী লক্ষ্যমাত্রা TSB</h3><ul><li><strong>৫কিমি/১০কিমি রেস:</strong> TSB +২০ থেকে +৩০ (সতেজতার জন্য ৭-১০ দিনের টেপার)</li><li><strong>হাফ ম্যারাথন:</strong> TSB +১৫ থেকে +২৫ (১০-১৪ দিনের টেপার)</li><li><strong>ম্যারাথন:</strong> TSB +১০ থেকে +২০ (ভলিউম কমিয়ে ১৪-২১ দিনের টেপার)</li><li><strong>আল্ট্রা ম্যারাথন (৫০কিমি+):</strong> TSB +৫ থেকে +১৫ (৭-১৪ দিনের টেপার, ইনটেনসিটি কমিয়ে
+                    ভলিউম বজায় রাখুন)</li></ul><p><em>ছোট রেসের জন্য গতি/পাওয়ারের জন্য উচ্চ TSB প্রয়োজন। দীর্ঘ রেসের জন্য এন্ডুরেন্স বজায় রাখতে মাঝারি TSB
+                    প্রয়োজন।</em></p></div></div></section><section class="section section-alt"><div class="container container-narrow"><h2>PMC উদাহরণ: রানিং ট্রেনিং ব্লক → টেপার → রেস</h2><div class="example-box"><h3>১২-সপ্তাহের ম্যারাথন ট্রেনিং সাইকেল</h3><h4>সপ্তাহ ১-৩: বেস বিল্ডিং ফেজ</h4><ul><li>সাপ্তাহিক TSS: ৩০০ → ৩৫০ → ৪০০</li><li>CTL: ধীরে ধীরে বৃদ্ধি পাচ্ছে ৪০ → ৪৮</li><li>ATL: লোড অনুযায়ী উঠানামা করছে ৪৫-৬০</li><li>TSB: সামান্য ঋণাত্মক (-৫ থেকে -১৫), নিয়ন্ত্রণযোগ্য ট্রেনিং স্ট্রেস</li><li><strong>মূল ফোকাস:</strong> অ্যারোবিক বেস উন্নয়ন, সহজ কিলোমিটার জমা করা</li></ul><h4>সপ্তাহ ৪-৭: বিল্ড ফেজ ১</h4><ul><li>সাপ্তাহিক TSS: ৪৫০ → ৫০০ → ৫০০ → ৪৫০ (রিকভারি সপ্তাহ)</li><li>CTL: বৃদ্ধি অব্যাহত ৪৮ → ৬০</li><li>ATL: উচ্চতর উঠানামা ৫৫-৭৫</li><li>TSB: আরও বেশি ঋণাত্মক (-১৫ থেকে -২৫), প্রোডাক্টিভ ওভারলোড</li><li><strong>মূল ফোকাস:</strong> টেম্পো রান এবং থ্রেশহোল্ড ইন্টারভ্যাল যোগ করা</li></ul><h4>সপ্তাহ ৮-১১: পিক ফেজ</h4><ul><li>সাপ্তাহিক TSS: ৫০০ → ৫৫০ → ৫৫০ → ৫০০</li><li>CTL: চূড়ায় পৌঁছাচ্ছে ~৬৫</li><li>ATL: সর্বোচ্চ মান ৬৫-৮০</li><li>TSB: সর্বোচ্চ ঋণাত্মক (-২০ থেকে -৩০), সর্বোচ্চ ফিটনেস স্টিমুলাস</li><li><strong>মূল ফোকাস:</strong> ম্যারাথোন পেস সেগমেন্ট সহ লং রান, কোয়ালিটি সেশন</li></ul><h4>সপ্তাহ ১২: রিকভারি সপ্তাহ</h4><ul><li>সাপ্তাহিক TSS: ৩০০ (৪৫% হ্রাস)</li><li>CTL: সামান্য কমে ~৬৩ (ফিটনেস বজায় আছে)</li><li>ATL: দ্রুত কমে ~৫০</li><li>TSB: বৃদ্ধি পেয়ে +৫ থেকে +১০ (আংশিক সতেজতা)</li><li><strong>মূল ফোকাস:</strong> রিকভারি রান, ট্রেনিং অ্যাডাপ্টেশন শরীরকে গ্রহণ করতে দেওয়া</li></ul><h4>সপ্তাহ ১৩-১৪: টেপার + রেস সপ্তাহ</h4><ul><li>১৩তম সপ্তাহের TSS: ২৫০, ১৪তম সপ্তাহের TSS: ১২০ + রেস (~মোট ২৫০)</li><li>CTL: ধীরে ধীরে কমে ~৬০ (ফিটনেস সামান্য হ্রাস)</li><li>ATL: দ্রুত নেমে ~৩৫ (ক্লান্তি দূর হয়েছে)</li><li>TSB: <strong>রেস ডে-তে +২০ থেকে +২৫ এ পৌঁছাচ্ছে</strong></li><li><strong>ফলাফল:</strong> সতেজ পা, বজায় রাখা ফিটনেস—সেরা ম্যারাথন পারফরম্যান্সের জন্য প্রস্তুত</li></ul></div><div class="callout callout-success"><h3>✅ রানারদের জন্য কেন টেপার কার্যকর</h3><p>ভিন্ন টাইম কনস্ট্যান্ট (CTL-এর জন্য ৪২ দিন, ATL-এর জন্য ৭ দিন) টেপার ইফেক্ট তৈরি করে যা রানিং
+                পারফরম্যান্স অপ্টিমাইজ করে:</p><ul><li>ATL দ্রুত রেসপন্স করে → রানিং ক্লান্তি (কার্ডিওভাসকুলার এবং মাসকুলোস্কেলিটাল উভয়ই) ৭-১০ দিনের মধ্যে
+                    দূর হয়</li><li>CTL ধীরগতিতে রেসপন্স করে → অ্যারোবিক ফিটনেস এবং অ্যাডাপ্টেশন কয়েক সপ্তাহ ধরে বজায় থাকে</li><li>ফলাফল: সতেজতা ফিরে আসে এবং ব্যথা দূর হয় কিন্তু ফিটনেস বজায় থাকে = সেরা রেস পারফরম্যান্স</li></ul></div></div></section><section class="section"><div class="container container-narrow"><h2>রানিং ট্রেনিং লোড ম্যানেজমেন্টের ব্যবহারিক নির্দেশিকা</h2><div class="guidelines-grid"><div class="guideline-item"><h3>১️⃣ নিয়মিত দৈনিক rTSS ট্র্যাক করুন</h3><p>সঠিক CTL/ATL/TSB ট্রেন্ড তৈরির জন্য প্রতিটি রানের TSS লিপিবদ্ধ করুন। বাদ পড়া ডেটা ফিটনেস কার্ভে ফাঁক
+                    তৈরি করে। GPS ওয়াচ ডেটা বা পেস-ভিত্তিক গণনা সব রানের জন্য ব্যবহার করুন।</p></div><div class="guideline-item"><h3>২️⃣ CTL র‍্যাম্প রেট সাবধানতার সাথে পর্যবেক্ষণ করুন</h3><p>ধীরে ধীরে CTL বাড়ান। অধিকাংশ রানারের জন্য সপ্তাহে ৩-৫ পয়েন্ট বৃদ্ধি টেকসই। ১০+ পয়েন্ট বাড়িয়ে দিলে
+                    রানিংয়ের ইমপ্যাক্ট স্ট্রেসের কারণে ওভারট্রেনিং এবং ইনজুরি হতে পারে।</p></div><div class="guideline-item"><h3>৩️⃣ রিকভারি সপ্তাহের পরিকল্পনা রাখুন</h3><p>প্রতি ৩-৪ সপ্তাহ অন্তর এক সপ্তাহের জন্য রানিং ভলিউম ৩০-৪০% কমিয়ে দিন। TSB-কে -৫ থেকে +১০ পর্যন্ত উঠতে
+                    দিন। এটি ফিটনেস অ্যাডাপ্টেশন পাকাপোক্ত করে এবং ক্লান্তি প্রতিরোধ করে।</p></div><div class="guideline-item"><h3>৪️⃣ আপনার রেস টেপার সময় নির্ধারণ করুন</h3><p>অধিকাংশ দূরত্বের রেসের জন্য রেস ডে-তে TSB +১৫ থেকে +২৫ লক্ষ্য রাখুন। রেসের দূরত্ব এবং বর্তমান TSB
+                    লেভেলের ওপর ভিত্তি করে ১০-২১ দিন আগে টেপার শুরু করুন।</p></div><div class="guideline-item"><h3>৫️⃣ বিল্ড ফেজে ঋণাত্মক TSB গ্রহণ করুন</h3><p>প্রস্তুতির সময় -২০ থেকে -২৫ TSB থাকা রানারদের জন্য স্বাভাবিক এবং উৎপাদনশীল। এর অর্থ হলো আপনি ইনজুরির
+                    ঝুঁকি ছাড়াই অ্যাডাপ্টেশনের জন্য ট্রেনিং স্টিমুলাস প্রয়োগ করছেন।</p></div><div class="guideline-item"><h3>৬️⃣ বিরতির পর ধীরে ধীরে CTL পুনর্গঠন করুন</h3><p>ইনজুরি বা অফ-সিজন বিরতির পর সাথে সাথেই আগের CTL-এ ফেরার চেষ্টা করবেন না। ইনজুরি এড়াতে সপ্তাহে ৩-৫ CTL
+                    পয়েন্ট হারে ধীরে ধীরে পুনরায় শুরু করুন।</p></div><div class="guideline-item"><h3>৭️⃣ আপনার শরীরের কথা শুনুন</h3><p>TSS মেট্রিকগুলো নির্দেশনামাত্র, কোনো চূড়ান্ত নিয়ম নয়। TSB ভালো থাকা সত্ত্বেও যদি ক্রমাগত ব্যথা, ঘুমের
+                    অভাব বা পারফরম্যান্স হ্রাস পায়, তবে অতিরিক্ত রিকভারির কথা ভাবুন।</p></div><div class="guideline-item"><h3>৮️⃣ রানিং বহির্ভূত স্ট্রেস বিবেচনা করুন</h3><p>জীবনের ধকল, ঘুমের অভাব এবং ক্রস-ট্রেনিং রিকভারিকে প্রভাবিত করে। হাই-স্ট্রেস পিরিয়ডের সময় TSS
+                    লক্ষ্যমাত্রা কিছুটা কমিয়ে দিন, এমনকি রানিং মেট্রিকগুলো ভালো থাকলেও।</p></div></div></div></section><section class="section section-alt"><div class="container container-narrow"><h2>সচরাচর জিজ্ঞাসিত প্রশ্নাবলী: রানিংয়ের জন্য ট্রেনিং স্ট্রেস স্কোর</h2><div class="faq-container"><div class="faq-item"><h3>পাওয়ার মিটার ছাড়া কীভাবে রানিং TSS গণনা করব?</h3><p>পেস-ভিত্তিক পদ্ধতি ব্যবহার করুন: আপনার থ্রেশহোল্ড পেস-কে রানের গড় পেস দিয়ে ভাগ করে ইনটেনসিটি ফ্যাক্টর
                     (IF) বের করুন। এরপর সূত্র প্রয়োগ করুন: rTSS = (IF²) × সময়কাল (ঘন্টা) × ১০০। উদাহরণস্বরূপ, ৪:০০/কিমি
                     থ্রেশহোল্ড পেস নিয়ে যদি ৪:৩০/কিমি পেস-এ ১০কিমি দৌড়ান (৪৫ মিনিট বা ০.৭৫ ঘন্টা): IF = ৪:০০/৪:৩০ =
-                    ০.৮৮৯, তাহলে rTSS = (০.৮৮৯²) × ০.৭৫ × ১০০ = ৫৯.২ TSS।</p>
-            </div>
-
-            <div class="faq-item">
-                <h3>রানিং TSS এবং সাইক্লিং TSS-এর মধ্যে পার্থক্য কী?</h3>
-                <p>উভয়ই একই IF² সূত্র ব্যবহার করে, তবে রানিং TSS পা মাটিতে পড়ার ইমপ্যাক্ট ফোর্সের কারণে শরীরের ওপর অনেক
+                    ০.৮৮৯, তাহলে rTSS = (০.৮৮৯²) × ০.৭৫ × ১০০ = ৫৯.২ TSS।</p></div><div class="faq-item"><h3>রানিং TSS এবং সাইক্লিং TSS-এর মধ্যে পার্থক্য কী?</h3><p>উভয়ই একই IF² সূত্র ব্যবহার করে, তবে রানিং TSS পা মাটিতে পড়ার ইমপ্যাক্ট ফোর্সের কারণে শরীরের ওপর অনেক
                     বেশি সামগ্রিক ফিজিক্যাল স্ট্রেস নির্দেশ করে। একজন রানার সপ্তাহে ৪০০ TSS অর্জন করলে তা সাইক্লিস্টের
                     ৬০০-৭০০ TSS-এর সমান ট্রেনিং অ্যাডাপ্টেশন দেয়। রানিংয়ের জন্য ইনপুট হিসেবে পাওয়ার ওয়াট-এর বদলে পেস/গতি
-                    ব্যবহৃত হয় এবং একই TSS মানের জন্য রানিংয়ে বেশি রিকভারি সময় লাগে।</p>
-            </div>
-
-            <div class="faq-item">
-                <h3>ম্যারাথন ট্রেনিংয়ের জন্য ভালো সাপ্তাহিক TSS কত?</h3>
-                <p>অভিজ্ঞতা অনুযায়ী এটি ভিন্ন হয়: প্রথম ম্যারাথনের জন্য নতুন রানার: ২৫০-৪০০ TSS/সপ্তাহ; মাঝারি
+                    ব্যবহৃত হয় এবং একই TSS মানের জন্য রানিংয়ে বেশি রিকভারি সময় লাগে।</p></div><div class="faq-item"><h3>ম্যারাথন ট্রেনিংয়ের জন্য ভালো সাপ্তাহিক TSS কত?</h3><p>অভিজ্ঞতা অনুযায়ী এটি ভিন্ন হয়: প্রথম ম্যারাথনের জন্য নতুন রানার: ২৫০-৪০০ TSS/সপ্তাহ; মাঝারি
                     ম্যারাথনার: ৪০০-৫৫০ TSS/সপ্তাহ; প্রতিযোগিতামূলক উন্নত ম্যারাথনার: ৫৫০-৭০০+ TSS/সপ্তাহ। পিক সপ্তাহে
-                    উন্নত রানারদের ৬০০-৮০০ TSS পর্যন্ত হতে পারে এবং টেপার সপ্তাহে তা ২০০-৩০০ এ নেমে আসে।</p>
-            </div>
-
-            <div class="faq-item">
-                <h3>১০কিমি রেসের জন্য আমার লক্ষ্যমাত্রা TSB কত হওয়া উচিত?</h3>
-                <p>১০কিমি রেসের জন্য রেস ডে-তে TSB +২০ থেকে +৩০ লক্ষ্য রাখুন। এটি অর্জনের জন্য ৭-১০ দিনের টেপার শুরু
+                    উন্নত রানারদের ৬০০-৮০০ TSS পর্যন্ত হতে পারে এবং টেপার সপ্তাহে তা ২০০-৩০০ এ নেমে আসে।</p></div><div class="faq-item"><h3>১০কিমি রেসের জন্য আমার লক্ষ্যমাত্রা TSB কত হওয়া উচিত?</h3><p>১০কিমি রেসের জন্য রেস ডে-তে TSB +২০ থেকে +৩০ লক্ষ্য রাখুন। এটি অর্জনের জন্য ৭-১০ দিনের টেপার শুরু
                     করুন। উচ্চতর TSB (অধিক সতেজতা) ছোট রেসের জন্য উপকারী যেখানে এন্ডুরেন্সের চেয়ে গতি এবং পাওয়ার বেশি
-                    গুরুত্বপূর্ণ। নিরুমোসকুলার শার্পনেস বজায় রাখতে ভলিউম কমানোর পাশাপাশি কিছু ইনটেনসিটি ধরে রাখুন।</p>
-            </div>
-
-            <div class="faq-item">
-                <h3>ক্রিটিক্যাল রানিং স্পিড (CRS) না জানলে কি TSS ব্যবহার করা সম্ভব?</h3>
-                <p>সঠিক TSS গণনার জন্য আপনার <a href="/bn/crs/">ক্রিটিক্যাল রানিং স্পিড (CRS)</a> বা থ্রেশহোল্ড পেস জানা
+                    গুরুত্বপূর্ণ। নিরুমোসকুলার শার্পনেস বজায় রাখতে ভলিউম কমানোর পাশাপাশি কিছু ইনটেনসিটি ধরে রাখুন।</p></div><div class="faq-item"><h3>ক্রিটিক্যাল রানিং স্পিড (CRS) না জানলে কি TSS ব্যবহার করা সম্ভব?</h3><p>সঠিক TSS গণনার জন্য আপনার <a href="/bn/crs/">ক্রিটিক্যাল রানিং স্পিড (CRS)</a> বা থ্রেশহোল্ড পেস জানা
                     অপরিহার্য কারণ IF এর সাপেক্ষে গণনা করা হয়। যদি CRS না জানেন, তবে একটি থ্রেশহোল্ড টেস্ট করুন: ৩০
                     মিনিটের অল-আউট টাইম ট্রায়াল (গড় পেস = CRS) অথবা ৮কিমি রেস পেস। বিকল্পভাবে সম্প্রতি রেস টাইমের
-                    সাহায্যে অনুমান করতে পারেন: ১০কিমি পেস + ১০-১৫ সেকেন্ড/কিমি সাধারণত আপনার CRS।</p>
-            </div>
-
-            <div class="faq-item">
-                <h3>আমি কত দ্রুত আমার CTL বাড়াতে পারি?</h3>
-                <p>নতুনদের জন্য সপ্তাহে ২-৪ পয়েন্ট, মাঝারিদের জন্য ৩-৫ পয়েন্ট এবং উন্নত রানারদের জন্য সর্বোচ্চ ৫-৭
+                    সাহায্যে অনুমান করতে পারেন: ১০কিমি পেস + ১০-১৫ সেকেন্ড/কিমি সাধারণত আপনার CRS।</p></div><div class="faq-item"><h3>আমি কত দ্রুত আমার CTL বাড়াতে পারি?</h3><p>নতুনদের জন্য সপ্তাহে ২-৪ পয়েন্ট, মাঝারিদের জন্য ৩-৫ পয়েন্ট এবং উন্নত রানারদের জন্য সর্বোচ্চ ৫-৭
                     পয়েন্ট CTL বাড়ানো নিরাপদ। এটি সাপ্তাহিক মাইলেজ বৃদ্ধির "১০% নিয়ম"-এর সাথে মিল রাখে এবং ইনজুরির ঝুঁকি
                     কমায়। এই হার অতিক্রম করলে শরীরের হাড়, পেশি এবং লিগামেন্টের ওপর রানিংয়ের উচ্চ ইমপ্যাক্ট স্ট্রেসের
-                    কারণে ইনজুরি এবং ওভারট্রেনিংয়ের ঝুঁকি বেড়ে যায়।</p>
-            </div>
-
-            <div class="faq-item">
-                <h3>ট্রেনিংয়ের সময় ঋণাত্মক (Negative) TSB বলতে কী বোঝায়?</h3>
-                <p>ঋণাত্মক TSB মানে ক্লান্তি (ATL) ফিটনেস (CTL)-কে ছাড়িয়ে গেছে—অর্থাৎ সাম্প্রতিক ট্রেনিংয়ের কারণে আপনি
+                    কারণে ইনজুরি এবং ওভারট্রেনিংয়ের ঝুঁকি বেড়ে যায়।</p></div><div class="faq-item"><h3>ট্রেনিংয়ের সময় ঋণাত্মক (Negative) TSB বলতে কী বোঝায়?</h3><p>ঋণাত্মক TSB মানে ক্লান্তি (ATL) ফিটনেস (CTL)-কে ছাড়িয়ে গেছে—অর্থাৎ সাম্প্রতিক ট্রেনিংয়ের কারণে আপনি
                     বর্তমানে ক্লান্ত। প্রস্তুতির সময় এটি স্বাভাবিক এবং উৎপাদনশীল। -১৫ থেকে -২৫ TSB প্রোডাক্টিভ ট্রেনিং
                     স্ট্রেস নির্দেশ করে। TSB -৩০ এর নিচে নেমে যাওয়া মানে ওভারট্রেনিং ঝুঁকি এবং রিকভারির প্রয়োজন।
                     প্রস্তুতির সময় ঋণাত্মক TSB ফিটনেস অ্যাডাপ্টেশনের উদ্দীপনা দেয় এবং টেপারের সময় ধনাত্মক TSB
-                    পারফরম্যান্সের সুযোগ দেয়।</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="section">
-    <div class="container container-narrow text-center">
-        <h2>আপনার রানিং ট্রেনিং লোড নিয়ন্ত্রণ করুন</h2>
-        <p class="lead">রানিংয়ের জন্য ট্রেনিং স্ট্রেস স্কোর বোঝার মাধ্যমে আপনি ব্যক্তিগত ধারণাকে বস্তুনিষ্ঠ এবং
+                    পারফরম্যান্সের সুযোগ দেয়।</p></div></div></div></section><section class="section"><div class="container container-narrow text-center"><h2>আপনার রানিং ট্রেনিং লোড নিয়ন্ত্রণ করুন</h2><p class="lead">রানিংয়ের জন্য ট্রেনিং স্ট্রেস স্কোর বোঝার মাধ্যমে আপনি ব্যক্তিগত ধারণাকে বস্তুনিষ্ঠ এবং
             ডেটা-চালিত পারফরম্যান্স অপ্টিমাইজেশনে রূপান্তর করতে পারেন। পারফরম্যান্স ম্যানেজমেন্ট চার্টের মাধ্যমে rTSS,
             CTL, ATL এবং TSB মনিটর করার মাধ্যমে আপনি ফিটনেস বৃদ্ধি, ক্লান্তি ব্যবস্থাপনা এবং রেসের সঠিক সময় নির্ধারণে
-            নিখুঁত নিয়ন্ত্রণ পাবেন।</p>
-
-        <p>CTL-ATL-TSB সিস্টেম ওভারট্রেনিং প্রতিরোধ করে, রিকভারির সময় নিখুঁত করে এবং নিশ্চিত করে যে আপনি আপনার টার্গেট
-            রেসের দিন সেরা ফিটনেস-ক্লান্তি ভারসাম্যের সাথে পৌঁছাচ্ছেন।</p>
-
-        <div class="mt-xl">
-            <a href="/bn/crs/" class="btn btn-secondary">← ক্রিটিক্যাল রানিং স্পিড (CRS)</a>
-            <a href="/bn/efficiency/" class="btn btn-primary">রানিং এফিশিয়েন্সি মেট্রিক্স →</a>
-        </div>
-    </div>
-</section>
-    
-  </main>
-
-  
-  <footer class="site-footer">
-    <div class="container">
-        
-        <div class="footer-top">
-            <div class="footer-brand-section">
-                
-                <h2>Run Analytics</h2>
-                <p>Track Critical Running Speed, Training Stress Score, and performance metrics with Run Analytics. Science-based iOS app for runners, triathletes &amp; coaches. 7-day free trial.</p>
-                
-            </div>
-
-            
-            <div class="footer-download">
-                <h3 class="footer-heading">Download</h3>
-                <div class="footer-badges">
-                    
-                    <a href="https://apps.apple.com/us/app/run-analytics/id6754524015" target="_blank" rel="noopener"
-                        aria-label="Download on the App Store">
-                        <img src="../../assets/images/badge-app-store.svg"
+            নিখুঁত নিয়ন্ত্রণ পাবেন।</p><p>CTL-ATL-TSB সিস্টেম ওভারট্রেনিং প্রতিরোধ করে, রিকভারির সময় নিখুঁত করে এবং নিশ্চিত করে যে আপনি আপনার টার্গেট
+            রেসের দিন সেরা ফিটনেস-ক্লান্তি ভারসাম্যের সাথে পৌঁছাচ্ছেন।</p><div class="mt-xl"><a href="/bn/crs/" class="btn btn-secondary">← ক্রিটিক্যাল রানিং স্পিড (CRS)</a><a href="/bn/efficiency/" class="btn btn-primary">রানিং এফিশিয়েন্সি মেট্রিক্স →</a></div></div></section></main><footer class="site-footer"><div class="container"><div class="footer-top"><div class="footer-brand-section"><h2>Run Analytics</h2><p>Track Critical Running Speed, Training Stress Score, and performance metrics with Run Analytics. Science-based iOS app for runners, triathletes &amp; coaches. 7-day free trial.</p></div><div class="footer-download"><h3 class="footer-heading">Download</h3><div class="footer-badges"><a href="https://apps.apple.com/us/app/run-analytics/id6754524015" target="_blank" rel="noopener"
+                        aria-label="Download on the App Store"><img src="../../assets/images/badge-app-store.svg"
                             alt="Download on the App Store" width="135"
-                            height="40" loading="lazy">
-                    </a>
-                    
-                    
-                    <a href="https://play.google.com/store/apps/details?id=com.arnohealth.runanalytics" target="_blank" rel="noopener"
-                        aria-label="Get it on Google Play">
-                        <img src="../../assets/images/badge-google-play.svg"
+                            height="40" loading="lazy"></a><a href="https://play.google.com/store/apps/details?id=com.arnohealth.runanalytics" target="_blank" rel="noopener"
+                        aria-label="Get it on Google Play"><img src="../../assets/images/badge-google-play.svg"
                             alt="Get it on Google Play" width="135"
-                            height="40" loading="lazy">
-                    </a>
-                    
-                </div>
-            </div>
-            
-        </div>
-
-        
-        <div class="footer-languages">
-            <h3 class="footer-heading">Available in</h3>
-            <div class="lang-grid">
-                
-                <a href="/af/" class="lang-link"
+                            height="40" loading="lazy"></a></div></div></div><div class="footer-languages"><h3 class="footer-heading">Available in</h3><div class="lang-grid"><a href="/af/" class="lang-link"
                     hreflang="af" >
                     Afrikaans
-                </a>
-                
-                <a href="/am/" class="lang-link"
+                </a><a href="/am/" class="lang-link"
                     hreflang="am" >
                     አማርኛ
-                </a>
-                
-                <a href="/ar/" class="lang-link"
+                </a><a href="/ar/" class="lang-link"
                     hreflang="ar" dir="rtl" >
                     العربية
-                </a>
-                
-                <a href="/bg/" class="lang-link"
+                </a><a href="/bg/" class="lang-link"
                     hreflang="bg" >
                     Български
-                </a>
-                
-                <a href="/bn/" class="lang-link active"
+                </a><a href="/bn/" class="lang-link active"
                     hreflang="bn" >
                     বাংলা
-                </a>
-                
-                <a href="/ca/" class="lang-link"
+                </a><a href="/ca/" class="lang-link"
                     hreflang="ca" >
                     Català
-                </a>
-                
-                <a href="/cs/" class="lang-link"
+                </a><a href="/cs/" class="lang-link"
                     hreflang="cs" >
                     Čeština
-                </a>
-                
-                <a href="/da/" class="lang-link"
+                </a><a href="/da/" class="lang-link"
                     hreflang="da" >
                     Dansk
-                </a>
-                
-                <a href="/de/" class="lang-link"
+                </a><a href="/de/" class="lang-link"
                     hreflang="de" >
                     Deutsch
-                </a>
-                
-                <a href="/el/" class="lang-link"
+                </a><a href="/el/" class="lang-link"
                     hreflang="el" >
                     Ελληνικά
-                </a>
-                
-                <a href="/en/" class="lang-link"
+                </a><a href="/en/" class="lang-link"
                     hreflang="en" >
                     English
-                </a>
-                
-                <a href="/es/" class="lang-link"
+                </a><a href="/es/" class="lang-link"
                     hreflang="es" >
                     Español
-                </a>
-                
-                <a href="/et/" class="lang-link"
+                </a><a href="/et/" class="lang-link"
                     hreflang="et" >
                     Eesti
-                </a>
-                
-                <a href="/fa/" class="lang-link"
+                </a><a href="/fa/" class="lang-link"
                     hreflang="fa" dir="rtl" >
                     فارسی
-                </a>
-                
-                <a href="/fi/" class="lang-link"
+                </a><a href="/fi/" class="lang-link"
                     hreflang="fi" >
                     Suomi
-                </a>
-                
-                <a href="/fr/" class="lang-link"
+                </a><a href="/fr/" class="lang-link"
                     hreflang="fr" >
                     Français
-                </a>
-                
-                <a href="/gu/" class="lang-link"
+                </a><a href="/gu/" class="lang-link"
                     hreflang="gu" >
                     ગુજરાતી
-                </a>
-                
-                <a href="/ha/" class="lang-link"
+                </a><a href="/ha/" class="lang-link"
                     hreflang="ha" >
                     Hausa
-                </a>
-                
-                <a href="/he/" class="lang-link"
+                </a><a href="/he/" class="lang-link"
                     hreflang="he" dir="rtl" >
                     עברית
-                </a>
-                
-                <a href="/hi/" class="lang-link"
+                </a><a href="/hi/" class="lang-link"
                     hreflang="hi" >
                     हिन्दी
-                </a>
-                
-                <a href="/hr/" class="lang-link"
+                </a><a href="/hr/" class="lang-link"
                     hreflang="hr" >
                     Hrvatski
-                </a>
-                
-                <a href="/hu/" class="lang-link"
+                </a><a href="/hu/" class="lang-link"
                     hreflang="hu" >
                     Magyar
-                </a>
-                
-                <a href="/id/" class="lang-link"
+                </a><a href="/id/" class="lang-link"
                     hreflang="id" >
                     Bahasa Indonesia
-                </a>
-                
-                <a href="/is/" class="lang-link"
+                </a><a href="/is/" class="lang-link"
                     hreflang="is" >
                     Íslenska
-                </a>
-                
-                <a href="/it/" class="lang-link"
+                </a><a href="/it/" class="lang-link"
                     hreflang="it" >
                     Italiano
-                </a>
-                
-                <a href="/ja/" class="lang-link"
+                </a><a href="/ja/" class="lang-link"
                     hreflang="ja" >
                     日本語
-                </a>
-                
-                <a href="/km/" class="lang-link"
+                </a><a href="/km/" class="lang-link"
                     hreflang="km" >
                     ភាសាខ្មែរ
-                </a>
-                
-                <a href="/kn/" class="lang-link"
+                </a><a href="/kn/" class="lang-link"
                     hreflang="kn" >
                     ಕನ್ನಡ
-                </a>
-                
-                <a href="/ko/" class="lang-link"
+                </a><a href="/ko/" class="lang-link"
                     hreflang="ko" >
                     한국어
-                </a>
-                
-                <a href="/lt/" class="lang-link"
+                </a><a href="/lt/" class="lang-link"
                     hreflang="lt" >
                     Lietuvių
-                </a>
-                
-                <a href="/lv/" class="lang-link"
+                </a><a href="/lv/" class="lang-link"
                     hreflang="lv" >
                     Latviešu
-                </a>
-                
-                <a href="/ms/" class="lang-link"
+                </a><a href="/ms/" class="lang-link"
                     hreflang="ms" >
                     Bahasa Melayu
-                </a>
-                
-                <a href="/my/" class="lang-link"
+                </a><a href="/my/" class="lang-link"
                     hreflang="my" >
                     မြန်မာစာ
-                </a>
-                
-                <a href="/nb/" class="lang-link"
+                </a><a href="/nb/" class="lang-link"
                     hreflang="nb" >
                     Norsk Bokmål
-                </a>
-                
-                <a href="/nl/" class="lang-link"
+                </a><a href="/nl/" class="lang-link"
                     hreflang="nl" >
                     Nederlands
-                </a>
-                
-                <a href="/pl/" class="lang-link"
+                </a><a href="/pl/" class="lang-link"
                     hreflang="pl" >
                     Polski
-                </a>
-                
-                <a href="/pt/" class="lang-link"
+                </a><a href="/pt/" class="lang-link"
                     hreflang="pt" >
                     Português
-                </a>
-                
-                <a href="/pt-br/" class="lang-link"
+                </a><a href="/pt-br/" class="lang-link"
                     hreflang="pt-br" >
                     Português (Brasil)
-                </a>
-                
-                <a href="/ro/" class="lang-link"
+                </a><a href="/ro/" class="lang-link"
                     hreflang="ro" >
                     Română
-                </a>
-                
-                <a href="/ru/" class="lang-link"
+                </a><a href="/ru/" class="lang-link"
                     hreflang="ru" >
                     Русский
-                </a>
-                
-                <a href="/sk/" class="lang-link"
+                </a><a href="/sk/" class="lang-link"
                     hreflang="sk" >
                     Slovenčina
-                </a>
-                
-                <a href="/sl/" class="lang-link"
+                </a><a href="/sl/" class="lang-link"
                     hreflang="sl" >
                     Slovenščina
-                </a>
-                
-                <a href="/sr/" class="lang-link"
+                </a><a href="/sr/" class="lang-link"
                     hreflang="sr" >
                     Srpski
-                </a>
-                
-                <a href="/sv/" class="lang-link"
+                </a><a href="/sv/" class="lang-link"
                     hreflang="sv" >
                     Svenska
-                </a>
-                
-                <a href="/sw/" class="lang-link"
+                </a><a href="/sw/" class="lang-link"
                     hreflang="sw" >
                     Kiswahili
-                </a>
-                
-                <a href="/ta/" class="lang-link"
+                </a><a href="/ta/" class="lang-link"
                     hreflang="ta" >
                     தமிழ்
-                </a>
-                
-                <a href="/te/" class="lang-link"
+                </a><a href="/te/" class="lang-link"
                     hreflang="te" >
                     తెలుగు
-                </a>
-                
-                <a href="/th/" class="lang-link"
+                </a><a href="/th/" class="lang-link"
                     hreflang="th" >
                     ไทย
-                </a>
-                
-                <a href="/tl/" class="lang-link"
+                </a><a href="/tl/" class="lang-link"
                     hreflang="tl" >
                     Tagalog
-                </a>
-                
-                <a href="/tr/" class="lang-link"
+                </a><a href="/tr/" class="lang-link"
                     hreflang="tr" >
                     Türkçe
-                </a>
-                
-                <a href="/uk/" class="lang-link"
+                </a><a href="/uk/" class="lang-link"
                     hreflang="uk" >
                     Українська
-                </a>
-                
-                <a href="/ur/" class="lang-link"
+                </a><a href="/ur/" class="lang-link"
                     hreflang="ur" dir="rtl" >
                     اردو
-                </a>
-                
-                <a href="/vi/" class="lang-link"
+                </a><a href="/vi/" class="lang-link"
                     hreflang="vi" >
                     Tiếng Việt
-                </a>
-                
-                <a href="/yo/" class="lang-link"
+                </a><a href="/yo/" class="lang-link"
                     hreflang="yo" >
                     Yorùbá
-                </a>
-                
-                <a href="/zh/" class="lang-link"
+                </a><a href="/zh/" class="lang-link"
                     hreflang="zh" >
                     中文
-                </a>
-                
-            </div>
-        </div>
-
-        <div class="footer-divider"></div>
-
-        
-        <div class="footer-bottom">
-            <p class="copyright">
+                </a></div></div><div class="footer-divider"></div><div class="footer-bottom"><p class="copyright">
                 &copy; 2026 Run Analytics. সর্বস্বত্ব সংরক্ষিত
-            </p>
-            <ul class="footer-legal">
-                <li><a href="/bn/privacy/">গোপনীয়তা</a></li>
-                <li><a href="/bn/terms/">শর্তাবলী</a></li>
-            </ul>
-        </div>
-    </div>
-</footer>
-
-  
-  <div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="Cookie consent" aria-live="polite">
-    <div class="cookie-banner-content">
-        <div>
-            <p>এই ওয়েবসাইট আপনার অভিজ্ঞতা উন্নত করতে কুকি ব্যবহার করে।</p>
-            <a href="/bn/privacy/" class="text-sm">আরও জানুন</a>
-        </div>
-        <div class="cookie-banner-actions">
-            <button id="cookie-decline" class="btn btn-secondary btn-small">প্রত্যাখ্যান করুন</button>
-            <button id="cookie-accept" class="btn btn-primary btn-small">গ্রহণ করুন</button>
-        </div>
-    </div>
-</div>
-
-  
-  <script src="../../assets/js/core.min.js?v=8aef43d1" defer></script>
-  <script src="../../assets/js/search.min.js?v=8aef43d1" defer></script>
-  
-
-  
-  
-  <script src="../../assets/js/analytics.min.js" data-ga-id="G-Y138VB4523" defer></script>
-  
-
-  
-  <script>if ('serviceWorker' in navigator) { navigator.serviceWorker.register('../../sw.js') }</script>
-</body>
-
-</html>
+            </p><ul class="footer-legal"><li><a href="/bn/privacy/">গোপনীয়তা</a></li><li><a href="/bn/terms/">শর্তাবলী</a></li></ul></div></div></footer><div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="Cookie consent" aria-live="polite"><div class="cookie-banner-content"><div><p>এই ওয়েবসাইট আপনার অভিজ্ঞতা উন্নত করতে কুকি ব্যবহার করে।</p><a href="/bn/privacy/" class="text-sm">আরও জানুন</a></div><div class="cookie-banner-actions"><button id="cookie-decline" class="btn btn-secondary btn-small">প্রত্যাখ্যান করুন</button><button id="cookie-accept" class="btn btn-primary btn-small">গ্রহণ করুন</button></div></div></div><script src="../../assets/js/core.min.js?v=e899af207631" defer></script><script src="../../assets/js/search.min.js?v=e899af207631" defer></script><script src="../../assets/js/analytics.min.js" data-ga-id="G-Y138VB4523" defer></script><script>if ('serviceWorker' in navigator) { navigator.serviceWorker.register('../../sw.js') }</script></body></html>

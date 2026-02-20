@@ -1,246 +1,61 @@
-<!DOCTYPE html>
-<html lang="vi" dir="ltr">
-
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
-    rel="stylesheet">
-
-  
-  <title>Các Bài Kiểm Tra Hiệu Suất Chạy Bộ: Hướng Dẫn Toàn Diện về Kiểm Tra</title>
-  <meta name="description" content="Xuất bản: 27 tháng 1, 2025 | Cập nhật: 29 tháng 1, 2025. Các Bài Kiểm Tra Hiệu Suất Chạy Bộ: Hướng Dẫn Toàn Diện về Kiểm Tra">
-  <meta name="author" content="AnalyticsZone Team">
-
-  
-  
-  <meta name="keywords" content="test hiệu suất running, running field tests, CRS test, vo2max test running, threshold test, running economy test, performance testing, training zones testing">
-  
-
-  
-  <link rel="canonical" href="https://run.analyticszone.app/vi/running-performance-tests/">
-
-  
-  
-  <meta property="article:published_time" content="2025-01-15T10:00:00Z">
-  <meta property="article:modified_time" content="2026-01-13T14:30:00Z">
-  <meta property="article:author" content="AnalyticsZone Team">
-  
-
-  
-  
-
-  
-  <meta property="og:type" content="article">
-  <meta property="og:url" content="https://run.analyticszone.app/vi/running-performance-tests/">
-  <meta property="og:title" content="Các Bài Kiểm Tra Hiệu Suất Chạy Bộ: Hướng Dẫn Toàn Diện về Kiểm Tra">
-  <meta property="og:description" content="Xuất bản: 27 tháng 1, 2025 | Cập nhật: 29 tháng 1, 2025. Các Bài Kiểm Tra Hiệu Suất Chạy Bộ: Hướng Dẫn Toàn Diện về Kiểm Tra">
-  <meta property="og:image" content="https://run.analyticszone.app/assets/images/og-image.svg">
-  <meta property="og:locale" content="vi_VN">
-  <meta property="og:site_name" content="Run Analytics">
-
-  
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:url" content="https://run.analyticszone.app/vi/running-performance-tests/">
-  <meta name="twitter:title" content="Các Bài Kiểm Tra Hiệu Suất Chạy Bộ: Hướng Dẫn Toàn Diện về Kiểm Tra">
-  <meta name="twitter:description" content="Xuất bản: 27 tháng 1, 2025 | Cập nhật: 29 tháng 1, 2025. Các Bài Kiểm Tra Hiệu Suất Chạy Bộ: Hướng Dẫn Toàn Diện về Kiểm Tra">
-  <meta name="twitter:image" content="https://run.analyticszone.app/assets/images/og-image.svg">
-  
-  <meta name="twitter:site" content="@runanalytics">
-  <meta name="twitter:creator" content="@runanalytics">
-  
-
-  
-  
-  <link rel="alternate" hreflang="af"
-    href="https://run.analyticszone.app/af/running-performance-tests/">
-  
-  <link rel="alternate" hreflang="am"
-    href="https://run.analyticszone.app/am/running-performance-tests/">
-  
-  <link rel="alternate" hreflang="ar"
-    href="https://run.analyticszone.app/ar/running-performance-tests/">
-  
-  <link rel="alternate" hreflang="bg"
-    href="https://run.analyticszone.app/bg/running-performance-tests/">
-  
-  <link rel="alternate" hreflang="bn"
-    href="https://run.analyticszone.app/bn/running-performance-tests/">
-  
-  <link rel="alternate" hreflang="ca"
-    href="https://run.analyticszone.app/ca/running-performance-tests/">
-  
-  <link rel="alternate" hreflang="cs"
-    href="https://run.analyticszone.app/cs/running-performance-tests/">
-  
-  <link rel="alternate" hreflang="da"
-    href="https://run.analyticszone.app/da/running-performance-tests/">
-  
-  <link rel="alternate" hreflang="de"
-    href="https://run.analyticszone.app/de/running-performance-tests/">
-  
-  <link rel="alternate" hreflang="el"
-    href="https://run.analyticszone.app/el/running-performance-tests/">
-  
-  <link rel="alternate" hreflang="en"
-    href="https://run.analyticszone.app/en/running-performance-tests/">
-  
-  <link rel="alternate" hreflang="es"
-    href="https://run.analyticszone.app/es/running-performance-tests/">
-  
-  <link rel="alternate" hreflang="et"
-    href="https://run.analyticszone.app/et/running-performance-tests/">
-  
-  <link rel="alternate" hreflang="fa"
-    href="https://run.analyticszone.app/fa/running-performance-tests/">
-  
-  <link rel="alternate" hreflang="fi"
-    href="https://run.analyticszone.app/fi/running-performance-tests/">
-  
-  <link rel="alternate" hreflang="fr"
-    href="https://run.analyticszone.app/fr/running-performance-tests/">
-  
-  <link rel="alternate" hreflang="gu"
-    href="https://run.analyticszone.app/gu/running-performance-tests/">
-  
-  <link rel="alternate" hreflang="ha"
-    href="https://run.analyticszone.app/ha/running-performance-tests/">
-  
-  <link rel="alternate" hreflang="he"
-    href="https://run.analyticszone.app/he/running-performance-tests/">
-  
-  <link rel="alternate" hreflang="hi"
-    href="https://run.analyticszone.app/hi/running-performance-tests/">
-  
-  <link rel="alternate" hreflang="hr"
-    href="https://run.analyticszone.app/hr/running-performance-tests/">
-  
-  <link rel="alternate" hreflang="hu"
-    href="https://run.analyticszone.app/hu/running-performance-tests/">
-  
-  <link rel="alternate" hreflang="id"
-    href="https://run.analyticszone.app/id/running-performance-tests/">
-  
-  <link rel="alternate" hreflang="is"
-    href="https://run.analyticszone.app/is/running-performance-tests/">
-  
-  <link rel="alternate" hreflang="it"
-    href="https://run.analyticszone.app/it/running-performance-tests/">
-  
-  <link rel="alternate" hreflang="ja"
-    href="https://run.analyticszone.app/ja/running-performance-tests/">
-  
-  <link rel="alternate" hreflang="km"
-    href="https://run.analyticszone.app/km/running-performance-tests/">
-  
-  <link rel="alternate" hreflang="kn"
-    href="https://run.analyticszone.app/kn/running-performance-tests/">
-  
-  <link rel="alternate" hreflang="ko"
-    href="https://run.analyticszone.app/ko/running-performance-tests/">
-  
-  <link rel="alternate" hreflang="lt"
-    href="https://run.analyticszone.app/lt/running-performance-tests/">
-  
-  <link rel="alternate" hreflang="lv"
-    href="https://run.analyticszone.app/lv/running-performance-tests/">
-  
-  <link rel="alternate" hreflang="ms"
-    href="https://run.analyticszone.app/ms/running-performance-tests/">
-  
-  <link rel="alternate" hreflang="my"
-    href="https://run.analyticszone.app/my/running-performance-tests/">
-  
-  <link rel="alternate" hreflang="nb"
-    href="https://run.analyticszone.app/nb/running-performance-tests/">
-  
-  <link rel="alternate" hreflang="nl"
-    href="https://run.analyticszone.app/nl/running-performance-tests/">
-  
-  <link rel="alternate" hreflang="pl"
-    href="https://run.analyticszone.app/pl/running-performance-tests/">
-  
-  <link rel="alternate" hreflang="pt"
-    href="https://run.analyticszone.app/pt/running-performance-tests/">
-  
-  <link rel="alternate" hreflang="pt-br"
-    href="https://run.analyticszone.app/pt-br/running-performance-tests/">
-  
-  <link rel="alternate" hreflang="ro"
-    href="https://run.analyticszone.app/ro/running-performance-tests/">
-  
-  <link rel="alternate" hreflang="ru"
-    href="https://run.analyticszone.app/ru/running-performance-tests/">
-  
-  <link rel="alternate" hreflang="sk"
-    href="https://run.analyticszone.app/sk/running-performance-tests/">
-  
-  <link rel="alternate" hreflang="sl"
-    href="https://run.analyticszone.app/sl/running-performance-tests/">
-  
-  <link rel="alternate" hreflang="sr"
-    href="https://run.analyticszone.app/sr/running-performance-tests/">
-  
-  <link rel="alternate" hreflang="sv"
-    href="https://run.analyticszone.app/sv/running-performance-tests/">
-  
-  <link rel="alternate" hreflang="sw"
-    href="https://run.analyticszone.app/sw/running-performance-tests/">
-  
-  <link rel="alternate" hreflang="ta"
-    href="https://run.analyticszone.app/ta/running-performance-tests/">
-  
-  <link rel="alternate" hreflang="te"
-    href="https://run.analyticszone.app/te/running-performance-tests/">
-  
-  <link rel="alternate" hreflang="th"
-    href="https://run.analyticszone.app/th/running-performance-tests/">
-  
-  <link rel="alternate" hreflang="tl"
-    href="https://run.analyticszone.app/tl/running-performance-tests/">
-  
-  <link rel="alternate" hreflang="tr"
-    href="https://run.analyticszone.app/tr/running-performance-tests/">
-  
-  <link rel="alternate" hreflang="uk"
-    href="https://run.analyticszone.app/uk/running-performance-tests/">
-  
-  <link rel="alternate" hreflang="ur"
-    href="https://run.analyticszone.app/ur/running-performance-tests/">
-  
-  <link rel="alternate" hreflang="vi"
-    href="https://run.analyticszone.app/vi/running-performance-tests/">
-  
-  <link rel="alternate" hreflang="yo"
-    href="https://run.analyticszone.app/yo/running-performance-tests/">
-  
-  <link rel="alternate" hreflang="zh"
-    href="https://run.analyticszone.app/zh/running-performance-tests/">
-  
-  <link rel="alternate" hreflang="x-default"
-    href="https://run.analyticszone.app/en/running-performance-tests/">
-
-  
-  <link rel="icon" type="image/png" sizes="32x32" href="../../assets/images/icons/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="../../assets/images/icons/favicon-16x16.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="../../assets/images/icons/apple-touch-icon.png">
-  <link rel="manifest" href="../../manifest.json">
-  <meta name="theme-color" content="#2563EB">
-  <meta name="robots" content="index, follow">
-
-  
-  
-  
-  <meta name="apple-itunes-app" content="app-id=6754524015">
-  
-
-  
-  <style>
+<!DOCTYPE html><html lang="vi" dir="ltr"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet"><title>Các Bài Kiểm Tra Hiệu Suất Chạy Bộ: Hướng Dẫn Toàn Diện về Kiểm Tra</title><meta name="description" content="Xuất bản: 27 tháng 1, 2025 | Cập nhật: 29 tháng 1, 2025. Các Bài Kiểm Tra Hiệu Suất Chạy Bộ: Hướng Dẫn Toàn Diện về Kiểm Tra"><meta name="author" content="AnalyticsZone Team"><meta name="keywords" content="test hiệu suất running, running field tests, CRS test, vo2max test running, threshold test, running economy test, performance testing, training zones testing"><link rel="canonical" href="https://run.analyticszone.app/vi/running-performance-tests/"><meta property="article:published_time" content="2025-01-15T10:00:00Z"><meta property="article:modified_time" content="2026-01-13T14:30:00Z"><meta property="article:author" content="AnalyticsZone Team"><meta property="og:type" content="article"><meta property="og:url" content="https://run.analyticszone.app/vi/running-performance-tests/"><meta property="og:title" content="Các Bài Kiểm Tra Hiệu Suất Chạy Bộ: Hướng Dẫn Toàn Diện về Kiểm Tra"><meta property="og:description" content="Xuất bản: 27 tháng 1, 2025 | Cập nhật: 29 tháng 1, 2025. Các Bài Kiểm Tra Hiệu Suất Chạy Bộ: Hướng Dẫn Toàn Diện về Kiểm Tra"><meta property="og:image" content="https://run.analyticszone.app/assets/images/og-image.svg"><meta property="og:locale" content="vi_VN"><meta property="og:site_name" content="Run Analytics"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:url" content="https://run.analyticszone.app/vi/running-performance-tests/"><meta name="twitter:title" content="Các Bài Kiểm Tra Hiệu Suất Chạy Bộ: Hướng Dẫn Toàn Diện về Kiểm Tra"><meta name="twitter:description" content="Xuất bản: 27 tháng 1, 2025 | Cập nhật: 29 tháng 1, 2025. Các Bài Kiểm Tra Hiệu Suất Chạy Bộ: Hướng Dẫn Toàn Diện về Kiểm Tra"><meta name="twitter:image" content="https://run.analyticszone.app/assets/images/og-image.svg"><meta name="twitter:site" content="@runanalytics"><meta name="twitter:creator" content="@runanalytics"><link rel="alternate" hreflang="af"
+    href="https://run.analyticszone.app/af/running-performance-tests/"><link rel="alternate" hreflang="am"
+    href="https://run.analyticszone.app/am/running-performance-tests/"><link rel="alternate" hreflang="ar"
+    href="https://run.analyticszone.app/ar/running-performance-tests/"><link rel="alternate" hreflang="bg"
+    href="https://run.analyticszone.app/bg/running-performance-tests/"><link rel="alternate" hreflang="bn"
+    href="https://run.analyticszone.app/bn/running-performance-tests/"><link rel="alternate" hreflang="ca"
+    href="https://run.analyticszone.app/ca/running-performance-tests/"><link rel="alternate" hreflang="cs"
+    href="https://run.analyticszone.app/cs/running-performance-tests/"><link rel="alternate" hreflang="da"
+    href="https://run.analyticszone.app/da/running-performance-tests/"><link rel="alternate" hreflang="de"
+    href="https://run.analyticszone.app/de/running-performance-tests/"><link rel="alternate" hreflang="el"
+    href="https://run.analyticszone.app/el/running-performance-tests/"><link rel="alternate" hreflang="en"
+    href="https://run.analyticszone.app/en/running-performance-tests/"><link rel="alternate" hreflang="es"
+    href="https://run.analyticszone.app/es/running-performance-tests/"><link rel="alternate" hreflang="et"
+    href="https://run.analyticszone.app/et/running-performance-tests/"><link rel="alternate" hreflang="fa"
+    href="https://run.analyticszone.app/fa/running-performance-tests/"><link rel="alternate" hreflang="fi"
+    href="https://run.analyticszone.app/fi/running-performance-tests/"><link rel="alternate" hreflang="fr"
+    href="https://run.analyticszone.app/fr/running-performance-tests/"><link rel="alternate" hreflang="gu"
+    href="https://run.analyticszone.app/gu/running-performance-tests/"><link rel="alternate" hreflang="ha"
+    href="https://run.analyticszone.app/ha/running-performance-tests/"><link rel="alternate" hreflang="he"
+    href="https://run.analyticszone.app/he/running-performance-tests/"><link rel="alternate" hreflang="hi"
+    href="https://run.analyticszone.app/hi/running-performance-tests/"><link rel="alternate" hreflang="hr"
+    href="https://run.analyticszone.app/hr/running-performance-tests/"><link rel="alternate" hreflang="hu"
+    href="https://run.analyticszone.app/hu/running-performance-tests/"><link rel="alternate" hreflang="id"
+    href="https://run.analyticszone.app/id/running-performance-tests/"><link rel="alternate" hreflang="is"
+    href="https://run.analyticszone.app/is/running-performance-tests/"><link rel="alternate" hreflang="it"
+    href="https://run.analyticszone.app/it/running-performance-tests/"><link rel="alternate" hreflang="ja"
+    href="https://run.analyticszone.app/ja/running-performance-tests/"><link rel="alternate" hreflang="km"
+    href="https://run.analyticszone.app/km/running-performance-tests/"><link rel="alternate" hreflang="kn"
+    href="https://run.analyticszone.app/kn/running-performance-tests/"><link rel="alternate" hreflang="ko"
+    href="https://run.analyticszone.app/ko/running-performance-tests/"><link rel="alternate" hreflang="lt"
+    href="https://run.analyticszone.app/lt/running-performance-tests/"><link rel="alternate" hreflang="lv"
+    href="https://run.analyticszone.app/lv/running-performance-tests/"><link rel="alternate" hreflang="ms"
+    href="https://run.analyticszone.app/ms/running-performance-tests/"><link rel="alternate" hreflang="my"
+    href="https://run.analyticszone.app/my/running-performance-tests/"><link rel="alternate" hreflang="nb"
+    href="https://run.analyticszone.app/nb/running-performance-tests/"><link rel="alternate" hreflang="nl"
+    href="https://run.analyticszone.app/nl/running-performance-tests/"><link rel="alternate" hreflang="pl"
+    href="https://run.analyticszone.app/pl/running-performance-tests/"><link rel="alternate" hreflang="pt"
+    href="https://run.analyticszone.app/pt/running-performance-tests/"><link rel="alternate" hreflang="pt-br"
+    href="https://run.analyticszone.app/pt-br/running-performance-tests/"><link rel="alternate" hreflang="ro"
+    href="https://run.analyticszone.app/ro/running-performance-tests/"><link rel="alternate" hreflang="ru"
+    href="https://run.analyticszone.app/ru/running-performance-tests/"><link rel="alternate" hreflang="sk"
+    href="https://run.analyticszone.app/sk/running-performance-tests/"><link rel="alternate" hreflang="sl"
+    href="https://run.analyticszone.app/sl/running-performance-tests/"><link rel="alternate" hreflang="sr"
+    href="https://run.analyticszone.app/sr/running-performance-tests/"><link rel="alternate" hreflang="sv"
+    href="https://run.analyticszone.app/sv/running-performance-tests/"><link rel="alternate" hreflang="sw"
+    href="https://run.analyticszone.app/sw/running-performance-tests/"><link rel="alternate" hreflang="ta"
+    href="https://run.analyticszone.app/ta/running-performance-tests/"><link rel="alternate" hreflang="te"
+    href="https://run.analyticszone.app/te/running-performance-tests/"><link rel="alternate" hreflang="th"
+    href="https://run.analyticszone.app/th/running-performance-tests/"><link rel="alternate" hreflang="tl"
+    href="https://run.analyticszone.app/tl/running-performance-tests/"><link rel="alternate" hreflang="tr"
+    href="https://run.analyticszone.app/tr/running-performance-tests/"><link rel="alternate" hreflang="uk"
+    href="https://run.analyticszone.app/uk/running-performance-tests/"><link rel="alternate" hreflang="ur"
+    href="https://run.analyticszone.app/ur/running-performance-tests/"><link rel="alternate" hreflang="vi"
+    href="https://run.analyticszone.app/vi/running-performance-tests/"><link rel="alternate" hreflang="yo"
+    href="https://run.analyticszone.app/yo/running-performance-tests/"><link rel="alternate" hreflang="zh"
+    href="https://run.analyticszone.app/zh/running-performance-tests/"><link rel="alternate" hreflang="x-default"
+    href="https://run.analyticszone.app/en/running-performance-tests/"><link rel="icon" type="image/png" sizes="32x32" href="../../assets/images/icons/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="../../assets/images/icons/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="../../assets/images/icons/apple-touch-icon.png"><link rel="manifest" href="../../manifest.json"><meta name="theme-color" content="#2563EB"><meta name="robots" content="index, follow"><meta name="apple-itunes-app" content="app-id=6754524015"><style>
 /* Critical CSS - Above the fold styles for fast LCP */
 :root {
   --color-primary: #0066CC;
@@ -499,20 +314,7 @@ img[width][height] {
     transition-duration: 0.01ms !important;
   }
 }
-</style>
-
-  
-  <link rel="preconnect" href="https://www.googletagmanager.com">
-  <link rel="dns-prefetch" href="https://www.googletagmanager.com">
-
-  
-  <link rel="stylesheet" href="../../assets/css/main.min.css?v=8aef43d1">
-
-  
-  
-
-
-<script type="application/ld+json">
+</style><link rel="preconnect" href="https://www.googletagmanager.com"><link rel="dns-prefetch" href="https://www.googletagmanager.com"><link rel="stylesheet" href="../../assets/css/main.min.css?v=e899af207631"><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Organization",
@@ -547,10 +349,7 @@ img[width][height] {
     
   ]
 }
-</script>
-
-
-<script type="application/ld+json">
+</script><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "WebSite",
@@ -559,11 +358,7 @@ img[width][height] {
   "description": "Track Critical Running Speed, Training Stress Score, and performance metrics with Run Analytics. Science-based iOS app for runners, triathletes &amp; coaches. 7-day free trial.",
   "inLanguage": "vi"
 }
-</script>
-
-
-
-<script type="application/ld+json">
+</script><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
@@ -578,14 +373,7 @@ img[width][height] {
   },
   "downloadUrl": "https://apps.apple.com/us/app/run-analytics/id6754524015"
 }
-</script>
-
-
-
-
-
-
-<script type="application/ld+json">
+</script><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "WebPage",
@@ -593,11 +381,7 @@ img[width][height] {
   "description": "Xuất bản: 27 tháng 1, 2025 | Cập nhật: 29 tháng 1, 2025. Các Bài Kiểm Tra Hiệu Suất Chạy Bộ: Hướng Dẫn Toàn Diện về Kiểm Tra",
   "url": "https://run.analyticszone.app/vi/running-performance-tests/"
 }
-</script>
-
-
-
-<script type="application/ld+json">
+</script><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Article",
@@ -622,17 +406,7 @@ img[width][height] {
     "@id": "https://run.analyticszone.app/vi/running-performance-tests/"
   }
 }
-</script>
-
-
-
-
-
-  
-  
-
-  
-  <script>
+</script><script>
     (function () {
       let theme = localStorage.getItem('theme');
       // Older builds could persist a per-subdomain `theme=light` value without a UI
@@ -646,1653 +420,279 @@ img[width][height] {
         document.documentElement.classList.add('dark-mode');
       }
     })();
-  </script>
-</head>
-
-<body>
-  
-  <a href="#main-content" class="skip-link">Chuyển đến nội dung</a>
-
-  
-  <header class="site-header">
-    <div class="container">
-        <div class="header-inner">
-            
-            <a href="/vi/" class="site-logo">
-                <picture>
-                    <source srcset="../../assets/images/logo-dark.png" type="image/png"
-                        media="(prefers-color-scheme: dark)">
-                    <img src="../../assets/images/logo.png" alt="Run Analytics - Running Analytics App | Critical Running Speed, TSS, CTL/ATL/TSB for iOS" width="56" height="56">
-                </picture>
-                <span class="logo-text">Run Analytics</span>
-            </a>
-
-            
-            <nav class="nav-primary" id="nav-primary" role="navigation" aria-label="Main navigation">
-                <div class="nav-group-left">
-                    <ul>
-                        
-                        <li>
-                            
-                            <a href="/vi/" 
+  </script></head><body><a href="#main-content" class="skip-link">Chuyển đến nội dung</a><header class="site-header"><div class="container"><div class="header-inner"><a href="/vi/" class="site-logo"><picture><source srcset="../../assets/images/logo-dark.png" type="image/png"
+                        media="(prefers-color-scheme: dark)"><img src="../../assets/images/logo.png" alt="Run Analytics - Running Analytics App | Critical Running Speed, TSS, CTL/ATL/TSB for iOS" width="56" height="56"></picture><span class="logo-text">Run Analytics</span></a><nav class="nav-primary" id="nav-primary" role="navigation" aria-label="Main navigation"><div class="nav-group-left"><ul><li><a href="/vi/" 
                                 aria-current="">
                                 Trang chủ
-                            </a>
-                            
-                            </li>
-                            
-                        <li class="has-submenu" >
-                            
-                            
-                            <a href="/vi/getting-started/" class="nav-label">Học tập</a>
-                            
-                            <ul class="submenu">
-                                
-                                <li>
-                                    <a href="/vi/getting-started/" 
+                            </a></li><li class="has-submenu" ><a href="/vi/getting-started/" class="nav-label">Học tập</a><ul class="submenu"><li><a href="/vi/getting-started/" 
                                         aria-current="">
                                         Bắt đầu
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/vi/crs/" 
+                                    </a></li><li><a href="/vi/crs/" 
                                         aria-current="">
                                         CRS
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/vi/training-zones/" 
+                                    </a></li><li><a href="/vi/training-zones/" 
                                         aria-current="">
                                         Vùng tập luyện
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/vi/training-load/" 
+                                    </a></li><li><a href="/vi/training-load/" 
                                         aria-current="">
                                         Tải tập luyện
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/vi/rtss-calculator/" 
+                                    </a></li><li><a href="/vi/rtss-calculator/" 
                                         aria-current="">
                                         Máy tính rTSS
-                                    </a>
-                                </li>
-                                
-                            </ul>
-                            
-                            </li>
-                            
-                        <li class="has-submenu" >
-                            
-                            
-                            <a href="/vi/research/" class="nav-label">Khoa học</a>
-                            
-                            <ul class="submenu">
-                                
-                                <li>
-                                    <a href="/vi/research/" 
+                                    </a></li></ul></li><li class="has-submenu" ><a href="/vi/research/" class="nav-label">Khoa học</a><ul class="submenu"><li><a href="/vi/research/" 
                                         aria-current="">
                                         Nghiên cứu
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/vi/formulas/" 
+                                    </a></li><li><a href="/vi/formulas/" 
                                         aria-current="">
                                         Công thức
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/vi/efficiency/" 
+                                    </a></li><li><a href="/vi/efficiency/" 
                                         aria-current="">
                                         Hiệu quả
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/vi/stride-mechanics/" 
+                                    </a></li><li><a href="/vi/stride-mechanics/" 
                                         aria-current="">
                                         Cơ học sải bước
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/vi/bibliography/" 
+                                    </a></li><li><a href="/vi/bibliography/" 
                                         aria-current="">
                                         Thư mục
-                                    </a>
-                                </li>
-                                
-                            </ul>
-                            
-                            </li>
-                            
-                        <li>
-                            
-                            <a href="/vi/contact/" 
+                                    </a></li></ul></li><li><a href="/vi/contact/" 
                                 aria-current="">
                                 Liên hệ
-                            </a>
-                            
-                            </li>
-                            
-                    </ul>
-
-                    
-                    <div class="search-container">
-                        <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                            </a></li></ul><div class="search-container"><svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
                             viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                            <circle cx="11" cy="11" r="8"></circle>
-                            <path d="m21 21-4.35-4.35"></path>
-                        </svg>
-                        <input type="search" id="site-search" class="search-input" aria-expanded="false"
-                            aria-haspopup="listbox" aria-autocomplete="list" autocomplete="off" spellcheck="false" />
-                        <div id="search-results" class="search-results hidden" role="region" aria-live="polite"></div>
-                    </div>
-
-                    
-                    <select class="language-selector" id="language-select" aria-label="Chọn ngôn ngữ">
-                        
-                        <option value="af" >
+                            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.35-4.35"></path></svg><input type="search" id="site-search" class="search-input" aria-expanded="false"
+                            aria-haspopup="listbox" aria-autocomplete="list" autocomplete="off" spellcheck="false" /><div id="search-results" class="search-results hidden" role="region" aria-live="polite"></div></div><select class="language-selector" id="language-select" aria-label="Chọn ngôn ngữ"><option value="af" >
                             Afrikaans
-                        </option>
-                        
-                        <option value="am" >
+                        </option><option value="am" >
                             አማርኛ
-                        </option>
-                        
-                        <option value="ar" >
+                        </option><option value="ar" >
                             العربية
-                        </option>
-                        
-                        <option value="bg" >
+                        </option><option value="bg" >
                             Български
-                        </option>
-                        
-                        <option value="bn" >
+                        </option><option value="bn" >
                             বাংলা
-                        </option>
-                        
-                        <option value="ca" >
+                        </option><option value="ca" >
                             Català
-                        </option>
-                        
-                        <option value="cs" >
+                        </option><option value="cs" >
                             Čeština
-                        </option>
-                        
-                        <option value="da" >
+                        </option><option value="da" >
                             Dansk
-                        </option>
-                        
-                        <option value="de" >
+                        </option><option value="de" >
                             Deutsch
-                        </option>
-                        
-                        <option value="el" >
+                        </option><option value="el" >
                             Ελληνικά
-                        </option>
-                        
-                        <option value="en" >
+                        </option><option value="en" >
                             English
-                        </option>
-                        
-                        <option value="es" >
+                        </option><option value="es" >
                             Español
-                        </option>
-                        
-                        <option value="et" >
+                        </option><option value="et" >
                             Eesti
-                        </option>
-                        
-                        <option value="fa" >
+                        </option><option value="fa" >
                             فارسی
-                        </option>
-                        
-                        <option value="fi" >
+                        </option><option value="fi" >
                             Suomi
-                        </option>
-                        
-                        <option value="fr" >
+                        </option><option value="fr" >
                             Français
-                        </option>
-                        
-                        <option value="gu" >
+                        </option><option value="gu" >
                             ગુજરાતી
-                        </option>
-                        
-                        <option value="ha" >
+                        </option><option value="ha" >
                             Hausa
-                        </option>
-                        
-                        <option value="he" >
+                        </option><option value="he" >
                             עברית
-                        </option>
-                        
-                        <option value="hi" >
+                        </option><option value="hi" >
                             हिन्दी
-                        </option>
-                        
-                        <option value="hr" >
+                        </option><option value="hr" >
                             Hrvatski
-                        </option>
-                        
-                        <option value="hu" >
+                        </option><option value="hu" >
                             Magyar
-                        </option>
-                        
-                        <option value="id" >
+                        </option><option value="id" >
                             Bahasa Indonesia
-                        </option>
-                        
-                        <option value="is" >
+                        </option><option value="is" >
                             Íslenska
-                        </option>
-                        
-                        <option value="it" >
+                        </option><option value="it" >
                             Italiano
-                        </option>
-                        
-                        <option value="ja" >
+                        </option><option value="ja" >
                             日本語
-                        </option>
-                        
-                        <option value="km" >
+                        </option><option value="km" >
                             ភាសាខ្មែរ
-                        </option>
-                        
-                        <option value="kn" >
+                        </option><option value="kn" >
                             ಕನ್ನಡ
-                        </option>
-                        
-                        <option value="ko" >
+                        </option><option value="ko" >
                             한국어
-                        </option>
-                        
-                        <option value="lt" >
+                        </option><option value="lt" >
                             Lietuvių
-                        </option>
-                        
-                        <option value="lv" >
+                        </option><option value="lv" >
                             Latviešu
-                        </option>
-                        
-                        <option value="ms" >
+                        </option><option value="ms" >
                             Bahasa Melayu
-                        </option>
-                        
-                        <option value="my" >
+                        </option><option value="my" >
                             မြန်မာစာ
-                        </option>
-                        
-                        <option value="nb" >
+                        </option><option value="nb" >
                             Norsk Bokmål
-                        </option>
-                        
-                        <option value="nl" >
+                        </option><option value="nl" >
                             Nederlands
-                        </option>
-                        
-                        <option value="pl" >
+                        </option><option value="pl" >
                             Polski
-                        </option>
-                        
-                        <option value="pt" >
+                        </option><option value="pt" >
                             Português
-                        </option>
-                        
-                        <option value="pt-br" >
+                        </option><option value="pt-br" >
                             Português (Brasil)
-                        </option>
-                        
-                        <option value="ro" >
+                        </option><option value="ro" >
                             Română
-                        </option>
-                        
-                        <option value="ru" >
+                        </option><option value="ru" >
                             Русский
-                        </option>
-                        
-                        <option value="sk" >
+                        </option><option value="sk" >
                             Slovenčina
-                        </option>
-                        
-                        <option value="sl" >
+                        </option><option value="sl" >
                             Slovenščina
-                        </option>
-                        
-                        <option value="sr" >
+                        </option><option value="sr" >
                             Srpski
-                        </option>
-                        
-                        <option value="sv" >
+                        </option><option value="sv" >
                             Svenska
-                        </option>
-                        
-                        <option value="sw" >
+                        </option><option value="sw" >
                             Kiswahili
-                        </option>
-                        
-                        <option value="ta" >
+                        </option><option value="ta" >
                             தமிழ்
-                        </option>
-                        
-                        <option value="te" >
+                        </option><option value="te" >
                             తెలుగు
-                        </option>
-                        
-                        <option value="th" >
+                        </option><option value="th" >
                             ไทย
-                        </option>
-                        
-                        <option value="tl" >
+                        </option><option value="tl" >
                             Tagalog
-                        </option>
-                        
-                        <option value="tr" >
+                        </option><option value="tr" >
                             Türkçe
-                        </option>
-                        
-                        <option value="uk" >
+                        </option><option value="uk" >
                             Українська
-                        </option>
-                        
-                        <option value="ur" >
+                        </option><option value="ur" >
                             اردو
-                        </option>
-                        
-                        <option value="vi" selected>
+                        </option><option value="vi" selected>
                             Tiếng Việt
-                        </option>
-                        
-                        <option value="yo" >
+                        </option><option value="yo" >
                             Yorùbá
-                        </option>
-                        
-                        <option value="zh" >
+                        </option><option value="zh" >
                             中文
-                        </option>
-                        
-                    </select>
-                </div>
-
-                <div class="nav-group-right">
-                    
-
-
-                    
-                    <div class="header-app-buttons">
-                        
-                        
-                        <a href="https://apps.apple.com/us/app/run-analytics/id6754524015" class="header-download-btn" target="_blank"
-                            rel="noopener" aria-label="Download on App Store" title="Download on App Store">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                                fill="currentColor">
-                                <path
-                                    d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z" />
-                            </svg>
-                        </a>
-                        
-
-                        
-                        <a href="https://play.google.com/store/apps/details?id=com.arnohealth.runanalytics" class="header-download-btn" target="_blank"
-                            rel="noopener" aria-label="Get it on Google Play" title="Get it on Google Play">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                                fill="currentColor">
-                                <path
-                                    d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.92 20.16,13.19L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M16.81,8.88L14.54,11.15L6.05,2.66L16.81,8.88Z" />
-                            </svg>
-                        </a>
-                        
-                        
-                    </div>
-
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-
-                    
-                    <div class="suite-menu-container">
-                        <button class="suite-menu-toggle" id="suite-menu-toggle" aria-label="See other apps"
-                            aria-expanded="false">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        </option></select></div><div class="nav-group-right"><div class="header-app-buttons"><a href="https://apps.apple.com/us/app/run-analytics/id6754524015" class="header-download-btn" target="_blank"
+                            rel="noopener" aria-label="Download on App Store" title="Download on App Store"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="currentColor"><path
+                                    d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z" /></svg></a><a href="https://play.google.com/store/apps/details?id=com.arnohealth.runanalytics" class="header-download-btn" target="_blank"
+                            rel="noopener" aria-label="Get it on Google Play" title="Get it on Google Play"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="currentColor"><path
+                                    d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.92 20.16,13.19L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M16.81,8.88L14.54,11.15L6.05,2.66L16.81,8.88Z" /></svg></a></div><div class="suite-menu-container"><button class="suite-menu-toggle" id="suite-menu-toggle" aria-label="See other apps"
+                            aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round">
-                                <rect x="3" y="3" width="7" height="7"></rect>
-                                <rect x="14" y="3" width="7" height="7"></rect>
-                                <rect x="14" y="14" width="7" height="7"></rect>
-                                <rect x="3" y="14" width="7" height="7"></rect>
-                            </svg>
-                        </button>
-                        <div class="suite-dropdown hidden" id="suite-dropdown">
-                            <div class="suite-dropdown-header">Other AnalyticsZone Apps</div>
-                            <div class="suite-apps-grid">
-                                
-                                <a href="https://analyticszone.app" class="suite-app-link">AnalyticsZone</a>
-                                
-                                <a href="https://swim.analyticszone.app" class="suite-app-link">Swim Analytics</a>
-                                
-                                <a href="https://bike.analyticszone.app" class="suite-app-link">Bike Analytics</a>
-                                
-                                <a href="https://walk.analyticszone.app" class="suite-app-link">Walk Analytics</a>
-                                
-                                <a href="https://cardio.analyticszone.app" class="suite-app-link">Cardio Analytics</a>
-                                
-                                <a href="https://health.analyticszone.app" class="suite-app-link">Health Analytics</a>
-                                
-                                <a href="https://swimtrainer.analyticszone.app" class="suite-app-link">Swim Trainer</a>
-                                
-                            </div>
-                        </div>
-                    </div>
-                    
-                </div>
-            </nav>
-
-            
-            <button class="menu-toggle" id="menu-toggle" aria-label="Chuyển menu"
-                aria-expanded="false" aria-controls="nav-primary">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </div>
-    </div>
-</header>
-
-  
-  
-
-
-  
-  <main id="main-content" class="main-content">
-    
-    <article class="article-content">
-  <header class="article-header">
-    <h1>Các Bài Kiểm Tra Hiệu Suất Chạy Bộ: Hướng Dẫn Toàn Diện về Kiểm Tra Thực Địa</h1>
-    <p class="article-meta">Xuất bản: <time datetime="2025-01-27">27 tháng 1, 2025</time> | Cập nhật: <time
-        datetime="2025-01-29">29 tháng 1, 2025</time></p>
-  </header>
-
-  <div class="quick-answer" itemscope itemtype="https://schema.org/Answer">
-    <h2>Trả Lời Nhanh</h2>
-    <div itemprop="text">
-      <p><strong>Các bài kiểm tra hiệu suất chạy bộ</strong> là các đánh giá thực địa đo lường các chỉ số thể lực như
+                                stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg></button><div class="suite-dropdown hidden" id="suite-dropdown"><div class="suite-dropdown-header">Other AnalyticsZone Apps</div><div class="suite-apps-grid"><a href="https://analyticszone.app" class="suite-app-link">AnalyticsZone</a><a href="https://swim.analyticszone.app" class="suite-app-link">Swim Analytics</a><a href="https://bike.analyticszone.app" class="suite-app-link">Bike Analytics</a><a href="https://walk.analyticszone.app" class="suite-app-link">Walk Analytics</a><a href="https://cardio.analyticszone.app" class="suite-app-link">Cardio Analytics</a><a href="https://health.analyticszone.app" class="suite-app-link">Health Analytics</a><a href="https://swimtrainer.analyticszone.app" class="suite-app-link">Swim Trainer</a></div></div></div></div></nav><button class="menu-toggle" id="menu-toggle" aria-label="Chuyển menu"
+                aria-expanded="false" aria-controls="nav-primary"><span></span><span></span><span></span></button></div></div></header><main id="main-content" class="main-content"><article class="article-content"><header class="article-header"><h1>Các Bài Kiểm Tra Hiệu Suất Chạy Bộ: Hướng Dẫn Toàn Diện về Kiểm Tra Thực Địa</h1><p class="article-meta">Xuất bản: <time datetime="2025-01-27">27 tháng 1, 2025</time> | Cập nhật: <time
+        datetime="2025-01-29">29 tháng 1, 2025</time></p></header><div class="quick-answer" itemscope itemtype="https://schema.org/Answer"><h2>Trả Lời Nhanh</h2><div itemprop="text"><p><strong>Các bài kiểm tra hiệu suất chạy bộ</strong> là các đánh giá thực địa đo lường các chỉ số thể lực như
         Tốc độ Chạy tới hạn (CRS), VO2max, ngưỡng lactate và kinh tế chạy bộ bằng cách sử dụng thiết bị đơn giản—chỉ cần
-        một chiếc đồng hồ và đường chạy đã được đo lường.</p>
-
-      <p><strong>Các Bài Kiểm Tra Chính:</strong></p>
-      <ul>
-        <li>Kiểm tra CRS: Nỗ lực tối đa 3 phút + 9 phút (hoặc 7 phút), xác định các vùng tập luyện</li>
-        <li>Kiểm tra Thực địa VO2max: Chạy tối đa 12 phút hoặc thử nghiệm 5K</li>
-        <li>Kiểm tra Ngưỡng: Thử nghiệm thời gian 30 phút ở tốc độ bền vững tối đa</li>
-        <li>Kinh tế Chạy bộ: Tốc độ dưới tối đa ở nhịp tim đã đặt</li>
-        <li>Tần suất kiểm tra: Mỗi 6-8 tuần trong các giai đoạn nền tảng/xây dựng</li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="article-intro">
-    <p>Các bài kiểm tra hiệu suất chạy bộ là công cụ thiết yếu để hiểu mức độ thể lực hiện tại của bạn, thiết lập các
+        một chiếc đồng hồ và đường chạy đã được đo lường.</p><p><strong>Các Bài Kiểm Tra Chính:</strong></p><ul><li>Kiểm tra CRS: Nỗ lực tối đa 3 phút + 9 phút (hoặc 7 phút), xác định các vùng tập luyện</li><li>Kiểm tra Thực địa VO2max: Chạy tối đa 12 phút hoặc thử nghiệm 5K</li><li>Kiểm tra Ngưỡng: Thử nghiệm thời gian 30 phút ở tốc độ bền vững tối đa</li><li>Kinh tế Chạy bộ: Tốc độ dưới tối đa ở nhịp tim đã đặt</li><li>Tần suất kiểm tra: Mỗi 6-8 tuần trong các giai đoạn nền tảng/xây dựng</li></ul></div></div><div class="article-intro"><p>Các bài kiểm tra hiệu suất chạy bộ là công cụ thiết yếu để hiểu mức độ thể lực hiện tại của bạn, thiết lập các
       vùng tập luyện phù hợp và theo dõi sự cải thiện theo thời gian. Không giống như kiểm tra phòng thí nghiệm đòi hỏi
       thiết bị đắt tiền và cơ sở vật chất chuyên biệt, các bài kiểm tra thực địa có thể được thực hiện trên bất kỳ đường
-      chạy hoặc quãng đường đã đo lường nào với không gì khác hơn là một chiếc đồng hồ và thiết bị GPS.</p>
-
-    <p>Hướng dẫn này bao gồm các bài kiểm tra hiệu suất chạy bộ hiệu quả nhất được sử dụng bởi các vận động viên cạnh
+      chạy hoặc quãng đường đã đo lường nào với không gì khác hơn là một chiếc đồng hồ và thiết bị GPS.</p><p>Hướng dẫn này bao gồm các bài kiểm tra hiệu suất chạy bộ hiệu quả nhất được sử dụng bởi các vận động viên cạnh
       tranh và huấn luyện viên, bao gồm <a href="/vi/crs/">Tốc độ Chạy tới hạn (CRS)</a>, <a
         href="/vi/vo2max-testing/">kiểm tra thực địa VO2max</a>, <a href="/vi/lactate-threshold-testing/">đánh giá
         ngưỡng lactate</a>, và đánh giá kinh tế chạy bộ. Bạn sẽ tìm hiểu khi nào nên kiểm tra, cách thực hiện từng bài
-      kiểm tra đúng cách và cách giải thích kết quả của bạn để tối ưu hóa việc tập luyện.</p>
-  </div>
-
-  <nav class="article-toc">
-    <h2>Nội Dung</h2>
-    <ul>
-      <li><a href="#why-test">Tại sao Kiểm tra Hiệu suất Lại Quan trọng</a></li>
-      <li><a href="#test-types">Các Loại Bài Kiểm tra Hiệu suất Chạy bộ</a></li>
-      <li><a href="#crs-test">Kiểm tra Tốc độ Chạy tới hạn (CRS)</a></li>
-      <li><a href="#vo2max-tests">Kiểm tra Thực địa VO2max</a></li>
-      <li><a href="#threshold-tests">Kiểm tra Ngưỡng Lactate</a></li>
-      <li><a href="#economy-assessment">Đánh giá Kinh tế Chạy bộ</a></li>
-      <li><a href="#testing-protocol">Giao thức Kiểm tra & Thực hành Tốt nhất</a></li>
-      <li><a href="#interpreting-results">Giải thích Kết quả của Bạn</a></li>
-      <li><a href="#testing-schedule">Khi nào nên Kiểm tra</a></li>
-      <li><a href="#using-data">Sử dụng Dữ liệu Kiểm tra cho Tập luyện</a></li>
-      <li><a href="#faq">Câu hỏi Thường gặp</a></li>
-    </ul>
-  </nav>
-
-  <section id="why-test">
-    <h2>Tại sao Kiểm tra Hiệu suất Lại Quan trọng</h2>
-
-    <p>Kiểm tra hiệu suất thường xuyên cung cấp dữ liệu khách quan mà đánh giá chủ quan không thể sánh được. Nếu không
+      kiểm tra đúng cách và cách giải thích kết quả của bạn để tối ưu hóa việc tập luyện.</p></div><nav class="article-toc"><h2>Nội Dung</h2><ul><li><a href="#why-test">Tại sao Kiểm tra Hiệu suất Lại Quan trọng</a></li><li><a href="#test-types">Các Loại Bài Kiểm tra Hiệu suất Chạy bộ</a></li><li><a href="#crs-test">Kiểm tra Tốc độ Chạy tới hạn (CRS)</a></li><li><a href="#vo2max-tests">Kiểm tra Thực địa VO2max</a></li><li><a href="#threshold-tests">Kiểm tra Ngưỡng Lactate</a></li><li><a href="#economy-assessment">Đánh giá Kinh tế Chạy bộ</a></li><li><a href="#testing-protocol">Giao thức Kiểm tra & Thực hành Tốt nhất</a></li><li><a href="#interpreting-results">Giải thích Kết quả của Bạn</a></li><li><a href="#testing-schedule">Khi nào nên Kiểm tra</a></li><li><a href="#using-data">Sử dụng Dữ liệu Kiểm tra cho Tập luyện</a></li><li><a href="#faq">Câu hỏi Thường gặp</a></li></ul></nav><section id="why-test"><h2>Tại sao Kiểm tra Hiệu suất Lại Quan trọng</h2><p>Kiểm tra hiệu suất thường xuyên cung cấp dữ liệu khách quan mà đánh giá chủ quan không thể sánh được. Nếu không
       kiểm tra, bạn về cơ bản là đang tập luyện một cách mù quáng—phỏng đoán cường độ tập luyện phù hợp và không thể
-      theo dõi sự cải thiện một cách dứt khoát.</p>
-
-    <h3>Lợi ích Chính của Kiểm tra Hiệu suất</h3>
-
-    <ul>
-      <li><strong>Vùng Tập luyện Chính xác:</strong> Các bài kiểm tra thiết lập các vùng cường độ chính xác dựa trên
-        sinh lý thực tế của bạn, không phải các công thức chung chung hay tỷ lệ phần trăm của nhịp tim tối đa</li>
-      <li><strong>Theo dõi Tiến độ Khách quan:</strong> Kiểm tra thường xuyên loại bỏ sự phỏng đoán và cho thấy sự cải
-        thiện cụ thể (hoặc thiếu cải thiện) trong các chỉ số cụ thể</li>
-      <li><strong>Tối ưu hóa Tập luyện:</strong> Kết quả kiểm tra tiết lộ điểm mạnh và điểm yếu, cho phép tập luyện có
-        mục tiêu để giải quyết các giới hạn</li>
-      <li><strong>Động lực và Trách nhiệm:</strong> Các bài kiểm tra đã lên lịch tạo ra cấu trúc tập luyện và cung cấp
-        các mục tiêu hữu hình ngoài ngày đua</li>
-      <li><strong>Hệ thống Cảnh báo Sớm:</strong> Kết quả kiểm tra suy giảm có thể chỉ ra quá tải, hồi phục không đủ
-        hoặc cần điều chỉnh tập luyện</li>
-      <li><strong>Hiệu quả Chi phí:</strong> Kiểm tra thực địa cung cấp 80-90% thông tin từ kiểm tra phòng thí nghiệm
-        với chi phí bằng không</li>
-    </ul>
-
-    <p>Những người chạy thành công nhất kiểm tra thường xuyên—thường là mỗi 6-8 tuần trong các khối tập luyện—để đảm bảo
+      theo dõi sự cải thiện một cách dứt khoát.</p><h3>Lợi ích Chính của Kiểm tra Hiệu suất</h3><ul><li><strong>Vùng Tập luyện Chính xác:</strong> Các bài kiểm tra thiết lập các vùng cường độ chính xác dựa trên
+        sinh lý thực tế của bạn, không phải các công thức chung chung hay tỷ lệ phần trăm của nhịp tim tối đa</li><li><strong>Theo dõi Tiến độ Khách quan:</strong> Kiểm tra thường xuyên loại bỏ sự phỏng đoán và cho thấy sự cải
+        thiện cụ thể (hoặc thiếu cải thiện) trong các chỉ số cụ thể</li><li><strong>Tối ưu hóa Tập luyện:</strong> Kết quả kiểm tra tiết lộ điểm mạnh và điểm yếu, cho phép tập luyện có
+        mục tiêu để giải quyết các giới hạn</li><li><strong>Động lực và Trách nhiệm:</strong> Các bài kiểm tra đã lên lịch tạo ra cấu trúc tập luyện và cung cấp
+        các mục tiêu hữu hình ngoài ngày đua</li><li><strong>Hệ thống Cảnh báo Sớm:</strong> Kết quả kiểm tra suy giảm có thể chỉ ra quá tải, hồi phục không đủ
+        hoặc cần điều chỉnh tập luyện</li><li><strong>Hiệu quả Chi phí:</strong> Kiểm tra thực địa cung cấp 80-90% thông tin từ kiểm tra phòng thí nghiệm
+        với chi phí bằng không</li></ul><p>Những người chạy thành công nhất kiểm tra thường xuyên—thường là mỗi 6-8 tuần trong các khối tập luyện—để đảm bảo
       các vùng tập luyện của họ vẫn chính xác khi thể lực thay đổi. Tìm hiểu thêm về cách sử dụng dữ liệu này trong
-      hướng dẫn của chúng tôi về <a href="/vi/training-zones/">các vùng tập luyện</a>.</p>
-  </section>
-
-  <section id="test-types">
-    <h2>Các Loại Bài Kiểm tra Hiệu suất Chạy bộ</h2>
-
-    <p>Các bài kiểm tra khác nhau đo lường các khía cạnh khác nhau của hiệu suất chạy bộ. Hiểu những gì mỗi bài kiểm tra
-      tiết lộ giúp bạn chọn các bài kiểm tra phù hợp cho mục tiêu của mình.</p>
-
-    <table>
-      <thead>
-        <tr>
-          <th>Loại bài kiểm tra</th>
-          <th>Nó đo lường cái gì</th>
-          <th>Thời gian Yêu cầu</th>
-          <th>Tốt nhất Cho</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><strong>Kiểm tra CRS</strong></td>
-          <td>Ranh giới hiếu khí-yếm khí, tốc độ bền vững</td>
-          <td>20-30 phút</td>
-          <td>Mọi cự ly, thiết lập vùng tập luyện</td>
-        </tr>
-        <tr>
-          <td><strong>Kiểm tra Cooper 12 Phút</strong></td>
-          <td>Ước tính VO2max, năng lực hiếu khí</td>
-          <td>15 phút</td>
-          <td>Đánh giá thể lực hiếu khí</td>
-        </tr>
-        <tr>
-          <td><strong>Thử nghiệm Thời gian 1.5 Dặm</strong></td>
-          <td>VO2max, năng lực kỵ khí</td>
-          <td>10-15 phút</td>
-          <td>Vận động viên trung bình</td>
-        </tr>
-        <tr>
-          <td><strong>Kiểm tra Ngưỡng 30 Phút</strong></td>
-          <td>Tốc độ/HR ngưỡng lactate</td>
-          <td>35-40 phút</td>
-          <td>Vận động viên đường dài, vùng tập luyện</td>
-        </tr>
-        <tr>
-          <td><strong>Thử nghiệm Thời gian 10K</strong></td>
-          <td>Ngưỡng lactate, thể lực đua</td>
-          <td>35-60 phút</td>
-          <td>Vận động viên 5K-marathon</td>
-        </tr>
-        <tr>
-          <td><strong>Kiểm tra Kinh tế Dưới tối đa</strong></td>
-          <td>Xu hướng kinh tế chạy bộ</td>
-          <td>30-40 phút</td>
-          <td>Theo dõi cải thiện hiệu quả</td>
-        </tr>
-      </tbody>
-    </table>
-
-    <p>Hầu hết người chạy được hưởng lợi từ việc thực hiện 2-3 loại bài kiểm tra thường xuyên: kiểm tra CRS cho các vùng
-      tập luyện, kiểm tra VO2max để theo dõi năng lực hiếu khí và kiểm tra ngưỡng cho thể lực cụ thể cho cuộc đua.</p>
-  </section>
-
-  <section id="crs-test">
-    <h2>Kiểm tra Tốc độ Chạy tới hạn (CRS)</h2>
-
-    <p><a href="/vi/crs/">Kiểm tra CRS</a> được cho là bài kiểm tra hiệu suất đơn lẻ có giá trị nhất cho người chạy bộ.
+      hướng dẫn của chúng tôi về <a href="/vi/training-zones/">các vùng tập luyện</a>.</p></section><section id="test-types"><h2>Các Loại Bài Kiểm tra Hiệu suất Chạy bộ</h2><p>Các bài kiểm tra khác nhau đo lường các khía cạnh khác nhau của hiệu suất chạy bộ. Hiểu những gì mỗi bài kiểm tra
+      tiết lộ giúp bạn chọn các bài kiểm tra phù hợp cho mục tiêu của mình.</p><table><thead><tr><th>Loại bài kiểm tra</th><th>Nó đo lường cái gì</th><th>Thời gian Yêu cầu</th><th>Tốt nhất Cho</th></tr></thead><tbody><tr><td><strong>Kiểm tra CRS</strong></td><td>Ranh giới hiếu khí-yếm khí, tốc độ bền vững</td><td>20-30 phút</td><td>Mọi cự ly, thiết lập vùng tập luyện</td></tr><tr><td><strong>Kiểm tra Cooper 12 Phút</strong></td><td>Ước tính VO2max, năng lực hiếu khí</td><td>15 phút</td><td>Đánh giá thể lực hiếu khí</td></tr><tr><td><strong>Thử nghiệm Thời gian 1.5 Dặm</strong></td><td>VO2max, năng lực kỵ khí</td><td>10-15 phút</td><td>Vận động viên trung bình</td></tr><tr><td><strong>Kiểm tra Ngưỡng 30 Phút</strong></td><td>Tốc độ/HR ngưỡng lactate</td><td>35-40 phút</td><td>Vận động viên đường dài, vùng tập luyện</td></tr><tr><td><strong>Thử nghiệm Thời gian 10K</strong></td><td>Ngưỡng lactate, thể lực đua</td><td>35-60 phút</td><td>Vận động viên 5K-marathon</td></tr><tr><td><strong>Kiểm tra Kinh tế Dưới tối đa</strong></td><td>Xu hướng kinh tế chạy bộ</td><td>30-40 phút</td><td>Theo dõi cải thiện hiệu quả</td></tr></tbody></table><p>Hầu hết người chạy được hưởng lợi từ việc thực hiện 2-3 loại bài kiểm tra thường xuyên: kiểm tra CRS cho các vùng
+      tập luyện, kiểm tra VO2max để theo dõi năng lực hiếu khí và kiểm tra ngưỡng cho thể lực cụ thể cho cuộc đua.</p></section><section id="crs-test"><h2>Kiểm tra Tốc độ Chạy tới hạn (CRS)</h2><p><a href="/vi/crs/">Kiểm tra CRS</a> được cho là bài kiểm tra hiệu suất đơn lẻ có giá trị nhất cho người chạy bộ.
       Nó xác định tốc độ chuyển đổi hiếu khí-yếm khí của bạn—tốc độ nhanh nhất bạn có thể duy trì vô thời hạn về mặt lý
-      thuyết mà không tích lũy lactate.</p>
-
-    <h3>Giao thức Kiểm tra CRS</h3>
-
-    <p><strong>Chuẩn bị:</strong></p>
-    <ul>
-      <li>Kiểm tra trên đường chạy (track) hoặc quãng đường bằng phẳng được đo chính xác</li>
-      <li>Nghỉ ngơi tốt (không tập nặng 48 giờ trước đó)</li>
-      <li>Khởi động: 15 phút chạy nhẹ + 3-4 lần chạy sải bước (strides)</li>
-      <li>Điều kiện lý tưởng: 10-18°C (50-65°F), gió tối thiểu</li>
-    </ul>
-
-    <p><strong>Cấu trúc Bài kiểm tra:</strong></p>
-    <ol>
-      <li><strong>Thử nghiệm 1:</strong> Chạy 3 phút nhanh nhất có thể, ghi lại quãng đường đã chạy</li>
-      <li><strong>Hồi phục:</strong> 30 phút đi bộ/chạy nhẹ</li>
-      <li><strong>Thử nghiệm 2:</strong> Chạy 7 phút nhanh nhất có thể, ghi lại quãng đường đã chạy</li>
-    </ol>
-
-    <p><strong>Tính toán CRS:</strong></p>
-    <pre>CRS (m/phút) = (D7 - D3) / (7 - 3)
+      thuyết mà không tích lũy lactate.</p><h3>Giao thức Kiểm tra CRS</h3><p><strong>Chuẩn bị:</strong></p><ul><li>Kiểm tra trên đường chạy (track) hoặc quãng đường bằng phẳng được đo chính xác</li><li>Nghỉ ngơi tốt (không tập nặng 48 giờ trước đó)</li><li>Khởi động: 15 phút chạy nhẹ + 3-4 lần chạy sải bước (strides)</li><li>Điều kiện lý tưởng: 10-18°C (50-65°F), gió tối thiểu</li></ul><p><strong>Cấu trúc Bài kiểm tra:</strong></p><ol><li><strong>Thử nghiệm 1:</strong> Chạy 3 phút nhanh nhất có thể, ghi lại quãng đường đã chạy</li><li><strong>Hồi phục:</strong> 30 phút đi bộ/chạy nhẹ</li><li><strong>Thử nghiệm 2:</strong> Chạy 7 phút nhanh nhất có thể, ghi lại quãng đường đã chạy</li></ol><p><strong>Tính toán CRS:</strong></p><pre>CRS (m/phút) = (D7 - D3) / (7 - 3)
 
 Trong đó:
 D7 = Quãng đường chạy trong thử nghiệm 7 phút (mét)
-D3 = Quãng đường chạy trong thử nghiệm 3 phút (mét)</pre>
-
-    <h3>Ví dụ Tính toán</h3>
-
-    <table>
-      <thead>
-        <tr>
-          <th>Thử nghiệm</th>
-          <th>Quãng đường</th>
-          <th>Tính toán</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Thử nghiệm 3 phút</td>
-          <td>900 mét</td>
-          <td>D3 = 900m</td>
-        </tr>
-        <tr>
-          <td>Thử nghiệm 7 phút</td>
-          <td>1,980 mét</td>
-          <td>D7 = 1,980m</td>
-        </tr>
-        <tr>
-          <td><strong>Kết quả CRS</strong></td>
-          <td colspan="2"><strong>(1,980 - 900) / (7 - 3) = 270 m/phút = 3:42/km = 5:57/dặm</strong></td>
-        </tr>
-      </tbody>
-    </table>
-
-    <p>Khi bạn có CRS, bạn có thể thiết lập tất cả năm vùng tập luyện bằng cách sử dụng <a
+D3 = Quãng đường chạy trong thử nghiệm 3 phút (mét)</pre><h3>Ví dụ Tính toán</h3><table><thead><tr><th>Thử nghiệm</th><th>Quãng đường</th><th>Tính toán</th></tr></thead><tbody><tr><td>Thử nghiệm 3 phút</td><td>900 mét</td><td>D3 = 900m</td></tr><tr><td>Thử nghiệm 7 phút</td><td>1,980 mét</td><td>D7 = 1,980m</td></tr><tr><td><strong>Kết quả CRS</strong></td><td colspan="2"><strong>(1,980 - 900) / (7 - 3) = 270 m/phút = 3:42/km = 5:57/dặm</strong></td></tr></tbody></table><p>Khi bạn có CRS, bạn có thể thiết lập tất cả năm vùng tập luyện bằng cách sử dụng <a
         href="/vi/training-zones/">máy tính vùng tập luyện</a> của chúng tôi và theo dõi mức độ căng thẳng tập luyện với
-      <a href="/vi/rtss-calculator/">tính toán rTSS</a>.</p>
-
-    <h3>Mẹo Kiểm tra CRS</h3>
-
-    <ul>
-      <li>Phân phối sức bài thử nghiệm 3 phút hơi thận trọng một chút—nó nên cảm thấy "rất khó" nhưng không phải là kiệt
-        sức hoàn toàn ngay lập tức</li>
-      <li>Bài thử nghiệm 7 phút nên bắt đầu tương tự như tốc độ 3 phút, dần dần chậm lại khi mệt mỏi xuất hiện</li>
-      <li>Độ chính xác của GPS rất quan trọng—kiểm tra trên đường chạy (track) là đáng tin cậy nhất</li>
-      <li>Ghi lại nhịp tim cho cả hai bài thử nghiệm để thiết lập các vùng tập luyện nhịp tim (HR)</li>
-      <li>Kiểm tra lại mỗi 6-8 tuần để theo dõi sự cải thiện</li>
-    </ul>
-  </section>
-
-  <section id="vo2max-tests">
-    <h2>Kiểm tra Thực địa VO2max</h2>
-
-    <p><a href="/vi/what-is-vo2max/">VO2max</a> đại diện cho năng lực hiếu khí tối đa của bạn—trần của hệ thống tim mạch
+      <a href="/vi/rtss-calculator/">tính toán rTSS</a>.</p><h3>Mẹo Kiểm tra CRS</h3><ul><li>Phân phối sức bài thử nghiệm 3 phút hơi thận trọng một chút—nó nên cảm thấy "rất khó" nhưng không phải là kiệt
+        sức hoàn toàn ngay lập tức</li><li>Bài thử nghiệm 7 phút nên bắt đầu tương tự như tốc độ 3 phút, dần dần chậm lại khi mệt mỏi xuất hiện</li><li>Độ chính xác của GPS rất quan trọng—kiểm tra trên đường chạy (track) là đáng tin cậy nhất</li><li>Ghi lại nhịp tim cho cả hai bài thử nghiệm để thiết lập các vùng tập luyện nhịp tim (HR)</li><li>Kiểm tra lại mỗi 6-8 tuần để theo dõi sự cải thiện</li></ul></section><section id="vo2max-tests"><h2>Kiểm tra Thực địa VO2max</h2><p><a href="/vi/what-is-vo2max/">VO2max</a> đại diện cho năng lực hiếu khí tối đa của bạn—trần của hệ thống tim mạch
       của bạn. Trong khi kiểm tra phòng thí nghiệm cung cấp tiêu chuẩn vàng, các bài kiểm tra thực địa có thể ước tính
-      VO2max với độ chính xác trong khoảng 3-5%.</p>
-
-    <h3>Bài kiểm tra Cooper 12 Phút</h3>
-
-    <p>Bài kiểm tra Cooper là một phương pháp đơn giản, được xác nhận tốt để ước tính VO2max. Chạy càng xa càng tốt
-      trong đúng 12 phút trên đường chạy.</p>
-
-    <p><strong>Giao thức:</strong></p>
-    <ol>
-      <li>Khởi động kỹ lưỡng (15 phút nhẹ + chạy sải bước)</li>
-      <li>Chạy càng xa càng tốt trong đúng 12 phút</li>
-      <li>Ghi lại tổng quãng đường đã chạy bằng mét</li>
-    </ol>
-
-    <p><strong>Tính toán VO2max:</strong></p>
-    <pre>VO2max (ml/kg/phút) = (Quãng đường bằng mét - 504.9) / 44.73</pre>
-
-    <h3>Kết quả Kiểm tra Cooper</h3>
-
-    <table>
-      <thead>
-        <tr>
-          <th>Quãng đường (12 phút)</th>
-          <th>VO2max Ước tính</th>
-          <th>Mức độ Hiệu suất</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>2,400m (1.49 dặm)</td>
-          <td>42.4 ml/kg/phút</td>
-          <td>Người chạy giải trí</td>
-        </tr>
-        <tr>
-          <td>2,800m (1.74 dặm)</td>
-          <td>51.3 ml/kg/phút</td>
-          <td>Người chạy câu lạc bộ cạnh tranh</td>
-        </tr>
-        <tr>
-          <td>3,200m (1.99 dặm)</td>
-          <td>60.2 ml/kg/phút</td>
-          <td>Cấp độ khu vực</td>
-        </tr>
-        <tr>
-          <td>3,600m (2.24 dặm)</td>
-          <td>69.2 ml/kg/phút</td>
-          <td>Cấp độ quốc gia</td>
-        </tr>
-        <tr>
-          <td>4,000m (2.49 dặm)</td>
-          <td>78.1 ml/kg/phút</td>
-          <td>Cấp độ ưu tú</td>
-        </tr>
-      </tbody>
-    </table>
-
-    <h3>Thử nghiệm Thời gian 1.5 Dặm (2.4km)</h3>
-
-    <p>Một giải pháp thay thế cho bài kiểm tra Cooper, thử nghiệm thời gian 1.5 dặm cung cấp ước tính VO2max tương tự
-      với mục tiêu dựa trên khoảng cách.</p>
-
-    <p><strong>Giao thức:</strong></p>
-    <ol>
-      <li>Khởi động kỹ lưỡng</li>
-      <li>Chạy 1.5 dặm (6 vòng trên đường chạy tiêu chuẩn) nhanh nhất có thể</li>
-      <li>Ghi lại thời gian bằng phút và giây</li>
-    </ol>
-
-    <p><strong>Tính toán VO2max:</strong></p>
-    <pre>VO2max (ml/kg/phút) = 483 / Thời gian bằng phút + 3.5</pre>
-
-    <h3>Điểm Chuẩn Kiểm tra VO2max</h3>
-
-    <table>
-      <thead>
-        <tr>
-          <th>Thời gian 1.5 Dặm</th>
-          <th>VO2max Ước tính</th>
-          <th>Thời gian Đua Tương đương</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>11:00</td>
-          <td>47.4 ml/kg/phút</td>
-          <td>5K: 24:30 | 10K: 51:00 | HM: 1:54</td>
-        </tr>
-        <tr>
-          <td>10:00</td>
-          <td>51.8 ml/kg/phút</td>
-          <td>5K: 22:00 | 10K: 46:00 | HM: 1:42</td>
-        </tr>
-        <tr>
-          <td>9:00</td>
-          <td>57.2 ml/kg/phút</td>
-          <td>5K: 19:30 | 10K: 41:00 | HM: 1:30</td>
-        </tr>
-        <tr>
-          <td>8:00</td>
-          <td>63.9 ml/kg/phút</td>
-          <td>5K: 17:15 | 10K: 36:00 | HM: 1:19</td>
-        </tr>
-        <tr>
-          <td>7:00</td>
-          <td>72.5 ml/kg/phút</td>
-          <td>5K: 15:00 | 10K: 31:30 | HM: 1:09</td>
-        </tr>
-      </tbody>
-    </table>
-
-    <p>Để biết thêm thông tin chi tiết về <a href="/vi/vo2max-testing/">các phương pháp kiểm tra VO2max</a> và diễn
-      giải, xem hướng dẫn hoàn chỉnh của chúng tôi.</p>
-  </section>
-
-  <section id="threshold-tests">
-    <h2>Kiểm tra Ngưỡng Lactate</h2>
-
-    <p><a href="/vi/lactate-threshold-testing/">Ngưỡng lactate</a> của bạn đại diện cho tốc độ nhanh nhất bạn có thể duy
+      VO2max với độ chính xác trong khoảng 3-5%.</p><h3>Bài kiểm tra Cooper 12 Phút</h3><p>Bài kiểm tra Cooper là một phương pháp đơn giản, được xác nhận tốt để ước tính VO2max. Chạy càng xa càng tốt
+      trong đúng 12 phút trên đường chạy.</p><p><strong>Giao thức:</strong></p><ol><li>Khởi động kỹ lưỡng (15 phút nhẹ + chạy sải bước)</li><li>Chạy càng xa càng tốt trong đúng 12 phút</li><li>Ghi lại tổng quãng đường đã chạy bằng mét</li></ol><p><strong>Tính toán VO2max:</strong></p><pre>VO2max (ml/kg/phút) = (Quãng đường bằng mét - 504.9) / 44.73</pre><h3>Kết quả Kiểm tra Cooper</h3><table><thead><tr><th>Quãng đường (12 phút)</th><th>VO2max Ước tính</th><th>Mức độ Hiệu suất</th></tr></thead><tbody><tr><td>2,400m (1.49 dặm)</td><td>42.4 ml/kg/phút</td><td>Người chạy giải trí</td></tr><tr><td>2,800m (1.74 dặm)</td><td>51.3 ml/kg/phút</td><td>Người chạy câu lạc bộ cạnh tranh</td></tr><tr><td>3,200m (1.99 dặm)</td><td>60.2 ml/kg/phút</td><td>Cấp độ khu vực</td></tr><tr><td>3,600m (2.24 dặm)</td><td>69.2 ml/kg/phút</td><td>Cấp độ quốc gia</td></tr><tr><td>4,000m (2.49 dặm)</td><td>78.1 ml/kg/phút</td><td>Cấp độ ưu tú</td></tr></tbody></table><h3>Thử nghiệm Thời gian 1.5 Dặm (2.4km)</h3><p>Một giải pháp thay thế cho bài kiểm tra Cooper, thử nghiệm thời gian 1.5 dặm cung cấp ước tính VO2max tương tự
+      với mục tiêu dựa trên khoảng cách.</p><p><strong>Giao thức:</strong></p><ol><li>Khởi động kỹ lưỡng</li><li>Chạy 1.5 dặm (6 vòng trên đường chạy tiêu chuẩn) nhanh nhất có thể</li><li>Ghi lại thời gian bằng phút và giây</li></ol><p><strong>Tính toán VO2max:</strong></p><pre>VO2max (ml/kg/phút) = 483 / Thời gian bằng phút + 3.5</pre><h3>Điểm Chuẩn Kiểm tra VO2max</h3><table><thead><tr><th>Thời gian 1.5 Dặm</th><th>VO2max Ước tính</th><th>Thời gian Đua Tương đương</th></tr></thead><tbody><tr><td>11:00</td><td>47.4 ml/kg/phút</td><td>5K: 24:30 | 10K: 51:00 | HM: 1:54</td></tr><tr><td>10:00</td><td>51.8 ml/kg/phút</td><td>5K: 22:00 | 10K: 46:00 | HM: 1:42</td></tr><tr><td>9:00</td><td>57.2 ml/kg/phút</td><td>5K: 19:30 | 10K: 41:00 | HM: 1:30</td></tr><tr><td>8:00</td><td>63.9 ml/kg/phút</td><td>5K: 17:15 | 10K: 36:00 | HM: 1:19</td></tr><tr><td>7:00</td><td>72.5 ml/kg/phút</td><td>5K: 15:00 | 10K: 31:30 | HM: 1:09</td></tr></tbody></table><p>Để biết thêm thông tin chi tiết về <a href="/vi/vo2max-testing/">các phương pháp kiểm tra VO2max</a> và diễn
+      giải, xem hướng dẫn hoàn chỉnh của chúng tôi.</p></section><section id="threshold-tests"><h2>Kiểm tra Ngưỡng Lactate</h2><p><a href="/vi/lactate-threshold-testing/">Ngưỡng lactate</a> của bạn đại diện cho tốc độ nhanh nhất bạn có thể duy
       trì trong khoảng 50-60 phút—khoảng tốc độ 10K đến bán marathon đối với hầu hết người chạy. Chỉ số này rất quan
-      trọng để thiết lập cường độ tập luyện cho chạy tempo và các bài tập ngưỡng.</p>
-
-    <h3>Kiểm tra Ngưỡng 30 Phút</h3>
-
-    <p>Bài kiểm tra 30 phút là tiêu chuẩn vàng của kiểm tra thực địa cho ngưỡng lactate. Nó đơn giản, thiết thực và có
-      tương quan cao với kiểm tra ngưỡng trong phòng thí nghiệm.</p>
-
-    <p><strong>Giao thức:</strong></p>
-    <ol>
-      <li>Khởi động kỹ lưỡng (15-20 phút nhẹ + 4-5 lần chạy sải bước)</li>
-      <li>Chạy thử nghiệm thời gian 30 phút ở nỗ lực bền vững tối đa</li>
-      <li>Tránh bắt đầu quá nhanh—tốc độ nên "khó một cách thoải mái" trong suốt quá trình</li>
-      <li>Ghi lại tốc độ trung bình và nhịp tim trung bình</li>
-    </ol>
-
-    <p><strong>Giải thích Kết quả:</strong></p>
-    <ul>
-      <li><strong>Tốc độ Ngưỡng:</strong> Tốc độ trung bình cho toàn bộ 30 phút</li>
-      <li><strong>Nhịp tim Ngưỡng Lactate (LTHR):</strong> Nhịp tim trung bình cho 20 phút cuối cùng</li>
-      <li><strong>Công suất Ngưỡng:</strong> Nếu sử dụng máy đo công suất chạy bộ, công suất trung bình cho 30 phút</li>
-    </ul>
-
-    <h3>Thử nghiệm Thời gian 10K</h3>
-
-    <p>Một cuộc đua 10K hoặc thử nghiệm thời gian phục vụ nhiệm vụ kép: đánh giá thể lực cụ thể cho cuộc đua và dấu hiệu
-      ngưỡng.</p>
-
-    <p><strong>Giao thức:</strong></p>
-    <ol>
-      <li>Khởi động đua tiêu chuẩn (15 phút nhẹ + chạy sải bước)</li>
-      <li>Chạy 10K ở nỗ lực đua (không phải nỗ lực tập luyện)</li>
-      <li>Ghi lại thời gian, tốc độ trung bình, nhịp tim trung bình</li>
-    </ol>
-
-    <p><strong>Ước tính Ngưỡng từ 10K:</strong></p>
-    <ul>
-      <li><strong>Tốc độ Ngưỡng:</strong> Tốc độ 10K + 6-9 giây mỗi km (10-15 giây mỗi dặm)</li>
-      <li><strong>LTHR:</strong> Nhịp tim trung bình cho 5K cuối của cuộc đua</li>
-      <li><strong>Tốc độ VO2max:</strong> Tốc độ 10K - 9-12 giây mỗi km (15-20 giây mỗi dặm)</li>
-    </ul>
-
-    <h3>So sánh Kiểm tra Ngưỡng</h3>
-
-    <table>
-      <thead>
-        <tr>
-          <th>Loại Bài Kiểm Tra</th>
-          <th>Thời gian</th>
-          <th>Mức độ Nỗ lực</th>
-          <th>Ưu điểm</th>
-          <th>Sử dụng Tốt nhất</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Thử nghiệm 30 Phút</td>
-          <td>30 phút</td>
-          <td>Khó một cách thoải mái</td>
-          <td>Đánh giá ngưỡng thuần túy, dễ phân phối sức hơn</td>
-          <td>Thiết lập vùng tập luyện</td>
-        </tr>
-        <tr>
-          <td>Cuộc đua 10K</td>
-          <td>35-60 phút</td>
-          <td>Nỗ lực đua</td>
-          <td>Cụ thể cho cuộc đua, kiểm tra mục đích kép</td>
-          <td>Đánh giá thể lực đỉnh cao</td>
-        </tr>
-        <tr>
-          <td>Thử nghiệm 20 Phút</td>
-          <td>20 phút</td>
-          <td>Rất khó</td>
-          <td>Thời gian ngắn hơn, ít mệt mỏi hơn</td>
-          <td>Kiểm tra thường xuyên</td>
-        </tr>
-      </tbody>
-    </table>
-
-    <p>Sử dụng kết quả kiểm tra ngưỡng để thiết lập <a href="/vi/tempo-runs-zone3/">tốc độ tempo Vùng 3</a> của bạn và
-      đảm bảo cường độ phù hợp cho các bài tập ngưỡng trong suốt chu kỳ tập luyện của bạn.</p>
-  </section>
-
-  <section id="economy-assessment">
-    <h2>Đánh giá Kinh tế Chạy bộ</h2>
-
-    <p><a href="/vi/running-economy/">Kinh tế chạy bộ</a> đo lường mức độ hiệu quả bạn sử dụng oxy ở một tốc độ nhất
+      trọng để thiết lập cường độ tập luyện cho chạy tempo và các bài tập ngưỡng.</p><h3>Kiểm tra Ngưỡng 30 Phút</h3><p>Bài kiểm tra 30 phút là tiêu chuẩn vàng của kiểm tra thực địa cho ngưỡng lactate. Nó đơn giản, thiết thực và có
+      tương quan cao với kiểm tra ngưỡng trong phòng thí nghiệm.</p><p><strong>Giao thức:</strong></p><ol><li>Khởi động kỹ lưỡng (15-20 phút nhẹ + 4-5 lần chạy sải bước)</li><li>Chạy thử nghiệm thời gian 30 phút ở nỗ lực bền vững tối đa</li><li>Tránh bắt đầu quá nhanh—tốc độ nên "khó một cách thoải mái" trong suốt quá trình</li><li>Ghi lại tốc độ trung bình và nhịp tim trung bình</li></ol><p><strong>Giải thích Kết quả:</strong></p><ul><li><strong>Tốc độ Ngưỡng:</strong> Tốc độ trung bình cho toàn bộ 30 phút</li><li><strong>Nhịp tim Ngưỡng Lactate (LTHR):</strong> Nhịp tim trung bình cho 20 phút cuối cùng</li><li><strong>Công suất Ngưỡng:</strong> Nếu sử dụng máy đo công suất chạy bộ, công suất trung bình cho 30 phút</li></ul><h3>Thử nghiệm Thời gian 10K</h3><p>Một cuộc đua 10K hoặc thử nghiệm thời gian phục vụ nhiệm vụ kép: đánh giá thể lực cụ thể cho cuộc đua và dấu hiệu
+      ngưỡng.</p><p><strong>Giao thức:</strong></p><ol><li>Khởi động đua tiêu chuẩn (15 phút nhẹ + chạy sải bước)</li><li>Chạy 10K ở nỗ lực đua (không phải nỗ lực tập luyện)</li><li>Ghi lại thời gian, tốc độ trung bình, nhịp tim trung bình</li></ol><p><strong>Ước tính Ngưỡng từ 10K:</strong></p><ul><li><strong>Tốc độ Ngưỡng:</strong> Tốc độ 10K + 6-9 giây mỗi km (10-15 giây mỗi dặm)</li><li><strong>LTHR:</strong> Nhịp tim trung bình cho 5K cuối của cuộc đua</li><li><strong>Tốc độ VO2max:</strong> Tốc độ 10K - 9-12 giây mỗi km (15-20 giây mỗi dặm)</li></ul><h3>So sánh Kiểm tra Ngưỡng</h3><table><thead><tr><th>Loại Bài Kiểm Tra</th><th>Thời gian</th><th>Mức độ Nỗ lực</th><th>Ưu điểm</th><th>Sử dụng Tốt nhất</th></tr></thead><tbody><tr><td>Thử nghiệm 30 Phút</td><td>30 phút</td><td>Khó một cách thoải mái</td><td>Đánh giá ngưỡng thuần túy, dễ phân phối sức hơn</td><td>Thiết lập vùng tập luyện</td></tr><tr><td>Cuộc đua 10K</td><td>35-60 phút</td><td>Nỗ lực đua</td><td>Cụ thể cho cuộc đua, kiểm tra mục đích kép</td><td>Đánh giá thể lực đỉnh cao</td></tr><tr><td>Thử nghiệm 20 Phút</td><td>20 phút</td><td>Rất khó</td><td>Thời gian ngắn hơn, ít mệt mỏi hơn</td><td>Kiểm tra thường xuyên</td></tr></tbody></table><p>Sử dụng kết quả kiểm tra ngưỡng để thiết lập <a href="/vi/tempo-runs-zone3/">tốc độ tempo Vùng 3</a> của bạn và
+      đảm bảo cường độ phù hợp cho các bài tập ngưỡng trong suốt chu kỳ tập luyện của bạn.</p></section><section id="economy-assessment"><h2>Đánh giá Kinh tế Chạy bộ</h2><p><a href="/vi/running-economy/">Kinh tế chạy bộ</a> đo lường mức độ hiệu quả bạn sử dụng oxy ở một tốc độ nhất
       định. Trong khi kiểm tra phòng thí nghiệm cung cấp các phép đo chi phí oxy chính xác, các đánh giá thực địa có thể
-      theo dõi sự cải thiện kinh tế theo thời gian.</p>
-
-    <h3>Giao thức Kiểm tra Kinh tế Dưới Tối đa</h3>
-
-    <p>Bài kiểm tra này theo dõi nhịp tim ở các tốc độ được chuẩn hóa để theo dõi thay đổi kinh tế. Khi kinh tế cải
-      thiện, nhịp tim giảm ở cùng một tốc độ.</p>
-
-    <p><strong>Giao thức:</strong></p>
-    <ol>
-      <li><strong>Khởi động:</strong> 15 phút chạy nhẹ</li>
-      <li><strong>Các Đoạn Kiểm tra:</strong> Chạy 5 phút ở mỗi trong ba tốc độ được chuẩn hóa:
-        <ul>
-          <li>Tốc độ 1: Tốc độ dễ (60-65% tốc độ ngưỡng)</li>
-          <li>Tốc độ 2: Tốc độ trung bình (75-80% tốc độ ngưỡng)</li>
-          <li>Tốc độ 3: Tốc độ Marathon (85-90% tốc độ ngưỡng)</li>
-        </ul>
-      </li>
-      <li><strong>Hồi phục:</strong> 3 phút nhẹ giữa các đoạn</li>
-      <li><strong>Ghi lại:</strong> Nhịp tim trung bình cho 3 phút cuối của mỗi đoạn</li>
-    </ol>
-
-    <h3>Ví dụ Theo dõi Kinh tế</h3>
-
-    <table>
-      <thead>
-        <tr>
-          <th>Ngày Kiểm tra</th>
-          <th>HR Tốc độ Dễ</th>
-          <th>HR Trung bình</th>
-          <th>HR Marathon</th>
-          <th>Xu hướng Kinh tế</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>1 tháng 1</td>
-          <td>140 bpm</td>
-          <td>156 bpm</td>
-          <td>168 bpm</td>
-          <td>Cơ bản</td>
-        </tr>
-        <tr>
-          <td>15 tháng 2</td>
-          <td>136 bpm</td>
-          <td>152 bpm</td>
-          <td>164 bpm</td>
-          <td>+3% cải thiện</td>
-        </tr>
-        <tr>
-          <td>1 tháng 4</td>
-          <td>134 bpm</td>
-          <td>149 bpm</td>
-          <td>161 bpm</td>
-          <td>+5% cải thiện</td>
-        </tr>
-        <tr>
-          <td>15 tháng 5</td>
-          <td>133 bpm</td>
-          <td>148 bpm</td>
-          <td>160 bpm</td>
-          <td>+6% cải thiện</td>
-        </tr>
-      </tbody>
-    </table>
-
-    <p><strong>Giải thích Thay đổi:</strong></p>
-    <ul>
-      <li><strong>Giảm HR:</strong> Cải thiện kinh tế—bạn đang sử dụng ít năng lượng hơn ở cùng tốc độ</li>
-      <li><strong>HR Ổn định:</strong> Kinh tế bình ổn—có thể cần tập luyện tập trung vào kinh tế cụ thể</li>
-      <li><strong>Tăng HR:</strong> Mệt mỏi, giảm tập luyện hoặc quá tải—điều chỉnh tải trọng tập luyện</li>
-    </ul>
-
-    <p>Tìm hiểu thêm về cách cải thiện hiệu quả của bạn trong hướng dẫn của chúng tôi về <a
-        href="/vi/running-efficiency-biomechanics/">cơ sinh học chạy bộ</a>.</p>
-  </section>
-
-  <section id="testing-protocol">
-    <h2>Giao thức Kiểm tra & Thực hành Tốt nhất</h2>
-
-    <p>Các giao thức kiểm tra nhất quán đảm bảo kết quả đáng tin cậy, có thể so sánh theo thời gian. Những thay đổi nhỏ
-      trong điều kiện hoặc chuẩn bị có thể ảnh hưởng đáng kể đến hiệu suất.</p>
-
-    <h3>Chuẩn bị Trước Kiểm tra</h3>
-
-    <ul>
-      <li><strong>Hồi phục:</strong> Không tập nặng 48-72 giờ trước khi kiểm tra</li>
-      <li><strong>Giấc ngủ:</strong> Nghỉ ngơi tốt (7-9 giờ) vào đêm hôm trước</li>
-      <li><strong>Dinh dưỡng:</strong> Ăn uống bình thường, tránh kiểm tra khi đói hoặc ăn quá no</li>
-      <li><strong>Hydrat hóa:</strong> Đủ nước nhưng không quá nhiều nước</li>
-      <li><strong>Thời gian:</strong> Kiểm tra vào cùng một thời điểm trong ngày để nhất quán</li>
-      <li><strong>Điều kiện:</strong> Tránh nhiệt độ cực đoan, gió hoặc thay đổi độ cao</li>
-    </ul>
-
-    <h3>Giao thức Khởi động</h3>
-
-    <p>Khởi động được chuẩn hóa chuẩn bị cơ thể bạn cho nỗ lực tối đa trong khi không gây mệt mỏi:</p>
-
-    <ol>
-      <li><strong>10 phút:</strong> Chạy bộ rất nhẹ (tốc độ nói chuyện)</li>
-      <li><strong>5 phút:</strong> Tăng dần đến tốc độ trung bình</li>
-      <li><strong>5 phút:</strong> Giãn cơ động và vận động khớp</li>
-      <li><strong>4-5 lần chạy sải bước:</strong> Tăng tốc 80-100m đến gần tốc độ kiểm tra</li>
-      <li><strong>3-5 phút:</strong> Thả lỏng nhẹ và chuẩn bị tinh thần cuối cùng</li>
-    </ol>
-
-    <h3>Môi trường Kiểm tra</h3>
-
-    <table>
-      <thead>
-        <tr>
-          <th>Yếu tố</th>
-          <th>Điều kiện Lý tưởng</th>
-          <th>Tác động nếu Không Lý tưởng</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><strong>Bề mặt</strong></td>
-          <td>Đường chạy (track) hoặc đường nhựa bằng phẳng</td>
-          <td>±3-6 giây mỗi km (5-10 giây mỗi dặm) trên địa hình không bằng phẳng</td>
-        </tr>
-        <tr>
-          <td><strong>Nhiệt độ</strong></td>
-          <td>10-18°C (50-65°F)</td>
-          <td>-5% hiệu suất trên 24°C (75°F), -3% dưới 4°C (40°F)</td>
-        </tr>
-        <tr>
-          <td><strong>Gió</strong></td>
-          <td>Lặng gió hoặc gió nhẹ</td>
-          <td>-6-9 giây mỗi km (10-15 giây mỗi dặm) trong gió vừa phải</td>
-        </tr>
-        <tr>
-          <td><strong>Độ cao</strong></td>
-          <td>Mực nước biển đến 300m</td>
-          <td>-2% hiệu suất mỗi 300m trên mức cơ bản</td>
-        </tr>
-        <tr>
-          <td><strong>Độ ẩm</strong></td>
-          <td>30-60%</td>
-          <td>-2-5% hiệu suất trên 70% độ ẩm</td>
-        </tr>
-      </tbody>
-    </table>
-
-    <h3>Ghi lại Dữ liệu</h3>
-
-    <p>Ghi lại dữ liệu toàn diện cho mỗi phiên kiểm tra:</p>
-
-    <ul>
-      <li>Ngày và giờ kiểm tra</li>
-      <li>Điều kiện thời tiết (nhiệt độ, gió, độ ẩm)</li>
-      <li>Chi tiết địa điểm/quãng đường</li>
-      <li>Tập luyện gần đây (khối lượng và cường độ tuần trước)</li>
-      <li>Chất lượng giấc ngủ và số giờ</li>
-      <li>Cảm nhận nỗ lực (RPE 1-10)</li>
-      <li>Bất kỳ yếu tố bất thường nào (căng thẳng, bệnh tật, chấn thương, v.v.)</li>
-    </ul>
-  </section>
-
-  <section id="interpreting-results">
-    <h2>Giải thích Kết quả của Bạn</h2>
-
-    <p>Số liệu kiểm tra thô có rất ít ý nghĩa nếu không có ngữ cảnh. Hiểu những gì kết quả của bạn chỉ ra về thể lực và
-      cách sử dụng chúng cho các quyết định tập luyện là rất quan trọng.</p>
-
-    <h3>Giải thích CRS</h3>
-
-    <table>
-      <thead>
-        <tr>
-          <th>CRS (m/phút)</th>
-          <th>Tốc độ CRS</th>
-          <th>Mức độ Hiệu suất</th>
-          <th>Thời gian Đua Điển hình</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>200-220</td>
-          <td>4:32-5:00/km</td>
-          <td>Người mới bắt đầu</td>
-          <td>5K: 28-32phút | 10K: 60-68phút</td>
-        </tr>
-        <tr>
-          <td>220-250</td>
-          <td>4:00-4:32/km</td>
-          <td>Giải trí</td>
-          <td>5K: 24-28phút | 10K: 50-60phút</td>
-        </tr>
-        <tr>
-          <td>250-280</td>
-          <td>3:34-4:00/km</td>
-          <td>Câu lạc bộ cạnh tranh</td>
-          <td>5K: 20-24phút | 10K: 42-50phút</td>
-        </tr>
-        <tr>
-          <td>280-310</td>
-          <td>3:13-3:34/km</td>
-          <td>Cấp độ khu vực</td>
-          <td>5K: 17:30-20phút | 10K: 36-42phút</td>
-        </tr>
-        <tr>
-          <td>310-340</td>
-          <td>2:56-3:13/km</td>
-          <td>Cấp độ quốc gia</td>
-          <td>5K: 15-17:30phút | 10K: 31-36phút</td>
-        </tr>
-        <tr>
-          <td>340+</td>
-          <td>
-            <3:56 /km</td>
-          <td>Ưu tú</td>
-          <td>5K: <15phút | 10K: <31phút</td>
-        </tr>
-      </tbody>
-    </table>
-
-    <h3>Giải thích VO2max theo Tuổi và Giới tính</h3>
-
-    <table>
-      <thead>
-        <tr>
-          <th>Phân loại</th>
-          <th>Nam 20-29</th>
-          <th>Nam 40-49</th>
-          <th>Nữ 20-29</th>
-          <th>Nữ 40-49</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Vượt trội</td>
-          <td>>55</td>
-          <td>>52</td>
-          <td>>49</td>
-          <td>>45</td>
-        </tr>
-        <tr>
-          <td>Xuất sắc</td>
-          <td>51-55</td>
-          <td>47-52</td>
-          <td>45-49</td>
-          <td>41-45</td>
-        </tr>
-        <tr>
-          <td>Tốt</td>
-          <td>45-51</td>
-          <td>42-47</td>
-          <td>39-45</td>
-          <td>35-41</td>
-        </tr>
-        <tr>
-          <td>Khá</td>
-          <td>39-45</td>
-          <td>36-42</td>
-          <td>33-39</td>
-          <td>29-35</td>
-        </tr>
-        <tr>
-          <td>Kém</td>
-          <td>
-            <39< /td>
-          <td>
-            <36< /td>
-          <td>
-            <33< /td>
-          <td>
-            <29< /td>
-        </tr>
-      </tbody>
-    </table>
-
-    <p><em>Giá trị tính bằng ml/kg/phút. Nguồn: American College of Sports Medicine</em></p>
-
-    <h3>Điểm Chuẩn Tốc độ Ngưỡng</h3>
-
-    <p>Ngưỡng lactate thường xảy ra ở các tỷ lệ phần trăm tốc độ VO2max sau đây đối với các cấp độ người chạy khác nhau:
-    </p>
-
-    <ul>
-      <li><strong>Người chạy mới bắt đầu:</strong> 75-80% tốc độ VO2max</li>
-      <li><strong>Người chạy đã qua tập luyện:</strong> 80-85% tốc độ VO2max</li>
-      <li><strong>Người chạy được tập luyện tốt:</strong> 85-90% tốc độ VO2max</li>
-      <li><strong>Vận động viên ưu tú:</strong> 90-95% tốc độ VO2max</li>
-    </ul>
-
-    <p>Nếu ngưỡng của bạn thấp hơn dự kiến so với VO2max, điều này cho thấy tiềm năng cải thiện thông qua tập luyện cụ
-      thể cho ngưỡng.</p>
-
-    <h3>Tỷ lệ Cải thiện</h3>
-
-    <p>Tỷ lệ cải thiện dự kiến giúp thiết lập các mục tiêu thực tế và xác định khi nào cần điều chỉnh tập luyện:</p>
-
-    <table>
-      <thead>
-        <tr>
-          <th>Chỉ số</th>
-          <th>Người mới bắt đầu (0-2 năm)</th>
-          <th>Trung cấp (2-5 năm)</th>
-          <th>Nâng cao (5+ năm)</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><strong>CRS</strong></td>
-          <td>+5-10% mỗi 3 tháng</td>
-          <td>+2-5% mỗi 3 tháng</td>
-          <td>+1-2% mỗi 3 tháng</td>
-        </tr>
-        <tr>
-          <td><strong>VO2max</strong></td>
-          <td>+8-15% mỗi 6 tháng</td>
-          <td>+3-6% mỗi 6 tháng</td>
-          <td>+1-3% mỗi 6 tháng</td>
-        </tr>
-        <tr>
-          <td><strong>Ngưỡng</strong></td>
-          <td>+6-12% mỗi 6 tháng</td>
-          <td>+3-6% mỗi 6 tháng</td>
-          <td>+1-3% mỗi 6 tháng</td>
-        </tr>
-        <tr>
-          <td><strong>Kinh tế</strong></td>
-          <td>+5-8% mỗi năm</td>
-          <td>+2-4% mỗi năm</td>
-          <td>+1-2% mỗi năm</td>
-        </tr>
-      </tbody>
-    </table>
-  </section>
-
-  <section id="testing-schedule">
-    <h2>Khi nào nên Kiểm tra</h2>
-
-    <p>Thời điểm chiến lược của các bài kiểm tra hiệu suất tối đa hóa giá trị của chúng trong khi giảm thiểu sự can
-      thiệp vào tập luyện và thi đấu.</p>
-
-    <h3>Tần suất Kiểm tra theo Giai đoạn Tập luyện</h3>
-
-    <table>
-      <thead>
-        <tr>
-          <th>Giai đoạn Tập luyện</th>
-          <th>Bài Kiểm tra Đề xuất</th>
-          <th>Tần suất</th>
-          <th>Mục đích</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><strong>Xây dựng Nền tảng</strong></td>
-          <td>Kiểm tra CRS, Đánh giá Kinh tế</td>
-          <td>Mỗi 6-8 tuần</td>
-          <td>Theo dõi phát triển hiếu khí, điều chỉnh vùng</td>
-        </tr>
-        <tr>
-          <td><strong>Giai đoạn Xây dựng</strong></td>
-          <td>Kiểm tra Ngưỡng, Kiểm tra CRS</td>
-          <td>Mỗi 4-6 tuần</td>
-          <td>Theo dõi cải thiện ngưỡng, cập nhật vùng</td>
-        </tr>
-        <tr>
-          <td><strong>Đỉnh cao/Cụ thể</strong></td>
-          <td>Kiểm tra VO2max, Kiểm tra Ngưỡng</td>
-          <td>Mỗi 3-4 tuần</td>
-          <td>Đánh giá sẵn sàng đua, tinh chỉnh tốc độ</td>
-        </tr>
-        <tr>
-          <td><strong>Taper (Giảm khối lượng)</strong></td>
-          <td>Chỉ chạy nhẹ làm sắc nét</td>
-          <td>Không kiểm tra</td>
-          <td>Bảo tồn sự tươi mới cho cuộc đua</td>
-        </tr>
-        <tr>
-          <td><strong>Hồi phục/Ngoài mùa giải</strong></td>
-          <td>Kiểm tra CRS</td>
-          <td>Một lần khi kết thúc</td>
-          <td>Thiết lập vùng tập luyện mới</td>
-        </tr>
-      </tbody>
-    </table>
-
-    <h3>Kiểm tra Trong Tuần Tập luyện</h3>
-
-    <p><strong>Thời điểm kiểm tra tối ưu trong lịch trình hàng tuần:</strong></p>
-
-    <ul>
-      <li><strong>Ngày 1 (Thứ Hai):</strong> Ngày hồi phục—không kiểm tra</li>
-      <li><strong>Ngày 2-3:</strong> Tập luyện nhẹ—phù hợp cho kiểm tra kinh tế</li>
-      <li><strong>Ngày 4-5:</strong> Hồi phục tốt—tốt nhất cho các bài kiểm tra tối đa (CRS, VO2max, ngưỡng)</li>
-      <li><strong>Ngày 6-7:</strong> Cuối tuần—tốt cho các bài kiểm tra dài hơn nếu được nghỉ ngơi tốt</li>
-    </ul>
-
-    <p><strong>Điều chỉnh tập luyện trước kiểm tra:</strong></p>
-    <ul>
-      <li>Không tập nặng 48 giờ trước kiểm tra</li>
-      <li>Giảm khối lượng 30-40% trong tuần kiểm tra</li>
-      <li>Duy trì cường độ trong các bài tập trước đó nhưng giảm khối lượng</li>
-      <li>Coi tuần kiểm tra như một đợt giảm khối lượng (mini-taper)</li>
-    </ul>
-
-    <h3>Ví dụ Lịch Kiểm tra Hàng năm</h3>
-
-    <p>Đối với một người chạy nhắm mục tiêu marathon mùa thu với các cuộc đua khởi động mùa xuân:</p>
-
-    <table>
-      <thead>
-        <tr>
-          <th>Tháng</th>
-          <th>Giai đoạn Tập luyện</th>
-          <th>Kiểm tra</th>
-          <th>Ghi chú</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Tháng 1</td>
-          <td>Xây dựng nền tảng</td>
-          <td>Kiểm tra CRS, Kinh tế cơ bản</td>
-          <td>Thiết lập vùng tập luyện sau kỳ nghỉ</td>
-        </tr>
-        <tr>
-          <td>Tháng 3</td>
-          <td>Xây dựng nền tảng</td>
-          <td>Kiểm tra lại CRS</td>
-          <td>Cập nhật vùng sau 8 tuần nền tảng</td>
-        </tr>
-        <tr>
-          <td>Tháng 4</td>
-          <td>Giai đoạn xây dựng</td>
-          <td>Đua 10K (kiểm tra ngưỡng)</td>
-          <td>Đua khởi động mùa xuân</td>
-        </tr>
-        <tr>
-          <td>Tháng 6</td>
-          <td>Xây dựng/Cụ thể</td>
-          <td>CRS, kiểm tra thực địa VO2max</td>
-          <td>Đánh giá giữa chu kỳ</td>
-        </tr>
-        <tr>
-          <td>Tháng 8</td>
-          <td>Đỉnh cao/Cụ thể</td>
-          <td>Kiểm tra ngưỡng 30 phút</td>
-          <td>Xác minh vùng cuối cùng trước marathon</td>
-        </tr>
-        <tr>
-          <td>Tháng 10</td>
-          <td>Đua</td>
-          <td>Ngày đua Marathon</td>
-          <td>Bài kiểm tra hiệu suất tối thượng</td>
-        </tr>
-        <tr>
-          <td>Tháng 12</td>
-          <td>Hồi phục/Ngoài mùa giải</td>
-          <td>Kiểm tra CRS</td>
-          <td>Cơ sở cho chu kỳ tập luyện tiếp theo</td>
-        </tr>
-      </tbody>
-    </table>
-
-    <p>Tìm hiểu thêm về cấu trúc năm tập luyện của bạn trong hướng dẫn của chúng tôi về <a
-        href="/vi/marathon-periodization/">chu kỳ hóa marathon</a>.</p>
-  </section>
-
-  <section id="using-data">
-    <h2>Sử dụng Dữ liệu Kiểm tra cho Tập luyện</h2>
-
-    <p>Dữ liệu kiểm tra hiệu suất chuyển từ những con số thú vị thành hướng dẫn tập luyện có thể hành động khi được áp
-      dụng đúng cách.</p>
-
-    <h3>Thiết lập Vùng Tập luyện từ Kết quả Kiểm tra</h3>
-
-    <p>Khi bạn có dữ liệu CRS và ngưỡng, hãy thiết lập tất cả năm vùng tập luyện:</p>
-
-    <table>
-      <thead>
-        <tr>
-          <th>Vùng</th>
-          <th>% của CRS</th>
-          <th>% của Ngưỡng</th>
-          <th>Ví dụ (CRS=270m/phút, 3:42/km)</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><strong>Vùng 1 (Hồi phục)</strong></td>
-          <td>60-70%</td>
-          <td>55-65%</td>
-          <td>5:17-6:10/km (8:30-9:56/dặm)</td>
-        </tr>
-        <tr>
-          <td><strong>Vùng 2 (Hiếu khí)</strong></td>
-          <td>70-85%</td>
-          <td>65-78%</td>
-          <td>4:21-5:17/km (7:01-8:30/dặm)</td>
-        </tr>
-        <tr>
-          <td><strong>Vùng 3 (Tempo)</strong></td>
-          <td>85-95%</td>
-          <td>78-88%</td>
-          <td>3:54-4:21/km (6:16-7:01/dặm)</td>
-        </tr>
-        <tr>
-          <td><strong>Vùng 4 (Ngưỡng)</strong></td>
-          <td>95-105%</td>
-          <td>88-100%</td>
-          <td>3:32-3:54/km (5:41-6:16/dặm)</td>
-        </tr>
-        <tr>
-          <td><strong>Vùng 5 (VO2max)</strong></td>
-          <td>105-120%</td>
-          <td>100-115%</td>
-          <td>3:05-3:32/km (4:58-5:41/dặm)</td>
-        </tr>
-      </tbody>
-    </table>
-
-    <p>Sử dụng <a href="/vi/training-zones/">máy tính vùng tập luyện</a> của chúng tôi để tính toán vùng chính xác dựa
-      trên kết quả kiểm tra của bạn.</p>
-
-    <h3>Xác định Các Lĩnh vực Tập luyện Trọng tâm</h3>
-
-    <p>Kết quả kiểm tra tiết lộ các lĩnh vực cụ thể cần chú ý:</p>
-
-    <ul>
-      <li><strong>VO2max thấp so với ngưỡng:</strong> Cần thêm công việc nền tảng hiếu khí (Vùng 2) và intervals VO2max
-      </li>
-      <li><strong>Ngưỡng thấp so với VO2max:</strong> Tăng khối lượng tập luyện ngưỡng (chạy tempo, cruise intervals)
-      </li>
-      <li><strong>Kinh tế kém mặc dù VO2max/ngưỡng tốt:</strong> Tập trung vào dáng chạy, tập sức mạnh và bài tập kỹ
-        thuật</li>
-      <li><strong>Cải thiện CRS chững lại:</strong> Có thể cần tăng khối lượng tập luyện hoặc điều chỉnh phân phối cường
-        độ</li>
-    </ul>
-
-    <h3>Điều chỉnh Tập luyện Dựa trên Xu hướng Kiểm tra</h3>
-
-    <table>
-      <thead>
-        <tr>
-          <th>Mẫu Kết quả Kiểm tra</th>
-          <th>Giải thích</th>
-          <th>Điều chỉnh Tập luyện</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Cải thiện liên tục</td>
-          <td>Tập luyện hiệu quả</td>
-          <td>Tiếp tục cách tiếp cận hiện tại</td>
-        </tr>
-        <tr>
-          <td>Đi ngang sau 2-3 lần kiểm tra</td>
-          <td>Thích ứng hoàn tất, cần kích thích mới</td>
-          <td>Tiến triển tập luyện: tăng khối lượng, thay đổi hỗn hợp cường độ, hoặc thêm các yếu tố mới</td>
-        </tr>
-        <tr>
-          <td>Hiệu suất suy giảm</td>
-          <td>Quá tải, hồi phục không đủ, hoặc bệnh tật</td>
-          <td>Giảm tải trọng tập luyện 30-50%, tập trung vào hồi phục, kiểm tra các vấn đề khác</td>
-        </tr>
-        <tr>
-          <td>Biến thiên cao theo ngày</td>
-          <td>Hồi phục hoặc giao thức kiểm tra không nhất quán</td>
-          <td>Cải thiện tính nhất quán: giấc ngủ, dinh dưỡng, quản lý căng thẳng, điều kiện kiểm tra</td>
-        </tr>
-      </tbody>
-    </table>
-
-    <h3>Theo dõi Điểm Căng thẳng Tập luyện (TSS)</h3>
-
-    <p>Sử dụng CRS từ kiểm tra để tính toán <a href="/vi/rtss-calculator/">rTSS (Điểm Căng thẳng Tập luyện Chạy bộ)</a>
-      cho mỗi buổi tập. Điều này định lượng tải trọng tập luyện và giúp quản lý mệt mỏi:</p>
-
-    <pre>rTSS = (Thời lượng bằng giây × Hệ số Cường độ² × 100) / 3600
-
-Trong đó Hệ số Cường độ (IF) = Tốc độ buổi tập / Tốc độ CRS</pre>
-
-    <p>Hướng dẫn TSS hàng tuần dựa trên CRS từ kiểm tra:</p>
-
-    <ul>
-      <li><strong>Xây dựng nền tảng:</strong> 200-400 rTSS mỗi tuần, 80%+ trong Vùng 2</li>
-      <li><strong>Giai đoạn xây dựng:</strong> 300-500 rTSS mỗi tuần, 70-80% trong Vùng 2</li>
-      <li><strong>Giai đoạn đỉnh cao:</strong> 350-600 rTSS mỗi tuần, cường độ cụ thể cho cuộc đua</li>
-      <li><strong>Taper (Giảm khối lượng):</strong> Giảm 30-50% TSS hàng tuần</li>
-    </ul>
-
-    <p>Tìm hiểu thêm về cách quản lý tải trọng tập luyện trong <a href="/vi/training-load/">hướng dẫn tải trọng tập
-        luyện</a> của chúng tôi.</p>
-  </section>
-
-  <section id="faq">
-    <h2>Câu hỏi Thường gặp</h2>
-
-    <div class="faq-item">
-      <h3>Tôi nên thực hiện các bài kiểm tra hiệu suất bao lâu một lần?</h3>
-      <p>Kiểm tra mỗi 6-8 tuần trong giai đoạn xây dựng nền tảng, mỗi 4-6 tuần trong giai đoạn xây dựng, và mỗi 3-4 tuần
+      theo dõi sự cải thiện kinh tế theo thời gian.</p><h3>Giao thức Kiểm tra Kinh tế Dưới Tối đa</h3><p>Bài kiểm tra này theo dõi nhịp tim ở các tốc độ được chuẩn hóa để theo dõi thay đổi kinh tế. Khi kinh tế cải
+      thiện, nhịp tim giảm ở cùng một tốc độ.</p><p><strong>Giao thức:</strong></p><ol><li><strong>Khởi động:</strong> 15 phút chạy nhẹ</li><li><strong>Các Đoạn Kiểm tra:</strong> Chạy 5 phút ở mỗi trong ba tốc độ được chuẩn hóa:
+        <ul><li>Tốc độ 1: Tốc độ dễ (60-65% tốc độ ngưỡng)</li><li>Tốc độ 2: Tốc độ trung bình (75-80% tốc độ ngưỡng)</li><li>Tốc độ 3: Tốc độ Marathon (85-90% tốc độ ngưỡng)</li></ul></li><li><strong>Hồi phục:</strong> 3 phút nhẹ giữa các đoạn</li><li><strong>Ghi lại:</strong> Nhịp tim trung bình cho 3 phút cuối của mỗi đoạn</li></ol><h3>Ví dụ Theo dõi Kinh tế</h3><table><thead><tr><th>Ngày Kiểm tra</th><th>HR Tốc độ Dễ</th><th>HR Trung bình</th><th>HR Marathon</th><th>Xu hướng Kinh tế</th></tr></thead><tbody><tr><td>1 tháng 1</td><td>140 bpm</td><td>156 bpm</td><td>168 bpm</td><td>Cơ bản</td></tr><tr><td>15 tháng 2</td><td>136 bpm</td><td>152 bpm</td><td>164 bpm</td><td>+3% cải thiện</td></tr><tr><td>1 tháng 4</td><td>134 bpm</td><td>149 bpm</td><td>161 bpm</td><td>+5% cải thiện</td></tr><tr><td>15 tháng 5</td><td>133 bpm</td><td>148 bpm</td><td>160 bpm</td><td>+6% cải thiện</td></tr></tbody></table><p><strong>Giải thích Thay đổi:</strong></p><ul><li><strong>Giảm HR:</strong> Cải thiện kinh tế—bạn đang sử dụng ít năng lượng hơn ở cùng tốc độ</li><li><strong>HR Ổn định:</strong> Kinh tế bình ổn—có thể cần tập luyện tập trung vào kinh tế cụ thể</li><li><strong>Tăng HR:</strong> Mệt mỏi, giảm tập luyện hoặc quá tải—điều chỉnh tải trọng tập luyện</li></ul><p>Tìm hiểu thêm về cách cải thiện hiệu quả của bạn trong hướng dẫn của chúng tôi về <a
+        href="/vi/running-efficiency-biomechanics/">cơ sinh học chạy bộ</a>.</p></section><section id="testing-protocol"><h2>Giao thức Kiểm tra & Thực hành Tốt nhất</h2><p>Các giao thức kiểm tra nhất quán đảm bảo kết quả đáng tin cậy, có thể so sánh theo thời gian. Những thay đổi nhỏ
+      trong điều kiện hoặc chuẩn bị có thể ảnh hưởng đáng kể đến hiệu suất.</p><h3>Chuẩn bị Trước Kiểm tra</h3><ul><li><strong>Hồi phục:</strong> Không tập nặng 48-72 giờ trước khi kiểm tra</li><li><strong>Giấc ngủ:</strong> Nghỉ ngơi tốt (7-9 giờ) vào đêm hôm trước</li><li><strong>Dinh dưỡng:</strong> Ăn uống bình thường, tránh kiểm tra khi đói hoặc ăn quá no</li><li><strong>Hydrat hóa:</strong> Đủ nước nhưng không quá nhiều nước</li><li><strong>Thời gian:</strong> Kiểm tra vào cùng một thời điểm trong ngày để nhất quán</li><li><strong>Điều kiện:</strong> Tránh nhiệt độ cực đoan, gió hoặc thay đổi độ cao</li></ul><h3>Giao thức Khởi động</h3><p>Khởi động được chuẩn hóa chuẩn bị cơ thể bạn cho nỗ lực tối đa trong khi không gây mệt mỏi:</p><ol><li><strong>10 phút:</strong> Chạy bộ rất nhẹ (tốc độ nói chuyện)</li><li><strong>5 phút:</strong> Tăng dần đến tốc độ trung bình</li><li><strong>5 phút:</strong> Giãn cơ động và vận động khớp</li><li><strong>4-5 lần chạy sải bước:</strong> Tăng tốc 80-100m đến gần tốc độ kiểm tra</li><li><strong>3-5 phút:</strong> Thả lỏng nhẹ và chuẩn bị tinh thần cuối cùng</li></ol><h3>Môi trường Kiểm tra</h3><table><thead><tr><th>Yếu tố</th><th>Điều kiện Lý tưởng</th><th>Tác động nếu Không Lý tưởng</th></tr></thead><tbody><tr><td><strong>Bề mặt</strong></td><td>Đường chạy (track) hoặc đường nhựa bằng phẳng</td><td>±3-6 giây mỗi km (5-10 giây mỗi dặm) trên địa hình không bằng phẳng</td></tr><tr><td><strong>Nhiệt độ</strong></td><td>10-18°C (50-65°F)</td><td>-5% hiệu suất trên 24°C (75°F), -3% dưới 4°C (40°F)</td></tr><tr><td><strong>Gió</strong></td><td>Lặng gió hoặc gió nhẹ</td><td>-6-9 giây mỗi km (10-15 giây mỗi dặm) trong gió vừa phải</td></tr><tr><td><strong>Độ cao</strong></td><td>Mực nước biển đến 300m</td><td>-2% hiệu suất mỗi 300m trên mức cơ bản</td></tr><tr><td><strong>Độ ẩm</strong></td><td>30-60%</td><td>-2-5% hiệu suất trên 70% độ ẩm</td></tr></tbody></table><h3>Ghi lại Dữ liệu</h3><p>Ghi lại dữ liệu toàn diện cho mỗi phiên kiểm tra:</p><ul><li>Ngày và giờ kiểm tra</li><li>Điều kiện thời tiết (nhiệt độ, gió, độ ẩm)</li><li>Chi tiết địa điểm/quãng đường</li><li>Tập luyện gần đây (khối lượng và cường độ tuần trước)</li><li>Chất lượng giấc ngủ và số giờ</li><li>Cảm nhận nỗ lực (RPE 1-10)</li><li>Bất kỳ yếu tố bất thường nào (căng thẳng, bệnh tật, chấn thương, v.v.)</li></ul></section><section id="interpreting-results"><h2>Giải thích Kết quả của Bạn</h2><p>Số liệu kiểm tra thô có rất ít ý nghĩa nếu không có ngữ cảnh. Hiểu những gì kết quả của bạn chỉ ra về thể lực và
+      cách sử dụng chúng cho các quyết định tập luyện là rất quan trọng.</p><h3>Giải thích CRS</h3><table><thead><tr><th>CRS (m/phút)</th><th>Tốc độ CRS</th><th>Mức độ Hiệu suất</th><th>Thời gian Đua Điển hình</th></tr></thead><tbody><tr><td>200-220</td><td>4:32-5:00/km</td><td>Người mới bắt đầu</td><td>5K: 28-32phút | 10K: 60-68phút</td></tr><tr><td>220-250</td><td>4:00-4:32/km</td><td>Giải trí</td><td>5K: 24-28phút | 10K: 50-60phút</td></tr><tr><td>250-280</td><td>3:34-4:00/km</td><td>Câu lạc bộ cạnh tranh</td><td>5K: 20-24phút | 10K: 42-50phút</td></tr><tr><td>280-310</td><td>3:13-3:34/km</td><td>Cấp độ khu vực</td><td>5K: 17:30-20phút | 10K: 36-42phút</td></tr><tr><td>310-340</td><td>2:56-3:13/km</td><td>Cấp độ quốc gia</td><td>5K: 15-17:30phút | 10K: 31-36phút</td></tr><tr><td>340+</td><td><3:56 /km</td><td>Ưu tú</td><td>5K: <15phút | 10K: <31phút</td></tr></tbody></table><h3>Giải thích VO2max theo Tuổi và Giới tính</h3><table><thead><tr><th>Phân loại</th><th>Nam 20-29</th><th>Nam 40-49</th><th>Nữ 20-29</th><th>Nữ 40-49</th></tr></thead><tbody><tr><td>Vượt trội</td><td>>55</td><td>>52</td><td>>49</td><td>>45</td></tr><tr><td>Xuất sắc</td><td>51-55</td><td>47-52</td><td>45-49</td><td>41-45</td></tr><tr><td>Tốt</td><td>45-51</td><td>42-47</td><td>39-45</td><td>35-41</td></tr><tr><td>Khá</td><td>39-45</td><td>36-42</td><td>33-39</td><td>29-35</td></tr><tr><td>Kém</td><td><39< /td><td><36< /td><td><33< /td><td><29< /td></tr></tbody></table><p><em>Giá trị tính bằng ml/kg/phút. Nguồn: American College of Sports Medicine</em></p><h3>Điểm Chuẩn Tốc độ Ngưỡng</h3><p>Ngưỡng lactate thường xảy ra ở các tỷ lệ phần trăm tốc độ VO2max sau đây đối với các cấp độ người chạy khác nhau:
+    </p><ul><li><strong>Người chạy mới bắt đầu:</strong> 75-80% tốc độ VO2max</li><li><strong>Người chạy đã qua tập luyện:</strong> 80-85% tốc độ VO2max</li><li><strong>Người chạy được tập luyện tốt:</strong> 85-90% tốc độ VO2max</li><li><strong>Vận động viên ưu tú:</strong> 90-95% tốc độ VO2max</li></ul><p>Nếu ngưỡng của bạn thấp hơn dự kiến so với VO2max, điều này cho thấy tiềm năng cải thiện thông qua tập luyện cụ
+      thể cho ngưỡng.</p><h3>Tỷ lệ Cải thiện</h3><p>Tỷ lệ cải thiện dự kiến giúp thiết lập các mục tiêu thực tế và xác định khi nào cần điều chỉnh tập luyện:</p><table><thead><tr><th>Chỉ số</th><th>Người mới bắt đầu (0-2 năm)</th><th>Trung cấp (2-5 năm)</th><th>Nâng cao (5+ năm)</th></tr></thead><tbody><tr><td><strong>CRS</strong></td><td>+5-10% mỗi 3 tháng</td><td>+2-5% mỗi 3 tháng</td><td>+1-2% mỗi 3 tháng</td></tr><tr><td><strong>VO2max</strong></td><td>+8-15% mỗi 6 tháng</td><td>+3-6% mỗi 6 tháng</td><td>+1-3% mỗi 6 tháng</td></tr><tr><td><strong>Ngưỡng</strong></td><td>+6-12% mỗi 6 tháng</td><td>+3-6% mỗi 6 tháng</td><td>+1-3% mỗi 6 tháng</td></tr><tr><td><strong>Kinh tế</strong></td><td>+5-8% mỗi năm</td><td>+2-4% mỗi năm</td><td>+1-2% mỗi năm</td></tr></tbody></table></section><section id="testing-schedule"><h2>Khi nào nên Kiểm tra</h2><p>Thời điểm chiến lược của các bài kiểm tra hiệu suất tối đa hóa giá trị của chúng trong khi giảm thiểu sự can
+      thiệp vào tập luyện và thi đấu.</p><h3>Tần suất Kiểm tra theo Giai đoạn Tập luyện</h3><table><thead><tr><th>Giai đoạn Tập luyện</th><th>Bài Kiểm tra Đề xuất</th><th>Tần suất</th><th>Mục đích</th></tr></thead><tbody><tr><td><strong>Xây dựng Nền tảng</strong></td><td>Kiểm tra CRS, Đánh giá Kinh tế</td><td>Mỗi 6-8 tuần</td><td>Theo dõi phát triển hiếu khí, điều chỉnh vùng</td></tr><tr><td><strong>Giai đoạn Xây dựng</strong></td><td>Kiểm tra Ngưỡng, Kiểm tra CRS</td><td>Mỗi 4-6 tuần</td><td>Theo dõi cải thiện ngưỡng, cập nhật vùng</td></tr><tr><td><strong>Đỉnh cao/Cụ thể</strong></td><td>Kiểm tra VO2max, Kiểm tra Ngưỡng</td><td>Mỗi 3-4 tuần</td><td>Đánh giá sẵn sàng đua, tinh chỉnh tốc độ</td></tr><tr><td><strong>Taper (Giảm khối lượng)</strong></td><td>Chỉ chạy nhẹ làm sắc nét</td><td>Không kiểm tra</td><td>Bảo tồn sự tươi mới cho cuộc đua</td></tr><tr><td><strong>Hồi phục/Ngoài mùa giải</strong></td><td>Kiểm tra CRS</td><td>Một lần khi kết thúc</td><td>Thiết lập vùng tập luyện mới</td></tr></tbody></table><h3>Kiểm tra Trong Tuần Tập luyện</h3><p><strong>Thời điểm kiểm tra tối ưu trong lịch trình hàng tuần:</strong></p><ul><li><strong>Ngày 1 (Thứ Hai):</strong> Ngày hồi phục—không kiểm tra</li><li><strong>Ngày 2-3:</strong> Tập luyện nhẹ—phù hợp cho kiểm tra kinh tế</li><li><strong>Ngày 4-5:</strong> Hồi phục tốt—tốt nhất cho các bài kiểm tra tối đa (CRS, VO2max, ngưỡng)</li><li><strong>Ngày 6-7:</strong> Cuối tuần—tốt cho các bài kiểm tra dài hơn nếu được nghỉ ngơi tốt</li></ul><p><strong>Điều chỉnh tập luyện trước kiểm tra:</strong></p><ul><li>Không tập nặng 48 giờ trước kiểm tra</li><li>Giảm khối lượng 30-40% trong tuần kiểm tra</li><li>Duy trì cường độ trong các bài tập trước đó nhưng giảm khối lượng</li><li>Coi tuần kiểm tra như một đợt giảm khối lượng (mini-taper)</li></ul><h3>Ví dụ Lịch Kiểm tra Hàng năm</h3><p>Đối với một người chạy nhắm mục tiêu marathon mùa thu với các cuộc đua khởi động mùa xuân:</p><table><thead><tr><th>Tháng</th><th>Giai đoạn Tập luyện</th><th>Kiểm tra</th><th>Ghi chú</th></tr></thead><tbody><tr><td>Tháng 1</td><td>Xây dựng nền tảng</td><td>Kiểm tra CRS, Kinh tế cơ bản</td><td>Thiết lập vùng tập luyện sau kỳ nghỉ</td></tr><tr><td>Tháng 3</td><td>Xây dựng nền tảng</td><td>Kiểm tra lại CRS</td><td>Cập nhật vùng sau 8 tuần nền tảng</td></tr><tr><td>Tháng 4</td><td>Giai đoạn xây dựng</td><td>Đua 10K (kiểm tra ngưỡng)</td><td>Đua khởi động mùa xuân</td></tr><tr><td>Tháng 6</td><td>Xây dựng/Cụ thể</td><td>CRS, kiểm tra thực địa VO2max</td><td>Đánh giá giữa chu kỳ</td></tr><tr><td>Tháng 8</td><td>Đỉnh cao/Cụ thể</td><td>Kiểm tra ngưỡng 30 phút</td><td>Xác minh vùng cuối cùng trước marathon</td></tr><tr><td>Tháng 10</td><td>Đua</td><td>Ngày đua Marathon</td><td>Bài kiểm tra hiệu suất tối thượng</td></tr><tr><td>Tháng 12</td><td>Hồi phục/Ngoài mùa giải</td><td>Kiểm tra CRS</td><td>Cơ sở cho chu kỳ tập luyện tiếp theo</td></tr></tbody></table><p>Tìm hiểu thêm về cấu trúc năm tập luyện của bạn trong hướng dẫn của chúng tôi về <a
+        href="/vi/marathon-periodization/">chu kỳ hóa marathon</a>.</p></section><section id="using-data"><h2>Sử dụng Dữ liệu Kiểm tra cho Tập luyện</h2><p>Dữ liệu kiểm tra hiệu suất chuyển từ những con số thú vị thành hướng dẫn tập luyện có thể hành động khi được áp
+      dụng đúng cách.</p><h3>Thiết lập Vùng Tập luyện từ Kết quả Kiểm tra</h3><p>Khi bạn có dữ liệu CRS và ngưỡng, hãy thiết lập tất cả năm vùng tập luyện:</p><table><thead><tr><th>Vùng</th><th>% của CRS</th><th>% của Ngưỡng</th><th>Ví dụ (CRS=270m/phút, 3:42/km)</th></tr></thead><tbody><tr><td><strong>Vùng 1 (Hồi phục)</strong></td><td>60-70%</td><td>55-65%</td><td>5:17-6:10/km (8:30-9:56/dặm)</td></tr><tr><td><strong>Vùng 2 (Hiếu khí)</strong></td><td>70-85%</td><td>65-78%</td><td>4:21-5:17/km (7:01-8:30/dặm)</td></tr><tr><td><strong>Vùng 3 (Tempo)</strong></td><td>85-95%</td><td>78-88%</td><td>3:54-4:21/km (6:16-7:01/dặm)</td></tr><tr><td><strong>Vùng 4 (Ngưỡng)</strong></td><td>95-105%</td><td>88-100%</td><td>3:32-3:54/km (5:41-6:16/dặm)</td></tr><tr><td><strong>Vùng 5 (VO2max)</strong></td><td>105-120%</td><td>100-115%</td><td>3:05-3:32/km (4:58-5:41/dặm)</td></tr></tbody></table><p>Sử dụng <a href="/vi/training-zones/">máy tính vùng tập luyện</a> của chúng tôi để tính toán vùng chính xác dựa
+      trên kết quả kiểm tra của bạn.</p><h3>Xác định Các Lĩnh vực Tập luyện Trọng tâm</h3><p>Kết quả kiểm tra tiết lộ các lĩnh vực cụ thể cần chú ý:</p><ul><li><strong>VO2max thấp so với ngưỡng:</strong> Cần thêm công việc nền tảng hiếu khí (Vùng 2) và intervals VO2max
+      </li><li><strong>Ngưỡng thấp so với VO2max:</strong> Tăng khối lượng tập luyện ngưỡng (chạy tempo, cruise intervals)
+      </li><li><strong>Kinh tế kém mặc dù VO2max/ngưỡng tốt:</strong> Tập trung vào dáng chạy, tập sức mạnh và bài tập kỹ
+        thuật</li><li><strong>Cải thiện CRS chững lại:</strong> Có thể cần tăng khối lượng tập luyện hoặc điều chỉnh phân phối cường
+        độ</li></ul><h3>Điều chỉnh Tập luyện Dựa trên Xu hướng Kiểm tra</h3><table><thead><tr><th>Mẫu Kết quả Kiểm tra</th><th>Giải thích</th><th>Điều chỉnh Tập luyện</th></tr></thead><tbody><tr><td>Cải thiện liên tục</td><td>Tập luyện hiệu quả</td><td>Tiếp tục cách tiếp cận hiện tại</td></tr><tr><td>Đi ngang sau 2-3 lần kiểm tra</td><td>Thích ứng hoàn tất, cần kích thích mới</td><td>Tiến triển tập luyện: tăng khối lượng, thay đổi hỗn hợp cường độ, hoặc thêm các yếu tố mới</td></tr><tr><td>Hiệu suất suy giảm</td><td>Quá tải, hồi phục không đủ, hoặc bệnh tật</td><td>Giảm tải trọng tập luyện 30-50%, tập trung vào hồi phục, kiểm tra các vấn đề khác</td></tr><tr><td>Biến thiên cao theo ngày</td><td>Hồi phục hoặc giao thức kiểm tra không nhất quán</td><td>Cải thiện tính nhất quán: giấc ngủ, dinh dưỡng, quản lý căng thẳng, điều kiện kiểm tra</td></tr></tbody></table><h3>Theo dõi Điểm Căng thẳng Tập luyện (TSS)</h3><p>Sử dụng CRS từ kiểm tra để tính toán <a href="/vi/rtss-calculator/">rTSS (Điểm Căng thẳng Tập luyện Chạy bộ)</a>
+      cho mỗi buổi tập. Điều này định lượng tải trọng tập luyện và giúp quản lý mệt mỏi:</p><pre>rTSS = (Thời lượng bằng giây × Hệ số Cường độ² × 100) / 3600
+
+Trong đó Hệ số Cường độ (IF) = Tốc độ buổi tập / Tốc độ CRS</pre><p>Hướng dẫn TSS hàng tuần dựa trên CRS từ kiểm tra:</p><ul><li><strong>Xây dựng nền tảng:</strong> 200-400 rTSS mỗi tuần, 80%+ trong Vùng 2</li><li><strong>Giai đoạn xây dựng:</strong> 300-500 rTSS mỗi tuần, 70-80% trong Vùng 2</li><li><strong>Giai đoạn đỉnh cao:</strong> 350-600 rTSS mỗi tuần, cường độ cụ thể cho cuộc đua</li><li><strong>Taper (Giảm khối lượng):</strong> Giảm 30-50% TSS hàng tuần</li></ul><p>Tìm hiểu thêm về cách quản lý tải trọng tập luyện trong <a href="/vi/training-load/">hướng dẫn tải trọng tập
+        luyện</a> của chúng tôi.</p></section><section id="faq"><h2>Câu hỏi Thường gặp</h2><div class="faq-item"><h3>Tôi nên thực hiện các bài kiểm tra hiệu suất bao lâu một lần?</h3><p>Kiểm tra mỗi 6-8 tuần trong giai đoạn xây dựng nền tảng, mỗi 4-6 tuần trong giai đoạn xây dựng, và mỗi 3-4 tuần
         trong quá trình chuẩn bị cụ thể. Tránh kiểm tra trong thời gian giảm khối lượng (2-3 tuần trước các cuộc đua mục
         tiêu). Kiểm tra thường xuyên hơn cung cấp dữ liệu tốt hơn nhưng đòi hỏi sự tích hợp cẩn thận vào việc tập luyện
-        để tránh mệt mỏi quá mức.</p>
-    </div>
-
-    <div class="faq-item">
-      <h3>Tôi có thể thực hiện nhiều bài kiểm tra trong một buổi không?</h3>
-      <p>Bạn có thể kết hợp đánh giá kinh tế với kiểm tra ngưỡng hoặc CRS trong một buổi, vì kiểm tra kinh tế là dưới
+        để tránh mệt mỏi quá mức.</p></div><div class="faq-item"><h3>Tôi có thể thực hiện nhiều bài kiểm tra trong một buổi không?</h3><p>Bạn có thể kết hợp đánh giá kinh tế với kiểm tra ngưỡng hoặc CRS trong một buổi, vì kiểm tra kinh tế là dưới
         tối đa. Tuy nhiên, tránh kết hợp các bài kiểm tra tối đa (CRS + VO2max, hoặc ngưỡng + VO2max) trong cùng một
         ngày—mệt mỏi từ bài kiểm tra đầu tiên sẽ làm ảnh hưởng đến bài thứ hai. Nếu bạn phải kiểm tra nhiều chỉ số, hãy
-        cách nhau 48-72 giờ để có kết quả chính xác.</p>
-    </div>
-
-    <div class="faq-item">
-      <h3>Nếu kết quả kiểm tra của tôi tệ hơn mong đợi thì sao?</h3>
-      <p>Hiệu suất kiểm tra kém có thể do hồi phục không đủ, mệt mỏi tích lũy, điều kiện không tối ưu, bệnh tật hoặc đơn
+        cách nhau 48-72 giờ để có kết quả chính xác.</p></div><div class="faq-item"><h3>Nếu kết quả kiểm tra của tôi tệ hơn mong đợi thì sao?</h3><p>Hiệu suất kiểm tra kém có thể do hồi phục không đủ, mệt mỏi tích lũy, điều kiện không tối ưu, bệnh tật hoặc đơn
         giản là một ngày tồi tệ. Trước khi điều chỉnh tập luyện, hãy kiểm tra lại sau 5-7 ngày hồi phục. Nếu kết quả vẫn
         kém, hãy giảm tải trọng tập luyện 30-40% trong 1-2 tuần, đảm bảo ngủ và dinh dưỡng đầy đủ, và kiểm tra lại. Kết
-        quả kém kéo dài cần được đánh giá y tế.</p>
-    </div>
-
-    <div class="faq-item">
-      <h3>Các bài kiểm tra thực địa có chính xác như kiểm tra phòng thí nghiệm không?</h3>
-      <p>Các bài kiểm tra thực địa cung cấp độ chính xác 85-95% so với kiểm tra phòng thí nghiệm đối với hầu hết các chỉ
+        quả kém kéo dài cần được đánh giá y tế.</p></div><div class="faq-item"><h3>Các bài kiểm tra thực địa có chính xác như kiểm tra phòng thí nghiệm không?</h3><p>Các bài kiểm tra thực địa cung cấp độ chính xác 85-95% so với kiểm tra phòng thí nghiệm đối với hầu hết các chỉ
         số. Kiểm tra CRS nằm trong khoảng 2-3% công suất/tốc độ tới hạn từ phòng thí nghiệm. Ước tính thực địa VO2max
         nằm trong khoảng 3-5%. Độ chính xác của kiểm tra ngưỡng phụ thuộc vào khả năng phân phối sức—các bài kiểm tra
         được phân phối sức tốt nằm trong khoảng 1-2% giá trị phòng thí nghiệm. Sự mất mát độ chính xác nhỏ được bù đắp
-        bởi sự thuận tiện, tiết kiệm chi phí và khả năng kiểm tra thường xuyên.</p>
-    </div>
-
-    <div class="faq-item">
-      <h3>Tôi nên kiểm tra trên máy chạy bộ hay ngoài trời?</h3>
-      <p>Kiểm tra ngoài trời trên đường chạy (track) thường được ưa chuộng hơn: nó đặc thù cho cơ học chạy thực tế,
+        bởi sự thuận tiện, tiết kiệm chi phí và khả năng kiểm tra thường xuyên.</p></div><div class="faq-item"><h3>Tôi nên kiểm tra trên máy chạy bộ hay ngoài trời?</h3><p>Kiểm tra ngoài trời trên đường chạy (track) thường được ưa chuộng hơn: nó đặc thù cho cơ học chạy thực tế,
         GPS/đồng hồ cung cấp dữ liệu chính xác và điều kiện phù hợp với tình huống đua. Kiểm tra trên máy chạy bộ được
         chấp nhận khi thời tiết ngăn cản, nhưng hãy đặt độ dốc 1% để phù hợp với nỗ lực ngoài trời, hiệu chỉnh tốc độ
         máy chạy bộ nếu có thể và duy trì môi trường kiểm tra nhất quán. Đừng so sánh trực tiếp kết quả kiểm tra trên
-        máy và ngoài trời—hãy chọn một phương pháp và gắn bó với nó.</p>
-    </div>
-
-    <div class="faq-item">
-      <h3>Làm thế nào để tính đến nhiệt độ và thời tiết trong kết quả kiểm tra?</h3>
-      <p>Nhiệt độ ảnh hưởng đáng kể đến hiệu suất: dự kiến giảm 2% hiệu suất cho mỗi 10°F (5.5°C) trên 60°F (15°C), và
+        máy và ngoài trời—hãy chọn một phương pháp và gắn bó với nó.</p></div><div class="faq-item"><h3>Làm thế nào để tính đến nhiệt độ và thời tiết trong kết quả kiểm tra?</h3><p>Nhiệt độ ảnh hưởng đáng kể đến hiệu suất: dự kiến giảm 2% hiệu suất cho mỗi 10°F (5.5°C) trên 60°F (15°C), và
         giảm 1.5% cho mỗi 10°F dưới 40°F (4°C). Gió làm tốn khoảng 5-10 giây mỗi dặm trong điều kiện vừa phải. Ghi lại
         dữ liệu thời tiết với mỗi lần kiểm tra và điều chỉnh kỳ vọng cho phù hợp hoặc chỉ so sánh các bài kiểm tra được
-        thực hiện trong điều kiện tương tự. Cân nhắc kiểm tra trong nhà trên đường chạy để có sự nhất quán tối đa.</p>
-    </div>
-
-    <div class="faq-item">
-      <h3>Tôi có thể sử dụng kết quả đua thay vì các bài kiểm tra chuyên dụng không?</h3>
-      <p>Có, kết quả đua có thể thay thế cho các bài kiểm tra hiệu suất: cuộc đua 10K cung cấp dữ liệu ngưỡng tuyệt vời,
+        thực hiện trong điều kiện tương tự. Cân nhắc kiểm tra trong nhà trên đường chạy để có sự nhất quán tối đa.</p></div><div class="faq-item"><h3>Tôi có thể sử dụng kết quả đua thay vì các bài kiểm tra chuyên dụng không?</h3><p>Có, kết quả đua có thể thay thế cho các bài kiểm tra hiệu suất: cuộc đua 10K cung cấp dữ liệu ngưỡng tuyệt vời,
         5K tiết lộ khả năng VO2max, và tốc độ bán marathon cho thấy năng lực hiếu khí. Tuy nhiên, nỗ lực đua khác với nỗ
         lực kiểm tra (đầu tư cảm xúc nhiều hơn, phân phối sức biến đổi, các đợt tăng tốc cạnh tranh), vì vậy hãy sử dụng
         dữ liệu đua một cách thận trọng để thiết lập các vùng tập luyện. Các bài kiểm tra chuyên dụng trong điều kiện
-        được kiểm soát cung cấp dữ liệu đáng tin cậy hơn cho các quyết định tập luyện hàng ngày.</p>
-    </div>
-
-    <div class="faq-item">
-      <h3>Khởi động của tôi nên như thế nào trước các bài kiểm tra hiệu suất?</h3>
-      <p>Một khởi động được chuẩn hóa là rất quan trọng: 10 phút chạy rất nhẹ, 5 phút tăng dần đến tốc độ trung bình, 5
+        được kiểm soát cung cấp dữ liệu đáng tin cậy hơn cho các quyết định tập luyện hàng ngày.</p></div><div class="faq-item"><h3>Khởi động của tôi nên như thế nào trước các bài kiểm tra hiệu suất?</h3><p>Một khởi động được chuẩn hóa là rất quan trọng: 10 phút chạy rất nhẹ, 5 phút tăng dần đến tốc độ trung bình, 5
         phút giãn cơ động, 4-5 lần chạy sải bước 80-100m đến gần tốc độ kiểm tra, sau đó 3-5 phút thả lỏng nhẹ. Tổng
         thời gian khởi động: 25-30 phút. Khởi động dài hơn (lên đến 40 phút) có thể có lợi cho một số vận động viên đối
-        với kiểm tra ngưỡng và VO2max. Không bao giờ kiểm tra mà không khởi động—kết quả sẽ bị ảnh hưởng đáng kể.</p>
-    </div>
-
-    <div class="faq-item">
-      <h3>Làm thế nào để biết tôi đã phân phối sức bài kiểm tra đúng cách?</h3>
-      <p>Đối với kiểm tra CRS: bài thử nghiệm 3 phút nên cảm thấy "rất khó nhưng bền vững," đánh giá nỗ lực 8-9/10. Bài
+        với kiểm tra ngưỡng và VO2max. Không bao giờ kiểm tra mà không khởi động—kết quả sẽ bị ảnh hưởng đáng kể.</p></div><div class="faq-item"><h3>Làm thế nào để biết tôi đã phân phối sức bài kiểm tra đúng cách?</h3><p>Đối với kiểm tra CRS: bài thử nghiệm 3 phút nên cảm thấy "rất khó nhưng bền vững," đánh giá nỗ lực 8-9/10. Bài
         thử nghiệm 7 phút bắt đầu tương tự nhưng chậm dần. Đối với kiểm tra ngưỡng: nỗ lực nên là "khó một cách thoải
         mái" trong suốt quá trình, 7-8/10. Bạn nên có thể nói 2-3 từ nhưng không phải câu đầy đủ. Nếu bạn chậm lại đáng
         kể trong 25% cuối cùng hoặc kết thúc với cảm giác có thể đã cố gắng hơn nhiều, việc phân phối sức đã bị sai.
-        Kinh nghiệm cải thiện việc phân phối sức—hãy mong đợi kết quả tốt hơn sau 2-3 chu kỳ kiểm tra.</p>
-    </div>
-
-    <div class="faq-item">
-      <h3>Tôi có nên tập luyện khác đi dựa trên kết quả kiểm tra của mình không?</h3>
-      <p>Chắc chắn rồi. Các bài kiểm tra tiết lộ những điểm mạnh và điểm yếu cá nhân nên hướng dẫn trọng tâm tập luyện.
+        Kinh nghiệm cải thiện việc phân phối sức—hãy mong đợi kết quả tốt hơn sau 2-3 chu kỳ kiểm tra.</p></div><div class="faq-item"><h3>Tôi có nên tập luyện khác đi dựa trên kết quả kiểm tra của mình không?</h3><p>Chắc chắn rồi. Các bài kiểm tra tiết lộ những điểm mạnh và điểm yếu cá nhân nên hướng dẫn trọng tâm tập luyện.
         Nếu VO2max thấp so với ngưỡng, hãy ưu tiên nền tảng hiếu khí và công việc VO2max. Nếu ngưỡng tụt hậu so với
         VO2max, hãy tăng khối lượng tập luyện tempo và ngưỡng. Kinh tế kém mặc dù các dấu hiệu sinh lý tốt cho thấy cần
         công việc về dáng chạy, tập sức mạnh và tinh chỉnh kỹ thuật. Các kế hoạch tập luyện chung chung không thể tính
-        đến sinh lý cá nhân—cá nhân hóa dựa trên kiểm tra là chìa khóa để tập luyện tối ưu.</p>
-    </div>
-  </section>
-
-  <section id="scientific-references">
-    <h2>Tài liệu Tham khảo Khoa học</h2>
-
-    <p>Các giao thức kiểm tra hiệu suất dựa trên nghiên cứu đã được xác nhận trong sinh lý học thể dục và khoa học thể
-      thao:</p>
-
-    <div class="callout callout-info">
-      <h3>Các Bài báo Nghiên cứu Chính</h3>
-      <ul>
-        <li><strong>Kiểm tra Tốc độ Tới hạn:</strong> <a href="https://pubmed.ncbi.nlm.nih.gov/8775547/" target="_blank"
+        đến sinh lý cá nhân—cá nhân hóa dựa trên kiểm tra là chìa khóa để tập luyện tối ưu.</p></div></section><section id="scientific-references"><h2>Tài liệu Tham khảo Khoa học</h2><p>Các giao thức kiểm tra hiệu suất dựa trên nghiên cứu đã được xác nhận trong sinh lý học thể dục và khoa học thể
+      thao:</p><div class="callout callout-info"><h3>Các Bài báo Nghiên cứu Chính</h3><ul><li><strong>Kiểm tra Tốc độ Tới hạn:</strong><a href="https://pubmed.ncbi.nlm.nih.gov/8775547/" target="_blank"
             rel="noopener">Jones AM, Doust JH. "A 1% treadmill grade most accurately reflects the energetic cost of
-            outdoor running." J Sports Sci. 1996</a> - Xác nhận giao thức tốc độ tới hạn</li>
-        <li><strong>Độ tin cậy của Kiểm tra Thực địa:</strong> <a href="https://pubmed.ncbi.nlm.nih.gov/15947721/"
+            outdoor running." J Sports Sci. 1996</a> - Xác nhận giao thức tốc độ tới hạn</li><li><strong>Độ tin cậy của Kiểm tra Thực địa:</strong><a href="https://pubmed.ncbi.nlm.nih.gov/15947721/"
             target="_blank" rel="noopener">Paavolainen L et al. "Neuromuscular characteristics and muscle power as
             determinants of 5-km running performance." Med Sci Sports Exerc. 1999</a> - Độ chính xác của kiểm tra thực
-          địa</li>
-        <li><strong>Kiểm tra Ngưỡng:</strong> <a href="https://pubmed.ncbi.nlm.nih.gov/8887211/" target="_blank"
+          địa</li><li><strong>Kiểm tra Ngưỡng:</strong><a href="https://pubmed.ncbi.nlm.nih.gov/8887211/" target="_blank"
             rel="noopener">Beneke R. "Methodological aspects of maximal lactate steady state-implications for
-            performance testing." Eur J Appl Physiol. 2003</a> - Các giao thức ngưỡng lactate</li>
-        <li><strong>Kiểm tra Kinh tế Chạy bộ:</strong> <a href="https://pubmed.ncbi.nlm.nih.gov/15076777/"
+            performance testing." Eur J Appl Physiol. 2003</a> - Các giao thức ngưỡng lactate</li><li><strong>Kiểm tra Kinh tế Chạy bộ:</strong><a href="https://pubmed.ncbi.nlm.nih.gov/15076777/"
             target="_blank" rel="noopener">Saunders PU et al. "Factors affecting running economy in trained distance
-            runners." Sports Med. 2004</a> - Các phương pháp đo lường kinh tế</li>
-        <li><strong>Khả năng Lặp lại Kiểm tra:</strong> <a href="https://pubmed.ncbi.nlm.nih.gov/17685687/"
+            runners." Sports Med. 2004</a> - Các phương pháp đo lường kinh tế</li><li><strong>Khả năng Lặp lại Kiểm tra:</strong><a href="https://pubmed.ncbi.nlm.nih.gov/17685687/"
             target="_blank" rel="noopener">Hopkins WG et al. "Progressive statistics for studies in sports medicine and
-            exercise science." Med Sci Sports Exerc. 2009</a> - Độ tin cậy của kiểm tra hiệu suất</li>
-      </ul>
-    </div>
-  </section>
-
-  <div class="article-footer">
-    <p>Sẵn sàng kiểm tra hiệu suất của bạn? Bắt đầu với <a href="/vi/crs/">máy tính CRS</a> để thiết lập các vùng tập
+            exercise science." Med Sci Sports Exerc. 2009</a> - Độ tin cậy của kiểm tra hiệu suất</li></ul></div></section><div class="article-footer"><p>Sẵn sàng kiểm tra hiệu suất của bạn? Bắt đầu với <a href="/vi/crs/">máy tính CRS</a> để thiết lập các vùng tập
       luyện của bạn, sau đó theo dõi tiến trình của bạn với <a href="/vi/rtss-calculator/">tính toán rTSS</a>. Để có
       phân tích chạy bộ toàn diện và theo dõi hiệu suất, hãy tải xuống <a href="/vi/">Run Analytics</a>—người bạn đồng
-      hành tập luyện dựa trên khoa học, riêng tư của bạn.</p>
-  </div>
-</article>
-
-<script type="application/ld+json">
+      hành tập luyện dựa trên khoa học, riêng tư của bạn.</p></div></article><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Article",
@@ -2318,9 +718,7 @@ Trong đó Hệ số Cường độ (IF) = Tốc độ buổi tập / Tốc đ�
   },
   "keywords": ["running performance tests", "running field tests", "CRS test", "vo2max test", "threshold test", "running economy test", "performance testing protocol", "training zones", "running analytics"]
 }
-</script>
-
-<script type="application/ld+json">
+</script><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "FAQPage",
@@ -2407,371 +805,177 @@ Trong đó Hệ số Cường độ (IF) = Tốc độ buổi tập / Tốc đ�
     }
   ]
 }
-</script>
-    
-  </main>
-
-  
-  <footer class="site-footer">
-    <div class="container">
-        
-        <div class="footer-top">
-            <div class="footer-brand-section">
-                
-                <h2>Run Analytics</h2>
-                <p>Track Critical Running Speed, Training Stress Score, and performance metrics with Run Analytics. Science-based iOS app for runners, triathletes &amp; coaches. 7-day free trial.</p>
-                
-            </div>
-
-            
-            <div class="footer-download">
-                <h3 class="footer-heading">Download</h3>
-                <div class="footer-badges">
-                    
-                    <a href="https://apps.apple.com/us/app/run-analytics/id6754524015" target="_blank" rel="noopener"
-                        aria-label="Download on the App Store">
-                        <img src="../../assets/images/badge-app-store.svg"
+</script></main><footer class="site-footer"><div class="container"><div class="footer-top"><div class="footer-brand-section"><h2>Run Analytics</h2><p>Track Critical Running Speed, Training Stress Score, and performance metrics with Run Analytics. Science-based iOS app for runners, triathletes &amp; coaches. 7-day free trial.</p></div><div class="footer-download"><h3 class="footer-heading">Download</h3><div class="footer-badges"><a href="https://apps.apple.com/us/app/run-analytics/id6754524015" target="_blank" rel="noopener"
+                        aria-label="Download on the App Store"><img src="../../assets/images/badge-app-store.svg"
                             alt="Download on the App Store" width="135"
-                            height="40" loading="lazy">
-                    </a>
-                    
-                    
-                    <a href="https://play.google.com/store/apps/details?id=com.arnohealth.runanalytics" target="_blank" rel="noopener"
-                        aria-label="Get it on Google Play">
-                        <img src="../../assets/images/badge-google-play.svg"
+                            height="40" loading="lazy"></a><a href="https://play.google.com/store/apps/details?id=com.arnohealth.runanalytics" target="_blank" rel="noopener"
+                        aria-label="Get it on Google Play"><img src="../../assets/images/badge-google-play.svg"
                             alt="Get it on Google Play" width="135"
-                            height="40" loading="lazy">
-                    </a>
-                    
-                </div>
-            </div>
-            
-        </div>
-
-        
-        <div class="footer-languages">
-            <h3 class="footer-heading">Available in</h3>
-            <div class="lang-grid">
-                
-                <a href="/af/" class="lang-link"
+                            height="40" loading="lazy"></a></div></div></div><div class="footer-languages"><h3 class="footer-heading">Available in</h3><div class="lang-grid"><a href="/af/" class="lang-link"
                     hreflang="af" >
                     Afrikaans
-                </a>
-                
-                <a href="/am/" class="lang-link"
+                </a><a href="/am/" class="lang-link"
                     hreflang="am" >
                     አማርኛ
-                </a>
-                
-                <a href="/ar/" class="lang-link"
+                </a><a href="/ar/" class="lang-link"
                     hreflang="ar" dir="rtl" >
                     العربية
-                </a>
-                
-                <a href="/bg/" class="lang-link"
+                </a><a href="/bg/" class="lang-link"
                     hreflang="bg" >
                     Български
-                </a>
-                
-                <a href="/bn/" class="lang-link"
+                </a><a href="/bn/" class="lang-link"
                     hreflang="bn" >
                     বাংলা
-                </a>
-                
-                <a href="/ca/" class="lang-link"
+                </a><a href="/ca/" class="lang-link"
                     hreflang="ca" >
                     Català
-                </a>
-                
-                <a href="/cs/" class="lang-link"
+                </a><a href="/cs/" class="lang-link"
                     hreflang="cs" >
                     Čeština
-                </a>
-                
-                <a href="/da/" class="lang-link"
+                </a><a href="/da/" class="lang-link"
                     hreflang="da" >
                     Dansk
-                </a>
-                
-                <a href="/de/" class="lang-link"
+                </a><a href="/de/" class="lang-link"
                     hreflang="de" >
                     Deutsch
-                </a>
-                
-                <a href="/el/" class="lang-link"
+                </a><a href="/el/" class="lang-link"
                     hreflang="el" >
                     Ελληνικά
-                </a>
-                
-                <a href="/en/" class="lang-link"
+                </a><a href="/en/" class="lang-link"
                     hreflang="en" >
                     English
-                </a>
-                
-                <a href="/es/" class="lang-link"
+                </a><a href="/es/" class="lang-link"
                     hreflang="es" >
                     Español
-                </a>
-                
-                <a href="/et/" class="lang-link"
+                </a><a href="/et/" class="lang-link"
                     hreflang="et" >
                     Eesti
-                </a>
-                
-                <a href="/fa/" class="lang-link"
+                </a><a href="/fa/" class="lang-link"
                     hreflang="fa" dir="rtl" >
                     فارسی
-                </a>
-                
-                <a href="/fi/" class="lang-link"
+                </a><a href="/fi/" class="lang-link"
                     hreflang="fi" >
                     Suomi
-                </a>
-                
-                <a href="/fr/" class="lang-link"
+                </a><a href="/fr/" class="lang-link"
                     hreflang="fr" >
                     Français
-                </a>
-                
-                <a href="/gu/" class="lang-link"
+                </a><a href="/gu/" class="lang-link"
                     hreflang="gu" >
                     ગુજરાતી
-                </a>
-                
-                <a href="/ha/" class="lang-link"
+                </a><a href="/ha/" class="lang-link"
                     hreflang="ha" >
                     Hausa
-                </a>
-                
-                <a href="/he/" class="lang-link"
+                </a><a href="/he/" class="lang-link"
                     hreflang="he" dir="rtl" >
                     עברית
-                </a>
-                
-                <a href="/hi/" class="lang-link"
+                </a><a href="/hi/" class="lang-link"
                     hreflang="hi" >
                     हिन्दी
-                </a>
-                
-                <a href="/hr/" class="lang-link"
+                </a><a href="/hr/" class="lang-link"
                     hreflang="hr" >
                     Hrvatski
-                </a>
-                
-                <a href="/hu/" class="lang-link"
+                </a><a href="/hu/" class="lang-link"
                     hreflang="hu" >
                     Magyar
-                </a>
-                
-                <a href="/id/" class="lang-link"
+                </a><a href="/id/" class="lang-link"
                     hreflang="id" >
                     Bahasa Indonesia
-                </a>
-                
-                <a href="/is/" class="lang-link"
+                </a><a href="/is/" class="lang-link"
                     hreflang="is" >
                     Íslenska
-                </a>
-                
-                <a href="/it/" class="lang-link"
+                </a><a href="/it/" class="lang-link"
                     hreflang="it" >
                     Italiano
-                </a>
-                
-                <a href="/ja/" class="lang-link"
+                </a><a href="/ja/" class="lang-link"
                     hreflang="ja" >
                     日本語
-                </a>
-                
-                <a href="/km/" class="lang-link"
+                </a><a href="/km/" class="lang-link"
                     hreflang="km" >
                     ភាសាខ្មែរ
-                </a>
-                
-                <a href="/kn/" class="lang-link"
+                </a><a href="/kn/" class="lang-link"
                     hreflang="kn" >
                     ಕನ್ನಡ
-                </a>
-                
-                <a href="/ko/" class="lang-link"
+                </a><a href="/ko/" class="lang-link"
                     hreflang="ko" >
                     한국어
-                </a>
-                
-                <a href="/lt/" class="lang-link"
+                </a><a href="/lt/" class="lang-link"
                     hreflang="lt" >
                     Lietuvių
-                </a>
-                
-                <a href="/lv/" class="lang-link"
+                </a><a href="/lv/" class="lang-link"
                     hreflang="lv" >
                     Latviešu
-                </a>
-                
-                <a href="/ms/" class="lang-link"
+                </a><a href="/ms/" class="lang-link"
                     hreflang="ms" >
                     Bahasa Melayu
-                </a>
-                
-                <a href="/my/" class="lang-link"
+                </a><a href="/my/" class="lang-link"
                     hreflang="my" >
                     မြန်မာစာ
-                </a>
-                
-                <a href="/nb/" class="lang-link"
+                </a><a href="/nb/" class="lang-link"
                     hreflang="nb" >
                     Norsk Bokmål
-                </a>
-                
-                <a href="/nl/" class="lang-link"
+                </a><a href="/nl/" class="lang-link"
                     hreflang="nl" >
                     Nederlands
-                </a>
-                
-                <a href="/pl/" class="lang-link"
+                </a><a href="/pl/" class="lang-link"
                     hreflang="pl" >
                     Polski
-                </a>
-                
-                <a href="/pt/" class="lang-link"
+                </a><a href="/pt/" class="lang-link"
                     hreflang="pt" >
                     Português
-                </a>
-                
-                <a href="/pt-br/" class="lang-link"
+                </a><a href="/pt-br/" class="lang-link"
                     hreflang="pt-br" >
                     Português (Brasil)
-                </a>
-                
-                <a href="/ro/" class="lang-link"
+                </a><a href="/ro/" class="lang-link"
                     hreflang="ro" >
                     Română
-                </a>
-                
-                <a href="/ru/" class="lang-link"
+                </a><a href="/ru/" class="lang-link"
                     hreflang="ru" >
                     Русский
-                </a>
-                
-                <a href="/sk/" class="lang-link"
+                </a><a href="/sk/" class="lang-link"
                     hreflang="sk" >
                     Slovenčina
-                </a>
-                
-                <a href="/sl/" class="lang-link"
+                </a><a href="/sl/" class="lang-link"
                     hreflang="sl" >
                     Slovenščina
-                </a>
-                
-                <a href="/sr/" class="lang-link"
+                </a><a href="/sr/" class="lang-link"
                     hreflang="sr" >
                     Srpski
-                </a>
-                
-                <a href="/sv/" class="lang-link"
+                </a><a href="/sv/" class="lang-link"
                     hreflang="sv" >
                     Svenska
-                </a>
-                
-                <a href="/sw/" class="lang-link"
+                </a><a href="/sw/" class="lang-link"
                     hreflang="sw" >
                     Kiswahili
-                </a>
-                
-                <a href="/ta/" class="lang-link"
+                </a><a href="/ta/" class="lang-link"
                     hreflang="ta" >
                     தமிழ்
-                </a>
-                
-                <a href="/te/" class="lang-link"
+                </a><a href="/te/" class="lang-link"
                     hreflang="te" >
                     తెలుగు
-                </a>
-                
-                <a href="/th/" class="lang-link"
+                </a><a href="/th/" class="lang-link"
                     hreflang="th" >
                     ไทย
-                </a>
-                
-                <a href="/tl/" class="lang-link"
+                </a><a href="/tl/" class="lang-link"
                     hreflang="tl" >
                     Tagalog
-                </a>
-                
-                <a href="/tr/" class="lang-link"
+                </a><a href="/tr/" class="lang-link"
                     hreflang="tr" >
                     Türkçe
-                </a>
-                
-                <a href="/uk/" class="lang-link"
+                </a><a href="/uk/" class="lang-link"
                     hreflang="uk" >
                     Українська
-                </a>
-                
-                <a href="/ur/" class="lang-link"
+                </a><a href="/ur/" class="lang-link"
                     hreflang="ur" dir="rtl" >
                     اردو
-                </a>
-                
-                <a href="/vi/" class="lang-link active"
+                </a><a href="/vi/" class="lang-link active"
                     hreflang="vi" >
                     Tiếng Việt
-                </a>
-                
-                <a href="/yo/" class="lang-link"
+                </a><a href="/yo/" class="lang-link"
                     hreflang="yo" >
                     Yorùbá
-                </a>
-                
-                <a href="/zh/" class="lang-link"
+                </a><a href="/zh/" class="lang-link"
                     hreflang="zh" >
                     中文
-                </a>
-                
-            </div>
-        </div>
-
-        <div class="footer-divider"></div>
-
-        
-        <div class="footer-bottom">
-            <p class="copyright">
+                </a></div></div><div class="footer-divider"></div><div class="footer-bottom"><p class="copyright">
                 &copy; 2026 Run Analytics. Bản quyền được bảo lưu
-            </p>
-            <ul class="footer-legal">
-                <li><a href="/vi/privacy/">Quyền riêng tư</a></li>
-                <li><a href="/vi/terms/">Điều khoản</a></li>
-            </ul>
-        </div>
-    </div>
-</footer>
-
-  
-  <div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="Cookie consent" aria-live="polite">
-    <div class="cookie-banner-content">
-        <div>
-            <p>Trang web này sử dụng cookie để cải thiện trải nghiệm của bạn.</p>
-            <a href="/vi/privacy/" class="text-sm">Tìm hiểu thêm</a>
-        </div>
-        <div class="cookie-banner-actions">
-            <button id="cookie-decline" class="btn btn-secondary btn-small">Từ chối</button>
-            <button id="cookie-accept" class="btn btn-primary btn-small">Chấp nhận</button>
-        </div>
-    </div>
-</div>
-
-  
-  <script src="../../assets/js/core.min.js?v=8aef43d1" defer></script>
-  <script src="../../assets/js/search.min.js?v=8aef43d1" defer></script>
-  
-
-  
-  
-  <script src="../../assets/js/analytics.min.js" data-ga-id="G-Y138VB4523" defer></script>
-  
-
-  
-  <script>if ('serviceWorker' in navigator) { navigator.serviceWorker.register('../../sw.js') }</script>
-</body>
-
-</html>
+            </p><ul class="footer-legal"><li><a href="/vi/privacy/">Quyền riêng tư</a></li><li><a href="/vi/terms/">Điều khoản</a></li></ul></div></div></footer><div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="Cookie consent" aria-live="polite"><div class="cookie-banner-content"><div><p>Trang web này sử dụng cookie để cải thiện trải nghiệm của bạn.</p><a href="/vi/privacy/" class="text-sm">Tìm hiểu thêm</a></div><div class="cookie-banner-actions"><button id="cookie-decline" class="btn btn-secondary btn-small">Từ chối</button><button id="cookie-accept" class="btn btn-primary btn-small">Chấp nhận</button></div></div></div><script src="../../assets/js/core.min.js?v=e899af207631" defer></script><script src="../../assets/js/search.min.js?v=e899af207631" defer></script><script src="../../assets/js/analytics.min.js" data-ga-id="G-Y138VB4523" defer></script><script>if ('serviceWorker' in navigator) { navigator.serviceWorker.register('../../sw.js') }</script></body></html>

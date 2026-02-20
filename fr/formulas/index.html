@@ -1,246 +1,61 @@
-<!DOCTYPE html>
-<html lang="fr" dir="ltr">
-
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
-    rel="stylesheet">
-
-  
-  <title>Référence technique et formules</title>
-  <meta name="description" content="Implémentation mathématique complète. Référence technique et formules Référence technique et formules">
-  <meta name="author" content="AnalyticsZone Team">
-
-  
-  
-  <meta name="keywords" content="formules natation, formule CRS, calcul TSS, métriques natation, JavaScript">
-  
-
-  
-  <link rel="canonical" href="https://run.analyticszone.app/fr/formulas/">
-
-  
-  
-  <meta property="article:published_time" content="2025-01-15T10:00:00Z">
-  <meta property="article:modified_time" content="2026-01-04T14:30:00Z">
-  <meta property="article:author" content="AnalyticsZone Team">
-  
-
-  
-  
-
-  
-  <meta property="og:type" content="article">
-  <meta property="og:url" content="https://run.analyticszone.app/fr/formulas/">
-  <meta property="og:title" content="Référence technique et formules">
-  <meta property="og:description" content="Implémentation mathématique complète. Référence technique et formules Référence technique et formules">
-  <meta property="og:image" content="https://run.analyticszone.app/assets/images/og-image.svg">
-  <meta property="og:locale" content="fr_FR">
-  <meta property="og:site_name" content="Run Analytics">
-
-  
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:url" content="https://run.analyticszone.app/fr/formulas/">
-  <meta name="twitter:title" content="Référence technique et formules">
-  <meta name="twitter:description" content="Implémentation mathématique complète. Référence technique et formules Référence technique et formules">
-  <meta name="twitter:image" content="https://run.analyticszone.app/assets/images/og-image.svg">
-  
-  <meta name="twitter:site" content="@runanalytics">
-  <meta name="twitter:creator" content="@runanalytics">
-  
-
-  
-  
-  <link rel="alternate" hreflang="af"
-    href="https://run.analyticszone.app/af/formulas/">
-  
-  <link rel="alternate" hreflang="am"
-    href="https://run.analyticszone.app/am/formulas/">
-  
-  <link rel="alternate" hreflang="ar"
-    href="https://run.analyticszone.app/ar/formulas/">
-  
-  <link rel="alternate" hreflang="bg"
-    href="https://run.analyticszone.app/bg/formulas/">
-  
-  <link rel="alternate" hreflang="bn"
-    href="https://run.analyticszone.app/bn/formulas/">
-  
-  <link rel="alternate" hreflang="ca"
-    href="https://run.analyticszone.app/ca/formulas/">
-  
-  <link rel="alternate" hreflang="cs"
-    href="https://run.analyticszone.app/cs/formulas/">
-  
-  <link rel="alternate" hreflang="da"
-    href="https://run.analyticszone.app/da/formulas/">
-  
-  <link rel="alternate" hreflang="de"
-    href="https://run.analyticszone.app/de/formulas/">
-  
-  <link rel="alternate" hreflang="el"
-    href="https://run.analyticszone.app/el/formulas/">
-  
-  <link rel="alternate" hreflang="en"
-    href="https://run.analyticszone.app/en/formulas/">
-  
-  <link rel="alternate" hreflang="es"
-    href="https://run.analyticszone.app/es/formulas/">
-  
-  <link rel="alternate" hreflang="et"
-    href="https://run.analyticszone.app/et/formulas/">
-  
-  <link rel="alternate" hreflang="fa"
-    href="https://run.analyticszone.app/fa/formulas/">
-  
-  <link rel="alternate" hreflang="fi"
-    href="https://run.analyticszone.app/fi/formulas/">
-  
-  <link rel="alternate" hreflang="fr"
-    href="https://run.analyticszone.app/fr/formulas/">
-  
-  <link rel="alternate" hreflang="gu"
-    href="https://run.analyticszone.app/gu/formulas/">
-  
-  <link rel="alternate" hreflang="ha"
-    href="https://run.analyticszone.app/ha/formulas/">
-  
-  <link rel="alternate" hreflang="he"
-    href="https://run.analyticszone.app/he/formulas/">
-  
-  <link rel="alternate" hreflang="hi"
-    href="https://run.analyticszone.app/hi/formulas/">
-  
-  <link rel="alternate" hreflang="hr"
-    href="https://run.analyticszone.app/hr/formulas/">
-  
-  <link rel="alternate" hreflang="hu"
-    href="https://run.analyticszone.app/hu/formulas/">
-  
-  <link rel="alternate" hreflang="id"
-    href="https://run.analyticszone.app/id/formulas/">
-  
-  <link rel="alternate" hreflang="is"
-    href="https://run.analyticszone.app/is/formulas/">
-  
-  <link rel="alternate" hreflang="it"
-    href="https://run.analyticszone.app/it/formulas/">
-  
-  <link rel="alternate" hreflang="ja"
-    href="https://run.analyticszone.app/ja/formulas/">
-  
-  <link rel="alternate" hreflang="km"
-    href="https://run.analyticszone.app/km/formulas/">
-  
-  <link rel="alternate" hreflang="kn"
-    href="https://run.analyticszone.app/kn/formulas/">
-  
-  <link rel="alternate" hreflang="ko"
-    href="https://run.analyticszone.app/ko/formulas/">
-  
-  <link rel="alternate" hreflang="lt"
-    href="https://run.analyticszone.app/lt/formulas/">
-  
-  <link rel="alternate" hreflang="lv"
-    href="https://run.analyticszone.app/lv/formulas/">
-  
-  <link rel="alternate" hreflang="ms"
-    href="https://run.analyticszone.app/ms/formulas/">
-  
-  <link rel="alternate" hreflang="my"
-    href="https://run.analyticszone.app/my/formulas/">
-  
-  <link rel="alternate" hreflang="nb"
-    href="https://run.analyticszone.app/nb/formulas/">
-  
-  <link rel="alternate" hreflang="nl"
-    href="https://run.analyticszone.app/nl/formulas/">
-  
-  <link rel="alternate" hreflang="pl"
-    href="https://run.analyticszone.app/pl/formulas/">
-  
-  <link rel="alternate" hreflang="pt"
-    href="https://run.analyticszone.app/pt/formulas/">
-  
-  <link rel="alternate" hreflang="pt-br"
-    href="https://run.analyticszone.app/pt-br/formulas/">
-  
-  <link rel="alternate" hreflang="ro"
-    href="https://run.analyticszone.app/ro/formulas/">
-  
-  <link rel="alternate" hreflang="ru"
-    href="https://run.analyticszone.app/ru/formulas/">
-  
-  <link rel="alternate" hreflang="sk"
-    href="https://run.analyticszone.app/sk/formulas/">
-  
-  <link rel="alternate" hreflang="sl"
-    href="https://run.analyticszone.app/sl/formulas/">
-  
-  <link rel="alternate" hreflang="sr"
-    href="https://run.analyticszone.app/sr/formulas/">
-  
-  <link rel="alternate" hreflang="sv"
-    href="https://run.analyticszone.app/sv/formulas/">
-  
-  <link rel="alternate" hreflang="sw"
-    href="https://run.analyticszone.app/sw/formulas/">
-  
-  <link rel="alternate" hreflang="ta"
-    href="https://run.analyticszone.app/ta/formulas/">
-  
-  <link rel="alternate" hreflang="te"
-    href="https://run.analyticszone.app/te/formulas/">
-  
-  <link rel="alternate" hreflang="th"
-    href="https://run.analyticszone.app/th/formulas/">
-  
-  <link rel="alternate" hreflang="tl"
-    href="https://run.analyticszone.app/tl/formulas/">
-  
-  <link rel="alternate" hreflang="tr"
-    href="https://run.analyticszone.app/tr/formulas/">
-  
-  <link rel="alternate" hreflang="uk"
-    href="https://run.analyticszone.app/uk/formulas/">
-  
-  <link rel="alternate" hreflang="ur"
-    href="https://run.analyticszone.app/ur/formulas/">
-  
-  <link rel="alternate" hreflang="vi"
-    href="https://run.analyticszone.app/vi/formulas/">
-  
-  <link rel="alternate" hreflang="yo"
-    href="https://run.analyticszone.app/yo/formulas/">
-  
-  <link rel="alternate" hreflang="zh"
-    href="https://run.analyticszone.app/zh/formulas/">
-  
-  <link rel="alternate" hreflang="x-default"
-    href="https://run.analyticszone.app/en/formulas/">
-
-  
-  <link rel="icon" type="image/png" sizes="32x32" href="../../assets/images/icons/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="../../assets/images/icons/favicon-16x16.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="../../assets/images/icons/apple-touch-icon.png">
-  <link rel="manifest" href="../../manifest.json">
-  <meta name="theme-color" content="#2563EB">
-  <meta name="robots" content="index, follow">
-
-  
-  
-  
-  <meta name="apple-itunes-app" content="app-id=6754524015">
-  
-
-  
-  <style>
+<!DOCTYPE html><html lang="fr" dir="ltr"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet"><title>Référence technique et formules</title><meta name="description" content="Implémentation mathématique complète. Référence technique et formules Référence technique et formules"><meta name="author" content="AnalyticsZone Team"><meta name="keywords" content="formules natation, formule CRS, calcul TSS, métriques natation, JavaScript"><link rel="canonical" href="https://run.analyticszone.app/fr/formulas/"><meta property="article:published_time" content="2025-01-15T10:00:00Z"><meta property="article:modified_time" content="2026-02-20T14:30:00Z"><meta property="article:author" content="AnalyticsZone Team"><meta property="og:type" content="article"><meta property="og:url" content="https://run.analyticszone.app/fr/formulas/"><meta property="og:title" content="Référence technique et formules"><meta property="og:description" content="Implémentation mathématique complète. Référence technique et formules Référence technique et formules"><meta property="og:image" content="https://run.analyticszone.app/assets/images/og-image.svg"><meta property="og:locale" content="fr_FR"><meta property="og:site_name" content="Run Analytics"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:url" content="https://run.analyticszone.app/fr/formulas/"><meta name="twitter:title" content="Référence technique et formules"><meta name="twitter:description" content="Implémentation mathématique complète. Référence technique et formules Référence technique et formules"><meta name="twitter:image" content="https://run.analyticszone.app/assets/images/og-image.svg"><meta name="twitter:site" content="@runanalytics"><meta name="twitter:creator" content="@runanalytics"><link rel="alternate" hreflang="af"
+    href="https://run.analyticszone.app/af/formulas/"><link rel="alternate" hreflang="am"
+    href="https://run.analyticszone.app/am/formulas/"><link rel="alternate" hreflang="ar"
+    href="https://run.analyticszone.app/ar/formulas/"><link rel="alternate" hreflang="bg"
+    href="https://run.analyticszone.app/bg/formulas/"><link rel="alternate" hreflang="bn"
+    href="https://run.analyticszone.app/bn/formulas/"><link rel="alternate" hreflang="ca"
+    href="https://run.analyticszone.app/ca/formulas/"><link rel="alternate" hreflang="cs"
+    href="https://run.analyticszone.app/cs/formulas/"><link rel="alternate" hreflang="da"
+    href="https://run.analyticszone.app/da/formulas/"><link rel="alternate" hreflang="de"
+    href="https://run.analyticszone.app/de/formulas/"><link rel="alternate" hreflang="el"
+    href="https://run.analyticszone.app/el/formulas/"><link rel="alternate" hreflang="en"
+    href="https://run.analyticszone.app/en/formulas/"><link rel="alternate" hreflang="es"
+    href="https://run.analyticszone.app/es/formulas/"><link rel="alternate" hreflang="et"
+    href="https://run.analyticszone.app/et/formulas/"><link rel="alternate" hreflang="fa"
+    href="https://run.analyticszone.app/fa/formulas/"><link rel="alternate" hreflang="fi"
+    href="https://run.analyticszone.app/fi/formulas/"><link rel="alternate" hreflang="fr"
+    href="https://run.analyticszone.app/fr/formulas/"><link rel="alternate" hreflang="gu"
+    href="https://run.analyticszone.app/gu/formulas/"><link rel="alternate" hreflang="ha"
+    href="https://run.analyticszone.app/ha/formulas/"><link rel="alternate" hreflang="he"
+    href="https://run.analyticszone.app/he/formulas/"><link rel="alternate" hreflang="hi"
+    href="https://run.analyticszone.app/hi/formulas/"><link rel="alternate" hreflang="hr"
+    href="https://run.analyticszone.app/hr/formulas/"><link rel="alternate" hreflang="hu"
+    href="https://run.analyticszone.app/hu/formulas/"><link rel="alternate" hreflang="id"
+    href="https://run.analyticszone.app/id/formulas/"><link rel="alternate" hreflang="is"
+    href="https://run.analyticszone.app/is/formulas/"><link rel="alternate" hreflang="it"
+    href="https://run.analyticszone.app/it/formulas/"><link rel="alternate" hreflang="ja"
+    href="https://run.analyticszone.app/ja/formulas/"><link rel="alternate" hreflang="km"
+    href="https://run.analyticszone.app/km/formulas/"><link rel="alternate" hreflang="kn"
+    href="https://run.analyticszone.app/kn/formulas/"><link rel="alternate" hreflang="ko"
+    href="https://run.analyticszone.app/ko/formulas/"><link rel="alternate" hreflang="lt"
+    href="https://run.analyticszone.app/lt/formulas/"><link rel="alternate" hreflang="lv"
+    href="https://run.analyticszone.app/lv/formulas/"><link rel="alternate" hreflang="ms"
+    href="https://run.analyticszone.app/ms/formulas/"><link rel="alternate" hreflang="my"
+    href="https://run.analyticszone.app/my/formulas/"><link rel="alternate" hreflang="nb"
+    href="https://run.analyticszone.app/nb/formulas/"><link rel="alternate" hreflang="nl"
+    href="https://run.analyticszone.app/nl/formulas/"><link rel="alternate" hreflang="pl"
+    href="https://run.analyticszone.app/pl/formulas/"><link rel="alternate" hreflang="pt"
+    href="https://run.analyticszone.app/pt/formulas/"><link rel="alternate" hreflang="pt-br"
+    href="https://run.analyticszone.app/pt-br/formulas/"><link rel="alternate" hreflang="ro"
+    href="https://run.analyticszone.app/ro/formulas/"><link rel="alternate" hreflang="ru"
+    href="https://run.analyticszone.app/ru/formulas/"><link rel="alternate" hreflang="sk"
+    href="https://run.analyticszone.app/sk/formulas/"><link rel="alternate" hreflang="sl"
+    href="https://run.analyticszone.app/sl/formulas/"><link rel="alternate" hreflang="sr"
+    href="https://run.analyticszone.app/sr/formulas/"><link rel="alternate" hreflang="sv"
+    href="https://run.analyticszone.app/sv/formulas/"><link rel="alternate" hreflang="sw"
+    href="https://run.analyticszone.app/sw/formulas/"><link rel="alternate" hreflang="ta"
+    href="https://run.analyticszone.app/ta/formulas/"><link rel="alternate" hreflang="te"
+    href="https://run.analyticszone.app/te/formulas/"><link rel="alternate" hreflang="th"
+    href="https://run.analyticszone.app/th/formulas/"><link rel="alternate" hreflang="tl"
+    href="https://run.analyticszone.app/tl/formulas/"><link rel="alternate" hreflang="tr"
+    href="https://run.analyticszone.app/tr/formulas/"><link rel="alternate" hreflang="uk"
+    href="https://run.analyticszone.app/uk/formulas/"><link rel="alternate" hreflang="ur"
+    href="https://run.analyticszone.app/ur/formulas/"><link rel="alternate" hreflang="vi"
+    href="https://run.analyticszone.app/vi/formulas/"><link rel="alternate" hreflang="yo"
+    href="https://run.analyticszone.app/yo/formulas/"><link rel="alternate" hreflang="zh"
+    href="https://run.analyticszone.app/zh/formulas/"><link rel="alternate" hreflang="x-default"
+    href="https://run.analyticszone.app/en/formulas/"><link rel="icon" type="image/png" sizes="32x32" href="../../assets/images/icons/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="../../assets/images/icons/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="../../assets/images/icons/apple-touch-icon.png"><link rel="manifest" href="../../manifest.json"><meta name="theme-color" content="#2563EB"><meta name="robots" content="index, follow"><meta name="apple-itunes-app" content="app-id=6754524015"><style>
 /* Critical CSS - Above the fold styles for fast LCP */
 :root {
   --color-primary: #0066CC;
@@ -499,20 +314,7 @@ img[width][height] {
     transition-duration: 0.01ms !important;
   }
 }
-</style>
-
-  
-  <link rel="preconnect" href="https://www.googletagmanager.com">
-  <link rel="dns-prefetch" href="https://www.googletagmanager.com">
-
-  
-  <link rel="stylesheet" href="../../assets/css/main.min.css?v=8aef43d1">
-
-  
-  
-
-
-<script type="application/ld+json">
+</style><link rel="preconnect" href="https://www.googletagmanager.com"><link rel="dns-prefetch" href="https://www.googletagmanager.com"><link rel="stylesheet" href="../../assets/css/main.min.css?v=e899af207631"><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Organization",
@@ -547,10 +349,7 @@ img[width][height] {
     
   ]
 }
-</script>
-
-
-<script type="application/ld+json">
+</script><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "WebSite",
@@ -559,11 +358,7 @@ img[width][height] {
   "description": "Track Critical Running Speed, Training Stress Score, and performance metrics with Run Analytics. Science-based iOS app for runners, triathletes &amp; coaches. 7-day free trial.",
   "inLanguage": "fr"
 }
-</script>
-
-
-
-<script type="application/ld+json">
+</script><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
@@ -578,12 +373,7 @@ img[width][height] {
   },
   "downloadUrl": "https://apps.apple.com/us/app/run-analytics/id6754524015"
 }
-</script>
-
-
-
-
-<script type="application/ld+json">
+</script><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
@@ -612,11 +402,7 @@ img[width][height] {
     
   ]
 }
-</script>
-
-
-
-<script type="application/ld+json">
+</script><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "WebPage",
@@ -624,11 +410,7 @@ img[width][height] {
   "description": "Implémentation mathématique complète. Référence technique et formules Référence technique et formules",
   "url": "https://run.analyticszone.app/fr/formulas/"
 }
-</script>
-
-
-
-<script type="application/ld+json">
+</script><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Article",
@@ -647,23 +429,13 @@ img[width][height] {
     }
   },
   "datePublished": "2025-01-15",
-  "dateModified": "2026-01-04",
+  "dateModified": "2026-02-20",
   "mainEntityOfPage": {
     "@type": "WebPage",
     "@id": "https://run.analyticszone.app/fr/formulas/"
   }
 }
-</script>
-
-
-
-
-
-  
-  
-
-  
-  <script>
+</script><script>
     (function () {
       let theme = localStorage.getItem('theme');
       // Older builds could persist a per-subdomain `theme=light` value without a UI
@@ -677,600 +449,170 @@ img[width][height] {
         document.documentElement.classList.add('dark-mode');
       }
     })();
-  </script>
-</head>
-
-<body>
-  
-  <a href="#main-content" class="skip-link">Aller au contenu</a>
-
-  
-  <header class="site-header">
-    <div class="container">
-        <div class="header-inner">
-            
-            <a href="/fr/" class="site-logo">
-                <picture>
-                    <source srcset="../../assets/images/logo-dark.png" type="image/png"
-                        media="(prefers-color-scheme: dark)">
-                    <img src="../../assets/images/logo.png" alt="Run Analytics - Running Analytics App | Critical Running Speed, TSS, CTL/ATL/TSB for iOS" width="56" height="56">
-                </picture>
-                <span class="logo-text">Run Analytics</span>
-            </a>
-
-            
-            <nav class="nav-primary" id="nav-primary" role="navigation" aria-label="Main navigation">
-                <div class="nav-group-left">
-                    <ul>
-                        
-                        <li>
-                            
-                            <a href="/fr/" 
+  </script></head><body><a href="#main-content" class="skip-link">Aller au contenu</a><header class="site-header"><div class="container"><div class="header-inner"><a href="/fr/" class="site-logo"><picture><source srcset="../../assets/images/logo-dark.png" type="image/png"
+                        media="(prefers-color-scheme: dark)"><img src="../../assets/images/logo.png" alt="Run Analytics - Running Analytics App | Critical Running Speed, TSS, CTL/ATL/TSB for iOS" width="56" height="56"></picture><span class="logo-text">Run Analytics</span></a><nav class="nav-primary" id="nav-primary" role="navigation" aria-label="Main navigation"><div class="nav-group-left"><ul><li><a href="/fr/" 
                                 aria-current="">
                                 Accueil
-                            </a>
-                            
-                            </li>
-                            
-                        <li class="has-submenu" >
-                            
-                            
-                            <a href="/fr/getting-started/" class="nav-label">Apprendre</a>
-                            
-                            <ul class="submenu">
-                                
-                                <li>
-                                    <a href="/fr/getting-started/" 
+                            </a></li><li class="has-submenu" ><a href="/fr/getting-started/" class="nav-label">Apprendre</a><ul class="submenu"><li><a href="/fr/getting-started/" 
                                         aria-current="">
                                         Commencer
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/fr/crs/" 
+                                    </a></li><li><a href="/fr/crs/" 
                                         aria-current="">
                                         CRS
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/fr/training-zones/" 
+                                    </a></li><li><a href="/fr/training-zones/" 
                                         aria-current="">
                                         Zones
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/fr/training-load/" 
+                                    </a></li><li><a href="/fr/training-load/" 
                                         aria-current="">
                                         Charge
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/fr/rtss-calculator/" 
+                                    </a></li><li><a href="/fr/rtss-calculator/" 
                                         aria-current="">
                                         Calculatrice rTSS
-                                    </a>
-                                </li>
-                                
-                            </ul>
-                            
-                            </li>
-                            
-                        <li class="has-submenu" >
-                            
-                            
-                            <a href="/fr/research/" class="nav-label">Science</a>
-                            
-                            <ul class="submenu">
-                                
-                                <li>
-                                    <a href="/fr/research/" 
+                                    </a></li></ul></li><li class="has-submenu" ><a href="/fr/research/" class="nav-label">Science</a><ul class="submenu"><li><a href="/fr/research/" 
                                         aria-current="">
                                         Recherche
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/fr/formulas/" class="active" 
+                                    </a></li><li><a href="/fr/formulas/" class="active" 
                                         aria-current="page">
                                         Formules
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/fr/efficiency/" 
+                                    </a></li><li><a href="/fr/efficiency/" 
                                         aria-current="">
                                         Efficacité
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/fr/stride-mechanics/" 
+                                    </a></li><li><a href="/fr/stride-mechanics/" 
                                         aria-current="">
                                         Mécanique
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/fr/bibliography/" 
+                                    </a></li><li><a href="/fr/bibliography/" 
                                         aria-current="">
                                         Bibliographie
-                                    </a>
-                                </li>
-                                
-                            </ul>
-                            
-                            </li>
-                            
-                        <li>
-                            
-                            <a href="/fr/contact/" 
+                                    </a></li></ul></li><li><a href="/fr/contact/" 
                                 aria-current="">
                                 Contact
-                            </a>
-                            
-                            </li>
-                            
-                    </ul>
-
-                    
-                    <div class="search-container">
-                        <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                            </a></li></ul><div class="search-container"><svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
                             viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                            <circle cx="11" cy="11" r="8"></circle>
-                            <path d="m21 21-4.35-4.35"></path>
-                        </svg>
-                        <input type="search" id="site-search" class="search-input" aria-expanded="false"
-                            aria-haspopup="listbox" aria-autocomplete="list" autocomplete="off" spellcheck="false" />
-                        <div id="search-results" class="search-results hidden" role="region" aria-live="polite"></div>
-                    </div>
-
-                    
-                    <select class="language-selector" id="language-select" aria-label="Sélectionner la langue">
-                        
-                        <option value="af" >
+                            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.35-4.35"></path></svg><input type="search" id="site-search" class="search-input" aria-expanded="false"
+                            aria-haspopup="listbox" aria-autocomplete="list" autocomplete="off" spellcheck="false" /><div id="search-results" class="search-results hidden" role="region" aria-live="polite"></div></div><select class="language-selector" id="language-select" aria-label="Sélectionner la langue"><option value="af" >
                             Afrikaans
-                        </option>
-                        
-                        <option value="am" >
+                        </option><option value="am" >
                             አማርኛ
-                        </option>
-                        
-                        <option value="ar" >
+                        </option><option value="ar" >
                             العربية
-                        </option>
-                        
-                        <option value="bg" >
+                        </option><option value="bg" >
                             Български
-                        </option>
-                        
-                        <option value="bn" >
+                        </option><option value="bn" >
                             বাংলা
-                        </option>
-                        
-                        <option value="ca" >
+                        </option><option value="ca" >
                             Català
-                        </option>
-                        
-                        <option value="cs" >
+                        </option><option value="cs" >
                             Čeština
-                        </option>
-                        
-                        <option value="da" >
+                        </option><option value="da" >
                             Dansk
-                        </option>
-                        
-                        <option value="de" >
+                        </option><option value="de" >
                             Deutsch
-                        </option>
-                        
-                        <option value="el" >
+                        </option><option value="el" >
                             Ελληνικά
-                        </option>
-                        
-                        <option value="en" >
+                        </option><option value="en" >
                             English
-                        </option>
-                        
-                        <option value="es" >
+                        </option><option value="es" >
                             Español
-                        </option>
-                        
-                        <option value="et" >
+                        </option><option value="et" >
                             Eesti
-                        </option>
-                        
-                        <option value="fa" >
+                        </option><option value="fa" >
                             فارسی
-                        </option>
-                        
-                        <option value="fi" >
+                        </option><option value="fi" >
                             Suomi
-                        </option>
-                        
-                        <option value="fr" selected>
+                        </option><option value="fr" selected>
                             Français
-                        </option>
-                        
-                        <option value="gu" >
+                        </option><option value="gu" >
                             ગુજરાતી
-                        </option>
-                        
-                        <option value="ha" >
+                        </option><option value="ha" >
                             Hausa
-                        </option>
-                        
-                        <option value="he" >
+                        </option><option value="he" >
                             עברית
-                        </option>
-                        
-                        <option value="hi" >
+                        </option><option value="hi" >
                             हिन्दी
-                        </option>
-                        
-                        <option value="hr" >
+                        </option><option value="hr" >
                             Hrvatski
-                        </option>
-                        
-                        <option value="hu" >
+                        </option><option value="hu" >
                             Magyar
-                        </option>
-                        
-                        <option value="id" >
+                        </option><option value="id" >
                             Bahasa Indonesia
-                        </option>
-                        
-                        <option value="is" >
+                        </option><option value="is" >
                             Íslenska
-                        </option>
-                        
-                        <option value="it" >
+                        </option><option value="it" >
                             Italiano
-                        </option>
-                        
-                        <option value="ja" >
+                        </option><option value="ja" >
                             日本語
-                        </option>
-                        
-                        <option value="km" >
+                        </option><option value="km" >
                             ភាសាខ្មែរ
-                        </option>
-                        
-                        <option value="kn" >
+                        </option><option value="kn" >
                             ಕನ್ನಡ
-                        </option>
-                        
-                        <option value="ko" >
+                        </option><option value="ko" >
                             한국어
-                        </option>
-                        
-                        <option value="lt" >
+                        </option><option value="lt" >
                             Lietuvių
-                        </option>
-                        
-                        <option value="lv" >
+                        </option><option value="lv" >
                             Latviešu
-                        </option>
-                        
-                        <option value="ms" >
+                        </option><option value="ms" >
                             Bahasa Melayu
-                        </option>
-                        
-                        <option value="my" >
+                        </option><option value="my" >
                             မြန်မာစာ
-                        </option>
-                        
-                        <option value="nb" >
+                        </option><option value="nb" >
                             Norsk Bokmål
-                        </option>
-                        
-                        <option value="nl" >
+                        </option><option value="nl" >
                             Nederlands
-                        </option>
-                        
-                        <option value="pl" >
+                        </option><option value="pl" >
                             Polski
-                        </option>
-                        
-                        <option value="pt" >
+                        </option><option value="pt" >
                             Português
-                        </option>
-                        
-                        <option value="pt-br" >
+                        </option><option value="pt-br" >
                             Português (Brasil)
-                        </option>
-                        
-                        <option value="ro" >
+                        </option><option value="ro" >
                             Română
-                        </option>
-                        
-                        <option value="ru" >
+                        </option><option value="ru" >
                             Русский
-                        </option>
-                        
-                        <option value="sk" >
+                        </option><option value="sk" >
                             Slovenčina
-                        </option>
-                        
-                        <option value="sl" >
+                        </option><option value="sl" >
                             Slovenščina
-                        </option>
-                        
-                        <option value="sr" >
+                        </option><option value="sr" >
                             Srpski
-                        </option>
-                        
-                        <option value="sv" >
+                        </option><option value="sv" >
                             Svenska
-                        </option>
-                        
-                        <option value="sw" >
+                        </option><option value="sw" >
                             Kiswahili
-                        </option>
-                        
-                        <option value="ta" >
+                        </option><option value="ta" >
                             தமிழ்
-                        </option>
-                        
-                        <option value="te" >
+                        </option><option value="te" >
                             తెలుగు
-                        </option>
-                        
-                        <option value="th" >
+                        </option><option value="th" >
                             ไทย
-                        </option>
-                        
-                        <option value="tl" >
+                        </option><option value="tl" >
                             Tagalog
-                        </option>
-                        
-                        <option value="tr" >
+                        </option><option value="tr" >
                             Türkçe
-                        </option>
-                        
-                        <option value="uk" >
+                        </option><option value="uk" >
                             Українська
-                        </option>
-                        
-                        <option value="ur" >
+                        </option><option value="ur" >
                             اردو
-                        </option>
-                        
-                        <option value="vi" >
+                        </option><option value="vi" >
                             Tiếng Việt
-                        </option>
-                        
-                        <option value="yo" >
+                        </option><option value="yo" >
                             Yorùbá
-                        </option>
-                        
-                        <option value="zh" >
+                        </option><option value="zh" >
                             中文
-                        </option>
-                        
-                    </select>
-                </div>
-
-                <div class="nav-group-right">
-                    
-
-
-                    
-                    <div class="header-app-buttons">
-                        
-                        
-                        <a href="https://apps.apple.com/us/app/run-analytics/id6754524015" class="header-download-btn" target="_blank"
-                            rel="noopener" aria-label="Download on App Store" title="Download on App Store">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                                fill="currentColor">
-                                <path
-                                    d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z" />
-                            </svg>
-                        </a>
-                        
-
-                        
-                        <a href="https://play.google.com/store/apps/details?id=com.arnohealth.runanalytics" class="header-download-btn" target="_blank"
-                            rel="noopener" aria-label="Get it on Google Play" title="Get it on Google Play">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                                fill="currentColor">
-                                <path
-                                    d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.92 20.16,13.19L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M16.81,8.88L14.54,11.15L6.05,2.66L16.81,8.88Z" />
-                            </svg>
-                        </a>
-                        
-                        
-                    </div>
-
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-
-                    
-                    <div class="suite-menu-container">
-                        <button class="suite-menu-toggle" id="suite-menu-toggle" aria-label="See other apps"
-                            aria-expanded="false">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        </option></select></div><div class="nav-group-right"><div class="header-app-buttons"><a href="https://apps.apple.com/us/app/run-analytics/id6754524015" class="header-download-btn" target="_blank"
+                            rel="noopener" aria-label="Download on App Store" title="Download on App Store"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="currentColor"><path
+                                    d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z" /></svg></a><a href="https://play.google.com/store/apps/details?id=com.arnohealth.runanalytics" class="header-download-btn" target="_blank"
+                            rel="noopener" aria-label="Get it on Google Play" title="Get it on Google Play"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="currentColor"><path
+                                    d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.92 20.16,13.19L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M16.81,8.88L14.54,11.15L6.05,2.66L16.81,8.88Z" /></svg></a></div><div class="suite-menu-container"><button class="suite-menu-toggle" id="suite-menu-toggle" aria-label="See other apps"
+                            aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round">
-                                <rect x="3" y="3" width="7" height="7"></rect>
-                                <rect x="14" y="3" width="7" height="7"></rect>
-                                <rect x="14" y="14" width="7" height="7"></rect>
-                                <rect x="3" y="14" width="7" height="7"></rect>
-                            </svg>
-                        </button>
-                        <div class="suite-dropdown hidden" id="suite-dropdown">
-                            <div class="suite-dropdown-header">Other AnalyticsZone Apps</div>
-                            <div class="suite-apps-grid">
-                                
-                                <a href="https://analyticszone.app" class="suite-app-link">AnalyticsZone</a>
-                                
-                                <a href="https://swim.analyticszone.app" class="suite-app-link">Swim Analytics</a>
-                                
-                                <a href="https://bike.analyticszone.app" class="suite-app-link">Bike Analytics</a>
-                                
-                                <a href="https://walk.analyticszone.app" class="suite-app-link">Walk Analytics</a>
-                                
-                                <a href="https://cardio.analyticszone.app" class="suite-app-link">Cardio Analytics</a>
-                                
-                                <a href="https://health.analyticszone.app" class="suite-app-link">Health Analytics</a>
-                                
-                                <a href="https://swimtrainer.analyticszone.app" class="suite-app-link">Swim Trainer</a>
-                                
-                            </div>
-                        </div>
-                    </div>
-                    
-                </div>
-            </nav>
-
-            
-            <button class="menu-toggle" id="menu-toggle" aria-label="Basculer le menu"
-                aria-expanded="false" aria-controls="nav-primary">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </div>
-    </div>
-</header>
-
-  
-  
-
-<nav class="breadcrumbs" aria-label="Breadcrumb">
-    <div class="container">
-        <ol>
-            
-            <li>
-                
-                <a href="/fr/">Accueil</a>
-                
-            </li>
-            
-            <li>
-                
-                <a href="/fr/research/">Science</a>
-                
-            </li>
-            
-            <li>
-                
-                <span aria-current="page">Formules</span>
-                
-            </li>
-            
-        </ol>
-    </div>
-</nav>
-
-
-  
-  <main id="main-content" class="main-content">
-    
-    <section class="page-hero">
-  <div class="container">
-    <h1>Référence technique et formules</h1>
-    <p class="lead">Implémentation mathématique complète</p>
-  </div>
-</section>
-<section class="section">
-  <div class="container container-narrow">
-    <h2>Guide de mise en œuvre</h2>
-    <p class="lead">Cette page fournit des formules de copier-coller et des méthodes de calcul étape par étape pour
-      toutes les métriques Run Analytics. Utilisez-les pour des implémentations personnalisées, une vérification ou une
-      compréhension plus approfondie.</p>
-    <div class="callout callout-warning">
-      <h3>⚠️ Notes de mise en œuvre</h3>
-      <ul>
-        <li>Tous les temps doivent être convertis en secondes pour les calculs</li>
-        <li>Le rythme de course est inversé (% plus élevé = rythme plus lent)</li>
-        <li>Validez toujours les entrées pour des plages raisonnables</li>
-        <li>Gérer les cas extrêmes (division par zéro, valeurs négatives)</li>
-      </ul>
-    </div>
-  </div>
-</section>
-<section class="section section-alt">
-  <div class="container">
-    <h2>Indicateurs de performance de base</h2>
-    <div class="formula-card">
-      <h3>Vitesse d'exécution critique (CRS)</h3>
-      <div class="formula-content">
-        <h4>Formule:</h4>
-        <div class="formula-box-large">
-          <div class="formula">CRS (m/s) = (D₂ - D₁) / (T₂ - T₁)</div>
-          <div class="formula">CRS Allure/100 m (secondes) = (T₄₀₀ - T₂₀₀) / 2</div>
-        </div>
-        <div class="callout callout-info mt-lg">
-          <h4>🧪 Calculatrice interactive - Testez la formule</h4>
-          <div class="calculator-grid">
-            <div class="input-group">
-              <label for="crs-d1">Distance 1 (mètres) :</label>
-              <input id="crs-d1" max="1000" min="50" step="50" type="number" value="200" />
-            </div>
-            <div class="input-group">
-              <label for="crs-t1">Temps 1 (mm:ss) :</label>
-              <input id="crs-t1" pattern="[0-9]{1,2}:[0-9]{2}" placeholder="2:30" type="text" value="2:30" />
-            </div>
-            <div class="input-group">
-              <label for="crs-d2">Distance 2 (mètres) :</label>
-              <input id="crs-d2" max="2000" min="100" step="50" type="number" value="400" />
-            </div>
-            <div class="input-group">
-              <label for="crs-t2">Temps 2 (mm:ss) :</label>
-              <input id="crs-t2" pattern="[0-9]{1,2}:[0-9]{2}" placeholder="6:08" type="text" value="6:08" />
-            </div>
-          </div>
-          <div class="calculator-result mt-md">
-            <div class="result-label">CRS Allure par 100 m :</div>
-            <div class="result-value" id="crs-result">1:49</div>
-          </div>
-          <div class="calculation-breakdown mt-md">
-            <small>
-              <strong>Étapes de calcul :</strong><br />
-              <span id="crs-steps">CRS (m/s) = (400 - 200) / (368 - 150) = 0,917 m/s<br />Allure/100 m = 100 / 0,917 =
-                109 secondes = 1:49</span>
-            </small>
-          </div>
-        </div>
-        <h4 class="mt-xl">Implémentation JavaScript :</h4>
-        <pre><code>fonction calculerCRS (distance1, temps1, distance2, temps2) {
+                                stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg></button><div class="suite-dropdown hidden" id="suite-dropdown"><div class="suite-dropdown-header">Other AnalyticsZone Apps</div><div class="suite-apps-grid"><a href="https://analyticszone.app" class="suite-app-link">AnalyticsZone</a><a href="https://swim.analyticszone.app" class="suite-app-link">Swim Analytics</a><a href="https://bike.analyticszone.app" class="suite-app-link">Bike Analytics</a><a href="https://walk.analyticszone.app" class="suite-app-link">Walk Analytics</a><a href="https://cardio.analyticszone.app" class="suite-app-link">Cardio Analytics</a><a href="https://health.analyticszone.app" class="suite-app-link">Health Analytics</a><a href="https://swimtrainer.analyticszone.app" class="suite-app-link">Swim Trainer</a></div></div></div></div></nav><button class="menu-toggle" id="menu-toggle" aria-label="Basculer le menu"
+                aria-expanded="false" aria-controls="nav-primary"><span></span><span></span><span></span></button></div></div></header><nav class="breadcrumbs" aria-label="Breadcrumb"><div class="container"><ol><li><a href="/fr/">Accueil</a></li><li><a href="/fr/research/">Science</a></li><li><span aria-current="page">Formules</span></li></ol></div></nav><main id="main-content" class="main-content"><section class="page-hero"><div class="container"><h1>Référence technique et formules</h1><p class="lead">Implémentation mathématique complète</p></div></section><section class="section"><div class="container container-narrow"><h2>Guide de mise en œuvre</h2><p class="lead">Cette page fournit des formules de copieur-coller et des méthodes de calcul étape par étape pour
+      toutes les mesures Run Analytics. Utilisez-les pour des implémentations personnalisées, une vérification ou une
+      compréhension plus approfondie.</p><div class="callout callout-warning"><h3>⚠️ Notes de mise en œuvre</h3><ul><li>Tous les temps doivent être convertis en secondes pour les calculs</li><li>Le rythme de course est inversé (% plus élevé = rythme plus lent)</li><li>Validez toujours les entrées pour des plages raisonnables</li><li>Gérer les cas extrêmes (division par zéro, valeurs négatives)</li></ul></div></div></section><section class="section section-alt"><div class="container"><h2>Indicateurs de performance de base</h2><div class="formula-card"><h3>Vitesse d'exécution critique (CRS)</h3><div class="formula-content"><h4>Formules :</h4><div class="formula-box-large"><div class="formula">CRS (m/s) = (D₂ - D₁) / (T₂ - T₁)</div><div class="formula">CRS Allure/100 m (secondes) = (T₄₀₀ - T₂₀₀) / 2</div></div><div class="callout callout-info mt-lg"><h4>🧪 Calculatrice interactive - Testez la formule</h4><div class="calculator-grid"><div class="input-group"><label for="crs-d1">Distance 1 (mètres) :</label><input id="crs-d1" max="1000" min="50" step="50" type="number" value="200"/></div><div class="input-group"><label for="crs-t1">Temps 1 (mm:ss) :</label><input id="crs-t1" pattern="[0-9]{1,2}:[0-9]{2}" placeholder="2:30" type="text" value="2:30"/></div><div class="input-group"><label for="crs-d2">Distance 2 (mètres) :</label><input id="crs-d2" max="2000" min="100" step="50" type="number" value="400"/></div><div class="input-group"><label for="crs-t2">Temps 2 (mm:ss) :</label><input id="crs-t2" pattern="[0-9]{1,2}:[0-9]{2}" placeholder="6:08" type="text" value="6:08"/></div></div><div class="calculator-result mt-md"><div class="result-label">CRS Allure par 100 m :</div><div class="result-value" id="crs-result">1:49</div></div><div class="calculation-breakdown mt-md"><small><strong>Étapes de calcul :</strong><br/><span id="crs-steps">CRS (m/s) = (400 - 200) / (368 - 150) = 0,917 m/s<br/>Allure/100 m = 100 / 0,917 =
+                109 secondes = 1:49</span></small></div></div><h4 class="mt-xl">Implémentation JavaScript :</h4><pre><code>fonction calculerCRS (distance1, temps1, distance2, temps2) {
   // Convertir les temps en secondes IF nécessaire
   const t1 = type de temps1 === 'string' ? timeToSeconds(time1) : time1;
   const t2 = typeof time2 === 'string' ? timeToSeconds(time2) : time2;
@@ -1294,8 +636,7 @@ img[width][height] {
 
 // Exemple d'utilisation :
 résultat const = calculerCRS(200, 150, 400, 368);
-// Renvoie : { css_ms : 0,917, rythme_secondes : 109, rythme_formatté : "1:49" }</code></pre>
-        <script>fonction timeToSecondsCRS(timeString) {
+// Renvoie : { css_ms : 0,917, rythme_secondes : 109, rythme_formatté : "1:49" }</code></pre><script>fonction timeToSecondsCRS(timeString) {
             const parts = timeString.split(':');
             return parseInt(parts[0]) * 60 + parseInt(parts[1]);
           }
@@ -1337,52 +678,8 @@ résultat const = calculerCRS(200, 150, 400, 368);
             document.getElementById('crs-d2').addEventListener('input', updateCRSCalculator);
             document.getElementById('crs-t2').addEventListener('input', updateCRSCalculator);
             updateCRSCalculator();
-          });</script>
-      </div>
-    </div>
-    <div class="formula-card">
-      <h3>Score de stress d'entraînement à la course à pied (rTSS)</h3>
-      <div class="formula-content">
-        <h4>Formule complète :</h4>
-        <div class="formula-box-large">
-          <div class="formula">rTSS = (IF²) × Durée (heures) × 100</div>
-          <div class="formula">IF = NSS / FTP</div>
-          <div class="formula">NSS = Distance totale / Temps total (m/min)</div>
-        </div>
-        <div class="callout callout-info mt-lg">
-          <h4>🧪 Calculatrice interactive - Testez la formule</h4>
-          <div class="calculator-grid">
-            <div class="input-group">
-              <label for="rtss-distance">Distance (mètres) :</label>
-              <input id="rtss-distance" max="10000" min="100" step="50" type="number" value="3000" />
-            </div>
-            <div class="input-group">
-              <label for="rtss-duration">Durée (minutes) :</label>
-              <input id="rtss-duration" max="300" min="1" step="1" type="number" value="55" />
-            </div>
-            <div class="input-group">
-              <label for="rtss-css">CRS Allure (mm:ss par 100 m) :</label>
-              <input id="rtss-css" pattern="[0-9]{1,2}:[0-9]{2}" placeholder="1:33" type="text" value="1:33" />
-            </div>
-            <div class="input-group">
-              <label>FTP (calculé) :</label>
-              <input id="rtss-ftp" readonly="" type="text" value="64.5 m/min" />
-            </div>
-          </div>
-          <div class="calculator-result mt-md">
-            <div class="result-label">rTSS calculé :</div>
-            <div class="result-value" id="rtss-result">65</div>
-          </div>
-          <div class="calculation-breakdown mt-md">
-            <small>
-              <strong>Étapes de calcul :</strong><br />
-              <span id="rtss-steps">NSS = 3 000 m / 55 min = 54,5 m/min<br />FTP = 100 / (93/60) = 64,5 m/min<br />IF =
-                54,5 / 64,5 = 0,845<br />rTSS = 0,845² × (55/60) × 100 = 65</span>
-            </small>
-          </div>
-        </div>
-        <h4 class="mt-xl">Implémentation JavaScript :</h4>
-        <pre><code>fonction calculateRTSS (distance, timeMinutes, ftpMetersPerMin) {
+          });</script></div></div><div class="formula-card"><h3>Score de stress d'entraînement à la course à pied (rTSS)</h3><div class="formula-content"><h4>Formule complète :</h4><div class="formula-box-large"><div class="formula">rTSS = (IF²) × Durée (heures) × 100</div><div class="formula">IF = NSS / FTP</div><div class="formula">NSS = Distance totale / Temps total (m/min)</div></div><div class="callout callout-info mt-lg"><h4>🧪 Calculatrice interactive - Testez la formule</h4><div class="calculator-grid"><div class="input-group"><label for="rtss-distance">Distance (mètres) :</label><input id="rtss-distance" max="10000" min="100" step="50" type="number" value="3000"/></div><div class="input-group"><label for="rtss-duration">Durée (minutes) :</label><input id="rtss-duration" max="300" min="1" step="1" type="number" value="55"/></div><div class="input-group"><label for="rtss-css">CRS Allure (mm:ss par 100 m) :</label><input id="rtss-css" pattern="[0-9]{1,2}:[0-9]{2}" placeholder="1:33" type="text" value="1:33"/></div><div class="input-group"><label>FTP (calculé)  :</label><input id="rtss-ftp" readonly="" type="text" value="64.5 m/min"/></div></div><div class="calculator-result mt-md"><div class="result-label">rTSS calculé :</div><div class="result-value" id="rtss-result">65</div></div><div class="calculation-breakdown mt-md"><small><strong>Étapes de calcul :</strong><br/><span id="rtss-steps">NSS = 3 000 m / 55 min = 54,5 m/min<br/>FTP = 100 / (93/60) = 64,5 m/min<br/>PROTÉGER15X =
+                54,5 / 64,5 = 0,845<br/>PROTÉGER14X = 0,845² × (55/60) × 100 = 65</span></small></div></div><h4 class="mt-xl">Implémentation JavaScript :</h4><pre><code>fonction calculateRTSS (distance, timeMinutes, ftpMetersPerMin) {
   // Calculer la vitesse d'exécution normalisée
   const nss = distance / tempsMinutes ;
 
@@ -1409,8 +706,7 @@ fonction cssToFTP (crsPacePer100mSeconds) {
 }
 
 // Exemple : CRS de 1:33 (93 secondes)
-const FTP = cssVersFTP(93); // Retours : 64,5 m/min</code></pre>
-        <script>// Assistant de conversion de temps
+const FTP = cssVersFTP(93); // Retours : 64,5 m/min</code></pre><script>// Assistant de conversion de temps
                 fonction timeToSeconds(timeString) {
             const parts = timeString.split(':');
             return parseInt(parts[0]) * 60 + parseInt(parts[1]);
@@ -1479,50 +775,8 @@ const FTP = cssVersFTP(93); // Retours : 64,5 m/min</code></pre>
 
             // Calcul initial
             updateRTSSCalculator();
-          });</script>
-      </div>
-    </div>
-    <div class="formula-card">
-      <h3>Efficacité de fonctionnement</h3>
-      <div class="formula-content">
-        <h4>Formule:</h4>
-        <div class="formula-box-large">
-          <div class="formula">Efficacité de course = temps kilométrique (secondes) + nombre de foulées</div>
-          <div class="formula">Efficacité de course₂₅ = (Temps × 25/longueur de la piste) + (foulées × 25/longueur de la
-            piste)</div>
-        </div>
-        <div class="callout callout-info mt-lg">
-          <h4>🧪 Calculatrice interactive - Testez la formule</h4>
-          <div class="calculator-grid">
-            <div class="input-group">
-              <label for="rtss-time">Temps kilométrique (secondes) :</label>
-              <input id="rtss-time" max="120" min="10" step="1" type="number" value="20" />
-            </div>
-            <div class="input-group">
-              <label for="rtss-strides">Nombre de foulées :</label>
-              <input id="rtss-strides" max="50" min="5" step="1" type="number" value="15" />
-            </div>
-            <div class="input-group">
-              <label for="crs-track">Longueur de la piste (m) :</label>
-              <select id="crs-track">
-                <option selected="" value="25">400m</option>
-                <option value="50">400m</option>
-              </select>
-            </div>
-          </div>
-          <div class="calculator-result mt-md">
-            <div class="result-label">Score d'efficacité de fonctionnement :</div>
-            <div class="result-value" id="rtss-result">35</div>
-          </div>
-          <div class="calculation-breakdown mt-md">
-            <small>
-              <strong>Calcul:</strong><br />
-              <span id="rtss-steps">Efficacité de course = 20 s + 15 foulées = 35</span>
-            </small>
-          </div>
-        </div>
-        <h4 class="mt-xl">Implémentation JavaScript :</h4>
-        <pre><code>function calculaterTSS Calculation (timeSeconds, strideCount) {
+          });</script></div></div><div class="formula-card"><h3>Efficacité de fonctionnement</h3><div class="formula-content"><h4>Formules :</h4><div class="formula-box-large"><div class="formula">Efficacité de course = temps kilométrique (secondes) + nombre de foulées</div><div class="formula">Efficacité de course₂₅ = (Temps × 25/longueur de la piste) + (foulées × 25/longueur de la piste)
+            piste)</div></div><div class="callout callout-info mt-lg"><h4>🧪 Calculatrice interactive - Testez la formule</h4><div class="calculator-grid"><div class="input-group"><label for="rtss-time">Temps kilométrique (secondes) :</label><input id="rtss-time" max="120" min="10" step="1" type="number" value="20"/></div><div class="input-group"><label for="rtss-strides">Nombre de foulées :</label><input id="rtss-strides" max="50" min="5" step="1" type="number" value="15"/></div><div class="input-group"><label for="crs-track">Longueur de la piste (m) :</label><select id="crs-track"><option selected="" value="25">400m</option><option value="50">400m</option></select></div></div><div class="calculator-result mt-md"><div class="result-label">Score d'efficacité de fonctionnement :</div><div class="result-value" id="rtss-result">35</div></div><div class="calculation-breakdown mt-md"><small><strong>Calculer :</strong><br/><span id="rtss-steps">Efficacité de course = 20 s + 15 foulées = 35</span></small></div></div><h4 class="mt-xl">Implémentation JavaScript :</h4><pre><code>function calculaterTSS Calculation (timeSeconds, strideCount) {
   retourner timeSeconds + strideCount ;
 }
 
@@ -1537,8 +791,7 @@ const rtss = calculer l'efficacité de fonctionnement (20, 15);
 // Renvoie : 35
 
 const rtss400m = calculer l'efficacité de fonctionnement normale (40, 30, 50);
-// Renvoie : 35 (normalisé à 25 m)</code></pre>
-        <script>fonction updaterTSS CalculationCalculator() {
+// Renvoie : 35 (normalisé à 25 m)</code></pre><script>fonction updaterTSS CalculationCalculator() {
                     essayez {
               const time = parseFloat(document.getElementById('rtss-time').value);
               const strides = parseFloat(document.getElementById('rtss-strides').value);
@@ -1571,54 +824,13 @@ const rtss400m = calculer l'efficacité de fonctionnement normale (40, 30, 50);
             document.getElementById('rtss-strides').addEventListener('input', updaterTSS CalculationCalculator);
             document.getElementById('crs-track').addEventListener('change', updaterTSS CalculationCalculator);
                     updaterTSS CalculationCalculator();
-          });</script>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="section">
-  <div class="container">
-    <h2>Mécanique de foulée</h2>
-    <div class="formula-card">
-      <h3>Fréquence de foulée (SR)</h3>
-      <div class="formula-content">
-        <h4>Formule:</h4>
-        <div class="formula-box-large">
-          <div class="formula">SR = 60 / Temps de cycle (secondes)</div>
-          <div class="formula">SR = (Nombre de foulées / Temps en secondes) × 60</div>
-        </div>
-        <div class="callout callout-info mt-lg">
-          <h4>🧪 Calculatrice interactive - Testez la formule</h4>
-          <div class="calculator-grid">
-            <div class="input-group">
-              <label for="sr-strides">Nombre de foulées :</label>
-              <input id="sr-strides" max="100" min="1" step="1" type="number" value="30" />
-            </div>
-            <div class="input-group">
-              <label for="sr-time">Temps (secondes) :</label>
-              <input id="sr-time" max="180" min="1" step="1" type="number" value="25" />
-            </div>
-          </div>
-          <div class="calculator-result mt-md">
-            <div class="result-label">Fréquence de foulée (SPM) :</div>
-            <div class="result-value" id="sr-result">72</div>
-          </div>
-          <div class="calculation-breakdown mt-md">
-            <small>
-              <strong>Calcul:</strong><br />
-              <span id="sr-steps">SR = (30/25) × 60 = 72 SPM</span>
-            </small>
-          </div>
-        </div>
-        <h4 class="mt-xl">Implémentation JavaScript :</h4>
-        <pre><code>fonction calculateStrideRate (strideCount, timeSeconds) {
+          });</script></div></div></div></section><section class="section"><div class="container"><h2>En cours d'exécution Mécanique de foulée</h2><div class="formula-card"><h3>Fréquence de foulée (SR)</h3><div class="formula-content"><h4>Formules :</h4><div class="formula-box-large"><div class="formula">SR = 60 / Temps de cycle (secondes)</div><div class="formula">SR = (Nombre de foulées / Temps en secondes) × 60</div></div><div class="callout callout-info mt-lg"><h4>🧪 Calculatrice interactive - Testez la formule</h4><div class="calculator-grid"><div class="input-group"><label for="sr-strides">Nombre de foulées :</label><input id="sr-strides" max="100" min="1" step="1" type="number" value="30"/></div><div class="input-group"><label for="sr-time">Temps (secondes) :</label><input id="sr-time" max="180" min="1" step="1" type="number" value="25"/></div></div><div class="calculator-result mt-md"><div class="result-label">Fréquence de foulée (SPM) :</div><div class="result-value" id="sr-result">72</div></div><div class="calculation-breakdown mt-md"><small><strong>Calculer :</strong><br/><span id="sr-steps">SR = (30/25) × 60 = 72 SPM</span></small></div></div><h4 class="mt-xl">Implémentation JavaScript :</h4><pre><code>fonction calculateStrideRate (strideCount, timeSeconds) {
   return (strideCount / timeSeconds) * 60 ;
 }
 
 // Exemple :
 const sr = calculateStrideRate(30, 25);
-// Renvoie : 72 SPM</code></pre>
-        <script>fonction updateSRCalculator() {
+// Renvoie : 72 SPM</code></pre><script>fonction updateSRCalculator() {
                     essayez {
               const strides = parseFloat(document.getElementById('sr-strides').value);
               const time = parseFloat(document.getElementById('sr-time').value);
@@ -1639,19 +851,7 @@ const sr = calculateStrideRate(30, 25);
             document.getElementById('sr-strides').addEventListener('input', updateSRCalculator);
             document.getElementById('sr-time').addEventListener('input', updateSRCalculator);
             updateSRCalculator();
-          });</script>
-      </div>
-    </div>
-    <div class="formula-card">
-      <h3>Distance par foulée (DPS)</h3>
-      <div class="formula-content">
-        <h4>Formule:</h4>
-        <div class="formula-box-large">
-          <div class="formula">DPS = Distance / Nombre de foulées</div>
-          <div class="formula">DPS = Distance / (SR / 60)</div>
-        </div>
-        <h4>Implémentation JavaScript :</h4>
-        <pre><code>fonction calculateDPS (distance, strideCount, pushoffDistance = 0) {
+          });</script></div></div><div class="formula-card"><h3>Distance par foulée (DPS)</h3><div class="formula-content"><h4>Formules :</h4><div class="formula-box-large"><div class="formula">DPS = Distance / Nombre de foulées</div><div class="formula">DPS = Distance / (SR / 60)</div></div><h4>Implémentation JavaScript :</h4><pre><code>fonction calculateDPS (distance, strideCount, pushoffDistance = 0) {
   const effectiveDistance = distance - pushoffDistance ;
   retourner effectiveDistance / strideCount ;
 }
@@ -1662,59 +862,19 @@ const dps = calculerDPS(25, 12, 5);
 
 // Pour plusieurs segments :
 const dps100m = calculerDPS(100, 48, 4 * 5);
-// Retours : 1,67 m/foulée (4 segments × poussée de 5 m)</code></pre>
-      </div>
-    </div>
-    <div class="formula-card">
-      <h3>Vitesse de SR et DPS</h3>
-      <div class="formula-content">
-        <h4>Formule:</h4>
-        <div class="formula-box-large">
-          <div class="formula">Vitesse (m/s) = (SR / 60) × DPS</div>
-        </div>
-        <h4>Implémentation JavaScript :</h4>
-        <pre><code>fonction calculerVelocity(strideRate, dps) {
+// Retours : 1,67 m/foulée (4 segments × poussée de 5 m)</code></pre></div></div><div class="formula-card"><h3>Vitesse de SR et DPS</h3><div class="formula-content"><h4>Formules :</h4><div class="formula-box-large"><div class="formula">Vitesse (m/s) = (SR / 60) × DPS</div></div><h4>Implémentation JavaScript :</h4><pre><code>fonction calculerVelocity(strideRate, dps) {
   retour (strideRate / 60) * dps ;
 }
 
 // Exemple :
 vitesse const = calculateVelocity(70, 1.6);
-// Retours : 1,87 m/s</code></pre>
-      </div>
-    </div>
-    <div class="formula-card">
-      <h3>Indice de foulée (SI)</h3>
-      <div class="formula-content">
-        <h4>Formule:</h4>
-        <div class="formula-box-large">
-          <div class="formula">SI = Vitesse (m/s) × DPS (m/foulée)</div>
-        </div>
-        <h4>Implémentation JavaScript :</h4>
-        <pre><code>fonction calculateStrideIndex (vitesse, dps) {
+// Retours : 1,87 m/s</code></pre></div></div><div class="formula-card"><h3>Indice de faute (SI)</h3><div class="formula-content"><h4>Formules :</h4><div class="formula-box-large"><div class="formula">SI = Vitesse (m/s) × DPS (m/foulée)</div></div><h4>Implémentation JavaScript :</h4><pre><code>fonction calculateStrideIndex (vitesse, dps) {
   vitesse de retour * dps ;
 }
 
 // Exemple :
 const si = calculateStrideIndex(1.5, 1.7);
-// Renvoie : 2,55</code></pre>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="section section-alt">
-  <div class="container">
-    <h2>Tableau de gestion des performances (PMC)</h2>
-    <div class="formula-card">
-      <h3>CTL, ATL, TSB Calculs</h3>
-      <div class="formula-content">
-        <h4>Formules :</h4>
-        <div class="formula-box-large">
-          <div class="formula">CTL aujourd'hui = CTL hier + (TSS aujourd'hui - CTL hier) × (1/42)</div>
-          <div class="formula">ATL aujourd'hui = ATL hier + (TSS aujourd'hui - ATL hier) × (1/7)</div>
-          <div class="formula">TSB = CTL hier - ATL hier</div>
-        </div>
-        <h4>Implémentation JavaScript :</h4>
-        <pre><code>fonction updateCTL (previousCTL, aujourd'huiTSS) {
+// Renvoie : 2,55</code></pre></div></div><div class="mt-xl text-center"><a class="btn btn-secondary" href="/fr/efficiency/">En savoir plus sur les mesures d'efficacité de fonctionnement →</a></div></div></section><section class="section section-alt"><div class="container"><h2>Tableau de gestion des performances (PMC) pour courir</h2><div class="formula-card"><h3>Calculs CTL, ATL, TSB</h3><div class="formula-content"><h4>Formules :</h4><div class="formula-box-large"><div class="formula">CTL aujourd'hui = CTL hier + (TSS aujourd'hui - CTL hier) × (1/42)</div><div class="formula">ATL aujourd'hui = ATL hier + (TSS aujourd'hui - ATL hier) × (1/7)</div><div class="formula">TSB = CTL ici - ATL ici</div></div><h4>Implémentation JavaScript :</h4><pre><code>fonction updateCTL (previousCTL, aujourd'huiTSS) {
   return previousCTL + (aujourd'huiTSS - previousCTL) * (1/42);
 }
 
@@ -1757,19 +917,7 @@ const entraînements = [
 ];
 
 const PMC = calculatePMC (entraînements);
-// Renvoie un tableau avec CTL, ATL, TSB pour chaque jour</code></pre>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="section">
-  <div class="container">
-    <h2>Calculs avancés</h2>
-    <div class="formula-card">
-      <h3>CRS à partir de plusieurs distances (méthode de régression)</h3>
-      <div class="formula-content">
-        <h4>Implémentation JavaScript :</h4>
-        <pre><code>fonction calculerCRSRegression (distances, temps) {
+// Renvoie un tableau avec CTL, ATL, TSB pour chaque jour</code></pre></div></div><div class="mt-xl text-center"><a class="btn btn-primary" href="/fr/training-load/">Lisez notre guide complet de charge de formation →</a></div></div></section><section class="section"><div class="container"><h2>Calculs avancés</h2><div class="formula-card"><h3>CRS à partir de plusieurs distances (méthode de régression)</h3><div class="formula-content"><h4>Implémentation JavaScript :</h4><pre><code>fonction calculerCRSRegression (distances, temps) {
   // Régression linéaire : distance = a + b*temps
   const n = distances.longueur ;
   const sumX = times.reduce((a, b) =&gt; a + b, 0);
@@ -1790,14 +938,7 @@ const PMC = calculatePMC (entraînements);
 distances constantes = [100, 200, 400, 800] ;
 const fois = [65, 150, 340, 720] ; // en secondes
 résultat const = calculateCRSRegression (distances, temps);
-// Renvoie : { css : 1,18, capacité_anaérobie : 15,3 }</code></pre>
-      </div>
-    </div>
-    <div class="formula-card">
-      <h3>Facteur d'intensité du rythme</h3>
-      <div class="formula-content">
-        <h4>Implémentation JavaScript :</h4>
-        <pre><code>fonction calculateIntensityFactor (actualPace100m, seuilPace100m) {
+// Renvoie : { css : 1,18, capacité_anaérobie : 15,3 }</code></pre></div></div><div class="formula-card"><h3>Facteur d'intensité du rythme</h3><div class="formula-content"><h4>Implémentation JavaScript :</h4><pre><code>fonction calculateIntensityFactor (actualPace100m, seuilPace100m) {
   // Convertit l'allure en vitesse (m/s)
   const actualSpeed = 100 / actualPace100m ;
   const seuilVitesse = 100 / seuilPace100m ;
@@ -1806,14 +947,7 @@ résultat const = calculateCRSRegression (distances, temps);
 
 // Exemple :
 const if_value = calculateIntensityFactor(110, 93);
-// Renvoie : 0,845 (à 84,5 % du seuil)</code></pre>
-      </div>
-    </div>
-    <div class="formula-card">
-      <h3>Analyse de la cohérence du rythme</h3>
-      <div class="formula-content">
-        <h4>Implémentation JavaScript :</h4>
-        <pre><code>fonction analysePaceConsistency (segments) {
+// Renvoie : 0,845 (à 84,5 % du seuil)</code></pre></div></div><div class="formula-card"><h3>Analyse de la cohérence du rythme</h3><div class="formula-content"><h4>Implémentation JavaScript :</h4><pre><code>fonction analysePaceConsistency (segments) {
   const Paces = segments.map(kilometer =&gt; kilometer.distance / kilometer.time);
   const avgPace = Paces.reduce((a, b) =&gt; a + b) / Paces.length;
 
@@ -1840,14 +974,7 @@ segments const = [
   //...
 ];
 const analyse = analysePaceConsistency(segments);
-// Renvoie : { avgPace : 1,41, stdDev : 0,02, coefficientOfVariation : 1,4, cohérence : "Excellent" }</code></pre>
-      </div>
-    </div>
-    <div class="formula-card">
-      <h3>Détection de la fatigue à partir du nombre de foulées</h3>
-      <div class="formula-content">
-        <h4>Implémentation JavaScript :</h4>
-        <pre><code>fonction détecterFatigue (segments) {
+// Renvoie : { avgPace : 1,41, stdDev : 0,02, coefficientOfVariation : 1,4, cohérence : "Excellent" }</code></pre></div></div><div class="formula-card"><h3>Détection de la fatigue à partir du nombre de foulées</h3><div class="formula-content"><h4>Implémentation JavaScript :</h4><pre><code>fonction détecterFatigue (segments) {
   const firstThird = segments.slice(0, Math.floor(segments.length/3));
   const lastThird = segments.slice(-Math.floor(segments.length/3));
 
@@ -1875,19 +1002,7 @@ segments const = [
   { strideCount : 17 }, { strideCount : 18 }, { strideCount : 18 }
 ];
 const fatigue = détecterFatigue(segments);
-// Renvoie : { firstThirdAvg : 14,3, lastThirdAvg : 17,7, percentIncrease : 23,8, fatigueLevel : "Severe" }</code></pre>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="section section-alt">
-  <div class="container">
-    <h2>Validation des données</h2>
-    <div class="formula-card">
-      <h3>Contrôles de qualité des données d'entraînement</h3>
-      <div class="formula-content">
-        <h4>Implémentation JavaScript :</h4>
-        <pre><code>fonction validateWorkoutData (entraînement) {
+// Renvoie : { firstThirdAvg : 14,3, lastThirdAvg : 17,7, percentIncrease : 23,8, fatigueLevel : "Severe" }</code></pre></div></div></div></section><section class="section section-alt"><div class="container"><h2>Validation des données</h2><div class="formula-card"><h3>Contrôles de qualité des données d'entraînement</h3><div class="formula-content"><h4>Implémentation JavaScript :</h4><pre><code>fonction validateWorkoutData (entraînement) {
   problèmes const = [];
 
   // Vérifiez les plages de rythme raisonnables (1h00-5h00 par 100 m)
@@ -1933,19 +1048,7 @@ const entraînement = {
   segments : [/* données kilométriques */]
 } ;
 const validation = validateWorkoutData(workout);
-// Renvoie : { isValid : true, issues : [] }</code></pre>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="section">
-  <div class="container container-narrow">
-    <h2>Fonctions d'assistance</h2>
-    <div class="formula-card">
-      <h3>Utilitaires de conversion de temps</h3>
-      <div class="formula-content">
-        <h4>Implémentation JavaScript :</h4>
-        <pre><code>// Convertit mm:ss en secondes
+// Renvoie : { isValid : true, issues : [] }</code></pre></div></div></div></section><section class="section"><div class="container container-narrow"><h2>Fonctions d'assistance</h2><div class="formula-card"><h3>Utilitaires de conversion de temps</h3><div class="formula-content"><h4>Implémentation JavaScript :</h4><pre><code>// Convertit mm:ss en secondes
 fonction timeToSeconds (timeString) {
   const parts = timeString.split(':');
   return parseInt(parts[0]) * 60 + parseInt(parts[1]);
@@ -1969,398 +1072,180 @@ fonction secondesToTimeDetailed(secondes) {
 // Exemples :
 timeToSeconds("1:33"); // Renvoie : 93
 secondesVersTemps(93); // Renvoie : "1:33"
-secondesToTimeDetailed(3665); // Renvoie : "1:01:05"</code></pre>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="section section-alt">
-  <div class="container container-narrow text-center">
-    <h2>Ressources de mise en œuvre</h2>
-    <p class="lead">Toutes les formules de cette page sont prêtes pour la production et validées par la littérature
+secondesToTimeDetailed(3665); // Renvoie : "1:01:05"</code></pre></div></div></div></section><section class="section section-alt"><div class="container container-narrow text-center"><h2>Ressources de mise en œuvre</h2><p class="lead">Toutes les formules de cette page sont prêtes pour la production et validées par la littérature
       scientifique. Utilisez-les pour des outils d'analyse personnalisés, une vérification ou une compréhension plus
-      approfondie des calculs de performances en cours d'exécution.</p>
-    <div class="callout callout-tip">
-      <h3>💡 Meilleures pratiques</h3>
-      <ul class="text-left">
-        <li><strong>Validez les entrées :</strong>Vérifiez les plages raisonnables avant de calculer</li>
-        <li><strong>Gérer les cas extrêmes :</strong>Division par zéro, valeurs négatives, données nulles</li>
-        <li><strong>Arrondissez convenablement :</strong>CTL/ATL/TSB à 1 décimale, rTSS à un entier</li>
-        <li><strong>Précision du magasin :</strong>Conserver une précision totale dans la base de données, arrondir pour
-          l'affichage</li>
-        <li><strong>Testez minutieusement :</strong>Utiliser des données connues pour vérifier les calculs</li>
-      </ul>
-    </div>
-    <div class="mt-xl">
-      <a class="btn btn-primary btn-large" href="/fr/">Retour à la maison</a>
-      <a class="btn btn-secondary" href="/fr/research/">Fondation scientifique</a>
-    </div>
-  </div>
-</section>
-    
-  </main>
-
-  
-  <footer class="site-footer">
-    <div class="container">
-        
-        <div class="footer-top">
-            <div class="footer-brand-section">
-                
-                <h2>Run Analytics</h2>
-                <p>Track Critical Running Speed, Training Stress Score, and performance metrics with Run Analytics. Science-based iOS app for runners, triathletes &amp; coaches. 7-day free trial.</p>
-                
-            </div>
-
-            
-            <div class="footer-download">
-                <h3 class="footer-heading">Télécharger</h3>
-                <div class="footer-badges">
-                    
-                    <a href="https://apps.apple.com/us/app/run-analytics/id6754524015" target="_blank" rel="noopener"
-                        aria-label="Télécharger dans l&#39;App Store">
-                        <img src="../../assets/images/badge-app-store.svg"
+      approfondie des calculs de performances en cours d'exécution.</p><div class="callout callout-tip"><h3>💡 Meilleures pratiques</h3><ul class="text-left"><li><strong>Validez les entrées :</strong>Vérifiez les plages raisonnables avant de calculer</li><li><strong>Gérer les cas extrêmes :</strong>Division par zéro, valeurs négatives, données nulles</li><li><strong>Arrondissez-vous :</strong>CTL/ATL/TSB à 1 décimale, rTSS à un entier</li><li><strong>Précision du magasin :</strong>Conserver une précision totale dans la base de données, arrondir pour
+          l'affichage</li><li><strong>Testez minutieusement :</strong>Utiliser des données connues pour vérifier les calculs</li></ul></div><div class="mt-xl"><a class="btn btn-primary btn-large" href="/fr/">Retour à la maison</a><a class="btn btn-secondary" href="/fr/research/">Fondation scientifique</a></div></div></section></main><footer class="site-footer"><div class="container"><div class="footer-top"><div class="footer-brand-section"><h2>Run Analytics</h2><p>Track Critical Running Speed, Training Stress Score, and performance metrics with Run Analytics. Science-based iOS app for runners, triathletes &amp; coaches. 7-day free trial.</p></div><div class="footer-download"><h3 class="footer-heading">Télécharger</h3><div class="footer-badges"><a href="https://apps.apple.com/us/app/run-analytics/id6754524015" target="_blank" rel="noopener"
+                        aria-label="Télécharger dans l&#39;App Store"><img src="../../assets/images/badge-app-store.svg"
                             alt="Télécharger dans l&#39;App Store" width="135"
-                            height="40" loading="lazy">
-                    </a>
-                    
-                    
-                    <a href="https://play.google.com/store/apps/details?id=com.arnohealth.runanalytics" target="_blank" rel="noopener"
-                        aria-label="DISPONIBLE SUR Google Play">
-                        <img src="../../assets/images/badge-google-play.svg"
+                            height="40" loading="lazy"></a><a href="https://play.google.com/store/apps/details?id=com.arnohealth.runanalytics" target="_blank" rel="noopener"
+                        aria-label="DISPONIBLE SUR Google Play"><img src="../../assets/images/badge-google-play.svg"
                             alt="DISPONIBLE SUR Google Play" width="135"
-                            height="40" loading="lazy">
-                    </a>
-                    
-                </div>
-            </div>
-            
-        </div>
-
-        
-        <div class="footer-languages">
-            <h3 class="footer-heading">Disponible en</h3>
-            <div class="lang-grid">
-                
-                <a href="/af/" class="lang-link"
+                            height="40" loading="lazy"></a></div></div></div><div class="footer-languages"><h3 class="footer-heading">Disponible en</h3><div class="lang-grid"><a href="/af/" class="lang-link"
                     hreflang="af" >
                     Afrikaans
-                </a>
-                
-                <a href="/am/" class="lang-link"
+                </a><a href="/am/" class="lang-link"
                     hreflang="am" >
                     አማርኛ
-                </a>
-                
-                <a href="/ar/" class="lang-link"
+                </a><a href="/ar/" class="lang-link"
                     hreflang="ar" dir="rtl" >
                     العربية
-                </a>
-                
-                <a href="/bg/" class="lang-link"
+                </a><a href="/bg/" class="lang-link"
                     hreflang="bg" >
                     Български
-                </a>
-                
-                <a href="/bn/" class="lang-link"
+                </a><a href="/bn/" class="lang-link"
                     hreflang="bn" >
                     বাংলা
-                </a>
-                
-                <a href="/ca/" class="lang-link"
+                </a><a href="/ca/" class="lang-link"
                     hreflang="ca" >
                     Català
-                </a>
-                
-                <a href="/cs/" class="lang-link"
+                </a><a href="/cs/" class="lang-link"
                     hreflang="cs" >
                     Čeština
-                </a>
-                
-                <a href="/da/" class="lang-link"
+                </a><a href="/da/" class="lang-link"
                     hreflang="da" >
                     Dansk
-                </a>
-                
-                <a href="/de/" class="lang-link"
+                </a><a href="/de/" class="lang-link"
                     hreflang="de" >
                     Deutsch
-                </a>
-                
-                <a href="/el/" class="lang-link"
+                </a><a href="/el/" class="lang-link"
                     hreflang="el" >
                     Ελληνικά
-                </a>
-                
-                <a href="/en/" class="lang-link"
+                </a><a href="/en/" class="lang-link"
                     hreflang="en" >
                     English
-                </a>
-                
-                <a href="/es/" class="lang-link"
+                </a><a href="/es/" class="lang-link"
                     hreflang="es" >
                     Español
-                </a>
-                
-                <a href="/et/" class="lang-link"
+                </a><a href="/et/" class="lang-link"
                     hreflang="et" >
                     Eesti
-                </a>
-                
-                <a href="/fa/" class="lang-link"
+                </a><a href="/fa/" class="lang-link"
                     hreflang="fa" dir="rtl" >
                     فارسی
-                </a>
-                
-                <a href="/fi/" class="lang-link"
+                </a><a href="/fi/" class="lang-link"
                     hreflang="fi" >
                     Suomi
-                </a>
-                
-                <a href="/fr/" class="lang-link active"
+                </a><a href="/fr/" class="lang-link active"
                     hreflang="fr" >
                     Français
-                </a>
-                
-                <a href="/gu/" class="lang-link"
+                </a><a href="/gu/" class="lang-link"
                     hreflang="gu" >
                     ગુજરાતી
-                </a>
-                
-                <a href="/ha/" class="lang-link"
+                </a><a href="/ha/" class="lang-link"
                     hreflang="ha" >
                     Hausa
-                </a>
-                
-                <a href="/he/" class="lang-link"
+                </a><a href="/he/" class="lang-link"
                     hreflang="he" dir="rtl" >
                     עברית
-                </a>
-                
-                <a href="/hi/" class="lang-link"
+                </a><a href="/hi/" class="lang-link"
                     hreflang="hi" >
                     हिन्दी
-                </a>
-                
-                <a href="/hr/" class="lang-link"
+                </a><a href="/hr/" class="lang-link"
                     hreflang="hr" >
                     Hrvatski
-                </a>
-                
-                <a href="/hu/" class="lang-link"
+                </a><a href="/hu/" class="lang-link"
                     hreflang="hu" >
                     Magyar
-                </a>
-                
-                <a href="/id/" class="lang-link"
+                </a><a href="/id/" class="lang-link"
                     hreflang="id" >
                     Bahasa Indonesia
-                </a>
-                
-                <a href="/is/" class="lang-link"
+                </a><a href="/is/" class="lang-link"
                     hreflang="is" >
                     Íslenska
-                </a>
-                
-                <a href="/it/" class="lang-link"
+                </a><a href="/it/" class="lang-link"
                     hreflang="it" >
                     Italiano
-                </a>
-                
-                <a href="/ja/" class="lang-link"
+                </a><a href="/ja/" class="lang-link"
                     hreflang="ja" >
                     日本語
-                </a>
-                
-                <a href="/km/" class="lang-link"
+                </a><a href="/km/" class="lang-link"
                     hreflang="km" >
                     ភាសាខ្មែរ
-                </a>
-                
-                <a href="/kn/" class="lang-link"
+                </a><a href="/kn/" class="lang-link"
                     hreflang="kn" >
                     ಕನ್ನಡ
-                </a>
-                
-                <a href="/ko/" class="lang-link"
+                </a><a href="/ko/" class="lang-link"
                     hreflang="ko" >
                     한국어
-                </a>
-                
-                <a href="/lt/" class="lang-link"
+                </a><a href="/lt/" class="lang-link"
                     hreflang="lt" >
                     Lietuvių
-                </a>
-                
-                <a href="/lv/" class="lang-link"
+                </a><a href="/lv/" class="lang-link"
                     hreflang="lv" >
                     Latviešu
-                </a>
-                
-                <a href="/ms/" class="lang-link"
+                </a><a href="/ms/" class="lang-link"
                     hreflang="ms" >
                     Bahasa Melayu
-                </a>
-                
-                <a href="/my/" class="lang-link"
+                </a><a href="/my/" class="lang-link"
                     hreflang="my" >
                     မြန်မာစာ
-                </a>
-                
-                <a href="/nb/" class="lang-link"
+                </a><a href="/nb/" class="lang-link"
                     hreflang="nb" >
                     Norsk Bokmål
-                </a>
-                
-                <a href="/nl/" class="lang-link"
+                </a><a href="/nl/" class="lang-link"
                     hreflang="nl" >
                     Nederlands
-                </a>
-                
-                <a href="/pl/" class="lang-link"
+                </a><a href="/pl/" class="lang-link"
                     hreflang="pl" >
                     Polski
-                </a>
-                
-                <a href="/pt/" class="lang-link"
+                </a><a href="/pt/" class="lang-link"
                     hreflang="pt" >
                     Português
-                </a>
-                
-                <a href="/pt-br/" class="lang-link"
+                </a><a href="/pt-br/" class="lang-link"
                     hreflang="pt-br" >
                     Português (Brasil)
-                </a>
-                
-                <a href="/ro/" class="lang-link"
+                </a><a href="/ro/" class="lang-link"
                     hreflang="ro" >
                     Română
-                </a>
-                
-                <a href="/ru/" class="lang-link"
+                </a><a href="/ru/" class="lang-link"
                     hreflang="ru" >
                     Русский
-                </a>
-                
-                <a href="/sk/" class="lang-link"
+                </a><a href="/sk/" class="lang-link"
                     hreflang="sk" >
                     Slovenčina
-                </a>
-                
-                <a href="/sl/" class="lang-link"
+                </a><a href="/sl/" class="lang-link"
                     hreflang="sl" >
                     Slovenščina
-                </a>
-                
-                <a href="/sr/" class="lang-link"
+                </a><a href="/sr/" class="lang-link"
                     hreflang="sr" >
                     Srpski
-                </a>
-                
-                <a href="/sv/" class="lang-link"
+                </a><a href="/sv/" class="lang-link"
                     hreflang="sv" >
                     Svenska
-                </a>
-                
-                <a href="/sw/" class="lang-link"
+                </a><a href="/sw/" class="lang-link"
                     hreflang="sw" >
                     Kiswahili
-                </a>
-                
-                <a href="/ta/" class="lang-link"
+                </a><a href="/ta/" class="lang-link"
                     hreflang="ta" >
                     தமிழ்
-                </a>
-                
-                <a href="/te/" class="lang-link"
+                </a><a href="/te/" class="lang-link"
                     hreflang="te" >
                     తెలుగు
-                </a>
-                
-                <a href="/th/" class="lang-link"
+                </a><a href="/th/" class="lang-link"
                     hreflang="th" >
                     ไทย
-                </a>
-                
-                <a href="/tl/" class="lang-link"
+                </a><a href="/tl/" class="lang-link"
                     hreflang="tl" >
                     Tagalog
-                </a>
-                
-                <a href="/tr/" class="lang-link"
+                </a><a href="/tr/" class="lang-link"
                     hreflang="tr" >
                     Türkçe
-                </a>
-                
-                <a href="/uk/" class="lang-link"
+                </a><a href="/uk/" class="lang-link"
                     hreflang="uk" >
                     Українська
-                </a>
-                
-                <a href="/ur/" class="lang-link"
+                </a><a href="/ur/" class="lang-link"
                     hreflang="ur" dir="rtl" >
                     اردو
-                </a>
-                
-                <a href="/vi/" class="lang-link"
+                </a><a href="/vi/" class="lang-link"
                     hreflang="vi" >
                     Tiếng Việt
-                </a>
-                
-                <a href="/yo/" class="lang-link"
+                </a><a href="/yo/" class="lang-link"
                     hreflang="yo" >
                     Yorùbá
-                </a>
-                
-                <a href="/zh/" class="lang-link"
+                </a><a href="/zh/" class="lang-link"
                     hreflang="zh" >
                     中文
-                </a>
-                
-            </div>
-        </div>
-
-        <div class="footer-divider"></div>
-
-        
-        <div class="footer-bottom">
-            <p class="copyright">
+                </a></div></div><div class="footer-divider"></div><div class="footer-bottom"><p class="copyright">
                 &copy; 2026 Run Analytics. Tous droits réservés
-            </p>
-            <ul class="footer-legal">
-                <li><a href="/fr/privacy/">Confidentialité</a></li>
-                <li><a href="/fr/terms/">Conditions</a></li>
-            </ul>
-        </div>
-    </div>
-</footer>
-
-  
-  <div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="Cookie consent" aria-live="polite">
-    <div class="cookie-banner-content">
-        <div>
-            <p>Ce site utilise des cookies pour améliorer votre expérience.</p>
-            <a href="/fr/privacy/" class="text-sm">En savoir plus</a>
-        </div>
-        <div class="cookie-banner-actions">
-            <button id="cookie-decline" class="btn btn-secondary btn-small">Refuser</button>
-            <button id="cookie-accept" class="btn btn-primary btn-small">Accepter</button>
-        </div>
-    </div>
-</div>
-
-  
-  <script src="../../assets/js/core.min.js?v=8aef43d1" defer></script>
-  <script src="../../assets/js/search.min.js?v=8aef43d1" defer></script>
-  
-
-  
-  
-  <script src="../../assets/js/analytics.min.js" data-ga-id="G-Y138VB4523" defer></script>
-  
-
-  
-  <script>if ('serviceWorker' in navigator) { navigator.serviceWorker.register('../../sw.js') }</script>
-</body>
-
-</html>
+            </p><ul class="footer-legal"><li><a href="/fr/privacy/">Confidentialité</a></li><li><a href="/fr/terms/">Conditions</a></li></ul></div></div></footer><div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="Cookie consent" aria-live="polite"><div class="cookie-banner-content"><div><p>Ce site utilise des cookies pour améliorer votre expérience.</p><a href="/fr/privacy/" class="text-sm">En savoir plus</a></div><div class="cookie-banner-actions"><button id="cookie-decline" class="btn btn-secondary btn-small">Refuser</button><button id="cookie-accept" class="btn btn-primary btn-small">Accepter</button></div></div></div><script src="../../assets/js/core.min.js?v=e899af207631" defer></script><script src="../../assets/js/search.min.js?v=e899af207631" defer></script><script src="../../assets/js/analytics.min.js" data-ga-id="G-Y138VB4523" defer></script><script>if ('serviceWorker' in navigator) { navigator.serviceWorker.register('../../sw.js') }</script></body></html>

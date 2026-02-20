@@ -1,242 +1,61 @@
-<!DOCTYPE html>
-<html lang="sk" dir="ltr">
-
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
-    rel="stylesheet">
-
-  
-  <title>Run Analytics: Aplikacja do Śledzenia Wydajności Pływania na iOS</title>
-  <meta name="description" content="Śledź metryki pływania, obliczaj CRS i rTSS, analizuj obciążenie treningowe z profesjonalną analityką. Darmowe kalkulatory dla zawodników i triatlonistów. 7-dniowy...">
-  <meta name="author" content="AnalyticsZone Team">
-
-  
-  
-  <meta name="keywords" content="aplikacja do śledzenia pływania, analityka pływania, kalkulator CRS, wydajność pływania, rTSS">
-  
-
-  
-  <link rel="canonical" href="https://run.analyticszone.app/sk/">
-
-  
-  
-
-  
-  
-
-  
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://run.analyticszone.app/sk/">
-  <meta property="og:title" content="Run Analytics: Aplikacja do Śledzenia Wydajności Pływania na iOS">
-  <meta property="og:description" content="Śledź metryki pływania, obliczaj CRS i rTSS, analizuj obciążenie treningowe z profesjonalną analityką. Darmowe kalkulatory dla zawodników i triatlonistów. 7-dniowy...">
-  <meta property="og:image" content="https://run.analyticszone.app/assets/images/og-image.svg">
-  <meta property="og:locale" content="sk_SK">
-  <meta property="og:site_name" content="Run Analytics">
-
-  
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:url" content="https://run.analyticszone.app/sk/">
-  <meta name="twitter:title" content="Run Analytics: Aplikacja do Śledzenia Wydajności Pływania na iOS">
-  <meta name="twitter:description" content="Śledź metryki pływania, obliczaj CRS i rTSS, analizuj obciążenie treningowe z profesjonalną analityką. Darmowe kalkulatory dla zawodników i triatlonistów. 7-dniowy...">
-  <meta name="twitter:image" content="https://run.analyticszone.app/assets/images/og-image.svg">
-  
-  <meta name="twitter:site" content="@runanalytics">
-  <meta name="twitter:creator" content="@runanalytics">
-  
-
-  
-  
-  <link rel="alternate" hreflang="af"
-    href="https://run.analyticszone.app/af/">
-  
-  <link rel="alternate" hreflang="am"
-    href="https://run.analyticszone.app/am/">
-  
-  <link rel="alternate" hreflang="ar"
-    href="https://run.analyticszone.app/ar/">
-  
-  <link rel="alternate" hreflang="bg"
-    href="https://run.analyticszone.app/bg/">
-  
-  <link rel="alternate" hreflang="bn"
-    href="https://run.analyticszone.app/bn/">
-  
-  <link rel="alternate" hreflang="ca"
-    href="https://run.analyticszone.app/ca/">
-  
-  <link rel="alternate" hreflang="cs"
-    href="https://run.analyticszone.app/cs/">
-  
-  <link rel="alternate" hreflang="da"
-    href="https://run.analyticszone.app/da/">
-  
-  <link rel="alternate" hreflang="de"
-    href="https://run.analyticszone.app/de/">
-  
-  <link rel="alternate" hreflang="el"
-    href="https://run.analyticszone.app/el/">
-  
-  <link rel="alternate" hreflang="en"
-    href="https://run.analyticszone.app/en/">
-  
-  <link rel="alternate" hreflang="es"
-    href="https://run.analyticszone.app/es/">
-  
-  <link rel="alternate" hreflang="et"
-    href="https://run.analyticszone.app/et/">
-  
-  <link rel="alternate" hreflang="fa"
-    href="https://run.analyticszone.app/fa/">
-  
-  <link rel="alternate" hreflang="fi"
-    href="https://run.analyticszone.app/fi/">
-  
-  <link rel="alternate" hreflang="fr"
-    href="https://run.analyticszone.app/fr/">
-  
-  <link rel="alternate" hreflang="gu"
-    href="https://run.analyticszone.app/gu/">
-  
-  <link rel="alternate" hreflang="ha"
-    href="https://run.analyticszone.app/ha/">
-  
-  <link rel="alternate" hreflang="he"
-    href="https://run.analyticszone.app/he/">
-  
-  <link rel="alternate" hreflang="hi"
-    href="https://run.analyticszone.app/hi/">
-  
-  <link rel="alternate" hreflang="hr"
-    href="https://run.analyticszone.app/hr/">
-  
-  <link rel="alternate" hreflang="hu"
-    href="https://run.analyticszone.app/hu/">
-  
-  <link rel="alternate" hreflang="id"
-    href="https://run.analyticszone.app/id/">
-  
-  <link rel="alternate" hreflang="is"
-    href="https://run.analyticszone.app/is/">
-  
-  <link rel="alternate" hreflang="it"
-    href="https://run.analyticszone.app/it/">
-  
-  <link rel="alternate" hreflang="ja"
-    href="https://run.analyticszone.app/ja/">
-  
-  <link rel="alternate" hreflang="km"
-    href="https://run.analyticszone.app/km/">
-  
-  <link rel="alternate" hreflang="kn"
-    href="https://run.analyticszone.app/kn/">
-  
-  <link rel="alternate" hreflang="ko"
-    href="https://run.analyticszone.app/ko/">
-  
-  <link rel="alternate" hreflang="lt"
-    href="https://run.analyticszone.app/lt/">
-  
-  <link rel="alternate" hreflang="lv"
-    href="https://run.analyticszone.app/lv/">
-  
-  <link rel="alternate" hreflang="ms"
-    href="https://run.analyticszone.app/ms/">
-  
-  <link rel="alternate" hreflang="my"
-    href="https://run.analyticszone.app/my/">
-  
-  <link rel="alternate" hreflang="nb"
-    href="https://run.analyticszone.app/nb/">
-  
-  <link rel="alternate" hreflang="nl"
-    href="https://run.analyticszone.app/nl/">
-  
-  <link rel="alternate" hreflang="pl"
-    href="https://run.analyticszone.app/pl/">
-  
-  <link rel="alternate" hreflang="pt"
-    href="https://run.analyticszone.app/pt/">
-  
-  <link rel="alternate" hreflang="pt-br"
-    href="https://run.analyticszone.app/pt-br/">
-  
-  <link rel="alternate" hreflang="ro"
-    href="https://run.analyticszone.app/ro/">
-  
-  <link rel="alternate" hreflang="ru"
-    href="https://run.analyticszone.app/ru/">
-  
-  <link rel="alternate" hreflang="sk"
-    href="https://run.analyticszone.app/sk/">
-  
-  <link rel="alternate" hreflang="sl"
-    href="https://run.analyticszone.app/sl/">
-  
-  <link rel="alternate" hreflang="sr"
-    href="https://run.analyticszone.app/sr/">
-  
-  <link rel="alternate" hreflang="sv"
-    href="https://run.analyticszone.app/sv/">
-  
-  <link rel="alternate" hreflang="sw"
-    href="https://run.analyticszone.app/sw/">
-  
-  <link rel="alternate" hreflang="ta"
-    href="https://run.analyticszone.app/ta/">
-  
-  <link rel="alternate" hreflang="te"
-    href="https://run.analyticszone.app/te/">
-  
-  <link rel="alternate" hreflang="th"
-    href="https://run.analyticszone.app/th/">
-  
-  <link rel="alternate" hreflang="tl"
-    href="https://run.analyticszone.app/tl/">
-  
-  <link rel="alternate" hreflang="tr"
-    href="https://run.analyticszone.app/tr/">
-  
-  <link rel="alternate" hreflang="uk"
-    href="https://run.analyticszone.app/uk/">
-  
-  <link rel="alternate" hreflang="ur"
-    href="https://run.analyticszone.app/ur/">
-  
-  <link rel="alternate" hreflang="vi"
-    href="https://run.analyticszone.app/vi/">
-  
-  <link rel="alternate" hreflang="yo"
-    href="https://run.analyticszone.app/yo/">
-  
-  <link rel="alternate" hreflang="zh"
-    href="https://run.analyticszone.app/zh/">
-  
-  <link rel="alternate" hreflang="x-default"
-    href="https://run.analyticszone.app/en/">
-
-  
-  <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/icons/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/icons/favicon-16x16.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/icons/apple-touch-icon.png">
-  <link rel="manifest" href="../manifest.json">
-  <meta name="theme-color" content="#2563EB">
-  <meta name="robots" content="index, follow">
-
-  
-  
-  
-  <meta name="apple-itunes-app" content="app-id=6754524015">
-  
-
-  
-  <style>
+<!DOCTYPE html><html lang="sk" dir="ltr"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet"><title>Run Analytics: Aplikacja do Śledzenia Wydajności Pływania na iOS</title><meta name="description" content="Śledź metryki pływania, obliczaj CRS i rTSS, analizuj obciążenie treningowe z profesjonalną analityką. Darmowe kalkulatory dla zawodników i triatlonistów. 7-dniowy..."><meta name="author" content="AnalyticsZone Team"><meta name="keywords" content="aplikacja do śledzenia pływania, analityka pływania, kalkulator CRS, wydajność pływania, rTSS"><link rel="canonical" href="https://run.analyticszone.app/sk/"><meta property="og:type" content="website"><meta property="og:url" content="https://run.analyticszone.app/sk/"><meta property="og:title" content="Run Analytics: Aplikacja do Śledzenia Wydajności Pływania na iOS"><meta property="og:description" content="Śledź metryki pływania, obliczaj CRS i rTSS, analizuj obciążenie treningowe z profesjonalną analityką. Darmowe kalkulatory dla zawodników i triatlonistów. 7-dniowy..."><meta property="og:image" content="https://run.analyticszone.app/assets/images/og-image.svg"><meta property="og:locale" content="sk_SK"><meta property="og:site_name" content="Run Analytics"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:url" content="https://run.analyticszone.app/sk/"><meta name="twitter:title" content="Run Analytics: Aplikacja do Śledzenia Wydajności Pływania na iOS"><meta name="twitter:description" content="Śledź metryki pływania, obliczaj CRS i rTSS, analizuj obciążenie treningowe z profesjonalną analityką. Darmowe kalkulatory dla zawodników i triatlonistów. 7-dniowy..."><meta name="twitter:image" content="https://run.analyticszone.app/assets/images/og-image.svg"><meta name="twitter:site" content="@runanalytics"><meta name="twitter:creator" content="@runanalytics"><link rel="alternate" hreflang="af"
+    href="https://run.analyticszone.app/af/"><link rel="alternate" hreflang="am"
+    href="https://run.analyticszone.app/am/"><link rel="alternate" hreflang="ar"
+    href="https://run.analyticszone.app/ar/"><link rel="alternate" hreflang="bg"
+    href="https://run.analyticszone.app/bg/"><link rel="alternate" hreflang="bn"
+    href="https://run.analyticszone.app/bn/"><link rel="alternate" hreflang="ca"
+    href="https://run.analyticszone.app/ca/"><link rel="alternate" hreflang="cs"
+    href="https://run.analyticszone.app/cs/"><link rel="alternate" hreflang="da"
+    href="https://run.analyticszone.app/da/"><link rel="alternate" hreflang="de"
+    href="https://run.analyticszone.app/de/"><link rel="alternate" hreflang="el"
+    href="https://run.analyticszone.app/el/"><link rel="alternate" hreflang="en"
+    href="https://run.analyticszone.app/en/"><link rel="alternate" hreflang="es"
+    href="https://run.analyticszone.app/es/"><link rel="alternate" hreflang="et"
+    href="https://run.analyticszone.app/et/"><link rel="alternate" hreflang="fa"
+    href="https://run.analyticszone.app/fa/"><link rel="alternate" hreflang="fi"
+    href="https://run.analyticszone.app/fi/"><link rel="alternate" hreflang="fr"
+    href="https://run.analyticszone.app/fr/"><link rel="alternate" hreflang="gu"
+    href="https://run.analyticszone.app/gu/"><link rel="alternate" hreflang="ha"
+    href="https://run.analyticszone.app/ha/"><link rel="alternate" hreflang="he"
+    href="https://run.analyticszone.app/he/"><link rel="alternate" hreflang="hi"
+    href="https://run.analyticszone.app/hi/"><link rel="alternate" hreflang="hr"
+    href="https://run.analyticszone.app/hr/"><link rel="alternate" hreflang="hu"
+    href="https://run.analyticszone.app/hu/"><link rel="alternate" hreflang="id"
+    href="https://run.analyticszone.app/id/"><link rel="alternate" hreflang="is"
+    href="https://run.analyticszone.app/is/"><link rel="alternate" hreflang="it"
+    href="https://run.analyticszone.app/it/"><link rel="alternate" hreflang="ja"
+    href="https://run.analyticszone.app/ja/"><link rel="alternate" hreflang="km"
+    href="https://run.analyticszone.app/km/"><link rel="alternate" hreflang="kn"
+    href="https://run.analyticszone.app/kn/"><link rel="alternate" hreflang="ko"
+    href="https://run.analyticszone.app/ko/"><link rel="alternate" hreflang="lt"
+    href="https://run.analyticszone.app/lt/"><link rel="alternate" hreflang="lv"
+    href="https://run.analyticszone.app/lv/"><link rel="alternate" hreflang="ms"
+    href="https://run.analyticszone.app/ms/"><link rel="alternate" hreflang="my"
+    href="https://run.analyticszone.app/my/"><link rel="alternate" hreflang="nb"
+    href="https://run.analyticszone.app/nb/"><link rel="alternate" hreflang="nl"
+    href="https://run.analyticszone.app/nl/"><link rel="alternate" hreflang="pl"
+    href="https://run.analyticszone.app/pl/"><link rel="alternate" hreflang="pt"
+    href="https://run.analyticszone.app/pt/"><link rel="alternate" hreflang="pt-br"
+    href="https://run.analyticszone.app/pt-br/"><link rel="alternate" hreflang="ro"
+    href="https://run.analyticszone.app/ro/"><link rel="alternate" hreflang="ru"
+    href="https://run.analyticszone.app/ru/"><link rel="alternate" hreflang="sk"
+    href="https://run.analyticszone.app/sk/"><link rel="alternate" hreflang="sl"
+    href="https://run.analyticszone.app/sl/"><link rel="alternate" hreflang="sr"
+    href="https://run.analyticszone.app/sr/"><link rel="alternate" hreflang="sv"
+    href="https://run.analyticszone.app/sv/"><link rel="alternate" hreflang="sw"
+    href="https://run.analyticszone.app/sw/"><link rel="alternate" hreflang="ta"
+    href="https://run.analyticszone.app/ta/"><link rel="alternate" hreflang="te"
+    href="https://run.analyticszone.app/te/"><link rel="alternate" hreflang="th"
+    href="https://run.analyticszone.app/th/"><link rel="alternate" hreflang="tl"
+    href="https://run.analyticszone.app/tl/"><link rel="alternate" hreflang="tr"
+    href="https://run.analyticszone.app/tr/"><link rel="alternate" hreflang="uk"
+    href="https://run.analyticszone.app/uk/"><link rel="alternate" hreflang="ur"
+    href="https://run.analyticszone.app/ur/"><link rel="alternate" hreflang="vi"
+    href="https://run.analyticszone.app/vi/"><link rel="alternate" hreflang="yo"
+    href="https://run.analyticszone.app/yo/"><link rel="alternate" hreflang="zh"
+    href="https://run.analyticszone.app/zh/"><link rel="alternate" hreflang="x-default"
+    href="https://run.analyticszone.app/en/"><link rel="icon" type="image/png" sizes="32x32" href="../assets/images/icons/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="../assets/images/icons/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="../assets/images/icons/apple-touch-icon.png"><link rel="manifest" href="../manifest.json"><meta name="theme-color" content="#2563EB"><meta name="robots" content="index, follow"><meta name="apple-itunes-app" content="app-id=6754524015"><style>
 /* Critical CSS - Above the fold styles for fast LCP */
 :root {
   --color-primary: #0066CC;
@@ -495,20 +314,7 @@ img[width][height] {
     transition-duration: 0.01ms !important;
   }
 }
-</style>
-
-  
-  <link rel="preconnect" href="https://www.googletagmanager.com">
-  <link rel="dns-prefetch" href="https://www.googletagmanager.com">
-
-  
-  <link rel="stylesheet" href="../assets/css/main.min.css?v=8aef43d1">
-
-  
-  
-
-
-<script type="application/ld+json">
+</style><link rel="preconnect" href="https://www.googletagmanager.com"><link rel="dns-prefetch" href="https://www.googletagmanager.com"><link rel="stylesheet" href="../assets/css/main.min.css?v=e899af207631"><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Organization",
@@ -543,10 +349,7 @@ img[width][height] {
     
   ]
 }
-</script>
-
-
-<script type="application/ld+json">
+</script><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "WebSite",
@@ -555,11 +358,7 @@ img[width][height] {
   "description": "Track Critical Running Speed, Training Stress Score, and performance metrics with Run Analytics. Science-based iOS app for runners, triathletes &amp; coaches. 7-day free trial.",
   "inLanguage": "sk"
 }
-</script>
-
-
-
-<script type="application/ld+json">
+</script><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
@@ -574,14 +373,7 @@ img[width][height] {
   },
   "downloadUrl": "https://apps.apple.com/us/app/run-analytics/id6754524015"
 }
-</script>
-
-
-
-
-
-
-<script type="application/ld+json">
+</script><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "WebPage",
@@ -589,19 +381,7 @@ img[width][height] {
   "description": "Śledź metryki pływania, obliczaj CRS i rTSS, analizuj obciążenie treningowe z profesjonalną analityką. Darmowe kalkulatory dla zawodników i triatlonistów. 7-dniowy...",
   "url": "https://run.analyticszone.app/sk/"
 }
-</script>
-
-
-
-
-
-
-
-  
-  
-
-  
-  <script>
+</script><script>
     (function () {
       let theme = localStorage.getItem('theme');
       // Older builds could persist a per-subdomain `theme=light` value without a UI
@@ -615,1556 +395,391 @@ img[width][height] {
         document.documentElement.classList.add('dark-mode');
       }
     })();
-  </script>
-</head>
-
-<body>
-  
-  <a href="#main-content" class="skip-link">Prejsť na obsah</a>
-
-  
-  <header class="site-header">
-    <div class="container">
-        <div class="header-inner">
-            
-            <a href="/sk/" class="site-logo">
-                <picture>
-                    <source srcset="../assets/images/logo-dark.png" type="image/png"
-                        media="(prefers-color-scheme: dark)">
-                    <img src="../assets/images/logo.png" alt="Run Analytics - Running Analytics App | Critical Running Speed, TSS, CTL/ATL/TSB for iOS" width="56" height="56">
-                </picture>
-                <span class="logo-text">Run Analytics</span>
-            </a>
-
-            
-            <nav class="nav-primary" id="nav-primary" role="navigation" aria-label="Main navigation">
-                <div class="nav-group-left">
-                    <ul>
-                        
-                        <li>
-                            
-                            <a href="/sk/" 
+  </script></head><body><a href="#main-content" class="skip-link">Prejsť na obsah</a><header class="site-header"><div class="container"><div class="header-inner"><a href="/sk/" class="site-logo"><picture><source srcset="../assets/images/logo-dark.png" type="image/png"
+                        media="(prefers-color-scheme: dark)"><img src="../assets/images/logo.png" alt="Run Analytics - Running Analytics App | Critical Running Speed, TSS, CTL/ATL/TSB for iOS" width="56" height="56"></picture><span class="logo-text">Run Analytics</span></a><nav class="nav-primary" id="nav-primary" role="navigation" aria-label="Main navigation"><div class="nav-group-left"><ul><li><a href="/sk/" 
                                 aria-current="">
                                 Domov
-                            </a>
-                            
-                            </li>
-                            
-                        <li class="has-submenu" >
-                            
-                            
-                            <a href="/sk/getting-started/" class="nav-label">Učiť sa</a>
-                            
-                            <ul class="submenu">
-                                
-                                <li>
-                                    <a href="/sk/getting-started/" 
+                            </a></li><li class="has-submenu" ><a href="/sk/getting-started/" class="nav-label">Učiť sa</a><ul class="submenu"><li><a href="/sk/getting-started/" 
                                         aria-current="">
                                         Začíname
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/sk/crs/" 
+                                    </a></li><li><a href="/sk/crs/" 
                                         aria-current="">
                                         CRS
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/sk/training-zones/" 
+                                    </a></li><li><a href="/sk/training-zones/" 
                                         aria-current="">
                                         Tréningové zóny
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/sk/training-load/" 
+                                    </a></li><li><a href="/sk/training-load/" 
                                         aria-current="">
                                         Tréningová záťaž
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/sk/rtss-calculator/" 
+                                    </a></li><li><a href="/sk/rtss-calculator/" 
                                         aria-current="">
                                         rTSS kalkulačka
-                                    </a>
-                                </li>
-                                
-                            </ul>
-                            
-                            </li>
-                            
-                        <li class="has-submenu" >
-                            
-                            
-                            <a href="/sk/research/" class="nav-label">Veda</a>
-                            
-                            <ul class="submenu">
-                                
-                                <li>
-                                    <a href="/sk/research/" 
+                                    </a></li></ul></li><li class="has-submenu" ><a href="/sk/research/" class="nav-label">Veda</a><ul class="submenu"><li><a href="/sk/research/" 
                                         aria-current="">
                                         Výskum
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/sk/formulas/" 
+                                    </a></li><li><a href="/sk/formulas/" 
                                         aria-current="">
                                         Vzorce
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/sk/efficiency/" 
+                                    </a></li><li><a href="/sk/efficiency/" 
                                         aria-current="">
                                         Efektivita
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/sk/stride-mechanics/" 
+                                    </a></li><li><a href="/sk/stride-mechanics/" 
                                         aria-current="">
                                         Mechanika behu
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/sk/bibliography/" 
+                                    </a></li><li><a href="/sk/bibliography/" 
                                         aria-current="">
                                         Bibliografia
-                                    </a>
-                                </li>
-                                
-                            </ul>
-                            
-                            </li>
-                            
-                        <li>
-                            
-                            <a href="/sk/contact/" 
+                                    </a></li></ul></li><li><a href="/sk/contact/" 
                                 aria-current="">
                                 Kontakt
-                            </a>
-                            
-                            </li>
-                            
-                    </ul>
-
-                    
-                    <div class="search-container">
-                        <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                            </a></li></ul><div class="search-container"><svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
                             viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                            <circle cx="11" cy="11" r="8"></circle>
-                            <path d="m21 21-4.35-4.35"></path>
-                        </svg>
-                        <input type="search" id="site-search" class="search-input" aria-expanded="false"
-                            aria-haspopup="listbox" aria-autocomplete="list" autocomplete="off" spellcheck="false" />
-                        <div id="search-results" class="search-results hidden" role="region" aria-live="polite"></div>
-                    </div>
-
-                    
-                    <select class="language-selector" id="language-select" aria-label="Vybrať jazyk">
-                        
-                        <option value="af" >
+                            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.35-4.35"></path></svg><input type="search" id="site-search" class="search-input" aria-expanded="false"
+                            aria-haspopup="listbox" aria-autocomplete="list" autocomplete="off" spellcheck="false" /><div id="search-results" class="search-results hidden" role="region" aria-live="polite"></div></div><select class="language-selector" id="language-select" aria-label="Vybrať jazyk"><option value="af" >
                             Afrikaans
-                        </option>
-                        
-                        <option value="am" >
+                        </option><option value="am" >
                             አማርኛ
-                        </option>
-                        
-                        <option value="ar" >
+                        </option><option value="ar" >
                             العربية
-                        </option>
-                        
-                        <option value="bg" >
+                        </option><option value="bg" >
                             Български
-                        </option>
-                        
-                        <option value="bn" >
+                        </option><option value="bn" >
                             বাংলা
-                        </option>
-                        
-                        <option value="ca" >
+                        </option><option value="ca" >
                             Català
-                        </option>
-                        
-                        <option value="cs" >
+                        </option><option value="cs" >
                             Čeština
-                        </option>
-                        
-                        <option value="da" >
+                        </option><option value="da" >
                             Dansk
-                        </option>
-                        
-                        <option value="de" >
+                        </option><option value="de" >
                             Deutsch
-                        </option>
-                        
-                        <option value="el" >
+                        </option><option value="el" >
                             Ελληνικά
-                        </option>
-                        
-                        <option value="en" >
+                        </option><option value="en" >
                             English
-                        </option>
-                        
-                        <option value="es" >
+                        </option><option value="es" >
                             Español
-                        </option>
-                        
-                        <option value="et" >
+                        </option><option value="et" >
                             Eesti
-                        </option>
-                        
-                        <option value="fa" >
+                        </option><option value="fa" >
                             فارسی
-                        </option>
-                        
-                        <option value="fi" >
+                        </option><option value="fi" >
                             Suomi
-                        </option>
-                        
-                        <option value="fr" >
+                        </option><option value="fr" >
                             Français
-                        </option>
-                        
-                        <option value="gu" >
+                        </option><option value="gu" >
                             ગુજરાતી
-                        </option>
-                        
-                        <option value="ha" >
+                        </option><option value="ha" >
                             Hausa
-                        </option>
-                        
-                        <option value="he" >
+                        </option><option value="he" >
                             עברית
-                        </option>
-                        
-                        <option value="hi" >
+                        </option><option value="hi" >
                             हिन्दी
-                        </option>
-                        
-                        <option value="hr" >
+                        </option><option value="hr" >
                             Hrvatski
-                        </option>
-                        
-                        <option value="hu" >
+                        </option><option value="hu" >
                             Magyar
-                        </option>
-                        
-                        <option value="id" >
+                        </option><option value="id" >
                             Bahasa Indonesia
-                        </option>
-                        
-                        <option value="is" >
+                        </option><option value="is" >
                             Íslenska
-                        </option>
-                        
-                        <option value="it" >
+                        </option><option value="it" >
                             Italiano
-                        </option>
-                        
-                        <option value="ja" >
+                        </option><option value="ja" >
                             日本語
-                        </option>
-                        
-                        <option value="km" >
+                        </option><option value="km" >
                             ភាសាខ្មែរ
-                        </option>
-                        
-                        <option value="kn" >
+                        </option><option value="kn" >
                             ಕನ್ನಡ
-                        </option>
-                        
-                        <option value="ko" >
+                        </option><option value="ko" >
                             한국어
-                        </option>
-                        
-                        <option value="lt" >
+                        </option><option value="lt" >
                             Lietuvių
-                        </option>
-                        
-                        <option value="lv" >
+                        </option><option value="lv" >
                             Latviešu
-                        </option>
-                        
-                        <option value="ms" >
+                        </option><option value="ms" >
                             Bahasa Melayu
-                        </option>
-                        
-                        <option value="my" >
+                        </option><option value="my" >
                             မြန်မာစာ
-                        </option>
-                        
-                        <option value="nb" >
+                        </option><option value="nb" >
                             Norsk Bokmål
-                        </option>
-                        
-                        <option value="nl" >
+                        </option><option value="nl" >
                             Nederlands
-                        </option>
-                        
-                        <option value="pl" >
+                        </option><option value="pl" >
                             Polski
-                        </option>
-                        
-                        <option value="pt" >
+                        </option><option value="pt" >
                             Português
-                        </option>
-                        
-                        <option value="pt-br" >
+                        </option><option value="pt-br" >
                             Português (Brasil)
-                        </option>
-                        
-                        <option value="ro" >
+                        </option><option value="ro" >
                             Română
-                        </option>
-                        
-                        <option value="ru" >
+                        </option><option value="ru" >
                             Русский
-                        </option>
-                        
-                        <option value="sk" selected>
+                        </option><option value="sk" selected>
                             Slovenčina
-                        </option>
-                        
-                        <option value="sl" >
+                        </option><option value="sl" >
                             Slovenščina
-                        </option>
-                        
-                        <option value="sr" >
+                        </option><option value="sr" >
                             Srpski
-                        </option>
-                        
-                        <option value="sv" >
+                        </option><option value="sv" >
                             Svenska
-                        </option>
-                        
-                        <option value="sw" >
+                        </option><option value="sw" >
                             Kiswahili
-                        </option>
-                        
-                        <option value="ta" >
+                        </option><option value="ta" >
                             தமிழ்
-                        </option>
-                        
-                        <option value="te" >
+                        </option><option value="te" >
                             తెలుగు
-                        </option>
-                        
-                        <option value="th" >
+                        </option><option value="th" >
                             ไทย
-                        </option>
-                        
-                        <option value="tl" >
+                        </option><option value="tl" >
                             Tagalog
-                        </option>
-                        
-                        <option value="tr" >
+                        </option><option value="tr" >
                             Türkçe
-                        </option>
-                        
-                        <option value="uk" >
+                        </option><option value="uk" >
                             Українська
-                        </option>
-                        
-                        <option value="ur" >
+                        </option><option value="ur" >
                             اردو
-                        </option>
-                        
-                        <option value="vi" >
+                        </option><option value="vi" >
                             Tiếng Việt
-                        </option>
-                        
-                        <option value="yo" >
+                        </option><option value="yo" >
                             Yorùbá
-                        </option>
-                        
-                        <option value="zh" >
+                        </option><option value="zh" >
                             中文
-                        </option>
-                        
-                    </select>
-                </div>
-
-                <div class="nav-group-right">
-                    
-
-
-                    
-                    <div class="header-app-buttons">
-                        
-                        
-                        <a href="https://apps.apple.com/us/app/run-analytics/id6754524015" class="header-download-btn" target="_blank"
-                            rel="noopener" aria-label="Download on App Store" title="Download on App Store">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                                fill="currentColor">
-                                <path
-                                    d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z" />
-                            </svg>
-                        </a>
-                        
-
-                        
-                        <a href="https://play.google.com/store/apps/details?id=com.arnohealth.runanalytics" class="header-download-btn" target="_blank"
-                            rel="noopener" aria-label="Get it on Google Play" title="Get it on Google Play">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                                fill="currentColor">
-                                <path
-                                    d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.92 20.16,13.19L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M16.81,8.88L14.54,11.15L6.05,2.66L16.81,8.88Z" />
-                            </svg>
-                        </a>
-                        
-                        
-                    </div>
-
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-
-                    
-                    <div class="suite-menu-container">
-                        <button class="suite-menu-toggle" id="suite-menu-toggle" aria-label="See other apps"
-                            aria-expanded="false">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        </option></select></div><div class="nav-group-right"><div class="header-app-buttons"><a href="https://apps.apple.com/us/app/run-analytics/id6754524015" class="header-download-btn" target="_blank"
+                            rel="noopener" aria-label="Download on App Store" title="Download on App Store"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="currentColor"><path
+                                    d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z" /></svg></a><a href="https://play.google.com/store/apps/details?id=com.arnohealth.runanalytics" class="header-download-btn" target="_blank"
+                            rel="noopener" aria-label="Get it on Google Play" title="Get it on Google Play"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="currentColor"><path
+                                    d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.92 20.16,13.19L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M16.81,8.88L14.54,11.15L6.05,2.66L16.81,8.88Z" /></svg></a></div><div class="suite-menu-container"><button class="suite-menu-toggle" id="suite-menu-toggle" aria-label="See other apps"
+                            aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round">
-                                <rect x="3" y="3" width="7" height="7"></rect>
-                                <rect x="14" y="3" width="7" height="7"></rect>
-                                <rect x="14" y="14" width="7" height="7"></rect>
-                                <rect x="3" y="14" width="7" height="7"></rect>
-                            </svg>
-                        </button>
-                        <div class="suite-dropdown hidden" id="suite-dropdown">
-                            <div class="suite-dropdown-header">Other AnalyticsZone Apps</div>
-                            <div class="suite-apps-grid">
-                                
-                                <a href="https://analyticszone.app" class="suite-app-link">AnalyticsZone</a>
-                                
-                                <a href="https://swim.analyticszone.app" class="suite-app-link">Swim Analytics</a>
-                                
-                                <a href="https://bike.analyticszone.app" class="suite-app-link">Bike Analytics</a>
-                                
-                                <a href="https://walk.analyticszone.app" class="suite-app-link">Walk Analytics</a>
-                                
-                                <a href="https://cardio.analyticszone.app" class="suite-app-link">Cardio Analytics</a>
-                                
-                                <a href="https://health.analyticszone.app" class="suite-app-link">Health Analytics</a>
-                                
-                                <a href="https://swimtrainer.analyticszone.app" class="suite-app-link">Swim Trainer</a>
-                                
-                            </div>
-                        </div>
-                    </div>
-                    
-                </div>
-            </nav>
-
-            
-            <button class="menu-toggle" id="menu-toggle" aria-label="Prepnúť menu"
-                aria-expanded="false" aria-controls="nav-primary">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </div>
-    </div>
-</header>
-
-  
-  
-
-
-  
-  <main id="main-content" class="main-content">
-    
-    <!-- Run Analytics App Landing Page - Domovská stránka -->
-
-<!-- Hero Section with App Introduction -->
-<section class="app-hero">
-  <div class="container">
-    <div class="app-hero-content">
-      <div class="app-hero-text">
-        <div class="app-hero-badge">
-          <span>🏃</span>
-          <span>Profesionálna bežecká analytika</span>
-        </div>
-        <h1>Trénujte rozumnejšie, behajte rýchlejšie</h1>
-        <p class="app-hero-subtitle">
+                                stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg></button><div class="suite-dropdown hidden" id="suite-dropdown"><div class="suite-dropdown-header">Other AnalyticsZone Apps</div><div class="suite-apps-grid"><a href="https://analyticszone.app" class="suite-app-link">AnalyticsZone</a><a href="https://swim.analyticszone.app" class="suite-app-link">Swim Analytics</a><a href="https://bike.analyticszone.app" class="suite-app-link">Bike Analytics</a><a href="https://walk.analyticszone.app" class="suite-app-link">Walk Analytics</a><a href="https://cardio.analyticszone.app" class="suite-app-link">Cardio Analytics</a><a href="https://health.analyticszone.app" class="suite-app-link">Health Analytics</a><a href="https://swimtrainer.analyticszone.app" class="suite-app-link">Swim Trainer</a></div></div></div></div></nav><button class="menu-toggle" id="menu-toggle" aria-label="Prepnúť menu"
+                aria-expanded="false" aria-controls="nav-primary"><span></span><span></span><span></span></button></div></div></header><main id="main-content" class="main-content"><section class="app-hero"><div class="container"><div class="app-hero-content"><div class="app-hero-text"><div class="app-hero-badge"><span>🏃</span><span>Profesionálna bežecká analytika</span></div><h1>Trénujte rozumnejšie, behajte rýchlejšie</h1><p class="app-hero-subtitle">
           iOS aplikácia s dôrazom na súkromie, vedeckými metrikami bežeckého výkonu, personalizovanými tréningovými
           zónami a komplexným sledovaním pokroku.
           Všetky údaje sa spracúvajú lokálne vo vašom iPhone pre absolútnu ochranu súkromia.
-        </p>
-        <div class="app-hero-cta store-badges">
-          <a href="https://apps.apple.com/us/app/run-analytics/id6754524015" class="store-badge" target="_blank" rel="noopener"
-            aria-label="Stiahnuť v App Store">
-            <img src="../assets/images/badge-app-store.svg" alt="Stiahnuť v App Store" width="140"
-              height="47">
-          </a>
-          <a href="https://play.google.com/store/apps/details?id=com.arnohealth.runanalytics" class="store-badge" target="_blank" rel="noopener"
-            aria-label="Stiahnuť v Google Play">
-            <img src="../assets/images/badge-google-play.svg" alt="Stiahnuť v Google Play" width="140"
-              height="47">
-          </a>
-        </div>
-        <div class="app-hero-secondary">
-          <a href="#features" class="btn btn-large btn-secondary">
+        </p><div class="app-hero-cta store-badges"><a aria-label="Stiahnuť v App Store" class="store-badge" href="https://apps.apple.com/us/app/run-analytics/id6754524015" rel="noopener" target="_blank"><img alt="Stiahnuť v App Store" height="47" src="../assets/images/badge-app-store.svg" width="140"/></a><a aria-label="Stiahnuť v Google Play" class="store-badge" href="https://play.google.com/store/apps/details?id=com.arnohealth.runanalytics" rel="noopener" target="_blank"><img alt="Stiahnuť v Google Play" height="47" src="../assets/images/badge-google-play.svg" width="140"/></a></div><div class="app-hero-secondary"><a class="btn btn-large btn-secondary" href="#features">
             Preskúmať funkcie
-          </a>
-        </div>
-        <p class="mt-6 text-sm-muted">
-          ✓ 7 dní bezplatná skúšobná verzia &nbsp;&nbsp; ✓ Nevyžaduje sa konto &nbsp;&nbsp; ✓ 100% lokálne údaje
-        </p>
-      </div>
-      <div class="app-hero-mockup">
-        <div class="mockup-phone">
-          <img src="../assets/images/screenshots/workouts-list.png"
-            alt="iOS aplikácia Run Analytics zobrazujúca zoznam bežeckých tréningov so vzdialenosťou, tempom a tréningovými metrikami na iPhone"
-            width="400" height="auto" loading="eager" />
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Key Features Section -->
-<section id="features" class="app-features">
-  <div class="container">
-    <div class="section-header">
-      <div class="section-badge">Funkcie</div>
-      <h2 class="section-title">Pokročilé metriky výkonu</h2>
-      <p class="section-subtitle">Profesionálna bežecká analytika navrhnutá pre bežcov všetkých úrovní</p>
-    </div>
-    <div class="app-features-grid">
-      
-
-      
-      
-      <div class="feature-card ">
-    <div class="feature-icon">
-        
-        <svg class="icon" aria-hidden="true">
-            <use href="../assets/images/icons-sprite.svg#icon-chart"></use>
-        </svg>
-        
-    </div>
-    <h3>Vedecké bežecké metriky</h3>
-    <p>
-        
-        <a href="/sk/crs/">Kritická rýchlosť behu (CRS)</a>
+          </a></div><p class="mt-6 text-sm-muted">
+          ✓ 7 dní bezplatná skúšobná verzia    ✓ Nevyžaduje sa konto    ✓ 100% lokálne údaje
+        </p></div><div class="app-hero-mockup"><div class="mockup-phone"><img alt="iOS aplikácia Run Analytics zobrazujúca zoznam bežeckých tréningov so vzdialenosťou, tempom a tréningovými metrikami na iPhone" height="auto" loading="eager" src="../assets/images/screenshots/workouts-list.png" width="400"></img></div></div></div></div></section><section class="app-features" id="features"><div class="container"><div class="section-header"><div class="section-badge">Funkcie</div><h2 class="section-title">Pokročilé metriky výkonu</h2><p class="section-subtitle">Profesionálna bežecká analytika navrhnutá pre bežcov všetkých úrovní</p></div><div class="app-features-grid"><div class="feature-card "><div class="feature-icon"><svg class="icon" aria-hidden="true"><use href="../assets/images/icons-sprite.svg#icon-chart"></use></svg></div><h3>Vedecké bežecké metriky</h3><p><a href="/sk/crs/">Kritická rýchlosť behu (CRS)</a>
         
          určuje váš
       aeróbny prah, čo umožňuje výpočet <a href="/sk/training-load/">Training Stress Score (TSS)</a>
       a sledovanie výkonu <a href="/sk/training-load/#pmc">CTL/ATL/TSB</a> na základe športového výskumu.
-    </p>
-</div>
-      
-      
-      
-      <div class="feature-card ">
-    <div class="feature-icon">
-        
-        <svg class="icon" aria-hidden="true">
-            <use href="../assets/images/icons-sprite.svg#icon-zones"></use>
-        </svg>
-        
-    </div>
-    <h3>Personalizované tréningové zóny</h3>
-    <p>
-        
-        <a href="/sk/training-zones-explained/">bežecké tréningové
+    </p></div><div class="feature-card "><div class="feature-icon"><svg class="icon" aria-hidden="true"><use href="../assets/images/icons-sprite.svg#icon-zones"></use></svg></div><h3>Personalizované tréningové zóny</h3><p><a href="/sk/training-zones-explained/">bežecké tréningové
       zóny</a>
         
         6 personalizovaných <a href="/sk/training-zones-explained/">tréningových zón</a> kalibrovaných podľa
       vašej kritickej rýchlosti.
       Optimalizujte každý beh na regeneráciu, <a href="/sk/base-building-phase/">aeróbnu bázu</a>, tréning na
       prahu alebo zlepšenie <a href="/sk/what-is-vo2max/">VO₂max</a>.
-    </p>
-</div>
-      
-      
-      
-      <div class="feature-card ">
-    <div class="feature-icon">
-        
-        <svg class="icon" aria-hidden="true">
-            <use href="../assets/images/icons-sprite.svg#icon-calendar"></use>
-        </svg>
-        
-    </div>
-    <h3>Porovnanie výkonu</h3>
-    <p>
+    </p></div><div class="feature-card "><div class="feature-icon"><svg class="icon" aria-hidden="true"><use href="../assets/images/icons-sprite.svg#icon-calendar"></use></svg></div><h3>Porovnanie výkonu</h3><p>
         
         Porovnania v čase na týždennej, mesačnej a ročnej báze s
       automatickou detekciou trendov a percentuálnymi zmenami pre všetky výkonnostné metriky.
-    </p>
-</div>
-      
-      
-      
-      <div class="feature-card ">
-    <div class="feature-icon">
-        
-        <svg class="icon" aria-hidden="true">
-            <use href="../assets/images/icons-sprite.svg#icon-shield"></use>
-        </svg>
-        
-    </div>
-    <h3>Úplné súkromie</h3>
-    <p>
+    </p></div><div class="feature-card "><div class="feature-icon"><svg class="icon" aria-hidden="true"><use href="../assets/images/icons-sprite.svg#icon-shield"></use></svg></div><h3>Úplné súkromie</h3><p>
         
         Všetky údaje o tréningoch sa spracúvajú lokálne vo vašom iOS zariadení.
       Žiadne servery, žiadne cloudové úložisko, žiadne sledovanie. Máte plnú kontrolu.
-    </p>
-</div>
-      
-      
-      
-      <div class="feature-card ">
-    <div class="feature-icon">
-        
-        <svg class="icon" aria-hidden="true">
-            <use href="../assets/images/icons-sprite.svg#icon-export"></use>
-        </svg>
-        
-    </div>
-    <h3>Export kamkoľvek</h3>
-    <p>
+    </p></div><div class="feature-card "><div class="feature-icon"><svg class="icon" aria-hidden="true"><use href="../assets/images/icons-sprite.svg#icon-export"></use></svg></div><h3>Export kamkoľvek</h3><p>
         
         Exportujte tréningy a výkonnostné metriky vo formátoch JSON, CSV,
       HTML alebo PDF. Úplná kompatibilita s trénermi a tréningovými platformami.
-    </p>
-</div>
-      
-      
-      
-      <div class="feature-card ">
-    <div class="feature-icon">
-        
-        <svg class="icon" aria-hidden="true">
-            <use href="../assets/images/icons-sprite.svg#icon-lightning"></use>
-        </svg>
-        
-    </div>
-    <h3>Okamžitý výkon</h3>
-    <p>
+    </p></div><div class="feature-card "><div class="feature-icon"><svg class="icon" aria-hidden="true"><use href="../assets/images/icons-sprite.svg#icon-lightning"></use></svg></div><h3>Okamžitý výkon</h3><p>
         
         Spustenie aplikácie za menej ako 0,35 s vďaka architektúre
       local-first. Sledujte svoju analytiku okamžite bez čakania na synchronizáciu.
-    </p>
-</div>
-      
-      
-    </div>
-  </div>
-</section>
-
-<!-- Screenshots Carousel -->
-<section class="app-screenshots">
-  <div class="container">
-    <div class="section-header">
-      <div class="section-badge">Snímky obrazovky</div>
-      <h2 class="section-title">Pozrite si Run Analytics v akcii</h2>
-      <p class="section-subtitle">Intuitívne a krásne iOS rozhranie navrhnuté pre bežcov</p>
-    </div>
-    <div class="carousel-wrapper">
-      <button class="carousel-btn carousel-btn-prev" aria-label="Predchádzajúca snímka">
-        <svg aria-hidden="true">
-          <use href="../assets/images/icons-sprite.svg#icon-arrow-left"></use>
-        </svg>
-      </button>
-      <div class="screenshots-carousel" id="screenshotsCarousel">
-        <div class="screenshot-item">
-          <img src="../assets/images/screenshots/workouts-list.png"
-            alt="Zoznam tréningov Run Analytics zobrazujúci bežecké relácie, skóre stresu a tréningové zóny"
-            loading="lazy" />
-          <p class="screenshot-caption">Prehľad tréningov</p>
-        </div>
-        <div class="screenshot-item">
-          <img src="../assets/images/screenshots/workout-detail.png"
-            alt="Detailná analýza tréningu s tempom na kilometer, metrikami efektivity a údajmi o srdcovom tepe"
-            loading="lazy" />
-          <p class="screenshot-caption">Analýza na kilometer</p>
-        </div>
-        <div class="screenshot-item">
-          <img src="../assets/images/screenshots/analytics.png"
-            alt="Nástenka Run Analytics s grafmi CTL, ATL a TSB a metrikami bežeckého výkonu" loading="lazy" />
-          <p class="screenshot-caption">Pokročilé metriky výkonu</p>
-        </div>
-        <div class="screenshot-item">
-          <img src="../assets/images/screenshots/performance.png"
-            alt="Graf trendov výkonu zobrazujúci pokrok kritickej rýchlosti a tréningového zaťaženia" loading="lazy" />
-          <p class="screenshot-caption">Trendy výkonu</p>
-        </div>
-        <div class="screenshot-item">
-          <img src="../assets/images/screenshots/training-zones.png"
-            alt="6 personalizovaných tréningových zón na základe prahu CRS" loading="lazy" />
-          <p class="screenshot-caption">Tréningové zóny</p>
-        </div>
-        <div class="screenshot-item">
-          <img src="../assets/images/screenshots/export-options.png"
-            alt="Možnosti exportu bežeckých údajov vo formátoch JSON, CSV, HTML a PDF pre trénerov a analýzu"
-            loading="lazy" />
-          <p class="screenshot-caption">Možnosti exportu</p>
-        </div>
-      </div>
-      <button class="carousel-btn carousel-btn-next" aria-label="Nasledujúca snímka">
-        <svg aria-hidden="true">
-          <use href="../assets/images/icons-sprite.svg#icon-arrow-right"></use>
-        </svg>
-      </button>
-      <div class="carousel-dots" id="carouselDots" role="tablist" aria-label="Navigácia snímok obrazovky"></div>
-    </div>
-  </div>
-</section>
-
-<!-- Scientific Metrics Section -->
-<section class="app-metrics">
-  <div class="container">
-    <div class="section-header">
-      <div class="section-badge">Založené na vede</div>
-      <h2 class="section-title text-white">Vedecké metriky efektivity behu</h2>
-      <p class="section-subtitle text-white-90">
+    </p></div></div></div></section><section class="app-screenshots"><div class="container"><div class="section-header"><div class="section-badge">Snímky obrazovky</div><h2 class="section-title">Pozrite si Run Analytics v akcii</h2><p class="section-subtitle">Intuitívne a krásne iOS rozhranie navrhnuté pre bežcov</p></div><div class="carousel-wrapper"><button aria-label="Predchádzajúca snímka" class="carousel-btn carousel-btn-prev"><svg aria-hidden="true"><use href="../assets/images/icons-sprite.svg#icon-arrow-left"></use></svg></button><div class="screenshots-carousel" id="screenshotsCarousel"><div class="screenshot-item"><img alt="Zoznam tréningov Run Analytics zobrazujúci bežecké relácie, skóre stresu a tréningové zóny" loading="lazy" src="../assets/images/screenshots/workouts-list.png"><p class="screenshot-caption">Prehľad tréningov</p></img></div><div class="screenshot-item"><img alt="Detailná analýza tréningu s tempom na kilometer, metrikami efektivity a údajmi o srdcovom tepe" loading="lazy" src="../assets/images/screenshots/workout-detail.png"/><p class="screenshot-caption">Analýza na kilometer</p></div><div class="screenshot-item"><img alt="Nástenka Run Analytics s grafmi CTL, ATL a TSB a metrikami bežeckého výkonu" loading="lazy" src="../assets/images/screenshots/analytics.png"/><p class="screenshot-caption">Pokročilé metriky výkonu</p></div><div class="screenshot-item"><img alt="Graf trendov výkonu zobrazujúci pokrok kritickej rýchlosti a tréningového zaťaženia" loading="lazy" src="../assets/images/screenshots/performance.png"/><p class="screenshot-caption">Trendy výkonu</p></div><div class="screenshot-item"><img alt="6 personalizovaných tréningových zón na základe prahu CRS" loading="lazy" src="../assets/images/screenshots/training-zones.png"/><p class="screenshot-caption">Tréningové zóny</p></div><div class="screenshot-item"><img alt="Možnosti exportu bežeckých údajov vo formátoch JSON, CSV, HTML a PDF pre trénerov a analýzu" loading="lazy" src="../assets/images/screenshots/export-options.png"/><p class="screenshot-caption">Možnosti exportu</p></div></div><button aria-label="Nasledujúca snímka" class="carousel-btn carousel-btn-next"><svg aria-hidden="true"><use href="../assets/images/icons-sprite.svg#icon-arrow-right"></use></svg></button><div aria-label="Navigácia snímok obrazovky" class="carousel-dots" id="carouselDots" role="tablist"></div></div></div></section><section class="app-metrics"><div class="container"><div class="section-header"><div class="section-badge">Založené na vede</div><h2 class="section-title text-white">Vedecké metriky efektivity behu</h2><p class="section-subtitle text-white-90">
         Run Analytics premieňa surové bežecké údaje na využiteľné poznatky pomocou tréningového zaťaženia,
         kritickej rýchlosti a výpočtov efektivity validovaných športovým výskumom.
-      </p>
-    </div>
-    <div class="metrics-grid">
-      
-
-      
-      
-      <div class="metric-card ">
-    
-    <div class="metric-icon">🎯</div>
-    
-
-    
-    <div class="metric-label">Prahové tempo</div>
-    
-
-    
-    <h3 class="metric-name">CRS</h3>
-    
-
-    <p class="metric-description">Kritická rýchlosť behu - vaše tempo aeróbneho prahu</p>
-
-    
-</div>
-      
-      
-      
-      <div class="metric-card ">
-    
-    <div class="metric-icon">📊</div>
-    
-
-    
-    <div class="metric-label">Tréningové zaťaženie</div>
-    
-
-    
-    <h3 class="metric-name">TSS</h3>
-    
-
-    <p class="metric-description">Training Stress Score kvantifikuje intenzitu tréningu</p>
-
-    
-</div>
-      
-      
-      
-      <div class="metric-card ">
-    
-    <div class="metric-icon">💪</div>
-    
-
-    
-    <div class="metric-label">Kondícia</div>
-    
-
-    
-    <h3 class="metric-name">CTL</h3>
-    
-
-    <p class="metric-description">Chronic Training Load - 42-dňový vážený kĺzavý priemer</p>
-
-    
-</div>
-      
-      
-      
-      <div class="metric-card ">
-    
-    <div class="metric-icon">😴</div>
-    
-
-    
-    <div class="metric-label">Únava</div>
-    
-
-    
-    <h3 class="metric-name">ATL</h3>
-    
-
-    <p class="metric-description">Acute Training Load - 7-dňový vážený kĺzavý priemer</p>
-
-    
-</div>
-      
-      
-      
-      <div class="metric-card ">
-    
-    <div class="metric-icon">⚖️</div>
-    
-
-    
-    <div class="metric-label">Forma</div>
-    
-
-    
-    <h3 class="metric-name">TSB</h3>
-    
-
-    <p class="metric-description">Training Stress Balance ukazuje vašu pripravenosť</p>
-
-    
-</div>
-      
-      
-      
-      <div class="metric-card ">
-    
-    <div class="metric-icon">⚡</div>
-    
-
-    
-    <div class="metric-label">Efektivita</div>
-    
-
-    
-    <h3 class="metric-name">Efektivita behu</h3>
-    
-
-    <p class="metric-description">Skóre efektivity kroku - čím nižšie, tým lepšie</p>
-
-    
-</div>
-      
-      
-      
-      <div class="metric-card ">
-    
-    <div class="metric-icon">🎯</div>
-    
-
-    
-    <div class="metric-label">Zóny</div>
-    
-
-    
-    <h3 class="metric-name">6 zón</h3>
-    
-
-    <p class="metric-description">Od regenerácie po šprint - úrovne intenzity</p>
-
-    
-</div>
-      
-      
-      
-      <div class="metric-card ">
-    
-    <div class="metric-icon">🏆</div>
-    
-
-    
-    <div class="metric-label">Rekordy</div>
-    
-
-    
-    <h3 class="metric-name">Osobné rekordy</h3>
-    
-
-    <p class="metric-description">Automatické sledovanie najlepších výkonov (PR)</p>
-
-    
-</div>
-      
-      
-    </div>
-  </div>
-</section>
-
-<!-- Pricing Section -->
-<section class="app-pricing">
-  <div class="container">
-    <div class="section-header">
-      <div class="section-badge">Ceny</div>
-      <h2 class="section-title">Jednoduché a transparentné ceny</h2>
-      <p class="section-subtitle">Začnite so 7-dňovou bezplatnou skúšobnou verziou. Zrušte kedykoľvek.</p>
-    </div>
-    <div class="pricing-grid">
-      
-      <div class="pricing-card " >
-    <div class="pricing-header">
-        <h3 class="pricing-name">Mesačne</h3>
-        <div class="pricing-price">
-            <span class="pricing-currency">€</span>
-            <span class="pricing-amount">4,99</span>
-            <span class="pricing-period">/mesiac</span>
-        </div>
-        
-        <p class="pricing-trial">7 dní bezplatná skúšobná verzia</p>
-        
-    </div>
-    <ul class="pricing-features">
-        
-        <li>Neobmedzená synchronizácia tréningov</li>
-        
-        <li>Všetky vedecké metriky (CRS, TSS, CTL/ATL/TSB)</li>
-        
-        <li>6 personalizovaných tréningových zón</li>
-        
-        <li>Týždenné, mesačné a ročné porovnania</li>
-        
-        <li>Export údajov: JSON, CSV, HTML a PDF</li>
-        
-        <li>100% súkromie, lokálne údaje</li>
-        
-        <li>Zahŕňa všetky budúce aktualizácie</li>
-        
-    </ul>
-</div>
-      
-
-      
-      <div class="pricing-card featured" data-badge="Best Value" >
-    <div class="pricing-header">
-        <h3 class="pricing-name">Ročne</h3>
-        <div class="pricing-price">
-            <span class="pricing-currency">€</span>
-            <span class="pricing-amount">49,99</span>
-            <span class="pricing-period">/rok</span>
-        </div>
-        
-        <p class="pricing-trial">Ušetrite 10 € ročne (zľava 17%)</p>
-        
-    </div>
-    <ul class="pricing-features">
-        
-        <li>Neobmedzená synchronizácia tréningov</li>
-        
-        <li>Všetky vedecké metriky (CRS, TSS, CTL/ATL/TSB)</li>
-        
-        <li>6 personalizovaných tréningových zón</li>
-        
-        <li>Týždenné, mesačné a ročné porovnania</li>
-        
-        <li>Export údajov: JSON, CSV, HTML a PDF</li>
-        
-        <li>100% súkromie, lokálne údaje</li>
-        
-        <li>Zahŕňa všetky budúce aktualizácie</li>
-        
-        <li><strong>Cca 4,15 € mesačne</strong></li>
-        
-    </ul>
-</div>
-      
-    </div>
-  </div>
-</section>
-
-<!-- Benefits Section -->
-<section class="app-benefits">
-  <div class="container">
-    <div class="section-header">
-      <div class="section-badge">Prečo Run Analytics</div>
-      <h2 class="section-title">Bežecká analytika so zameraním na súkromie</h2>
-      <p class="section-subtitle">Profesionálne metriky výkonu bez zbytočnej zložitosti</p>
-    </div>
-    <div class="benefits-grid">
-      
-
-      
-      
-      <div class="benefit-item">
-    <div class="benefit-icon">🎯</div>
-    <div class="benefit-content">
-        <h3>Testovací protokol CRS</h3>
-        <p>Zabudovaný protokol testovania na 1200m/3600m na určenie vašej kritickej
-      rýchlosti. Opakujte každých 6-8 týždňov pre sledovanie pokroku.</p>
-    </div>
-</div>
-      
-      
-      
-      <div class="benefit-item">
-    <div class="benefit-icon">📱</div>
-    <div class="benefit-content">
-        <h3>Natívna iOS aplikácia</h3>
-        <p>Postavená na SwiftUI pre plynulý výkon a dokonalú integráciu s iOS.
-      Synchronizácia s Apple Health a podpora widgetov.</p>
-    </div>
-</div>
-      
-      
-      
-      <div class="benefit-item">
-    <div class="benefit-icon">🔬</div>
-    <div class="benefit-content">
-        <h3>Údaje založené na výskume</h3>
-        <p>Všetky metriky vychádzajú z vedeckého výskumu. CRS podľa Wakayoshiho a kol.,
-      TSS formula a CTL/ATL modely.</p>
-    </div>
-</div>
-      
-      
-      
-      <div class="benefit-item">
-    <div class="benefit-icon">👥</div>
-    <div class="benefit-content">
-        <h3>Reporty pre trénerov</h3>
-        <p>Exportujte podrobné reporty pre svojich trénerov. Zdieľajte HTML súhrny e-mailom
-      alebo generujte PDF pre tréningové denníky.</p>
-    </div>
-</div>
-      
-      
-      
-      <div class="benefit-item">
-    <div class="benefit-icon">🌍</div>
-    <div class="benefit-content">
-        <h3>Funguje kdekoľvek</h3>
-        <p>Dráha alebo terén, šprinty alebo dlhé behy. Run Analytics prispôsobí metriky
-      efektivity každému typu behu.</p>
-    </div>
-</div>
-      
-      
-      
-      <div class="benefit-item">
-    <div class="benefit-icon">🚀</div>
-    <div class="benefit-content">
-        <h3>Neustály vývoj</h3>
-        <p>Pravidelné aktualizácie s novými funkciami na základe spätnej väzby používateľov.
-      Posledné novinky: sledovanie osobných rekordov.</p>
-    </div>
-</div>
-      
-      
-    </div>
-  </div>
-</section>
-
-<!-- FAQ Section -->
-<section class="section">
-  <div class="container container-narrow">
-    <div class="section-header">
-      <div class="section-badge">FAQ</div>
-      <h2 class="section-title">Často kladené otázky</h2>
-    </div>
-
-    <div class="feature-list">
-      <div class="feature-item">
-        <h3>Ako aplikácia získava moje bežecké údaje?</h3>
-        <p>Run Analytics sa synchronizuje s Apple Health, aby importovala tréningy zaznamenané akýmkoľvek kompatibilným
-          zariadením alebo aplikáciou. Aplikácia tieto údaje spracúva lokálne.</p>
-      </div>
-
-      <div class="feature-item">
-        <h3>Čo je test kritickej rýchlosti?</h3>
-        <p>CRS je vedecký protokol využívajúci 2 behy s maximálnym úsilím: 5km a 3km. Aplikácia z týchto časov vypočíta
-          váš aeróbny prah a nastaví tréningové zóny.</p>
-      </div>
-
-      <div class="feature-item">
-        <h3>Sú moje údaje odosielané do cloudu?</h3>
-        <p>Nie. Všetky bežecké údaje sa spracúvajú lokálne vo vašom iPhone. Vy kontrolujete export do formátov JSON,
-          CSV, HTML alebo PDF.</p>
-      </div>
-
-      <div class="feature-item">
-        <h3>Môžem aplikáciu použiť na trailový beh?</h3>
-        <p>Áno. Run Analytics funguje so všetkými bežeckými tréningmi v Apple Health vrátane trailov. Aplikácia
-          prispôsobí metriky dostupným údajom.</p>
-      </div>
-
-      <div class="feature-item">
-        <h3>Aký je rozdiel medzi mesačným a ročným plánom?</h3>
-        <p>Oba plány ponúkajú rovnaké funkcie. Jediný rozdiel je v cene; ročný plán vám ušetrí približne 17 % v
-          porovnaní s mesačnými platbami.</p>
-      </div>
-
-      <div class="feature-item">
-        <h3>Môžem zrušiť predplatné kedykoľvek?</h3>
-        <p>Áno. Predplatné spravujete cez App Store, takže ho môžete zrušiť kedykoľvek. Prístup k funkciám si ponecháte
-          až do konca predplateného obdobia.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Final CTA Section -->
-<section class="app-cta-final">
-  <div class="container">
-    <h2>Ste pripravení posunúť svoj beh na vyššiu úroveň?</h2>
-    <p>Pridajte sa k tisícom bežcov, ktorí využívajú vedeckú analýzu. Začnite svoju 7-dňovú skúšobnú verziu ešte dnes.
-    </p>
-    <div class="app-hero-cta store-badges">
-      <a href="https://apps.apple.com/us/app/run-analytics/id6754524015" class="store-badge" target="_blank" rel="noopener"
-        aria-label="Stiahnuť v App Store">
-        <img src="../assets/images/badge-app-store.svg" alt="Stiahnuť v App Store" width="140" height="47">
-      </a>
-      <a href="https://play.google.com/store/apps/details?id=com.arnohealth.runanalytics" class="store-badge" target="_blank" rel="noopener"
-        aria-label="Stiahnuť v Google Play">
-        <img src="../assets/images/badge-google-play.svg" alt="Stiahnuť v Google Play" width="140"
-          height="47">
-      </a>
-    </div>
-    <p class="section-footer">
+      </p><a class="btn btn-secondary btn-small mt-md" href="/sk/efficiency/">Ponorte sa hlboko do metrík efektívnosti behu →</a></div><div class="metrics-grid"><div class="metric-card "><div class="metric-icon">🎯</div><div class="metric-label">Prahové tempo</div><h3 class="metric-name">CRS</h3><p class="metric-description">Kritická rýchlosť behu - vaše tempo aeróbneho prahu</p></div><div class="metric-card "><div class="metric-icon">📊</div><div class="metric-label">Tréningové zaťaženie</div><h3 class="metric-name">TSS</h3><p class="metric-description">Training Stress Score kvantifikuje intenzitu tréningu</p></div><div class="metric-card "><div class="metric-icon">💪</div><div class="metric-label">Kondícia</div><h3 class="metric-name">CTL</h3><p class="metric-description">Chronic Training Load - 42-dňový vážený kĺzavý priemer</p></div><div class="metric-card "><div class="metric-icon">😴</div><div class="metric-label">Únava</div><h3 class="metric-name">ATL</h3><p class="metric-description">Acute Training Load - 7-dňový vážený kĺzavý priemer</p></div><div class="metric-card "><div class="metric-icon">⚖️</div><div class="metric-label">Forma</div><h3 class="metric-name">TSB</h3><p class="metric-description">Training Stress Balance ukazuje vašu pripravenosť</p></div><div class="metric-card "><div class="metric-icon">⚡</div><div class="metric-label">Efektivita</div><h3 class="metric-name">Efektivita behu</h3><p class="metric-description">Skóre efektivity kroku - čím nižšie, tým lepšie</p></div><div class="metric-card "><div class="metric-icon">🎯</div><div class="metric-label">Zóny</div><h3 class="metric-name">6 zón</h3><p class="metric-description">Od regenerácie po šprint - úrovne intenzity</p></div><div class="metric-card "><div class="metric-icon">🏆</div><div class="metric-label">Rekordy</div><h3 class="metric-name">Osobné rekordy</h3><p class="metric-description">Automatické sledovanie najlepších výkonov (PR)</p></div></div></div></section><section class="app-pricing"><div class="container"><div class="section-header"><div class="section-badge">Ceny</div><h2 class="section-title">Jednoduché a transparentné ceny</h2><p class="section-subtitle">Začnite so 7-dňovou bezplatnou skúšobnou verziou. Zrušte kedykoľvek.</p></div><div class="pricing-grid"><div class="pricing-card " ><div class="pricing-header"><h3 class="pricing-name">Mesačne</h3><div class="pricing-price"><span class="pricing-currency">€</span><span class="pricing-amount">4,99</span><span class="pricing-period">/mesiac</span></div><p class="pricing-trial">7 dní bezplatná skúšobná verzia</p></div><ul class="pricing-features"><li>Neobmedzená synchronizácia tréningov</li><li>Všetky vedecké metriky (CRS, TSS, CTL/ATL/TSB)</li><li>6 personalizovaných tréningových zón</li><li>Týždenné, mesačné a ročné porovnania</li><li>Export údajov: JSON, CSV, HTML a PDF</li><li>100% súkromie, lokálne údaje</li><li>Zahŕňa všetky budúce aktualizácie</li></ul></div><div class="pricing-card featured" data-badge="Best Value" ><div class="pricing-header"><h3 class="pricing-name">Ročne</h3><div class="pricing-price"><span class="pricing-currency">€</span><span class="pricing-amount">49,99</span><span class="pricing-period">/rok</span></div><p class="pricing-trial">Ušetrite 10 € ročne (zľava 17%)</p></div><ul class="pricing-features"><li>Neobmedzená synchronizácia tréningov</li><li>Všetky vedecké metriky (CRS, TSS, CTL/ATL/TSB)</li><li>6 personalizovaných tréningových zón</li><li>Týždenné, mesačné a ročné porovnania</li><li>Export údajov: JSON, CSV, HTML a PDF</li><li>100% súkromie, lokálne údaje</li><li>Zahŕňa všetky budúce aktualizácie</li><li><strong>Cca 4,15 € mesačne</strong></li></ul></div></div></div></section><section class="app-benefits"><div class="container"><div class="section-header"><div class="section-badge">Prečo Run Analytics</div><h2 class="section-title">Bežecká analytika so zameraním na súkromie</h2><p class="section-subtitle">Profesionálne metriky výkonu bez zbytočnej zložitosti</p></div><div class="benefits-grid"><div class="benefit-item"><div class="benefit-icon">🎯</div><div class="benefit-content"><h3>Testovací protokol CRS</h3><p>Zabudovaný protokol testovania na 1200m/3600m na určenie vašej kritickej
+      rýchlosti. Opakujte každých 6-8 týždňov pre sledovanie pokroku.</p></div></div><div class="benefit-item"><div class="benefit-icon">📱</div><div class="benefit-content"><h3>Natívna iOS aplikácia</h3><p>Postavená na SwiftUI pre plynulý výkon a dokonalú integráciu s iOS.
+      Synchronizácia s Apple Health a podpora widgetov.</p></div></div><div class="benefit-item"><div class="benefit-icon">🔬</div><div class="benefit-content"><h3>Údaje založené na výskume</h3><p>Všetky metriky vychádzajú z vedeckého výskumu. CRS podľa Wakayoshiho a kol.,
+      TSS formula a CTL/ATL modely.</p></div></div><div class="benefit-item"><div class="benefit-icon">👥</div><div class="benefit-content"><h3>Reporty pre trénerov</h3><p>Exportujte podrobné reporty pre svojich trénerov. Zdieľajte HTML súhrny e-mailom
+      alebo generujte PDF pre tréningové denníky.</p></div></div><div class="benefit-item"><div class="benefit-icon">🌍</div><div class="benefit-content"><h3>Funguje kdekoľvek</h3><p>Dráha alebo terén, šprinty alebo dlhé behy. Run Analytics prispôsobí metriky
+      efektivity každému typu behu.</p></div></div><div class="benefit-item"><div class="benefit-icon">🚀</div><div class="benefit-content"><h3>Neustály vývoj</h3><p>Pravidelné aktualizácie s novými funkciami na základe spätnej väzby používateľov.
+      Posledné novinky: sledovanie osobných rekordov.</p></div></div></div></div></section><section class="section"><div class="container container-narrow"><div class="section-header"><div class="section-badge">FAQ</div><h2 class="section-title">Často kladené otázky</h2></div><div class="feature-list"><div class="feature-item"><h3>Ako aplikácia získava moje bežecké údaje?</h3><p>Run Analytics sa synchronizuje s Apple Health, aby importovala tréningy zaznamenané akýmkoľvek kompatibilným
+          zariadením alebo aplikáciou. Aplikácia tieto údaje spracúva lokálne.</p></div><div class="feature-item"><h3>Čo je test kritickej rýchlosti?</h3><p>CRS je vedecký protokol využívajúci 2 behy s maximálnym úsilím: 5km a 3km. Aplikácia z týchto časov vypočíta
+          váš aeróbny prah a nastaví tréningové zóny.</p></div><div class="feature-item"><h3>Sú moje údaje odosielané do cloudu?</h3><p>Nie. Všetky bežecké údaje sa spracúvajú lokálne vo vašom iPhone. Vy kontrolujete export do formátov JSON,
+          CSV, HTML alebo PDF.</p></div><div class="feature-item"><h3>Môžem aplikáciu použiť na trailový beh?</h3><p>Áno. Run Analytics funguje so všetkými bežeckými tréningmi v Apple Health vrátane trailov. Aplikácia
+          prispôsobí metriky dostupným údajom.</p></div><div class="feature-item"><h3>Aký je rozdiel medzi mesačným a ročným plánom?</h3><p>Oba plány ponúkajú rovnaké funkcie. Jediný rozdiel je v cene; ročný plán vám ušetrí približne 17 % v
+          porovnaní s mesačnými platbami.</p></div><div class="feature-item"><h3>Môžem zrušiť predplatné kedykoľvek?</h3><p>Áno. Predplatné spravujete cez App Store, takže ho môžete zrušiť kedykoľvek. Prístup k funkciám si ponecháte
+          až do konca predplateného obdobia.</p></div></div></div></section><section class="app-cta-final"><div class="container"><h2>Ste pripravení posunúť svoj beh na vyššiu úroveň?</h2><p>Pridajte sa k tisícom bežcov, ktorí využívajú vedeckú analýzu. Začnite svoju 7-dňovú skúšobnú verziu ešte dnes.
+    </p><div class="app-hero-cta store-badges"><a aria-label="Stiahnuť v App Store" class="store-badge" href="https://apps.apple.com/us/app/run-analytics/id6754524015" rel="noopener" target="_blank"><img alt="Stiahnuť v App Store" height="47" src="../assets/images/badge-app-store.svg" width="140"/></a><a aria-label="Stiahnuť v Google Play" class="store-badge" href="https://play.google.com/store/apps/details?id=com.arnohealth.runanalytics" rel="noopener" target="_blank"><img alt="Stiahnuť v Google Play" height="47" src="../assets/images/badge-google-play.svg" width="140"/></a></div><p class="section-footer">
       Nevyžaduje sa konto • Zrušte kedykoľvek • Údaje zostávajú vo vašom zariadení
-    </p>
-  </div>
-</section>
-
-<!-- Additional Information Links -->
-<section class="section">
-  <div class="container">
-    <div class="section-header">
-      <h2 class="section-title">Zistite viac o metričkách výkonu</h2>
-      <p class="section-subtitle">Ponorte sa hlbšie do vedy za bežeckou analytikou</p>
-    </div>
-    <div class="grid grid-3">
-      <div class="card">
-        <h3 class="card-title">Kritická rýchlosť behu (CRS)</h3>
-        <div class="card-content">
-          <p>Pochopte, ako kritická rýchlosť určuje váš aeróbny prah a prečo je to dôležité.</p>
-          <a href="/sk/crs/" class="btn btn-secondary btn-small mt-md">Viac o CRS →</a>
-        </div>
-      </div>
-      <div class="card">
-        <h3 class="card-title">Training Stress Score (TSS)</h3>
-        <div class="card-content">
-          <p>Objavte, ako TSS, CTL, ATL a TSB pomáhajú vyvážiť tréningový stres a únavu.</p>
-          <a href="/sk/training-stress-score/" class="btn btn-secondary btn-small mt-md">Preskúmať TSS →</a>
-        </div>
-      </div>
-      <div class="card">
-        <h3 class="card-title">Vysvetlenie tréningových zón</h3>
-        <div class="card-content">
-          <p>Kompletný sprievodca 6 tréningovými zónami: od regenerácie po anaeróbnu zónu.</p>
-          <a href="/sk/training-zones-explained/" class="btn btn-secondary btn-small mt-md">Zobraziť zóny →</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-    
-  </main>
-
-  
-  <footer class="site-footer">
-    <div class="container">
-        
-        <div class="footer-top">
-            <div class="footer-brand-section">
-                
-                <h2>Run Analytics</h2>
-                <p>Track Critical Running Speed, Training Stress Score, and performance metrics with Run Analytics. Science-based iOS app for runners, triathletes &amp; coaches. 7-day free trial.</p>
-                
-            </div>
-
-            
-            <div class="footer-download">
-                <h3 class="footer-heading">Download</h3>
-                <div class="footer-badges">
-                    
-                    <a href="https://apps.apple.com/us/app/run-analytics/id6754524015" target="_blank" rel="noopener"
-                        aria-label="Download on the App Store">
-                        <img src="../assets/images/badge-app-store.svg"
+    </p></div></section><section class="section"><div class="container"><div class="section-header"><h2 class="section-title">Zistite viac o metričkách výkonu</h2><p class="section-subtitle">Ponorte sa hlbšie do vedy za bežeckou analytikou</p></div><div class="grid grid-3"><div class="card"><h3 class="card-title">Kritická rýchlosť behu (CRS)</h3><div class="card-content"><p>Pochopte, ako kritická rýchlosť určuje váš aeróbny prah a prečo je to dôležité.</p><a class="btn btn-secondary btn-small mt-md" href="/sk/crs/">Viac o CRS →</a></div></div><div class="card"><h3 class="card-title">Training Stress Score (TSS)</h3><div class="card-content"><p>Objavte, ako TSS, CTL, ATL a TSB pomáhajú vyvážiť tréningový stres a únavu.</p><a class="btn btn-secondary btn-small mt-md" href="/sk/training-stress-score/">Preskúmať TSS →</a></div></div><div class="card"><h3 class="card-title">Vysvetlenie tréningových zón</h3><div class="card-content"><p>Kompletný sprievodca 6 tréningovými zónami: od regenerácie po anaeróbnu zónu.</p><a class="btn btn-secondary btn-small mt-md" href="/sk/training-zones-explained/">Zobraziť zóny →</a></div></div></div></div></section></main><footer class="site-footer"><div class="container"><div class="footer-top"><div class="footer-brand-section"><h2>Run Analytics</h2><p>Track Critical Running Speed, Training Stress Score, and performance metrics with Run Analytics. Science-based iOS app for runners, triathletes &amp; coaches. 7-day free trial.</p></div><div class="footer-download"><h3 class="footer-heading">Download</h3><div class="footer-badges"><a href="https://apps.apple.com/us/app/run-analytics/id6754524015" target="_blank" rel="noopener"
+                        aria-label="Download on the App Store"><img src="../assets/images/badge-app-store.svg"
                             alt="Download on the App Store" width="135"
-                            height="40" loading="lazy">
-                    </a>
-                    
-                    
-                    <a href="https://play.google.com/store/apps/details?id=com.arnohealth.runanalytics" target="_blank" rel="noopener"
-                        aria-label="Get it on Google Play">
-                        <img src="../assets/images/badge-google-play.svg"
+                            height="40" loading="lazy"></a><a href="https://play.google.com/store/apps/details?id=com.arnohealth.runanalytics" target="_blank" rel="noopener"
+                        aria-label="Get it on Google Play"><img src="../assets/images/badge-google-play.svg"
                             alt="Get it on Google Play" width="135"
-                            height="40" loading="lazy">
-                    </a>
-                    
-                </div>
-            </div>
-            
-        </div>
-
-        
-        <div class="footer-languages">
-            <h3 class="footer-heading">Available in</h3>
-            <div class="lang-grid">
-                
-                <a href="/af/" class="lang-link"
+                            height="40" loading="lazy"></a></div></div></div><div class="footer-languages"><h3 class="footer-heading">Available in</h3><div class="lang-grid"><a href="/af/" class="lang-link"
                     hreflang="af" >
                     Afrikaans
-                </a>
-                
-                <a href="/am/" class="lang-link"
+                </a><a href="/am/" class="lang-link"
                     hreflang="am" >
                     አማርኛ
-                </a>
-                
-                <a href="/ar/" class="lang-link"
+                </a><a href="/ar/" class="lang-link"
                     hreflang="ar" dir="rtl" >
                     العربية
-                </a>
-                
-                <a href="/bg/" class="lang-link"
+                </a><a href="/bg/" class="lang-link"
                     hreflang="bg" >
                     Български
-                </a>
-                
-                <a href="/bn/" class="lang-link"
+                </a><a href="/bn/" class="lang-link"
                     hreflang="bn" >
                     বাংলা
-                </a>
-                
-                <a href="/ca/" class="lang-link"
+                </a><a href="/ca/" class="lang-link"
                     hreflang="ca" >
                     Català
-                </a>
-                
-                <a href="/cs/" class="lang-link"
+                </a><a href="/cs/" class="lang-link"
                     hreflang="cs" >
                     Čeština
-                </a>
-                
-                <a href="/da/" class="lang-link"
+                </a><a href="/da/" class="lang-link"
                     hreflang="da" >
                     Dansk
-                </a>
-                
-                <a href="/de/" class="lang-link"
+                </a><a href="/de/" class="lang-link"
                     hreflang="de" >
                     Deutsch
-                </a>
-                
-                <a href="/el/" class="lang-link"
+                </a><a href="/el/" class="lang-link"
                     hreflang="el" >
                     Ελληνικά
-                </a>
-                
-                <a href="/en/" class="lang-link"
+                </a><a href="/en/" class="lang-link"
                     hreflang="en" >
                     English
-                </a>
-                
-                <a href="/es/" class="lang-link"
+                </a><a href="/es/" class="lang-link"
                     hreflang="es" >
                     Español
-                </a>
-                
-                <a href="/et/" class="lang-link"
+                </a><a href="/et/" class="lang-link"
                     hreflang="et" >
                     Eesti
-                </a>
-                
-                <a href="/fa/" class="lang-link"
+                </a><a href="/fa/" class="lang-link"
                     hreflang="fa" dir="rtl" >
                     فارسی
-                </a>
-                
-                <a href="/fi/" class="lang-link"
+                </a><a href="/fi/" class="lang-link"
                     hreflang="fi" >
                     Suomi
-                </a>
-                
-                <a href="/fr/" class="lang-link"
+                </a><a href="/fr/" class="lang-link"
                     hreflang="fr" >
                     Français
-                </a>
-                
-                <a href="/gu/" class="lang-link"
+                </a><a href="/gu/" class="lang-link"
                     hreflang="gu" >
                     ગુજરાતી
-                </a>
-                
-                <a href="/ha/" class="lang-link"
+                </a><a href="/ha/" class="lang-link"
                     hreflang="ha" >
                     Hausa
-                </a>
-                
-                <a href="/he/" class="lang-link"
+                </a><a href="/he/" class="lang-link"
                     hreflang="he" dir="rtl" >
                     עברית
-                </a>
-                
-                <a href="/hi/" class="lang-link"
+                </a><a href="/hi/" class="lang-link"
                     hreflang="hi" >
                     हिन्दी
-                </a>
-                
-                <a href="/hr/" class="lang-link"
+                </a><a href="/hr/" class="lang-link"
                     hreflang="hr" >
                     Hrvatski
-                </a>
-                
-                <a href="/hu/" class="lang-link"
+                </a><a href="/hu/" class="lang-link"
                     hreflang="hu" >
                     Magyar
-                </a>
-                
-                <a href="/id/" class="lang-link"
+                </a><a href="/id/" class="lang-link"
                     hreflang="id" >
                     Bahasa Indonesia
-                </a>
-                
-                <a href="/is/" class="lang-link"
+                </a><a href="/is/" class="lang-link"
                     hreflang="is" >
                     Íslenska
-                </a>
-                
-                <a href="/it/" class="lang-link"
+                </a><a href="/it/" class="lang-link"
                     hreflang="it" >
                     Italiano
-                </a>
-                
-                <a href="/ja/" class="lang-link"
+                </a><a href="/ja/" class="lang-link"
                     hreflang="ja" >
                     日本語
-                </a>
-                
-                <a href="/km/" class="lang-link"
+                </a><a href="/km/" class="lang-link"
                     hreflang="km" >
                     ភាសាខ្មែរ
-                </a>
-                
-                <a href="/kn/" class="lang-link"
+                </a><a href="/kn/" class="lang-link"
                     hreflang="kn" >
                     ಕನ್ನಡ
-                </a>
-                
-                <a href="/ko/" class="lang-link"
+                </a><a href="/ko/" class="lang-link"
                     hreflang="ko" >
                     한국어
-                </a>
-                
-                <a href="/lt/" class="lang-link"
+                </a><a href="/lt/" class="lang-link"
                     hreflang="lt" >
                     Lietuvių
-                </a>
-                
-                <a href="/lv/" class="lang-link"
+                </a><a href="/lv/" class="lang-link"
                     hreflang="lv" >
                     Latviešu
-                </a>
-                
-                <a href="/ms/" class="lang-link"
+                </a><a href="/ms/" class="lang-link"
                     hreflang="ms" >
                     Bahasa Melayu
-                </a>
-                
-                <a href="/my/" class="lang-link"
+                </a><a href="/my/" class="lang-link"
                     hreflang="my" >
                     မြန်မာစာ
-                </a>
-                
-                <a href="/nb/" class="lang-link"
+                </a><a href="/nb/" class="lang-link"
                     hreflang="nb" >
                     Norsk Bokmål
-                </a>
-                
-                <a href="/nl/" class="lang-link"
+                </a><a href="/nl/" class="lang-link"
                     hreflang="nl" >
                     Nederlands
-                </a>
-                
-                <a href="/pl/" class="lang-link"
+                </a><a href="/pl/" class="lang-link"
                     hreflang="pl" >
                     Polski
-                </a>
-                
-                <a href="/pt/" class="lang-link"
+                </a><a href="/pt/" class="lang-link"
                     hreflang="pt" >
                     Português
-                </a>
-                
-                <a href="/pt-br/" class="lang-link"
+                </a><a href="/pt-br/" class="lang-link"
                     hreflang="pt-br" >
                     Português (Brasil)
-                </a>
-                
-                <a href="/ro/" class="lang-link"
+                </a><a href="/ro/" class="lang-link"
                     hreflang="ro" >
                     Română
-                </a>
-                
-                <a href="/ru/" class="lang-link"
+                </a><a href="/ru/" class="lang-link"
                     hreflang="ru" >
                     Русский
-                </a>
-                
-                <a href="/sk/" class="lang-link active"
+                </a><a href="/sk/" class="lang-link active"
                     hreflang="sk" >
                     Slovenčina
-                </a>
-                
-                <a href="/sl/" class="lang-link"
+                </a><a href="/sl/" class="lang-link"
                     hreflang="sl" >
                     Slovenščina
-                </a>
-                
-                <a href="/sr/" class="lang-link"
+                </a><a href="/sr/" class="lang-link"
                     hreflang="sr" >
                     Srpski
-                </a>
-                
-                <a href="/sv/" class="lang-link"
+                </a><a href="/sv/" class="lang-link"
                     hreflang="sv" >
                     Svenska
-                </a>
-                
-                <a href="/sw/" class="lang-link"
+                </a><a href="/sw/" class="lang-link"
                     hreflang="sw" >
                     Kiswahili
-                </a>
-                
-                <a href="/ta/" class="lang-link"
+                </a><a href="/ta/" class="lang-link"
                     hreflang="ta" >
                     தமிழ்
-                </a>
-                
-                <a href="/te/" class="lang-link"
+                </a><a href="/te/" class="lang-link"
                     hreflang="te" >
                     తెలుగు
-                </a>
-                
-                <a href="/th/" class="lang-link"
+                </a><a href="/th/" class="lang-link"
                     hreflang="th" >
                     ไทย
-                </a>
-                
-                <a href="/tl/" class="lang-link"
+                </a><a href="/tl/" class="lang-link"
                     hreflang="tl" >
                     Tagalog
-                </a>
-                
-                <a href="/tr/" class="lang-link"
+                </a><a href="/tr/" class="lang-link"
                     hreflang="tr" >
                     Türkçe
-                </a>
-                
-                <a href="/uk/" class="lang-link"
+                </a><a href="/uk/" class="lang-link"
                     hreflang="uk" >
                     Українська
-                </a>
-                
-                <a href="/ur/" class="lang-link"
+                </a><a href="/ur/" class="lang-link"
                     hreflang="ur" dir="rtl" >
                     اردو
-                </a>
-                
-                <a href="/vi/" class="lang-link"
+                </a><a href="/vi/" class="lang-link"
                     hreflang="vi" >
                     Tiếng Việt
-                </a>
-                
-                <a href="/yo/" class="lang-link"
+                </a><a href="/yo/" class="lang-link"
                     hreflang="yo" >
                     Yorùbá
-                </a>
-                
-                <a href="/zh/" class="lang-link"
+                </a><a href="/zh/" class="lang-link"
                     hreflang="zh" >
                     中文
-                </a>
-                
-            </div>
-        </div>
-
-        <div class="footer-divider"></div>
-
-        
-        <div class="footer-bottom">
-            <p class="copyright">
+                </a></div></div><div class="footer-divider"></div><div class="footer-bottom"><p class="copyright">
                 &copy; 2026 Run Analytics. Všetky práva vyhradené
-            </p>
-            <ul class="footer-legal">
-                <li><a href="/sk/privacy/">Súkromie</a></li>
-                <li><a href="/sk/terms/">Podmienky</a></li>
-            </ul>
-        </div>
-    </div>
-</footer>
-
-  
-  <div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="Cookie consent" aria-live="polite">
-    <div class="cookie-banner-content">
-        <div>
-            <p>Táto webová stránka používa súbory cookie na zlepšenie vášho zážitku.</p>
-            <a href="/sk/privacy/" class="text-sm">Dozvedieť sa viac</a>
-        </div>
-        <div class="cookie-banner-actions">
-            <button id="cookie-decline" class="btn btn-secondary btn-small">Odmietnuť</button>
-            <button id="cookie-accept" class="btn btn-primary btn-small">Prijať</button>
-        </div>
-    </div>
-</div>
-
-  
-  <script src="../assets/js/core.min.js?v=8aef43d1" defer></script>
-  <script src="../assets/js/search.min.js?v=8aef43d1" defer></script>
-  
-  <script src="../assets/js/carousel.min.js?v=8aef43d1" defer></script>
-  
-
-  
-  
-  <script src="../assets/js/analytics.min.js" data-ga-id="G-Y138VB4523" defer></script>
-  
-
-  
-  <script>if ('serviceWorker' in navigator) { navigator.serviceWorker.register('../sw.js') }</script>
-</body>
-
-</html>
+            </p><ul class="footer-legal"><li><a href="/sk/privacy/">Súkromie</a></li><li><a href="/sk/terms/">Podmienky</a></li></ul></div></div></footer><div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="Cookie consent" aria-live="polite"><div class="cookie-banner-content"><div><p>Táto webová stránka používa súbory cookie na zlepšenie vášho zážitku.</p><a href="/sk/privacy/" class="text-sm">Dozvedieť sa viac</a></div><div class="cookie-banner-actions"><button id="cookie-decline" class="btn btn-secondary btn-small">Odmietnuť</button><button id="cookie-accept" class="btn btn-primary btn-small">Prijať</button></div></div></div><script src="../assets/js/core.min.js?v=e899af207631" defer></script><script src="../assets/js/search.min.js?v=e899af207631" defer></script><script src="../assets/js/carousel.min.js?v=e899af207631" defer></script><script src="../assets/js/analytics.min.js" data-ga-id="G-Y138VB4523" defer></script><script>if ('serviceWorker' in navigator) { navigator.serviceWorker.register('../sw.js') }</script></body></html>

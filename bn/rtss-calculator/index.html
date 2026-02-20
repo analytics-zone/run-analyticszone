@@ -1,246 +1,61 @@
-<!DOCTYPE html>
-<html lang="bn" dir="ltr">
-
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
-    rel="stylesheet">
-
-  
-  <title>বিনামূল্যে দৌড়ের TSS ক্যালকুলেটর</title>
-  <meta name="description" content="দৌড়ের ওয়ার্কআউটের জন্য ট্রেনিং স্ট্রেস স্কোর গণনা করুন - একমাত্র বিনামূল্যে sTSS ক্যালকুলেটর. বিনামূল্যে দৌড়ের TSS ক্যালকুলেটর">
-  <meta name="author" content="AnalyticsZone Team">
-
-  
-  
-  <meta name="keywords" content="রানিং TSS ক্যালকুলেটর, sTSS ক্যালকুলেটর, training stress score, রানিং ট্রেনিং লোড, ফ্রি TSS">
-  
-
-  
-  <link rel="canonical" href="https://run.analyticszone.app/bn/rtss-calculator/">
-
-  
-  
-  <meta property="article:published_time" content="2025-01-15T10:00:00Z">
-  <meta property="article:modified_time" content="2026-01-23T14:30:00Z">
-  <meta property="article:author" content="AnalyticsZone Team">
-  
-
-  
-  
-
-  
-  <meta property="og:type" content="article">
-  <meta property="og:url" content="https://run.analyticszone.app/bn/rtss-calculator/">
-  <meta property="og:title" content="বিনামূল্যে দৌড়ের TSS ক্যালকুলেটর">
-  <meta property="og:description" content="দৌড়ের ওয়ার্কআউটের জন্য ট্রেনিং স্ট্রেস স্কোর গণনা করুন - একমাত্র বিনামূল্যে sTSS ক্যালকুলেটর. বিনামূল্যে দৌড়ের TSS ক্যালকুলেটর">
-  <meta property="og:image" content="https://run.analyticszone.app/assets/images/og-image.svg">
-  <meta property="og:locale" content="bn_BD">
-  <meta property="og:site_name" content="Run Analytics">
-
-  
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:url" content="https://run.analyticszone.app/bn/rtss-calculator/">
-  <meta name="twitter:title" content="বিনামূল্যে দৌড়ের TSS ক্যালকুলেটর">
-  <meta name="twitter:description" content="দৌড়ের ওয়ার্কআউটের জন্য ট্রেনিং স্ট্রেস স্কোর গণনা করুন - একমাত্র বিনামূল্যে sTSS ক্যালকুলেটর. বিনামূল্যে দৌড়ের TSS ক্যালকুলেটর">
-  <meta name="twitter:image" content="https://run.analyticszone.app/assets/images/og-image.svg">
-  
-  <meta name="twitter:site" content="@runanalytics">
-  <meta name="twitter:creator" content="@runanalytics">
-  
-
-  
-  
-  <link rel="alternate" hreflang="af"
-    href="https://run.analyticszone.app/af/rtss-calculator/">
-  
-  <link rel="alternate" hreflang="am"
-    href="https://run.analyticszone.app/am/rtss-calculator/">
-  
-  <link rel="alternate" hreflang="ar"
-    href="https://run.analyticszone.app/ar/rtss-calculator/">
-  
-  <link rel="alternate" hreflang="bg"
-    href="https://run.analyticszone.app/bg/rtss-calculator/">
-  
-  <link rel="alternate" hreflang="bn"
-    href="https://run.analyticszone.app/bn/rtss-calculator/">
-  
-  <link rel="alternate" hreflang="ca"
-    href="https://run.analyticszone.app/ca/rtss-calculator/">
-  
-  <link rel="alternate" hreflang="cs"
-    href="https://run.analyticszone.app/cs/rtss-calculator/">
-  
-  <link rel="alternate" hreflang="da"
-    href="https://run.analyticszone.app/da/rtss-calculator/">
-  
-  <link rel="alternate" hreflang="de"
-    href="https://run.analyticszone.app/de/rtss-calculator/">
-  
-  <link rel="alternate" hreflang="el"
-    href="https://run.analyticszone.app/el/rtss-calculator/">
-  
-  <link rel="alternate" hreflang="en"
-    href="https://run.analyticszone.app/en/rtss-calculator/">
-  
-  <link rel="alternate" hreflang="es"
-    href="https://run.analyticszone.app/es/rtss-calculator/">
-  
-  <link rel="alternate" hreflang="et"
-    href="https://run.analyticszone.app/et/rtss-calculator/">
-  
-  <link rel="alternate" hreflang="fa"
-    href="https://run.analyticszone.app/fa/rtss-calculator/">
-  
-  <link rel="alternate" hreflang="fi"
-    href="https://run.analyticszone.app/fi/rtss-calculator/">
-  
-  <link rel="alternate" hreflang="fr"
-    href="https://run.analyticszone.app/fr/rtss-calculator/">
-  
-  <link rel="alternate" hreflang="gu"
-    href="https://run.analyticszone.app/gu/rtss-calculator/">
-  
-  <link rel="alternate" hreflang="ha"
-    href="https://run.analyticszone.app/ha/rtss-calculator/">
-  
-  <link rel="alternate" hreflang="he"
-    href="https://run.analyticszone.app/he/rtss-calculator/">
-  
-  <link rel="alternate" hreflang="hi"
-    href="https://run.analyticszone.app/hi/rtss-calculator/">
-  
-  <link rel="alternate" hreflang="hr"
-    href="https://run.analyticszone.app/hr/rtss-calculator/">
-  
-  <link rel="alternate" hreflang="hu"
-    href="https://run.analyticszone.app/hu/rtss-calculator/">
-  
-  <link rel="alternate" hreflang="id"
-    href="https://run.analyticszone.app/id/rtss-calculator/">
-  
-  <link rel="alternate" hreflang="is"
-    href="https://run.analyticszone.app/is/rtss-calculator/">
-  
-  <link rel="alternate" hreflang="it"
-    href="https://run.analyticszone.app/it/rtss-calculator/">
-  
-  <link rel="alternate" hreflang="ja"
-    href="https://run.analyticszone.app/ja/rtss-calculator/">
-  
-  <link rel="alternate" hreflang="km"
-    href="https://run.analyticszone.app/km/rtss-calculator/">
-  
-  <link rel="alternate" hreflang="kn"
-    href="https://run.analyticszone.app/kn/rtss-calculator/">
-  
-  <link rel="alternate" hreflang="ko"
-    href="https://run.analyticszone.app/ko/rtss-calculator/">
-  
-  <link rel="alternate" hreflang="lt"
-    href="https://run.analyticszone.app/lt/rtss-calculator/">
-  
-  <link rel="alternate" hreflang="lv"
-    href="https://run.analyticszone.app/lv/rtss-calculator/">
-  
-  <link rel="alternate" hreflang="ms"
-    href="https://run.analyticszone.app/ms/rtss-calculator/">
-  
-  <link rel="alternate" hreflang="my"
-    href="https://run.analyticszone.app/my/rtss-calculator/">
-  
-  <link rel="alternate" hreflang="nb"
-    href="https://run.analyticszone.app/nb/rtss-calculator/">
-  
-  <link rel="alternate" hreflang="nl"
-    href="https://run.analyticszone.app/nl/rtss-calculator/">
-  
-  <link rel="alternate" hreflang="pl"
-    href="https://run.analyticszone.app/pl/rtss-calculator/">
-  
-  <link rel="alternate" hreflang="pt"
-    href="https://run.analyticszone.app/pt/rtss-calculator/">
-  
-  <link rel="alternate" hreflang="pt-br"
-    href="https://run.analyticszone.app/pt-br/rtss-calculator/">
-  
-  <link rel="alternate" hreflang="ro"
-    href="https://run.analyticszone.app/ro/rtss-calculator/">
-  
-  <link rel="alternate" hreflang="ru"
-    href="https://run.analyticszone.app/ru/rtss-calculator/">
-  
-  <link rel="alternate" hreflang="sk"
-    href="https://run.analyticszone.app/sk/rtss-calculator/">
-  
-  <link rel="alternate" hreflang="sl"
-    href="https://run.analyticszone.app/sl/rtss-calculator/">
-  
-  <link rel="alternate" hreflang="sr"
-    href="https://run.analyticszone.app/sr/rtss-calculator/">
-  
-  <link rel="alternate" hreflang="sv"
-    href="https://run.analyticszone.app/sv/rtss-calculator/">
-  
-  <link rel="alternate" hreflang="sw"
-    href="https://run.analyticszone.app/sw/rtss-calculator/">
-  
-  <link rel="alternate" hreflang="ta"
-    href="https://run.analyticszone.app/ta/rtss-calculator/">
-  
-  <link rel="alternate" hreflang="te"
-    href="https://run.analyticszone.app/te/rtss-calculator/">
-  
-  <link rel="alternate" hreflang="th"
-    href="https://run.analyticszone.app/th/rtss-calculator/">
-  
-  <link rel="alternate" hreflang="tl"
-    href="https://run.analyticszone.app/tl/rtss-calculator/">
-  
-  <link rel="alternate" hreflang="tr"
-    href="https://run.analyticszone.app/tr/rtss-calculator/">
-  
-  <link rel="alternate" hreflang="uk"
-    href="https://run.analyticszone.app/uk/rtss-calculator/">
-  
-  <link rel="alternate" hreflang="ur"
-    href="https://run.analyticszone.app/ur/rtss-calculator/">
-  
-  <link rel="alternate" hreflang="vi"
-    href="https://run.analyticszone.app/vi/rtss-calculator/">
-  
-  <link rel="alternate" hreflang="yo"
-    href="https://run.analyticszone.app/yo/rtss-calculator/">
-  
-  <link rel="alternate" hreflang="zh"
-    href="https://run.analyticszone.app/zh/rtss-calculator/">
-  
-  <link rel="alternate" hreflang="x-default"
-    href="https://run.analyticszone.app/en/rtss-calculator/">
-
-  
-  <link rel="icon" type="image/png" sizes="32x32" href="../../assets/images/icons/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="../../assets/images/icons/favicon-16x16.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="../../assets/images/icons/apple-touch-icon.png">
-  <link rel="manifest" href="../../manifest.json">
-  <meta name="theme-color" content="#2563EB">
-  <meta name="robots" content="index, follow">
-
-  
-  
-  
-  <meta name="apple-itunes-app" content="app-id=6754524015">
-  
-
-  
-  <style>
+<!DOCTYPE html><html lang="bn" dir="ltr"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet"><title>বিনামূল্যে দৌড়ের TSS ক্যালকুলেটর</title><meta name="description" content="দৌড়ের ওয়ার্কআউটের জন্য ট্রেনিং স্ট্রেস স্কোর গণনা করুন - একমাত্র বিনামূল্যে sTSS ক্যালকুলেটর. বিনামূল্যে দৌড়ের TSS ক্যালকুলেটর"><meta name="author" content="AnalyticsZone Team"><meta name="keywords" content="রানিং TSS ক্যালকুলেটর, sTSS ক্যালকুলেটর, training stress score, রানিং ট্রেনিং লোড, ফ্রি TSS"><link rel="canonical" href="https://run.analyticszone.app/bn/rtss-calculator/"><meta property="article:published_time" content="2025-01-15T10:00:00Z"><meta property="article:modified_time" content="2026-01-23T14:30:00Z"><meta property="article:author" content="AnalyticsZone Team"><meta property="og:type" content="article"><meta property="og:url" content="https://run.analyticszone.app/bn/rtss-calculator/"><meta property="og:title" content="বিনামূল্যে দৌড়ের TSS ক্যালকুলেটর"><meta property="og:description" content="দৌড়ের ওয়ার্কআউটের জন্য ট্রেনিং স্ট্রেস স্কোর গণনা করুন - একমাত্র বিনামূল্যে sTSS ক্যালকুলেটর. বিনামূল্যে দৌড়ের TSS ক্যালকুলেটর"><meta property="og:image" content="https://run.analyticszone.app/assets/images/og-image.svg"><meta property="og:locale" content="bn_BD"><meta property="og:site_name" content="Run Analytics"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:url" content="https://run.analyticszone.app/bn/rtss-calculator/"><meta name="twitter:title" content="বিনামূল্যে দৌড়ের TSS ক্যালকুলেটর"><meta name="twitter:description" content="দৌড়ের ওয়ার্কআউটের জন্য ট্রেনিং স্ট্রেস স্কোর গণনা করুন - একমাত্র বিনামূল্যে sTSS ক্যালকুলেটর. বিনামূল্যে দৌড়ের TSS ক্যালকুলেটর"><meta name="twitter:image" content="https://run.analyticszone.app/assets/images/og-image.svg"><meta name="twitter:site" content="@runanalytics"><meta name="twitter:creator" content="@runanalytics"><link rel="alternate" hreflang="af"
+    href="https://run.analyticszone.app/af/rtss-calculator/"><link rel="alternate" hreflang="am"
+    href="https://run.analyticszone.app/am/rtss-calculator/"><link rel="alternate" hreflang="ar"
+    href="https://run.analyticszone.app/ar/rtss-calculator/"><link rel="alternate" hreflang="bg"
+    href="https://run.analyticszone.app/bg/rtss-calculator/"><link rel="alternate" hreflang="bn"
+    href="https://run.analyticszone.app/bn/rtss-calculator/"><link rel="alternate" hreflang="ca"
+    href="https://run.analyticszone.app/ca/rtss-calculator/"><link rel="alternate" hreflang="cs"
+    href="https://run.analyticszone.app/cs/rtss-calculator/"><link rel="alternate" hreflang="da"
+    href="https://run.analyticszone.app/da/rtss-calculator/"><link rel="alternate" hreflang="de"
+    href="https://run.analyticszone.app/de/rtss-calculator/"><link rel="alternate" hreflang="el"
+    href="https://run.analyticszone.app/el/rtss-calculator/"><link rel="alternate" hreflang="en"
+    href="https://run.analyticszone.app/en/rtss-calculator/"><link rel="alternate" hreflang="es"
+    href="https://run.analyticszone.app/es/rtss-calculator/"><link rel="alternate" hreflang="et"
+    href="https://run.analyticszone.app/et/rtss-calculator/"><link rel="alternate" hreflang="fa"
+    href="https://run.analyticszone.app/fa/rtss-calculator/"><link rel="alternate" hreflang="fi"
+    href="https://run.analyticszone.app/fi/rtss-calculator/"><link rel="alternate" hreflang="fr"
+    href="https://run.analyticszone.app/fr/rtss-calculator/"><link rel="alternate" hreflang="gu"
+    href="https://run.analyticszone.app/gu/rtss-calculator/"><link rel="alternate" hreflang="ha"
+    href="https://run.analyticszone.app/ha/rtss-calculator/"><link rel="alternate" hreflang="he"
+    href="https://run.analyticszone.app/he/rtss-calculator/"><link rel="alternate" hreflang="hi"
+    href="https://run.analyticszone.app/hi/rtss-calculator/"><link rel="alternate" hreflang="hr"
+    href="https://run.analyticszone.app/hr/rtss-calculator/"><link rel="alternate" hreflang="hu"
+    href="https://run.analyticszone.app/hu/rtss-calculator/"><link rel="alternate" hreflang="id"
+    href="https://run.analyticszone.app/id/rtss-calculator/"><link rel="alternate" hreflang="is"
+    href="https://run.analyticszone.app/is/rtss-calculator/"><link rel="alternate" hreflang="it"
+    href="https://run.analyticszone.app/it/rtss-calculator/"><link rel="alternate" hreflang="ja"
+    href="https://run.analyticszone.app/ja/rtss-calculator/"><link rel="alternate" hreflang="km"
+    href="https://run.analyticszone.app/km/rtss-calculator/"><link rel="alternate" hreflang="kn"
+    href="https://run.analyticszone.app/kn/rtss-calculator/"><link rel="alternate" hreflang="ko"
+    href="https://run.analyticszone.app/ko/rtss-calculator/"><link rel="alternate" hreflang="lt"
+    href="https://run.analyticszone.app/lt/rtss-calculator/"><link rel="alternate" hreflang="lv"
+    href="https://run.analyticszone.app/lv/rtss-calculator/"><link rel="alternate" hreflang="ms"
+    href="https://run.analyticszone.app/ms/rtss-calculator/"><link rel="alternate" hreflang="my"
+    href="https://run.analyticszone.app/my/rtss-calculator/"><link rel="alternate" hreflang="nb"
+    href="https://run.analyticszone.app/nb/rtss-calculator/"><link rel="alternate" hreflang="nl"
+    href="https://run.analyticszone.app/nl/rtss-calculator/"><link rel="alternate" hreflang="pl"
+    href="https://run.analyticszone.app/pl/rtss-calculator/"><link rel="alternate" hreflang="pt"
+    href="https://run.analyticszone.app/pt/rtss-calculator/"><link rel="alternate" hreflang="pt-br"
+    href="https://run.analyticszone.app/pt-br/rtss-calculator/"><link rel="alternate" hreflang="ro"
+    href="https://run.analyticszone.app/ro/rtss-calculator/"><link rel="alternate" hreflang="ru"
+    href="https://run.analyticszone.app/ru/rtss-calculator/"><link rel="alternate" hreflang="sk"
+    href="https://run.analyticszone.app/sk/rtss-calculator/"><link rel="alternate" hreflang="sl"
+    href="https://run.analyticszone.app/sl/rtss-calculator/"><link rel="alternate" hreflang="sr"
+    href="https://run.analyticszone.app/sr/rtss-calculator/"><link rel="alternate" hreflang="sv"
+    href="https://run.analyticszone.app/sv/rtss-calculator/"><link rel="alternate" hreflang="sw"
+    href="https://run.analyticszone.app/sw/rtss-calculator/"><link rel="alternate" hreflang="ta"
+    href="https://run.analyticszone.app/ta/rtss-calculator/"><link rel="alternate" hreflang="te"
+    href="https://run.analyticszone.app/te/rtss-calculator/"><link rel="alternate" hreflang="th"
+    href="https://run.analyticszone.app/th/rtss-calculator/"><link rel="alternate" hreflang="tl"
+    href="https://run.analyticszone.app/tl/rtss-calculator/"><link rel="alternate" hreflang="tr"
+    href="https://run.analyticszone.app/tr/rtss-calculator/"><link rel="alternate" hreflang="uk"
+    href="https://run.analyticszone.app/uk/rtss-calculator/"><link rel="alternate" hreflang="ur"
+    href="https://run.analyticszone.app/ur/rtss-calculator/"><link rel="alternate" hreflang="vi"
+    href="https://run.analyticszone.app/vi/rtss-calculator/"><link rel="alternate" hreflang="yo"
+    href="https://run.analyticszone.app/yo/rtss-calculator/"><link rel="alternate" hreflang="zh"
+    href="https://run.analyticszone.app/zh/rtss-calculator/"><link rel="alternate" hreflang="x-default"
+    href="https://run.analyticszone.app/en/rtss-calculator/"><link rel="icon" type="image/png" sizes="32x32" href="../../assets/images/icons/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="../../assets/images/icons/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="../../assets/images/icons/apple-touch-icon.png"><link rel="manifest" href="../../manifest.json"><meta name="theme-color" content="#2563EB"><meta name="robots" content="index, follow"><meta name="apple-itunes-app" content="app-id=6754524015"><style>
 /* Critical CSS - Above the fold styles for fast LCP */
 :root {
   --color-primary: #0066CC;
@@ -499,20 +314,7 @@ img[width][height] {
     transition-duration: 0.01ms !important;
   }
 }
-</style>
-
-  
-  <link rel="preconnect" href="https://www.googletagmanager.com">
-  <link rel="dns-prefetch" href="https://www.googletagmanager.com">
-
-  
-  <link rel="stylesheet" href="../../assets/css/main.min.css?v=8aef43d1">
-
-  
-  
-
-
-<script type="application/ld+json">
+</style><link rel="preconnect" href="https://www.googletagmanager.com"><link rel="dns-prefetch" href="https://www.googletagmanager.com"><link rel="stylesheet" href="../../assets/css/main.min.css?v=e899af207631"><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Organization",
@@ -547,10 +349,7 @@ img[width][height] {
     
   ]
 }
-</script>
-
-
-<script type="application/ld+json">
+</script><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "WebSite",
@@ -559,11 +358,7 @@ img[width][height] {
   "description": "Track Critical Running Speed, Training Stress Score, and performance metrics with Run Analytics. Science-based iOS app for runners, triathletes &amp; coaches. 7-day free trial.",
   "inLanguage": "bn"
 }
-</script>
-
-
-
-<script type="application/ld+json">
+</script><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
@@ -578,12 +373,7 @@ img[width][height] {
   },
   "downloadUrl": "https://apps.apple.com/us/app/run-analytics/id6754524015"
 }
-</script>
-
-
-
-
-<script type="application/ld+json">
+</script><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
@@ -612,11 +402,7 @@ img[width][height] {
     
   ]
 }
-</script>
-
-
-
-<script type="application/ld+json">
+</script><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "WebPage",
@@ -624,11 +410,7 @@ img[width][height] {
   "description": "দৌড়ের ওয়ার্কআউটের জন্য ট্রেনিং স্ট্রেস স্কোর গণনা করুন - একমাত্র বিনামূল্যে sTSS ক্যালকুলেটর. বিনামূল্যে দৌড়ের TSS ক্যালকুলেটর",
   "url": "https://run.analyticszone.app/bn/rtss-calculator/"
 }
-</script>
-
-
-
-<script type="application/ld+json">
+</script><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Article",
@@ -653,17 +435,7 @@ img[width][height] {
     "@id": "https://run.analyticszone.app/bn/rtss-calculator/"
   }
 }
-</script>
-
-
-
-
-
-  
-  
-
-  
-  <script>
+</script><script>
     (function () {
       let theme = localStorage.getItem('theme');
       // Older builds could persist a per-subdomain `theme=light` value without a UI
@@ -677,1276 +449,388 @@ img[width][height] {
         document.documentElement.classList.add('dark-mode');
       }
     })();
-  </script>
-</head>
-
-<body>
-  
-  <a href="#main-content" class="skip-link">কন্টেন্টে যান</a>
-
-  
-  <header class="site-header">
-    <div class="container">
-        <div class="header-inner">
-            
-            <a href="/bn/" class="site-logo">
-                <picture>
-                    <source srcset="../../assets/images/logo-dark.png" type="image/png"
-                        media="(prefers-color-scheme: dark)">
-                    <img src="../../assets/images/logo.png" alt="Run Analytics - Running Analytics App | Critical Running Speed, TSS, CTL/ATL/TSB for iOS" width="56" height="56">
-                </picture>
-                <span class="logo-text">Run Analytics</span>
-            </a>
-
-            
-            <nav class="nav-primary" id="nav-primary" role="navigation" aria-label="Main navigation">
-                <div class="nav-group-left">
-                    <ul>
-                        
-                        <li>
-                            
-                            <a href="/bn/" 
+  </script></head><body><a href="#main-content" class="skip-link">কন্টেন্টে যান</a><header class="site-header"><div class="container"><div class="header-inner"><a href="/bn/" class="site-logo"><picture><source srcset="../../assets/images/logo-dark.png" type="image/png"
+                        media="(prefers-color-scheme: dark)"><img src="../../assets/images/logo.png" alt="Run Analytics - Running Analytics App | Critical Running Speed, TSS, CTL/ATL/TSB for iOS" width="56" height="56"></picture><span class="logo-text">Run Analytics</span></a><nav class="nav-primary" id="nav-primary" role="navigation" aria-label="Main navigation"><div class="nav-group-left"><ul><li><a href="/bn/" 
                                 aria-current="">
                                 হোম
-                            </a>
-                            
-                            </li>
-                            
-                        <li class="has-submenu" >
-                            
-                            
-                            <a href="/bn/getting-started/" class="nav-label">শিখুন</a>
-                            
-                            <ul class="submenu">
-                                
-                                <li>
-                                    <a href="/bn/getting-started/" 
+                            </a></li><li class="has-submenu" ><a href="/bn/getting-started/" class="nav-label">শিখুন</a><ul class="submenu"><li><a href="/bn/getting-started/" 
                                         aria-current="">
                                         শুরু করুন
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/bn/crs/" 
+                                    </a></li><li><a href="/bn/crs/" 
                                         aria-current="">
                                         CRS
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/bn/training-zones/" 
+                                    </a></li><li><a href="/bn/training-zones/" 
                                         aria-current="">
                                         প্রশিক্ষণ জোন
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/bn/training-load/" 
+                                    </a></li><li><a href="/bn/training-load/" 
                                         aria-current="">
                                         প্রশিক্ষণ লোড
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/bn/rtss-calculator/" class="active" 
+                                    </a></li><li><a href="/bn/rtss-calculator/" class="active" 
                                         aria-current="page">
                                         rTSS ক্যালকুলেটর
-                                    </a>
-                                </li>
-                                
-                            </ul>
-                            
-                            </li>
-                            
-                        <li class="has-submenu" >
-                            
-                            
-                            <a href="/bn/research/" class="nav-label">বিজ্ঞান</a>
-                            
-                            <ul class="submenu">
-                                
-                                <li>
-                                    <a href="/bn/research/" 
+                                    </a></li></ul></li><li class="has-submenu" ><a href="/bn/research/" class="nav-label">বিজ্ঞান</a><ul class="submenu"><li><a href="/bn/research/" 
                                         aria-current="">
                                         গবেষণা
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/bn/formulas/" 
+                                    </a></li><li><a href="/bn/formulas/" 
                                         aria-current="">
                                         সূত্র
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/bn/efficiency/" 
+                                    </a></li><li><a href="/bn/efficiency/" 
                                         aria-current="">
                                         দক্ষতা
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/bn/stride-mechanics/" 
+                                    </a></li><li><a href="/bn/stride-mechanics/" 
                                         aria-current="">
                                         স্ট্রাইড মেকানিক্স
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/bn/bibliography/" 
+                                    </a></li><li><a href="/bn/bibliography/" 
                                         aria-current="">
                                         গ্রন্থপঞ্জি
-                                    </a>
-                                </li>
-                                
-                            </ul>
-                            
-                            </li>
-                            
-                        <li>
-                            
-                            <a href="/bn/contact/" 
+                                    </a></li></ul></li><li><a href="/bn/contact/" 
                                 aria-current="">
                                 যোগাযোগ
-                            </a>
-                            
-                            </li>
-                            
-                    </ul>
-
-                    
-                    <div class="search-container">
-                        <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                            </a></li></ul><div class="search-container"><svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
                             viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                            <circle cx="11" cy="11" r="8"></circle>
-                            <path d="m21 21-4.35-4.35"></path>
-                        </svg>
-                        <input type="search" id="site-search" class="search-input" aria-expanded="false"
-                            aria-haspopup="listbox" aria-autocomplete="list" autocomplete="off" spellcheck="false" />
-                        <div id="search-results" class="search-results hidden" role="region" aria-live="polite"></div>
-                    </div>
-
-                    
-                    <select class="language-selector" id="language-select" aria-label="ভাষা নির্বাচন করুন">
-                        
-                        <option value="af" >
+                            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.35-4.35"></path></svg><input type="search" id="site-search" class="search-input" aria-expanded="false"
+                            aria-haspopup="listbox" aria-autocomplete="list" autocomplete="off" spellcheck="false" /><div id="search-results" class="search-results hidden" role="region" aria-live="polite"></div></div><select class="language-selector" id="language-select" aria-label="ভাষা নির্বাচন করুন"><option value="af" >
                             Afrikaans
-                        </option>
-                        
-                        <option value="am" >
+                        </option><option value="am" >
                             አማርኛ
-                        </option>
-                        
-                        <option value="ar" >
+                        </option><option value="ar" >
                             العربية
-                        </option>
-                        
-                        <option value="bg" >
+                        </option><option value="bg" >
                             Български
-                        </option>
-                        
-                        <option value="bn" selected>
+                        </option><option value="bn" selected>
                             বাংলা
-                        </option>
-                        
-                        <option value="ca" >
+                        </option><option value="ca" >
                             Català
-                        </option>
-                        
-                        <option value="cs" >
+                        </option><option value="cs" >
                             Čeština
-                        </option>
-                        
-                        <option value="da" >
+                        </option><option value="da" >
                             Dansk
-                        </option>
-                        
-                        <option value="de" >
+                        </option><option value="de" >
                             Deutsch
-                        </option>
-                        
-                        <option value="el" >
+                        </option><option value="el" >
                             Ελληνικά
-                        </option>
-                        
-                        <option value="en" >
+                        </option><option value="en" >
                             English
-                        </option>
-                        
-                        <option value="es" >
+                        </option><option value="es" >
                             Español
-                        </option>
-                        
-                        <option value="et" >
+                        </option><option value="et" >
                             Eesti
-                        </option>
-                        
-                        <option value="fa" >
+                        </option><option value="fa" >
                             فارسی
-                        </option>
-                        
-                        <option value="fi" >
+                        </option><option value="fi" >
                             Suomi
-                        </option>
-                        
-                        <option value="fr" >
+                        </option><option value="fr" >
                             Français
-                        </option>
-                        
-                        <option value="gu" >
+                        </option><option value="gu" >
                             ગુજરાતી
-                        </option>
-                        
-                        <option value="ha" >
+                        </option><option value="ha" >
                             Hausa
-                        </option>
-                        
-                        <option value="he" >
+                        </option><option value="he" >
                             עברית
-                        </option>
-                        
-                        <option value="hi" >
+                        </option><option value="hi" >
                             हिन्दी
-                        </option>
-                        
-                        <option value="hr" >
+                        </option><option value="hr" >
                             Hrvatski
-                        </option>
-                        
-                        <option value="hu" >
+                        </option><option value="hu" >
                             Magyar
-                        </option>
-                        
-                        <option value="id" >
+                        </option><option value="id" >
                             Bahasa Indonesia
-                        </option>
-                        
-                        <option value="is" >
+                        </option><option value="is" >
                             Íslenska
-                        </option>
-                        
-                        <option value="it" >
+                        </option><option value="it" >
                             Italiano
-                        </option>
-                        
-                        <option value="ja" >
+                        </option><option value="ja" >
                             日本語
-                        </option>
-                        
-                        <option value="km" >
+                        </option><option value="km" >
                             ភាសាខ្មែរ
-                        </option>
-                        
-                        <option value="kn" >
+                        </option><option value="kn" >
                             ಕನ್ನಡ
-                        </option>
-                        
-                        <option value="ko" >
+                        </option><option value="ko" >
                             한국어
-                        </option>
-                        
-                        <option value="lt" >
+                        </option><option value="lt" >
                             Lietuvių
-                        </option>
-                        
-                        <option value="lv" >
+                        </option><option value="lv" >
                             Latviešu
-                        </option>
-                        
-                        <option value="ms" >
+                        </option><option value="ms" >
                             Bahasa Melayu
-                        </option>
-                        
-                        <option value="my" >
+                        </option><option value="my" >
                             မြန်မာစာ
-                        </option>
-                        
-                        <option value="nb" >
+                        </option><option value="nb" >
                             Norsk Bokmål
-                        </option>
-                        
-                        <option value="nl" >
+                        </option><option value="nl" >
                             Nederlands
-                        </option>
-                        
-                        <option value="pl" >
+                        </option><option value="pl" >
                             Polski
-                        </option>
-                        
-                        <option value="pt" >
+                        </option><option value="pt" >
                             Português
-                        </option>
-                        
-                        <option value="pt-br" >
+                        </option><option value="pt-br" >
                             Português (Brasil)
-                        </option>
-                        
-                        <option value="ro" >
+                        </option><option value="ro" >
                             Română
-                        </option>
-                        
-                        <option value="ru" >
+                        </option><option value="ru" >
                             Русский
-                        </option>
-                        
-                        <option value="sk" >
+                        </option><option value="sk" >
                             Slovenčina
-                        </option>
-                        
-                        <option value="sl" >
+                        </option><option value="sl" >
                             Slovenščina
-                        </option>
-                        
-                        <option value="sr" >
+                        </option><option value="sr" >
                             Srpski
-                        </option>
-                        
-                        <option value="sv" >
+                        </option><option value="sv" >
                             Svenska
-                        </option>
-                        
-                        <option value="sw" >
+                        </option><option value="sw" >
                             Kiswahili
-                        </option>
-                        
-                        <option value="ta" >
+                        </option><option value="ta" >
                             தமிழ்
-                        </option>
-                        
-                        <option value="te" >
+                        </option><option value="te" >
                             తెలుగు
-                        </option>
-                        
-                        <option value="th" >
+                        </option><option value="th" >
                             ไทย
-                        </option>
-                        
-                        <option value="tl" >
+                        </option><option value="tl" >
                             Tagalog
-                        </option>
-                        
-                        <option value="tr" >
+                        </option><option value="tr" >
                             Türkçe
-                        </option>
-                        
-                        <option value="uk" >
+                        </option><option value="uk" >
                             Українська
-                        </option>
-                        
-                        <option value="ur" >
+                        </option><option value="ur" >
                             اردو
-                        </option>
-                        
-                        <option value="vi" >
+                        </option><option value="vi" >
                             Tiếng Việt
-                        </option>
-                        
-                        <option value="yo" >
+                        </option><option value="yo" >
                             Yorùbá
-                        </option>
-                        
-                        <option value="zh" >
+                        </option><option value="zh" >
                             中文
-                        </option>
-                        
-                    </select>
-                </div>
-
-                <div class="nav-group-right">
-                    
-
-
-                    
-                    <div class="header-app-buttons">
-                        
-                        
-                        <a href="https://apps.apple.com/us/app/run-analytics/id6754524015" class="header-download-btn" target="_blank"
-                            rel="noopener" aria-label="Download on App Store" title="Download on App Store">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                                fill="currentColor">
-                                <path
-                                    d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z" />
-                            </svg>
-                        </a>
-                        
-
-                        
-                        <a href="https://play.google.com/store/apps/details?id=com.arnohealth.runanalytics" class="header-download-btn" target="_blank"
-                            rel="noopener" aria-label="Get it on Google Play" title="Get it on Google Play">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                                fill="currentColor">
-                                <path
-                                    d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.92 20.16,13.19L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M16.81,8.88L14.54,11.15L6.05,2.66L16.81,8.88Z" />
-                            </svg>
-                        </a>
-                        
-                        
-                    </div>
-
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-
-                    
-                    <div class="suite-menu-container">
-                        <button class="suite-menu-toggle" id="suite-menu-toggle" aria-label="See other apps"
-                            aria-expanded="false">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        </option></select></div><div class="nav-group-right"><div class="header-app-buttons"><a href="https://apps.apple.com/us/app/run-analytics/id6754524015" class="header-download-btn" target="_blank"
+                            rel="noopener" aria-label="Download on App Store" title="Download on App Store"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="currentColor"><path
+                                    d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z" /></svg></a><a href="https://play.google.com/store/apps/details?id=com.arnohealth.runanalytics" class="header-download-btn" target="_blank"
+                            rel="noopener" aria-label="Get it on Google Play" title="Get it on Google Play"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="currentColor"><path
+                                    d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.92 20.16,13.19L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M16.81,8.88L14.54,11.15L6.05,2.66L16.81,8.88Z" /></svg></a></div><div class="suite-menu-container"><button class="suite-menu-toggle" id="suite-menu-toggle" aria-label="See other apps"
+                            aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round">
-                                <rect x="3" y="3" width="7" height="7"></rect>
-                                <rect x="14" y="3" width="7" height="7"></rect>
-                                <rect x="14" y="14" width="7" height="7"></rect>
-                                <rect x="3" y="14" width="7" height="7"></rect>
-                            </svg>
-                        </button>
-                        <div class="suite-dropdown hidden" id="suite-dropdown">
-                            <div class="suite-dropdown-header">Other AnalyticsZone Apps</div>
-                            <div class="suite-apps-grid">
-                                
-                                <a href="https://analyticszone.app" class="suite-app-link">AnalyticsZone</a>
-                                
-                                <a href="https://swim.analyticszone.app" class="suite-app-link">Swim Analytics</a>
-                                
-                                <a href="https://bike.analyticszone.app" class="suite-app-link">Bike Analytics</a>
-                                
-                                <a href="https://walk.analyticszone.app" class="suite-app-link">Walk Analytics</a>
-                                
-                                <a href="https://cardio.analyticszone.app" class="suite-app-link">Cardio Analytics</a>
-                                
-                                <a href="https://health.analyticszone.app" class="suite-app-link">Health Analytics</a>
-                                
-                                <a href="https://swimtrainer.analyticszone.app" class="suite-app-link">Swim Trainer</a>
-                                
-                            </div>
-                        </div>
-                    </div>
-                    
-                </div>
-            </nav>
-
-            
-            <button class="menu-toggle" id="menu-toggle" aria-label="মেনু টগল করুন"
-                aria-expanded="false" aria-controls="nav-primary">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </div>
-    </div>
-</header>
-
-  
-  
-
-<nav class="breadcrumbs" aria-label="Breadcrumb">
-    <div class="container">
-        <ol>
-            
-            <li>
-                
-                <a href="/bn/">হোম</a>
-                
-            </li>
-            
-            <li>
-                
-                <a href="/bn/getting-started/">শিখুন</a>
-                
-            </li>
-            
-            <li>
-                
-                <span aria-current="page">rTSS ক্যালকুলেটর</span>
-                
-            </li>
-            
-        </ol>
-    </div>
-</nav>
-
-
-  
-  <main id="main-content" class="main-content">
-    
-    <section class="page-hero">
-    <div class="container">
-        <h1>বিনামূল্যে দৌড়ের TSS ক্যালকুলেটর</h1>
-        <p class="lead">দৌড়ের ওয়ার্কআউটের জন্য ট্রেনিং স্ট্রেস স্কোর গণনা করুন - একমাত্র বিনামূল্যে rTSS ক্যালকুলেটর
-        </p>
-    </div>
-</section>
-
-<section class="section">
-    <div class="container container-narrow">
-        <div class="callout callout-info mb-xl">
-            <h2>রানিং rTSS (rTSS) কী?</h2>
-            <p><strong>রানিং স্ট্রেস স্কোর (rTSS)</strong> ইনটেনসিটি এবং সময়কাল একত্রিত করে একটি দৌড়ের ওয়ার্কআউটের
+                                stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg></button><div class="suite-dropdown hidden" id="suite-dropdown"><div class="suite-dropdown-header">Other AnalyticsZone Apps</div><div class="suite-apps-grid"><a href="https://analyticszone.app" class="suite-app-link">AnalyticsZone</a><a href="https://swim.analyticszone.app" class="suite-app-link">Swim Analytics</a><a href="https://bike.analyticszone.app" class="suite-app-link">Bike Analytics</a><a href="https://walk.analyticszone.app" class="suite-app-link">Walk Analytics</a><a href="https://cardio.analyticszone.app" class="suite-app-link">Cardio Analytics</a><a href="https://health.analyticszone.app" class="suite-app-link">Health Analytics</a><a href="https://swimtrainer.analyticszone.app" class="suite-app-link">Swim Trainer</a></div></div></div></div></nav><button class="menu-toggle" id="menu-toggle" aria-label="মেনু টগল করুন"
+                aria-expanded="false" aria-controls="nav-primary"><span></span><span></span><span></span></button></div></div></header><nav class="breadcrumbs" aria-label="Breadcrumb"><div class="container"><ol><li><a href="/bn/">হোম</a></li><li><a href="/bn/getting-started/">শিখুন</a></li><li><span aria-current="page">rTSS ক্যালকুলেটর</span></li></ol></div></nav><main id="main-content" class="main-content"><section class="page-hero"><div class="container"><h1>বিনামূল্যে দৌড়ের TSS ক্যালকুলেটর</h1><p class="lead">দৌড়ের ওয়ার্কআউটের জন্য ট্রেনিং স্ট্রেস স্কোর গণনা করুন - একমাত্র বিনামূল্যে rTSS ক্যালকুলেটর
+        </p></div></section><section class="section"><div class="container container-narrow"><div class="callout callout-info mb-xl"><h2>রানিং rTSS (rTSS) কী?</h2><p><strong>রানিং স্ট্রেস স্কোর (rTSS)</strong> ইনটেনসিটি এবং সময়কাল একত্রিত করে একটি দৌড়ের ওয়ার্কআউটের
                 ট্রেনিং লোড পরিমাপ করে। এটি সাইক্লিং-এর TSS পদ্ধতি থেকে গৃহীত, যা আপনার ক্রিটিক্যাল রান স্পিড (CRS)-কে
-                থ্রেশহোল্ড পেস হিসেবে ব্যবহার করে। CRS পেসে ১ ঘণ্টার ওয়ার্কআউট = ১০০ rTSS।</p>
-        </div>
-
-        <h2 class="mt-3xl">ফ্রি rTSS ক্যালকুলেটর</h2>
-        <p class="lead mb-xl">যেকোনো রানিং ওয়ার্কআউটের জন্য ট্রেনিং স্ট্রেস গণনা করুন। আপনার CRS পেস প্রয়োজন।</p>
-
-        <div class="crs-calculator">
-            <form id="rtssCalculatorForm">
-                <div class="calculator-inputs">
-                    <div class="form-group">
-                        <label for="crsPace" class="form-label">আপনার CRS পেস (মিমি:সেসে প্রতি কিমি)</label>
-                        <input type="text" id="crsPace" class="form-input" placeholder="4:15"
-                            pattern="[0-9]{1,2}:[0-5][0-9]" aria-required="true" aria-describedby="crsPace-help" />
-                        <small id="crsPace-help" class="form-help">CRS টেস্ট থেকে আপনার থ্রেশহোল্ড পেস (যেমন,
-                            ৪:১৫)</small>
-                        <div class="form-error" id="crsPace-error"></div>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="workoutDuration" class="form-label">ওয়ার্কআউটের সময়কাল (মিনিট)</label>
-                        <input type="number" id="workoutDuration" class="form-input" placeholder="60" min="1" max="300"
-                            aria-required="true" aria-describedby="duration-help" />
-                        <small id="duration-help" class="form-help">বিশ্রাম সহ মোট ওয়ার্কআউট সময় (১-৩০০ মিনিট)</small>
-                        <div class="form-error" id="duration-error"></div>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="avgPace" class="form-label">গড় ওয়ার্কআউট পেস (মিমি:সেসে প্রতি কিমি)</label>
-                        <input type="text" id="avgPace" class="form-input" placeholder="4:45"
-                            pattern="[0-9]{1,2}:[0-5][0-9]" aria-required="true" aria-describedby="pace-help" />
-                        <small id="pace-help" class="form-help">ওয়ার্কআউটের সময় আপনার গড় পেস (যেমন, ৪:৪৫)</small>
-                        <div class="form-error" id="pace-error"></div>
-                    </div>
-
-                    <div class="calculator-buttons">
-                        <button type="submit" class="btn btn-primary" id="calculateRtssBtn">rTSS গণনা করুন</button>
-                        <button type="reset" class="btn btn-ghost" id="resetRtssBtn">মুছুন</button>
-                    </div>
-                </div>
-            </form>
-
-            <div class="calculator-results hidden" id="rtssResults" aria-live="polite">
-                <h3>আপনার ট্রেনিং স্ট্রেস স্কোর</h3>
-                <div class="results-summary">
-                    <div class="result-item">
-                        <div class="result-label">rTSS</div>
-                        <div class="crs-result-value" id="rtssValue">--</div>
-                    </div>
-                    <div class="result-item">
-                        <div class="result-label">ইনটেনসিটি ফ্যাক্টর (IF)</div>
-                        <div class="crs-result-value" id="intensityFactor">--</div>
-                    </div>
-                </div>
-
-                <div class="zones-result">
-                    <h4>ট্রেনিং লোড ব্যাখ্যা</h4>
-                    <p class="mb-md text-secondary" id="rtssInterpretation">
-                        <!-- Filled by JavaScript -->
-                    </p>
-                </div>
-            </div>
-        </div>
-
-        <h2 class="mt-3xl">কীভাবে rTSS গণনা করা হয়</h2>
-
-        <div class="formula-box">
-            <h3>ফর্মুলা</h3>
-            <div class="formula">
+                থ্রেশহোল্ড পেস হিসেবে ব্যবহার করে। CRS পেসে ১ ঘণ্টার ওয়ার্কআউট = ১০০ rTSS।</p></div><h2 class="mt-3xl">ফ্রি rTSS ক্যালকুলেটর</h2><p class="lead mb-xl">যেকোনো রানিং ওয়ার্কআউটের জন্য ট্রেনিং স্ট্রেস গণনা করুন। আপনার CRS পেস প্রয়োজন।</p><div class="crs-calculator"><form id="rtssCalculatorForm"><div class="calculator-inputs"><div class="form-group"><label for="crsPace" class="form-label">আপনার CRS পেস (মিমি:সেসে প্রতি কিমি)</label><input type="text" id="crsPace" class="form-input" placeholder="4:15"
+                            pattern="[0-9]{1,2}:[0-5][0-9]" aria-required="true" aria-describedby="crsPace-help" /><small id="crsPace-help" class="form-help">CRS টেস্ট থেকে আপনার থ্রেশহোল্ড পেস (যেমন,
+                            ৪:১৫)</small><div class="form-error" id="crsPace-error"></div></div><div class="form-group"><label for="workoutDuration" class="form-label">ওয়ার্কআউটের সময়কাল (মিনিট)</label><input type="number" id="workoutDuration" class="form-input" placeholder="60" min="1" max="300"
+                            aria-required="true" aria-describedby="duration-help" /><small id="duration-help" class="form-help">বিশ্রাম সহ মোট ওয়ার্কআউট সময় (১-৩০০ মিনিট)</small><div class="form-error" id="duration-error"></div></div><div class="form-group"><label for="avgPace" class="form-label">গড় ওয়ার্কআউট পেস (মিমি:সেসে প্রতি কিমি)</label><input type="text" id="avgPace" class="form-input" placeholder="4:45"
+                            pattern="[0-9]{1,2}:[0-5][0-9]" aria-required="true" aria-describedby="pace-help" /><small id="pace-help" class="form-help">ওয়ার্কআউটের সময় আপনার গড় পেস (যেমন, ৪:৪৫)</small><div class="form-error" id="pace-error"></div></div><div class="calculator-buttons"><button type="submit" class="btn btn-primary" id="calculateRtssBtn">rTSS গণনা করুন</button><button type="reset" class="btn btn-ghost" id="resetRtssBtn">মুছুন</button></div></div></form><div class="calculator-results hidden" id="rtssResults" aria-live="polite"><h3>আপনার ট্রেনিং স্ট্রেস স্কোর</h3><div class="results-summary"><div class="result-item"><div class="result-label">rTSS</div><div class="crs-result-value" id="rtssValue">--</div></div><div class="result-item"><div class="result-label">ইনটেনসিটি ফ্যাক্টর (IF)</div><div class="crs-result-value" id="intensityFactor">--</div></div></div><div class="zones-result"><h4>ট্রেনিং লোড ব্যাখ্যা</h4><p class="mb-md text-secondary" id="rtssInterpretation"></p></div></div></div><h2 class="mt-3xl">কীভাবে rTSS গণনা করা হয়</h2><div class="formula-box"><h3>ফর্মুলা</h3><div class="formula">
                 rTSS = (Duration in hours) × (Intensity Factor)² × 100
-            </div>
-            <div class="formula-explanation">
-                <p>যেখানে:</p>
-                <ul>
-                    <li><strong>ইনটেনসিটি ফ্যাক্টর (IF)</strong> = CRS Pace / Average Workout Pace</li>
-                    <li><strong>Duration</strong> = ঘণ্টায় মোট ওয়ার্কআউট সময়</li>
-                    <li><strong>CRS Pace</strong> = CRS টেস্ট থেকে আপনার থ্রেশহোল্ড পেস</li>
-                </ul>
-            </div>
-        </div>
-
-        <h3 class="mt-xl">কাজের উদাহরণ</h3>
-        <div class="example-box">
-            <h4>ওয়ার্কআউটের বিবরণ:</h4>
-            <ul>
-                <li>CRS পেস: <strong>৪:১৫/কিমি</strong> (২৫৫ সেকেন্ড)</li>
-                <li>ওয়ার্কআউটের সময়কাল: <strong>৬০ মিনিট</strong> (১ ঘণ্টা)</li>
-                <li>গড় পেস: <strong>৪:৪৫/কিমি</strong> (২৮৫ সেকেন্ড)</li>
-            </ul>
-
-            <h4>ধাপ ১: ইনটেনসিটি ফ্যাক্টর গণনা</h4>
-            <div class="calculation">
+            </div><div class="formula-explanation"><p>যেখানে:</p><ul><li><strong>ইনটেনসিটি ফ্যাক্টর (IF)</strong> = CRS Pace / Average Workout Pace</li><li><strong>Duration</strong> = ঘণ্টায় মোট ওয়ার্কআউট সময়</li><li><strong>CRS Pace</strong> = CRS টেস্ট থেকে আপনার থ্রেশহোল্ড পেস</li></ul></div></div><h3 class="mt-xl">কাজের উদাহরণ</h3><div class="example-box"><h4>ওয়ার্কআউটের বিবরণ:</h4><ul><li>CRS পেস: <strong>৪:১৫/কিমি</strong> (২৫৫ সেকেন্ড)</li><li>ওয়ার্কআউটের সময়কাল: <strong>৬০ মিনিট</strong> (১ ঘণ্টা)</li><li>গড় পেস: <strong>৪:৪৫/কিমি</strong> (২৮৫ সেকেন্ড)</li></ul><h4>ধাপ ১: ইনটেনসিটি ফ্যাক্টর গণনা</h4><div class="calculation">
                 IF = CRS Pace / Workout Pace<br>
                 IF = ২৫৫ / ২৮৫<br>
-                IF = <strong>০.৮৯৫</strong>
-            </div>
-
-            <h4>ধাপ ২: rTSS গণনা</h4>
-            <div class="calculation">
+                IF = <strong>০.৮৯৫</strong></div><h4>ধাপ ২: rTSS গণনা</h4><div class="calculation">
                 rTSS = ১.০ ঘণ্টা × (০.৮৯৫)² × ১০০<br>
                 rTSS = ১.০ × ০.৮০১ × ১০০<br>
-                rTSS = <strong>৮০</strong>
-            </div>
-
-            <p class="mt-md"><strong>ব্যাখ্যা:</strong> সহজ পেসে (CRS-এর চেয়ে ধীর) এই ৬০-মিনিটের ওয়ার্কআউটটি ৭২ rTSS
-                তৈরি করেছে - যা অ্যারোবিক বেস তৈরির জন্য একটি মাঝারি ট্রেনিং লোড।</p>
-        </div>
-
-        <h2 class="mt-3xl">rTSS মান বোঝা</h2>
-
-        <div class="zones-table-container">
-            <table class="zones-table">
-                <thead>
-                    <tr>
-                        <th>rTSS রেঞ্জ</th>
-                        <th>ট্রেনিং লোড</th>
-                        <th>রিকভারি সময়</th>
-                        <th>উদাহরণ ওয়ার্কআউট</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>&lt; ৫০</td>
-                        <td>কম</td>
-                        <td>একই দিন</td>
-                        <td>সহজ ৩০-মিনিট দৌড়, টেকনিক ড্রিল</td>
-                    </tr>
-                    <tr>
-                        <td>৫০-১০০</td>
-                        <td>মাঝারি</td>
-                        <td>১ দিন</td>
-                        <td>৬০-মিনিট এনডুরেন্স, স্টেডি পেস</td>
-                    </tr>
-                    <tr>
-                        <td>১০০-২০০</td>
-                        <td>উচ্চ</td>
-                        <td>১-২ দিন</td>
-                        <td>৯০-মিনিট থ্রেশহোল্ড সেট, রেস পেস ইন্টারভাল</td>
-                    </tr>
-                    <tr>
-                        <td>২০০-৩০০</td>
-                        <td>খুব উচ্চ</td>
-                        <td>২-৩ দিন</td>
-                        <td>২-ঘণ্টা কঠিন ট্রেনিং, একাধিক থ্রেশহোল্ড ব্লক</td>
-                    </tr>
-                    <tr>
-                        <td>&gt; ৩০০</td>
-                        <td>চরম</td>
-                        <td>৩+ দিন</td>
-                        <td>লং রেস (&gt;২ ঘণ্টা), আল্ট্রা-এনডুরেন্স</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-
-        <h2 class="mt-3xl">সাপ্তাহিক rTSS নির্দেশিকা</h2>
-
-        <p class="mb-md">সাপ্তাহিক rTSS লক্ষ্য আপনার ট্রেনিং লেভেল এবং লক্ষ্যের উপর নির্ভর করে:</p>
-
-        <div class="grid grid-2 mb-xl">
-            <div class="card">
-                <h3 class="card-title">রিক্রিয়েশনাল রানার</h3>
-                <div class="card-content">
-                    <p class="mb-sm"><strong>সাপ্তাহিক rTSS:</strong> ১৫০-৩০০</p>
-                    <p>সপ্তাহে ২-৩টি ওয়ার্কআউট, প্রতিটি ৫০-১০০ rTSS। টেকনিক এবং অ্যারোবিক বেস তৈরির উপর ফোকাস করুন।</p>
-                </div>
-            </div>
-
-            <div class="card">
-                <h3 class="card-title">ফিটনেস রানার / ট্রায়াথলিট</h3>
-                <div class="card-content">
-                    <p class="mb-sm"><strong>সাপ্তাহিক rTSS:</strong> ৩০০-৫০০</p>
-                    <p>সপ্তাহে ৩-৪টি ওয়ার্কআউট, প্রতিটি ৭৫-১২৫ rTSS। অ্যারোবিক এনডুরেন্স এবং থ্রেশহোল্ড কাজের মিশ্রণ।
-                    </p>
-                </div>
-            </div>
-
-            <div class="card">
-                <h3 class="card-title">কম্পিটিটিভ মাস্টার্স রানার</h3>
-                <div class="card-content">
-                    <p class="mb-sm"><strong>সাপ্তাহিক rTSS:</strong> ৫০০-৮০০</p>
-                    <p>সপ্তাহে ৪-৬টি ওয়ার্কআউট, প্রতিটি ৮০-১৫০ rTSS। পিরিয়ডাইজেশন সহ স্ট্রাকচার্ড ট্রেনিং।</p>
-                </div>
-            </div>
-
-            <div class="card">
-                <h3 class="card-title">এলিট / কলেজিয়েট রানার</h3>
-                <div class="card-content">
-                    <p class="mb-sm"><strong>সাপ্তাহিক rTSS:</strong> ৮০০-১২০০+</p>
-                    <p>সপ্তাহে ৮-১২টি ওয়ার্কআউট, ডাবল ডে। রিকভারি ম্যানেজমেন্ট অত্যন্ত গুরুত্বপূর্ণ।</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="callout callout-warning">
-            <h3>⚠️ গুরুত্বপূর্ণ নোট</h3>
-            <ul>
-                <li><strong>নির্ভুল CRS প্রয়োজন:</strong> সঠিক rTSS-এর জন্য আপনার CRS সাম্প্রতিক (৬-৮ সপ্তাহের মধ্যে
-                    টেস্ট করা) হতে হবে।</li>
-                <li><strong>সরলীকৃত গণনা:</strong> এই ক্যালকুলেটর গড় পেস ব্যবহার করে। অ্যাডভান্সড rTSS নরমালাইজড
-                    গ্রেডেড পেস (NGP) ব্যবহার করে যা ইন্টারভাল স্ট্রাকচার বিবেচনা করে।</li>
-                <li><strong>টেকনিক কাজের জন্য নয়:</strong> rTSS শুধুমাত্র শারীরিক ট্রেনিং স্ট্রেস পরিমাপ করে, স্কিল
-                    ডেভেলপমেন্ট নয়।</li>
-                <li><strong>ব্যক্তিগত তারতম্য:</strong> একই rTSS বিভিন্ন রানারের জন্য ভিন্ন অনুভূত হয়। আপনার রিকভারির
-                    উপর ভিত্তি করে নির্দেশিকা সামঞ্জস্য করুন।</li>
-            </ul>
-        </div>
-
-        <h2 class="mt-3xl">rTSS কেন গুরুত্বপূর্ণ</h2>
-
-        <p class="mb-md">ট্রেনিং স্ট্রেস স্কোর হলো এগুলোর ভিত্তি:</p>
-
-        <ul class="mb-xl">
-            <li><strong>CTL (ক্রনিক ট্রেনিং লোড):</strong> আপনার ফিটনেস লেভেল - দৈনিক rTSS-এর ৪২-দিনের এক্সপোনেনশিয়াল
-                ওয়েটেড এভারেজ</li>
-            <li><strong>ATL (একিউট ট্রেনিং লোড):</strong> আপনার ক্লান্তি - দৈনিক rTSS-এর ৭-দিনের এক্সপোনেনশিয়াল ওয়েটেড
-                এভারেজ</li>
-            <li><strong>TSB (ট্রেনিং স্ট্রেস ব্যালেন্স):</strong> আপনার ফর্ম - TSB = CTL - ATL (পজিটিভ = ফ্রেশ, নেগেটিভ
-                = ক্লান্ত)</li>
-            <li><strong>পিরিয়ডাইজেশন:</strong> টার্গেট CTL প্রগ্রেশন ব্যবহার করে ট্রেনিং ফেজ (বেস, বিল্ড, পিক, টেপার)
-                পরিকল্পনা করুন</li>
-            <li><strong>রিকভারি ম্যানেজমেন্ট:</strong> TSB-এর উপর ভিত্তি করে কখন পুশ করতে হবে এবং কখন বিশ্রাম নিতে হবে
-                তা জানুন</li>
-        </ul>
-
-        <div class="callout callout-tip">
-            <h3>প্রো টিপ: আপনার CTL ট্র্যাক করুন</h3>
-            <p>একটি স্প্রেডশিট বা ট্রেনিং লগে দৈনিক rTSS রেকর্ড করুন। সাপ্তাহিক আপনার ৪২-দিনের গড় (CTL) গণনা করুন। বেস
+                rTSS = <strong>৮০</strong></div><p class="mt-md"><strong>ব্যাখ্যা:</strong> সহজ পেসে (CRS-এর চেয়ে ধীর) এই ৬০-মিনিটের ওয়ার্কআউটটি ৭২ rTSS
+                তৈরি করেছে - যা অ্যারোবিক বেস তৈরির জন্য একটি মাঝারি ট্রেনিং লোড।</p></div><h2 class="mt-3xl">rTSS মান বোঝা</h2><div class="zones-table-container"><table class="zones-table"><thead><tr><th>rTSS রেঞ্জ</th><th>ট্রেনিং লোড</th><th>রিকভারি সময়</th><th>উদাহরণ ওয়ার্কআউট</th></tr></thead><tbody><tr><td>&lt; ৫০</td><td>কম</td><td>একই দিন</td><td>সহজ ৩০-মিনিট দৌড়, টেকনিক ড্রিল</td></tr><tr><td>৫০-১০০</td><td>মাঝারি</td><td>১ দিন</td><td>৬০-মিনিট এনডুরেন্স, স্টেডি পেস</td></tr><tr><td>১০০-২০০</td><td>উচ্চ</td><td>১-২ দিন</td><td>৯০-মিনিট থ্রেশহোল্ড সেট, রেস পেস ইন্টারভাল</td></tr><tr><td>২০০-৩০০</td><td>খুব উচ্চ</td><td>২-৩ দিন</td><td>২-ঘণ্টা কঠিন ট্রেনিং, একাধিক থ্রেশহোল্ড ব্লক</td></tr><tr><td>&gt; ৩০০</td><td>চরম</td><td>৩+ দিন</td><td>লং রেস (&gt;২ ঘণ্টা), আল্ট্রা-এনডুরেন্স</td></tr></tbody></table></div><h2 class="mt-3xl">সাপ্তাহিক rTSS নির্দেশিকা</h2><p class="mb-md">সাপ্তাহিক rTSS লক্ষ্য আপনার ট্রেনিং লেভেল এবং লক্ষ্যের উপর নির্ভর করে:</p><div class="grid grid-2 mb-xl"><div class="card"><h3 class="card-title">রিক্রিয়েশনাল রানার</h3><div class="card-content"><p class="mb-sm"><strong>সাপ্তাহিক rTSS:</strong> ১৫০-৩০০</p><p>সপ্তাহে ২-৩টি ওয়ার্কআউট, প্রতিটি ৫০-১০০ rTSS। টেকনিক এবং অ্যারোবিক বেস তৈরির উপর ফোকাস করুন।</p></div></div><div class="card"><h3 class="card-title">ফিটনেস রানার / ট্রায়াথলিট</h3><div class="card-content"><p class="mb-sm"><strong>সাপ্তাহিক rTSS:</strong> ৩০০-৫০০</p><p>সপ্তাহে ৩-৪টি ওয়ার্কআউট, প্রতিটি ৭৫-১২৫ rTSS। অ্যারোবিক এনডুরেন্স এবং থ্রেশহোল্ড কাজের মিশ্রণ।
+                    </p></div></div><div class="card"><h3 class="card-title">কম্পিটিটিভ মাস্টার্স রানার</h3><div class="card-content"><p class="mb-sm"><strong>সাপ্তাহিক rTSS:</strong> ৫০০-৮০০</p><p>সপ্তাহে ৪-৬টি ওয়ার্কআউট, প্রতিটি ৮০-১৫০ rTSS। পিরিয়ডাইজেশন সহ স্ট্রাকচার্ড ট্রেনিং।</p></div></div><div class="card"><h3 class="card-title">এলিট / কলেজিয়েট রানার</h3><div class="card-content"><p class="mb-sm"><strong>সাপ্তাহিক rTSS:</strong> ৮০০-১২০০+</p><p>সপ্তাহে ৮-১২টি ওয়ার্কআউট, ডাবল ডে। রিকভারি ম্যানেজমেন্ট অত্যন্ত গুরুত্বপূর্ণ।</p></div></div></div><div class="callout callout-warning"><h3>⚠️ গুরুত্বপূর্ণ নোট</h3><ul><li><strong>নির্ভুল CRS প্রয়োজন:</strong> সঠিক rTSS-এর জন্য আপনার CRS সাম্প্রতিক (৬-৮ সপ্তাহের মধ্যে
+                    টেস্ট করা) হতে হবে।</li><li><strong>সরলীকৃত গণনা:</strong> এই ক্যালকুলেটর গড় পেস ব্যবহার করে। অ্যাডভান্সড rTSS নরমালাইজড
+                    গ্রেডেড পেস (NGP) ব্যবহার করে যা ইন্টারভাল স্ট্রাকচার বিবেচনা করে।</li><li><strong>টেকনিক কাজের জন্য নয়:</strong> rTSS শুধুমাত্র শারীরিক ট্রেনিং স্ট্রেস পরিমাপ করে, স্কিল
+                    ডেভেলপমেন্ট নয়।</li><li><strong>ব্যক্তিগত তারতম্য:</strong> একই rTSS বিভিন্ন রানারের জন্য ভিন্ন অনুভূত হয়। আপনার রিকভারির
+                    উপর ভিত্তি করে নির্দেশিকা সামঞ্জস্য করুন।</li></ul></div><h2 class="mt-3xl">rTSS কেন গুরুত্বপূর্ণ</h2><p class="mb-md">ট্রেনিং স্ট্রেস স্কোর হলো এগুলোর ভিত্তি:</p><ul class="mb-xl"><li><strong>CTL (ক্রনিক ট্রেনিং লোড):</strong> আপনার ফিটনেস লেভেল - দৈনিক rTSS-এর ৪২-দিনের এক্সপোনেনশিয়াল
+                ওয়েটেড এভারেজ</li><li><strong>ATL (একিউট ট্রেনিং লোড):</strong> আপনার ক্লান্তি - দৈনিক rTSS-এর ৭-দিনের এক্সপোনেনশিয়াল ওয়েটেড
+                এভারেজ</li><li><strong>TSB (ট্রেনিং স্ট্রেস ব্যালেন্স):</strong> আপনার ফর্ম - TSB = CTL - ATL (পজিটিভ = ফ্রেশ, নেগেটিভ
+                = ক্লান্ত)</li><li><strong>পিরিয়ডাইজেশন:</strong> টার্গেট CTL প্রগ্রেশন ব্যবহার করে ট্রেনিং ফেজ (বেস, বিল্ড, পিক, টেপার)
+                পরিকল্পনা করুন</li><li><strong>রিকভারি ম্যানেজমেন্ট:</strong> TSB-এর উপর ভিত্তি করে কখন পুশ করতে হবে এবং কখন বিশ্রাম নিতে হবে
+                তা জানুন</li></ul><div class="callout callout-tip"><h3>প্রো টিপ: আপনার CTL ট্র্যাক করুন</h3><p>একটি স্প্রেডশিট বা ট্রেনিং লগে দৈনিক rTSS রেকর্ড করুন। সাপ্তাহিক আপনার ৪২-দিনের গড় (CTL) গণনা করুন। বেস
                 তৈরির সময় সপ্তাহে ৫-১০ CTL পয়েন্ট বৃদ্ধির লক্ষ্য রাখুন। টেপার (রেসের ১-২ সপ্তাহ আগে) চলাকালীন CTL
-                বজায় রাখুন বা সামান্য কমান।</p>
-        </div>
-
-        <h2 class="mt-3xl">সচরাচর জিজ্ঞাসিত প্রশ্নাবলী</h2>
-
-        <div class="faq-section" itemscope itemtype="https://schema.org/FAQPage">
-            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">রানিং TSS (rTSS) কী?</h3>
-                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                    <div itemprop="text">
-                        <p>রানিং ট্রেনিং স্ট্রেস স্কোর (rTSS) হলো একটি মেট্রিক যা ইনটেনসিটি এবং সময়কাল একত্রিত করে একটি
+                বজায় রাখুন বা সামান্য কমান।</p></div><h2 class="mt-3xl">সচরাচর জিজ্ঞাসিত প্রশ্নাবলী</h2><div class="faq-section" itemscope itemtype="https://schema.org/FAQPage"><div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><h3 itemprop="name">রানিং TSS (rTSS) কী?</h3><div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div itemprop="text"><p>রানিং ট্রেনিং স্ট্রেস স্কোর (rTSS) হলো একটি মেট্রিক যা ইনটেনসিটি এবং সময়কাল একত্রিত করে একটি
                             রানিং ওয়ার্কআউটের ট্রেনিং লোড পরিমাপ করে। এটি সাইক্লিং-এর TSS পদ্ধতি থেকে গৃহীত, যা আপনার
                             ক্রিটিক্যাল রান স্পিড (CRS)-কে থ্রেশহোল্ড পেস হিসেবে ব্যবহার করে। CRS পেসে ১ ঘণ্টার একটি
-                            ওয়ার্কআউট ১০০ rTSS-এর সমান।</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">আমি কীভাবে আমার rTSS গণনা করব?</h3>
-                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                    <div itemprop="text">
-                        <p>উপরের ক্যালকুলেটরে আপনার CRS পেস (CRS টেস্ট থেকে), মোট ওয়ার্কআউট সময়কাল এবং ওয়ার্কআউটের
+                            ওয়ার্কআউট ১০০ rTSS-এর সমান।</p></div></div></div><div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><h3 itemprop="name">আমি কীভাবে আমার rTSS গণনা করব?</h3><div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div itemprop="text"><p>উপরের ক্যালকুলেটরে আপনার CRS পেস (CRS টেস্ট থেকে), মোট ওয়ার্কআউট সময়কাল এবং ওয়ার্কআউটের
                             গড় পেস ইনপুট করুন। ফর্মুলা হলো: rTSS = Duration (hours) × Intensity Factor³ × 100, যেখানে
-                            Intensity Factor = CRS Pace / Average Workout Pace।</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">rTSS গণনা করতে কি আমার CRS প্রয়োজন?</h3>
-                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                    <div itemprop="text">
-                        <p>হ্যাঁ, ইনটেনসিটি ফ্যাক্টর গণনা করার জন্য আপনার ক্রিটিক্যাল রান স্পিড (CRS) প্রয়োজন, যা rTSS
+                            Intensity Factor = CRS Pace / Average Workout Pace।</p></div></div></div><div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><h3 itemprop="name">rTSS গণনা করতে কি আমার CRS প্রয়োজন?</h3><div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div itemprop="text"><p>হ্যাঁ, ইনটেনসিটি ফ্যাক্টর গণনা করার জন্য আপনার ক্রিটিক্যাল রান স্পিড (CRS) প্রয়োজন, যা rTSS
                             গণনার জন্য অপরিহার্য। CRS আপনার থ্রেশহোল্ড পেস নির্দেশ করে এবং প্রতি ৬-৮ সপ্তাহে টেস্ট করা
                             উচিত। আপনি আমাদের <a href="/bn/crs/">CRS ক্যালকুলেটর</a> ব্যবহার করে আপনার CRS খুঁজে পেতে
-                            পারেন।</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">একটি ওয়ার্কআউটের জন্য ভালো rTSS স্কোর কত?</h3>
-                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                    <div itemprop="text">
-                        <p>এটি ওয়ার্কআউটের ইনটেনসিটির উপর নির্ভর করে: সহজ ওয়ার্কআউটের স্কোর সাধারণত ৫০ rTSS-এর নিচে,
+                            পারেন।</p></div></div></div><div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><h3 itemprop="name">একটি ওয়ার্কআউটের জন্য ভালো rTSS স্কোর কত?</h3><div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div itemprop="text"><p>এটি ওয়ার্কআউটের ইনটেনসিটির উপর নির্ভর করে: সহজ ওয়ার্কআউটের স্কোর সাধারণত ৫০ rTSS-এর নিচে,
                             মাঝারি ওয়ার্কআউট ৫০-১০০ rTSS, কঠিন ওয়ার্কআউট ১০০-২০০ rTSS, এবং খুব কঠিন ওয়ার্কআউট ২০০
                             rTSS-এর উপরে হয়। উপযুক্ত স্কোর আপনার ট্রেনিং লক্ষ্য এবং বর্তমান ফিটনেস লেভেলের উপর নির্ভর
-                            করে।</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">সপ্তাহে আমার কত rTSS করা উচিত?</h3>
-                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                    <div itemprop="text">
-                        <p>লেভেল অনুযায়ী সাপ্তাহিক rTSS লক্ষ্য পরিবর্তিত হয়: রিক্রিয়েশনাল রানার: ১৫০-৩০০, ফিটনেস
+                            করে।</p></div></div></div><div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><h3 itemprop="name">সপ্তাহে আমার কত rTSS করা উচিত?</h3><div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div itemprop="text"><p>লেভেল অনুযায়ী সাপ্তাহিক rTSS লক্ষ্য পরিবর্তিত হয়: রিক্রিয়েশনাল রানার: ১৫০-৩০০, ফিটনেস
                             রানার/ট্রায়াথলিট: ৩০০-৫০০, কম্পিটিটিভ মাস্টার্স: ৫০০-৮০০, এলিট/কলেজিয়েট: ৮০০-১২০০+।
-                            ওভারট্রেনিং এড়াতে কম দিয়ে শুরু করুন এবং ধীরে ধীরে বাড়ান।</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">রানিং TSS কি সাইক্লিং TSS-এর মতো একই?</h3>
-                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                    <div itemprop="text">
-                        <p>ধারণা এবং ফর্মুলা একই, কিন্তু rTSS রানিং-এর জন্য অভিযোজিত। সাইক্লিং TSS-এর মতো পাওয়ার (FTP)
+                            ওভারট্রেনিং এড়াতে কম দিয়ে শুরু করুন এবং ধীরে ধীরে বাড়ান।</p></div></div></div><div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><h3 itemprop="name">রানিং TSS কি সাইক্লিং TSS-এর মতো একই?</h3><div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div itemprop="text"><p>ধারণা এবং ফর্মুলা একই, কিন্তু rTSS রানিং-এর জন্য অভিযোজিত। সাইক্লিং TSS-এর মতো পাওয়ার (FTP)
                             ব্যবহার করার পরিবর্তে, rTSS থ্রেশহোল্ড হিসেবে CRS সহ পেস ব্যবহার করে। উভয়ই ট্রেনিং লোড
-                            পরিমাপ করে: Duration × Intensity Factor² × 100।</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">rTSS কি ভূখণ্ড বা পাহাড় বিবেচনা করে?</h3>
-                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                    <div itemprop="text">
-                        <p>গড় GPS পেসের উপর ভিত্তি করে স্ট্যান্ডার্ড rTSS পাহাড় বিবেচনা করে না। ট্রেইল রানিং বা
+                            পরিমাপ করে: Duration × Intensity Factor² × 100।</p></div></div></div><div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><h3 itemprop="name">rTSS কি ভূখণ্ড বা পাহাড় বিবেচনা করে?</h3><div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div itemprop="text"><p>গড় GPS পেসের উপর ভিত্তি করে স্ট্যান্ডার্ড rTSS পাহাড় বিবেচনা করে না। ট্রেইল রানিং বা
                             পাহাড়ি রুটের জন্য, উন্নত সরঞ্জামগুলি ট্রেনিং স্ট্রেসের আরও সঠিক উপস্থাপনা প্রদানের জন্য
-                            <strong>নরমালাইজড গ্রেডেড পেস (NGP)</strong> বা হার্ট রেট ইন্টারভাল ব্যবহার করে।</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">rTSS এবং CTL/ATL/TSB-এর মধ্যে পার্থক্য কী?</h3>
-                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                    <div itemprop="text">
-                        <p>rTSS একটি একক ওয়ার্কআউটের ট্রেনিং লোড পরিমাপ করে। CTL (ক্রনিক ট্রেনিং লোড) হলো আপনার
+                            <strong>নরমালাইজড গ্রেডেড পেস (NGP)</strong> বা হার্ট রেট ইন্টারভাল ব্যবহার করে।</p></div></div></div><div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><h3 itemprop="name">rTSS এবং CTL/ATL/TSB-এর মধ্যে পার্থক্য কী?</h3><div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div itemprop="text"><p>rTSS একটি একক ওয়ার্কআউটের ট্রেনিং লোড পরিমাপ করে। CTL (ক্রনিক ট্রেনিং লোড) হলো আপনার
                             দীর্ঘমেয়াদী ফিটনেস, ATL (একিউট ট্রেনিং লোড) হলো আপনার সাম্প্রতিক ক্লান্তি, এবং TSB (ট্রেনিং
                             স্ট্রেস ব্যালেন্স) হলো আপনার সতেজতা। এই মেট্রিক্সগুলি আপনার ট্রেনিং অবস্থা ট্র্যাক করতে
                             সময়ের সাথে সাথে rTSS মান ব্যবহার করে। আমাদের <a href="/bn/training-load/">ট্রেনিং লোড
-                                গাইডে</a> আরও জানুন।</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <h2 class="mt-3xl">সম্পর্কিত রিসোর্স</h2>
-
-        <div class="grid grid-3">
-            <div class="card">
-                <h3 class="card-title">CRS টেস্ট</h3>
-                <div class="card-content">
-                    <p>আপনার CRS পেস প্রয়োজন? ৫কিমি এবং ৩কিমি টেস্ট টাইম সহ আমাদের বিনামূল্যে CRS ক্যালকুলেটর ব্যবহার
-                        করুন।</p>
-                    <a href="/bn/crs/" class="btn btn-secondary btn-small mt-md">CRS ক্যালকুলেটর →</a>
-                </div>
-            </div>
-
-            <div class="card">
-                <h3 class="card-title">ট্রেনিং লোড গাইড</h3>
-                <div class="card-content">
-                    <p>CTL, ATL, TSB এবং পারফরম্যান্স ম্যানেজমেন্ট চার্ট মেট্রিক্স সম্পর্কে জানুন।</p>
-                    <a href="/bn/training-load/" class="btn btn-secondary btn-small mt-md">ট্রেনিং লোড →</a>
-                </div>
-            </div>
-
-            <div class="card">
-                <h3 class="card-title">Run Analytics অ্যাপ</h3>
-                <div class="card-content">
-                    <p>সব ওয়ার্কআউটের জন্য স্বয়ংক্রিয় rTSS গণনা। সময়ের সাথে CTL/ATL/TSB ট্রেন্ড ট্র্যাক করুন।</p>
-                    <a href="/bn/" class="btn btn-secondary btn-small mt-md">আরও জানুন →</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="mt-xl text-center">
-            <p class="mb-md"><strong>স্বয়ংক্রিয় rTSS ট্র্যাকিং চান?</strong></p>
-            <a href="https://apps.apple.com/us/app/run-analytics/id6754524015" class="btn btn-primary btn-large" target="_blank" rel="noopener">Run
-                Analytics বিনামূল্যে ডাউনলোড করুন</a>
-        </div>
-    </div>
-</section>
-
-<script src="../../assets/js/rtss-calculator.min.js"></script>
-    
-  </main>
-
-  
-  <footer class="site-footer">
-    <div class="container">
-        
-        <div class="footer-top">
-            <div class="footer-brand-section">
-                
-                <h2>Run Analytics</h2>
-                <p>Track Critical Running Speed, Training Stress Score, and performance metrics with Run Analytics. Science-based iOS app for runners, triathletes &amp; coaches. 7-day free trial.</p>
-                
-            </div>
-
-            
-            <div class="footer-download">
-                <h3 class="footer-heading">Download</h3>
-                <div class="footer-badges">
-                    
-                    <a href="https://apps.apple.com/us/app/run-analytics/id6754524015" target="_blank" rel="noopener"
-                        aria-label="Download on the App Store">
-                        <img src="../../assets/images/badge-app-store.svg"
+                                গাইডে</a> আরও জানুন।</p></div></div></div></div><h2 class="mt-3xl">সম্পর্কিত রিসোর্স</h2><div class="grid grid-3"><div class="card"><h3 class="card-title">CRS টেস্ট</h3><div class="card-content"><p>আপনার CRS পেস প্রয়োজন? ৫কিমি এবং ৩কিমি টেস্ট টাইম সহ আমাদের বিনামূল্যে CRS ক্যালকুলেটর ব্যবহার
+                        করুন।</p><a href="/bn/crs/" class="btn btn-secondary btn-small mt-md">CRS ক্যালকুলেটর →</a></div></div><div class="card"><h3 class="card-title">ট্রেনিং লোড গাইড</h3><div class="card-content"><p>CTL, ATL, TSB এবং পারফরম্যান্স ম্যানেজমেন্ট চার্ট মেট্রিক্স সম্পর্কে জানুন।</p><a href="/bn/training-load/" class="btn btn-secondary btn-small mt-md">ট্রেনিং লোড →</a></div></div><div class="card"><h3 class="card-title">Run Analytics অ্যাপ</h3><div class="card-content"><p>সব ওয়ার্কআউটের জন্য স্বয়ংক্রিয় rTSS গণনা। সময়ের সাথে CTL/ATL/TSB ট্রেন্ড ট্র্যাক করুন।</p><a href="/bn/" class="btn btn-secondary btn-small mt-md">আরও জানুন →</a></div></div></div><div class="mt-xl text-center"><p class="mb-md"><strong>স্বয়ংক্রিয় rTSS ট্র্যাকিং চান?</strong></p><a href="https://apps.apple.com/us/app/run-analytics/id6754524015" class="btn btn-primary btn-large" target="_blank" rel="noopener">Run
+                Analytics বিনামূল্যে ডাউনলোড করুন</a></div></div></section><script src="../../assets/js/rtss-calculator.min.js"></script></main><footer class="site-footer"><div class="container"><div class="footer-top"><div class="footer-brand-section"><h2>Run Analytics</h2><p>Track Critical Running Speed, Training Stress Score, and performance metrics with Run Analytics. Science-based iOS app for runners, triathletes &amp; coaches. 7-day free trial.</p></div><div class="footer-download"><h3 class="footer-heading">Download</h3><div class="footer-badges"><a href="https://apps.apple.com/us/app/run-analytics/id6754524015" target="_blank" rel="noopener"
+                        aria-label="Download on the App Store"><img src="../../assets/images/badge-app-store.svg"
                             alt="Download on the App Store" width="135"
-                            height="40" loading="lazy">
-                    </a>
-                    
-                    
-                    <a href="https://play.google.com/store/apps/details?id=com.arnohealth.runanalytics" target="_blank" rel="noopener"
-                        aria-label="Get it on Google Play">
-                        <img src="../../assets/images/badge-google-play.svg"
+                            height="40" loading="lazy"></a><a href="https://play.google.com/store/apps/details?id=com.arnohealth.runanalytics" target="_blank" rel="noopener"
+                        aria-label="Get it on Google Play"><img src="../../assets/images/badge-google-play.svg"
                             alt="Get it on Google Play" width="135"
-                            height="40" loading="lazy">
-                    </a>
-                    
-                </div>
-            </div>
-            
-        </div>
-
-        
-        <div class="footer-languages">
-            <h3 class="footer-heading">Available in</h3>
-            <div class="lang-grid">
-                
-                <a href="/af/" class="lang-link"
+                            height="40" loading="lazy"></a></div></div></div><div class="footer-languages"><h3 class="footer-heading">Available in</h3><div class="lang-grid"><a href="/af/" class="lang-link"
                     hreflang="af" >
                     Afrikaans
-                </a>
-                
-                <a href="/am/" class="lang-link"
+                </a><a href="/am/" class="lang-link"
                     hreflang="am" >
                     አማርኛ
-                </a>
-                
-                <a href="/ar/" class="lang-link"
+                </a><a href="/ar/" class="lang-link"
                     hreflang="ar" dir="rtl" >
                     العربية
-                </a>
-                
-                <a href="/bg/" class="lang-link"
+                </a><a href="/bg/" class="lang-link"
                     hreflang="bg" >
                     Български
-                </a>
-                
-                <a href="/bn/" class="lang-link active"
+                </a><a href="/bn/" class="lang-link active"
                     hreflang="bn" >
                     বাংলা
-                </a>
-                
-                <a href="/ca/" class="lang-link"
+                </a><a href="/ca/" class="lang-link"
                     hreflang="ca" >
                     Català
-                </a>
-                
-                <a href="/cs/" class="lang-link"
+                </a><a href="/cs/" class="lang-link"
                     hreflang="cs" >
                     Čeština
-                </a>
-                
-                <a href="/da/" class="lang-link"
+                </a><a href="/da/" class="lang-link"
                     hreflang="da" >
                     Dansk
-                </a>
-                
-                <a href="/de/" class="lang-link"
+                </a><a href="/de/" class="lang-link"
                     hreflang="de" >
                     Deutsch
-                </a>
-                
-                <a href="/el/" class="lang-link"
+                </a><a href="/el/" class="lang-link"
                     hreflang="el" >
                     Ελληνικά
-                </a>
-                
-                <a href="/en/" class="lang-link"
+                </a><a href="/en/" class="lang-link"
                     hreflang="en" >
                     English
-                </a>
-                
-                <a href="/es/" class="lang-link"
+                </a><a href="/es/" class="lang-link"
                     hreflang="es" >
                     Español
-                </a>
-                
-                <a href="/et/" class="lang-link"
+                </a><a href="/et/" class="lang-link"
                     hreflang="et" >
                     Eesti
-                </a>
-                
-                <a href="/fa/" class="lang-link"
+                </a><a href="/fa/" class="lang-link"
                     hreflang="fa" dir="rtl" >
                     فارسی
-                </a>
-                
-                <a href="/fi/" class="lang-link"
+                </a><a href="/fi/" class="lang-link"
                     hreflang="fi" >
                     Suomi
-                </a>
-                
-                <a href="/fr/" class="lang-link"
+                </a><a href="/fr/" class="lang-link"
                     hreflang="fr" >
                     Français
-                </a>
-                
-                <a href="/gu/" class="lang-link"
+                </a><a href="/gu/" class="lang-link"
                     hreflang="gu" >
                     ગુજરાતી
-                </a>
-                
-                <a href="/ha/" class="lang-link"
+                </a><a href="/ha/" class="lang-link"
                     hreflang="ha" >
                     Hausa
-                </a>
-                
-                <a href="/he/" class="lang-link"
+                </a><a href="/he/" class="lang-link"
                     hreflang="he" dir="rtl" >
                     עברית
-                </a>
-                
-                <a href="/hi/" class="lang-link"
+                </a><a href="/hi/" class="lang-link"
                     hreflang="hi" >
                     हिन्दी
-                </a>
-                
-                <a href="/hr/" class="lang-link"
+                </a><a href="/hr/" class="lang-link"
                     hreflang="hr" >
                     Hrvatski
-                </a>
-                
-                <a href="/hu/" class="lang-link"
+                </a><a href="/hu/" class="lang-link"
                     hreflang="hu" >
                     Magyar
-                </a>
-                
-                <a href="/id/" class="lang-link"
+                </a><a href="/id/" class="lang-link"
                     hreflang="id" >
                     Bahasa Indonesia
-                </a>
-                
-                <a href="/is/" class="lang-link"
+                </a><a href="/is/" class="lang-link"
                     hreflang="is" >
                     Íslenska
-                </a>
-                
-                <a href="/it/" class="lang-link"
+                </a><a href="/it/" class="lang-link"
                     hreflang="it" >
                     Italiano
-                </a>
-                
-                <a href="/ja/" class="lang-link"
+                </a><a href="/ja/" class="lang-link"
                     hreflang="ja" >
                     日本語
-                </a>
-                
-                <a href="/km/" class="lang-link"
+                </a><a href="/km/" class="lang-link"
                     hreflang="km" >
                     ភាសាខ្មែរ
-                </a>
-                
-                <a href="/kn/" class="lang-link"
+                </a><a href="/kn/" class="lang-link"
                     hreflang="kn" >
                     ಕನ್ನಡ
-                </a>
-                
-                <a href="/ko/" class="lang-link"
+                </a><a href="/ko/" class="lang-link"
                     hreflang="ko" >
                     한국어
-                </a>
-                
-                <a href="/lt/" class="lang-link"
+                </a><a href="/lt/" class="lang-link"
                     hreflang="lt" >
                     Lietuvių
-                </a>
-                
-                <a href="/lv/" class="lang-link"
+                </a><a href="/lv/" class="lang-link"
                     hreflang="lv" >
                     Latviešu
-                </a>
-                
-                <a href="/ms/" class="lang-link"
+                </a><a href="/ms/" class="lang-link"
                     hreflang="ms" >
                     Bahasa Melayu
-                </a>
-                
-                <a href="/my/" class="lang-link"
+                </a><a href="/my/" class="lang-link"
                     hreflang="my" >
                     မြန်မာစာ
-                </a>
-                
-                <a href="/nb/" class="lang-link"
+                </a><a href="/nb/" class="lang-link"
                     hreflang="nb" >
                     Norsk Bokmål
-                </a>
-                
-                <a href="/nl/" class="lang-link"
+                </a><a href="/nl/" class="lang-link"
                     hreflang="nl" >
                     Nederlands
-                </a>
-                
-                <a href="/pl/" class="lang-link"
+                </a><a href="/pl/" class="lang-link"
                     hreflang="pl" >
                     Polski
-                </a>
-                
-                <a href="/pt/" class="lang-link"
+                </a><a href="/pt/" class="lang-link"
                     hreflang="pt" >
                     Português
-                </a>
-                
-                <a href="/pt-br/" class="lang-link"
+                </a><a href="/pt-br/" class="lang-link"
                     hreflang="pt-br" >
                     Português (Brasil)
-                </a>
-                
-                <a href="/ro/" class="lang-link"
+                </a><a href="/ro/" class="lang-link"
                     hreflang="ro" >
                     Română
-                </a>
-                
-                <a href="/ru/" class="lang-link"
+                </a><a href="/ru/" class="lang-link"
                     hreflang="ru" >
                     Русский
-                </a>
-                
-                <a href="/sk/" class="lang-link"
+                </a><a href="/sk/" class="lang-link"
                     hreflang="sk" >
                     Slovenčina
-                </a>
-                
-                <a href="/sl/" class="lang-link"
+                </a><a href="/sl/" class="lang-link"
                     hreflang="sl" >
                     Slovenščina
-                </a>
-                
-                <a href="/sr/" class="lang-link"
+                </a><a href="/sr/" class="lang-link"
                     hreflang="sr" >
                     Srpski
-                </a>
-                
-                <a href="/sv/" class="lang-link"
+                </a><a href="/sv/" class="lang-link"
                     hreflang="sv" >
                     Svenska
-                </a>
-                
-                <a href="/sw/" class="lang-link"
+                </a><a href="/sw/" class="lang-link"
                     hreflang="sw" >
                     Kiswahili
-                </a>
-                
-                <a href="/ta/" class="lang-link"
+                </a><a href="/ta/" class="lang-link"
                     hreflang="ta" >
                     தமிழ்
-                </a>
-                
-                <a href="/te/" class="lang-link"
+                </a><a href="/te/" class="lang-link"
                     hreflang="te" >
                     తెలుగు
-                </a>
-                
-                <a href="/th/" class="lang-link"
+                </a><a href="/th/" class="lang-link"
                     hreflang="th" >
                     ไทย
-                </a>
-                
-                <a href="/tl/" class="lang-link"
+                </a><a href="/tl/" class="lang-link"
                     hreflang="tl" >
                     Tagalog
-                </a>
-                
-                <a href="/tr/" class="lang-link"
+                </a><a href="/tr/" class="lang-link"
                     hreflang="tr" >
                     Türkçe
-                </a>
-                
-                <a href="/uk/" class="lang-link"
+                </a><a href="/uk/" class="lang-link"
                     hreflang="uk" >
                     Українська
-                </a>
-                
-                <a href="/ur/" class="lang-link"
+                </a><a href="/ur/" class="lang-link"
                     hreflang="ur" dir="rtl" >
                     اردو
-                </a>
-                
-                <a href="/vi/" class="lang-link"
+                </a><a href="/vi/" class="lang-link"
                     hreflang="vi" >
                     Tiếng Việt
-                </a>
-                
-                <a href="/yo/" class="lang-link"
+                </a><a href="/yo/" class="lang-link"
                     hreflang="yo" >
                     Yorùbá
-                </a>
-                
-                <a href="/zh/" class="lang-link"
+                </a><a href="/zh/" class="lang-link"
                     hreflang="zh" >
                     中文
-                </a>
-                
-            </div>
-        </div>
-
-        <div class="footer-divider"></div>
-
-        
-        <div class="footer-bottom">
-            <p class="copyright">
+                </a></div></div><div class="footer-divider"></div><div class="footer-bottom"><p class="copyright">
                 &copy; 2026 Run Analytics. সর্বস্বত্ব সংরক্ষিত
-            </p>
-            <ul class="footer-legal">
-                <li><a href="/bn/privacy/">গোপনীয়তা</a></li>
-                <li><a href="/bn/terms/">শর্তাবলী</a></li>
-            </ul>
-        </div>
-    </div>
-</footer>
-
-  
-  <div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="Cookie consent" aria-live="polite">
-    <div class="cookie-banner-content">
-        <div>
-            <p>এই ওয়েবসাইট আপনার অভিজ্ঞতা উন্নত করতে কুকি ব্যবহার করে।</p>
-            <a href="/bn/privacy/" class="text-sm">আরও জানুন</a>
-        </div>
-        <div class="cookie-banner-actions">
-            <button id="cookie-decline" class="btn btn-secondary btn-small">প্রত্যাখ্যান করুন</button>
-            <button id="cookie-accept" class="btn btn-primary btn-small">গ্রহণ করুন</button>
-        </div>
-    </div>
-</div>
-
-  
-  <script src="../../assets/js/core.min.js?v=8aef43d1" defer></script>
-  <script src="../../assets/js/search.min.js?v=8aef43d1" defer></script>
-  
-
-  
-  
-  <script src="../../assets/js/analytics.min.js" data-ga-id="G-Y138VB4523" defer></script>
-  
-
-  
-  <script>if ('serviceWorker' in navigator) { navigator.serviceWorker.register('../../sw.js') }</script>
-</body>
-
-</html>
+            </p><ul class="footer-legal"><li><a href="/bn/privacy/">গোপনীয়তা</a></li><li><a href="/bn/terms/">শর্তাবলী</a></li></ul></div></div></footer><div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="Cookie consent" aria-live="polite"><div class="cookie-banner-content"><div><p>এই ওয়েবসাইট আপনার অভিজ্ঞতা উন্নত করতে কুকি ব্যবহার করে।</p><a href="/bn/privacy/" class="text-sm">আরও জানুন</a></div><div class="cookie-banner-actions"><button id="cookie-decline" class="btn btn-secondary btn-small">প্রত্যাখ্যান করুন</button><button id="cookie-accept" class="btn btn-primary btn-small">গ্রহণ করুন</button></div></div></div><script src="../../assets/js/core.min.js?v=e899af207631" defer></script><script src="../../assets/js/search.min.js?v=e899af207631" defer></script><script src="../../assets/js/analytics.min.js" data-ga-id="G-Y138VB4523" defer></script><script>if ('serviceWorker' in navigator) { navigator.serviceWorker.register('../../sw.js') }</script></body></html>

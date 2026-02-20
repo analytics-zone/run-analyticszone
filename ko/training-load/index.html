@@ -1,246 +1,61 @@
-<!DOCTYPE html>
-<html lang="ko" dir="ltr">
-
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
-    rel="stylesheet">
-
-  
-  <title>러닝 Training Stress Score: TSS, CTL, ATL &amp; TSB 완전 정리</title>
-  <meta name="description" content="퍼포먼스 관리 차트로 러닝 훈련 부하를 마스터하세요. 러닝 Training Stress Score: TSS, CTL, ATL &amp; TSB 완전 정리 러닝 Training Stress Score: TSS, CTL, ATL &amp; TSB 완전 정리">
-  <meta name="author" content="AnalyticsZone Team">
-
-  
-  
-  <meta name="keywords" content="러닝 TSS, CTL, ATL, TSB, 훈련 부하">
-  
-
-  
-  <link rel="canonical" href="https://run.analyticszone.app/ko/training-load/">
-
-  
-  
-  <meta property="article:published_time" content="2025-01-15T10:00:00Z">
-  <meta property="article:modified_time" content="2026-01-20T14:30:00Z">
-  <meta property="article:author" content="AnalyticsZone Team">
-  
-
-  
-  
-
-  
-  <meta property="og:type" content="article">
-  <meta property="og:url" content="https://run.analyticszone.app/ko/training-load/">
-  <meta property="og:title" content="러닝 Training Stress Score: TSS, CTL, ATL &amp; TSB 완전 정리">
-  <meta property="og:description" content="퍼포먼스 관리 차트로 러닝 훈련 부하를 마스터하세요. 러닝 Training Stress Score: TSS, CTL, ATL &amp; TSB 완전 정리 러닝 Training Stress Score: TSS, CTL, ATL &amp; TSB 완전 정리">
-  <meta property="og:image" content="https://run.analyticszone.app/assets/images/og-image.svg">
-  <meta property="og:locale" content="ko_KR">
-  <meta property="og:site_name" content="Run Analytics">
-
-  
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:url" content="https://run.analyticszone.app/ko/training-load/">
-  <meta name="twitter:title" content="러닝 Training Stress Score: TSS, CTL, ATL &amp; TSB 완전 정리">
-  <meta name="twitter:description" content="퍼포먼스 관리 차트로 러닝 훈련 부하를 마스터하세요. 러닝 Training Stress Score: TSS, CTL, ATL &amp; TSB 완전 정리 러닝 Training Stress Score: TSS, CTL, ATL &amp; TSB 완전 정리">
-  <meta name="twitter:image" content="https://run.analyticszone.app/assets/images/og-image.svg">
-  
-  <meta name="twitter:site" content="@runanalytics">
-  <meta name="twitter:creator" content="@runanalytics">
-  
-
-  
-  
-  <link rel="alternate" hreflang="af"
-    href="https://run.analyticszone.app/af/training-load/">
-  
-  <link rel="alternate" hreflang="am"
-    href="https://run.analyticszone.app/am/training-load/">
-  
-  <link rel="alternate" hreflang="ar"
-    href="https://run.analyticszone.app/ar/training-load/">
-  
-  <link rel="alternate" hreflang="bg"
-    href="https://run.analyticszone.app/bg/training-load/">
-  
-  <link rel="alternate" hreflang="bn"
-    href="https://run.analyticszone.app/bn/training-load/">
-  
-  <link rel="alternate" hreflang="ca"
-    href="https://run.analyticszone.app/ca/training-load/">
-  
-  <link rel="alternate" hreflang="cs"
-    href="https://run.analyticszone.app/cs/training-load/">
-  
-  <link rel="alternate" hreflang="da"
-    href="https://run.analyticszone.app/da/training-load/">
-  
-  <link rel="alternate" hreflang="de"
-    href="https://run.analyticszone.app/de/training-load/">
-  
-  <link rel="alternate" hreflang="el"
-    href="https://run.analyticszone.app/el/training-load/">
-  
-  <link rel="alternate" hreflang="en"
-    href="https://run.analyticszone.app/en/training-load/">
-  
-  <link rel="alternate" hreflang="es"
-    href="https://run.analyticszone.app/es/training-load/">
-  
-  <link rel="alternate" hreflang="et"
-    href="https://run.analyticszone.app/et/training-load/">
-  
-  <link rel="alternate" hreflang="fa"
-    href="https://run.analyticszone.app/fa/training-load/">
-  
-  <link rel="alternate" hreflang="fi"
-    href="https://run.analyticszone.app/fi/training-load/">
-  
-  <link rel="alternate" hreflang="fr"
-    href="https://run.analyticszone.app/fr/training-load/">
-  
-  <link rel="alternate" hreflang="gu"
-    href="https://run.analyticszone.app/gu/training-load/">
-  
-  <link rel="alternate" hreflang="ha"
-    href="https://run.analyticszone.app/ha/training-load/">
-  
-  <link rel="alternate" hreflang="he"
-    href="https://run.analyticszone.app/he/training-load/">
-  
-  <link rel="alternate" hreflang="hi"
-    href="https://run.analyticszone.app/hi/training-load/">
-  
-  <link rel="alternate" hreflang="hr"
-    href="https://run.analyticszone.app/hr/training-load/">
-  
-  <link rel="alternate" hreflang="hu"
-    href="https://run.analyticszone.app/hu/training-load/">
-  
-  <link rel="alternate" hreflang="id"
-    href="https://run.analyticszone.app/id/training-load/">
-  
-  <link rel="alternate" hreflang="is"
-    href="https://run.analyticszone.app/is/training-load/">
-  
-  <link rel="alternate" hreflang="it"
-    href="https://run.analyticszone.app/it/training-load/">
-  
-  <link rel="alternate" hreflang="ja"
-    href="https://run.analyticszone.app/ja/training-load/">
-  
-  <link rel="alternate" hreflang="km"
-    href="https://run.analyticszone.app/km/training-load/">
-  
-  <link rel="alternate" hreflang="kn"
-    href="https://run.analyticszone.app/kn/training-load/">
-  
-  <link rel="alternate" hreflang="ko"
-    href="https://run.analyticszone.app/ko/training-load/">
-  
-  <link rel="alternate" hreflang="lt"
-    href="https://run.analyticszone.app/lt/training-load/">
-  
-  <link rel="alternate" hreflang="lv"
-    href="https://run.analyticszone.app/lv/training-load/">
-  
-  <link rel="alternate" hreflang="ms"
-    href="https://run.analyticszone.app/ms/training-load/">
-  
-  <link rel="alternate" hreflang="my"
-    href="https://run.analyticszone.app/my/training-load/">
-  
-  <link rel="alternate" hreflang="nb"
-    href="https://run.analyticszone.app/nb/training-load/">
-  
-  <link rel="alternate" hreflang="nl"
-    href="https://run.analyticszone.app/nl/training-load/">
-  
-  <link rel="alternate" hreflang="pl"
-    href="https://run.analyticszone.app/pl/training-load/">
-  
-  <link rel="alternate" hreflang="pt"
-    href="https://run.analyticszone.app/pt/training-load/">
-  
-  <link rel="alternate" hreflang="pt-br"
-    href="https://run.analyticszone.app/pt-br/training-load/">
-  
-  <link rel="alternate" hreflang="ro"
-    href="https://run.analyticszone.app/ro/training-load/">
-  
-  <link rel="alternate" hreflang="ru"
-    href="https://run.analyticszone.app/ru/training-load/">
-  
-  <link rel="alternate" hreflang="sk"
-    href="https://run.analyticszone.app/sk/training-load/">
-  
-  <link rel="alternate" hreflang="sl"
-    href="https://run.analyticszone.app/sl/training-load/">
-  
-  <link rel="alternate" hreflang="sr"
-    href="https://run.analyticszone.app/sr/training-load/">
-  
-  <link rel="alternate" hreflang="sv"
-    href="https://run.analyticszone.app/sv/training-load/">
-  
-  <link rel="alternate" hreflang="sw"
-    href="https://run.analyticszone.app/sw/training-load/">
-  
-  <link rel="alternate" hreflang="ta"
-    href="https://run.analyticszone.app/ta/training-load/">
-  
-  <link rel="alternate" hreflang="te"
-    href="https://run.analyticszone.app/te/training-load/">
-  
-  <link rel="alternate" hreflang="th"
-    href="https://run.analyticszone.app/th/training-load/">
-  
-  <link rel="alternate" hreflang="tl"
-    href="https://run.analyticszone.app/tl/training-load/">
-  
-  <link rel="alternate" hreflang="tr"
-    href="https://run.analyticszone.app/tr/training-load/">
-  
-  <link rel="alternate" hreflang="uk"
-    href="https://run.analyticszone.app/uk/training-load/">
-  
-  <link rel="alternate" hreflang="ur"
-    href="https://run.analyticszone.app/ur/training-load/">
-  
-  <link rel="alternate" hreflang="vi"
-    href="https://run.analyticszone.app/vi/training-load/">
-  
-  <link rel="alternate" hreflang="yo"
-    href="https://run.analyticszone.app/yo/training-load/">
-  
-  <link rel="alternate" hreflang="zh"
-    href="https://run.analyticszone.app/zh/training-load/">
-  
-  <link rel="alternate" hreflang="x-default"
-    href="https://run.analyticszone.app/en/training-load/">
-
-  
-  <link rel="icon" type="image/png" sizes="32x32" href="../../assets/images/icons/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="../../assets/images/icons/favicon-16x16.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="../../assets/images/icons/apple-touch-icon.png">
-  <link rel="manifest" href="../../manifest.json">
-  <meta name="theme-color" content="#2563EB">
-  <meta name="robots" content="index, follow">
-
-  
-  
-  
-  <meta name="apple-itunes-app" content="app-id=6754524015">
-  
-
-  
-  <style>
+<!DOCTYPE html><html lang="ko" dir="ltr"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet"><title>러닝 Training Stress Score: TSS, CTL, ATL &amp; TSB 완전 정리</title><meta name="description" content="퍼포먼스 관리 차트로 러닝 훈련 부하를 마스터하세요. 러닝 Training Stress Score: TSS, CTL, ATL &amp; TSB 완전 정리 러닝 Training Stress Score: TSS, CTL, ATL &amp; TSB 완전 정리"><meta name="author" content="AnalyticsZone Team"><meta name="keywords" content="러닝 TSS, CTL, ATL, TSB, 훈련 부하"><link rel="canonical" href="https://run.analyticszone.app/ko/training-load/"><meta property="article:published_time" content="2025-01-15T10:00:00Z"><meta property="article:modified_time" content="2026-01-20T14:30:00Z"><meta property="article:author" content="AnalyticsZone Team"><meta property="og:type" content="article"><meta property="og:url" content="https://run.analyticszone.app/ko/training-load/"><meta property="og:title" content="러닝 Training Stress Score: TSS, CTL, ATL &amp; TSB 완전 정리"><meta property="og:description" content="퍼포먼스 관리 차트로 러닝 훈련 부하를 마스터하세요. 러닝 Training Stress Score: TSS, CTL, ATL &amp; TSB 완전 정리 러닝 Training Stress Score: TSS, CTL, ATL &amp; TSB 완전 정리"><meta property="og:image" content="https://run.analyticszone.app/assets/images/og-image.svg"><meta property="og:locale" content="ko_KR"><meta property="og:site_name" content="Run Analytics"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:url" content="https://run.analyticszone.app/ko/training-load/"><meta name="twitter:title" content="러닝 Training Stress Score: TSS, CTL, ATL &amp; TSB 완전 정리"><meta name="twitter:description" content="퍼포먼스 관리 차트로 러닝 훈련 부하를 마스터하세요. 러닝 Training Stress Score: TSS, CTL, ATL &amp; TSB 완전 정리 러닝 Training Stress Score: TSS, CTL, ATL &amp; TSB 완전 정리"><meta name="twitter:image" content="https://run.analyticszone.app/assets/images/og-image.svg"><meta name="twitter:site" content="@runanalytics"><meta name="twitter:creator" content="@runanalytics"><link rel="alternate" hreflang="af"
+    href="https://run.analyticszone.app/af/training-load/"><link rel="alternate" hreflang="am"
+    href="https://run.analyticszone.app/am/training-load/"><link rel="alternate" hreflang="ar"
+    href="https://run.analyticszone.app/ar/training-load/"><link rel="alternate" hreflang="bg"
+    href="https://run.analyticszone.app/bg/training-load/"><link rel="alternate" hreflang="bn"
+    href="https://run.analyticszone.app/bn/training-load/"><link rel="alternate" hreflang="ca"
+    href="https://run.analyticszone.app/ca/training-load/"><link rel="alternate" hreflang="cs"
+    href="https://run.analyticszone.app/cs/training-load/"><link rel="alternate" hreflang="da"
+    href="https://run.analyticszone.app/da/training-load/"><link rel="alternate" hreflang="de"
+    href="https://run.analyticszone.app/de/training-load/"><link rel="alternate" hreflang="el"
+    href="https://run.analyticszone.app/el/training-load/"><link rel="alternate" hreflang="en"
+    href="https://run.analyticszone.app/en/training-load/"><link rel="alternate" hreflang="es"
+    href="https://run.analyticszone.app/es/training-load/"><link rel="alternate" hreflang="et"
+    href="https://run.analyticszone.app/et/training-load/"><link rel="alternate" hreflang="fa"
+    href="https://run.analyticszone.app/fa/training-load/"><link rel="alternate" hreflang="fi"
+    href="https://run.analyticszone.app/fi/training-load/"><link rel="alternate" hreflang="fr"
+    href="https://run.analyticszone.app/fr/training-load/"><link rel="alternate" hreflang="gu"
+    href="https://run.analyticszone.app/gu/training-load/"><link rel="alternate" hreflang="ha"
+    href="https://run.analyticszone.app/ha/training-load/"><link rel="alternate" hreflang="he"
+    href="https://run.analyticszone.app/he/training-load/"><link rel="alternate" hreflang="hi"
+    href="https://run.analyticszone.app/hi/training-load/"><link rel="alternate" hreflang="hr"
+    href="https://run.analyticszone.app/hr/training-load/"><link rel="alternate" hreflang="hu"
+    href="https://run.analyticszone.app/hu/training-load/"><link rel="alternate" hreflang="id"
+    href="https://run.analyticszone.app/id/training-load/"><link rel="alternate" hreflang="is"
+    href="https://run.analyticszone.app/is/training-load/"><link rel="alternate" hreflang="it"
+    href="https://run.analyticszone.app/it/training-load/"><link rel="alternate" hreflang="ja"
+    href="https://run.analyticszone.app/ja/training-load/"><link rel="alternate" hreflang="km"
+    href="https://run.analyticszone.app/km/training-load/"><link rel="alternate" hreflang="kn"
+    href="https://run.analyticszone.app/kn/training-load/"><link rel="alternate" hreflang="ko"
+    href="https://run.analyticszone.app/ko/training-load/"><link rel="alternate" hreflang="lt"
+    href="https://run.analyticszone.app/lt/training-load/"><link rel="alternate" hreflang="lv"
+    href="https://run.analyticszone.app/lv/training-load/"><link rel="alternate" hreflang="ms"
+    href="https://run.analyticszone.app/ms/training-load/"><link rel="alternate" hreflang="my"
+    href="https://run.analyticszone.app/my/training-load/"><link rel="alternate" hreflang="nb"
+    href="https://run.analyticszone.app/nb/training-load/"><link rel="alternate" hreflang="nl"
+    href="https://run.analyticszone.app/nl/training-load/"><link rel="alternate" hreflang="pl"
+    href="https://run.analyticszone.app/pl/training-load/"><link rel="alternate" hreflang="pt"
+    href="https://run.analyticszone.app/pt/training-load/"><link rel="alternate" hreflang="pt-br"
+    href="https://run.analyticszone.app/pt-br/training-load/"><link rel="alternate" hreflang="ro"
+    href="https://run.analyticszone.app/ro/training-load/"><link rel="alternate" hreflang="ru"
+    href="https://run.analyticszone.app/ru/training-load/"><link rel="alternate" hreflang="sk"
+    href="https://run.analyticszone.app/sk/training-load/"><link rel="alternate" hreflang="sl"
+    href="https://run.analyticszone.app/sl/training-load/"><link rel="alternate" hreflang="sr"
+    href="https://run.analyticszone.app/sr/training-load/"><link rel="alternate" hreflang="sv"
+    href="https://run.analyticszone.app/sv/training-load/"><link rel="alternate" hreflang="sw"
+    href="https://run.analyticszone.app/sw/training-load/"><link rel="alternate" hreflang="ta"
+    href="https://run.analyticszone.app/ta/training-load/"><link rel="alternate" hreflang="te"
+    href="https://run.analyticszone.app/te/training-load/"><link rel="alternate" hreflang="th"
+    href="https://run.analyticszone.app/th/training-load/"><link rel="alternate" hreflang="tl"
+    href="https://run.analyticszone.app/tl/training-load/"><link rel="alternate" hreflang="tr"
+    href="https://run.analyticszone.app/tr/training-load/"><link rel="alternate" hreflang="uk"
+    href="https://run.analyticszone.app/uk/training-load/"><link rel="alternate" hreflang="ur"
+    href="https://run.analyticszone.app/ur/training-load/"><link rel="alternate" hreflang="vi"
+    href="https://run.analyticszone.app/vi/training-load/"><link rel="alternate" hreflang="yo"
+    href="https://run.analyticszone.app/yo/training-load/"><link rel="alternate" hreflang="zh"
+    href="https://run.analyticszone.app/zh/training-load/"><link rel="alternate" hreflang="x-default"
+    href="https://run.analyticszone.app/en/training-load/"><link rel="icon" type="image/png" sizes="32x32" href="../../assets/images/icons/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="../../assets/images/icons/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="../../assets/images/icons/apple-touch-icon.png"><link rel="manifest" href="../../manifest.json"><meta name="theme-color" content="#2563EB"><meta name="robots" content="index, follow"><meta name="apple-itunes-app" content="app-id=6754524015"><style>
 /* Critical CSS - Above the fold styles for fast LCP */
 :root {
   --color-primary: #0066CC;
@@ -499,20 +314,7 @@ img[width][height] {
     transition-duration: 0.01ms !important;
   }
 }
-</style>
-
-  
-  <link rel="preconnect" href="https://www.googletagmanager.com">
-  <link rel="dns-prefetch" href="https://www.googletagmanager.com">
-
-  
-  <link rel="stylesheet" href="../../assets/css/main.min.css?v=8aef43d1">
-
-  
-  
-
-
-<script type="application/ld+json">
+</style><link rel="preconnect" href="https://www.googletagmanager.com"><link rel="dns-prefetch" href="https://www.googletagmanager.com"><link rel="stylesheet" href="../../assets/css/main.min.css?v=e899af207631"><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Organization",
@@ -547,10 +349,7 @@ img[width][height] {
     
   ]
 }
-</script>
-
-
-<script type="application/ld+json">
+</script><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "WebSite",
@@ -559,11 +358,7 @@ img[width][height] {
   "description": "Track Critical Running Speed, Training Stress Score, and performance metrics with Run Analytics. Science-based iOS app for runners, triathletes &amp; coaches. 7-day free trial.",
   "inLanguage": "ko"
 }
-</script>
-
-
-
-<script type="application/ld+json">
+</script><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
@@ -578,12 +373,7 @@ img[width][height] {
   },
   "downloadUrl": "https://apps.apple.com/us/app/run-analytics/id6754524015"
 }
-</script>
-
-
-
-
-<script type="application/ld+json">
+</script><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
@@ -612,11 +402,7 @@ img[width][height] {
     
   ]
 }
-</script>
-
-
-
-<script type="application/ld+json">
+</script><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "WebPage",
@@ -624,11 +410,7 @@ img[width][height] {
   "description": "퍼포먼스 관리 차트로 러닝 훈련 부하를 마스터하세요. 러닝 Training Stress Score: TSS, CTL, ATL &amp; TSB 완전 정리 러닝 Training Stress Score: TSS, CTL, ATL &amp; TSB 완전 정리",
   "url": "https://run.analyticszone.app/ko/training-load/"
 }
-</script>
-
-
-
-<script type="application/ld+json">
+</script><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Article",
@@ -653,17 +435,7 @@ img[width][height] {
     "@id": "https://run.analyticszone.app/ko/training-load/"
   }
 }
-</script>
-
-
-
-
-
-  
-  
-
-  
-  <script>
+</script><script>
     (function () {
       let theme = localStorage.getItem('theme');
       // Older builds could persist a per-subdomain `theme=light` value without a UI
@@ -677,1552 +449,389 @@ img[width][height] {
         document.documentElement.classList.add('dark-mode');
       }
     })();
-  </script>
-</head>
-
-<body>
-  
-  <a href="#main-content" class="skip-link">콘텐츠로 이동</a>
-
-  
-  <header class="site-header">
-    <div class="container">
-        <div class="header-inner">
-            
-            <a href="/ko/" class="site-logo">
-                <picture>
-                    <source srcset="../../assets/images/logo-dark.png" type="image/png"
-                        media="(prefers-color-scheme: dark)">
-                    <img src="../../assets/images/logo.png" alt="Run Analytics - Running Analytics App | Critical Running Speed, TSS, CTL/ATL/TSB for iOS" width="56" height="56">
-                </picture>
-                <span class="logo-text">Run Analytics</span>
-            </a>
-
-            
-            <nav class="nav-primary" id="nav-primary" role="navigation" aria-label="Main navigation">
-                <div class="nav-group-left">
-                    <ul>
-                        
-                        <li>
-                            
-                            <a href="/ko/" 
+  </script></head><body><a href="#main-content" class="skip-link">콘텐츠로 이동</a><header class="site-header"><div class="container"><div class="header-inner"><a href="/ko/" class="site-logo"><picture><source srcset="../../assets/images/logo-dark.png" type="image/png"
+                        media="(prefers-color-scheme: dark)"><img src="../../assets/images/logo.png" alt="Run Analytics - Running Analytics App | Critical Running Speed, TSS, CTL/ATL/TSB for iOS" width="56" height="56"></picture><span class="logo-text">Run Analytics</span></a><nav class="nav-primary" id="nav-primary" role="navigation" aria-label="Main navigation"><div class="nav-group-left"><ul><li><a href="/ko/" 
                                 aria-current="">
                                 홈
-                            </a>
-                            
-                            </li>
-                            
-                        <li class="has-submenu" >
-                            
-                            
-                            <a href="/ko/getting-started/" class="nav-label">학습</a>
-                            
-                            <ul class="submenu">
-                                
-                                <li>
-                                    <a href="/ko/getting-started/" 
+                            </a></li><li class="has-submenu" ><a href="/ko/getting-started/" class="nav-label">학습</a><ul class="submenu"><li><a href="/ko/getting-started/" 
                                         aria-current="">
                                         시작하기
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/ko/crs/" 
+                                    </a></li><li><a href="/ko/crs/" 
                                         aria-current="">
                                         CRS
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/ko/training-zones/" 
+                                    </a></li><li><a href="/ko/training-zones/" 
                                         aria-current="">
                                         훈련 구간
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/ko/training-load/" class="active" 
+                                    </a></li><li><a href="/ko/training-load/" class="active" 
                                         aria-current="page">
                                         훈련 부하
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/ko/rtss-calculator/" 
+                                    </a></li><li><a href="/ko/rtss-calculator/" 
                                         aria-current="">
                                         rTSS 계산기
-                                    </a>
-                                </li>
-                                
-                            </ul>
-                            
-                            </li>
-                            
-                        <li class="has-submenu" >
-                            
-                            
-                            <a href="/ko/research/" class="nav-label">과학</a>
-                            
-                            <ul class="submenu">
-                                
-                                <li>
-                                    <a href="/ko/research/" 
+                                    </a></li></ul></li><li class="has-submenu" ><a href="/ko/research/" class="nav-label">과학</a><ul class="submenu"><li><a href="/ko/research/" 
                                         aria-current="">
                                         연구
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/ko/formulas/" 
+                                    </a></li><li><a href="/ko/formulas/" 
                                         aria-current="">
                                         공식
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/ko/efficiency/" 
+                                    </a></li><li><a href="/ko/efficiency/" 
                                         aria-current="">
                                         효율성
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/ko/stride-mechanics/" 
+                                    </a></li><li><a href="/ko/stride-mechanics/" 
                                         aria-current="">
                                         스트라이드
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/ko/bibliography/" 
+                                    </a></li><li><a href="/ko/bibliography/" 
                                         aria-current="">
                                         참고문헌
-                                    </a>
-                                </li>
-                                
-                            </ul>
-                            
-                            </li>
-                            
-                        <li>
-                            
-                            <a href="/ko/contact/" 
+                                    </a></li></ul></li><li><a href="/ko/contact/" 
                                 aria-current="">
                                 연락처
-                            </a>
-                            
-                            </li>
-                            
-                    </ul>
-
-                    
-                    <div class="search-container">
-                        <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                            </a></li></ul><div class="search-container"><svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
                             viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                            <circle cx="11" cy="11" r="8"></circle>
-                            <path d="m21 21-4.35-4.35"></path>
-                        </svg>
-                        <input type="search" id="site-search" class="search-input" aria-expanded="false"
-                            aria-haspopup="listbox" aria-autocomplete="list" autocomplete="off" spellcheck="false" />
-                        <div id="search-results" class="search-results hidden" role="region" aria-live="polite"></div>
-                    </div>
-
-                    
-                    <select class="language-selector" id="language-select" aria-label="언어 선택">
-                        
-                        <option value="af" >
+                            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.35-4.35"></path></svg><input type="search" id="site-search" class="search-input" aria-expanded="false"
+                            aria-haspopup="listbox" aria-autocomplete="list" autocomplete="off" spellcheck="false" /><div id="search-results" class="search-results hidden" role="region" aria-live="polite"></div></div><select class="language-selector" id="language-select" aria-label="언어 선택"><option value="af" >
                             Afrikaans
-                        </option>
-                        
-                        <option value="am" >
+                        </option><option value="am" >
                             አማርኛ
-                        </option>
-                        
-                        <option value="ar" >
+                        </option><option value="ar" >
                             العربية
-                        </option>
-                        
-                        <option value="bg" >
+                        </option><option value="bg" >
                             Български
-                        </option>
-                        
-                        <option value="bn" >
+                        </option><option value="bn" >
                             বাংলা
-                        </option>
-                        
-                        <option value="ca" >
+                        </option><option value="ca" >
                             Català
-                        </option>
-                        
-                        <option value="cs" >
+                        </option><option value="cs" >
                             Čeština
-                        </option>
-                        
-                        <option value="da" >
+                        </option><option value="da" >
                             Dansk
-                        </option>
-                        
-                        <option value="de" >
+                        </option><option value="de" >
                             Deutsch
-                        </option>
-                        
-                        <option value="el" >
+                        </option><option value="el" >
                             Ελληνικά
-                        </option>
-                        
-                        <option value="en" >
+                        </option><option value="en" >
                             English
-                        </option>
-                        
-                        <option value="es" >
+                        </option><option value="es" >
                             Español
-                        </option>
-                        
-                        <option value="et" >
+                        </option><option value="et" >
                             Eesti
-                        </option>
-                        
-                        <option value="fa" >
+                        </option><option value="fa" >
                             فارسی
-                        </option>
-                        
-                        <option value="fi" >
+                        </option><option value="fi" >
                             Suomi
-                        </option>
-                        
-                        <option value="fr" >
+                        </option><option value="fr" >
                             Français
-                        </option>
-                        
-                        <option value="gu" >
+                        </option><option value="gu" >
                             ગુજરાતી
-                        </option>
-                        
-                        <option value="ha" >
+                        </option><option value="ha" >
                             Hausa
-                        </option>
-                        
-                        <option value="he" >
+                        </option><option value="he" >
                             עברית
-                        </option>
-                        
-                        <option value="hi" >
+                        </option><option value="hi" >
                             हिन्दी
-                        </option>
-                        
-                        <option value="hr" >
+                        </option><option value="hr" >
                             Hrvatski
-                        </option>
-                        
-                        <option value="hu" >
+                        </option><option value="hu" >
                             Magyar
-                        </option>
-                        
-                        <option value="id" >
+                        </option><option value="id" >
                             Bahasa Indonesia
-                        </option>
-                        
-                        <option value="is" >
+                        </option><option value="is" >
                             Íslenska
-                        </option>
-                        
-                        <option value="it" >
+                        </option><option value="it" >
                             Italiano
-                        </option>
-                        
-                        <option value="ja" >
+                        </option><option value="ja" >
                             日本語
-                        </option>
-                        
-                        <option value="km" >
+                        </option><option value="km" >
                             ភាសាខ្មែរ
-                        </option>
-                        
-                        <option value="kn" >
+                        </option><option value="kn" >
                             ಕನ್ನಡ
-                        </option>
-                        
-                        <option value="ko" selected>
+                        </option><option value="ko" selected>
                             한국어
-                        </option>
-                        
-                        <option value="lt" >
+                        </option><option value="lt" >
                             Lietuvių
-                        </option>
-                        
-                        <option value="lv" >
+                        </option><option value="lv" >
                             Latviešu
-                        </option>
-                        
-                        <option value="ms" >
+                        </option><option value="ms" >
                             Bahasa Melayu
-                        </option>
-                        
-                        <option value="my" >
+                        </option><option value="my" >
                             မြန်မာစာ
-                        </option>
-                        
-                        <option value="nb" >
+                        </option><option value="nb" >
                             Norsk Bokmål
-                        </option>
-                        
-                        <option value="nl" >
+                        </option><option value="nl" >
                             Nederlands
-                        </option>
-                        
-                        <option value="pl" >
+                        </option><option value="pl" >
                             Polski
-                        </option>
-                        
-                        <option value="pt" >
+                        </option><option value="pt" >
                             Português
-                        </option>
-                        
-                        <option value="pt-br" >
+                        </option><option value="pt-br" >
                             Português (Brasil)
-                        </option>
-                        
-                        <option value="ro" >
+                        </option><option value="ro" >
                             Română
-                        </option>
-                        
-                        <option value="ru" >
+                        </option><option value="ru" >
                             Русский
-                        </option>
-                        
-                        <option value="sk" >
+                        </option><option value="sk" >
                             Slovenčina
-                        </option>
-                        
-                        <option value="sl" >
+                        </option><option value="sl" >
                             Slovenščina
-                        </option>
-                        
-                        <option value="sr" >
+                        </option><option value="sr" >
                             Srpski
-                        </option>
-                        
-                        <option value="sv" >
+                        </option><option value="sv" >
                             Svenska
-                        </option>
-                        
-                        <option value="sw" >
+                        </option><option value="sw" >
                             Kiswahili
-                        </option>
-                        
-                        <option value="ta" >
+                        </option><option value="ta" >
                             தமிழ்
-                        </option>
-                        
-                        <option value="te" >
+                        </option><option value="te" >
                             తెలుగు
-                        </option>
-                        
-                        <option value="th" >
+                        </option><option value="th" >
                             ไทย
-                        </option>
-                        
-                        <option value="tl" >
+                        </option><option value="tl" >
                             Tagalog
-                        </option>
-                        
-                        <option value="tr" >
+                        </option><option value="tr" >
                             Türkçe
-                        </option>
-                        
-                        <option value="uk" >
+                        </option><option value="uk" >
                             Українська
-                        </option>
-                        
-                        <option value="ur" >
+                        </option><option value="ur" >
                             اردو
-                        </option>
-                        
-                        <option value="vi" >
+                        </option><option value="vi" >
                             Tiếng Việt
-                        </option>
-                        
-                        <option value="yo" >
+                        </option><option value="yo" >
                             Yorùbá
-                        </option>
-                        
-                        <option value="zh" >
+                        </option><option value="zh" >
                             中文
-                        </option>
-                        
-                    </select>
-                </div>
-
-                <div class="nav-group-right">
-                    
-
-
-                    
-                    <div class="header-app-buttons">
-                        
-                        
-                        <a href="https://apps.apple.com/us/app/run-analytics/id6754524015" class="header-download-btn" target="_blank"
-                            rel="noopener" aria-label="Download on App Store" title="Download on App Store">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                                fill="currentColor">
-                                <path
-                                    d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z" />
-                            </svg>
-                        </a>
-                        
-
-                        
-                        <a href="https://play.google.com/store/apps/details?id=com.arnohealth.runanalytics" class="header-download-btn" target="_blank"
-                            rel="noopener" aria-label="Get it on Google Play" title="Get it on Google Play">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                                fill="currentColor">
-                                <path
-                                    d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.92 20.16,13.19L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M16.81,8.88L14.54,11.15L6.05,2.66L16.81,8.88Z" />
-                            </svg>
-                        </a>
-                        
-                        
-                    </div>
-
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-
-                    
-                    <div class="suite-menu-container">
-                        <button class="suite-menu-toggle" id="suite-menu-toggle" aria-label="See other apps"
-                            aria-expanded="false">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        </option></select></div><div class="nav-group-right"><div class="header-app-buttons"><a href="https://apps.apple.com/us/app/run-analytics/id6754524015" class="header-download-btn" target="_blank"
+                            rel="noopener" aria-label="Download on App Store" title="Download on App Store"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="currentColor"><path
+                                    d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z" /></svg></a><a href="https://play.google.com/store/apps/details?id=com.arnohealth.runanalytics" class="header-download-btn" target="_blank"
+                            rel="noopener" aria-label="Get it on Google Play" title="Get it on Google Play"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="currentColor"><path
+                                    d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.92 20.16,13.19L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M16.81,8.88L14.54,11.15L6.05,2.66L16.81,8.88Z" /></svg></a></div><div class="suite-menu-container"><button class="suite-menu-toggle" id="suite-menu-toggle" aria-label="See other apps"
+                            aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round">
-                                <rect x="3" y="3" width="7" height="7"></rect>
-                                <rect x="14" y="3" width="7" height="7"></rect>
-                                <rect x="14" y="14" width="7" height="7"></rect>
-                                <rect x="3" y="14" width="7" height="7"></rect>
-                            </svg>
-                        </button>
-                        <div class="suite-dropdown hidden" id="suite-dropdown">
-                            <div class="suite-dropdown-header">Other AnalyticsZone Apps</div>
-                            <div class="suite-apps-grid">
-                                
-                                <a href="https://analyticszone.app" class="suite-app-link">AnalyticsZone</a>
-                                
-                                <a href="https://swim.analyticszone.app" class="suite-app-link">Swim Analytics</a>
-                                
-                                <a href="https://bike.analyticszone.app" class="suite-app-link">Bike Analytics</a>
-                                
-                                <a href="https://walk.analyticszone.app" class="suite-app-link">Walk Analytics</a>
-                                
-                                <a href="https://cardio.analyticszone.app" class="suite-app-link">Cardio Analytics</a>
-                                
-                                <a href="https://health.analyticszone.app" class="suite-app-link">Health Analytics</a>
-                                
-                                <a href="https://swimtrainer.analyticszone.app" class="suite-app-link">Swim Trainer</a>
-                                
-                            </div>
-                        </div>
-                    </div>
-                    
-                </div>
-            </nav>
-
-            
-            <button class="menu-toggle" id="menu-toggle" aria-label="메뉴 전환"
-                aria-expanded="false" aria-controls="nav-primary">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </div>
-    </div>
-</header>
-
-  
-  
-
-<nav class="breadcrumbs" aria-label="Breadcrumb">
-    <div class="container">
-        <ol>
-            
-            <li>
-                
-                <a href="/ko/">홈</a>
-                
-            </li>
-            
-            <li>
-                
-                <a href="/ko/getting-started/">학습</a>
-                
-            </li>
-            
-            <li>
-                
-                <span aria-current="page">훈련 부하</span>
-                
-            </li>
-            
-        </ol>
-    </div>
-</nav>
-
-
-  
-  <main id="main-content" class="main-content">
-    
-    <section class="page-hero">
-    <div class="container">
-        <h1>러닝 훈련 스트레스 점수: TSS, CTL, ATL & TSB 완전 정리</h1>
-        <p class="lead">퍼포먼스 관리 차트로 러닝 훈련 부하 마스터하기</p>
-    </div>
-</section>
-
-<section class="section">
-    <div class="container container-narrow">
-        <div class="callout callout-success">
-            <h2>🎯 핵심 요약: 러닝 훈련 스트레스 점수</h2>
-            <ul>
-                <li><strong>훈련 스트레스 점수 (TSS)</strong>는 강도와 시간을 결합하여 각 러닝이 신체에 미치는 영향을 정량화합니다.</li>
-                <li><strong>CTL (만성 훈련 부하)</strong>은 42일간의 꾸준한 러닝을 통해 축적된 장기적인 체력을 측정합니다.</li>
-                <li><strong>ATL (급성 훈련 부하)</strong>은 지난 7일간의 훈련으로 인한 최근의 피로를 추적합니다.</li>
-                <li><strong>TSB (훈련 스트레스 균형)</strong>는 체력과 피로의 균형을 보여주며, 레이스 준비 상태나 회복 필요성을 나타냅니다.</li>
-                <li>러닝 훈련 부하를 이해하면 오버트레이닝을 방지하고 데이터 기반의 주기화를 통해 퍼포먼스 타이밍을 최적화할 수 있습니다.</li>
-            </ul>
-            <p><em>기반: TSS 계산은 역치 기준점으로 <a href="/ko/crs/">임계 러닝 속도 (CRS)</a>를 필요로 합니다.</em></p>
-        </div>
-    </div>
-</section>
-
-<section class="section section-alt">
-    <div class="container container-narrow">
-        <h2>러닝 훈련 스트레스 점수 (TSS)란 무엇인가요?</h2>
-        <p class="lead">러닝 훈련 스트레스 점수 방법론은 중요한 질문에 답을 줍니다: <strong>그 워크아웃은 얼마나 힘들었나요?</strong> 단순히 거리나 시간이 아니라, 각 러닝이
-            신체에 가한 진정한 생리적 스트레스를 의미합니다.</p>
-
-        <p>앤드류 코건 박사가 사이클링을 위해 개발한 훈련 스트레스 점수(TSS) 시스템은 러닝에 맞게 조정되어 워크아웃 강도와 지속 시간을 단일 숫자로 정량화하는 표준화된 방법을 제공합니다. 러너의 경우,
-            역치 대비 페이스를 기반으로 하는 <strong>러닝 훈련 스트레스 점수 (rTSS)</strong>를 사용합니다.</p>
-
-        <div class="callout callout-info">
-            <h3>러닝 TSS 표준</h3>
-            <p><a href="/ko/crs/">임계 러닝 속도 (CRS)</a> 또는 역치 페이스로 1시간 러닝 = <strong>100 TSS</strong></p>
-            <p>이 표준화를 통해 워크아웃, 주간, 훈련 주기 전반에 걸친 비교가 가능합니다. 30분 역치 러닝 = ~50 TSS. 2시간 역치 러닝 = ~200 TSS.</p>
-        </div>
-
-        <h3>러닝 TSS vs 사이클링 TSS: 주요 차이점</h3>
-        <p>두 종목 모두 TSS를 사용하지만, 러닝 훈련 부하는 독특한 특성을 가집니다:</p>
-
-        <table class="comparison-table">
-            <thead>
-                <tr>
-                    <th>측면</th>
-                    <th>사이클링 TSS</th>
-                    <th>러닝 TSS (rTSS)</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><strong>주요 입력값</strong></td>
-                    <td>파워 (와트)</td>
-                    <td>페이스 (분/km 또는 분/마일)</td>
-                </tr>
-                <tr>
-                    <td><strong>충격 스트레스</strong></td>
-                    <td>낮음 (착석)</td>
-                    <td>높음 (지면 접촉부하)</td>
-                </tr>
-                <tr>
-                    <td><strong>회복 필요성</strong></td>
-                    <td>동일 TSS 대비 낮음</td>
-                    <td>근골격계 스트레스로 인해 높음</td>
-                </tr>
-                <tr>
-                    <td><strong>주간 볼륨</strong></td>
-                    <td>일반적으로 500-800+ TSS</td>
-                    <td>일반적으로 300-500 TSS (동일 체력 수준)</td>
-                </tr>
-                <tr>
-                    <td><strong>공식</strong></td>
-                    <td>IF² × 지속 시간 × 100</td>
-                    <td>IF² × 지속 시간 × 100</td>
-                </tr>
-            </tbody>
-        </table>
-
-        <div class="callout callout-warning">
-            <h4>⚠️ 중요: 러닝의 높은 충격</h4>
-            <p>동일한 TSS 값이라도 러닝은 충격력 때문에 사이클링보다 더 많은 신체적 스트레스를 나타냅니다. 주당 400 TSS를 축적하는 러너는 주당 600-700 TSS의 사이클리스트와 유사한 훈련
-                적응을 경험합니다. 러닝 훈련 부하는 심혈관 및 근골격계 스트레스를 모두 고려해야 합니다.</p>
-        </div>
-    </div>
-</section>
-
-<section class="section">
-    <div class="container">
-        <h2 class="text-center mb-xl">러닝 훈련 스트레스 점수 (rTSS) 계산</h2>
-
-        <div class="grid grid-2">
-            <div>
-                <h3>러닝 TSS 공식</h3>
-                <div class="formula-box">
-                    <div class="formula">
+                                stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg></button><div class="suite-dropdown hidden" id="suite-dropdown"><div class="suite-dropdown-header">Other AnalyticsZone Apps</div><div class="suite-apps-grid"><a href="https://analyticszone.app" class="suite-app-link">AnalyticsZone</a><a href="https://swim.analyticszone.app" class="suite-app-link">Swim Analytics</a><a href="https://bike.analyticszone.app" class="suite-app-link">Bike Analytics</a><a href="https://walk.analyticszone.app" class="suite-app-link">Walk Analytics</a><a href="https://cardio.analyticszone.app" class="suite-app-link">Cardio Analytics</a><a href="https://health.analyticszone.app" class="suite-app-link">Health Analytics</a><a href="https://swimtrainer.analyticszone.app" class="suite-app-link">Swim Trainer</a></div></div></div></div></nav><button class="menu-toggle" id="menu-toggle" aria-label="메뉴 전환"
+                aria-expanded="false" aria-controls="nav-primary"><span></span><span></span><span></span></button></div></div></header><nav class="breadcrumbs" aria-label="Breadcrumb"><div class="container"><ol><li><a href="/ko/">홈</a></li><li><a href="/ko/getting-started/">학습</a></li><li><span aria-current="page">훈련 부하</span></li></ol></div></nav><main id="main-content" class="main-content"><section class="page-hero"><div class="container"><h1>러닝 훈련 스트레스 점수: TSS, CTL, ATL & TSB 완전 정리</h1><p class="lead">퍼포먼스 관리 차트로 러닝 훈련 부하 마스터하기</p></div></section><section class="section"><div class="container container-narrow"><div class="callout callout-success"><h2>🎯 핵심 요약: 러닝 훈련 스트레스 점수</h2><ul><li><strong>훈련 스트레스 점수 (TSS)</strong>는 강도와 시간을 결합하여 각 러닝이 신체에 미치는 영향을 정량화합니다.</li><li><strong>CTL (만성 훈련 부하)</strong>은 42일간의 꾸준한 러닝을 통해 축적된 장기적인 체력을 측정합니다.</li><li><strong>ATL (급성 훈련 부하)</strong>은 지난 7일간의 훈련으로 인한 최근의 피로를 추적합니다.</li><li><strong>TSB (훈련 스트레스 균형)</strong>는 체력과 피로의 균형을 보여주며, 레이스 준비 상태나 회복 필요성을 나타냅니다.</li><li>러닝 훈련 부하를 이해하면 오버트레이닝을 방지하고 데이터 기반의 주기화를 통해 퍼포먼스 타이밍을 최적화할 수 있습니다.</li></ul><p><em>기반: TSS 계산은 역치 기준점으로 <a href="/ko/crs/">임계 러닝 속도 (CRS)</a>를 필요로 합니다.</em></p></div></div></section><section class="section section-alt"><div class="container container-narrow"><h2>러닝 훈련 스트레스 점수 (TSS)란 무엇인가요?</h2><p class="lead">러닝 훈련 스트레스 점수 방법론은 중요한 질문에 답을 줍니다: <strong>그 워크아웃은 얼마나 힘들었나요?</strong> 단순히 거리나 시간이 아니라, 각 러닝이
+            신체에 가한 진정한 생리적 스트레스를 의미합니다.</p><p>앤드류 코건 박사가 사이클링을 위해 개발한 훈련 스트레스 점수(TSS) 시스템은 러닝에 맞게 조정되어 워크아웃 강도와 지속 시간을 단일 숫자로 정량화하는 표준화된 방법을 제공합니다. 러너의 경우,
+            역치 대비 페이스를 기반으로 하는 <strong>러닝 훈련 스트레스 점수 (rTSS)</strong>를 사용합니다.</p><div class="callout callout-info"><h3>러닝 TSS 표준</h3><p><a href="/ko/crs/">임계 러닝 속도 (CRS)</a> 또는 역치 페이스로 1시간 러닝 = <strong>100 TSS</strong></p><p>이 표준화를 통해 워크아웃, 주간, 훈련 주기 전반에 걸친 비교가 가능합니다. 30분 역치 러닝 = ~50 TSS. 2시간 역치 러닝 = ~200 TSS.</p></div><h3>러닝 TSS vs 사이클링 TSS: 주요 차이점</h3><p>두 종목 모두 TSS를 사용하지만, 러닝 훈련 부하는 독특한 특성을 가집니다:</p><table class="comparison-table"><thead><tr><th>측면</th><th>사이클링 TSS</th><th>러닝 TSS (rTSS)</th></tr></thead><tbody><tr><td><strong>주요 입력값</strong></td><td>파워 (와트)</td><td>페이스 (분/km 또는 분/마일)</td></tr><tr><td><strong>충격 스트레스</strong></td><td>낮음 (착석)</td><td>높음 (지면 접촉부하)</td></tr><tr><td><strong>회복 필요성</strong></td><td>동일 TSS 대비 낮음</td><td>근골격계 스트레스로 인해 높음</td></tr><tr><td><strong>주간 볼륨</strong></td><td>일반적으로 500-800+ TSS</td><td>일반적으로 300-500 TSS (동일 체력 수준)</td></tr><tr><td><strong>공식</strong></td><td>IF² × 지속 시간 × 100</td><td>IF² × 지속 시간 × 100</td></tr></tbody></table><div class="callout callout-warning"><h4>⚠️ 중요: 러닝의 높은 충격</h4><p>동일한 TSS 값이라도 러닝은 충격력 때문에 사이클링보다 더 많은 신체적 스트레스를 나타냅니다. 주당 400 TSS를 축적하는 러너는 주당 600-700 TSS의 사이클리스트와 유사한 훈련
+                적응을 경험합니다. 러닝 훈련 부하는 심혈관 및 근골격계 스트레스를 모두 고려해야 합니다.</p></div></div></section><section class="section"><div class="container"><h2 class="text-center mb-xl">러닝 훈련 스트레스 점수 (rTSS) 계산</h2><div class="grid grid-2"><div><h3>러닝 TSS 공식</h3><div class="formula-box"><div class="formula">
                         rTSS = (IF²) × 지속 시간 (시간) × 100
-                    </div>
-                    <div class="formula-explanation">
-                        <p>여기서 강도 계수 (IF)는:</p>
-                        <div class="formula">
+                    </div><div class="formula-explanation"><p>여기서 강도 계수 (IF)는:</p><div class="formula">
                             IF = NGS / CRS
-                        </div>
-                        <p>노멀라이즈드 그레이디드 속도 (NGS)는 페이스 변동성과 고도를 고려합니다:</p>
-                        <div class="formula">
+                        </div><p>노멀라이즈드 그레이디드 속도 (NGS)는 페이스 변동성과 고도를 고려합니다:</p><div class="formula">
                             NGS ≈ 평균 러닝 속도 (지형 보정됨)
-                        </div>
-                    </div>
-                </div>
-
-                <div class="callout callout-tip mt-md">
-                    <h4>📊 페이스 기반 간편법</h4>
-                    <p>파워 미터가 없는 러너의 경우, 페이스 기반 계산을 사용하세요:</p>
-                    <div class="formula">
+                        </div></div></div><div class="callout callout-tip mt-md"><h4>📊 페이스 기반 간편법</h4><p>파워 미터가 없는 러너의 경우, 페이스 기반 계산을 사용하세요:</p><div class="formula">
                         IF = 역치 페이스 / 평균 페이스
-                    </div>
-                    <p><strong>예시:</strong> CRS 페이스가 4:00/km이고 4:20/km로 달릴 경우:</p>
-                    <p>IF = 4:00 / 4:20 = 240 / 260 = 0.923</p>
-                    <p><em>참고: 속도가 느릴수록 IF는 낮아집니다 (속도 계산과는 역수 관계)</em></p>
-                </div>
-            </div>
-
-            <div>
-                <h3>계산 예시: 템포 런</h3>
-                <div class="example-box">
-                    <h4>러너 프로필:</h4>
-                    <ul>
-                        <li>CRS 페이스: 4:00/km (15 km/hr)</li>
-                        <li>CRS: 1시간 동안의 역치 페이스</li>
-                    </ul>
-
-                    <h4>워크아웃 데이터:</h4>
-                    <ul>
-                        <li>총 거리: 10 km</li>
-                        <li>이동 시간: 43:20 (0.722 시간)</li>
-                        <li>평균 페이스: 4:20/km</li>
-                    </ul>
-
-                    <h4>1단계: 평균 속도 계산</h4>
-                    <div class="calculation">
+                    </div><p><strong>예시:</strong> CRS 페이스가 4:00/km이고 4:20/km로 달릴 경우:</p><p>IF = 4:00 / 4:20 = 240 / 260 = 0.923</p><p><em>참고: 속도가 느릴수록 IF는 낮아집니다 (속도 계산과는 역수 관계)</em></p></div></div><div><h3>계산 예시: 템포 런</h3><div class="example-box"><h4>러너 프로필:</h4><ul><li>CRS 페이스: 4:00/km (15 km/hr)</li><li>CRS: 1시간 동안의 역치 페이스</li></ul><h4>워크아웃 데이터:</h4><ul><li>총 거리: 10 km</li><li>이동 시간: 43:20 (0.722 시간)</li><li>평균 페이스: 4:20/km</li></ul><h4>1단계: 평균 속도 계산</h4><div class="calculation">
                         속도 = 10km / 0.722hr<br>
-                        속도 = <strong>13.85 km/hr</strong>
-                    </div>
-
-                    <h4>2단계: IF 계산 (속도법)</h4>
-                    <div class="calculation">
+                        속도 = <strong>13.85 km/hr</strong></div><h4>2단계: IF 계산 (속도법)</h4><div class="calculation">
                         IF = 13.85 / 15.0<br>
-                        IF = <strong>0.923</strong>
-                    </div>
-
-                    <h4>3단계: IF 계산 (페이스법)</h4>
-                    <div class="calculation">
+                        IF = <strong>0.923</strong></div><h4>3단계: IF 계산 (페이스법)</h4><div class="calculation">
                         IF = 240 초/km / 260 초/km<br>
                         IF = <strong>0.923</strong> ✓
-                    </div>
-
-                    <h4>4단계: rTSS 계산</h4>
-                    <div class="calculation">
+                    </div><h4>4단계: rTSS 계산</h4><div class="calculation">
                         rTSS = (0.923²) × 0.722 × 100<br>
                         rTSS = 0.852 × 0.722 × 100<br>
-                        rTSS = <strong>61.5</strong>
-                    </div>
-
-                    <p class="mt-md"><strong>해석:</strong> 역치보다 10% 느린 페이스로 진행된 이 10km 템포 런은 61.5 TSS를 생성했습니다—양질의 유산소
-                        세션에서 전형적인 적당한 훈련 자극입니다.</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="intensity-guide mt-xl">
-            <h3>러닝 TSS 강도 가이드라인</h3>
-            <table class="intensity-table">
-                <thead>
-                    <tr>
-                        <th>TSS 범위</th>
-                        <th>강도 수준</th>
-                        <th>설명</th>
-                        <th>워크아웃 예시</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>&lt; 50</td>
-                        <td>쉬운 회복</td>
-                        <td>가벼운 러닝, 대화 가능한 페이스, 적극적 휴식</td>
-                        <td>30-45분 이지 런, 회복 조깅, 질주</td>
-                    </tr>
-                    <tr>
-                        <td>50-100</td>
-                        <td>중간 훈련</td>
-                        <td>전형적인 일일 훈련 볼륨, 유산소 기초</td>
-                        <td>60-90분 지속주, 긴 이지 런</td>
-                    </tr>
-                    <tr>
-                        <td>100-200</td>
-                        <td>강한 훈련</td>
-                        <td>템포/역치 훈련이 포함된 양질의 세션</td>
-                        <td>90-120분 역치 인터벌 포함, 빌드업 런</td>
-                    </tr>
-                    <tr>
-                        <td>200-300</td>
-                        <td>매우 강함</td>
-                        <td>장거리주와 질 높은 훈련, 레이스 시뮬레이션</td>
-                        <td>2-3시간 장거리주, 하프 마라톤 페이스 훈련</td>
-                    </tr>
-                    <tr>
-                        <td>&gt; 300</td>
-                        <td>극한</td>
-                        <td>레이스 당일, 울트라 거리 이벤트</td>
-                        <td>마라톤 레이스, 50k+ 울트라, 아이언맨 런</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-
-        <div class="callout callout-tip mt-lg">
-            <h3>📊 러닝 수준별 주간 TSS 목표</h3>
-            <ul>
-                <li><strong>초보 러너:</strong> 150-300 TSS/주 (주 3-4회 러닝)</li>
-                <li><strong>중급 러너:</strong> 300-500 TSS/주 (주 4-6회 러닝)</li>
-                <li><strong>상급 러너:</strong> 500-700 TSS/주 (주 6-8회 세션)</li>
-                <li><strong>엘리트 러너:</strong> 700-900+ TSS/주 (주 8-12회 세션)</li>
-            </ul>
-            <p>이 수치들은 아래에 설명된 체력 지표인 만성 훈련 부하(CTL)로 축적됩니다.</p>
-        </div>
-    </div>
-</section>
-
-<section class="section section-alt">
-    <div class="container">
-        <h2 class="text-center mb-xl">러너를 위한 CTL, ATL, TSB 이해하기</h2>
-        <p class="text-center lead">퍼포먼스 관리 차트(PMC)는 러닝 훈련의 전체 스토리를 말해주는 세 가지 상호 연결된 지표인 체력, 피로, 컨디션(Form)을 시각화합니다.</p>
-
-        <div class="pmc-overview">
-            <div class="grid grid-3">
-                <div class="pmc-metric">
-                    <div class="metric-icon">📈</div>
-                    <h3>CTL - 만성 훈련 부하</h3>
-                    <div class="metric-value-label">당신의 체력 (FITNESS)</div>
-                    <p>일일 TSS의 42일 지수 가중 이동 평균. 42일간의 꾸준한 러닝으로 축적된 장기적인 유산소 체력과 훈련 적응을 나타냅니다.</p>
-                    <div class="formula-small">
+                        rTSS = <strong>61.5</strong></div><p class="mt-md"><strong>해석:</strong> 역치보다 10% 느린 페이스로 진행된 이 10km 템포 런은 61.5 TSS를 생성했습니다—양질의 유산소
+                        세션에서 전형적인 적당한 훈련 자극입니다.</p></div></div></div><div class="intensity-guide mt-xl"><h3>러닝 TSS 강도 가이드라인</h3><table class="intensity-table"><thead><tr><th>TSS 범위</th><th>강도 수준</th><th>설명</th><th>워크아웃 예시</th></tr></thead><tbody><tr><td>&lt; 50</td><td>쉬운 회복</td><td>가벼운 러닝, 대화 가능한 페이스, 적극적 휴식</td><td>30-45분 이지 런, 회복 조깅, 질주</td></tr><tr><td>50-100</td><td>중간 훈련</td><td>전형적인 일일 훈련 볼륨, 유산소 기초</td><td>60-90분 지속주, 긴 이지 런</td></tr><tr><td>100-200</td><td>강한 훈련</td><td>템포/역치 훈련이 포함된 양질의 세션</td><td>90-120분 역치 인터벌 포함, 빌드업 런</td></tr><tr><td>200-300</td><td>매우 강함</td><td>장거리주와 질 높은 훈련, 레이스 시뮬레이션</td><td>2-3시간 장거리주, 하프 마라톤 페이스 훈련</td></tr><tr><td>&gt; 300</td><td>극한</td><td>레이스 당일, 울트라 거리 이벤트</td><td>마라톤 레이스, 50k+ 울트라, 아이언맨 런</td></tr></tbody></table></div><div class="callout callout-tip mt-lg"><h3>📊 러닝 수준별 주간 TSS 목표</h3><ul><li><strong>초보 러너:</strong> 150-300 TSS/주 (주 3-4회 러닝)</li><li><strong>중급 러너:</strong> 300-500 TSS/주 (주 4-6회 러닝)</li><li><strong>상급 러너:</strong> 500-700 TSS/주 (주 6-8회 세션)</li><li><strong>엘리트 러너:</strong> 700-900+ TSS/주 (주 8-12회 세션)</li></ul><p>이 수치들은 아래에 설명된 체력 지표인 만성 훈련 부하(CTL)로 축적됩니다.</p></div></div></section><section class="section section-alt"><div class="container"><h2 class="text-center mb-xl">러너를 위한 CTL, ATL, TSB 이해하기</h2><p class="text-center lead">퍼포먼스 관리 차트(PMC)는 러닝 훈련의 전체 스토리를 말해주는 세 가지 상호 연결된 지표인 체력, 피로, 컨디션(Form)을 시각화합니다.</p><div class="pmc-overview"><div class="grid grid-3"><div class="pmc-metric"><div class="metric-icon">📈</div><h3>CTL - 만성 훈련 부하</h3><div class="metric-value-label">당신의 체력 (FITNESS)</div><p>일일 TSS의 42일 지수 가중 이동 평균. 42일간의 꾸준한 러닝으로 축적된 장기적인 유산소 체력과 훈련 적응을 나타냅니다.</p><div class="formula-small">
                         오늘의 CTL = 어제의 CTL + (오늘의 TSS - 어제의 CTL) × (1/42)
-                    </div>
-                </div>
-
-                <div class="pmc-metric">
-                    <div class="metric-icon">⚡</div>
-                    <h3>ATL - 급성 훈련 부하</h3>
-                    <div class="metric-value-label">당신의 피로 (FATIGUE)</div>
-                    <p>일일 TSS의 7일 지수 가중 이동 평균. 지난주 러닝으로 인한 최근 훈련 스트레스와 축적된 피로를 포착합니다.</p>
-                    <div class="formula-small">
+                    </div></div><div class="pmc-metric"><div class="metric-icon">⚡</div><h3>ATL - 급성 훈련 부하</h3><div class="metric-value-label">당신의 피로 (FATIGUE)</div><p>일일 TSS의 7일 지수 가중 이동 평균. 지난주 러닝으로 인한 최근 훈련 스트레스와 축적된 피로를 포착합니다.</p><div class="formula-small">
                         오늘의 ATL = 어제의 ATL + (오늘의 TSS - 어제의 ATL) × (1/7)
-                    </div>
-                </div>
-
-                <div class="pmc-metric">
-                    <div class="metric-icon">🎯</div>
-                    <h3>TSB - 훈련 스트레스 균형</h3>
-                    <div class="metric-value-label">당신의 컨디션 (FORM)</div>
-                    <p>어제의 체력과 피로의 차이. 다음의 질 높은 러닝이나 레이스 전에 수행 준비가 되었는지 또는 휴식이 필요한지를 나타냅니다.</p>
-                    <div class="formula-small">
+                    </div></div><div class="pmc-metric"><div class="metric-icon">🎯</div><h3>TSB - 훈련 스트레스 균형</h3><div class="metric-value-label">당신의 컨디션 (FORM)</div><p>어제의 체력과 피로의 차이. 다음의 질 높은 러닝이나 레이스 전에 수행 준비가 되었는지 또는 휴식이 필요한지를 나타냅니다.</p><div class="formula-small">
                         TSB = 어제의 CTL - 어제의 ATL
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="section">
-    <div class="container">
-        <h2>CTL: 러닝 체력 지표</h2>
-
-        <div class="grid grid-2">
-            <div>
-                <h3>러너에게 CTL이 의미하는 것</h3>
-                <p>CTL은 지난 6주 동안 신체가 <em>적응한</em> 러닝 훈련 부하를 정량화합니다. 러닝에서 더 높은 CTL은 다음을 의미합니다:</p>
-                <ul>
-                    <li>더 큰 유산소 능력과 러닝 지구력</li>
-                    <li>더 많은 훈련 볼륨과 강도를 소화할 수 있는 능력</li>
-                    <li>향상된 신경근 및 대사 적응</li>
-                    <li>더 높은 지속 가능한 러닝 퍼포먼스</li>
-                    <li>지면 접촉부하로 인한 충격 스트레스에 대한 더 나은 내성</li>
-                </ul>
-
-                <div class="callout callout-info">
-                    <h4>시상수: 42일</h4>
-                    <p>CTL의 반감기는 약 14.7일입니다. 42일 후에는 단일 워크아웃의 영향 중 약 36.8%(1/e)가 체력 계산에 남아 있습니다.</p>
-                    <p>이 느린 감소는 러닝 체력이 점진적으로 구축되지만 또한 천천히 사라짐을 의미하여, 짧은 회복 기간 동안의 훈련 중단(디트레이닝)을 방지합니다.</p>
-                </div>
-            </div>
-
-            <div>
-                <h3>러너를 위한 일반적인 CTL 값</h3>
-                <div class="levels-comparison">
-                    <div class="level-card-compact">
-                        <strong>초보 러너:</strong>
-                        <div class="value">15-35 CTL</div>
-                        <p>기초 체력 구축, 주 3-4회 러닝</p>
-                    </div>
-
-                    <div class="level-card-compact">
-                        <strong>중급 러너:</strong>
-                        <div class="value">35-60 CTL</div>
-                        <p>꾸준한 훈련, 주 4-6회 러닝</p>
-                    </div>
-
-                    <div class="level-card-compact">
-                        <strong>상급 러너:</strong>
-                        <div class="value">60-85 CTL</div>
-                        <p>높은 볼륨, 주 6-8회 세션</p>
-                    </div>
-
-                    <div class="level-card-compact">
-                        <strong>엘리트 러너:</strong>
-                        <div class="value">85-120+ CTL</div>
-                        <p>전문적인 훈련 부하, 주 8-12회 이상 세션</p>
-                    </div>
-                </div>
-
-                <div class="warning-box mt-md">
-                    <strong>⚠️ 러너를 위한 CTL 램프 레이트 제한</strong>
-                    <ul>
-                        <li><strong>초보자:</strong> 주당 +2-4 CTL</li>
-                        <li><strong>중급자:</strong> 주당 +3-5 CTL</li>
-                        <li><strong>상급자:</strong> 주당 +5-7 CTL</li>
-                    </ul>
-                    <p>이 속도를 초과하면 러닝의 높은 충격 스트레스로 인해 부상 위험이 크게 증가합니다. "10% 규칙"(주간 마일리지를 10% 이상 늘리지 않음)은 이러한 CTL 램프 레이트와
-                        일치합니다.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="section section-alt">
-    <div class="container">
-        <h2>ATL: 러닝 피로 지표</h2>
-
-        <div class="content-split">
-            <div>
-                <p>ATL은 단기 훈련 스트레스, 즉 지난주 러닝으로 축적된 피로를 추적합니다. 힘든 훈련 후 빠르게 상승하고 휴식 시 빠르게 하락하므로, 질 높은 세션 간의 회복 관리에 필수적입니다.
-                </p>
-
-                <h3>러닝 훈련에서의 ATL 역학</h3>
-                <ul>
-                    <li><strong>빠른 반응:</strong> 7일 시상수 (반감기 ~2.4일)</li>
-                    <li><strong>스파이크 패턴:</strong> 힘든 세션 후 급증, 회복일 동안 하락</li>
-                    <li><strong>회복 지표:</strong> 하락하는 ATL = 러닝 사이의 피로 해소</li>
-                    <li><strong>오버트레이닝 경고:</strong> 만성적으로 높은 ATL은 불충분한 회복을 시사</li>
-                    <li><strong>충격 스트레스:</strong> 러닝 ATL은 심혈관 및 근골격계 피로를 모두 반영</li>
-                </ul>
-
-                <div class="callout callout-science">
-                    <h4>🔬 러닝을 위한 체력-피로 모델</h4>
-                    <p>모든 훈련 러닝은 두 가지 효과를 생성합니다:</p>
-                    <ol>
-                        <li><strong>체력 자극</strong> (천천히 구축, 오래 지속됨)</li>
-                        <li><strong>피로</strong> (빠르게 구축, 빠르게 해소됨)</li>
-                    </ol>
-                    <p>러닝 퍼포먼스 = 체력 - 피로. PMC는 이 모델을 시각화하여 러너를 위한 과학적 주기화와 최적의 레이스 타이밍을 가능하게 합니다.</p>
-                </div>
-            </div>
-
-            <div>
-                <h3>안정 상태에서</h3>
-                <p>주간 러닝 훈련 부하가 일정할 때, CTL과 ATL은 수렴합니다:</p>
-                <div class="example-box">
-                    <h4>예시: 꾸준히 주당 400 TSS</h4>
-                    <div class="calculation">
+                    </div></div></div></div></div></section><section class="section"><div class="container"><h2>CTL: 러닝 체력 지표</h2><div class="grid grid-2"><div><h3>러너에게 CTL이 의미하는 것</h3><p>CTL은 지난 6주 동안 신체가 <em>적응한</em> 러닝 훈련 부하를 정량화합니다. 러닝에서 더 높은 CTL은 다음을 의미합니다:</p><ul><li>더 큰 유산소 능력과 러닝 지구력</li><li>더 많은 훈련 볼륨과 강도를 소화할 수 있는 능력</li><li>향상된 신경근 및 대사 적응</li><li>더 높은 지속 가능한 러닝 퍼포먼스</li><li>지면 접촉부하로 인한 충격 스트레스에 대한 더 나은 내성</li></ul><div class="callout callout-info"><h4>시상수: 42일</h4><p>CTL의 반감기는 약 14.7일입니다. 42일 후에는 단일 워크아웃의 영향 중 약 36.8%(1/e)가 체력 계산에 남아 있습니다.</p><p>이 느린 감소는 러닝 체력이 점진적으로 구축되지만 또한 천천히 사라짐을 의미하여, 짧은 회복 기간 동안의 훈련 중단(디트레이닝)을 방지합니다.</p></div></div><div><h3>러너를 위한 일반적인 CTL 값</h3><div class="levels-comparison"><div class="level-card-compact"><strong>초보 러너:</strong><div class="value">15-35 CTL</div><p>기초 체력 구축, 주 3-4회 러닝</p></div><div class="level-card-compact"><strong>중급 러너:</strong><div class="value">35-60 CTL</div><p>꾸준한 훈련, 주 4-6회 러닝</p></div><div class="level-card-compact"><strong>상급 러너:</strong><div class="value">60-85 CTL</div><p>높은 볼륨, 주 6-8회 세션</p></div><div class="level-card-compact"><strong>엘리트 러너:</strong><div class="value">85-120+ CTL</div><p>전문적인 훈련 부하, 주 8-12회 이상 세션</p></div></div><div class="warning-box mt-md"><strong>⚠️ 러너를 위한 CTL 램프 레이트 제한</strong><ul><li><strong>초보자:</strong> 주당 +2-4 CTL</li><li><strong>중급자:</strong> 주당 +3-5 CTL</li><li><strong>상급자:</strong> 주당 +5-7 CTL</li></ul><p>이 속도를 초과하면 러닝의 높은 충격 스트레스로 인해 부상 위험이 크게 증가합니다. "10% 규칙"(주간 마일리지를 10% 이상 늘리지 않음)은 이러한 CTL 램프 레이트와
+                        일치합니다.</p></div></div></div></div></section><section class="section section-alt"><div class="container"><h2>ATL: 러닝 피로 지표</h2><div class="content-split"><div><p>ATL은 단기 훈련 스트레스, 즉 지난주 러닝으로 축적된 피로를 추적합니다. 힘든 훈련 후 빠르게 상승하고 휴식 시 빠르게 하락하므로, 질 높은 세션 간의 회복 관리에 필수적입니다.
+                </p><h3>러닝 훈련에서의 ATL 역학</h3><ul><li><strong>빠른 반응:</strong> 7일 시상수 (반감기 ~2.4일)</li><li><strong>스파이크 패턴:</strong> 힘든 세션 후 급증, 회복일 동안 하락</li><li><strong>회복 지표:</strong> 하락하는 ATL = 러닝 사이의 피로 해소</li><li><strong>오버트레이닝 경고:</strong> 만성적으로 높은 ATL은 불충분한 회복을 시사</li><li><strong>충격 스트레스:</strong> 러닝 ATL은 심혈관 및 근골격계 피로를 모두 반영</li></ul><div class="callout callout-science"><h4>🔬 러닝을 위한 체력-피로 모델</h4><p>모든 훈련 러닝은 두 가지 효과를 생성합니다:</p><ol><li><strong>체력 자극</strong> (천천히 구축, 오래 지속됨)</li><li><strong>피로</strong> (빠르게 구축, 빠르게 해소됨)</li></ol><p>러닝 퍼포먼스 = 체력 - 피로. PMC는 이 모델을 시각화하여 러너를 위한 과학적 주기화와 최적의 레이스 타이밍을 가능하게 합니다.</p></div></div><div><h3>안정 상태에서</h3><p>주간 러닝 훈련 부하가 일정할 때, CTL과 ATL은 수렴합니다:</p><div class="example-box"><h4>예시: 꾸준히 주당 400 TSS</h4><div class="calculation">
                         일일 TSS ≈ 57<br>
                         CTL 접근값 ~57<br>
                         ATL 접근값 ~57<br>
                         TSB 접근값 0
-                    </div>
-                    <p><strong>해석:</strong> 체력과 피로가 균형을 이룹니다. 축적되는 결핍이나 과잉 없이 지속 가능한 훈련 유지 상태입니다.</p>
-                </div>
-
-                <h3>강화(Build) 단계 중</h3>
-                <p>러닝 볼륨이나 강도를 높일 때:</p>
-                <div class="example-box">
-                    <p>짧은 시상수로 인해 ATL이 CTL보다 <em>더 빠르게</em> 상승합니다. TSB는 음수(피로 > 체력)가 됩니다. 이는 정상적이고 생산적입니다—러닝 적응을 자극하기 위해
-                        과부하를 적용하고 있는 것입니다.</p>
-                </div>
-
-                <h3>레이스 테이퍼(Taper) 중</h3>
-                <p>대회 전 훈련 부하를 줄일 때:</p>
-                <div class="example-box">
-                    <p>ATL이 CTL보다 <em>더 빠르게</em> 하락합니다. TSB는 양수(체력 > 피로)가 됩니다. 이것이 목표입니다—체력을 유지하면서 다리가 신선하여 레이스 당일 퍼포먼스를
-                        발휘할 준비가 된 상태입니다.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="section">
-    <div class="container">
-        <h2>TSB: 체력-피로 균형과 레이스 준비 상태</h2>
-
-        <p class="lead">TSB(훈련 스트레스 균형)는 어제의 체력(CTL)과 어제의 피로(ATL)의 차이입니다. 러너에게 이는 신선한지 피로한지, 레이스 준비가 되었는지 회복일이 필요한지를
-            나타냅니다.</p>
-
-        <div class="tsb-zones-container">
-            <h3>러너를 위한 TSB 해석 가이드</h3>
-            <table class="tsb-zones-table">
-                <thead>
-                    <tr>
-                        <th>TSB 범위</th>
-                        <th>상태</th>
-                        <th>해석</th>
-                        <th>권장 조치</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr class="tsb-critical">
-                        <td>&lt; -30</td>
-                        <td><strong>오버트레이닝 위험</strong></td>
-                        <td>극심한 피로. 높은 부상 위험.</td>
-                        <td>즉각적인 회복 필요. 볼륨 50% 이상 축소. 휴식일 고려.</td>
-                    </tr>
-                    <tr class="tsb-training">
-                        <td>-20 ~ -30</td>
-                        <td><strong>최적 훈련 블록</strong></td>
-                        <td>생산적 과부하. 체력 구축 중.</td>
-                        <td>계획 지속. 과도한 통증이나 피로 징후 모니터링.</td>
-                    </tr>
-                    <tr class="tsb-moderate">
-                        <td>-10 ~ -20</td>
-                        <td><strong>중간 훈련 부하</strong></td>
-                        <td>표준 훈련 축적.</td>
-                        <td>정상 훈련. 질 높은 인터벌이나 템포 세션 소화 가능.</td>
-                    </tr>
-                    <tr class="tsb-neutral">
-                        <td>-10 ~ +15</td>
-                        <td><strong>전환/유지</strong></td>
-                        <td>균형 잡힌 상태. 가벼운 피로 또는 신선함.</td>
-                        <td>B/C급 레이스, 테스트, 또는 회복 주간에 적합.</td>
-                    </tr>
-                    <tr class="tsb-fresh">
-                        <td>+15 ~ +25</td>
-                        <td><strong>피크 레이스 컨디션</strong></td>
-                        <td>신선하고 핏함. 최적의 퍼포먼스 윈도우.</td>
-                        <td>A급 우선순위 레이스. 예상되는 최고의 러닝 퍼포먼스.</td>
-                    </tr>
-                    <tr class="tsb-very-fresh">
-                        <td>+25 ~ +35</td>
-                        <td><strong>매우 신선함</strong></td>
-                        <td>충분한 휴식. 짧은 레이스에 좋음.</td>
-                        <td>5K-10K 레이스, 타임 트라이얼, 트랙 이벤트.</td>
-                    </tr>
-                    <tr class="tsb-detraining">
-                        <td>&gt; +35</td>
-                        <td><strong>디트레이닝</strong></td>
-                        <td>활동 부족으로 인한 체력 손실.</td>
-                        <td>훈련 재개. 장기간 휴식으로 체력 감소 중.</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-
-        <div class="callout callout-tip mt-xl">
-            <h3>🎯 러닝 레이스 거리별 목표 TSB</h3>
-            <ul>
-                <li><strong>5K/10K 레이스:</strong> TSB +20 ~ +30 (신선함을 위한 7-10일 테이퍼)</li>
-                <li><strong>하프 마라톤:</strong> TSB +15 ~ +25 (10-14일 테이퍼)</li>
-                <li><strong>마라톤:</strong> TSB +10 ~ +20 (볼륨 축소와 함께 14-21일 테이퍼)</li>
-                <li><strong>울트라 마라톤 (50K+):</strong> TSB +5 ~ +15 (7-14일 테이퍼, 볼륨 유지하되 강도 축소)</li>
-            </ul>
-            <p><em>짧은 레이스는 속도/파워를 위해 더 높은 TSB가 필요합니다. 긴 레이스는 지구력을 유지하기 위해 적당한 TSB가 필요합니다.</em></p>
-        </div>
-    </div>
-</section>
-
-<section class="section section-alt">
-    <div class="container container-narrow">
-        <h2>PMC 예시: 러닝 훈련 블록 → 테이퍼 → 레이스</h2>
-
-        <div class="example-box">
-            <h3>12주 마라톤 훈련 주기</h3>
-
-            <h4>1-3주차: 기초 구축 단계</h4>
-            <ul>
-                <li>주간 TSS: 300 → 350 → 400</li>
-                <li>CTL: 40 → 48로 점진적 상승</li>
-                <li>ATL: 주간 부하 추적, 45-60 변동</li>
-                <li>TSB: 약간 음수 (-5 ~ -15), 관리 가능한 훈련 스트레스</li>
-                <li><strong>초점:</strong> 유산소 기초 개발, 이지 마일리지</li>
-            </ul>
-
-            <h4>4-7주차: 강화(Build) 1단계</h4>
-            <ul>
-                <li>주간 TSS: 450 → 500 → 500 → 450 (회복주)</li>
-                <li>CTL: 48 → 60으로 지속 상승</li>
-                <li>ATL: 더 높은 변동 55-75</li>
-                <li>TSB: 더 음수 (-15 ~ -25), 생산적 과부하</li>
-                <li><strong>초점:</strong> 템포 런, 역치 인터벌 추가</li>
-            </ul>
-
-            <h4>8-11주차: 피크 단계</h4>
-            <ul>
-                <li>주간 TSS: 500 → 550 → 550 → 500</li>
-                <li>CTL: ~65에서 피크</li>
-                <li>ATL: 최고값 65-80</li>
-                <li>TSB: 가장 음수 (-20 ~ -30), 최대 체력 자극</li>
-                <li><strong>초점:</strong> 마라톤 페이스 구간이 포함된 장거리주, 질 높은 세션</li>
-            </ul>
-
-            <h4>12주차: 회복주</h4>
-            <ul>
-                <li>주간 TSS: 300 (45% 감소)</li>
-                <li>CTL: ~63으로 약간 하락 (체력 유지)</li>
-                <li>ATL: ~50으로 급격히 하락</li>
-                <li>TSB: +5 ~ +10으로 상승 (부분적 신선함)</li>
-                <li><strong>초점:</strong> 회복 러닝, 훈련 적응 흡수</li>
-            </ul>
-
-            <h4>13-14주차: 테이퍼 + 레이스 주간</h4>
-            <ul>
-                <li>13주차 TSS: 250, 14주차 TSS: 120 + 레이스 (총 ~250)</li>
-                <li>CTL: ~60으로 완만한 하락 (최소한의 체력 손실)</li>
-                <li>ATL: ~35로 급격한 하락 (피로 제거됨)</li>
-                <li>TSB: <strong>레이스 당일 +20 ~ +25</strong>로 피크</li>
-                <li><strong>결과:</strong> 신선한 다리, 유지된 체력, 최고의 마라톤 퍼포먼스 준비 완료</li>
-            </ul>
-        </div>
-
-        <div class="callout callout-success">
-            <h3>✅ 러너에게 테이퍼가 효과적인 이유</h3>
-            <p>서로 다른 시상수(CTL 42일, ATL 7일)는 러닝 퍼포먼스를 최적화하는 테이퍼 효과를 생성합니다:</p>
-            <ul>
-                <li>ATL은 빠르게 반응 → 러닝 피로(심혈관 및 근골격계 모두)는 7-10일 내에 사라짐</li>
-                <li>CTL은 느리게 반응 → 유산소 체력과 러닝 적응은 수주간 지속됨</li>
-                <li>결과: 피로와 통증이 사라지는 동안 체력은 유지됨 = 최고의 레이스 퍼포먼스를 위한 신선한 다리</li>
-            </ul>
-        </div>
-    </div>
-</section>
-
-<section class="section">
-    <div class="container container-narrow">
-        <h2>실전 러닝 훈련 부하 관리 가이드라인</h2>
-
-        <div class="guidelines-grid">
-            <div class="guideline-item">
-                <h3>1️⃣ 매일 rTSS 꾸준히 추적하기</h3>
-                <p>모든 러닝의 TSS를 기록하여 정확한 CTL/ATL/TSB 추세를 만드세요. 데이터 누락은 체력 곡선에 공백을 만듭니다. 모든 러닝에 GPS 시계 데이터나 페이스 기반 계산을
-                    사용하세요.</p>
-            </div>
-
-            <div class="guideline-item">
-                <h3>2️⃣ CTL 램프 레이트 주의 깊게 모니터링하기</h3>
-                <p>CTL을 점진적으로 높이세요. 주당 3-5 포인트 증가는 대부분의 러너에게 지속 가능합니다. 10포인트 이상 급등하면 러닝의 충격 스트레스로 인해 오버트레이닝과 부상을 초래합니다.
-                </p>
-            </div>
-
-            <div class="guideline-item">
-                <h3>3️⃣ 회복주 일정 잡기</h3>
-                <p>3-4주마다 한 주 동안 러닝 볼륨을 30-40% 줄이세요. TSB가 -5 ~ +10까지 오르게 하세요. 이는 체력 적응을 공고히 하고 누적 피로를 방지합니다.</p>
-            </div>
-
-            <div class="guideline-item">
-                <h3>4️⃣ 레이스 테이퍼 타이밍 맞추기</h3>
-                <p>대부분의 거리에서 레이스 당일 TSB +15 ~ +25를 목표로 하세요. 레이스 거리와 현재 TSB 수준에 따라 10-21일 전부터 테이퍼를 시작하세요.</p>
-            </div>
-
-            <div class="guideline-item">
-                <h3>5️⃣ 강화 기간 중 음수 TSB 수용하기</h3>
-                <p>강화 단계에서 -20 ~ -25의 TSB는 러너에게 정상적이고 생산적입니다. 이는 과도한 부상 위험 없이 적응을 위한 훈련 자극을 가하고 있음을 의미합니다.</p>
-            </div>
-
-            <div class="guideline-item">
-                <h3>6️⃣ 휴식 후 CTL 점진적 재구축</h3>
-                <p>부상이나 비시즌 휴식 후에는 즉시 이전 CTL로 복귀하려 하지 마세요. 재부상을 피하기 위해 주당 3-5 CTL 포인트씩 점진적으로 재구축하세요.</p>
-            </div>
-
-            <div class="guideline-item">
-                <h3>7️⃣ 몸의 소리에 귀 기울이기</h3>
-                <p>TSS 지표는 가이드일 뿐 절대적인 규칙이 아닙니다. 좋은 TSB 수치에도 불구하고 지속적인 통증, 수면 부족, 퍼포먼스 저하가 있다면 추가 회복이 필요하다는 신호입니다.</p>
-            </div>
-
-            <div class="guideline-item">
-                <h3>8️⃣ 러닝 외적 스트레스 고려하기</h3>
-                <p>생활 스트레스, 수면 부족, 크로스 트레이닝은 회복에 영향을 미칩니다. 러닝 관련 지표가 좋아 보이더라도 스트레스가 많은 시기에는 TSS 목표를 줄이는 것을 고려하세요.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="section section-alt">
-    <div class="container container-narrow">
-        <h2>자주 묻는 질문: 러닝 훈련 스트레스 점수</h2>
-
-        <div class="faq-container">
-            <div class="faq-item">
-                <h3>파워 미터 없이 러닝 TSS를 어떻게 계산하나요?</h3>
-                <p>페이스 기반 방법을 사용하세요: 역치 페이스를 러닝의 평균 페이스로 나누어 강도 계수(IF)를 계산합니다. 그런 다음 공식을 적용합니다: rTSS = (IF²) × 지속 시간(시간)
+                    </div><p><strong>해석:</strong> 체력과 피로가 균형을 이룹니다. 축적되는 결핍이나 과잉 없이 지속 가능한 훈련 유지 상태입니다.</p></div><h3>강화(Build) 단계 중</h3><p>러닝 볼륨이나 강도를 높일 때:</p><div class="example-box"><p>짧은 시상수로 인해 ATL이 CTL보다 <em>더 빠르게</em> 상승합니다. TSB는 음수(피로 > 체력)가 됩니다. 이는 정상적이고 생산적입니다—러닝 적응을 자극하기 위해
+                        과부하를 적용하고 있는 것입니다.</p></div><h3>레이스 테이퍼(Taper) 중</h3><p>대회 전 훈련 부하를 줄일 때:</p><div class="example-box"><p>ATL이 CTL보다 <em>더 빠르게</em> 하락합니다. TSB는 양수(체력 > 피로)가 됩니다. 이것이 목표입니다—체력을 유지하면서 다리가 신선하여 레이스 당일 퍼포먼스를
+                        발휘할 준비가 된 상태입니다.</p></div></div></div></div></section><section class="section"><div class="container"><h2>TSB: 체력-피로 균형과 레이스 준비 상태</h2><p class="lead">TSB(훈련 스트레스 균형)는 어제의 체력(CTL)과 어제의 피로(ATL)의 차이입니다. 러너에게 이는 신선한지 피로한지, 레이스 준비가 되었는지 회복일이 필요한지를
+            나타냅니다.</p><div class="tsb-zones-container"><h3>러너를 위한 TSB 해석 가이드</h3><table class="tsb-zones-table"><thead><tr><th>TSB 범위</th><th>상태</th><th>해석</th><th>권장 조치</th></tr></thead><tbody><tr class="tsb-critical"><td>&lt; -30</td><td><strong>오버트레이닝 위험</strong></td><td>극심한 피로. 높은 부상 위험.</td><td>즉각적인 회복 필요. 볼륨 50% 이상 축소. 휴식일 고려.</td></tr><tr class="tsb-training"><td>-20 ~ -30</td><td><strong>최적 훈련 블록</strong></td><td>생산적 과부하. 체력 구축 중.</td><td>계획 지속. 과도한 통증이나 피로 징후 모니터링.</td></tr><tr class="tsb-moderate"><td>-10 ~ -20</td><td><strong>중간 훈련 부하</strong></td><td>표준 훈련 축적.</td><td>정상 훈련. 질 높은 인터벌이나 템포 세션 소화 가능.</td></tr><tr class="tsb-neutral"><td>-10 ~ +15</td><td><strong>전환/유지</strong></td><td>균형 잡힌 상태. 가벼운 피로 또는 신선함.</td><td>B/C급 레이스, 테스트, 또는 회복 주간에 적합.</td></tr><tr class="tsb-fresh"><td>+15 ~ +25</td><td><strong>피크 레이스 컨디션</strong></td><td>신선하고 핏함. 최적의 퍼포먼스 윈도우.</td><td>A급 우선순위 레이스. 예상되는 최고의 러닝 퍼포먼스.</td></tr><tr class="tsb-very-fresh"><td>+25 ~ +35</td><td><strong>매우 신선함</strong></td><td>충분한 휴식. 짧은 레이스에 좋음.</td><td>5K-10K 레이스, 타임 트라이얼, 트랙 이벤트.</td></tr><tr class="tsb-detraining"><td>&gt; +35</td><td><strong>디트레이닝</strong></td><td>활동 부족으로 인한 체력 손실.</td><td>훈련 재개. 장기간 휴식으로 체력 감소 중.</td></tr></tbody></table></div><div class="callout callout-tip mt-xl"><h3>🎯 러닝 레이스 거리별 목표 TSB</h3><ul><li><strong>5K/10K 레이스:</strong> TSB +20 ~ +30 (신선함을 위한 7-10일 테이퍼)</li><li><strong>하프 마라톤:</strong> TSB +15 ~ +25 (10-14일 테이퍼)</li><li><strong>마라톤:</strong> TSB +10 ~ +20 (볼륨 축소와 함께 14-21일 테이퍼)</li><li><strong>울트라 마라톤 (50K+):</strong> TSB +5 ~ +15 (7-14일 테이퍼, 볼륨 유지하되 강도 축소)</li></ul><p><em>짧은 레이스는 속도/파워를 위해 더 높은 TSB가 필요합니다. 긴 레이스는 지구력을 유지하기 위해 적당한 TSB가 필요합니다.</em></p></div></div></section><section class="section section-alt"><div class="container container-narrow"><h2>PMC 예시: 러닝 훈련 블록 → 테이퍼 → 레이스</h2><div class="example-box"><h3>12주 마라톤 훈련 주기</h3><h4>1-3주차: 기초 구축 단계</h4><ul><li>주간 TSS: 300 → 350 → 400</li><li>CTL: 40 → 48로 점진적 상승</li><li>ATL: 주간 부하 추적, 45-60 변동</li><li>TSB: 약간 음수 (-5 ~ -15), 관리 가능한 훈련 스트레스</li><li><strong>초점:</strong> 유산소 기초 개발, 이지 마일리지</li></ul><h4>4-7주차: 강화(Build) 1단계</h4><ul><li>주간 TSS: 450 → 500 → 500 → 450 (회복주)</li><li>CTL: 48 → 60으로 지속 상승</li><li>ATL: 더 높은 변동 55-75</li><li>TSB: 더 음수 (-15 ~ -25), 생산적 과부하</li><li><strong>초점:</strong> 템포 런, 역치 인터벌 추가</li></ul><h4>8-11주차: 피크 단계</h4><ul><li>주간 TSS: 500 → 550 → 550 → 500</li><li>CTL: ~65에서 피크</li><li>ATL: 최고값 65-80</li><li>TSB: 가장 음수 (-20 ~ -30), 최대 체력 자극</li><li><strong>초점:</strong> 마라톤 페이스 구간이 포함된 장거리주, 질 높은 세션</li></ul><h4>12주차: 회복주</h4><ul><li>주간 TSS: 300 (45% 감소)</li><li>CTL: ~63으로 약간 하락 (체력 유지)</li><li>ATL: ~50으로 급격히 하락</li><li>TSB: +5 ~ +10으로 상승 (부분적 신선함)</li><li><strong>초점:</strong> 회복 러닝, 훈련 적응 흡수</li></ul><h4>13-14주차: 테이퍼 + 레이스 주간</h4><ul><li>13주차 TSS: 250, 14주차 TSS: 120 + 레이스 (총 ~250)</li><li>CTL: ~60으로 완만한 하락 (최소한의 체력 손실)</li><li>ATL: ~35로 급격한 하락 (피로 제거됨)</li><li>TSB: <strong>레이스 당일 +20 ~ +25</strong>로 피크</li><li><strong>결과:</strong> 신선한 다리, 유지된 체력, 최고의 마라톤 퍼포먼스 준비 완료</li></ul></div><div class="callout callout-success"><h3>✅ 러너에게 테이퍼가 효과적인 이유</h3><p>서로 다른 시상수(CTL 42일, ATL 7일)는 러닝 퍼포먼스를 최적화하는 테이퍼 효과를 생성합니다:</p><ul><li>ATL은 빠르게 반응 → 러닝 피로(심혈관 및 근골격계 모두)는 7-10일 내에 사라짐</li><li>CTL은 느리게 반응 → 유산소 체력과 러닝 적응은 수주간 지속됨</li><li>결과: 피로와 통증이 사라지는 동안 체력은 유지됨 = 최고의 레이스 퍼포먼스를 위한 신선한 다리</li></ul></div></div></section><section class="section"><div class="container container-narrow"><h2>실전 러닝 훈련 부하 관리 가이드라인</h2><div class="guidelines-grid"><div class="guideline-item"><h3>1️⃣ 매일 rTSS 꾸준히 추적하기</h3><p>모든 러닝의 TSS를 기록하여 정확한 CTL/ATL/TSB 추세를 만드세요. 데이터 누락은 체력 곡선에 공백을 만듭니다. 모든 러닝에 GPS 시계 데이터나 페이스 기반 계산을
+                    사용하세요.</p></div><div class="guideline-item"><h3>2️⃣ CTL 램프 레이트 주의 깊게 모니터링하기</h3><p>CTL을 점진적으로 높이세요. 주당 3-5 포인트 증가는 대부분의 러너에게 지속 가능합니다. 10포인트 이상 급등하면 러닝의 충격 스트레스로 인해 오버트레이닝과 부상을 초래합니다.
+                </p></div><div class="guideline-item"><h3>3️⃣ 회복주 일정 잡기</h3><p>3-4주마다 한 주 동안 러닝 볼륨을 30-40% 줄이세요. TSB가 -5 ~ +10까지 오르게 하세요. 이는 체력 적응을 공고히 하고 누적 피로를 방지합니다.</p></div><div class="guideline-item"><h3>4️⃣ 레이스 테이퍼 타이밍 맞추기</h3><p>대부분의 거리에서 레이스 당일 TSB +15 ~ +25를 목표로 하세요. 레이스 거리와 현재 TSB 수준에 따라 10-21일 전부터 테이퍼를 시작하세요.</p></div><div class="guideline-item"><h3>5️⃣ 강화 기간 중 음수 TSB 수용하기</h3><p>강화 단계에서 -20 ~ -25의 TSB는 러너에게 정상적이고 생산적입니다. 이는 과도한 부상 위험 없이 적응을 위한 훈련 자극을 가하고 있음을 의미합니다.</p></div><div class="guideline-item"><h3>6️⃣ 휴식 후 CTL 점진적 재구축</h3><p>부상이나 비시즌 휴식 후에는 즉시 이전 CTL로 복귀하려 하지 마세요. 재부상을 피하기 위해 주당 3-5 CTL 포인트씩 점진적으로 재구축하세요.</p></div><div class="guideline-item"><h3>7️⃣ 몸의 소리에 귀 기울이기</h3><p>TSS 지표는 가이드일 뿐 절대적인 규칙이 아닙니다. 좋은 TSB 수치에도 불구하고 지속적인 통증, 수면 부족, 퍼포먼스 저하가 있다면 추가 회복이 필요하다는 신호입니다.</p></div><div class="guideline-item"><h3>8️⃣ 러닝 외적 스트레스 고려하기</h3><p>생활 스트레스, 수면 부족, 크로스 트레이닝은 회복에 영향을 미칩니다. 러닝 관련 지표가 좋아 보이더라도 스트레스가 많은 시기에는 TSS 목표를 줄이는 것을 고려하세요.</p></div></div></div></section><section class="section section-alt"><div class="container container-narrow"><h2>자주 묻는 질문: 러닝 훈련 스트레스 점수</h2><div class="faq-container"><div class="faq-item"><h3>파워 미터 없이 러닝 TSS를 어떻게 계산하나요?</h3><p>페이스 기반 방법을 사용하세요: 역치 페이스를 러닝의 평균 페이스로 나누어 강도 계수(IF)를 계산합니다. 그런 다음 공식을 적용합니다: rTSS = (IF²) × 지속 시간(시간)
                     × 100. 예를 들어, 역치 페이스가 4:00/km이고 10km를 4:30/km 페이스로 45분(0.75시간) 동안 달렸다면: IF = 4:00/4:30 = 0.889, 따라서
-                    rTSS = (0.889²) × 0.75 × 100 = 59.2 TSS입니다.</p>
-            </div>
-
-            <div class="faq-item">
-                <h3>러닝 TSS와 사이클링 TSS의 차이점은 무엇인가요?</h3>
-                <p>둘 다 동일한 IF² 공식을 사용하지만, 러닝 TSS는 지면 접촉으로 인한 충격력 때문에 더 큰 전체 신체적 스트레스를 나타냅니다. 주당 400 TSS를 가진 러너는 주당
+                    rTSS = (0.889²) × 0.75 × 100 = 59.2 TSS입니다.</p></div><div class="faq-item"><h3>러닝 TSS와 사이클링 TSS의 차이점은 무엇인가요?</h3><p>둘 다 동일한 IF² 공식을 사용하지만, 러닝 TSS는 지면 접촉으로 인한 충격력 때문에 더 큰 전체 신체적 스트레스를 나타냅니다. 주당 400 TSS를 가진 러너는 주당
                     600-700 TSS를 가진 사이클리스트와 유사한 훈련 적응을 경험합니다. 또한 러닝은 파워(와트) 대신 페이스/속도를 입력값으로 사용하며, 동일한 TSS 값에 대해 더 많은 회복
-                    시간이 필요합니다.</p>
-            </div>
-
-            <div class="faq-item">
-                <h3>마라톤 훈련에 좋은 주간 TSS는 얼마인가요?</h3>
-                <p>마라톤 훈련을 위한 주간 러닝 TSS는 경험에 따라 다릅니다: 첫 마라톤을 준비하는 초보자: 250-400 TSS/주; 중급 마라토너: 400-550 TSS/주; 상급/경쟁적인
-                    마라토너: 550-700+ TSS/주. 피크 주간에는 상급 러너의 경우 600-800 TSS에 도달할 수 있으며, 테이퍼 주간에는 200-300 TSS로 떨어집니다.</p>
-            </div>
-
-            <div class="faq-item">
-                <h3>10K 레이스를 위해 어떤 TSB를 목표로 해야 하나요?</h3>
-                <p>10K 레이스의 경우, 레이스 당일 TSB +20 ~ +30을 목표로 하세요. 이를 달성하기 위해 7-10일간의 테이퍼를 시작하세요. 더 높은 TSB(더 많은 신선함)는 지구력보다
-                    속도와 파워가 중요한 짧은 레이스에 유리합니다. 신경근의 예리함을 유지하기 위해 어느 정도의 강도는 유지하면서 10일 전부터 볼륨을 줄이세요.</p>
-            </div>
-
-            <div class="faq-item">
-                <h3>임계 러닝 속도를 모르면 TSS를 사용할 수 없나요?</h3>
-                <p>IF가 이 값을 기준으로 계산되므로 정확한 TSS 계산을 위해서는 <a href="/ko/crs/">임계 러닝 속도(CRS)</a> 또는 역치 페이스를 아는 것이
+                    시간이 필요합니다.</p></div><div class="faq-item"><h3>마라톤 훈련에 좋은 주간 TSS는 얼마인가요?</h3><p>마라톤 훈련을 위한 주간 러닝 TSS는 경험에 따라 다릅니다: 첫 마라톤을 준비하는 초보자: 250-400 TSS/주; 중급 마라토너: 400-550 TSS/주; 상급/경쟁적인
+                    마라토너: 550-700+ TSS/주. 피크 주간에는 상급 러너의 경우 600-800 TSS에 도달할 수 있으며, 테이퍼 주간에는 200-300 TSS로 떨어집니다.</p></div><div class="faq-item"><h3>10K 레이스를 위해 어떤 TSB를 목표로 해야 하나요?</h3><p>10K 레이스의 경우, 레이스 당일 TSB +20 ~ +30을 목표로 하세요. 이를 달성하기 위해 7-10일간의 테이퍼를 시작하세요. 더 높은 TSB(더 많은 신선함)는 지구력보다
+                    속도와 파워가 중요한 짧은 레이스에 유리합니다. 신경근의 예리함을 유지하기 위해 어느 정도의 강도는 유지하면서 10일 전부터 볼륨을 줄이세요.</p></div><div class="faq-item"><h3>임계 러닝 속도를 모르면 TSS를 사용할 수 없나요?</h3><p>IF가 이 값을 기준으로 계산되므로 정확한 TSS 계산을 위해서는 <a href="/ko/crs/">임계 러닝 속도(CRS)</a> 또는 역치 페이스를 아는 것이
                     필수적입니다. CRS를 모른다면 역치 테스트를 수행하세요: 30분 전력 타임 트라이얼(평균 페이스 = CRS) 또는 8km 레이스 페이스. 또는 최근 레이스 기록을 사용하여
-                    추정하세요: 10K 페이스 + 10-15초/km가 대략적인 CRS입니다.</p>
-            </div>
-
-            <div class="faq-item">
-                <h3>CTL을 얼마나 빨리 늘려야 하나요?</h3>
-                <p>러닝 CTL은 초보자는 주당 2-4 포인트, 중급자는 3-5 포인트, 상급자는 최대 5-7 포인트씩 늘리세요. 이는 주간 마일리지 증가를 위한 "10% 규칙"과 일치하며 부상 위험을
-                    최소화합니다. 이 속도를 초과하면 근육, 건, 뼈에 가해지는 러닝의 높은 충격 스트레스로 인해 오버트레이닝과 부상 위험이 크게 증가합니다.</p>
-            </div>
-
-            <div class="faq-item">
-                <h3>훈련 중 음수 TSB는 무엇을 의미하나요?</h3>
-                <p>음수 TSB는 피로(ATL)가 체력(CTL)을 초과함을 의미합니다—즉, 최근 훈련으로 인해 현재 피로한 상태입니다. 이는 강화(Build) 단계에서 정상적이고 생산적입니다. -15
+                    추정하세요: 10K 페이스 + 10-15초/km가 대략적인 CRS입니다.</p></div><div class="faq-item"><h3>CTL을 얼마나 빨리 늘려야 하나요?</h3><p>러닝 CTL은 초보자는 주당 2-4 포인트, 중급자는 3-5 포인트, 상급자는 최대 5-7 포인트씩 늘리세요. 이는 주간 마일리지 증가를 위한 "10% 규칙"과 일치하며 부상 위험을
+                    최소화합니다. 이 속도를 초과하면 근육, 건, 뼈에 가해지는 러닝의 높은 충격 스트레스로 인해 오버트레이닝과 부상 위험이 크게 증가합니다.</p></div><div class="faq-item"><h3>훈련 중 음수 TSB는 무엇을 의미하나요?</h3><p>음수 TSB는 피로(ATL)가 체력(CTL)을 초과함을 의미합니다—즉, 최근 훈련으로 인해 현재 피로한 상태입니다. 이는 강화(Build) 단계에서 정상적이고 생산적입니다. -15
                     ~ -25의 TSB는 생산적인 훈련 스트레스를 나타냅니다. -30 미만의 TSB는 오버트레이닝 위험과 회복 필요성을 시사합니다. 강화 중의 음수 TSB는 체력 적응을 위한 자극을
-                    생성하고, 테이퍼 중의 양수 TSB는 퍼포먼스를 가능하게 합니다.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="section">
-    <div class="container container-narrow text-center">
-        <h2>러닝 훈련 부하 마스터하기</h2>
-        <p class="lead">러닝에 대한 훈련 스트레스 점수를 이해하면 주관적인 훈련이 객관적이고 데이터 기반의 퍼포먼스 최적화로 바뀝니다. 퍼포먼스 관리 차트를 통해 rTSS, CTL, ATL,
-            TSB를 모니터링함으로써, 체력 향상, 피로 관리, 피크 레이스 타이밍에 대한 정밀한 제어권을 얻게 됩니다.</p>
-
-        <p>CTL-ATL-TSB 시스템은 오버트레이닝을 방지하고, 회복 타이밍을 최적화하며, 최고의 퍼포먼스를 위한 완벽한 체력-피로 균형 상태로 목표 레이스에 도착하도록 보장합니다.</p>
-
-        <div class="mt-xl">
-            <a href="/ko/crs/" class="btn btn-secondary">← 임계 러닝 속도 (CRS)</a>
-            <a href="/ko/efficiency/" class="btn btn-primary">러닝 효율성 지표 →</a>
-        </div>
-    </div>
-</section>
-    
-  </main>
-
-  
-  <footer class="site-footer">
-    <div class="container">
-        
-        <div class="footer-top">
-            <div class="footer-brand-section">
-                
-                <h2>Run Analytics</h2>
-                <p>Track Critical Running Speed, Training Stress Score, and performance metrics with Run Analytics. Science-based iOS app for runners, triathletes &amp; coaches. 7-day free trial.</p>
-                
-            </div>
-
-            
-            <div class="footer-download">
-                <h3 class="footer-heading">Download</h3>
-                <div class="footer-badges">
-                    
-                    <a href="https://apps.apple.com/us/app/run-analytics/id6754524015" target="_blank" rel="noopener"
-                        aria-label="Download on the App Store">
-                        <img src="../../assets/images/badge-app-store.svg"
+                    생성하고, 테이퍼 중의 양수 TSB는 퍼포먼스를 가능하게 합니다.</p></div></div></div></section><section class="section"><div class="container container-narrow text-center"><h2>러닝 훈련 부하 마스터하기</h2><p class="lead">러닝에 대한 훈련 스트레스 점수를 이해하면 주관적인 훈련이 객관적이고 데이터 기반의 퍼포먼스 최적화로 바뀝니다. 퍼포먼스 관리 차트를 통해 rTSS, CTL, ATL,
+            TSB를 모니터링함으로써, 체력 향상, 피로 관리, 피크 레이스 타이밍에 대한 정밀한 제어권을 얻게 됩니다.</p><p>CTL-ATL-TSB 시스템은 오버트레이닝을 방지하고, 회복 타이밍을 최적화하며, 최고의 퍼포먼스를 위한 완벽한 체력-피로 균형 상태로 목표 레이스에 도착하도록 보장합니다.</p><div class="mt-xl"><a href="/ko/crs/" class="btn btn-secondary">← 임계 러닝 속도 (CRS)</a><a href="/ko/efficiency/" class="btn btn-primary">러닝 효율성 지표 →</a></div></div></section></main><footer class="site-footer"><div class="container"><div class="footer-top"><div class="footer-brand-section"><h2>Run Analytics</h2><p>Track Critical Running Speed, Training Stress Score, and performance metrics with Run Analytics. Science-based iOS app for runners, triathletes &amp; coaches. 7-day free trial.</p></div><div class="footer-download"><h3 class="footer-heading">Download</h3><div class="footer-badges"><a href="https://apps.apple.com/us/app/run-analytics/id6754524015" target="_blank" rel="noopener"
+                        aria-label="Download on the App Store"><img src="../../assets/images/badge-app-store.svg"
                             alt="Download on the App Store" width="135"
-                            height="40" loading="lazy">
-                    </a>
-                    
-                    
-                    <a href="https://play.google.com/store/apps/details?id=com.arnohealth.runanalytics" target="_blank" rel="noopener"
-                        aria-label="Get it on Google Play">
-                        <img src="../../assets/images/badge-google-play.svg"
+                            height="40" loading="lazy"></a><a href="https://play.google.com/store/apps/details?id=com.arnohealth.runanalytics" target="_blank" rel="noopener"
+                        aria-label="Get it on Google Play"><img src="../../assets/images/badge-google-play.svg"
                             alt="Get it on Google Play" width="135"
-                            height="40" loading="lazy">
-                    </a>
-                    
-                </div>
-            </div>
-            
-        </div>
-
-        
-        <div class="footer-languages">
-            <h3 class="footer-heading">Available in</h3>
-            <div class="lang-grid">
-                
-                <a href="/af/" class="lang-link"
+                            height="40" loading="lazy"></a></div></div></div><div class="footer-languages"><h3 class="footer-heading">Available in</h3><div class="lang-grid"><a href="/af/" class="lang-link"
                     hreflang="af" >
                     Afrikaans
-                </a>
-                
-                <a href="/am/" class="lang-link"
+                </a><a href="/am/" class="lang-link"
                     hreflang="am" >
                     አማርኛ
-                </a>
-                
-                <a href="/ar/" class="lang-link"
+                </a><a href="/ar/" class="lang-link"
                     hreflang="ar" dir="rtl" >
                     العربية
-                </a>
-                
-                <a href="/bg/" class="lang-link"
+                </a><a href="/bg/" class="lang-link"
                     hreflang="bg" >
                     Български
-                </a>
-                
-                <a href="/bn/" class="lang-link"
+                </a><a href="/bn/" class="lang-link"
                     hreflang="bn" >
                     বাংলা
-                </a>
-                
-                <a href="/ca/" class="lang-link"
+                </a><a href="/ca/" class="lang-link"
                     hreflang="ca" >
                     Català
-                </a>
-                
-                <a href="/cs/" class="lang-link"
+                </a><a href="/cs/" class="lang-link"
                     hreflang="cs" >
                     Čeština
-                </a>
-                
-                <a href="/da/" class="lang-link"
+                </a><a href="/da/" class="lang-link"
                     hreflang="da" >
                     Dansk
-                </a>
-                
-                <a href="/de/" class="lang-link"
+                </a><a href="/de/" class="lang-link"
                     hreflang="de" >
                     Deutsch
-                </a>
-                
-                <a href="/el/" class="lang-link"
+                </a><a href="/el/" class="lang-link"
                     hreflang="el" >
                     Ελληνικά
-                </a>
-                
-                <a href="/en/" class="lang-link"
+                </a><a href="/en/" class="lang-link"
                     hreflang="en" >
                     English
-                </a>
-                
-                <a href="/es/" class="lang-link"
+                </a><a href="/es/" class="lang-link"
                     hreflang="es" >
                     Español
-                </a>
-                
-                <a href="/et/" class="lang-link"
+                </a><a href="/et/" class="lang-link"
                     hreflang="et" >
                     Eesti
-                </a>
-                
-                <a href="/fa/" class="lang-link"
+                </a><a href="/fa/" class="lang-link"
                     hreflang="fa" dir="rtl" >
                     فارسی
-                </a>
-                
-                <a href="/fi/" class="lang-link"
+                </a><a href="/fi/" class="lang-link"
                     hreflang="fi" >
                     Suomi
-                </a>
-                
-                <a href="/fr/" class="lang-link"
+                </a><a href="/fr/" class="lang-link"
                     hreflang="fr" >
                     Français
-                </a>
-                
-                <a href="/gu/" class="lang-link"
+                </a><a href="/gu/" class="lang-link"
                     hreflang="gu" >
                     ગુજરાતી
-                </a>
-                
-                <a href="/ha/" class="lang-link"
+                </a><a href="/ha/" class="lang-link"
                     hreflang="ha" >
                     Hausa
-                </a>
-                
-                <a href="/he/" class="lang-link"
+                </a><a href="/he/" class="lang-link"
                     hreflang="he" dir="rtl" >
                     עברית
-                </a>
-                
-                <a href="/hi/" class="lang-link"
+                </a><a href="/hi/" class="lang-link"
                     hreflang="hi" >
                     हिन्दी
-                </a>
-                
-                <a href="/hr/" class="lang-link"
+                </a><a href="/hr/" class="lang-link"
                     hreflang="hr" >
                     Hrvatski
-                </a>
-                
-                <a href="/hu/" class="lang-link"
+                </a><a href="/hu/" class="lang-link"
                     hreflang="hu" >
                     Magyar
-                </a>
-                
-                <a href="/id/" class="lang-link"
+                </a><a href="/id/" class="lang-link"
                     hreflang="id" >
                     Bahasa Indonesia
-                </a>
-                
-                <a href="/is/" class="lang-link"
+                </a><a href="/is/" class="lang-link"
                     hreflang="is" >
                     Íslenska
-                </a>
-                
-                <a href="/it/" class="lang-link"
+                </a><a href="/it/" class="lang-link"
                     hreflang="it" >
                     Italiano
-                </a>
-                
-                <a href="/ja/" class="lang-link"
+                </a><a href="/ja/" class="lang-link"
                     hreflang="ja" >
                     日本語
-                </a>
-                
-                <a href="/km/" class="lang-link"
+                </a><a href="/km/" class="lang-link"
                     hreflang="km" >
                     ភាសាខ្មែរ
-                </a>
-                
-                <a href="/kn/" class="lang-link"
+                </a><a href="/kn/" class="lang-link"
                     hreflang="kn" >
                     ಕನ್ನಡ
-                </a>
-                
-                <a href="/ko/" class="lang-link active"
+                </a><a href="/ko/" class="lang-link active"
                     hreflang="ko" >
                     한국어
-                </a>
-                
-                <a href="/lt/" class="lang-link"
+                </a><a href="/lt/" class="lang-link"
                     hreflang="lt" >
                     Lietuvių
-                </a>
-                
-                <a href="/lv/" class="lang-link"
+                </a><a href="/lv/" class="lang-link"
                     hreflang="lv" >
                     Latviešu
-                </a>
-                
-                <a href="/ms/" class="lang-link"
+                </a><a href="/ms/" class="lang-link"
                     hreflang="ms" >
                     Bahasa Melayu
-                </a>
-                
-                <a href="/my/" class="lang-link"
+                </a><a href="/my/" class="lang-link"
                     hreflang="my" >
                     မြန်မာစာ
-                </a>
-                
-                <a href="/nb/" class="lang-link"
+                </a><a href="/nb/" class="lang-link"
                     hreflang="nb" >
                     Norsk Bokmål
-                </a>
-                
-                <a href="/nl/" class="lang-link"
+                </a><a href="/nl/" class="lang-link"
                     hreflang="nl" >
                     Nederlands
-                </a>
-                
-                <a href="/pl/" class="lang-link"
+                </a><a href="/pl/" class="lang-link"
                     hreflang="pl" >
                     Polski
-                </a>
-                
-                <a href="/pt/" class="lang-link"
+                </a><a href="/pt/" class="lang-link"
                     hreflang="pt" >
                     Português
-                </a>
-                
-                <a href="/pt-br/" class="lang-link"
+                </a><a href="/pt-br/" class="lang-link"
                     hreflang="pt-br" >
                     Português (Brasil)
-                </a>
-                
-                <a href="/ro/" class="lang-link"
+                </a><a href="/ro/" class="lang-link"
                     hreflang="ro" >
                     Română
-                </a>
-                
-                <a href="/ru/" class="lang-link"
+                </a><a href="/ru/" class="lang-link"
                     hreflang="ru" >
                     Русский
-                </a>
-                
-                <a href="/sk/" class="lang-link"
+                </a><a href="/sk/" class="lang-link"
                     hreflang="sk" >
                     Slovenčina
-                </a>
-                
-                <a href="/sl/" class="lang-link"
+                </a><a href="/sl/" class="lang-link"
                     hreflang="sl" >
                     Slovenščina
-                </a>
-                
-                <a href="/sr/" class="lang-link"
+                </a><a href="/sr/" class="lang-link"
                     hreflang="sr" >
                     Srpski
-                </a>
-                
-                <a href="/sv/" class="lang-link"
+                </a><a href="/sv/" class="lang-link"
                     hreflang="sv" >
                     Svenska
-                </a>
-                
-                <a href="/sw/" class="lang-link"
+                </a><a href="/sw/" class="lang-link"
                     hreflang="sw" >
                     Kiswahili
-                </a>
-                
-                <a href="/ta/" class="lang-link"
+                </a><a href="/ta/" class="lang-link"
                     hreflang="ta" >
                     தமிழ்
-                </a>
-                
-                <a href="/te/" class="lang-link"
+                </a><a href="/te/" class="lang-link"
                     hreflang="te" >
                     తెలుగు
-                </a>
-                
-                <a href="/th/" class="lang-link"
+                </a><a href="/th/" class="lang-link"
                     hreflang="th" >
                     ไทย
-                </a>
-                
-                <a href="/tl/" class="lang-link"
+                </a><a href="/tl/" class="lang-link"
                     hreflang="tl" >
                     Tagalog
-                </a>
-                
-                <a href="/tr/" class="lang-link"
+                </a><a href="/tr/" class="lang-link"
                     hreflang="tr" >
                     Türkçe
-                </a>
-                
-                <a href="/uk/" class="lang-link"
+                </a><a href="/uk/" class="lang-link"
                     hreflang="uk" >
                     Українська
-                </a>
-                
-                <a href="/ur/" class="lang-link"
+                </a><a href="/ur/" class="lang-link"
                     hreflang="ur" dir="rtl" >
                     اردو
-                </a>
-                
-                <a href="/vi/" class="lang-link"
+                </a><a href="/vi/" class="lang-link"
                     hreflang="vi" >
                     Tiếng Việt
-                </a>
-                
-                <a href="/yo/" class="lang-link"
+                </a><a href="/yo/" class="lang-link"
                     hreflang="yo" >
                     Yorùbá
-                </a>
-                
-                <a href="/zh/" class="lang-link"
+                </a><a href="/zh/" class="lang-link"
                     hreflang="zh" >
                     中文
-                </a>
-                
-            </div>
-        </div>
-
-        <div class="footer-divider"></div>
-
-        
-        <div class="footer-bottom">
-            <p class="copyright">
+                </a></div></div><div class="footer-divider"></div><div class="footer-bottom"><p class="copyright">
                 &copy; 2026 Run Analytics. 모든 권리 보유
-            </p>
-            <ul class="footer-legal">
-                <li><a href="/ko/privacy/">개인정보</a></li>
-                <li><a href="/ko/terms/">약관</a></li>
-            </ul>
-        </div>
-    </div>
-</footer>
-
-  
-  <div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="Cookie consent" aria-live="polite">
-    <div class="cookie-banner-content">
-        <div>
-            <p>이 웹사이트는 쿠키를 사용하여 경험을 개선합니다.</p>
-            <a href="/ko/privacy/" class="text-sm">자세히 보기</a>
-        </div>
-        <div class="cookie-banner-actions">
-            <button id="cookie-decline" class="btn btn-secondary btn-small">거부</button>
-            <button id="cookie-accept" class="btn btn-primary btn-small">수락</button>
-        </div>
-    </div>
-</div>
-
-  
-  <script src="../../assets/js/core.min.js?v=8aef43d1" defer></script>
-  <script src="../../assets/js/search.min.js?v=8aef43d1" defer></script>
-  
-
-  
-  
-  <script src="../../assets/js/analytics.min.js" data-ga-id="G-Y138VB4523" defer></script>
-  
-
-  
-  <script>if ('serviceWorker' in navigator) { navigator.serviceWorker.register('../../sw.js') }</script>
-</body>
-
-</html>
+            </p><ul class="footer-legal"><li><a href="/ko/privacy/">개인정보</a></li><li><a href="/ko/terms/">약관</a></li></ul></div></div></footer><div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="Cookie consent" aria-live="polite"><div class="cookie-banner-content"><div><p>이 웹사이트는 쿠키를 사용하여 경험을 개선합니다.</p><a href="/ko/privacy/" class="text-sm">자세히 보기</a></div><div class="cookie-banner-actions"><button id="cookie-decline" class="btn btn-secondary btn-small">거부</button><button id="cookie-accept" class="btn btn-primary btn-small">수락</button></div></div></div><script src="../../assets/js/core.min.js?v=e899af207631" defer></script><script src="../../assets/js/search.min.js?v=e899af207631" defer></script><script src="../../assets/js/analytics.min.js" data-ga-id="G-Y138VB4523" defer></script><script>if ('serviceWorker' in navigator) { navigator.serviceWorker.register('../../sw.js') }</script></body></html>

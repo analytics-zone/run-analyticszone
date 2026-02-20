@@ -1,242 +1,61 @@
-<!DOCTYPE html>
-<html lang="my" dir="ltr">
-
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
-    rel="stylesheet">
-
-  
-  <title>Run Analytics: แอปติดตามและวิเคราะห์ประสิทธิภาพการว่ายน้ำสำหรับ iOS</title>
-  <meta name="description" content="ติดตามข้อมูลการว่ายน้ำ คำนวณ CRS และ rTSS วิเคราะห์ภาระการฝึกด้วยการวิเคราะห์แบบมืออาชีพ เครื่องคำนวณฟรีสำหรับนักว่ายน้ำและนักไตรกีฬา ทดลองใช้ฟรี 7 วัน">
-  <meta name="author" content="AnalyticsZone Team">
-
-  
-  
-  <meta name="keywords" content="แอปติดตามการว่ายน้ำ, การวิเคราะห์การว่ายน้ำ, เครื่องคำนวณ CRS, ประสิทธิภาพการว่ายน้ำ, rTSS">
-  
-
-  
-  <link rel="canonical" href="https://run.analyticszone.app/my/">
-
-  
-  
-
-  
-  
-
-  
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://run.analyticszone.app/my/">
-  <meta property="og:title" content="Run Analytics: แอปติดตามและวิเคราะห์ประสิทธิภาพการว่ายน้ำสำหรับ iOS">
-  <meta property="og:description" content="ติดตามข้อมูลการว่ายน้ำ คำนวณ CRS และ rTSS วิเคราะห์ภาระการฝึกด้วยการวิเคราะห์แบบมืออาชีพ เครื่องคำนวณฟรีสำหรับนักว่ายน้ำและนักไตรกีฬา ทดลองใช้ฟรี 7 วัน">
-  <meta property="og:image" content="https://run.analyticszone.app/assets/images/og-image.svg">
-  <meta property="og:locale" content="my_MM">
-  <meta property="og:site_name" content="Run Analytics">
-
-  
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:url" content="https://run.analyticszone.app/my/">
-  <meta name="twitter:title" content="Run Analytics: แอปติดตามและวิเคราะห์ประสิทธิภาพการว่ายน้ำสำหรับ iOS">
-  <meta name="twitter:description" content="ติดตามข้อมูลการว่ายน้ำ คำนวณ CRS และ rTSS วิเคราะห์ภาระการฝึกด้วยการวิเคราะห์แบบมืออาชีพ เครื่องคำนวณฟรีสำหรับนักว่ายน้ำและนักไตรกีฬา ทดลองใช้ฟรี 7 วัน">
-  <meta name="twitter:image" content="https://run.analyticszone.app/assets/images/og-image.svg">
-  
-  <meta name="twitter:site" content="@runanalytics">
-  <meta name="twitter:creator" content="@runanalytics">
-  
-
-  
-  
-  <link rel="alternate" hreflang="af"
-    href="https://run.analyticszone.app/af/">
-  
-  <link rel="alternate" hreflang="am"
-    href="https://run.analyticszone.app/am/">
-  
-  <link rel="alternate" hreflang="ar"
-    href="https://run.analyticszone.app/ar/">
-  
-  <link rel="alternate" hreflang="bg"
-    href="https://run.analyticszone.app/bg/">
-  
-  <link rel="alternate" hreflang="bn"
-    href="https://run.analyticszone.app/bn/">
-  
-  <link rel="alternate" hreflang="ca"
-    href="https://run.analyticszone.app/ca/">
-  
-  <link rel="alternate" hreflang="cs"
-    href="https://run.analyticszone.app/cs/">
-  
-  <link rel="alternate" hreflang="da"
-    href="https://run.analyticszone.app/da/">
-  
-  <link rel="alternate" hreflang="de"
-    href="https://run.analyticszone.app/de/">
-  
-  <link rel="alternate" hreflang="el"
-    href="https://run.analyticszone.app/el/">
-  
-  <link rel="alternate" hreflang="en"
-    href="https://run.analyticszone.app/en/">
-  
-  <link rel="alternate" hreflang="es"
-    href="https://run.analyticszone.app/es/">
-  
-  <link rel="alternate" hreflang="et"
-    href="https://run.analyticszone.app/et/">
-  
-  <link rel="alternate" hreflang="fa"
-    href="https://run.analyticszone.app/fa/">
-  
-  <link rel="alternate" hreflang="fi"
-    href="https://run.analyticszone.app/fi/">
-  
-  <link rel="alternate" hreflang="fr"
-    href="https://run.analyticszone.app/fr/">
-  
-  <link rel="alternate" hreflang="gu"
-    href="https://run.analyticszone.app/gu/">
-  
-  <link rel="alternate" hreflang="ha"
-    href="https://run.analyticszone.app/ha/">
-  
-  <link rel="alternate" hreflang="he"
-    href="https://run.analyticszone.app/he/">
-  
-  <link rel="alternate" hreflang="hi"
-    href="https://run.analyticszone.app/hi/">
-  
-  <link rel="alternate" hreflang="hr"
-    href="https://run.analyticszone.app/hr/">
-  
-  <link rel="alternate" hreflang="hu"
-    href="https://run.analyticszone.app/hu/">
-  
-  <link rel="alternate" hreflang="id"
-    href="https://run.analyticszone.app/id/">
-  
-  <link rel="alternate" hreflang="is"
-    href="https://run.analyticszone.app/is/">
-  
-  <link rel="alternate" hreflang="it"
-    href="https://run.analyticszone.app/it/">
-  
-  <link rel="alternate" hreflang="ja"
-    href="https://run.analyticszone.app/ja/">
-  
-  <link rel="alternate" hreflang="km"
-    href="https://run.analyticszone.app/km/">
-  
-  <link rel="alternate" hreflang="kn"
-    href="https://run.analyticszone.app/kn/">
-  
-  <link rel="alternate" hreflang="ko"
-    href="https://run.analyticszone.app/ko/">
-  
-  <link rel="alternate" hreflang="lt"
-    href="https://run.analyticszone.app/lt/">
-  
-  <link rel="alternate" hreflang="lv"
-    href="https://run.analyticszone.app/lv/">
-  
-  <link rel="alternate" hreflang="ms"
-    href="https://run.analyticszone.app/ms/">
-  
-  <link rel="alternate" hreflang="my"
-    href="https://run.analyticszone.app/my/">
-  
-  <link rel="alternate" hreflang="nb"
-    href="https://run.analyticszone.app/nb/">
-  
-  <link rel="alternate" hreflang="nl"
-    href="https://run.analyticszone.app/nl/">
-  
-  <link rel="alternate" hreflang="pl"
-    href="https://run.analyticszone.app/pl/">
-  
-  <link rel="alternate" hreflang="pt"
-    href="https://run.analyticszone.app/pt/">
-  
-  <link rel="alternate" hreflang="pt-br"
-    href="https://run.analyticszone.app/pt-br/">
-  
-  <link rel="alternate" hreflang="ro"
-    href="https://run.analyticszone.app/ro/">
-  
-  <link rel="alternate" hreflang="ru"
-    href="https://run.analyticszone.app/ru/">
-  
-  <link rel="alternate" hreflang="sk"
-    href="https://run.analyticszone.app/sk/">
-  
-  <link rel="alternate" hreflang="sl"
-    href="https://run.analyticszone.app/sl/">
-  
-  <link rel="alternate" hreflang="sr"
-    href="https://run.analyticszone.app/sr/">
-  
-  <link rel="alternate" hreflang="sv"
-    href="https://run.analyticszone.app/sv/">
-  
-  <link rel="alternate" hreflang="sw"
-    href="https://run.analyticszone.app/sw/">
-  
-  <link rel="alternate" hreflang="ta"
-    href="https://run.analyticszone.app/ta/">
-  
-  <link rel="alternate" hreflang="te"
-    href="https://run.analyticszone.app/te/">
-  
-  <link rel="alternate" hreflang="th"
-    href="https://run.analyticszone.app/th/">
-  
-  <link rel="alternate" hreflang="tl"
-    href="https://run.analyticszone.app/tl/">
-  
-  <link rel="alternate" hreflang="tr"
-    href="https://run.analyticszone.app/tr/">
-  
-  <link rel="alternate" hreflang="uk"
-    href="https://run.analyticszone.app/uk/">
-  
-  <link rel="alternate" hreflang="ur"
-    href="https://run.analyticszone.app/ur/">
-  
-  <link rel="alternate" hreflang="vi"
-    href="https://run.analyticszone.app/vi/">
-  
-  <link rel="alternate" hreflang="yo"
-    href="https://run.analyticszone.app/yo/">
-  
-  <link rel="alternate" hreflang="zh"
-    href="https://run.analyticszone.app/zh/">
-  
-  <link rel="alternate" hreflang="x-default"
-    href="https://run.analyticszone.app/en/">
-
-  
-  <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/icons/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/icons/favicon-16x16.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/icons/apple-touch-icon.png">
-  <link rel="manifest" href="../manifest.json">
-  <meta name="theme-color" content="#2563EB">
-  <meta name="robots" content="index, follow">
-
-  
-  
-  
-  <meta name="apple-itunes-app" content="app-id=6754524015">
-  
-
-  
-  <style>
+<!DOCTYPE html><html lang="my" dir="ltr"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet"><title>Run Analytics: แอปติดตามและวิเคราะห์ประสิทธิภาพการว่ายน้ำสำหรับ iOS</title><meta name="description" content="ติดตามข้อมูลการว่ายน้ำ คำนวณ CRS และ rTSS วิเคราะห์ภาระการฝึกด้วยการวิเคราะห์แบบมืออาชีพ เครื่องคำนวณฟรีสำหรับนักว่ายน้ำและนักไตรกีฬา ทดลองใช้ฟรี 7 วัน"><meta name="author" content="AnalyticsZone Team"><meta name="keywords" content="แอปติดตามการว่ายน้ำ, การวิเคราะห์การว่ายน้ำ, เครื่องคำนวณ CRS, ประสิทธิภาพการว่ายน้ำ, rTSS"><link rel="canonical" href="https://run.analyticszone.app/my/"><meta property="og:type" content="website"><meta property="og:url" content="https://run.analyticszone.app/my/"><meta property="og:title" content="Run Analytics: แอปติดตามและวิเคราะห์ประสิทธิภาพการว่ายน้ำสำหรับ iOS"><meta property="og:description" content="ติดตามข้อมูลการว่ายน้ำ คำนวณ CRS และ rTSS วิเคราะห์ภาระการฝึกด้วยการวิเคราะห์แบบมืออาชีพ เครื่องคำนวณฟรีสำหรับนักว่ายน้ำและนักไตรกีฬา ทดลองใช้ฟรี 7 วัน"><meta property="og:image" content="https://run.analyticszone.app/assets/images/og-image.svg"><meta property="og:locale" content="my_MM"><meta property="og:site_name" content="Run Analytics"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:url" content="https://run.analyticszone.app/my/"><meta name="twitter:title" content="Run Analytics: แอปติดตามและวิเคราะห์ประสิทธิภาพการว่ายน้ำสำหรับ iOS"><meta name="twitter:description" content="ติดตามข้อมูลการว่ายน้ำ คำนวณ CRS และ rTSS วิเคราะห์ภาระการฝึกด้วยการวิเคราะห์แบบมืออาชีพ เครื่องคำนวณฟรีสำหรับนักว่ายน้ำและนักไตรกีฬา ทดลองใช้ฟรี 7 วัน"><meta name="twitter:image" content="https://run.analyticszone.app/assets/images/og-image.svg"><meta name="twitter:site" content="@runanalytics"><meta name="twitter:creator" content="@runanalytics"><link rel="alternate" hreflang="af"
+    href="https://run.analyticszone.app/af/"><link rel="alternate" hreflang="am"
+    href="https://run.analyticszone.app/am/"><link rel="alternate" hreflang="ar"
+    href="https://run.analyticszone.app/ar/"><link rel="alternate" hreflang="bg"
+    href="https://run.analyticszone.app/bg/"><link rel="alternate" hreflang="bn"
+    href="https://run.analyticszone.app/bn/"><link rel="alternate" hreflang="ca"
+    href="https://run.analyticszone.app/ca/"><link rel="alternate" hreflang="cs"
+    href="https://run.analyticszone.app/cs/"><link rel="alternate" hreflang="da"
+    href="https://run.analyticszone.app/da/"><link rel="alternate" hreflang="de"
+    href="https://run.analyticszone.app/de/"><link rel="alternate" hreflang="el"
+    href="https://run.analyticszone.app/el/"><link rel="alternate" hreflang="en"
+    href="https://run.analyticszone.app/en/"><link rel="alternate" hreflang="es"
+    href="https://run.analyticszone.app/es/"><link rel="alternate" hreflang="et"
+    href="https://run.analyticszone.app/et/"><link rel="alternate" hreflang="fa"
+    href="https://run.analyticszone.app/fa/"><link rel="alternate" hreflang="fi"
+    href="https://run.analyticszone.app/fi/"><link rel="alternate" hreflang="fr"
+    href="https://run.analyticszone.app/fr/"><link rel="alternate" hreflang="gu"
+    href="https://run.analyticszone.app/gu/"><link rel="alternate" hreflang="ha"
+    href="https://run.analyticszone.app/ha/"><link rel="alternate" hreflang="he"
+    href="https://run.analyticszone.app/he/"><link rel="alternate" hreflang="hi"
+    href="https://run.analyticszone.app/hi/"><link rel="alternate" hreflang="hr"
+    href="https://run.analyticszone.app/hr/"><link rel="alternate" hreflang="hu"
+    href="https://run.analyticszone.app/hu/"><link rel="alternate" hreflang="id"
+    href="https://run.analyticszone.app/id/"><link rel="alternate" hreflang="is"
+    href="https://run.analyticszone.app/is/"><link rel="alternate" hreflang="it"
+    href="https://run.analyticszone.app/it/"><link rel="alternate" hreflang="ja"
+    href="https://run.analyticszone.app/ja/"><link rel="alternate" hreflang="km"
+    href="https://run.analyticszone.app/km/"><link rel="alternate" hreflang="kn"
+    href="https://run.analyticszone.app/kn/"><link rel="alternate" hreflang="ko"
+    href="https://run.analyticszone.app/ko/"><link rel="alternate" hreflang="lt"
+    href="https://run.analyticszone.app/lt/"><link rel="alternate" hreflang="lv"
+    href="https://run.analyticszone.app/lv/"><link rel="alternate" hreflang="ms"
+    href="https://run.analyticszone.app/ms/"><link rel="alternate" hreflang="my"
+    href="https://run.analyticszone.app/my/"><link rel="alternate" hreflang="nb"
+    href="https://run.analyticszone.app/nb/"><link rel="alternate" hreflang="nl"
+    href="https://run.analyticszone.app/nl/"><link rel="alternate" hreflang="pl"
+    href="https://run.analyticszone.app/pl/"><link rel="alternate" hreflang="pt"
+    href="https://run.analyticszone.app/pt/"><link rel="alternate" hreflang="pt-br"
+    href="https://run.analyticszone.app/pt-br/"><link rel="alternate" hreflang="ro"
+    href="https://run.analyticszone.app/ro/"><link rel="alternate" hreflang="ru"
+    href="https://run.analyticszone.app/ru/"><link rel="alternate" hreflang="sk"
+    href="https://run.analyticszone.app/sk/"><link rel="alternate" hreflang="sl"
+    href="https://run.analyticszone.app/sl/"><link rel="alternate" hreflang="sr"
+    href="https://run.analyticszone.app/sr/"><link rel="alternate" hreflang="sv"
+    href="https://run.analyticszone.app/sv/"><link rel="alternate" hreflang="sw"
+    href="https://run.analyticszone.app/sw/"><link rel="alternate" hreflang="ta"
+    href="https://run.analyticszone.app/ta/"><link rel="alternate" hreflang="te"
+    href="https://run.analyticszone.app/te/"><link rel="alternate" hreflang="th"
+    href="https://run.analyticszone.app/th/"><link rel="alternate" hreflang="tl"
+    href="https://run.analyticszone.app/tl/"><link rel="alternate" hreflang="tr"
+    href="https://run.analyticszone.app/tr/"><link rel="alternate" hreflang="uk"
+    href="https://run.analyticszone.app/uk/"><link rel="alternate" hreflang="ur"
+    href="https://run.analyticszone.app/ur/"><link rel="alternate" hreflang="vi"
+    href="https://run.analyticszone.app/vi/"><link rel="alternate" hreflang="yo"
+    href="https://run.analyticszone.app/yo/"><link rel="alternate" hreflang="zh"
+    href="https://run.analyticszone.app/zh/"><link rel="alternate" hreflang="x-default"
+    href="https://run.analyticszone.app/en/"><link rel="icon" type="image/png" sizes="32x32" href="../assets/images/icons/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="../assets/images/icons/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="../assets/images/icons/apple-touch-icon.png"><link rel="manifest" href="../manifest.json"><meta name="theme-color" content="#2563EB"><meta name="robots" content="index, follow"><meta name="apple-itunes-app" content="app-id=6754524015"><style>
 /* Critical CSS - Above the fold styles for fast LCP */
 :root {
   --color-primary: #0066CC;
@@ -495,20 +314,7 @@ img[width][height] {
     transition-duration: 0.01ms !important;
   }
 }
-</style>
-
-  
-  <link rel="preconnect" href="https://www.googletagmanager.com">
-  <link rel="dns-prefetch" href="https://www.googletagmanager.com">
-
-  
-  <link rel="stylesheet" href="../assets/css/main.min.css?v=8aef43d1">
-
-  
-  
-
-
-<script type="application/ld+json">
+</style><link rel="preconnect" href="https://www.googletagmanager.com"><link rel="dns-prefetch" href="https://www.googletagmanager.com"><link rel="stylesheet" href="../assets/css/main.min.css?v=e899af207631"><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Organization",
@@ -543,10 +349,7 @@ img[width][height] {
     
   ]
 }
-</script>
-
-
-<script type="application/ld+json">
+</script><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "WebSite",
@@ -555,11 +358,7 @@ img[width][height] {
   "description": "Track Critical Running Speed, Training Stress Score, and performance metrics with Run Analytics. Science-based iOS app for runners, triathletes &amp; coaches. 7-day free trial.",
   "inLanguage": "my"
 }
-</script>
-
-
-
-<script type="application/ld+json">
+</script><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
@@ -574,14 +373,7 @@ img[width][height] {
   },
   "downloadUrl": "https://apps.apple.com/us/app/run-analytics/id6754524015"
 }
-</script>
-
-
-
-
-
-
-<script type="application/ld+json">
+</script><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "WebPage",
@@ -589,19 +381,7 @@ img[width][height] {
   "description": "ติดตามข้อมูลการว่ายน้ำ คำนวณ CRS และ rTSS วิเคราะห์ภาระการฝึกด้วยการวิเคราะห์แบบมืออาชีพ เครื่องคำนวณฟรีสำหรับนักว่ายน้ำและนักไตรกีฬา ทดลองใช้ฟรี 7 วัน",
   "url": "https://run.analyticszone.app/my/"
 }
-</script>
-
-
-
-
-
-
-
-  
-  
-
-  
-  <script>
+</script><script>
     (function () {
       let theme = localStorage.getItem('theme');
       // Older builds could persist a per-subdomain `theme=light` value without a UI
@@ -615,1345 +395,350 @@ img[width][height] {
         document.documentElement.classList.add('dark-mode');
       }
     })();
-  </script>
-</head>
-
-<body>
-  
-  <a href="#main-content" class="skip-link">ข้ามไปยังเนื้อหา</a>
-
-  
-  <header class="site-header">
-    <div class="container">
-        <div class="header-inner">
-            
-            <a href="/my/" class="site-logo">
-                <picture>
-                    <source srcset="../assets/images/logo-dark.png" type="image/png"
-                        media="(prefers-color-scheme: dark)">
-                    <img src="../assets/images/logo.png" alt="Run Analytics - Running Analytics App | Critical Running Speed, TSS, CTL/ATL/TSB for iOS" width="56" height="56">
-                </picture>
-                <span class="logo-text">Run Analytics</span>
-            </a>
-
-            
-            <nav class="nav-primary" id="nav-primary" role="navigation" aria-label="Main navigation">
-                <div class="nav-group-left">
-                    <ul>
-                        
-                        <li>
-                            
-                            <a href="/my/" 
+  </script></head><body><a href="#main-content" class="skip-link">ข้ามไปยังเนื้อหา</a><header class="site-header"><div class="container"><div class="header-inner"><a href="/my/" class="site-logo"><picture><source srcset="../assets/images/logo-dark.png" type="image/png"
+                        media="(prefers-color-scheme: dark)"><img src="../assets/images/logo.png" alt="Run Analytics - Running Analytics App | Critical Running Speed, TSS, CTL/ATL/TSB for iOS" width="56" height="56"></picture><span class="logo-text">Run Analytics</span></a><nav class="nav-primary" id="nav-primary" role="navigation" aria-label="Main navigation"><div class="nav-group-left"><ul><li><a href="/my/" 
                                 aria-current="">
                                 หน้าแรก
-                            </a>
-                            
-                            </li>
-                            
-                        <li class="has-submenu" >
-                            
-                            
-                            <a href="/my/getting-started/" class="nav-label">เรียนรู้</a>
-                            
-                            <ul class="submenu">
-                                
-                                <li>
-                                    <a href="/my/getting-started/" 
+                            </a></li><li class="has-submenu" ><a href="/my/getting-started/" class="nav-label">เรียนรู้</a><ul class="submenu"><li><a href="/my/getting-started/" 
                                         aria-current="">
                                         เริ่มต้น
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/my/crs/" 
+                                    </a></li><li><a href="/my/crs/" 
                                         aria-current="">
                                         CRS
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/my/training-zones/" 
+                                    </a></li><li><a href="/my/training-zones/" 
                                         aria-current="">
                                         โซนการฝึก
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/my/training-load/" 
+                                    </a></li><li><a href="/my/training-load/" 
                                         aria-current="">
                                         ภาระการฝึก
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/my/rtss-calculator/" 
+                                    </a></li><li><a href="/my/rtss-calculator/" 
                                         aria-current="">
                                         เครื่องคำนวณ rTSS
-                                    </a>
-                                </li>
-                                
-                            </ul>
-                            
-                            </li>
-                            
-                        <li class="has-submenu" >
-                            
-                            
-                            <a href="/my/research/" class="nav-label">วิทยาศาสตร์</a>
-                            
-                            <ul class="submenu">
-                                
-                                <li>
-                                    <a href="/my/research/" 
+                                    </a></li></ul></li><li class="has-submenu" ><a href="/my/research/" class="nav-label">วิทยาศาสตร์</a><ul class="submenu"><li><a href="/my/research/" 
                                         aria-current="">
                                         การวิจัย
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/my/formulas/" 
+                                    </a></li><li><a href="/my/formulas/" 
                                         aria-current="">
                                         สูตร
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/my/efficiency/" 
+                                    </a></li><li><a href="/my/efficiency/" 
                                         aria-current="">
                                         ประสิทธิภาพ
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/my/stride-mechanics/" 
+                                    </a></li><li><a href="/my/stride-mechanics/" 
                                         aria-current="">
                                         กลศาสตร์การว่าย
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/my/bibliography/" 
+                                    </a></li><li><a href="/my/bibliography/" 
                                         aria-current="">
                                         บรรณานุกรม
-                                    </a>
-                                </li>
-                                
-                            </ul>
-                            
-                            </li>
-                            
-                        <li>
-                            
-                            <a href="/my/contact/" 
+                                    </a></li></ul></li><li><a href="/my/contact/" 
                                 aria-current="">
                                 ติดต่อ
-                            </a>
-                            
-                            </li>
-                            
-                    </ul>
-
-                    
-                    <div class="search-container">
-                        <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                            </a></li></ul><div class="search-container"><svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
                             viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                            <circle cx="11" cy="11" r="8"></circle>
-                            <path d="m21 21-4.35-4.35"></path>
-                        </svg>
-                        <input type="search" id="site-search" class="search-input" aria-expanded="false"
-                            aria-haspopup="listbox" aria-autocomplete="list" autocomplete="off" spellcheck="false" />
-                        <div id="search-results" class="search-results hidden" role="region" aria-live="polite"></div>
-                    </div>
-
-                    
-                    <select class="language-selector" id="language-select" aria-label="เลือกภาษา">
-                        
-                        <option value="af" >
+                            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.35-4.35"></path></svg><input type="search" id="site-search" class="search-input" aria-expanded="false"
+                            aria-haspopup="listbox" aria-autocomplete="list" autocomplete="off" spellcheck="false" /><div id="search-results" class="search-results hidden" role="region" aria-live="polite"></div></div><select class="language-selector" id="language-select" aria-label="เลือกภาษา"><option value="af" >
                             Afrikaans
-                        </option>
-                        
-                        <option value="am" >
+                        </option><option value="am" >
                             አማርኛ
-                        </option>
-                        
-                        <option value="ar" >
+                        </option><option value="ar" >
                             العربية
-                        </option>
-                        
-                        <option value="bg" >
+                        </option><option value="bg" >
                             Български
-                        </option>
-                        
-                        <option value="bn" >
+                        </option><option value="bn" >
                             বাংলা
-                        </option>
-                        
-                        <option value="ca" >
+                        </option><option value="ca" >
                             Català
-                        </option>
-                        
-                        <option value="cs" >
+                        </option><option value="cs" >
                             Čeština
-                        </option>
-                        
-                        <option value="da" >
+                        </option><option value="da" >
                             Dansk
-                        </option>
-                        
-                        <option value="de" >
+                        </option><option value="de" >
                             Deutsch
-                        </option>
-                        
-                        <option value="el" >
+                        </option><option value="el" >
                             Ελληνικά
-                        </option>
-                        
-                        <option value="en" >
+                        </option><option value="en" >
                             English
-                        </option>
-                        
-                        <option value="es" >
+                        </option><option value="es" >
                             Español
-                        </option>
-                        
-                        <option value="et" >
+                        </option><option value="et" >
                             Eesti
-                        </option>
-                        
-                        <option value="fa" >
+                        </option><option value="fa" >
                             فارسی
-                        </option>
-                        
-                        <option value="fi" >
+                        </option><option value="fi" >
                             Suomi
-                        </option>
-                        
-                        <option value="fr" >
+                        </option><option value="fr" >
                             Français
-                        </option>
-                        
-                        <option value="gu" >
+                        </option><option value="gu" >
                             ગુજરાતી
-                        </option>
-                        
-                        <option value="ha" >
+                        </option><option value="ha" >
                             Hausa
-                        </option>
-                        
-                        <option value="he" >
+                        </option><option value="he" >
                             עברית
-                        </option>
-                        
-                        <option value="hi" >
+                        </option><option value="hi" >
                             हिन्दी
-                        </option>
-                        
-                        <option value="hr" >
+                        </option><option value="hr" >
                             Hrvatski
-                        </option>
-                        
-                        <option value="hu" >
+                        </option><option value="hu" >
                             Magyar
-                        </option>
-                        
-                        <option value="id" >
+                        </option><option value="id" >
                             Bahasa Indonesia
-                        </option>
-                        
-                        <option value="is" >
+                        </option><option value="is" >
                             Íslenska
-                        </option>
-                        
-                        <option value="it" >
+                        </option><option value="it" >
                             Italiano
-                        </option>
-                        
-                        <option value="ja" >
+                        </option><option value="ja" >
                             日本語
-                        </option>
-                        
-                        <option value="km" >
+                        </option><option value="km" >
                             ភាសាខ្មែរ
-                        </option>
-                        
-                        <option value="kn" >
+                        </option><option value="kn" >
                             ಕನ್ನಡ
-                        </option>
-                        
-                        <option value="ko" >
+                        </option><option value="ko" >
                             한국어
-                        </option>
-                        
-                        <option value="lt" >
+                        </option><option value="lt" >
                             Lietuvių
-                        </option>
-                        
-                        <option value="lv" >
+                        </option><option value="lv" >
                             Latviešu
-                        </option>
-                        
-                        <option value="ms" >
+                        </option><option value="ms" >
                             Bahasa Melayu
-                        </option>
-                        
-                        <option value="my" selected>
+                        </option><option value="my" selected>
                             မြန်မာစာ
-                        </option>
-                        
-                        <option value="nb" >
+                        </option><option value="nb" >
                             Norsk Bokmål
-                        </option>
-                        
-                        <option value="nl" >
+                        </option><option value="nl" >
                             Nederlands
-                        </option>
-                        
-                        <option value="pl" >
+                        </option><option value="pl" >
                             Polski
-                        </option>
-                        
-                        <option value="pt" >
+                        </option><option value="pt" >
                             Português
-                        </option>
-                        
-                        <option value="pt-br" >
+                        </option><option value="pt-br" >
                             Português (Brasil)
-                        </option>
-                        
-                        <option value="ro" >
+                        </option><option value="ro" >
                             Română
-                        </option>
-                        
-                        <option value="ru" >
+                        </option><option value="ru" >
                             Русский
-                        </option>
-                        
-                        <option value="sk" >
+                        </option><option value="sk" >
                             Slovenčina
-                        </option>
-                        
-                        <option value="sl" >
+                        </option><option value="sl" >
                             Slovenščina
-                        </option>
-                        
-                        <option value="sr" >
+                        </option><option value="sr" >
                             Srpski
-                        </option>
-                        
-                        <option value="sv" >
+                        </option><option value="sv" >
                             Svenska
-                        </option>
-                        
-                        <option value="sw" >
+                        </option><option value="sw" >
                             Kiswahili
-                        </option>
-                        
-                        <option value="ta" >
+                        </option><option value="ta" >
                             தமிழ்
-                        </option>
-                        
-                        <option value="te" >
+                        </option><option value="te" >
                             తెలుగు
-                        </option>
-                        
-                        <option value="th" >
+                        </option><option value="th" >
                             ไทย
-                        </option>
-                        
-                        <option value="tl" >
+                        </option><option value="tl" >
                             Tagalog
-                        </option>
-                        
-                        <option value="tr" >
+                        </option><option value="tr" >
                             Türkçe
-                        </option>
-                        
-                        <option value="uk" >
+                        </option><option value="uk" >
                             Українська
-                        </option>
-                        
-                        <option value="ur" >
+                        </option><option value="ur" >
                             اردو
-                        </option>
-                        
-                        <option value="vi" >
+                        </option><option value="vi" >
                             Tiếng Việt
-                        </option>
-                        
-                        <option value="yo" >
+                        </option><option value="yo" >
                             Yorùbá
-                        </option>
-                        
-                        <option value="zh" >
+                        </option><option value="zh" >
                             中文
-                        </option>
-                        
-                    </select>
-                </div>
-
-                <div class="nav-group-right">
-                    
-
-
-                    
-                    <div class="header-app-buttons">
-                        
-                        
-                        <a href="https://apps.apple.com/us/app/run-analytics/id6754524015" class="header-download-btn" target="_blank"
-                            rel="noopener" aria-label="Download on App Store" title="Download on App Store">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                                fill="currentColor">
-                                <path
-                                    d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z" />
-                            </svg>
-                        </a>
-                        
-
-                        
-                        <a href="https://play.google.com/store/apps/details?id=com.arnohealth.runanalytics" class="header-download-btn" target="_blank"
-                            rel="noopener" aria-label="Get it on Google Play" title="Get it on Google Play">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                                fill="currentColor">
-                                <path
-                                    d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.92 20.16,13.19L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M16.81,8.88L14.54,11.15L6.05,2.66L16.81,8.88Z" />
-                            </svg>
-                        </a>
-                        
-                        
-                    </div>
-
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-
-                    
-                    <div class="suite-menu-container">
-                        <button class="suite-menu-toggle" id="suite-menu-toggle" aria-label="See other apps"
-                            aria-expanded="false">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        </option></select></div><div class="nav-group-right"><div class="header-app-buttons"><a href="https://apps.apple.com/us/app/run-analytics/id6754524015" class="header-download-btn" target="_blank"
+                            rel="noopener" aria-label="Download on App Store" title="Download on App Store"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="currentColor"><path
+                                    d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z" /></svg></a><a href="https://play.google.com/store/apps/details?id=com.arnohealth.runanalytics" class="header-download-btn" target="_blank"
+                            rel="noopener" aria-label="Get it on Google Play" title="Get it on Google Play"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="currentColor"><path
+                                    d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.92 20.16,13.19L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M16.81,8.88L14.54,11.15L6.05,2.66L16.81,8.88Z" /></svg></a></div><div class="suite-menu-container"><button class="suite-menu-toggle" id="suite-menu-toggle" aria-label="See other apps"
+                            aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round">
-                                <rect x="3" y="3" width="7" height="7"></rect>
-                                <rect x="14" y="3" width="7" height="7"></rect>
-                                <rect x="14" y="14" width="7" height="7"></rect>
-                                <rect x="3" y="14" width="7" height="7"></rect>
-                            </svg>
-                        </button>
-                        <div class="suite-dropdown hidden" id="suite-dropdown">
-                            <div class="suite-dropdown-header">Other AnalyticsZone Apps</div>
-                            <div class="suite-apps-grid">
-                                
-                                <a href="https://analyticszone.app" class="suite-app-link">AnalyticsZone</a>
-                                
-                                <a href="https://swim.analyticszone.app" class="suite-app-link">Swim Analytics</a>
-                                
-                                <a href="https://bike.analyticszone.app" class="suite-app-link">Bike Analytics</a>
-                                
-                                <a href="https://walk.analyticszone.app" class="suite-app-link">Walk Analytics</a>
-                                
-                                <a href="https://cardio.analyticszone.app" class="suite-app-link">Cardio Analytics</a>
-                                
-                                <a href="https://health.analyticszone.app" class="suite-app-link">Health Analytics</a>
-                                
-                                <a href="https://swimtrainer.analyticszone.app" class="suite-app-link">Swim Trainer</a>
-                                
-                            </div>
-                        </div>
-                    </div>
-                    
-                </div>
-            </nav>
-
-            
-            <button class="menu-toggle" id="menu-toggle" aria-label="สลับเมนู"
-                aria-expanded="false" aria-controls="nav-primary">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </div>
-    </div>
-</header>
-
-  
-  
-
-
-  
-  <main id="main-content" class="main-content">
-    
-    <!-- Run Analytics App Landing Page - Homepage -->
-
-<!-- Hero Section with App Introduction -->
-<section class="app-hero">
-  <div class="container">
-    <div class="app-hero-content">
-      <div class="app-hero-text">
-        <div class="app-hero-badge">
-          <span>🏃</span>
-          <span>ပရော်ဖက်ရှင်နယ် ပြေးခြင်း ခွဲခြမ်းစိတ်ဖြာမှု</span>
-        </div>
-        <h1>ပိုမိုဉာဏ်ကောင်းစွာ လေ့ကျင့်ပါ၊ ပိုမြန်စွာ ပြေးပါ</h1>
-        <p class="app-hero-subtitle">
+                                stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg></button><div class="suite-dropdown hidden" id="suite-dropdown"><div class="suite-dropdown-header">Other AnalyticsZone Apps</div><div class="suite-apps-grid"><a href="https://analyticszone.app" class="suite-app-link">AnalyticsZone</a><a href="https://swim.analyticszone.app" class="suite-app-link">Swim Analytics</a><a href="https://bike.analyticszone.app" class="suite-app-link">Bike Analytics</a><a href="https://walk.analyticszone.app" class="suite-app-link">Walk Analytics</a><a href="https://cardio.analyticszone.app" class="suite-app-link">Cardio Analytics</a><a href="https://health.analyticszone.app" class="suite-app-link">Health Analytics</a><a href="https://swimtrainer.analyticszone.app" class="suite-app-link">Swim Trainer</a></div></div></div></div></nav><button class="menu-toggle" id="menu-toggle" aria-label="สลับเมนู"
+                aria-expanded="false" aria-controls="nav-primary"><span></span><span></span><span></span></button></div></div></header><main id="main-content" class="main-content"><section class="app-hero"><div class="container"><div class="app-hero-content"><div class="app-hero-text"><div class="app-hero-badge"><span>🏃</span><span>ပရော်ဖက်ရှင်နယ် ပြေးခြင်း ခွဲခြမ်းစိတ်ဖြာမှု</span></div><h1>ပိုမိုဉာဏ်ကောင်းစွာ လေ့ကျင့်ပါ၊ ပိုမြန်စွာ ပြေးပါ</h1><p class="app-hero-subtitle">
           ကိုယ်ရေးကိုယ်တာ ဦးစားပေး iOS အက်ပ်တွင် သိပ္ပံနည်းကျ ပြေးခြင်း စွမ်းဆောင်ရည် မက်ထရစ်များ၊ ပုဂ္ဂိုလ်ရေး လေ့ကျင့်ရေး ဇုန်များနှင့်
           ပြည့်စုံသော စွမ်းဆောင်ရည် ခြေရာခံခြင်း။
           သင့် iPhone တွင် ဒေတာအားလုံး ပြည်တွင်းတွင် လုပ်ဆောင်ပြီး ကိုယ်ရေးကိုယ်တာ အပြည့်အဝ ကာကွယ်ထားသည်။
-        </p>
-        <div class="app-hero-cta store-badges">
-          <a href="https://apps.apple.com/us/app/run-analytics/id6754524015" class="store-badge" target="_blank" rel="noopener"
-            aria-label="App Store တွင် ဒေါင်းလုဒ်လုပ်ပါ">
-            <img src="../assets/images/badge-app-store.svg" alt="App Store တွင် ဒေါင်းလုဒ်လုပ်ပါ" width="140" height="47">
-          </a>
-          <a href="https://play.google.com/store/apps/details?id=com.arnohealth.runanalytics" class="store-badge" target="_blank" rel="noopener"
-            aria-label="Google Play တွင် ရယူပါ">
-            <img src="../assets/images/badge-google-play.svg" alt="Google Play တွင် ရယူပါ" width="140" height="47">
-          </a>
-        </div>
-        <div class="app-hero-secondary">
-          <a href="#features" class="btn btn-large btn-secondary">
+        </p><div class="app-hero-cta store-badges"><a aria-label="App Store တွင် ဒေါင်းလုဒ်လုပ်ပါ" class="store-badge" href="https://apps.apple.com/us/app/run-analytics/id6754524015" rel="noopener" target="_blank"><img alt="App Store တွင် ဒေါင်းလုဒ်လုပ်ပါ" height="47" src="../assets/images/badge-app-store.svg" width="140"/></a><a aria-label="Google Play တွင် ရယူပါ" class="store-badge" href="https://play.google.com/store/apps/details?id=com.arnohealth.runanalytics" rel="noopener" target="_blank"><img alt="Google Play တွင် ရယူပါ" height="47" src="../assets/images/badge-google-play.svg" width="140"/></a></div><div class="app-hero-secondary"><a class="btn btn-large btn-secondary" href="#features">
             ကျွန်ုပ်တို့၏ ဖြေရှင်းနည်းများကို လေ့လာပါ
-          </a>
-        </div>
-        <p class="mt-6 text-sm-muted">
-          ✓ ၇ ရက် အခမဲ့ စမ်းသုံးခွင့် &nbsp;&nbsp; ✓ အကောင့် မလိုအပ်ပါ &nbsp;&nbsp; ✓ ဒေတာ ၁၀၀% ပြည်တွင်း
-        </p>
-      </div>
-      <div class="app-hero-mockup">
-        <div class="mockup-phone">
-          <img src="../assets/images/screenshots/workouts-list.png"
-            alt="Run Analytics iOS အက်ပ်တွင် ပြေးခြင်း လေ့ကျင့်မှုများ စာရင်း၊ အကွာအဝေး၊ အရှိန်နှင့် လေ့ကျင့်ရေး မက်ထရစ်များ ပြသထားသည်"
-            width="400" height="auto" loading="eager" />
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Key Features Section -->
-<section id="features" class="app-features">
-  <div class="container">
-    <div class="section-header">
-      <div class="section-badge">အင်္ဂါရပ်များ</div>
-      <h2 class="section-title">အဆင့်မြင့် ပြေးခြင်း စွမ်းဆောင်ရည် မက်ထရစ်များ</h2>
-      <p class="section-subtitle">အဆင့်တိုင်းရှိ ပြေးသမားများအတွက် ဒီဇိုင်းထုတ်ထားသော ပရော်ဖက်ရှင်နယ် ပြေးခြင်း ခွဲခြမ်းစိတ်ဖြာမှု</p>
-    </div>
-    <div class="app-features-grid">
-      <div class="feature-card">
-        <div class="feature-icon">
-          <svg class="icon" aria-hidden="true">
-            <use href="../assets/images/icons-sprite.svg#icon-chart"></use>
-          </svg>
-        </div>
-        <h3>သိပ္ပံနည်းကျ ပြေးခြင်း မက်ထရစ်များ</h3>
-        <p><a href="/my/crs/">Critical Running Speed (CRS)</a> သည် သင့် aerobic threshold ကို ဆုံးဖြတ်ပေးပြီး <a
-            href="/my/training-load/">Training Stress Score (TSS)</a> တွက်ချက်မှုနှင့် <a
-            href="/my/training-load/#pmc">CTL/ATL/TSB စွမ်းဆောင်ရည် ခြေရာခံခြင်း</a> ကို အားကစား သိပ္ပံ သုတေသန အပေါ် အခြေခံ၍ ဖွင့်ပေးသည်။</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon">
-          <svg class="icon" aria-hidden="true">
-            <use href="../assets/images/icons-sprite.svg#icon-zones"></use>
-          </svg>
-        </div>
-        <h3>ပုဂ္ဂိုလ်ရေး လေ့ကျင့်ရေး ဇုန်များ</h3>
-        <p>သင့် critical running speed အပေါ် ချိန်ညှိထားသော <a href="/my/training-zones-explained/">ပြေးခြင်း လေ့ကျင့်ရေး ဇုန် ၇ ခု</a>။ နာလန်ထူခြင်း၊ <a
-            href="/my/base-building-phase/">aerobic ဖွံ့ဖြိုးမှု</a>၊ threshold လေ့ကျင့်ခြင်း သို့မဟုတ် <a
-            href="/my/what-is-vo2max/">VO₂max</a> တိုးတက်မှုအတွက် လေ့ကျင့်မှုတိုင်းကို အကောင်းဆုံးဖြစ်အောင် လုပ်ပါ။</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon">
-          <svg class="icon" aria-hidden="true">
-            <use href="../assets/images/icons-sprite.svg#icon-calendar"></use>
-          </svg>
-        </div>
-        <h3>စွမ်းဆောင်ရည် နှိုင်းယှဉ်မှုများ</h3>
-        <p>ပြေးခြင်း စွမ်းဆောင်ရည် မက်ထရစ်အားလုံးအတွက် အလိုအလျောက် လမ်းကြောင်း ရှာဖွေမှုနှင့် ရာခိုင်နှုန်း ပြောင်းလဲမှုများဖြင့် အပတ်စဉ်၊ လစဉ်နှင့် နှစ်စဉ် ကာလ နှိုင်းယှဉ်မှုများ။</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon">
-          <svg class="icon" aria-hidden="true">
-            <use href="../assets/images/icons-sprite.svg#icon-shield"></use>
-          </svg>
-        </div>
-        <h3>ကိုယ်ရေးကိုယ်တာ အပြည့်အဝ ကာကွယ်မှု</h3>
-        <p>ပြေးခြင်း ဒေတာအားလုံး သင့် iOS စက်တွင် ပြည်တွင်း၌ လုပ်ဆောင်သည်။ ဆာဗာမရှိ၊ cloud သိုလှောင်မှုမရှိ၊ ခြေရာခံမှုမရှိ။ သင့် ပြေးခြင်း ခွဲခြမ်းစိတ်ဖြာမှုကို အပြည့်အဝ ပိုင်ဆိုင်ပြီး ထိန်းချုပ်နိုင်သည်။</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon">
-          <svg class="icon" aria-hidden="true">
-            <use href="../assets/images/icons-sprite.svg#icon-export"></use>
-          </svg>
-        </div>
-        <h3>မည်သည့်နေရာသို့မဆို တင်ပို့ပါ</h3>
-        <p>JSON၊ CSV၊ HTML သို့မဟုတ် PDF ဖော်မတ်များဖြင့် လေ့ကျင့်မှုများနှင့် ပြေးခြင်း စွမ်းဆောင်ရည် မက်ထရစ်များကို တင်ပို့ပါ။ နည်းပြများ၊ spreadsheets နှင့် လေ့ကျင့်ရေး ပလက်ဖောင်းများနှင့် တွဲဖက်အသုံးပြုနိုင်သည်။</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon">
-          <svg class="icon" aria-hidden="true">
-            <use href="../assets/images/icons-sprite.svg#icon-lightning"></use>
-          </svg>
-        </div>
-        <h3>ချက်ချင်း စွမ်းဆောင်ရည်</h3>
-        <p>ပြည်တွင်း-ဦးစားပေး ဗိသုကာဖြင့် အက်ပ် စတင်ချိန် ၀.၃၅ စက္ကန့်အောက်။ sync သို့မဟုတ် ဒေါင်းလုဒ်များကို စောင့်စရာမလိုဘဲ သင့် ပြေးခြင်း ခွဲခြမ်းစိတ်ဖြာမှုကို ချက်ချင်း ကြည့်ရှုပါ။</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- Screenshots Carousel -->
-<section class="app-screenshots">
-  <div class="container">
-    <div class="section-header">
-      <div class="section-badge">ဖန်သားပြင်ဓာတ်ပုံများ</div>
-      <h2 class="section-title">Run Analytics ကို လက်တွေ့ ကြည့်ရှုပါ</h2>
-      <p class="section-subtitle">ပြေးသမားများအတွက် ဒီဇိုင်းထုတ်ထားသော လှပပြီး အသုံးပြုရလွယ်ကူသော iOS မျက်နှာပြင်</p>
-    </div>
-    <div class="carousel-wrapper">
-      <button class="carousel-btn carousel-btn-prev" aria-label="ယခင် ဖန်သားပြင်ဓာတ်ပုံ">
-        <svg aria-hidden="true">
-          <use href="../assets/images/icons-sprite.svg#icon-arrow-left"></use>
-        </svg>
-      </button>
-      <div class="screenshots-carousel" id="screenshotsCarousel">
-        <div class="screenshot-item">
-          <img src="../assets/images/screenshots/workouts-list.png"
-            alt="Run Analytics လေ့ကျင့်မှု စာရင်းတွင် training stress score နှင့် training zones ဖြင့် ပြေးခြင်း session များ ပြသထားသည်"
-            loading="lazy" />
-          <p class="screenshot-caption">လေ့ကျင့်မှုများ အကျဉ်းချုပ်</p>
-        </div>
-        <div class="screenshot-item">
-          <img src="../assets/images/screenshots/workout-detail.png"
-            alt="ကီလိုမီတာတစ်ခုချင်းစီ အရှိန်၊ ပြေးခြင်း ထိရောက်မှု မက်ထရစ်များနှင့် နှလုံးခုန်နှုန်း ဒေတာဖြင့် အသေးစိတ် ပြေးခြင်း လေ့ကျင့်မှု ခွဲခြမ်းစိတ်ဖြာမှု"
-            loading="lazy" />
-          <p class="screenshot-caption">ကီလိုမီတာတစ်ခုချင်းစီ ခွဲခြမ်းစိတ်ဖြာမှု</p>
-        </div>
-        <div class="screenshot-item">
-          <img src="../assets/images/screenshots/analytics.png"
-            alt="Run Analytics dashboard တွင် CTL၊ ATL နှင့် TSB performance management chart ကို ပြေးခြင်း စွမ်းဆောင်ရည် မက်ထရစ်များဖြင့် ပြသထားသည်"
-            loading="lazy" />
-          <p class="screenshot-caption">အဆင့်မြင့် စွမ်းဆောင်ရည် မက်ထရစ်များ</p>
-        </div>
-        <div class="screenshot-item">
-          <img src="../assets/images/screenshots/performance.png"
-            alt="ပြေးခြင်း စွမ်းဆောင်ရည် လမ်းကြောင်း ဇယားတွင် critical running speed တိုးတက်မှုနှင့် အချိန်နှင့်အမျှ training load ပြသထားသည်"
-            loading="lazy" />
-          <p class="screenshot-caption">စွမ်းဆောင်ရည် လမ်းကြောင်းများ</p>
-        </div>
-        <div class="screenshot-item">
-          <img src="../assets/images/screenshots/training-zones.png"
-            alt="critical running speed threshold အပေါ် အခြေခံသော ပုဂ္ဂိုလ်ရေး ပြေးခြင်း လေ့ကျင့်ရေး ဇုန် ၇ ခု" loading="lazy" />
-          <p class="screenshot-caption">လေ့ကျင့်ရေး ဇုန်များ</p>
-        </div>
-        <div class="screenshot-item">
-          <img src="../assets/images/screenshots/export-options.png"
-            alt="နည်းပြများနှင့် ခွဲခြမ်းစိတ်ဖြာမှုအတွက် JSON၊ CSV၊ HTML နှင့် PDF ဖော်မတ်များဖြင့် ပြေးခြင်း ဒေတာ တင်ပို့ခြင်း" loading="lazy" />
-          <p class="screenshot-caption">တင်ပို့မှု ရွေးချယ်စရာများ</p>
-        </div>
-      </div>
-      <button class="carousel-btn carousel-btn-next" aria-label="နောက် ဖန်သားပြင်ဓာတ်ပုံ">
-        <svg aria-hidden="true">
-          <use href="../assets/images/icons-sprite.svg#icon-arrow-right"></use>
-        </svg>
-      </button>
-      <div class="carousel-dots" id="carouselDots" role="tablist" aria-label="ဖန်သားပြင်ဓာတ်ပုံ လမ်းညွှန်"></div>
-    </div>
-  </div>
-</section>
-
-<!-- Scientific Metrics Section -->
-<section class="app-metrics">
-  <div class="container">
-    <div class="section-header">
-      <div class="section-badge">သိပ္ပံအခြေခံ</div>
-      <h2 class="section-title text-white">သိပ္ပံအခြေခံ ပြေးခြင်း ထိရောက်မှု မက်ထရစ်များ</h2>
-      <p class="section-subtitle text-white-90">
+          </a></div><p class="mt-6 text-sm-muted">
+          ✓ ၇ ရက် အခမဲ့ စမ်းသုံးခွင့်    ✓ အကောင့် မလိုအပ်ပါ    ✓ ဒေတာ ၁၀၀% ပြည်တွင်း
+        </p></div><div class="app-hero-mockup"><div class="mockup-phone"><img alt="Run Analytics iOS အက်ပ်တွင် ပြေးခြင်း လေ့ကျင့်မှုများ စာရင်း၊ အကွာအဝေး၊ အရှိန်နှင့် လေ့ကျင့်ရေး မက်ထရစ်များ ပြသထားသည်" height="auto" loading="eager" src="../assets/images/screenshots/workouts-list.png" width="400"></img></div></div></div></div></section><section class="app-features" id="features"><div class="container"><div class="section-header"><div class="section-badge">အင်္ဂါရပ်များ</div><h2 class="section-title">အဆင့်မြင့် ပြေးခြင်း စွမ်းဆောင်ရည် မက်ထရစ်များ</h2><p class="section-subtitle">အဆင့်တိုင်းရှိ ပြေးသမားများအတွက် ဒီဇိုင်းထုတ်ထားသော ပရော်ဖက်ရှင်နယ် ပြေးခြင်း ခွဲခြမ်းစိတ်ဖြာမှု</p></div><div class="app-features-grid"><div class="feature-card"><div class="feature-icon"><svg aria-hidden="true" class="icon"><use href="../assets/images/icons-sprite.svg#icon-chart"></use></svg></div><h3>သိပ္ပံနည်းကျ ပြေးခြင်း မက်ထရစ်များ</h3><p><a href="/my/crs/">Critical Running Speed (CRS)</a> သည် သင့် aerobic threshold ကို ဆုံးဖြတ်ပေးပြီး <a href="/my/training-load/">Training Stress Score (TSS)</a> တွက်ချက်မှုနှင့် <a href="/my/training-load/#pmc">CTL/ATL/TSB စွမ်းဆောင်ရည် ခြေရာခံခြင်း</a> ကို အားကစား သိပ္ပံ သုတေသန အပေါ် အခြေခံ၍ ဖွင့်ပေးသည်။</p></div><div class="feature-card"><div class="feature-icon"><svg aria-hidden="true" class="icon"><use href="../assets/images/icons-sprite.svg#icon-zones"></use></svg></div><h3>ပုဂ္ဂိုလ်ရေး လေ့ကျင့်ရေး ဇုန်များ</h3><p>သင့် critical running speed အပေါ် ချိန်ညှိထားသော <a href="/my/training-zones-explained/">ပြေးခြင်း လေ့ကျင့်ရေး ဇုန် ၇ ခု</a>။ နာလန်ထူခြင်း၊ <a href="/my/base-building-phase/">aerobic ဖွံ့ဖြိုးမှု</a>၊ threshold လေ့ကျင့်ခြင်း သို့မဟုတ် <a href="/my/what-is-vo2max/">VO₂max</a> တိုးတက်မှုအတွက် လေ့ကျင့်မှုတိုင်းကို အကောင်းဆုံးဖြစ်အောင် လုပ်ပါ။</p></div><div class="feature-card"><div class="feature-icon"><svg aria-hidden="true" class="icon"><use href="../assets/images/icons-sprite.svg#icon-calendar"></use></svg></div><h3>စွမ်းဆောင်ရည် နှိုင်းယှဉ်မှုများ</h3><p>ပြေးခြင်း စွမ်းဆောင်ရည် မက်ထရစ်အားလုံးအတွက် အလိုအလျောက် လမ်းကြောင်း ရှာဖွေမှုနှင့် ရာခိုင်နှုန်း ပြောင်းလဲမှုများဖြင့် အပတ်စဉ်၊ လစဉ်နှင့် နှစ်စဉ် ကာလ နှိုင်းယှဉ်မှုများ။</p></div><div class="feature-card"><div class="feature-icon"><svg aria-hidden="true" class="icon"><use href="../assets/images/icons-sprite.svg#icon-shield"></use></svg></div><h3>ကိုယ်ရေးကိုယ်တာ အပြည့်အဝ ကာကွယ်မှု</h3><p>ပြေးခြင်း ဒေတာအားလုံး သင့် iOS စက်တွင် ပြည်တွင်း၌ လုပ်ဆောင်သည်။ ဆာဗာမရှိ၊ cloud သိုလှောင်မှုမရှိ၊ ခြေရာခံမှုမရှိ။ သင့် ပြေးခြင်း ခွဲခြမ်းစိတ်ဖြာမှုကို အပြည့်အဝ ပိုင်ဆိုင်ပြီး ထိန်းချုပ်နိုင်သည်။</p></div><div class="feature-card"><div class="feature-icon"><svg aria-hidden="true" class="icon"><use href="../assets/images/icons-sprite.svg#icon-export"></use></svg></div><h3>မည်သည့်နေရာသို့မဆို တင်ပို့ပါ</h3><p>JSON၊ CSV၊ HTML သို့မဟုတ် PDF ဖော်မတ်များဖြင့် လေ့ကျင့်မှုများနှင့် ပြေးခြင်း စွမ်းဆောင်ရည် မက်ထရစ်များကို တင်ပို့ပါ။ နည်းပြများ၊ spreadsheets နှင့် လေ့ကျင့်ရေး ပလက်ဖောင်းများနှင့် တွဲဖက်အသုံးပြုနိုင်သည်။</p></div><div class="feature-card"><div class="feature-icon"><svg aria-hidden="true" class="icon"><use href="../assets/images/icons-sprite.svg#icon-lightning"></use></svg></div><h3>ချက်ချင်း စွမ်းဆောင်ရည်</h3><p>ပြည်တွင်း-ဦးစားပေး ဗိသုကာဖြင့် အက်ပ် စတင်ချိန် ၀.၃၅ စက္ကန့်အောက်။ sync သို့မဟုတ် ဒေါင်းလုဒ်များကို စောင့်စရာမလိုဘဲ သင့် ပြေးခြင်း ခွဲခြမ်းစိတ်ဖြာမှုကို ချက်ချင်း ကြည့်ရှုပါ။</p></div></div></div></section><section class="app-screenshots"><div class="container"><div class="section-header"><div class="section-badge">ဖန်သားပြင်ဓာတ်ပုံများ</div><h2 class="section-title">Run Analytics ကို လက်တွေ့ ကြည့်ရှုပါ</h2><p class="section-subtitle">ပြေးသမားများအတွက် ဒီဇိုင်းထုတ်ထားသော လှပပြီး အသုံးပြုရလွယ်ကူသော iOS မျက်နှာပြင်</p></div><div class="carousel-wrapper"><button aria-label="ယခင် ဖန်သားပြင်ဓာတ်ပုံ" class="carousel-btn carousel-btn-prev"><svg aria-hidden="true"><use href="../assets/images/icons-sprite.svg#icon-arrow-left"></use></svg></button><div class="screenshots-carousel" id="screenshotsCarousel"><div class="screenshot-item"><img alt="Run Analytics လေ့ကျင့်မှု စာရင်းတွင် training stress score နှင့် training zones ဖြင့် ပြေးခြင်း session များ ပြသထားသည်" loading="lazy" src="../assets/images/screenshots/workouts-list.png"><p class="screenshot-caption">လေ့ကျင့်မှုများ အကျဉ်းချုပ်</p></img></div><div class="screenshot-item"><img alt="ကီလိုမီတာတစ်ခုချင်းစီ အရှိန်၊ ပြေးခြင်း ထိရောက်မှု မက်ထရစ်များနှင့် နှလုံးခုန်နှုန်း ဒေတာဖြင့် အသေးစိတ် ပြေးခြင်း လေ့ကျင့်မှု ခွဲခြမ်းစိတ်ဖြာမှု" loading="lazy" src="../assets/images/screenshots/workout-detail.png"/><p class="screenshot-caption">ကီလိုမီတာတစ်ခုချင်းစီ ခွဲခြမ်းစိတ်ဖြာမှု</p></div><div class="screenshot-item"><img alt="Run Analytics dashboard တွင် CTL၊ ATL နှင့် TSB performance management chart ကို ပြေးခြင်း စွမ်းဆောင်ရည် မက်ထရစ်များဖြင့် ပြသထားသည်" loading="lazy" src="../assets/images/screenshots/analytics.png"/><p class="screenshot-caption">အဆင့်မြင့် စွမ်းဆောင်ရည် မက်ထရစ်များ</p></div><div class="screenshot-item"><img alt="ပြေးခြင်း စွမ်းဆောင်ရည် လမ်းကြောင်း ဇယားတွင် critical running speed တိုးတက်မှုနှင့် အချိန်နှင့်အမျှ training load ပြသထားသည်" loading="lazy" src="../assets/images/screenshots/performance.png"/><p class="screenshot-caption">စွမ်းဆောင်ရည် လမ်းကြောင်းများ</p></div><div class="screenshot-item"><img alt="critical running speed threshold အပေါ် အခြေခံသော ပုဂ္ဂိုလ်ရေး ပြေးခြင်း လေ့ကျင့်ရေး ဇုန် ၇ ခု" loading="lazy" src="../assets/images/screenshots/training-zones.png"/><p class="screenshot-caption">လေ့ကျင့်ရေး ဇုန်များ</p></div><div class="screenshot-item"><img alt="နည်းပြများနှင့် ခွဲခြမ်းစိတ်ဖြာမှုအတွက် JSON၊ CSV၊ HTML နှင့် PDF ဖော်မတ်များဖြင့် ပြေးခြင်း ဒေတာ တင်ပို့ခြင်း" loading="lazy" src="../assets/images/screenshots/export-options.png"/><p class="screenshot-caption">တင်ပို့မှု ရွေးချယ်စရာများ</p></div></div><button aria-label="နောက် ဖန်သားပြင်ဓာတ်ပုံ" class="carousel-btn carousel-btn-next"><svg aria-hidden="true"><use href="../assets/images/icons-sprite.svg#icon-arrow-right"></use></svg></button><div aria-label="ဖန်သားပြင်ဓာတ်ပုံ လမ်းညွှန်" class="carousel-dots" id="carouselDots" role="tablist"></div></div></div></section><section class="app-metrics"><div class="container"><div class="section-header"><div class="section-badge">သိပ္ပံအခြေခံ</div><h2 class="section-title text-white">သိပ္ပံအခြေခံ ပြေးခြင်း ထိရောက်မှု မက်ထရစ်များ</h2><p class="section-subtitle text-white-90">
         Run Analytics သည် ကုန်ကြမ်း ပြေးခြင်း ဒေတာကို အားကစား သိပ္ပံ သုတေသနဖြင့် အတည်ပြုထားသော
         training stress score၊ critical running speed နှင့် ထိရောက်မှု တွက်ချက်မှုများကို အသုံးပြု၍ လုပ်ဆောင်နိုင်သော ပြေးခြင်း စွမ်းဆောင်ရည် မက်ထရစ်များအဖြစ် ပြောင်းလဲပေးသည်
-      </p>
-    </div>
-    <div class="metrics-grid">
-      <div class="metric-card">
-        <div class="metric-icon">🎯</div>
-        <div class="metric-label">Threshold အရှိန်</div>
-        <h3 class="metric-name">CRS</h3>
-        <p class="metric-description">Critical Running Speed - သင့် aerobic threshold အရှိန်</p>
-      </div>
-      <div class="metric-card">
-        <div class="metric-icon">📊</div>
-        <div class="metric-label">လေ့ကျင့်မှု ဝန်</div>
-        <h3 class="metric-name">TSS</h3>
-        <p class="metric-description">Training Stress Score သည် လေ့ကျင့်မှု ပြင်းထန်မှုကို တိုင်းတာသည်</p>
-      </div>
-      <div class="metric-card">
-        <div class="metric-icon">💪</div>
-        <div class="metric-label">ကြံ့ခိုင်မှု</div>
-        <h3 class="metric-name">CTL</h3>
-        <p class="metric-description">Chronic Training Load - ၄၂ ရက် rolling ပျမ်းမျှ</p>
-      </div>
-      <div class="metric-card">
-        <div class="metric-icon">😴</div>
-        <div class="metric-label">ပင်ပန်းမှု</div>
-        <h3 class="metric-name">ATL</h3>
-        <p class="metric-description">Acute Training Load - ၇ ရက် rolling ပျမ်းမျှ</p>
-      </div>
-      <div class="metric-card">
-        <div class="metric-icon">⚖️</div>
-        <div class="metric-label">ဖောင်</div>
-        <h3 class="metric-name">TSB</h3>
-        <p class="metric-description">Training Stress Balance သည် အသင့်ဖြစ်မှုကို ညွှန်ပြသည်</p>
-      </div>
-      <div class="metric-card">
-        <div class="metric-icon">⚡</div>
-        <div class="metric-label">ထိရောက်မှု</div>
-        <h3 class="metric-name">Running Efficiency</h3>
-        <p class="metric-description">ခြေလှမ်း ထိရောက်မှု ရမှတ် - နိမ့်လေ ကောင်းလေ</p>
-      </div>
-      <div class="metric-card">
-        <div class="metric-icon">🎯</div>
-        <div class="metric-label">ဇုန်များ</div>
-        <h3 class="metric-name">ဇုန် ၇ ခု</h3>
-        <p class="metric-description">နာလန်ထူခြင်းမှ Sprint ပြင်းထန်မှု အဆင့်များ</p>
-      </div>
-      <div class="metric-card">
-        <div class="metric-icon">🏆</div>
-        <div class="metric-label">မှတ်တမ်းများ</div>
-        <h3 class="metric-name">PRs</h3>
-        <p class="metric-description">အလိုအလျောက် ကိုယ်ပိုင် မှတ်တမ်း ခြေရာခံခြင်း</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- Pricing Section -->
-<section class="app-pricing">
-  <div class="container">
-    <div class="section-header">
-      <div class="section-badge">စျေးနှုန်း</div>
-      <h2 class="section-title">ရိုးရှင်းပြီး ပွင့်လင်းသော စျေးနှုန်း</h2>
-      <p class="section-subtitle">၇ ရက် အခမဲ့ စမ်းသုံးခွင့်ဖြင့် စတင်ပါ။ အချိန်မရွေး ပယ်ဖျက်နိုင်သည်။</p>
-    </div>
-    <div class="pricing-grid">
-      <div class="pricing-card">
-        <div class="pricing-header">
-          <h3 class="pricing-name">လစဉ်</h3>
-          <div class="pricing-price">
-            <span class="pricing-currency">€</span>
-            <span class="pricing-amount">3.99</span>
-            <span class="pricing-period">/လ</span>
-          </div>
-          <p class="pricing-trial">၇ ရက် အခမဲ့ စမ်းသုံးခွင့်</p>
-        </div>
-        <ul class="pricing-features">
-          <li>အကန့်အသတ်မရှိ လေ့ကျင့်မှု sync</li>
-          <li>သိပ္ပံနည်းကျ မက်ထရစ်အားလုံး (CRS၊ TSS၊ CTL/ATL/TSB)</li>
-          <li>ပုဂ္ဂိုလ်ရေး လေ့ကျင့်ရေး ဇုန် ၇ ခု</li>
-          <li>အပတ်စဉ်၊ လစဉ်နှင့် နှစ်စဉ် နှိုင်းယှဉ်မှုများ</li>
-          <li>JSON၊ CSV၊ HTML နှင့် PDF ဖြင့် တင်ပို့ခြင်း</li>
-          <li>၁၀၀% ကိုယ်ရေးကိုယ်တာ၊ ပြည်တွင်း ဒေတာ</li>
-          <li>အနာဂတ် အပ်ဒိတ်အားလုံး</li>
-        </ul>
-      </div>
-      <div class="pricing-card featured" data-badge="အကောင်းဆုံး တန်ဖိုး">
-        <div class="pricing-header">
-          <h3 class="pricing-name">နှစ်စဉ်</h3>
-          <div class="pricing-price">
-            <span class="pricing-currency">€</span>
-            <span class="pricing-amount">39</span>
-            <span class="pricing-period">/နှစ်</span>
-          </div>
-          <p class="pricing-trial">€8.88/နှစ် သက်သာသည် (18% လျှော့)</p>
-        </div>
-        <ul class="pricing-features">
-          <li>အကန့်အသတ်မရှိ လေ့ကျင့်မှု sync</li>
-          <li>သိပ္ပံနည်းကျ မက်ထရစ်အားလုံး (CRS၊ TSS၊ CTL/ATL/TSB)</li>
-          <li>ပုဂ္ဂိုလ်ရေး လေ့ကျင့်ရေး ဇုန် ၇ ခု</li>
-          <li>အပတ်စဉ်၊ လစဉ်နှင့် နှစ်စဉ် နှိုင်းယှဉ်မှုများ</li>
-          <li>JSON၊ CSV၊ HTML နှင့် PDF ဖြင့် တင်ပို့ခြင်း</li>
-          <li>၁၀၀% ကိုယ်ရေးကိုယ်တာ၊ ပြည်တွင်း ဒေတာ</li>
-          <li>အနာဂတ် အပ်ဒိတ်အားလုံး</li>
-          <li><strong>တစ်လလျှင် €3.25 သာ</strong></li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Benefits Section -->
-<section class="app-benefits">
-  <div class="container">
-    <div class="section-header">
-      <div class="section-badge">Run Analytics ဘာကြောင့်</div>
-      <h2 class="section-title">အလေးအနက် အားကစားသမားများအတွက် ကိုယ်ရေးကိုယ်တာ-ဦးစားပေး ပြေးခြင်း ခွဲခြမ်းစိတ်ဖြာမှု</h2>
-      <p class="section-subtitle">ရှုပ်ထွေးမှုမရှိဘဲ ပရော်ဖက်ရှင်နယ် ပြေးခြင်း စွမ်းဆောင်ရည် မက်ထရစ်များ</p>
-    </div>
-    <div class="benefits-grid">
-      <div class="benefit-item">
-        <div class="benefit-icon">🎯</div>
-        <div class="benefit-content">
-          <h3>CRS စမ်းသပ်မှု ပရိုတိုကော</h3>
-          <p>သင့် critical running speed ကို ဆုံးဖြတ်ရန် ပေါင်းစပ်ထားသော 1200m/3600m စမ်းသပ်မှု ပရိုတိုကော။ တိုးတက်မှုကို ခြေရာခံရန်နှင့် ပြေးခြင်း လေ့ကျင့်ရေး ဇုန်များကို အလိုအလျောက် ချိန်ညှိရန် ၆-၈ ပတ်တိုင်း ထပ်လုပ်ပါ။</p>
-        </div>
-      </div>
-      <div class="benefit-item">
-        <div class="benefit-icon">📱</div>
-        <div class="benefit-content">
-          <h3>Native iOS ပြေးခြင်း အက်ပ်</h3>
-          <p>ချောမွေ့သော စွမ်းဆောင်ရည်နှင့် iOS ပေါင်းစပ်မှုအတွက် SwiftUI ဖြင့် တည်ဆောက်ထားသည်။ ပြေးခြင်း ခွဲခြမ်းစိတ်ဖြာမှုအတွက် Health အက်ပ်နှင့် ပြီးပြည့်စုံသော sync၊ widget ပံ့ပိုးမှုနှင့် ရင်းနှီးသော Apple ဒီဇိုင်း ဘာသာစကား။</p>
-        </div>
-      </div>
-      <div class="benefit-item">
-        <div class="benefit-icon">🔬</div>
-        <div class="benefit-content">
-          <h3>သုတေသန-အခြေခံ မက်ထရစ်များ</h3>
-          <p>မက်ထရစ်အားလုံး peer-reviewed သိပ္ပံ သုတေသန အပေါ် အခြေခံသည်။ Wakayoshi et al. မှ CRS၊ IF² ဖော်မြူလာဖြင့် ပြေးခြင်းအတွက် လိုက်လျောညီထွေဖြစ်အောင် ပြုလုပ်ထားသော TSS၊ သက်သေပြထားသော CTL/ATL မော်ဒယ်များ။</p>
-        </div>
-      </div>
-      <div class="benefit-item">
-        <div class="benefit-icon">👥</div>
-        <div class="benefit-content">
-          <h3>နည်းပြ-ဖော်ရွေ့ အစီရင်ခံစာများ</h3>
-          <p>နည်းပြများအတွက် အသေးစိတ် အစီရင်ခံစာများ တင်ပို့ပါ။ အီးမေးလ်ဖြင့် HTML အကျဉ်းချုပ်များ မျှဝေပါ၊ spreadsheet ခွဲခြမ်းစိတ်ဖြာမှုအတွက် CSV သို့မဟုတ် လေ့ကျင့်ရေး မှတ်တမ်းများနှင့် မှတ်တမ်းများအတွက် PDF။</p>
-        </div>
-      </div>
-      <div class="benefit-item">
-        <div class="benefit-icon">🌍</div>
-        <div class="benefit-content">
-          <h3>နေရာတိုင်းတွင် အလုပ်လုပ်သည်</h3>
-          <p>လမ်းကြောင်း သို့မဟုတ် တောင်တန်း၊ sprint သို့မဟုတ် အကွာအဝေး။ Run Analytics သည် ပြေးခြင်း ထိရောက်မှု မက်ထရစ်များကို ပြေးခြင်း အမျိုးအစားအားလုံးနှင့် လိုက်လျောညီထွေဖြစ်အောင် ပြုလုပ်ပြီး လေ့ကျင့်မှု လက္ခဏာများကို အလိုအလျောက် ရှာဖွေသည်။</p>
-        </div>
-      </div>
-      <div class="benefit-item">
-        <div class="benefit-icon">🚀</div>
-        <div class="benefit-content">
-          <h3>အမြဲ တိုးတက်နေသည်</h3>
-          <p>အသုံးပြုသူ တုံ့ပြန်ချက် အပေါ် အခြေခံ၍ ပြေးခြင်း စွမ်းဆောင်ရည် အင်္ဂါရပ်အသစ်များဖြင့် ပုံမှန် အပ်ဒိတ်များ။ မကြာသေးမီက ထည့်သွင်းမှုများတွင် နှစ်စဉ် နှိုင်းယှဉ်မှုများ၊ ကိုယ်ပိုင် မှတ်တမ်း ခြေရာခံခြင်းနှင့် တိုးမြှင့်ထားသော တင်ပို့မှု ရွေးချယ်စရာများ ပါဝင်သည်။</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- FAQ Section -->
-<section class="section">
-  <div class="container container-narrow">
-    <div class="section-header">
-      <div class="section-badge">မေးလေ့ရှိသော မေးခွန်းများ</div>
-      <h2 class="section-title">မကြာခဏ မေးလေ့ရှိသော မေးခွန်းများ</h2>
-    </div>
-
-    <div class="feature-list">
-      <div class="feature-item">
-        <h3>ဤ ပြေးခြင်း ခွဲခြမ်းစိတ်ဖြာမှု အက်ပ်သည် ကျွန်ုပ်၏ ဒေတာကို မည်သို့ ရရှိသနည်း။</h3>
-        <p>Run Analytics သည် Apple Health နှင့် sync လုပ်၍ တွဲဖက်အသုံးပြုနိုင်သော စက် သို့မဟုတ် အက်ပ်မှ မှတ်တမ်းတင်ထားသော ပြေးခြင်း လေ့ကျင့်မှုများကို တင်သွင်းသည်။ ၎င်းတွင် smart watch များ၊ fitness tracker များနှင့် လက်ဖြင့် ထည့်သွင်းမှုများ ပါဝင်သည်။ အက်ပ်သည် ဤဒေတာကို ပြည်တွင်းတွင် လုပ်ဆောင်၍ အဆင့်မြင့် ပြေးခြင်း စွမ်းဆောင်ရည် မက်ထရစ်များကို တွက်ချက်သည်။</p>
-      </div>
-
-      <div class="feature-item">
-        <h3>Critical running speed စမ်းသပ်မှုဆိုသည်မှာ အဘယ်နည်း၊ မည်သို့ လုပ်ဆောင်ရမည်နည်း။</h3>
-        <p>Critical running speed (CRS) သည် အများဆုံး ကြိုးစားမှု ပြေးခြင်း ၂ ခုကို အသုံးပြုသော သိပ္ပံနည်းကျ ပရိုတိုကောဖြစ်သည်: 5K နှင့် 3K ကြားတွင် ၁၀-၂၀ မိနစ် နားခြင်းဖြင့်။ အက်ပ်သည် ဤအချိန်များမှ သင့် aerobic threshold ကို တွက်ချက်ပြီး ပြေးခြင်း လေ့ကျင့်ရေး ဇုန်အားလုံးကို အလိုအလျောက် ချိန်ညှိသည်။ တိုးတက်မှုကို ခြေရာခံရန် ၆-၈ ပတ်တိုင်း ထပ်လုပ်ပါ။</p>
-      </div>
-
-      <div class="feature-item">
-        <h3>ကျွန်ုပ်၏ ပြေးခြင်း ဒေတာကို cloud သို့ တင်သနည်း။</h3>
-        <p>မဟုတ်ပါ။ Run Analytics သည် ပြေးခြင်း ဒေတာအားလုံးကို သင့် iPhone တွင် ပြည်တွင်း၌ လုပ်ဆောင်သည်။ ပြင်ပ ဆာဗာမရှိ၊ cloud အကောင့်မရှိ၊ ဒေတာ လွှဲပြောင်းမှုမရှိ။ တင်ပို့မှုများကို သင် ထိန်းချုပ်သည်: သင့် ပြေးခြင်း စွမ်းဆောင်ရည် မက်ထရစ်များဖြင့် JSON၊ CSV၊ HTML သို့မဟုတ် PDF ဖိုင်များ ဖန်တီးပြီး သင်လိုချင်သလို မျှဝေပါ။</p>
-      </div>
-
-      <div class="feature-item">
-        <h3>ဤ ပြေးခြင်း ခွဲခြမ်းစိတ်ဖြာမှု အက်ပ်ကို တောင်တန်း ပြေးခြင်းအတွက် အသုံးပြုနိုင်သလား။</h3>
-        <p>ဟုတ်ကဲ့။ Run Analytics သည် တောင်တန်း ပြေးခြင်း အပါအဝင် Apple Health ရှိ မည်သည့် ပြေးခြင်း လေ့ကျင့်မှုနှင့်မဆို အလုပ်လုပ်သည်။ အက်ပ်သည် ပြေးခြင်း ထိရောက်မှု မက်ထရစ်များကို ရရှိနိုင်သော ဒေတာနှင့် လိုက်လျောညီထွေဖြစ်အောင် ပြုလုပ်ပြီး လမ်းကြောင်း သို့မဟုတ် တောင်တန်းတွင် ပတ်ဝန်းကျင်တစ်ခုစီအတွက် သက်ဆိုင်ရာ စွမ်းဆောင်ရည် ခွဲခြမ်းစိတ်ဖြာမှု ပေးသည်။</p>
-      </div>
-
-      <div class="feature-item">
-        <h3>လစဉ်နှင့် နှစ်စဉ် အစီအစဉ်များ ကွာခြားချက်က ဘာလဲ။</h3>
-        <p>အစီအစဉ် နှစ်ခုလုံးသည် တူညီသော အင်္ဂါရပ်များ ပေးသည်: ပြေးခြင်း စွမ်းဆောင်ရည် မက်ထရစ်အားလုံး၊ အကန့်အသတ်မရှိ လေ့ကျင့်ရေး ဇုန်များ၊ အချိန်ကာလ နှိုင်းယှဉ်မှုများ၊ တင်ပို့မှု အမျိုးမျိုးနှင့် အခမဲ့ အပ်ဒိတ်များ။ ကွာခြားချက်တစ်ခုတည်းမှာ စျေးနှုန်းဖြစ်သည်: နှစ်စဉ်သည် 18% သက်သာသည် (တစ်လလျှင် €3.99 နှင့် နှိုင်းယှဉ်လျှင် €3.25)။</p>
-      </div>
-
-      <div class="feature-item">
-        <h3>ကျွန်ုပ်၏ subscription ကို အချိန်မရွေး ပယ်ဖျက်နိုင်သလား။</h3>
-        <p>ဟုတ်ကဲ့။ Subscription များကို App Store မှတဆင့် စီမံခန့်ခွဲသောကြောင့် Settings → [သင့်အမည်] → Subscriptions မှ အချိန်မရွေး ပယ်ဖျက်နိုင်သည်။ ပယ်ဖျက်ပါက သင့် လက်ရှိ ငွေပေးချေမှု ကာလ ကုန်ဆုံးသည်အထိ ဝင်ရောက်ခွင့် ဆက်လက် ရရှိမည်ဖြစ်သည်။</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Final CTA Section -->
-<section class="app-cta-final">
-  <div class="container">
-    <h2>သင့် ပြေးခြင်း စွမ်းဆောင်ရည်ကို ပြောင်းလဲရန် အသင့်ဖြစ်ပြီလား။</h2>
-    <p>စွမ်းဆောင်ရည် တိုးတက်စေရန် သိပ္ပံနည်းကျ ပြေးခြင်း ခွဲခြမ်းစိတ်ဖြာမှု အသုံးပြုနေသော ပြေးသမား ထောင်ပေါင်းများစွာနှင့် ပူးပေါင်းပါ။ ဤ ကိုယ်ရေးကိုယ်တာ-ဦးစားပေး iOS ပြေးခြင်း အက်ပ်၏ ၇ ရက် အခမဲ့ စမ်းသုံးခွင့်ကို ယနေ့ စတင်ပါ။</p>
-    <div class="app-hero-cta store-badges">
-      <a href="https://apps.apple.com/us/app/run-analytics/id6754524015" class="store-badge" target="_blank" rel="noopener"
-        aria-label="App Store တွင် ဒေါင်းလုဒ်လုပ်ပါ">
-        <img src="../assets/images/badge-app-store.svg" alt="App Store တွင် ဒေါင်းလုဒ်လုပ်ပါ" width="140" height="47">
-      </a>
-      <a href="https://play.google.com/store/apps/details?id=com.arnohealth.runanalytics" class="store-badge" target="_blank" rel="noopener"
-        aria-label="Google Play တွင် ရယူပါ">
-        <img src="../assets/images/badge-google-play.svg" alt="Google Play တွင် ရယူပါ" width="140" height="47">
-      </a>
-    </div>
-    <p class="section-footer">
+      </p><a class="btn btn-secondary btn-small mt-md" href="/my/efficiency/">Running Efficiency Metrics → နက်နဲစွာ စေ့စေ့ငုကြည့်ပါ။</a></div><div class="metrics-grid"><div class="metric-card"><div class="metric-icon">🎯</div><div class="metric-label">Threshold အရှိန်</div><h3 class="metric-name">CRS</h3><p class="metric-description">Critical Running Speed - သင့် aerobic threshold အရှိန်</p></div><div class="metric-card"><div class="metric-icon">📊</div><div class="metric-label">လေ့ကျင့်မှု ဝန်</div><h3 class="metric-name">TSS</h3><p class="metric-description">Training Stress Score သည် လေ့ကျင့်မှု ပြင်းထန်မှုကို တိုင်းတာသည်</p></div><div class="metric-card"><div class="metric-icon">💪</div><div class="metric-label">ကြံ့ခိုင်မှု</div><h3 class="metric-name">CTL</h3><p class="metric-description">Chronic Training Load - ၄၂ ရက် rolling ပျမ်းမျှ</p></div><div class="metric-card"><div class="metric-icon">😴</div><div class="metric-label">ပင်ပန်းမှု</div><h3 class="metric-name">ATL</h3><p class="metric-description">Acute Training Load - ၇ ရက် rolling ပျမ်းမျှ</p></div><div class="metric-card"><div class="metric-icon">⚖️</div><div class="metric-label">ဖောင်</div><h3 class="metric-name">TSB</h3><p class="metric-description">Training Stress Balance သည် အသင့်ဖြစ်မှုကို ညွှန်ပြသည်</p></div><div class="metric-card"><div class="metric-icon">⚡</div><div class="metric-label">ထိရောက်မှု</div><h3 class="metric-name">Running Efficiency</h3><p class="metric-description">ခြေလှမ်း ထိရောက်မှု ရမှတ် - နိမ့်လေ ကောင်းလေ</p></div><div class="metric-card"><div class="metric-icon">🎯</div><div class="metric-label">ဇုန်များ</div><h3 class="metric-name">ဇုန် ၇ ခု</h3><p class="metric-description">နာလန်ထူခြင်းမှ Sprint ပြင်းထန်မှု အဆင့်များ</p></div><div class="metric-card"><div class="metric-icon">🏆</div><div class="metric-label">မှတ်တမ်းများ</div><h3 class="metric-name">PRs</h3><p class="metric-description">အလိုအလျောက် ကိုယ်ပိုင် မှတ်တမ်း ခြေရာခံခြင်း</p></div></div></div></section><section class="app-pricing"><div class="container"><div class="section-header"><div class="section-badge">စျေးနှုန်း</div><h2 class="section-title">ရိုးရှင်းပြီး ပွင့်လင်းသော စျေးနှုန်း</h2><p class="section-subtitle">၇ ရက် အခမဲ့ စမ်းသုံးခွင့်ဖြင့် စတင်ပါ။ အချိန်မရွေး ပယ်ဖျက်နိုင်သည်။</p></div><div class="pricing-grid"><div class="pricing-card"><div class="pricing-header"><h3 class="pricing-name">လစဉ်</h3><div class="pricing-price"><span class="pricing-currency">€</span><span class="pricing-amount">3.99</span><span class="pricing-period">/လ</span></div><p class="pricing-trial">၇ ရက် အခမဲ့ စမ်းသုံးခွင့်</p></div><ul class="pricing-features"><li>အကန့်အသတ်မရှိ လေ့ကျင့်မှု sync</li><li>သိပ္ပံနည်းကျ မက်ထရစ်အားလုံး (CRS၊ TSS၊ CTL/ATL/TSB)</li><li>ပုဂ္ဂိုလ်ရေး လေ့ကျင့်ရေး ဇုန် ၇ ခု</li><li>အပတ်စဉ်၊ လစဉ်နှင့် နှစ်စဉ် နှိုင်းယှဉ်မှုများ</li><li>JSON၊ CSV၊ HTML နှင့် PDF ဖြင့် တင်ပို့ခြင်း</li><li>၁၀၀% ကိုယ်ရေးကိုယ်တာ၊ ပြည်တွင်း ဒေတာ</li><li>အနာဂတ် အပ်ဒိတ်အားလုံး</li></ul></div><div class="pricing-card featured" data-badge="အကောင်းဆုံး တန်ဖိုး"><div class="pricing-header"><h3 class="pricing-name">နှစ်စဉ်</h3><div class="pricing-price"><span class="pricing-currency">€</span><span class="pricing-amount">39</span><span class="pricing-period">/နှစ်</span></div><p class="pricing-trial">€8.88/နှစ် သက်သာသည် (18% လျှော့)</p></div><ul class="pricing-features"><li>အကန့်အသတ်မရှိ လေ့ကျင့်မှု sync</li><li>သိပ္ပံနည်းကျ မက်ထရစ်အားလုံး (CRS၊ TSS၊ CTL/ATL/TSB)</li><li>ပုဂ္ဂိုလ်ရေး လေ့ကျင့်ရေး ဇုန် ၇ ခု</li><li>အပတ်စဉ်၊ လစဉ်နှင့် နှစ်စဉ် နှိုင်းယှဉ်မှုများ</li><li>JSON၊ CSV၊ HTML နှင့် PDF ဖြင့် တင်ပို့ခြင်း</li><li>၁၀၀% ကိုယ်ရေးကိုယ်တာ၊ ပြည်တွင်း ဒေတာ</li><li>အနာဂတ် အပ်ဒိတ်အားလုံး</li><li><strong>တစ်လလျှင် €3.25 သာ</strong></li></ul></div></div></div></section><section class="app-benefits"><div class="container"><div class="section-header"><div class="section-badge">Run Analytics ဘာကြောင့်</div><h2 class="section-title">အလေးအနက် အားကစားသမားများအတွက် ကိုယ်ရေးကိုယ်တာ-ဦးစားပေး ပြေးခြင်း ခွဲခြမ်းစိတ်ဖြာမှု</h2><p class="section-subtitle">ရှုပ်ထွေးမှုမရှိဘဲ ပရော်ဖက်ရှင်နယ် ပြေးခြင်း စွမ်းဆောင်ရည် မက်ထရစ်များ</p></div><div class="benefits-grid"><div class="benefit-item"><div class="benefit-icon">🎯</div><div class="benefit-content"><h3>CRS စမ်းသပ်မှု ပရိုတိုကော</h3><p>သင့် critical running speed ကို ဆုံးဖြတ်ရန် ပေါင်းစပ်ထားသော 1200m/3600m စမ်းသပ်မှု ပရိုတိုကော။ တိုးတက်မှုကို ခြေရာခံရန်နှင့် ပြေးခြင်း လေ့ကျင့်ရေး ဇုန်များကို အလိုအလျောက် ချိန်ညှိရန် ၆-၈ ပတ်တိုင်း ထပ်လုပ်ပါ။</p></div></div><div class="benefit-item"><div class="benefit-icon">📱</div><div class="benefit-content"><h3>Native iOS ပြေးခြင်း အက်ပ်</h3><p>ချောမွေ့သော စွမ်းဆောင်ရည်နှင့် iOS ပေါင်းစပ်မှုအတွက် SwiftUI ဖြင့် တည်ဆောက်ထားသည်။ ပြေးခြင်း ခွဲခြမ်းစိတ်ဖြာမှုအတွက် Health အက်ပ်နှင့် ပြီးပြည့်စုံသော sync၊ widget ပံ့ပိုးမှုနှင့် ရင်းနှီးသော Apple ဒီဇိုင်း ဘာသာစကား။</p></div></div><div class="benefit-item"><div class="benefit-icon">🔬</div><div class="benefit-content"><h3>သုတေသန-အခြေခံ မက်ထရစ်များ</h3><p>မက်ထရစ်အားလုံး peer-reviewed သိပ္ပံ သုတေသန အပေါ် အခြေခံသည်။ Wakayoshi et al. မှ CRS၊ IF² ဖော်မြူလာဖြင့် ပြေးခြင်းအတွက် လိုက်လျောညီထွေဖြစ်အောင် ပြုလုပ်ထားသော TSS၊ သက်သေပြထားသော CTL/ATL မော်ဒယ်များ။</p></div></div><div class="benefit-item"><div class="benefit-icon">👥</div><div class="benefit-content"><h3>နည်းပြ-ဖော်ရွေ့ အစီရင်ခံစာများ</h3><p>နည်းပြများအတွက် အသေးစိတ် အစီရင်ခံစာများ တင်ပို့ပါ။ အီးမေးလ်ဖြင့် HTML အကျဉ်းချုပ်များ မျှဝေပါ၊ spreadsheet ခွဲခြမ်းစိတ်ဖြာမှုအတွက် CSV သို့မဟုတ် လေ့ကျင့်ရေး မှတ်တမ်းများနှင့် မှတ်တမ်းများအတွက် PDF။</p></div></div><div class="benefit-item"><div class="benefit-icon">🌍</div><div class="benefit-content"><h3>နေရာတိုင်းတွင် အလုပ်လုပ်သည်</h3><p>လမ်းကြောင်း သို့မဟုတ် တောင်တန်း၊ sprint သို့မဟုတ် အကွာအဝေး။ Run Analytics သည် ပြေးခြင်း ထိရောက်မှု မက်ထရစ်များကို ပြေးခြင်း အမျိုးအစားအားလုံးနှင့် လိုက်လျောညီထွေဖြစ်အောင် ပြုလုပ်ပြီး လေ့ကျင့်မှု လက္ခဏာများကို အလိုအလျောက် ရှာဖွေသည်။</p></div></div><div class="benefit-item"><div class="benefit-icon">🚀</div><div class="benefit-content"><h3>အမြဲ တိုးတက်နေသည်</h3><p>အသုံးပြုသူ တုံ့ပြန်ချက် အပေါ် အခြေခံ၍ ပြေးခြင်း စွမ်းဆောင်ရည် အင်္ဂါရပ်အသစ်များဖြင့် ပုံမှန် အပ်ဒိတ်များ။ မကြာသေးမီက ထည့်သွင်းမှုများတွင် နှစ်စဉ် နှိုင်းယှဉ်မှုများ၊ ကိုယ်ပိုင် မှတ်တမ်း ခြေရာခံခြင်းနှင့် တိုးမြှင့်ထားသော တင်ပို့မှု ရွေးချယ်စရာများ ပါဝင်သည်။</p></div></div></div></div></section><section class="section"><div class="container container-narrow"><div class="section-header"><div class="section-badge">မေးလေ့ရှိသော မေးခွန်းများ</div><h2 class="section-title">မကြာခဏ မေးလေ့ရှိသော မေးခွန်းများ</h2></div><div class="feature-list"><div class="feature-item"><h3>ဤ ပြေးခြင်း ခွဲခြမ်းစိတ်ဖြာမှု အက်ပ်သည် ကျွန်ုပ်၏ ဒေတာကို မည်သို့ ရရှိသနည်း။</h3><p>Run Analytics သည် Apple Health နှင့် sync လုပ်၍ တွဲဖက်အသုံးပြုနိုင်သော စက် သို့မဟုတ် အက်ပ်မှ မှတ်တမ်းတင်ထားသော ပြေးခြင်း လေ့ကျင့်မှုများကို တင်သွင်းသည်။ ၎င်းတွင် smart watch များ၊ fitness tracker များနှင့် လက်ဖြင့် ထည့်သွင်းမှုများ ပါဝင်သည်။ အက်ပ်သည် ဤဒေတာကို ပြည်တွင်းတွင် လုပ်ဆောင်၍ အဆင့်မြင့် ပြေးခြင်း စွမ်းဆောင်ရည် မက်ထရစ်များကို တွက်ချက်သည်။</p></div><div class="feature-item"><h3>Critical running speed စမ်းသပ်မှုဆိုသည်မှာ အဘယ်နည်း၊ မည်သို့ လုပ်ဆောင်ရမည်နည်း။</h3><p>Critical running speed (CRS) သည် အများဆုံး ကြိုးစားမှု ပြေးခြင်း ၂ ခုကို အသုံးပြုသော သိပ္ပံနည်းကျ ပရိုတိုကောဖြစ်သည်: 5K နှင့် 3K ကြားတွင် ၁၀-၂၀ မိနစ် နားခြင်းဖြင့်။ အက်ပ်သည် ဤအချိန်များမှ သင့် aerobic threshold ကို တွက်ချက်ပြီး ပြေးခြင်း လေ့ကျင့်ရေး ဇုန်အားလုံးကို အလိုအလျောက် ချိန်ညှိသည်။ တိုးတက်မှုကို ခြေရာခံရန် ၆-၈ ပတ်တိုင်း ထပ်လုပ်ပါ။</p></div><div class="feature-item"><h3>ကျွန်ုပ်၏ ပြေးခြင်း ဒေတာကို cloud သို့ တင်သနည်း။</h3><p>မဟုတ်ပါ။ Run Analytics သည် ပြေးခြင်း ဒေတာအားလုံးကို သင့် iPhone တွင် ပြည်တွင်း၌ လုပ်ဆောင်သည်။ ပြင်ပ ဆာဗာမရှိ၊ cloud အကောင့်မရှိ၊ ဒေတာ လွှဲပြောင်းမှုမရှိ။ တင်ပို့မှုများကို သင် ထိန်းချုပ်သည်: သင့် ပြေးခြင်း စွမ်းဆောင်ရည် မက်ထရစ်များဖြင့် JSON၊ CSV၊ HTML သို့မဟုတ် PDF ဖိုင်များ ဖန်တီးပြီး သင်လိုချင်သလို မျှဝေပါ။</p></div><div class="feature-item"><h3>ဤ ပြေးခြင်း ခွဲခြမ်းစိတ်ဖြာမှု အက်ပ်ကို တောင်တန်း ပြေးခြင်းအတွက် အသုံးပြုနိုင်သလား။</h3><p>ဟုတ်ကဲ့။ Run Analytics သည် တောင်တန်း ပြေးခြင်း အပါအဝင် Apple Health ရှိ မည်သည့် ပြေးခြင်း လေ့ကျင့်မှုနှင့်မဆို အလုပ်လုပ်သည်။ အက်ပ်သည် ပြေးခြင်း ထိရောက်မှု မက်ထရစ်များကို ရရှိနိုင်သော ဒေတာနှင့် လိုက်လျောညီထွေဖြစ်အောင် ပြုလုပ်ပြီး လမ်းကြောင်း သို့မဟုတ် တောင်တန်းတွင် ပတ်ဝန်းကျင်တစ်ခုစီအတွက် သက်ဆိုင်ရာ စွမ်းဆောင်ရည် ခွဲခြမ်းစိတ်ဖြာမှု ပေးသည်။</p></div><div class="feature-item"><h3>လစဉ်နှင့် နှစ်စဉ် အစီအစဉ်များ ကွာခြားချက်က ဘာလဲ။</h3><p>အစီအစဉ် နှစ်ခုလုံးသည် တူညီသော အင်္ဂါရပ်များ ပေးသည်: ပြေးခြင်း စွမ်းဆောင်ရည် မက်ထရစ်အားလုံး၊ အကန့်အသတ်မရှိ လေ့ကျင့်ရေး ဇုန်များ၊ အချိန်ကာလ နှိုင်းယှဉ်မှုများ၊ တင်ပို့မှု အမျိုးမျိုးနှင့် အခမဲ့ အပ်ဒိတ်များ။ ကွာခြားချက်တစ်ခုတည်းမှာ စျေးနှုန်းဖြစ်သည်: နှစ်စဉ်သည် 18% သက်သာသည် (တစ်လလျှင် €3.99 နှင့် နှိုင်းယှဉ်လျှင် €3.25)။</p></div><div class="feature-item"><h3>ကျွန်ုပ်၏ subscription ကို အချိန်မရွေး ပယ်ဖျက်နိုင်သလား။</h3><p>ဟုတ်ကဲ့။ Subscription များကို App Store မှတဆင့် စီမံခန့်ခွဲသောကြောင့် Settings → [သင့်အမည်] → Subscriptions မှ အချိန်မရွေး ပယ်ဖျက်နိုင်သည်။ ပယ်ဖျက်ပါက သင့် လက်ရှိ ငွေပေးချေမှု ကာလ ကုန်ဆုံးသည်အထိ ဝင်ရောက်ခွင့် ဆက်လက် ရရှိမည်ဖြစ်သည်။</p></div></div></div></section><section class="app-cta-final"><div class="container"><h2>သင့် ပြေးခြင်း စွမ်းဆောင်ရည်ကို ပြောင်းလဲရန် အသင့်ဖြစ်ပြီလား။</h2><p>စွမ်းဆောင်ရည် တိုးတက်စေရန် သိပ္ပံနည်းကျ ပြေးခြင်း ခွဲခြမ်းစိတ်ဖြာမှု အသုံးပြုနေသော ပြေးသမား ထောင်ပေါင်းများစွာနှင့် ပူးပေါင်းပါ။ ဤ ကိုယ်ရေးကိုယ်တာ-ဦးစားပေး iOS ပြေးခြင်း အက်ပ်၏ ၇ ရက် အခမဲ့ စမ်းသုံးခွင့်ကို ယနေ့ စတင်ပါ။</p><div class="app-hero-cta store-badges"><a aria-label="App Store တွင် ဒေါင်းလုဒ်လုပ်ပါ" class="store-badge" href="https://apps.apple.com/us/app/run-analytics/id6754524015" rel="noopener" target="_blank"><img alt="App Store တွင် ဒေါင်းလုဒ်လုပ်ပါ" height="47" src="../assets/images/badge-app-store.svg" width="140"/></a><a aria-label="Google Play တွင် ရယူပါ" class="store-badge" href="https://play.google.com/store/apps/details?id=com.arnohealth.runanalytics" rel="noopener" target="_blank"><img alt="Google Play တွင် ရယူပါ" height="47" src="../assets/images/badge-google-play.svg" width="140"/></a></div><p class="section-footer">
       အကောင့် မလိုအပ်ပါ • အချိန်မရွေး ပယ်ဖျက်နိုင်သည် • သင့်ဒေတာ သင့်စက်တွင် ရှိနေသည်
-    </p>
-  </div>
-</section>
-
-<!-- Additional Information Links -->
-<section class="section">
-  <div class="container">
-    <div class="section-header">
-      <h2 class="section-title">ပြေးခြင်း စွမ်းဆောင်ရည် မက်ထရစ်များအကြောင်း ပိုမိုလေ့လာပါ</h2>
-      <p class="section-subtitle">ပြေးခြင်း ခွဲခြမ်းစိတ်ဖြာမှု နောက်ကွယ်ရှိ သိပ္ပံကို နက်ရှိုင်းစွာ လေ့လာပါ</p>
-    </div>
-    <div class="grid grid-3">
-      <div class="card">
-        <h3 class="card-title">Critical Running Speed</h3>
-        <div class="card-content">
-          <p>Critical running speed သည် သင့် aerobic threshold ကို မည်သို့ ဆုံးဖြတ်သည်နှင့် ဖွဲ့စည်းထားသော လေ့ကျင့်ရေးအတွက် အဘယ်ကြောင့် အရေးကြီးသည်ကို နားလည်ပါ။</p>
-          <a href="/my/crs/" class="btn btn-secondary btn-small mt-md">CRS အကြောင်း လေ့လာပါ →</a>
-        </div>
-      </div>
-      <div class="card">
-        <h3 class="card-title">Training Stress Score</h3>
-        <div class="card-content">
-          <p>TSS၊ CTL၊ ATL နှင့် TSB တို့သည် လေ့ကျင့်ရေး ဖိအား ချိန်ခွင်လျှာညှိရန်၊ ပင်ပန်းမှု စီမံခန့်ခွဲရန်နှင့် စွမ်းဆောင်ရည် အကောင်းဆုံးဖြစ်အောင် မည်သို့ ကူညီသည်ကို ရှာဖွေပါ။</p>
-          <a href="/my/training-stress-score/" class="btn btn-secondary btn-small mt-md">TSS ကို စူးစမ်းပါ →</a>
-        </div>
-      </div>
-      <div class="card">
-        <h3 class="card-title">လေ့ကျင့်ရေး ဇုန်များ ရှင်းပြချက်</h3>
-        <div class="card-content">
-          <p>အကောင်းဆုံး လေ့ကျင့်ရေးအတွက် လေ့ကျင့်ရေး ဇုန် ၅ ခု: နာလန်ထူခြင်း၊ aerobic၊ tempo၊ threshold နှင့် VO2max အတွက် ပြည့်စုံသော လမ်းညွှန်။</p>
-          <a href="/my/training-zones-explained/" class="btn btn-secondary btn-small mt-md">လေ့ကျင့်ရေး ဇုန်များ ကြည့်ပါ →</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="grid grid-3 mt-lg">
-      <div class="card">
-        <h3 class="card-title">VO2max ဆိုသည်မှာ အဘယ်နည်း။</h3>
-        <div class="card-content">
-          <p>VO2max အကြောင်း၊ မည်သို့ စမ်းသပ်ရမည်၊ အသက်အလိုက် ပျမ်းမျှ တန်ဖိုးများနှင့် သင့် aerobic စွမ်းရည်ကို တိုးတက်စေရန် သက်သေပြထားသော နည်းလမ်းများကို လေ့လာပါ။</p>
-          <a href="/my/what-is-vo2max/" class="btn btn-secondary btn-small mt-md">VO2max ကို နားလည်ပါ →</a>
-        </div>
-      </div>
-      <div class="card">
-        <h3 class="card-title">မာရသွန် Periodization</h3>
-        <div class="card-content">
-          <p>သိပ္ပံအခြေခံ စီမံကိန်းဖြင့် မာရသွန် အောင်မြင်မှုအတွက် လေ့ကျင့်ရေး အဆင့်များ: base building၊ build၊ peak နှင့် taper ကို ကျွမ်းကျင်ပါ။</p>
-          <a href="/my/marathon-periodization/" class="btn btn-secondary btn-small mt-md">သင့် လေ့ကျင့်ရေးကို စီစဉ်ပါ →</a>
-        </div>
-      </div>
-      <div class="card">
-        <h3 class="card-title">80/20 လေ့ကျင့်ရေး စည်းမျဉ်း</h3>
-        <div class="card-content">
-          <p>အကောင်းဆုံး ရလဒ်များအတွက် elite ပြေးသမားများ အသုံးပြုသော သက်သေပြထားသော 80% လွယ်ကူ၊ 20% ခက်ခဲ ပြင်းထန်မှု ဖြန့်ဝေမှုကို ရှာဖွေပါ။</p>
-          <a href="/my/8020-training-rule/" class="btn btn-secondary btn-small mt-md">80/20 ကို လေ့လာပါ →</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-    
-  </main>
-
-  
-  <footer class="site-footer">
-    <div class="container">
-        
-        <div class="footer-top">
-            <div class="footer-brand-section">
-                
-                <h2>Run Analytics</h2>
-                <p>Track Critical Running Speed, Training Stress Score, and performance metrics with Run Analytics. Science-based iOS app for runners, triathletes &amp; coaches. 7-day free trial.</p>
-                
-            </div>
-
-            
-            <div class="footer-download">
-                <h3 class="footer-heading">Download</h3>
-                <div class="footer-badges">
-                    
-                    <a href="https://apps.apple.com/us/app/run-analytics/id6754524015" target="_blank" rel="noopener"
-                        aria-label="Download on the App Store">
-                        <img src="../assets/images/badge-app-store.svg"
+    </p></div></section><section class="section"><div class="container"><div class="section-header"><h2 class="section-title">ပြေးခြင်း စွမ်းဆောင်ရည် မက်ထရစ်များအကြောင်း ပိုမိုလေ့လာပါ</h2><p class="section-subtitle">ပြေးခြင်း ခွဲခြမ်းစိတ်ဖြာမှု နောက်ကွယ်ရှိ သိပ္ပံကို နက်ရှိုင်းစွာ လေ့လာပါ</p></div><div class="grid grid-3"><div class="card"><h3 class="card-title">Critical Running Speed</h3><div class="card-content"><p>Critical running speed သည် သင့် aerobic threshold ကို မည်သို့ ဆုံးဖြတ်သည်နှင့် ဖွဲ့စည်းထားသော လေ့ကျင့်ရေးအတွက် အဘယ်ကြောင့် အရေးကြီးသည်ကို နားလည်ပါ။</p><a class="btn btn-secondary btn-small mt-md" href="/my/crs/">CRS အကြောင်း လေ့လာပါ →</a></div></div><div class="card"><h3 class="card-title">Training Stress Score</h3><div class="card-content"><p>TSS၊ CTL၊ ATL နှင့် TSB တို့သည် လေ့ကျင့်ရေး ဖိအား ချိန်ခွင်လျှာညှိရန်၊ ပင်ပန်းမှု စီမံခန့်ခွဲရန်နှင့် စွမ်းဆောင်ရည် အကောင်းဆုံးဖြစ်အောင် မည်သို့ ကူညီသည်ကို ရှာဖွေပါ။</p><a class="btn btn-secondary btn-small mt-md" href="/my/training-stress-score/">TSS ကို စူးစမ်းပါ →</a></div></div><div class="card"><h3 class="card-title">လေ့ကျင့်ရေး ဇုန်များ ရှင်းပြချက်</h3><div class="card-content"><p>အကောင်းဆုံး လေ့ကျင့်ရေးအတွက် လေ့ကျင့်ရေး ဇုန် ၅ ခု: နာလန်ထူခြင်း၊ aerobic၊ tempo၊ threshold နှင့် VO2max အတွက် ပြည့်စုံသော လမ်းညွှန်။</p><a class="btn btn-secondary btn-small mt-md" href="/my/training-zones-explained/">လေ့ကျင့်ရေး ဇုန်များ ကြည့်ပါ →</a></div></div></div><div class="grid grid-3 mt-lg"><div class="card"><h3 class="card-title">VO2max ဆိုသည်မှာ အဘယ်နည်း။</h3><div class="card-content"><p>VO2max အကြောင်း၊ မည်သို့ စမ်းသပ်ရမည်၊ အသက်အလိုက် ပျမ်းမျှ တန်ဖိုးများနှင့် သင့် aerobic စွမ်းရည်ကို တိုးတက်စေရန် သက်သေပြထားသော နည်းလမ်းများကို လေ့လာပါ။</p><a class="btn btn-secondary btn-small mt-md" href="/my/what-is-vo2max/">VO2max ကို နားလည်ပါ →</a></div></div><div class="card"><h3 class="card-title">မာရသွန် Periodization</h3><div class="card-content"><p>သိပ္ပံအခြေခံ စီမံကိန်းဖြင့် မာရသွန် အောင်မြင်မှုအတွက် လေ့ကျင့်ရေး အဆင့်များ: base building၊ build၊ peak နှင့် taper ကို ကျွမ်းကျင်ပါ။</p><a class="btn btn-secondary btn-small mt-md" href="/my/marathon-periodization/">သင့် လေ့ကျင့်ရေးကို စီစဉ်ပါ →</a></div></div><div class="card"><h3 class="card-title">80/20 လေ့ကျင့်ရေး စည်းမျဉ်း</h3><div class="card-content"><p>အကောင်းဆုံး ရလဒ်များအတွက် elite ပြေးသမားများ အသုံးပြုသော သက်သေပြထားသော 80% လွယ်ကူ၊ 20% ခက်ခဲ ပြင်းထန်မှု ဖြန့်ဝေမှုကို ရှာဖွေပါ။</p><a class="btn btn-secondary btn-small mt-md" href="/my/8020-training-rule/">80/20 ကို လေ့လာပါ →</a></div></div></div></div></section></main><footer class="site-footer"><div class="container"><div class="footer-top"><div class="footer-brand-section"><h2>Run Analytics</h2><p>Track Critical Running Speed, Training Stress Score, and performance metrics with Run Analytics. Science-based iOS app for runners, triathletes &amp; coaches. 7-day free trial.</p></div><div class="footer-download"><h3 class="footer-heading">Download</h3><div class="footer-badges"><a href="https://apps.apple.com/us/app/run-analytics/id6754524015" target="_blank" rel="noopener"
+                        aria-label="Download on the App Store"><img src="../assets/images/badge-app-store.svg"
                             alt="Download on the App Store" width="135"
-                            height="40" loading="lazy">
-                    </a>
-                    
-                    
-                    <a href="https://play.google.com/store/apps/details?id=com.arnohealth.runanalytics" target="_blank" rel="noopener"
-                        aria-label="Get it on Google Play">
-                        <img src="../assets/images/badge-google-play.svg"
+                            height="40" loading="lazy"></a><a href="https://play.google.com/store/apps/details?id=com.arnohealth.runanalytics" target="_blank" rel="noopener"
+                        aria-label="Get it on Google Play"><img src="../assets/images/badge-google-play.svg"
                             alt="Get it on Google Play" width="135"
-                            height="40" loading="lazy">
-                    </a>
-                    
-                </div>
-            </div>
-            
-        </div>
-
-        
-        <div class="footer-languages">
-            <h3 class="footer-heading">Available in</h3>
-            <div class="lang-grid">
-                
-                <a href="/af/" class="lang-link"
+                            height="40" loading="lazy"></a></div></div></div><div class="footer-languages"><h3 class="footer-heading">Available in</h3><div class="lang-grid"><a href="/af/" class="lang-link"
                     hreflang="af" >
                     Afrikaans
-                </a>
-                
-                <a href="/am/" class="lang-link"
+                </a><a href="/am/" class="lang-link"
                     hreflang="am" >
                     አማርኛ
-                </a>
-                
-                <a href="/ar/" class="lang-link"
+                </a><a href="/ar/" class="lang-link"
                     hreflang="ar" dir="rtl" >
                     العربية
-                </a>
-                
-                <a href="/bg/" class="lang-link"
+                </a><a href="/bg/" class="lang-link"
                     hreflang="bg" >
                     Български
-                </a>
-                
-                <a href="/bn/" class="lang-link"
+                </a><a href="/bn/" class="lang-link"
                     hreflang="bn" >
                     বাংলা
-                </a>
-                
-                <a href="/ca/" class="lang-link"
+                </a><a href="/ca/" class="lang-link"
                     hreflang="ca" >
                     Català
-                </a>
-                
-                <a href="/cs/" class="lang-link"
+                </a><a href="/cs/" class="lang-link"
                     hreflang="cs" >
                     Čeština
-                </a>
-                
-                <a href="/da/" class="lang-link"
+                </a><a href="/da/" class="lang-link"
                     hreflang="da" >
                     Dansk
-                </a>
-                
-                <a href="/de/" class="lang-link"
+                </a><a href="/de/" class="lang-link"
                     hreflang="de" >
                     Deutsch
-                </a>
-                
-                <a href="/el/" class="lang-link"
+                </a><a href="/el/" class="lang-link"
                     hreflang="el" >
                     Ελληνικά
-                </a>
-                
-                <a href="/en/" class="lang-link"
+                </a><a href="/en/" class="lang-link"
                     hreflang="en" >
                     English
-                </a>
-                
-                <a href="/es/" class="lang-link"
+                </a><a href="/es/" class="lang-link"
                     hreflang="es" >
                     Español
-                </a>
-                
-                <a href="/et/" class="lang-link"
+                </a><a href="/et/" class="lang-link"
                     hreflang="et" >
                     Eesti
-                </a>
-                
-                <a href="/fa/" class="lang-link"
+                </a><a href="/fa/" class="lang-link"
                     hreflang="fa" dir="rtl" >
                     فارسی
-                </a>
-                
-                <a href="/fi/" class="lang-link"
+                </a><a href="/fi/" class="lang-link"
                     hreflang="fi" >
                     Suomi
-                </a>
-                
-                <a href="/fr/" class="lang-link"
+                </a><a href="/fr/" class="lang-link"
                     hreflang="fr" >
                     Français
-                </a>
-                
-                <a href="/gu/" class="lang-link"
+                </a><a href="/gu/" class="lang-link"
                     hreflang="gu" >
                     ગુજરાતી
-                </a>
-                
-                <a href="/ha/" class="lang-link"
+                </a><a href="/ha/" class="lang-link"
                     hreflang="ha" >
                     Hausa
-                </a>
-                
-                <a href="/he/" class="lang-link"
+                </a><a href="/he/" class="lang-link"
                     hreflang="he" dir="rtl" >
                     עברית
-                </a>
-                
-                <a href="/hi/" class="lang-link"
+                </a><a href="/hi/" class="lang-link"
                     hreflang="hi" >
                     हिन्दी
-                </a>
-                
-                <a href="/hr/" class="lang-link"
+                </a><a href="/hr/" class="lang-link"
                     hreflang="hr" >
                     Hrvatski
-                </a>
-                
-                <a href="/hu/" class="lang-link"
+                </a><a href="/hu/" class="lang-link"
                     hreflang="hu" >
                     Magyar
-                </a>
-                
-                <a href="/id/" class="lang-link"
+                </a><a href="/id/" class="lang-link"
                     hreflang="id" >
                     Bahasa Indonesia
-                </a>
-                
-                <a href="/is/" class="lang-link"
+                </a><a href="/is/" class="lang-link"
                     hreflang="is" >
                     Íslenska
-                </a>
-                
-                <a href="/it/" class="lang-link"
+                </a><a href="/it/" class="lang-link"
                     hreflang="it" >
                     Italiano
-                </a>
-                
-                <a href="/ja/" class="lang-link"
+                </a><a href="/ja/" class="lang-link"
                     hreflang="ja" >
                     日本語
-                </a>
-                
-                <a href="/km/" class="lang-link"
+                </a><a href="/km/" class="lang-link"
                     hreflang="km" >
                     ភាសាខ្មែរ
-                </a>
-                
-                <a href="/kn/" class="lang-link"
+                </a><a href="/kn/" class="lang-link"
                     hreflang="kn" >
                     ಕನ್ನಡ
-                </a>
-                
-                <a href="/ko/" class="lang-link"
+                </a><a href="/ko/" class="lang-link"
                     hreflang="ko" >
                     한국어
-                </a>
-                
-                <a href="/lt/" class="lang-link"
+                </a><a href="/lt/" class="lang-link"
                     hreflang="lt" >
                     Lietuvių
-                </a>
-                
-                <a href="/lv/" class="lang-link"
+                </a><a href="/lv/" class="lang-link"
                     hreflang="lv" >
                     Latviešu
-                </a>
-                
-                <a href="/ms/" class="lang-link"
+                </a><a href="/ms/" class="lang-link"
                     hreflang="ms" >
                     Bahasa Melayu
-                </a>
-                
-                <a href="/my/" class="lang-link active"
+                </a><a href="/my/" class="lang-link active"
                     hreflang="my" >
                     မြန်မာစာ
-                </a>
-                
-                <a href="/nb/" class="lang-link"
+                </a><a href="/nb/" class="lang-link"
                     hreflang="nb" >
                     Norsk Bokmål
-                </a>
-                
-                <a href="/nl/" class="lang-link"
+                </a><a href="/nl/" class="lang-link"
                     hreflang="nl" >
                     Nederlands
-                </a>
-                
-                <a href="/pl/" class="lang-link"
+                </a><a href="/pl/" class="lang-link"
                     hreflang="pl" >
                     Polski
-                </a>
-                
-                <a href="/pt/" class="lang-link"
+                </a><a href="/pt/" class="lang-link"
                     hreflang="pt" >
                     Português
-                </a>
-                
-                <a href="/pt-br/" class="lang-link"
+                </a><a href="/pt-br/" class="lang-link"
                     hreflang="pt-br" >
                     Português (Brasil)
-                </a>
-                
-                <a href="/ro/" class="lang-link"
+                </a><a href="/ro/" class="lang-link"
                     hreflang="ro" >
                     Română
-                </a>
-                
-                <a href="/ru/" class="lang-link"
+                </a><a href="/ru/" class="lang-link"
                     hreflang="ru" >
                     Русский
-                </a>
-                
-                <a href="/sk/" class="lang-link"
+                </a><a href="/sk/" class="lang-link"
                     hreflang="sk" >
                     Slovenčina
-                </a>
-                
-                <a href="/sl/" class="lang-link"
+                </a><a href="/sl/" class="lang-link"
                     hreflang="sl" >
                     Slovenščina
-                </a>
-                
-                <a href="/sr/" class="lang-link"
+                </a><a href="/sr/" class="lang-link"
                     hreflang="sr" >
                     Srpski
-                </a>
-                
-                <a href="/sv/" class="lang-link"
+                </a><a href="/sv/" class="lang-link"
                     hreflang="sv" >
                     Svenska
-                </a>
-                
-                <a href="/sw/" class="lang-link"
+                </a><a href="/sw/" class="lang-link"
                     hreflang="sw" >
                     Kiswahili
-                </a>
-                
-                <a href="/ta/" class="lang-link"
+                </a><a href="/ta/" class="lang-link"
                     hreflang="ta" >
                     தமிழ்
-                </a>
-                
-                <a href="/te/" class="lang-link"
+                </a><a href="/te/" class="lang-link"
                     hreflang="te" >
                     తెలుగు
-                </a>
-                
-                <a href="/th/" class="lang-link"
+                </a><a href="/th/" class="lang-link"
                     hreflang="th" >
                     ไทย
-                </a>
-                
-                <a href="/tl/" class="lang-link"
+                </a><a href="/tl/" class="lang-link"
                     hreflang="tl" >
                     Tagalog
-                </a>
-                
-                <a href="/tr/" class="lang-link"
+                </a><a href="/tr/" class="lang-link"
                     hreflang="tr" >
                     Türkçe
-                </a>
-                
-                <a href="/uk/" class="lang-link"
+                </a><a href="/uk/" class="lang-link"
                     hreflang="uk" >
                     Українська
-                </a>
-                
-                <a href="/ur/" class="lang-link"
+                </a><a href="/ur/" class="lang-link"
                     hreflang="ur" dir="rtl" >
                     اردو
-                </a>
-                
-                <a href="/vi/" class="lang-link"
+                </a><a href="/vi/" class="lang-link"
                     hreflang="vi" >
                     Tiếng Việt
-                </a>
-                
-                <a href="/yo/" class="lang-link"
+                </a><a href="/yo/" class="lang-link"
                     hreflang="yo" >
                     Yorùbá
-                </a>
-                
-                <a href="/zh/" class="lang-link"
+                </a><a href="/zh/" class="lang-link"
                     hreflang="zh" >
                     中文
-                </a>
-                
-            </div>
-        </div>
-
-        <div class="footer-divider"></div>
-
-        
-        <div class="footer-bottom">
-            <p class="copyright">
+                </a></div></div><div class="footer-divider"></div><div class="footer-bottom"><p class="copyright">
                 &copy; 2026 Run Analytics. สงวนลิขสิทธิ์
-            </p>
-            <ul class="footer-legal">
-                <li><a href="/my/privacy/">ความเป็นส่วนตัว</a></li>
-                <li><a href="/my/terms/">เงื่อนไข</a></li>
-            </ul>
-        </div>
-    </div>
-</footer>
-
-  
-  <div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="Cookie consent" aria-live="polite">
-    <div class="cookie-banner-content">
-        <div>
-            <p>เว็บไซต์นี้ใช้คุกกี้เพื่อปรับปรุงประสบการณ์ของคุณ</p>
-            <a href="/my/privacy/" class="text-sm">เรียนรู้เพิ่มเติม</a>
-        </div>
-        <div class="cookie-banner-actions">
-            <button id="cookie-decline" class="btn btn-secondary btn-small">ปฏิเสธ</button>
-            <button id="cookie-accept" class="btn btn-primary btn-small">ยอมรับ</button>
-        </div>
-    </div>
-</div>
-
-  
-  <script src="../assets/js/core.min.js?v=8aef43d1" defer></script>
-  <script src="../assets/js/search.min.js?v=8aef43d1" defer></script>
-  
-  <script src="../assets/js/carousel.min.js?v=8aef43d1" defer></script>
-  
-
-  
-  
-  <script src="../assets/js/analytics.min.js" data-ga-id="G-Y138VB4523" defer></script>
-  
-
-  
-  <script>if ('serviceWorker' in navigator) { navigator.serviceWorker.register('../sw.js') }</script>
-</body>
-
-</html>
+            </p><ul class="footer-legal"><li><a href="/my/privacy/">ความเป็นส่วนตัว</a></li><li><a href="/my/terms/">เงื่อนไข</a></li></ul></div></div></footer><div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="Cookie consent" aria-live="polite"><div class="cookie-banner-content"><div><p>เว็บไซต์นี้ใช้คุกกี้เพื่อปรับปรุงประสบการณ์ของคุณ</p><a href="/my/privacy/" class="text-sm">เรียนรู้เพิ่มเติม</a></div><div class="cookie-banner-actions"><button id="cookie-decline" class="btn btn-secondary btn-small">ปฏิเสธ</button><button id="cookie-accept" class="btn btn-primary btn-small">ยอมรับ</button></div></div></div><script src="../assets/js/core.min.js?v=e899af207631" defer></script><script src="../assets/js/search.min.js?v=e899af207631" defer></script><script src="../assets/js/carousel.min.js?v=e899af207631" defer></script><script src="../assets/js/analytics.min.js" data-ga-id="G-Y138VB4523" defer></script><script>if ('serviceWorker' in navigator) { navigator.serviceWorker.register('../sw.js') }</script></body></html>

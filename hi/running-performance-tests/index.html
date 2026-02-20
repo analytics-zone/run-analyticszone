@@ -1,246 +1,61 @@
-<!DOCTYPE html>
-<html lang="hi" dir="ltr">
-
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
-    rel="stylesheet">
-
-  
-  <title>रनिंग परफॉर्मेंस टेस्ट: फील्ड टेस्टिंग के लिए पूर्ण गाइड</title>
-  <meta name="description" content="प्रकाशित: 27 जनवरी, 2025 | अद्यतन: 29 जनवरी, 2025। रनिंग परफॉर्मेंस टेस्ट और फील्ड टेस्टिंग के लिए पूर्ण गाइड।">
-  <meta name="author" content="AnalyticsZone Team">
-
-  
-  
-  <meta name="keywords" content="running performance tests, running field tests, CRS test, vo2max test running, threshold test, running economy test, performance testing, training zones testing">
-  
-
-  
-  <link rel="canonical" href="https://run.analyticszone.app/hi/running-performance-tests/">
-
-  
-  
-  <meta property="article:published_time" content="2025-01-27T10:00:00Z">
-  <meta property="article:modified_time" content="2026-01-18T14:30:00Z">
-  <meta property="article:author" content="AnalyticsZone Team">
-  
-
-  
-  
-
-  
-  <meta property="og:type" content="article">
-  <meta property="og:url" content="https://run.analyticszone.app/hi/running-performance-tests/">
-  <meta property="og:title" content="रनिंग परफॉर्मेंस टेस्ट: फील्ड टेस्टिंग के लिए पूर्ण गाइड">
-  <meta property="og:description" content="प्रकाशित: 27 जनवरी, 2025 | अद्यतन: 29 जनवरी, 2025। रनिंग परफॉर्मेंस टेस्ट और फील्ड टेस्टिंग के लिए पूर्ण गाइड।">
-  <meta property="og:image" content="https://run.analyticszone.app/assets/images/og-image.svg">
-  <meta property="og:locale" content="hi_IN">
-  <meta property="og:site_name" content="Run Analytics">
-
-  
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:url" content="https://run.analyticszone.app/hi/running-performance-tests/">
-  <meta name="twitter:title" content="रनिंग परफॉर्मेंस टेस्ट: फील्ड टेस्टिंग के लिए पूर्ण गाइड">
-  <meta name="twitter:description" content="प्रकाशित: 27 जनवरी, 2025 | अद्यतन: 29 जनवरी, 2025। रनिंग परफॉर्मेंस टेस्ट और फील्ड टेस्टिंग के लिए पूर्ण गाइड।">
-  <meta name="twitter:image" content="https://run.analyticszone.app/assets/images/og-image.svg">
-  
-  <meta name="twitter:site" content="@runanalytics">
-  <meta name="twitter:creator" content="@runanalytics">
-  
-
-  
-  
-  <link rel="alternate" hreflang="af"
-    href="https://run.analyticszone.app/af/running-performance-tests/">
-  
-  <link rel="alternate" hreflang="am"
-    href="https://run.analyticszone.app/am/running-performance-tests/">
-  
-  <link rel="alternate" hreflang="ar"
-    href="https://run.analyticszone.app/ar/running-performance-tests/">
-  
-  <link rel="alternate" hreflang="bg"
-    href="https://run.analyticszone.app/bg/running-performance-tests/">
-  
-  <link rel="alternate" hreflang="bn"
-    href="https://run.analyticszone.app/bn/running-performance-tests/">
-  
-  <link rel="alternate" hreflang="ca"
-    href="https://run.analyticszone.app/ca/running-performance-tests/">
-  
-  <link rel="alternate" hreflang="cs"
-    href="https://run.analyticszone.app/cs/running-performance-tests/">
-  
-  <link rel="alternate" hreflang="da"
-    href="https://run.analyticszone.app/da/running-performance-tests/">
-  
-  <link rel="alternate" hreflang="de"
-    href="https://run.analyticszone.app/de/running-performance-tests/">
-  
-  <link rel="alternate" hreflang="el"
-    href="https://run.analyticszone.app/el/running-performance-tests/">
-  
-  <link rel="alternate" hreflang="en"
-    href="https://run.analyticszone.app/en/running-performance-tests/">
-  
-  <link rel="alternate" hreflang="es"
-    href="https://run.analyticszone.app/es/running-performance-tests/">
-  
-  <link rel="alternate" hreflang="et"
-    href="https://run.analyticszone.app/et/running-performance-tests/">
-  
-  <link rel="alternate" hreflang="fa"
-    href="https://run.analyticszone.app/fa/running-performance-tests/">
-  
-  <link rel="alternate" hreflang="fi"
-    href="https://run.analyticszone.app/fi/running-performance-tests/">
-  
-  <link rel="alternate" hreflang="fr"
-    href="https://run.analyticszone.app/fr/running-performance-tests/">
-  
-  <link rel="alternate" hreflang="gu"
-    href="https://run.analyticszone.app/gu/running-performance-tests/">
-  
-  <link rel="alternate" hreflang="ha"
-    href="https://run.analyticszone.app/ha/running-performance-tests/">
-  
-  <link rel="alternate" hreflang="he"
-    href="https://run.analyticszone.app/he/running-performance-tests/">
-  
-  <link rel="alternate" hreflang="hi"
-    href="https://run.analyticszone.app/hi/running-performance-tests/">
-  
-  <link rel="alternate" hreflang="hr"
-    href="https://run.analyticszone.app/hr/running-performance-tests/">
-  
-  <link rel="alternate" hreflang="hu"
-    href="https://run.analyticszone.app/hu/running-performance-tests/">
-  
-  <link rel="alternate" hreflang="id"
-    href="https://run.analyticszone.app/id/running-performance-tests/">
-  
-  <link rel="alternate" hreflang="is"
-    href="https://run.analyticszone.app/is/running-performance-tests/">
-  
-  <link rel="alternate" hreflang="it"
-    href="https://run.analyticszone.app/it/running-performance-tests/">
-  
-  <link rel="alternate" hreflang="ja"
-    href="https://run.analyticszone.app/ja/running-performance-tests/">
-  
-  <link rel="alternate" hreflang="km"
-    href="https://run.analyticszone.app/km/running-performance-tests/">
-  
-  <link rel="alternate" hreflang="kn"
-    href="https://run.analyticszone.app/kn/running-performance-tests/">
-  
-  <link rel="alternate" hreflang="ko"
-    href="https://run.analyticszone.app/ko/running-performance-tests/">
-  
-  <link rel="alternate" hreflang="lt"
-    href="https://run.analyticszone.app/lt/running-performance-tests/">
-  
-  <link rel="alternate" hreflang="lv"
-    href="https://run.analyticszone.app/lv/running-performance-tests/">
-  
-  <link rel="alternate" hreflang="ms"
-    href="https://run.analyticszone.app/ms/running-performance-tests/">
-  
-  <link rel="alternate" hreflang="my"
-    href="https://run.analyticszone.app/my/running-performance-tests/">
-  
-  <link rel="alternate" hreflang="nb"
-    href="https://run.analyticszone.app/nb/running-performance-tests/">
-  
-  <link rel="alternate" hreflang="nl"
-    href="https://run.analyticszone.app/nl/running-performance-tests/">
-  
-  <link rel="alternate" hreflang="pl"
-    href="https://run.analyticszone.app/pl/running-performance-tests/">
-  
-  <link rel="alternate" hreflang="pt"
-    href="https://run.analyticszone.app/pt/running-performance-tests/">
-  
-  <link rel="alternate" hreflang="pt-br"
-    href="https://run.analyticszone.app/pt-br/running-performance-tests/">
-  
-  <link rel="alternate" hreflang="ro"
-    href="https://run.analyticszone.app/ro/running-performance-tests/">
-  
-  <link rel="alternate" hreflang="ru"
-    href="https://run.analyticszone.app/ru/running-performance-tests/">
-  
-  <link rel="alternate" hreflang="sk"
-    href="https://run.analyticszone.app/sk/running-performance-tests/">
-  
-  <link rel="alternate" hreflang="sl"
-    href="https://run.analyticszone.app/sl/running-performance-tests/">
-  
-  <link rel="alternate" hreflang="sr"
-    href="https://run.analyticszone.app/sr/running-performance-tests/">
-  
-  <link rel="alternate" hreflang="sv"
-    href="https://run.analyticszone.app/sv/running-performance-tests/">
-  
-  <link rel="alternate" hreflang="sw"
-    href="https://run.analyticszone.app/sw/running-performance-tests/">
-  
-  <link rel="alternate" hreflang="ta"
-    href="https://run.analyticszone.app/ta/running-performance-tests/">
-  
-  <link rel="alternate" hreflang="te"
-    href="https://run.analyticszone.app/te/running-performance-tests/">
-  
-  <link rel="alternate" hreflang="th"
-    href="https://run.analyticszone.app/th/running-performance-tests/">
-  
-  <link rel="alternate" hreflang="tl"
-    href="https://run.analyticszone.app/tl/running-performance-tests/">
-  
-  <link rel="alternate" hreflang="tr"
-    href="https://run.analyticszone.app/tr/running-performance-tests/">
-  
-  <link rel="alternate" hreflang="uk"
-    href="https://run.analyticszone.app/uk/running-performance-tests/">
-  
-  <link rel="alternate" hreflang="ur"
-    href="https://run.analyticszone.app/ur/running-performance-tests/">
-  
-  <link rel="alternate" hreflang="vi"
-    href="https://run.analyticszone.app/vi/running-performance-tests/">
-  
-  <link rel="alternate" hreflang="yo"
-    href="https://run.analyticszone.app/yo/running-performance-tests/">
-  
-  <link rel="alternate" hreflang="zh"
-    href="https://run.analyticszone.app/zh/running-performance-tests/">
-  
-  <link rel="alternate" hreflang="x-default"
-    href="https://run.analyticszone.app/en/running-performance-tests/">
-
-  
-  <link rel="icon" type="image/png" sizes="32x32" href="../../assets/images/icons/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="../../assets/images/icons/favicon-16x16.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="../../assets/images/icons/apple-touch-icon.png">
-  <link rel="manifest" href="../../manifest.json">
-  <meta name="theme-color" content="#2563EB">
-  <meta name="robots" content="index, follow">
-
-  
-  
-  
-  <meta name="apple-itunes-app" content="app-id=6754524015">
-  
-
-  
-  <style>
+<!DOCTYPE html><html lang="hi" dir="ltr"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet"><title>रनिंग परफॉर्मेंस टेस्ट: फील्ड टेस्टिंग के लिए पूर्ण गाइड</title><meta name="description" content="प्रकाशित: 27 जनवरी, 2025 | अद्यतन: 29 जनवरी, 2025। रनिंग परफॉर्मेंस टेस्ट और फील्ड टेस्टिंग के लिए पूर्ण गाइड।"><meta name="author" content="AnalyticsZone Team"><meta name="keywords" content="running performance tests, running field tests, CRS test, vo2max test running, threshold test, running economy test, performance testing, training zones testing"><link rel="canonical" href="https://run.analyticszone.app/hi/running-performance-tests/"><meta property="article:published_time" content="2025-01-27T10:00:00Z"><meta property="article:modified_time" content="2026-01-18T14:30:00Z"><meta property="article:author" content="AnalyticsZone Team"><meta property="og:type" content="article"><meta property="og:url" content="https://run.analyticszone.app/hi/running-performance-tests/"><meta property="og:title" content="रनिंग परफॉर्मेंस टेस्ट: फील्ड टेस्टिंग के लिए पूर्ण गाइड"><meta property="og:description" content="प्रकाशित: 27 जनवरी, 2025 | अद्यतन: 29 जनवरी, 2025। रनिंग परफॉर्मेंस टेस्ट और फील्ड टेस्टिंग के लिए पूर्ण गाइड।"><meta property="og:image" content="https://run.analyticszone.app/assets/images/og-image.svg"><meta property="og:locale" content="hi_IN"><meta property="og:site_name" content="Run Analytics"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:url" content="https://run.analyticszone.app/hi/running-performance-tests/"><meta name="twitter:title" content="रनिंग परफॉर्मेंस टेस्ट: फील्ड टेस्टिंग के लिए पूर्ण गाइड"><meta name="twitter:description" content="प्रकाशित: 27 जनवरी, 2025 | अद्यतन: 29 जनवरी, 2025। रनिंग परफॉर्मेंस टेस्ट और फील्ड टेस्टिंग के लिए पूर्ण गाइड।"><meta name="twitter:image" content="https://run.analyticszone.app/assets/images/og-image.svg"><meta name="twitter:site" content="@runanalytics"><meta name="twitter:creator" content="@runanalytics"><link rel="alternate" hreflang="af"
+    href="https://run.analyticszone.app/af/running-performance-tests/"><link rel="alternate" hreflang="am"
+    href="https://run.analyticszone.app/am/running-performance-tests/"><link rel="alternate" hreflang="ar"
+    href="https://run.analyticszone.app/ar/running-performance-tests/"><link rel="alternate" hreflang="bg"
+    href="https://run.analyticszone.app/bg/running-performance-tests/"><link rel="alternate" hreflang="bn"
+    href="https://run.analyticszone.app/bn/running-performance-tests/"><link rel="alternate" hreflang="ca"
+    href="https://run.analyticszone.app/ca/running-performance-tests/"><link rel="alternate" hreflang="cs"
+    href="https://run.analyticszone.app/cs/running-performance-tests/"><link rel="alternate" hreflang="da"
+    href="https://run.analyticszone.app/da/running-performance-tests/"><link rel="alternate" hreflang="de"
+    href="https://run.analyticszone.app/de/running-performance-tests/"><link rel="alternate" hreflang="el"
+    href="https://run.analyticszone.app/el/running-performance-tests/"><link rel="alternate" hreflang="en"
+    href="https://run.analyticszone.app/en/running-performance-tests/"><link rel="alternate" hreflang="es"
+    href="https://run.analyticszone.app/es/running-performance-tests/"><link rel="alternate" hreflang="et"
+    href="https://run.analyticszone.app/et/running-performance-tests/"><link rel="alternate" hreflang="fa"
+    href="https://run.analyticszone.app/fa/running-performance-tests/"><link rel="alternate" hreflang="fi"
+    href="https://run.analyticszone.app/fi/running-performance-tests/"><link rel="alternate" hreflang="fr"
+    href="https://run.analyticszone.app/fr/running-performance-tests/"><link rel="alternate" hreflang="gu"
+    href="https://run.analyticszone.app/gu/running-performance-tests/"><link rel="alternate" hreflang="ha"
+    href="https://run.analyticszone.app/ha/running-performance-tests/"><link rel="alternate" hreflang="he"
+    href="https://run.analyticszone.app/he/running-performance-tests/"><link rel="alternate" hreflang="hi"
+    href="https://run.analyticszone.app/hi/running-performance-tests/"><link rel="alternate" hreflang="hr"
+    href="https://run.analyticszone.app/hr/running-performance-tests/"><link rel="alternate" hreflang="hu"
+    href="https://run.analyticszone.app/hu/running-performance-tests/"><link rel="alternate" hreflang="id"
+    href="https://run.analyticszone.app/id/running-performance-tests/"><link rel="alternate" hreflang="is"
+    href="https://run.analyticszone.app/is/running-performance-tests/"><link rel="alternate" hreflang="it"
+    href="https://run.analyticszone.app/it/running-performance-tests/"><link rel="alternate" hreflang="ja"
+    href="https://run.analyticszone.app/ja/running-performance-tests/"><link rel="alternate" hreflang="km"
+    href="https://run.analyticszone.app/km/running-performance-tests/"><link rel="alternate" hreflang="kn"
+    href="https://run.analyticszone.app/kn/running-performance-tests/"><link rel="alternate" hreflang="ko"
+    href="https://run.analyticszone.app/ko/running-performance-tests/"><link rel="alternate" hreflang="lt"
+    href="https://run.analyticszone.app/lt/running-performance-tests/"><link rel="alternate" hreflang="lv"
+    href="https://run.analyticszone.app/lv/running-performance-tests/"><link rel="alternate" hreflang="ms"
+    href="https://run.analyticszone.app/ms/running-performance-tests/"><link rel="alternate" hreflang="my"
+    href="https://run.analyticszone.app/my/running-performance-tests/"><link rel="alternate" hreflang="nb"
+    href="https://run.analyticszone.app/nb/running-performance-tests/"><link rel="alternate" hreflang="nl"
+    href="https://run.analyticszone.app/nl/running-performance-tests/"><link rel="alternate" hreflang="pl"
+    href="https://run.analyticszone.app/pl/running-performance-tests/"><link rel="alternate" hreflang="pt"
+    href="https://run.analyticszone.app/pt/running-performance-tests/"><link rel="alternate" hreflang="pt-br"
+    href="https://run.analyticszone.app/pt-br/running-performance-tests/"><link rel="alternate" hreflang="ro"
+    href="https://run.analyticszone.app/ro/running-performance-tests/"><link rel="alternate" hreflang="ru"
+    href="https://run.analyticszone.app/ru/running-performance-tests/"><link rel="alternate" hreflang="sk"
+    href="https://run.analyticszone.app/sk/running-performance-tests/"><link rel="alternate" hreflang="sl"
+    href="https://run.analyticszone.app/sl/running-performance-tests/"><link rel="alternate" hreflang="sr"
+    href="https://run.analyticszone.app/sr/running-performance-tests/"><link rel="alternate" hreflang="sv"
+    href="https://run.analyticszone.app/sv/running-performance-tests/"><link rel="alternate" hreflang="sw"
+    href="https://run.analyticszone.app/sw/running-performance-tests/"><link rel="alternate" hreflang="ta"
+    href="https://run.analyticszone.app/ta/running-performance-tests/"><link rel="alternate" hreflang="te"
+    href="https://run.analyticszone.app/te/running-performance-tests/"><link rel="alternate" hreflang="th"
+    href="https://run.analyticszone.app/th/running-performance-tests/"><link rel="alternate" hreflang="tl"
+    href="https://run.analyticszone.app/tl/running-performance-tests/"><link rel="alternate" hreflang="tr"
+    href="https://run.analyticszone.app/tr/running-performance-tests/"><link rel="alternate" hreflang="uk"
+    href="https://run.analyticszone.app/uk/running-performance-tests/"><link rel="alternate" hreflang="ur"
+    href="https://run.analyticszone.app/ur/running-performance-tests/"><link rel="alternate" hreflang="vi"
+    href="https://run.analyticszone.app/vi/running-performance-tests/"><link rel="alternate" hreflang="yo"
+    href="https://run.analyticszone.app/yo/running-performance-tests/"><link rel="alternate" hreflang="zh"
+    href="https://run.analyticszone.app/zh/running-performance-tests/"><link rel="alternate" hreflang="x-default"
+    href="https://run.analyticszone.app/en/running-performance-tests/"><link rel="icon" type="image/png" sizes="32x32" href="../../assets/images/icons/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="../../assets/images/icons/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="../../assets/images/icons/apple-touch-icon.png"><link rel="manifest" href="../../manifest.json"><meta name="theme-color" content="#2563EB"><meta name="robots" content="index, follow"><meta name="apple-itunes-app" content="app-id=6754524015"><style>
 /* Critical CSS - Above the fold styles for fast LCP */
 :root {
   --color-primary: #0066CC;
@@ -499,20 +314,7 @@ img[width][height] {
     transition-duration: 0.01ms !important;
   }
 }
-</style>
-
-  
-  <link rel="preconnect" href="https://www.googletagmanager.com">
-  <link rel="dns-prefetch" href="https://www.googletagmanager.com">
-
-  
-  <link rel="stylesheet" href="../../assets/css/main.min.css?v=8aef43d1">
-
-  
-  
-
-
-<script type="application/ld+json">
+</style><link rel="preconnect" href="https://www.googletagmanager.com"><link rel="dns-prefetch" href="https://www.googletagmanager.com"><link rel="stylesheet" href="../../assets/css/main.min.css?v=e899af207631"><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Organization",
@@ -547,10 +349,7 @@ img[width][height] {
     
   ]
 }
-</script>
-
-
-<script type="application/ld+json">
+</script><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "WebSite",
@@ -559,11 +358,7 @@ img[width][height] {
   "description": "Track Critical Running Speed, Training Stress Score, and performance metrics with Run Analytics. Science-based iOS app for runners, triathletes &amp; coaches. 7-day free trial.",
   "inLanguage": "hi"
 }
-</script>
-
-
-
-<script type="application/ld+json">
+</script><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
@@ -578,14 +373,7 @@ img[width][height] {
   },
   "downloadUrl": "https://apps.apple.com/us/app/run-analytics/id6754524015"
 }
-</script>
-
-
-
-
-
-
-<script type="application/ld+json">
+</script><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "WebPage",
@@ -593,11 +381,7 @@ img[width][height] {
   "description": "प्रकाशित: 27 जनवरी, 2025 | अद्यतन: 29 जनवरी, 2025। रनिंग परफॉर्मेंस टेस्ट और फील्ड टेस्टिंग के लिए पूर्ण गाइड।",
   "url": "https://run.analyticszone.app/hi/running-performance-tests/"
 }
-</script>
-
-
-
-<script type="application/ld+json">
+</script><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Article",
@@ -622,17 +406,7 @@ img[width][height] {
     "@id": "https://run.analyticszone.app/hi/running-performance-tests/"
   }
 }
-</script>
-
-
-
-
-
-  
-  
-
-  
-  <script>
+</script><script>
     (function () {
       let theme = localStorage.getItem('theme');
       // Older builds could persist a per-subdomain `theme=light` value without a UI
@@ -646,1657 +420,283 @@ img[width][height] {
         document.documentElement.classList.add('dark-mode');
       }
     })();
-  </script>
-</head>
-
-<body>
-  
-  <a href="#main-content" class="skip-link">सामग्री पर जाएं</a>
-
-  
-  <header class="site-header">
-    <div class="container">
-        <div class="header-inner">
-            
-            <a href="/hi/" class="site-logo">
-                <picture>
-                    <source srcset="../../assets/images/logo-dark.png" type="image/png"
-                        media="(prefers-color-scheme: dark)">
-                    <img src="../../assets/images/logo.png" alt="Run Analytics - Running Analytics App | Critical Running Speed, TSS, CTL/ATL/TSB for iOS" width="56" height="56">
-                </picture>
-                <span class="logo-text">Run Analytics</span>
-            </a>
-
-            
-            <nav class="nav-primary" id="nav-primary" role="navigation" aria-label="Main navigation">
-                <div class="nav-group-left">
-                    <ul>
-                        
-                        <li>
-                            
-                            <a href="/hi/" 
+  </script></head><body><a href="#main-content" class="skip-link">सामग्री पर जाएं</a><header class="site-header"><div class="container"><div class="header-inner"><a href="/hi/" class="site-logo"><picture><source srcset="../../assets/images/logo-dark.png" type="image/png"
+                        media="(prefers-color-scheme: dark)"><img src="../../assets/images/logo.png" alt="Run Analytics - Running Analytics App | Critical Running Speed, TSS, CTL/ATL/TSB for iOS" width="56" height="56"></picture><span class="logo-text">Run Analytics</span></a><nav class="nav-primary" id="nav-primary" role="navigation" aria-label="Main navigation"><div class="nav-group-left"><ul><li><a href="/hi/" 
                                 aria-current="">
                                 होम
-                            </a>
-                            
-                            </li>
-                            
-                        <li class="has-submenu" >
-                            
-                            
-                            <a href="/hi/getting-started/" class="nav-label">सीखें</a>
-                            
-                            <ul class="submenu">
-                                
-                                <li>
-                                    <a href="/hi/getting-started/" 
+                            </a></li><li class="has-submenu" ><a href="/hi/getting-started/" class="nav-label">सीखें</a><ul class="submenu"><li><a href="/hi/getting-started/" 
                                         aria-current="">
                                         शुरू करें
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/hi/crs/" 
+                                    </a></li><li><a href="/hi/crs/" 
                                         aria-current="">
                                         CRS
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/hi/training-zones/" 
+                                    </a></li><li><a href="/hi/training-zones/" 
                                         aria-current="">
                                         प्रशिक्षण क्षेत्र
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/hi/training-load/" 
+                                    </a></li><li><a href="/hi/training-load/" 
                                         aria-current="">
                                         प्रशिक्षण भार
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/hi/rtss-calculator/" 
+                                    </a></li><li><a href="/hi/rtss-calculator/" 
                                         aria-current="">
                                         rTSS कैलकुलेटर
-                                    </a>
-                                </li>
-                                
-                            </ul>
-                            
-                            </li>
-                            
-                        <li class="has-submenu" >
-                            
-                            
-                            <a href="/hi/research/" class="nav-label">विज्ञान</a>
-                            
-                            <ul class="submenu">
-                                
-                                <li>
-                                    <a href="/hi/research/" 
+                                    </a></li></ul></li><li class="has-submenu" ><a href="/hi/research/" class="nav-label">विज्ञान</a><ul class="submenu"><li><a href="/hi/research/" 
                                         aria-current="">
                                         अनुसंधान
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/hi/formulas/" 
+                                    </a></li><li><a href="/hi/formulas/" 
                                         aria-current="">
                                         सूत्र
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/hi/efficiency/" 
+                                    </a></li><li><a href="/hi/efficiency/" 
                                         aria-current="">
                                         दक्षता
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/hi/stride-mechanics/" 
+                                    </a></li><li><a href="/hi/stride-mechanics/" 
                                         aria-current="">
                                         स्ट्राइड मैकेनिक्स
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/hi/bibliography/" 
+                                    </a></li><li><a href="/hi/bibliography/" 
                                         aria-current="">
                                         ग्रंथ सूची
-                                    </a>
-                                </li>
-                                
-                            </ul>
-                            
-                            </li>
-                            
-                        <li>
-                            
-                            <a href="/hi/contact/" 
+                                    </a></li></ul></li><li><a href="/hi/contact/" 
                                 aria-current="">
                                 संपर्क
-                            </a>
-                            
-                            </li>
-                            
-                    </ul>
-
-                    
-                    <div class="search-container">
-                        <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                            </a></li></ul><div class="search-container"><svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
                             viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                            <circle cx="11" cy="11" r="8"></circle>
-                            <path d="m21 21-4.35-4.35"></path>
-                        </svg>
-                        <input type="search" id="site-search" class="search-input" aria-expanded="false"
-                            aria-haspopup="listbox" aria-autocomplete="list" autocomplete="off" spellcheck="false" />
-                        <div id="search-results" class="search-results hidden" role="region" aria-live="polite"></div>
-                    </div>
-
-                    
-                    <select class="language-selector" id="language-select" aria-label="भाषा चुनें">
-                        
-                        <option value="af" >
+                            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.35-4.35"></path></svg><input type="search" id="site-search" class="search-input" aria-expanded="false"
+                            aria-haspopup="listbox" aria-autocomplete="list" autocomplete="off" spellcheck="false" /><div id="search-results" class="search-results hidden" role="region" aria-live="polite"></div></div><select class="language-selector" id="language-select" aria-label="भाषा चुनें"><option value="af" >
                             Afrikaans
-                        </option>
-                        
-                        <option value="am" >
+                        </option><option value="am" >
                             አማርኛ
-                        </option>
-                        
-                        <option value="ar" >
+                        </option><option value="ar" >
                             العربية
-                        </option>
-                        
-                        <option value="bg" >
+                        </option><option value="bg" >
                             Български
-                        </option>
-                        
-                        <option value="bn" >
+                        </option><option value="bn" >
                             বাংলা
-                        </option>
-                        
-                        <option value="ca" >
+                        </option><option value="ca" >
                             Català
-                        </option>
-                        
-                        <option value="cs" >
+                        </option><option value="cs" >
                             Čeština
-                        </option>
-                        
-                        <option value="da" >
+                        </option><option value="da" >
                             Dansk
-                        </option>
-                        
-                        <option value="de" >
+                        </option><option value="de" >
                             Deutsch
-                        </option>
-                        
-                        <option value="el" >
+                        </option><option value="el" >
                             Ελληνικά
-                        </option>
-                        
-                        <option value="en" >
+                        </option><option value="en" >
                             English
-                        </option>
-                        
-                        <option value="es" >
+                        </option><option value="es" >
                             Español
-                        </option>
-                        
-                        <option value="et" >
+                        </option><option value="et" >
                             Eesti
-                        </option>
-                        
-                        <option value="fa" >
+                        </option><option value="fa" >
                             فارسی
-                        </option>
-                        
-                        <option value="fi" >
+                        </option><option value="fi" >
                             Suomi
-                        </option>
-                        
-                        <option value="fr" >
+                        </option><option value="fr" >
                             Français
-                        </option>
-                        
-                        <option value="gu" >
+                        </option><option value="gu" >
                             ગુજરાતી
-                        </option>
-                        
-                        <option value="ha" >
+                        </option><option value="ha" >
                             Hausa
-                        </option>
-                        
-                        <option value="he" >
+                        </option><option value="he" >
                             עברית
-                        </option>
-                        
-                        <option value="hi" selected>
+                        </option><option value="hi" selected>
                             हिन्दी
-                        </option>
-                        
-                        <option value="hr" >
+                        </option><option value="hr" >
                             Hrvatski
-                        </option>
-                        
-                        <option value="hu" >
+                        </option><option value="hu" >
                             Magyar
-                        </option>
-                        
-                        <option value="id" >
+                        </option><option value="id" >
                             Bahasa Indonesia
-                        </option>
-                        
-                        <option value="is" >
+                        </option><option value="is" >
                             Íslenska
-                        </option>
-                        
-                        <option value="it" >
+                        </option><option value="it" >
                             Italiano
-                        </option>
-                        
-                        <option value="ja" >
+                        </option><option value="ja" >
                             日本語
-                        </option>
-                        
-                        <option value="km" >
+                        </option><option value="km" >
                             ភាសាខ្មែរ
-                        </option>
-                        
-                        <option value="kn" >
+                        </option><option value="kn" >
                             ಕನ್ನಡ
-                        </option>
-                        
-                        <option value="ko" >
+                        </option><option value="ko" >
                             한국어
-                        </option>
-                        
-                        <option value="lt" >
+                        </option><option value="lt" >
                             Lietuvių
-                        </option>
-                        
-                        <option value="lv" >
+                        </option><option value="lv" >
                             Latviešu
-                        </option>
-                        
-                        <option value="ms" >
+                        </option><option value="ms" >
                             Bahasa Melayu
-                        </option>
-                        
-                        <option value="my" >
+                        </option><option value="my" >
                             မြန်မာစာ
-                        </option>
-                        
-                        <option value="nb" >
+                        </option><option value="nb" >
                             Norsk Bokmål
-                        </option>
-                        
-                        <option value="nl" >
+                        </option><option value="nl" >
                             Nederlands
-                        </option>
-                        
-                        <option value="pl" >
+                        </option><option value="pl" >
                             Polski
-                        </option>
-                        
-                        <option value="pt" >
+                        </option><option value="pt" >
                             Português
-                        </option>
-                        
-                        <option value="pt-br" >
+                        </option><option value="pt-br" >
                             Português (Brasil)
-                        </option>
-                        
-                        <option value="ro" >
+                        </option><option value="ro" >
                             Română
-                        </option>
-                        
-                        <option value="ru" >
+                        </option><option value="ru" >
                             Русский
-                        </option>
-                        
-                        <option value="sk" >
+                        </option><option value="sk" >
                             Slovenčina
-                        </option>
-                        
-                        <option value="sl" >
+                        </option><option value="sl" >
                             Slovenščina
-                        </option>
-                        
-                        <option value="sr" >
+                        </option><option value="sr" >
                             Srpski
-                        </option>
-                        
-                        <option value="sv" >
+                        </option><option value="sv" >
                             Svenska
-                        </option>
-                        
-                        <option value="sw" >
+                        </option><option value="sw" >
                             Kiswahili
-                        </option>
-                        
-                        <option value="ta" >
+                        </option><option value="ta" >
                             தமிழ்
-                        </option>
-                        
-                        <option value="te" >
+                        </option><option value="te" >
                             తెలుగు
-                        </option>
-                        
-                        <option value="th" >
+                        </option><option value="th" >
                             ไทย
-                        </option>
-                        
-                        <option value="tl" >
+                        </option><option value="tl" >
                             Tagalog
-                        </option>
-                        
-                        <option value="tr" >
+                        </option><option value="tr" >
                             Türkçe
-                        </option>
-                        
-                        <option value="uk" >
+                        </option><option value="uk" >
                             Українська
-                        </option>
-                        
-                        <option value="ur" >
+                        </option><option value="ur" >
                             اردو
-                        </option>
-                        
-                        <option value="vi" >
+                        </option><option value="vi" >
                             Tiếng Việt
-                        </option>
-                        
-                        <option value="yo" >
+                        </option><option value="yo" >
                             Yorùbá
-                        </option>
-                        
-                        <option value="zh" >
+                        </option><option value="zh" >
                             中文
-                        </option>
-                        
-                    </select>
-                </div>
-
-                <div class="nav-group-right">
-                    
-
-
-                    
-                    <div class="header-app-buttons">
-                        
-                        
-                        <a href="https://apps.apple.com/us/app/run-analytics/id6754524015" class="header-download-btn" target="_blank"
-                            rel="noopener" aria-label="Download on App Store" title="Download on App Store">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                                fill="currentColor">
-                                <path
-                                    d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z" />
-                            </svg>
-                        </a>
-                        
-
-                        
-                        <a href="https://play.google.com/store/apps/details?id=com.arnohealth.runanalytics" class="header-download-btn" target="_blank"
-                            rel="noopener" aria-label="Get it on Google Play" title="Get it on Google Play">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                                fill="currentColor">
-                                <path
-                                    d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.92 20.16,13.19L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M16.81,8.88L14.54,11.15L6.05,2.66L16.81,8.88Z" />
-                            </svg>
-                        </a>
-                        
-                        
-                    </div>
-
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-
-                    
-                    <div class="suite-menu-container">
-                        <button class="suite-menu-toggle" id="suite-menu-toggle" aria-label="See other apps"
-                            aria-expanded="false">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        </option></select></div><div class="nav-group-right"><div class="header-app-buttons"><a href="https://apps.apple.com/us/app/run-analytics/id6754524015" class="header-download-btn" target="_blank"
+                            rel="noopener" aria-label="Download on App Store" title="Download on App Store"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="currentColor"><path
+                                    d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z" /></svg></a><a href="https://play.google.com/store/apps/details?id=com.arnohealth.runanalytics" class="header-download-btn" target="_blank"
+                            rel="noopener" aria-label="Get it on Google Play" title="Get it on Google Play"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="currentColor"><path
+                                    d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.92 20.16,13.19L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M16.81,8.88L14.54,11.15L6.05,2.66L16.81,8.88Z" /></svg></a></div><div class="suite-menu-container"><button class="suite-menu-toggle" id="suite-menu-toggle" aria-label="See other apps"
+                            aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round">
-                                <rect x="3" y="3" width="7" height="7"></rect>
-                                <rect x="14" y="3" width="7" height="7"></rect>
-                                <rect x="14" y="14" width="7" height="7"></rect>
-                                <rect x="3" y="14" width="7" height="7"></rect>
-                            </svg>
-                        </button>
-                        <div class="suite-dropdown hidden" id="suite-dropdown">
-                            <div class="suite-dropdown-header">Other AnalyticsZone Apps</div>
-                            <div class="suite-apps-grid">
-                                
-                                <a href="https://analyticszone.app" class="suite-app-link">AnalyticsZone</a>
-                                
-                                <a href="https://swim.analyticszone.app" class="suite-app-link">Swim Analytics</a>
-                                
-                                <a href="https://bike.analyticszone.app" class="suite-app-link">Bike Analytics</a>
-                                
-                                <a href="https://walk.analyticszone.app" class="suite-app-link">Walk Analytics</a>
-                                
-                                <a href="https://cardio.analyticszone.app" class="suite-app-link">Cardio Analytics</a>
-                                
-                                <a href="https://health.analyticszone.app" class="suite-app-link">Health Analytics</a>
-                                
-                                <a href="https://swimtrainer.analyticszone.app" class="suite-app-link">Swim Trainer</a>
-                                
-                            </div>
-                        </div>
-                    </div>
-                    
-                </div>
-            </nav>
-
-            
-            <button class="menu-toggle" id="menu-toggle" aria-label="मेनू टॉगल करें"
-                aria-expanded="false" aria-controls="nav-primary">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </div>
-    </div>
-</header>
-
-  
-  
-
-
-  
-  <main id="main-content" class="main-content">
-    
-    <article class="article-content">
-  <header class="article-header">
-    <h1>दौड़ने के प्रदर्शन के परीक्षण: फील्ड टेस्टिंग के लिए पूर्ण मार्गदर्शिका</h1>
-    <p class="article-meta">प्रकाशित: <time datetime="2025-01-27">27 जनवरी, 2025</time> | अपडेटेड: <time
-        datetime="2025-01-29">29 जनवरी, 2025</time></p>
-  </header>
-
-  <div class="quick-answer" itemscope itemtype="https://schema.org/Answer">
-    <h2>त्वरित उत्तर</h2>
-    <div itemprop="text">
-      <p><strong>दौड़ने के प्रदर्शन के परीक्षण (Running performance tests)</strong> फील्ड आकलन हैं जो साधारण
+                                stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg></button><div class="suite-dropdown hidden" id="suite-dropdown"><div class="suite-dropdown-header">Other AnalyticsZone Apps</div><div class="suite-apps-grid"><a href="https://analyticszone.app" class="suite-app-link">AnalyticsZone</a><a href="https://swim.analyticszone.app" class="suite-app-link">Swim Analytics</a><a href="https://bike.analyticszone.app" class="suite-app-link">Bike Analytics</a><a href="https://walk.analyticszone.app" class="suite-app-link">Walk Analytics</a><a href="https://cardio.analyticszone.app" class="suite-app-link">Cardio Analytics</a><a href="https://health.analyticszone.app" class="suite-app-link">Health Analytics</a><a href="https://swimtrainer.analyticszone.app" class="suite-app-link">Swim Trainer</a></div></div></div></div></nav><button class="menu-toggle" id="menu-toggle" aria-label="मेनू टॉगल करें"
+                aria-expanded="false" aria-controls="nav-primary"><span></span><span></span><span></span></button></div></div></header><main id="main-content" class="main-content"><article class="article-content"><header class="article-header"><h1>दौड़ने के प्रदर्शन के परीक्षण: फील्ड टेस्टिंग के लिए पूर्ण मार्गदर्शिका</h1><p class="article-meta">प्रकाशित: <time datetime="2025-01-27">27 जनवरी, 2025</time> | अपडेटेड: <time
+        datetime="2025-01-29">29 जनवरी, 2025</time></p></header><div class="quick-answer" itemscope itemtype="https://schema.org/Answer"><h2>त्वरित उत्तर</h2><div itemprop="text"><p><strong>दौड़ने के प्रदर्शन के परीक्षण (Running performance tests)</strong> फील्ड आकलन हैं जो साधारण
         उपकरणों—सिर्फ एक घड़ी और मापे गए कोर्स—का उपयोग करके क्रिटिकल रनिंग स्पीड (CRS), VO2max, लैक्टेट थ्रेशोल्ड और
-        रनिंग इकोनॉमी जैसे फिटनेस मेट्रिक्स को मापते हैं।</p>
-
-      <p><strong>मुख्य परीक्षण:</strong></p>
-      <ul>
-        <li>CRS टेस्ट: 3-मिनट + 9-मिनट अधिकतम प्रयास, प्रशिक्षण क्षेत्रों को निर्धारित करता है</li>
-        <li>VO2max फील्ड टेस्ट: 12-मिनट की अधिकतम दौड़ या 5K टाइम ट्रायल</li>
-        <li>थ्रेशोल्ड टेस्ट: अधिकतम टिकाऊ गति पर 30-मिनट का टाइम ट्रायल</li>
-        <li>रनिंग इकोनॉमी: निर्धारित हृदय गति पर सबमैक्सिमल (submaximal) गति</li>
-        <li>परीक्षण की आवृत्ति: बेस/बिल्ड चरणों के दौरान हर 6-8 सप्ताह में</li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="article-intro">
-    <p>दौड़ने के प्रदर्शन के परीक्षण आपके वर्तमान फिटनेस स्तर को समझने, उचित प्रशिक्षण क्षेत्र निर्धारित करने और समय के
+        रनिंग इकोनॉमी जैसे फिटनेस मेट्रिक्स को मापते हैं।</p><p><strong>मुख्य परीक्षण:</strong></p><ul><li>CRS टेस्ट: 3-मिनट + 9-मिनट अधिकतम प्रयास, प्रशिक्षण क्षेत्रों को निर्धारित करता है</li><li>VO2max फील्ड टेस्ट: 12-मिनट की अधिकतम दौड़ या 5K टाइम ट्रायल</li><li>थ्रेशोल्ड टेस्ट: अधिकतम टिकाऊ गति पर 30-मिनट का टाइम ट्रायल</li><li>रनिंग इकोनॉमी: निर्धारित हृदय गति पर सबमैक्सिमल (submaximal) गति</li><li>परीक्षण की आवृत्ति: बेस/बिल्ड चरणों के दौरान हर 6-8 सप्ताह में</li></ul></div></div><div class="article-intro"><p>दौड़ने के प्रदर्शन के परीक्षण आपके वर्तमान फिटनेस स्तर को समझने, उचित प्रशिक्षण क्षेत्र निर्धारित करने और समय के
       साथ सुधार को ट्रैक करने के लिए आवश्यक उपकरण हैं। प्रयोगशाला परीक्षण के विपरीत, जिसमें महंगे उपकरण और विशेष
       सुविधाओं की आवश्यकता होती है, फील्ड परीक्षण किसी भी ट्रैक या मापे गए कोर्स पर केवल एक घड़ी और GPS डिवाइस के साथ
-      किए जा सकते हैं।</p>
-
-    <p>यह मार्गदर्शिका प्रतिस्पर्धी धावकों और कोचों द्वारा उपयोग किए जाने वाले सबसे प्रभावी रनिंग प्रदर्शन परीक्षणों को
+      किए जा सकते हैं।</p><p>यह मार्गदर्शिका प्रतिस्पर्धी धावकों और कोचों द्वारा उपयोग किए जाने वाले सबसे प्रभावी रनिंग प्रदर्शन परीक्षणों को
       कवर करती है, जिसमें <a href="/hi/crs/">क्रिटिकल रनिंग स्पीड (CRS)</a>, <a
         href="/hi/vo2max-testing/">VO2max फील्ड परीक्षण</a>, <a
         href="/hi/lactate-threshold-testing/">लैक्टेट थ्रेशोल्ड आकलन</a>, और रनिंग इकोनॉमी मूल्यांकन शामिल हैं।
       आप सीखेंगे कि कब परीक्षण करना है, प्रत्येक परीक्षण को ठीक से कैसे करना है, और अपने प्रशिक्षण को अनुकूलित करने के
-      लिए अपने परिणामों की व्याख्या कैसे करनी है।</p>
-  </div>
-
-  <nav class="article-toc">
-    <h2>सामग्री</h2>
-    <ul>
-      <li><a href="#why-test">प्रदर्शन परीक्षण क्यों महत्वपूर्ण है</a></li>
-      <li><a href="#test-types">दौड़ने के प्रदर्शन परीक्षणों के प्रकार</a></li>
-      <li><a href="#crs-test">क्रिटिकल रनिंग स्पीड (CRS) टेस्ट</a></li>
-      <li><a href="#vo2max-tests">VO2max फील्ड टेस्ट</a></li>
-      <li><a href="#threshold-tests">लैक्टेट थ्रेशोल्ड टेस्ट</a></li>
-      <li><a href="#economy-assessment">रनिंग इकोनॉमी का आकलन</a></li>
-      <li><a href="#testing-protocol">परीक्षण प्रोटोकॉल और सर्वोत्तम अभ्यास</a></li>
-      <li><a href="#interpreting-results">अपने परिणामों की व्याख्या करना</a></li>
-      <li><a href="#testing-schedule">कब परीक्षण करें</a></li>
-      <li><a href="#using-data">प्रशिक्षण के लिए परीक्षण डेटा का उपयोग करना</a></li>
-      <li><a href="#faq">अक्सर पूछे जाने वाले प्रश्न</a></li>
-    </ul>
-  </nav>
-
-  <section id="why-test">
-    <h2>प्रदर्शन परीक्षण क्यों महत्वपूर्ण है</h2>
-
-    <p>नियमित प्रदर्शन परीक्षण वस्तुनिष्ठ डेटा प्रदान करते हैं जो व्यक्तिपरक मूल्यांकन (subjective assessment) नहीं कर
+      लिए अपने परिणामों की व्याख्या कैसे करनी है।</p></div><nav class="article-toc"><h2>सामग्री</h2><ul><li><a href="#why-test">प्रदर्शन परीक्षण क्यों महत्वपूर्ण है</a></li><li><a href="#test-types">दौड़ने के प्रदर्शन परीक्षणों के प्रकार</a></li><li><a href="#crs-test">क्रिटिकल रनिंग स्पीड (CRS) टेस्ट</a></li><li><a href="#vo2max-tests">VO2max फील्ड टेस्ट</a></li><li><a href="#threshold-tests">लैक्टेट थ्रेशोल्ड टेस्ट</a></li><li><a href="#economy-assessment">रनिंग इकोनॉमी का आकलन</a></li><li><a href="#testing-protocol">परीक्षण प्रोटोकॉल और सर्वोत्तम अभ्यास</a></li><li><a href="#interpreting-results">अपने परिणामों की व्याख्या करना</a></li><li><a href="#testing-schedule">कब परीक्षण करें</a></li><li><a href="#using-data">प्रशिक्षण के लिए परीक्षण डेटा का उपयोग करना</a></li><li><a href="#faq">अक्सर पूछे जाने वाले प्रश्न</a></li></ul></nav><section id="why-test"><h2>प्रदर्शन परीक्षण क्यों महत्वपूर्ण है</h2><p>नियमित प्रदर्शन परीक्षण वस्तुनिष्ठ डेटा प्रदान करते हैं जो व्यक्तिपरक मूल्यांकन (subjective assessment) नहीं कर
       सकते। परीक्षण के बिना, आप अनिवार्य रूप से नेत्रहीन प्रशिक्षण ले रहे हैं—उचित प्रशिक्षण तीव्रता का अनुमान लगा रहे
-      हैं और निश्चित रूप से सुधार को ट्रैक करने में असमर्थ हैं।</p>
-
-    <h3>प्रदर्शन परीक्षण के प्रमुख लाभ</h3>
-
-    <ul>
-      <li><strong>सटीक प्रशिक्षण क्षेत्र:</strong> परीक्षण आपकी वास्तविक शारीरिक बनावट (physiology) के आधार पर सटीक
-        तीव्रता वाले क्षेत्र स्थापित करते हैं, न कि सामान्य सूत्रों या अधिकतम हृदय गति के प्रतिशत के आधार पर</li>
-      <li><strong>वस्तुनिष्ठ प्रगति ट्रैकिंग:</strong> नियमित परीक्षण अनुमान को हटा देते हैं और विशिष्ट मेट्रिक्स में
-        ठोस सुधार (या कमी) दिखाते हैं</li>
-      <li><strong>प्रशिक्षण अनुकूलन:</strong> परीक्षण के परिणाम शक्तियों और कमजोरियों को प्रकट करते हैं, जिससे बाधाओं को
-        दूर करने के लिए लक्षित प्रशिक्षण संभव होता है</li>
-      <li><strong>प्रेरणा और जवाबदेही:</strong> निर्धारित परीक्षण प्रशिक्षण संरचना बनाते हैं और रेस के दिन से परे मूर्त
-        लक्ष्य प्रदान करते हैं</li>
-      <li><strong>प्रारंभिक चेतावनी प्रणाली:</strong> गिरावट वाले परीक्षण परिणाम ओवरट्रेनिंग, अपर्याप्त रिकवरी, या
-        प्रशिक्षण समायोजन की आवश्यकता का संकेत दे सकते हैं</li>
-      <li><strong>किफायती:</strong> फील्ड परीक्षण शून्य लागत पर प्रयोगशाला परीक्षण से मिलने वाली 80-90% जानकारी प्रदान
-        करते हैं</li>
-    </ul>
-
-    <p>सबसे सफल धावक नियमित रूप से परीक्षण करते हैं—आमतौर पर प्रशिक्षण ब्लॉक के दौरान हर 6-8 सप्ताह में—यह सुनिश्चित
+      हैं और निश्चित रूप से सुधार को ट्रैक करने में असमर्थ हैं।</p><h3>प्रदर्शन परीक्षण के प्रमुख लाभ</h3><ul><li><strong>सटीक प्रशिक्षण क्षेत्र:</strong> परीक्षण आपकी वास्तविक शारीरिक बनावट (physiology) के आधार पर सटीक
+        तीव्रता वाले क्षेत्र स्थापित करते हैं, न कि सामान्य सूत्रों या अधिकतम हृदय गति के प्रतिशत के आधार पर</li><li><strong>वस्तुनिष्ठ प्रगति ट्रैकिंग:</strong> नियमित परीक्षण अनुमान को हटा देते हैं और विशिष्ट मेट्रिक्स में
+        ठोस सुधार (या कमी) दिखाते हैं</li><li><strong>प्रशिक्षण अनुकूलन:</strong> परीक्षण के परिणाम शक्तियों और कमजोरियों को प्रकट करते हैं, जिससे बाधाओं को
+        दूर करने के लिए लक्षित प्रशिक्षण संभव होता है</li><li><strong>प्रेरणा और जवाबदेही:</strong> निर्धारित परीक्षण प्रशिक्षण संरचना बनाते हैं और रेस के दिन से परे मूर्त
+        लक्ष्य प्रदान करते हैं</li><li><strong>प्रारंभिक चेतावनी प्रणाली:</strong> गिरावट वाले परीक्षण परिणाम ओवरट्रेनिंग, अपर्याप्त रिकवरी, या
+        प्रशिक्षण समायोजन की आवश्यकता का संकेत दे सकते हैं</li><li><strong>किफायती:</strong> फील्ड परीक्षण शून्य लागत पर प्रयोगशाला परीक्षण से मिलने वाली 80-90% जानकारी प्रदान
+        करते हैं</li></ul><p>सबसे सफल धावक नियमित रूप से परीक्षण करते हैं—आमतौर पर प्रशिक्षण ब्लॉक के दौरान हर 6-8 सप्ताह में—यह सुनिश्चित
       करने के लिए कि फिटनेस बदलने के साथ उनके प्रशिक्षण क्षेत्र सटीक बने रहें। इस डेटा का उपयोग करने के बारे में हमारे
-      <a href="/hi/training-zones/">प्रशिक्षण क्षेत्र</a> मार्गदर्शिका में और जानें।</p>
-  </section>
-
-  <section id="test-types">
-    <h2>दौड़ने के प्रदर्शन परीक्षणों के प्रकार</h2>
-
-    <p>अलग-अलग परीक्षण दौड़ने के प्रदर्शन के अलग-अलग पहलुओं को मापते हैं। यह समझना कि प्रत्येक परीक्षण क्या प्रकट करता
-      है, आपको अपने लक्ष्यों के लिए सही परीक्षण चुनने में मदद करता है।</p>
-
-    <table>
-      <thead>
-        <tr>
-          <th>परीक्षण का प्रकार</th>
-          <th>यह क्या मापता है</th>
-          <th>आवश्यक समय</th>
-          <th>किसके लिए सर्वश्रेष्ठ</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><strong>CRS टेस्ट</strong></td>
-          <td>एरोबिक-एनारोबिक सीमा, टिकाऊ गति</td>
-          <td>20-30 मिनट</td>
-          <td>सभी दूरियां, प्रशिक्षण क्षेत्र सेटिंग</td>
-        </tr>
-        <tr>
-          <td><strong>कूपर 12-मिनट टेस्ट</strong></td>
-          <td>VO2max अनुमान, एरोबिक क्षमता</td>
-          <td>15 मिनट</td>
-          <td>एरोबिक फिटनेस मूल्यांकन</td>
-        </tr>
-        <tr>
-          <td><strong>1.5-मील टाइम ट्रायल</strong></td>
-          <td>VO2max, एनारोबिक क्षमता</td>
-          <td>10-15 मिनट</td>
-          <td>मध्यम दूरी के धावक</td>
-        </tr>
-        <tr>
-          <td><strong>30-मिनट थ्रेशोल्ड टेस्ट</strong></td>
-          <td>लैक्टेट थ्रेशोल्ड गति/HR</td>
-          <td>35-40 मिनट</td>
-          <td>लंबी दूरी के धावक, प्रशिक्षण क्षेत्र</td>
-        </tr>
-        <tr>
-          <td><strong>10K टाइम ट्रायल</strong></td>
-          <td>लैक्टेट थ्रेशोल्ड, रेस फिटनेस</td>
-          <td>35-60 मिनट</td>
-          <td>5K-मैराथन धावक</td>
-        </tr>
-        <tr>
-          <td><strong>सबमैक्सिमल इकोनॉमी टेस्ट</strong></td>
-          <td>रनिंग इकोनॉमी के रुझान</td>
-          <td>30-40 मिनट</td>
-          <td>दक्षता सुधारों को ट्रैक करना</td>
-        </tr>
-      </tbody>
-    </table>
-
-    <p>अधिकांश धावक नियमित रूप से 2-3 प्रकार के परीक्षण करने से लाभान्वित होते हैं: प्रशिक्षण क्षेत्रों के लिए एक CRS
-      परीक्षण, एरोबिक क्षमता ट्रैकिंग के लिए एक VO2max परीक्षण, और रेस-विशिष्ट फिटनेस के लिए एक थ्रेशोल्ड परीक्षण।</p>
-  </section>
-
-  <section id="crs-test">
-    <h2>क्रिटिकल रनिंग स्पीड (CRS) टेस्ट</h2>
-
-    <p><a href="/hi/crs/">CRS टेस्ट</a> यकीनन धावकों के लिए सबसे मूल्यवान एकल प्रदर्शन परीक्षण है। यह आपकी
+      <a href="/hi/training-zones/">प्रशिक्षण क्षेत्र</a> मार्गदर्शिका में और जानें।</p></section><section id="test-types"><h2>दौड़ने के प्रदर्शन परीक्षणों के प्रकार</h2><p>अलग-अलग परीक्षण दौड़ने के प्रदर्शन के अलग-अलग पहलुओं को मापते हैं। यह समझना कि प्रत्येक परीक्षण क्या प्रकट करता
+      है, आपको अपने लक्ष्यों के लिए सही परीक्षण चुनने में मदद करता है।</p><table><thead><tr><th>परीक्षण का प्रकार</th><th>यह क्या मापता है</th><th>आवश्यक समय</th><th>किसके लिए सर्वश्रेष्ठ</th></tr></thead><tbody><tr><td><strong>CRS टेस्ट</strong></td><td>एरोबिक-एनारोबिक सीमा, टिकाऊ गति</td><td>20-30 मिनट</td><td>सभी दूरियां, प्रशिक्षण क्षेत्र सेटिंग</td></tr><tr><td><strong>कूपर 12-मिनट टेस्ट</strong></td><td>VO2max अनुमान, एरोबिक क्षमता</td><td>15 मिनट</td><td>एरोबिक फिटनेस मूल्यांकन</td></tr><tr><td><strong>1.5-मील टाइम ट्रायल</strong></td><td>VO2max, एनारोबिक क्षमता</td><td>10-15 मिनट</td><td>मध्यम दूरी के धावक</td></tr><tr><td><strong>30-मिनट थ्रेशोल्ड टेस्ट</strong></td><td>लैक्टेट थ्रेशोल्ड गति/HR</td><td>35-40 मिनट</td><td>लंबी दूरी के धावक, प्रशिक्षण क्षेत्र</td></tr><tr><td><strong>10K टाइम ट्रायल</strong></td><td>लैक्टेट थ्रेशोल्ड, रेस फिटनेस</td><td>35-60 मिनट</td><td>5K-मैराथन धावक</td></tr><tr><td><strong>सबमैक्सिमल इकोनॉमी टेस्ट</strong></td><td>रनिंग इकोनॉमी के रुझान</td><td>30-40 मिनट</td><td>दक्षता सुधारों को ट्रैक करना</td></tr></tbody></table><p>अधिकांश धावक नियमित रूप से 2-3 प्रकार के परीक्षण करने से लाभान्वित होते हैं: प्रशिक्षण क्षेत्रों के लिए एक CRS
+      परीक्षण, एरोबिक क्षमता ट्रैकिंग के लिए एक VO2max परीक्षण, और रेस-विशिष्ट फिटनेस के लिए एक थ्रेशोल्ड परीक्षण।</p></section><section id="crs-test"><h2>क्रिटिकल रनिंग स्पीड (CRS) टेस्ट</h2><p><a href="/hi/crs/">CRS टेस्ट</a> यकीनन धावकों के लिए सबसे मूल्यवान एकल प्रदर्शन परीक्षण है। यह आपकी
       एरोबिक-एनारोबिक संक्रमण गति की पहचान करता है—वह सबसे तेज गति जिसे आप सिद्धांत रूप में लैक्टेट जमा किए बिना
-      अनिश्चित काल तक बनाए रख सकते हैं।</p>
-
-    <h3>CRS परीक्षण प्रोटोकॉल</h3>
-
-    <p><strong>तैयारी:</strong></p>
-    <ul>
-      <li>ट्रैक या सटीक रूप से मापे गए समतल कोर्स पर परीक्षण करें</li>
-      <li>अच्छी तरह से विश्राम (परीक्षण से 48 घंटे पहले कोई कठिन प्रशिक्षण नहीं)</li>
-      <li>वार्म-अप: 15 मिनट आसान दौड़ + 3-4 स्ट्राइड्स</li>
-      <li>आदर्श स्थितियां: 50-65°F, न्यूनतम हवा</li>
-    </ul>
-
-    <p><strong>परीक्षण संरचना:</strong></p>
-    <ol>
-      <li><strong>ट्रायल 1:</strong> जितना संभव हो सके 3 मिनट तक तेज दौड़ें, तय की गई दूरी रिकॉर्ड करें</li>
-      <li><strong>रिकवरी:</strong> 30 मिनट तक आराम से टहलना/जॉगिंग करना</li>
-      <li><strong>ट्रायल 2:</strong> जितना संभव हो सके 7 मिनट तक तेज दौड़ें, तय की गई दूरी रिकॉर्ड करें</li>
-    </ol>
-
-    <p><strong>CRS गणना करें:</strong></p>
-    <pre>CRS (m/min) = (D7 - D3) / (7 - 3)
+      अनिश्चित काल तक बनाए रख सकते हैं।</p><h3>CRS परीक्षण प्रोटोकॉल</h3><p><strong>तैयारी:</strong></p><ul><li>ट्रैक या सटीक रूप से मापे गए समतल कोर्स पर परीक्षण करें</li><li>अच्छी तरह से विश्राम (परीक्षण से 48 घंटे पहले कोई कठिन प्रशिक्षण नहीं)</li><li>वार्म-अप: 15 मिनट आसान दौड़ + 3-4 स्ट्राइड्स</li><li>आदर्श स्थितियां: 50-65°F, न्यूनतम हवा</li></ul><p><strong>परीक्षण संरचना:</strong></p><ol><li><strong>ट्रायल 1:</strong> जितना संभव हो सके 3 मिनट तक तेज दौड़ें, तय की गई दूरी रिकॉर्ड करें</li><li><strong>रिकवरी:</strong> 30 मिनट तक आराम से टहलना/जॉगिंग करना</li><li><strong>ट्रायल 2:</strong> जितना संभव हो सके 7 मिनट तक तेज दौड़ें, तय की गई दूरी रिकॉर्ड करें</li></ol><p><strong>CRS गणना करें:</strong></p><pre>CRS (m/min) = (D7 - D3) / (7 - 3)
 
 जहाँ:
 D7 = 7-मिनट के ट्रायल में तय की गई दूरी (मीटर)
-D3 = 3-मिनट के ट्रायल में तय की गई दूरी (मीटर)</pre>
-
-    <h3>गणना का उदाहरण</h3>
-
-    <table>
-      <thead>
-        <tr>
-          <th>ट्रायल</th>
-          <th>दूरी</th>
-          <th>गणना</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>3-मिनट ट्रायल</td>
-          <td>900 मीटर</td>
-          <td>D3 = 900m</td>
-        </tr>
-        <tr>
-          <td>7-मिनट ट्रायल</td>
-          <td>1,980 मीटर</td>
-          <td>D7 = 1,980m</td>
-        </tr>
-        <tr>
-          <td><strong>CRS परिणाम</strong></td>
-          <td colspan="2"><strong>(1,980 - 900) / (7 - 3) = 270 m/min = 3:42/km = 5:57/mile</strong></td>
-        </tr>
-      </tbody>
-    </table>
-
-    <p>एक बार जब आपके पास अपना CRS हो जाता है, तो आप हमारे <a href="/hi/training-zones/">प्रशिक्षण क्षेत्र
+D3 = 3-मिनट के ट्रायल में तय की गई दूरी (मीटर)</pre><h3>गणना का उदाहरण</h3><table><thead><tr><th>ट्रायल</th><th>दूरी</th><th>गणना</th></tr></thead><tbody><tr><td>3-मिनट ट्रायल</td><td>900 मीटर</td><td>D3 = 900m</td></tr><tr><td>7-मिनट ट्रायल</td><td>1,980 मीटर</td><td>D7 = 1,980m</td></tr><tr><td><strong>CRS परिणाम</strong></td><td colspan="2"><strong>(1,980 - 900) / (7 - 3) = 270 m/min = 3:42/km = 5:57/mile</strong></td></tr></tbody></table><p>एक बार जब आपके पास अपना CRS हो जाता है, तो आप हमारे <a href="/hi/training-zones/">प्रशिक्षण क्षेत्र
         कैलकुलेटर</a> का उपयोग करके सभी पांच प्रशिक्षण क्षेत्र स्थापित कर सकते हैं और <a
-        href="/hi/rtss-calculator/">rTSS गणना</a> के साथ प्रशिक्षण तनाव को ट्रैक कर सकते हैं।</p>
-
-    <h3>CRS टेस्ट टिप्स</h3>
-
-    <ul>
-      <li>3-मिनट के ट्रायल की गति को थोड़ा संतुलित रखें—यह "बहुत कठिन" महसूस होना चाहिए लेकिन पूरी तरह से थका देने वाला
-        नहीं</li>
-      <li>7-मिनट का ट्रायल 3-मिनट की गति जैसा ही शुरू होना चाहिए, धीरे-धीरे थकान बढ़ने के साथ धीमा होता जाना चाहिए</li>
-      <li>GPS सटीकता मायने रखती है—ट्रैक परीक्षण सबसे विश्वसनीय है</li>
-      <li>हृदय गति प्रशिक्षण क्षेत्र स्थापित करने के लिए दोनों परीक्षणों के लिए हृदय गति रिकॉर्ड करें</li>
-      <li>सुधारों को ट्रैक करने के लिए हर 6-8 सप्ताह में पुनः परीक्षण करें</li>
-    </ul>
-  </section>
-
-  <section id="vo2max-tests">
-    <h2>VO2max फील्ड टेस्ट</h2>
-
-    <p><a href="/hi/what-is-vo2max/">VO2max</a> आपकी अधिकतम एरोबिक क्षमता का प्रतिनिधित्व करता है—आपके
+        href="/hi/rtss-calculator/">rTSS गणना</a> के साथ प्रशिक्षण तनाव को ट्रैक कर सकते हैं।</p><h3>CRS टेस्ट टिप्स</h3><ul><li>3-मिनट के ट्रायल की गति को थोड़ा संतुलित रखें—यह "बहुत कठिन" महसूस होना चाहिए लेकिन पूरी तरह से थका देने वाला
+        नहीं</li><li>7-मिनट का ट्रायल 3-मिनट की गति जैसा ही शुरू होना चाहिए, धीरे-धीरे थकान बढ़ने के साथ धीमा होता जाना चाहिए</li><li>GPS सटीकता मायने रखती है—ट्रैक परीक्षण सबसे विश्वसनीय है</li><li>हृदय गति प्रशिक्षण क्षेत्र स्थापित करने के लिए दोनों परीक्षणों के लिए हृदय गति रिकॉर्ड करें</li><li>सुधारों को ट्रैक करने के लिए हर 6-8 सप्ताह में पुनः परीक्षण करें</li></ul></section><section id="vo2max-tests"><h2>VO2max फील्ड टेस्ट</h2><p><a href="/hi/what-is-vo2max/">VO2max</a> आपकी अधिकतम एरोबिक क्षमता का प्रतिनिधित्व करता है—आपके
       कार्डियोवैस्कुलर सिस्टम की उच्चतम सीमा। जबकि प्रयोगशाला परीक्षण गोल्ड स्टैंडर्ड प्रदान करता है, फील्ड परीक्षण 3-5%
-      सटीकता के भीतर VO2max का अनुमान लगा सकते हैं।</p>
-
-    <h3>कूपर 12-मिनट टेस्ट (Cooper 12-Minute Test)</h3>
-
-    <p>कूपर टेस्ट VO2max का अनुमान लगाने के लिए एक सरल, अच्छी तरह से मान्य तरीका है। ट्रैक पर ठीक 12 मिनट में जितनी
-      जल्दी हो सके उतनी दूर दौड़ें।</p>
-
-    <p><strong>प्रोटोकॉल:</strong></p>
-    <ol>
-      <li>अच्छी तरह से वार्म अप करें (15 मिनट आसान + स्ट्राइड्स)</li>
-      <li>ठीक 12 मिनट में जितनी संभव हो उतनी दूर दौड़ें</li>
-      <li>मीटर में तय की गई कुल दूरी रिकॉर्ड करें</li>
-    </ol>
-
-    <p><strong>VO2max गणना करें:</strong></p>
-    <pre>VO2max (ml/kg/min) = (मीटर में दूरी - 504.9) / 44.73</pre>
-
-    <h3>कूपर टेस्ट के परिणाम</h3>
-
-    <table>
-      <thead>
-        <tr>
-          <th>दूरी (12 मिनट)</th>
-          <th>अनुमानित VO2max</th>
-          <th>प्रदर्शन का स्तर</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>2,400m (1.49 mi)</td>
-          <td>42.4 ml/kg/min</td>
-          <td>मनोरंजक धावक</td>
-        </tr>
-        <tr>
-          <td>2,800m (1.74 mi)</td>
-          <td>51.3 ml/kg/min</td>
-          <td>प्रतिस्पर्धी क्लब धावक</td>
-        </tr>
-        <tr>
-          <td>3,200m (1.99 mi)</td>
-          <td>60.2 ml/kg/min</td>
-          <td>क्षेत्रीय स्तर</td>
-        </tr>
-        <tr>
-          <td>3,600m (2.24 mi)</td>
-          <td>69.2 ml/kg/min</td>
-          <td>राष्ट्रीय स्तर</td>
-        </tr>
-        <tr>
-          <td>4,000m (2.49 mi)</td>
-          <td>78.1 ml/kg/min</td>
-          <td>विशिष्ट स्तर (Elite)</td>
-        </tr>
-      </tbody>
-    </table>
-
-    <h3>1.5-मील (2.4km) टाइम ट्रायल</h3>
-
-    <p>कूपर टेस्ट का एक विकल्प, 1.5-मील टाइम ट्रायल दूरी-आधारित लक्ष्य के साथ समान VO2max अनुमान प्रदान करता है।</p>
-
-    <p><strong>प्रोटोकॉल:</strong></p>
-    <ol>
-      <li>अच्छी तरह से वार्म अप करें</li>
-      <li>जितनी जल्दी हो सके 1.5 मील (मानक ट्रैक पर 6 चक्कर) दौड़ें</li>
-      <li>मिनट और सेकंड में समय रिकॉर्ड करें</li>
-    </ol>
-
-    <p><strong>VO2max गणना करें:</strong></p>
-    <pre>VO2max (ml/kg/min) = 483 / मिनट में समय + 3.5</pre>
-
-    <h3>VO2max टेस्ट बेंचमार्क</h3>
-
-    <table>
-      <thead>
-        <tr>
-          <th>1.5-मील का समय</th>
-          <th>अनुमानित VO2max</th>
-          <th>समतुल्य रेस समय</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>11:00</td>
-          <td>47.4 ml/kg/min</td>
-          <td>5K: 24:30 | 10K: 51:00 | HM: 1:54</td>
-        </tr>
-        <tr>
-          <td>10:00</td>
-          <td>51.8 ml/kg/min</td>
-          <td>5K: 22:00 | 10K: 46:00 | HM: 1:42</td>
-        </tr>
-        <tr>
-          <td>9:00</td>
-          <td>57.2 ml/kg/min</td>
-          <td>5K: 19:30 | 10K: 41:00 | HM: 1:30</td>
-        </tr>
-        <tr>
-          <td>8:00</td>
-          <td>63.9 ml/kg/min</td>
-          <td>5K: 17:15 | 10K: 36:00 | HM: 1:19</td>
-        </tr>
-        <tr>
-          <td>7:00</td>
-          <td>72.5 ml/kg/min</td>
-          <td>5K: 15:00 | 10K: 31:30 | HM: 1:09</td>
-        </tr>
-      </tbody>
-    </table>
-
-    <p><a href="/hi/vo2max-testing/">VO2max परीक्षण विधियों</a> और व्याख्या के बारे में अधिक विस्तृत जानकारी के
-      लिए, हमारी पूर्ण मार्गदर्शिका देखें।</p>
-  </section>
-
-  <section id="threshold-tests">
-    <h2>लैक्टेट थ्रेशोल्ड टेस्ट</h2>
-
-    <p>आपका <a href="/hi/lactate-threshold-testing/">लैक्टेट थ्रेशोल्ड</a> उस सबसे तेज गति का प्रतिनिधित्व करता
+      सटीकता के भीतर VO2max का अनुमान लगा सकते हैं।</p><h3>कूपर 12-मिनट टेस्ट (Cooper 12-Minute Test)</h3><p>कूपर टेस्ट VO2max का अनुमान लगाने के लिए एक सरल, अच्छी तरह से मान्य तरीका है। ट्रैक पर ठीक 12 मिनट में जितनी
+      जल्दी हो सके उतनी दूर दौड़ें।</p><p><strong>प्रोटोकॉल:</strong></p><ol><li>अच्छी तरह से वार्म अप करें (15 मिनट आसान + स्ट्राइड्स)</li><li>ठीक 12 मिनट में जितनी संभव हो उतनी दूर दौड़ें</li><li>मीटर में तय की गई कुल दूरी रिकॉर्ड करें</li></ol><p><strong>VO2max गणना करें:</strong></p><pre>VO2max (ml/kg/min) = (मीटर में दूरी - 504.9) / 44.73</pre><h3>कूपर टेस्ट के परिणाम</h3><table><thead><tr><th>दूरी (12 मिनट)</th><th>अनुमानित VO2max</th><th>प्रदर्शन का स्तर</th></tr></thead><tbody><tr><td>2,400m (1.49 mi)</td><td>42.4 ml/kg/min</td><td>मनोरंजक धावक</td></tr><tr><td>2,800m (1.74 mi)</td><td>51.3 ml/kg/min</td><td>प्रतिस्पर्धी क्लब धावक</td></tr><tr><td>3,200m (1.99 mi)</td><td>60.2 ml/kg/min</td><td>क्षेत्रीय स्तर</td></tr><tr><td>3,600m (2.24 mi)</td><td>69.2 ml/kg/min</td><td>राष्ट्रीय स्तर</td></tr><tr><td>4,000m (2.49 mi)</td><td>78.1 ml/kg/min</td><td>विशिष्ट स्तर (Elite)</td></tr></tbody></table><h3>1.5-मील (2.4km) टाइम ट्रायल</h3><p>कूपर टेस्ट का एक विकल्प, 1.5-मील टाइम ट्रायल दूरी-आधारित लक्ष्य के साथ समान VO2max अनुमान प्रदान करता है।</p><p><strong>प्रोटोकॉल:</strong></p><ol><li>अच्छी तरह से वार्म अप करें</li><li>जितनी जल्दी हो सके 1.5 मील (मानक ट्रैक पर 6 चक्कर) दौड़ें</li><li>मिनट और सेकंड में समय रिकॉर्ड करें</li></ol><p><strong>VO2max गणना करें:</strong></p><pre>VO2max (ml/kg/min) = 483 / मिनट में समय + 3.5</pre><h3>VO2max टेस्ट बेंचमार्क</h3><table><thead><tr><th>1.5-मील का समय</th><th>अनुमानित VO2max</th><th>समतुल्य रेस समय</th></tr></thead><tbody><tr><td>11:00</td><td>47.4 ml/kg/min</td><td>5K: 24:30 | 10K: 51:00 | HM: 1:54</td></tr><tr><td>10:00</td><td>51.8 ml/kg/min</td><td>5K: 22:00 | 10K: 46:00 | HM: 1:42</td></tr><tr><td>9:00</td><td>57.2 ml/kg/min</td><td>5K: 19:30 | 10K: 41:00 | HM: 1:30</td></tr><tr><td>8:00</td><td>63.9 ml/kg/min</td><td>5K: 17:15 | 10K: 36:00 | HM: 1:19</td></tr><tr><td>7:00</td><td>72.5 ml/kg/min</td><td>5K: 15:00 | 10K: 31:30 | HM: 1:09</td></tr></tbody></table><p><a href="/hi/vo2max-testing/">VO2max परीक्षण विधियों</a> और व्याख्या के बारे में अधिक विस्तृत जानकारी के
+      लिए, हमारी पूर्ण मार्गदर्शिका देखें।</p></section><section id="threshold-tests"><h2>लैक्टेट थ्रेशोल्ड टेस्ट</h2><p>आपका <a href="/hi/lactate-threshold-testing/">लैक्टेट थ्रेशोल्ड</a> उस सबसे तेज गति का प्रतिनिधित्व करता
       है जिसे आप लगभग 50-60 मिनट तक बनाए रख सकते हैं—अधिकांश धावकों के लिए लगभग 10K से हाफ-मैराथन गति। यह मेट्रिक टेंपो
-      रन और थ्रेशोल्ड वर्कआउट के लिए प्रशिक्षण तीव्रता निर्धारित करने के लिए महत्वपूर्ण है।</p>
-
-    <h3>30-मिनट थ्रेशोल्ड टेस्ट</h3>
-
-    <p>30-मिनट का टेस्ट लैक्टेट थ्रेशोल्ड के लिए गोल्ड स्टैंडर्ड फील्ड टेस्ट है। यह सरल, व्यावहारिक और प्रयोगशाला
-      थ्रेशोल्ड परीक्षण के साथ अत्यधिक सह-संबंधित है।</p>
-
-    <p><strong>प्रोटोकॉल:</strong></p>
-    <ol>
-      <li>अच्छी तरह से वार्म अप करें (15-20 मिनट आसान + 4-5 स्ट्राइड्स)</li>
-      <li>अधिकतम निरंतर प्रयास पर 30-मिनट का टाइम ट्रायल दौड़ें</li>
-      <li>बहुत तेज शुरू करने से बचें—पूरी दौड़ के दौरान गति "सुखद रूप से कठिन (comfortably hard)" होनी चाहिए</li>
-      <li>औसत गति और औसत हृदय गति रिकॉर्ड करें</li>
-    </ol>
-
-    <p><strong>परिणामों की व्याख्या:</strong></p>
-    <ul>
-      <li><strong>थ्रेशोल्ड गति:</strong> पूरे 30 मिनट की औसत गति</li>
-      <li><strong>लैक्टेट थ्रेशोल्ड हृदय गति (LTHR):</strong> अंतिम 20 मिनट की औसत हृदय गति</li>
-      <li><strong>थ्रेशोल्ड पावर:</strong> यदि रन पावर मीटर का उपयोग कर रहे हैं, तो 30 मिनट के लिए औसत पावर</li>
-    </ul>
-
-    <h3>10K टाइम ट्रायल</h3>
-
-    <p>एक 10K रेस या टाइम ट्रायल दो काम करता है: रेस-विशिष्ट फिटनेस मूल्यांकन और थ्रेशोल्ड मार्कर।</p>
-
-    <p><strong>प्रोटोकॉल:</strong></p>
-    <ol>
-      <li>मानक रेस वार्म-अप (15 मिनट आसान + स्ट्राइड्स)</li>
-      <li>रेस के प्रयास (प्रशिक्षण प्रयास नहीं) पर 10K दौड़ें</li>
-      <li>समय, औसत गति, औसत हृदय गति रिकॉर्ड करें</li>
-    </ol>
-
-    <p><strong>10K से थ्रेशोल्ड अनुमान:</strong></p>
-    <ul>
-      <li><strong>थ्रेशोल्ड गति:</strong> 10K गति + 10-15 सेकंड प्रति मील</li>
-      <li><strong>LTHR:</strong> रेस के अंतिम 5K की औसत हृदय गति</li>
-      <li><strong>VO2max गति:</strong> 10K गति - 15-20 सेकंड प्रति मील</li>
-    </ul>
-
-    <h3>थ्रेशोल्ड परीक्षण तुलना</h3>
-
-    <table>
-      <thead>
-        <tr>
-          <th>परीक्षण का प्रकार</th>
-          <th>अवधि</th>
-          <th>प्रयास का स्तर</th>
-          <th>फायदे</th>
-          <th>सबसे अच्छा उपयोग</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>30-Min TT</td>
-          <td>30 मिनट</td>
-          <td>सुखद रूप से कठिन</td>
-          <td>शुद्ध थ्रेशोल्ड मूल्यांकन, गति बनाना आसान</td>
-          <td>प्रशिक्षण क्षेत्र सेटिंग</td>
-        </tr>
-        <tr>
-          <td>10K Race</td>
-          <td>35-60 मिनट</td>
-          <td>रेस प्रयास</td>
-          <td>रेस-विशिष्ट, दोहरे उद्देश्य वाला परीक्षण</td>
-          <td>चरम फिटनेस मूल्यांकन</td>
-        </tr>
-        <tr>
-          <td>20-Min TT</td>
-          <td>20 मिनट</td>
-          <td>बहुत कठिन</td>
-          <td>कम अवधि, कम थकान</td>
-          <td>बार-बार परीक्षण</td>
-        </tr>
-      </tbody>
-    </table>
-
-    <p>अपने <a href="/hi/tempo-runs-zone3/">ज़ोन 3 टेंपो गति</a> को सेट करने के लिए थ्रेशोल्ड परीक्षण परिणामों
-      का उपयोग करें और अपने पूरे प्रशिक्षण चक्र में थ्रेशोल्ड वर्कआउट के लिए उचित तीव्रता सुनिश्चित करें।</p>
-  </section>
-
-  <section id="economy-assessment">
-    <h2>रनिंग इकोनॉमी का आकलन</h2>
-
-    <p><a href="/hi/running-economy/">रनिंग इकोनॉमी</a> मापती है कि आप किसी गति विशेष पर ऑक्सीजन का कितनी कुशलता
+      रन और थ्रेशोल्ड वर्कआउट के लिए प्रशिक्षण तीव्रता निर्धारित करने के लिए महत्वपूर्ण है।</p><h3>30-मिनट थ्रेशोल्ड टेस्ट</h3><p>30-मिनट का टेस्ट लैक्टेट थ्रेशोल्ड के लिए गोल्ड स्टैंडर्ड फील्ड टेस्ट है। यह सरल, व्यावहारिक और प्रयोगशाला
+      थ्रेशोल्ड परीक्षण के साथ अत्यधिक सह-संबंधित है।</p><p><strong>प्रोटोकॉल:</strong></p><ol><li>अच्छी तरह से वार्म अप करें (15-20 मिनट आसान + 4-5 स्ट्राइड्स)</li><li>अधिकतम निरंतर प्रयास पर 30-मिनट का टाइम ट्रायल दौड़ें</li><li>बहुत तेज शुरू करने से बचें—पूरी दौड़ के दौरान गति "सुखद रूप से कठिन (comfortably hard)" होनी चाहिए</li><li>औसत गति और औसत हृदय गति रिकॉर्ड करें</li></ol><p><strong>परिणामों की व्याख्या:</strong></p><ul><li><strong>थ्रेशोल्ड गति:</strong> पूरे 30 मिनट की औसत गति</li><li><strong>लैक्टेट थ्रेशोल्ड हृदय गति (LTHR):</strong> अंतिम 20 मिनट की औसत हृदय गति</li><li><strong>थ्रेशोल्ड पावर:</strong> यदि रन पावर मीटर का उपयोग कर रहे हैं, तो 30 मिनट के लिए औसत पावर</li></ul><h3>10K टाइम ट्रायल</h3><p>एक 10K रेस या टाइम ट्रायल दो काम करता है: रेस-विशिष्ट फिटनेस मूल्यांकन और थ्रेशोल्ड मार्कर।</p><p><strong>प्रोटोकॉल:</strong></p><ol><li>मानक रेस वार्म-अप (15 मिनट आसान + स्ट्राइड्स)</li><li>रेस के प्रयास (प्रशिक्षण प्रयास नहीं) पर 10K दौड़ें</li><li>समय, औसत गति, औसत हृदय गति रिकॉर्ड करें</li></ol><p><strong>10K से थ्रेशोल्ड अनुमान:</strong></p><ul><li><strong>थ्रेशोल्ड गति:</strong> 10K गति + 10-15 सेकंड प्रति मील</li><li><strong>LTHR:</strong> रेस के अंतिम 5K की औसत हृदय गति</li><li><strong>VO2max गति:</strong> 10K गति - 15-20 सेकंड प्रति मील</li></ul><h3>थ्रेशोल्ड परीक्षण तुलना</h3><table><thead><tr><th>परीक्षण का प्रकार</th><th>अवधि</th><th>प्रयास का स्तर</th><th>फायदे</th><th>सबसे अच्छा उपयोग</th></tr></thead><tbody><tr><td>30-Min TT</td><td>30 मिनट</td><td>सुखद रूप से कठिन</td><td>शुद्ध थ्रेशोल्ड मूल्यांकन, गति बनाना आसान</td><td>प्रशिक्षण क्षेत्र सेटिंग</td></tr><tr><td>10K Race</td><td>35-60 मिनट</td><td>रेस प्रयास</td><td>रेस-विशिष्ट, दोहरे उद्देश्य वाला परीक्षण</td><td>चरम फिटनेस मूल्यांकन</td></tr><tr><td>20-Min TT</td><td>20 मिनट</td><td>बहुत कठिन</td><td>कम अवधि, कम थकान</td><td>बार-बार परीक्षण</td></tr></tbody></table><p>अपने <a href="/hi/tempo-runs-zone3/">ज़ोन 3 टेंपो गति</a> को सेट करने के लिए थ्रेशोल्ड परीक्षण परिणामों
+      का उपयोग करें और अपने पूरे प्रशिक्षण चक्र में थ्रेशोल्ड वर्कआउट के लिए उचित तीव्रता सुनिश्चित करें।</p></section><section id="economy-assessment"><h2>रनिंग इकोनॉमी का आकलन</h2><p><a href="/hi/running-economy/">रनिंग इकोनॉमी</a> मापती है कि आप किसी गति विशेष पर ऑक्सीजन का कितनी कुशलता
       से उपयोग करते हैं। जबकि प्रयोगशाला परीक्षण सटीक ऑक्सीजन लागत माप प्रदान करता है, फील्ड मूल्यांकन समय के साथ
-      इकोनॉमी सुधारों को ट्रैक कर सकते हैं।</p>
-
-    <h3>सबमैक्सिमल इकोनॉमी टेस्ट प्रोटोकॉल</h3>
-
-    <p>यह परीक्षण इकोनॉमी परिवर्तनों की निगरानी के लिए मानकीकृत गति पर हृदय गति को ट्रैक करता है। जैसे-जैसे इकोनॉमी
-      सुधरती है, समान गति पर हृदय गति कम होती जाती है।</p>
-
-    <p><strong>प्रोटोकॉल:</strong></p>
-    <ol>
-      <li><strong>वार्म-अप:</strong> 15 मिनट आसान दौड़</li>
-      <li><strong>परीक्षण खंड (Test Segments):</strong> तीन मानकीकृत गतियों में से प्रत्येक पर 5 मिनट दौड़ें:
-        <ul>
-          <li>गति 1: आसान गति (थ्रेशोल्ड गति का 60-65%)</li>
-          <li>गति 2: मध्यम गति (थ्रेशोल्ड गति का 75-80%)</li>
-          <li>गति 3: मैराथन गति (थ्रेशोल्ड गति का 85-90%)</li>
-        </ul>
-      </li>
-      <li><strong>रिकवरी:</strong> खंडों के बीच 3 मिनट आसान दौड़</li>
-      <li><strong>रिकॉर्ड:</strong> प्रत्येक खंड के अंतिम 3 मिनट की औसत हृदय गति</li>
-    </ol>
-
-    <h3>इकोनॉमी ट्रैकिंग का उदाहरण</h3>
-
-    <table>
-      <thead>
-        <tr>
-          <th>परीक्षण की तिथि</th>
-          <th>आसान गति HR</th>
-          <th>मध्यम HR</th>
-          <th>मैराथन HR</th>
-          <th>इकोनॉमी रुझान</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>1 जनवरी</td>
-          <td>140 bpm</td>
-          <td>156 bpm</td>
-          <td>168 bpm</td>
-          <td>बेसलाइन</td>
-        </tr>
-        <tr>
-          <td>15 फरवरी</td>
-          <td>136 bpm</td>
-          <td>152 bpm</td>
-          <td>164 bpm</td>
-          <td>+3% सुधार</td>
-        </tr>
-        <tr>
-          <td>1 अप्रैल</td>
-          <td>134 bpm</td>
-          <td>149 bpm</td>
-          <td>161 bpm</td>
-          <td>+5% सुधार</td>
-        </tr>
-        <tr>
-          <td>15 मई</td>
-          <td>133 bpm</td>
-          <td>148 bpm</td>
-          <td>160 bpm</td>
-          <td>+6% सुधार</td>
-        </tr>
-      </tbody>
-    </table>
-
-    <p><strong>परिवर्तनों की व्याख्या:</strong></p>
-    <ul>
-      <li><strong>हृदय गति घटना:</strong> बेहतर इकोनॉमी—आप समान गति पर कम ऊर्जा का उपयोग कर रहे हैं</li>
-      <li><strong>स्थिर हृदय गति:</strong> इकोनॉमी स्तर स्थिर (plateau)—विशिष्ट इकोनॉमी-केंद्रित प्रशिक्षण की आवश्यकता
-        हो सकती है</li>
-      <li><strong>हृदय गति बढ़ना:</strong> थकान, फिटनेस में कमी (detraining), या ओवरट्रेनिंग—प्रशिक्षण भार को समायोजित
-        करें</li>
-    </ul>
-
-    <p>अपनी दक्षता में सुधार के बारे में हमारे <a href="/hi/running-efficiency-biomechanics/">रनिंग
-        बायोमैकेनिक्स</a> मार्गदर्शिका में और जानें।</p>
-  </section>
-
-  <section id="testing-protocol">
-    <h2>परीक्षण प्रोटोकॉल और सर्वोत्तम अभ्यास</h2>
-
-    <p>लगातार परीक्षण प्रोटोकॉल समय के साथ विश्वसनीय और तुलनीय परिणाम सुनिश्चित करते हैं। स्थितियों या तैयारी में मामूली
-      बदलाव भी प्रदर्शन को महत्वपूर्ण रूप से प्रभावित कर सकते हैं।</p>
-
-    <h3>परीक्षण-पूर्व तैयारी</h3>
-
-    <ul>
-      <li><strong>रिकवरी:</strong> परीक्षण से 48-72 घंटे पहले कोई कठिन प्रशिक्षण नहीं</li>
-      <li><strong>नींद:</strong> परीक्षण से पहली रात अच्छी तरह से विश्राम (7-9 घंटे)</li>
-      <li><strong>पोषण:</strong> सामान्य खान-पान, खाली पेट या अत्यधिक खाकर परीक्षण करने से बचें</li>
-      <li><strong>हाइड्रेशन:</strong> अच्छी तरह से हाइड्रेटेड रहें लेकिन जरूरत से ज्यादा पानी न पियें</li>
-      <li><strong>समय:</strong> निरंतरता के लिए दिन के एक ही समय पर परीक्षण करें</li>
-      <li><strong>स्थितियां:</strong> अत्यधिक गर्मी, ठंड, हवा या ऊंचाई में बदलाव से बचें</li>
-    </ul>
-
-    <h3>वार्म-अप प्रोटोकॉल</h3>
-
-    <p>एक मानकीकृत वार्म-अप थकान पैदा किए बिना आपके शरीर को अधिकतम प्रयास के लिए तैयार करता है:</p>
-
-    <ol>
-      <li><strong>10 मिनट:</strong> बहुत आसान जॉगिंग (संवादी गति)</li>
-      <li><strong>5 मिनट:</strong> मध्यम गति की ओर धीरे-धीरे बढ़ना</li>
-      <li><strong>5 मिनट:</strong> डायनामिक स्ट्रेचिंग और मोबिलिटी वर्क</li>
-      <li><strong>4-5 स्ट्राइड्स:</strong> परीक्षण गति के करीब 80-100m त्वरण (accelerations)</li>
-      <li><strong>3-5 मिनट:</strong> आसान शेकआउट और अंतिम मानसिक तैयारी</li>
-    </ol>
-
-    <h3>परीक्षण का वातावरण</h3>
-
-    <table>
-      <thead>
-        <tr>
-          <th>कारक</th>
-          <th>आदर्श स्थितियां</th>
-          <th>यदि आदर्श न हो तो प्रभाव</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><strong>सतह</strong></td>
-          <td>ट्रैक या समतल, पक्का रास्ता</td>
-          <td>असमतल इलाके पर ±5-10 सेकंड प्रति मील</td>
-        </tr>
-        <tr>
-          <td><strong>तापमान</strong></td>
-          <td>50-65°F (10-18°C)</td>
-          <td>75°F से ऊपर -5% प्रदर्शन, 40°F से नीचे -3%</td>
-        </tr>
-        <tr>
-          <td><strong>हवा</strong></td>
-          <td>शांत या हल्की हवा</td>
-          <td>मध्यम हवा में -10-15 सेकंड प्रति मील</td>
-        </tr>
-        <tr>
-          <td><strong>ऊंचाई (Elevation)</strong></td>
-          <td>समुद्र तल से 1,000 फीट तक</td>
-          <td>बेसलाइन से प्रति 1,000 फीट ऊपर -2% प्रदर्शन</td>
-        </tr>
-        <tr>
-          <td><strong>आर्द्रता (Humidity)</strong></td>
-          <td>30-60%</td>
-          <td>70% आर्द्रता से ऊपर -2-5% प्रदर्शन</td>
-        </tr>
-      </tbody>
-    </table>
-
-    <h3>डेटा रिकॉर्डिंग</h3>
-
-    <p>प्रत्येक परीक्षण सत्र के लिए व्यापक डेटा रिकॉर्ड करें:</p>
-
-    <ul>
-      <li>परीक्षण की तिथि और समय</li>
-      <li>मौसम की स्थिति (तापमान, हवा, आर्द्रता)</li>
-      <li>कोर्स/स्थान का विवरण</li>
-      <li>हालिया प्रशिक्षण (पिछले सप्ताह का वॉल्यूम और तीव्रता)</li>
-      <li>नींद की गुणवत्ता और घंटे</li>
-      <li>कथित प्रयास (RPE 1-10)</li>
-      <li>कोई भी असामान्य कारक (तनाव, बीमारी, चोट, आदि)</li>
-    </ul>
-  </section>
-
-  <section id="interpreting-results">
-    <h2>अपने परिणामों की व्याख्या करना</h2>
-
-    <p>कच्चे परीक्षण नंबर बिना संदर्भ के बहुत कम मायने रखते हैं। यह समझना महत्वपूर्ण है कि आपके परिणाम फिटनेस के बारे
-      में क्या संकेत देते हैं और प्रशिक्षण निर्णयों के लिए उनका उपयोग कैसे किया जाए।</p>
-
-    <h3>CRS व्याख्या</h3>
-
-    <table>
-      <thead>
-        <tr>
-          <th>CRS (m/min)</th>
-          <th>CRS गति (पेस)</th>
-          <th>प्रदर्शन का स्तर</th>
-          <th>विशिष्ट रेस समय</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>200-220</td>
-          <td>4:32-5:00/km</td>
-          <td>शुरुआती (Beginner)</td>
-          <td>5K: 28-32min | 10K: 60-68min</td>
-        </tr>
-        <tr>
-          <td>220-250</td>
-          <td>4:00-4:32/km</td>
-          <td>मनोरंजक</td>
-          <td>5K: 24-28min | 10K: 50-60min</td>
-        </tr>
-        <tr>
-          <td>250-280</td>
-          <td>3:34-4:00/km</td>
-          <td>प्रतिस्पर्धी क्लब</td>
-          <td>5K: 20-24min | 10K: 42-50min</td>
-        </tr>
-        <tr>
-          <td>280-310</td>
-          <td>3:13-3:34/km</td>
-          <td>क्षेत्रीय स्तर</td>
-          <td>5K: 17:30-20min | 10K: 36-42min</td>
-        </tr>
-        <tr>
-          <td>310-340</td>
-          <td>2:56-3:13/km</td>
-          <td>राष्ट्रीय स्तर</td>
-          <td>5K: 15-17:30min | 10K: 31-36min</td>
-        </tr>
-        <tr>
-          <td>340+</td>
-          <td>
-            <3:56 /km</td>
-          <td>विशिष्ट (Elite)</td>
-          <td>5K: <15min | 10K: <31min</td>
-        </tr>
-      </tbody>
-    </table>
-
-    <h3>आयु और लिंग के अनुसार VO2max व्याख्या</h3>
-
-    <table>
-      <thead>
-        <tr>
-          <th>वर्गीकरण</th>
-          <th>पुरुष 20-29</th>
-          <th>पुरुष 40-49</th>
-          <th>महिलाएं 20-29</th>
-          <th>महिलाएं 40-49</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>सर्वोच्च (Superior)</td>
-          <td>>55</td>
-          <td>>52</td>
-          <td>>49</td>
-          <td>>45</td>
-        </tr>
-        <tr>
-          <td>उत्कृष्ट (Excellent)</td>
-          <td>51-55</td>
-          <td>47-52</td>
-          <td>45-49</td>
-          <td>41-45</td>
-        </tr>
-        <tr>
-          <td>अच्छा</td>
-          <td>45-51</td>
-          <td>42-47</td>
-          <td>39-45</td>
-          <td>35-41</td>
-        </tr>
-        <tr>
-          <td>सामान्य (Fair)</td>
-          <td>39-45</td>
-          <td>36-42</td>
-          <td>33-39</td>
-          <td>29-35</td>
-        </tr>
-        <tr>
-          <td>कमजोर (Poor)</td>
-          <td>
-            <39< /td>
-          <td>
-            <36< /td>
-          <td>
-            <33< /td>
-          <td>
-            <29< /td>
-        </tr>
-      </tbody>
-    </table>
-
-    <p><em>मान ml/kg/min में। स्रोत: अमेरिकन कॉलेज ऑफ स्पोर्ट्स मेडिसिन</em></p>
-
-    <h3>थ्रेशोल्ड गति बेंचमार्क</h3>
-
-    <p>लैक्टेट थ्रेशोल्ड आमतौर पर विभिन्न धावक स्तरों के लिए VO2max गति के निम्नलिखित प्रतिशत पर होता है:</p>
-
-    <ul>
-      <li><strong>शुरुआती धावक:</strong> VO2max गति का 75-80%</li>
-      <li><strong>प्रशिक्षित धावक:</strong> VO2max गति का 80-85%</li>
-      <li><strong>अच्छी तरह से प्रशिक्षित धावक:</strong> VO2max गति का 85-90%</li>
-      <li><strong>विशिष्ट धावक:</strong> VO2max गति का 90-95%</li>
-    </ul>
-
-    <p>यदि आपकी थ्रेशोल्ड VO2max के सापेक्ष अपेक्षा से कम है, तो यह थ्रेशोल्ड-विशिष्ट प्रशिक्षण के माध्यम से सुधार की
-      संभावना का संकेत देता है।</p>
-
-    <h3>सुधार की दर</h3>
-
-    <p>अपेक्षित सुधार दरें यथार्थवादी लक्ष्य निर्धारित करने में मदद करती हैं और यह पहचानने में मदद करती हैं कि प्रशिक्षण
-      समायोजन की आवश्यकता कब है:</p>
-
-    <table>
-      <thead>
-        <tr>
-          <th>मेट्रिक</th>
-          <th>शुरुआती (0-2 वर्ष)</th>
-          <th>मध्यवर्ती (2-5 वर्ष)</th>
-          <th>उन्नत (5+ वर्ष)</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><strong>CRS</strong></td>
-          <td>+5-10% प्रति 3 महीने में</td>
-          <td>+2-5% प्रति 3 महीने में</td>
-          <td>+1-2% प्रति 3 महीने में</td>
-        </tr>
-        <tr>
-          <td><strong>VO2max</strong></td>
-          <td>+8-15% प्रति 6 महीने में</td>
-          <td>+3-6% प्रति 6 महीने में</td>
-          <td>+1-3% प्रति 6 महीने में</td>
-        </tr>
-        <tr>
-          <td><strong>थ्रेशोल्ड</strong></td>
-          <td>+6-12% प्रति 6 महीने में</td>
-          <td>+3-6% प्रति 6 महीने में</td>
-          <td>+1-3% प्रति 6 महीने में</td>
-        </tr>
-        <tr>
-          <td><strong>इकोनॉमी</strong></td>
-          <td>+5-8% प्रति वर्ष में</td>
-          <td>+2-4% प्रति वर्ष में</td>
-          <td>+1-2% प्रति वर्ष में</td>
-        </tr>
-      </tbody>
-    </table>
-  </section>
-
-  <section id="testing-schedule">
-    <h2>कब परीक्षण करें</h2>
-
-    <p>प्रदर्शन परीक्षणों का रणनीतिक समय प्रशिक्षण और दौड़ में हस्तक्षेप को कम करते हुए उनके मूल्य को अधिकतम करता है।
-    </p>
-
-    <h3>प्रशिक्षण चरण के अनुसार परीक्षण आवृत्ति</h3>
-
-    <table>
-      <thead>
-        <tr>
-          <th>प्रशिक्षण चरण</th>
-          <th>अनुशंसित परीक्षण</th>
-          <th>आवृत्ति</th>
-          <th>उद्देश्य</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><strong>बेस बिल्डिंग</strong></td>
-          <td>CRS टेस्ट, इकोनॉमी आकलन</td>
-          <td>हर 6-8 सप्ताह में</td>
-          <td>एरोबिक विकास की निगरानी, ज़ोन समायोजन</td>
-        </tr>
-        <tr>
-          <td><strong>बिल्ड चरण (Build Phase)</strong></td>
-          <td>थ्रेशोल्ड टेस्ट, CRS टेस्ट</td>
-          <td>हर 4-6 सप्ताह में</td>
-          <td>थ्रेशोल्ड सुधार को ट्रैक करना, ज़ोन अपडेट</td>
-        </tr>
-        <tr>
-          <td><strong>पीक/विशिष्ट (Peak/Specific)</strong></td>
-          <td>VO2max टेस्ट, थ्रेशोल्ड टेस्ट</td>
-          <td>हर 3-4 सप्ताह में</td>
-          <td>रेस की तैयारी का आकलन, पेसिंग को ठीक करना</td>
-        </tr>
-        <tr>
-          <td><strong>टेपर (Taper)</strong></td>
-          <td>केवल हल्की दौड़</td>
-          <td>कोई परीक्षण नहीं</td>
-          <td>रेस के लिए ताजगी बनाए रखना</td>
-        </tr>
-        <tr>
-          <td><strong>रिकवरी/ऑफ-सीजन</strong></td>
-          <td>CRS टेस्ट</td>
-          <td>अंत में एक बार</td>
-          <td>नए प्रशिक्षण क्षेत्र स्थापित करना</td>
-        </tr>
-      </tbody>
-    </table>
-
-    <h3>प्रशिक्षण सप्ताह के भीतर परीक्षण</h3>
-
-    <p><strong>साप्ताहिक कार्यक्रम में परीक्षण का इष्टतम समय:</strong></p>
-
-    <ul>
-      <li><strong>दिन 1 (सोमवार):</strong> रिकवरी दिन—कोई परीक्षण नहीं</li>
-      <li><strong>दिन 2-3:</strong> हल्का प्रशिक्षण—इकोनॉमी परीक्षणों के लिए उपयुक्त</li>
-      <li><strong>दिन 4-5:</strong> अच्छी तरह से रिकवरी के बाद—अधिकतम परीक्षणों के लिए सर्वश्रेष्ठ (CRS, VO2max,
-        थ्रेशोल्ड)</li>
-      <li><strong>दिन 6-7:</strong> वीकेंड—यदि अच्छी तरह से विश्राम किया हो तो लंबे परीक्षणों के लिए अच्छा है</li>
-    </ul>
-
-    <p><strong>परीक्षण-पूर्व प्रशिक्षण समायोजन:</strong></p>
-    <ul>
-      <li>परीक्षण से 48 घंटे पहले कोई कठिन वर्कआउट नहीं</li>
-      <li>परीक्षण सप्ताह में वॉल्यूम को 30-40% तक कम करें</li>
-      <li>पिछले वर्कआउट में तीव्रता बनाए रखें लेकिन वॉल्यूम कम करें</li>
-      <li>परीक्षण सप्ताह को एक मिनी-टेपर के रूप में मानें</li>
-    </ul>
-
-    <h3>वार्षिक परीक्षण कैलेंडर उदाहरण</h3>
-
-    <p>स्प्रिंग ट्यून-अप दौड़ के साथ फॉल मैराथन को लक्षित करने वाले धावक के लिए:</p>
-
-    <table>
-      <thead>
-        <tr>
-          <th>महीना</th>
-          <th>प्रशिक्षण चरण</th>
-          <th>परीक्षण</th>
-          <th>नोट्स</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>जनवरी</td>
-          <td>बेस बिल्डिंग</td>
-          <td>CRS टेस्ट, इकोनॉमी बेसलाइन</td>
-          <td>छुट्टियों के बाद के प्रशिक्षण क्षेत्र स्थापित करें</td>
-        </tr>
-        <tr>
-          <td>मार्च</td>
-          <td>बेस बिल्डिंग</td>
-          <td>CRS पुन: परीक्षण</td>
-          <td>8 सप्ताह के बेस के बाद ज़ोन अपडेट करें</td>
-        </tr>
-        <tr>
-          <td>अप्रैल</td>
-          <td>बिल्ड चरण</td>
-          <td>10K रेस (थ्रेशोल्ड टेस्ट)</td>
-          <td>स्प्रिंग ट्यून-अप रेस</td>
-        </tr>
-        <tr>
-          <td>जून</td>
-          <td>बिल्ड/विशिष्ट</td>
-          <td>CRS, VO2max फील्ड टेस्ट</td>
-          <td>चक्र के मध्य में मूल्यांकन</td>
-        </tr>
-        <tr>
-          <td>अगस्त</td>
-          <td>पीक/विशिष्ट</td>
-          <td>30-मिनट थ्रेशोल्ड टेस्ट</td>
-          <td>मैराथन से पहले अंतिम ज़ोन सत्यापन</td>
-        </tr>
-        <tr>
-          <td>अक्टूबर</td>
-          <td>रेस</td>
-          <td>मैराथन रेस का दिन</td>
-          <td>अंतिम प्रदर्शन परीक्षण</td>
-        </tr>
-        <tr>
-          <td>दिसंबर</td>
-          <td>रिकवरी/ऑफ-सीजन</td>
-          <td>CRS टेस्ट</td>
-          <td>अगले प्रशिक्षण चक्र के लिए आधारभूत स्तर (Baseline)</td>
-        </tr>
-      </tbody>
-    </table>
-
-    <p>हमारे <a href="/hi/marathon-periodization/">मैराथन पीरियडाइजेशन</a> मार्गदर्शिका में अपने प्रशिक्षण वर्ष
-      की संरचना के बारे में और जानें।</p>
-  </section>
-
-  <section id="using-data">
-    <h2>प्रशिक्षण के लिए परीक्षण डेटा का उपयोग करना</h2>
-
-    <p>प्रदर्शन परीक्षण डेटा दिलचस्प संख्याओं से क्रियान्वित प्रशिक्षण मार्गदर्शन में बदल जाता है जब इसे उचित रूप से
-      लागू किया जाता है।</p>
-
-    <h3>परीक्षण परिणामों से प्रशिक्षण क्षेत्र निर्धारित करना</h3>
-
-    <p>एक बार आपके पास CRS और थ्रेशोल्ड डेटा होने के बाद, सभी पांच प्रशिक्षण क्षेत्र स्थापित करें:</p>
-
-    <table>
-      <thead>
-        <tr>
-          <th>ज़ोन</th>
-          <th>CRS का %</th>
-          <th>थ्रेशोल्ड का %</th>
-          <th>उदाहरण (CRS=270m/min, 3:42/km)</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><strong>ज़ोन 1 (रिकवरी)</strong></td>
-          <td>60-70%</td>
-          <td>55-65%</td>
-          <td>5:17-6:10/km</td>
-        </tr>
-        <tr>
-          <td><strong>ज़ोन 2 (एरोबिक)</strong></td>
-          <td>70-85%</td>
-          <td>65-78%</td>
-          <td>4:21-5:17/km</td>
-        </tr>
-        <tr>
-          <td><strong>ज़ोन 3 (टेंपो)</strong></td>
-          <td>85-95%</td>
-          <td>78-88%</td>
-          <td>3:54-4:21/km</td>
-        </tr>
-        <tr>
-          <td><strong>ज़ोन 4 (थ्रेशोल्ड)</strong></td>
-          <td>95-105%</td>
-          <td>88-100%</td>
-          <td>3:32-3:54/km</td>
-        </tr>
-        <tr>
-          <td><strong>ज़ोन 5 (VO2max)</strong></td>
-          <td>105-120%</td>
-          <td>100-115%</td>
-          <td>3:05-3:32/km</td>
-        </tr>
-      </tbody>
-    </table>
-
-    <p>अपने परीक्षण परिणामों के आधार पर सटीक ज़ोन गणना के लिए हमारे <a href="/hi/training-zones/">प्रशिक्षण
-        क्षेत्र कैलकुलेटर</a> का उपयोग करें।</p>
-
-    <h3>प्रशिक्षण फोकस क्षेत्रों की पहचान करना</h3>
-
-    <p>परीक्षण के परिणाम उन विशिष्ट क्षेत्रों को प्रकट करते हैं जिन पर ध्यान देने की आवश्यकता है:</p>
-
-    <ul>
-      <li><strong>थ्रेशोल्ड के सापेक्ष कम VO2max:</strong> अधिक एरोबिक बेस कार्य (ज़ोन 2) और VO2max अंतराल की आवश्यकता है
-      </li>
-      <li><strong>VO2max के सापेक्ष कम थ्रेशोल्ड:</strong> थ्रेशोल्ड प्रशिक्षण मात्रा (टेंपो रन, क्रूज अंतराल) बढ़ाएं
-      </li>
-      <li><strong>अच्छे VO2max/थ्रेशोल्ड के बावजूद खराब इकोनॉमी:</strong> दौड़ने के फॉर्म, स्ट्रेंथ ट्रेनिंग और तकनीकी
-        ड्रिल पर ध्यान दें</li>
-      <li><strong>CRS सुधारों का रुकना:</strong> प्रशिक्षण वॉल्यूम वृद्धि या तीव्रता वितरण समायोजन की आवश्यकता हो सकती
-        है</li>
-    </ul>
-
-    <h3>परीक्षण के रुझानों के आधार पर प्रशिक्षण को समायोजित करना</h3>
-
-    <table>
-      <thead>
-        <tr>
-          <th>परीक्षण परिणाम पैटर्न</th>
-          <th>व्याख्या</th>
-          <th>प्रशिक्षण समायोजन</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>निरंतर सुधार</td>
-          <td>प्रशिक्षण प्रभावी है</td>
-          <td>वर्तमान दृष्टिकोण जारी रखें</td>
-        </tr>
-        <tr>
-          <td>2-3 परीक्षणों के बाद सुधार रुकना</td>
-          <td>अनुकूलन पूर्ण, नई उत्तेजना (stimulus) की आवश्यकता है</td>
-          <td>प्रशिक्षण प्रगति: वॉल्यूम बढ़ाएं, तीव्रता मिश्रण बदलें, या नए तत्व जोड़ें</td>
-        </tr>
-        <tr>
-          <td>प्रदर्शन में गिरावट</td>
-          <td>ओवरट्रेनिंग, अपर्याप्त रिकवरी, या बीमारी</td>
-          <td>प्रशिक्षण भार 30-50% कम करें, रिकवरी पर ध्यान दें, अन्य मुद्दों की जाँच करें</td>
-        </tr>
-        <tr>
-          <td>दिन-प्रतिदिन उच्च परिवर्तनशीलता</td>
-          <td>असंगत रिकवरी या परीक्षण प्रोटोकॉल</td>
-          <td>निरंतरता में सुधार करें: नींद, पोषण, तनाव प्रबंधन, परीक्षण स्थितियां</td>
-        </tr>
-      </tbody>
-    </table>
-
-    <h3>ट्रेनिंग स्ट्रेस स्कोर (TSS) को ट्रैक करना</h3>
-
-    <p>प्रत्येक वर्कआउट के लिए <a href="/hi/rtss-calculator/">rTSS (रनिंग ट्रेनिंग स्ट्रेस स्कोर)</a> की गणना
+      इकोनॉमी सुधारों को ट्रैक कर सकते हैं।</p><h3>सबमैक्सिमल इकोनॉमी टेस्ट प्रोटोकॉल</h3><p>यह परीक्षण इकोनॉमी परिवर्तनों की निगरानी के लिए मानकीकृत गति पर हृदय गति को ट्रैक करता है। जैसे-जैसे इकोनॉमी
+      सुधरती है, समान गति पर हृदय गति कम होती जाती है।</p><p><strong>प्रोटोकॉल:</strong></p><ol><li><strong>वार्म-अप:</strong> 15 मिनट आसान दौड़</li><li><strong>परीक्षण खंड (Test Segments):</strong> तीन मानकीकृत गतियों में से प्रत्येक पर 5 मिनट दौड़ें:
+        <ul><li>गति 1: आसान गति (थ्रेशोल्ड गति का 60-65%)</li><li>गति 2: मध्यम गति (थ्रेशोल्ड गति का 75-80%)</li><li>गति 3: मैराथन गति (थ्रेशोल्ड गति का 85-90%)</li></ul></li><li><strong>रिकवरी:</strong> खंडों के बीच 3 मिनट आसान दौड़</li><li><strong>रिकॉर्ड:</strong> प्रत्येक खंड के अंतिम 3 मिनट की औसत हृदय गति</li></ol><h3>इकोनॉमी ट्रैकिंग का उदाहरण</h3><table><thead><tr><th>परीक्षण की तिथि</th><th>आसान गति HR</th><th>मध्यम HR</th><th>मैराथन HR</th><th>इकोनॉमी रुझान</th></tr></thead><tbody><tr><td>1 जनवरी</td><td>140 bpm</td><td>156 bpm</td><td>168 bpm</td><td>बेसलाइन</td></tr><tr><td>15 फरवरी</td><td>136 bpm</td><td>152 bpm</td><td>164 bpm</td><td>+3% सुधार</td></tr><tr><td>1 अप्रैल</td><td>134 bpm</td><td>149 bpm</td><td>161 bpm</td><td>+5% सुधार</td></tr><tr><td>15 मई</td><td>133 bpm</td><td>148 bpm</td><td>160 bpm</td><td>+6% सुधार</td></tr></tbody></table><p><strong>परिवर्तनों की व्याख्या:</strong></p><ul><li><strong>हृदय गति घटना:</strong> बेहतर इकोनॉमी—आप समान गति पर कम ऊर्जा का उपयोग कर रहे हैं</li><li><strong>स्थिर हृदय गति:</strong> इकोनॉमी स्तर स्थिर (plateau)—विशिष्ट इकोनॉमी-केंद्रित प्रशिक्षण की आवश्यकता
+        हो सकती है</li><li><strong>हृदय गति बढ़ना:</strong> थकान, फिटनेस में कमी (detraining), या ओवरट्रेनिंग—प्रशिक्षण भार को समायोजित
+        करें</li></ul><p>अपनी दक्षता में सुधार के बारे में हमारे <a href="/hi/running-efficiency-biomechanics/">रनिंग
+        बायोमैकेनिक्स</a> मार्गदर्शिका में और जानें।</p></section><section id="testing-protocol"><h2>परीक्षण प्रोटोकॉल और सर्वोत्तम अभ्यास</h2><p>लगातार परीक्षण प्रोटोकॉल समय के साथ विश्वसनीय और तुलनीय परिणाम सुनिश्चित करते हैं। स्थितियों या तैयारी में मामूली
+      बदलाव भी प्रदर्शन को महत्वपूर्ण रूप से प्रभावित कर सकते हैं।</p><h3>परीक्षण-पूर्व तैयारी</h3><ul><li><strong>रिकवरी:</strong> परीक्षण से 48-72 घंटे पहले कोई कठिन प्रशिक्षण नहीं</li><li><strong>नींद:</strong> परीक्षण से पहली रात अच्छी तरह से विश्राम (7-9 घंटे)</li><li><strong>पोषण:</strong> सामान्य खान-पान, खाली पेट या अत्यधिक खाकर परीक्षण करने से बचें</li><li><strong>हाइड्रेशन:</strong> अच्छी तरह से हाइड्रेटेड रहें लेकिन जरूरत से ज्यादा पानी न पियें</li><li><strong>समय:</strong> निरंतरता के लिए दिन के एक ही समय पर परीक्षण करें</li><li><strong>स्थितियां:</strong> अत्यधिक गर्मी, ठंड, हवा या ऊंचाई में बदलाव से बचें</li></ul><h3>वार्म-अप प्रोटोकॉल</h3><p>एक मानकीकृत वार्म-अप थकान पैदा किए बिना आपके शरीर को अधिकतम प्रयास के लिए तैयार करता है:</p><ol><li><strong>10 मिनट:</strong> बहुत आसान जॉगिंग (संवादी गति)</li><li><strong>5 मिनट:</strong> मध्यम गति की ओर धीरे-धीरे बढ़ना</li><li><strong>5 मिनट:</strong> डायनामिक स्ट्रेचिंग और मोबिलिटी वर्क</li><li><strong>4-5 स्ट्राइड्स:</strong> परीक्षण गति के करीब 80-100m त्वरण (accelerations)</li><li><strong>3-5 मिनट:</strong> आसान शेकआउट और अंतिम मानसिक तैयारी</li></ol><h3>परीक्षण का वातावरण</h3><table><thead><tr><th>कारक</th><th>आदर्श स्थितियां</th><th>यदि आदर्श न हो तो प्रभाव</th></tr></thead><tbody><tr><td><strong>सतह</strong></td><td>ट्रैक या समतल, पक्का रास्ता</td><td>असमतल इलाके पर ±5-10 सेकंड प्रति मील</td></tr><tr><td><strong>तापमान</strong></td><td>50-65°F (10-18°C)</td><td>75°F से ऊपर -5% प्रदर्शन, 40°F से नीचे -3%</td></tr><tr><td><strong>हवा</strong></td><td>शांत या हल्की हवा</td><td>मध्यम हवा में -10-15 सेकंड प्रति मील</td></tr><tr><td><strong>ऊंचाई (Elevation)</strong></td><td>समुद्र तल से 1,000 फीट तक</td><td>बेसलाइन से प्रति 1,000 फीट ऊपर -2% प्रदर्शन</td></tr><tr><td><strong>आर्द्रता (Humidity)</strong></td><td>30-60%</td><td>70% आर्द्रता से ऊपर -2-5% प्रदर्शन</td></tr></tbody></table><h3>डेटा रिकॉर्डिंग</h3><p>प्रत्येक परीक्षण सत्र के लिए व्यापक डेटा रिकॉर्ड करें:</p><ul><li>परीक्षण की तिथि और समय</li><li>मौसम की स्थिति (तापमान, हवा, आर्द्रता)</li><li>कोर्स/स्थान का विवरण</li><li>हालिया प्रशिक्षण (पिछले सप्ताह का वॉल्यूम और तीव्रता)</li><li>नींद की गुणवत्ता और घंटे</li><li>कथित प्रयास (RPE 1-10)</li><li>कोई भी असामान्य कारक (तनाव, बीमारी, चोट, आदि)</li></ul></section><section id="interpreting-results"><h2>अपने परिणामों की व्याख्या करना</h2><p>कच्चे परीक्षण नंबर बिना संदर्भ के बहुत कम मायने रखते हैं। यह समझना महत्वपूर्ण है कि आपके परिणाम फिटनेस के बारे
+      में क्या संकेत देते हैं और प्रशिक्षण निर्णयों के लिए उनका उपयोग कैसे किया जाए।</p><h3>CRS व्याख्या</h3><table><thead><tr><th>CRS (m/min)</th><th>CRS गति (पेस)</th><th>प्रदर्शन का स्तर</th><th>विशिष्ट रेस समय</th></tr></thead><tbody><tr><td>200-220</td><td>4:32-5:00/km</td><td>शुरुआती (Beginner)</td><td>5K: 28-32min | 10K: 60-68min</td></tr><tr><td>220-250</td><td>4:00-4:32/km</td><td>मनोरंजक</td><td>5K: 24-28min | 10K: 50-60min</td></tr><tr><td>250-280</td><td>3:34-4:00/km</td><td>प्रतिस्पर्धी क्लब</td><td>5K: 20-24min | 10K: 42-50min</td></tr><tr><td>280-310</td><td>3:13-3:34/km</td><td>क्षेत्रीय स्तर</td><td>5K: 17:30-20min | 10K: 36-42min</td></tr><tr><td>310-340</td><td>2:56-3:13/km</td><td>राष्ट्रीय स्तर</td><td>5K: 15-17:30min | 10K: 31-36min</td></tr><tr><td>340+</td><td><3:56 /km</td><td>विशिष्ट (Elite)</td><td>5K: <15min | 10K: <31min</td></tr></tbody></table><h3>आयु और लिंग के अनुसार VO2max व्याख्या</h3><table><thead><tr><th>वर्गीकरण</th><th>पुरुष 20-29</th><th>पुरुष 40-49</th><th>महिलाएं 20-29</th><th>महिलाएं 40-49</th></tr></thead><tbody><tr><td>सर्वोच्च (Superior)</td><td>>55</td><td>>52</td><td>>49</td><td>>45</td></tr><tr><td>उत्कृष्ट (Excellent)</td><td>51-55</td><td>47-52</td><td>45-49</td><td>41-45</td></tr><tr><td>अच्छा</td><td>45-51</td><td>42-47</td><td>39-45</td><td>35-41</td></tr><tr><td>सामान्य (Fair)</td><td>39-45</td><td>36-42</td><td>33-39</td><td>29-35</td></tr><tr><td>कमजोर (Poor)</td><td><39< /td><td><36< /td><td><33< /td><td><29< /td></tr></tbody></table><p><em>मान ml/kg/min में। स्रोत: अमेरिकन कॉलेज ऑफ स्पोर्ट्स मेडिसिन</em></p><h3>थ्रेशोल्ड गति बेंचमार्क</h3><p>लैक्टेट थ्रेशोल्ड आमतौर पर विभिन्न धावक स्तरों के लिए VO2max गति के निम्नलिखित प्रतिशत पर होता है:</p><ul><li><strong>शुरुआती धावक:</strong> VO2max गति का 75-80%</li><li><strong>प्रशिक्षित धावक:</strong> VO2max गति का 80-85%</li><li><strong>अच्छी तरह से प्रशिक्षित धावक:</strong> VO2max गति का 85-90%</li><li><strong>विशिष्ट धावक:</strong> VO2max गति का 90-95%</li></ul><p>यदि आपकी थ्रेशोल्ड VO2max के सापेक्ष अपेक्षा से कम है, तो यह थ्रेशोल्ड-विशिष्ट प्रशिक्षण के माध्यम से सुधार की
+      संभावना का संकेत देता है।</p><h3>सुधार की दर</h3><p>अपेक्षित सुधार दरें यथार्थवादी लक्ष्य निर्धारित करने में मदद करती हैं और यह पहचानने में मदद करती हैं कि प्रशिक्षण
+      समायोजन की आवश्यकता कब है:</p><table><thead><tr><th>मेट्रिक</th><th>शुरुआती (0-2 वर्ष)</th><th>मध्यवर्ती (2-5 वर्ष)</th><th>उन्नत (5+ वर्ष)</th></tr></thead><tbody><tr><td><strong>CRS</strong></td><td>+5-10% प्रति 3 महीने में</td><td>+2-5% प्रति 3 महीने में</td><td>+1-2% प्रति 3 महीने में</td></tr><tr><td><strong>VO2max</strong></td><td>+8-15% प्रति 6 महीने में</td><td>+3-6% प्रति 6 महीने में</td><td>+1-3% प्रति 6 महीने में</td></tr><tr><td><strong>थ्रेशोल्ड</strong></td><td>+6-12% प्रति 6 महीने में</td><td>+3-6% प्रति 6 महीने में</td><td>+1-3% प्रति 6 महीने में</td></tr><tr><td><strong>इकोनॉमी</strong></td><td>+5-8% प्रति वर्ष में</td><td>+2-4% प्रति वर्ष में</td><td>+1-2% प्रति वर्ष में</td></tr></tbody></table></section><section id="testing-schedule"><h2>कब परीक्षण करें</h2><p>प्रदर्शन परीक्षणों का रणनीतिक समय प्रशिक्षण और दौड़ में हस्तक्षेप को कम करते हुए उनके मूल्य को अधिकतम करता है।
+    </p><h3>प्रशिक्षण चरण के अनुसार परीक्षण आवृत्ति</h3><table><thead><tr><th>प्रशिक्षण चरण</th><th>अनुशंसित परीक्षण</th><th>आवृत्ति</th><th>उद्देश्य</th></tr></thead><tbody><tr><td><strong>बेस बिल्डिंग</strong></td><td>CRS टेस्ट, इकोनॉमी आकलन</td><td>हर 6-8 सप्ताह में</td><td>एरोबिक विकास की निगरानी, ज़ोन समायोजन</td></tr><tr><td><strong>बिल्ड चरण (Build Phase)</strong></td><td>थ्रेशोल्ड टेस्ट, CRS टेस्ट</td><td>हर 4-6 सप्ताह में</td><td>थ्रेशोल्ड सुधार को ट्रैक करना, ज़ोन अपडेट</td></tr><tr><td><strong>पीक/विशिष्ट (Peak/Specific)</strong></td><td>VO2max टेस्ट, थ्रेशोल्ड टेस्ट</td><td>हर 3-4 सप्ताह में</td><td>रेस की तैयारी का आकलन, पेसिंग को ठीक करना</td></tr><tr><td><strong>टेपर (Taper)</strong></td><td>केवल हल्की दौड़</td><td>कोई परीक्षण नहीं</td><td>रेस के लिए ताजगी बनाए रखना</td></tr><tr><td><strong>रिकवरी/ऑफ-सीजन</strong></td><td>CRS टेस्ट</td><td>अंत में एक बार</td><td>नए प्रशिक्षण क्षेत्र स्थापित करना</td></tr></tbody></table><h3>प्रशिक्षण सप्ताह के भीतर परीक्षण</h3><p><strong>साप्ताहिक कार्यक्रम में परीक्षण का इष्टतम समय:</strong></p><ul><li><strong>दिन 1 (सोमवार):</strong> रिकवरी दिन—कोई परीक्षण नहीं</li><li><strong>दिन 2-3:</strong> हल्का प्रशिक्षण—इकोनॉमी परीक्षणों के लिए उपयुक्त</li><li><strong>दिन 4-5:</strong> अच्छी तरह से रिकवरी के बाद—अधिकतम परीक्षणों के लिए सर्वश्रेष्ठ (CRS, VO2max,
+        थ्रेशोल्ड)</li><li><strong>दिन 6-7:</strong> वीकेंड—यदि अच्छी तरह से विश्राम किया हो तो लंबे परीक्षणों के लिए अच्छा है</li></ul><p><strong>परीक्षण-पूर्व प्रशिक्षण समायोजन:</strong></p><ul><li>परीक्षण से 48 घंटे पहले कोई कठिन वर्कआउट नहीं</li><li>परीक्षण सप्ताह में वॉल्यूम को 30-40% तक कम करें</li><li>पिछले वर्कआउट में तीव्रता बनाए रखें लेकिन वॉल्यूम कम करें</li><li>परीक्षण सप्ताह को एक मिनी-टेपर के रूप में मानें</li></ul><h3>वार्षिक परीक्षण कैलेंडर उदाहरण</h3><p>स्प्रिंग ट्यून-अप दौड़ के साथ फॉल मैराथन को लक्षित करने वाले धावक के लिए:</p><table><thead><tr><th>महीना</th><th>प्रशिक्षण चरण</th><th>परीक्षण</th><th>नोट्स</th></tr></thead><tbody><tr><td>जनवरी</td><td>बेस बिल्डिंग</td><td>CRS टेस्ट, इकोनॉमी बेसलाइन</td><td>छुट्टियों के बाद के प्रशिक्षण क्षेत्र स्थापित करें</td></tr><tr><td>मार्च</td><td>बेस बिल्डिंग</td><td>CRS पुन: परीक्षण</td><td>8 सप्ताह के बेस के बाद ज़ोन अपडेट करें</td></tr><tr><td>अप्रैल</td><td>बिल्ड चरण</td><td>10K रेस (थ्रेशोल्ड टेस्ट)</td><td>स्प्रिंग ट्यून-अप रेस</td></tr><tr><td>जून</td><td>बिल्ड/विशिष्ट</td><td>CRS, VO2max फील्ड टेस्ट</td><td>चक्र के मध्य में मूल्यांकन</td></tr><tr><td>अगस्त</td><td>पीक/विशिष्ट</td><td>30-मिनट थ्रेशोल्ड टेस्ट</td><td>मैराथन से पहले अंतिम ज़ोन सत्यापन</td></tr><tr><td>अक्टूबर</td><td>रेस</td><td>मैराथन रेस का दिन</td><td>अंतिम प्रदर्शन परीक्षण</td></tr><tr><td>दिसंबर</td><td>रिकवरी/ऑफ-सीजन</td><td>CRS टेस्ट</td><td>अगले प्रशिक्षण चक्र के लिए आधारभूत स्तर (Baseline)</td></tr></tbody></table><p>हमारे <a href="/hi/marathon-periodization/">मैराथन पीरियडाइजेशन</a> मार्गदर्शिका में अपने प्रशिक्षण वर्ष
+      की संरचना के बारे में और जानें।</p></section><section id="using-data"><h2>प्रशिक्षण के लिए परीक्षण डेटा का उपयोग करना</h2><p>प्रदर्शन परीक्षण डेटा दिलचस्प संख्याओं से क्रियान्वित प्रशिक्षण मार्गदर्शन में बदल जाता है जब इसे उचित रूप से
+      लागू किया जाता है।</p><h3>परीक्षण परिणामों से प्रशिक्षण क्षेत्र निर्धारित करना</h3><p>एक बार आपके पास CRS और थ्रेशोल्ड डेटा होने के बाद, सभी पांच प्रशिक्षण क्षेत्र स्थापित करें:</p><table><thead><tr><th>ज़ोन</th><th>CRS का %</th><th>थ्रेशोल्ड का %</th><th>उदाहरण (CRS=270m/min, 3:42/km)</th></tr></thead><tbody><tr><td><strong>ज़ोन 1 (रिकवरी)</strong></td><td>60-70%</td><td>55-65%</td><td>5:17-6:10/km</td></tr><tr><td><strong>ज़ोन 2 (एरोबिक)</strong></td><td>70-85%</td><td>65-78%</td><td>4:21-5:17/km</td></tr><tr><td><strong>ज़ोन 3 (टेंपो)</strong></td><td>85-95%</td><td>78-88%</td><td>3:54-4:21/km</td></tr><tr><td><strong>ज़ोन 4 (थ्रेशोल्ड)</strong></td><td>95-105%</td><td>88-100%</td><td>3:32-3:54/km</td></tr><tr><td><strong>ज़ोन 5 (VO2max)</strong></td><td>105-120%</td><td>100-115%</td><td>3:05-3:32/km</td></tr></tbody></table><p>अपने परीक्षण परिणामों के आधार पर सटीक ज़ोन गणना के लिए हमारे <a href="/hi/training-zones/">प्रशिक्षण
+        क्षेत्र कैलकुलेटर</a> का उपयोग करें।</p><h3>प्रशिक्षण फोकस क्षेत्रों की पहचान करना</h3><p>परीक्षण के परिणाम उन विशिष्ट क्षेत्रों को प्रकट करते हैं जिन पर ध्यान देने की आवश्यकता है:</p><ul><li><strong>थ्रेशोल्ड के सापेक्ष कम VO2max:</strong> अधिक एरोबिक बेस कार्य (ज़ोन 2) और VO2max अंतराल की आवश्यकता है
+      </li><li><strong>VO2max के सापेक्ष कम थ्रेशोल्ड:</strong> थ्रेशोल्ड प्रशिक्षण मात्रा (टेंपो रन, क्रूज अंतराल) बढ़ाएं
+      </li><li><strong>अच्छे VO2max/थ्रेशोल्ड के बावजूद खराब इकोनॉमी:</strong> दौड़ने के फॉर्म, स्ट्रेंथ ट्रेनिंग और तकनीकी
+        ड्रिल पर ध्यान दें</li><li><strong>CRS सुधारों का रुकना:</strong> प्रशिक्षण वॉल्यूम वृद्धि या तीव्रता वितरण समायोजन की आवश्यकता हो सकती
+        है</li></ul><h3>परीक्षण के रुझानों के आधार पर प्रशिक्षण को समायोजित करना</h3><table><thead><tr><th>परीक्षण परिणाम पैटर्न</th><th>व्याख्या</th><th>प्रशिक्षण समायोजन</th></tr></thead><tbody><tr><td>निरंतर सुधार</td><td>प्रशिक्षण प्रभावी है</td><td>वर्तमान दृष्टिकोण जारी रखें</td></tr><tr><td>2-3 परीक्षणों के बाद सुधार रुकना</td><td>अनुकूलन पूर्ण, नई उत्तेजना (stimulus) की आवश्यकता है</td><td>प्रशिक्षण प्रगति: वॉल्यूम बढ़ाएं, तीव्रता मिश्रण बदलें, या नए तत्व जोड़ें</td></tr><tr><td>प्रदर्शन में गिरावट</td><td>ओवरट्रेनिंग, अपर्याप्त रिकवरी, या बीमारी</td><td>प्रशिक्षण भार 30-50% कम करें, रिकवरी पर ध्यान दें, अन्य मुद्दों की जाँच करें</td></tr><tr><td>दिन-प्रतिदिन उच्च परिवर्तनशीलता</td><td>असंगत रिकवरी या परीक्षण प्रोटोकॉल</td><td>निरंतरता में सुधार करें: नींद, पोषण, तनाव प्रबंधन, परीक्षण स्थितियां</td></tr></tbody></table><h3>ट्रेनिंग स्ट्रेस स्कोर (TSS) को ट्रैक करना</h3><p>प्रत्येक वर्कआउट के लिए <a href="/hi/rtss-calculator/">rTSS (रनिंग ट्रेनिंग स्ट्रेस स्कोर)</a> की गणना
       करने के लिए परीक्षण से प्राप्त अपने CRS का उपयोग करें। यह प्रशिक्षण भार को मापता है और थकान को प्रबंधित करने में
-      मदद करता है:</p>
+      मदद करता है:</p><pre>rTSS = (अवधि सेकंड में × तीव्रता कारक² × 100) / 3600
 
-    <pre>rTSS = (अवधि सेकंड में × तीव्रता कारक² × 100) / 3600
-
-जहाँ तीव्रता कारक (IF) = वर्कआउट की गति / CRS की गति</pre>
-
-    <p>परीक्षण-आधारित CRS पर आधारित साप्ताहिक TSS दिशानिर्देश:</p>
-
-    <ul>
-      <li><strong>बेस बिल्डिंग:</strong> प्रति सप्ताह 200-400 rTSS, ज़ोन 2 में 80%+</li>
-      <li><strong>बिल्ड चरण:</strong> प्रति सप्ताह 300-500 rTSS, ज़ोन 2 में 70-80%</li>
-      <li><strong>पीक चरण:</strong> प्रति सप्ताह 350-600 rTSS, रेस-विशिष्ट तीव्रता</li>
-      <li><strong>टेपर:</strong> साप्ताहिक TSS में 30-50% की कमी</li>
-    </ul>
-
-    <p>प्रशिक्षण भार के प्रबंधन के बारे में हमारे <a href="/hi/training-load/">प्रशिक्षण भार मार्गदर्शिका</a>
-      में और जानें।</p>
-  </section>
-
-  <section id="faq">
-    <h2>अक्सर पूछे जाने वाले प्रश्न</h2>
-
-    <div class="faq-item">
-      <h3>मुझे प्रदर्शन परीक्षण कितनी बार करना चाहिए?</h3>
-      <p>बेस बिल्डिंग के दौरान हर 6-8 सप्ताह में, बिल्ड चरणों के दौरान हर 4-6 सप्ताह में, और विशिष्ट तैयारी के दौरान हर
+जहाँ तीव्रता कारक (IF) = वर्कआउट की गति / CRS की गति</pre><p>परीक्षण-आधारित CRS पर आधारित साप्ताहिक TSS दिशानिर्देश:</p><ul><li><strong>बेस बिल्डिंग:</strong> प्रति सप्ताह 200-400 rTSS, ज़ोन 2 में 80%+</li><li><strong>बिल्ड चरण:</strong> प्रति सप्ताह 300-500 rTSS, ज़ोन 2 में 70-80%</li><li><strong>पीक चरण:</strong> प्रति सप्ताह 350-600 rTSS, रेस-विशिष्ट तीव्रता</li><li><strong>टेपर:</strong> साप्ताहिक TSS में 30-50% की कमी</li></ul><p>प्रशिक्षण भार के प्रबंधन के बारे में हमारे <a href="/hi/training-load/">प्रशिक्षण भार मार्गदर्शिका</a>
+      में और जानें।</p></section><section id="faq"><h2>अक्सर पूछे जाने वाले प्रश्न</h2><div class="faq-item"><h3>मुझे प्रदर्शन परीक्षण कितनी बार करना चाहिए?</h3><p>बेस बिल्डिंग के दौरान हर 6-8 सप्ताह में, बिल्ड चरणों के दौरान हर 4-6 सप्ताह में, और विशिष्ट तैयारी के दौरान हर
         3-4 सप्ताह में परीक्षण करें। टेपर अवधि (लक्ष्य रेस से 2-3 सप्ताह पहले) के दौरान परीक्षण से बचें। बार-बार परीक्षण
         बेहतर डेटा प्रदान करता है लेकिन अत्यधिक थकान से बचने के लिए प्रशिक्षण में सावधानीपूर्वक एकीकरण की आवश्यकता होती
-        है।</p>
-    </div>
-
-    <div class="faq-item">
-      <h3>क्या मैं एक सत्र में कई परीक्षण कर सकता हूँ?</h3>
-      <p>आप एक सत्र में थ्रेशोल्ड या CRS परीक्षण के साथ इकोनॉमी आकलन को मिला सकते हैं, क्योंकि इकोनॉमी परीक्षण
+        है।</p></div><div class="faq-item"><h3>क्या मैं एक सत्र में कई परीक्षण कर सकता हूँ?</h3><p>आप एक सत्र में थ्रेशोल्ड या CRS परीक्षण के साथ इकोनॉमी आकलन को मिला सकते हैं, क्योंकि इकोनॉमी परीक्षण
         सबमैक्सिमल है। हालांकि, एक ही दिन में अधिकतम परीक्षणों (CRS + VO2max, या थ्रेशोल्ड + VO2max) को मिलाने से
         बचें—पहले परीक्षण की थकान दूसरे परीक्षण के परिणामों को खराब कर देती है। यदि आपको कई मेट्रिक्स का परीक्षण करना
-        है, तो सटीक परिणामों के लिए उन्हें 48-72 घंटे की दूरी पर रखें।</p>
-    </div>
-
-    <div class="faq-item">
-      <h3>क्या होगा यदि मेरे परीक्षण के परिणाम अपेक्षा से खराब हों?</h3>
-      <p>खराब परीक्षण प्रदर्शन अपर्याप्त रिकवरी, संचित थकान, उप-इष्टतम स्थितियों, बीमारी, या केवल एक खराब दिन का परिणाम
+        है, तो सटीक परिणामों के लिए उन्हें 48-72 घंटे की दूरी पर रखें।</p></div><div class="faq-item"><h3>क्या होगा यदि मेरे परीक्षण के परिणाम अपेक्षा से खराब हों?</h3><p>खराब परीक्षण प्रदर्शन अपर्याप्त रिकवरी, संचित थकान, उप-इष्टतम स्थितियों, बीमारी, या केवल एक खराब दिन का परिणाम
         हो सकता है। प्रशिक्षण को समायोजित करने से पहले, रिकवरी के 5-7 दिनों के बाद पुनः परीक्षण करें। यदि परिणाम खराब
         बने रहते हैं, तो 1-2 सप्ताह के लिए प्रशिक्षण भार को 30-40% कम करें, पर्याप्त नींद और पोषण सुनिश्चित करें और पुनः
-        परीक्षण करें। लगातार खराब परिणाम डॉक्टरी मूल्यांकन की मांग करते हैं।</p>
-    </div>
-
-    <div class="faq-item">
-      <h3>क्या फील्ड परीक्षण प्रयोगशाला परीक्षण जितने सटीक हैं?</h3>
-      <p>फील्ड परीक्षण अधिकांश मेट्रिक्स के लिए प्रयोगशाला परीक्षण की तुलना में 85-95% सटीकता प्रदान करते हैं। CRS
+        परीक्षण करें। लगातार खराब परिणाम डॉक्टरी मूल्यांकन की मांग करते हैं।</p></div><div class="faq-item"><h3>क्या फील्ड परीक्षण प्रयोगशाला परीक्षण जितने सटीक हैं?</h3><p>फील्ड परीक्षण अधिकांश मेट्रिक्स के लिए प्रयोगशाला परीक्षण की तुलना में 85-95% सटीकता प्रदान करते हैं। CRS
         परीक्षण लैब-आधारित क्रिटिकल पावर/स्पीड के 2-3% के भीतर है। VO2max फील्ड अनुमान 3-5% के भीतर हैं। थ्रेशोल्ड
         परीक्षण सटीकता पेसिंग क्षमता पर निर्भर करती है—अच्छी तरह से पेस किए गए परीक्षण लैब मानों के 1-2% के भीतर होते
-        हैं। सटीकता की मामूली कमी सुविधा, लागत बचत और बार-बार परीक्षण करने की क्षमता से पूरी हो जाती है।</p>
-    </div>
-
-    <div class="faq-item">
-      <h3>क्या मुझे ट्रेडमिल पर या बाहर परीक्षण करना चाहिए?</h3>
-      <p>बाहर ट्रैक पर परीक्षण को आम तौर पर प्राथमिकता दी जाती है: यह वास्तविक रनिंग मैकेनिक्स के लिए विशिष्ट है,
+        हैं। सटीकता की मामूली कमी सुविधा, लागत बचत और बार-बार परीक्षण करने की क्षमता से पूरी हो जाती है।</p></div><div class="faq-item"><h3>क्या मुझे ट्रेडमिल पर या बाहर परीक्षण करना चाहिए?</h3><p>बाहर ट्रैक पर परीक्षण को आम तौर पर प्राथमिकता दी जाती है: यह वास्तविक रनिंग मैकेनिक्स के लिए विशिष्ट है,
         GPS/घड़ी सटीक डेटा प्रदान करती है, और स्थितियां रेस की स्थितियों से मेल खाती हैं। ट्रेडमिल परीक्षण तब स्वीकार्य
         है जब मौसम बाधा डाल रहा हो, लेकिन बाहरी प्रयास से मेल खाने के लिए ग्रेड को 1% पर सेट करें, यदि संभव हो तो
         ट्रेडमिल की गति को कैलिब्रेट करें, और परीक्षण का माहौल एक समान बनाए रखें। ट्रेडमिल और आउटडोर परीक्षण परिणामों की
-        सीधे तुलना न करें—एक तरीका चुनें और उसी पर टिके रहें।</p>
-    </div>
-
-    <div class="faq-item">
-      <h3>मैं परीक्षण के परिणामों में तापमान और मौसम का हिसाब कैसे रखूँ?</h3>
-      <p>तापमान प्रदर्शन को महत्वपूर्ण रूप से प्रभावित करता है: 60°F से ऊपर प्रत्येक 10°F के लिए -2% प्रदर्शन, और 40°F
+        सीधे तुलना न करें—एक तरीका चुनें और उसी पर टिके रहें।</p></div><div class="faq-item"><h3>मैं परीक्षण के परिणामों में तापमान और मौसम का हिसाब कैसे रखूँ?</h3><p>तापमान प्रदर्शन को महत्वपूर्ण रूप से प्रभावित करता है: 60°F से ऊपर प्रत्येक 10°F के लिए -2% प्रदर्शन, और 40°F
         से नीचे प्रत्येक 10°F के लिए -1.5% प्रदर्शन की अपेक्षा करें। हवा मध्यम स्थितियों में लगभग -5-10 सेकंड प्रति मील
         का नुकसान कराती है। प्रत्येक परीक्षण के साथ मौसम का डेटा रिकॉर्ड करें और या तो अपेक्षाओं को उसी अनुसार समायोजित
         करें या केवल समान स्थितियों में किए गए परीक्षणों की तुलना करें। अधिकतम निरंतरता के लिए इनडोर ट्रैक पर परीक्षण
-        करने पर विचार करें।</p>
-    </div>
-
-    <div class="faq-item">
-      <h3>क्या मैं समर्पित परीक्षणों के बजाय रेस के परिणामों का उपयोग कर सकता हूँ?</h3>
-      <p>हाँ, रेस के परिणाम प्रदर्शन परीक्षणों की जगह ले सकते हैं: एक 10K रेस उत्कृष्ट थ्रेशोल्ड डेटा प्रदान करती है, एक
+        करने पर विचार करें।</p></div><div class="faq-item"><h3>क्या मैं समर्पित परीक्षणों के बजाय रेस के परिणामों का उपयोग कर सकता हूँ?</h3><p>हाँ, रेस के परिणाम प्रदर्शन परीक्षणों की जगह ले सकते हैं: एक 10K रेस उत्कृष्ट थ्रेशोल्ड डेटा प्रदान करती है, एक
         5K दौड़ VO2max क्षमताओं को प्रकट करती है, और हाफ-मैराथन गति एरोबिक क्षमता का संकेत देती है। हालांकि, रेस का
         प्रयास परीक्षण के प्रयास से भिन्न होता है (अधिक भावनात्मक निवेश, परिवर्तनशील पेसिंग, प्रतिस्पर्धी बढ़त), इसलिए
         प्रशिक्षण क्षेत्र निर्धारित करने के लिए रेस डेटा का सावधानीपूर्वक उपयोग करें। नियंत्रित स्थितियों में समर्पित
-        परीक्षण दिन-प्रतिदिन के प्रशिक्षण निर्णयों के लिए अधिक विश्वसनीय डेटा प्रदान करते हैं।</p>
-    </div>
-
-    <div class="faq-item">
-      <h3>प्रदर्शन परीक्षण से पहले मेरा वार्म-अप क्या होना चाहिए?</h3>
-      <p>एक मानकीकृत वार्म-अप महत्वपूर्ण है: 10 मिनट बहुत आसान जॉगिंग, 5 मिनट मध्यम गति की ओर क्रमिक वृद्धि, 5 मिनट
+        परीक्षण दिन-प्रतिदिन के प्रशिक्षण निर्णयों के लिए अधिक विश्वसनीय डेटा प्रदान करते हैं।</p></div><div class="faq-item"><h3>प्रदर्शन परीक्षण से पहले मेरा वार्म-अप क्या होना चाहिए?</h3><p>एक मानकीकृत वार्म-अप महत्वपूर्ण है: 10 मिनट बहुत आसान जॉगिंग, 5 मिनट मध्यम गति की ओर क्रमिक वृद्धि, 5 मिनट
         गतिशील (dynamic) स्ट्रेचिंग, परीक्षण गति के करीब 80-100m के 4-5 स्ट्राइड्स, फिर 3-5 मिनट आसान शेकआउट। कुल
         वार्म-अप: 25-30 मिनट। लंबे वार्म-अप (40 मिनट तक) थ्रेशोल्ड और VO2max परीक्षणों के लिए कुछ एथलीटों को लाभ पहुँचा
-        सकते हैं। वार्म-अप के बिना कभी भी परीक्षण न करें—परिणाम काफी खराब होंगे।</p>
-    </div>
-
-    <div class="faq-item">
-      <h3>मुझे कैसे पता चलेगा कि मैंने किसी परीक्षण को सही ढंग से पेस (pace) किया है?</h3>
-      <p>CRS परीक्षणों के लिए: 3-मिनट का ट्रायल "बहुत कठिन लेकिन टिकाऊ" महसूस होना चाहिए, 8-9/10 प्रयास की रेटिंग के
+        सकते हैं। वार्म-अप के बिना कभी भी परीक्षण न करें—परिणाम काफी खराब होंगे।</p></div><div class="faq-item"><h3>मुझे कैसे पता चलेगा कि मैंने किसी परीक्षण को सही ढंग से पेस (pace) किया है?</h3><p>CRS परीक्षणों के लिए: 3-मिनट का ट्रायल "बहुत कठिन लेकिन टिकाऊ" महसूस होना चाहिए, 8-9/10 प्रयास की रेटिंग के
         साथ। 7-मिनट का ट्रायल इसी तरह शुरू होता है लेकिन धीरे-धीरे धीमा होता है। थ्रेशोल्ड परीक्षणों के लिए: प्रयास पूरे
         समय "सुखद रूप से कठिन" होना चाहिए, 7-8/10। आपको 2-3 शब्द बोलने में सक्षम होना चाहिए लेकिन पूरे वाक्य नहीं। यदि
         आप अंतिम 25% में नाटकीय रूप से धीमे हो जाते हैं या यह महसूस करते हुए समाप्त करते हैं कि आप बहुत अधिक कठिन जा
         सकते थे, तो पेसिंग गलत थी। अनुभव पेसिंग में सुधार करता है—2-3 परीक्षण चक्रों के बाद बेहतर परिणामों की अपेक्षा
-        करें।</p>
-    </div>
-
-    <div class="faq-item">
-      <h3>क्या मुझे अपने परीक्षण परिणामों के आधार पर अलग तरह से प्रशिक्षण लेना चाहिए?</h3>
-      <p>बिल्कुल। परीक्षण व्यक्तिगत शक्तियों और कमजोरियों को प्रकट करते हैं जिन्हें प्रशिक्षण के आधार के रूप में कार्य
+        करें।</p></div><div class="faq-item"><h3>क्या मुझे अपने परीक्षण परिणामों के आधार पर अलग तरह से प्रशिक्षण लेना चाहिए?</h3><p>बिल्कुल। परीक्षण व्यक्तिगत शक्तियों और कमजोरियों को प्रकट करते हैं जिन्हें प्रशिक्षण के आधार के रूप में कार्य
         करना चाहिए। यदि थ्रेशोल्ड के सापेक्ष VO2max कम है, तो एरोबिक बेस और VO2max कार्य को प्राथमिकता दें। यदि
         थ्रेशोल्ड VO2max से पीछे है, तो टेंपो और थ्रेशोल्ड प्रशिक्षण वॉल्यूम बढ़ाएं। अच्छे शारीरिक संकेतकों के बावजूद
         खराब इकोनॉमी फॉर्म वर्क, स्ट्रेंथ ट्रेनिंग और तकनीक सुधार की आवश्यकता की ओर इशारा करती है। जेनेरिक प्रशिक्षण
         योजनाएं व्यक्तिगत शरीर क्रिया विज्ञान (physiology) का हिसाब नहीं रख सकतीं—परीक्षण-आधारित वैयक्तिकरण अनुकूलित
-        प्रशिक्षण की कुंजी है।</p>
-    </div>
-  </section>
-
-  <section id="scientific-references">
-    <h2>वैज्ञानिक संदर्भ</h2>
-
-    <p>प्रदर्शन परीक्षण प्रोटोकॉल व्यायाम फिजियोलॉजी और खेल विज्ञान में मान्य शोध पर आधारित हैं:</p>
-
-    <div class="callout callout-info">
-      <h3>प्रमुख शोध पत्र</h3>
-      <ul>
-        <li><strong>क्रिटिकल स्पीड टेस्टिंग:</strong> <a href="https://pubmed.ncbi.nlm.nih.gov/8775547/" target="_blank"
+        प्रशिक्षण की कुंजी है।</p></div></section><section id="scientific-references"><h2>वैज्ञानिक संदर्भ</h2><p>प्रदर्शन परीक्षण प्रोटोकॉल व्यायाम फिजियोलॉजी और खेल विज्ञान में मान्य शोध पर आधारित हैं:</p><div class="callout callout-info"><h3>प्रमुख शोध पत्र</h3><ul><li><strong>क्रिटिकल स्पीड टेस्टिंग:</strong><a href="https://pubmed.ncbi.nlm.nih.gov/8775547/" target="_blank"
             rel="noopener">Jones AM, Doust JH. "A 1% treadmill grade most accurately reflects the energetic cost of
-            outdoor running." J Sports Sci. 1996</a> - क्रिटिकल स्पीड प्रोटोकॉल सत्यापन</li>
-        <li><strong>फील्ड टेस्ट विश्वसनीयता:</strong> <a href="https://pubmed.ncbi.nlm.nih.gov/15947721/"
+            outdoor running." J Sports Sci. 1996</a> - क्रिटिकल स्पीड प्रोटोकॉल सत्यापन</li><li><strong>फील्ड टेस्ट विश्वसनीयता:</strong><a href="https://pubmed.ncbi.nlm.nih.gov/15947721/"
             target="_blank" rel="noopener">Paavolainen L et al. "Neuromuscular characteristics and muscle power as
-            determinants of 5-km running performance." Med Sci Sports Exerc. 1999</a> - फील्ड परीक्षण सटीकता</li>
-        <li><strong>थ्रेशोल्ड टेस्टिंग:</strong> <a href="https://pubmed.ncbi.nlm.nih.gov/8887211/" target="_blank"
+            determinants of 5-km running performance." Med Sci Sports Exerc. 1999</a> - फील्ड परीक्षण सटीकता</li><li><strong>थ्रेशोल्ड टेस्टिंग:</strong><a href="https://pubmed.ncbi.nlm.nih.gov/8887211/" target="_blank"
             rel="noopener">Beneke R. "Methodological aspects of maximal lactate steady state-implications for
-            performance testing." Eur J Appl Physiol. 2003</a> - लैक्टेट थ्रेशोल्ड प्रोटोकॉल</li>
-        <li><strong>रनिंग इकोनॉमी टेस्टिंग:</strong> <a href="https://pubmed.ncbi.nlm.nih.gov/15076777/" target="_blank"
+            performance testing." Eur J Appl Physiol. 2003</a> - लैक्टेट थ्रेशोल्ड प्रोटोकॉल</li><li><strong>रनिंग इकोनॉमी टेस्टिंग:</strong><a href="https://pubmed.ncbi.nlm.nih.gov/15076777/" target="_blank"
             rel="noopener">Saunders PU et al. "Factors affecting running economy in trained distance runners." Sports
-            Med. 2004</a> - इकोनॉमी माप विधियाँ</li>
-        <li><strong>परीक्षण दोहराव की क्षमता (Repeatability):</strong> <a
+            Med. 2004</a> - इकोनॉमी माप विधियाँ</li><li><strong>परीक्षण दोहराव की क्षमता (Repeatability):</strong><a
             href="https://pubmed.ncbi.nlm.nih.gov/17685687/" target="_blank" rel="noopener">Hopkins WG et al.
             "Progressive statistics for studies in sports medicine and exercise science." Med Sci Sports Exerc. 2009</a>
-          - प्रदर्शन परीक्षण विश्वसनीयता</li>
-      </ul>
-    </div>
-  </section>
-
-  <div class="article-footer">
-    <p>अपने प्रदर्शन का परीक्षण करने के लिए तैयार हैं? अपने प्रशिक्षण क्षेत्र स्थापित करने के लिए <a
+          - प्रदर्शन परीक्षण विश्वसनीयता</li></ul></div></section><div class="article-footer"><p>अपने प्रदर्शन का परीक्षण करने के लिए तैयार हैं? अपने प्रशिक्षण क्षेत्र स्थापित करने के लिए <a
         href="/hi/crs/">CRS कैलकुलेटर</a> के साथ शुरुआत करें, फिर <a href="/hi/rtss-calculator/">rTSS
         गणना</a> के साथ अपनी प्रगति को ट्रैक करें। व्यापक रनिंग एनालिटिक्स और प्रदर्शन ट्रैकिंग के लिए, <a
-        href="/hi/">Run Analytics</a> डाउनलोड करें—आपका निजी, विज्ञान-आधारित प्रशिक्षण साथी।</p>
-  </div>
-</article>
-
-<script type="application/ld+json">
+        href="/hi/">Run Analytics</a> डाउनलोड करें—आपका निजी, विज्ञान-आधारित प्रशिक्षण साथी।</p></div></article><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Article",
@@ -2322,9 +722,7 @@ D3 = 3-मिनट के ट्रायल में तय की गई द
   },
   "keywords": ["रनिंग प्रदर्शन परीक्षण", "रनिंग फील्ड परीक्षण", "CRS टेस्ट", "vo2max टेस्ट", "थ्रेशोल्ड टेस्ट", "रनिंग इकोनॉमी टेस्ट", "प्रदर्शन परीक्षण प्रोटोकॉल", "प्रशिक्षण क्षेत्र", "रनिंग एनालिटिक्स"]
 }
-</script>
-
-<script type="application/ld+json">
+</script><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "FAQPage",
@@ -2411,371 +809,177 @@ D3 = 3-मिनट के ट्रायल में तय की गई द
     }
   ]
 }
-</script>
-    
-  </main>
-
-  
-  <footer class="site-footer">
-    <div class="container">
-        
-        <div class="footer-top">
-            <div class="footer-brand-section">
-                
-                <h2>Run Analytics</h2>
-                <p>Track Critical Running Speed, Training Stress Score, and performance metrics with Run Analytics. Science-based iOS app for runners, triathletes &amp; coaches. 7-day free trial.</p>
-                
-            </div>
-
-            
-            <div class="footer-download">
-                <h3 class="footer-heading">Download</h3>
-                <div class="footer-badges">
-                    
-                    <a href="https://apps.apple.com/us/app/run-analytics/id6754524015" target="_blank" rel="noopener"
-                        aria-label="Download on the App Store">
-                        <img src="../../assets/images/badge-app-store.svg"
+</script></main><footer class="site-footer"><div class="container"><div class="footer-top"><div class="footer-brand-section"><h2>Run Analytics</h2><p>Track Critical Running Speed, Training Stress Score, and performance metrics with Run Analytics. Science-based iOS app for runners, triathletes &amp; coaches. 7-day free trial.</p></div><div class="footer-download"><h3 class="footer-heading">Download</h3><div class="footer-badges"><a href="https://apps.apple.com/us/app/run-analytics/id6754524015" target="_blank" rel="noopener"
+                        aria-label="Download on the App Store"><img src="../../assets/images/badge-app-store.svg"
                             alt="Download on the App Store" width="135"
-                            height="40" loading="lazy">
-                    </a>
-                    
-                    
-                    <a href="https://play.google.com/store/apps/details?id=com.arnohealth.runanalytics" target="_blank" rel="noopener"
-                        aria-label="Get it on Google Play">
-                        <img src="../../assets/images/badge-google-play.svg"
+                            height="40" loading="lazy"></a><a href="https://play.google.com/store/apps/details?id=com.arnohealth.runanalytics" target="_blank" rel="noopener"
+                        aria-label="Get it on Google Play"><img src="../../assets/images/badge-google-play.svg"
                             alt="Get it on Google Play" width="135"
-                            height="40" loading="lazy">
-                    </a>
-                    
-                </div>
-            </div>
-            
-        </div>
-
-        
-        <div class="footer-languages">
-            <h3 class="footer-heading">Available in</h3>
-            <div class="lang-grid">
-                
-                <a href="/af/" class="lang-link"
+                            height="40" loading="lazy"></a></div></div></div><div class="footer-languages"><h3 class="footer-heading">Available in</h3><div class="lang-grid"><a href="/af/" class="lang-link"
                     hreflang="af" >
                     Afrikaans
-                </a>
-                
-                <a href="/am/" class="lang-link"
+                </a><a href="/am/" class="lang-link"
                     hreflang="am" >
                     አማርኛ
-                </a>
-                
-                <a href="/ar/" class="lang-link"
+                </a><a href="/ar/" class="lang-link"
                     hreflang="ar" dir="rtl" >
                     العربية
-                </a>
-                
-                <a href="/bg/" class="lang-link"
+                </a><a href="/bg/" class="lang-link"
                     hreflang="bg" >
                     Български
-                </a>
-                
-                <a href="/bn/" class="lang-link"
+                </a><a href="/bn/" class="lang-link"
                     hreflang="bn" >
                     বাংলা
-                </a>
-                
-                <a href="/ca/" class="lang-link"
+                </a><a href="/ca/" class="lang-link"
                     hreflang="ca" >
                     Català
-                </a>
-                
-                <a href="/cs/" class="lang-link"
+                </a><a href="/cs/" class="lang-link"
                     hreflang="cs" >
                     Čeština
-                </a>
-                
-                <a href="/da/" class="lang-link"
+                </a><a href="/da/" class="lang-link"
                     hreflang="da" >
                     Dansk
-                </a>
-                
-                <a href="/de/" class="lang-link"
+                </a><a href="/de/" class="lang-link"
                     hreflang="de" >
                     Deutsch
-                </a>
-                
-                <a href="/el/" class="lang-link"
+                </a><a href="/el/" class="lang-link"
                     hreflang="el" >
                     Ελληνικά
-                </a>
-                
-                <a href="/en/" class="lang-link"
+                </a><a href="/en/" class="lang-link"
                     hreflang="en" >
                     English
-                </a>
-                
-                <a href="/es/" class="lang-link"
+                </a><a href="/es/" class="lang-link"
                     hreflang="es" >
                     Español
-                </a>
-                
-                <a href="/et/" class="lang-link"
+                </a><a href="/et/" class="lang-link"
                     hreflang="et" >
                     Eesti
-                </a>
-                
-                <a href="/fa/" class="lang-link"
+                </a><a href="/fa/" class="lang-link"
                     hreflang="fa" dir="rtl" >
                     فارسی
-                </a>
-                
-                <a href="/fi/" class="lang-link"
+                </a><a href="/fi/" class="lang-link"
                     hreflang="fi" >
                     Suomi
-                </a>
-                
-                <a href="/fr/" class="lang-link"
+                </a><a href="/fr/" class="lang-link"
                     hreflang="fr" >
                     Français
-                </a>
-                
-                <a href="/gu/" class="lang-link"
+                </a><a href="/gu/" class="lang-link"
                     hreflang="gu" >
                     ગુજરાતી
-                </a>
-                
-                <a href="/ha/" class="lang-link"
+                </a><a href="/ha/" class="lang-link"
                     hreflang="ha" >
                     Hausa
-                </a>
-                
-                <a href="/he/" class="lang-link"
+                </a><a href="/he/" class="lang-link"
                     hreflang="he" dir="rtl" >
                     עברית
-                </a>
-                
-                <a href="/hi/" class="lang-link active"
+                </a><a href="/hi/" class="lang-link active"
                     hreflang="hi" >
                     हिन्दी
-                </a>
-                
-                <a href="/hr/" class="lang-link"
+                </a><a href="/hr/" class="lang-link"
                     hreflang="hr" >
                     Hrvatski
-                </a>
-                
-                <a href="/hu/" class="lang-link"
+                </a><a href="/hu/" class="lang-link"
                     hreflang="hu" >
                     Magyar
-                </a>
-                
-                <a href="/id/" class="lang-link"
+                </a><a href="/id/" class="lang-link"
                     hreflang="id" >
                     Bahasa Indonesia
-                </a>
-                
-                <a href="/is/" class="lang-link"
+                </a><a href="/is/" class="lang-link"
                     hreflang="is" >
                     Íslenska
-                </a>
-                
-                <a href="/it/" class="lang-link"
+                </a><a href="/it/" class="lang-link"
                     hreflang="it" >
                     Italiano
-                </a>
-                
-                <a href="/ja/" class="lang-link"
+                </a><a href="/ja/" class="lang-link"
                     hreflang="ja" >
                     日本語
-                </a>
-                
-                <a href="/km/" class="lang-link"
+                </a><a href="/km/" class="lang-link"
                     hreflang="km" >
                     ភាសាខ្មែរ
-                </a>
-                
-                <a href="/kn/" class="lang-link"
+                </a><a href="/kn/" class="lang-link"
                     hreflang="kn" >
                     ಕನ್ನಡ
-                </a>
-                
-                <a href="/ko/" class="lang-link"
+                </a><a href="/ko/" class="lang-link"
                     hreflang="ko" >
                     한국어
-                </a>
-                
-                <a href="/lt/" class="lang-link"
+                </a><a href="/lt/" class="lang-link"
                     hreflang="lt" >
                     Lietuvių
-                </a>
-                
-                <a href="/lv/" class="lang-link"
+                </a><a href="/lv/" class="lang-link"
                     hreflang="lv" >
                     Latviešu
-                </a>
-                
-                <a href="/ms/" class="lang-link"
+                </a><a href="/ms/" class="lang-link"
                     hreflang="ms" >
                     Bahasa Melayu
-                </a>
-                
-                <a href="/my/" class="lang-link"
+                </a><a href="/my/" class="lang-link"
                     hreflang="my" >
                     မြန်မာစာ
-                </a>
-                
-                <a href="/nb/" class="lang-link"
+                </a><a href="/nb/" class="lang-link"
                     hreflang="nb" >
                     Norsk Bokmål
-                </a>
-                
-                <a href="/nl/" class="lang-link"
+                </a><a href="/nl/" class="lang-link"
                     hreflang="nl" >
                     Nederlands
-                </a>
-                
-                <a href="/pl/" class="lang-link"
+                </a><a href="/pl/" class="lang-link"
                     hreflang="pl" >
                     Polski
-                </a>
-                
-                <a href="/pt/" class="lang-link"
+                </a><a href="/pt/" class="lang-link"
                     hreflang="pt" >
                     Português
-                </a>
-                
-                <a href="/pt-br/" class="lang-link"
+                </a><a href="/pt-br/" class="lang-link"
                     hreflang="pt-br" >
                     Português (Brasil)
-                </a>
-                
-                <a href="/ro/" class="lang-link"
+                </a><a href="/ro/" class="lang-link"
                     hreflang="ro" >
                     Română
-                </a>
-                
-                <a href="/ru/" class="lang-link"
+                </a><a href="/ru/" class="lang-link"
                     hreflang="ru" >
                     Русский
-                </a>
-                
-                <a href="/sk/" class="lang-link"
+                </a><a href="/sk/" class="lang-link"
                     hreflang="sk" >
                     Slovenčina
-                </a>
-                
-                <a href="/sl/" class="lang-link"
+                </a><a href="/sl/" class="lang-link"
                     hreflang="sl" >
                     Slovenščina
-                </a>
-                
-                <a href="/sr/" class="lang-link"
+                </a><a href="/sr/" class="lang-link"
                     hreflang="sr" >
                     Srpski
-                </a>
-                
-                <a href="/sv/" class="lang-link"
+                </a><a href="/sv/" class="lang-link"
                     hreflang="sv" >
                     Svenska
-                </a>
-                
-                <a href="/sw/" class="lang-link"
+                </a><a href="/sw/" class="lang-link"
                     hreflang="sw" >
                     Kiswahili
-                </a>
-                
-                <a href="/ta/" class="lang-link"
+                </a><a href="/ta/" class="lang-link"
                     hreflang="ta" >
                     தமிழ்
-                </a>
-                
-                <a href="/te/" class="lang-link"
+                </a><a href="/te/" class="lang-link"
                     hreflang="te" >
                     తెలుగు
-                </a>
-                
-                <a href="/th/" class="lang-link"
+                </a><a href="/th/" class="lang-link"
                     hreflang="th" >
                     ไทย
-                </a>
-                
-                <a href="/tl/" class="lang-link"
+                </a><a href="/tl/" class="lang-link"
                     hreflang="tl" >
                     Tagalog
-                </a>
-                
-                <a href="/tr/" class="lang-link"
+                </a><a href="/tr/" class="lang-link"
                     hreflang="tr" >
                     Türkçe
-                </a>
-                
-                <a href="/uk/" class="lang-link"
+                </a><a href="/uk/" class="lang-link"
                     hreflang="uk" >
                     Українська
-                </a>
-                
-                <a href="/ur/" class="lang-link"
+                </a><a href="/ur/" class="lang-link"
                     hreflang="ur" dir="rtl" >
                     اردو
-                </a>
-                
-                <a href="/vi/" class="lang-link"
+                </a><a href="/vi/" class="lang-link"
                     hreflang="vi" >
                     Tiếng Việt
-                </a>
-                
-                <a href="/yo/" class="lang-link"
+                </a><a href="/yo/" class="lang-link"
                     hreflang="yo" >
                     Yorùbá
-                </a>
-                
-                <a href="/zh/" class="lang-link"
+                </a><a href="/zh/" class="lang-link"
                     hreflang="zh" >
                     中文
-                </a>
-                
-            </div>
-        </div>
-
-        <div class="footer-divider"></div>
-
-        
-        <div class="footer-bottom">
-            <p class="copyright">
+                </a></div></div><div class="footer-divider"></div><div class="footer-bottom"><p class="copyright">
                 &copy; 2026 Run Analytics. सर्वाधिकार सुरक्षित
-            </p>
-            <ul class="footer-legal">
-                <li><a href="/hi/privacy/">गोपनीयता</a></li>
-                <li><a href="/hi/terms/">शर्तें</a></li>
-            </ul>
-        </div>
-    </div>
-</footer>
-
-  
-  <div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="Cookie consent" aria-live="polite">
-    <div class="cookie-banner-content">
-        <div>
-            <p>यह वेबसाइट आपके अनुभव को बेहतर बनाने के लिए कुकीज़ का उपयोग करती है।</p>
-            <a href="/hi/privacy/" class="text-sm">और जानें</a>
-        </div>
-        <div class="cookie-banner-actions">
-            <button id="cookie-decline" class="btn btn-secondary btn-small">अस्वीकार करें</button>
-            <button id="cookie-accept" class="btn btn-primary btn-small">स्वीकार करें</button>
-        </div>
-    </div>
-</div>
-
-  
-  <script src="../../assets/js/core.min.js?v=8aef43d1" defer></script>
-  <script src="../../assets/js/search.min.js?v=8aef43d1" defer></script>
-  
-
-  
-  
-  <script src="../../assets/js/analytics.min.js" data-ga-id="G-Y138VB4523" defer></script>
-  
-
-  
-  <script>if ('serviceWorker' in navigator) { navigator.serviceWorker.register('../../sw.js') }</script>
-</body>
-
-</html>
+            </p><ul class="footer-legal"><li><a href="/hi/privacy/">गोपनीयता</a></li><li><a href="/hi/terms/">शर्तें</a></li></ul></div></div></footer><div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="Cookie consent" aria-live="polite"><div class="cookie-banner-content"><div><p>यह वेबसाइट आपके अनुभव को बेहतर बनाने के लिए कुकीज़ का उपयोग करती है।</p><a href="/hi/privacy/" class="text-sm">और जानें</a></div><div class="cookie-banner-actions"><button id="cookie-decline" class="btn btn-secondary btn-small">अस्वीकार करें</button><button id="cookie-accept" class="btn btn-primary btn-small">स्वीकार करें</button></div></div></div><script src="../../assets/js/core.min.js?v=e899af207631" defer></script><script src="../../assets/js/search.min.js?v=e899af207631" defer></script><script src="../../assets/js/analytics.min.js" data-ga-id="G-Y138VB4523" defer></script><script>if ('serviceWorker' in navigator) { navigator.serviceWorker.register('../../sw.js') }</script></body></html>

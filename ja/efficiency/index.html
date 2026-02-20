@@ -1,246 +1,61 @@
-<!DOCTYPE html>
-<html lang="ja" dir="ltr">
-
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
-    rel="stylesheet">
-
-  
-  <title>ランニング効率指標：ランニングエコノミーを測定する | Run Analytics - Running Analytics App |</title>
-  <meta name="description" content="ストライド効率と酸素効率をマスターして、より少ない努力でより速く走る. ランニング効率指標：ランニングエコノミーを測定する | Run Analytics - Running Analytics App |">
-  <meta name="author" content="AnalyticsZone Team">
-
-  
-  
-  <meta name="keywords" content="Running Efficiency, 水泳効率, ストローク効率, Running Efficiencyスコア, 効率計算機">
-  
-
-  
-  <link rel="canonical" href="https://run.analyticszone.app/ja/efficiency/">
-
-  
-  
-  <meta property="article:published_time" content="2025-01-15T10:00:00Z">
-  <meta property="article:modified_time" content="2026-01-04T14:30:00Z">
-  <meta property="article:author" content="AnalyticsZone Team">
-  
-
-  
-  
-
-  
-  <meta property="og:type" content="article">
-  <meta property="og:url" content="https://run.analyticszone.app/ja/efficiency/">
-  <meta property="og:title" content="ランニング効率指標：ランニングエコノミーを測定する | Run Analytics - Running Analytics App |">
-  <meta property="og:description" content="ストライド効率と酸素効率をマスターして、より少ない努力でより速く走る. ランニング効率指標：ランニングエコノミーを測定する | Run Analytics - Running Analytics App |">
-  <meta property="og:image" content="https://run.analyticszone.app/assets/images/og-image.svg">
-  <meta property="og:locale" content="ja_JP">
-  <meta property="og:site_name" content="Run Analytics">
-
-  
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:url" content="https://run.analyticszone.app/ja/efficiency/">
-  <meta name="twitter:title" content="ランニング効率指標：ランニングエコノミーを測定する | Run Analytics - Running Analytics App |">
-  <meta name="twitter:description" content="ストライド効率と酸素効率をマスターして、より少ない努力でより速く走る. ランニング効率指標：ランニングエコノミーを測定する | Run Analytics - Running Analytics App |">
-  <meta name="twitter:image" content="https://run.analyticszone.app/assets/images/og-image.svg">
-  
-  <meta name="twitter:site" content="@runanalytics">
-  <meta name="twitter:creator" content="@runanalytics">
-  
-
-  
-  
-  <link rel="alternate" hreflang="af"
-    href="https://run.analyticszone.app/af/efficiency/">
-  
-  <link rel="alternate" hreflang="am"
-    href="https://run.analyticszone.app/am/efficiency/">
-  
-  <link rel="alternate" hreflang="ar"
-    href="https://run.analyticszone.app/ar/efficiency/">
-  
-  <link rel="alternate" hreflang="bg"
-    href="https://run.analyticszone.app/bg/efficiency/">
-  
-  <link rel="alternate" hreflang="bn"
-    href="https://run.analyticszone.app/bn/efficiency/">
-  
-  <link rel="alternate" hreflang="ca"
-    href="https://run.analyticszone.app/ca/efficiency/">
-  
-  <link rel="alternate" hreflang="cs"
-    href="https://run.analyticszone.app/cs/efficiency/">
-  
-  <link rel="alternate" hreflang="da"
-    href="https://run.analyticszone.app/da/efficiency/">
-  
-  <link rel="alternate" hreflang="de"
-    href="https://run.analyticszone.app/de/efficiency/">
-  
-  <link rel="alternate" hreflang="el"
-    href="https://run.analyticszone.app/el/efficiency/">
-  
-  <link rel="alternate" hreflang="en"
-    href="https://run.analyticszone.app/en/efficiency/">
-  
-  <link rel="alternate" hreflang="es"
-    href="https://run.analyticszone.app/es/efficiency/">
-  
-  <link rel="alternate" hreflang="et"
-    href="https://run.analyticszone.app/et/efficiency/">
-  
-  <link rel="alternate" hreflang="fa"
-    href="https://run.analyticszone.app/fa/efficiency/">
-  
-  <link rel="alternate" hreflang="fi"
-    href="https://run.analyticszone.app/fi/efficiency/">
-  
-  <link rel="alternate" hreflang="fr"
-    href="https://run.analyticszone.app/fr/efficiency/">
-  
-  <link rel="alternate" hreflang="gu"
-    href="https://run.analyticszone.app/gu/efficiency/">
-  
-  <link rel="alternate" hreflang="ha"
-    href="https://run.analyticszone.app/ha/efficiency/">
-  
-  <link rel="alternate" hreflang="he"
-    href="https://run.analyticszone.app/he/efficiency/">
-  
-  <link rel="alternate" hreflang="hi"
-    href="https://run.analyticszone.app/hi/efficiency/">
-  
-  <link rel="alternate" hreflang="hr"
-    href="https://run.analyticszone.app/hr/efficiency/">
-  
-  <link rel="alternate" hreflang="hu"
-    href="https://run.analyticszone.app/hu/efficiency/">
-  
-  <link rel="alternate" hreflang="id"
-    href="https://run.analyticszone.app/id/efficiency/">
-  
-  <link rel="alternate" hreflang="is"
-    href="https://run.analyticszone.app/is/efficiency/">
-  
-  <link rel="alternate" hreflang="it"
-    href="https://run.analyticszone.app/it/efficiency/">
-  
-  <link rel="alternate" hreflang="ja"
-    href="https://run.analyticszone.app/ja/efficiency/">
-  
-  <link rel="alternate" hreflang="km"
-    href="https://run.analyticszone.app/km/efficiency/">
-  
-  <link rel="alternate" hreflang="kn"
-    href="https://run.analyticszone.app/kn/efficiency/">
-  
-  <link rel="alternate" hreflang="ko"
-    href="https://run.analyticszone.app/ko/efficiency/">
-  
-  <link rel="alternate" hreflang="lt"
-    href="https://run.analyticszone.app/lt/efficiency/">
-  
-  <link rel="alternate" hreflang="lv"
-    href="https://run.analyticszone.app/lv/efficiency/">
-  
-  <link rel="alternate" hreflang="ms"
-    href="https://run.analyticszone.app/ms/efficiency/">
-  
-  <link rel="alternate" hreflang="my"
-    href="https://run.analyticszone.app/my/efficiency/">
-  
-  <link rel="alternate" hreflang="nb"
-    href="https://run.analyticszone.app/nb/efficiency/">
-  
-  <link rel="alternate" hreflang="nl"
-    href="https://run.analyticszone.app/nl/efficiency/">
-  
-  <link rel="alternate" hreflang="pl"
-    href="https://run.analyticszone.app/pl/efficiency/">
-  
-  <link rel="alternate" hreflang="pt"
-    href="https://run.analyticszone.app/pt/efficiency/">
-  
-  <link rel="alternate" hreflang="pt-br"
-    href="https://run.analyticszone.app/pt-br/efficiency/">
-  
-  <link rel="alternate" hreflang="ro"
-    href="https://run.analyticszone.app/ro/efficiency/">
-  
-  <link rel="alternate" hreflang="ru"
-    href="https://run.analyticszone.app/ru/efficiency/">
-  
-  <link rel="alternate" hreflang="sk"
-    href="https://run.analyticszone.app/sk/efficiency/">
-  
-  <link rel="alternate" hreflang="sl"
-    href="https://run.analyticszone.app/sl/efficiency/">
-  
-  <link rel="alternate" hreflang="sr"
-    href="https://run.analyticszone.app/sr/efficiency/">
-  
-  <link rel="alternate" hreflang="sv"
-    href="https://run.analyticszone.app/sv/efficiency/">
-  
-  <link rel="alternate" hreflang="sw"
-    href="https://run.analyticszone.app/sw/efficiency/">
-  
-  <link rel="alternate" hreflang="ta"
-    href="https://run.analyticszone.app/ta/efficiency/">
-  
-  <link rel="alternate" hreflang="te"
-    href="https://run.analyticszone.app/te/efficiency/">
-  
-  <link rel="alternate" hreflang="th"
-    href="https://run.analyticszone.app/th/efficiency/">
-  
-  <link rel="alternate" hreflang="tl"
-    href="https://run.analyticszone.app/tl/efficiency/">
-  
-  <link rel="alternate" hreflang="tr"
-    href="https://run.analyticszone.app/tr/efficiency/">
-  
-  <link rel="alternate" hreflang="uk"
-    href="https://run.analyticszone.app/uk/efficiency/">
-  
-  <link rel="alternate" hreflang="ur"
-    href="https://run.analyticszone.app/ur/efficiency/">
-  
-  <link rel="alternate" hreflang="vi"
-    href="https://run.analyticszone.app/vi/efficiency/">
-  
-  <link rel="alternate" hreflang="yo"
-    href="https://run.analyticszone.app/yo/efficiency/">
-  
-  <link rel="alternate" hreflang="zh"
-    href="https://run.analyticszone.app/zh/efficiency/">
-  
-  <link rel="alternate" hreflang="x-default"
-    href="https://run.analyticszone.app/en/efficiency/">
-
-  
-  <link rel="icon" type="image/png" sizes="32x32" href="../../assets/images/icons/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="../../assets/images/icons/favicon-16x16.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="../../assets/images/icons/apple-touch-icon.png">
-  <link rel="manifest" href="../../manifest.json">
-  <meta name="theme-color" content="#2563EB">
-  <meta name="robots" content="index, follow">
-
-  
-  
-  
-  <meta name="apple-itunes-app" content="app-id=6754524015">
-  
-
-  
-  <style>
+<!DOCTYPE html><html lang="ja" dir="ltr"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet"><title>ランニング効率指標：ランニングエコノミーを測定する | Run Analytics - Running Analytics App |</title><meta name="description" content="ストライド効率と酸素効率をマスターして、より少ない努力でより速く走る. ランニング効率指標：ランニングエコノミーを測定する | Run Analytics - Running Analytics App |"><meta name="author" content="AnalyticsZone Team"><meta name="keywords" content="Running Efficiency, 水泳効率, ストローク効率, Running Efficiencyスコア, 効率計算機"><link rel="canonical" href="https://run.analyticszone.app/ja/efficiency/"><meta property="article:published_time" content="2025-01-15T10:00:00Z"><meta property="article:modified_time" content="2026-01-04T14:30:00Z"><meta property="article:author" content="AnalyticsZone Team"><meta property="og:type" content="article"><meta property="og:url" content="https://run.analyticszone.app/ja/efficiency/"><meta property="og:title" content="ランニング効率指標：ランニングエコノミーを測定する | Run Analytics - Running Analytics App |"><meta property="og:description" content="ストライド効率と酸素効率をマスターして、より少ない努力でより速く走る. ランニング効率指標：ランニングエコノミーを測定する | Run Analytics - Running Analytics App |"><meta property="og:image" content="https://run.analyticszone.app/assets/images/og-image.svg"><meta property="og:locale" content="ja_JP"><meta property="og:site_name" content="Run Analytics"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:url" content="https://run.analyticszone.app/ja/efficiency/"><meta name="twitter:title" content="ランニング効率指標：ランニングエコノミーを測定する | Run Analytics - Running Analytics App |"><meta name="twitter:description" content="ストライド効率と酸素効率をマスターして、より少ない努力でより速く走る. ランニング効率指標：ランニングエコノミーを測定する | Run Analytics - Running Analytics App |"><meta name="twitter:image" content="https://run.analyticszone.app/assets/images/og-image.svg"><meta name="twitter:site" content="@runanalytics"><meta name="twitter:creator" content="@runanalytics"><link rel="alternate" hreflang="af"
+    href="https://run.analyticszone.app/af/efficiency/"><link rel="alternate" hreflang="am"
+    href="https://run.analyticszone.app/am/efficiency/"><link rel="alternate" hreflang="ar"
+    href="https://run.analyticszone.app/ar/efficiency/"><link rel="alternate" hreflang="bg"
+    href="https://run.analyticszone.app/bg/efficiency/"><link rel="alternate" hreflang="bn"
+    href="https://run.analyticszone.app/bn/efficiency/"><link rel="alternate" hreflang="ca"
+    href="https://run.analyticszone.app/ca/efficiency/"><link rel="alternate" hreflang="cs"
+    href="https://run.analyticszone.app/cs/efficiency/"><link rel="alternate" hreflang="da"
+    href="https://run.analyticszone.app/da/efficiency/"><link rel="alternate" hreflang="de"
+    href="https://run.analyticszone.app/de/efficiency/"><link rel="alternate" hreflang="el"
+    href="https://run.analyticszone.app/el/efficiency/"><link rel="alternate" hreflang="en"
+    href="https://run.analyticszone.app/en/efficiency/"><link rel="alternate" hreflang="es"
+    href="https://run.analyticszone.app/es/efficiency/"><link rel="alternate" hreflang="et"
+    href="https://run.analyticszone.app/et/efficiency/"><link rel="alternate" hreflang="fa"
+    href="https://run.analyticszone.app/fa/efficiency/"><link rel="alternate" hreflang="fi"
+    href="https://run.analyticszone.app/fi/efficiency/"><link rel="alternate" hreflang="fr"
+    href="https://run.analyticszone.app/fr/efficiency/"><link rel="alternate" hreflang="gu"
+    href="https://run.analyticszone.app/gu/efficiency/"><link rel="alternate" hreflang="ha"
+    href="https://run.analyticszone.app/ha/efficiency/"><link rel="alternate" hreflang="he"
+    href="https://run.analyticszone.app/he/efficiency/"><link rel="alternate" hreflang="hi"
+    href="https://run.analyticszone.app/hi/efficiency/"><link rel="alternate" hreflang="hr"
+    href="https://run.analyticszone.app/hr/efficiency/"><link rel="alternate" hreflang="hu"
+    href="https://run.analyticszone.app/hu/efficiency/"><link rel="alternate" hreflang="id"
+    href="https://run.analyticszone.app/id/efficiency/"><link rel="alternate" hreflang="is"
+    href="https://run.analyticszone.app/is/efficiency/"><link rel="alternate" hreflang="it"
+    href="https://run.analyticszone.app/it/efficiency/"><link rel="alternate" hreflang="ja"
+    href="https://run.analyticszone.app/ja/efficiency/"><link rel="alternate" hreflang="km"
+    href="https://run.analyticszone.app/km/efficiency/"><link rel="alternate" hreflang="kn"
+    href="https://run.analyticszone.app/kn/efficiency/"><link rel="alternate" hreflang="ko"
+    href="https://run.analyticszone.app/ko/efficiency/"><link rel="alternate" hreflang="lt"
+    href="https://run.analyticszone.app/lt/efficiency/"><link rel="alternate" hreflang="lv"
+    href="https://run.analyticszone.app/lv/efficiency/"><link rel="alternate" hreflang="ms"
+    href="https://run.analyticszone.app/ms/efficiency/"><link rel="alternate" hreflang="my"
+    href="https://run.analyticszone.app/my/efficiency/"><link rel="alternate" hreflang="nb"
+    href="https://run.analyticszone.app/nb/efficiency/"><link rel="alternate" hreflang="nl"
+    href="https://run.analyticszone.app/nl/efficiency/"><link rel="alternate" hreflang="pl"
+    href="https://run.analyticszone.app/pl/efficiency/"><link rel="alternate" hreflang="pt"
+    href="https://run.analyticszone.app/pt/efficiency/"><link rel="alternate" hreflang="pt-br"
+    href="https://run.analyticszone.app/pt-br/efficiency/"><link rel="alternate" hreflang="ro"
+    href="https://run.analyticszone.app/ro/efficiency/"><link rel="alternate" hreflang="ru"
+    href="https://run.analyticszone.app/ru/efficiency/"><link rel="alternate" hreflang="sk"
+    href="https://run.analyticszone.app/sk/efficiency/"><link rel="alternate" hreflang="sl"
+    href="https://run.analyticszone.app/sl/efficiency/"><link rel="alternate" hreflang="sr"
+    href="https://run.analyticszone.app/sr/efficiency/"><link rel="alternate" hreflang="sv"
+    href="https://run.analyticszone.app/sv/efficiency/"><link rel="alternate" hreflang="sw"
+    href="https://run.analyticszone.app/sw/efficiency/"><link rel="alternate" hreflang="ta"
+    href="https://run.analyticszone.app/ta/efficiency/"><link rel="alternate" hreflang="te"
+    href="https://run.analyticszone.app/te/efficiency/"><link rel="alternate" hreflang="th"
+    href="https://run.analyticszone.app/th/efficiency/"><link rel="alternate" hreflang="tl"
+    href="https://run.analyticszone.app/tl/efficiency/"><link rel="alternate" hreflang="tr"
+    href="https://run.analyticszone.app/tr/efficiency/"><link rel="alternate" hreflang="uk"
+    href="https://run.analyticszone.app/uk/efficiency/"><link rel="alternate" hreflang="ur"
+    href="https://run.analyticszone.app/ur/efficiency/"><link rel="alternate" hreflang="vi"
+    href="https://run.analyticszone.app/vi/efficiency/"><link rel="alternate" hreflang="yo"
+    href="https://run.analyticszone.app/yo/efficiency/"><link rel="alternate" hreflang="zh"
+    href="https://run.analyticszone.app/zh/efficiency/"><link rel="alternate" hreflang="x-default"
+    href="https://run.analyticszone.app/en/efficiency/"><link rel="icon" type="image/png" sizes="32x32" href="../../assets/images/icons/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="../../assets/images/icons/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="../../assets/images/icons/apple-touch-icon.png"><link rel="manifest" href="../../manifest.json"><meta name="theme-color" content="#2563EB"><meta name="robots" content="index, follow"><meta name="apple-itunes-app" content="app-id=6754524015"><style>
 /* Critical CSS - Above the fold styles for fast LCP */
 :root {
   --color-primary: #0066CC;
@@ -499,20 +314,7 @@ img[width][height] {
     transition-duration: 0.01ms !important;
   }
 }
-</style>
-
-  
-  <link rel="preconnect" href="https://www.googletagmanager.com">
-  <link rel="dns-prefetch" href="https://www.googletagmanager.com">
-
-  
-  <link rel="stylesheet" href="../../assets/css/main.min.css?v=8aef43d1">
-
-  
-  
-
-
-<script type="application/ld+json">
+</style><link rel="preconnect" href="https://www.googletagmanager.com"><link rel="dns-prefetch" href="https://www.googletagmanager.com"><link rel="stylesheet" href="../../assets/css/main.min.css?v=e899af207631"><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Organization",
@@ -547,10 +349,7 @@ img[width][height] {
     
   ]
 }
-</script>
-
-
-<script type="application/ld+json">
+</script><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "WebSite",
@@ -559,11 +358,7 @@ img[width][height] {
   "description": "Track Critical Running Speed, Training Stress Score, and performance metrics with Run Analytics. Science-based iOS app for runners, triathletes &amp; coaches. 7-day free trial.",
   "inLanguage": "ja"
 }
-</script>
-
-
-
-<script type="application/ld+json">
+</script><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
@@ -578,12 +373,7 @@ img[width][height] {
   },
   "downloadUrl": "https://apps.apple.com/us/app/run-analytics/id6754524015"
 }
-</script>
-
-
-
-
-<script type="application/ld+json">
+</script><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
@@ -612,11 +402,7 @@ img[width][height] {
     
   ]
 }
-</script>
-
-
-
-<script type="application/ld+json">
+</script><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "WebPage",
@@ -624,11 +410,7 @@ img[width][height] {
   "description": "ストライド効率と酸素効率をマスターして、より少ない努力でより速く走る. ランニング効率指標：ランニングエコノミーを測定する | Run Analytics - Running Analytics App |",
   "url": "https://run.analyticszone.app/ja/efficiency/"
 }
-</script>
-
-
-
-<script type="application/ld+json">
+</script><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Article",
@@ -653,17 +435,7 @@ img[width][height] {
     "@id": "https://run.analyticszone.app/ja/efficiency/"
   }
 }
-</script>
-
-
-
-
-
-  
-  
-
-  
-  <script>
+</script><script>
     (function () {
       let theme = localStorage.getItem('theme');
       // Older builds could persist a per-subdomain `theme=light` value without a UI
@@ -677,1528 +449,380 @@ img[width][height] {
         document.documentElement.classList.add('dark-mode');
       }
     })();
-  </script>
-</head>
-
-<body>
-  
-  <a href="#main-content" class="skip-link">コンテンツへ</a>
-
-  
-  <header class="site-header">
-    <div class="container">
-        <div class="header-inner">
-            
-            <a href="/ja/" class="site-logo">
-                <picture>
-                    <source srcset="../../assets/images/logo-dark.png" type="image/png"
-                        media="(prefers-color-scheme: dark)">
-                    <img src="../../assets/images/logo.png" alt="Run Analytics - Running Analytics App | Critical Running Speed, TSS, CTL/ATL/TSB for iOS" width="56" height="56">
-                </picture>
-                <span class="logo-text">Run Analytics</span>
-            </a>
-
-            
-            <nav class="nav-primary" id="nav-primary" role="navigation" aria-label="Main navigation">
-                <div class="nav-group-left">
-                    <ul>
-                        
-                        <li>
-                            
-                            <a href="/ja/" 
+  </script></head><body><a href="#main-content" class="skip-link">コンテンツへ</a><header class="site-header"><div class="container"><div class="header-inner"><a href="/ja/" class="site-logo"><picture><source srcset="../../assets/images/logo-dark.png" type="image/png"
+                        media="(prefers-color-scheme: dark)"><img src="../../assets/images/logo.png" alt="Run Analytics - Running Analytics App | Critical Running Speed, TSS, CTL/ATL/TSB for iOS" width="56" height="56"></picture><span class="logo-text">Run Analytics</span></a><nav class="nav-primary" id="nav-primary" role="navigation" aria-label="Main navigation"><div class="nav-group-left"><ul><li><a href="/ja/" 
                                 aria-current="">
                                 ホーム
-                            </a>
-                            
-                            </li>
-                            
-                        <li class="has-submenu" >
-                            
-                            
-                            <a href="/ja/getting-started/" class="nav-label">学ぶ</a>
-                            
-                            <ul class="submenu">
-                                
-                                <li>
-                                    <a href="/ja/getting-started/" 
+                            </a></li><li class="has-submenu" ><a href="/ja/getting-started/" class="nav-label">学ぶ</a><ul class="submenu"><li><a href="/ja/getting-started/" 
                                         aria-current="">
                                         はじめに
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/ja/crs/" 
+                                    </a></li><li><a href="/ja/crs/" 
                                         aria-current="">
                                         CRS
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/ja/training-zones/" 
+                                    </a></li><li><a href="/ja/training-zones/" 
                                         aria-current="">
                                         トレーニングゾーン
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/ja/training-load/" 
+                                    </a></li><li><a href="/ja/training-load/" 
                                         aria-current="">
                                         トレーニング負荷
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/ja/rtss-calculator/" 
+                                    </a></li><li><a href="/ja/rtss-calculator/" 
                                         aria-current="">
                                         rTSS計算機
-                                    </a>
-                                </li>
-                                
-                            </ul>
-                            
-                            </li>
-                            
-                        <li class="has-submenu" >
-                            
-                            
-                            <a href="/ja/research/" class="nav-label">科学</a>
-                            
-                            <ul class="submenu">
-                                
-                                <li>
-                                    <a href="/ja/research/" 
+                                    </a></li></ul></li><li class="has-submenu" ><a href="/ja/research/" class="nav-label">科学</a><ul class="submenu"><li><a href="/ja/research/" 
                                         aria-current="">
                                         研究
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/ja/formulas/" 
+                                    </a></li><li><a href="/ja/formulas/" 
                                         aria-current="">
                                         数式
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/ja/efficiency/" class="active" 
+                                    </a></li><li><a href="/ja/efficiency/" class="active" 
                                         aria-current="page">
                                         効率
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/ja/stride-mechanics/" 
+                                    </a></li><li><a href="/ja/stride-mechanics/" 
                                         aria-current="">
                                         ストローク
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/ja/bibliography/" 
+                                    </a></li><li><a href="/ja/bibliography/" 
                                         aria-current="">
                                         参考文献
-                                    </a>
-                                </li>
-                                
-                            </ul>
-                            
-                            </li>
-                            
-                        <li>
-                            
-                            <a href="/ja/contact/" 
+                                    </a></li></ul></li><li><a href="/ja/contact/" 
                                 aria-current="">
                                 お問い合わせ
-                            </a>
-                            
-                            </li>
-                            
-                    </ul>
-
-                    
-                    <div class="search-container">
-                        <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                            </a></li></ul><div class="search-container"><svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
                             viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                            <circle cx="11" cy="11" r="8"></circle>
-                            <path d="m21 21-4.35-4.35"></path>
-                        </svg>
-                        <input type="search" id="site-search" class="search-input" aria-expanded="false"
-                            aria-haspopup="listbox" aria-autocomplete="list" autocomplete="off" spellcheck="false" />
-                        <div id="search-results" class="search-results hidden" role="region" aria-live="polite"></div>
-                    </div>
-
-                    
-                    <select class="language-selector" id="language-select" aria-label="言語を選択">
-                        
-                        <option value="af" >
+                            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.35-4.35"></path></svg><input type="search" id="site-search" class="search-input" aria-expanded="false"
+                            aria-haspopup="listbox" aria-autocomplete="list" autocomplete="off" spellcheck="false" /><div id="search-results" class="search-results hidden" role="region" aria-live="polite"></div></div><select class="language-selector" id="language-select" aria-label="言語を選択"><option value="af" >
                             Afrikaans
-                        </option>
-                        
-                        <option value="am" >
+                        </option><option value="am" >
                             አማርኛ
-                        </option>
-                        
-                        <option value="ar" >
+                        </option><option value="ar" >
                             العربية
-                        </option>
-                        
-                        <option value="bg" >
+                        </option><option value="bg" >
                             Български
-                        </option>
-                        
-                        <option value="bn" >
+                        </option><option value="bn" >
                             বাংলা
-                        </option>
-                        
-                        <option value="ca" >
+                        </option><option value="ca" >
                             Català
-                        </option>
-                        
-                        <option value="cs" >
+                        </option><option value="cs" >
                             Čeština
-                        </option>
-                        
-                        <option value="da" >
+                        </option><option value="da" >
                             Dansk
-                        </option>
-                        
-                        <option value="de" >
+                        </option><option value="de" >
                             Deutsch
-                        </option>
-                        
-                        <option value="el" >
+                        </option><option value="el" >
                             Ελληνικά
-                        </option>
-                        
-                        <option value="en" >
+                        </option><option value="en" >
                             English
-                        </option>
-                        
-                        <option value="es" >
+                        </option><option value="es" >
                             Español
-                        </option>
-                        
-                        <option value="et" >
+                        </option><option value="et" >
                             Eesti
-                        </option>
-                        
-                        <option value="fa" >
+                        </option><option value="fa" >
                             فارسی
-                        </option>
-                        
-                        <option value="fi" >
+                        </option><option value="fi" >
                             Suomi
-                        </option>
-                        
-                        <option value="fr" >
+                        </option><option value="fr" >
                             Français
-                        </option>
-                        
-                        <option value="gu" >
+                        </option><option value="gu" >
                             ગુજરાતી
-                        </option>
-                        
-                        <option value="ha" >
+                        </option><option value="ha" >
                             Hausa
-                        </option>
-                        
-                        <option value="he" >
+                        </option><option value="he" >
                             עברית
-                        </option>
-                        
-                        <option value="hi" >
+                        </option><option value="hi" >
                             हिन्दी
-                        </option>
-                        
-                        <option value="hr" >
+                        </option><option value="hr" >
                             Hrvatski
-                        </option>
-                        
-                        <option value="hu" >
+                        </option><option value="hu" >
                             Magyar
-                        </option>
-                        
-                        <option value="id" >
+                        </option><option value="id" >
                             Bahasa Indonesia
-                        </option>
-                        
-                        <option value="is" >
+                        </option><option value="is" >
                             Íslenska
-                        </option>
-                        
-                        <option value="it" >
+                        </option><option value="it" >
                             Italiano
-                        </option>
-                        
-                        <option value="ja" selected>
+                        </option><option value="ja" selected>
                             日本語
-                        </option>
-                        
-                        <option value="km" >
+                        </option><option value="km" >
                             ភាសាខ្មែរ
-                        </option>
-                        
-                        <option value="kn" >
+                        </option><option value="kn" >
                             ಕನ್ನಡ
-                        </option>
-                        
-                        <option value="ko" >
+                        </option><option value="ko" >
                             한국어
-                        </option>
-                        
-                        <option value="lt" >
+                        </option><option value="lt" >
                             Lietuvių
-                        </option>
-                        
-                        <option value="lv" >
+                        </option><option value="lv" >
                             Latviešu
-                        </option>
-                        
-                        <option value="ms" >
+                        </option><option value="ms" >
                             Bahasa Melayu
-                        </option>
-                        
-                        <option value="my" >
+                        </option><option value="my" >
                             မြန်မာစာ
-                        </option>
-                        
-                        <option value="nb" >
+                        </option><option value="nb" >
                             Norsk Bokmål
-                        </option>
-                        
-                        <option value="nl" >
+                        </option><option value="nl" >
                             Nederlands
-                        </option>
-                        
-                        <option value="pl" >
+                        </option><option value="pl" >
                             Polski
-                        </option>
-                        
-                        <option value="pt" >
+                        </option><option value="pt" >
                             Português
-                        </option>
-                        
-                        <option value="pt-br" >
+                        </option><option value="pt-br" >
                             Português (Brasil)
-                        </option>
-                        
-                        <option value="ro" >
+                        </option><option value="ro" >
                             Română
-                        </option>
-                        
-                        <option value="ru" >
+                        </option><option value="ru" >
                             Русский
-                        </option>
-                        
-                        <option value="sk" >
+                        </option><option value="sk" >
                             Slovenčina
-                        </option>
-                        
-                        <option value="sl" >
+                        </option><option value="sl" >
                             Slovenščina
-                        </option>
-                        
-                        <option value="sr" >
+                        </option><option value="sr" >
                             Srpski
-                        </option>
-                        
-                        <option value="sv" >
+                        </option><option value="sv" >
                             Svenska
-                        </option>
-                        
-                        <option value="sw" >
+                        </option><option value="sw" >
                             Kiswahili
-                        </option>
-                        
-                        <option value="ta" >
+                        </option><option value="ta" >
                             தமிழ்
-                        </option>
-                        
-                        <option value="te" >
+                        </option><option value="te" >
                             తెలుగు
-                        </option>
-                        
-                        <option value="th" >
+                        </option><option value="th" >
                             ไทย
-                        </option>
-                        
-                        <option value="tl" >
+                        </option><option value="tl" >
                             Tagalog
-                        </option>
-                        
-                        <option value="tr" >
+                        </option><option value="tr" >
                             Türkçe
-                        </option>
-                        
-                        <option value="uk" >
+                        </option><option value="uk" >
                             Українська
-                        </option>
-                        
-                        <option value="ur" >
+                        </option><option value="ur" >
                             اردو
-                        </option>
-                        
-                        <option value="vi" >
+                        </option><option value="vi" >
                             Tiếng Việt
-                        </option>
-                        
-                        <option value="yo" >
+                        </option><option value="yo" >
                             Yorùbá
-                        </option>
-                        
-                        <option value="zh" >
+                        </option><option value="zh" >
                             中文
-                        </option>
-                        
-                    </select>
-                </div>
-
-                <div class="nav-group-right">
-                    
-
-
-                    
-                    <div class="header-app-buttons">
-                        
-                        
-                        <a href="https://apps.apple.com/us/app/run-analytics/id6754524015" class="header-download-btn" target="_blank"
-                            rel="noopener" aria-label="Download on App Store" title="Download on App Store">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                                fill="currentColor">
-                                <path
-                                    d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z" />
-                            </svg>
-                        </a>
-                        
-
-                        
-                        <a href="https://play.google.com/store/apps/details?id=com.arnohealth.runanalytics" class="header-download-btn" target="_blank"
-                            rel="noopener" aria-label="Get it on Google Play" title="Get it on Google Play">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                                fill="currentColor">
-                                <path
-                                    d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.92 20.16,13.19L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M16.81,8.88L14.54,11.15L6.05,2.66L16.81,8.88Z" />
-                            </svg>
-                        </a>
-                        
-                        
-                    </div>
-
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-
-                    
-                    <div class="suite-menu-container">
-                        <button class="suite-menu-toggle" id="suite-menu-toggle" aria-label="See other apps"
-                            aria-expanded="false">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        </option></select></div><div class="nav-group-right"><div class="header-app-buttons"><a href="https://apps.apple.com/us/app/run-analytics/id6754524015" class="header-download-btn" target="_blank"
+                            rel="noopener" aria-label="Download on App Store" title="Download on App Store"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="currentColor"><path
+                                    d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z" /></svg></a><a href="https://play.google.com/store/apps/details?id=com.arnohealth.runanalytics" class="header-download-btn" target="_blank"
+                            rel="noopener" aria-label="Get it on Google Play" title="Get it on Google Play"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="currentColor"><path
+                                    d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.92 20.16,13.19L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M16.81,8.88L14.54,11.15L6.05,2.66L16.81,8.88Z" /></svg></a></div><div class="suite-menu-container"><button class="suite-menu-toggle" id="suite-menu-toggle" aria-label="See other apps"
+                            aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round">
-                                <rect x="3" y="3" width="7" height="7"></rect>
-                                <rect x="14" y="3" width="7" height="7"></rect>
-                                <rect x="14" y="14" width="7" height="7"></rect>
-                                <rect x="3" y="14" width="7" height="7"></rect>
-                            </svg>
-                        </button>
-                        <div class="suite-dropdown hidden" id="suite-dropdown">
-                            <div class="suite-dropdown-header">Other AnalyticsZone Apps</div>
-                            <div class="suite-apps-grid">
-                                
-                                <a href="https://analyticszone.app" class="suite-app-link">AnalyticsZone</a>
-                                
-                                <a href="https://swim.analyticszone.app" class="suite-app-link">Swim Analytics</a>
-                                
-                                <a href="https://bike.analyticszone.app" class="suite-app-link">Bike Analytics</a>
-                                
-                                <a href="https://walk.analyticszone.app" class="suite-app-link">Walk Analytics</a>
-                                
-                                <a href="https://cardio.analyticszone.app" class="suite-app-link">Cardio Analytics</a>
-                                
-                                <a href="https://health.analyticszone.app" class="suite-app-link">Health Analytics</a>
-                                
-                                <a href="https://swimtrainer.analyticszone.app" class="suite-app-link">Swim Trainer</a>
-                                
-                            </div>
-                        </div>
-                    </div>
-                    
-                </div>
-            </nav>
-
-            
-            <button class="menu-toggle" id="menu-toggle" aria-label="メニュー切替"
-                aria-expanded="false" aria-controls="nav-primary">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </div>
-    </div>
-</header>
-
-  
-  
-
-<nav class="breadcrumbs" aria-label="Breadcrumb">
-    <div class="container">
-        <ol>
-            
-            <li>
-                
-                <a href="/ja/">ホーム</a>
-                
-            </li>
-            
-            <li>
-                
-                <a href="/ja/research/">科学</a>
-                
-            </li>
-            
-            <li>
-                
-                <span aria-current="page">効率</span>
-                
-            </li>
-            
-        </ol>
-    </div>
-</nav>
-
-
-  
-  <main id="main-content" class="main-content">
-    
-    <section class="page-hero">
-    <div class="container">
-        <h1>ランニング効率指標：ランニングエコノミーを測定する</h1>
-        <p class="lead">ストライド効率と酸素効率をマスターして、より少ない努力でより速く走る</p>
-    </div>
-</section>
-
-<section class="section">
-    <div class="container container-narrow">
-        <div class="callout callout-success">
-            <h2>重要ポイント：ランニング効率</h2>
-            <ul class="key-points">
-                <li><strong>ランニング効率指標</strong>は、ストライド数と時間を組み合わせてランニングエコノミーを測定します</li>
-                <li><strong>効率スコアは低いほど良い</strong> – ゴルフのように、数値を最小化することが目標です</li>
-                <li><strong>エリートランナーは25mで30-35</strong>のスコア、初心者は60+のスコア</li>
-                <li><strong>自分の進歩を追跡する</strong> – 身長とストライド長により、アスリート間の比較は無効です</li>
-                <li><strong>改善には6-12週間</strong>の一貫したテクニック練習が必要で、意味のある向上が見られます</li>
-            </ul>
-        </div>
-
-        <h2>ランニング効率とは？</h2>
-        <p class="lead">
+                                stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg></button><div class="suite-dropdown hidden" id="suite-dropdown"><div class="suite-dropdown-header">Other AnalyticsZone Apps</div><div class="suite-apps-grid"><a href="https://analyticszone.app" class="suite-app-link">AnalyticsZone</a><a href="https://swim.analyticszone.app" class="suite-app-link">Swim Analytics</a><a href="https://bike.analyticszone.app" class="suite-app-link">Bike Analytics</a><a href="https://walk.analyticszone.app" class="suite-app-link">Walk Analytics</a><a href="https://cardio.analyticszone.app" class="suite-app-link">Cardio Analytics</a><a href="https://health.analyticszone.app" class="suite-app-link">Health Analytics</a><a href="https://swimtrainer.analyticszone.app" class="suite-app-link">Swim Trainer</a></div></div></div></div></nav><button class="menu-toggle" id="menu-toggle" aria-label="メニュー切替"
+                aria-expanded="false" aria-controls="nav-primary"><span></span><span></span><span></span></button></div></div></header><nav class="breadcrumbs" aria-label="Breadcrumb"><div class="container"><ol><li><a href="/ja/">ホーム</a></li><li><a href="/ja/research/">科学</a></li><li><span aria-current="page">効率</span></li></ol></div></nav><main id="main-content" class="main-content"><section class="page-hero"><div class="container"><h1>ランニング効率指標：ランニングエコノミーを測定する</h1><p class="lead">ストライド効率と酸素効率をマスターして、より少ない努力でより速く走る</p></div></section><section class="section"><div class="container container-narrow"><div class="callout callout-success"><h2>重要ポイント：ランニング効率</h2><ul class="key-points"><li><strong>ランニング効率指標</strong>は、ストライド数と時間を組み合わせてランニングエコノミーを測定します</li><li><strong>効率スコアは低いほど良い</strong> – ゴルフのように、数値を最小化することが目標です</li><li><strong>エリートランナーは25mで30-35</strong>のスコア、初心者は60+のスコア</li><li><strong>自分の進歩を追跡する</strong> – 身長とストライド長により、アスリート間の比較は無効です</li><li><strong>改善には6-12週間</strong>の一貫したテクニック練習が必要で、意味のある向上が見られます</li></ul></div><h2>ランニング効率とは？</h2><p class="lead">
             ランニング効率は、空間をどれだけ経済的に移動するかを測定します。<strong>効率スコア</strong>は、ストライド数と時間を単一の指標に組み合わせ、<strong>ランニングエコノミー</strong>（特定のペースを維持するエネルギーコスト）を反映します。
-        </p>
-
-        <p><strong>ランニング効率指標</strong>を理解することで、テクニックの破綻を特定し、疲労を監視し、より良いパフォーマンスのためにストライドメカニクスを最適化できます。研究によると、ランニングエコノミーをわずか5%改善するだけで、同じ努力レベルで大幅に速いレースタイムにつながることが示されています。
-        </p>
-
-        <div class="formula-box">
-            <h3>ランニング効率の公式</h3>
-            <div class="formula">
+        </p><p><strong>ランニング効率指標</strong>を理解することで、テクニックの破綻を特定し、疲労を監視し、より良いパフォーマンスのためにストライドメカニクスを最適化できます。研究によると、ランニングエコノミーをわずか5%改善するだけで、同じ努力レベルで大幅に速いレースタイムにつながることが示されています。
+        </p><div class="formula-box"><h3>ランニング効率の公式</h3><div class="formula">
                 ランニング効率スコア = 時間（秒）+ ストライド数
-            </div>
-            <div class="formula-explanation">
-                <p><strong>計算例：</strong> 25メートルを20秒で15ストライドで走った場合：</p>
-                <div class="calculation">
-                    ランニング効率 = 20秒 + 15ストライド = <strong>35ポイント</strong>
-                </div>
-                <p><em>これは、エリートレベルのストライド効率と酸素効率が連携していることを表しています。</em></p>
-            </div>
-        </div>
-
-        <div class="callout callout-info">
-            <h3>なぜこの指標がランニングエコノミーにとって重要なのか</h3>
-            <p>効率スコアは、<strong>ランニングエコノミー</strong>（特定のペースで消費する酸素量）の実用的な代替指標として機能します。エコノミーが優れたランナーは、より少ない努力でより速いペースを維持でき、800mからマラソンまでのレースでパフォーマンスが向上します。
-            </p>
-            <p>時間の経過とともに効率スコアを追跡することで、ストライド効率、生体力学、および全体的なランニングエコノミーの改善を監視できます。</p>
-        </div>
-
-        <div class="callout callout-info">
-            <h3>距離比較のための正規化されたランニング効率</h3>
-            <p>異なる測定距離間でスコアを比較するには：</p>
-            <div class="formula">
+            </div><div class="formula-explanation"><p><strong>計算例：</strong> 25メートルを20秒で15ストライドで走った場合：</p><div class="calculation">
+                    ランニング効率 = 20秒 + 15ストライド = <strong>35ポイント</strong></div><p><em>これは、エリートレベルのストライド効率と酸素効率が連携していることを表しています。</em></p></div></div><div class="callout callout-info"><h3>なぜこの指標がランニングエコノミーにとって重要なのか</h3><p>効率スコアは、<strong>ランニングエコノミー</strong>（特定のペースで消費する酸素量）の実用的な代替指標として機能します。エコノミーが優れたランナーは、より少ない努力でより速いペースを維持でき、800mからマラソンまでのレースでパフォーマンスが向上します。
+            </p><p>時間の経過とともに効率スコアを追跡することで、ストライド効率、生体力学、および全体的なランニングエコノミーの改善を監視できます。</p></div><div class="callout callout-info"><h3>距離比較のための正規化されたランニング効率</h3><p>異なる測定距離間でスコアを比較するには：</p><div class="formula">
                 ランニング効率₂₅ = (時間 × 25/距離) + (ストライド × 25/距離)
-            </div>
-            <p><strong>例：</strong> 50mを42秒で32ストライドで走った場合：</p>
-            <p>25mに正規化 = (42 × 25/50) + (32 × 25/50) = 21 + 16 = <strong>37ポイント</strong></p>
-        </div>
-    </div>
-</section>
-
-<section class="section section-alt">
-    <div class="container">
-        <h2 class="text-center mb-xl">ランニング効率ベンチマーク：スコアを比較する</h2>
-
-        <div class="grid grid-2">
-            <div>
-                <h3>一般的なランニング – 25m距離</h3>
-                <div class="levels-comparison">
-                    <div class="level-card-compact">
-                        <strong>エリートランナー</strong>
-                        <div class="value">30-35</div>
-                        <p>並外れたストライド効率とランニングエコノミーを持つ国内/国際レベルの競技者</p>
-                    </div>
-                    <div class="level-card-compact">
-                        <strong>競技ランナー</strong>
-                        <div class="value">35-45</div>
-                        <p>確かなテクニックを持つ高校、大学、マスターズの競技者</p>
-                    </div>
-                    <div class="level-card-compact">
-                        <strong>フィットネスランナー</strong>
-                        <div class="value">45-60</div>
-                        <p>発展途上のテクニックと良好な有酸素ベースを持つ定期的なトレーニングを行うランナー</p>
-                    </div>
-                    <div class="level-card-compact">
-                        <strong>初心者ランナー</strong>
-                        <div class="value">60+</div>
-                        <p>ランニングを始めたばかりで、基本的なテクニックとコンディショニングを開発中のランナー</p>
-                    </div>
-                </div>
-            </div>
-
-            <div>
-                <h3>スコアの意味</h3>
-                <div class="benchmark-interpretation">
-                    <p><strong>効率スコアの構成要素：</strong></p>
-                    <ul>
-                        <li><strong>ストライド数</strong>は、ストライド長と回転率を反映します</li>
-                        <li><strong>時間</strong>は、距離に対する絶対的な速度を反映します</li>
-                        <li><strong>合計スコア</strong>は、全体的なストライド効率を明らかにします</li>
-                    </ul>
-
-                    <div class="callout callout-warning">
-                        <h4>⚠️ 身長と体型が重要です</h4>
-                        <p>背の高いランナーは、距離あたりのストライド数が自然に少なくなり、効率スコアが低くなります。同じフィットネスレベルの身長188cmのランナーと168cmのランナーでは、ストライド長の違いによりスコアが異なります。
-                        </p>
-                        <p><strong>解決策：</strong> 効率スコアは、他のランナーと比較するためではなく、時間の経過に伴う自分の改善を追跡するために使用してください。</p>
-                    </div>
-                </div>
-
-                <div class="improvement-expectations">
-                    <h4>予想される改善タイムライン</h4>
-                    <table class="data-table">
-                        <tr>
-                            <th>期間</th>
-                            <th>予想される改善</th>
-                        </tr>
-                        <tr>
-                            <td>4-6週間</td>
-                            <td>2-4ポイント減少</td>
-                        </tr>
-                        <tr>
-                            <td>8-12週間</td>
-                            <td>5-8ポイント減少</td>
-                        </tr>
-                        <tr>
-                            <td>6ヶ月以上</td>
-                            <td>10-15ポイント減少</td>
-                        </tr>
-                    </table>
-                    <p><em>週2-3回の一貫したテクニック練習に基づく</em></p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="section">
-    <div class="container container-narrow">
-        <h2>ランニング効率スコアを改善する方法</h2>
-        <p class="lead">
-            <strong>効率スコア</strong>を改善するには、ストライドメカニクス、ランニングエコノミー、および生体力学的効率に焦点を当てた取り組みが必要です。以下は、スコアを下げてより経済的に走るための体系的なアプローチです。
-        </p>
-
-        <div class="improvement-strategy">
-            <div class="strategy-item">
-                <h3>1. ストライド長とケイデンスの最適化</h3>
-                <p>より良い<strong>ストライド効率</strong>の鍵は、ストライド長と回転率の間の最適なバランスを見つけることです。</p>
-                <ul>
-                    <li>股関節の伸展とより強力なプッシュオフを通じて<strong>ストライド長を伸ばす</strong></li>
-                    <li>最適な酸素効率のために<strong>170-180歩/分のケイデンスを維持する</strong></li>
-                    <li><strong>オーバーストライドを避ける</strong> – 重心の前に着地するとエネルギーを浪費します</li>
-                    <li><strong>素早い接地を練習する</strong> – エリートランナーは一歩あたりの接地時間が100ミリ秒未満です</li>
-                </ul>
-                <div class="tip-box">
-                    <strong>クイックウィン：</strong> イージーラン中にメトロノームアプリを180
+            </div><p><strong>例：</strong> 50mを42秒で32ストライドで走った場合：</p><p>25mに正規化 = (42 × 25/50) + (32 × 25/50) = 21 + 16 = <strong>37ポイント</strong></p></div></div></section><section class="section section-alt"><div class="container"><h2 class="text-center mb-xl">ランニング効率ベンチマーク：スコアを比較する</h2><div class="grid grid-2"><div><h3>一般的なランニング – 25m距離</h3><div class="levels-comparison"><div class="level-card-compact"><strong>エリートランナー</strong><div class="value">30-35</div><p>並外れたストライド効率とランニングエコノミーを持つ国内/国際レベルの競技者</p></div><div class="level-card-compact"><strong>競技ランナー</strong><div class="value">35-45</div><p>確かなテクニックを持つ高校、大学、マスターズの競技者</p></div><div class="level-card-compact"><strong>フィットネスランナー</strong><div class="value">45-60</div><p>発展途上のテクニックと良好な有酸素ベースを持つ定期的なトレーニングを行うランナー</p></div><div class="level-card-compact"><strong>初心者ランナー</strong><div class="value">60+</div><p>ランニングを始めたばかりで、基本的なテクニックとコンディショニングを開発中のランナー</p></div></div></div><div><h3>スコアの意味</h3><div class="benchmark-interpretation"><p><strong>効率スコアの構成要素：</strong></p><ul><li><strong>ストライド数</strong>は、ストライド長と回転率を反映します</li><li><strong>時間</strong>は、距離に対する絶対的な速度を反映します</li><li><strong>合計スコア</strong>は、全体的なストライド効率を明らかにします</li></ul><div class="callout callout-warning"><h4>⚠️ 身長と体型が重要です</h4><p>背の高いランナーは、距離あたりのストライド数が自然に少なくなり、効率スコアが低くなります。同じフィットネスレベルの身長188cmのランナーと168cmのランナーでは、ストライド長の違いによりスコアが異なります。
+                        </p><p><strong>解決策：</strong> 効率スコアは、他のランナーと比較するためではなく、時間の経過に伴う自分の改善を追跡するために使用してください。</p></div></div><div class="improvement-expectations"><h4>予想される改善タイムライン</h4><table class="data-table"><tr><th>期間</th><th>予想される改善</th></tr><tr><td>4-6週間</td><td>2-4ポイント減少</td></tr><tr><td>8-12週間</td><td>5-8ポイント減少</td></tr><tr><td>6ヶ月以上</td><td>10-15ポイント減少</td></tr></table><p><em>週2-3回の一貫したテクニック練習に基づく</em></p></div></div></div></div></section><section class="section"><div class="container container-narrow"><h2>ランニング効率スコアを改善する方法</h2><p class="lead"><strong>効率スコア</strong>を改善するには、ストライドメカニクス、ランニングエコノミー、および生体力学的効率に焦点を当てた取り組みが必要です。以下は、スコアを下げてより経済的に走るための体系的なアプローチです。
+        </p><div class="improvement-strategy"><div class="strategy-item"><h3>1. ストライド長とケイデンスの最適化</h3><p>より良い<strong>ストライド効率</strong>の鍵は、ストライド長と回転率の間の最適なバランスを見つけることです。</p><ul><li>股関節の伸展とより強力なプッシュオフを通じて<strong>ストライド長を伸ばす</strong></li><li>最適な酸素効率のために<strong>170-180歩/分のケイデンスを維持する</strong></li><li><strong>オーバーストライドを避ける</strong> – 重心の前に着地するとエネルギーを浪費します</li><li><strong>素早い接地を練習する</strong> – エリートランナーは一歩あたりの接地時間が100ミリ秒未満です</li></ul><div class="tip-box"><strong>クイックウィン：</strong> イージーラン中にメトロノームアプリを180
                     bpmに設定して、最適なケイデンスを体に覚えさせます。これだけで、4週間以内に効率スコアを3-5ポイント改善できます。
-                </div>
-            </div>
-
-            <div class="strategy-item">
-                <h3>2. 筋力を通じたランニングエコノミーの改善</h3>
-                <p>研究によると、ターゲットを絞った筋力トレーニングにより<strong>ランニングエコノミー</strong>が3-8%改善し、効率スコアが直接低下することが示されています。</p>
-                <ul>
-                    <li><strong>プライオメトリックエクササイズ</strong> – ボックスジャンプ、バウンディング、片足ホップは反応筋力を向上させます</li>
-                    <li><strong>体幹安定性ワーク</strong> – プランク、アンチローテーションエクササイズはエネルギー漏れを減らします</li>
-                    <li><strong>ふくらはぎの強化</strong> – 片足カーフレイズは強力なプッシュオフを構築します</li>
-                    <li><strong>股関節の筋力</strong> – グルートブリッジとクラムシェルはストライドメカニクスを改善します</li>
-                </ul>
-                <div class="tip-box">
-                    <strong>研究による裏付け：</strong> Beattie et al.
+                </div></div><div class="strategy-item"><h3>2. 筋力を通じたランニングエコノミーの改善</h3><p>研究によると、ターゲットを絞った筋力トレーニングにより<strong>ランニングエコノミー</strong>が3-8%改善し、効率スコアが直接低下することが示されています。</p><ul><li><strong>プライオメトリックエクササイズ</strong> – ボックスジャンプ、バウンディング、片足ホップは反応筋力を向上させます</li><li><strong>体幹安定性ワーク</strong> – プランク、アンチローテーションエクササイズはエネルギー漏れを減らします</li><li><strong>ふくらはぎの強化</strong> – 片足カーフレイズは強力なプッシュオフを構築します</li><li><strong>股関節の筋力</strong> – グルートブリッジとクラムシェルはストライドメカニクスを改善します</li></ul><div class="tip-box"><strong>研究による裏付け：</strong> Beattie et al.
                     (2014)は、週2回40分のプライオメトリックトレーニングが、わずか8週間でランニングエコノミーを4.2%改善したことを発見しました。
-                </div>
-            </div>
-
-            <div class="strategy-item">
-                <h3>3. 酸素効率の向上</h3>
-                <p>より良い<strong>酸素効率</strong>は、同じペースでの心拍数と知覚的努力の低下を意味します—これはランニングエコノミーの重要な要素です。</p>
-                <ul>
-                    <li><strong>有酸素ベースの構築</strong> – トレーニングの80%を楽な会話ペースで行う</li>
-                    <li><strong>テンポ走を含める</strong> – 乳酸閾値での持続的な努力はエコノミーを改善します</li>
-                    <li><strong>呼吸パターンの練習</strong> – 3:3または2:2の吸う：吐くリズムは酸素コストを削減します</li>
-                    <li><strong>VO₂maxの改善</strong> – インターバルトレーニングは最大酸素摂取能力を高めます</li>
-                </ul>
-                <div class="tip-box">
-                    <strong>閾値トレーニング：</strong> 週1回の15K〜ハーフマラソンペースでのテンポ走は、乳酸除去とミトコンドリア密度を高めることで酸素効率を改善します。
-                </div>
-            </div>
-
-            <div class="strategy-item">
-                <h3>4. ランニングフォームと生体力学の改善</h3>
-                <p>小さなフォームの調整は、時間の経過とともに大幅な効率改善につながります。</p>
-                <ul>
-                    <li><strong>足首からの前傾</strong> – 重力を利用して前進運動を助ける</li>
-                    <li><strong>上半身をリラックスさせる</strong> – 肩や腕の緊張はエネルギーを浪費します</li>
-                    <li><strong>ミッドフット着地</strong> – ブレーキ力を減らし、効率を向上させます</li>
-                    <li><strong>腕振り</strong> – 肘を90°に保ち、手は腰から胸の高さまで振る</li>
-                    <li><strong>適切な呼吸</strong> – 胸式呼吸ではなく腹式呼吸で酸素交換を改善する</li>
-                </ul>
-                <div class="tip-box">
-                    <strong>ビデオ分析：</strong> 横から自分の走りを録画します。オーバーストライド（膝の前での着地）、過度な上下動、または腕のクロススイング（すべて効率キラー）がないか確認してください。
-                </div>
-            </div>
-
-            <div class="strategy-item">
-                <h3>5. 疲労と回復の監視</h3>
-                <p>疲労は効率を低下させます。スマートなトレーニングは、フィットネスを構築しながらランニングエコノミーを維持します。</p>
-                <ul>
-                    <li><strong>効率トレンドの追跡</strong> – ワークアウト中のスコア上昇は疲労を示します</li>
-                    <li><strong>回復走の実施</strong> – イージーな日は疲労を蓄積せずに適応を可能にします</li>
-                    <li><strong>十分な睡眠</strong> – 毎晩7-9時間の睡眠はホルモン回復を最適化します</li>
-                    <li><strong>栄養のタイミング</strong> – 適切な燃料補給はロングランでのテクニック崩壊を防ぎます</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="callout callout-success">
-            <h3>🎯 12週間効率改善プラン</h3>
-            <ol>
-                <li><strong>1-4週目：</strong> ベースラインの確立 – 毎週効率を測定し、ケイデンスワークに焦点を当てる</li>
-                <li><strong>5-8週目：</strong> 週2回の筋力/プライオメトリクスを追加 + イージーラン前のフォームドリル</li>
-                <li><strong>9-12週目：</strong> 毎週のテンポ走を含め、筋力ワークを維持し、効率を再テストする</li>
-            </ol>
-            <p><strong>期待される結果：</strong> 一貫した実行により、効率スコアが5-8ポイント減少。</p>
-        </div>
-    </div>
-</section>
-
-<section class="section section-alt">
-    <div class="container container-narrow">
-        <h2>ランニングエコノミーの科学を理解する</h2>
-
-        <div class="science-content">
-            <p><strong>ランニングエコノミー</strong>は、特定の走行速度を維持するために必要なエネルギーコスト（酸素消費量）として定義されます。これは、VO₂maxおよび乳酸閾値と並んで、長距離走のパフォーマンスの3つの主要な生理学的決定要因の1つです。
-            </p>
-
-            <div class="callout callout-science">
-                <h3>🔬 ランニングエコノミーに関する研究</h3>
-                <p><strong>Costillら（1985）</strong>は、中距離パフォーマンスにおいてランニングエコノミーがVO₂maxよりも重要であることを確立しました。同じVO₂maxを持つ2人のランナーでも、ランニングエコノミーに20-30%の差があり、レースパフォーマンスに直接影響する可能性があります。
-                </p>
-
-                <p><strong>Barnes & Kilding（2015）</strong>は60以上の研究をレビューし、ランニングエコノミーに影響を与える主要な要因を発見しました：</p>
-                <ul>
-                    <li>生体力学的効率（ストライドメカニクス）</li>
-                    <li>代謝効率（酸素利用）</li>
-                    <li>神経筋特性（筋繊維タイプ、剛性）</li>
-                    <li>身体測定要因（体重、四肢の比率）</li>
-                </ul>
-
-                <p><strong>Saunders et al.
+                </div></div><div class="strategy-item"><h3>3. 酸素効率の向上</h3><p>より良い<strong>酸素効率</strong>は、同じペースでの心拍数と知覚的努力の低下を意味します—これはランニングエコノミーの重要な要素です。</p><ul><li><strong>有酸素ベースの構築</strong> – トレーニングの80%を楽な会話ペースで行う</li><li><strong>テンポ走を含める</strong> – 乳酸閾値での持続的な努力はエコノミーを改善します</li><li><strong>呼吸パターンの練習</strong> – 3:3または2:2の吸う：吐くリズムは酸素コストを削減します</li><li><strong>VO₂maxの改善</strong> – インターバルトレーニングは最大酸素摂取能力を高めます</li></ul><div class="tip-box"><strong>閾値トレーニング：</strong> 週1回の15K〜ハーフマラソンペースでのテンポ走は、乳酸除去とミトコンドリア密度を高めることで酸素効率を改善します。
+                </div></div><div class="strategy-item"><h3>4. ランニングフォームと生体力学の改善</h3><p>小さなフォームの調整は、時間の経過とともに大幅な効率改善につながります。</p><ul><li><strong>足首からの前傾</strong> – 重力を利用して前進運動を助ける</li><li><strong>上半身をリラックスさせる</strong> – 肩や腕の緊張はエネルギーを浪費します</li><li><strong>ミッドフット着地</strong> – ブレーキ力を減らし、効率を向上させます</li><li><strong>腕振り</strong> – 肘を90°に保ち、手は腰から胸の高さまで振る</li><li><strong>適切な呼吸</strong> – 胸式呼吸ではなく腹式呼吸で酸素交換を改善する</li></ul><div class="tip-box"><strong>ビデオ分析：</strong> 横から自分の走りを録画します。オーバーストライド（膝の前での着地）、過度な上下動、または腕のクロススイング（すべて効率キラー）がないか確認してください。
+                </div></div><div class="strategy-item"><h3>5. 疲労と回復の監視</h3><p>疲労は効率を低下させます。スマートなトレーニングは、フィットネスを構築しながらランニングエコノミーを維持します。</p><ul><li><strong>効率トレンドの追跡</strong> – ワークアウト中のスコア上昇は疲労を示します</li><li><strong>回復走の実施</strong> – イージーな日は疲労を蓄積せずに適応を可能にします</li><li><strong>十分な睡眠</strong> – 毎晩7-9時間の睡眠はホルモン回復を最適化します</li><li><strong>栄養のタイミング</strong> – 適切な燃料補給はロングランでのテクニック崩壊を防ぎます</li></ul></div></div><div class="callout callout-success"><h3>🎯 12週間効率改善プラン</h3><ol><li><strong>1-4週目：</strong> ベースラインの確立 – 毎週効率を測定し、ケイデンスワークに焦点を当てる</li><li><strong>5-8週目：</strong> 週2回の筋力/プライオメトリクスを追加 + イージーラン前のフォームドリル</li><li><strong>9-12週目：</strong> 毎週のテンポ走を含め、筋力ワークを維持し、効率を再テストする</li></ol><p><strong>期待される結果：</strong> 一貫した実行により、効率スコアが5-8ポイント減少。</p></div></div></section><section class="section section-alt"><div class="container container-narrow"><h2>ランニングエコノミーの科学を理解する</h2><div class="science-content"><p><strong>ランニングエコノミー</strong>は、特定の走行速度を維持するために必要なエネルギーコスト（酸素消費量）として定義されます。これは、VO₂maxおよび乳酸閾値と並んで、長距離走のパフォーマンスの3つの主要な生理学的決定要因の1つです。
+            </p><div class="callout callout-science"><h3>🔬 ランニングエコノミーに関する研究</h3><p><strong>Costillら（1985）</strong>は、中距離パフォーマンスにおいてランニングエコノミーがVO₂maxよりも重要であることを確立しました。同じVO₂maxを持つ2人のランナーでも、ランニングエコノミーに20-30%の差があり、レースパフォーマンスに直接影響する可能性があります。
+                </p><p><strong>Barnes & Kilding（2015）</strong>は60以上の研究をレビューし、ランニングエコノミーに影響を与える主要な要因を発見しました：</p><ul><li>生体力学的効率（ストライドメカニクス）</li><li>代謝効率（酸素利用）</li><li>神経筋特性（筋繊維タイプ、剛性）</li><li>身体測定要因（体重、四肢の比率）</li></ul><p><strong>Saunders et al.
                         (2004)</strong>は、エリート長距離ランナーが同じVO₂maxの優れたクラブレベルのランナーよりも5-10%優れたランニングエコノミーを持っていることを示しました—このエコノミーの差がパフォーマンスギャップの多くを説明しています。
-                </p>
-            </div>
-
-            <h3>効率スコアとランニングエコノミーの関係</h3>
-            <p>効率スコアは、以下の理由からランニングエコノミーのフィールド測定可能な代替指標として機能します：</p>
-            <ul>
-                <li>特定のペースでの<strong>より少ないストライド数</strong>は、より良い生体力学的効率を示します</li>
-                <li>同じストライド数での<strong>より速いタイム</strong>は、改善されたパワー出力を示します</li>
-                <li><strong>合計スコアの減少</strong>は、メートルあたりの酸素コストの削減と相関します</li>
-            </ul>
-
-            <p>実験室でのランニングエコノミー測定には高価なガス分析機器が必要ですが、効率スコアは、トラックや計測されたセグメントで測定できる実用的なフィードバックを提供します。</p>
-        </div>
-    </div>
-</section>
-
-<section class="section">
-    <div class="container container-narrow">
-        <h2>ランニング効率パターンの解釈</h2>
-
-        <div class="pattern-analysis">
-            <div class="pattern-item">
-                <h3>📉 スコアの減少 = 効率の改善</h3>
-                <p>数週間または数ヶ月にわたって効率スコアが低下する場合、テクニックが改善しているか、特定のペースでより経済的になっています。これが一貫したトレーニングの目標です。</p>
-                <div class="example-box">
-                    <strong>例：</strong> 8週間の集中フォームドリルとケイデンスワークで、効率スコアが48 → 45 → 42に低下。
-                </div>
-                <p><strong>何が起きているか：</strong> ストライドメカニクスの改善、ランニングエコノミーの向上、筋力の増加、または神経筋協調性の強化。</p>
-            </div>
-
-            <div class="pattern-item">
-                <h3>📈 スコアの増加 = 効率の低下</h3>
-                <p>ワークアウト中に効率スコアが上昇する場合、疲労によるテクニックの崩壊、または効率がサポートできる以上の速さで走っていることを示します。</p>
-                <div class="example-box">
-                    <strong>例：</strong> 5Kタイムトライアルの最後の400mで効率スコアが42 → 48に上昇し、疲労によるフォームの崩れを示唆。
-                </div>
-                <p><strong>何が起きているか：</strong> 筋肉疲労、テクニックの悪化、不十分な回復、または持続可能なペースを超えたランニング。</p>
-            </div>
-
-            <div class="pattern-item">
-                <h3>📊 同じスコア、異なる構成要素</h3>
-                <p>効率スコア45は、複数のストライド/時間の組み合わせから生じる可能性があり、異なるランニング戦略を明らかにします：</p>
-                <ul>
-                    <li><strong>20秒 + 25ストライド</strong> = 高ケイデンス、短いストライド長（初心者に一般的）</li>
-                    <li><strong>25秒 + 20ストライド</strong> = 低ケイデンス、長いストライド長（背の高いランナーに典型的）</li>
-                    <li><strong>22.5秒 + 22.5ストライド</strong> = バランスの取れたアプローチ（ほとんどのランナーに理想的）</li>
-                </ul>
-                <p><strong>分析のヒント：</strong> 常にストライド数と時間を別々に調べて、特定の効率プロファイルを理解し、改善の機会を特定してください。</p>
-            </div>
-        </div>
-
-        <div class="callout callout-tip">
-            <h3>🎯 ランニング効率指標のトレーニングへの応用</h3>
-            <ul>
-                <li><strong>テクニックセッション：</strong> フォームドリル、流し、意識的な生体力学的フォーカスを通じて効率スコアを下げることを目指す</li>
-                <li><strong>疲労モニタリング：</strong> ワークアウト中の効率上昇はテクニックの崩壊を示します – 回復の時間です</li>
-                <li><strong>ペースと効率のバランス：</strong> 効率スコアが5ポイント以上急上昇せずに維持できる最速ペースを見つける</li>
-                <li><strong>ドリルの有効性：</strong> ドリルセットの前後に効率を測定し、実際のランニングへのテクニック転移を定量化する</li>
-                <li><strong>レースペーシング：</strong> 距離全体で一貫した効率を維持しながら、目標レースペースを維持する練習をする</li>
-            </ul>
-        </div>
-    </div>
-</section>
-
-<section class="section section-alt">
-    <div class="container container-narrow">
-        <h2>測定のベストプラクティス</h2>
-
-        <div class="measurement-guidelines">
-            <div class="guideline-box">
-                <h3>📏 ストライドを正確に数える</h3>
-                <ul>
-                    <li>すべての着地を数える（右 + 左 = 2ストライド）</li>
-                    <li>または右足のみを数えて2倍する</li>
-                    <li>一貫した距離のために計測されたトラックまたはGPSセグメントを使用する</li>
-                    <li>開始後の最初の一歩から数え始める</li>
-                    <li>距離マーカーに到達するまで継続的に数える</li>
-                    <li>スキルを構築するためにウォーミングアップ中に数える練習をする</li>
-                </ul>
-                <div class="tip-box">
-                    <strong>プロのヒント：</strong> 400mトラックでは、1周の右足着地を数えます。2倍して合計ストライドを出します。練習すればストライドカウントは自動的になります。
-                </div>
-            </div>
-
-            <div class="guideline-box">
-                <h3>⏱️ ランニングの計時</h3>
-                <ul>
-                    <li>自動ラップ計時のためにGPSウォッチを使用する（Garmin, Apple Watch, Coros, Polar）</li>
-                    <li>またはトラックマーカーで手動スプリット計時を使用する</li>
-                    <li>計測セグメント全体で一貫した努力を維持する</li>
-                    <li>秒単位で時間を記録する</li>
-                    <li>一部の高度なウォッチはストライド指標を自動的に計算します</li>
-                </ul>
-                <div class="tip-box">
-                    <strong>テックツール：</strong> Garmin Running Dynamics、Strydフットポッド、Apple
+                </p></div><h3>効率スコアとランニングエコノミーの関係</h3><p>効率スコアは、以下の理由からランニングエコノミーのフィールド測定可能な代替指標として機能します：</p><ul><li>特定のペースでの<strong>より少ないストライド数</strong>は、より良い生体力学的効率を示します</li><li>同じストライド数での<strong>より速いタイム</strong>は、改善されたパワー出力を示します</li><li><strong>合計スコアの減少</strong>は、メートルあたりの酸素コストの削減と相関します</li></ul><p>実験室でのランニングエコノミー測定には高価なガス分析機器が必要ですが、効率スコアは、トラックや計測されたセグメントで測定できる実用的なフィードバックを提供します。</p></div></div></section><section class="section"><div class="container container-narrow"><h2>ランニング効率パターンの解釈</h2><div class="pattern-analysis"><div class="pattern-item"><h3>📉 スコアの減少 = 効率の改善</h3><p>数週間または数ヶ月にわたって効率スコアが低下する場合、テクニックが改善しているか、特定のペースでより経済的になっています。これが一貫したトレーニングの目標です。</p><div class="example-box"><strong>例：</strong> 8週間の集中フォームドリルとケイデンスワークで、効率スコアが48 → 45 → 42に低下。
+                </div><p><strong>何が起きているか：</strong> ストライドメカニクスの改善、ランニングエコノミーの向上、筋力の増加、または神経筋協調性の強化。</p></div><div class="pattern-item"><h3>📈 スコアの増加 = 効率の低下</h3><p>ワークアウト中に効率スコアが上昇する場合、疲労によるテクニックの崩壊、または効率がサポートできる以上の速さで走っていることを示します。</p><div class="example-box"><strong>例：</strong> 5Kタイムトライアルの最後の400mで効率スコアが42 → 48に上昇し、疲労によるフォームの崩れを示唆。
+                </div><p><strong>何が起きているか：</strong> 筋肉疲労、テクニックの悪化、不十分な回復、または持続可能なペースを超えたランニング。</p></div><div class="pattern-item"><h3>📊 同じスコア、異なる構成要素</h3><p>効率スコア45は、複数のストライド/時間の組み合わせから生じる可能性があり、異なるランニング戦略を明らかにします：</p><ul><li><strong>20秒 + 25ストライド</strong> = 高ケイデンス、短いストライド長（初心者に一般的）</li><li><strong>25秒 + 20ストライド</strong> = 低ケイデンス、長いストライド長（背の高いランナーに典型的）</li><li><strong>22.5秒 + 22.5ストライド</strong> = バランスの取れたアプローチ（ほとんどのランナーに理想的）</li></ul><p><strong>分析のヒント：</strong> 常にストライド数と時間を別々に調べて、特定の効率プロファイルを理解し、改善の機会を特定してください。</p></div></div><div class="callout callout-tip"><h3>🎯 ランニング効率指標のトレーニングへの応用</h3><ul><li><strong>テクニックセッション：</strong> フォームドリル、流し、意識的な生体力学的フォーカスを通じて効率スコアを下げることを目指す</li><li><strong>疲労モニタリング：</strong> ワークアウト中の効率上昇はテクニックの崩壊を示します – 回復の時間です</li><li><strong>ペースと効率のバランス：</strong> 効率スコアが5ポイント以上急上昇せずに維持できる最速ペースを見つける</li><li><strong>ドリルの有効性：</strong> ドリルセットの前後に効率を測定し、実際のランニングへのテクニック転移を定量化する</li><li><strong>レースペーシング：</strong> 距離全体で一貫した効率を維持しながら、目標レースペースを維持する練習をする</li></ul></div></div></section><section class="section section-alt"><div class="container container-narrow"><h2>測定のベストプラクティス</h2><div class="measurement-guidelines"><div class="guideline-box"><h3>📏 ストライドを正確に数える</h3><ul><li>すべての着地を数える（右 + 左 = 2ストライド）</li><li>または右足のみを数えて2倍する</li><li>一貫した距離のために計測されたトラックまたはGPSセグメントを使用する</li><li>開始後の最初の一歩から数え始める</li><li>距離マーカーに到達するまで継続的に数える</li><li>スキルを構築するためにウォーミングアップ中に数える練習をする</li></ul><div class="tip-box"><strong>プロのヒント：</strong> 400mトラックでは、1周の右足着地を数えます。2倍して合計ストライドを出します。練習すればストライドカウントは自動的になります。
+                </div></div><div class="guideline-box"><h3>⏱️ ランニングの計時</h3><ul><li>自動ラップ計時のためにGPSウォッチを使用する（Garmin, Apple Watch, Coros, Polar）</li><li>またはトラックマーカーで手動スプリット計時を使用する</li><li>計測セグメント全体で一貫した努力を維持する</li><li>秒単位で時間を記録する</li><li>一部の高度なウォッチはストライド指標を自動的に計算します</li></ul><div class="tip-box"><strong>テックツール：</strong> Garmin Running Dynamics、Strydフットポッド、Apple
                     Watchは、ストライドとペースデータから効率指標を自動計算できます。
-                </div>
-            </div>
-
-            <div class="guideline-box">
-                <h3>🔄 一貫した比較の確保</h3>
-                <ul>
-                    <li><strong>同じ距離：</strong> 常に25m、50m、100m、またはフルトラックラップ測定を使用する</li>
-                    <li><strong>同様のペース：</strong> イージーペースでの効率とテンポペースでの効率を別々に比較する</li>
-                    <li><strong>フレッシュ対疲労：</strong> 測定がウォーミングアップかワークアウト中かを記録する</li>
-                    <li><strong>トラック表面：</strong> トラック、ロード、トレッドミルの効率はわずかに異なる場合があります</li>
-                    <li><strong>毎週の追跡：</strong> トレンドのために毎週同じワークアウト中に効率を測定する</li>
-                </ul>
-            </div>
-
-            <div class="guideline-box">
-                <h3>📊 データの記録と分析</h3>
-                <p>シンプルな追跡スプレッドシートを作成するか、ランニングアプリを使用します：</p>
-                <ul>
-                    <li><strong>日付、距離、時間、ストライド数、効率スコア</strong></li>
-                    <li>ペースを記録（分/kmまたは分/マイル）</li>
-                    <li>疲労、天候、またはテクニックの焦点についてのコメントを追加</li>
-                    <li>週間平均効率を計算</li>
-                    <li>4週間ブロックでのトレンドをグラフ化</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="section">
-    <div class="container container-narrow">
-        <h2>ランニング効率の制限と考慮事項</h2>
-
-        <div class="limitations-list">
-            <div class="limitation-item">
-                <h3>🚫 アスリート間での比較はできません</h3>
-                <p>身長、脚の長さ、および生体力学的要因により、自然なストライド数の違いが生じます。身長188cmのランナーは、ストライド長が長いため、同じフィットネスレベルの身長168cmのランナーよりも効率スコアが低くなります。
-                </p>
-                <p><strong>解決策：</strong> 効率スコアは個人の進歩追跡のみに使用してください。今月のスコアを先月と比較し、他のランナーとは比較しないでください。</p>
-            </div>
-
-            <div class="limitation-item">
-                <h3>🚫 複合スコアは構成要素の変化を隠します</h3>
-                <p>効率スコアは2つの変数を組み合わせたものです。テクニックの変化にもかかわらず、ストライド長を改善しながらわずかに遅くなる（またはその逆）ことで、同じスコアを維持する可能性があります。</p>
-                <p><strong>解決策：</strong> 常にストライド数と時間を別々に分析してください。「ストライド数が3減り、時間が2減った」などのパターンを探して、真の改善を理解してください。</p>
-            </div>
-
-            <div class="limitation-item">
-                <h3>🚫 ペース正規化されていません</h3>
-                <p>効率スコアは、速く走るにつれて自然に増加します—秒あたりのストライド数が増え、数値が複合するためです。これは非効率性を意味するのではなく、生体力学的現実です。</p>
-                <p><strong>解決策：</strong>
-                    特定の再現可能なペースで効率を追跡します。「イージーペースでの効率」（5:30/km）と「テンポペースでの効率」（4:15/km）の別々のベースラインを作成してください。</p>
-            </div>
-
-            <div class="limitation-item">
-                <h3>🚫 環境および疲労要因</h3>
-                <p>風、気温、水分補給状態、累積トレーニング疲労、および時間帯はすべて、テクニックの変化とは無関係に効率スコアに影響を与えます。</p>
-                <p><strong>解決策：</strong> 有効な比較のために、同様の条件（時間帯、天候、疲労状態）で効率を測定してください。日々の変動を平準化するために、4週間以上のトレンドを追跡してください。
-                </p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="section section-alt">
-    <div class="container container-narrow">
-        <h2>ランニング効率トレーニングワークアウト</h2>
-        <p>これらのワークアウトは、ストライド効率とランニングエコノミーの改善を具体的にターゲットにしています：</p>
-
-        <div class="drill-set">
-            <h3>🎯 効率最適化セット</h3>
-            <div class="workout-box">
-                <h4>8 × 200m（90秒リカバリージョグ）</h4>
-                <ol>
-                    <li><strong>レップ #1-2：</strong> 快適なペースで走り、ベースラインの効率スコアと構成要素を記録</li>
-                    <li><strong>レップ #3-4：</strong> ストライド数を5-10減らし、同じタイムを維持 → ストライド長の伸展に集中</li>
-                    <li><strong>レップ #5-6：</strong> ケイデンスを+5-10歩/分増やし、同様のストライド数を維持 → 回転率に集中</li>
-                    <li><strong>レップ #7-8：</strong> 最も低い効率スコアを生み出す最適なバランスを見つける</li>
-                </ol>
-                <p><strong>目標：</strong> 最も効率的なストライド数/ケイデンスの組み合わせを発見し、それを維持する練習をする。</p>
-            </div>
-        </div>
-
-        <div class="drill-set">
-            <h3>⚡ 効率安定性テスト</h3>
-            <div class="workout-box">
-                <h4>6 × 800m @ テンポペース（2分リカバリー）</h4>
-                <p>各800m（またはその中の各200m）の効率スコアを記録します。分析：</p>
-                <ul>
-                    <li>どの800mが最も効率が低かったか？（最も経済的なランニング）</li>
-                    <li>どこで効率が急上昇したか？（テクニックの崩壊または疲労の開始）</li>
-                    <li>最初と最後の800mで効率がどれだけ変化したか？</li>
-                </ul>
-                <p><strong>目標：</strong> すべてのレップで効率を±3ポイント以内に維持する。一貫性は、疲労下での強力なテクニックを示します。</p>
-            </div>
-        </div>
-
-        <div class="drill-set">
-            <h3>🏃 フォーム重視の効率インターバル</h3>
-            <div class="workout-box">
-                <h4>10 × 400m（200mジョグリカバリー）</h4>
-                <p>各レップで焦点を交互に変える：</p>
-                <ul>
-                    <li><strong>奇数レップ：</strong> 素早い接地（「熱い石炭」）に集中 – 接地時間を最小限に抑える</li>
-                    <li><strong>偶数レップ：：</strong> 強力なプッシュオフに集中 – 臀部からドライブし、股関節を完全に伸展させる</li>
-                </ul>
-                <p>各レップの効率を記録し、フォーカスタイプを比較します。</p>
-                <p><strong>目標：</strong> どのテクニカルキューがあなたの生体力学にとってより良い効率を生み出すかを特定する。</p>
-            </div>
-        </div>
-
-        <div class="drill-set">
-            <h3>💪 筋力と効率のコネクター</h3>
-            <div class="workout-box">
-                <h4>ランニング前のアクティベーション + 効率テスト</h4>
-                <ol>
-                    <li>5分間のイージーランニングウォーミングアップ</li>
-                    <li>アクティベーションサーキット：3ラウンド：
-                        <ul>
-                            <li>片足カーフレイズ 10回（各足）</li>
-                            <li>グルートブリッジ 10回</li>
-                            <li>30秒プランク</li>
-                        </ul>
-                    </li>
-                    <li>5分間のイージーランニング</li>
-                    <li>4 × 200m 効率スコア測定</li>
-                </ol>
-                <p><strong>目標：</strong> アクティベーション前後の効率を比較する。多くのランナーは、アクティベーション後に2-4ポイントの改善が見られます。</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="section">
-    <div class="container container-narrow">
-        <h2>よくある質問</h2>
-
-        <div class="faq-section" itemscope itemtype="https://schema.org/FAQPage">
-            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">ランニング効率指標とは何ですか？</h3>
-                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                    <div itemprop="text">
-                        <p>ランニング効率指標は、どれだけ経済的に動いているかを測定します。効率スコアは、設定された距離に対するストライド数と時間を単一の数値に組み合わせます。ゴルフのように、スコアは低いほど良いです。スコアは、ストライド効率（生体力学）と酸素効率（有酸素能力）の両方を反映します。例：20秒
-                            + 15ストライド = 効率スコア35。</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">ランニング効率スコアはどのように計算しますか？</h3>
-                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                    <div itemprop="text">
-                        <p>計測された距離（25m、50m、100m、または400mラップ）を走り、すべてのストライド（足の着地）を数え、時間を秒単位で記録します。ストライド数を秒単位の時間に加えます。例：100mを75秒で95ストライド
-                            = 効率スコア170。ストライドセンサーを備えた多くのGPSウォッチは、これを自動的に計算します。</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">良いランニング効率スコアとは何ですか？</h3>
-                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                    <div itemprop="text">
-                        <p>25m距離の場合：エリートランナーは30-35、競技ランナーは35-45、フィットネスランナーは45-60、初心者は60+です。身長はストライド数に大きく影響します—背の高いランナーは自然にスコアが低くなります。他人と比較するのではなく、時間の経過とともに自分のスコアを改善すること（8-12週間で5-8ポイントの削減を目指す）に焦点を当ててください。
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">自分のランニング効率を他のランナーと比較できますか？</h3>
-                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                    <div itemprop="text">
-                        <p>いいえ。効率スコアは、身長、脚の長さ、および生体力学的違いにより、非常に個人的なものです。テクニックが悪い身長188cmのランナーは、優れたテクニックを持つ身長168cmのランナーと同じスコアになる可能性があります。効率指標を使用して、トレーニングパートナーやライバルと比較するのではなく、数週間および数ヶ月にわたる自分の進歩を追跡してください。
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">ランニングエコノミーとは何ですか？効率とどのように関係していますか？</h3>
-                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                    <div itemprop="text">
-                        <p>ランニングエコノミーは、特定のペースを維持するための酸素コストです。これはレースパフォーマンスの重要な予測因子です。ランニングエコノミーが良いということは、同じ速度で消費する酸素が少ないことを意味します。効率スコアは、ランニングエコノミーのフィールドテストの代替指標として機能します—スコアが改善（低下）すると、通常、ランニングエコノミーも改善し、同じ知覚的努力でより効率的に走っていることを意味します。
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">速く走るとランニング効率スコアは上がりますか、下がりますか？</h3>
-                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                    <div itemprop="text">
-                        <p>効率スコアは、生体力学により、より速いペースでは自然にわずかに増加します—秒あたりのストライド数が増え、数値が複合するためです。これは通常の物理現象であり、非効率ではありません。一貫した特定のペースで効率を別々に追跡してください：「イージーペースでの効率（5:30/km）」対「テンポペースでの効率（4:15/km）」。改善とは、同じペースで時間の経過とともにスコアが低下することを意味します。
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">なぜワークアウト中にランニング効率が悪くなるのですか？</h3>
-                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                    <div itemprop="text">
-                        <p>ワークアウト中に効率スコアが増加することは、疲労によるテクニックの崩壊を示しています。これは正常であり、ストレス下でフォームがどこで悪化するかを明らかにします。ワークアウト中に効率が5ポイント以上上昇した場合、それがテクニックの限界点です。この情報を使用して、技術的な弱点を特定し、より短いインターバルとより多くの回復で、それらの特定のペースでの持久力を構築してください。
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">ランニング効率を改善するにはどれくらい時間がかかりますか？</h3>
-                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                    <div itemprop="text">
-                        <p>週2-3回の一貫したテクニック練習で：4-6週間で2-4ポイント、8-12週間で5-8ポイント、6ヶ月以上で10-15ポイントの改善が期待できます。改善は、筋力トレーニング（特にプライオメトリクス）、フォームドリル、ケイデンスの最適化、および有酸素ベースの構築から生じます。クイックウィンには、ケイデンスワーク（180歩/分で走ることを試みる）が含まれ、1ヶ月でスコアを3-5ポイント改善できます。
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">ランニングにおけるストライド効率とは何ですか？</h3>
-                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                    <div itemprop="text">
-                        <p>ストライド効率とは、各ストライドを最小限の無駄なエネルギーで前進運動に変換する効果を指します。これは、ストライド長、接地時間、垂直振動、および生体力学的アライメントの影響を受けます。優れたストライド効率は、最適なエネルギーコストでストライドあたりの最大距離をカバーすることを意味します。効率スコアのストライドコンポーネントは、ストライド効率を直接反映します。
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">ランニングにおける酸素効率とは何ですか？</h3>
-                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                    <div itemprop="text">
-                        <p>酸素効率（ランニングエコノミーの一部）は、特定のペースを維持するために消費する酸素量を指します。酸素効率が良いということは、同じ速度で心拍数と呼吸数が低いことを意味します。有酸素ベースの構築（イージーラン）、乳酸閾値でのテンポ走、VO₂maxインターバル、および適切な呼吸メカニクスを通じて改善します。効率スコアの時間コンポーネントは、有酸素能力と酸素効率を反映しています。
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">ランニング効率をどのように改善できますか？</h3>
-                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                    <div itemprop="text">
-                        <p>5つの主要な戦略：(1) ケイデンスを170-180歩/分に最適化する、(2) プライオメトリックおよび筋力トレーニングを週2回追加する、(3)
+                </div></div><div class="guideline-box"><h3>🔄 一貫した比較の確保</h3><ul><li><strong>同じ距離：</strong> 常に25m、50m、100m、またはフルトラックラップ測定を使用する</li><li><strong>同様のペース：</strong> イージーペースでの効率とテンポペースでの効率を別々に比較する</li><li><strong>フレッシュ対疲労：</strong> 測定がウォーミングアップかワークアウト中かを記録する</li><li><strong>トラック表面：</strong> トラック、ロード、トレッドミルの効率はわずかに異なる場合があります</li><li><strong>毎週の追跡：</strong> トレンドのために毎週同じワークアウト中に効率を測定する</li></ul></div><div class="guideline-box"><h3>📊 データの記録と分析</h3><p>シンプルな追跡スプレッドシートを作成するか、ランニングアプリを使用します：</p><ul><li><strong>日付、距離、時間、ストライド数、効率スコア</strong></li><li>ペースを記録（分/kmまたは分/マイル）</li><li>疲労、天候、またはテクニックの焦点についてのコメントを追加</li><li>週間平均効率を計算</li><li>4週間ブロックでのトレンドをグラフ化</li></ul></div></div></div></section><section class="section"><div class="container container-narrow"><h2>ランニング効率の制限と考慮事項</h2><div class="limitations-list"><div class="limitation-item"><h3>🚫 アスリート間での比較はできません</h3><p>身長、脚の長さ、および生体力学的要因により、自然なストライド数の違いが生じます。身長188cmのランナーは、ストライド長が長いため、同じフィットネスレベルの身長168cmのランナーよりも効率スコアが低くなります。
+                </p><p><strong>解決策：</strong> 効率スコアは個人の進歩追跡のみに使用してください。今月のスコアを先月と比較し、他のランナーとは比較しないでください。</p></div><div class="limitation-item"><h3>🚫 複合スコアは構成要素の変化を隠します</h3><p>効率スコアは2つの変数を組み合わせたものです。テクニックの変化にもかかわらず、ストライド長を改善しながらわずかに遅くなる（またはその逆）ことで、同じスコアを維持する可能性があります。</p><p><strong>解決策：</strong> 常にストライド数と時間を別々に分析してください。「ストライド数が3減り、時間が2減った」などのパターンを探して、真の改善を理解してください。</p></div><div class="limitation-item"><h3>🚫 ペース正規化されていません</h3><p>効率スコアは、速く走るにつれて自然に増加します—秒あたりのストライド数が増え、数値が複合するためです。これは非効率性を意味するのではなく、生体力学的現実です。</p><p><strong>解決策：</strong>
+                    特定の再現可能なペースで効率を追跡します。「イージーペースでの効率」（5:30/km）と「テンポペースでの効率」（4:15/km）の別々のベースラインを作成してください。</p></div><div class="limitation-item"><h3>🚫 環境および疲労要因</h3><p>風、気温、水分補給状態、累積トレーニング疲労、および時間帯はすべて、テクニックの変化とは無関係に効率スコアに影響を与えます。</p><p><strong>解決策：</strong> 有効な比較のために、同様の条件（時間帯、天候、疲労状態）で効率を測定してください。日々の変動を平準化するために、4週間以上のトレンドを追跡してください。
+                </p></div></div></div></section><section class="section section-alt"><div class="container container-narrow"><h2>ランニング効率トレーニングワークアウト</h2><p>これらのワークアウトは、ストライド効率とランニングエコノミーの改善を具体的にターゲットにしています：</p><div class="drill-set"><h3>🎯 効率最適化セット</h3><div class="workout-box"><h4>8 × 200m（90秒リカバリージョグ）</h4><ol><li><strong>レップ #1-2：</strong> 快適なペースで走り、ベースラインの効率スコアと構成要素を記録</li><li><strong>レップ #3-4：</strong> ストライド数を5-10減らし、同じタイムを維持 → ストライド長の伸展に集中</li><li><strong>レップ #5-6：</strong> ケイデンスを+5-10歩/分増やし、同様のストライド数を維持 → 回転率に集中</li><li><strong>レップ #7-8：</strong> 最も低い効率スコアを生み出す最適なバランスを見つける</li></ol><p><strong>目標：</strong> 最も効率的なストライド数/ケイデンスの組み合わせを発見し、それを維持する練習をする。</p></div></div><div class="drill-set"><h3>⚡ 効率安定性テスト</h3><div class="workout-box"><h4>6 × 800m @ テンポペース（2分リカバリー）</h4><p>各800m（またはその中の各200m）の効率スコアを記録します。分析：</p><ul><li>どの800mが最も効率が低かったか？（最も経済的なランニング）</li><li>どこで効率が急上昇したか？（テクニックの崩壊または疲労の開始）</li><li>最初と最後の800mで効率がどれだけ変化したか？</li></ul><p><strong>目標：</strong> すべてのレップで効率を±3ポイント以内に維持する。一貫性は、疲労下での強力なテクニックを示します。</p></div></div><div class="drill-set"><h3>🏃 フォーム重視の効率インターバル</h3><div class="workout-box"><h4>10 × 400m（200mジョグリカバリー）</h4><p>各レップで焦点を交互に変える：</p><ul><li><strong>奇数レップ：</strong> 素早い接地（「熱い石炭」）に集中 – 接地時間を最小限に抑える</li><li><strong>偶数レップ：：</strong> 強力なプッシュオフに集中 – 臀部からドライブし、股関節を完全に伸展させる</li></ul><p>各レップの効率を記録し、フォーカスタイプを比較します。</p><p><strong>目標：</strong> どのテクニカルキューがあなたの生体力学にとってより良い効率を生み出すかを特定する。</p></div></div><div class="drill-set"><h3>💪 筋力と効率のコネクター</h3><div class="workout-box"><h4>ランニング前のアクティベーション + 効率テスト</h4><ol><li>5分間のイージーランニングウォーミングアップ</li><li>アクティベーションサーキット：3ラウンド：
+                        <ul><li>片足カーフレイズ 10回（各足）</li><li>グルートブリッジ 10回</li><li>30秒プランク</li></ul></li><li>5分間のイージーランニング</li><li>4 × 200m 効率スコア測定</li></ol><p><strong>目標：</strong> アクティベーション前後の効率を比較する。多くのランナーは、アクティベーション後に2-4ポイントの改善が見られます。</p></div></div></div></section><section class="section"><div class="container container-narrow"><h2>よくある質問</h2><div class="faq-section" itemscope itemtype="https://schema.org/FAQPage"><div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><h3 itemprop="name">ランニング効率指標とは何ですか？</h3><div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div itemprop="text"><p>ランニング効率指標は、どれだけ経済的に動いているかを測定します。効率スコアは、設定された距離に対するストライド数と時間を単一の数値に組み合わせます。ゴルフのように、スコアは低いほど良いです。スコアは、ストライド効率（生体力学）と酸素効率（有酸素能力）の両方を反映します。例：20秒
+                            + 15ストライド = 効率スコア35。</p></div></div></div><div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><h3 itemprop="name">ランニング効率スコアはどのように計算しますか？</h3><div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div itemprop="text"><p>計測された距離（25m、50m、100m、または400mラップ）を走り、すべてのストライド（足の着地）を数え、時間を秒単位で記録します。ストライド数を秒単位の時間に加えます。例：100mを75秒で95ストライド
+                            = 効率スコア170。ストライドセンサーを備えた多くのGPSウォッチは、これを自動的に計算します。</p></div></div></div><div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><h3 itemprop="name">良いランニング効率スコアとは何ですか？</h3><div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div itemprop="text"><p>25m距離の場合：エリートランナーは30-35、競技ランナーは35-45、フィットネスランナーは45-60、初心者は60+です。身長はストライド数に大きく影響します—背の高いランナーは自然にスコアが低くなります。他人と比較するのではなく、時間の経過とともに自分のスコアを改善すること（8-12週間で5-8ポイントの削減を目指す）に焦点を当ててください。
+                        </p></div></div></div><div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><h3 itemprop="name">自分のランニング効率を他のランナーと比較できますか？</h3><div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div itemprop="text"><p>いいえ。効率スコアは、身長、脚の長さ、および生体力学的違いにより、非常に個人的なものです。テクニックが悪い身長188cmのランナーは、優れたテクニックを持つ身長168cmのランナーと同じスコアになる可能性があります。効率指標を使用して、トレーニングパートナーやライバルと比較するのではなく、数週間および数ヶ月にわたる自分の進歩を追跡してください。
+                        </p></div></div></div><div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><h3 itemprop="name">ランニングエコノミーとは何ですか？効率とどのように関係していますか？</h3><div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div itemprop="text"><p>ランニングエコノミーは、特定のペースを維持するための酸素コストです。これはレースパフォーマンスの重要な予測因子です。ランニングエコノミーが良いということは、同じ速度で消費する酸素が少ないことを意味します。効率スコアは、ランニングエコノミーのフィールドテストの代替指標として機能します—スコアが改善（低下）すると、通常、ランニングエコノミーも改善し、同じ知覚的努力でより効率的に走っていることを意味します。
+                        </p></div></div></div><div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><h3 itemprop="name">速く走るとランニング効率スコアは上がりますか、下がりますか？</h3><div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div itemprop="text"><p>効率スコアは、生体力学により、より速いペースでは自然にわずかに増加します—秒あたりのストライド数が増え、数値が複合するためです。これは通常の物理現象であり、非効率ではありません。一貫した特定のペースで効率を別々に追跡してください：「イージーペースでの効率（5:30/km）」対「テンポペースでの効率（4:15/km）」。改善とは、同じペースで時間の経過とともにスコアが低下することを意味します。
+                        </p></div></div></div><div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><h3 itemprop="name">なぜワークアウト中にランニング効率が悪くなるのですか？</h3><div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div itemprop="text"><p>ワークアウト中に効率スコアが増加することは、疲労によるテクニックの崩壊を示しています。これは正常であり、ストレス下でフォームがどこで悪化するかを明らかにします。ワークアウト中に効率が5ポイント以上上昇した場合、それがテクニックの限界点です。この情報を使用して、技術的な弱点を特定し、より短いインターバルとより多くの回復で、それらの特定のペースでの持久力を構築してください。
+                        </p></div></div></div><div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><h3 itemprop="name">ランニング効率を改善するにはどれくらい時間がかかりますか？</h3><div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div itemprop="text"><p>週2-3回の一貫したテクニック練習で：4-6週間で2-4ポイント、8-12週間で5-8ポイント、6ヶ月以上で10-15ポイントの改善が期待できます。改善は、筋力トレーニング（特にプライオメトリクス）、フォームドリル、ケイデンスの最適化、および有酸素ベースの構築から生じます。クイックウィンには、ケイデンスワーク（180歩/分で走ることを試みる）が含まれ、1ヶ月でスコアを3-5ポイント改善できます。
+                        </p></div></div></div><div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><h3 itemprop="name">ランニングにおけるストライド効率とは何ですか？</h3><div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div itemprop="text"><p>ストライド効率とは、各ストライドを最小限の無駄なエネルギーで前進運動に変換する効果を指します。これは、ストライド長、接地時間、垂直振動、および生体力学的アライメントの影響を受けます。優れたストライド効率は、最適なエネルギーコストでストライドあたりの最大距離をカバーすることを意味します。効率スコアのストライドコンポーネントは、ストライド効率を直接反映します。
+                        </p></div></div></div><div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><h3 itemprop="name">ランニングにおける酸素効率とは何ですか？</h3><div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div itemprop="text"><p>酸素効率（ランニングエコノミーの一部）は、特定のペースを維持するために消費する酸素量を指します。酸素効率が良いということは、同じ速度で心拍数と呼吸数が低いことを意味します。有酸素ベースの構築（イージーラン）、乳酸閾値でのテンポ走、VO₂maxインターバル、および適切な呼吸メカニクスを通じて改善します。効率スコアの時間コンポーネントは、有酸素能力と酸素効率を反映しています。
+                        </p></div></div></div><div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"><h3 itemprop="name">ランニング効率をどのように改善できますか？</h3><div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div itemprop="text"><p>5つの主要な戦略：(1) ケイデンスを170-180歩/分に最適化する、(2) プライオメトリックおよび筋力トレーニングを週2回追加する、(3)
                             素早い接地と前傾に焦点を当てたランニングフォームドリルを練習する、(4) 走行距離の80%をイージーペースで行い有酸素ベースを構築する、(5)
                             乳酸閾値での毎週のテンポ走を含める。8-12週間にわたる一貫性が測定可能な改善をもたらします。具体的なワークアウトとドリルについては、上記の詳細な改善セクションを参照してください。
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="section section-alt">
-    <div class="container container-narrow text-center">
-        <h2 class="mt-3xl">関連リソース</h2>
-
-        <div class="related-articles">
-            <a href="/ja/training-zones/" class="related-card">
-                <h3>トレーニングゾーンガイド</h3>
-                <p>5つのトレーニングゾーンを理解し、ランニングエコノミー改善のためにワークアウトを最適化する</p>
-            </a>
-
-            <a href="/ja/crs/" class="related-card">
-                <h3>クリティカルランスピード（CRS）テスト</h3>
-                <p>ランニング閾値ペースを測定し、効率向上のための適切なトレーニングゾーンを設定する</p>
-            </a>
-
-            <a href="/ja/rtss-calculator/" class="related-card">
-                <h3>ランニングTSS計算機</h3>
-                <p>トレーニング負荷を定量化し、ランニングエコノミーを改善するフィットネス適応を追跡する</p>
-            </a>
-        </div>
-
-        <h2>一貫した練習を通じて効率を構築する</h2>
-        <p class="lead">ランニング効率は、何千もの質の高いストライド、意図的なテクニック練習、および有酸素および生体力学的システムの忍耐強い開発を通じて徐々に改善されます。</p>
-
-        <p>毎週効率を測定してください。意図を持ってトレーニングしてください。プロセスを信頼してください。ランニングエコノミーは着実に改善し、より低い心拍数でより速いタイムにつながります。</p>
-
-        <div class="mt-xl">
-            <a href="/ja/getting-started/" class="btn btn-primary">スタートガイド →</a>
-            <a href="/ja/formulas/" class="btn btn-secondary">すべての計算式</a>
-        </div>
-    </div>
-</section>
-    
-  </main>
-
-  
-  <footer class="site-footer">
-    <div class="container">
-        
-        <div class="footer-top">
-            <div class="footer-brand-section">
-                
-                <h2>Run Analytics</h2>
-                <p>Track Critical Running Speed, Training Stress Score, and performance metrics with Run Analytics. Science-based iOS app for runners, triathletes &amp; coaches. 7-day free trial.</p>
-                
-            </div>
-
-            
-            <div class="footer-download">
-                <h3 class="footer-heading">Download</h3>
-                <div class="footer-badges">
-                    
-                    <a href="https://apps.apple.com/us/app/run-analytics/id6754524015" target="_blank" rel="noopener"
-                        aria-label="Download on the App Store">
-                        <img src="../../assets/images/badge-app-store.svg"
+                        </p></div></div></div></div></div></section><section class="section section-alt"><div class="container container-narrow text-center"><h2 class="mt-3xl">関連リソース</h2><div class="related-articles"><a href="/ja/training-zones/" class="related-card"><h3>トレーニングゾーンガイド</h3><p>5つのトレーニングゾーンを理解し、ランニングエコノミー改善のためにワークアウトを最適化する</p></a><a href="/ja/crs/" class="related-card"><h3>クリティカルランスピード（CRS）テスト</h3><p>ランニング閾値ペースを測定し、効率向上のための適切なトレーニングゾーンを設定する</p></a><a href="/ja/rtss-calculator/" class="related-card"><h3>ランニングTSS計算機</h3><p>トレーニング負荷を定量化し、ランニングエコノミーを改善するフィットネス適応を追跡する</p></a></div><h2>一貫した練習を通じて効率を構築する</h2><p class="lead">ランニング効率は、何千もの質の高いストライド、意図的なテクニック練習、および有酸素および生体力学的システムの忍耐強い開発を通じて徐々に改善されます。</p><p>毎週効率を測定してください。意図を持ってトレーニングしてください。プロセスを信頼してください。ランニングエコノミーは着実に改善し、より低い心拍数でより速いタイムにつながります。</p><div class="mt-xl"><a href="/ja/getting-started/" class="btn btn-primary">スタートガイド →</a><a href="/ja/formulas/" class="btn btn-secondary">すべての計算式</a></div></div></section></main><footer class="site-footer"><div class="container"><div class="footer-top"><div class="footer-brand-section"><h2>Run Analytics</h2><p>Track Critical Running Speed, Training Stress Score, and performance metrics with Run Analytics. Science-based iOS app for runners, triathletes &amp; coaches. 7-day free trial.</p></div><div class="footer-download"><h3 class="footer-heading">Download</h3><div class="footer-badges"><a href="https://apps.apple.com/us/app/run-analytics/id6754524015" target="_blank" rel="noopener"
+                        aria-label="Download on the App Store"><img src="../../assets/images/badge-app-store.svg"
                             alt="Download on the App Store" width="135"
-                            height="40" loading="lazy">
-                    </a>
-                    
-                    
-                    <a href="https://play.google.com/store/apps/details?id=com.arnohealth.runanalytics" target="_blank" rel="noopener"
-                        aria-label="Get it on Google Play">
-                        <img src="../../assets/images/badge-google-play.svg"
+                            height="40" loading="lazy"></a><a href="https://play.google.com/store/apps/details?id=com.arnohealth.runanalytics" target="_blank" rel="noopener"
+                        aria-label="Get it on Google Play"><img src="../../assets/images/badge-google-play.svg"
                             alt="Get it on Google Play" width="135"
-                            height="40" loading="lazy">
-                    </a>
-                    
-                </div>
-            </div>
-            
-        </div>
-
-        
-        <div class="footer-languages">
-            <h3 class="footer-heading">Available in</h3>
-            <div class="lang-grid">
-                
-                <a href="/af/" class="lang-link"
+                            height="40" loading="lazy"></a></div></div></div><div class="footer-languages"><h3 class="footer-heading">Available in</h3><div class="lang-grid"><a href="/af/" class="lang-link"
                     hreflang="af" >
                     Afrikaans
-                </a>
-                
-                <a href="/am/" class="lang-link"
+                </a><a href="/am/" class="lang-link"
                     hreflang="am" >
                     አማርኛ
-                </a>
-                
-                <a href="/ar/" class="lang-link"
+                </a><a href="/ar/" class="lang-link"
                     hreflang="ar" dir="rtl" >
                     العربية
-                </a>
-                
-                <a href="/bg/" class="lang-link"
+                </a><a href="/bg/" class="lang-link"
                     hreflang="bg" >
                     Български
-                </a>
-                
-                <a href="/bn/" class="lang-link"
+                </a><a href="/bn/" class="lang-link"
                     hreflang="bn" >
                     বাংলা
-                </a>
-                
-                <a href="/ca/" class="lang-link"
+                </a><a href="/ca/" class="lang-link"
                     hreflang="ca" >
                     Català
-                </a>
-                
-                <a href="/cs/" class="lang-link"
+                </a><a href="/cs/" class="lang-link"
                     hreflang="cs" >
                     Čeština
-                </a>
-                
-                <a href="/da/" class="lang-link"
+                </a><a href="/da/" class="lang-link"
                     hreflang="da" >
                     Dansk
-                </a>
-                
-                <a href="/de/" class="lang-link"
+                </a><a href="/de/" class="lang-link"
                     hreflang="de" >
                     Deutsch
-                </a>
-                
-                <a href="/el/" class="lang-link"
+                </a><a href="/el/" class="lang-link"
                     hreflang="el" >
                     Ελληνικά
-                </a>
-                
-                <a href="/en/" class="lang-link"
+                </a><a href="/en/" class="lang-link"
                     hreflang="en" >
                     English
-                </a>
-                
-                <a href="/es/" class="lang-link"
+                </a><a href="/es/" class="lang-link"
                     hreflang="es" >
                     Español
-                </a>
-                
-                <a href="/et/" class="lang-link"
+                </a><a href="/et/" class="lang-link"
                     hreflang="et" >
                     Eesti
-                </a>
-                
-                <a href="/fa/" class="lang-link"
+                </a><a href="/fa/" class="lang-link"
                     hreflang="fa" dir="rtl" >
                     فارسی
-                </a>
-                
-                <a href="/fi/" class="lang-link"
+                </a><a href="/fi/" class="lang-link"
                     hreflang="fi" >
                     Suomi
-                </a>
-                
-                <a href="/fr/" class="lang-link"
+                </a><a href="/fr/" class="lang-link"
                     hreflang="fr" >
                     Français
-                </a>
-                
-                <a href="/gu/" class="lang-link"
+                </a><a href="/gu/" class="lang-link"
                     hreflang="gu" >
                     ગુજરાતી
-                </a>
-                
-                <a href="/ha/" class="lang-link"
+                </a><a href="/ha/" class="lang-link"
                     hreflang="ha" >
                     Hausa
-                </a>
-                
-                <a href="/he/" class="lang-link"
+                </a><a href="/he/" class="lang-link"
                     hreflang="he" dir="rtl" >
                     עברית
-                </a>
-                
-                <a href="/hi/" class="lang-link"
+                </a><a href="/hi/" class="lang-link"
                     hreflang="hi" >
                     हिन्दी
-                </a>
-                
-                <a href="/hr/" class="lang-link"
+                </a><a href="/hr/" class="lang-link"
                     hreflang="hr" >
                     Hrvatski
-                </a>
-                
-                <a href="/hu/" class="lang-link"
+                </a><a href="/hu/" class="lang-link"
                     hreflang="hu" >
                     Magyar
-                </a>
-                
-                <a href="/id/" class="lang-link"
+                </a><a href="/id/" class="lang-link"
                     hreflang="id" >
                     Bahasa Indonesia
-                </a>
-                
-                <a href="/is/" class="lang-link"
+                </a><a href="/is/" class="lang-link"
                     hreflang="is" >
                     Íslenska
-                </a>
-                
-                <a href="/it/" class="lang-link"
+                </a><a href="/it/" class="lang-link"
                     hreflang="it" >
                     Italiano
-                </a>
-                
-                <a href="/ja/" class="lang-link active"
+                </a><a href="/ja/" class="lang-link active"
                     hreflang="ja" >
                     日本語
-                </a>
-                
-                <a href="/km/" class="lang-link"
+                </a><a href="/km/" class="lang-link"
                     hreflang="km" >
                     ភាសាខ្មែរ
-                </a>
-                
-                <a href="/kn/" class="lang-link"
+                </a><a href="/kn/" class="lang-link"
                     hreflang="kn" >
                     ಕನ್ನಡ
-                </a>
-                
-                <a href="/ko/" class="lang-link"
+                </a><a href="/ko/" class="lang-link"
                     hreflang="ko" >
                     한국어
-                </a>
-                
-                <a href="/lt/" class="lang-link"
+                </a><a href="/lt/" class="lang-link"
                     hreflang="lt" >
                     Lietuvių
-                </a>
-                
-                <a href="/lv/" class="lang-link"
+                </a><a href="/lv/" class="lang-link"
                     hreflang="lv" >
                     Latviešu
-                </a>
-                
-                <a href="/ms/" class="lang-link"
+                </a><a href="/ms/" class="lang-link"
                     hreflang="ms" >
                     Bahasa Melayu
-                </a>
-                
-                <a href="/my/" class="lang-link"
+                </a><a href="/my/" class="lang-link"
                     hreflang="my" >
                     မြန်မာစာ
-                </a>
-                
-                <a href="/nb/" class="lang-link"
+                </a><a href="/nb/" class="lang-link"
                     hreflang="nb" >
                     Norsk Bokmål
-                </a>
-                
-                <a href="/nl/" class="lang-link"
+                </a><a href="/nl/" class="lang-link"
                     hreflang="nl" >
                     Nederlands
-                </a>
-                
-                <a href="/pl/" class="lang-link"
+                </a><a href="/pl/" class="lang-link"
                     hreflang="pl" >
                     Polski
-                </a>
-                
-                <a href="/pt/" class="lang-link"
+                </a><a href="/pt/" class="lang-link"
                     hreflang="pt" >
                     Português
-                </a>
-                
-                <a href="/pt-br/" class="lang-link"
+                </a><a href="/pt-br/" class="lang-link"
                     hreflang="pt-br" >
                     Português (Brasil)
-                </a>
-                
-                <a href="/ro/" class="lang-link"
+                </a><a href="/ro/" class="lang-link"
                     hreflang="ro" >
                     Română
-                </a>
-                
-                <a href="/ru/" class="lang-link"
+                </a><a href="/ru/" class="lang-link"
                     hreflang="ru" >
                     Русский
-                </a>
-                
-                <a href="/sk/" class="lang-link"
+                </a><a href="/sk/" class="lang-link"
                     hreflang="sk" >
                     Slovenčina
-                </a>
-                
-                <a href="/sl/" class="lang-link"
+                </a><a href="/sl/" class="lang-link"
                     hreflang="sl" >
                     Slovenščina
-                </a>
-                
-                <a href="/sr/" class="lang-link"
+                </a><a href="/sr/" class="lang-link"
                     hreflang="sr" >
                     Srpski
-                </a>
-                
-                <a href="/sv/" class="lang-link"
+                </a><a href="/sv/" class="lang-link"
                     hreflang="sv" >
                     Svenska
-                </a>
-                
-                <a href="/sw/" class="lang-link"
+                </a><a href="/sw/" class="lang-link"
                     hreflang="sw" >
                     Kiswahili
-                </a>
-                
-                <a href="/ta/" class="lang-link"
+                </a><a href="/ta/" class="lang-link"
                     hreflang="ta" >
                     தமிழ்
-                </a>
-                
-                <a href="/te/" class="lang-link"
+                </a><a href="/te/" class="lang-link"
                     hreflang="te" >
                     తెలుగు
-                </a>
-                
-                <a href="/th/" class="lang-link"
+                </a><a href="/th/" class="lang-link"
                     hreflang="th" >
                     ไทย
-                </a>
-                
-                <a href="/tl/" class="lang-link"
+                </a><a href="/tl/" class="lang-link"
                     hreflang="tl" >
                     Tagalog
-                </a>
-                
-                <a href="/tr/" class="lang-link"
+                </a><a href="/tr/" class="lang-link"
                     hreflang="tr" >
                     Türkçe
-                </a>
-                
-                <a href="/uk/" class="lang-link"
+                </a><a href="/uk/" class="lang-link"
                     hreflang="uk" >
                     Українська
-                </a>
-                
-                <a href="/ur/" class="lang-link"
+                </a><a href="/ur/" class="lang-link"
                     hreflang="ur" dir="rtl" >
                     اردو
-                </a>
-                
-                <a href="/vi/" class="lang-link"
+                </a><a href="/vi/" class="lang-link"
                     hreflang="vi" >
                     Tiếng Việt
-                </a>
-                
-                <a href="/yo/" class="lang-link"
+                </a><a href="/yo/" class="lang-link"
                     hreflang="yo" >
                     Yorùbá
-                </a>
-                
-                <a href="/zh/" class="lang-link"
+                </a><a href="/zh/" class="lang-link"
                     hreflang="zh" >
                     中文
-                </a>
-                
-            </div>
-        </div>
-
-        <div class="footer-divider"></div>
-
-        
-        <div class="footer-bottom">
-            <p class="copyright">
+                </a></div></div><div class="footer-divider"></div><div class="footer-bottom"><p class="copyright">
                 &copy; 2026 Run Analytics. 全著作権所有
-            </p>
-            <ul class="footer-legal">
-                <li><a href="/ja/privacy/">プライバシー</a></li>
-                <li><a href="/ja/terms/">利用規約</a></li>
-            </ul>
-        </div>
-    </div>
-</footer>
-
-  
-  <div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="Cookie consent" aria-live="polite">
-    <div class="cookie-banner-content">
-        <div>
-            <p>このウェブサイトはクッキーを使用してユーザー体験を向上させています。</p>
-            <a href="/ja/privacy/" class="text-sm">詳細</a>
-        </div>
-        <div class="cookie-banner-actions">
-            <button id="cookie-decline" class="btn btn-secondary btn-small">拒否する</button>
-            <button id="cookie-accept" class="btn btn-primary btn-small">同意する</button>
-        </div>
-    </div>
-</div>
-
-  
-  <script src="../../assets/js/core.min.js?v=8aef43d1" defer></script>
-  <script src="../../assets/js/search.min.js?v=8aef43d1" defer></script>
-  
-
-  
-  
-  <script src="../../assets/js/analytics.min.js" data-ga-id="G-Y138VB4523" defer></script>
-  
-
-  
-  <script>if ('serviceWorker' in navigator) { navigator.serviceWorker.register('../../sw.js') }</script>
-</body>
-
-</html>
+            </p><ul class="footer-legal"><li><a href="/ja/privacy/">プライバシー</a></li><li><a href="/ja/terms/">利用規約</a></li></ul></div></div></footer><div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="Cookie consent" aria-live="polite"><div class="cookie-banner-content"><div><p>このウェブサイトはクッキーを使用してユーザー体験を向上させています。</p><a href="/ja/privacy/" class="text-sm">詳細</a></div><div class="cookie-banner-actions"><button id="cookie-decline" class="btn btn-secondary btn-small">拒否する</button><button id="cookie-accept" class="btn btn-primary btn-small">同意する</button></div></div></div><script src="../../assets/js/core.min.js?v=e899af207631" defer></script><script src="../../assets/js/search.min.js?v=e899af207631" defer></script><script src="../../assets/js/analytics.min.js" data-ga-id="G-Y138VB4523" defer></script><script>if ('serviceWorker' in navigator) { navigator.serviceWorker.register('../../sw.js') }</script></body></html>

@@ -1,246 +1,61 @@
-<!DOCTYPE html>
-<html lang="tr" dir="ltr">
-
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
-    rel="stylesheet">
-
-  
-  <title>Gizlilik Öncelikli Koşu Analitiği: Verileriniz, Cihazınız</title>
-  <meta name="description" content="Gizliliğinizden ödün vermeden daha akıllı antrenman yapın. Yerel veri işlemenin koşu analitiğiniz üzerinde size nasıl tam kontrol sağladığını ve aynı zamanda konum">
-  <meta name="author" content="AnalyticsZone Team">
-
-  
-  
-  <meta name="keywords" content="gizlilik odaklı, yerel veri depolama, güvenli analitik, bulut yok, özel koşu uygulaması">
-  
-
-  
-  <link rel="canonical" href="https://run.analyticszone.app/tr/privacy-first-running-analytics/">
-
-  
-  
-  <meta property="article:published_time" content="2025-01-15T10:00:00Z">
-  <meta property="article:modified_time" content="2026-01-04T14:30:00Z">
-  <meta property="article:author" content="AnalyticsZone Team">
-  
-
-  
-  
-
-  
-  <meta property="og:type" content="article">
-  <meta property="og:url" content="https://run.analyticszone.app/tr/privacy-first-running-analytics/">
-  <meta property="og:title" content="Gizlilik Öncelikli Koşu Analitiği: Verileriniz, Cihazınız">
-  <meta property="og:description" content="Gizliliğinizden ödün vermeden daha akıllı antrenman yapın. Yerel veri işlemenin koşu analitiğiniz üzerinde size nasıl tam kontrol sağladığını ve aynı zamanda konum">
-  <meta property="og:image" content="https://run.analyticszone.app/assets/images/og-image.svg">
-  <meta property="og:locale" content="tr_TR">
-  <meta property="og:site_name" content="Run Analytics">
-
-  
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:url" content="https://run.analyticszone.app/tr/privacy-first-running-analytics/">
-  <meta name="twitter:title" content="Gizlilik Öncelikli Koşu Analitiği: Verileriniz, Cihazınız">
-  <meta name="twitter:description" content="Gizliliğinizden ödün vermeden daha akıllı antrenman yapın. Yerel veri işlemenin koşu analitiğiniz üzerinde size nasıl tam kontrol sağladığını ve aynı zamanda konum">
-  <meta name="twitter:image" content="https://run.analyticszone.app/assets/images/og-image.svg">
-  
-  <meta name="twitter:site" content="@runanalytics">
-  <meta name="twitter:creator" content="@runanalytics">
-  
-
-  
-  
-  <link rel="alternate" hreflang="af"
-    href="https://run.analyticszone.app/af/privacy-first-running-analytics/">
-  
-  <link rel="alternate" hreflang="am"
-    href="https://run.analyticszone.app/am/privacy-first-running-analytics/">
-  
-  <link rel="alternate" hreflang="ar"
-    href="https://run.analyticszone.app/ar/privacy-first-running-analytics/">
-  
-  <link rel="alternate" hreflang="bg"
-    href="https://run.analyticszone.app/bg/privacy-first-running-analytics/">
-  
-  <link rel="alternate" hreflang="bn"
-    href="https://run.analyticszone.app/bn/privacy-first-running-analytics/">
-  
-  <link rel="alternate" hreflang="ca"
-    href="https://run.analyticszone.app/ca/privacy-first-running-analytics/">
-  
-  <link rel="alternate" hreflang="cs"
-    href="https://run.analyticszone.app/cs/privacy-first-running-analytics/">
-  
-  <link rel="alternate" hreflang="da"
-    href="https://run.analyticszone.app/da/privacy-first-running-analytics/">
-  
-  <link rel="alternate" hreflang="de"
-    href="https://run.analyticszone.app/de/privacy-first-running-analytics/">
-  
-  <link rel="alternate" hreflang="el"
-    href="https://run.analyticszone.app/el/privacy-first-running-analytics/">
-  
-  <link rel="alternate" hreflang="en"
-    href="https://run.analyticszone.app/en/privacy-first-running-analytics/">
-  
-  <link rel="alternate" hreflang="es"
-    href="https://run.analyticszone.app/es/privacy-first-running-analytics/">
-  
-  <link rel="alternate" hreflang="et"
-    href="https://run.analyticszone.app/et/privacy-first-running-analytics/">
-  
-  <link rel="alternate" hreflang="fa"
-    href="https://run.analyticszone.app/fa/privacy-first-running-analytics/">
-  
-  <link rel="alternate" hreflang="fi"
-    href="https://run.analyticszone.app/fi/privacy-first-running-analytics/">
-  
-  <link rel="alternate" hreflang="fr"
-    href="https://run.analyticszone.app/fr/privacy-first-running-analytics/">
-  
-  <link rel="alternate" hreflang="gu"
-    href="https://run.analyticszone.app/gu/privacy-first-running-analytics/">
-  
-  <link rel="alternate" hreflang="ha"
-    href="https://run.analyticszone.app/ha/privacy-first-running-analytics/">
-  
-  <link rel="alternate" hreflang="he"
-    href="https://run.analyticszone.app/he/privacy-first-running-analytics/">
-  
-  <link rel="alternate" hreflang="hi"
-    href="https://run.analyticszone.app/hi/privacy-first-running-analytics/">
-  
-  <link rel="alternate" hreflang="hr"
-    href="https://run.analyticszone.app/hr/privacy-first-running-analytics/">
-  
-  <link rel="alternate" hreflang="hu"
-    href="https://run.analyticszone.app/hu/privacy-first-running-analytics/">
-  
-  <link rel="alternate" hreflang="id"
-    href="https://run.analyticszone.app/id/privacy-first-running-analytics/">
-  
-  <link rel="alternate" hreflang="is"
-    href="https://run.analyticszone.app/is/privacy-first-running-analytics/">
-  
-  <link rel="alternate" hreflang="it"
-    href="https://run.analyticszone.app/it/privacy-first-running-analytics/">
-  
-  <link rel="alternate" hreflang="ja"
-    href="https://run.analyticszone.app/ja/privacy-first-running-analytics/">
-  
-  <link rel="alternate" hreflang="km"
-    href="https://run.analyticszone.app/km/privacy-first-running-analytics/">
-  
-  <link rel="alternate" hreflang="kn"
-    href="https://run.analyticszone.app/kn/privacy-first-running-analytics/">
-  
-  <link rel="alternate" hreflang="ko"
-    href="https://run.analyticszone.app/ko/privacy-first-running-analytics/">
-  
-  <link rel="alternate" hreflang="lt"
-    href="https://run.analyticszone.app/lt/privacy-first-running-analytics/">
-  
-  <link rel="alternate" hreflang="lv"
-    href="https://run.analyticszone.app/lv/privacy-first-running-analytics/">
-  
-  <link rel="alternate" hreflang="ms"
-    href="https://run.analyticszone.app/ms/privacy-first-running-analytics/">
-  
-  <link rel="alternate" hreflang="my"
-    href="https://run.analyticszone.app/my/privacy-first-running-analytics/">
-  
-  <link rel="alternate" hreflang="nb"
-    href="https://run.analyticszone.app/nb/privacy-first-running-analytics/">
-  
-  <link rel="alternate" hreflang="nl"
-    href="https://run.analyticszone.app/nl/privacy-first-running-analytics/">
-  
-  <link rel="alternate" hreflang="pl"
-    href="https://run.analyticszone.app/pl/privacy-first-running-analytics/">
-  
-  <link rel="alternate" hreflang="pt"
-    href="https://run.analyticszone.app/pt/privacy-first-running-analytics/">
-  
-  <link rel="alternate" hreflang="pt-br"
-    href="https://run.analyticszone.app/pt-br/privacy-first-running-analytics/">
-  
-  <link rel="alternate" hreflang="ro"
-    href="https://run.analyticszone.app/ro/privacy-first-running-analytics/">
-  
-  <link rel="alternate" hreflang="ru"
-    href="https://run.analyticszone.app/ru/privacy-first-running-analytics/">
-  
-  <link rel="alternate" hreflang="sk"
-    href="https://run.analyticszone.app/sk/privacy-first-running-analytics/">
-  
-  <link rel="alternate" hreflang="sl"
-    href="https://run.analyticszone.app/sl/privacy-first-running-analytics/">
-  
-  <link rel="alternate" hreflang="sr"
-    href="https://run.analyticszone.app/sr/privacy-first-running-analytics/">
-  
-  <link rel="alternate" hreflang="sv"
-    href="https://run.analyticszone.app/sv/privacy-first-running-analytics/">
-  
-  <link rel="alternate" hreflang="sw"
-    href="https://run.analyticszone.app/sw/privacy-first-running-analytics/">
-  
-  <link rel="alternate" hreflang="ta"
-    href="https://run.analyticszone.app/ta/privacy-first-running-analytics/">
-  
-  <link rel="alternate" hreflang="te"
-    href="https://run.analyticszone.app/te/privacy-first-running-analytics/">
-  
-  <link rel="alternate" hreflang="th"
-    href="https://run.analyticszone.app/th/privacy-first-running-analytics/">
-  
-  <link rel="alternate" hreflang="tl"
-    href="https://run.analyticszone.app/tl/privacy-first-running-analytics/">
-  
-  <link rel="alternate" hreflang="tr"
-    href="https://run.analyticszone.app/tr/privacy-first-running-analytics/">
-  
-  <link rel="alternate" hreflang="uk"
-    href="https://run.analyticszone.app/uk/privacy-first-running-analytics/">
-  
-  <link rel="alternate" hreflang="ur"
-    href="https://run.analyticszone.app/ur/privacy-first-running-analytics/">
-  
-  <link rel="alternate" hreflang="vi"
-    href="https://run.analyticszone.app/vi/privacy-first-running-analytics/">
-  
-  <link rel="alternate" hreflang="yo"
-    href="https://run.analyticszone.app/yo/privacy-first-running-analytics/">
-  
-  <link rel="alternate" hreflang="zh"
-    href="https://run.analyticszone.app/zh/privacy-first-running-analytics/">
-  
-  <link rel="alternate" hreflang="x-default"
-    href="https://run.analyticszone.app/en/privacy-first-running-analytics/">
-
-  
-  <link rel="icon" type="image/png" sizes="32x32" href="../../assets/images/icons/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="../../assets/images/icons/favicon-16x16.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="../../assets/images/icons/apple-touch-icon.png">
-  <link rel="manifest" href="../../manifest.json">
-  <meta name="theme-color" content="#2563EB">
-  <meta name="robots" content="index, follow">
-
-  
-  
-  
-  <meta name="apple-itunes-app" content="app-id=6754524015">
-  
-
-  
-  <style>
+<!DOCTYPE html><html lang="tr" dir="ltr"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet"><title>Gizlilik Öncelikli Koşu Analitiği: Verileriniz, Cihazınız</title><meta name="description" content="Gizliliğinizden ödün vermeden daha akıllı antrenman yapın. Yerel veri işlemenin koşu analitiğiniz üzerinde size nasıl tam kontrol sağladığını ve aynı zamanda konum"><meta name="author" content="AnalyticsZone Team"><meta name="keywords" content="gizlilik odaklı, yerel veri depolama, güvenli analitik, bulut yok, özel koşu uygulaması"><link rel="canonical" href="https://run.analyticszone.app/tr/privacy-first-running-analytics/"><meta property="article:published_time" content="2025-01-15T10:00:00Z"><meta property="article:modified_time" content="2026-02-06T14:30:00Z"><meta property="article:author" content="AnalyticsZone Team"><meta property="og:type" content="article"><meta property="og:url" content="https://run.analyticszone.app/tr/privacy-first-running-analytics/"><meta property="og:title" content="Gizlilik Öncelikli Koşu Analitiği: Verileriniz, Cihazınız"><meta property="og:description" content="Gizliliğinizden ödün vermeden daha akıllı antrenman yapın. Yerel veri işlemenin koşu analitiğiniz üzerinde size nasıl tam kontrol sağladığını ve aynı zamanda konum"><meta property="og:image" content="https://run.analyticszone.app/assets/images/og-image.svg"><meta property="og:locale" content="tr_TR"><meta property="og:site_name" content="Run Analytics"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:url" content="https://run.analyticszone.app/tr/privacy-first-running-analytics/"><meta name="twitter:title" content="Gizlilik Öncelikli Koşu Analitiği: Verileriniz, Cihazınız"><meta name="twitter:description" content="Gizliliğinizden ödün vermeden daha akıllı antrenman yapın. Yerel veri işlemenin koşu analitiğiniz üzerinde size nasıl tam kontrol sağladığını ve aynı zamanda konum"><meta name="twitter:image" content="https://run.analyticszone.app/assets/images/og-image.svg"><meta name="twitter:site" content="@runanalytics"><meta name="twitter:creator" content="@runanalytics"><link rel="alternate" hreflang="af"
+    href="https://run.analyticszone.app/af/privacy-first-running-analytics/"><link rel="alternate" hreflang="am"
+    href="https://run.analyticszone.app/am/privacy-first-running-analytics/"><link rel="alternate" hreflang="ar"
+    href="https://run.analyticszone.app/ar/privacy-first-running-analytics/"><link rel="alternate" hreflang="bg"
+    href="https://run.analyticszone.app/bg/privacy-first-running-analytics/"><link rel="alternate" hreflang="bn"
+    href="https://run.analyticszone.app/bn/privacy-first-running-analytics/"><link rel="alternate" hreflang="ca"
+    href="https://run.analyticszone.app/ca/privacy-first-running-analytics/"><link rel="alternate" hreflang="cs"
+    href="https://run.analyticszone.app/cs/privacy-first-running-analytics/"><link rel="alternate" hreflang="da"
+    href="https://run.analyticszone.app/da/privacy-first-running-analytics/"><link rel="alternate" hreflang="de"
+    href="https://run.analyticszone.app/de/privacy-first-running-analytics/"><link rel="alternate" hreflang="el"
+    href="https://run.analyticszone.app/el/privacy-first-running-analytics/"><link rel="alternate" hreflang="en"
+    href="https://run.analyticszone.app/en/privacy-first-running-analytics/"><link rel="alternate" hreflang="es"
+    href="https://run.analyticszone.app/es/privacy-first-running-analytics/"><link rel="alternate" hreflang="et"
+    href="https://run.analyticszone.app/et/privacy-first-running-analytics/"><link rel="alternate" hreflang="fa"
+    href="https://run.analyticszone.app/fa/privacy-first-running-analytics/"><link rel="alternate" hreflang="fi"
+    href="https://run.analyticszone.app/fi/privacy-first-running-analytics/"><link rel="alternate" hreflang="fr"
+    href="https://run.analyticszone.app/fr/privacy-first-running-analytics/"><link rel="alternate" hreflang="gu"
+    href="https://run.analyticszone.app/gu/privacy-first-running-analytics/"><link rel="alternate" hreflang="ha"
+    href="https://run.analyticszone.app/ha/privacy-first-running-analytics/"><link rel="alternate" hreflang="he"
+    href="https://run.analyticszone.app/he/privacy-first-running-analytics/"><link rel="alternate" hreflang="hi"
+    href="https://run.analyticszone.app/hi/privacy-first-running-analytics/"><link rel="alternate" hreflang="hr"
+    href="https://run.analyticszone.app/hr/privacy-first-running-analytics/"><link rel="alternate" hreflang="hu"
+    href="https://run.analyticszone.app/hu/privacy-first-running-analytics/"><link rel="alternate" hreflang="id"
+    href="https://run.analyticszone.app/id/privacy-first-running-analytics/"><link rel="alternate" hreflang="is"
+    href="https://run.analyticszone.app/is/privacy-first-running-analytics/"><link rel="alternate" hreflang="it"
+    href="https://run.analyticszone.app/it/privacy-first-running-analytics/"><link rel="alternate" hreflang="ja"
+    href="https://run.analyticszone.app/ja/privacy-first-running-analytics/"><link rel="alternate" hreflang="km"
+    href="https://run.analyticszone.app/km/privacy-first-running-analytics/"><link rel="alternate" hreflang="kn"
+    href="https://run.analyticszone.app/kn/privacy-first-running-analytics/"><link rel="alternate" hreflang="ko"
+    href="https://run.analyticszone.app/ko/privacy-first-running-analytics/"><link rel="alternate" hreflang="lt"
+    href="https://run.analyticszone.app/lt/privacy-first-running-analytics/"><link rel="alternate" hreflang="lv"
+    href="https://run.analyticszone.app/lv/privacy-first-running-analytics/"><link rel="alternate" hreflang="ms"
+    href="https://run.analyticszone.app/ms/privacy-first-running-analytics/"><link rel="alternate" hreflang="my"
+    href="https://run.analyticszone.app/my/privacy-first-running-analytics/"><link rel="alternate" hreflang="nb"
+    href="https://run.analyticszone.app/nb/privacy-first-running-analytics/"><link rel="alternate" hreflang="nl"
+    href="https://run.analyticszone.app/nl/privacy-first-running-analytics/"><link rel="alternate" hreflang="pl"
+    href="https://run.analyticszone.app/pl/privacy-first-running-analytics/"><link rel="alternate" hreflang="pt"
+    href="https://run.analyticszone.app/pt/privacy-first-running-analytics/"><link rel="alternate" hreflang="pt-br"
+    href="https://run.analyticszone.app/pt-br/privacy-first-running-analytics/"><link rel="alternate" hreflang="ro"
+    href="https://run.analyticszone.app/ro/privacy-first-running-analytics/"><link rel="alternate" hreflang="ru"
+    href="https://run.analyticszone.app/ru/privacy-first-running-analytics/"><link rel="alternate" hreflang="sk"
+    href="https://run.analyticszone.app/sk/privacy-first-running-analytics/"><link rel="alternate" hreflang="sl"
+    href="https://run.analyticszone.app/sl/privacy-first-running-analytics/"><link rel="alternate" hreflang="sr"
+    href="https://run.analyticszone.app/sr/privacy-first-running-analytics/"><link rel="alternate" hreflang="sv"
+    href="https://run.analyticszone.app/sv/privacy-first-running-analytics/"><link rel="alternate" hreflang="sw"
+    href="https://run.analyticszone.app/sw/privacy-first-running-analytics/"><link rel="alternate" hreflang="ta"
+    href="https://run.analyticszone.app/ta/privacy-first-running-analytics/"><link rel="alternate" hreflang="te"
+    href="https://run.analyticszone.app/te/privacy-first-running-analytics/"><link rel="alternate" hreflang="th"
+    href="https://run.analyticszone.app/th/privacy-first-running-analytics/"><link rel="alternate" hreflang="tl"
+    href="https://run.analyticszone.app/tl/privacy-first-running-analytics/"><link rel="alternate" hreflang="tr"
+    href="https://run.analyticszone.app/tr/privacy-first-running-analytics/"><link rel="alternate" hreflang="uk"
+    href="https://run.analyticszone.app/uk/privacy-first-running-analytics/"><link rel="alternate" hreflang="ur"
+    href="https://run.analyticszone.app/ur/privacy-first-running-analytics/"><link rel="alternate" hreflang="vi"
+    href="https://run.analyticszone.app/vi/privacy-first-running-analytics/"><link rel="alternate" hreflang="yo"
+    href="https://run.analyticszone.app/yo/privacy-first-running-analytics/"><link rel="alternate" hreflang="zh"
+    href="https://run.analyticszone.app/zh/privacy-first-running-analytics/"><link rel="alternate" hreflang="x-default"
+    href="https://run.analyticszone.app/en/privacy-first-running-analytics/"><link rel="icon" type="image/png" sizes="32x32" href="../../assets/images/icons/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="../../assets/images/icons/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="../../assets/images/icons/apple-touch-icon.png"><link rel="manifest" href="../../manifest.json"><meta name="theme-color" content="#2563EB"><meta name="robots" content="index, follow"><meta name="apple-itunes-app" content="app-id=6754524015"><style>
 /* Critical CSS - Above the fold styles for fast LCP */
 :root {
   --color-primary: #0066CC;
@@ -499,20 +314,7 @@ img[width][height] {
     transition-duration: 0.01ms !important;
   }
 }
-</style>
-
-  
-  <link rel="preconnect" href="https://www.googletagmanager.com">
-  <link rel="dns-prefetch" href="https://www.googletagmanager.com">
-
-  
-  <link rel="stylesheet" href="../../assets/css/main.min.css?v=8aef43d1">
-
-  
-  
-
-
-<script type="application/ld+json">
+</style><link rel="preconnect" href="https://www.googletagmanager.com"><link rel="dns-prefetch" href="https://www.googletagmanager.com"><link rel="stylesheet" href="../../assets/css/main.min.css?v=e899af207631"><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Organization",
@@ -547,10 +349,7 @@ img[width][height] {
     
   ]
 }
-</script>
-
-
-<script type="application/ld+json">
+</script><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "WebSite",
@@ -559,11 +358,7 @@ img[width][height] {
   "description": "Track Critical Running Speed, Training Stress Score, and performance metrics with Run Analytics. Science-based iOS app for runners, triathletes &amp; coaches. 7-day free trial.",
   "inLanguage": "tr"
 }
-</script>
-
-
-
-<script type="application/ld+json">
+</script><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
@@ -578,14 +373,7 @@ img[width][height] {
   },
   "downloadUrl": "https://apps.apple.com/us/app/run-analytics/id6754524015"
 }
-</script>
-
-
-
-
-
-
-<script type="application/ld+json">
+</script><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "WebPage",
@@ -593,11 +381,7 @@ img[width][height] {
   "description": "Gizliliğinizden ödün vermeden daha akıllı antrenman yapın. Yerel veri işlemenin koşu analitiğiniz üzerinde size nasıl tam kontrol sağladığını ve aynı zamanda konum",
   "url": "https://run.analyticszone.app/tr/privacy-first-running-analytics/"
 }
-</script>
-
-
-
-<script type="application/ld+json">
+</script><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Article",
@@ -616,23 +400,13 @@ img[width][height] {
     }
   },
   "datePublished": "2025-01-15",
-  "dateModified": "2026-01-04",
+  "dateModified": "2026-02-06",
   "mainEntityOfPage": {
     "@type": "WebPage",
     "@id": "https://run.analyticszone.app/tr/privacy-first-running-analytics/"
   }
 }
-</script>
-
-
-
-
-
-  
-  
-
-  
-  <script>
+</script><script>
     (function () {
       let theme = localStorage.getItem('theme');
       // Older builds could persist a per-subdomain `theme=light` value without a UI
@@ -646,1479 +420,337 @@ img[width][height] {
         document.documentElement.classList.add('dark-mode');
       }
     })();
-  </script>
-</head>
-
-<body>
-  
-  <a href="#main-content" class="skip-link">İçeriğe atla</a>
-
-  
-  <header class="site-header">
-    <div class="container">
-        <div class="header-inner">
-            
-            <a href="/tr/" class="site-logo">
-                <picture>
-                    <source srcset="../../assets/images/logo-dark.png" type="image/png"
-                        media="(prefers-color-scheme: dark)">
-                    <img src="../../assets/images/logo.png" alt="Run Analytics - Running Analytics App | Critical Running Speed, TSS, CTL/ATL/TSB for iOS" width="56" height="56">
-                </picture>
-                <span class="logo-text">Run Analytics</span>
-            </a>
-
-            
-            <nav class="nav-primary" id="nav-primary" role="navigation" aria-label="Main navigation">
-                <div class="nav-group-left">
-                    <ul>
-                        
-                        <li>
-                            
-                            <a href="/tr/" 
+  </script></head><body><a href="#main-content" class="skip-link">İçeriğe atla</a><header class="site-header"><div class="container"><div class="header-inner"><a href="/tr/" class="site-logo"><picture><source srcset="../../assets/images/logo-dark.png" type="image/png"
+                        media="(prefers-color-scheme: dark)"><img src="../../assets/images/logo.png" alt="Run Analytics - Running Analytics App | Critical Running Speed, TSS, CTL/ATL/TSB for iOS" width="56" height="56"></picture><span class="logo-text">Run Analytics</span></a><nav class="nav-primary" id="nav-primary" role="navigation" aria-label="Main navigation"><div class="nav-group-left"><ul><li><a href="/tr/" 
                                 aria-current="">
                                 Ana Sayfa
-                            </a>
-                            
-                            </li>
-                            
-                        <li class="has-submenu" >
-                            
-                            
-                            <a href="/tr/getting-started/" class="nav-label">Öğren</a>
-                            
-                            <ul class="submenu">
-                                
-                                <li>
-                                    <a href="/tr/getting-started/" 
+                            </a></li><li class="has-submenu" ><a href="/tr/getting-started/" class="nav-label">Öğren</a><ul class="submenu"><li><a href="/tr/getting-started/" 
                                         aria-current="">
                                         Başlangıç
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/tr/crs/" 
+                                    </a></li><li><a href="/tr/crs/" 
                                         aria-current="">
                                         CRS
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/tr/training-zones/" 
+                                    </a></li><li><a href="/tr/training-zones/" 
                                         aria-current="">
                                         Antrenman Bölgeleri
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/tr/training-load/" 
+                                    </a></li><li><a href="/tr/training-load/" 
                                         aria-current="">
                                         Antrenman Yükü
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/tr/rtss-calculator/" 
+                                    </a></li><li><a href="/tr/rtss-calculator/" 
                                         aria-current="">
                                         rTSS Hesaplayıcı
-                                    </a>
-                                </li>
-                                
-                            </ul>
-                            
-                            </li>
-                            
-                        <li class="has-submenu" >
-                            
-                            
-                            <a href="/tr/research/" class="nav-label">Bilim</a>
-                            
-                            <ul class="submenu">
-                                
-                                <li>
-                                    <a href="/tr/research/" 
+                                    </a></li></ul></li><li class="has-submenu" ><a href="/tr/research/" class="nav-label">Bilim</a><ul class="submenu"><li><a href="/tr/research/" 
                                         aria-current="">
                                         Araştırma
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/tr/formulas/" 
+                                    </a></li><li><a href="/tr/formulas/" 
                                         aria-current="">
                                         Formüller
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/tr/efficiency/" 
+                                    </a></li><li><a href="/tr/efficiency/" 
                                         aria-current="">
                                         Verimlilik
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/tr/stride-mechanics/" 
+                                    </a></li><li><a href="/tr/stride-mechanics/" 
                                         aria-current="">
                                         Adım Mekaniği
-                                    </a>
-                                </li>
-                                
-                                <li>
-                                    <a href="/tr/bibliography/" 
+                                    </a></li><li><a href="/tr/bibliography/" 
                                         aria-current="">
                                         Kaynakça
-                                    </a>
-                                </li>
-                                
-                            </ul>
-                            
-                            </li>
-                            
-                        <li>
-                            
-                            <a href="/tr/contact/" 
+                                    </a></li></ul></li><li><a href="/tr/contact/" 
                                 aria-current="">
                                 İletişim
-                            </a>
-                            
-                            </li>
-                            
-                    </ul>
-
-                    
-                    <div class="search-container">
-                        <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                            </a></li></ul><div class="search-container"><svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
                             viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                            <circle cx="11" cy="11" r="8"></circle>
-                            <path d="m21 21-4.35-4.35"></path>
-                        </svg>
-                        <input type="search" id="site-search" class="search-input" aria-expanded="false"
-                            aria-haspopup="listbox" aria-autocomplete="list" autocomplete="off" spellcheck="false" />
-                        <div id="search-results" class="search-results hidden" role="region" aria-live="polite"></div>
-                    </div>
-
-                    
-                    <select class="language-selector" id="language-select" aria-label="Dil seçin">
-                        
-                        <option value="af" >
+                            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.35-4.35"></path></svg><input type="search" id="site-search" class="search-input" aria-expanded="false"
+                            aria-haspopup="listbox" aria-autocomplete="list" autocomplete="off" spellcheck="false" /><div id="search-results" class="search-results hidden" role="region" aria-live="polite"></div></div><select class="language-selector" id="language-select" aria-label="Dil seçin"><option value="af" >
                             Afrikaans
-                        </option>
-                        
-                        <option value="am" >
+                        </option><option value="am" >
                             አማርኛ
-                        </option>
-                        
-                        <option value="ar" >
+                        </option><option value="ar" >
                             العربية
-                        </option>
-                        
-                        <option value="bg" >
+                        </option><option value="bg" >
                             Български
-                        </option>
-                        
-                        <option value="bn" >
+                        </option><option value="bn" >
                             বাংলা
-                        </option>
-                        
-                        <option value="ca" >
+                        </option><option value="ca" >
                             Català
-                        </option>
-                        
-                        <option value="cs" >
+                        </option><option value="cs" >
                             Čeština
-                        </option>
-                        
-                        <option value="da" >
+                        </option><option value="da" >
                             Dansk
-                        </option>
-                        
-                        <option value="de" >
+                        </option><option value="de" >
                             Deutsch
-                        </option>
-                        
-                        <option value="el" >
+                        </option><option value="el" >
                             Ελληνικά
-                        </option>
-                        
-                        <option value="en" >
+                        </option><option value="en" >
                             English
-                        </option>
-                        
-                        <option value="es" >
+                        </option><option value="es" >
                             Español
-                        </option>
-                        
-                        <option value="et" >
+                        </option><option value="et" >
                             Eesti
-                        </option>
-                        
-                        <option value="fa" >
+                        </option><option value="fa" >
                             فارسی
-                        </option>
-                        
-                        <option value="fi" >
+                        </option><option value="fi" >
                             Suomi
-                        </option>
-                        
-                        <option value="fr" >
+                        </option><option value="fr" >
                             Français
-                        </option>
-                        
-                        <option value="gu" >
+                        </option><option value="gu" >
                             ગુજરાતી
-                        </option>
-                        
-                        <option value="ha" >
+                        </option><option value="ha" >
                             Hausa
-                        </option>
-                        
-                        <option value="he" >
+                        </option><option value="he" >
                             עברית
-                        </option>
-                        
-                        <option value="hi" >
+                        </option><option value="hi" >
                             हिन्दी
-                        </option>
-                        
-                        <option value="hr" >
+                        </option><option value="hr" >
                             Hrvatski
-                        </option>
-                        
-                        <option value="hu" >
+                        </option><option value="hu" >
                             Magyar
-                        </option>
-                        
-                        <option value="id" >
+                        </option><option value="id" >
                             Bahasa Indonesia
-                        </option>
-                        
-                        <option value="is" >
+                        </option><option value="is" >
                             Íslenska
-                        </option>
-                        
-                        <option value="it" >
+                        </option><option value="it" >
                             Italiano
-                        </option>
-                        
-                        <option value="ja" >
+                        </option><option value="ja" >
                             日本語
-                        </option>
-                        
-                        <option value="km" >
+                        </option><option value="km" >
                             ភាសាខ្មែរ
-                        </option>
-                        
-                        <option value="kn" >
+                        </option><option value="kn" >
                             ಕನ್ನಡ
-                        </option>
-                        
-                        <option value="ko" >
+                        </option><option value="ko" >
                             한국어
-                        </option>
-                        
-                        <option value="lt" >
+                        </option><option value="lt" >
                             Lietuvių
-                        </option>
-                        
-                        <option value="lv" >
+                        </option><option value="lv" >
                             Latviešu
-                        </option>
-                        
-                        <option value="ms" >
+                        </option><option value="ms" >
                             Bahasa Melayu
-                        </option>
-                        
-                        <option value="my" >
+                        </option><option value="my" >
                             မြန်မာစာ
-                        </option>
-                        
-                        <option value="nb" >
+                        </option><option value="nb" >
                             Norsk Bokmål
-                        </option>
-                        
-                        <option value="nl" >
+                        </option><option value="nl" >
                             Nederlands
-                        </option>
-                        
-                        <option value="pl" >
+                        </option><option value="pl" >
                             Polski
-                        </option>
-                        
-                        <option value="pt" >
+                        </option><option value="pt" >
                             Português
-                        </option>
-                        
-                        <option value="pt-br" >
+                        </option><option value="pt-br" >
                             Português (Brasil)
-                        </option>
-                        
-                        <option value="ro" >
+                        </option><option value="ro" >
                             Română
-                        </option>
-                        
-                        <option value="ru" >
+                        </option><option value="ru" >
                             Русский
-                        </option>
-                        
-                        <option value="sk" >
+                        </option><option value="sk" >
                             Slovenčina
-                        </option>
-                        
-                        <option value="sl" >
+                        </option><option value="sl" >
                             Slovenščina
-                        </option>
-                        
-                        <option value="sr" >
+                        </option><option value="sr" >
                             Srpski
-                        </option>
-                        
-                        <option value="sv" >
+                        </option><option value="sv" >
                             Svenska
-                        </option>
-                        
-                        <option value="sw" >
+                        </option><option value="sw" >
                             Kiswahili
-                        </option>
-                        
-                        <option value="ta" >
+                        </option><option value="ta" >
                             தமிழ்
-                        </option>
-                        
-                        <option value="te" >
+                        </option><option value="te" >
                             తెలుగు
-                        </option>
-                        
-                        <option value="th" >
+                        </option><option value="th" >
                             ไทย
-                        </option>
-                        
-                        <option value="tl" >
+                        </option><option value="tl" >
                             Tagalog
-                        </option>
-                        
-                        <option value="tr" selected>
+                        </option><option value="tr" selected>
                             Türkçe
-                        </option>
-                        
-                        <option value="uk" >
+                        </option><option value="uk" >
                             Українська
-                        </option>
-                        
-                        <option value="ur" >
+                        </option><option value="ur" >
                             اردو
-                        </option>
-                        
-                        <option value="vi" >
+                        </option><option value="vi" >
                             Tiếng Việt
-                        </option>
-                        
-                        <option value="yo" >
+                        </option><option value="yo" >
                             Yorùbá
-                        </option>
-                        
-                        <option value="zh" >
+                        </option><option value="zh" >
                             中文
-                        </option>
-                        
-                    </select>
-                </div>
-
-                <div class="nav-group-right">
-                    
-
-
-                    
-                    <div class="header-app-buttons">
-                        
-                        
-                        <a href="https://apps.apple.com/us/app/run-analytics/id6754524015" class="header-download-btn" target="_blank"
-                            rel="noopener" aria-label="Download on App Store" title="Download on App Store">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                                fill="currentColor">
-                                <path
-                                    d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z" />
-                            </svg>
-                        </a>
-                        
-
-                        
-                        <a href="https://play.google.com/store/apps/details?id=com.arnohealth.runanalytics" class="header-download-btn" target="_blank"
-                            rel="noopener" aria-label="Get it on Google Play" title="Get it on Google Play">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                                fill="currentColor">
-                                <path
-                                    d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.92 20.16,13.19L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M16.81,8.88L14.54,11.15L6.05,2.66L16.81,8.88Z" />
-                            </svg>
-                        </a>
-                        
-                        
-                    </div>
-
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-
-                    
-                    <div class="suite-menu-container">
-                        <button class="suite-menu-toggle" id="suite-menu-toggle" aria-label="See other apps"
-                            aria-expanded="false">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        </option></select></div><div class="nav-group-right"><div class="header-app-buttons"><a href="https://apps.apple.com/us/app/run-analytics/id6754524015" class="header-download-btn" target="_blank"
+                            rel="noopener" aria-label="Download on App Store" title="Download on App Store"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="currentColor"><path
+                                    d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z" /></svg></a><a href="https://play.google.com/store/apps/details?id=com.arnohealth.runanalytics" class="header-download-btn" target="_blank"
+                            rel="noopener" aria-label="Get it on Google Play" title="Get it on Google Play"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="currentColor"><path
+                                    d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.92 20.16,13.19L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M16.81,8.88L14.54,11.15L6.05,2.66L16.81,8.88Z" /></svg></a></div><div class="suite-menu-container"><button class="suite-menu-toggle" id="suite-menu-toggle" aria-label="See other apps"
+                            aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round">
-                                <rect x="3" y="3" width="7" height="7"></rect>
-                                <rect x="14" y="3" width="7" height="7"></rect>
-                                <rect x="14" y="14" width="7" height="7"></rect>
-                                <rect x="3" y="14" width="7" height="7"></rect>
-                            </svg>
-                        </button>
-                        <div class="suite-dropdown hidden" id="suite-dropdown">
-                            <div class="suite-dropdown-header">Other AnalyticsZone Apps</div>
-                            <div class="suite-apps-grid">
-                                
-                                <a href="https://analyticszone.app" class="suite-app-link">AnalyticsZone</a>
-                                
-                                <a href="https://swim.analyticszone.app" class="suite-app-link">Swim Analytics</a>
-                                
-                                <a href="https://bike.analyticszone.app" class="suite-app-link">Bike Analytics</a>
-                                
-                                <a href="https://walk.analyticszone.app" class="suite-app-link">Walk Analytics</a>
-                                
-                                <a href="https://cardio.analyticszone.app" class="suite-app-link">Cardio Analytics</a>
-                                
-                                <a href="https://health.analyticszone.app" class="suite-app-link">Health Analytics</a>
-                                
-                                <a href="https://swimtrainer.analyticszone.app" class="suite-app-link">Swim Trainer</a>
-                                
-                            </div>
-                        </div>
-                    </div>
-                    
-                </div>
-            </nav>
-
-            
-            <button class="menu-toggle" id="menu-toggle" aria-label="Menüyü aç/kapat"
-                aria-expanded="false" aria-controls="nav-primary">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </div>
-    </div>
-</header>
-
-  
-  
-
-
-  
-  <main id="main-content" class="main-content">
-    
-    <section class="page-hero">
-<div class="container">
-<h1>Gizlilik Öncelikli Koşul Analizi: Verileriniz, Kayıt</h1>
-<p class="lead">Gizliliğinizden ödün vermeden daha akıllı antrenman yapın. Yerel veri işlemenin koşu analiziniz üzerinde boyut nasıl tam kontrol gösterilir ve aynı zamanda konum, sağlık korumasız ve kişisel bilgilerinizin nasıl korunduğunu gösterir.</p>
-</div>
-</section>
-<section class="section">
-<div class="container container-narrow">
-<div class="callout callout-success mb-xl">
-<h2>Temel Çıkarımlar</h2>
-<ul class="key-points">
-<li><strong>Verileriniz Hayatınızı Ortaya Çıkarır:</strong>Çalışan uygulamalar, evden uzakta olduğunuzda ortaya çıkan GPS konumunu (ev/iş), sağlık ölçümlerini ve egzersiz modellerini toplar</li>
-<li><strong>Bulut Gizlilik Sorunu:</strong>Çoğu uygulama, verilerinizi sunuculara yükler, süresiz olarak saklar ve üçüncü taraflarla paylaşır; yükleme sonrasında hiçbir kontrol sizde değildir</li>
-<li><strong>Gizlilik Öncelikli Çözüm:</strong>Yerel veri işleme, TÜM analizleri cihazınızda tutar; buluta yükleme yok, hesap yok, izleme yok</li>
-<li><strong>Run Analytics Farkı:</strong>%100 yerli işlem<a href="/tr/crs/">Kritik Koşu Hızı</a>, <a href="/tr/training-load/">TSS/CTL/ATL/TSB</a>, Ve<a href="/tr/training-zones/">eğitim bölgeleri</a>—çalışan verileriniz iPhone'inizden asla ayrılmaz</li>
-<li><strong>Tasarım itibarıyla GDPR Uyumluluğu:</strong>Uygulamalar veri toplamadığında gizlilik yasalarını ihlal edemezler; gizliliğe öncelik veren mimari sayesinde tam uyumluluk</li>
-</ul>
-</div>
-<article itemscope="" itemtype="https://schema.org/Article">
-<meta content="Privacy-First Running Analytics: Your Data, Your Device" itemprop="headline"/>
-<meta content="Privacy-first running analytics with 100% local data processing. No cloud, no tracking, no account required. Your running data stays on your device." itemprop="description"/>
-<meta content="2025-01-15T10:00:00Z" itemprop="datePublished"/>
-<meta content="2025-10-29T18:00:00Z" itemprop="dateModified"/>
-<meta content="Run Analytics" itemprop="author"/>
-<p class="lead">Koşu verileriniz hayatınızın hikayesini anlatır. GPS izleri nerede yaşadığınızı ve çalıştığınızı ortaya çıkarır. Antrenman modelleri evden uzakta olduğunuz zamanları gösterir. Kalp atış hızı verileri, kondisyon seviyenizi ve sağlık durumunuzu ortaya çıkarır. Çalışan uygulamaların çoğu tüm bu bilgileri toplar, bulut sunucularına yükler ve süresiz olarak saklar; çoğu zaman adını daha önce duymadığınız üçüncü taraflarla paylaşır.</p>
-<p>Ancak akıllıca eğitim, mahremiyetten ödün vermeyi gerektirmez. Bu kapsamlı kılavuz, popüler çalışan uygulamalardaki gizlilik sorunlarını ortaya koyuyor, yerel veri işlemenin nasıl çalıştığını açıklıyor ve gizlilik öncelikli çalışan analizlerin, rekabetçi koşucuların ihtiyaç duyduğu gelişmiş ölçümleri sunarken hassas bilgilerinizi nasıl koruduğunu gösteriyor.</p>
-<h2 id="privacy-problem">Koşucular İçin Gizlilik Neden Önemlidir?</h2>
-<p>Koşu uygulamaları temel eğitim araçları haline geldi, ancak veri toplama uygulamaları çoğu koşucunun tam olarak anlamadığı ciddi gizlilik endişeleri yaratıyor. Gündelik uygulama kullanımının aksine, çalışan analizler günlük yaşamınız, sağlık durumunuz ve davranış kalıplarınız hakkında derinlemesine kişisel bilgileri ortaya çıkarır.</p>
-<h3>Çalışan Uygulamaların Topladığı Veriler</h3>
-<p>Tipik bir bulut tabanlı koşu uygulamasını kullandığınızda, egzersiz istatistiklerinden çok daha fazlasını sağlarsınız:</p>
-<div class="warning-box">
-<strong>⚠️ Veri Toplama Gerçekliği:</strong>
-<ul>
-<li><strong>GPS Konum Verileri:</strong>Her koşunun her metresi için ev adresini, iş yerini, sık ziyaret edilen yerleri ve düzenli rotaları gösteren kesin koordinatlar</li>
-<li><strong>Zamansal Desenler:</strong>Antrenman zamanlaması günlük programları gösterir; uyandığınızda, işteyken, evden uzakta olduğunuzda</li>
-<li><strong>Sağlık Metrikleri:</strong>Kalp atış hızı bölgeleri, dinlenme kalp atış hızı, kalp atış hızı değişkenliği ve dinlenme modelleri, kondisyon düzeyini ve potansiyel tıbbi koşulları ortaya çıkarır</li>
-<li><strong>Performans Verileri:</strong>Hız, mesafe, yükseklik, ritim ve güç ölçümleri kapsamlı kondisyon profilleri oluşturur</li>
-<li><strong>Cihaz Bilgileri:</strong>Telefon modeli, işletim sistemi, IP adresi ve kullanım kalıpları</li>
-<li><strong>Sosyal Bilgiler:</strong>Ad, e-posta, profil fotoğrafları, bağlantılar ve sosyal etkileşimler</li>
-</ul>
-</div>
-<p>Bu veriler tek başına mevcut değildir. Bu veri noktaları bir araya getirildiğinde hayatınızın "Bugün 10 km koştum" ifadesinin çok ötesine geçen ayrıntılı bir profilini oluşturur.</p>
-<h3>Verileriniz Nasıl Kullanılıyor?</h3>
-<p>Bulut tabanlı çalışan uygulamalar, yalnızca size eğitim analitiği sağlamak için büyük miktarda veri toplamaz. Bilgilerinizin ticari değeri var:</p>
-<ul>
-<li><strong>Üçüncü Taraf Veri Paylaşımı:</strong>Birçok uygulama, reklamverenlere, araştırmacılara ve veri komisyoncularına anonimleştirilmiş (veya sözde anonimleştirilmiş) antrenman verilerini satmaktadır. "Anonimleştirilmiş" konum verileri bile bireylere yeniden tanımlanabilir</li>
-<li><strong>Hedefli Reklamcılık:</strong>Kondisyon düzeyiniz, antrenman düzenleriniz ve koşu hedefleriniz, fitness ürünleri ve hizmetleriyle sizi hedeflemek için kullanılan reklam profilleri hakkında bilgi verir</li>
-<li><strong>Sigorta Riski Değerlendirmesi:</strong>Sağlık sigortası şirketleri giderek daha fazla fitness verileri arıyor. Bazıları etkinlik izleme verilerini paylaşmak için "indirimler" sunuyor ve bu da bilgilerin açıklanması konusunda baskı yaratıyor</li>
-<li><strong>Kurumsal Zeka:</strong>Toplu egzersiz verileri, çalışanların fitness durumlarını ortaya koyuyor ve işe alım veya sağlık sigortası kararlarını potansiyel olarak etkiliyor</li>
-<li><strong>Hükümetin Talepleri:</strong>Bulutta depolanan veriler, konum geçmişinizi veya etkinlik düzenlerinizi ortaya çıkaracak şekilde yasal işlemler için mahkeme celbi yapılabilir</li>
-</ul>
-<h3>Gerçek Gizlilik Olayları</h3>
-<p>Gizlilik kaygıları teorik değildir; belgelenen olaylarda somutlaşmıştır:</p>
-<div class="example-box">
-<h4>Vaka Çalışmaları:</h4>
-<p><strong>Strava Isı Haritası Olayı (2018):</strong>Strava'nın toplu faaliyet ısı haritası, askerlerin antrenmanları çevre devriye rotalarını takip ederken, yanlışlıkla gizli askeri üs yerlerini ortaya çıkardı. Olay, "anonimleştirilmiş" verilerin hassas bilgileri nasıl açığa çıkarabileceğini gösterdi.</p>
-<p><strong>Fitness Uygulaması Veri İhlali (2021):</strong>Büyük bir fitness takip platformu, milyonlarca kullanıcının GPS izlerini, e-posta adreslerini ve sağlık verilerini açığa çıkaran bir veri ihlali yaşadı. Yıllar süren antrenman geçmişi herkesin erişimine açıldı.</p>
-<p><strong>Konum Takip:</strong>Güvenlik araştırmacıları, rota başlangıç/bitiş noktalarını bularak ev adreslerini belirlemek için halka açık çalışma verilerinin nasıl kullanılabileceğini gösterdi. Bu, özellikle koşucuların tek başına antrenman yapması durumunda güvenlik endişeleri yaratır.</p>
-<p><strong>GDPR Uygulama Eylemleri:</strong>Avrupalı ​​gizlilik düzenleyicileri, yetersiz onay mekanizmaları, aşırı veri toplama ve net olmayan gizlilik politikaları nedeniyle fitness uygulamalarına para cezası verdi; bu da yaygın uyumluluk başarısızlıklarının altını çizdi.</p>
-</div>
-<p>Bu olaylar temel bir sorunu ortaya çıkarıyor: Bulut sunucularına veri yüklediğinizde kontrolü kaybedersiniz. Şirketler gizlilik politikalarını değiştirebilir, ihlallere maruz kalabilir, başka şirketler tarafından ele geçirilebilir veya devlet veri talepleriyle karşı karşıya kalabilir ve mevcut gizlilik tercihleriniz ne olursa olsun geçmiş verileriniz savunmasız kalır.</p>
-<h2 id="local-vs-cloud">Yerel ve Bulut İşlemeyi Anlamak</h2>
-<p>Yerel ve bulut veri işleme arasındaki mimari seçim, temel olarak gizlilik duruşunuzu belirler. Bu ayrımı anlamak, hassas bilgilerinizle ilgili olarak hangi çalışan uygulamalara güveneceğiniz konusunda bilinçli kararlar vermenize yardımcı olur.</p>
-<h3>Bulut Tabanlı Uygulamalar Nasıl Çalışır?</h3>
-<p>Geleneksel çalışan analitik platformları merkezi bir modeli izler:</p>
-<div class="protocol-card">
-<h3>📤 Bulut İşleme Akışı:</h3>
-<ol class="protocol-steps">
-<li><strong>Veri Yakalama:</strong>iPhone veya GPS saatiniz GPS izlerini, kalp atış hızını, tempoyu, tempoyu ve diğer egzersiz ölçümlerini kaydeder</li>
-<li><strong>Yüklemek:</strong>Ham antrenman verileri, internet bağlantısı aracılığıyla şirket sunucularına aktarılır; genellikle her antrenmandan sonra otomatik olarak</li>
-<li><strong>Sunucu İşleme:</strong>Bulut altyapısı analitik ölçümlerini hesaplar (rTSS, CTL/ATL, eğitim bölgeleri, performans trendleri)</li>
-<li><strong>Depolamak:</strong>İşlenen sonuçlar ve ham veriler süresiz olarak şirket sunucularında kalır (manuel olarak silmediğiniz sürece)</li>
-<li><strong>Alma:</strong>Verilerinizi sunuculardan cihazınıza veya web tarayıcınıza indirerek görüntülersiniz</li>
-</ol>
-</div>
-<p>Bu mimari şirketlere avantajlar sunuyor; merkezi veriler; sosyal özellikleri, cihazlar arası senkronizasyonu ve kullanıcı popülasyonları arasında makine öğrenimini mümkün kılıyor. Ancak bu, gizlilik açısından kritik bir zayıflık yaratır: Verileriniz kurumsal altyapı üzerinde kontrolünüz dışında bulunur.</p>
-<h3>Yerel İşleme Nasıl Çalışır?</h3>
-<p>Gizlilik öncelikli mimari, cihazınızdaki verileri işleyerek bu modeli tersine çevirir:</p>
-<div class="callout callout-success">
-<h3>🔒 Yerel İşleme Akışı:</h3>
-<ol>
-<li><strong>Veri Yakalama:</strong>Apple Health tarafından yerel olarak kaydedilen veya GPS izleme dosyalarından içe aktarılan egzersiz verileri</li>
-<li><strong>Yerel Depolama:</strong>Veriler Apple Health veritabanındaki iPhone'inizde kalır (uçtan uca şifreleme etkinken iCloud kullanıldığında şifrelenir)</li>
-<li><strong>Cihaz Üzerinde İşleme:</strong>Analitik uygulamasını çalıştırmak Sağlık verilerini okur, hesaplar<a href="/tr/crs/">KORUMA0X</a>, <a href="/tr/training-load/">rTSS, CTL/ATL/TSB</a>, <a href="/tr/training-zones/">eğitim bölgeleri</a>ve diğer ölçümler doğrudan iPhone'inizin işlemcisinde</li>
-<li><strong>Yerel Sonuçlar:</strong>Hesaplanan metrikler cihazınızda kalır; uygulamanın işlevselliği için yükleme gerekmez</li>
-<li><strong>İsteğe Bağlı Dışa Aktarma:</strong>Verilerin dışa aktarılıp aktarılmayacağına/ne zaman, hangi formatta aktarılacağına ve kimin alacağına SİZ karar verirsiniz</li>
-</ol>
-</div>
-<p>Bu mimari, uygulamaların hiçbir zaman verilerinize sahip olmayacağı anlamına gelir; halihazırda cihazınızda bulunan bilgileri işler ve sonuçları yerel olarak depolar. Yükleme yok, bulut depolama yok, kurumsal veri bulundurma yok.</p>
-<h3>Yerel İşlemenin Faydaları</h3>
-<p>Gizlilik öncelikli mimari, yalnızca gizliliğin ötesinde avantajlar sağlar:</p>
-<div class="application-grid">
-<div class="application-item">
-<h3>🛡️ Güvenlik Avantajları</h3>
-<ul>
-<li><strong>İhlal Riski Yok:</strong>Sunuculara ulaşmayan veriler ihlallerde çalınamaz</li>
-<li><strong>Yetkisiz Erişim Yok:</strong>Şirket çalışanları antrenman geçmişinizi göremez</li>
-<li><strong>Üçüncü Taraf Paylaşımı Yok:</strong>Uygulamalar sahip olmadıkları verileri satamaz</li>
-</ul>
-</div>
-<div class="application-item">
-<h3>⚡ Performans Avantajları</h3>
-<ul>
-<li><strong>Anında İşleme:</strong>Yükleme/indirmede gecikme yok; hesaplamalar hemen yapılıyor</li>
-<li><strong>Çevrimdışı İşlevsellik:</strong>Tam analizler internet bağlantısı olmadan çalışır</li>
-<li><strong>Senkronizasyon Sorunu Yok:</strong>Veriler her zaman cihazınızda mevcuttur</li>
-</ul>
-</div>
-<div class="application-item">
-<h3>✅ Kontrol Avantajları</h3>
-<ul>
-<li><strong>Tam Sahiplik:</strong>Silme, dışa aktarma ve paylaşma işlemlerini siz kontrol edersiniz</li>
-<li><strong>Hesap Kilitlenmesi Yok:</strong>Veriler özel bulut sistemlerinde sıkışıp kalmıyor</li>
-<li><strong>Gerçek Gizlilik:</strong>"Verilerinizi koruyacağımıza söz veriyoruz" değil, "verilerinize asla sahip değiliz"</li>
-</ul>
-</div>
-</div>
-<p>Gizliliğe öncelik veren yaklaşım güç dinamiğini değiştirir: Yüklenen verilerinizi koruma konusunda şirketlere güvenmek yerine, ilk etapta mülkiyetten asla vazgeçmeyerek tam kontrolü elinizde tutarsınız.</p>
-<h2 id="runanalytics-privacy">Run Analytics Gizliliğinizi Nasıl Korur?</h2>
-<p>Run Analytics, sıfırdan gizliliğe öncelik veren mimariyi uygular. Her tasarım kararında veri koruma ve kullanıcı kontrolü önceliklendirilir ve gizlilik sonradan akla gelen bir düşünce olmaktan ziyade temel bir özellik haline gelir.</p>
-<h3>%100 Yerel Veri İşleme</h3>
-<p>Çalışan tüm analitik hesaplamaları iPhone'inizde gerçekleşir:</p>
-<ul>
-<li><strong><a href="/tr/crs/">Kritik Çalışma Hızı (CRS)</a>:</strong>Aerobik eşik hesaplamalarınız, test verileriniz kullanılarak yerel olarak işlenir</li>
-<li><strong><a href="/tr/training-zones/">Eğitim Bölgeleri</a>:</strong>Tamamen cihaz üzerinde CRS'ten türetilen kişiselleştirilmiş yoğunluk bölgeleri (Bölge 1-7)</li>
-<li><strong><a href="/tr/training-load/">Eğitim Stres Puanı (rTSS)</a>:</strong>Yerel CRS referansı kullanılarak hesaplanan antrenman yoğunluğu ölçümü</li>
-<li><strong>CTL/ATL/TSB İzleme:</strong>Yerel egzersiz geçmişinizden hesaplanan Performans Yönetimi Tablosu ölçümleri (Kronik Egzersiz Yükü, Akut Egzersiz Yükü, Egzersiz Stres Dengesi)</li>
-<li><strong><a href="/tr/running-performance-metrics/">Performans Metrikleri</a>:</strong>VO2max tahminleri, hız analizleri ve verimlilik trendleri cihazınızda analiz edilir</li>
-<li><strong><a href="/tr/running-efficiency-biomechanics/">Biyomekanik Analiz</a>:</strong>Yerel olarak işlenen adım verimliliği, çalışma ekonomisi ve form ölçümleri</li>
-</ul>
-<p>Hiçbir hesaplama internet bağlantısı gerektirmez. Run Analytics sunucularına hiçbir veri aktarılmaz. Hiçbir harici işlem altyapısı bilgilerinize dokunmaz.</p>
-<h3>Hesap Gerekmiyor</h3>
-<p>Run Analytics, gizlilik açıkları oluşturan hesap altyapısının tamamını ortadan kaldırır:</p>
-<div class="callout callout-info">
-<h3>🚫 Nelere ihtiyacımız yok:</h3>
-<ul>
-<li><strong>Kayıt Yok:</strong>Kayıt formu yok, kişisel bilgi toplama yok</li>
-<li><strong>E-posta Adresi Yok:</strong>E-postanızı asla istemiyoruz veya saklamayız</li>
-<li><strong>Giriş Yok:</strong>Yönetilecek veya potansiyel olarak tehlikeye atılacak şifre yok</li>
-<li><strong>Profil Yok:</strong>Bilgilerinizi içeren genel veya özel profil yok</li>
-<li><strong>Kullanıcı Adı Yok:</strong>Tamamen anonimlik; kim olduğunuzu bilmiyoruz</li>
-</ul>
-</div>
-<p>Bu sadece kolaylık değil, aynı zamanda bir gizlilik garantisidir. Hesaplar mevcut olmadığında veri ihlalleri hesap bilgilerinizi açığa çıkaramaz. Hiçbir zaman kimlik vermediğinizde kimlik hırsızlığı imkansız hale gelir.</p>
-<h3>Üçüncü Taraf Takibi Yok</h3>
-<p>Birçok "ücretsiz" uygulama, reklam ağlarından ve analiz platformlarından gelen izleme SDK'ları (Yazılım Geliştirme Kitleri) aracılığıyla para kazanıyor. Bu üçüncü taraf kitaplıklar uygulama kullanımını izler, uygulamalar arasındaki etkinlikleri bağlar ve reklam profilleri oluşturur.</p>
-<p>Run Analytics SIFIR üçüncü taraf takibi içerir:</p>
-<ul>
-<li><strong>Reklam SDK'sı yok:</strong>Facebook Pixel, Google Analytics veya reklam ağı izleyicisi yok</li>
-<li><strong>Davranış Analizi Yok:</strong>Mixpanel, Genlik veya kullanım izleme hizmetleri yok</li>
-<li><strong>Kilitlenme Raporlama Hizmeti Yok:</strong>Cihaz bilgilerini ileten üçüncü taraf kilitlenme analitiği yok</li>
-<li><strong>Sosyal Medya Entegrasyonu Yok:</strong>"Facebook ile Giriş Yap" veya sosyal paylaşım SDK'sı yok</li>
-</ul>
-<p>Run Analytics için Apple'ın Uygulama Gizliliği etiketlerini kontrol ederek bunu doğrulayabilirsiniz; bunlar, çalışan uygulamalar arasında nadir görülen bir durum olan tam olarak sıfır veri toplama kategorisi gösterir.</p>
-<h3>Yedeklemeler için Uçtan Uca Şifreleme</h3>
-<p>Run Analytics verileriniz, Gelişmiş Veri Korumayı etkinleştirdiğinizde uçtan uca şifrelemeyle isteğe bağlı iCloud yedeklemesi sunan Apple Health'te bulunur:</p>
-<div class="protocol-card">
-<h3>🔐 Şifreli Yedekleme Akışı:</h3>
-<ol class="protocol-steps">
-<li><strong>Yerel Şifreleme:</strong>İletimden önce iPhone cihazınızda şifrelenen sağlık verileri</li>
-<li><strong>Şifreli Aktarım:</strong>Veriler şifreli bağlantı üzerinden iCloud'a gider</li>
-<li><strong>Şifreli Depolama:</strong>iCloud şifrelenmiş verileri saklıyor; Apple bunların şifresini çözemiyor</li>
-<li><strong>Anahtar Kontrolü:</strong>Yalnızca kimlik bilgilerinize sahip cihazlar yedeklemelerin şifresini çözebilir</li>
-</ol>
-</div>
-<p>Bu, aygıt geçişi veya yedekleme için iCloud yedeklemesini kullansanız bile çalışan analizlerinizin gizli kalacağı anlamına gelir; Apple bunlara erişemez ve aygıt parolanız olmadan resmi makamların talepleri de erişemez.</p>
-<h2 id="competitor-comparison">Uygulamaların Gizlilik Karşılaştırmasını Çalıştırma</h2>
-<p>Çalışan uygulamaların tümü verileri aynı şekilde işlemez. Platformlar arasındaki farkları anlamak, bilinçli gizlilik kararları vermenize yardımcı olur.</p>
-<h3>Strava: Sosyal-Önce, Gizlilik-Son</h3>
-<p>Strava, sosyal fitness takibine öncülük etti, ancak mimarisi gizlilikten ziyade paylaşıma öncelik veriyor:</p>
-<div class="comparison-table-container">
-<table class="comparison-table">
-<tbody>
-<tr>
-<th>Bakış açısı</th>
-<th>Strava Yaklaşımı</th>
-<th>Gizlilik Etkisi</th>
-</tr>
-<tr>
-<td><strong>Veri İşleme</strong></td>
-<td>%100 bulut tabanlı sunucu işleme</td>
-<td>Tüm antrenman verileri yüklendi ve süresiz olarak saklandı</td>
-</tr>
-<tr>
-<td><strong>Hesap Gereksinimi</strong></td>
-<td>E-posta ile zorunlu kayıt</td>
-<td>Tüm faaliyetlere bağlı kişisel bilgiler</td>
-</tr>
-<tr>
-<td><strong>Konum Verileri</strong></td>
-<td>Sunucularda depolanan tam GPS izleri</td>
-<td>Şirketin erişebileceği kapsamlı konum geçmişi</td>
-</tr>
-<tr>
-<td><strong>Sosyal Özellikler</strong></td>
-<td>Varsayılan genel profiller, etkinlik paylaşımı</td>
-<td>Takipçilerin görebileceği antrenmanlar; vazgeçmek yapılandırma gerektirir</td>
-</tr>
-<tr>
-<td><strong>Üçüncü Taraf Paylaşımı</strong></td>
-<td>İş ortaklarıyla paylaşılan ve araştırma için toplanan veriler</td>
-<td>Aşağı yöndeki veri kullanımı üzerinde sınırlı kontrol</td>
-</tr>
-<tr>
-<td><strong>Gizlilik Kontrolleri</strong></td>
-<td>Gizlilik bölgeleri başlangıç/bitiş konumlarını gizler</td>
-<td>Konum maruziyetini azaltır ancak ortadan kaldırmaz</td>
-</tr>
-</tbody>
-</table>
-</div>
-<p><strong>Özet:</strong>Strava'nın sosyal özellikleri, merkezi bulut altyapısı gerektirir ve bu da gerçek gizliliği imkansız hale getirir. Sosyal motivasyon isteyen rekabetçi koşucular için yararlı olsa da, gizlilik öncelikli ilkelerle bağdaşmaz.</p>
-<h3>Garmin Connect: Buluta Bağlı</h3>
-<p>Garmin kapsamlı eğitim analitiği sağlar ancak tamamen bulut işlemeye dayanır:</p>
-<ul>
-<li><strong>Sunucu Bağımlılığı:</strong>Tüm gelişmiş analizler (Eğitim Durumu, Eğitim Yükü, VO2max trendleri) Garmin'in bulut platformunu gerektirir</li>
-<li><strong>Hesap Kilitleme:</strong>Yalnızca Garmin sunucularında depolanan geçmiş veriler; tüm geçmişi dışa aktarmak zordur</li>
-<li><strong>GPS Parça Depolama:</strong>Her antrenmanın GPS verileri yüklendi ve saklandı</li>
-<li><strong>Üçüncü Taraf Entegrasyonları:</strong>Garmin Connect, API bağlantıları aracılığıyla verileri çok sayıda fitness platformuyla paylaşır</li>
-<li><strong>Sınırlı Gizlilik Seçenekleri:</strong>Etkinlikleri özel olarak ayarlayabilir ancak veriler hâlâ Garmin altyapısında bulunmaktadır</li>
-</ul>
-<p><strong>Özet:</strong>Garmin'in ekosistemi, kapsamlı egzersiz geçmişine sahip şirkete güvenmeyi gerektirir. Yalnızca yerel analizler için seçenek yoktur.</p>
-<h3>Runalyze: Sunucu Tabanlı İşleme</h3>
-<p>Runalyze gelişmiş eğitim analitiği sunar ancak geleneksel bulut mimarisini kullanır:</p>
-<ul>
-<li><strong>Yükleme Gerekli:</strong>Analiz için tüm antrenman dosyalarının (.fit, .tcx, .gpx) Runalyze sunucularına yüklenmesi gerekir</li>
-<li><strong>Sunucu Depolama:</strong>Runalyze altyapısında saklanan eksiksiz egzersiz veritabanı</li>
-<li><strong>Açık Kaynak Şeffaflığı:</strong>Kod açık kaynaktır ve gizlilik doğrulamasına olanak tanır; önemli bir avantaj</li>
-<li><strong>Kendi Kendine Barındırma Seçeneği:</strong>İleri düzey kullanıcılar, eksiksiz veri kontrolü için kendi Runalyze örneğini barındırabilir</li>
-<li><strong>Sınırlı Üçüncü Taraf Paylaşımı:</strong>Daha az ortaklık/veri paylaşımı anlaşmasıyla daha küçük platform</li>
-</ul>
-<p><strong>Özet:</strong>Açık kaynak modeli ve kendi kendine barındırma seçeneği nedeniyle ticari platformlardan daha iyi gizlilik, ancak standart barındırılan sürüm yine de veri yüklemeyi gerektirir.</p>
-<h3>Run Analytics: Tasarımda Gizlilik Öncelikli</h3>
-<p>Run Analytics temelde farklı bir mimari yaklaşım benimsiyor:</p>
-<div class="callout callout-success">
-<h3>✅ Run Analytics Gizlilik Modeli:</h3>
-<table class="comparison-table">
-<tbody>
-<tr>
-<th>Bakış açısı</th>
-<th>Run Analytics Yaklaşımı</th>
-<th>Gizlilik Avantajı</th>
-</tr>
-<tr class="highlight-row">
-<td><strong>Veri İşleme</strong></td>
-<td>iPhone'inizde %100 yerel</td>
-<td>Sıfır veri yükleme; tasarım gereği tam gizlilik</td>
-</tr>
-<tr class="highlight-row">
-<td><strong>Hesap Gereksinimi</strong></td>
-<td>Yok—kayıt yok</td>
-<td>Anonim kullanım; kim olduğunuzu bilmiyoruz</td>
-</tr>
-<tr class="highlight-row">
-<td><strong>Konum Verileri</strong></td>
-<td>Cihazınızda Apple Health'te kalır</td>
-<td>Sizden başka kimsenin erişebileceği konum geçmişi yok</td>
-</tr>
-<tr class="highlight-row">
-<td><strong>Sosyal Özellikler</strong></td>
-<td>Yok—sosyal medya üzerinde mahremiyet</td>
-<td>Paylaşma baskısı yok, halkın maruz kalma riski yok</td>
-</tr>
-<tr class="highlight-row">
-<td><strong>Üçüncü Taraf Paylaşımı</strong></td>
-<td>İmkansız; verileriniz elimizde değil</td>
-<td>Sıfır üçüncü taraf erişim riski</td>
-</tr>
-<tr class="highlight-row">
-<td><strong>Gizlilik Kontrolleri</strong></td>
-<td>Tamamlandı; tüm verileri ve dışa aktarmaları siz kontrol edersiniz</td>
-<td>Tam sahiplik ve kontrol</td>
-</tr>
-</tbody>
-</table>
-</div>
-<p><strong>Özet:</strong>Run Analytics, herhangi bir veri yüklemeye gerek kalmadan gelişmiş eğitim analitiği (CRS, rTSS, CTL/ATL/TSB, kişiselleştirilmiş bölgeler) sağlar. Gizlilik ve işlevsellik, yerel işleme mimarisi aracılığıyla bir arada bulunur.</p>
-<h2 id="location-privacy">Konum Verilerinizi Koruma</h2>
-<p>Koşu antrenmanlarından elde edilen GPS izleri, yaşam kalıplarınız hakkında hassas bilgileri ortaya çıkaran kapsamlı konum geçmişleri oluşturarak konum gizliliğini koşucular için çok önemli hale getirir.</p>
-<h3>GPS Takibinin Riski</h3>
-<p>GPS ile izlenen her koşu, aşağıdakileri ortaya çıkaran ayrıntılı bir konum geçmişi oluşturur:</p>
-<div class="warning-box">
-<strong>⚠️ Konum Verileri şunları ortaya koyuyor:</strong>
-<ul>
-<li><strong>Ev Adresi:</strong>Her gün aynı yerden başlayan koşular nerede yaşadığınızı belirler</li>
-<li><strong>Çalışma Yeri:</strong>Öğle yemeği koşuları veya işten başlayan rotalar istihdam yerini açığa çıkarıyor</li>
-<li><strong>Günlük Rutinler:</strong>Düzenli rotalar ve zamanlama kalıpları öngörülebilir davranış alışkanlıkları gösterir</li>
-<li><strong>Devamsızlık Modelleri:</strong>Ev tabanlı koşulardaki boşluklar seyahat ettiğinizi veya uzakta olduğunuzu gösterir</li>
-<li><strong>Sosyal Bağlantılar:</strong>Başkalarıyla yapılan koşular ilişkileri ve toplantı yerlerini ortaya çıkarabilir</li>
-<li><strong>Özel Yerler:</strong>Tıbbi tesisler, ibadet yerleri veya diğer hassas yerler</li>
-</ul>
-</div>
-<p>Bu bilgi, özellikle tek başına antrenman yapan koşucular için güvenlik endişeleri ve yıllara yayılan kapsamlı hareket geçmişine kimin erişebileceği konusunda gizlilik endişeleri yaratıyor.</p>
-<h3>Gizlilik Bölgeleri ve Güvenlik</h3>
-<p>Çalışan bazı uygulamalar, belirli adreslerin yakınındaki GPS izlerinin bölümlerini gizleyen "gizlilik bölgeleri" sunar:</p>
-<ul>
-<li><strong>Nasıl Çalışırlar:</strong>Hassas konumların çevresinde dairesel bölgeler (genellikle 200-500 m yarıçaplı) tanımlayın; Bölge yarıçapı içinde gizlenmiş GPS izi</li>
-<li><strong>Sınırlamalar:</strong>Verileri yalnızca halka açık ekranlarda gizleyin; tam GPS verileri hâlâ sunuculara yükleniyor ve şirket tarafından erişilebilir durumda</li>
-<li><strong>Yapılandırma Yükü:</strong>Her hassas konumun manuel olarak tanımlanmasını ve yapılandırılmasını gerektirir</li>
-<li><strong>Yanlış Güvenlik:</strong>Tüm veriler bulut depolama alanında kalırken gizlilik izlenimi yaratır</li>
-</ul>
-<p>Gizlilik bölgeleri kısmi koruma sağlar ancak temel sorunu çözmez: GPS verileri sunuculara yüklendiğinde, konum geçmişinin tamamı kontrolünüz dışında kalır.</p>
-<h3>Run Analytics Konum Özellikleri</h3>
-<p>Run Analytics, konum verilerini Apple Health entegrasyonu aracılığıyla yönetir:</p>
-<div class="callout callout-success">
-<h3>🗺️ Konum Gizliliği Özellikleri:</h3>
-<ul>
-<li><strong>GPS Yüklemesi Yok:</strong>Antrenmanlardan alınan konum verileri iPhone cihazınızdaki Apple Health'te kalır; hiçbir zaman Run Analytics sunucularına aktarılmaz</li>
-<li><strong>Apple Health Koruması:</strong>iOS izinleri, uygulamanın Sağlık verilerine erişimi için açık yetkilendirme gerektirir</li>
-<li><strong>Seçmeli Paylaşım:</strong>Antrenman verilerini dışa aktarırken, GPS izlerini dahil etmeyi veya yalnızca özet istatistikleri dışa aktarmayı SİZ seçersiniz</li>
-<li><strong>Yerel Rota Analizi:</strong> <a href="/tr/training-zones/">Eğitim bölgesi</a>hesaplamalar GPS verilerini gerektirmez; konum bilgisi olmadan Sağlık'tan tempo/kalp atış hızını kullanın</li>
-<li><strong>Tam Kontrol:</strong>Antrenman konumu verilerini istediğiniz zaman Apple Health'ten silin; kaldırma işlemleri Run Analytics'e anında yansır</li>
-</ul>
-</div>
-<p>Bu mimari, konum geçmişinizin özel kontrolünüz altında kalması anlamına gelir. Antrenörünüzle belirli bir antrenmanı paylaşmak mı istiyorsunuz? Sadece bu antrenmanı dışa aktarın. Rotaları açıklamadan eğitim trendlerini analiz etmek mi istiyorsunuz? CSV verilerini GPS koordinatları olmadan dışa aktarın. Tam esneklik, tam kontrol.</p>
-<h2 id="gdpr-compliance">GDPR ve Veri Haklarınız</h2>
-<p>Avrupa Birliği'nin Genel Veri Koruma Yönetmeliği (GDPR), kapsamlı veri koruma haklarını belirler ve diğer yargı bölgeleri de benzer gizlilik yasalarını benimsedikçe bu yönetmeliğin ilkeleri küresel olarak uygulanır.</p>
-<h3>GDPR Neleri Garanti Ediyor?</h3>
-<p>GDPR bireylere kişisel veriler üzerinde kapsamlı haklar tanır:</p>
-<ul>
-<li><strong>Erişim Hakkı:</strong>Şirketler hakkınızda tuttukları tüm verilerin kopyalarını sağlamalıdır</li>
-<li><strong>Düzeltme Hakkı:</strong>Yanlış kişisel verileri düzeltin</li>
-<li><strong>Silme Hakkı ("Unutulma Hakkı"):</strong>Belirli koşullar altında kişisel verilerin silinmesini gerektirmek</li>
-<li><strong>Veri Taşınabilirliği Hakkı:</strong>Başka bir hizmete aktarmak için kişisel verileri makine tarafından okunabilir formatta alın</li>
-<li><strong>İtiraz Hakkı:</strong>Pazarlama, profil oluşturma veya araştırma amacıyla işlemeye itiraz etme</li>
-<li><strong>İşlemeyi Kısıtlama Hakkı:</strong>Şirketlerin verilerinizi kullanma şeklini sınırlayın</li>
-</ul>
-<p>Bu haklar teorik olarak kullanıcıları korur, ancak uygulanması şirketlerin uyumluluğuna bağlıdır ve hakların kullanılması genellikle karmaşık prosedürlerde gezinmeyi, yanıtlar için haftalarca beklemeyi ve yedeklemeler de dahil olmak üzere tüm sistemlerden verileri gerçekten silme konusunda şirketlere güvenmeyi gerektirir.</p>
-<h3>Run Analytics Nasıl Uyumludur?</h3>
-<p>Run Analytics, mimari basitlik sayesinde tam GDPR uyumluluğuna ulaşır:</p>
-<div class="callout callout-info">
-<h3>📜 Gizliliğe Önem Veren Tasarım Sayesinde GDPR Uyumluluğu:</h3>
-<ul>
-<li><strong>Veri Toplama Yok = Tam Uyumluluk:</strong>GDPR kişisel verilerin işlenmesini düzenler; uygulamalar veri toplamadığında düzenlemeler geçerli olmaz</li>
-<li><strong>Veri Sahibi Talebi Gerekmez:</strong>Sahip olmadığımız verilere erişim talebinde bulunamayız; hiç toplamadığımız verilerin silinmesini talep edemeyiz</li>
-<li><strong>Onay Olmama Mekanizmaları:</strong>İzleme olmadığında çerez banner'larına veya onay formlarına gerek yoktur</li>
-<li><strong>İhlal Bildirim Yükümlülüğü Yok:</strong>Sahip olmadığımız verileri ihlal edemeyiz</li>
-<li><strong>Uluslararası Transfer Endişesi Yok:</strong>Veriler cihazınızda kalır; sınır ötesi veri aktarımı yapılmaz</li>
-</ul>
-</div>
-<p>Bu, yasal manevralar yoluyla uyum değil; gizliliğe temel saygı yoluyla uyumdur. En güvenli veriler hiçbir zaman toplanmayan verilerdir.</p>
-<h3>Haklarınızı Kullanmak</h3>
-<p>Bulut tabanlı çalışan uygulamalarda GDPR haklarının kullanılması genellikle şunları gerektirir:</p>
-<div class="protocol-card">
-<h3>📋 Tipik GDPR Talep Süreci:</h3>
-<ol class="protocol-steps">
-<li><strong>Talebi Gönder:</strong>Veri erişimi/silme talebinde bulunmak için gizlilik ekibine e-posta gönderin veya hesap ayarlarını kullanın</li>
-<li><strong>Kimlik Doğrulaması:</strong>Kimlik kanıtı sağlayın (güvenlik için)</li>
-<li><strong>Bekleme Süresi:</strong>Şirketlerin yanıt vermek için 30 günü vardır (90 güne uzatılabilir)</li>
-<li><strong>İnceleme Yanıtı:</strong>Veri dışa aktarma veya silme onayını alın</li>
-<li><strong>Gerçek Uyum için Umut:</strong>Şirketin tüm sistemlerden, yedeklemelerden ve üçüncü taraf işlemcilerden verileri gerçekten sildiğine güvenin</li>
-</ol>
-</div>
-<p>Run Analytics ile tüm bu süreci atlamış olursunuz: verileriniz zaten yalnızca cihazınızda bulunur. Her şeyi silmek mi istiyorsunuz? Uygulamayı ve Apple Health egzersiz verilerinizi silin. İhracat yapmak ister misiniz? Uygulamanın dışa aktarma işlevini istediğiniz zaman kullanın. Geçmiş verilere mi erişmek istiyorsunuz? Hepsi iPhone'inizde. Firmalardan izin istemeden anında, tam kontrol.</p>
-<h2 id="health-data-privacy">Sağlık Bilgilerinizin Korunması</h2>
-<p>Koşu performansı verileri sağlık bilgilerini oluşturur; kalp atış hızı ölçümleri, kondisyon düzeyleri ve egzersiz modelleri fiziksel durumunuzu ortaya çıkarır. Bu hassasiyet gizlilik hususlarının özel olarak dikkate alınmasını gerektirir.</p>
-<h3>Sağlık Verileri Neleri Ortaya Çıkarıyor</h3>
-<p>Analizleri çalıştırmak ayrıntılı sağlık bilgilerini ortaya çıkarır:</p>
-<ul>
-<li><strong>Kardiyovasküler Fitness:</strong>Kalp atış hızı verileri, VO2max tahminleri ve iyileşme modelleri kalp sağlığını gösterir</li>
-<li><strong>Performans Trendleri:</strong>Azalan<a href="/tr/running-performance-metrics/">performans ölçümleri</a>hastalık, aşırı antrenman veya sağlık sorunlarının sinyali olabilir</li>
-<li><strong>Eğitim Stresi:</strong> <a href="/tr/training-load/">CTL/ATL/TSB izleme</a>Yorgunluk seviyelerini ve iyileşme kapasitesini ortaya çıkarır</li>
-<li><strong>Biyomekanik Desenler:</strong>Adım asimetrileri veya verimlilik değişiklikleri yaralanmalara veya fiziksel sınırlamalara işaret edebilir</li>
-<li><strong>Davranış Sağlığı:</strong>Bozulan antrenman modelleri veya ani değişiklikler stresi, zihinsel sağlığı veya yaşam koşullarını yansıtabilir</li>
-</ul>
-<h3>Sigorta ve İstihdam Kaygıları</h3>
-<p>Sağlık verilerinin gizliliği yalnızca kişisel konforla ilgili değildir; bunun pratik sonuçları da vardır:</p>
-<div class="warning-box">
-<strong>⚠️ Gerçek Dünya Kaygıları:</strong>
-<ul>
-<li><strong>Sigorta Ayrımcılığı:</strong>Sağlık sigortacıları giderek daha fazla "sağlıklı yaşam programları" için fitness verileri arıyor. Zayıf kondisyon ölçümleri teorik olarak primleri veya teminat kararlarını etkileyebilir</li>
-<li><strong>İstihdam Taraması:</strong>Bazı işverenler belirli pozisyonlar için uygunluk kriterlerini kullanır. Kapsamlı sağlık verileri işe alım kararlarını bilgilendirebilir</li>
-<li><strong>Hayat Sigortası Yazımı:</strong>Hayat sigortası şirketleri başvuru sürecinde kondisyon takip verilerini talep edebilir. Paylaşmayı reddetmek daha yüksek primleri tetikleyebilir</li>
-<li><strong>Tıbbi Gizlilik:</strong>Ani performans düşüşlerini gösteren verileri çalıştırmak, gizli tutmayı tercih ettiğiniz tıbbi durumları ortaya çıkarabilir</li>
-<li><strong>Yasal Keşif:</strong>Dava sırasında, karşı tarafın avukatı, yaralanma iddialarına itiraz etmek veya aktivite kalıpları oluşturmak için fitness uygulaması verilerini mahkemeye celp edebilir</li>
-</ul>
-</div>
-<p>Bu senaryolar varsayımsal değil; fitness takibi her yerde yaygınlaştıkça ve veriye aç endüstriler herhangi bir avantaj arayışına girdikçe ortaya çıkan gerçeklerdir.</p>
-<h3>Run Analytics Sağlık Verilerinin Kullanımı</h3>
-<p>Run Analytics, Apple Health entegrasyonu ve yerel işleme yoluyla sağlık bilgilerini korur:</p>
-<div class="callout callout-success">
-<h3>💚 Sağlık Verilerinin Korunması:</h3>
-<ul>
-<li><strong>Apple HealthKit Çerçevesi:</strong>Apple'ın sıkı gizlilik denetimlerine sahip güvenli Sağlık çerçevesi aracılığıyla erişilen tüm sağlık verileri</li>
-<li><strong>Ayrıntılı İzinler:</strong>iOS, her veri türü (antrenmanlar, kalp atış hızı vb.) için açık yetkilendirme gerektirir; Run Analytics'in erişebileceği şeyleri tam olarak siz kontrol edersiniz</li>
-<li><strong>Yalnızca Yerel İşleme:</strong>Cihazda hesaplanan kalp atış hızı analizi, performans hesaplamaları ve sağlık eğilimleri</li>
-<li><strong>Sağlık Verisi İletimi Yok:</strong>Kalp atış hızınız, VO2max tahminleriniz ve kondisyon ölçümleriniz iPhone'inizden asla ayrılmaz</li>
-<li><strong>Derhal Silme:</strong>iOS Ayarlarından istediğiniz zaman Sağlık verilerine uygulama erişimini kaldırın; tüm erişimi anında iptal eder</li>
-<li><strong>Şifreli iCloud Yedekleme:</strong>Gelişmiş Veri Korumayı kullanırken Sağlık verileri uçtan uca şifrelemeyle yedeklenir</li>
-</ul>
-</div>
-<p>Bu yaklaşım, sağlık bilgilerinizin, Apple'ın tüm Sağlık verileri için uyguladığı katı gizlilik korumalarının aynısı altında kalması anlamına gelir; üçüncü taraf uygulama şirketlerine ek maruz kalma söz konusu değildir.</p>
-<h2 id="anonymous-analytics">Anonim Çalıştırma Analitiği</h2>
-<p>Analitik yürütmede gerçek anonimlik, tüm kişisel tanımlayıcıların veri toplama ve işleme zincirinden kaldırılmasını gerektirir. Run Analytics bunu hesapsız mimarisiyle başarır.</p>
-<h3>Hesap Yok, Profil Yok</h3>
-<p>Çalışan uygulamaların çoğu kayıtla başlar; gelecekteki tüm etkinlikleri kimliğinize bağlayan bir hesap oluşturulur. Run Analytics bunu tamamen ortadan kaldırır:</p>
-<ul>
-<li><strong>Sıfır Kayıt:</strong>App Store'ten indirin ve hemen kullanmaya başlayın; form yok, kayıt işlemi yok</li>
-<li><strong>Kişisel Bilgi Yok:</strong>Uygulama asla isim, e-posta, doğum tarihi, cinsiyet veya herhangi bir tanımlayıcı bilgi istemez</li>
-<li><strong>Kullanıcı Kimliği Yok:</strong>Verileri oturumlar arasında bağlayan dahili kullanıcı kimlik numarası yok</li>
-<li><strong>İzleme Jetonu Yok:</strong>Kullanım takibi için cihaz parmak izi veya benzersiz tanımlayıcı yok</li>
-</ul>
-<h3>E-postaya Gerek Yok</h3>
-<p>E-posta adresleri, kimliğiniz ile uygulama kullanımınız arasında kalıcı bağlantılar oluşturur. Şunları sağlarlar:</p>
-<ul>
-<li><strong>Platformlar Arası Takip:</strong>E-posta adresleri, reklam ağları aracılığıyla uygulamalar ve web siteleri arasındaki etkinlikleri birbirine bağlar</li>
-<li><strong>Veri Aracısı Eşleştirmesi:</strong>Veri komisyoncuları, profilleri zenginleştirmek için e-postayla ilişkili verileri satın alır</li>
-<li><strong>Pazarlama Listeleri:</strong>E-posta listeleri satılıyor, paylaşılıyor veya üçüncü taraflara sızdırılıyor</li>
-<li><strong>İhlal Maruziyeti:</strong>Veri ihlalleri, antrenman verilerinin yanı sıra e-posta adreslerini de açığa çıkarıyor</li>
-</ul>
-<p>Run Analytics hiçbir zaman e-posta adresi istemez; hiçbir kimlik bağlantısı, pazarlama listesi oluşturmaz ve ihlale maruz kalma riski oluşturmaz.</p>
-<h3>Tam Anonimlik</h3>
-<p>Hesap yok, takip yok ve yerel işlemenin birleşimi gerçek bir anonimlik yaratıyor:</p>
-<div class="callout callout-info">
-<h3>👤 Anonim Kullanım Garantileri:</h3>
-<ul>
-<li><strong>Seni Tanımıyoruz:</strong>Run Analytics'in uygulamayı kimin kullandığı hakkında hiçbir fikri yok; isim, e-posta veya tanımlayıcı yok</li>
-<li><strong>Profiller Oluşturulamıyor:</strong>Kullanıcı kimlikleri olmadan kullanım profilleri oluşturamayız veya zaman içindeki davranışları izleyemeyiz</li>
-<li><strong>Hacklenemez:</strong>Bilgisayar korsanları şirket sunucularında bulunmayan verileri çalamaz</li>
-<li><strong>Mahkemeye çağrılamaz:</strong>Kullanıcı verilerine yönelik resmi veya yasal talepler boş sonuçlar döndürüyor; elimizde bu bilgi yok</li>
-<li><strong>Fikrimizi Değiştiremeyiz:</strong>İş uygulamaları değişse bile yararlanılabilecek geçmiş veriler mevcut değildir</li>
-</ul>
-</div>
-<p>Bu, "size veri bağlamayacağız" şeklindeki anonimlik değil; "verileri size bağlayamayız çünkü elimizde hiçbir veri yok" şeklindeki yapısal anonimliktir.</p>
-<h2 id="privacy-future">Gizliliğin Geleceği Öncelikli Fitness</h2>
-<p>Gizlilik öncelikli çalışan analitikler, kullanıcıların veri toplama uygulamalarının farkına varması ve kişisel bilgilere saygılı alternatifler talep etmesiyle ortaya çıkan bir eğilimi temsil ediyor.</p>
-<h3>Kullanıcı Farkındalığını Artırma</h3>
-<p>Birçok faktör gizlilik bilincinin artmasına neden oluyor:</p>
-<ul>
-<li><strong>Yüksek Profilli İhlaller:</strong>Düzenli fitness uygulaması veri ihlalleri, bulut depolama riskleri konusunda farkındalığı artırıyor</li>
-<li><strong>GDPR Eğitimi:</strong>Avrupa gizlilik düzenlemeleri küresel kullanıcı tabanını veri hakları konusunda eğitmiştir</li>
-<li><strong>İzleme Sorunları:</strong>Kişisel verilerin reklam ve gözetimi nasıl körüklediğine dair artan farkındalık</li>
-<li><strong>Sosyal Medya Yorgunluğu:</strong>Kullanıcılar, sürekli veri paylaşımının kendi çıkarlarına hizmet edip etmediğini giderek daha fazla sorguluyor</li>
-<li><strong>Nesil Değişimi:</strong>Genç kullanıcılar veri toplama uygulamalarına karşı daha fazla şüpheci davranıyor</li>
-</ul>
-<h3>Apple'ın Gizlilik Liderliği</h3>
-<p>Apple'ın gizlilik girişimleri, gizliliğe öncelik veren uygulamalar için altyapı oluşturuyor:</p>
-<div class="application-grid">
-<div class="application-item">
-<h3>🍎Apple Gizlilik Özellikleri</h3>
-<ul>
-<li><strong>Uygulama Gizlilik Etiketleri:</strong>App Store beslenme etiketleri, uygulamaların tam olarak hangi verileri topladığını gösterir</li>
-<li><strong>Uygulama İzleme Şeffaflığı:</strong>iOS, uygulamalar arası izleme için açık izin gerektirir</li>
-<li><strong>Gizlilik Raporları:</strong>Hangi uygulamaların hassas verilere ne sıklıkta eriştiğini gösterir</li>
-</ul>
-</div>
-<div class="application-item">
-<h3>🔐Platform Yetenekleri</h3>
-<ul>
-<li><strong>Cihaz Üzerinde İşleme:</strong>Neural Engine, gelişmiş yerel makine öğrenimine olanak sağlar</li>
-<li><strong>HealthKit Güvenliği:</strong>Sıkı Sağlık veri erişim kontrolleri ve şifreleme</li>
-<li><strong>Gelişmiş Veri Koruması:</strong>iCloud yedeklemeleri için uçtan uca şifreleme</li>
-</ul>
-</div>
-<div class="application-item">
-<h3>📱 Ekosistem Faydaları</h3>
-<ul>
-<li><strong>Geliştirici Araçları:</strong>Gizliliğe öncelik veren uygulama geliştirmeyi mümkün kılan API'ler</li>
-<li><strong>Kullanıcı Beklentileri:</strong>iOS kullanıcıları giderek daha fazla gizliliğe saygılı uygulamalar bekliyor</li>
-<li><strong>Rekabet Avantajı:</strong>App Store'te gizlilik fark yaratan bir unsur haline geliyor</li>
-</ul>
-</div>
-</div>
-<p>Bu ekosistem evrimi, gizlilik öncelikli çalışan analitiği sadece mümkün kılmakla kalmıyor, aynı zamanda platformun gizlilik taahhütlerini anlayan iOS kullanıcıları tarafından giderek daha fazla bekleniyor.</p>
-<h3>Düzenleyici Eğilimler</h3>
-<p>Gizlilik düzenlemeleri dünya çapında genişlemeye devam ediyor:</p>
-<ul>
-<li><strong>GDPR (AB):</strong>Veri koruması için küresel düzenlemeleri etkileyen altın standart oluşturuldu</li>
-<li><strong>CCPA/CPRA (Kaliforniya):</strong>Kaliforniya Tüketici Gizliliği Yasası, Kaliforniya'da ikamet edenlere veri hakları veriyor</li>
-<li><strong>LGPD (Brezilya):</strong>Brezilya Genel Veri Koruma Yasası GDPR ilkelerini yansıtıyor</li>
-<li><strong>PIPEDA (Kanada):</strong>Kişisel Bilgilerin Korunması ve Elektronik Belgeler Yasası</li>
-<li><strong>Yeni Mevzuat:</strong>Düzinelerce ülke ve ABD eyaleti kapsamlı gizlilik yasalarını değerlendiriyor</li>
-</ul>
-<p>Mevzuat baskısı, gizliliğe öncelik veren tasarımı teşvik ediyor: veri toplamayan uygulamalar, karmaşık çoklu yetki alanı gereksinimlerini karşılayan bulut tabanlı alternatiflerle karşılaştırıldığında sıfır uyumluluk yüküyle karşı karşıya kalıyor.</p>
-<h2 id="privacy-faqs">Yaygın Gizlilik Soruları</h2>
-<h3>Bulut yapay zekası olmadan yerel analizler ne kadar doğrudur?</h3>
-<p><strong>Doğruluk konuma değil metodolojiye bağlıdır.</strong>Bulut tabanlı uygulamalar doğası gereği daha iyi doğruluk sağlamaz; yalnızca verileri cihazınız yerine uzak sunucularda işlerler. Run Analytics, aşağıdakiler için aynı bilimsel olarak doğrulanmış formülleri kullanır:<a href="/tr/crs/">KORUMA0X</a>, <a href="/tr/training-load/">KORUMA14X</a>, Ve<a href="/tr/training-zones/">eğitim bölgeleri</a>bulut platformları olarak. Hesaplamalar aynıdır; sadece iPhone'inizin işlemcisi üzerinde çalışırlar. Modern iPhone'lar, on yıl önceki sunucu gruplarının tamamından daha fazla bilgi işlem gücü sağlıyor; yerel işleme, doğruluktan ödün vermeden anında sonuçlar sağlıyor.</p>
-<h3>Antrenmanlarımı koçumla özel olarak paylaşabilir miyim?</h3>
-<p><strong>Evet; paylaşımı SİZ kontrol edersiniz.</strong>Run Analytics esnek dışa aktarma seçenekleri sunar: bireysel antrenmanları veya tarih aralıklarını JSON, CSV, HTML veya PDF formatlarında dışa aktarın. Dışa aktarılan dosyaları e-posta, mesajlaşma uygulamaları veya tercih ettiğiniz bulut depolama alanı aracılığıyla koçunuza gönderin. Verilerin otomatik olarak sunucularla senkronize edildiği bulut platformlarının aksine, neyi paylaşacağınıza, ne zaman paylaşacağınıza ve kimin alacağına tam olarak siz karar verirsiniz. Antrenörünüz, tüm antrenman geçmişinize kalıcı erişim elde etmeden, analiz için ihtiyaç duyduğu antrenman verilerini alır.</p>
-<h3>Cihazımı kaybedersem yedeklemeler ne olacak?</h3>
-<p><strong>Gelişmiş Veri Koruma ile iCloud Health yedeklemesini kullanın.</strong>Apple Health, etkinleştirildiğinde iCloud'a yedeklenerek cihazın taşınmasını ve kurtarılmasını sağlar. Gelişmiş Veri Korumanın etkinleştirilmesi uçtan uca şifreleme ekler; Apple sağlık verilerinizin şifresini çözemez; bu verilere yalnızca kimliği doğrulanmış cihazlarınız erişebilir. Yeni bir iPhone ayarladığınızda ve iCloud yedeklemesinden geri yüklediğinizde, tüm Sağlık verileriniz (Run Analytics tarafından kullanılan egzersiz geçmişi dahil) otomatik olarak aktarılır. Bu, verileri üçüncü taraflara ifşa etmeden yedeklilik sağlar.</p>
-<h3>Cihazımı kaybedersem ne olur?</h3>
-<p><strong>Standart iOS güvenliği verilerinizi korur.</strong>iPhone'lar, Sağlık bilgileri dahil tüm verileri şifreler. Cihazınızı kaybederseniz: (1) Verileri tamamen silmek için Find My iPhone'i kullanarak uzaktan silin veya (2) Cihaz, şifrenizle kilitli kalır; verilere yetkisiz kullanıcılar erişemez. iCloud Health yedeklemesini etkinleştirdiyseniz yeni cihazınız tüm antrenman verilerini geri yükler. Yedekleme olmadan veriler kaybolur; ancak bu, gizlilik açısından ödün verilmesi gereken bir durumdur: tam kontrol, tam sorumluluk anlamına gelir. Artıklık için şifrelenmiş iCloud yedeklemelerini etkinleştirmeyi düşünün.</p>
-<h3>Verileri harici analiz için dışa aktarabilir miyim?</h3>
-<p><strong>Evet—birden fazla format seçeneği.</strong>Run Analytics dört dışa aktarma formatı sağlar: (1)<strong>KORUMA25X</strong>programatik analiz ve geliştirici araçları için, (2)<strong>KORUMA26X</strong>Excel/Numbers/Google E-Tablolar'da e-tablo analizi için, (3)<strong>KORUMA27X</strong>grafikli okunabilir raporlar için ve (4)<strong>KORUMA28X</strong>Koç paylaşımı veya yazdırma için. Belirli tarih aralıklarını seçin, hangi metriklerin dahil edileceğini seçin ve iOS paylaşım sayfası aracılığıyla herhangi bir hedefe aktarın. Verileriniz taşınabilir kalır; özel formatlar yoktur, dışa aktarma kısıtlamaları yoktur, tercih ettiğiniz analiz araçları için tam esneklik sağlar.</p>
-<h2 id="conclusion">Sonuç: Ödün Vermeyen Gizlilik</h2>
-<p>Akıllı eğitim, gizlilikten ödün vermeyi gerektirmez. Modern iPhone yetenekleri, yerel veri işleme yoluyla gelişmiş analizlerin çalıştırılmasına olanak tanır; bulut tabanlı platformlarla aynı gelişmiş ölçümleri sunarken hassas bilgilerinizi özel kontrolünüz altında tutar.</p>
-<div class="callout callout-success">
-<h3>✅ Gizliliği Ön Planda Çalıştırmanın Analitik Avantajları:</h3>
-<ul>
-<li><strong>Tam Gizlilik:</strong>Antrenman verileriniz, GPS izleriniz, kalp atış hızı ölçümleriniz ve performans eğilimleriniz asla cihazınızdan ayrılmaz</li>
-<li><strong>Tam İşlevsellik:</strong> <a href="/tr/crs/">CRS testi</a>, <a href="/tr/training-zones/">kişiselleştirilmiş eğitim bölgeleri</a>, <a href="/tr/training-load/">rTSS/CTL/ATL/TSB izleme</a>ve kapsamlı analizler (tümü yerel olarak işlenir)</li>
-<li><strong>Sıfır Hesaplar:</strong>Kayıt yok, e-posta yok, şifre yok; tam anonimlikle hemen kullanmaya başlayın</li>
-<li><strong>Kontrolünüz:</strong>Neyin dışa aktarılacağına, ne zaman paylaşılacağına ve kimin alacağına karar verin; tam veri sahipliği</li>
-<li><strong>GDPR Uyumlu:</strong>Gizliliğe öncelik veren mimari sayesinde mükemmel uyumluluk; toplamadığımız verilerle ilgili düzenlemeleri ihlal edemeyiz</li>
-<li><strong>Elma Entegrasyonu:</strong>HealthKit güvenliği ve şifreli yedeklemeler dahil iOS gizlilik özelliklerinden yararlanır</li>
-</ul>
-</div>
-<p>Gizlilik ve performans arasındaki seçim yanlıştır. Run Analytics her ikisine de sahip olabileceğinizi kanıtlar: tam gizlilik korumasıyla hesaplanan, bilimsel olarak doğrulanmış eğitim ölçümleri. Sizin verileriniz, sizin cihazınız, sizin seçiminiz.</p>
-</article>
-</div>
-</section>
-<section class="section section-alt">
-<div class="container container-narrow">
-<h2>Gizlilik SSS'leri</h2>
-<div class="faq-section" itemscope="" itemtype="https://schema.org/FAQPage">
-<div class="faq-item" itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question">
-<h3 itemprop="name">Run Analytics gerçekten özel mi?</h3>
-<div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer">
-<div itemprop="text">
-<p>Evet—mimari tasarım sayesinde %100 özel. Run Analytics, tüm verileri yerel olarak iPhone'inizde işler; egzersiz bilgilerini, GPS izlerini veya sağlık ölçümlerini asla harici sunuculara yüklemez. Uygulama hiçbir hesap gerektirmez, hiçbir kişisel bilgi toplamaz ve sıfır üçüncü taraf izleme SDK'sı içerir. Sıfır veri toplama kategorisi gösteren Apple'ın Uygulama Gizliliği etiketlerini kontrol ederek bunu doğrulayabilirsiniz. Bu, güven yoluyla sağlanan gizlilik değildir ("verilerinizi koruyacağımıza söz veriyoruz") - mimari yoluyla sağlanan gizliliktir ("verilerinize asla sahip değiliz").</p>
-</div>
-</div>
-</div>
-<div class="faq-item" itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question">
-<h3 itemprop="name">Yerel işleme nasıl çalışır?</h3>
-<div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer">
-<div itemprop="text">
-<p><strong>Yerel işleme</strong>tüm hesaplamaların uzak sunucular yerine iPhone işlemcinizde gerçekleştirileceği anlamına gelir. Run Analytics, Apple Health'ten (zaten cihazınızda yerel olarak depolanan) egzersiz verilerini okur,<a href="/tr/crs/">KORUMA0X</a>, <a href="/tr/training-load/">rTSS, CTL/ATL/TSB</a>, Ve<a href="/tr/training-zones/">eğitim bölgeleri</a>iPhone'inizin CPU'sunu kullanır ve sonuçları uygulamanın yerel veritabanında saklar. İnternet üzerinden işlenmek üzere hiçbir veri iletilmez. Modern iPhone'lar, bulut bağımlılığı olmadan gelişmiş analizler için fazlasıyla bilgi işlem gücü sağlar. Yükleme/indirme gecikmesi olmadığı için sonuçlar anında görünür.</p>
-</div>
-</div>
-</div>
-<div class="faq-item" itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question">
-<h3 itemprop="name">Run Analytics hangi verileri toplar?</h3>
-<div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer">
-<div itemprop="text">
-<p><strong>Hiçbiri.</strong>Run Analytics sıfır veri toplar. Uygulama, Apple Health'ten antrenman bilgilerini okur (açık izninizle) ancak harici sunuculara aktarmadan yerel olarak işler. Hesap yok, e-posta adresi koleksiyonunun olmadığı anlamına gelir. İzleme SDK'sının olmaması, davranışsal veri toplamanın olmayacağı anlamına gelir. Analiz hizmetlerinin olmaması, kullanım istatistiklerinin olmadığı anlamına gelir. Bulut işleme olmaması, antrenman yüklemesi yapılmaması anlamına gelir. Uygulamanın kelimenin tam anlamıyla veri toplamaya yönelik teknik kapasitesi yoktur; bu verileri alacak sunucu uç noktaları yoktur. Doğrulama için App Store'teki Uygulama Gizliliği etiketini kontrol edin: sıfır veri toplama kategorisi.</p>
-</div>
-</div>
-</div>
-<div class="faq-item" itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question">
-<h3 itemprop="name">Run Analytics'i kullanmak için bir hesaba ihtiyacım var mı?</h3>
-<div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer">
-<div itemprop="text">
-<p>Hayır—kesinlikle hesap gerekmez. App Store'ten Run Analytics'i indirin ve hemen kullanmaya başlayın. Kayıt formu yok, e-posta doğrulaması yok, şifre oluşturma yok, profil kurulumu yok. Uygulamanın hesap altyapısı bile yok; oturum açacak bir şey olmadığından oturum açma ekranı yok. Bu hem kolaylık (anında erişim) hem de gizlilik (tam anonimlik) sağlar. Kullanımınız, herhangi bir harici sistemle kimlik bağlantısı olmaksızın tamamen cihazınıza özgü kalır.</p>
-</div>
-</div>
-</div>
-<div class="faq-item" itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question">
-<h3 itemprop="name">Run Analytics verilerimi satabilir mi?</h3>
-<div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer">
-<div itemprop="text">
-<p><strong>İmkansız; satacak verileriniz elimizde yok.</strong>Run Analytics asla egzersiz verilerinizi, GPS izlerinizi veya sağlık ölçümlerinizi sunuculara yüklemez. Tüm işlemler iPhone cihazınızda yerel olarak gerçekleşir. Şirketler yalnızca sahip oldukları verileri satabiliyor ve biz sıfır kullanıcı verisine sahibiz. Kullanıcı antrenmanlarının veri tabanı yok, GPS izlerinin sunucuda saklanması yok, sağlık bilgilerinin toplanması yok. Bu mimari karar, veri satışını yalnızca politika açısından yasaklamakla kalmayıp, teknik olarak da imkansız hale getiriyor. Bu mümkün olan en güçlü garantidir: sahip olmadığımız şeyi satamayız.</p>
-</div>
-</div>
-</div>
-<div class="faq-item" itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question">
-<h3 itemprop="name">Konum verilerim güvende mi?</h3>
-<div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer">
-<div itemprop="text">
-<p>Evet; konum verileri yalnızca Apple Health'teki iPhone cihazınızda kalır. Run Analytics hiçbir zaman GPS izlerini veya koordinatlarını harici sunuculara yüklemez. Uygulama, mesafeyi ve tempoyu hesaplamak için Sağlık'tan konum verilerini okuyabilir (izniniz doğrultusunda) ancak tüm işlemler yerel olarak gerçekleşir. iOS şifrelemesi ve erişim kontrolleri ile korunan Apple Health'te GPS izleri kontrolünüz altında kalır. Antrenman verilerini dışa aktardığınızda, konum bilgilerinin dahil edilip edilmeyeceğini veya yalnızca özet istatistiklerin paylaşılıp paylaşılmayacağını SİZ seçersiniz. Yalnızca yerel mimariyle eksiksiz konum gizliliği.</p>
-</div>
-</div>
-</div>
-<div class="faq-item" itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question">
-<h3 itemprop="name">Peki ya iCloud yedeklemeleri?</h3>
-<div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer">
-<div itemprop="text">
-<p>iOS ayarlarında Sağlık yedeklemeyi etkinleştirdiğinizde Apple Health verileri iCloud'a yedeklenir. Maksimum gizlilik için etkinleştirin<strong>Gelişmiş Veri Koruması</strong>—bu, Sağlık yedeklemelerine uçtan uca şifreleme ekler; bu, Apple'ın verilerinizin şifresini çözemeyeceği anlamına gelir (bu verilere yalnızca kimliği doğrulanmış cihazlarınız erişebilir). iCloud yedeklemesi, doğru şekilde yapılandırıldığında gizlilikten ödün vermeden cihazın kurtarılmasını ve taşınmasını sağlar. Run Analytics verileri Apple ekosisteminin gizlilik korumaları kapsamında kalır; ayrı bir bulut hizmeti yoktur, üçüncü taraf yedekleme sağlayıcıları yoktur, iOS güvenlik modeliyle tam entegrasyon vardır.</p>
-</div>
-</div>
-</div>
-<div class="faq-item" itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question">
-<h3 itemprop="name">Bunun Strava'dan farkı nedir?</h3>
-<div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer">
-<div itemprop="text">
-<p><strong>Temelde farklı mimariler:</strong>Strava, işlenmek üzere tüm egzersiz verilerinin sunucularına yüklenmesini gerektirir; hepsi Strava'nın bulut altyapısında depolanan GPS izleri, kalp atış hızı, performans ölçümleri. Strava, hesap kaydı gerektirir (e-posta adresi), sosyal özellikler sunar (herkese açık profiller) ve verileri üçüncü taraf ortaklarla paylaşır. Run Analytics, iPhone'inizde her şeyi yerel olarak işler, hesap gerektirmez, sıfır veri yükler ve hiçbir sosyal özellik sunmaz. Strava sosyal bağlantıya öncelik veriyor; Run Analytics gizliliğe öncelik verir. Her ikisi de eğitim analitiği sağlıyor ancak tamamen zıt mimari yaklaşımlarla. Bizimkilere bakın<a href="#competitor-comparison">detaylı karşılaştırma</a>üstünde.</p>
-</div>
-</div>
-</div>
-<div class="faq-item" itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question">
-<h3 itemprop="name">Gizlilik doğruluğu azaltır mı?</h3>
-<div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer">
-<div itemprop="text">
-<p>Hayır; gizliliği ön planda tutan mimari doğruluktan ödün vermez.<a href="/tr/running-performance-metrics/">Performans metrikleri</a>işlem yerine değil, hesaplama metodolojisine bağlıdır. Run Analytics, aşağıdakiler için aynı bilimsel olarak doğrulanmış formülleri kullanır:<a href="/tr/crs/">Kritik Koşu Hızı</a>, <a href="/tr/training-load/">Antrenman Stres Puanı</a>ve bulut tabanlı platformlar olarak eğitim bölgesi hesaplaması. İster uzak sunucularda ister iPhone'inizde yürütülsün, matematik aynıdır; yerel işleme, ağ gecikmeleri olmadan anında gerçekleşir. Modern iOS cihazları, daha önce sunucu çiftlikleri gerektiren analizler için muazzam bilgi işlem gücü sağlar. Yerel işleme sayesinde gizlilik ve doğruluk mükemmel bir şekilde bir arada bulunur.</p>
-</div>
-</div>
-</div>
-<div class="faq-item" itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question">
-<h3 itemprop="name">Verilerimi dışa aktarabilir miyim?</h3>
-<div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer">
-<div itemprop="text">
-<p>Evet—tam ihracat esnekliği. Run Analytics birden fazla dışa aktarma formatı sağlar:<strong>KORUMA25X</strong>(programatik analiz için),<strong>KORUMA26X</strong>(e-tablolar için),<strong>KORUMA27X</strong>(okunabilir raporlar için) ve<strong>KORUMA28X</strong>(antrenör paylaşımı için). Belirli tarih aralıklarını seçin, hangi ölçümlerin dahil edileceğini seçin, GPS verilerinin dahil edilip edilmeyeceğine karar verin ve iOS paylaşım sayfası aracılığıyla herhangi bir hedefe (e-posta, bulut depolama, mesajlaşma uygulamaları) aktarın. Verileriniz, herhangi bir özel format veya satıcıya bağlı kalma olmaksızın taşınabilir kalır. Tercih ettiğiniz araçları kullanarak yedekleme, koç paylaşımı veya harici analiz için istediğiniz zaman dışa aktarın.</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section class="section">
-<div class="container container-narrow">
-<h2>Çalışan Veri Gizliliğinizin Kontrolünü Elinize Alın</h2>
-<div class="callout callout-success">
-<h3>Eğitime Tam Gizlilikle Başlayın</h3>
-<p>Gizliliğinizden ödün vermeden gelişmiş çalışma analizlerini deneyimleyin. Run Analytics, gelişmiş eğitim ölçümlerine VE eksiksiz veri kontrolüne sahip olabileceğinizi kanıtlar:</p>
-<ul>
-<li><strong>CRS'inizi Test Edin:</strong>Ölçüm<a href="/tr/crs/">Kritik Koşu Hızı</a>ve cihazınızda %100 yerel olarak kişiselleştirilmiş eğitim bölgeleri oluşturun</li>
-<li><strong>Antrenman Yükünü Takip Edin:</strong>Monitör<a href="/tr/training-load/">rTSS, CTL, ATL ve TSB</a>antrenman stresini optimize etmek ve aşırı antrenmanı önlemek için - tümü özel olarak hesaplanır</li>
-<li><strong>Performansı Analiz Edin:</strong>İzlemek<a href="/tr/running-performance-metrics/">VO2max, eşik temposu ve koşu ekonomisi</a>bulut yüklemeleri olmadan</li>
-<li><strong>Yapı Eğitim Bölgeleri:</strong>Kullanmak<a href="/tr/training-zones-intensity/">7 bilime dayalı eğitim bölgesi</a>hassas egzersiz yoğunluğu kontrolü için</li>
-<li><strong>Run Analytics'i indirin:</strong> <a href="/tr/">7 günlük ücretsiz denemenizi başlatın</a>ve gizlilik öncelikli çalışan analitiği bugün deneyimleyin</li>
-</ul>
-</div>
-<div class="mt-xl text-center">
-<a class="btn btn-primary" href="https://apps.apple.com/es/app/runanalytics/id6754524015">Run Analytics'i İndirin (7 Günlük Ücretsiz Deneme) →</a>
-<a class="btn btn-secondary" href="/tr/crs/">CRS'inizi Hesaplayın →</a>
-</div>
-</div>
-</section>
-    
-  </main>
-
-  
-  <footer class="site-footer">
-    <div class="container">
-        
-        <div class="footer-top">
-            <div class="footer-brand-section">
-                
-                <h2>Run Analytics</h2>
-                <p>Track Critical Running Speed, Training Stress Score, and performance metrics with Run Analytics. Science-based iOS app for runners, triathletes &amp; coaches. 7-day free trial.</p>
-                
-            </div>
-
-            
-            <div class="footer-download">
-                <h3 class="footer-heading">Download</h3>
-                <div class="footer-badges">
-                    
-                    <a href="https://apps.apple.com/us/app/run-analytics/id6754524015" target="_blank" rel="noopener"
-                        aria-label="Download on the App Store">
-                        <img src="../../assets/images/badge-app-store.svg"
+                                stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg></button><div class="suite-dropdown hidden" id="suite-dropdown"><div class="suite-dropdown-header">Other AnalyticsZone Apps</div><div class="suite-apps-grid"><a href="https://analyticszone.app" class="suite-app-link">AnalyticsZone</a><a href="https://swim.analyticszone.app" class="suite-app-link">Swim Analytics</a><a href="https://bike.analyticszone.app" class="suite-app-link">Bike Analytics</a><a href="https://walk.analyticszone.app" class="suite-app-link">Walk Analytics</a><a href="https://cardio.analyticszone.app" class="suite-app-link">Cardio Analytics</a><a href="https://health.analyticszone.app" class="suite-app-link">Health Analytics</a><a href="https://swimtrainer.analyticszone.app" class="suite-app-link">Swim Trainer</a></div></div></div></div></nav><button class="menu-toggle" id="menu-toggle" aria-label="Menüyü aç/kapat"
+                aria-expanded="false" aria-controls="nav-primary"><span></span><span></span><span></span></button></div></div></header><main id="main-content" class="main-content"><section class="page-hero"><div class="container"><h1>Gizlilik Öncelikli Koşul Analizi: Verileriniz, Kayıt</h1><p class="lead">Gizliliğinizden ödün vermeden daha akıllı antrenman yapın. Yerel veri işlemenin koşu analiziniz üzerinde boyut nasıl tam kontrol gösterilir ve aynı zamanda konum, sağlık korumasız ve kişisel bilgilerinizin nasıl korunduğunu gösterir.</p></div></section><section class="section"><div class="container container-narrow"><div class="callout callout-success mb-xl"><h2>Temel Çıkarımlar</h2><ul class="key-points"><li><strong>Verileriniz Hayatınızı Ortaya Çıkarır:</strong>Çalışan uygulamalar, evden uzakta olduğunuzda ortaya çıkan GPS konumunu (ev/iş), sağlık ölçümlerini ve egzersiz modellerini toplar</li><li><strong>Bulut Gizlilik Sorunu:</strong>Çoğu uygulama, verilerinizi sunuculara yükler, süresiz olarak saklar ve üçüncü taraflarla paylaşır; yükleme sonrasında hiçbir kontrol sizde değildir</li><li><strong>Gizlilik Öncelikli Çözüm:</strong>Yerel veri işleme, TÜM analizleri cihazınızda tutar; buluta yükleme yok, hesap yok, izleme yok</li><li><strong>Run Analytics Farkı:</strong>%100 yerli işlem<a href="/tr/crs/">Kritik Koşu Hızı</a>, <a href="/tr/training-load/">TSS/CTL/ATL/TSB</a>, Ve<a href="/tr/training-zones/">eğitim bölgeleri</a>—çalışan verileriniz iPhone'inizden asla ayrılmaz</li><li><strong>Tasarım itibarıyla GDPR Uyumluluğu:</strong>Uygulamalar veri toplamadığında gizlilik yasalarını ihlal edemezler; gizliliğe öncelik veren mimari sayesinde tam uyumluluk</li></ul></div><article itemscope="" itemtype="https://schema.org/Article"><meta content="Privacy-First Running Analytics: Your Data, Your Device" itemprop="headline"/><meta content="Privacy-first running analytics with 100% local data processing. No cloud, no tracking, no account required. Your running data stays on your device." itemprop="description"/><meta content="2025-01-15T10:00:00Z" itemprop="datePublished"/><meta content="2025-10-29T18:00:00Z" itemprop="dateModified"/><meta content="Run Analytics" itemprop="author"/><p class="lead">Koşu verileriniz hayatınızın hikayesini anlatır. GPS izleri nerede yaşadığınızı ve çalıştığınızı ortaya çıkarır. Antrenman modelleri evden uzakta olduğunuz zamanları gösterir. Kalp atış hızı verileri, kondisyon seviyenizi ve sağlık durumunuzu ortaya çıkarır. Çalışan uygulamaların çoğu tüm bu bilgileri toplar, bulut sunucularına yükler ve süresiz olarak saklar; çoğu zaman adını daha önce duymadığınız üçüncü taraflarla paylaşır.</p><p>Ancak akıllıca eğitim, mahremiyetten ödün vermeyi gerektirmez. Bu kapsamlı kılavuz, popüler çalışan uygulamalardaki gizlilik sorunlarını ortaya koyuyor, yerel veri işlemenin nasıl çalıştığını açıklıyor ve gizlilik öncelikli çalışan analizlerin, rekabetçi koşucuların ihtiyaç duyduğu gelişmiş ölçümleri sunarken hassas bilgilerinizi nasıl koruduğunu gösteriyor.</p><h2 id="privacy-problem">Koşucular İçin Gizlilik Neden Önemlidir?</h2><p>Koşu uygulamaları temel eğitim araçları haline geldi, ancak veri toplama uygulamaları çoğu koşucunun tam olarak anlamadığı ciddi gizlilik endişeleri yaratıyor. Gündelik uygulama kullanımının aksine, çalışan analizler günlük yaşamınız, sağlık durumunuz ve davranış kalıplarınız hakkında derinlemesine kişisel bilgileri ortaya çıkarır.</p><h3>Çalışan Uygulamaların Topladığı Veriler</h3><p>Tipik bir bulut tabanlı koşu uygulamasını kullandığınızda, egzersiz istatistiklerinden çok daha fazlasını sağlarsınız:</p><div class="warning-box"><strong>⚠️ Veri Toplama Gerçekliği:</strong><ul><li><strong>GPS Konum Verileri:</strong>Her koşunun her metresi için ev adresini, iş yerini, sık ziyaret edilen yerleri ve düzenli rotaları gösteren kesin koordinatlar</li><li><strong>Zamansal Desenler:</strong>Antrenman zamanlaması günlük programları gösterir; uyandığınızda, işteyken, evden uzakta olduğunuzda</li><li><strong>Sağlık Metrikleri:</strong>Kalp atış hızı bölgeleri, dinlenme kalp atış hızı, kalp atış hızı değişkenliği ve dinlenme modelleri, kondisyon düzeyini ve potansiyel tıbbi koşulları ortaya çıkarır</li><li><strong>Performans Verileri:</strong>Hız, mesafe, yükseklik, ritim ve güç ölçümleri kapsamlı kondisyon profilleri oluşturur</li><li><strong>Cihaz Bilgileri:</strong>Telefon modeli, işletim sistemi, IP adresi ve kullanım kalıpları</li><li><strong>Sosyal Bilgiler:</strong>Ad, e-posta, profil fotoğrafları, bağlantılar ve sosyal etkileşimler</li></ul></div><p>Bu veriler tek başına mevcut değildir. Bu veri noktaları bir araya getirildiğinde hayatınızın "Bugün 10 km koştum" ifadesinin çok ötesine geçen ayrıntılı bir profilini oluşturur.</p><h3>Verileriniz Nasıl Kullanılıyor?</h3><p>Bulut tabanlı çalışan uygulamalar, yalnızca size eğitim analitiği sağlamak için büyük miktarda veri toplamaz. Bilgilerinizin ticari değeri var:</p><ul><li><strong>Üçüncü Taraf Veri Paylaşımı:</strong>Birçok uygulama, reklamverenlere, araştırmacılara ve veri komisyoncularına anonimleştirilmiş (veya sözde anonimleştirilmiş) antrenman verilerini satmaktadır. "Anonimleştirilmiş" konum verileri bile bireylere yeniden tanımlanabilir</li><li><strong>Hedefli Reklamcılık:</strong>Kondisyon düzeyiniz, antrenman düzenleriniz ve koşu hedefleriniz, fitness ürünleri ve hizmetleriyle sizi hedeflemek için kullanılan reklam profilleri hakkında bilgi verir</li><li><strong>Sigorta Riski Değerlendirmesi:</strong>Sağlık sigortası şirketleri giderek daha fazla fitness verileri arıyor. Bazıları etkinlik izleme verilerini paylaşmak için "indirimler" sunuyor ve bu da bilgilerin açıklanması konusunda baskı yaratıyor</li><li><strong>Kurumsal Zeka:</strong>Toplu egzersiz verileri, çalışanların fitness durumlarını ortaya koyuyor ve işe alım veya sağlık sigortası kararlarını potansiyel olarak etkiliyor</li><li><strong>Hükümetin Talepleri:</strong>Bulutta depolanan veriler, konum geçmişinizi veya etkinlik düzenlerinizi ortaya çıkaracak şekilde yasal işlemler için mahkeme celbi yapılabilir</li></ul><h3>Gerçek Gizlilik Olayları</h3><p>Gizlilik kaygıları teorik değildir; belgelenen olaylarda somutlaşmıştır:</p><div class="example-box"><h4>Vaka Çalışmaları:</h4><p><strong>Strava Isı Haritası Olayı (2018):</strong>Strava'nın toplu faaliyet ısı haritası, askerlerin antrenmanları çevre devriye rotalarını takip ederken, yanlışlıkla gizli askeri üs yerlerini ortaya çıkardı. Olay, "anonimleştirilmiş" verilerin hassas bilgileri nasıl açığa çıkarabileceğini gösterdi.</p><p><strong>Fitness Uygulaması Veri İhlali (2021):</strong>Büyük bir fitness takip platformu, milyonlarca kullanıcının GPS izlerini, e-posta adreslerini ve sağlık verilerini açığa çıkaran bir veri ihlali yaşadı. Yıllar süren antrenman geçmişi herkesin erişimine açıldı.</p><p><strong>Konum Takip:</strong>Güvenlik araştırmacıları, rota başlangıç/bitiş noktalarını bularak ev adreslerini belirlemek için halka açık çalışma verilerinin nasıl kullanılabileceğini gösterdi. Bu, özellikle koşucuların tek başına antrenman yapması durumunda güvenlik endişeleri yaratır.</p><p><strong>GDPR Uygulama Eylemleri:</strong>Avrupalı ​​gizlilik düzenleyicileri, yetersiz onay mekanizmaları, aşırı veri toplama ve net olmayan gizlilik politikaları nedeniyle fitness uygulamalarına para cezası verdi; bu da yaygın uyumluluk başarısızlıklarının altını çizdi.</p></div><p>Bu olaylar temel bir sorunu ortaya çıkarıyor: Bulut sunucularına veri yüklediğinizde kontrolü kaybedersiniz. Şirketler gizlilik politikalarını değiştirebilir, ihlallere maruz kalabilir, başka şirketler tarafından ele geçirilebilir veya devlet veri talepleriyle karşı karşıya kalabilir ve mevcut gizlilik tercihleriniz ne olursa olsun geçmiş verileriniz savunmasız kalır.</p><h2 id="local-vs-cloud">Yerel ve Bulut İşlemeyi Anlamak</h2><p>Yerel ve bulut veri işleme arasındaki mimari seçim, temel olarak gizlilik duruşunuzu belirler. Bu ayrımı anlamak, hassas bilgilerinizle ilgili olarak hangi çalışan uygulamalara güveneceğiniz konusunda bilinçli kararlar vermenize yardımcı olur.</p><h3>Bulut Tabanlı Uygulamalar Nasıl Çalışır?</h3><p>Geleneksel çalışan analitik platformları merkezi bir modeli izler:</p><div class="protocol-card"><h3>📤 Bulut İşleme Akışı:</h3><ol class="protocol-steps"><li><strong>Veri Yakalama:</strong>iPhone veya GPS saatiniz GPS izlerini, kalp atış hızını, tempoyu, tempoyu ve diğer egzersiz ölçümlerini kaydeder</li><li><strong>Yüklemek:</strong>Ham antrenman verileri, internet bağlantısı aracılığıyla şirket sunucularına aktarılır; genellikle her antrenmandan sonra otomatik olarak</li><li><strong>Sunucu İşleme:</strong>Bulut altyapısı analitik ölçümlerini hesaplar (rTSS, CTL/ATL, eğitim bölgeleri, performans trendleri)</li><li><strong>Depolamak:</strong>İşlenen sonuçlar ve ham veriler süresiz olarak şirket sunucularında kalır (manuel olarak silmediğiniz sürece)</li><li><strong>Alma:</strong>Verilerinizi sunuculardan cihazınıza veya web tarayıcınıza indirerek görüntülersiniz</li></ol></div><p>Bu mimari şirketlere avantajlar sunuyor; merkezi veriler; sosyal özellikleri, cihazlar arası senkronizasyonu ve kullanıcı popülasyonları arasında makine öğrenimini mümkün kılıyor. Ancak bu, gizlilik açısından kritik bir zayıflık yaratır: Verileriniz kurumsal altyapı üzerinde kontrolünüz dışında bulunur.</p><h3>Yerel İşleme Nasıl Çalışır?</h3><p>Gizlilik öncelikli mimari, cihazınızdaki verileri işleyerek bu modeli tersine çevirir:</p><div class="callout callout-success"><h3>🔒 Yerel İşleme Akışı:</h3><ol><li><strong>Veri Yakalama:</strong>Apple Health tarafından yerel olarak kaydedilen veya GPS izleme dosyalarından içe aktarılan egzersiz verileri</li><li><strong>Yerel Depolama:</strong>Veriler Apple Health veritabanındaki iPhone'inizde kalır (uçtan uca şifreleme etkinken iCloud kullanıldığında şifrelenir)</li><li><strong>Cihaz Üzerinde İşleme:</strong>Analitik uygulamasını çalıştırmak Sağlık verilerini okur, hesaplar<a href="/tr/crs/">KORUMA0X</a>, <a href="/tr/training-load/">rTSS, CTL/ATL/TSB</a>, <a href="/tr/training-zones/">eğitim bölgeleri</a>ve diğer ölçümler doğrudan iPhone'inizin işlemcisinde</li><li><strong>Yerel Sonuçlar:</strong>Hesaplanan metrikler cihazınızda kalır; uygulamanın işlevselliği için yükleme gerekmez</li><li><strong>İsteğe Bağlı Dışa Aktarma:</strong>Verilerin dışa aktarılıp aktarılmayacağına/ne zaman, hangi formatta aktarılacağına ve kimin alacağına SİZ karar verirsiniz</li></ol></div><p>Bu mimari, uygulamaların hiçbir zaman verilerinize sahip olmayacağı anlamına gelir; halihazırda cihazınızda bulunan bilgileri işler ve sonuçları yerel olarak depolar. Yükleme yok, bulut depolama yok, kurumsal veri bulundurma yok.</p><h3>Yerel İşlemenin Faydaları</h3><p>Gizlilik öncelikli mimari, yalnızca gizliliğin ötesinde avantajlar sağlar:</p><div class="application-grid"><div class="application-item"><h3>🛡️ Güvenlik Avantajları</h3><ul><li><strong>İhlal Riski Yok:</strong>Sunuculara ulaşmayan veriler ihlallerde çalınamaz</li><li><strong>Yetkisiz Erişim Yok:</strong>Şirket çalışanları antrenman geçmişinizi göremez</li><li><strong>Üçüncü Taraf Paylaşımı Yok:</strong>Uygulamalar sahip olmadıkları verileri satamaz</li></ul></div><div class="application-item"><h3>⚡ Performans Avantajları</h3><ul><li><strong>Anında İşleme:</strong>Yükleme/indirmede gecikme yok; hesaplamalar hemen yapılıyor</li><li><strong>Çevrimdışı İşlevsellik:</strong>Tam analizler internet bağlantısı olmadan çalışır</li><li><strong>Senkronizasyon Sorunu Yok:</strong>Veriler her zaman cihazınızda mevcuttur</li></ul></div><div class="application-item"><h3>✅ Kontrol Avantajları</h3><ul><li><strong>Tam Sahiplik:</strong>Silme, dışa aktarma ve paylaşma işlemlerini siz kontrol edersiniz</li><li><strong>Hesap Kilitlenmesi Yok:</strong>Veriler özel bulut sistemlerinde sıkışıp kalmıyor</li><li><strong>Gerçek Gizlilik:</strong>"Verilerinizi koruyacağımıza söz veriyoruz" değil, "verilerinize asla sahip değiliz"</li></ul></div></div><p>Gizliliğe öncelik veren yaklaşım güç dinamiğini değiştirir: Yüklenen verilerinizi koruma konusunda şirketlere güvenmek yerine, ilk etapta mülkiyetten asla vazgeçmeyerek tam kontrolü elinizde tutarsınız.</p><h2 id="runanalytics-privacy">Run Analytics Gizliliğinizi Nasıl Korur?</h2><p>Run Analytics, sıfırdan gizliliğe öncelik veren mimariyi uygular. Her tasarım kararında veri koruma ve kullanıcı kontrolü önceliklendirilir ve gizlilik sonradan akla gelen bir düşünce olmaktan ziyade temel bir özellik haline gelir.</p><h3>%100 Yerel Veri İşleme</h3><p>Çalışan tüm analitik hesaplamaları iPhone'inizde gerçekleşir:</p><ul><li><strong><a href="/tr/crs/">Kritik Çalışma Hızı (CRS)</a>:</strong>Aerobik eşik hesaplamalarınız, test verileriniz kullanılarak yerel olarak işlenir</li><li><strong><a href="/tr/training-zones/">Eğitim Bölgeleri</a>:</strong>Tamamen cihaz üzerinde CRS'ten türetilen kişiselleştirilmiş yoğunluk bölgeleri (Bölge 1-7)</li><li><strong><a href="/tr/training-load/">Eğitim Stres Puanı (rTSS)</a>:</strong>Yerel CRS referansı kullanılarak hesaplanan antrenman yoğunluğu ölçümü</li><li><strong>CTL/ATL/TSB İzleme:</strong>Yerel egzersiz geçmişinizden hesaplanan Performans Yönetimi Tablosu ölçümleri (Kronik Egzersiz Yükü, Akut Egzersiz Yükü, Egzersiz Stres Dengesi)</li><li><strong><a href="/tr/running-performance-metrics/">Performans Metrikleri</a>:</strong>VO2max tahminleri, hız analizleri ve verimlilik trendleri cihazınızda analiz edilir</li><li><strong><a href="/tr/running-efficiency-biomechanics/">Biyomekanik Analiz</a>:</strong>Yerel olarak işlenen adım verimliliği, çalışma ekonomisi ve form ölçümleri</li></ul><p>Hiçbir hesaplama internet bağlantısı gerektirmez. Run Analytics sunucularına hiçbir veri aktarılmaz. Hiçbir harici işlem altyapısı bilgilerinize dokunmaz.</p><h3>Hesap Gerekmiyor</h3><p>Run Analytics, gizlilik açıkları oluşturan hesap altyapısının tamamını ortadan kaldırır:</p><div class="callout callout-info"><h3>🚫 Nelere ihtiyacımız yok:</h3><ul><li><strong>Kayıt Yok:</strong>Kayıt formu yok, kişisel bilgi toplama yok</li><li><strong>E-posta Adresi Yok:</strong>E-postanızı asla istemiyoruz veya saklamayız</li><li><strong>Giriş Yok:</strong>Yönetilecek veya potansiyel olarak tehlikeye atılacak şifre yok</li><li><strong>Profil Yok:</strong>Bilgilerinizi içeren genel veya özel profil yok</li><li><strong>Kullanıcı Adı Yok:</strong>Tamamen anonimlik; kim olduğunuzu bilmiyoruz</li></ul></div><p>Bu sadece kolaylık değil, aynı zamanda bir gizlilik garantisidir. Hesaplar mevcut olmadığında veri ihlalleri hesap bilgilerinizi açığa çıkaramaz. Hiçbir zaman kimlik vermediğinizde kimlik hırsızlığı imkansız hale gelir.</p><h3>Üçüncü Taraf Takibi Yok</h3><p>Birçok "ücretsiz" uygulama, reklam ağlarından ve analiz platformlarından gelen izleme SDK'ları (Yazılım Geliştirme Kitleri) aracılığıyla para kazanıyor. Bu üçüncü taraf kitaplıklar uygulama kullanımını izler, uygulamalar arasındaki etkinlikleri bağlar ve reklam profilleri oluşturur.</p><p>Run Analytics SIFIR üçüncü taraf takibi içerir:</p><ul><li><strong>Reklam SDK'sı yok:</strong>Facebook Pixel, Google Analytics veya reklam ağı izleyicisi yok</li><li><strong>Davranış Analizi Yok:</strong>Mixpanel, Genlik veya kullanım izleme hizmetleri yok</li><li><strong>Kilitlenme Raporlama Hizmeti Yok:</strong>Cihaz bilgilerini ileten üçüncü taraf kilitlenme analitiği yok</li><li><strong>Sosyal Medya Entegrasyonu Yok:</strong>"Facebook ile Giriş Yap" veya sosyal paylaşım SDK'sı yok</li></ul><p>Run Analytics için Apple'ın Uygulama Gizliliği etiketlerini kontrol ederek bunu doğrulayabilirsiniz; bunlar, çalışan uygulamalar arasında nadir görülen bir durum olan tam olarak sıfır veri toplama kategorisi gösterir.</p><h3>Yedeklemeler için Uçtan Uca Şifreleme</h3><p>Run Analytics verileriniz, Gelişmiş Veri Korumayı etkinleştirdiğinizde uçtan uca şifrelemeyle isteğe bağlı iCloud yedeklemesi sunan Apple Health'te bulunur:</p><div class="protocol-card"><h3>🔐 Şifreli Yedekleme Akışı:</h3><ol class="protocol-steps"><li><strong>Yerel Şifreleme:</strong>İletimden önce iPhone cihazınızda şifrelenen sağlık verileri</li><li><strong>Şifreli Aktarım:</strong>Veriler şifreli bağlantı üzerinden iCloud'a gider</li><li><strong>Şifreli Depolama:</strong>iCloud şifrelenmiş verileri saklıyor; Apple bunların şifresini çözemiyor</li><li><strong>Anahtar Kontrolü:</strong>Yalnızca kimlik bilgilerinize sahip cihazlar yedeklemelerin şifresini çözebilir</li></ol></div><p>Bu, aygıt geçişi veya yedekleme için iCloud yedeklemesini kullansanız bile çalışan analizlerinizin gizli kalacağı anlamına gelir; Apple bunlara erişemez ve aygıt parolanız olmadan resmi makamların talepleri de erişemez.</p><h2 id="competitor-comparison">Uygulamaların Gizlilik Karşılaştırmasını Çalıştırma</h2><p>Çalışan uygulamaların tümü verileri aynı şekilde işlemez. Platformlar arasındaki farkları anlamak, bilinçli gizlilik kararları vermenize yardımcı olur.</p><h3>Strava: Sosyal-Önce, Gizlilik-Son</h3><p>Strava, sosyal fitness takibine öncülük etti, ancak mimarisi gizlilikten ziyade paylaşıma öncelik veriyor:</p><div class="comparison-table-container"><table class="comparison-table"><tbody><tr><th>Bakış açısı</th><th>Strava Yaklaşımı</th><th>Gizlilik Etkisi</th></tr><tr><td><strong>Veri İşleme</strong></td><td>%100 bulut tabanlı sunucu işleme</td><td>Tüm antrenman verileri yüklendi ve süresiz olarak saklandı</td></tr><tr><td><strong>Hesap Gereksinimi</strong></td><td>E-posta ile zorunlu kayıt</td><td>Tüm faaliyetlere bağlı kişisel bilgiler</td></tr><tr><td><strong>Konum Verileri</strong></td><td>Sunucularda depolanan tam GPS izleri</td><td>Şirketin erişebileceği kapsamlı konum geçmişi</td></tr><tr><td><strong>Sosyal Özellikler</strong></td><td>Varsayılan genel profiller, etkinlik paylaşımı</td><td>Takipçilerin görebileceği antrenmanlar; vazgeçmek yapılandırma gerektirir</td></tr><tr><td><strong>Üçüncü Taraf Paylaşımı</strong></td><td>İş ortaklarıyla paylaşılan ve araştırma için toplanan veriler</td><td>Aşağı yöndeki veri kullanımı üzerinde sınırlı kontrol</td></tr><tr><td><strong>Gizlilik Kontrolleri</strong></td><td>Gizlilik bölgeleri başlangıç/bitiş konumlarını gizler</td><td>Konum maruziyetini azaltır ancak ortadan kaldırmaz</td></tr></tbody></table></div><p><strong>Özet:</strong>Strava'nın sosyal özellikleri, merkezi bulut altyapısı gerektirir ve bu da gerçek gizliliği imkansız hale getirir. Sosyal motivasyon isteyen rekabetçi koşucular için yararlı olsa da, gizlilik öncelikli ilkelerle bağdaşmaz.</p><h3>Garmin Connect: Buluta Bağlı</h3><p>Garmin kapsamlı eğitim analitiği sağlar ancak tamamen bulut işlemeye dayanır:</p><ul><li><strong>Sunucu Bağımlılığı:</strong>Tüm gelişmiş analizler (Eğitim Durumu, Eğitim Yükü, VO2max trendleri) Garmin'in bulut platformunu gerektirir</li><li><strong>Hesap Kilitleme:</strong>Yalnızca Garmin sunucularında depolanan geçmiş veriler; tüm geçmişi dışa aktarmak zordur</li><li><strong>GPS Parça Depolama:</strong>Her antrenmanın GPS verileri yüklendi ve saklandı</li><li><strong>Üçüncü Taraf Entegrasyonları:</strong>Garmin Connect, API bağlantıları aracılığıyla verileri çok sayıda fitness platformuyla paylaşır</li><li><strong>Sınırlı Gizlilik Seçenekleri:</strong>Etkinlikleri özel olarak ayarlayabilir ancak veriler hâlâ Garmin altyapısında bulunmaktadır</li></ul><p><strong>Özet:</strong>Garmin'in ekosistemi, kapsamlı egzersiz geçmişine sahip şirkete güvenmeyi gerektirir. Yalnızca yerel analizler için seçenek yoktur.</p><h3>Runalyze: Sunucu Tabanlı İşleme</h3><p>Runalyze gelişmiş eğitim analitiği sunar ancak geleneksel bulut mimarisini kullanır:</p><ul><li><strong>Yükleme Gerekli:</strong>Analiz için tüm antrenman dosyalarının (.fit, .tcx, .gpx) Runalyze sunucularına yüklenmesi gerekir</li><li><strong>Sunucu Depolama:</strong>Runalyze altyapısında saklanan eksiksiz egzersiz veritabanı</li><li><strong>Açık Kaynak Şeffaflığı:</strong>Kod açık kaynaktır ve gizlilik doğrulamasına olanak tanır; önemli bir avantaj</li><li><strong>Kendi Kendine Barındırma Seçeneği:</strong>İleri düzey kullanıcılar, eksiksiz veri kontrolü için kendi Runalyze örneğini barındırabilir</li><li><strong>Sınırlı Üçüncü Taraf Paylaşımı:</strong>Daha az ortaklık/veri paylaşımı anlaşmasıyla daha küçük platform</li></ul><p><strong>Özet:</strong>Açık kaynak modeli ve kendi kendine barındırma seçeneği nedeniyle ticari platformlardan daha iyi gizlilik, ancak standart barındırılan sürüm yine de veri yüklemeyi gerektirir.</p><h3>Run Analytics: Tasarımda Gizlilik Öncelikli</h3><p>Run Analytics temelde farklı bir mimari yaklaşım benimsiyor:</p><div class="callout callout-success"><h3>✅ Run Analytics Gizlilik Modeli:</h3><table class="comparison-table"><tbody><tr><th>Bakış açısı</th><th>Run Analytics Yaklaşımı</th><th>Gizlilik Avantajı</th></tr><tr class="highlight-row"><td><strong>Veri İşleme</strong></td><td>iPhone'inizde %100 yerel</td><td>Sıfır veri yükleme; tasarım gereği tam gizlilik</td></tr><tr class="highlight-row"><td><strong>Hesap Gereksinimi</strong></td><td>Yok—kayıt yok</td><td>Anonim kullanım; kim olduğunuzu bilmiyoruz</td></tr><tr class="highlight-row"><td><strong>Konum Verileri</strong></td><td>Cihazınızda Apple Health'te kalır</td><td>Sizden başka kimsenin erişebileceği konum geçmişi yok</td></tr><tr class="highlight-row"><td><strong>Sosyal Özellikler</strong></td><td>Yok—sosyal medya üzerinde mahremiyet</td><td>Paylaşma baskısı yok, halkın maruz kalma riski yok</td></tr><tr class="highlight-row"><td><strong>Üçüncü Taraf Paylaşımı</strong></td><td>İmkansız; verileriniz elimizde değil</td><td>Sıfır üçüncü taraf erişim riski</td></tr><tr class="highlight-row"><td><strong>Gizlilik Kontrolleri</strong></td><td>Tamamlandı; tüm verileri ve dışa aktarmaları siz kontrol edersiniz</td><td>Tam sahiplik ve kontrol</td></tr></tbody></table></div><p><strong>Özet:</strong>Run Analytics, herhangi bir veri yüklemeye gerek kalmadan gelişmiş eğitim analitiği (CRS, rTSS, CTL/ATL/TSB, kişiselleştirilmiş bölgeler) sağlar. Gizlilik ve işlevsellik, yerel işleme mimarisi aracılığıyla bir arada bulunur.</p><h2 id="location-privacy">Konum Verilerinizi Koruma</h2><p>Koşu antrenmanlarından elde edilen GPS izleri, yaşam kalıplarınız hakkında hassas bilgileri ortaya çıkaran kapsamlı konum geçmişleri oluşturarak konum gizliliğini koşucular için çok önemli hale getirir.</p><h3>GPS Takibinin Riski</h3><p>GPS ile izlenen her koşu, aşağıdakileri ortaya çıkaran ayrıntılı bir konum geçmişi oluşturur:</p><div class="warning-box"><strong>⚠️ Konum Verileri şunları ortaya koyuyor:</strong><ul><li><strong>Ev Adresi:</strong>Her gün aynı yerden başlayan koşular nerede yaşadığınızı belirler</li><li><strong>Çalışma Yeri:</strong>Öğle yemeği koşuları veya işten başlayan rotalar istihdam yerini açığa çıkarıyor</li><li><strong>Günlük Rutinler:</strong>Düzenli rotalar ve zamanlama kalıpları öngörülebilir davranış alışkanlıkları gösterir</li><li><strong>Devamsızlık Modelleri:</strong>Ev tabanlı koşulardaki boşluklar seyahat ettiğinizi veya uzakta olduğunuzu gösterir</li><li><strong>Sosyal Bağlantılar:</strong>Başkalarıyla yapılan koşular ilişkileri ve toplantı yerlerini ortaya çıkarabilir</li><li><strong>Özel Yerler:</strong>Tıbbi tesisler, ibadet yerleri veya diğer hassas yerler</li></ul></div><p>Bu bilgi, özellikle tek başına antrenman yapan koşucular için güvenlik endişeleri ve yıllara yayılan kapsamlı hareket geçmişine kimin erişebileceği konusunda gizlilik endişeleri yaratıyor.</p><h3>Gizlilik Bölgeleri ve Güvenlik</h3><p>Çalışan bazı uygulamalar, belirli adreslerin yakınındaki GPS izlerinin bölümlerini gizleyen "gizlilik bölgeleri" sunar:</p><ul><li><strong>Nasıl Çalışırlar:</strong>Hassas konumların çevresinde dairesel bölgeler (genellikle 200-500 m yarıçaplı) tanımlayın; Bölge yarıçapı içinde gizlenmiş GPS izi</li><li><strong>Sınırlamalar:</strong>Verileri yalnızca halka açık ekranlarda gizleyin; tam GPS verileri hâlâ sunuculara yükleniyor ve şirket tarafından erişilebilir durumda</li><li><strong>Yapılandırma Yükü:</strong>Her hassas konumun manuel olarak tanımlanmasını ve yapılandırılmasını gerektirir</li><li><strong>Yanlış Güvenlik:</strong>Tüm veriler bulut depolama alanında kalırken gizlilik izlenimi yaratır</li></ul><p>Gizlilik bölgeleri kısmi koruma sağlar ancak temel sorunu çözmez: GPS verileri sunuculara yüklendiğinde, konum geçmişinin tamamı kontrolünüz dışında kalır.</p><h3>Run Analytics Konum Özellikleri</h3><p>Run Analytics, konum verilerini Apple Health entegrasyonu aracılığıyla yönetir:</p><div class="callout callout-success"><h3>🗺️ Konum Gizliliği Özellikleri:</h3><ul><li><strong>GPS Yüklemesi Yok:</strong>Antrenmanlardan alınan konum verileri iPhone cihazınızdaki Apple Health'te kalır; hiçbir zaman Run Analytics sunucularına aktarılmaz</li><li><strong>Apple Health Koruması:</strong>iOS izinleri, uygulamanın Sağlık verilerine erişimi için açık yetkilendirme gerektirir</li><li><strong>Seçmeli Paylaşım:</strong>Antrenman verilerini dışa aktarırken, GPS izlerini dahil etmeyi veya yalnızca özet istatistikleri dışa aktarmayı SİZ seçersiniz</li><li><strong>Yerel Rota Analizi:</strong><a href="/tr/training-zones/">Eğitim bölgesi</a>hesaplamalar GPS verilerini gerektirmez; konum bilgisi olmadan Sağlık'tan tempo/kalp atış hızını kullanın</li><li><strong>Tam Kontrol:</strong>Antrenman konumu verilerini istediğiniz zaman Apple Health'ten silin; kaldırma işlemleri Run Analytics'e anında yansır</li></ul></div><p>Bu mimari, konum geçmişinizin özel kontrolünüz altında kalması anlamına gelir. Antrenörünüzle belirli bir antrenmanı paylaşmak mı istiyorsunuz? Sadece bu antrenmanı dışa aktarın. Rotaları açıklamadan eğitim trendlerini analiz etmek mi istiyorsunuz? CSV verilerini GPS koordinatları olmadan dışa aktarın. Tam esneklik, tam kontrol.</p><h2 id="gdpr-compliance">GDPR ve Veri Haklarınız</h2><p>Avrupa Birliği'nin Genel Veri Koruma Yönetmeliği (GDPR), kapsamlı veri koruma haklarını belirler ve diğer yargı bölgeleri de benzer gizlilik yasalarını benimsedikçe bu yönetmeliğin ilkeleri küresel olarak uygulanır.</p><h3>GDPR Neleri Garanti Ediyor?</h3><p>GDPR bireylere kişisel veriler üzerinde kapsamlı haklar tanır:</p><ul><li><strong>Erişim Hakkı:</strong>Şirketler hakkınızda tuttukları tüm verilerin kopyalarını sağlamalıdır</li><li><strong>Düzeltme Hakkı:</strong>Yanlış kişisel verileri düzeltin</li><li><strong>Silme Hakkı ("Unutulma Hakkı"):</strong>Belirli koşullar altında kişisel verilerin silinmesini gerektirmek</li><li><strong>Veri Taşınabilirliği Hakkı:</strong>Başka bir hizmete aktarmak için kişisel verileri makine tarafından okunabilir formatta alın</li><li><strong>İtiraz Hakkı:</strong>Pazarlama, profil oluşturma veya araştırma amacıyla işlemeye itiraz etme</li><li><strong>İşlemeyi Kısıtlama Hakkı:</strong>Şirketlerin verilerinizi kullanma şeklini sınırlayın</li></ul><p>Bu haklar teorik olarak kullanıcıları korur, ancak uygulanması şirketlerin uyumluluğuna bağlıdır ve hakların kullanılması genellikle karmaşık prosedürlerde gezinmeyi, yanıtlar için haftalarca beklemeyi ve yedeklemeler de dahil olmak üzere tüm sistemlerden verileri gerçekten silme konusunda şirketlere güvenmeyi gerektirir.</p><h3>Run Analytics Nasıl Uyumludur?</h3><p>Run Analytics, mimari basitlik sayesinde tam GDPR uyumluluğuna ulaşır:</p><div class="callout callout-info"><h3>📜 Gizliliğe Önem Veren Tasarım Sayesinde GDPR Uyumluluğu:</h3><ul><li><strong>Veri Toplama Yok = Tam Uyumluluk:</strong>GDPR kişisel verilerin işlenmesini düzenler; uygulamalar veri toplamadığında düzenlemeler geçerli olmaz</li><li><strong>Veri Sahibi Talebi Gerekmez:</strong>Sahip olmadığımız verilere erişim talebinde bulunamayız; hiç toplamadığımız verilerin silinmesini talep edemeyiz</li><li><strong>Onay Olmama Mekanizmaları:</strong>İzleme olmadığında çerez banner'larına veya onay formlarına gerek yoktur</li><li><strong>İhlal Bildirim Yükümlülüğü Yok:</strong>Sahip olmadığımız verileri ihlal edemeyiz</li><li><strong>Uluslararası Transfer Endişesi Yok:</strong>Veriler cihazınızda kalır; sınır ötesi veri aktarımı yapılmaz</li></ul></div><p>Bu, yasal manevralar yoluyla uyum değil; gizliliğe temel saygı yoluyla uyumdur. En güvenli veriler hiçbir zaman toplanmayan verilerdir.</p><h3>Haklarınızı Kullanmak</h3><p>Bulut tabanlı çalışan uygulamalarda GDPR haklarının kullanılması genellikle şunları gerektirir:</p><div class="protocol-card"><h3>📋 Tipik GDPR Talep Süreci:</h3><ol class="protocol-steps"><li><strong>Talebi Gönder:</strong>Veri erişimi/silme talebinde bulunmak için gizlilik ekibine e-posta gönderin veya hesap ayarlarını kullanın</li><li><strong>Kimlik Doğrulaması:</strong>Kimlik kanıtı sağlayın (güvenlik için)</li><li><strong>Bekleme Süresi:</strong>Şirketlerin yanıt vermek için 30 günü vardır (90 güne uzatılabilir)</li><li><strong>İnceleme Yanıtı:</strong>Veri dışa aktarma veya silme onayını alın</li><li><strong>Gerçek Uyum için Umut:</strong>Şirketin tüm sistemlerden, yedeklemelerden ve üçüncü taraf işlemcilerden verileri gerçekten sildiğine güvenin</li></ol></div><p>Run Analytics ile tüm bu süreci atlamış olursunuz: verileriniz zaten yalnızca cihazınızda bulunur. Her şeyi silmek mi istiyorsunuz? Uygulamayı ve Apple Health egzersiz verilerinizi silin. İhracat yapmak ister misiniz? Uygulamanın dışa aktarma işlevini istediğiniz zaman kullanın. Geçmiş verilere mi erişmek istiyorsunuz? Hepsi iPhone'inizde. Firmalardan izin istemeden anında, tam kontrol.</p><h2 id="health-data-privacy">Sağlık Bilgilerinizin Korunması</h2><p>Koşu performansı verileri sağlık bilgilerini oluşturur; kalp atış hızı ölçümleri, kondisyon düzeyleri ve egzersiz modelleri fiziksel durumunuzu ortaya çıkarır. Bu hassasiyet gizlilik hususlarının özel olarak dikkate alınmasını gerektirir.</p><h3>Sağlık Verileri Neleri Ortaya Çıkarıyor</h3><p>Analizleri çalıştırmak ayrıntılı sağlık bilgilerini ortaya çıkarır:</p><ul><li><strong>Kardiyovasküler Fitness:</strong>Kalp atış hızı verileri, VO2max tahminleri ve iyileşme modelleri kalp sağlığını gösterir</li><li><strong>Performans Trendleri:</strong>Azalan<a href="/tr/running-performance-metrics/">performans ölçümleri</a>hastalık, aşırı antrenman veya sağlık sorunlarının sinyali olabilir</li><li><strong>Eğitim Stresi:</strong><a href="/tr/training-load/">CTL/ATL/TSB izleme</a>Yorgunluk seviyelerini ve iyileşme kapasitesini ortaya çıkarır</li><li><strong>Biyomekanik Desenler:</strong>Adım asimetrileri veya verimlilik değişiklikleri yaralanmalara veya fiziksel sınırlamalara işaret edebilir</li><li><strong>Davranış Sağlığı:</strong>Bozulan antrenman modelleri veya ani değişiklikler stresi, zihinsel sağlığı veya yaşam koşullarını yansıtabilir</li></ul><h3>Sigorta ve İstihdam Kaygıları</h3><p>Sağlık verilerinin gizliliği yalnızca kişisel konforla ilgili değildir; bunun pratik sonuçları da vardır:</p><div class="warning-box"><strong>⚠️ Gerçek Dünya Kaygıları:</strong><ul><li><strong>Sigorta Ayrımcılığı:</strong>Sağlık sigortacıları giderek daha fazla "sağlıklı yaşam programları" için fitness verileri arıyor. Zayıf kondisyon ölçümleri teorik olarak primleri veya teminat kararlarını etkileyebilir</li><li><strong>İstihdam Taraması:</strong>Bazı işverenler belirli pozisyonlar için uygunluk kriterlerini kullanır. Kapsamlı sağlık verileri işe alım kararlarını bilgilendirebilir</li><li><strong>Hayat Sigortası Yazımı:</strong>Hayat sigortası şirketleri başvuru sürecinde kondisyon takip verilerini talep edebilir. Paylaşmayı reddetmek daha yüksek primleri tetikleyebilir</li><li><strong>Tıbbi Gizlilik:</strong>Ani performans düşüşlerini gösteren verileri çalıştırmak, gizli tutmayı tercih ettiğiniz tıbbi durumları ortaya çıkarabilir</li><li><strong>Yasal Keşif:</strong>Dava sırasında, karşı tarafın avukatı, yaralanma iddialarına itiraz etmek veya aktivite kalıpları oluşturmak için fitness uygulaması verilerini mahkemeye celp edebilir</li></ul></div><p>Bu senaryolar varsayımsal değil; fitness takibi her yerde yaygınlaştıkça ve veriye aç endüstriler herhangi bir avantaj arayışına girdikçe ortaya çıkan gerçeklerdir.</p><h3>Run Analytics Sağlık Verilerinin Kullanımı</h3><p>Run Analytics, Apple Health entegrasyonu ve yerel işleme yoluyla sağlık bilgilerini korur:</p><div class="callout callout-success"><h3>💚 Sağlık Verilerinin Korunması:</h3><ul><li><strong>Apple HealthKit Çerçevesi:</strong>Apple'ın sıkı gizlilik denetimlerine sahip güvenli Sağlık çerçevesi aracılığıyla erişilen tüm sağlık verileri</li><li><strong>Ayrıntılı İzinler:</strong>iOS, her veri türü (antrenmanlar, kalp atış hızı vb.) için açık yetkilendirme gerektirir; Run Analytics'in erişebileceği şeyleri tam olarak siz kontrol edersiniz</li><li><strong>Yalnızca Yerel İşleme:</strong>Cihazda hesaplanan kalp atış hızı analizi, performans hesaplamaları ve sağlık eğilimleri</li><li><strong>Sağlık Verisi İletimi Yok:</strong>Kalp atış hızınız, VO2max tahminleriniz ve kondisyon ölçümleriniz iPhone'inizden asla ayrılmaz</li><li><strong>Derhal Silme:</strong>iOS Ayarlarından istediğiniz zaman Sağlık verilerine uygulama erişimini kaldırın; tüm erişimi anında iptal eder</li><li><strong>Şifreli iCloud Yedekleme:</strong>Gelişmiş Veri Korumayı kullanırken Sağlık verileri uçtan uca şifrelemeyle yedeklenir</li></ul></div><p>Bu yaklaşım, sağlık bilgilerinizin, Apple'ın tüm Sağlık verileri için uyguladığı katı gizlilik korumalarının aynısı altında kalması anlamına gelir; üçüncü taraf uygulama şirketlerine ek maruz kalma söz konusu değildir.</p><h2 id="anonymous-analytics">Anonim Çalıştırma Analitiği</h2><p>Analitik yürütmede gerçek anonimlik, tüm kişisel tanımlayıcıların veri toplama ve işleme zincirinden kaldırılmasını gerektirir. Run Analytics bunu hesapsız mimarisiyle başarır.</p><h3>Hesap Yok, Profil Yok</h3><p>Çalışan uygulamaların çoğu kayıtla başlar; gelecekteki tüm etkinlikleri kimliğinize bağlayan bir hesap oluşturulur. Run Analytics bunu tamamen ortadan kaldırır:</p><ul><li><strong>Sıfır Kayıt:</strong>App Store'ten indirin ve hemen kullanmaya başlayın; form yok, kayıt işlemi yok</li><li><strong>Kişisel Bilgi Yok:</strong>Uygulama asla isim, e-posta, doğum tarihi, cinsiyet veya herhangi bir tanımlayıcı bilgi istemez</li><li><strong>Kullanıcı Kimliği Yok:</strong>Verileri oturumlar arasında bağlayan dahili kullanıcı kimlik numarası yok</li><li><strong>İzleme Jetonu Yok:</strong>Kullanım takibi için cihaz parmak izi veya benzersiz tanımlayıcı yok</li></ul><h3>E-postaya Gerek Yok</h3><p>E-posta adresleri, kimliğiniz ile uygulama kullanımınız arasında kalıcı bağlantılar oluşturur. Şunları sağlarlar:</p><ul><li><strong>Platformlar Arası Takip:</strong>E-posta adresleri, reklam ağları aracılığıyla uygulamalar ve web siteleri arasındaki etkinlikleri birbirine bağlar</li><li><strong>Veri Aracısı Eşleştirmesi:</strong>Veri komisyoncuları, profilleri zenginleştirmek için e-postayla ilişkili verileri satın alır</li><li><strong>Pazarlama Listeleri:</strong>E-posta listeleri satılıyor, paylaşılıyor veya üçüncü taraflara sızdırılıyor</li><li><strong>İhlal Maruziyeti:</strong>Veri ihlalleri, antrenman verilerinin yanı sıra e-posta adreslerini de açığa çıkarıyor</li></ul><p>Run Analytics hiçbir zaman e-posta adresi istemez; hiçbir kimlik bağlantısı, pazarlama listesi oluşturmaz ve ihlale maruz kalma riski oluşturmaz.</p><h3>Tam Anonimlik</h3><p>Hesap yok, takip yok ve yerel işlemenin birleşimi gerçek bir anonimlik yaratıyor:</p><div class="callout callout-info"><h3>👤 Anonim Kullanım Garantileri:</h3><ul><li><strong>Seni Tanımıyoruz:</strong>Run Analytics'in uygulamayı kimin kullandığı hakkında hiçbir fikri yok; isim, e-posta veya tanımlayıcı yok</li><li><strong>Profiller Oluşturulamıyor:</strong>Kullanıcı kimlikleri olmadan kullanım profilleri oluşturamayız veya zaman içindeki davranışları izleyemeyiz</li><li><strong>Hacklenemez:</strong>Bilgisayar korsanları şirket sunucularında bulunmayan verileri çalamaz</li><li><strong>Mahkemeye çağrılamaz:</strong>Kullanıcı verilerine yönelik resmi veya yasal talepler boş sonuçlar döndürüyor; elimizde bu bilgi yok</li><li><strong>Fikrimizi Değiştiremeyiz:</strong>İş uygulamaları değişse bile yararlanılabilecek geçmiş veriler mevcut değildir</li></ul></div><p>Bu, "size veri bağlamayacağız" şeklindeki anonimlik değil; "verileri size bağlayamayız çünkü elimizde hiçbir veri yok" şeklindeki yapısal anonimliktir.</p><h2 id="privacy-future">Gizliliğin Geleceği Öncelikli Fitness</h2><p>Gizlilik öncelikli çalışan analitikler, kullanıcıların veri toplama uygulamalarının farkına varması ve kişisel bilgilere saygılı alternatifler talep etmesiyle ortaya çıkan bir eğilimi temsil ediyor.</p><h3>Kullanıcı Farkındalığını Artırma</h3><p>Birçok faktör gizlilik bilincinin artmasına neden oluyor:</p><ul><li><strong>Yüksek Profilli İhlaller:</strong>Düzenli fitness uygulaması veri ihlalleri, bulut depolama riskleri konusunda farkındalığı artırıyor</li><li><strong>GDPR Eğitimi:</strong>Avrupa gizlilik düzenlemeleri küresel kullanıcı tabanını veri hakları konusunda eğitmiştir</li><li><strong>İzleme Sorunları:</strong>Kişisel verilerin reklam ve gözetimi nasıl körüklediğine dair artan farkındalık</li><li><strong>Sosyal Medya Yorgunluğu:</strong>Kullanıcılar, sürekli veri paylaşımının kendi çıkarlarına hizmet edip etmediğini giderek daha fazla sorguluyor</li><li><strong>Nesil Değişimi:</strong>Genç kullanıcılar veri toplama uygulamalarına karşı daha fazla şüpheci davranıyor</li></ul><h3>Apple'ın Gizlilik Liderliği</h3><p>Apple'ın gizlilik girişimleri, gizliliğe öncelik veren uygulamalar için altyapı oluşturuyor:</p><div class="application-grid"><div class="application-item"><h3>🍎Apple Gizlilik Özellikleri</h3><ul><li><strong>Uygulama Gizlilik Etiketleri:</strong>App Store beslenme etiketleri, uygulamaların tam olarak hangi verileri topladığını gösterir</li><li><strong>Uygulama İzleme Şeffaflığı:</strong>iOS, uygulamalar arası izleme için açık izin gerektirir</li><li><strong>Gizlilik Raporları:</strong>Hangi uygulamaların hassas verilere ne sıklıkta eriştiğini gösterir</li></ul></div><div class="application-item"><h3>🔐Platform Yetenekleri</h3><ul><li><strong>Cihaz Üzerinde İşleme:</strong>Neural Engine, gelişmiş yerel makine öğrenimine olanak sağlar</li><li><strong>HealthKit Güvenliği:</strong>Sıkı Sağlık veri erişim kontrolleri ve şifreleme</li><li><strong>Gelişmiş Veri Koruması:</strong>iCloud yedeklemeleri için uçtan uca şifreleme</li></ul></div><div class="application-item"><h3>📱 Ekosistem Faydaları</h3><ul><li><strong>Geliştirici Araçları:</strong>Gizliliğe öncelik veren uygulama geliştirmeyi mümkün kılan API'ler</li><li><strong>Kullanıcı Beklentileri:</strong>iOS kullanıcıları giderek daha fazla gizliliğe saygılı uygulamalar bekliyor</li><li><strong>Rekabet Avantajı:</strong>App Store'te gizlilik fark yaratan bir unsur haline geliyor</li></ul></div></div><p>Bu ekosistem evrimi, gizlilik öncelikli çalışan analitiği sadece mümkün kılmakla kalmıyor, aynı zamanda platformun gizlilik taahhütlerini anlayan iOS kullanıcıları tarafından giderek daha fazla bekleniyor.</p><h3>Düzenleyici Eğilimler</h3><p>Gizlilik düzenlemeleri dünya çapında genişlemeye devam ediyor:</p><ul><li><strong>GDPR (AB):</strong>Veri koruması için küresel düzenlemeleri etkileyen altın standart oluşturuldu</li><li><strong>CCPA/CPRA (Kaliforniya):</strong>Kaliforniya Tüketici Gizliliği Yasası, Kaliforniya'da ikamet edenlere veri hakları veriyor</li><li><strong>LGPD (Brezilya):</strong>Brezilya Genel Veri Koruma Yasası GDPR ilkelerini yansıtıyor</li><li><strong>PIPEDA (Kanada):</strong>Kişisel Bilgilerin Korunması ve Elektronik Belgeler Yasası</li><li><strong>Yeni Mevzuat:</strong>Düzinelerce ülke ve ABD eyaleti kapsamlı gizlilik yasalarını değerlendiriyor</li></ul><p>Mevzuat baskısı, gizliliğe öncelik veren tasarımı teşvik ediyor: veri toplamayan uygulamalar, karmaşık çoklu yetki alanı gereksinimlerini karşılayan bulut tabanlı alternatiflerle karşılaştırıldığında sıfır uyumluluk yüküyle karşı karşıya kalıyor.</p><h2 id="privacy-faqs">Yaygın Gizlilik Soruları</h2><h3>Bulut yapay zekası olmadan yerel analizler ne kadar doğrudur?</h3><p><strong>Doğruluk konuma değil metodolojiye bağlıdır.</strong>Bulut tabanlı uygulamalar doğası gereği daha iyi doğruluk sağlamaz; yalnızca verileri cihazınız yerine uzak sunucularda işlerler. Run Analytics, aşağıdakiler için aynı bilimsel olarak doğrulanmış formülleri kullanır:<a href="/tr/crs/">KORUMA0X</a>, <a href="/tr/training-load/">KORUMA14X</a>, Ve<a href="/tr/training-zones/">eğitim bölgeleri</a>bulut platformları olarak. Hesaplamalar aynıdır; sadece iPhone'inizin işlemcisi üzerinde çalışırlar. Modern iPhone'lar, on yıl önceki sunucu gruplarının tamamından daha fazla bilgi işlem gücü sağlıyor; yerel işleme, doğruluktan ödün vermeden anında sonuçlar sağlıyor.</p><h3>Antrenmanlarımı koçumla özel olarak paylaşabilir miyim?</h3><p><strong>Evet; paylaşımı SİZ kontrol edersiniz.</strong>Run Analytics esnek dışa aktarma seçenekleri sunar: bireysel antrenmanları veya tarih aralıklarını JSON, CSV, HTML veya PDF formatlarında dışa aktarın. Dışa aktarılan dosyaları e-posta, mesajlaşma uygulamaları veya tercih ettiğiniz bulut depolama alanı aracılığıyla koçunuza gönderin. Verilerin otomatik olarak sunucularla senkronize edildiği bulut platformlarının aksine, neyi paylaşacağınıza, ne zaman paylaşacağınıza ve kimin alacağına tam olarak siz karar verirsiniz. Antrenörünüz, tüm antrenman geçmişinize kalıcı erişim elde etmeden, analiz için ihtiyaç duyduğu antrenman verilerini alır.</p><h3>Cihazımı kaybedersem yedeklemeler ne olacak?</h3><p><strong>Gelişmiş Veri Koruma ile iCloud Health yedeklemesini kullanın.</strong>Apple Health, etkinleştirildiğinde iCloud'a yedeklenerek cihazın taşınmasını ve kurtarılmasını sağlar. Gelişmiş Veri Korumanın etkinleştirilmesi uçtan uca şifreleme ekler; Apple sağlık verilerinizin şifresini çözemez; bu verilere yalnızca kimliği doğrulanmış cihazlarınız erişebilir. Yeni bir iPhone ayarladığınızda ve iCloud yedeklemesinden geri yüklediğinizde, tüm Sağlık verileriniz (Run Analytics tarafından kullanılan egzersiz geçmişi dahil) otomatik olarak aktarılır. Bu, verileri üçüncü taraflara ifşa etmeden yedeklilik sağlar.</p><h3>Cihazımı kaybedersem ne olur?</h3><p><strong>Standart iOS güvenliği verilerinizi korur.</strong>iPhone'lar, Sağlık bilgileri dahil tüm verileri şifreler. Cihazınızı kaybederseniz: (1) Verileri tamamen silmek için Find My iPhone'i kullanarak uzaktan silin veya (2) Cihaz, şifrenizle kilitli kalır; verilere yetkisiz kullanıcılar erişemez. iCloud Health yedeklemesini etkinleştirdiyseniz yeni cihazınız tüm antrenman verilerini geri yükler. Yedekleme olmadan veriler kaybolur; ancak bu, gizlilik açısından ödün verilmesi gereken bir durumdur: tam kontrol, tam sorumluluk anlamına gelir. Artıklık için şifrelenmiş iCloud yedeklemelerini etkinleştirmeyi düşünün.</p><h3>Verileri harici analiz için dışa aktarabilir miyim?</h3><p><strong>Evet—birden fazla format seçeneği.</strong>Run Analytics dört dışa aktarma formatı sağlar: (1)<strong>KORUMA25X</strong>programatik analiz ve geliştirici araçları için, (2)<strong>KORUMA26X</strong>Excel/Numbers/Google E-Tablolar'da e-tablo analizi için, (3)<strong>KORUMA27X</strong>grafikli okunabilir raporlar için ve (4)<strong>KORUMA28X</strong>Koç paylaşımı veya yazdırma için. Belirli tarih aralıklarını seçin, hangi metriklerin dahil edileceğini seçin ve iOS paylaşım sayfası aracılığıyla herhangi bir hedefe aktarın. Verileriniz taşınabilir kalır; özel formatlar yoktur, dışa aktarma kısıtlamaları yoktur, tercih ettiğiniz analiz araçları için tam esneklik sağlar.</p><h2 id="conclusion">Sonuç: Ödün Vermeyen Gizlilik</h2><p>Akıllı eğitim, gizlilikten ödün vermeyi gerektirmez. Modern iPhone yetenekleri, yerel veri işleme yoluyla gelişmiş analizlerin çalıştırılmasına olanak tanır; bulut tabanlı platformlarla aynı gelişmiş ölçümleri sunarken hassas bilgilerinizi özel kontrolünüz altında tutar.</p><div class="callout callout-success"><h3>✅ Gizliliği Ön Planda Çalıştırmanın Analitik Avantajları:</h3><ul><li><strong>Tam Gizlilik:</strong>Antrenman verileriniz, GPS izleriniz, kalp atış hızı ölçümleriniz ve performans eğilimleriniz asla cihazınızdan ayrılmaz</li><li><strong>Tam İşlevsellik:</strong><a href="/tr/crs/">CRS testi</a>, <a href="/tr/training-zones/">kişiselleştirilmiş eğitim bölgeleri</a>, <a href="/tr/training-load/">rTSS/CTL/ATL/TSB izleme</a>ve kapsamlı analizler (tümü yerel olarak işlenir)</li><li><strong>Sıfır Hesaplar:</strong>Kayıt yok, e-posta yok, şifre yok; tam anonimlikle hemen kullanmaya başlayın</li><li><strong>Kontrolünüz:</strong>Neyin dışa aktarılacağına, ne zaman paylaşılacağına ve kimin alacağına karar verin; tam veri sahipliği</li><li><strong>GDPR Uyumlu:</strong>Gizliliğe öncelik veren mimari sayesinde mükemmel uyumluluk; toplamadığımız verilerle ilgili düzenlemeleri ihlal edemeyiz</li><li><strong>Elma Entegrasyonu:</strong>HealthKit güvenliği ve şifreli yedeklemeler dahil iOS gizlilik özelliklerinden yararlanır</li></ul></div><p>Gizlilik ve performans arasındaki seçim yanlıştır. Run Analytics her ikisine de sahip olabileceğinizi kanıtlar: tam gizlilik korumasıyla hesaplanan, bilimsel olarak doğrulanmış eğitim ölçümleri. Sizin verileriniz, sizin cihazınız, sizin seçiminiz.</p></article></div></section><section class="section section-alt"><div class="container container-narrow"><h2>Gizlilik SSS'leri</h2><div class="faq-section" itemscope="" itemtype="https://schema.org/FAQPage"><div class="faq-item" itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question"><h3 itemprop="name">Run Analytics gerçekten özel mi?</h3><div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer"><div itemprop="text"><p>Evet—mimari tasarım sayesinde %100 özel. Run Analytics, tüm verileri yerel olarak iPhone'inizde işler; egzersiz bilgilerini, GPS izlerini veya sağlık ölçümlerini asla harici sunuculara yüklemez. Uygulama hiçbir hesap gerektirmez, hiçbir kişisel bilgi toplamaz ve sıfır üçüncü taraf izleme SDK'sı içerir. Sıfır veri toplama kategorisi gösteren Apple'ın Uygulama Gizliliği etiketlerini kontrol ederek bunu doğrulayabilirsiniz. Bu, güven yoluyla sağlanan gizlilik değildir ("verilerinizi koruyacağımıza söz veriyoruz") - mimari yoluyla sağlanan gizliliktir ("verilerinize asla sahip değiliz").</p></div></div></div><div class="faq-item" itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question"><h3 itemprop="name">Yerel işleme nasıl çalışır?</h3><div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer"><div itemprop="text"><p><strong>Yerel işleme</strong>tüm hesaplamaların uzak sunucular yerine iPhone işlemcinizde gerçekleştirileceği anlamına gelir. Run Analytics, Apple Health'ten (zaten cihazınızda yerel olarak depolanan) egzersiz verilerini okur,<a href="/tr/crs/">KORUMA0X</a>, <a href="/tr/training-load/">rTSS, CTL/ATL/TSB</a>, Ve<a href="/tr/training-zones/">eğitim bölgeleri</a>iPhone'inizin CPU'sunu kullanır ve sonuçları uygulamanın yerel veritabanında saklar. İnternet üzerinden işlenmek üzere hiçbir veri iletilmez. Modern iPhone'lar, bulut bağımlılığı olmadan gelişmiş analizler için fazlasıyla bilgi işlem gücü sağlar. Yükleme/indirme gecikmesi olmadığı için sonuçlar anında görünür.</p></div></div></div><div class="faq-item" itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question"><h3 itemprop="name">Run Analytics hangi verileri toplar?</h3><div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer"><div itemprop="text"><p><strong>Hiçbiri.</strong>Run Analytics sıfır veri toplar. Uygulama, Apple Health'ten antrenman bilgilerini okur (açık izninizle) ancak harici sunuculara aktarmadan yerel olarak işler. Hesap yok, e-posta adresi koleksiyonunun olmadığı anlamına gelir. İzleme SDK'sının olmaması, davranışsal veri toplamanın olmayacağı anlamına gelir. Analiz hizmetlerinin olmaması, kullanım istatistiklerinin olmadığı anlamına gelir. Bulut işleme olmaması, antrenman yüklemesi yapılmaması anlamına gelir. Uygulamanın kelimenin tam anlamıyla veri toplamaya yönelik teknik kapasitesi yoktur; bu verileri alacak sunucu uç noktaları yoktur. Doğrulama için App Store'teki Uygulama Gizliliği etiketini kontrol edin: sıfır veri toplama kategorisi.</p></div></div></div><div class="faq-item" itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question"><h3 itemprop="name">Run Analytics'i kullanmak için bir hesaba ihtiyacım var mı?</h3><div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer"><div itemprop="text"><p>Hayır—kesinlikle hesap gerekmez. App Store'ten Run Analytics'i indirin ve hemen kullanmaya başlayın. Kayıt formu yok, e-posta doğrulaması yok, şifre oluşturma yok, profil kurulumu yok. Uygulamanın hesap altyapısı bile yok; oturum açacak bir şey olmadığından oturum açma ekranı yok. Bu hem kolaylık (anında erişim) hem de gizlilik (tam anonimlik) sağlar. Kullanımınız, herhangi bir harici sistemle kimlik bağlantısı olmaksızın tamamen cihazınıza özgü kalır.</p></div></div></div><div class="faq-item" itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question"><h3 itemprop="name">Run Analytics verilerimi satabilir mi?</h3><div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer"><div itemprop="text"><p><strong>İmkansız; satacak verileriniz elimizde yok.</strong>Run Analytics asla egzersiz verilerinizi, GPS izlerinizi veya sağlık ölçümlerinizi sunuculara yüklemez. Tüm işlemler iPhone cihazınızda yerel olarak gerçekleşir. Şirketler yalnızca sahip oldukları verileri satabiliyor ve biz sıfır kullanıcı verisine sahibiz. Kullanıcı antrenmanlarının veri tabanı yok, GPS izlerinin sunucuda saklanması yok, sağlık bilgilerinin toplanması yok. Bu mimari karar, veri satışını yalnızca politika açısından yasaklamakla kalmayıp, teknik olarak da imkansız hale getiriyor. Bu mümkün olan en güçlü garantidir: sahip olmadığımız şeyi satamayız.</p></div></div></div><div class="faq-item" itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question"><h3 itemprop="name">Konum verilerim güvende mi?</h3><div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer"><div itemprop="text"><p>Evet; konum verileri yalnızca Apple Health'teki iPhone cihazınızda kalır. Run Analytics hiçbir zaman GPS izlerini veya koordinatlarını harici sunuculara yüklemez. Uygulama, mesafeyi ve tempoyu hesaplamak için Sağlık'tan konum verilerini okuyabilir (izniniz doğrultusunda) ancak tüm işlemler yerel olarak gerçekleşir. iOS şifrelemesi ve erişim kontrolleri ile korunan Apple Health'te GPS izleri kontrolünüz altında kalır. Antrenman verilerini dışa aktardığınızda, konum bilgilerinin dahil edilip edilmeyeceğini veya yalnızca özet istatistiklerin paylaşılıp paylaşılmayacağını SİZ seçersiniz. Yalnızca yerel mimariyle eksiksiz konum gizliliği.</p></div></div></div><div class="faq-item" itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question"><h3 itemprop="name">Peki ya iCloud yedeklemeleri?</h3><div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer"><div itemprop="text"><p>iOS ayarlarında Sağlık yedeklemeyi etkinleştirdiğinizde Apple Health verileri iCloud'a yedeklenir. Maksimum gizlilik için etkinleştirin<strong>Gelişmiş Veri Koruması</strong>—bu, Sağlık yedeklemelerine uçtan uca şifreleme ekler; bu, Apple'ın verilerinizin şifresini çözemeyeceği anlamına gelir (bu verilere yalnızca kimliği doğrulanmış cihazlarınız erişebilir). iCloud yedeklemesi, doğru şekilde yapılandırıldığında gizlilikten ödün vermeden cihazın kurtarılmasını ve taşınmasını sağlar. Run Analytics verileri Apple ekosisteminin gizlilik korumaları kapsamında kalır; ayrı bir bulut hizmeti yoktur, üçüncü taraf yedekleme sağlayıcıları yoktur, iOS güvenlik modeliyle tam entegrasyon vardır.</p></div></div></div><div class="faq-item" itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question"><h3 itemprop="name">Bunun Strava'dan farkı nedir?</h3><div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer"><div itemprop="text"><p><strong>Temelde farklı mimariler:</strong>Strava, işlenmek üzere tüm egzersiz verilerinin sunucularına yüklenmesini gerektirir; hepsi Strava'nın bulut altyapısında depolanan GPS izleri, kalp atış hızı, performans ölçümleri. Strava, hesap kaydı gerektirir (e-posta adresi), sosyal özellikler sunar (herkese açık profiller) ve verileri üçüncü taraf ortaklarla paylaşır. Run Analytics, iPhone'inizde her şeyi yerel olarak işler, hesap gerektirmez, sıfır veri yükler ve hiçbir sosyal özellik sunmaz. Strava sosyal bağlantıya öncelik veriyor; Run Analytics gizliliğe öncelik verir. Her ikisi de eğitim analitiği sağlıyor ancak tamamen zıt mimari yaklaşımlarla. Bizimkilere bakın<a href="#competitor-comparison">detaylı karşılaştırma</a>üstünde.</p></div></div></div><div class="faq-item" itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question"><h3 itemprop="name">Gizlilik doğruluğu azaltır mı?</h3><div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer"><div itemprop="text"><p>Hayır; gizliliği ön planda tutan mimari doğruluktan ödün vermez.<a href="/tr/running-performance-metrics/">Performans metrikleri</a>işlem yerine değil, hesaplama metodolojisine bağlıdır. Run Analytics, aşağıdakiler için aynı bilimsel olarak doğrulanmış formülleri kullanır:<a href="/tr/crs/">Kritik Koşu Hızı</a>, <a href="/tr/training-load/">Antrenman Stres Puanı</a>ve bulut tabanlı platformlar olarak eğitim bölgesi hesaplaması. İster uzak sunucularda ister iPhone'inizde yürütülsün, matematik aynıdır; yerel işleme, ağ gecikmeleri olmadan anında gerçekleşir. Modern iOS cihazları, daha önce sunucu çiftlikleri gerektiren analizler için muazzam bilgi işlem gücü sağlar. Yerel işleme sayesinde gizlilik ve doğruluk mükemmel bir şekilde bir arada bulunur.</p></div></div></div><div class="faq-item" itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question"><h3 itemprop="name">Verilerimi dışa aktarabilir miyim?</h3><div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer"><div itemprop="text"><p>Evet—tam ihracat esnekliği. Run Analytics birden fazla dışa aktarma formatı sağlar:<strong>KORUMA25X</strong>(programatik analiz için),<strong>KORUMA26X</strong>(e-tablolar için),<strong>KORUMA27X</strong>(okunabilir raporlar için) ve<strong>KORUMA28X</strong>(antrenör paylaşımı için). Belirli tarih aralıklarını seçin, hangi ölçümlerin dahil edileceğini seçin, GPS verilerinin dahil edilip edilmeyeceğine karar verin ve iOS paylaşım sayfası aracılığıyla herhangi bir hedefe (e-posta, bulut depolama, mesajlaşma uygulamaları) aktarın. Verileriniz, herhangi bir özel format veya satıcıya bağlı kalma olmaksızın taşınabilir kalır. Tercih ettiğiniz araçları kullanarak yedekleme, koç paylaşımı veya harici analiz için istediğiniz zaman dışa aktarın.</p></div></div></div></div></div></section><section class="section"><div class="container container-narrow"><h2>Çalışan Veri Gizliliğinizin Kontrolünü Elinize Alın</h2><div class="callout callout-success"><h3>Eğitime Tam Gizlilikle Başlayın</h3><p>Gizliliğinizden ödün vermeden gelişmiş çalışma analizlerini deneyimleyin. Run Analytics, gelişmiş eğitim ölçümlerine VE eksiksiz veri kontrolüne sahip olabileceğinizi kanıtlar:</p><ul><li><strong>CRS'inizi Test Edin:</strong>Ölçüm<a href="/tr/crs/">Kritik Koşu Hızı</a>ve cihazınızda %100 yerel olarak kişiselleştirilmiş eğitim bölgeleri oluşturun</li><li><strong>Antrenman Yükünü Takip Edin:</strong>Monitör<a href="/tr/training-load/">rTSS, CTL, ATL ve TSB</a>antrenman stresini optimize etmek ve aşırı antrenmanı önlemek için - tümü özel olarak hesaplanır</li><li><strong>Performansı Analiz Edin:</strong>İzlemek<a href="/tr/running-performance-metrics/">VO2max, eşik temposu ve koşu ekonomisi</a>bulut yüklemeleri olmadan</li><li><strong>Yapı Eğitim Bölgeleri:</strong>Kullanmak<a href="/tr/training-zones-intensity/">7 bilime dayalı eğitim bölgesi</a>hassas egzersiz yoğunluğu kontrolü için</li><li><strong>Run Analytics'i indirin:</strong><a href="/tr/">7 günlük ücretsiz denemenizi başlatın</a>ve gizlilik öncelikli çalışan analitiği bugün deneyimleyin</li></ul></div><div class="mt-xl text-center"><a class="btn btn-primary" href="https://apps.apple.com/es/app/runanalytics/id6754524015">Run Analytics'i İndirin (7 Günlük Ücretsiz Deneme) →</a><a class="btn btn-secondary" href="/tr/crs/">CRS'inizi Hesaplayın →</a></div></div></section></main><footer class="site-footer"><div class="container"><div class="footer-top"><div class="footer-brand-section"><h2>Run Analytics</h2><p>Track Critical Running Speed, Training Stress Score, and performance metrics with Run Analytics. Science-based iOS app for runners, triathletes &amp; coaches. 7-day free trial.</p></div><div class="footer-download"><h3 class="footer-heading">Download</h3><div class="footer-badges"><a href="https://apps.apple.com/us/app/run-analytics/id6754524015" target="_blank" rel="noopener"
+                        aria-label="Download on the App Store"><img src="../../assets/images/badge-app-store.svg"
                             alt="Download on the App Store" width="135"
-                            height="40" loading="lazy">
-                    </a>
-                    
-                    
-                    <a href="https://play.google.com/store/apps/details?id=com.arnohealth.runanalytics" target="_blank" rel="noopener"
-                        aria-label="Get it on Google Play">
-                        <img src="../../assets/images/badge-google-play.svg"
+                            height="40" loading="lazy"></a><a href="https://play.google.com/store/apps/details?id=com.arnohealth.runanalytics" target="_blank" rel="noopener"
+                        aria-label="Get it on Google Play"><img src="../../assets/images/badge-google-play.svg"
                             alt="Get it on Google Play" width="135"
-                            height="40" loading="lazy">
-                    </a>
-                    
-                </div>
-            </div>
-            
-        </div>
-
-        
-        <div class="footer-languages">
-            <h3 class="footer-heading">Available in</h3>
-            <div class="lang-grid">
-                
-                <a href="/af/" class="lang-link"
+                            height="40" loading="lazy"></a></div></div></div><div class="footer-languages"><h3 class="footer-heading">Available in</h3><div class="lang-grid"><a href="/af/" class="lang-link"
                     hreflang="af" >
                     Afrikaans
-                </a>
-                
-                <a href="/am/" class="lang-link"
+                </a><a href="/am/" class="lang-link"
                     hreflang="am" >
                     አማርኛ
-                </a>
-                
-                <a href="/ar/" class="lang-link"
+                </a><a href="/ar/" class="lang-link"
                     hreflang="ar" dir="rtl" >
                     العربية
-                </a>
-                
-                <a href="/bg/" class="lang-link"
+                </a><a href="/bg/" class="lang-link"
                     hreflang="bg" >
                     Български
-                </a>
-                
-                <a href="/bn/" class="lang-link"
+                </a><a href="/bn/" class="lang-link"
                     hreflang="bn" >
                     বাংলা
-                </a>
-                
-                <a href="/ca/" class="lang-link"
+                </a><a href="/ca/" class="lang-link"
                     hreflang="ca" >
                     Català
-                </a>
-                
-                <a href="/cs/" class="lang-link"
+                </a><a href="/cs/" class="lang-link"
                     hreflang="cs" >
                     Čeština
-                </a>
-                
-                <a href="/da/" class="lang-link"
+                </a><a href="/da/" class="lang-link"
                     hreflang="da" >
                     Dansk
-                </a>
-                
-                <a href="/de/" class="lang-link"
+                </a><a href="/de/" class="lang-link"
                     hreflang="de" >
                     Deutsch
-                </a>
-                
-                <a href="/el/" class="lang-link"
+                </a><a href="/el/" class="lang-link"
                     hreflang="el" >
                     Ελληνικά
-                </a>
-                
-                <a href="/en/" class="lang-link"
+                </a><a href="/en/" class="lang-link"
                     hreflang="en" >
                     English
-                </a>
-                
-                <a href="/es/" class="lang-link"
+                </a><a href="/es/" class="lang-link"
                     hreflang="es" >
                     Español
-                </a>
-                
-                <a href="/et/" class="lang-link"
+                </a><a href="/et/" class="lang-link"
                     hreflang="et" >
                     Eesti
-                </a>
-                
-                <a href="/fa/" class="lang-link"
+                </a><a href="/fa/" class="lang-link"
                     hreflang="fa" dir="rtl" >
                     فارسی
-                </a>
-                
-                <a href="/fi/" class="lang-link"
+                </a><a href="/fi/" class="lang-link"
                     hreflang="fi" >
                     Suomi
-                </a>
-                
-                <a href="/fr/" class="lang-link"
+                </a><a href="/fr/" class="lang-link"
                     hreflang="fr" >
                     Français
-                </a>
-                
-                <a href="/gu/" class="lang-link"
+                </a><a href="/gu/" class="lang-link"
                     hreflang="gu" >
                     ગુજરાતી
-                </a>
-                
-                <a href="/ha/" class="lang-link"
+                </a><a href="/ha/" class="lang-link"
                     hreflang="ha" >
                     Hausa
-                </a>
-                
-                <a href="/he/" class="lang-link"
+                </a><a href="/he/" class="lang-link"
                     hreflang="he" dir="rtl" >
                     עברית
-                </a>
-                
-                <a href="/hi/" class="lang-link"
+                </a><a href="/hi/" class="lang-link"
                     hreflang="hi" >
                     हिन्दी
-                </a>
-                
-                <a href="/hr/" class="lang-link"
+                </a><a href="/hr/" class="lang-link"
                     hreflang="hr" >
                     Hrvatski
-                </a>
-                
-                <a href="/hu/" class="lang-link"
+                </a><a href="/hu/" class="lang-link"
                     hreflang="hu" >
                     Magyar
-                </a>
-                
-                <a href="/id/" class="lang-link"
+                </a><a href="/id/" class="lang-link"
                     hreflang="id" >
                     Bahasa Indonesia
-                </a>
-                
-                <a href="/is/" class="lang-link"
+                </a><a href="/is/" class="lang-link"
                     hreflang="is" >
                     Íslenska
-                </a>
-                
-                <a href="/it/" class="lang-link"
+                </a><a href="/it/" class="lang-link"
                     hreflang="it" >
                     Italiano
-                </a>
-                
-                <a href="/ja/" class="lang-link"
+                </a><a href="/ja/" class="lang-link"
                     hreflang="ja" >
                     日本語
-                </a>
-                
-                <a href="/km/" class="lang-link"
+                </a><a href="/km/" class="lang-link"
                     hreflang="km" >
                     ភាសាខ្មែរ
-                </a>
-                
-                <a href="/kn/" class="lang-link"
+                </a><a href="/kn/" class="lang-link"
                     hreflang="kn" >
                     ಕನ್ನಡ
-                </a>
-                
-                <a href="/ko/" class="lang-link"
+                </a><a href="/ko/" class="lang-link"
                     hreflang="ko" >
                     한국어
-                </a>
-                
-                <a href="/lt/" class="lang-link"
+                </a><a href="/lt/" class="lang-link"
                     hreflang="lt" >
                     Lietuvių
-                </a>
-                
-                <a href="/lv/" class="lang-link"
+                </a><a href="/lv/" class="lang-link"
                     hreflang="lv" >
                     Latviešu
-                </a>
-                
-                <a href="/ms/" class="lang-link"
+                </a><a href="/ms/" class="lang-link"
                     hreflang="ms" >
                     Bahasa Melayu
-                </a>
-                
-                <a href="/my/" class="lang-link"
+                </a><a href="/my/" class="lang-link"
                     hreflang="my" >
                     မြန်မာစာ
-                </a>
-                
-                <a href="/nb/" class="lang-link"
+                </a><a href="/nb/" class="lang-link"
                     hreflang="nb" >
                     Norsk Bokmål
-                </a>
-                
-                <a href="/nl/" class="lang-link"
+                </a><a href="/nl/" class="lang-link"
                     hreflang="nl" >
                     Nederlands
-                </a>
-                
-                <a href="/pl/" class="lang-link"
+                </a><a href="/pl/" class="lang-link"
                     hreflang="pl" >
                     Polski
-                </a>
-                
-                <a href="/pt/" class="lang-link"
+                </a><a href="/pt/" class="lang-link"
                     hreflang="pt" >
                     Português
-                </a>
-                
-                <a href="/pt-br/" class="lang-link"
+                </a><a href="/pt-br/" class="lang-link"
                     hreflang="pt-br" >
                     Português (Brasil)
-                </a>
-                
-                <a href="/ro/" class="lang-link"
+                </a><a href="/ro/" class="lang-link"
                     hreflang="ro" >
                     Română
-                </a>
-                
-                <a href="/ru/" class="lang-link"
+                </a><a href="/ru/" class="lang-link"
                     hreflang="ru" >
                     Русский
-                </a>
-                
-                <a href="/sk/" class="lang-link"
+                </a><a href="/sk/" class="lang-link"
                     hreflang="sk" >
                     Slovenčina
-                </a>
-                
-                <a href="/sl/" class="lang-link"
+                </a><a href="/sl/" class="lang-link"
                     hreflang="sl" >
                     Slovenščina
-                </a>
-                
-                <a href="/sr/" class="lang-link"
+                </a><a href="/sr/" class="lang-link"
                     hreflang="sr" >
                     Srpski
-                </a>
-                
-                <a href="/sv/" class="lang-link"
+                </a><a href="/sv/" class="lang-link"
                     hreflang="sv" >
                     Svenska
-                </a>
-                
-                <a href="/sw/" class="lang-link"
+                </a><a href="/sw/" class="lang-link"
                     hreflang="sw" >
                     Kiswahili
-                </a>
-                
-                <a href="/ta/" class="lang-link"
+                </a><a href="/ta/" class="lang-link"
                     hreflang="ta" >
                     தமிழ்
-                </a>
-                
-                <a href="/te/" class="lang-link"
+                </a><a href="/te/" class="lang-link"
                     hreflang="te" >
                     తెలుగు
-                </a>
-                
-                <a href="/th/" class="lang-link"
+                </a><a href="/th/" class="lang-link"
                     hreflang="th" >
                     ไทย
-                </a>
-                
-                <a href="/tl/" class="lang-link"
+                </a><a href="/tl/" class="lang-link"
                     hreflang="tl" >
                     Tagalog
-                </a>
-                
-                <a href="/tr/" class="lang-link active"
+                </a><a href="/tr/" class="lang-link active"
                     hreflang="tr" >
                     Türkçe
-                </a>
-                
-                <a href="/uk/" class="lang-link"
+                </a><a href="/uk/" class="lang-link"
                     hreflang="uk" >
                     Українська
-                </a>
-                
-                <a href="/ur/" class="lang-link"
+                </a><a href="/ur/" class="lang-link"
                     hreflang="ur" dir="rtl" >
                     اردو
-                </a>
-                
-                <a href="/vi/" class="lang-link"
+                </a><a href="/vi/" class="lang-link"
                     hreflang="vi" >
                     Tiếng Việt
-                </a>
-                
-                <a href="/yo/" class="lang-link"
+                </a><a href="/yo/" class="lang-link"
                     hreflang="yo" >
                     Yorùbá
-                </a>
-                
-                <a href="/zh/" class="lang-link"
+                </a><a href="/zh/" class="lang-link"
                     hreflang="zh" >
                     中文
-                </a>
-                
-            </div>
-        </div>
-
-        <div class="footer-divider"></div>
-
-        
-        <div class="footer-bottom">
-            <p class="copyright">
+                </a></div></div><div class="footer-divider"></div><div class="footer-bottom"><p class="copyright">
                 &copy; 2026 Run Analytics. Tüm hakları saklıdır
-            </p>
-            <ul class="footer-legal">
-                <li><a href="/tr/privacy/">Gizlilik</a></li>
-                <li><a href="/tr/terms/">Şartlar</a></li>
-            </ul>
-        </div>
-    </div>
-</footer>
-
-  
-  <div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="Cookie consent" aria-live="polite">
-    <div class="cookie-banner-content">
-        <div>
-            <p>Bu web sitesi deneyiminizi geliştirmek için çerezler kullanır.</p>
-            <a href="/tr/privacy/" class="text-sm">Daha fazla bilgi</a>
-        </div>
-        <div class="cookie-banner-actions">
-            <button id="cookie-decline" class="btn btn-secondary btn-small">Reddet</button>
-            <button id="cookie-accept" class="btn btn-primary btn-small">Kabul Et</button>
-        </div>
-    </div>
-</div>
-
-  
-  <script src="../../assets/js/core.min.js?v=8aef43d1" defer></script>
-  <script src="../../assets/js/search.min.js?v=8aef43d1" defer></script>
-  
-
-  
-  
-  <script src="../../assets/js/analytics.min.js" data-ga-id="G-Y138VB4523" defer></script>
-  
-
-  
-  <script>if ('serviceWorker' in navigator) { navigator.serviceWorker.register('../../sw.js') }</script>
-</body>
-
-</html>
+            </p><ul class="footer-legal"><li><a href="/tr/privacy/">Gizlilik</a></li><li><a href="/tr/terms/">Şartlar</a></li></ul></div></div></footer><div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="Cookie consent" aria-live="polite"><div class="cookie-banner-content"><div><p>Bu web sitesi deneyiminizi geliştirmek için çerezler kullanır.</p><a href="/tr/privacy/" class="text-sm">Daha fazla bilgi</a></div><div class="cookie-banner-actions"><button id="cookie-decline" class="btn btn-secondary btn-small">Reddet</button><button id="cookie-accept" class="btn btn-primary btn-small">Kabul Et</button></div></div></div><script src="../../assets/js/core.min.js?v=e899af207631" defer></script><script src="../../assets/js/search.min.js?v=e899af207631" defer></script><script src="../../assets/js/analytics.min.js" data-ga-id="G-Y138VB4523" defer></script><script>if ('serviceWorker' in navigator) { navigator.serviceWorker.register('../../sw.js') }</script></body></html>
