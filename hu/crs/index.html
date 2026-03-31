@@ -1,61 +1,251 @@
-<!DOCTYPE html><html lang="hu" dir="ltr"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap"
-    rel="stylesheet"><title>Kritikus Futási Sebesség (CRS): Útmutató a küszöbsebességhez</title><meta name="description" content="Értse meg a Kritikus Futási Sebesség mögötti tudományt. Tanulja meg, hogyan tesztelje CRS-ét, használja kalkulátorunkat, és eddzen hatékonyabban."><meta name="author" content="AnalyticsZone Team"><meta name="keywords" content="kritikus futási sebesség, CRS futás, laktátküszöb, futósebesség kalkulátor, küszöbteszt futás"><link rel="canonical" href="https://run.analyticszone.app/hu/crs/"><meta property="article:published_time" content="2025-01-27T10:00:00Z"><meta property="article:modified_time" content="2026-01-04T14:30:00Z"><meta property="article:author" content="AnalyticsZone Team"><meta property="og:type" content="article"><meta property="og:url" content="https://run.analyticszone.app/hu/crs/"><meta property="og:title" content="Kritikus Futási Sebesség (CRS): Útmutató a küszöbsebességhez"><meta property="og:description" content="Értse meg a Kritikus Futási Sebesség mögötti tudományt. Tanulja meg, hogyan tesztelje CRS-ét, használja kalkulátorunkat, és eddzen hatékonyabban."><meta property="og:image" content="https://run.analyticszone.app/assets/images/og-image.svg"><meta property="og:locale" content="hu_HU"><meta property="og:site_name" content="Run Analytics"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:url" content="https://run.analyticszone.app/hu/crs/"><meta name="twitter:title" content="Kritikus Futási Sebesség (CRS): Útmutató a küszöbsebességhez"><meta name="twitter:description" content="Értse meg a Kritikus Futási Sebesség mögötti tudományt. Tanulja meg, hogyan tesztelje CRS-ét, használja kalkulátorunkat, és eddzen hatékonyabban."><meta name="twitter:image" content="https://run.analyticszone.app/assets/images/og-image.svg"><meta name="twitter:site" content="@runanalytics"><meta name="twitter:creator" content="@runanalytics"><link rel="alternate" hreflang="af"
-    href="https://run.analyticszone.app/af/crs/"><link rel="alternate" hreflang="am"
-    href="https://run.analyticszone.app/am/crs/"><link rel="alternate" hreflang="ar"
-    href="https://run.analyticszone.app/ar/crs/"><link rel="alternate" hreflang="bg"
-    href="https://run.analyticszone.app/bg/crs/"><link rel="alternate" hreflang="bn"
-    href="https://run.analyticszone.app/bn/crs/"><link rel="alternate" hreflang="ca"
-    href="https://run.analyticszone.app/ca/crs/"><link rel="alternate" hreflang="cs"
-    href="https://run.analyticszone.app/cs/crs/"><link rel="alternate" hreflang="da"
-    href="https://run.analyticszone.app/da/crs/"><link rel="alternate" hreflang="de"
-    href="https://run.analyticszone.app/de/crs/"><link rel="alternate" hreflang="el"
-    href="https://run.analyticszone.app/el/crs/"><link rel="alternate" hreflang="en"
-    href="https://run.analyticszone.app/en/crs/"><link rel="alternate" hreflang="es"
-    href="https://run.analyticszone.app/es/crs/"><link rel="alternate" hreflang="et"
-    href="https://run.analyticszone.app/et/crs/"><link rel="alternate" hreflang="fa"
-    href="https://run.analyticszone.app/fa/crs/"><link rel="alternate" hreflang="fi"
-    href="https://run.analyticszone.app/fi/crs/"><link rel="alternate" hreflang="fr"
-    href="https://run.analyticszone.app/fr/crs/"><link rel="alternate" hreflang="gu"
-    href="https://run.analyticszone.app/gu/crs/"><link rel="alternate" hreflang="ha"
-    href="https://run.analyticszone.app/ha/crs/"><link rel="alternate" hreflang="he"
-    href="https://run.analyticszone.app/he/crs/"><link rel="alternate" hreflang="hi"
-    href="https://run.analyticszone.app/hi/crs/"><link rel="alternate" hreflang="hr"
-    href="https://run.analyticszone.app/hr/crs/"><link rel="alternate" hreflang="hu"
-    href="https://run.analyticszone.app/hu/crs/"><link rel="alternate" hreflang="id"
-    href="https://run.analyticszone.app/id/crs/"><link rel="alternate" hreflang="is"
-    href="https://run.analyticszone.app/is/crs/"><link rel="alternate" hreflang="it"
-    href="https://run.analyticszone.app/it/crs/"><link rel="alternate" hreflang="ja"
-    href="https://run.analyticszone.app/ja/crs/"><link rel="alternate" hreflang="km"
-    href="https://run.analyticszone.app/km/crs/"><link rel="alternate" hreflang="kn"
-    href="https://run.analyticszone.app/kn/crs/"><link rel="alternate" hreflang="ko"
-    href="https://run.analyticszone.app/ko/crs/"><link rel="alternate" hreflang="lt"
-    href="https://run.analyticszone.app/lt/crs/"><link rel="alternate" hreflang="lv"
-    href="https://run.analyticszone.app/lv/crs/"><link rel="alternate" hreflang="ms"
-    href="https://run.analyticszone.app/ms/crs/"><link rel="alternate" hreflang="my"
-    href="https://run.analyticszone.app/my/crs/"><link rel="alternate" hreflang="nb"
-    href="https://run.analyticszone.app/nb/crs/"><link rel="alternate" hreflang="nl"
-    href="https://run.analyticszone.app/nl/crs/"><link rel="alternate" hreflang="pl"
-    href="https://run.analyticszone.app/pl/crs/"><link rel="alternate" hreflang="pt"
-    href="https://run.analyticszone.app/pt/crs/"><link rel="alternate" hreflang="pt-br"
-    href="https://run.analyticszone.app/pt-br/crs/"><link rel="alternate" hreflang="ro"
-    href="https://run.analyticszone.app/ro/crs/"><link rel="alternate" hreflang="ru"
-    href="https://run.analyticszone.app/ru/crs/"><link rel="alternate" hreflang="sk"
-    href="https://run.analyticszone.app/sk/crs/"><link rel="alternate" hreflang="sl"
-    href="https://run.analyticszone.app/sl/crs/"><link rel="alternate" hreflang="sr"
-    href="https://run.analyticszone.app/sr/crs/"><link rel="alternate" hreflang="sv"
-    href="https://run.analyticszone.app/sv/crs/"><link rel="alternate" hreflang="sw"
-    href="https://run.analyticszone.app/sw/crs/"><link rel="alternate" hreflang="ta"
-    href="https://run.analyticszone.app/ta/crs/"><link rel="alternate" hreflang="te"
-    href="https://run.analyticszone.app/te/crs/"><link rel="alternate" hreflang="th"
-    href="https://run.analyticszone.app/th/crs/"><link rel="alternate" hreflang="tl"
-    href="https://run.analyticszone.app/tl/crs/"><link rel="alternate" hreflang="tr"
-    href="https://run.analyticszone.app/tr/crs/"><link rel="alternate" hreflang="uk"
-    href="https://run.analyticszone.app/uk/crs/"><link rel="alternate" hreflang="ur"
-    href="https://run.analyticszone.app/ur/crs/"><link rel="alternate" hreflang="vi"
-    href="https://run.analyticszone.app/vi/crs/"><link rel="alternate" hreflang="yo"
-    href="https://run.analyticszone.app/yo/crs/"><link rel="alternate" hreflang="zh"
-    href="https://run.analyticszone.app/zh/crs/"><link rel="alternate" hreflang="x-default"
-    href="https://run.analyticszone.app/en/crs/"><link rel="icon" type="image/png" sizes="32x32" href="../../assets/images/icons/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="../../assets/images/icons/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="../../assets/images/icons/apple-touch-icon.png"><link rel="manifest" href="../../manifest.json"><meta name="theme-color" content="#2563EB"><meta name="robots" content="index, follow"><meta name="apple-itunes-app" content="app-id=6754524015"><style>
+<!DOCTYPE html>
+<html lang="hu" dir="ltr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap"
+    rel="stylesheet">
+
+  
+  <title>Kritikus Futási Sebesség (CRS): Útmutató a küszöbsebességhez</title>
+  <meta name="description" content="Értse meg a Kritikus Futási Sebesség mögötti tudományt. Tanulja meg, hogyan tesztelje CRS-ét, használja kalkulátorunkat, és eddzen hatékonyabban.">
+  <meta name="author" content="AnalyticsZone Team">
+
+  
+  
+  <meta name="keywords" content="kritikus futási sebesség, CRS futás, laktátküszöb, futósebesség kalkulátor, küszöbteszt futás">
+  
+
+  
+  <link rel="canonical" href="https://run.analyticszone.app/hu/crs/">
+
+  
+  
+  <meta property="article:published_time" content="2025-01-27T10:00:00Z">
+  <meta property="article:modified_time" content="2026-03-24T14:30:00Z">
+  <meta property="article:author" content="AnalyticsZone Team">
+  
+
+  
+  
+
+  
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://run.analyticszone.app/hu/crs/">
+  <meta property="og:title" content="Kritikus Futási Sebesség (CRS): Útmutató a küszöbsebességhez">
+  <meta property="og:description" content="Értse meg a Kritikus Futási Sebesség mögötti tudományt. Tanulja meg, hogyan tesztelje CRS-ét, használja kalkulátorunkat, és eddzen hatékonyabban.">
+  <meta property="og:image" content="https://run.analyticszone.app/assets/images/og-image.svg">
+  <meta property="og:locale" content="hu_HU">
+  <meta property="og:site_name" content="Run Analytics">
+
+  
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://run.analyticszone.app/hu/crs/">
+  <meta name="twitter:title" content="Kritikus Futási Sebesség (CRS): Útmutató a küszöbsebességhez">
+  <meta name="twitter:description" content="Értse meg a Kritikus Futási Sebesség mögötti tudományt. Tanulja meg, hogyan tesztelje CRS-ét, használja kalkulátorunkat, és eddzen hatékonyabban.">
+  <meta name="twitter:image" content="https://run.analyticszone.app/assets/images/og-image.svg">
+  
+  <meta name="twitter:site" content="@runanalytics">
+  <meta name="twitter:creator" content="@runanalytics">
+  
+
+  
+  
+  <link rel="alternate" hreflang="af"
+    href="https://run.analyticszone.app/af/crs/">
+  
+  <link rel="alternate" hreflang="am"
+    href="https://run.analyticszone.app/am/crs/">
+  
+  <link rel="alternate" hreflang="ar"
+    href="https://run.analyticszone.app/ar/crs/">
+  
+  <link rel="alternate" hreflang="bg"
+    href="https://run.analyticszone.app/bg/crs/">
+  
+  <link rel="alternate" hreflang="bn"
+    href="https://run.analyticszone.app/bn/crs/">
+  
+  <link rel="alternate" hreflang="ca"
+    href="https://run.analyticszone.app/ca/crs/">
+  
+  <link rel="alternate" hreflang="cs"
+    href="https://run.analyticszone.app/cs/crs/">
+  
+  <link rel="alternate" hreflang="da"
+    href="https://run.analyticszone.app/da/crs/">
+  
+  <link rel="alternate" hreflang="de"
+    href="https://run.analyticszone.app/de/crs/">
+  
+  <link rel="alternate" hreflang="el"
+    href="https://run.analyticszone.app/el/crs/">
+  
+  <link rel="alternate" hreflang="en"
+    href="https://run.analyticszone.app/en/crs/">
+  
+  <link rel="alternate" hreflang="es"
+    href="https://run.analyticszone.app/es/crs/">
+  
+  <link rel="alternate" hreflang="et"
+    href="https://run.analyticszone.app/et/crs/">
+  
+  <link rel="alternate" hreflang="fa"
+    href="https://run.analyticszone.app/fa/crs/">
+  
+  <link rel="alternate" hreflang="fi"
+    href="https://run.analyticszone.app/fi/crs/">
+  
+  <link rel="alternate" hreflang="fr"
+    href="https://run.analyticszone.app/fr/crs/">
+  
+  <link rel="alternate" hreflang="gu"
+    href="https://run.analyticszone.app/gu/crs/">
+  
+  <link rel="alternate" hreflang="ha"
+    href="https://run.analyticszone.app/ha/crs/">
+  
+  <link rel="alternate" hreflang="he"
+    href="https://run.analyticszone.app/he/crs/">
+  
+  <link rel="alternate" hreflang="hi"
+    href="https://run.analyticszone.app/hi/crs/">
+  
+  <link rel="alternate" hreflang="hr"
+    href="https://run.analyticszone.app/hr/crs/">
+  
+  <link rel="alternate" hreflang="hu"
+    href="https://run.analyticszone.app/hu/crs/">
+  
+  <link rel="alternate" hreflang="id"
+    href="https://run.analyticszone.app/id/crs/">
+  
+  <link rel="alternate" hreflang="is"
+    href="https://run.analyticszone.app/is/crs/">
+  
+  <link rel="alternate" hreflang="it"
+    href="https://run.analyticszone.app/it/crs/">
+  
+  <link rel="alternate" hreflang="ja"
+    href="https://run.analyticszone.app/ja/crs/">
+  
+  <link rel="alternate" hreflang="km"
+    href="https://run.analyticszone.app/km/crs/">
+  
+  <link rel="alternate" hreflang="kn"
+    href="https://run.analyticszone.app/kn/crs/">
+  
+  <link rel="alternate" hreflang="ko"
+    href="https://run.analyticszone.app/ko/crs/">
+  
+  <link rel="alternate" hreflang="lt"
+    href="https://run.analyticszone.app/lt/crs/">
+  
+  <link rel="alternate" hreflang="lv"
+    href="https://run.analyticszone.app/lv/crs/">
+  
+  <link rel="alternate" hreflang="ms"
+    href="https://run.analyticszone.app/ms/crs/">
+  
+  <link rel="alternate" hreflang="my"
+    href="https://run.analyticszone.app/my/crs/">
+  
+  <link rel="alternate" hreflang="nb"
+    href="https://run.analyticszone.app/nb/crs/">
+  
+  <link rel="alternate" hreflang="nl"
+    href="https://run.analyticszone.app/nl/crs/">
+  
+  <link rel="alternate" hreflang="pl"
+    href="https://run.analyticszone.app/pl/crs/">
+  
+  <link rel="alternate" hreflang="pt"
+    href="https://run.analyticszone.app/pt/crs/">
+  
+  <link rel="alternate" hreflang="pt-br"
+    href="https://run.analyticszone.app/pt-br/crs/">
+  
+  <link rel="alternate" hreflang="ro"
+    href="https://run.analyticszone.app/ro/crs/">
+  
+  <link rel="alternate" hreflang="ru"
+    href="https://run.analyticszone.app/ru/crs/">
+  
+  <link rel="alternate" hreflang="sk"
+    href="https://run.analyticszone.app/sk/crs/">
+  
+  <link rel="alternate" hreflang="sl"
+    href="https://run.analyticszone.app/sl/crs/">
+  
+  <link rel="alternate" hreflang="sr"
+    href="https://run.analyticszone.app/sr/crs/">
+  
+  <link rel="alternate" hreflang="sv"
+    href="https://run.analyticszone.app/sv/crs/">
+  
+  <link rel="alternate" hreflang="sw"
+    href="https://run.analyticszone.app/sw/crs/">
+  
+  <link rel="alternate" hreflang="ta"
+    href="https://run.analyticszone.app/ta/crs/">
+  
+  <link rel="alternate" hreflang="te"
+    href="https://run.analyticszone.app/te/crs/">
+  
+  <link rel="alternate" hreflang="th"
+    href="https://run.analyticszone.app/th/crs/">
+  
+  <link rel="alternate" hreflang="tl"
+    href="https://run.analyticszone.app/tl/crs/">
+  
+  <link rel="alternate" hreflang="tr"
+    href="https://run.analyticszone.app/tr/crs/">
+  
+  <link rel="alternate" hreflang="uk"
+    href="https://run.analyticszone.app/uk/crs/">
+  
+  <link rel="alternate" hreflang="ur"
+    href="https://run.analyticszone.app/ur/crs/">
+  
+  <link rel="alternate" hreflang="vi"
+    href="https://run.analyticszone.app/vi/crs/">
+  
+  <link rel="alternate" hreflang="yo"
+    href="https://run.analyticszone.app/yo/crs/">
+  
+  <link rel="alternate" hreflang="zh"
+    href="https://run.analyticszone.app/zh/crs/">
+  
+  <link rel="alternate" hreflang="x-default"
+    href="https://run.analyticszone.app/en/crs/">
+
+  
+  <link rel="icon" type="image/png" sizes="32x32" href="../../assets/images/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../assets/images/icons/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../../assets/images/icons/apple-touch-icon.png">
+  <link rel="manifest" href="../../manifest.json">
+  <meta name="theme-color" content="#2563EB">
+  
+  
+  
+  
+  <meta name="robots" content="index, follow">
+  
+
+  
+  
+  
+  <meta name="apple-itunes-app" content="app-id=6754524015">
+  
+
+  
+  <style>
 /* Critical CSS - Above the fold styles for fast LCP */
 :root {
   --color-primary: #0066CC;
@@ -314,7 +504,20 @@ img[width][height] {
     transition-duration: 0.01ms !important;
   }
 }
-</style><link rel="preconnect" href="https://www.googletagmanager.com"><link rel="dns-prefetch" href="https://www.googletagmanager.com"><link rel="stylesheet" href="../../assets/css/main.min.css?v=635348535bde"><script type="application/ld+json">
+</style>
+
+  
+  <link rel="preconnect" href="https://www.googletagmanager.com">
+  <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+
+  
+  <link rel="stylesheet" href="../../assets/css/main.min.css?v=19fdca55b3da">
+
+  
+  
+
+
+<script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Organization",
@@ -349,7 +552,10 @@ img[width][height] {
     
   ]
 }
-</script><script type="application/ld+json">
+</script>
+
+
+<script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "WebSite",
@@ -358,7 +564,11 @@ img[width][height] {
   "description": "Track Critical Running Speed, Training Stress Score, and performance metrics with Run Analytics. Science-based iOS app for runners, triathletes &amp; coaches. 7-day free trial.",
   "inLanguage": "hu"
 }
-</script><script type="application/ld+json">
+</script>
+
+
+
+<script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
@@ -373,7 +583,12 @@ img[width][height] {
   },
   "downloadUrl": "https://apps.apple.com/us/app/run-analytics/id6754524015"
 }
-</script><script type="application/ld+json">
+</script>
+
+
+
+
+<script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
@@ -402,7 +617,11 @@ img[width][height] {
     
   ]
 }
-</script><script type="application/ld+json">
+</script>
+
+
+
+<script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "WebPage",
@@ -416,7 +635,7 @@ img[width][height] {
     "url": "https://run.analyticszone.app"
   },
   "datePublished": "2025-01-27",
-  "dateModified": "2026-01-04",
+  "dateModified": "2026-03-24",
   "keywords": ["kritikus futási sebesség", "CRS futás", "laktátküszöb", "futósebesség kalkulátor", "küszöbteszt futás"],
   "about": [
     {
@@ -445,7 +664,14 @@ img[width][height] {
     }
   ]
 }
-</script><script type="application/ld+json">
+</script>
+
+
+
+
+
+
+<script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Article",
@@ -464,13 +690,23 @@ img[width][height] {
     }
   },
   "datePublished": "2025-01-27",
-  "dateModified": "2026-01-04",
+  "dateModified": "2026-03-24",
   "mainEntityOfPage": {
     "@type": "WebPage",
     "@id": "https://run.analyticszone.app/hu/crs/"
   }
 }
-</script><script>
+</script>
+
+
+
+
+
+  
+  
+
+  
+  <script>
     (function () {
       let theme = localStorage.getItem('theme');
       // Older builds could persist a per-subdomain `theme=light` value without a UI
@@ -484,427 +720,1612 @@ img[width][height] {
         document.documentElement.classList.add('dark-mode');
       }
     })();
-  </script></head><body><a href="#main-content" class="skip-link">Ugrás a tartalomra</a><header class="site-header"><div class="container"><div class="header-inner"><a href="/hu/" class="site-logo"><picture><source srcset="../../assets/images/logo-dark.png" type="image/png"
-                        media="(prefers-color-scheme: dark)"><img src="../../assets/images/logo.png" alt="Run Analytics - Running Analytics App | Critical Running Speed, TSS, CTL/ATL/TSB for iOS" width="56" height="56"></picture><span class="logo-text">Run Analytics</span></a><nav class="nav-primary" id="nav-primary" role="navigation" aria-label="Main navigation"><div class="nav-group-left"><ul><li><a href="/hu/" 
+  </script>
+</head>
+
+<body>
+  
+  <a href="#main-content" class="skip-link">Ugrás a tartalomra</a>
+
+  
+  <header class="site-header">
+    <div class="container">
+        <div class="header-inner">
+            
+            <a href="/hu/" class="site-logo">
+                <picture>
+                    <source srcset="../../assets/images/logo-dark.png" type="image/png"
+                        media="(prefers-color-scheme: dark)">
+                    <img src="../../assets/images/logo.png" alt="Run Analytics - Running Analytics App | Critical Running Speed, TSS, CTL/ATL/TSB for iOS" width="56" height="56">
+                </picture>
+                <span class="logo-text">Run Analytics</span>
+            </a>
+
+            
+            <nav class="nav-primary" id="nav-primary" role="navigation" aria-label="Main navigation">
+                <div class="nav-group-left">
+                    <ul>
+                        
+                        <li>
+                            
+                            <a href="/hu/" 
                                 aria-current="">
                                 Kezdőlap
-                            </a></li><li class="has-submenu" ><a href="/hu/getting-started/" class="nav-label">Tanulás</a><ul class="submenu"><li><a href="/hu/getting-started/" 
+                            </a>
+                            
+                            </li>
+                            
+                        <li class="has-submenu" >
+                            
+                            
+                            <a href="/hu/getting-started/" class="nav-label">Tanulás</a>
+                            
+                            <ul class="submenu">
+                                
+                                <li>
+                                    <a href="/hu/getting-started/" 
                                         aria-current="">
                                         Első lépések
-                                    </a></li><li><a href="/hu/crs/" class="active" 
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/hu/crs/" class="active" 
                                         aria-current="page">
                                         CRS
-                                    </a></li><li><a href="/hu/training-zones/" 
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/hu/training-zones/" 
                                         aria-current="">
                                         Edzészónák
-                                    </a></li><li><a href="/hu/training-load/" 
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/hu/training-load/" 
                                         aria-current="">
                                         Edzésterhelés
-                                    </a></li><li><a href="/hu/rtss-calculator/" 
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/hu/rtss-calculator/" 
                                         aria-current="">
                                         rTSS kalkulátor
-                                    </a></li></ul></li><li class="has-submenu" ><a href="/hu/research/" class="nav-label">Tudomány</a><ul class="submenu"><li><a href="/hu/research/" 
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                            
+                            </li>
+                            
+                        <li class="has-submenu" >
+                            
+                            
+                            <a href="/hu/research/" class="nav-label">Tudomány</a>
+                            
+                            <ul class="submenu">
+                                
+                                <li>
+                                    <a href="/hu/research/" 
                                         aria-current="">
                                         Kutatás
-                                    </a></li><li><a href="/hu/formulas/" 
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/hu/formulas/" 
                                         aria-current="">
                                         Képletek
-                                    </a></li><li><a href="/hu/efficiency/" 
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/hu/efficiency/" 
                                         aria-current="">
                                         Hatékonyság
-                                    </a></li><li><a href="/hu/stride-mechanics/" 
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/hu/stride-mechanics/" 
                                         aria-current="">
                                         Lépésmechanika
-                                    </a></li><li><a href="/hu/bibliography/" 
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/hu/bibliography/" 
                                         aria-current="">
                                         Bibliográfia
-                                    </a></li></ul></li><li><a href="/hu/contact/" 
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                            
+                            </li>
+                            
+                        <li>
+                            
+                            <a href="/hu/contact/" 
                                 aria-current="">
                                 Kapcsolat
-                            </a></li></ul><div class="search-container"><svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                            </a>
+                            
+                            </li>
+                            
+                    </ul>
+
+                    
+                    <div class="search-container">
+                        <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
                             viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.35-4.35"></path></svg><input type="search" id="site-search" class="search-input" aria-expanded="false"
-                            aria-haspopup="listbox" aria-autocomplete="list" autocomplete="off" spellcheck="false" /><div id="search-results" class="search-results hidden" role="region" aria-live="polite"></div></div><select class="language-selector" id="language-select" aria-label="Nyelv kiválasztása"><option value="af" >
+                            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <path d="m21 21-4.35-4.35"></path>
+                        </svg>
+                        <input type="search" id="site-search" class="search-input" aria-expanded="false"
+                            aria-haspopup="listbox" aria-autocomplete="list" autocomplete="off" spellcheck="false" />
+                        <div id="search-results" class="search-results hidden" role="region" aria-live="polite"></div>
+                    </div>
+
+                    
+                    <select class="language-selector" id="language-select" aria-label="Nyelv kiválasztása">
+                        
+                        <option value="af" >
                             Afrikaans
-                        </option><option value="am" >
+                        </option>
+                        
+                        <option value="am" >
                             አማርኛ
-                        </option><option value="ar" >
+                        </option>
+                        
+                        <option value="ar" >
                             العربية
-                        </option><option value="bg" >
+                        </option>
+                        
+                        <option value="bg" >
                             Български
-                        </option><option value="bn" >
+                        </option>
+                        
+                        <option value="bn" >
                             বাংলা
-                        </option><option value="ca" >
+                        </option>
+                        
+                        <option value="ca" >
                             Català
-                        </option><option value="cs" >
+                        </option>
+                        
+                        <option value="cs" >
                             Čeština
-                        </option><option value="da" >
+                        </option>
+                        
+                        <option value="da" >
                             Dansk
-                        </option><option value="de" >
+                        </option>
+                        
+                        <option value="de" >
                             Deutsch
-                        </option><option value="el" >
+                        </option>
+                        
+                        <option value="el" >
                             Ελληνικά
-                        </option><option value="en" >
+                        </option>
+                        
+                        <option value="en" >
                             English
-                        </option><option value="es" >
+                        </option>
+                        
+                        <option value="es" >
                             Español
-                        </option><option value="et" >
+                        </option>
+                        
+                        <option value="et" >
                             Eesti
-                        </option><option value="fa" >
+                        </option>
+                        
+                        <option value="fa" >
                             فارسی
-                        </option><option value="fi" >
+                        </option>
+                        
+                        <option value="fi" >
                             Suomi
-                        </option><option value="fr" >
+                        </option>
+                        
+                        <option value="fr" >
                             Français
-                        </option><option value="gu" >
+                        </option>
+                        
+                        <option value="gu" >
                             ગુજરાતી
-                        </option><option value="ha" >
+                        </option>
+                        
+                        <option value="ha" >
                             Hausa
-                        </option><option value="he" >
+                        </option>
+                        
+                        <option value="he" >
                             עברית
-                        </option><option value="hi" >
+                        </option>
+                        
+                        <option value="hi" >
                             हिन्दी
-                        </option><option value="hr" >
+                        </option>
+                        
+                        <option value="hr" >
                             Hrvatski
-                        </option><option value="hu" selected>
+                        </option>
+                        
+                        <option value="hu" selected>
                             Magyar
-                        </option><option value="id" >
+                        </option>
+                        
+                        <option value="id" >
                             Bahasa Indonesia
-                        </option><option value="is" >
+                        </option>
+                        
+                        <option value="is" >
                             Íslenska
-                        </option><option value="it" >
+                        </option>
+                        
+                        <option value="it" >
                             Italiano
-                        </option><option value="ja" >
+                        </option>
+                        
+                        <option value="ja" >
                             日本語
-                        </option><option value="km" >
+                        </option>
+                        
+                        <option value="km" >
                             ភាសាខ្មែរ
-                        </option><option value="kn" >
+                        </option>
+                        
+                        <option value="kn" >
                             ಕನ್ನಡ
-                        </option><option value="ko" >
+                        </option>
+                        
+                        <option value="ko" >
                             한국어
-                        </option><option value="lt" >
+                        </option>
+                        
+                        <option value="lt" >
                             Lietuvių
-                        </option><option value="lv" >
+                        </option>
+                        
+                        <option value="lv" >
                             Latviešu
-                        </option><option value="ms" >
+                        </option>
+                        
+                        <option value="ms" >
                             Bahasa Melayu
-                        </option><option value="my" >
+                        </option>
+                        
+                        <option value="my" >
                             မြန်မာစာ
-                        </option><option value="nb" >
+                        </option>
+                        
+                        <option value="nb" >
                             Norsk Bokmål
-                        </option><option value="nl" >
+                        </option>
+                        
+                        <option value="nl" >
                             Nederlands
-                        </option><option value="pl" >
+                        </option>
+                        
+                        <option value="pl" >
                             Polski
-                        </option><option value="pt" >
+                        </option>
+                        
+                        <option value="pt" >
                             Português
-                        </option><option value="pt-br" >
+                        </option>
+                        
+                        <option value="pt-br" >
                             Português (Brasil)
-                        </option><option value="ro" >
+                        </option>
+                        
+                        <option value="ro" >
                             Română
-                        </option><option value="ru" >
+                        </option>
+                        
+                        <option value="ru" >
                             Русский
-                        </option><option value="sk" >
+                        </option>
+                        
+                        <option value="sk" >
                             Slovenčina
-                        </option><option value="sl" >
+                        </option>
+                        
+                        <option value="sl" >
                             Slovenščina
-                        </option><option value="sr" >
+                        </option>
+                        
+                        <option value="sr" >
                             Srpski
-                        </option><option value="sv" >
+                        </option>
+                        
+                        <option value="sv" >
                             Svenska
-                        </option><option value="sw" >
+                        </option>
+                        
+                        <option value="sw" >
                             Kiswahili
-                        </option><option value="ta" >
+                        </option>
+                        
+                        <option value="ta" >
                             தமிழ்
-                        </option><option value="te" >
+                        </option>
+                        
+                        <option value="te" >
                             తెలుగు
-                        </option><option value="th" >
+                        </option>
+                        
+                        <option value="th" >
                             ไทย
-                        </option><option value="tl" >
+                        </option>
+                        
+                        <option value="tl" >
                             Tagalog
-                        </option><option value="tr" >
+                        </option>
+                        
+                        <option value="tr" >
                             Türkçe
-                        </option><option value="uk" >
+                        </option>
+                        
+                        <option value="uk" >
                             Українська
-                        </option><option value="ur" >
+                        </option>
+                        
+                        <option value="ur" >
                             اردو
-                        </option><option value="vi" >
+                        </option>
+                        
+                        <option value="vi" >
                             Tiếng Việt
-                        </option><option value="yo" >
+                        </option>
+                        
+                        <option value="yo" >
                             Yorùbá
-                        </option><option value="zh" >
+                        </option>
+                        
+                        <option value="zh" >
                             中文
-                        </option></select></div><div class="nav-group-right"><div class="header-app-buttons"><a href="https://apps.apple.com/us/app/run-analytics/id6754524015" class="header-download-btn" target="_blank"
-                            rel="noopener" aria-label="Download on App Store" title="Download on App Store"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                                fill="currentColor"><path
-                                    d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z" /></svg></a><a href="https://play.google.com/store/apps/details?id=com.arnohealth.runanalytics" class="header-download-btn" target="_blank"
-                            rel="noopener" aria-label="Get it on Google Play" title="Get it on Google Play"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                                fill="currentColor"><path
-                                    d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.92 20.16,13.19L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M16.81,8.88L14.54,11.15L6.05,2.66L16.81,8.88Z" /></svg></a></div><div class="suite-menu-container"><button class="suite-menu-toggle" id="suite-menu-toggle" aria-label="See other apps"
-                            aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        </option>
+                        
+                    </select>
+                </div>
+
+                <div class="nav-group-right">
+                    
+
+
+                    
+                    <div class="header-app-buttons">
+                        
+                        
+                        <a href="https://apps.apple.com/us/app/run-analytics/id6754524015" class="header-download-btn" target="_blank"
+                            rel="noopener" aria-label="Download on App Store" title="Download on App Store">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="currentColor">
+                                <path
+                                    d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z" />
+                            </svg>
+                        </a>
+                        
+
+                        
+                        <a href="https://play.google.com/store/apps/details?id=com.arnohealth.runanalytics" class="header-download-btn" target="_blank"
+                            rel="noopener" aria-label="Get it on Google Play" title="Get it on Google Play">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="currentColor">
+                                <path
+                                    d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.92 20.16,13.19L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M16.81,8.88L14.54,11.15L6.05,2.66L16.81,8.88Z" />
+                            </svg>
+                        </a>
+                        
+                        
+                    </div>
+
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+
+                    
+                    <div class="suite-menu-container">
+                        <button class="suite-menu-toggle" id="suite-menu-toggle" aria-label="See other apps"
+                            aria-expanded="false">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg></button><div class="suite-dropdown hidden" id="suite-dropdown"><div class="suite-dropdown-header">Other AnalyticsZone Apps</div><div class="suite-apps-grid"><a href="https://analyticszone.app" class="suite-app-link">AnalyticsZone</a><a href="https://swim.analyticszone.app" class="suite-app-link">Swim Analytics</a><a href="https://bike.analyticszone.app" class="suite-app-link">Bike Analytics</a><a href="https://walk.analyticszone.app" class="suite-app-link">Walk Analytics</a><a href="https://cardio.analyticszone.app" class="suite-app-link">Cardio Analytics</a><a href="https://health.analyticszone.app" class="suite-app-link">Health Analytics</a><a href="https://swimtrainer.analyticszone.app" class="suite-app-link">Swim Trainer</a><a href="https://hike.analyticszone.app" class="suite-app-link">Hike Analytics</a><a href="https://sleep.analyticszone.app" class="suite-app-link">Sleep Analytics</a></div></div></div></div></nav><button class="menu-toggle" id="menu-toggle" aria-label="Menü váltása"
-                aria-expanded="false" aria-controls="nav-primary"><span></span><span></span><span></span></button></div></div></header><nav class="breadcrumbs" aria-label="Breadcrumb"><div class="container"><ol><li><a href="/hu/">Kezdőlap</a></li><li><a href="/hu/getting-started/">Tanulás</a></li><li><span aria-current="page">CRS</span></li></ol></div></nav><main id="main-content" class="main-content"><section class="page-hero"><div class="container"><h1>Kritikus futási sebesség (CRS)</h1><p class="lead">Az adatvezérelt futóedzés alapja</p></div></section><section class="section"><div class="container container-narrow"><div class="callout callout-success mb-xl"><h2>Kulcs elvitelek</h2><ul class="key-points"><li><strong>Mi:</strong>A kritikus futási sebesség (CRS) az Ön maximális fenntartható futási üteme – a
-                    aerob küszöb, ahol 30+ percig képes fenntartani az erőfeszítést</li><li><strong>Hogyan kell számolni:</strong>Végezzen 1200 és 3600 méteres időmérőket, majd használja a lineárist
-                    távolság-idő kapcsolat a lejtő megtalálásához (CRS)</li><li><strong>Miért számít:</strong>A CRS lehetővé teszi a személyre szabott<a href="/hu/training-zones/">edzési zónák</a>, pontos<a href="/hu/training-load/">TSS számítások</a>és objektív fitneszkövetés</li><li><strong>Tipikus értékek:</strong>Elitfutók: 18-22 mp/100 m | Versenyképes: 22-26s/100m | Fitness
-                    futók: 26-32mp/100m</li><li><strong>Tesztelési gyakoriság:</strong>Tesztelje újra 6-8 hetente, hogy frissítse a zónákat futási küszöbként
-                    javul a tempó</li></ul></div><div class="callout callout-info mb-xl"><h2>Mi az a kritikus futási sebesség?</h2><p><strong>Kritikus futási sebesség (CRS)</strong>az elméleti maximális futási sebesség
+                                stroke-linejoin="round">
+                                <rect x="3" y="3" width="7" height="7"></rect>
+                                <rect x="14" y="3" width="7" height="7"></rect>
+                                <rect x="14" y="14" width="7" height="7"></rect>
+                                <rect x="3" y="14" width="7" height="7"></rect>
+                            </svg>
+                        </button>
+                        <div class="suite-dropdown hidden" id="suite-dropdown">
+                            <div class="suite-dropdown-header">Other AnalyticsZone Apps</div>
+                            <div class="suite-apps-grid">
+                                
+                                <a href="https://analyticszone.app" class="suite-app-link">AnalyticsZone</a>
+                                
+                                <a href="https://swim.analyticszone.app" class="suite-app-link">Swim Analytics</a>
+                                
+                                <a href="https://bike.analyticszone.app" class="suite-app-link">Bike Analytics</a>
+                                
+                                <a href="https://walk.analyticszone.app" class="suite-app-link">Walk Analytics</a>
+                                
+                                <a href="https://cardio.analyticszone.app" class="suite-app-link">Cardio Analytics</a>
+                                
+                                <a href="https://health.analyticszone.app" class="suite-app-link">Health Analytics</a>
+                                
+                                <a href="https://swimtrainer.analyticszone.app" class="suite-app-link">Swim Trainer</a>
+                                
+                                <a href="https://hike.analyticszone.app" class="suite-app-link">Hike Analytics</a>
+                                
+                                <a href="https://sleep.analyticszone.app" class="suite-app-link">Sleep Analytics</a>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </nav>
+
+            
+            <button class="menu-toggle" id="menu-toggle" aria-label="Menü váltása"
+                aria-expanded="false" aria-controls="nav-primary">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </div>
+</header>
+
+  
+  
+
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+    <div class="container">
+        <ol>
+            
+            <li>
+                
+                <a href="/hu/">Kezdőlap</a>
+                
+            </li>
+            
+            <li>
+                
+                <a href="/hu/getting-started/">Tanulás</a>
+                
+            </li>
+            
+            <li>
+                
+                <span aria-current="page">CRS</span>
+                
+            </li>
+            
+        </ol>
+    </div>
+</nav>
+
+
+  
+  <main id="main-content" class="main-content">
+    
+    <section class="page-hero">
+<div class="container">
+<h1>Kritikus futási sebesség (CRS)</h1>
+<p class="lead">Az adatvezérelt futóedzés alapja</p>
+</div>
+</section>
+<section class="section">
+<div class="container container-narrow">
+<div class="callout callout-success mb-xl">
+<h2>Kulcs elvitelek</h2>
+<ul class="key-points">
+<li><strong>Mi:</strong>A kritikus futási sebesség (CRS) az Ön maximális fenntartható futási üteme – a
+                    aerob küszöb, ahol 30+ percig képes fenntartani az erőfeszítést</li>
+<li><strong>Hogyan kell számolni:</strong>Végezzen 1200 és 3600 méteres időmérőket, majd használja a lineárist
+                    távolság-idő kapcsolat a lejtő megtalálásához (CRS)</li>
+<li><strong>Miért számít:</strong>A CRS lehetővé teszi a személyre szabott<a href="/hu/training-zones/">edzési zónák</a>, pontos<a href="/hu/training-load/">TSS számítások</a>és objektív fitneszkövetés</li>
+<li><strong>Tipikus értékek:</strong>Elitfutók: 18-22 mp/100 m | Versenyképes: 22-26s/100m | Fitness
+                    futók: 26-32mp/100m</li>
+<li><strong>Tesztelési gyakoriság:</strong>Tesztelje újra 6-8 hetente, hogy frissítse a zónákat futási küszöbként
+                    javul a tempó</li>
+</ul>
+</div>
+<div class="callout callout-info mb-xl">
+<h2>Mi az a kritikus futási sebesség?</h2>
+<p><strong>Kritikus futási sebesség (CRS)</strong>az elméleti maximális futási sebesség
                 fárasztás nélkül karbantartani. Ez az aerob küszöb futási tempóját jelenti, általában ennek megfelelő
                 4 mmol/l vér laktátig, és körülbelül 30-60 percig fenntartható. A CRS kiszámítása kettővel történik
                 maximális erőfeszítést igénylő időfutamok (pl. 1200 m és 3600 m) a tempóhoz személyre szabott edzési zónák meghatározásához
-                optimalizálás.</p></div><p class="lead">A kritikus futási sebesség azt az elméleti maximális futási sebességet jelenti, amelyet fenntarthat
+                optimalizálás.</p>
+</div>
+<p class="lead">A kritikus futási sebesség azt az elméleti maximális futási sebességet jelenti, amelyet fenntarthat
             folyamatosan kimerülés nélkül. Ez az Ön aerob küszöbe – az intenzitás, ahol a laktáttermelés megegyezik
-            laktát-clearance.</p><div class="callout callout-info"><h3>🎯 Fiziológiai jelentősége</h3><p>A CRS szorosan megfelel a következőknek:</p><ul><li><strong>2. laktátküszöb (LT2)</strong>- Második légzési küszöb</li><li><strong>Maximális laktát egyensúlyi állapot (MLSS)</strong>- A legmagasabb fenntartható laktátszint</li><li><strong>Funkcionális küszöbtempó (FTP)</strong>- A FTP kerékpározásnak megfelelő futás</li><li><strong>~4 mmol/l vér laktát</strong>- Hagyományos OBLA marker</li></ul></div><h3>Miért számít a CRS?</h3><p>A kritikus futási sebesség a<strong>alapozó mérőszám</strong>amely feloldja az összes haladó edzésterhelést
-            elemzés:</p><ul><li><strong><a href="/hu/training-zones/">Képzési zónák</a>:</strong>Személyre szabja az intenzitási zónákat
-                fiziológiája alapján</li><li><strong><a href="/hu/training-load/">rTSS számítás</a>:</strong>Lehetővé teszi a pontos képzést
-                Stresszpontszám számszerűsítése</li><li><strong><a href="/hu/training-load/">CTL/ATL/TSB</a>:</strong>A teljesítményhez szükséges
-                Kezelési diagram mérőszámai</li><li><strong>Haladás követése:</strong>Az aerob erőnlét javításának objektív mérőszáma</li></ul><div class="warning-box"><strong>⚠️ Kritikus függőség:</strong>Érvényes CRS teszt nélkül fejlett edzési terhelési mutatók (rTSS,
-            CTL, ATL, TSB) nem számítható ki. A pontatlan CRS megsérti az összes későbbi képzési elemzést.</div><div class="callout callout-primary mt-xl"><h3>📱 A Run Analytics automatizálja az összes CRS-alapú elemzést</h3><p>Míg ez az útmutató elmagyarázza a CRS mögött meghúzódó tudományt,<strong>A Run Analytics automatikusan kiszámítja és
+            laktát-clearance.</p>
+<div class="callout callout-info">
+<h3>🎯 Fiziológiai jelentősége</h3>
+<p>A CRS szorosan megfelel a következőknek:</p>
+<ul>
+<li><strong>2. laktátküszöb (LT2)</strong>- Második légzési küszöb</li>
+<li><strong>Maximális laktát egyensúlyi állapot (MLSS)</strong>- A legmagasabb fenntartható laktátszint</li>
+<li><strong>Funkcionális küszöbtempó (FTP)</strong>- A FTP kerékpározásnak megfelelő futás</li>
+<li><strong>~4 mmol/l vér laktát</strong>- Hagyományos OBLA marker</li>
+</ul>
+</div>
+<h3>Miért számít a CRS?</h3>
+<p>A kritikus futási sebesség a<strong>alapozó mérőszám</strong>amely feloldja az összes haladó edzésterhelést
+            elemzés:</p>
+<ul>
+<li><strong><a href="/hu/training-zones/">Képzési zónák</a>:</strong>Személyre szabja az intenzitási zónákat
+                fiziológiája alapján</li>
+<li><strong><a href="/hu/training-load/">rTSS számítás</a>:</strong>Lehetővé teszi a pontos képzést
+                Stresszpontszám számszerűsítése</li>
+<li><strong><a href="/hu/training-load/">CTL/ATL/TSB</a>:</strong>A teljesítményhez szükséges
+                Kezelési diagram mérőszámai</li>
+<li><strong>Haladás követése:</strong>Az aerob erőnlét javításának objektív mérőszáma</li>
+</ul>
+<div class="warning-box">
+<strong>⚠️ Kritikus függőség:</strong>Érvényes CRS teszt nélkül fejlett edzési terhelési mutatók (rTSS,
+            CTL, ATL, TSB) nem számítható ki. A pontatlan CRS megsérti az összes későbbi képzési elemzést.</div>
+<div class="callout callout-primary mt-xl">
+<h3>📱 A Run Analytics automatizálja az összes CRS-alapú elemzést</h3>
+<p>Míg ez az útmutató elmagyarázza a CRS mögött meghúzódó tudományt,<strong>A Run Analytics automatikusan kiszámítja és
                     követi a kritikus futási sebességét</strong>az edzésadatokból – nincs kézi számítás vagy tesztelés
-                protokollok szükségesek.</p><p><strong>Az alkalmazás kezeli:</strong></p><ul><li>Automatikus CRS felismerés az edzésadatokból</li><li>Személyre szabott edzési zóna frissítések a CRS fejlesztésével</li><li>Valós idejű rTSS, CTL, ATL és TSB követés</li><li>Történelmi CRS progressziós diagramok</li></ul><p><a class="btn btn-accent btn-small" href="/hu/">A Run Analytics letöltése ingyen →</a></p></div></div></section><section class="section section-gray"><div class="container container-narrow"><h2>Kritikus futási sebesség vs egyéb mutatók</h2><p class="lead">Ha megérti, hogy a CRS hogyan viszonyul más futóteljesítmény-mutatókhoz, segít kiválasztani a
-            megfelelő mérőszám edzési céljaihoz.</p><div class="comparison-table-container"><table class="comparison-table"><thead><tr><th>Metrikus</th><th>Mit mér</th><th>Vizsgálati módszer</th><th>Fenntartható időtartam</th><th>Legjobb használati eset</th></tr></thead><tbody><tr class="highlight-row"><td><strong>Kritikus futási sebesség (CRS)</strong></td><td>Aerob küszöbtempó (4 mmol/l laktát)</td><td>1200m + 3600m időfutamok</td><td>30-60 perc</td><td>Edzészónák, TSS számítás, aerob küszöb futás</td></tr><tr><td><strong><a href="/hu/what-is-vo2max/">VO₂max</a></strong></td><td>Maximális oxigénfelvétel</td><td><a href="/hu/vo2max-testing/">Laborvizsgálat vagy 12 perces maximális erőfeszítés</a></td><td>6-8 perc</td><td>Általános edzettségi szint, nagy intenzitású intervallumok</td></tr><tr><td><strong><a href="/hu/lactate-threshold-testing/">Laktát küszöb (LT)</a></strong></td><td>A laktát felhalmozódási pontja (2-4 mmol/L)</td><td>Labor vér laktát vizsgálat</td><td>30-60 perc</td><td>Versenytempó előrejelzés,<a href="/hu/tempo-runs-zone3/">tempó fut</a></td></tr><tr><td><strong>Funkcionális küszöbtempó (FTP)</strong></td><td>A legjobb 60 perces tempó</td><td>60 perces időfutam vagy 20 perces teszt</td><td>60 perc</td><td>Állóképesség edzés, maratoni tempómunka</td></tr><tr><td><strong>5K versenytempó</strong></td><td>Kitartó versenyfutás</td><td>5K verseny vagy időmérő</td><td>15-25 perc</td><td>Versenyspecifikus edzés, tempós stratégia</td></tr></tbody></table></div><div class="callout callout-tip mt-lg"><h3>Miért válassza a CRS-et?</h3><p>A VO₂max-től (laboratóriumi vizsgálat szükséges) vagy a laktátküszöbtől (vérminta szükséges) ellentétben a kritikus futás
+                protokollok szükségesek.</p>
+<p><strong>Az alkalmazás kezeli:</strong></p>
+<ul>
+<li>Automatikus CRS felismerés az edzésadatokból</li>
+<li>Személyre szabott edzési zóna frissítések a CRS fejlesztésével</li>
+<li>Valós idejű rTSS, CTL, ATL és TSB követés</li>
+<li>Történelmi CRS progressziós diagramok</li>
+</ul>
+<p><a class="btn btn-accent btn-small" href="/hu/">A Run Analytics letöltése ingyen →</a></p>
+</div>
+</div>
+</section>
+<section class="section section-gray">
+<div class="container container-narrow">
+<h2>Kritikus futási sebesség vs egyéb mutatók</h2>
+<p class="lead">Ha megérti, hogy a CRS hogyan viszonyul más futóteljesítmény-mutatókhoz, segít kiválasztani a
+            megfelelő mérőszám edzési céljaihoz.</p>
+<div class="comparison-table-container">
+<table class="comparison-table">
+<thead>
+<tr>
+<th>Metrikus</th>
+<th>Mit mér</th>
+<th>Vizsgálati módszer</th>
+<th>Fenntartható időtartam</th>
+<th>Legjobb használati eset</th>
+</tr>
+</thead>
+<tbody>
+<tr class="highlight-row">
+<td><strong>Kritikus futási sebesség (CRS)</strong></td>
+<td>Aerob küszöbtempó (4 mmol/l laktát)</td>
+<td>1200m + 3600m időfutamok</td>
+<td>30-60 perc</td>
+<td>Edzészónák, TSS számítás, aerob küszöb futás</td>
+</tr>
+<tr>
+<td><strong><a href="/hu/what-is-vo2max/">VO₂max</a></strong></td>
+<td>Maximális oxigénfelvétel</td>
+<td><a href="/hu/vo2max-testing/">Laborvizsgálat vagy 12 perces maximális erőfeszítés</a></td>
+<td>6-8 perc</td>
+<td>Általános edzettségi szint, nagy intenzitású intervallumok</td>
+</tr>
+<tr>
+<td><strong><a href="/hu/lactate-threshold-testing/">Laktát küszöb (LT)</a></strong>
+</td>
+<td>A laktát felhalmozódási pontja (2-4 mmol/L)</td>
+<td>Labor vér laktát vizsgálat</td>
+<td>30-60 perc</td>
+<td>Versenytempó előrejelzés,<a href="/hu/tempo-runs-zone3/">tempó fut</a></td>
+</tr>
+<tr>
+<td><strong>Funkcionális küszöbtempó (FTP)</strong></td>
+<td>A legjobb 60 perces tempó</td>
+<td>60 perces időfutam vagy 20 perces teszt</td>
+<td>60 perc</td>
+<td>Állóképesség edzés, maratoni tempómunka</td>
+</tr>
+<tr>
+<td><strong>5K versenytempó</strong></td>
+<td>Kitartó versenyfutás</td>
+<td>5K verseny vagy időmérő</td>
+<td>15-25 perc</td>
+<td>Versenyspecifikus edzés, tempós stratégia</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="callout callout-tip mt-lg">
+<h3>Miért válassza a CRS-et?</h3>
+<p>A VO₂max-től (laboratóriumi vizsgálat szükséges) vagy a laktátküszöbtől (vérminta szükséges) ellentétben a kritikus futás
                 a sebesség bármely pályán mérhető egy stopperrel. Ugyanazokat a képzési betekintést nyújtja, mint
                 költséges laboratóriumi vizsgálatok, miközben praktikus a rendszeres, 6-8 hetente ismételt tesztelés. Tudjon meg többet mindenről<a href="/hu/running-performance-tests/">teljesítménytesztelési módszerek futtatása</a>és mikor kell
-                használd mindegyiket.</p></div></div></section><section class="section section-alt"><div class="container"><h2 class="text-center mb-xl">CRS tesztelési protokoll</h2><div class="grid grid-2"><div class="protocol-card"><h3>📋 Szabványos protokoll</h3><ol class="protocol-steps"><li><strong>Bemelegítés</strong><p>15-20 perc könnyű futás, dinamikus gyakorlatok és 4-6 lépés a nagy intenzitásra való felkészüléshez
-                            erőfeszítést.</p></li><li><strong>1200 m időfutam</strong><p>Maximális kitartó erőfeszítés (3 kör 400 m-es pályán). A teljes idő rögzítése. Cél: a lehető leggyorsabb
-                            átlagos tempó.</p></li><li><strong>Teljes helyreállítás</strong><p><span class="highlight-text">15-30 perc</span>könnyű kocogás vagy séta/pihenés. Ez lehetővé teszi
-                            a laktát-clearance és az aerob regeneráció érdekében.</p></li><li><strong>3600 m időfutam</strong><p>Maximális erőfeszítés (9 kör 400 m-es pályán). Tartsa az egyenletes ingerlést. Ez megtehető a
-                            szükség esetén külön nap.</p></li></ol></div><div class="protocol-card"><h3>⚠️ Gyakori hibák</h3><div class="mistake-list"><div class="mistake-item"><h4>Elégtelen helyreállítás</h4><p><strong>Probléma:</strong>A fáradtság mesterségesen lelassítja a 3600 métert</p><p><strong>Eredmény:</strong>A számított CRS lesz<em>gyorsabb, mint a valóság</em>, ami a
-                            túledzett zónák</p><p><strong>Megoldás:</strong>Pihenjen, amíg a pulzusszám 120 ütés/perc alá nem esik, vagy amíg a légzés teljesen meg nem történik
-                            felépült</p></div><div class="mistake-item"><h4>Gyenge tempó 1200 méteren</h4><p><strong>Probléma:</strong>A túl gyors indítás drámai lassulást okoz</p><p><strong>Eredmény:</strong>Az 1200 méteres idő nem tükrözi az igazi fenntartható tempót</p><p><strong>Megoldás:</strong>Törekedjen egyenletes felosztásra vagy negatív felosztásra (második fele ≤ első fele)</p></div><div class="mistake-item"><h4>Inkonzisztens feltételek</h4><p><strong>Probléma:</strong>Tesztelés különböző terepen vagy szélsőséges szélben.</p><p><strong>Megoldás:</strong>Mindig sík pályán teszteljen hasonló időjárási körülmények között
-                            hosszirányú pontosság.</p></div></div></div></div><div class="callout callout-tip mt-xl"><h3>🔄 Újratesztelési gyakoriság</h3><p>Tesztelje újra a CRS-et minden alkalommal<strong>6-8 hét</strong>az edzési zónák frissítéséhez az erőnlét javulásával. A zónáid
-                fokozatosan gyorsabbá kell válnia, ahogy alkalmazkodsz az edzéshez.</p></div></div></section><section class="section"><div class="container container-narrow"><h2>CRS számítási képlet</h2><div class="formula-box"><h3>Képlet</h3><div class="formula">CRS (m/s) = (D2 - D1) / (T2 - T1)</div><div class="formula-explanation"><p>Hol:</p><ul><li>D₁ = rövidebb távolság (pl. 1200 méter)</li><li>D₂ = nagyobb távolság (pl. 3600 méter)</li><li>T₁ = D₁ ideje (másodpercben)</li><li>T₂ = D2 ideje (másodpercben)</li></ul></div><h3 class="mt-lg">Egyszerűsített távolság-idő koncepció</h3><p>A CRS a vonalrajzolási távolság lejtése az idő függvényében két vagy több maximális erőfeszítés esetén.</p></div><h3>Működő példa</h3><div class="example-box"><h4>Teszt eredményei:</h4><ul><li>3600 m idő:<strong>14:24</strong>(864 másodperc)</li><li>1200 m idő:<strong>4:12</strong>(252 másodperc)</li></ul><h4>1. lépés: A CRS kiszámítása m/s-ban</h4><div class="calculation">CRS = (3600 - 1200) / (864 - 252)<br/>CRS = 2400 / 612<br/>CRS =<strong>3,92 m/s</strong></div><h4>2. lépés: Váltson át 100 méterenkénti tempóra</h4><div class="calculation">Tempó = 100 / 3,92<br/>Tempó = 25,5 másodperc<br/>Tempó =<strong>25,5 mp 100 méterenként</strong>(4:15/km)</div></div><h2 class="mt-3xl">Ingyenes kritikus futási sebesség kalkulátor</h2><p class="lead">A CRS segítségével azonnal kiszámolhatja kritikus futási sebességét és személyre szabott edzési zónáit
-            számológép</p><div class="crs-calculator"><form id="cssCalculatorForm"><div class="calculator-inputs"><div class="form-group"><label class="form-label" for="timeLong">Hosszabb távolsági idő (pl. 3600 m) (mm:ss)</label><input aria-describedby="timeLong-help" aria-required="true" class="form-input" id="timeLong" pattern="[0-9]{1,2}:[0-5][0-9]" placeholder="14:24" type="text"/><small class="form-help" id="timeLong-help">Formátum: perc:másodperc (pl. 14:24)</small></div><div class="form-group"><label class="form-label" for="timeShort">Rövidebb távolsági idő (pl. 1200 m) (mm:ss)</label><input aria-describedby="timeShort-help" aria-required="true" class="form-input" id="timeShort" pattern="[0-9]{1,2}:[0-5][0-9]" placeholder="4:12" type="text"/><small class="form-help" id="timeShort-help">Formátum: perc:másodperc (pl. 4:12)</small></div><div class="calculator-buttons"><button class="btn btn-primary" id="calculateBtn" type="submit">Számítsa ki a CRS-et</button><button class="btn btn-ghost" id="resetBtn" type="reset">Világos</button></div></div></form><div aria-live="polite" class="calculator-results hidden" id="cssResults"><h3>Az Ön eredményei</h3><div class="results-summary"><div class="result-item"><div class="result-label">Kritikus futási sebesség</div><div class="crs-result-value" id="crsValue">--</div></div><div class="result-item"><div class="result-label">CRS Tempó 100 méterenként</div><div class="crs-result-value" id="crsPace">--</div></div></div><div class="zones-result"><h4>Az Ön személyre szabott edzési zónái</h4><p class="mb-md text-secondary">A CRS alapján itt vannak az edzési zónái 100 méterenkénti tempóban:</p><div id="zonesTable"></div></div></div><div class="callout callout-tip mt-md"><p><strong>💡 Automatikus nyomkövetés:</strong>A Run Analytics automatikusan kiszámítja a CRS-et az edzésből
+                használd mindegyiket.</p>
+</div>
+</div>
+</section>
+<section class="section section-alt">
+<div class="container">
+<h2 class="text-center mb-xl">CRS tesztelési protokoll</h2>
+<div class="grid grid-2">
+<div class="protocol-card">
+<h3>📋 Szabványos protokoll</h3>
+<ol class="protocol-steps">
+<li>
+<strong>Bemelegítés</strong>
+<p>15-20 perc könnyű futás, dinamikus gyakorlatok és 4-6 lépés a nagy intenzitásra való felkészüléshez
+                            erőfeszítést.</p>
+</li>
+<li>
+<strong>1200 m időfutam</strong>
+<p>Maximális kitartó erőfeszítés (3 kör 400 m-es pályán). A teljes idő rögzítése. Cél: a lehető leggyorsabb
+                            átlagos tempó.</p>
+</li>
+<li>
+<strong>Teljes helyreállítás</strong>
+<p><span class="highlight-text">15-30 perc</span>könnyű kocogás vagy séta/pihenés. Ez lehetővé teszi
+                            a laktát-clearance és az aerob regeneráció érdekében.</p>
+</li>
+<li>
+<strong>3600 m időfutam</strong>
+<p>Maximális erőfeszítés (9 kör 400 m-es pályán). Tartsa az egyenletes ingerlést. Ez megtehető a
+                            szükség esetén külön nap.</p>
+</li>
+</ol>
+</div>
+<div class="protocol-card">
+<h3>⚠️ Gyakori hibák</h3>
+<div class="mistake-list">
+<div class="mistake-item">
+<h4>Elégtelen helyreállítás</h4>
+<p><strong>Probléma:</strong>A fáradtság mesterségesen lelassítja a 3600 métert</p>
+<p><strong>Eredmény:</strong>A számított CRS lesz<em>gyorsabb, mint a valóság</em>, ami a
+                            túledzett zónák</p>
+<p><strong>Megoldás:</strong>Pihenjen, amíg a pulzusszám 120 ütés/perc alá nem esik, vagy amíg a légzés teljesen meg nem történik
+                            felépült</p>
+</div>
+<div class="mistake-item">
+<h4>Gyenge tempó 1200 méteren</h4>
+<p><strong>Probléma:</strong>A túl gyors indítás drámai lassulást okoz</p>
+<p><strong>Eredmény:</strong>Az 1200 méteres idő nem tükrözi az igazi fenntartható tempót</p>
+<p><strong>Megoldás:</strong>Törekedjen egyenletes felosztásra vagy negatív felosztásra (második fele ≤ első fele)</p>
+</div>
+<div class="mistake-item">
+<h4>Inkonzisztens feltételek</h4>
+<p><strong>Probléma:</strong>Tesztelés különböző terepen vagy szélsőséges szélben.</p>
+<p><strong>Megoldás:</strong>Mindig sík pályán teszteljen hasonló időjárási körülmények között
+                            hosszirányú pontosság.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-tip mt-xl">
+<h3>🔄 Újratesztelési gyakoriság</h3>
+<p>Tesztelje újra a CRS-et minden alkalommal<strong>6-8 hét</strong>az edzési zónák frissítéséhez az erőnlét javulásával. A zónáid
+                fokozatosan gyorsabbá kell válnia, ahogy alkalmazkodsz az edzéshez.</p>
+</div>
+</div>
+</section>
+<section class="section">
+<div class="container container-narrow">
+<h2>CRS számítási képlet</h2>
+<div class="formula-box">
+<h3>Képlet</h3>
+<div class="formula">CRS (m/s) = (D2 - D1) / (T2 - T1)</div>
+<div class="formula-explanation">
+<p>Hol:</p>
+<ul>
+<li>D₁ = rövidebb távolság (pl. 1200 méter)</li>
+<li>D₂ = nagyobb távolság (pl. 3600 méter)</li>
+<li>T₁ = D₁ ideje (másodpercben)</li>
+<li>T₂ = D2 ideje (másodpercben)</li>
+</ul>
+</div>
+<h3 class="mt-lg">Egyszerűsített távolság-idő koncepció</h3>
+<p>A CRS a vonalrajzolási távolság lejtése az idő függvényében két vagy több maximális erőfeszítés esetén.</p>
+</div>
+<h3>Működő példa</h3>
+<div class="example-box">
+<h4>Teszt eredményei:</h4>
+<ul>
+<li>3600 m idő:<strong>14:24</strong>(864 másodperc)</li>
+<li>1200 m idő:<strong>4:12</strong>(252 másodperc)</li>
+</ul>
+<h4>1. lépés: A CRS kiszámítása m/s-ban</h4>
+<div class="calculation">CRS = (3600 - 1200) / (864 - 252)<br/>CRS = 2400 / 612<br/>CRS =<strong>3,92 m/s</strong>
+</div>
+<h4>2. lépés: Váltson át 100 méterenkénti tempóra</h4>
+<div class="calculation">Tempó = 100 / 3,92<br/>Tempó = 25,5 másodperc<br/>Tempó =<strong>25,5 mp 100 méterenként</strong>(4:15/km)</div>
+</div>
+<h2 class="mt-3xl">Ingyenes kritikus futási sebesség kalkulátor</h2>
+<p class="lead">A CRS segítségével azonnal kiszámolhatja kritikus futási sebességét és személyre szabott edzési zónáit
+            számológép</p>
+<div class="crs-calculator">
+<form id="cssCalculatorForm">
+<div class="calculator-inputs">
+<div class="form-group">
+<label class="form-label" for="timeLong">Hosszabb távolsági idő (pl. 3600 m) (mm:ss)</label>
+<input aria-describedby="timeLong-help" aria-required="true" class="form-input" id="timeLong" pattern="[0-9]{1,2}:[0-5][0-9]" placeholder="14:24" type="text"/>
+<small class="form-help" id="timeLong-help">Formátum: perc:másodperc (pl. 14:24)</small>
+</div>
+<div class="form-group">
+<label class="form-label" for="timeShort">Rövidebb távolsági idő (pl. 1200 m) (mm:ss)</label>
+<input aria-describedby="timeShort-help" aria-required="true" class="form-input" id="timeShort" pattern="[0-9]{1,2}:[0-5][0-9]" placeholder="4:12" type="text"/>
+<small class="form-help" id="timeShort-help">Formátum: perc:másodperc (pl. 4:12)</small>
+</div>
+<div class="calculator-buttons">
+<button class="btn btn-primary" id="calculateBtn" type="submit">Számítsa ki a CRS-et</button>
+<button class="btn btn-ghost" id="resetBtn" type="reset">Világos</button>
+</div>
+</div>
+</form>
+<div aria-live="polite" class="calculator-results hidden" id="cssResults">
+<h3>Az Ön eredményei</h3>
+<div class="results-summary">
+<div class="result-item">
+<div class="result-label">Kritikus futási sebesség</div>
+<div class="crs-result-value" id="crsValue">--</div>
+</div>
+<div class="result-item">
+<div class="result-label">CRS Tempó 100 méterenként</div>
+<div class="crs-result-value" id="crsPace">--</div>
+</div>
+</div>
+<div class="zones-result">
+<h4>Az Ön személyre szabott edzési zónái</h4>
+<p class="mb-md text-secondary">A CRS alapján itt vannak az edzési zónái 100 méterenkénti tempóban:</p>
+<div id="zonesTable"></div>
+</div>
+</div>
+<div class="callout callout-tip mt-md">
+<p><strong>💡 Automatikus nyomkövetés:</strong>A Run Analytics automatikusan kiszámítja a CRS-et az edzésből
                     adatokat, és nyomon követi azokat az idő múlásával – nincs szükség manuális tesztelésre vagy számításokra. Az alkalmazás frissíti az Ön
-                    edzési zónákat, ahogy a CRS javul.<a href="/hu/">További információ →</a></p></div></div><h3 class="mt-xl">Alternatíva: 3 perces és 12 perces tesztek</h3><p>Egy széles körben használt alternatíva, hogy 3 perc 12 perc alatt a lehető legtávolabbra fut. A különbség a
-            távolság osztva az időkülönbséggel, így a CRS.</p></div></section><section class="section section-alt"><div class="container"><h2 class="mb-xl">Kritikus futási sebességen alapuló edzési zónák</h2><div class="callout callout-info"><p><strong>Megjegyzés:</strong>Futásban a tempót úgy mérik<em>távolságonkénti idő</em>. Ezért a<strong>magasabb százalék = lassabb tempó</strong>és a<strong>alacsonyabb százalék = gyorsabb tempó</strong>.
-                Ez fordítottja az olyan erőalapú sportoknak, mint a kerékpározás, ahol magasabb % = nagyobb erőfeszítés. További információ:<a href="/hu/training-zones/">hogyan kell használni ezeket az edzési zónákat</a>hatékonyan.</p></div><div class="zones-table-container"><table class="zones-table"><thead><tr><th>Zóna</th><th>Név</th><th>A CRS tempó %-a</th><th>Példa a CRS 1:40/100 m-hez</th><th>RPE</th><th>Fiziológiai cél</th></tr></thead><tbody><tr class="zone-1"><td><strong>1</strong></td><td>Helyreállítás</td><td>&gt;120%</td><td>&gt;30s/100m</td><td>2-3/10</td><td>Aktív regeneráció, könnyű aerob karbantartás</td></tr><tr class="zone-2"><td><strong>2</strong></td><td>Aerob bázis</td><td>108-120%</td><td>27-30s/100m</td><td>4-5/10</td><td>Az aerob kapacitás fejlesztése, a zsírok oxidációja</td></tr><tr class="zone-3"><td><strong>3</strong></td><td>Tempo</td><td>102-108%</td><td>25-27s/100m</td><td>6-7/10</td><td>Maratoni tempós edzés, izomállóság</td></tr><tr class="zone-4"><td><strong>4</strong></td><td>Küszöb (CRS)</td><td>97-102%</td><td>24-25s/100m</td><td>7-8/10</td><td>A laktát küszöb javulása</td></tr><tr class="zone-5"><td><strong>5</strong></td><td>VO₂max</td><td>&lt;97%</td><td>&lt;24s/100m</td><td>9-10/10</td><td>Intervallum edzés, VO₂max fejlesztés</td></tr></tbody></table></div><div class="callout callout-tip mt-lg"><h3>🎯 Zóna alapú képzési előnyök</h3><p>A CRS alapú zónák használata a szubjektív "érzés" edzést objektív, megismételhető edzésekké alakítja. Mindegyik
-                zóna speciális fiziológiai adaptációkat céloz meg:</p><ul><li><strong>2. zóna:</strong>Aerob motor építése (a heti mennyiség 60-70%-a)</li><li><strong>3. zóna:</strong>Növelje a versenytempó hatékonyságát (a mennyiség 15-20%-a)</li><li><strong>4. zóna:</strong>Nyomja magasabbra a laktát küszöböt (a térfogat 10-15%-a)</li><li><strong>5. zóna:</strong>Csúcs sebesség és teljesítmény fejlesztése (a hangerő 5-10%-a)</li></ul></div></div></section><section class="section"><div class="container container-narrow"><h2>Tipikus kritikus futási sebesség értékek szintenként</h2><div class="levels-comparison"><div class="level-card"><h3>🥇 Elit távfutók</h3><div class="pace-value">5,0-5,5 m/s</div><div class="pace-equivalent">18-20 mp 100 méterenként</div><p>3:00-3:20 perc/km tempó. Profi maratonisták és elit középtávfutók.</p></div><div class="level-card"><h3>🏃 Versenyképes futók</h3><div class="pace-value">4,0-5,0 m/s</div><div class="pace-equivalent">20-25 mp 100 méterenként</div><p>3:20-4:10 perc/km tempó. Erős klubfutók, 3:00 alatti maratonisták, versenyképes korosztályosok.</p></div><div class="level-card"><h3>👟 Rendszeres fitneszfutók</h3><div class="pace-value">3,2-4,0 m/s</div><div class="pace-equivalent">25-31 mp 100 méterenként</div><p>4:10-5:10 perc/km tempó. Folyamatos edzés 3-5 nap/hét. Normál 5K maratoni célidők.</p></div><div class="level-card"><h3>🌱 Fejlődő futók</h3><div class="pace-value">&lt;3,2 m/s</div><div class="pace-equivalent">&gt;31 mp/100 m</div><p>5:10 perc/km feletti tempó. Az aerob bázis felépítése és a heti futásteljesítmény biztonságos növelése.</p></div></div></div></section><section class="section section-alt"><div class="container container-narrow"><h2>Tudományos validálás</h2><div class="research-highlight"><h3>Wakayoshi et al. (1992-1993) – Alapkutatás</h3><p>A Kohji Wakayoshi alapvető tanulmányai az Osakai Egyetemen megalapozták a CRS-et érvényes, gyakorlati alternatívaként
-                laboratóriumi laktátvizsgálathoz:</p><ul class="research-findings"><li><strong>Erős korreláció a VO₂-vel anaerob küszöbön</strong>(r &gt; 0,90)</li><li><strong>Kiváló előrejelzője a 10K és a maratoni teljesítménynek</strong></li><li><strong>Megfelel a maximális laktát egyensúlyi állapotnak (MLSS)</strong></li><li><strong>Független az anaerob kapacitástól (W')</strong></li></ul><div class="citation"><p><strong>Kulcsfontosságú papírok:</strong></p><ol><li>Wakayoshi K, et al. (1992). "A kritikus sebesség meghatározása és érvényessége indexként
+                    edzési zónákat, ahogy a CRS javul.<a href="/hu/">További információ →</a></p>
+</div>
+</div>
+<h3 class="mt-xl">Alternatíva: 3 perces és 12 perces tesztek</h3>
+<p>Egy széles körben használt alternatíva, hogy 3 perc 12 perc alatt a lehető legtávolabbra fut. A különbség a
+            távolság osztva az időkülönbséggel, így a CRS.</p>
+</div>
+</section>
+<section class="section section-alt">
+<div class="container">
+<h2 class="mb-xl">Kritikus futási sebességen alapuló edzési zónák</h2>
+<div class="callout callout-info">
+<p><strong>Megjegyzés:</strong>Futásban a tempót úgy mérik<em>távolságonkénti idő</em>. Ezért a<strong>magasabb százalék = lassabb tempó</strong>és a<strong>alacsonyabb százalék = gyorsabb tempó</strong>.
+                Ez fordítottja az olyan erőalapú sportoknak, mint a kerékpározás, ahol magasabb % = nagyobb erőfeszítés. További információ:<a href="/hu/training-zones/">hogyan kell használni ezeket az edzési zónákat</a>hatékonyan.</p>
+</div>
+<div class="zones-table-container">
+<table class="zones-table">
+<thead>
+<tr>
+<th>Zóna</th>
+<th>Név</th>
+<th>A CRS tempó %-a</th>
+<th>Példa a CRS 1:40/100 m-hez</th>
+<th>RPE</th>
+<th>Fiziológiai cél</th>
+</tr>
+</thead>
+<tbody>
+<tr class="zone-1">
+<td><strong>1</strong></td>
+<td>Helyreállítás</td>
+<td>&gt;120%</td>
+<td>&gt;30s/100m</td>
+<td>2-3/10</td>
+<td>Aktív regeneráció, könnyű aerob karbantartás</td>
+</tr>
+<tr class="zone-2">
+<td><strong>2</strong></td>
+<td>Aerob bázis</td>
+<td>108-120%</td>
+<td>27-30s/100m</td>
+<td>4-5/10</td>
+<td>Az aerob kapacitás fejlesztése, a zsírok oxidációja</td>
+</tr>
+<tr class="zone-3">
+<td><strong>3</strong></td>
+<td>Tempo</td>
+<td>102-108%</td>
+<td>25-27s/100m</td>
+<td>6-7/10</td>
+<td>Maratoni tempós edzés, izomállóság</td>
+</tr>
+<tr class="zone-4">
+<td><strong>4</strong></td>
+<td>Küszöb (CRS)</td>
+<td>97-102%</td>
+<td>24-25s/100m</td>
+<td>7-8/10</td>
+<td>A laktát küszöb javulása</td>
+</tr>
+<tr class="zone-5">
+<td><strong>5</strong></td>
+<td>VO₂max</td>
+<td>&lt;97%</td>
+<td>&lt;24s/100m</td>
+<td>9-10/10</td>
+<td>Intervallum edzés, VO₂max fejlesztés</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="callout callout-tip mt-lg">
+<h3>🎯 Zóna alapú képzési előnyök</h3>
+<p>A CRS alapú zónák használata a szubjektív "érzés" edzést objektív, megismételhető edzésekké alakítja. Mindegyik
+                zóna speciális fiziológiai adaptációkat céloz meg:</p>
+<ul>
+<li><strong>2. zóna:</strong>Aerob motor építése (a heti mennyiség 60-70%-a)</li>
+<li><strong>3. zóna:</strong>Növelje a versenytempó hatékonyságát (a mennyiség 15-20%-a)</li>
+<li><strong>4. zóna:</strong>Nyomja magasabbra a laktát küszöböt (a térfogat 10-15%-a)</li>
+<li><strong>5. zóna:</strong>Csúcs sebesség és teljesítmény fejlesztése (a hangerő 5-10%-a)</li>
+</ul>
+</div>
+</div>
+</section>
+<section class="section">
+<div class="container container-narrow">
+<h2>Tipikus kritikus futási sebesség értékek szintenként</h2>
+<div class="levels-comparison">
+<div class="level-card">
+<h3>🥇 Elit távfutók</h3>
+<div class="pace-value">5,0-5,5 m/s</div>
+<div class="pace-equivalent">18-20 mp 100 méterenként</div>
+<p>3:00-3:20 perc/km tempó. Profi maratonisták és elit középtávfutók.</p>
+</div>
+<div class="level-card">
+<h3>🏃 Versenyképes futók</h3>
+<div class="pace-value">4,0-5,0 m/s</div>
+<div class="pace-equivalent">20-25 mp 100 méterenként</div>
+<p>3:20-4:10 perc/km tempó. Erős klubfutók, 3:00 alatti maratonisták, versenyképes korosztályosok.</p>
+</div>
+<div class="level-card">
+<h3>👟 Rendszeres fitneszfutók</h3>
+<div class="pace-value">3,2-4,0 m/s</div>
+<div class="pace-equivalent">25-31 mp 100 méterenként</div>
+<p>4:10-5:10 perc/km tempó. Folyamatos edzés 3-5 nap/hét. Normál 5K maratoni célidők.</p>
+</div>
+<div class="level-card">
+<h3>🌱 Fejlődő futók</h3>
+<div class="pace-value">&lt;3,2 m/s</div>
+<div class="pace-equivalent">&gt;31 mp/100 m</div>
+<p>5:10 perc/km feletti tempó. Az aerob bázis felépítése és a heti futásteljesítmény biztonságos növelése.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="section section-alt">
+<div class="container container-narrow">
+<h2>Tudományos validálás</h2>
+<div class="research-highlight">
+<h3>Wakayoshi et al. (1992-1993) – Alapkutatás</h3>
+<p>A Kohji Wakayoshi alapvető tanulmányai az Osakai Egyetemen megalapozták a CRS-et érvényes, gyakorlati alternatívaként
+                laboratóriumi laktátvizsgálathoz:</p>
+<ul class="research-findings">
+<li><strong>Erős korreláció a VO₂-vel anaerob küszöbön</strong>(r &gt; 0,90)</li>
+<li><strong>Kiváló előrejelzője a 10K és a maratoni teljesítménynek</strong></li>
+<li><strong>Megfelel a maximális laktát egyensúlyi állapotnak (MLSS)</strong></li>
+<li><strong>Független az anaerob kapacitástól (W')</strong></li>
+</ul>
+<div class="citation">
+<p><strong>Kulcsfontosságú papírok:</strong></p>
+<ol>
+<li>Wakayoshi K, et al. (1992). "A kritikus sebesség meghatározása és érvényessége indexként
                         futóteljesítmény a versenyző futóban."<em>European Journal of Applied Physiology</em>,
-                        64. (2), 153-157.</li><li>Wakayoshi K, et al. (1992). "Egy egyszerű módszer a kritikus sebesség meghatározására futási fáradtságként
+                        64. (2), 153-157.</li>
+<li>Wakayoshi K, et al. (1992). "Egy egyszerű módszer a kritikus sebesség meghatározására futási fáradtságként
                         küszöb a versenyfutásban."<em>International Journal of Sports Medicine</em>, 13. cikk (5),
-                        367-371.</li><li>Wakayoshi K, et al. (1993). "A kritikus futási sebesség az edzés intenzitását jelenti?
-                        maximális laktát egyensúlyi állapot?"<em>European Journal of Applied Physiology</em>, 66(1), 90-95.</li></ol></div></div><div class="callout callout-science"><h3>🔬 Miért működik a kritikus futási sebesség?</h3><p>A kritikus futási sebesség jelenti a határt a<strong>nehéz és súlyos gyakorlat
+                        367-371.</li>
+<li>Wakayoshi K, et al. (1993). "A kritikus futási sebesség az edzés intenzitását jelenti?
+                        maximális laktát egyensúlyi állapot?"<em>European Journal of Applied Physiology</em>, 66(1), 90-95.</li>
+</ol>
+</div>
+</div>
+<div class="callout callout-science">
+<h3>🔬 Miért működik a kritikus futási sebesség?</h3>
+<p>A kritikus futási sebesség jelenti a határt a<strong>nehéz és súlyos gyakorlat
                     domainek</strong>. A CRS alatt a laktáttermelés és a felszabadulás egyensúlyban marad – lehet futni
-                meghosszabbított időszakok. A CRS felett a laktát fokozatosan halmozódik fel 20-40 percen belüli kimerülésig.</p><p>Ez teszi a CRS-et tökéletes intenzitással a következőkhöz:</p><ul><li>Fenntartható versenytempó beállítása az 5K-tól a maratoni eseményekig</li><li>Felírás<a href="/hu/training-zones/">küszöbintervallum edzés</a></li><li>Az aerob erőnlét időbeli javulásának nyomon követése</li><li>Számítás<a href="/hu/training-load/">edzésterhelés és helyreállítási igények</a></li></ul></div></div></section><section class="section"><div class="container container-narrow"><h2 class="mt-3xl">Hogyan tesztelje kritikus futási sebességét</h2><div class="howto-section" itemscope="" itemtype="https://schema.org/HowTo"><meta content="How to Test Your Critical Running Speed" itemprop="name"/><meta content="Follow this step-by-step protocol to accurately measure your Critical Running Speed (CRS) for optimal pace optimization" itemprop="description"/><div class="howto-step" itemprop="step" itemscope="" itemtype="https://schema.org/HowToStep"><meta content="1" itemprop="position"/><h3 itemprop="name">1. lépés: Melegítsen be megfelelően</h3><div itemprop="itemListElement" itemscope="" itemtype="https://schema.org/HowToDirection"><div itemprop="text"><p>Végezzen el 15-20 perc könnyű futást, dinamikus nyújtásokat és 4-6 lépést. Ez előkészíti
-                            az izmokat és a szív- és érrendszert a maximális erőfeszítés érdekében.</p></div></div></div><div class="howto-step" itemprop="step" itemscope="" itemtype="https://schema.org/HowToStep"><meta content="2" itemprop="position"/><h3 itemprop="name">2. lépés: Végezzen 1200 m időfutamot</h3><div itemprop="itemListElement" itemscope="" itemtype="https://schema.org/HowToDirection"><div itemprop="text"><p>Fuss 1200 métert (3 kör 400 m-es pályán) maximális kitartó erőkifejtéssel. Jegyezze fel az idejét a
+                meghosszabbított időszakok. A CRS felett a laktát fokozatosan halmozódik fel 20-40 percen belüli kimerülésig.</p>
+<p>Ez teszi a CRS-et tökéletes intenzitással a következőkhöz:</p>
+<ul>
+<li>Fenntartható versenytempó beállítása az 5K-tól a maratoni eseményekig</li>
+<li>Felírás<a href="/hu/training-zones/">küszöbintervallum edzés</a></li>
+<li>Az aerob erőnlét időbeli javulásának nyomon követése</li>
+<li>Számítás<a href="/hu/training-load/">edzésterhelés és helyreállítási igények</a></li>
+</ul>
+</div>
+</div>
+</section>
+<section class="section">
+<div class="container container-narrow">
+<h2 class="mt-3xl">Hogyan tesztelje kritikus futási sebességét</h2>
+<div class="howto-section" itemscope="" itemtype="https://schema.org/HowTo">
+<meta content="How to Test Your Critical Running Speed" itemprop="name"/>
+<meta content="Follow this step-by-step protocol to accurately measure your Critical Running Speed (CRS) for optimal pace optimization" itemprop="description"/>
+<div class="howto-step" itemprop="step" itemscope="" itemtype="https://schema.org/HowToStep">
+<meta content="1" itemprop="position"/>
+<h3 itemprop="name">1. lépés: Melegítsen be megfelelően</h3>
+<div itemprop="itemListElement" itemscope="" itemtype="https://schema.org/HowToDirection">
+<div itemprop="text">
+<p>Végezzen el 15-20 perc könnyű futást, dinamikus nyújtásokat és 4-6 lépést. Ez előkészíti
+                            az izmokat és a szív- és érrendszert a maximális erőfeszítés érdekében.</p>
+</div>
+</div>
+</div>
+<div class="howto-step" itemprop="step" itemscope="" itemtype="https://schema.org/HowToStep">
+<meta content="2" itemprop="position"/>
+<h3 itemprop="name">2. lépés: Végezzen 1200 m időfutamot</h3>
+<div itemprop="itemListElement" itemscope="" itemtype="https://schema.org/HowToDirection">
+<div itemprop="text">
+<p>Fuss 1200 métert (3 kör 400 m-es pályán) maximális kitartó erőkifejtéssel. Jegyezze fel az idejét a
                             második. Fókusz
-                            konzisztens, magas intenzitás fenntartása az egész TT alatt.</p></div></div></div><div class="howto-step" itemprop="step" itemscope="" itemtype="https://schema.org/HowToStep"><meta content="3" itemprop="position"/><h3 itemprop="name">3. lépés: Teljes helyreállítás</h3><div itemprop="itemListElement" itemscope="" itemtype="https://schema.org/HowToDirection"><div itemprop="text"><p>Pihenjen 15-30 percig. Nagyon lassan sétálhat vagy kocoghat. Elengedhetetlen, hogy engedd a szíved
-                            a sebesség csökken, és lábai jelentősen felépülnek a következő erőfeszítés előtt.</p></div></div></div><div class="howto-step" itemprop="step" itemscope="" itemtype="https://schema.org/HowToStep"><meta content="4" itemprop="position"/><h3 itemprop="name">4. lépés: Hajtson végre 3600 m időfutamot</h3><div itemprop="itemListElement" itemscope="" itemtype="https://schema.org/HowToDirection"><div itemprop="text"><p>Fuss 3600 métert (9 kör 400 m-es pályán) maximális erőkifejtéssel. Ez az állóképesség összetevője
+                            konzisztens, magas intenzitás fenntartása az egész TT alatt.</p>
+</div>
+</div>
+</div>
+<div class="howto-step" itemprop="step" itemscope="" itemtype="https://schema.org/HowToStep">
+<meta content="3" itemprop="position"/>
+<h3 itemprop="name">3. lépés: Teljes helyreállítás</h3>
+<div itemprop="itemListElement" itemscope="" itemtype="https://schema.org/HowToDirection">
+<div itemprop="text">
+<p>Pihenjen 15-30 percig. Nagyon lassan sétálhat vagy kocoghat. Elengedhetetlen, hogy engedd a szíved
+                            a sebesség csökken, és lábai jelentősen felépülnek a következő erőfeszítés előtt.</p>
+</div>
+</div>
+</div>
+<div class="howto-step" itemprop="step" itemscope="" itemtype="https://schema.org/HowToStep">
+<meta content="4" itemprop="position"/>
+<h3 itemprop="name">4. lépés: Hajtson végre 3600 m időfutamot</h3>
+<div itemprop="itemListElement" itemscope="" itemtype="https://schema.org/HowToDirection">
+<div itemprop="text">
+<p>Fuss 3600 métert (9 kör 400 m-es pályán) maximális erőkifejtéssel. Ez az állóképesség összetevője
                             a tesztből.
-                            Fenntartja a tartható leggyorsabb tempót a teljes távon.</p></div></div></div><div class="howto-step" itemprop="step" itemscope="" itemtype="https://schema.org/HowToStep"><meta content="5" itemprop="position"/><h3 itemprop="name">5. lépés: Számítsa ki a CRS-et</h3><div itemprop="itemListElement" itemscope="" itemtype="https://schema.org/HowToDirection"><div itemprop="text"><p>Használja a lineáris képletet: (D2 - D1) / (T2 - T1). Például: (3600 - 1200) / (864s - 252s) =
-                            2400 / 612 = 3,92 m/s. Átalakítás ütemre: 100 / 3,92 = 25,5 s/100 m.</p></div></div></div></div><h2>A kritikus futási sebesség gyakorlati alkalmazásai</h2><div class="application-grid"><div class="application-item"><h3>1️⃣ Oldja fel a képzési terhelési mutatókat</h3><p>A kritikus futási sebesség a nevező az intenzitási tényező számításában<a href="/hu/training-load/">rTSS (futási edzés stresszpontszáma)</a>. Enélkül te
-                    nem tudja számszerűsíteni az edzési stresszt vagy nyomon követni a fitnesz/fáradtság trendeket.</p></div><div class="application-item"><h3>2️⃣ Tedd személyre az edzési zónákat</h3><p>Az általános tempódiagramok nem veszik figyelembe az egyéni fiziológiát.<a href="/hu/training-zones/">CRS alapú edzészónák</a>gondoskodjon arról, hogy minden futó a helyszínen edzen
-                    optimális intenzitásuk az aerob küszöbfutáshoz.</p></div><div class="application-item"><h3>3️⃣ Kövesse nyomon a fitnesz fejlődését</h3><p>6-8 hetente tesztelje újra. A kritikus futási sebesség javítása (gyorsabb tempó) a sikeres aerobik jele
-                    alkalmazkodás. A stagnáló CRS az edzési igények módosítását javasolja.</p></div><div class="application-item"><h3>4️⃣ Jósolja meg a verseny teljesítményét</h3><p>A CRS tempó megközelíti a fenntartható küszöbtempót. Használja reális célok kitűzésére 5K, 10K és
-                    félmaratoni események.</p></div><div class="application-item"><h3>5️⃣ Küszöbbeli edzéstervezés</h3><p>Klasszikus CRS szettek: 10×400 @ CRS tempó (60 mp pihenés), 4×1200 @ 98% CRS (90 mp pihenés). Laktát-clearance kialakítása
-                    kapacitás.</p></div><div class="application-item"><h3>6️⃣ Optimalizálja a Taper stratégiát</h3><p>CRS pálya a kúposodás előtt és után. A sikeres kúposodás fenntartja vagy enyhén javítja a CRS-et, miközben
-                    csökkenti a fáradtságot (megnövekedett TSB).</p></div></div><h2 class="mt-3xl">Gyakran ismételt kérdések a kritikus futási sebességről</h2><div class="faq-section" itemscope="" itemtype="https://schema.org/FAQPage"><div class="faq-item" itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question"><h3 itemprop="name">Mi a kritikus futási sebesség (CRS)?</h3><div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer"><div itemprop="text"><p>A kritikus futási sebesség az a maximális futási tempó, amelyet körülbelül 30-60 futásig ki tud tartani
+                            Fenntartja a tartható leggyorsabb tempót a teljes távon.</p>
+</div>
+</div>
+</div>
+<div class="howto-step" itemprop="step" itemscope="" itemtype="https://schema.org/HowToStep">
+<meta content="5" itemprop="position"/>
+<h3 itemprop="name">5. lépés: Számítsa ki a CRS-et</h3>
+<div itemprop="itemListElement" itemscope="" itemtype="https://schema.org/HowToDirection">
+<div itemprop="text">
+<p>Használja a lineáris képletet: (D2 - D1) / (T2 - T1). Például: (3600 - 1200) / (864s - 252s) =
+                            2400 / 612 = 3,92 m/s. Átalakítás ütemre: 100 / 3,92 = 25,5 s/100 m.</p>
+</div>
+</div>
+</div>
+</div>
+<h2>A kritikus futási sebesség gyakorlati alkalmazásai</h2>
+<div class="application-grid">
+<div class="application-item">
+<h3>1️⃣ Oldja fel a képzési terhelési mutatókat</h3>
+<p>A kritikus futási sebesség a nevező az intenzitási tényező számításában<a href="/hu/training-load/">rTSS (futási edzés stresszpontszáma)</a>. Enélkül te
+                    nem tudja számszerűsíteni az edzési stresszt vagy nyomon követni a fitnesz/fáradtság trendeket.</p>
+</div>
+<div class="application-item">
+<h3>2️⃣ Tedd személyre az edzési zónákat</h3>
+<p>Az általános tempódiagramok nem veszik figyelembe az egyéni fiziológiát.<a href="/hu/training-zones/">CRS alapú edzészónák</a>gondoskodjon arról, hogy minden futó a helyszínen edzen
+                    optimális intenzitásuk az aerob küszöbfutáshoz.</p>
+</div>
+<div class="application-item">
+<h3>3️⃣ Kövesse nyomon a fitnesz fejlődését</h3>
+<p>6-8 hetente tesztelje újra. A kritikus futási sebesség javítása (gyorsabb tempó) a sikeres aerobik jele
+                    alkalmazkodás. A stagnáló CRS az edzési igények módosítását javasolja.</p>
+</div>
+<div class="application-item">
+<h3>4️⃣ Jósolja meg a verseny teljesítményét</h3>
+<p>A CRS tempó megközelíti a fenntartható küszöbtempót. Használja reális célok kitűzésére 5K, 10K és
+                    félmaratoni események.</p>
+</div>
+<div class="application-item">
+<h3>5️⃣ Küszöbbeli edzéstervezés</h3>
+<p>Klasszikus CRS szettek: 10×400 @ CRS tempó (60 mp pihenés), 4×1200 @ 98% CRS (90 mp pihenés). Laktát-clearance kialakítása
+                    kapacitás.</p>
+</div>
+<div class="application-item">
+<h3>6️⃣ Optimalizálja a Taper stratégiát</h3>
+<p>CRS pálya a kúposodás előtt és után. A sikeres kúposodás fenntartja vagy enyhén javítja a CRS-et, miközben
+                    csökkenti a fáradtságot (megnövekedett TSB).</p>
+</div>
+</div>
+<h2 class="mt-3xl">Gyakran ismételt kérdések a kritikus futási sebességről</h2>
+<div class="faq-section" itemscope="" itemtype="https://schema.org/FAQPage">
+<div class="faq-item" itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question">
+<h3 itemprop="name">Mi a kritikus futási sebesség (CRS)?</h3>
+<div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer">
+<div itemprop="text">
+<p>A kritikus futási sebesség az a maximális futási tempó, amelyet körülbelül 30-60 futásig ki tud tartani
                             perc alatt felhalmozódó fáradtság nélkül. Az Ön aerob küszöbét jelenti – azt a pontot, ahol
                             a laktáttermelés megegyezik a laktát-clearance-sel (általában 4 mmol/L vér laktát). A CRS az
-                            két maximális erőkifejtést igénylő időfutamból számítják ki, és a személyre szabottság alapjául szolgál<a href="/hu/training-zones/">edzési zónák</a>és<a href="/hu/training-load/">TSS számítások</a>.</p></div></div></div><div class="faq-item" itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question"><h3 itemprop="name">Hogyan számíthatom ki a CRS-et?</h3><div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer"><div itemprop="text"><p>A kritikus futási sebesség kiszámításához: (1) Melegítsen be megfelelően, (2) Végezzen maximális erőfeszítést
+                            két maximális erőkifejtést igénylő időfutamból számítják ki, és a személyre szabottság alapjául szolgál<a href="/hu/training-zones/">edzési zónák</a>és<a href="/hu/training-load/">TSS számítások</a>.</p>
+</div>
+</div>
+</div>
+<div class="faq-item" itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question">
+<h3 itemprop="name">Hogyan számíthatom ki a CRS-et?</h3>
+<div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer">
+<div itemprop="text">
+<p>A kritikus futási sebesség kiszámításához: (1) Melegítsen be megfelelően, (2) Végezzen maximális erőfeszítést
                             1200 méteres időfutam, (3) 15-30 perc pihenés, (4) maximális erőkifejtés végrehajtása 3600 méteres időfutam,
                             (5) Használja a következő képletet:<strong>CRS (m/s) = (D2 - D1) / (T2 - T1)</strong>. Konvertálja az eredményt
-                            tempózni 100 méterenként vagy km-enként. Azonnali eredményekért használja fenti ingyenes CRS kalkulátorunkat.</p></div></div></div><div class="faq-item" itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question"><h3 itemprop="name">Milyen gyakran teszteljem a CRS-et?</h3><div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer"><div itemprop="text"><p>Tesztelje újra kritikus futási sebességét 6-8 hetente, hogy frissítse edzési zónáit
+                            tempózni 100 méterenként vagy km-enként. Azonnali eredményekért használja fenti ingyenes CRS kalkulátorunkat.</p>
+</div>
+</div>
+</div>
+<div class="faq-item" itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question">
+<h3 itemprop="name">Milyen gyakran teszteljem a CRS-et?</h3>
+<div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer">
+<div itemprop="text">
+<p>Tesztelje újra kritikus futási sebességét 6-8 hetente, hogy frissítse edzési zónáit
                             javul az erőnlét. Intenzív időszakban gyakoribb vizsgálat (4 hetente) indokolt lehet
                             képzési blokkok, míg a ritkább tesztelés (10-12 hét) a karbantartási fázisoknál működik.
                             A futási küszöbtempójának fokozatosan javulnia kell a következetes edzéssel,
-                            pozitív aerob adaptációkat jelezve.</p></div></div></div><div class="faq-item" itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question"><h3 itemprop="name">A CRS ugyanaz, mint a laktátküszöb vagy a FTP?</h3><div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer"><div itemprop="text"><p>A CRS nagyon hasonló, de nem azonos. A kritikus futási sebesség a másodpercednek felel meg
+                            pozitív aerob adaptációkat jelezve.</p>
+</div>
+</div>
+</div>
+<div class="faq-item" itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question">
+<h3 itemprop="name">A CRS ugyanaz, mint a laktátküszöb vagy a FTP?</h3>
+<div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer">
+<div itemprop="text">
+<p>A CRS nagyon hasonló, de nem azonos. A kritikus futási sebesség a másodpercednek felel meg
                             laktát küszöb (LT2, körülbelül 4 mmol/L), ami valamivel magasabb, mint az első laktát
                             küszöbérték (LT1, 2 mmol/L). Összehasonlítható a Functional Threshold Pace-hez (FTP), de a FTP
                             60 perces erőfeszítésen alapul, míg a CRS-et rövidebb időpróbákból számítják. CRS általában
                             30-40 percig fenntartható tempót képvisel, így ideális 5K versenytempóhoz
                             előkészítés és
-                            küszöb edzés.</p></div></div></div><div class="faq-item" itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question"><h3 itemprop="name">Milyen a jó CRS kezdőknek?</h3><div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer"><div itemprop="text"><p>A fejlődő futók számára a CRS tipikus sebessége meghaladja a 31 mp/100 métert (&gt;5:10 perc/km). Fitness futók
+                            küszöb edzés.</p>
+</div>
+</div>
+</div>
+<div class="faq-item" itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question">
+<h3 itemprop="name">Milyen a jó CRS kezdőknek?</h3>
+<div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer">
+<div itemprop="text">
+<p>A fejlődő futók számára a CRS tipikus sebessége meghaladja a 31 mp/100 métert (&gt;5:10 perc/km). Fitness futók
                             általában 25-31 másodpercet ér el 100 méterenként (4:10-5:10 perc/km). Ne hasonlítsd magad az elithez
                             sportolók – összpontosítson saját CRS fejlesztésére strukturált edzéseken keresztül. Bármely CRS érvényes
-                            a tempóoptimalizálás kiindulópontja.</p></div></div></div><div class="faq-item" itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question"><h3 itemprop="name">Használhatom a CRS-et maratoni edzéshez?</h3><div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer"><div itemprop="text"><p>Igen, de módosításokkal. A CRS egy olyan tempót képvisel, amelyet 30-40 percig tarthatsz, ami
+                            a tempóoptimalizálás kiindulópontja.</p>
+</div>
+</div>
+</div>
+<div class="faq-item" itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question">
+<h3 itemprop="name">Használhatom a CRS-et maratoni edzéshez?</h3>
+<div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer">
+<div itemprop="text">
+<p>Igen, de módosításokkal. A CRS egy olyan tempót képvisel, amelyet 30-40 percig tarthatsz, ami
                             túl intenzív a teljes maratonokhoz. A CRS alapú edzészónák azonban kiválóak a maratoni futáshoz
                             felkészülés: a 2. zóna az aerob bázist, a 3. zóna versenyspecifikus állóképességet fejleszt, és
                             A 4-es zóna (a CRS-nél) javítja a laktátküszöböt. A maratoni tempó jellemzően kb
                             CRS tempójának 105-110%-a (a küszöbértéknél lassabb). Használja a CRS-et az edzés felépítéséhez, ne
-                            mint a versenytempód.</p></div></div></div><div class="faq-item" itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question"><h3 itemprop="name">Miért olyan fontos az időmérő edzések közötti felépülés?</h3><div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer"><div itemprop="text"><p>Ha nem tér vissza kellőképpen a két időfutam között, a fáradtság mesterségesen lelassul
+                            mint a versenytempód.</p>
+</div>
+</div>
+</div>
+<div class="faq-item" itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question">
+<h3 itemprop="name">Miért olyan fontos az időmérő edzések közötti felépülés?</h3>
+<div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer">
+<div itemprop="text">
+<p>Ha nem tér vissza kellőképpen a két időfutam között, a fáradtság mesterségesen lelassul
                             a második alkalommal, így a kiszámított kritikus futási sebesség gyorsabbnak tűnik, mint a valóság.
                             Ez túl agresszív edzési zónákhoz vezet. Biztosítson legalább 15-30 perc pihenőt ill
-                            fontolja meg a tesztek ugyanazon hét különböző napjain történő elvégzését.</p></div></div></div><div class="faq-item" itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question"><h3 itemprop="name">Megbecsülhetem-e a CRS-et a versenyidők alapján tesztelés helyett?</h3><div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer"><div itemprop="text"><p>Míg a CRS a versenyteljesítmény alapján közelíthető, a közvetlen tesztelés pontosabb. Ha te
+                            fontolja meg a tesztek ugyanazon hét különböző napjain történő elvégzését.</p>
+</div>
+</div>
+</div>
+<div class="faq-item" itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question">
+<h3 itemprop="name">Megbecsülhetem-e a CRS-et a versenyidők alapján tesztelés helyett?</h3>
+<div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer">
+<div itemprop="text">
+<p>Míg a CRS a versenyteljesítmény alapján közelíthető, a közvetlen tesztelés pontosabb. Ha te
                             meg kell becsülni: vegye ki az elmúlt 10 000 legjobb időt, és használja ezt a tempót 100 méterenként mínusz ~1 másodperc, vagy
                             használd a félmaratoni tempód 103-105%-át. Az 1200m + 3600m teszt azonban biztosítja a
-                            a hatékony edzéshez szükséges pontos adatok.</p></div></div></div></div><div class="callout mt-2xl"><h3>Alkalmazza CRS tudását</h3><p>Most, hogy megértette a kritikus futási sebességet, tegye meg a következő lépéseket az edzés optimalizálásához:</p><ul><li><a href="/hu/training-load/">Az edzési stresszpontszám kiszámítása (TSS)</a>a CRS to
-                    számszerűsítse az edzés intenzitását</li><li><a href="/hu/training-zones/">Fedezze fel a 7 edzési zónát</a>és megtanulják, hogyan kell strukturálni
-                    edzések speciális alkalmazkodáshoz</li><li><a href="/hu/formulas/">Az összes képlet megtekintése</a>Run Analytics-ben használják a teljes
-                    átláthatóság</li><li><a href="/hu/">Töltse le a Run Analytics-et</a>a CRS, TSS és a teljesítmény automatikus követéséhez
-                    trendek</li></ul></div><div class="mt-xl text-center"><a class="btn btn-primary" href="/hu/training-load/">További információ a rTSS számításról →</a><a class="btn btn-secondary" href="/hu/formulas/">Összes képlet megtekintése →</a></div></div></section></main><footer class="site-footer"><div class="container"><div class="footer-top"><div class="footer-brand-section"><h2>Run Analytics</h2><p>Track Critical Running Speed, Training Stress Score, and performance metrics with Run Analytics. Science-based iOS app for runners, triathletes &amp; coaches. 7-day free trial.</p></div><div class="footer-download"><h3 class="footer-heading">Letöltés</h3><div class="footer-badges"><a href="https://apps.apple.com/us/app/run-analytics/id6754524015" target="_blank" rel="noopener"
-                        aria-label="Töltse le a App Store-ről"><img src="../../assets/images/badge-app-store.svg"
+                            a hatékony edzéshez szükséges pontos adatok.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="callout mt-2xl">
+<h3>Alkalmazza CRS tudását</h3>
+<p>Most, hogy megértette a kritikus futási sebességet, tegye meg a következő lépéseket az edzés optimalizálásához:</p>
+<ul>
+<li><a href="/hu/training-load/">Az edzési stresszpontszám kiszámítása (TSS)</a>a CRS to
+                    számszerűsítse az edzés intenzitását</li>
+<li><a href="/hu/training-zones/">Fedezze fel a 7 edzési zónát</a>és megtanulják, hogyan kell strukturálni
+                    edzések speciális alkalmazkodáshoz</li>
+<li><a href="/hu/formulas/">Az összes képlet megtekintése</a>Run Analytics-ben használják a teljes
+                    átláthatóság</li>
+<li><a href="/hu/">Töltse le a Run Analytics-et</a>a CRS, TSS és a teljesítmény automatikus követéséhez
+                    trendek</li>
+</ul>
+</div>
+<div class="mt-xl text-center">
+<a class="btn btn-primary" href="/hu/training-load/">További információ a rTSS számításról →</a>
+<a class="btn btn-secondary" href="/hu/formulas/">Összes képlet megtekintése →</a>
+</div>
+</div>
+</section>
+    
+
+    
+    
+<section class="eeat-author bg-light divider-top-lg divider-bottom-lg" aria-label="Author and Reviewer Information">
+  <div class="container container-narrow">
+    <div class="eeat-card" style="display: flex; gap: 1.5rem; align-items: center; padding: 1.5rem; background: var(--color-bg-alt, #f8f9fa); border-radius: 8px; border: 1px solid var(--color-border, #e9ecef); margin-top: 3rem; margin-bottom: 2rem;">
+      <div class="eeat-avatar" style="font-size: 2.5rem; line-height: 1; flex-shrink: 0;" aria-hidden="true">👨‍🔬</div>
+      <div class="eeat-details">
+        
+        
+        <h3 style="margin: 0 0 0.5rem 0; font-size: 1.125rem; font-weight: 600;">
+          Expertly Reviewed by 
+          <span itemprop="author" itemscope itemtype="https://schema.org/Person">
+            <span itemprop="name">AnalyticsZone Team</span>
+          </span>
+        </h3>
+        <p style="margin: 0; font-size: 0.95rem; color: var(--color-body-text, #4a5568); line-height: 1.5;">
+          This content has been written and reviewed by a sports data metrics expert to ensure technical accuracy and adherence to the latest sports science methodologies.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    
+    
+<section class="ai-citation-block divider-top-xl" data-ai-ready="true" data-ai-page="crs">
+  <div class="container ai-citation-shell">
+    <h2 class="ai-citation-title">Kritikus Futási Sebesség (CRS): Útmutató a küszöbsebességhez</h2>
+    <p class="ai-citation-answer">Értse meg a Kritikus Futási Sebesség mögötti tudományt. Tanulja meg, hogyan tesztelje CRS-ét, használja kalkulátorunkat, és eddzen hatékonyabban.</p>
+
+    <ul class="ai-citation-facts" role="list">
+      
+      <li class="ai-citation-fact">
+        <span class="ai-citation-icon" aria-hidden="true">📅</span>
+        <span>2026-03-24</span>
+      </li>
+      
+
+      
+      <li class="ai-citation-fact ai-citation-keywords">
+        <span class="ai-citation-icon" aria-hidden="true">🏷️</span>
+        <span>kritikus futási sebesség · CRS futás · laktátküszöb · futósebesség kalkulátor · küszöbteszt futás</span>
+      </li>
+      
+
+      
+      <li class="ai-citation-fact">
+        <span class="ai-citation-icon" aria-hidden="true">🔬</span>
+        <a href="../../hu/bibliography/">
+          
+          Bibliográfia
+          
+        </a>
+      </li>
+      
+    </ul>
+
+    
+  </div>
+</section>
+
+  </main>
+
+  
+  <footer class="site-footer">
+    <div class="container">
+        
+        <div class="footer-top">
+            <div class="footer-brand-section">
+                
+                <h2>Run Analytics</h2>
+                <p>Track Critical Running Speed, Training Stress Score, and performance metrics with Run Analytics. Science-based iOS app for runners, triathletes &amp; coaches. 7-day free trial.</p>
+                
+            </div>
+
+            
+            <div class="footer-download">
+                <h3 class="footer-heading">Letöltés</h3>
+                <div class="footer-badges">
+                    
+                    <a href="https://apps.apple.com/us/app/run-analytics/id6754524015" target="_blank" rel="noopener"
+                        aria-label="Töltse le a App Store-ről">
+                        <img src="../../assets/images/badge-app-store.svg"
                             alt="Töltse le a App Store-ről" width="135"
-                            height="40" loading="lazy"></a><a href="https://play.google.com/store/apps/details?id=com.arnohealth.runanalytics" target="_blank" rel="noopener"
-                        aria-label="Szerezd meg a Google Playen"><img src="../../assets/images/badge-google-play.svg"
+                            height="40" loading="lazy">
+                    </a>
+                    
+                    
+                    <a href="https://play.google.com/store/apps/details?id=com.arnohealth.runanalytics" target="_blank" rel="noopener"
+                        aria-label="Szerezd meg a Google Playen">
+                        <img src="../../assets/images/badge-google-play.svg"
                             alt="Szerezd meg a Google Playen" width="135"
-                            height="40" loading="lazy"></a></div></div></div><div class="footer-languages"><h3 class="footer-heading">Elérhető:</h3><div class="lang-grid"><a href="/af/" class="lang-link"
+                            height="40" loading="lazy">
+                    </a>
+                    
+                </div>
+            </div>
+            
+        </div>
+
+        
+        <div class="footer-languages">
+            <h3 class="footer-heading">Elérhető:</h3>
+            <div class="lang-grid">
+                
+                <a href="/af/" class="lang-link"
                     hreflang="af" >
                     Afrikaans
-                </a><a href="/am/" class="lang-link"
+                </a>
+                
+                <a href="/am/" class="lang-link"
                     hreflang="am" >
                     አማርኛ
-                </a><a href="/ar/" class="lang-link"
+                </a>
+                
+                <a href="/ar/" class="lang-link"
                     hreflang="ar" dir="rtl" >
                     العربية
-                </a><a href="/bg/" class="lang-link"
+                </a>
+                
+                <a href="/bg/" class="lang-link"
                     hreflang="bg" >
                     Български
-                </a><a href="/bn/" class="lang-link"
+                </a>
+                
+                <a href="/bn/" class="lang-link"
                     hreflang="bn" >
                     বাংলা
-                </a><a href="/ca/" class="lang-link"
+                </a>
+                
+                <a href="/ca/" class="lang-link"
                     hreflang="ca" >
                     Català
-                </a><a href="/cs/" class="lang-link"
+                </a>
+                
+                <a href="/cs/" class="lang-link"
                     hreflang="cs" >
                     Čeština
-                </a><a href="/da/" class="lang-link"
+                </a>
+                
+                <a href="/da/" class="lang-link"
                     hreflang="da" >
                     Dansk
-                </a><a href="/de/" class="lang-link"
+                </a>
+                
+                <a href="/de/" class="lang-link"
                     hreflang="de" >
                     Deutsch
-                </a><a href="/el/" class="lang-link"
+                </a>
+                
+                <a href="/el/" class="lang-link"
                     hreflang="el" >
                     Ελληνικά
-                </a><a href="/en/" class="lang-link"
+                </a>
+                
+                <a href="/en/" class="lang-link"
                     hreflang="en" >
                     English
-                </a><a href="/es/" class="lang-link"
+                </a>
+                
+                <a href="/es/" class="lang-link"
                     hreflang="es" >
                     Español
-                </a><a href="/et/" class="lang-link"
+                </a>
+                
+                <a href="/et/" class="lang-link"
                     hreflang="et" >
                     Eesti
-                </a><a href="/fa/" class="lang-link"
+                </a>
+                
+                <a href="/fa/" class="lang-link"
                     hreflang="fa" dir="rtl" >
                     فارسی
-                </a><a href="/fi/" class="lang-link"
+                </a>
+                
+                <a href="/fi/" class="lang-link"
                     hreflang="fi" >
                     Suomi
-                </a><a href="/fr/" class="lang-link"
+                </a>
+                
+                <a href="/fr/" class="lang-link"
                     hreflang="fr" >
                     Français
-                </a><a href="/gu/" class="lang-link"
+                </a>
+                
+                <a href="/gu/" class="lang-link"
                     hreflang="gu" >
                     ગુજરાતી
-                </a><a href="/ha/" class="lang-link"
+                </a>
+                
+                <a href="/ha/" class="lang-link"
                     hreflang="ha" >
                     Hausa
-                </a><a href="/he/" class="lang-link"
+                </a>
+                
+                <a href="/he/" class="lang-link"
                     hreflang="he" dir="rtl" >
                     עברית
-                </a><a href="/hi/" class="lang-link"
+                </a>
+                
+                <a href="/hi/" class="lang-link"
                     hreflang="hi" >
                     हिन्दी
-                </a><a href="/hr/" class="lang-link"
+                </a>
+                
+                <a href="/hr/" class="lang-link"
                     hreflang="hr" >
                     Hrvatski
-                </a><a href="/hu/" class="lang-link active"
+                </a>
+                
+                <a href="/hu/" class="lang-link active"
                     hreflang="hu" >
                     Magyar
-                </a><a href="/id/" class="lang-link"
+                </a>
+                
+                <a href="/id/" class="lang-link"
                     hreflang="id" >
                     Bahasa Indonesia
-                </a><a href="/is/" class="lang-link"
+                </a>
+                
+                <a href="/is/" class="lang-link"
                     hreflang="is" >
                     Íslenska
-                </a><a href="/it/" class="lang-link"
+                </a>
+                
+                <a href="/it/" class="lang-link"
                     hreflang="it" >
                     Italiano
-                </a><a href="/ja/" class="lang-link"
+                </a>
+                
+                <a href="/ja/" class="lang-link"
                     hreflang="ja" >
                     日本語
-                </a><a href="/km/" class="lang-link"
+                </a>
+                
+                <a href="/km/" class="lang-link"
                     hreflang="km" >
                     ភាសាខ្មែរ
-                </a><a href="/kn/" class="lang-link"
+                </a>
+                
+                <a href="/kn/" class="lang-link"
                     hreflang="kn" >
                     ಕನ್ನಡ
-                </a><a href="/ko/" class="lang-link"
+                </a>
+                
+                <a href="/ko/" class="lang-link"
                     hreflang="ko" >
                     한국어
-                </a><a href="/lt/" class="lang-link"
+                </a>
+                
+                <a href="/lt/" class="lang-link"
                     hreflang="lt" >
                     Lietuvių
-                </a><a href="/lv/" class="lang-link"
+                </a>
+                
+                <a href="/lv/" class="lang-link"
                     hreflang="lv" >
                     Latviešu
-                </a><a href="/ms/" class="lang-link"
+                </a>
+                
+                <a href="/ms/" class="lang-link"
                     hreflang="ms" >
                     Bahasa Melayu
-                </a><a href="/my/" class="lang-link"
+                </a>
+                
+                <a href="/my/" class="lang-link"
                     hreflang="my" >
                     မြန်မာစာ
-                </a><a href="/nb/" class="lang-link"
+                </a>
+                
+                <a href="/nb/" class="lang-link"
                     hreflang="nb" >
                     Norsk Bokmål
-                </a><a href="/nl/" class="lang-link"
+                </a>
+                
+                <a href="/nl/" class="lang-link"
                     hreflang="nl" >
                     Nederlands
-                </a><a href="/pl/" class="lang-link"
+                </a>
+                
+                <a href="/pl/" class="lang-link"
                     hreflang="pl" >
                     Polski
-                </a><a href="/pt/" class="lang-link"
+                </a>
+                
+                <a href="/pt/" class="lang-link"
                     hreflang="pt" >
                     Português
-                </a><a href="/pt-br/" class="lang-link"
+                </a>
+                
+                <a href="/pt-br/" class="lang-link"
                     hreflang="pt-br" >
                     Português (Brasil)
-                </a><a href="/ro/" class="lang-link"
+                </a>
+                
+                <a href="/ro/" class="lang-link"
                     hreflang="ro" >
                     Română
-                </a><a href="/ru/" class="lang-link"
+                </a>
+                
+                <a href="/ru/" class="lang-link"
                     hreflang="ru" >
                     Русский
-                </a><a href="/sk/" class="lang-link"
+                </a>
+                
+                <a href="/sk/" class="lang-link"
                     hreflang="sk" >
                     Slovenčina
-                </a><a href="/sl/" class="lang-link"
+                </a>
+                
+                <a href="/sl/" class="lang-link"
                     hreflang="sl" >
                     Slovenščina
-                </a><a href="/sr/" class="lang-link"
+                </a>
+                
+                <a href="/sr/" class="lang-link"
                     hreflang="sr" >
                     Srpski
-                </a><a href="/sv/" class="lang-link"
+                </a>
+                
+                <a href="/sv/" class="lang-link"
                     hreflang="sv" >
                     Svenska
-                </a><a href="/sw/" class="lang-link"
+                </a>
+                
+                <a href="/sw/" class="lang-link"
                     hreflang="sw" >
                     Kiswahili
-                </a><a href="/ta/" class="lang-link"
+                </a>
+                
+                <a href="/ta/" class="lang-link"
                     hreflang="ta" >
                     தமிழ்
-                </a><a href="/te/" class="lang-link"
+                </a>
+                
+                <a href="/te/" class="lang-link"
                     hreflang="te" >
                     తెలుగు
-                </a><a href="/th/" class="lang-link"
+                </a>
+                
+                <a href="/th/" class="lang-link"
                     hreflang="th" >
                     ไทย
-                </a><a href="/tl/" class="lang-link"
+                </a>
+                
+                <a href="/tl/" class="lang-link"
                     hreflang="tl" >
                     Tagalog
-                </a><a href="/tr/" class="lang-link"
+                </a>
+                
+                <a href="/tr/" class="lang-link"
                     hreflang="tr" >
                     Türkçe
-                </a><a href="/uk/" class="lang-link"
+                </a>
+                
+                <a href="/uk/" class="lang-link"
                     hreflang="uk" >
                     Українська
-                </a><a href="/ur/" class="lang-link"
+                </a>
+                
+                <a href="/ur/" class="lang-link"
                     hreflang="ur" dir="rtl" >
                     اردو
-                </a><a href="/vi/" class="lang-link"
+                </a>
+                
+                <a href="/vi/" class="lang-link"
                     hreflang="vi" >
                     Tiếng Việt
-                </a><a href="/yo/" class="lang-link"
+                </a>
+                
+                <a href="/yo/" class="lang-link"
                     hreflang="yo" >
                     Yorùbá
-                </a><a href="/zh/" class="lang-link"
+                </a>
+                
+                <a href="/zh/" class="lang-link"
                     hreflang="zh" >
                     中文
-                </a></div></div><div class="footer-divider"></div><div class="footer-bottom"><p class="copyright">
+                </a>
+                
+            </div>
+        </div>
+
+        <div class="footer-divider"></div>
+
+        
+        <div class="footer-bottom">
+            <p class="copyright">
                 &copy; 2026 Run Analytics. Minden jog fenntartva
-            </p><ul class="footer-legal"><li><a href="/hu/privacy/">Adatvédelem</a></li><li><a href="/hu/terms/">Feltételek</a></li></ul></div></div></footer><div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="Cookie consent" aria-live="polite"><div class="cookie-banner-content"><div><p>Ez a weboldal sütiket használ az élmény javítására.</p><a href="/hu/privacy/" class="text-sm">Tudjon meg többet</a></div><div class="cookie-banner-actions"><button id="cookie-decline" class="btn btn-secondary btn-small">Elutasítom</button><button id="cookie-accept" class="btn btn-primary btn-small">Elfogadom</button></div></div></div><script src="../../assets/js/core.min.js?v=635348535bde" defer></script><script src="../../assets/js/search.min.js?v=635348535bde" defer></script><script src="../../assets/js/analytics.min.js" data-ga-id="G-Y138VB4523" defer></script><script>if ('serviceWorker' in navigator) { navigator.serviceWorker.register('../../sw.js') }</script></body></html>
+            </p>
+            <ul class="footer-legal">
+                <li><a href="/hu/privacy/">Adatvédelem</a></li>
+                <li><a href="/hu/terms/">Feltételek</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+  
+  <div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="Cookie consent" aria-live="polite">
+    <div class="cookie-banner-content">
+        <div>
+            <p>Ez a weboldal sütiket használ az élmény javítására.</p>
+            <a href="/hu/privacy/" class="text-sm">Tudjon meg többet</a>
+        </div>
+        <div class="cookie-banner-actions">
+            <button id="cookie-decline" class="btn btn-secondary btn-small">Elutasítom</button>
+            <button id="cookie-accept" class="btn btn-primary btn-small">Elfogadom</button>
+        </div>
+    </div>
+</div>
+
+  
+  <script src="../../assets/js/core.min.js?v=19fdca55b3da" defer></script>
+  <script src="../../assets/js/search.min.js?v=19fdca55b3da" defer></script>
+  
+
+  
+  
+  <script src="../../assets/js/analytics.min.js" data-ga-id="G-Y138VB4523" defer></script>
+  
+
+  
+  <script>if ('serviceWorker' in navigator) { navigator.serviceWorker.register('../../sw.js') }</script>
+</body>
+
+</html>

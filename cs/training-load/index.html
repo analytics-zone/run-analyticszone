@@ -1,61 +1,251 @@
-<!DOCTYPE html><html lang="cs" dir="ltr"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap"
-    rel="stylesheet"><title>Průvodce tréninkovou zátěží: TSS, CTL, ATL, TSB pro běžce</title><meta name="description" content="Naučte se metriky tréninkové zátěže. Výpočet TSS, analýza CTL/ATL/TSB, PMC grafy. Sledujte kondici vědecky."><meta name="author" content="AnalyticsZone Team"><meta name="keywords" content="tréninkový stres běh, CTL ATL TSB běžci, tréninková zátěž, PMC graf, metriky sledování kondice"><link rel="canonical" href="https://run.analyticszone.app/cs/training-load/"><meta property="article:published_time" content="2025-01-15T10:00:00Z"><meta property="article:modified_time" content="2026-01-04T14:30:00Z"><meta property="article:author" content="AnalyticsZone Team"><meta property="og:type" content="article"><meta property="og:url" content="https://run.analyticszone.app/cs/training-load/"><meta property="og:title" content="Průvodce tréninkovou zátěží: TSS, CTL, ATL, TSB pro běžce"><meta property="og:description" content="Naučte se metriky tréninkové zátěže. Výpočet TSS, analýza CTL/ATL/TSB, PMC grafy. Sledujte kondici vědecky."><meta property="og:image" content="https://run.analyticszone.app/assets/images/og-image.svg"><meta property="og:locale" content="cs_CZ"><meta property="og:site_name" content="Run Analytics"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:url" content="https://run.analyticszone.app/cs/training-load/"><meta name="twitter:title" content="Průvodce tréninkovou zátěží: TSS, CTL, ATL, TSB pro běžce"><meta name="twitter:description" content="Naučte se metriky tréninkové zátěže. Výpočet TSS, analýza CTL/ATL/TSB, PMC grafy. Sledujte kondici vědecky."><meta name="twitter:image" content="https://run.analyticszone.app/assets/images/og-image.svg"><meta name="twitter:site" content="@runanalytics"><meta name="twitter:creator" content="@runanalytics"><link rel="alternate" hreflang="af"
-    href="https://run.analyticszone.app/af/training-load/"><link rel="alternate" hreflang="am"
-    href="https://run.analyticszone.app/am/training-load/"><link rel="alternate" hreflang="ar"
-    href="https://run.analyticszone.app/ar/training-load/"><link rel="alternate" hreflang="bg"
-    href="https://run.analyticszone.app/bg/training-load/"><link rel="alternate" hreflang="bn"
-    href="https://run.analyticszone.app/bn/training-load/"><link rel="alternate" hreflang="ca"
-    href="https://run.analyticszone.app/ca/training-load/"><link rel="alternate" hreflang="cs"
-    href="https://run.analyticszone.app/cs/training-load/"><link rel="alternate" hreflang="da"
-    href="https://run.analyticszone.app/da/training-load/"><link rel="alternate" hreflang="de"
-    href="https://run.analyticszone.app/de/training-load/"><link rel="alternate" hreflang="el"
-    href="https://run.analyticszone.app/el/training-load/"><link rel="alternate" hreflang="en"
-    href="https://run.analyticszone.app/en/training-load/"><link rel="alternate" hreflang="es"
-    href="https://run.analyticszone.app/es/training-load/"><link rel="alternate" hreflang="et"
-    href="https://run.analyticszone.app/et/training-load/"><link rel="alternate" hreflang="fa"
-    href="https://run.analyticszone.app/fa/training-load/"><link rel="alternate" hreflang="fi"
-    href="https://run.analyticszone.app/fi/training-load/"><link rel="alternate" hreflang="fr"
-    href="https://run.analyticszone.app/fr/training-load/"><link rel="alternate" hreflang="gu"
-    href="https://run.analyticszone.app/gu/training-load/"><link rel="alternate" hreflang="ha"
-    href="https://run.analyticszone.app/ha/training-load/"><link rel="alternate" hreflang="he"
-    href="https://run.analyticszone.app/he/training-load/"><link rel="alternate" hreflang="hi"
-    href="https://run.analyticszone.app/hi/training-load/"><link rel="alternate" hreflang="hr"
-    href="https://run.analyticszone.app/hr/training-load/"><link rel="alternate" hreflang="hu"
-    href="https://run.analyticszone.app/hu/training-load/"><link rel="alternate" hreflang="id"
-    href="https://run.analyticszone.app/id/training-load/"><link rel="alternate" hreflang="is"
-    href="https://run.analyticszone.app/is/training-load/"><link rel="alternate" hreflang="it"
-    href="https://run.analyticszone.app/it/training-load/"><link rel="alternate" hreflang="ja"
-    href="https://run.analyticszone.app/ja/training-load/"><link rel="alternate" hreflang="km"
-    href="https://run.analyticszone.app/km/training-load/"><link rel="alternate" hreflang="kn"
-    href="https://run.analyticszone.app/kn/training-load/"><link rel="alternate" hreflang="ko"
-    href="https://run.analyticszone.app/ko/training-load/"><link rel="alternate" hreflang="lt"
-    href="https://run.analyticszone.app/lt/training-load/"><link rel="alternate" hreflang="lv"
-    href="https://run.analyticszone.app/lv/training-load/"><link rel="alternate" hreflang="ms"
-    href="https://run.analyticszone.app/ms/training-load/"><link rel="alternate" hreflang="my"
-    href="https://run.analyticszone.app/my/training-load/"><link rel="alternate" hreflang="nb"
-    href="https://run.analyticszone.app/nb/training-load/"><link rel="alternate" hreflang="nl"
-    href="https://run.analyticszone.app/nl/training-load/"><link rel="alternate" hreflang="pl"
-    href="https://run.analyticszone.app/pl/training-load/"><link rel="alternate" hreflang="pt"
-    href="https://run.analyticszone.app/pt/training-load/"><link rel="alternate" hreflang="pt-br"
-    href="https://run.analyticszone.app/pt-br/training-load/"><link rel="alternate" hreflang="ro"
-    href="https://run.analyticszone.app/ro/training-load/"><link rel="alternate" hreflang="ru"
-    href="https://run.analyticszone.app/ru/training-load/"><link rel="alternate" hreflang="sk"
-    href="https://run.analyticszone.app/sk/training-load/"><link rel="alternate" hreflang="sl"
-    href="https://run.analyticszone.app/sl/training-load/"><link rel="alternate" hreflang="sr"
-    href="https://run.analyticszone.app/sr/training-load/"><link rel="alternate" hreflang="sv"
-    href="https://run.analyticszone.app/sv/training-load/"><link rel="alternate" hreflang="sw"
-    href="https://run.analyticszone.app/sw/training-load/"><link rel="alternate" hreflang="ta"
-    href="https://run.analyticszone.app/ta/training-load/"><link rel="alternate" hreflang="te"
-    href="https://run.analyticszone.app/te/training-load/"><link rel="alternate" hreflang="th"
-    href="https://run.analyticszone.app/th/training-load/"><link rel="alternate" hreflang="tl"
-    href="https://run.analyticszone.app/tl/training-load/"><link rel="alternate" hreflang="tr"
-    href="https://run.analyticszone.app/tr/training-load/"><link rel="alternate" hreflang="uk"
-    href="https://run.analyticszone.app/uk/training-load/"><link rel="alternate" hreflang="ur"
-    href="https://run.analyticszone.app/ur/training-load/"><link rel="alternate" hreflang="vi"
-    href="https://run.analyticszone.app/vi/training-load/"><link rel="alternate" hreflang="yo"
-    href="https://run.analyticszone.app/yo/training-load/"><link rel="alternate" hreflang="zh"
-    href="https://run.analyticszone.app/zh/training-load/"><link rel="alternate" hreflang="x-default"
-    href="https://run.analyticszone.app/en/training-load/"><link rel="icon" type="image/png" sizes="32x32" href="../../assets/images/icons/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="../../assets/images/icons/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="../../assets/images/icons/apple-touch-icon.png"><link rel="manifest" href="../../manifest.json"><meta name="theme-color" content="#2563EB"><meta name="robots" content="index, follow"><meta name="apple-itunes-app" content="app-id=6754524015"><style>
+<!DOCTYPE html>
+<html lang="cs" dir="ltr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap"
+    rel="stylesheet">
+
+  
+  <title>Průvodce tréninkovou zátěží: TSS, CTL, ATL, TSB pro běžce</title>
+  <meta name="description" content="Naučte se metriky tréninkové zátěže. Výpočet TSS, analýza CTL/ATL/TSB, PMC grafy. Sledujte kondici vědecky.">
+  <meta name="author" content="AnalyticsZone Team">
+
+  
+  
+  <meta name="keywords" content="tréninkový stres běh, CTL ATL TSB běžci, tréninková zátěž, PMC graf, metriky sledování kondice">
+  
+
+  
+  <link rel="canonical" href="https://run.analyticszone.app/cs/training-load/">
+
+  
+  
+  <meta property="article:published_time" content="2025-01-15T10:00:00Z">
+  <meta property="article:modified_time" content="2026-03-24T14:30:00Z">
+  <meta property="article:author" content="AnalyticsZone Team">
+  
+
+  
+  
+
+  
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://run.analyticszone.app/cs/training-load/">
+  <meta property="og:title" content="Průvodce tréninkovou zátěží: TSS, CTL, ATL, TSB pro běžce">
+  <meta property="og:description" content="Naučte se metriky tréninkové zátěže. Výpočet TSS, analýza CTL/ATL/TSB, PMC grafy. Sledujte kondici vědecky.">
+  <meta property="og:image" content="https://run.analyticszone.app/assets/images/og-image.svg">
+  <meta property="og:locale" content="cs_CZ">
+  <meta property="og:site_name" content="Run Analytics">
+
+  
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://run.analyticszone.app/cs/training-load/">
+  <meta name="twitter:title" content="Průvodce tréninkovou zátěží: TSS, CTL, ATL, TSB pro běžce">
+  <meta name="twitter:description" content="Naučte se metriky tréninkové zátěže. Výpočet TSS, analýza CTL/ATL/TSB, PMC grafy. Sledujte kondici vědecky.">
+  <meta name="twitter:image" content="https://run.analyticszone.app/assets/images/og-image.svg">
+  
+  <meta name="twitter:site" content="@runanalytics">
+  <meta name="twitter:creator" content="@runanalytics">
+  
+
+  
+  
+  <link rel="alternate" hreflang="af"
+    href="https://run.analyticszone.app/af/training-load/">
+  
+  <link rel="alternate" hreflang="am"
+    href="https://run.analyticszone.app/am/training-load/">
+  
+  <link rel="alternate" hreflang="ar"
+    href="https://run.analyticszone.app/ar/training-load/">
+  
+  <link rel="alternate" hreflang="bg"
+    href="https://run.analyticszone.app/bg/training-load/">
+  
+  <link rel="alternate" hreflang="bn"
+    href="https://run.analyticszone.app/bn/training-load/">
+  
+  <link rel="alternate" hreflang="ca"
+    href="https://run.analyticszone.app/ca/training-load/">
+  
+  <link rel="alternate" hreflang="cs"
+    href="https://run.analyticszone.app/cs/training-load/">
+  
+  <link rel="alternate" hreflang="da"
+    href="https://run.analyticszone.app/da/training-load/">
+  
+  <link rel="alternate" hreflang="de"
+    href="https://run.analyticszone.app/de/training-load/">
+  
+  <link rel="alternate" hreflang="el"
+    href="https://run.analyticszone.app/el/training-load/">
+  
+  <link rel="alternate" hreflang="en"
+    href="https://run.analyticszone.app/en/training-load/">
+  
+  <link rel="alternate" hreflang="es"
+    href="https://run.analyticszone.app/es/training-load/">
+  
+  <link rel="alternate" hreflang="et"
+    href="https://run.analyticszone.app/et/training-load/">
+  
+  <link rel="alternate" hreflang="fa"
+    href="https://run.analyticszone.app/fa/training-load/">
+  
+  <link rel="alternate" hreflang="fi"
+    href="https://run.analyticszone.app/fi/training-load/">
+  
+  <link rel="alternate" hreflang="fr"
+    href="https://run.analyticszone.app/fr/training-load/">
+  
+  <link rel="alternate" hreflang="gu"
+    href="https://run.analyticszone.app/gu/training-load/">
+  
+  <link rel="alternate" hreflang="ha"
+    href="https://run.analyticszone.app/ha/training-load/">
+  
+  <link rel="alternate" hreflang="he"
+    href="https://run.analyticszone.app/he/training-load/">
+  
+  <link rel="alternate" hreflang="hi"
+    href="https://run.analyticszone.app/hi/training-load/">
+  
+  <link rel="alternate" hreflang="hr"
+    href="https://run.analyticszone.app/hr/training-load/">
+  
+  <link rel="alternate" hreflang="hu"
+    href="https://run.analyticszone.app/hu/training-load/">
+  
+  <link rel="alternate" hreflang="id"
+    href="https://run.analyticszone.app/id/training-load/">
+  
+  <link rel="alternate" hreflang="is"
+    href="https://run.analyticszone.app/is/training-load/">
+  
+  <link rel="alternate" hreflang="it"
+    href="https://run.analyticszone.app/it/training-load/">
+  
+  <link rel="alternate" hreflang="ja"
+    href="https://run.analyticszone.app/ja/training-load/">
+  
+  <link rel="alternate" hreflang="km"
+    href="https://run.analyticszone.app/km/training-load/">
+  
+  <link rel="alternate" hreflang="kn"
+    href="https://run.analyticszone.app/kn/training-load/">
+  
+  <link rel="alternate" hreflang="ko"
+    href="https://run.analyticszone.app/ko/training-load/">
+  
+  <link rel="alternate" hreflang="lt"
+    href="https://run.analyticszone.app/lt/training-load/">
+  
+  <link rel="alternate" hreflang="lv"
+    href="https://run.analyticszone.app/lv/training-load/">
+  
+  <link rel="alternate" hreflang="ms"
+    href="https://run.analyticszone.app/ms/training-load/">
+  
+  <link rel="alternate" hreflang="my"
+    href="https://run.analyticszone.app/my/training-load/">
+  
+  <link rel="alternate" hreflang="nb"
+    href="https://run.analyticszone.app/nb/training-load/">
+  
+  <link rel="alternate" hreflang="nl"
+    href="https://run.analyticszone.app/nl/training-load/">
+  
+  <link rel="alternate" hreflang="pl"
+    href="https://run.analyticszone.app/pl/training-load/">
+  
+  <link rel="alternate" hreflang="pt"
+    href="https://run.analyticszone.app/pt/training-load/">
+  
+  <link rel="alternate" hreflang="pt-br"
+    href="https://run.analyticszone.app/pt-br/training-load/">
+  
+  <link rel="alternate" hreflang="ro"
+    href="https://run.analyticszone.app/ro/training-load/">
+  
+  <link rel="alternate" hreflang="ru"
+    href="https://run.analyticszone.app/ru/training-load/">
+  
+  <link rel="alternate" hreflang="sk"
+    href="https://run.analyticszone.app/sk/training-load/">
+  
+  <link rel="alternate" hreflang="sl"
+    href="https://run.analyticszone.app/sl/training-load/">
+  
+  <link rel="alternate" hreflang="sr"
+    href="https://run.analyticszone.app/sr/training-load/">
+  
+  <link rel="alternate" hreflang="sv"
+    href="https://run.analyticszone.app/sv/training-load/">
+  
+  <link rel="alternate" hreflang="sw"
+    href="https://run.analyticszone.app/sw/training-load/">
+  
+  <link rel="alternate" hreflang="ta"
+    href="https://run.analyticszone.app/ta/training-load/">
+  
+  <link rel="alternate" hreflang="te"
+    href="https://run.analyticszone.app/te/training-load/">
+  
+  <link rel="alternate" hreflang="th"
+    href="https://run.analyticszone.app/th/training-load/">
+  
+  <link rel="alternate" hreflang="tl"
+    href="https://run.analyticszone.app/tl/training-load/">
+  
+  <link rel="alternate" hreflang="tr"
+    href="https://run.analyticszone.app/tr/training-load/">
+  
+  <link rel="alternate" hreflang="uk"
+    href="https://run.analyticszone.app/uk/training-load/">
+  
+  <link rel="alternate" hreflang="ur"
+    href="https://run.analyticszone.app/ur/training-load/">
+  
+  <link rel="alternate" hreflang="vi"
+    href="https://run.analyticszone.app/vi/training-load/">
+  
+  <link rel="alternate" hreflang="yo"
+    href="https://run.analyticszone.app/yo/training-load/">
+  
+  <link rel="alternate" hreflang="zh"
+    href="https://run.analyticszone.app/zh/training-load/">
+  
+  <link rel="alternate" hreflang="x-default"
+    href="https://run.analyticszone.app/en/training-load/">
+
+  
+  <link rel="icon" type="image/png" sizes="32x32" href="../../assets/images/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../assets/images/icons/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../../assets/images/icons/apple-touch-icon.png">
+  <link rel="manifest" href="../../manifest.json">
+  <meta name="theme-color" content="#2563EB">
+  
+  
+  
+  
+  <meta name="robots" content="index, follow">
+  
+
+  
+  
+  
+  <meta name="apple-itunes-app" content="app-id=6754524015">
+  
+
+  
+  <style>
 /* Critical CSS - Above the fold styles for fast LCP */
 :root {
   --color-primary: #0066CC;
@@ -314,7 +504,20 @@ img[width][height] {
     transition-duration: 0.01ms !important;
   }
 }
-</style><link rel="preconnect" href="https://www.googletagmanager.com"><link rel="dns-prefetch" href="https://www.googletagmanager.com"><link rel="stylesheet" href="../../assets/css/main.min.css?v=635348535bde"><script type="application/ld+json">
+</style>
+
+  
+  <link rel="preconnect" href="https://www.googletagmanager.com">
+  <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+
+  
+  <link rel="stylesheet" href="../../assets/css/main.min.css?v=19fdca55b3da">
+
+  
+  
+
+
+<script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Organization",
@@ -349,7 +552,10 @@ img[width][height] {
     
   ]
 }
-</script><script type="application/ld+json">
+</script>
+
+
+<script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "WebSite",
@@ -358,7 +564,11 @@ img[width][height] {
   "description": "Track Critical Running Speed, Training Stress Score, and performance metrics with Run Analytics. Science-based iOS app for runners, triathletes &amp; coaches. 7-day free trial.",
   "inLanguage": "cs"
 }
-</script><script type="application/ld+json">
+</script>
+
+
+
+<script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
@@ -373,7 +583,12 @@ img[width][height] {
   },
   "downloadUrl": "https://apps.apple.com/us/app/run-analytics/id6754524015"
 }
-</script><script type="application/ld+json">
+</script>
+
+
+
+
+<script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
@@ -402,7 +617,11 @@ img[width][height] {
     
   ]
 }
-</script><script type="application/ld+json">
+</script>
+
+
+
+<script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "WebPage",
@@ -416,7 +635,7 @@ img[width][height] {
     "url": "https://run.analyticszone.app"
   },
   "datePublished": "2025-01-15",
-  "dateModified": "2026-01-04",
+  "dateModified": "2026-03-24",
   "keywords": ["tréninkový stres běh", "CTL ATL TSB běžci", "tréninková zátěž", "PMC graf", "metriky sledování kondice"],
   "about": [
     {
@@ -445,7 +664,14 @@ img[width][height] {
     }
   ]
 }
-</script><script type="application/ld+json">
+</script>
+
+
+
+
+
+
+<script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Article",
@@ -464,13 +690,23 @@ img[width][height] {
     }
   },
   "datePublished": "2025-01-15",
-  "dateModified": "2026-01-04",
+  "dateModified": "2026-03-24",
   "mainEntityOfPage": {
     "@type": "WebPage",
     "@id": "https://run.analyticszone.app/cs/training-load/"
   }
 }
-</script><script>
+</script>
+
+
+
+
+
+  
+  
+
+  
+  <script>
     (function () {
       let theme = localStorage.getItem('theme');
       // Older builds could persist a per-subdomain `theme=light` value without a UI
@@ -484,407 +720,1576 @@ img[width][height] {
         document.documentElement.classList.add('dark-mode');
       }
     })();
-  </script></head><body><a href="#main-content" class="skip-link">Přejít na obsah</a><header class="site-header"><div class="container"><div class="header-inner"><a href="/cs/" class="site-logo"><picture><source srcset="../../assets/images/logo-dark.png" type="image/png"
-                        media="(prefers-color-scheme: dark)"><img src="../../assets/images/logo.png" alt="Run Analytics - Running Analytics App | Critical Running Speed, TSS, CTL/ATL/TSB for iOS" width="56" height="56"></picture><span class="logo-text">Run Analytics</span></a><nav class="nav-primary" id="nav-primary" role="navigation" aria-label="Main navigation"><div class="nav-group-left"><ul><li><a href="/cs/" 
+  </script>
+</head>
+
+<body>
+  
+  <a href="#main-content" class="skip-link">Přejít na obsah</a>
+
+  
+  <header class="site-header">
+    <div class="container">
+        <div class="header-inner">
+            
+            <a href="/cs/" class="site-logo">
+                <picture>
+                    <source srcset="../../assets/images/logo-dark.png" type="image/png"
+                        media="(prefers-color-scheme: dark)">
+                    <img src="../../assets/images/logo.png" alt="Run Analytics - Running Analytics App | Critical Running Speed, TSS, CTL/ATL/TSB for iOS" width="56" height="56">
+                </picture>
+                <span class="logo-text">Run Analytics</span>
+            </a>
+
+            
+            <nav class="nav-primary" id="nav-primary" role="navigation" aria-label="Main navigation">
+                <div class="nav-group-left">
+                    <ul>
+                        
+                        <li>
+                            
+                            <a href="/cs/" 
                                 aria-current="">
                                 Domů
-                            </a></li><li class="has-submenu" ><a href="/cs/getting-started/" class="nav-label">Učit se</a><ul class="submenu"><li><a href="/cs/getting-started/" 
+                            </a>
+                            
+                            </li>
+                            
+                        <li class="has-submenu" >
+                            
+                            
+                            <a href="/cs/getting-started/" class="nav-label">Učit se</a>
+                            
+                            <ul class="submenu">
+                                
+                                <li>
+                                    <a href="/cs/getting-started/" 
                                         aria-current="">
                                         Začínáme
-                                    </a></li><li><a href="/cs/crs/" 
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/cs/crs/" 
                                         aria-current="">
                                         CRS
-                                    </a></li><li><a href="/cs/training-zones/" 
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/cs/training-zones/" 
                                         aria-current="">
                                         Tréninkové zóny
-                                    </a></li><li><a href="/cs/training-load/" class="active" 
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/cs/training-load/" class="active" 
                                         aria-current="page">
                                         Tréninková zátěž
-                                    </a></li><li><a href="/cs/rtss-calculator/" 
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/cs/rtss-calculator/" 
                                         aria-current="">
                                         rTSS Kalkulačka
-                                    </a></li></ul></li><li class="has-submenu" ><a href="/cs/research/" class="nav-label">Věda</a><ul class="submenu"><li><a href="/cs/research/" 
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                            
+                            </li>
+                            
+                        <li class="has-submenu" >
+                            
+                            
+                            <a href="/cs/research/" class="nav-label">Věda</a>
+                            
+                            <ul class="submenu">
+                                
+                                <li>
+                                    <a href="/cs/research/" 
                                         aria-current="">
                                         Výzkum
-                                    </a></li><li><a href="/cs/formulas/" 
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/cs/formulas/" 
                                         aria-current="">
                                         Vzorce
-                                    </a></li><li><a href="/cs/efficiency/" 
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/cs/efficiency/" 
                                         aria-current="">
                                         Efektivita
-                                    </a></li><li><a href="/cs/stride-mechanics/" 
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/cs/stride-mechanics/" 
                                         aria-current="">
                                         Mechanika běhu
-                                    </a></li><li><a href="/cs/bibliography/" 
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/cs/bibliography/" 
                                         aria-current="">
                                         Bibliografie
-                                    </a></li></ul></li><li><a href="/cs/contact/" 
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                            
+                            </li>
+                            
+                        <li>
+                            
+                            <a href="/cs/contact/" 
                                 aria-current="">
                                 Kontakt
-                            </a></li></ul><div class="search-container"><svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                            </a>
+                            
+                            </li>
+                            
+                    </ul>
+
+                    
+                    <div class="search-container">
+                        <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
                             viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.35-4.35"></path></svg><input type="search" id="site-search" class="search-input" aria-expanded="false"
-                            aria-haspopup="listbox" aria-autocomplete="list" autocomplete="off" spellcheck="false" /><div id="search-results" class="search-results hidden" role="region" aria-live="polite"></div></div><select class="language-selector" id="language-select" aria-label="Vybrat jazyk"><option value="af" >
+                            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <path d="m21 21-4.35-4.35"></path>
+                        </svg>
+                        <input type="search" id="site-search" class="search-input" aria-expanded="false"
+                            aria-haspopup="listbox" aria-autocomplete="list" autocomplete="off" spellcheck="false" />
+                        <div id="search-results" class="search-results hidden" role="region" aria-live="polite"></div>
+                    </div>
+
+                    
+                    <select class="language-selector" id="language-select" aria-label="Vybrat jazyk">
+                        
+                        <option value="af" >
                             Afrikaans
-                        </option><option value="am" >
+                        </option>
+                        
+                        <option value="am" >
                             አማርኛ
-                        </option><option value="ar" >
+                        </option>
+                        
+                        <option value="ar" >
                             العربية
-                        </option><option value="bg" >
+                        </option>
+                        
+                        <option value="bg" >
                             Български
-                        </option><option value="bn" >
+                        </option>
+                        
+                        <option value="bn" >
                             বাংলা
-                        </option><option value="ca" >
+                        </option>
+                        
+                        <option value="ca" >
                             Català
-                        </option><option value="cs" selected>
+                        </option>
+                        
+                        <option value="cs" selected>
                             Čeština
-                        </option><option value="da" >
+                        </option>
+                        
+                        <option value="da" >
                             Dansk
-                        </option><option value="de" >
+                        </option>
+                        
+                        <option value="de" >
                             Deutsch
-                        </option><option value="el" >
+                        </option>
+                        
+                        <option value="el" >
                             Ελληνικά
-                        </option><option value="en" >
+                        </option>
+                        
+                        <option value="en" >
                             English
-                        </option><option value="es" >
+                        </option>
+                        
+                        <option value="es" >
                             Español
-                        </option><option value="et" >
+                        </option>
+                        
+                        <option value="et" >
                             Eesti
-                        </option><option value="fa" >
+                        </option>
+                        
+                        <option value="fa" >
                             فارسی
-                        </option><option value="fi" >
+                        </option>
+                        
+                        <option value="fi" >
                             Suomi
-                        </option><option value="fr" >
+                        </option>
+                        
+                        <option value="fr" >
                             Français
-                        </option><option value="gu" >
+                        </option>
+                        
+                        <option value="gu" >
                             ગુજરાતી
-                        </option><option value="ha" >
+                        </option>
+                        
+                        <option value="ha" >
                             Hausa
-                        </option><option value="he" >
+                        </option>
+                        
+                        <option value="he" >
                             עברית
-                        </option><option value="hi" >
+                        </option>
+                        
+                        <option value="hi" >
                             हिन्दी
-                        </option><option value="hr" >
+                        </option>
+                        
+                        <option value="hr" >
                             Hrvatski
-                        </option><option value="hu" >
+                        </option>
+                        
+                        <option value="hu" >
                             Magyar
-                        </option><option value="id" >
+                        </option>
+                        
+                        <option value="id" >
                             Bahasa Indonesia
-                        </option><option value="is" >
+                        </option>
+                        
+                        <option value="is" >
                             Íslenska
-                        </option><option value="it" >
+                        </option>
+                        
+                        <option value="it" >
                             Italiano
-                        </option><option value="ja" >
+                        </option>
+                        
+                        <option value="ja" >
                             日本語
-                        </option><option value="km" >
+                        </option>
+                        
+                        <option value="km" >
                             ភាសាខ្មែរ
-                        </option><option value="kn" >
+                        </option>
+                        
+                        <option value="kn" >
                             ಕನ್ನಡ
-                        </option><option value="ko" >
+                        </option>
+                        
+                        <option value="ko" >
                             한국어
-                        </option><option value="lt" >
+                        </option>
+                        
+                        <option value="lt" >
                             Lietuvių
-                        </option><option value="lv" >
+                        </option>
+                        
+                        <option value="lv" >
                             Latviešu
-                        </option><option value="ms" >
+                        </option>
+                        
+                        <option value="ms" >
                             Bahasa Melayu
-                        </option><option value="my" >
+                        </option>
+                        
+                        <option value="my" >
                             မြန်မာစာ
-                        </option><option value="nb" >
+                        </option>
+                        
+                        <option value="nb" >
                             Norsk Bokmål
-                        </option><option value="nl" >
+                        </option>
+                        
+                        <option value="nl" >
                             Nederlands
-                        </option><option value="pl" >
+                        </option>
+                        
+                        <option value="pl" >
                             Polski
-                        </option><option value="pt" >
+                        </option>
+                        
+                        <option value="pt" >
                             Português
-                        </option><option value="pt-br" >
+                        </option>
+                        
+                        <option value="pt-br" >
                             Português (Brasil)
-                        </option><option value="ro" >
+                        </option>
+                        
+                        <option value="ro" >
                             Română
-                        </option><option value="ru" >
+                        </option>
+                        
+                        <option value="ru" >
                             Русский
-                        </option><option value="sk" >
+                        </option>
+                        
+                        <option value="sk" >
                             Slovenčina
-                        </option><option value="sl" >
+                        </option>
+                        
+                        <option value="sl" >
                             Slovenščina
-                        </option><option value="sr" >
+                        </option>
+                        
+                        <option value="sr" >
                             Srpski
-                        </option><option value="sv" >
+                        </option>
+                        
+                        <option value="sv" >
                             Svenska
-                        </option><option value="sw" >
+                        </option>
+                        
+                        <option value="sw" >
                             Kiswahili
-                        </option><option value="ta" >
+                        </option>
+                        
+                        <option value="ta" >
                             தமிழ்
-                        </option><option value="te" >
+                        </option>
+                        
+                        <option value="te" >
                             తెలుగు
-                        </option><option value="th" >
+                        </option>
+                        
+                        <option value="th" >
                             ไทย
-                        </option><option value="tl" >
+                        </option>
+                        
+                        <option value="tl" >
                             Tagalog
-                        </option><option value="tr" >
+                        </option>
+                        
+                        <option value="tr" >
                             Türkçe
-                        </option><option value="uk" >
+                        </option>
+                        
+                        <option value="uk" >
                             Українська
-                        </option><option value="ur" >
+                        </option>
+                        
+                        <option value="ur" >
                             اردو
-                        </option><option value="vi" >
+                        </option>
+                        
+                        <option value="vi" >
                             Tiếng Việt
-                        </option><option value="yo" >
+                        </option>
+                        
+                        <option value="yo" >
                             Yorùbá
-                        </option><option value="zh" >
+                        </option>
+                        
+                        <option value="zh" >
                             中文
-                        </option></select></div><div class="nav-group-right"><div class="header-app-buttons"><a href="https://apps.apple.com/us/app/run-analytics/id6754524015" class="header-download-btn" target="_blank"
-                            rel="noopener" aria-label="Download on App Store" title="Download on App Store"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                                fill="currentColor"><path
-                                    d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z" /></svg></a><a href="https://play.google.com/store/apps/details?id=com.arnohealth.runanalytics" class="header-download-btn" target="_blank"
-                            rel="noopener" aria-label="Get it on Google Play" title="Get it on Google Play"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                                fill="currentColor"><path
-                                    d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.92 20.16,13.19L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M16.81,8.88L14.54,11.15L6.05,2.66L16.81,8.88Z" /></svg></a></div><div class="suite-menu-container"><button class="suite-menu-toggle" id="suite-menu-toggle" aria-label="See other apps"
-                            aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        </option>
+                        
+                    </select>
+                </div>
+
+                <div class="nav-group-right">
+                    
+
+
+                    
+                    <div class="header-app-buttons">
+                        
+                        
+                        <a href="https://apps.apple.com/us/app/run-analytics/id6754524015" class="header-download-btn" target="_blank"
+                            rel="noopener" aria-label="Download on App Store" title="Download on App Store">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="currentColor">
+                                <path
+                                    d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z" />
+                            </svg>
+                        </a>
+                        
+
+                        
+                        <a href="https://play.google.com/store/apps/details?id=com.arnohealth.runanalytics" class="header-download-btn" target="_blank"
+                            rel="noopener" aria-label="Get it on Google Play" title="Get it on Google Play">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="currentColor">
+                                <path
+                                    d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.92 20.16,13.19L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M16.81,8.88L14.54,11.15L6.05,2.66L16.81,8.88Z" />
+                            </svg>
+                        </a>
+                        
+                        
+                    </div>
+
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+
+                    
+                    <div class="suite-menu-container">
+                        <button class="suite-menu-toggle" id="suite-menu-toggle" aria-label="See other apps"
+                            aria-expanded="false">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg></button><div class="suite-dropdown hidden" id="suite-dropdown"><div class="suite-dropdown-header">Other AnalyticsZone Apps</div><div class="suite-apps-grid"><a href="https://analyticszone.app" class="suite-app-link">AnalyticsZone</a><a href="https://swim.analyticszone.app" class="suite-app-link">Swim Analytics</a><a href="https://bike.analyticszone.app" class="suite-app-link">Bike Analytics</a><a href="https://walk.analyticszone.app" class="suite-app-link">Walk Analytics</a><a href="https://cardio.analyticszone.app" class="suite-app-link">Cardio Analytics</a><a href="https://health.analyticszone.app" class="suite-app-link">Health Analytics</a><a href="https://swimtrainer.analyticszone.app" class="suite-app-link">Swim Trainer</a><a href="https://hike.analyticszone.app" class="suite-app-link">Hike Analytics</a><a href="https://sleep.analyticszone.app" class="suite-app-link">Sleep Analytics</a></div></div></div></div></nav><button class="menu-toggle" id="menu-toggle" aria-label="Přepnout menu"
-                aria-expanded="false" aria-controls="nav-primary"><span></span><span></span><span></span></button></div></div></header><nav class="breadcrumbs" aria-label="Breadcrumb"><div class="container"><ol><li><a href="/cs/">Domů</a></li><li><a href="/cs/getting-started/">Učit se</a></li><li><span aria-current="page">Tréninková zátěž</span></li></ol></div></nav><main id="main-content" class="main-content"><section class="page-hero"><div class="container"><h1>Skóre tréninkového stresu pro běh: TSS, CTL, ATL &amp; TSB Vysvětlení</h1><p class="lead">Zvládněte běžecké tréninkové zatížení s tabulkami řízení výkonu</p></div></section><section class="section"><div class="container container-narrow"><div class="callout callout-success"><h2>🎯 Klíčové poznatky: Tréninkové skóre stresu pro běh</h2><ul><li><strong>Skóre tréninkového stresu (TSS)</strong>kvantifikuje, jak silně každý běh ovlivňuje vaše tělo,
-                    kombinující intenzitu a trvání do jediné metriky</li><li><strong>CTL (chronická tréninková zátěž)</strong>měří vaši dlouhodobou kondici budovanou za 42 dní
-                    konzistentní běh</li><li><strong>ATL (Akutní tréninková zátěž)</strong>sleduje nedávnou únavu z posledních 7 dnů tréninku</li><li><strong>TSB (tréninková zátěžová rovnováha)</strong>ukazuje vaši kondičně-únavovou rovnováhu a připravenost
-                    závod nebo potřeba se zotavit</li><li>Pochopení běžecké tréninkové zátěže zabraňuje přetrénování a optimalizuje načasování výkonu
-                    periodizace řízená daty</li></ul><p><em>Základ: Výpočty TSS vyžadují váš<a href="/cs/crs/">Kritická rychlost běhu (CRS)</a>jako prahový referenční bod.</em></p></div></div></section><section class="section section-alt"><div class="container container-narrow"><h2>Co je tréninkové stresové skóre (TSS) pro běh?</h2><p class="lead">Metodika tréninku zátěžového skóre odpovídá na kritickou otázku:<strong>Jak těžké to bylo
+                                stroke-linejoin="round">
+                                <rect x="3" y="3" width="7" height="7"></rect>
+                                <rect x="14" y="3" width="7" height="7"></rect>
+                                <rect x="14" y="14" width="7" height="7"></rect>
+                                <rect x="3" y="14" width="7" height="7"></rect>
+                            </svg>
+                        </button>
+                        <div class="suite-dropdown hidden" id="suite-dropdown">
+                            <div class="suite-dropdown-header">Other AnalyticsZone Apps</div>
+                            <div class="suite-apps-grid">
+                                
+                                <a href="https://analyticszone.app" class="suite-app-link">AnalyticsZone</a>
+                                
+                                <a href="https://swim.analyticszone.app" class="suite-app-link">Swim Analytics</a>
+                                
+                                <a href="https://bike.analyticszone.app" class="suite-app-link">Bike Analytics</a>
+                                
+                                <a href="https://walk.analyticszone.app" class="suite-app-link">Walk Analytics</a>
+                                
+                                <a href="https://cardio.analyticszone.app" class="suite-app-link">Cardio Analytics</a>
+                                
+                                <a href="https://health.analyticszone.app" class="suite-app-link">Health Analytics</a>
+                                
+                                <a href="https://swimtrainer.analyticszone.app" class="suite-app-link">Swim Trainer</a>
+                                
+                                <a href="https://hike.analyticszone.app" class="suite-app-link">Hike Analytics</a>
+                                
+                                <a href="https://sleep.analyticszone.app" class="suite-app-link">Sleep Analytics</a>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </nav>
+
+            
+            <button class="menu-toggle" id="menu-toggle" aria-label="Přepnout menu"
+                aria-expanded="false" aria-controls="nav-primary">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </div>
+</header>
+
+  
+  
+
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+    <div class="container">
+        <ol>
+            
+            <li>
+                
+                <a href="/cs/">Domů</a>
+                
+            </li>
+            
+            <li>
+                
+                <a href="/cs/getting-started/">Učit se</a>
+                
+            </li>
+            
+            <li>
+                
+                <span aria-current="page">Tréninková zátěž</span>
+                
+            </li>
+            
+        </ol>
+    </div>
+</nav>
+
+
+  
+  <main id="main-content" class="main-content">
+    
+    <section class="page-hero">
+<div class="container">
+<h1>Skóre tréninkového stresu pro běh: TSS, CTL, ATL &amp; TSB Vysvětlení</h1>
+<p class="lead">Zvládněte běžecké tréninkové zatížení s tabulkami řízení výkonu</p>
+</div>
+</section>
+<section class="section">
+<div class="container container-narrow">
+<div class="callout callout-success">
+<h2>🎯 Klíčové poznatky: Tréninkové skóre stresu pro běh</h2>
+<ul>
+<li><strong>Skóre tréninkového stresu (TSS)</strong>kvantifikuje, jak silně každý běh ovlivňuje vaše tělo,
+                    kombinující intenzitu a trvání do jediné metriky</li>
+<li><strong>CTL (chronická tréninková zátěž)</strong>měří vaši dlouhodobou kondici budovanou za 42 dní
+                    konzistentní běh</li>
+<li><strong>ATL (Akutní tréninková zátěž)</strong>sleduje nedávnou únavu z posledních 7 dnů tréninku</li>
+<li><strong>TSB (tréninková zátěžová rovnováha)</strong>ukazuje vaši kondičně-únavovou rovnováhu a připravenost
+                    závod nebo potřeba se zotavit</li>
+<li>Pochopení běžecké tréninkové zátěže zabraňuje přetrénování a optimalizuje načasování výkonu
+                    periodizace řízená daty</li>
+</ul>
+<p><em>Základ: Výpočty TSS vyžadují váš<a href="/cs/crs/">Kritická rychlost běhu (CRS)</a>jako prahový referenční bod.</em></p>
+</div>
+</div>
+</section>
+<section class="section section-alt">
+<div class="container container-narrow">
+<h2>Co je tréninkové stresové skóre (TSS) pro běh?</h2>
+<p class="lead">Metodika tréninku zátěžového skóre odpovídá na kritickou otázku:<strong>Jak těžké to bylo
                 ten trénink?</strong>Nejen vzdálenost nebo čas, ale skutečný fyziologický stres kladený na vaše tělo
-            při každém běhu.</p><p>Systém Training Stress Score (TSS), vyvinutý Dr. Andrewem Cogganem pro cyklistiku, byl přizpůsoben pro
+            při každém běhu.</p>
+<p>Systém Training Stress Score (TSS), vyvinutý Dr. Andrewem Cogganem pro cyklistiku, byl přizpůsoben pro
             běh poskytuje standardizovanou metodu pro kvantifikaci intenzity a trvání tréninku do jediného čísla.
             Pro běžce používáme<strong>Stresové skóre při běžeckém tréninku (rTSS)</strong>na základě tempa vzhledem k vašemu
-            práh.</p><div class="callout callout-info"><h3>Standard TSS pro běh</h3><p>Jedna hodina u vás<a href="/cs/crs/">Kritická rychlost běhu (CRS)</a>nebo prahové tempo =<strong>100 TSS</strong></p><p>Tato standardizace umožňuje srovnání mezi tréninky, týdny a tréninkovými cykly. Hranice 30 minut
-                běh = ~50 TSS. 2hodinový prahový běh = ~200 TSS.</p></div><h3>Běh TSS versus jízda na kole TSS: Klíčové rozdíly</h3><p>Zatímco oba sporty využívají TSS, běžecká tréninková zátěž má jedinečné vlastnosti:</p><table class="comparison-table"><thead><tr><th>Aspekt</th><th>Cyklistika TSS</th><th>Spuštění TSS (rTSS)</th></tr></thead><tbody><tr><td><strong>Primární vstup</strong></td><td>Výkon (watty)</td><td>Tempo (min/km nebo min/míle)</td></tr><tr><td><strong>Nárazový stres</strong></td><td>Nízká (sedící)</td><td>Vysoká (kontaktní síly se zemí)</td></tr><tr><td><strong>Potřeby obnovy</strong></td><td>Nižší pro stejný TSS</td><td>Vyšší kvůli muskuloskeletálnímu stresu</td></tr><tr><td><strong>Týdenní objem</strong></td><td>Typická 500-800+ TSS</td><td>Typicky 300-500 TSS (stejná úroveň zdatnosti)</td></tr><tr><td><strong>Vzorec</strong></td><td>IF² × Trvání × 100</td><td>IF² × Trvání × 100</td></tr></tbody></table><div class="callout callout-warning"><h4>⚠️ Důležité: Běh má větší dopad</h4><p>Stejná hodnota TSS představuje větší fyzickou zátěž při běhu než při jízdě na kole v důsledku nárazových sil. Běžec
+            práh.</p>
+<div class="callout callout-info">
+<h3>Standard TSS pro běh</h3>
+<p>Jedna hodina u vás<a href="/cs/crs/">Kritická rychlost běhu (CRS)</a>nebo prahové tempo =<strong>100 TSS</strong>
+</p>
+<p>Tato standardizace umožňuje srovnání mezi tréninky, týdny a tréninkovými cykly. Hranice 30 minut
+                běh = ~50 TSS. 2hodinový prahový běh = ~200 TSS.</p>
+</div>
+<h3>Běh TSS versus jízda na kole TSS: Klíčové rozdíly</h3>
+<p>Zatímco oba sporty využívají TSS, běžecká tréninková zátěž má jedinečné vlastnosti:</p>
+<table class="comparison-table">
+<thead>
+<tr>
+<th>Aspekt</th>
+<th>Cyklistika TSS</th>
+<th>Spuštění TSS (rTSS)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Primární vstup</strong></td>
+<td>Výkon (watty)</td>
+<td>Tempo (min/km nebo min/míle)</td>
+</tr>
+<tr>
+<td><strong>Nárazový stres</strong></td>
+<td>Nízká (sedící)</td>
+<td>Vysoká (kontaktní síly se zemí)</td>
+</tr>
+<tr>
+<td><strong>Potřeby obnovy</strong></td>
+<td>Nižší pro stejný TSS</td>
+<td>Vyšší kvůli muskuloskeletálnímu stresu</td>
+</tr>
+<tr>
+<td><strong>Týdenní objem</strong></td>
+<td>Typická 500-800+ TSS</td>
+<td>Typicky 300-500 TSS (stejná úroveň zdatnosti)</td>
+</tr>
+<tr>
+<td><strong>Vzorec</strong></td>
+<td>IF² × Trvání × 100</td>
+<td>IF² × Trvání × 100</td>
+</tr>
+</tbody>
+</table>
+<div class="callout callout-warning">
+<h4>⚠️ Důležité: Běh má větší dopad</h4>
+<p>Stejná hodnota TSS představuje větší fyzickou zátěž při běhu než při jízdě na kole v důsledku nárazových sil. Běžec
                 akumulující 400 TSS/týden zažije podobnou adaptaci tréninku jako cyklista s 600-700 TSS/týden.
-                Běžecká tréninková zátěž musí zohledňovat kardiovaskulární i muskuloskeletální stres.</p></div></div></section><section class="section"><div class="container"><h2 class="text-center mb-xl">Výpočet skóre stresu při běhu (rTSS).</h2><div class="grid grid-2"><div><h3>Vzorec pro běh TSS</h3><div class="formula-box"><div class="formula">rTSS = (IF²) × Trvání (hodiny) × 100</div><div class="formula-explanation"><p>Kde je faktor intenzity (IF):</p><div class="formula">IF = NGS / CRS</div><p>Normalizovaná odstupňovaná rychlost (NGS) odpovídá za variabilitu tempa a nadmořskou výšku:</p><div class="formula">NGS ≈ Průměrná rychlost běhu (upravená pro terén)</div></div></div><div class="callout callout-tip mt-md"><h4>📊 Zjednodušená metoda založená na tempu</h4><p>Pro běžce bez měřičů výkonu použijte výpočet založený na tempu:</p><div class="formula">IF = prahové tempo / průměrné tempo</div><p><strong>Příklad:</strong>Pokud je vaše tempo CRS 4:00/km a běžíte rychlostí 4:20/km:</p><p>IF = 4:00 / 4:20 = 240/260 = 0,923</p><p><em>Poznámka: Pomalejší tempo = nižší IF (převrácené z výpočtu rychlosti)</em></p></div></div><div><h3>Zpracovaný příklad: Tempo Run</h3><div class="example-box"><h4>Profil běžce:</h4><ul><li>CRS Tempo: 4:00/km (15 km/h)</li><li>CRS: Prahové tempo na 1 hodinu</li></ul><h4>Údaje o cvičení:</h4><ul><li>Celková vzdálenost: 10 km</li><li>Doba pohybu: 43:20 (0,722 hodin)</li><li>Průměrné tempo: 4:20/km</li></ul><h4>Krok 1: Výpočet průměrné rychlosti</h4><div class="calculation">Rychlost = 10 km / 0,722 hod<br/>Rychlost =<strong>13,85 km/h</strong></div><h4>Krok 2: Výpočet IF (rychlostní metoda)</h4><div class="calculation">IF = 13,85 / 15,0<br/>IF =<strong>0,923</strong></div><h4>Krok 3: Vypočítejte IF (metoda tempa)</h4><div class="calculation">IF = 240 s/km / 260 s/km<br/>IF =<strong>0,923</strong>✓</div><h4>Krok 4: Vypočítejte rTSS</h4><div class="calculation">rTSS = (0,923²) × 0,722 × 100<br/>rTSS = 0,852 × 0,722 × 100<br/>rTSS =<strong>61,5</strong></div><p class="mt-md"><strong>Výklad:</strong>Toto tempo na 10 km běží na hranici 10% tempa
-                        vygeneroval 61,5 TSS – mírný tréninkový stimul typický pro kvalitní aerobní cvičení.</p></div></div></div><div class="intensity-guide mt-xl"><h3>Spuštění pokynů pro intenzitu TSS</h3><table class="intensity-table"><thead><tr><th>Rozsah TSS</th><th>Úroveň intenzity</th><th>Popis</th><th>Příklad cvičení</th></tr></thead><tbody><tr><td>&lt; 50</td><td>Snadné zotavení</td><td>Lehký běh, konverzační tempo, aktivní odpočinek</td><td>30-45min lehký běh, zotavovací jog, kroky</td></tr><tr><td>50-100</td><td>Mírný trénink</td><td>Typický denní tréninkový objem, aerobní základ</td><td>60-90min stálý běh, dlouhý snadný běh</td></tr><tr><td>100-200</td><td>Tvrdý trénink</td><td>Kvalitní sezení s tempem/prahovou prací</td><td>90-120min s prahovými intervaly, progrese běží</td></tr><tr><td>200-300</td><td>Velmi těžké</td><td>Kvalitní dlouhé běhy, simulace závodu</td><td>2-3h dlouhé běhy, půlmaratonské tempo práce</td></tr><tr><td>&gt; 300</td><td>Extrémní</td><td>Závodní den, akce na ultra-vzdálenosti</td><td>Maratonské závody, 50k+ ultras, běhy Ironman</td></tr></tbody></table></div><div class="callout callout-tip mt-lg"><h3>📊 Týdenní cíle TSS podle úrovně běhu</h3><ul><li><strong>Začátečníci:</strong>150-300 TSS/týden (3-4 běhy/týden)</li><li><strong>Středně pokročilí běžci:</strong>300-500 TSS/týden (4-6 běhů/týden)</li><li><strong>Pokročilí běžci:</strong>500-700 TSS/týden (6-8 sezení/týden)</li><li><strong>Elitní běžci:</strong>700-900+ TSS/týden (8-12 sezení/týden)</li></ul><p>Ty se kumulují směrem k vaší chronické tréninkové zátěži (CTL), což je metrika fitness vysvětlená níže.</p></div></div></section><section class="section section-alt"><div class="container"><h2 class="text-center mb-xl">Pochopení CTL, ATL a TSB pro běžce</h2><p class="text-center lead">Tabulka řízení výkonu (PMC) zobrazuje tři vzájemně propojené metriky, které
-            vyprávějte celý příběh svého běžeckého tréninku: kondici, únavu a formu.</p><div class="pmc-overview"><div class="grid grid-3"><div class="pmc-metric"><div class="metric-icon">📈</div><h3>CTL - Chronická tréninková zátěž</h3><div class="metric-value-label">Vaše FITNESS</div><p>42denní exponenciálně vážený průměr denního TSS. Představuje dlouhodobou aerobní zdatnost a
-                        tréninková adaptace z důsledného běhu.</p><div class="formula-small">CTL dnes = CTL včera + (TSS dnes - CTL včera) × (1/42)</div></div><div class="pmc-metric"><div class="metric-icon">⚡</div><h3>ATL - Akutní tréninková zátěž</h3><div class="metric-value-label">Vaše ÚNAVA</div><p>7denní exponenciálně vážený průměr denního TSS. Zachycuje nedávný tréninkový stres a
-                        nahromaděná únava z minulého týdne běhání.</p><div class="formula-small">ATL dnes = ATL včera + (TSS dnes - ATL včera) × (1/7)</div></div><div class="pmc-metric"><div class="metric-icon">🎯</div><h3>TSB - Trénink proti stresu</h3><div class="metric-value-label">Váš FORMULÁŘ</div><p>Rozdíl mezi včerejší kondicí a únavou. Označuje připravenost k výkonu nebo potřebu
-                        odpočiňte si před dalším kvalitním během nebo závodem.</p><div class="formula-small">TSB = CTL včera - ATL včera</div></div></div></div></div></section><section class="section"><div class="container"><h2>CTL: Vaše metrika běžecké fitness</h2><div class="grid grid-2"><div><h3>Co CTL představuje pro běžce</h3><p>CTL kvantifikuje běžecké tréninkové zatížení vašeho těla<em>přizpůsobený</em>za posledních 6 týdnů. A
-                    vyšší CTL v běhu znamená:</p><ul><li>Větší aerobní kapacita a vytrvalost při běhu</li><li>Schopnost zvládnout větší objem a intenzitu tréninku</li><li>Zlepšené neuromuskulární a metabolické adaptace</li><li>Vyšší udržitelný běžecký výkon</li><li>Lepší odolnost vůči rázovému namáhání od zemních kontaktních sil</li></ul><div class="callout callout-info"><h4>Časová konstanta: 42 dní</h4><p>CTL má poločas ~14,7 dne.Po 42 dnech přibližně 36,8 % (1/e) jednoho tréninku
-                        impact remains in your fitness calculation.</p><p>Tento pomalý úpadek znamená, že běžecká kondice se buduje postupně, ale také pomalu slábne – ochrana proti
-                        detraining during short recovery breaks.</p></div></div><div><h3>Typical CTL Values for Runners</h3><div class="levels-comparison"><div class="level-card-compact"><strong>Začátečníci:</strong><div class="value">15-35 CTL</div><p>Budova základního fitness, 3-4 běhy/týden</p></div><div class="level-card-compact"><strong>Středně pokročilí běžci:</strong><div class="value">35-60 CTL</div><p>Důsledný trénink, 4-6 běhů/týden</p></div><div class="level-card-compact"><strong>Pokročilí běžci:</strong><div class="value">60-85 CTL</div><p>Vysoká hlasitost, 6-8 sezení/týden</p></div><div class="level-card-compact"><strong>Elitní běžci:</strong><div class="value">85-120+ CTL</div><p>Profesionální tréninková zátěž, 8-12+ sezení/týden</p></div></div><div class="warning-box mt-md"><strong>⚠️ CTL limity nájezdové rychlosti pro běžce</strong><ul><li><strong>Začátečníci:</strong>+2-4 CTL týdně</li><li><strong>Střední:</strong>+3-5 CTL za týden</li><li><strong>Pokročilé:</strong>+5-7 CTL za týden</li></ul><p>Překročení těchto hodnot výrazně zvyšuje riziko zranění kvůli vysokému namáhání při běhu.
-                        „Pravidlo 10 %“ (zvýšení týdenního objemu o ne více než 10 %) je v souladu s těmito rychlostmi náběhu CTL.</p></div></div></div></div></section><section class="section section-alt"><div class="container"><h2>ATL: Vaše metrika běžecké únavy</h2><div class="content-split"><div><p>ATL sleduje krátkodobý tréninkový stres – únavu nahromaděnou v posledním týdnu běhu. To stoupá
+                Běžecká tréninková zátěž musí zohledňovat kardiovaskulární i muskuloskeletální stres.</p>
+</div>
+</div>
+</section>
+<section class="section">
+<div class="container">
+<h2 class="text-center mb-xl">Výpočet skóre stresu při běhu (rTSS).</h2>
+<div class="grid grid-2">
+<div>
+<h3>Vzorec pro běh TSS</h3>
+<div class="formula-box">
+<div class="formula">rTSS = (IF²) × Trvání (hodiny) × 100</div>
+<div class="formula-explanation">
+<p>Kde je faktor intenzity (IF):</p>
+<div class="formula">IF = NGS / CRS</div>
+<p>Normalizovaná odstupňovaná rychlost (NGS) odpovídá za variabilitu tempa a nadmořskou výšku:</p>
+<div class="formula">NGS ≈ Průměrná rychlost běhu (upravená pro terén)</div>
+</div>
+</div>
+<div class="callout callout-tip mt-md">
+<h4>📊 Zjednodušená metoda založená na tempu</h4>
+<p>Pro běžce bez měřičů výkonu použijte výpočet založený na tempu:</p>
+<div class="formula">IF = prahové tempo / průměrné tempo</div>
+<p><strong>Příklad:</strong>Pokud je vaše tempo CRS 4:00/km a běžíte rychlostí 4:20/km:</p>
+<p>IF = 4:00 / 4:20 = 240/260 = 0,923</p>
+<p><em>Poznámka: Pomalejší tempo = nižší IF (převrácené z výpočtu rychlosti)</em></p>
+</div>
+</div>
+<div>
+<h3>Zpracovaný příklad: Tempo Run</h3>
+<div class="example-box">
+<h4>Profil běžce:</h4>
+<ul>
+<li>CRS Tempo: 4:00/km (15 km/h)</li>
+<li>CRS: Prahové tempo na 1 hodinu</li>
+</ul>
+<h4>Údaje o cvičení:</h4>
+<ul>
+<li>Celková vzdálenost: 10 km</li>
+<li>Doba pohybu: 43:20 (0,722 hodin)</li>
+<li>Průměrné tempo: 4:20/km</li>
+</ul>
+<h4>Krok 1: Výpočet průměrné rychlosti</h4>
+<div class="calculation">Rychlost = 10 km / 0,722 hod<br/>Rychlost =<strong>13,85 km/h</strong>
+</div>
+<h4>Krok 2: Výpočet IF (rychlostní metoda)</h4>
+<div class="calculation">IF = 13,85 / 15,0<br/>IF =<strong>0,923</strong>
+</div>
+<h4>Krok 3: Vypočítejte IF (metoda tempa)</h4>
+<div class="calculation">IF = 240 s/km / 260 s/km<br/>IF =<strong>0,923</strong>✓</div>
+<h4>Krok 4: Vypočítejte rTSS</h4>
+<div class="calculation">rTSS = (0,923²) × 0,722 × 100<br/>rTSS = 0,852 × 0,722 × 100<br/>rTSS =<strong>61,5</strong>
+</div>
+<p class="mt-md"><strong>Výklad:</strong>Toto tempo na 10 km běží na hranici 10% tempa
+                        vygeneroval 61,5 TSS – mírný tréninkový stimul typický pro kvalitní aerobní cvičení.</p>
+</div>
+</div>
+</div>
+<div class="intensity-guide mt-xl">
+<h3>Spuštění pokynů pro intenzitu TSS</h3>
+<table class="intensity-table">
+<thead>
+<tr>
+<th>Rozsah TSS</th>
+<th>Úroveň intenzity</th>
+<th>Popis</th>
+<th>Příklad cvičení</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&lt; 50</td>
+<td>Snadné zotavení</td>
+<td>Lehký běh, konverzační tempo, aktivní odpočinek</td>
+<td>30-45min lehký běh, zotavovací jog, kroky</td>
+</tr>
+<tr>
+<td>50-100</td>
+<td>Mírný trénink</td>
+<td>Typický denní tréninkový objem, aerobní základ</td>
+<td>60-90min stálý běh, dlouhý snadný běh</td>
+</tr>
+<tr>
+<td>100-200</td>
+<td>Tvrdý trénink</td>
+<td>Kvalitní sezení s tempem/prahovou prací</td>
+<td>90-120min s prahovými intervaly, progrese běží</td>
+</tr>
+<tr>
+<td>200-300</td>
+<td>Velmi těžké</td>
+<td>Kvalitní dlouhé běhy, simulace závodu</td>
+<td>2-3h dlouhé běhy, půlmaratonské tempo práce</td>
+</tr>
+<tr>
+<td>&gt; 300</td>
+<td>Extrémní</td>
+<td>Závodní den, akce na ultra-vzdálenosti</td>
+<td>Maratonské závody, 50k+ ultras, běhy Ironman</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="callout callout-tip mt-lg">
+<h3>📊 Týdenní cíle TSS podle úrovně běhu</h3>
+<ul>
+<li><strong>Začátečníci:</strong>150-300 TSS/týden (3-4 běhy/týden)</li>
+<li><strong>Středně pokročilí běžci:</strong>300-500 TSS/týden (4-6 běhů/týden)</li>
+<li><strong>Pokročilí běžci:</strong>500-700 TSS/týden (6-8 sezení/týden)</li>
+<li><strong>Elitní běžci:</strong>700-900+ TSS/týden (8-12 sezení/týden)</li>
+</ul>
+<p>Ty se kumulují směrem k vaší chronické tréninkové zátěži (CTL), což je metrika fitness vysvětlená níže.</p>
+</div>
+</div>
+</section>
+<section class="section section-alt">
+<div class="container">
+<h2 class="text-center mb-xl">Pochopení CTL, ATL a TSB pro běžce</h2>
+<p class="text-center lead">Tabulka řízení výkonu (PMC) zobrazuje tři vzájemně propojené metriky, které
+            vyprávějte celý příběh svého běžeckého tréninku: kondici, únavu a formu.</p>
+<div class="pmc-overview">
+<div class="grid grid-3">
+<div class="pmc-metric">
+<div class="metric-icon">📈</div>
+<h3>CTL - Chronická tréninková zátěž</h3>
+<div class="metric-value-label">Vaše FITNESS</div>
+<p>42denní exponenciálně vážený průměr denního TSS. Představuje dlouhodobou aerobní zdatnost a
+                        tréninková adaptace z důsledného běhu.</p>
+<div class="formula-small">CTL dnes = CTL včera + (TSS dnes - CTL včera) × (1/42)</div>
+</div>
+<div class="pmc-metric">
+<div class="metric-icon">⚡</div>
+<h3>ATL - Akutní tréninková zátěž</h3>
+<div class="metric-value-label">Vaše ÚNAVA</div>
+<p>7denní exponenciálně vážený průměr denního TSS. Zachycuje nedávný tréninkový stres a
+                        nahromaděná únava z minulého týdne běhání.</p>
+<div class="formula-small">ATL dnes = ATL včera + (TSS dnes - ATL včera) × (1/7)</div>
+</div>
+<div class="pmc-metric">
+<div class="metric-icon">🎯</div>
+<h3>TSB - Trénink proti stresu</h3>
+<div class="metric-value-label">Váš FORMULÁŘ</div>
+<p>Rozdíl mezi včerejší kondicí a únavou. Označuje připravenost k výkonu nebo potřebu
+                        odpočiňte si před dalším kvalitním během nebo závodem.</p>
+<div class="formula-small">TSB = CTL včera - ATL včera</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="section">
+<div class="container">
+<h2>CTL: Vaše metrika běžecké fitness</h2>
+<div class="grid grid-2">
+<div>
+<h3>Co CTL představuje pro běžce</h3>
+<p>CTL kvantifikuje běžecké tréninkové zatížení vašeho těla<em>přizpůsobený</em>za posledních 6 týdnů. A
+                    vyšší CTL v běhu znamená:</p>
+<ul>
+<li>Větší aerobní kapacita a vytrvalost při běhu</li>
+<li>Schopnost zvládnout větší objem a intenzitu tréninku</li>
+<li>Zlepšené neuromuskulární a metabolické adaptace</li>
+<li>Vyšší udržitelný běžecký výkon</li>
+<li>Lepší odolnost vůči rázovému namáhání od zemních kontaktních sil</li>
+</ul>
+<div class="callout callout-info">
+<h4>Časová konstanta: 42 dní</h4>
+<p>CTL má poločas ~14,7 dne.Po 42 dnech přibližně 36,8 % (1/e) jednoho tréninku
+                        impact remains in your fitness calculation.</p>
+<p>Tento pomalý úpadek znamená, že běžecká kondice se buduje postupně, ale také pomalu slábne – ochrana proti
+                        detraining during short recovery breaks.</p>
+</div>
+</div>
+<div>
+<h3>Typical CTL Values for Runners</h3>
+<div class="levels-comparison">
+<div class="level-card-compact">
+<strong>Začátečníci:</strong>
+<div class="value">15-35 CTL</div>
+<p>Budova základního fitness, 3-4 běhy/týden</p>
+</div>
+<div class="level-card-compact">
+<strong>Středně pokročilí běžci:</strong>
+<div class="value">35-60 CTL</div>
+<p>Důsledný trénink, 4-6 běhů/týden</p>
+</div>
+<div class="level-card-compact">
+<strong>Pokročilí běžci:</strong>
+<div class="value">60-85 CTL</div>
+<p>Vysoká hlasitost, 6-8 sezení/týden</p>
+</div>
+<div class="level-card-compact">
+<strong>Elitní běžci:</strong>
+<div class="value">85-120+ CTL</div>
+<p>Profesionální tréninková zátěž, 8-12+ sezení/týden</p>
+</div>
+</div>
+<div class="warning-box mt-md">
+<strong>⚠️ CTL limity nájezdové rychlosti pro běžce</strong>
+<ul>
+<li><strong>Začátečníci:</strong>+2-4 CTL týdně</li>
+<li><strong>Střední:</strong>+3-5 CTL za týden</li>
+<li><strong>Pokročilé:</strong>+5-7 CTL za týden</li>
+</ul>
+<p>Překročení těchto hodnot výrazně zvyšuje riziko zranění kvůli vysokému namáhání při běhu.
+                        „Pravidlo 10 %“ (zvýšení týdenního objemu o ne více než 10 %) je v souladu s těmito rychlostmi náběhu CTL.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="section section-alt">
+<div class="container">
+<h2>ATL: Vaše metrika běžecké únavy</h2>
+<div class="content-split">
+<div>
+<p>ATL sleduje krátkodobý tréninkový stres – únavu nahromaděnou v posledním týdnu běhu. To stoupá
                     rychle po tvrdém tréninku a rychle klesá během odpočinku, což je nezbytné pro zvládnutí regenerace
-                    mezi kvalitními sezeními.</p><h3>ATL Dynamika v běžeckém tréninku</h3><ul><li><strong>Rychlá odezva:</strong>7denní časová konstanta (poločas rozpadu ~2,4 dne)</li><li><strong>Špičkový vzor:</strong>Skoky po těžkých sezeních, dropy během dnů zotavení</li><li><strong>Indikátor obnovy:</strong>Pád ATL = rozptýlení únavy mezi jízdami</li><li><strong>Upozornění na přetrénování:</strong>Chronicky zvýšený ATL naznačuje nedostatečné zotavení</li><li><strong>Nárazový stres:</strong>Běh ATL odráží kardiovaskulární i muskuloskeletální systém
-                        únava</li></ul><div class="callout callout-science"><h4>🔬 Model fitness a únavy pro běhání</h4><p>Každý trénink má dva efekty:</p><ol><li><strong>Fitness stimul</strong>(pomalá stavba, dlouhotrvající)</li><li><strong>Únava</strong>(rychle se tvoří, rychle se rozptýlí)</li></ol><p>Běžecký výkon = kondice – únava. PMC tento model vizualizuje a umožňuje vědecké
-                        periodizace a optimální načasování závodu pro běžce.</p></div></div><div><h3>Ve stabilním stavu</h3><p>Když je běžecká tréninková zátěž každý týden konzistentní, CTL a ATL se sbližují:</p><div class="example-box"><h4>Příklad: 400 TSS/týden trvale</h4><div class="calculation">Denní TSS ≈ 57<br/>CTL se blíží ~57<br/>ATL se blíží ~57<br/>TSB se blíží 0</div><p><strong>Výklad:</strong>Kondice a únava jsou vyvážené. Žádný kumulující se deficit resp
-                        přebytek — udržitelná údržba školení.</p></div><h3>Během stavebních fází</h3><p>Při zvyšování objemu nebo intenzity běhu:</p><div class="example-box"><p>ATL stoupá<em>rychlejší</em>než CTL díky kratší časové konstantě. TSB se stává negativním (únava &gt;
+                    mezi kvalitními sezeními.</p>
+<h3>ATL Dynamika v běžeckém tréninku</h3>
+<ul>
+<li><strong>Rychlá odezva:</strong>7denní časová konstanta (poločas rozpadu ~2,4 dne)</li>
+<li><strong>Špičkový vzor:</strong>Skoky po těžkých sezeních, dropy během dnů zotavení</li>
+<li><strong>Indikátor obnovy:</strong>Pád ATL = rozptýlení únavy mezi jízdami</li>
+<li><strong>Upozornění na přetrénování:</strong>Chronicky zvýšený ATL naznačuje nedostatečné zotavení</li>
+<li><strong>Nárazový stres:</strong>Běh ATL odráží kardiovaskulární i muskuloskeletální systém
+                        únava</li>
+</ul>
+<div class="callout callout-science">
+<h4>🔬 Model fitness a únavy pro běhání</h4>
+<p>Každý trénink má dva efekty:</p>
+<ol>
+<li><strong>Fitness stimul</strong>(pomalá stavba, dlouhotrvající)</li>
+<li><strong>Únava</strong>(rychle se tvoří, rychle se rozptýlí)</li>
+</ol>
+<p>Běžecký výkon = kondice – únava. PMC tento model vizualizuje a umožňuje vědecké
+                        periodizace a optimální načasování závodu pro běžce.</p>
+</div>
+</div>
+<div>
+<h3>Ve stabilním stavu</h3>
+<p>Když je běžecká tréninková zátěž každý týden konzistentní, CTL a ATL se sbližují:</p>
+<div class="example-box">
+<h4>Příklad: 400 TSS/týden trvale</h4>
+<div class="calculation">Denní TSS ≈ 57<br/>CTL se blíží ~57<br/>ATL se blíží ~57<br/>TSB se blíží 0</div>
+<p><strong>Výklad:</strong>Kondice a únava jsou vyvážené. Žádný kumulující se deficit resp
+                        přebytek — udržitelná údržba školení.</p>
+</div>
+<h3>Během stavebních fází</h3>
+<p>Při zvyšování objemu nebo intenzity běhu:</p>
+<div class="example-box">
+<p>ATL stoupá<em>rychlejší</em>než CTL díky kratší časové konstantě. TSB se stává negativním (únava &gt;
                         fitness). To je normální a produktivní – používáte přetížení, abyste stimulovali běh
-                        adaptací.</p></div><h3>Během Taper for Races</h3><p>Při snižování tréninkové zátěže před soutěží:</p><div class="example-box"><p>ATL kapky<em>rychlejší</em>než CTL. TSB se stává pozitivním (fitness &gt; únava). Toto je
-                        cíl – dorazit v den závodu svěží s nohama připravenými k výkonu při zachování kondice.</p></div></div></div></div></section><section class="section"><div class="container"><h2>TSB: Vaše kondice, únava a připravenost na závody</h2><p class="lead">TSB (Training Stress Balance) je rozdíl mezi včerejší kondicí (CTL) a
+                        adaptací.</p>
+</div>
+<h3>Během Taper for Races</h3>
+<p>Při snižování tréninkové zátěže před soutěží:</p>
+<div class="example-box">
+<p>ATL kapky<em>rychlejší</em>než CTL. TSB se stává pozitivním (fitness &gt; únava). Toto je
+                        cíl – dorazit v den závodu svěží s nohama připravenými k výkonu při zachování kondice.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="section">
+<div class="container">
+<h2>TSB: Vaše kondice, únava a připravenost na závody</h2>
+<p class="lead">TSB (Training Stress Balance) je rozdíl mezi včerejší kondicí (CTL) a
             včerejší únava (ATL). U běžců ukazuje, zda jste svěží nebo unavení, připraveni na závod nebo ve hře
-            potřeba dní na zotavení.</p><div class="tsb-zones-container"><h3>Výkladový průvodce TSB pro běžce</h3><table class="tsb-zones-table"><thead><tr><th>Řada TSB</th><th>Stav</th><th>Výklad</th><th>Doporučená akce</th></tr></thead><tbody><tr class="tsb-critical"><td>&lt; -30</td><td><strong>Riziko přetrénování</strong></td><td>Extrémní únava. Vysoké riziko zranění.</td><td>Nutné okamžité zotavení. Snížit hlasitost o 50 %+. Zvažte dny odpočinku.</td></tr><tr class="tsb-training"><td>-20 až -30</td><td><strong>Optimální tréninkový blok</strong></td><td>Produktivní přetížení. Budování kondice.</td><td>Pokračovat v plánu. Sledujte známky nadměrné bolesti nebo únavy.</td></tr><tr class="tsb-moderate"><td>-10 až -20</td><td><strong>Mírné tréninkové zatížení</strong></td><td>Standardní tréninková akumulace.</td><td>Normální trénink. Zvládne kvalitní intervalové nebo tempové relace.</td></tr><tr class="tsb-neutral"><td>-10 až +15</td><td><strong>Přechod/Údržba</strong></td><td>Vyrovnaný stav. Lehká únava nebo svěžest.</td><td>Dobré pro B/C závody, testování nebo zotavovací týdny.</td></tr><tr class="tsb-fresh"><td>+15 až +25</td><td><strong>Forma vrcholového závodu</strong></td><td>Svěží a fit. Okno optimálního výkonu.</td><td>Prioritní závody. Očekávaný špičkový běžecký výkon.</td></tr><tr class="tsb-very-fresh"><td>+25 až +35</td><td><strong>Velmi čerstvé</strong></td><td>Vysoce odpočatý. Dobré pro krátké závody.</td><td>Závody 5K-10K, časovky, závody na dráze.</td></tr><tr class="tsb-detraining"><td>&gt; +35</td><td><strong>Přeškolování</strong></td><td>Ztráta kondice z nečinnosti.</td><td>Obnovit trénink. Kondice klesá z dlouhodobého odpočinku.</td></tr></tbody></table></div><div class="callout callout-tip mt-xl"><h3>🎯 Zacilte TSB na vzdálenost běhu závodu</h3><ul><li><strong>5K/10K závody:</strong>TSB +20 až +30 (7-10 dní pro čerstvost)</li><li><strong>Půlmaraton:</strong>TSB +15 až +25 (pokles po 10–14 dnech)</li><li><strong>maraton:</strong>TSB +10 až +20 (14-21denní zúžení se snížením objemu)</li><li><strong>Ultramaraton (50 000+):</strong>TSB +5 až +15 (7-14 dní postupné snižování, zachování objemu, ale snížení
-                    intenzita)</li></ul><p><em>Kratší závody potřebují vyšší TSB pro rychlost/výkon. Delší závody potřebují k udržení střední TSB
-                    výdrž.</em></p></div></div></section><section class="section section-alt"><div class="container container-narrow"><h2>PMC Příklad: Běžecký tréninkový blok → Taper → Závod</h2><div class="example-box"><h3>12týdenní tréninkový cyklus maratonu</h3><h4>Týdny 1-3: Fáze budování základny</h4><ul><li>Týdenní TSS: 300 → 350 → 400</li><li>CTL: Postupně stoupá z 40 → 48</li><li>ATL: Sleduje týdenní zatížení, kolísá 45-60</li><li>TSB: Mírně negativní (-5 až -15), zvládnutelný tréninkový stres</li><li><strong>Zaměření:</strong>Rozvoj aerobní základny, snadné míle</li></ul><h4>Týdny 4-7: Fáze výstavby 1</h4><ul><li>Týdenní TSS: 450 → 500 → 500 → 450 (týden na zotavení)</li><li>CTL: Stále stoupá 48 → 60</li><li>ATL: Vyšší výkyvy 55-75</li><li>TSB: Negativnější (-15 až -25), produktivní přetížení</li><li><strong>Zaměření:</strong>Přidání tempových běhů, prahových intervalů</li></ul><h4>Týdny 8-11: Vrcholová fáze</h4><ul><li>Týdenní TSS: 500 → 550 → 550 → 500</li><li>CTL: Nejvyšší hodnoty ~65</li><li>ATL: Nejvyšší hodnoty 65-80</li><li>TSB: Nejvíce negativní (-20 až -30), maximální fitness stimul</li><li><strong>Zaměření:</strong>Dlouhé běhy s maratonskými tempovými segmenty, kvalitní tréninky</li></ul><h4>12. týden: zotavovací týden</h4><ul><li>Týdenní TSS: 300 (45% snížení)</li><li>CTL: Mírný pokles na ~63 (kondice zachována)</li><li>ATL: Rychle klesá na ~50</li><li>TSB: Zvyšuje se na +5 až +10 (částečná čerstvost)</li><li><strong>Zaměření:</strong>Regenerační běhy, vstřebání tréninkových adaptací</li></ul><h4>Týden 13-14: Taper + Race Week</h4><ul><li>13. týden TSS: 250, týden 14 TSS: 120 + závod (~250 celkem)</li><li>CTL: Mírný pokles na ~60 (minimální ztráta kondice)</li><li>ATL: Rychlý pokles na ~35 (eliminovaná únava)</li><li>TSB: Vrcholy na<strong>+20 až +25 v den závodu</strong></li><li><strong>výsledek:</strong>Svěží nohy, udržovaná kondice, připravená na vrcholný maratonský výkon</li></ul></div><div class="callout callout-success"><h3>✅ Proč Taper funguje pro běžce</h3><p>Různé časové konstanty (42 dní pro CTL, 7 dní pro ATL) vytvářejí efekt zúžení, který optimalizuje
-                běžecký výkon:</p><ul><li>ATL reaguje rychle → Únava z běhu (kardiovaskulární i muskuloskeletální) zmizí uvnitř
-                    7-10 dní</li><li>CTL reaguje pomalu → Aerobní fitness a běžecké adaptace přetrvávají týdny</li><li>Výsledek: Fitness zůstává, zatímco únava a bolest zmizí = čerstvé nohy pro špičkový závodní výkon</li></ul></div></div></section><section class="section"><div class="container container-narrow"><h2>Praktický běžecký trénink Pokyny pro řízení zátěže</h2><div class="guidelines-grid"><div class="guideline-item"><h3>1️⃣ Důsledně sledujte denní rTSS</h3><p>Zaznamenávejte TSS každého běhu, abyste vytvořili přesné trendy CTL/ATL/TSB. Chybějící data vytvářejí mezery ve fitness
-                    křivka. Pro všechny běhy použijte data z hodinek GPS nebo výpočty založené na tempu.</p></div><div class="guideline-item"><h3>2️⃣ Pečlivě sledujte rychlost náběhu CTL</h3><p>Postupně zvyšujte CTL. Týdenní nárůst o 3-5 bodů je pro většinu běžců udržitelný. Skákání 10+
-                    body vede k přetrénování a zranění v důsledku nárazového stresu při běhu.</p></div><div class="guideline-item"><h3>3️⃣ Naplánujte si zotavovací týdny</h3><p>Každé 3-4 týdny snižte běžecký objem o 30-40% po dobu jednoho týdne. Nechte TSB zvýšit na -5 až +10. Toto
-                    konsoliduje kondiční adaptace a zabraňuje kumulativní únavě.</p></div><div class="guideline-item"><h3>4️⃣ Načasujte svůj závod</h3><p>Cíl TSB +15 až +25 v den závodu na většinu vzdáleností. Začněte zužovat 10-21 dní v závislosti na rase
-                    vzdálenost a aktuální úroveň TSB.</p></div><div class="guideline-item"><h3>5️⃣ Přijměte negativní TSB během sestavení</h3><p>TSB od -20 do -25 během fází stavby je normální a produktivní pro běžce. Znamená to, že se hlásíte
-                    tréninkový stimul pro adaptaci bez nadměrného rizika zranění.</p></div><div class="guideline-item"><h3>6️⃣ Po přestávkách postupně obnovujte CTL</h3><p>Po zranění nebo mimosezónních přestávkách se nepokoušejte okamžitě obnovit předchozí CTL. Postupně obnovovat
-                    na 3-5 CTL bodů týdně, aby nedošlo k opětovnému zranění.</p></div><div class="guideline-item"><h3>7️⃣ Naslouchejte svému tělu</h3><p>Metriky TSS jsou vodítka, nikoli absolutní pravidla. Přetrvávající bolestivost, špatný spánek nebo klesající výkon
-                    navzdory dobrým hodnotám TSB naznačují potřebu další obnovy.</p></div><div class="guideline-item"><h3>8️⃣ Účet za Neběžecký stres</h3><p>Životní stres, špatný spánek a křížový trénink ovlivňují zotavení. Zvažte snížení cílů TSS během
-                    období vysokého stresu, i když metriky specifické pro běh vypadají dobře.</p></div></div></div></section><section class="section section-alt"><div class="container container-narrow"><h2>Často kladené otázky: Trénink skóre stresu pro běh</h2><div class="faq-container"><div class="faq-item"><h3>Jak vypočítám TSS pro běh bez měřiče výkonu?</h3><p>Použijte metodu založenou na tempu: Vypočítejte svůj faktor intenzity (IF) vydělením prahového tempa
+            potřeba dní na zotavení.</p>
+<div class="tsb-zones-container">
+<h3>Výkladový průvodce TSB pro běžce</h3>
+<table class="tsb-zones-table">
+<thead>
+<tr>
+<th>Řada TSB</th>
+<th>Stav</th>
+<th>Výklad</th>
+<th>Doporučená akce</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tsb-critical">
+<td>&lt; -30</td>
+<td><strong>Riziko přetrénování</strong></td>
+<td>Extrémní únava. Vysoké riziko zranění.</td>
+<td>Nutné okamžité zotavení. Snížit hlasitost o 50 %+. Zvažte dny odpočinku.</td>
+</tr>
+<tr class="tsb-training">
+<td>-20 až -30</td>
+<td><strong>Optimální tréninkový blok</strong></td>
+<td>Produktivní přetížení. Budování kondice.</td>
+<td>Pokračovat v plánu. Sledujte známky nadměrné bolesti nebo únavy.</td>
+</tr>
+<tr class="tsb-moderate">
+<td>-10 až -20</td>
+<td><strong>Mírné tréninkové zatížení</strong></td>
+<td>Standardní tréninková akumulace.</td>
+<td>Normální trénink. Zvládne kvalitní intervalové nebo tempové relace.</td>
+</tr>
+<tr class="tsb-neutral">
+<td>-10 až +15</td>
+<td><strong>Přechod/Údržba</strong></td>
+<td>Vyrovnaný stav. Lehká únava nebo svěžest.</td>
+<td>Dobré pro B/C závody, testování nebo zotavovací týdny.</td>
+</tr>
+<tr class="tsb-fresh">
+<td>+15 až +25</td>
+<td><strong>Forma vrcholového závodu</strong></td>
+<td>Svěží a fit. Okno optimálního výkonu.</td>
+<td>Prioritní závody. Očekávaný špičkový běžecký výkon.</td>
+</tr>
+<tr class="tsb-very-fresh">
+<td>+25 až +35</td>
+<td><strong>Velmi čerstvé</strong></td>
+<td>Vysoce odpočatý. Dobré pro krátké závody.</td>
+<td>Závody 5K-10K, časovky, závody na dráze.</td>
+</tr>
+<tr class="tsb-detraining">
+<td>&gt; +35</td>
+<td><strong>Přeškolování</strong></td>
+<td>Ztráta kondice z nečinnosti.</td>
+<td>Obnovit trénink. Kondice klesá z dlouhodobého odpočinku.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="callout callout-tip mt-xl">
+<h3>🎯 Zacilte TSB na vzdálenost běhu závodu</h3>
+<ul>
+<li><strong>5K/10K závody:</strong>TSB +20 až +30 (7-10 dní pro čerstvost)</li>
+<li><strong>Půlmaraton:</strong>TSB +15 až +25 (pokles po 10–14 dnech)</li>
+<li><strong>maraton:</strong>TSB +10 až +20 (14-21denní zúžení se snížením objemu)</li>
+<li><strong>Ultramaraton (50 000+):</strong>TSB +5 až +15 (7-14 dní postupné snižování, zachování objemu, ale snížení
+                    intenzita)</li>
+</ul>
+<p><em>Kratší závody potřebují vyšší TSB pro rychlost/výkon. Delší závody potřebují k udržení střední TSB
+                    výdrž.</em></p>
+</div>
+</div>
+</section>
+<section class="section section-alt">
+<div class="container container-narrow">
+<h2>PMC Příklad: Běžecký tréninkový blok → Taper → Závod</h2>
+<div class="example-box">
+<h3>12týdenní tréninkový cyklus maratonu</h3>
+<h4>Týdny 1-3: Fáze budování základny</h4>
+<ul>
+<li>Týdenní TSS: 300 → 350 → 400</li>
+<li>CTL: Postupně stoupá z 40 → 48</li>
+<li>ATL: Sleduje týdenní zatížení, kolísá 45-60</li>
+<li>TSB: Mírně negativní (-5 až -15), zvládnutelný tréninkový stres</li>
+<li><strong>Zaměření:</strong>Rozvoj aerobní základny, snadné míle</li>
+</ul>
+<h4>Týdny 4-7: Fáze výstavby 1</h4>
+<ul>
+<li>Týdenní TSS: 450 → 500 → 500 → 450 (týden na zotavení)</li>
+<li>CTL: Stále stoupá 48 → 60</li>
+<li>ATL: Vyšší výkyvy 55-75</li>
+<li>TSB: Negativnější (-15 až -25), produktivní přetížení</li>
+<li><strong>Zaměření:</strong>Přidání tempových běhů, prahových intervalů</li>
+</ul>
+<h4>Týdny 8-11: Vrcholová fáze</h4>
+<ul>
+<li>Týdenní TSS: 500 → 550 → 550 → 500</li>
+<li>CTL: Nejvyšší hodnoty ~65</li>
+<li>ATL: Nejvyšší hodnoty 65-80</li>
+<li>TSB: Nejvíce negativní (-20 až -30), maximální fitness stimul</li>
+<li><strong>Zaměření:</strong>Dlouhé běhy s maratonskými tempovými segmenty, kvalitní tréninky</li>
+</ul>
+<h4>12. týden: zotavovací týden</h4>
+<ul>
+<li>Týdenní TSS: 300 (45% snížení)</li>
+<li>CTL: Mírný pokles na ~63 (kondice zachována)</li>
+<li>ATL: Rychle klesá na ~50</li>
+<li>TSB: Zvyšuje se na +5 až +10 (částečná čerstvost)</li>
+<li><strong>Zaměření:</strong>Regenerační běhy, vstřebání tréninkových adaptací</li>
+</ul>
+<h4>Týden 13-14: Taper + Race Week</h4>
+<ul>
+<li>13. týden TSS: 250, týden 14 TSS: 120 + závod (~250 celkem)</li>
+<li>CTL: Mírný pokles na ~60 (minimální ztráta kondice)</li>
+<li>ATL: Rychlý pokles na ~35 (eliminovaná únava)</li>
+<li>TSB: Vrcholy na<strong>+20 až +25 v den závodu</strong></li>
+<li><strong>výsledek:</strong>Svěží nohy, udržovaná kondice, připravená na vrcholný maratonský výkon</li>
+</ul>
+</div>
+<div class="callout callout-success">
+<h3>✅ Proč Taper funguje pro běžce</h3>
+<p>Různé časové konstanty (42 dní pro CTL, 7 dní pro ATL) vytvářejí efekt zúžení, který optimalizuje
+                běžecký výkon:</p>
+<ul>
+<li>ATL reaguje rychle → Únava z běhu (kardiovaskulární i muskuloskeletální) zmizí uvnitř
+                    7-10 dní</li>
+<li>CTL reaguje pomalu → Aerobní fitness a běžecké adaptace přetrvávají týdny</li>
+<li>Výsledek: Fitness zůstává, zatímco únava a bolest zmizí = čerstvé nohy pro špičkový závodní výkon</li>
+</ul>
+</div>
+</div>
+</section>
+<section class="section">
+<div class="container container-narrow">
+<h2>Praktický běžecký trénink Pokyny pro řízení zátěže</h2>
+<div class="guidelines-grid">
+<div class="guideline-item">
+<h3>1️⃣ Důsledně sledujte denní rTSS</h3>
+<p>Zaznamenávejte TSS každého běhu, abyste vytvořili přesné trendy CTL/ATL/TSB. Chybějící data vytvářejí mezery ve fitness
+                    křivka. Pro všechny běhy použijte data z hodinek GPS nebo výpočty založené na tempu.</p>
+</div>
+<div class="guideline-item">
+<h3>2️⃣ Pečlivě sledujte rychlost náběhu CTL</h3>
+<p>Postupně zvyšujte CTL. Týdenní nárůst o 3-5 bodů je pro většinu běžců udržitelný. Skákání 10+
+                    body vede k přetrénování a zranění v důsledku nárazového stresu při běhu.</p>
+</div>
+<div class="guideline-item">
+<h3>3️⃣ Naplánujte si zotavovací týdny</h3>
+<p>Každé 3-4 týdny snižte běžecký objem o 30-40% po dobu jednoho týdne. Nechte TSB zvýšit na -5 až +10. Toto
+                    konsoliduje kondiční adaptace a zabraňuje kumulativní únavě.</p>
+</div>
+<div class="guideline-item">
+<h3>4️⃣ Načasujte svůj závod</h3>
+<p>Cíl TSB +15 až +25 v den závodu na většinu vzdáleností. Začněte zužovat 10-21 dní v závislosti na rase
+                    vzdálenost a aktuální úroveň TSB.</p>
+</div>
+<div class="guideline-item">
+<h3>5️⃣ Přijměte negativní TSB během sestavení</h3>
+<p>TSB od -20 do -25 během fází stavby je normální a produktivní pro běžce. Znamená to, že se hlásíte
+                    tréninkový stimul pro adaptaci bez nadměrného rizika zranění.</p>
+</div>
+<div class="guideline-item">
+<h3>6️⃣ Po přestávkách postupně obnovujte CTL</h3>
+<p>Po zranění nebo mimosezónních přestávkách se nepokoušejte okamžitě obnovit předchozí CTL. Postupně obnovovat
+                    na 3-5 CTL bodů týdně, aby nedošlo k opětovnému zranění.</p>
+</div>
+<div class="guideline-item">
+<h3>7️⃣ Naslouchejte svému tělu</h3>
+<p>Metriky TSS jsou vodítka, nikoli absolutní pravidla. Přetrvávající bolestivost, špatný spánek nebo klesající výkon
+                    navzdory dobrým hodnotám TSB naznačují potřebu další obnovy.</p>
+</div>
+<div class="guideline-item">
+<h3>8️⃣ Účet za Neběžecký stres</h3>
+<p>Životní stres, špatný spánek a křížový trénink ovlivňují zotavení. Zvažte snížení cílů TSS během
+                    období vysokého stresu, i když metriky specifické pro běh vypadají dobře.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="section section-alt">
+<div class="container container-narrow">
+<h2>Často kladené otázky: Trénink skóre stresu pro běh</h2>
+<div class="faq-container">
+<div class="faq-item">
+<h3>Jak vypočítám TSS pro běh bez měřiče výkonu?</h3>
+<p>Použijte metodu založenou na tempu: Vypočítejte svůj faktor intenzity (IF) vydělením prahového tempa
                     vaše průměrné tempo běhu. Poté použijte vzorec: rTSS = (IF²) × Doba trvání (hodiny) × 100.
                     například, pokud je vaše prahové tempo 4:00/km a uběhnete 10 km tempem 4:30/km za 45 minut (0,75
-                    hodin): IF = 4:00/4:30 = 0,889, takže rTSS = (0,889²) × 0,75 × 100 = 59,2 TSS.</p></div><div class="faq-item"><h3>Jaký je rozdíl mezi provozováním TSS a cyklistikou TSS?</h3><p>Oba používají stejné složení IF², ale provoz TSS představuje větší celkovou fyzickou zátěž způsobenou nárazem
+                    hodin): IF = 4:00/4:30 = 0,889, takže rTSS = (0,889²) × 0,75 × 100 = 59,2 TSS.</p>
+</div>
+<div class="faq-item">
+<h3>Jaký je rozdíl mezi provozováním TSS a cyklistikou TSS?</h3>
+<p>Oba používají stejné složení IF², ale provoz TSS představuje větší celkovou fyzickou zátěž způsobenou nárazem
                     síly z kontaktu se zemí. Běžec se 400 TSS/týden zažívá podobnou tréninkovou adaptaci jako a
                     cyklista s 600-700 TSS/týden. Běh také používá tempo/rychlost jako vstup místo výkonu ve wattech a
-                    vyžaduje delší dobu obnovy pro stejnou hodnotu TSS.</p></div><div class="faq-item"><h3>Jaký je dobrý týdenní TSS pro maratonský trénink?</h3><p>Týdenní běh TSS pro maratonský trénink se liší podle zkušeností: Začátečníci od prvního maratonu:
+                    vyžaduje delší dobu obnovy pro stejnou hodnotu TSS.</p>
+</div>
+<div class="faq-item">
+<h3>Jaký je dobrý týdenní TSS pro maratonský trénink?</h3>
+<p>Týdenní běh TSS pro maratonský trénink se liší podle zkušeností: Začátečníci od prvního maratonu:
                     250-400 TSS/týden; Středně pokročilí maratonci: 400-550 TSS/týden; Pokročilí/konkurenční maratonci:
                     550-700+ TSS/týden. Týdny ve špičce mohou u pokročilých běžců dosáhnout 600–800 TSS, s klesajícím počtem týdnů.
-                    až 200-300 TSS.</p></div><div class="faq-item"><h3>Na jaký TSB bych se měl zaměřit pro závod 10K?</h3><p>Pro závod 10K cíl TSB +20 až +30 v den závodu. Abyste toho dosáhli, začněte 7–10denní postup. The
+                    až 200-300 TSS.</p>
+</div>
+<div class="faq-item">
+<h3>Na jaký TSB bych se měl zaměřit pro závod 10K?</h3>
+<p>Pro závod 10K cíl TSB +20 až +30 v den závodu. Abyste toho dosáhli, začněte 7–10denní postup. The
                     vyšší TSB (více svěžesti) je prospěšný pro kratší závody, kde na rychlosti a síle záleží více než
                     výdrž. Začněte snižovat objem po 10 dnech, přičemž si udržujte určitou intenzitu pro zachování
-                    nervosvalová ostrost.</p></div><div class="faq-item"><h3>Mohu použít TSS, když neznám svou kritickou rychlost?</h3><p>Znát své<a href="/cs/crs/">Kritická rychlost běhu (CRS)</a>nebo prahové tempo je
+                    nervosvalová ostrost.</p>
+</div>
+<div class="faq-item">
+<h3>Mohu použít TSS, když neznám svou kritickou rychlost?</h3>
+<p>Znát své<a href="/cs/crs/">Kritická rychlost běhu (CRS)</a>nebo prahové tempo je
                     nezbytné pro přesný výpočet TSS, protože IF se vypočítává vzhledem k této hodnotě. Pokud ne
                     znát svůj CRS, proveďte prahový test: buď 30minutová časovka (průměrné tempo = CRS)
                     nebo 8 km závodní tempo. Případně odhadněte pomocí nedávných závodních časů: 10K tempo + 10-15 sekund/km
-                    se blíží CRS.</p></div><div class="faq-item"><h3>Jak rychle mám zvýšit svůj CTL?</h3><p>Zvyšte běh CTL o 2-4 body týdně pro začátečníky, 3-5 bodů pro středně pokročilé běžce a
+                    se blíží CRS.</p>
+</div>
+<div class="faq-item">
+<h3>Jak rychle mám zvýšit svůj CTL?</h3>
+<p>Zvyšte běh CTL o 2-4 body týdně pro začátečníky, 3-5 bodů pro středně pokročilé běžce a
                     Maximálně 5-7 bodů pro pokročilé běžce. To je v souladu s „pravidlem 10 %“ pro týdenní kilometrový výkon
                     zvyšuje a minimalizuje riziko zranění. Překročení těchto sazeb výrazně zvyšuje přetrénování a
-                    riziko zranění kvůli vysokému zatížení svalů, šlach a kostí při běhu.</p></div><div class="faq-item"><h3>Co znamená negativní TSB během tréninku?</h3><p>Negativní TSB znamená, že únava (ATL) převyšuje kondici (CTL) – momentálně jste unavení z nedávné
+                    riziko zranění kvůli vysokému zatížení svalů, šlach a kostí při běhu.</p>
+</div>
+<div class="faq-item">
+<h3>Co znamená negativní TSB během tréninku?</h3>
+<p>Negativní TSB znamená, že únava (ATL) převyšuje kondici (CTL) – momentálně jste unavení z nedávné
                     školení. To je normální a produktivní během fází výstavby. TSB od -15 do -25 znamená produktivní
                     tréninkový stres. TSB pod -30 naznačuje riziko přetrénování a potřebu zotavení. Negativní TSB během
                     builds vytváří stimul pro fitness adaptace, zatímco pozitivní TSB během zužování umožňuje
-                    výkon.</p></div></div></div></section><section class="section"><div class="container container-narrow text-center"><h2>Zvládněte svou běžeckou tréninkovou zátěž</h2><p class="lead">Pochopení skóre tréninkového stresu pro běh mění subjektivní trénink na objektivní,
+                    výkon.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="section">
+<div class="container container-narrow text-center">
+<h2>Zvládněte svou běžeckou tréninkovou zátěž</h2>
+<p class="lead">Pochopení skóre tréninkového stresu pro běh mění subjektivní trénink na objektivní,
             optimalizace výkonu na základě dat. Monitorováním rTSS, CTL, ATL a TSB prostřednictvím výkonu
             Management Chart, získáte přesnou kontrolu nad progresem kondice, zvládáním únavy a špičkovým závodem
-            načasování.</p><p>Systém CTL-ATL-TSB zabraňuje přetrénování, optimalizuje načasování zotavení a zajišťuje dosažení cílových závodů
-            s dokonalou rovnováhou kondice a únavy pro špičkový výkon.</p><div class="mt-xl"><a class="btn btn-secondary" href="/cs/crs/">← Kritická rychlost běhu (CRS)</a><a class="btn btn-primary" href="/cs/efficiency/">Metriky efektivity běhu →</a></div></div></section></main><footer class="site-footer"><div class="container"><div class="footer-top"><div class="footer-brand-section"><h2>Run Analytics</h2><p>Track Critical Running Speed, Training Stress Score, and performance metrics with Run Analytics. Science-based iOS app for runners, triathletes &amp; coaches. 7-day free trial.</p></div><div class="footer-download"><h3 class="footer-heading">Stáhnout</h3><div class="footer-badges"><a href="https://apps.apple.com/us/app/run-analytics/id6754524015" target="_blank" rel="noopener"
-                        aria-label="Stáhněte si na App Store"><img src="../../assets/images/badge-app-store.svg"
+            načasování.</p>
+<p>Systém CTL-ATL-TSB zabraňuje přetrénování, optimalizuje načasování zotavení a zajišťuje dosažení cílových závodů
+            s dokonalou rovnováhou kondice a únavy pro špičkový výkon.</p>
+<div class="mt-xl">
+<a class="btn btn-secondary" href="/cs/crs/">← Kritická rychlost běhu (CRS)</a>
+<a class="btn btn-primary" href="/cs/efficiency/">Metriky efektivity běhu →</a>
+</div>
+</div>
+</section>
+    
+
+    
+    
+<section class="eeat-author bg-light divider-top-lg divider-bottom-lg" aria-label="Author and Reviewer Information">
+  <div class="container container-narrow">
+    <div class="eeat-card" style="display: flex; gap: 1.5rem; align-items: center; padding: 1.5rem; background: var(--color-bg-alt, #f8f9fa); border-radius: 8px; border: 1px solid var(--color-border, #e9ecef); margin-top: 3rem; margin-bottom: 2rem;">
+      <div class="eeat-avatar" style="font-size: 2.5rem; line-height: 1; flex-shrink: 0;" aria-hidden="true">👨‍🔬</div>
+      <div class="eeat-details">
+        
+        
+        <h3 style="margin: 0 0 0.5rem 0; font-size: 1.125rem; font-weight: 600;">
+          Expertly Reviewed by 
+          <span itemprop="author" itemscope itemtype="https://schema.org/Person">
+            <span itemprop="name">AnalyticsZone Team</span>
+          </span>
+        </h3>
+        <p style="margin: 0; font-size: 0.95rem; color: var(--color-body-text, #4a5568); line-height: 1.5;">
+          This content has been written and reviewed by a sports data metrics expert to ensure technical accuracy and adherence to the latest sports science methodologies.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    
+    
+<section class="ai-citation-block divider-top-xl" data-ai-ready="true" data-ai-page="training-load">
+  <div class="container ai-citation-shell">
+    <h2 class="ai-citation-title">Průvodce tréninkovou zátěží: TSS, CTL, ATL, TSB pro běžce</h2>
+    <p class="ai-citation-answer">Naučte se metriky tréninkové zátěže. Výpočet TSS, analýza CTL/ATL/TSB, PMC grafy. Sledujte kondici vědecky.</p>
+
+    <ul class="ai-citation-facts" role="list">
+      
+      <li class="ai-citation-fact">
+        <span class="ai-citation-icon" aria-hidden="true">📅</span>
+        <span>2026-03-24</span>
+      </li>
+      
+
+      
+      <li class="ai-citation-fact ai-citation-keywords">
+        <span class="ai-citation-icon" aria-hidden="true">🏷️</span>
+        <span>tréninkový stres běh · CTL ATL TSB běžci · tréninková zátěž · PMC graf · metriky sledování kondice</span>
+      </li>
+      
+
+      
+      <li class="ai-citation-fact">
+        <span class="ai-citation-icon" aria-hidden="true">🔬</span>
+        <a href="../../cs/bibliography/">
+          
+          Bibliografie
+          
+        </a>
+      </li>
+      
+    </ul>
+
+    
+  </div>
+</section>
+
+  </main>
+
+  
+  <footer class="site-footer">
+    <div class="container">
+        
+        <div class="footer-top">
+            <div class="footer-brand-section">
+                
+                <h2>Run Analytics</h2>
+                <p>Track Critical Running Speed, Training Stress Score, and performance metrics with Run Analytics. Science-based iOS app for runners, triathletes &amp; coaches. 7-day free trial.</p>
+                
+            </div>
+
+            
+            <div class="footer-download">
+                <h3 class="footer-heading">Stáhnout</h3>
+                <div class="footer-badges">
+                    
+                    <a href="https://apps.apple.com/us/app/run-analytics/id6754524015" target="_blank" rel="noopener"
+                        aria-label="Stáhněte si na App Store">
+                        <img src="../../assets/images/badge-app-store.svg"
                             alt="Stáhněte si na App Store" width="135"
-                            height="40" loading="lazy"></a><a href="https://play.google.com/store/apps/details?id=com.arnohealth.runanalytics" target="_blank" rel="noopener"
-                        aria-label="Získejte ji na Google Play"><img src="../../assets/images/badge-google-play.svg"
+                            height="40" loading="lazy">
+                    </a>
+                    
+                    
+                    <a href="https://play.google.com/store/apps/details?id=com.arnohealth.runanalytics" target="_blank" rel="noopener"
+                        aria-label="Získejte ji na Google Play">
+                        <img src="../../assets/images/badge-google-play.svg"
                             alt="Získejte ji na Google Play" width="135"
-                            height="40" loading="lazy"></a></div></div></div><div class="footer-languages"><h3 class="footer-heading">Dostupné v</h3><div class="lang-grid"><a href="/af/" class="lang-link"
+                            height="40" loading="lazy">
+                    </a>
+                    
+                </div>
+            </div>
+            
+        </div>
+
+        
+        <div class="footer-languages">
+            <h3 class="footer-heading">Dostupné v</h3>
+            <div class="lang-grid">
+                
+                <a href="/af/" class="lang-link"
                     hreflang="af" >
                     Afrikaans
-                </a><a href="/am/" class="lang-link"
+                </a>
+                
+                <a href="/am/" class="lang-link"
                     hreflang="am" >
                     አማርኛ
-                </a><a href="/ar/" class="lang-link"
+                </a>
+                
+                <a href="/ar/" class="lang-link"
                     hreflang="ar" dir="rtl" >
                     العربية
-                </a><a href="/bg/" class="lang-link"
+                </a>
+                
+                <a href="/bg/" class="lang-link"
                     hreflang="bg" >
                     Български
-                </a><a href="/bn/" class="lang-link"
+                </a>
+                
+                <a href="/bn/" class="lang-link"
                     hreflang="bn" >
                     বাংলা
-                </a><a href="/ca/" class="lang-link"
+                </a>
+                
+                <a href="/ca/" class="lang-link"
                     hreflang="ca" >
                     Català
-                </a><a href="/cs/" class="lang-link active"
+                </a>
+                
+                <a href="/cs/" class="lang-link active"
                     hreflang="cs" >
                     Čeština
-                </a><a href="/da/" class="lang-link"
+                </a>
+                
+                <a href="/da/" class="lang-link"
                     hreflang="da" >
                     Dansk
-                </a><a href="/de/" class="lang-link"
+                </a>
+                
+                <a href="/de/" class="lang-link"
                     hreflang="de" >
                     Deutsch
-                </a><a href="/el/" class="lang-link"
+                </a>
+                
+                <a href="/el/" class="lang-link"
                     hreflang="el" >
                     Ελληνικά
-                </a><a href="/en/" class="lang-link"
+                </a>
+                
+                <a href="/en/" class="lang-link"
                     hreflang="en" >
                     English
-                </a><a href="/es/" class="lang-link"
+                </a>
+                
+                <a href="/es/" class="lang-link"
                     hreflang="es" >
                     Español
-                </a><a href="/et/" class="lang-link"
+                </a>
+                
+                <a href="/et/" class="lang-link"
                     hreflang="et" >
                     Eesti
-                </a><a href="/fa/" class="lang-link"
+                </a>
+                
+                <a href="/fa/" class="lang-link"
                     hreflang="fa" dir="rtl" >
                     فارسی
-                </a><a href="/fi/" class="lang-link"
+                </a>
+                
+                <a href="/fi/" class="lang-link"
                     hreflang="fi" >
                     Suomi
-                </a><a href="/fr/" class="lang-link"
+                </a>
+                
+                <a href="/fr/" class="lang-link"
                     hreflang="fr" >
                     Français
-                </a><a href="/gu/" class="lang-link"
+                </a>
+                
+                <a href="/gu/" class="lang-link"
                     hreflang="gu" >
                     ગુજરાતી
-                </a><a href="/ha/" class="lang-link"
+                </a>
+                
+                <a href="/ha/" class="lang-link"
                     hreflang="ha" >
                     Hausa
-                </a><a href="/he/" class="lang-link"
+                </a>
+                
+                <a href="/he/" class="lang-link"
                     hreflang="he" dir="rtl" >
                     עברית
-                </a><a href="/hi/" class="lang-link"
+                </a>
+                
+                <a href="/hi/" class="lang-link"
                     hreflang="hi" >
                     हिन्दी
-                </a><a href="/hr/" class="lang-link"
+                </a>
+                
+                <a href="/hr/" class="lang-link"
                     hreflang="hr" >
                     Hrvatski
-                </a><a href="/hu/" class="lang-link"
+                </a>
+                
+                <a href="/hu/" class="lang-link"
                     hreflang="hu" >
                     Magyar
-                </a><a href="/id/" class="lang-link"
+                </a>
+                
+                <a href="/id/" class="lang-link"
                     hreflang="id" >
                     Bahasa Indonesia
-                </a><a href="/is/" class="lang-link"
+                </a>
+                
+                <a href="/is/" class="lang-link"
                     hreflang="is" >
                     Íslenska
-                </a><a href="/it/" class="lang-link"
+                </a>
+                
+                <a href="/it/" class="lang-link"
                     hreflang="it" >
                     Italiano
-                </a><a href="/ja/" class="lang-link"
+                </a>
+                
+                <a href="/ja/" class="lang-link"
                     hreflang="ja" >
                     日本語
-                </a><a href="/km/" class="lang-link"
+                </a>
+                
+                <a href="/km/" class="lang-link"
                     hreflang="km" >
                     ភាសាខ្មែរ
-                </a><a href="/kn/" class="lang-link"
+                </a>
+                
+                <a href="/kn/" class="lang-link"
                     hreflang="kn" >
                     ಕನ್ನಡ
-                </a><a href="/ko/" class="lang-link"
+                </a>
+                
+                <a href="/ko/" class="lang-link"
                     hreflang="ko" >
                     한국어
-                </a><a href="/lt/" class="lang-link"
+                </a>
+                
+                <a href="/lt/" class="lang-link"
                     hreflang="lt" >
                     Lietuvių
-                </a><a href="/lv/" class="lang-link"
+                </a>
+                
+                <a href="/lv/" class="lang-link"
                     hreflang="lv" >
                     Latviešu
-                </a><a href="/ms/" class="lang-link"
+                </a>
+                
+                <a href="/ms/" class="lang-link"
                     hreflang="ms" >
                     Bahasa Melayu
-                </a><a href="/my/" class="lang-link"
+                </a>
+                
+                <a href="/my/" class="lang-link"
                     hreflang="my" >
                     မြန်မာစာ
-                </a><a href="/nb/" class="lang-link"
+                </a>
+                
+                <a href="/nb/" class="lang-link"
                     hreflang="nb" >
                     Norsk Bokmål
-                </a><a href="/nl/" class="lang-link"
+                </a>
+                
+                <a href="/nl/" class="lang-link"
                     hreflang="nl" >
                     Nederlands
-                </a><a href="/pl/" class="lang-link"
+                </a>
+                
+                <a href="/pl/" class="lang-link"
                     hreflang="pl" >
                     Polski
-                </a><a href="/pt/" class="lang-link"
+                </a>
+                
+                <a href="/pt/" class="lang-link"
                     hreflang="pt" >
                     Português
-                </a><a href="/pt-br/" class="lang-link"
+                </a>
+                
+                <a href="/pt-br/" class="lang-link"
                     hreflang="pt-br" >
                     Português (Brasil)
-                </a><a href="/ro/" class="lang-link"
+                </a>
+                
+                <a href="/ro/" class="lang-link"
                     hreflang="ro" >
                     Română
-                </a><a href="/ru/" class="lang-link"
+                </a>
+                
+                <a href="/ru/" class="lang-link"
                     hreflang="ru" >
                     Русский
-                </a><a href="/sk/" class="lang-link"
+                </a>
+                
+                <a href="/sk/" class="lang-link"
                     hreflang="sk" >
                     Slovenčina
-                </a><a href="/sl/" class="lang-link"
+                </a>
+                
+                <a href="/sl/" class="lang-link"
                     hreflang="sl" >
                     Slovenščina
-                </a><a href="/sr/" class="lang-link"
+                </a>
+                
+                <a href="/sr/" class="lang-link"
                     hreflang="sr" >
                     Srpski
-                </a><a href="/sv/" class="lang-link"
+                </a>
+                
+                <a href="/sv/" class="lang-link"
                     hreflang="sv" >
                     Svenska
-                </a><a href="/sw/" class="lang-link"
+                </a>
+                
+                <a href="/sw/" class="lang-link"
                     hreflang="sw" >
                     Kiswahili
-                </a><a href="/ta/" class="lang-link"
+                </a>
+                
+                <a href="/ta/" class="lang-link"
                     hreflang="ta" >
                     தமிழ்
-                </a><a href="/te/" class="lang-link"
+                </a>
+                
+                <a href="/te/" class="lang-link"
                     hreflang="te" >
                     తెలుగు
-                </a><a href="/th/" class="lang-link"
+                </a>
+                
+                <a href="/th/" class="lang-link"
                     hreflang="th" >
                     ไทย
-                </a><a href="/tl/" class="lang-link"
+                </a>
+                
+                <a href="/tl/" class="lang-link"
                     hreflang="tl" >
                     Tagalog
-                </a><a href="/tr/" class="lang-link"
+                </a>
+                
+                <a href="/tr/" class="lang-link"
                     hreflang="tr" >
                     Türkçe
-                </a><a href="/uk/" class="lang-link"
+                </a>
+                
+                <a href="/uk/" class="lang-link"
                     hreflang="uk" >
                     Українська
-                </a><a href="/ur/" class="lang-link"
+                </a>
+                
+                <a href="/ur/" class="lang-link"
                     hreflang="ur" dir="rtl" >
                     اردو
-                </a><a href="/vi/" class="lang-link"
+                </a>
+                
+                <a href="/vi/" class="lang-link"
                     hreflang="vi" >
                     Tiếng Việt
-                </a><a href="/yo/" class="lang-link"
+                </a>
+                
+                <a href="/yo/" class="lang-link"
                     hreflang="yo" >
                     Yorùbá
-                </a><a href="/zh/" class="lang-link"
+                </a>
+                
+                <a href="/zh/" class="lang-link"
                     hreflang="zh" >
                     中文
-                </a></div></div><div class="footer-divider"></div><div class="footer-bottom"><p class="copyright">
+                </a>
+                
+            </div>
+        </div>
+
+        <div class="footer-divider"></div>
+
+        
+        <div class="footer-bottom">
+            <p class="copyright">
                 &copy; 2026 Run Analytics. Všechna práva vyhrazena
-            </p><ul class="footer-legal"><li><a href="/cs/privacy/">Soukromí</a></li><li><a href="/cs/terms/">Podmínky</a></li></ul></div></div></footer><div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="Cookie consent" aria-live="polite"><div class="cookie-banner-content"><div><p>Tato webová stránka používá soubory cookie ke zlepšení vašeho zážitku.</p><a href="/cs/privacy/" class="text-sm">Dozvědět se více</a></div><div class="cookie-banner-actions"><button id="cookie-decline" class="btn btn-secondary btn-small">Odmítnout</button><button id="cookie-accept" class="btn btn-primary btn-small">Přijmout</button></div></div></div><script src="../../assets/js/core.min.js?v=635348535bde" defer></script><script src="../../assets/js/search.min.js?v=635348535bde" defer></script><script src="../../assets/js/analytics.min.js" data-ga-id="G-Y138VB4523" defer></script><script>if ('serviceWorker' in navigator) { navigator.serviceWorker.register('../../sw.js') }</script></body></html>
+            </p>
+            <ul class="footer-legal">
+                <li><a href="/cs/privacy/">Soukromí</a></li>
+                <li><a href="/cs/terms/">Podmínky</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+  
+  <div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="Cookie consent" aria-live="polite">
+    <div class="cookie-banner-content">
+        <div>
+            <p>Tato webová stránka používá soubory cookie ke zlepšení vašeho zážitku.</p>
+            <a href="/cs/privacy/" class="text-sm">Dozvědět se více</a>
+        </div>
+        <div class="cookie-banner-actions">
+            <button id="cookie-decline" class="btn btn-secondary btn-small">Odmítnout</button>
+            <button id="cookie-accept" class="btn btn-primary btn-small">Přijmout</button>
+        </div>
+    </div>
+</div>
+
+  
+  <script src="../../assets/js/core.min.js?v=19fdca55b3da" defer></script>
+  <script src="../../assets/js/search.min.js?v=19fdca55b3da" defer></script>
+  
+
+  
+  
+  <script src="../../assets/js/analytics.min.js" data-ga-id="G-Y138VB4523" defer></script>
+  
+
+  
+  <script>if ('serviceWorker' in navigator) { navigator.serviceWorker.register('../../sw.js') }</script>
+</body>
+
+</html>
