@@ -1,0 +1,939 @@
+<!DOCTYPE html><html lang="zh" dir="ltr"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=optional"
+    rel="stylesheet"><title>运行性能测试：现场测试完整指南 - Run Analytics - Running Analytics App |</title><meta name="description" content="Published: January 27, 2025 | Updated: January 29, 2025. Running Performance Tests: Complete Guide to Field Testing"><meta name="author" content="AnalyticsZone Team"><meta name="keywords" content="运行性能测试, 运行现场测试, CRS测试, 最大摄氧量测试运行, 阈值测试, 跑步经济性测试, 性能测试, 训练区测试"><link rel="canonical" href="https://run.analyticszone.app/zh/running-performance-tests/"><meta property="article:published_time" content="2025-01-27T10:00:00Z"><meta property="article:modified_time" content="2026-03-24T14:30:00Z"><meta property="article:author" content="AnalyticsZone Team"><meta property="og:type" content="article"><meta property="og:url" content="https://run.analyticszone.app/zh/running-performance-tests/"><meta property="og:title" content="运行性能测试：现场测试完整指南 - Run Analytics - Running Analytics App |"><meta property="og:description" content="Published: January 27, 2025 | Updated: January 29, 2025. Running Performance Tests: Complete Guide to Field Testing"><meta property="og:image" content="https://run.analyticszone.app/assets/images/og-image.svg"><meta property="og:locale" content="zh_CN"><meta property="og:site_name" content="Run Analytics"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:url" content="https://run.analyticszone.app/zh/running-performance-tests/"><meta name="twitter:title" content="运行性能测试：现场测试完整指南 - Run Analytics - Running Analytics App |"><meta name="twitter:description" content="Published: January 27, 2025 | Updated: January 29, 2025. Running Performance Tests: Complete Guide to Field Testing"><meta name="twitter:image" content="https://run.analyticszone.app/assets/images/og-image.svg"><meta name="twitter:site" content="@runanalytics"><meta name="twitter:creator" content="@runanalytics"><link rel="alternate" hreflang="af"
+    href="https://run.analyticszone.app/af/running-performance-tests/"><link rel="alternate" hreflang="am"
+    href="https://run.analyticszone.app/am/running-performance-tests/"><link rel="alternate" hreflang="ar"
+    href="https://run.analyticszone.app/ar/running-performance-tests/"><link rel="alternate" hreflang="bg"
+    href="https://run.analyticszone.app/bg/running-performance-tests/"><link rel="alternate" hreflang="bn"
+    href="https://run.analyticszone.app/bn/running-performance-tests/"><link rel="alternate" hreflang="ca"
+    href="https://run.analyticszone.app/ca/running-performance-tests/"><link rel="alternate" hreflang="cs"
+    href="https://run.analyticszone.app/cs/running-performance-tests/"><link rel="alternate" hreflang="da"
+    href="https://run.analyticszone.app/da/running-performance-tests/"><link rel="alternate" hreflang="de"
+    href="https://run.analyticszone.app/de/running-performance-tests/"><link rel="alternate" hreflang="el"
+    href="https://run.analyticszone.app/el/running-performance-tests/"><link rel="alternate" hreflang="en"
+    href="https://run.analyticszone.app/en/running-performance-tests/"><link rel="alternate" hreflang="es"
+    href="https://run.analyticszone.app/es/running-performance-tests/"><link rel="alternate" hreflang="et"
+    href="https://run.analyticszone.app/et/running-performance-tests/"><link rel="alternate" hreflang="fa"
+    href="https://run.analyticszone.app/fa/running-performance-tests/"><link rel="alternate" hreflang="fi"
+    href="https://run.analyticszone.app/fi/running-performance-tests/"><link rel="alternate" hreflang="fr"
+    href="https://run.analyticszone.app/fr/running-performance-tests/"><link rel="alternate" hreflang="gu"
+    href="https://run.analyticszone.app/gu/running-performance-tests/"><link rel="alternate" hreflang="ha"
+    href="https://run.analyticszone.app/ha/running-performance-tests/"><link rel="alternate" hreflang="he"
+    href="https://run.analyticszone.app/he/running-performance-tests/"><link rel="alternate" hreflang="hi"
+    href="https://run.analyticszone.app/hi/running-performance-tests/"><link rel="alternate" hreflang="hr"
+    href="https://run.analyticszone.app/hr/running-performance-tests/"><link rel="alternate" hreflang="hu"
+    href="https://run.analyticszone.app/hu/running-performance-tests/"><link rel="alternate" hreflang="id"
+    href="https://run.analyticszone.app/id/running-performance-tests/"><link rel="alternate" hreflang="is"
+    href="https://run.analyticszone.app/is/running-performance-tests/"><link rel="alternate" hreflang="it"
+    href="https://run.analyticszone.app/it/running-performance-tests/"><link rel="alternate" hreflang="ja"
+    href="https://run.analyticszone.app/ja/running-performance-tests/"><link rel="alternate" hreflang="km"
+    href="https://run.analyticszone.app/km/running-performance-tests/"><link rel="alternate" hreflang="kn"
+    href="https://run.analyticszone.app/kn/running-performance-tests/"><link rel="alternate" hreflang="ko"
+    href="https://run.analyticszone.app/ko/running-performance-tests/"><link rel="alternate" hreflang="lt"
+    href="https://run.analyticszone.app/lt/running-performance-tests/"><link rel="alternate" hreflang="lv"
+    href="https://run.analyticszone.app/lv/running-performance-tests/"><link rel="alternate" hreflang="ms"
+    href="https://run.analyticszone.app/ms/running-performance-tests/"><link rel="alternate" hreflang="my"
+    href="https://run.analyticszone.app/my/running-performance-tests/"><link rel="alternate" hreflang="nb"
+    href="https://run.analyticszone.app/nb/running-performance-tests/"><link rel="alternate" hreflang="nl"
+    href="https://run.analyticszone.app/nl/running-performance-tests/"><link rel="alternate" hreflang="pl"
+    href="https://run.analyticszone.app/pl/running-performance-tests/"><link rel="alternate" hreflang="pt"
+    href="https://run.analyticszone.app/pt/running-performance-tests/"><link rel="alternate" hreflang="pt-br"
+    href="https://run.analyticszone.app/pt-br/running-performance-tests/"><link rel="alternate" hreflang="ro"
+    href="https://run.analyticszone.app/ro/running-performance-tests/"><link rel="alternate" hreflang="ru"
+    href="https://run.analyticszone.app/ru/running-performance-tests/"><link rel="alternate" hreflang="sk"
+    href="https://run.analyticszone.app/sk/running-performance-tests/"><link rel="alternate" hreflang="sl"
+    href="https://run.analyticszone.app/sl/running-performance-tests/"><link rel="alternate" hreflang="sr"
+    href="https://run.analyticszone.app/sr/running-performance-tests/"><link rel="alternate" hreflang="sv"
+    href="https://run.analyticszone.app/sv/running-performance-tests/"><link rel="alternate" hreflang="sw"
+    href="https://run.analyticszone.app/sw/running-performance-tests/"><link rel="alternate" hreflang="ta"
+    href="https://run.analyticszone.app/ta/running-performance-tests/"><link rel="alternate" hreflang="te"
+    href="https://run.analyticszone.app/te/running-performance-tests/"><link rel="alternate" hreflang="th"
+    href="https://run.analyticszone.app/th/running-performance-tests/"><link rel="alternate" hreflang="tl"
+    href="https://run.analyticszone.app/tl/running-performance-tests/"><link rel="alternate" hreflang="tr"
+    href="https://run.analyticszone.app/tr/running-performance-tests/"><link rel="alternate" hreflang="uk"
+    href="https://run.analyticszone.app/uk/running-performance-tests/"><link rel="alternate" hreflang="ur"
+    href="https://run.analyticszone.app/ur/running-performance-tests/"><link rel="alternate" hreflang="vi"
+    href="https://run.analyticszone.app/vi/running-performance-tests/"><link rel="alternate" hreflang="yo"
+    href="https://run.analyticszone.app/yo/running-performance-tests/"><link rel="alternate" hreflang="zh"
+    href="https://run.analyticszone.app/zh/running-performance-tests/"><link rel="alternate" hreflang="x-default"
+    href="https://run.analyticszone.app/en/running-performance-tests/"><link rel="icon" type="image/png" sizes="32x32" href="../../assets/images/icons/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="../../assets/images/icons/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="../../assets/images/icons/apple-touch-icon.png"><link rel="manifest" href="../../manifest.json"><meta name="theme-color" content="#2563EB"><meta name="robots" content="index, follow"><meta name="apple-itunes-app" content="app-id=6754524015"><style>
+/* Critical CSS - Above the fold styles for fast LCP */
+:root {
+  --color-primary: #0066CC;
+  --color-text: #1a1a1a;
+  --color-text-muted: #666;
+  --color-bg: #ffffff;
+  --color-bg-alt: #f8f9fa;
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+}
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  color: var(--color-text);
+  background: var(--color-bg);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Skip link - Accessibility */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--color-primary);
+  color: #fff;
+  padding: 8px 16px;
+  z-index: 1000;
+  text-decoration: none;
+}
+.skip-link:focus {
+  top: 0;
+}
+
+/* Header - Critical for LCP */
+.site-header {
+  background: var(--color-bg);
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0.75rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.site-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: var(--color-text);
+  font-weight: 600;
+  font-size: 1.125rem;
+}
+
+.site-logo img, .site-logo svg {
+  width: 32px;
+  height: 32px;
+}
+
+/* Navigation */
+.main-nav {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .main-nav {
+    display: flex;
+    gap: 1.5rem;
+  }
+  .main-nav a {
+    color: var(--color-text);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9375rem;
+    transition: color 0.2s;
+  }
+  .main-nav a:hover {
+    color: var(--color-primary);
+  }
+}
+
+/* Mobile menu button */
+.menu-toggle {
+  display: flex;
+  background: none;
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .menu-toggle {
+    display: none;
+  }
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Main content */
+main.main-content {
+  flex: 1;
+}
+
+/* Hero section - Critical for LCP */
+.hero {
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .hero {
+    padding: 4rem 2rem;
+  }
+}
+
+.hero h1 {
+  font-size: clamp(1.75rem, 5vw, 3rem);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  color: var(--color-text);
+}
+
+.hero .lead, .hero p {
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  color: var(--color-text-muted);
+  max-width: 700px;
+  margin: 0 auto 1.5rem;
+}
+
+/* Buttons - Critical for CTA */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: var(--radius-md);
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-primary {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: #0052a3;
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+}
+
+.btn-large {
+  padding: 1rem 2rem;
+  font-size: 1.125rem;
+}
+
+/* Utility classes */
+.hidden { display: none !important; }
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Images - prevent CLS with aspect-ratio */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+img[width][height] {
+  aspect-ratio: attr(width) / attr(height);
+}
+
+.lazy-image {
+  background: var(--color-bg-alt);
+  transition: opacity 0.3s;
+}
+
+.lazy-image:not(.loaded) {
+  opacity: 0;
+}
+
+.lazy-image.loaded {
+  opacity: 1;
+}
+
+/* App badges - fixed dimensions to prevent CLS */
+.app-badge img {
+  width: 140px;
+  height: 42px;
+}
+
+/* Logo - fixed dimensions */
+.site-logo img {
+  width: 32px;
+  height: 32px;
+}
+
+/* Reduce motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+</style><link rel="preconnect" href="https://www.googletagmanager.com"><link rel="dns-prefetch" href="https://www.googletagmanager.com"><link rel="stylesheet" href="../../assets/css/main.min.css?v=62ba6be7"><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Run Analytics",
+  "url": "https://run.analyticszone.app",
+  "logo": "https://run.analyticszone.app/assets/images/logo.png",
+  "description": "Track Critical Running Speed, Training Stress Score, and performance metrics with Run Analytics. Science-based iOS app for runners, triathletes &amp; coaches. 7-day free trial.",
+  
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "Customer Support",
+    "email": "analyticszone+run@onmedic.org"
+  },
+  
+  "sameAs": [
+    
+    
+      
+    
+    
+      
+    
+    
+      
+    
+    
+    "https://twitter.com/runanalytics",
+    
+    "https://apps.apple.com/us/app/run-analytics/id6754524015",
+    
+    "https://play.google.com/store/apps/details?id=com.arnohealth.runanalytics"
+    
+  ]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Run Analytics",
+  "url": "https://run.analyticszone.app",
+  "description": "Track Critical Running Speed, Training Stress Score, and performance metrics with Run Analytics. Science-based iOS app for runners, triathletes &amp; coaches. 7-day free trial.",
+  "inLanguage": "zh"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Run Analytics",
+  "description": "Track Critical Running Speed, Training Stress Score, and performance metrics with Run Analytics. Science-based iOS app for runners, triathletes &amp; coaches. 7-day free trial.",
+  "url": "https://run.analyticszone.app",
+  "applicationCategory": ["HealthApplication", "FitnessApplication"],
+  "operatingSystem": "iOS, Android",
+  "author": {
+    "@type": "Organization",
+    "name": "AnalyticsZone Team"
+  },
+  "downloadUrl": "https://apps.apple.com/us/app/run-analytics/id6754524015"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "运行性能测试：现场测试完整指南 - Run Analytics - Running Analytics App |",
+  "description": "Published: January 27, 2025 | Updated: January 29, 2025. Running Performance Tests: Complete Guide to Field Testing",
+  "url": "https://run.analyticszone.app/zh/running-performance-tests/",
+  "inLanguage": "zh",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "Run Analytics",
+    "url": "https://run.analyticszone.app"
+  },
+  "datePublished": "2025-01-27",
+  "dateModified": "2026-03-24",
+  "keywords": ["运行性能测试", "运行现场测试", "CRS测试", "最大摄氧量测试运行", "阈值测试", "跑步经济性测试", "性能测试", "训练区测试"],
+  "about": [
+    {
+      "@type": "Thing",
+      "name": "运行性能测试"
+    }, 
+  
+    {
+      "@type": "Thing",
+      "name": "运行现场测试"
+    }, 
+  
+    {
+      "@type": "Thing",
+      "name": "CRS测试"
+    }, 
+  
+    {
+      "@type": "Thing",
+      "name": "最大摄氧量测试运行"
+    }, 
+  
+    {
+      "@type": "Thing",
+      "name": "阈值测试"
+    }, 
+  
+    {
+      "@type": "Thing",
+      "name": "跑步经济性测试"
+    }, 
+  
+    {
+      "@type": "Thing",
+      "name": "性能测试"
+    }, 
+  
+    {
+      "@type": "Thing",
+      "name": "训练区测试"
+    }
+  ]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "运行性能测试：现场测试完整指南 - Run Analytics - Running Analytics App |",
+  "description": "Published: January 27, 2025 | Updated: January 29, 2025. Running Performance Tests: Complete Guide to Field Testing",
+  "author": {
+    "@type": "Person",
+    "name": "AnalyticsZone Team"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Run Analytics",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://run.analyticszone.app/assets/images/logo.png"
+    }
+  },
+  "datePublished": "2025-01-27",
+  "dateModified": "2026-03-24",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://run.analyticszone.app/zh/running-performance-tests/"
+  }
+}
+</script><script>
+    (function () {
+      let theme = localStorage.getItem('theme');
+      // Older builds could persist a per-subdomain `theme=light` value without a UI
+      // to keep it consistent across apps. Treat it as stale and fall back to the OS.
+      if (theme === 'light') {
+        try { localStorage.removeItem('theme'); } catch (e) { /* ignore */ }
+        theme = null;
+      }
+
+      if (theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark-mode');
+      }
+    })();
+  </script></head><body><a href="#main-content" class="skip-link">跳到内容</a><header class="site-header"><div class="container"><div class="header-inner"><a href="/zh/" class="site-logo"><picture><source srcset="../../assets/images/logo-dark.png" type="image/png"
+                        media="(prefers-color-scheme: dark)"><img src="../../assets/images/logo.png" alt="Run Analytics - Running Analytics App | Critical Running Speed, TSS, CTL/ATL/TSB for iOS" width="56" height="56"></picture><span class="logo-text">Run Analytics</span></a><nav class="nav-primary" id="nav-primary" role="navigation" aria-label="Main navigation"><div class="nav-group-left"><ul><li><a href="/zh/" 
+                                aria-current="">
+                                首页
+                            </a></li><li class="has-submenu" ><a href="/zh/getting-started/" class="nav-label">学习</a><ul class="submenu"><li><a href="/zh/getting-started/" 
+                                        aria-current="">
+                                        入门指南
+                                    </a></li><li><a href="/zh/crs/" 
+                                        aria-current="">
+                                        CRS
+                                    </a></li><li><a href="/zh/training-zones/" 
+                                        aria-current="">
+                                        训练区间
+                                    </a></li><li><a href="/zh/training-load/" 
+                                        aria-current="">
+                                        训练负荷
+                                    </a></li><li><a href="/zh/rtss-calculator/" 
+                                        aria-current="">
+                                        rTSS计算器
+                                    </a></li></ul></li><li class="has-submenu" ><a href="/zh/research/" class="nav-label">科学</a><ul class="submenu"><li><a href="/zh/research/" 
+                                        aria-current="">
+                                        研究
+                                    </a></li><li><a href="/zh/formulas/" 
+                                        aria-current="">
+                                        公式
+                                    </a></li><li><a href="/zh/efficiency/" 
+                                        aria-current="">
+                                        效率
+                                    </a></li><li><a href="/zh/stride-mechanics/" 
+                                        aria-current="">
+                                        步幅力学
+                                    </a></li><li><a href="/zh/bibliography/" 
+                                        aria-current="">
+                                        参考文献
+                                    </a></li></ul></li><li><a href="/zh/contact/" 
+                                aria-current="">
+                                联系我们
+                            </a></li></ul><div class="search-container"><svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.35-4.35"></path></svg><input type="search" id="site-search" class="search-input" aria-expanded="false"
+                            aria-haspopup="listbox" aria-autocomplete="list" autocomplete="off" spellcheck="false" /><div id="search-results" class="search-results hidden" role="region" aria-live="polite"></div></div><select class="language-selector" id="language-select" aria-label="选择语言"><option value="af" >
+                            Afrikaans
+                        </option><option value="am" >
+                            አማርኛ
+                        </option><option value="ar" >
+                            العربية
+                        </option><option value="bg" >
+                            Български
+                        </option><option value="bn" >
+                            বাংলা
+                        </option><option value="ca" >
+                            Català
+                        </option><option value="cs" >
+                            Čeština
+                        </option><option value="da" >
+                            Dansk
+                        </option><option value="de" >
+                            Deutsch
+                        </option><option value="el" >
+                            Ελληνικά
+                        </option><option value="en" >
+                            English
+                        </option><option value="es" >
+                            Español
+                        </option><option value="et" >
+                            Eesti
+                        </option><option value="fa" >
+                            فارسی
+                        </option><option value="fi" >
+                            Suomi
+                        </option><option value="fr" >
+                            Français
+                        </option><option value="gu" >
+                            ગુજરાતી
+                        </option><option value="ha" >
+                            Hausa
+                        </option><option value="he" >
+                            עברית
+                        </option><option value="hi" >
+                            हिन्दी
+                        </option><option value="hr" >
+                            Hrvatski
+                        </option><option value="hu" >
+                            Magyar
+                        </option><option value="id" >
+                            Bahasa Indonesia
+                        </option><option value="is" >
+                            Íslenska
+                        </option><option value="it" >
+                            Italiano
+                        </option><option value="ja" >
+                            日本語
+                        </option><option value="km" >
+                            ភាសាខ្មែរ
+                        </option><option value="kn" >
+                            ಕನ್ನಡ
+                        </option><option value="ko" >
+                            한국어
+                        </option><option value="lt" >
+                            Lietuvių
+                        </option><option value="lv" >
+                            Latviešu
+                        </option><option value="ms" >
+                            Bahasa Melayu
+                        </option><option value="my" >
+                            မြန်မာစာ
+                        </option><option value="nb" >
+                            Norsk Bokmål
+                        </option><option value="nl" >
+                            Nederlands
+                        </option><option value="pl" >
+                            Polski
+                        </option><option value="pt" >
+                            Português
+                        </option><option value="pt-br" >
+                            Português (Brasil)
+                        </option><option value="ro" >
+                            Română
+                        </option><option value="ru" >
+                            Русский
+                        </option><option value="sk" >
+                            Slovenčina
+                        </option><option value="sl" >
+                            Slovenščina
+                        </option><option value="sr" >
+                            Srpski
+                        </option><option value="sv" >
+                            Svenska
+                        </option><option value="sw" >
+                            Kiswahili
+                        </option><option value="ta" >
+                            தமிழ்
+                        </option><option value="te" >
+                            తెలుగు
+                        </option><option value="th" >
+                            ไทย
+                        </option><option value="tl" >
+                            Tagalog
+                        </option><option value="tr" >
+                            Türkçe
+                        </option><option value="uk" >
+                            Українська
+                        </option><option value="ur" >
+                            اردو
+                        </option><option value="vi" >
+                            Tiếng Việt
+                        </option><option value="yo" >
+                            Yorùbá
+                        </option><option value="zh" selected>
+                            中文
+                        </option></select></div><div class="nav-group-right"><div class="header-app-buttons"><a href="https://apps.apple.com/us/app/run-analytics/id6754524015" class="header-download-btn" target="_blank"
+                            rel="noopener" aria-label="Download on App Store" title="Download on App Store"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="currentColor"><path
+                                    d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z" /></svg></a><a href="https://play.google.com/store/apps/details?id=com.arnohealth.runanalytics" class="header-download-btn" target="_blank"
+                            rel="noopener" aria-label="Get it on Google Play" title="Get it on Google Play"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="currentColor"><path
+                                    d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.92 20.16,13.19L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M16.81,8.88L14.54,11.15L6.05,2.66L16.81,8.88Z" /></svg></a></div><div class="suite-menu-container"><button class="suite-menu-toggle" id="suite-menu-toggle" aria-label="See other apps"
+                            aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg></button><div class="suite-dropdown hidden" id="suite-dropdown"><div class="suite-dropdown-header">Other AnalyticsZone Apps</div><div class="suite-apps-grid"><a href="https://analyticszone.app" class="suite-app-link">AnalyticsZone</a><a href="https://swim.analyticszone.app" class="suite-app-link">Swim Analytics</a><a href="https://bike.analyticszone.app" class="suite-app-link">Bike Analytics</a><a href="https://walk.analyticszone.app" class="suite-app-link">Walk Analytics</a><a href="https://cardio.analyticszone.app" class="suite-app-link">Cardio Analytics</a><a href="https://health.analyticszone.app" class="suite-app-link">Health Analytics</a><a href="https://swimtrainer.analyticszone.app" class="suite-app-link">Swim Trainer</a><a href="https://hike.analyticszone.app" class="suite-app-link">Hike Analytics</a><a href="https://sleep.analyticszone.app" class="suite-app-link">Sleep Analytics</a><a href="https://paceva.analyticszone.app" class="suite-app-link">Paceva Analytics</a></div></div></div></div></nav><button class="menu-toggle" id="menu-toggle" aria-label="切换菜单"
+                aria-expanded="false" aria-controls="nav-primary"><span></span><span></span><span></span></button></div></div></header><main id="main-content" class="main-content"><article class="article-content"><header class="article-header"><h1>运行性能测试：现场测试完整指南</h1><p class="article-meta">发表：<time datetime="2025-01-27">2025 年 1 月 27 日</time>|更新：<time datetime="2025-01-29">2025 年 1 月 29 日</time></p></header><div class="quick-answer" itemscope="" itemtype="https://schema.org/Answer"><h2>快速解答</h2><div itemprop="text"><p><strong>运行性能测试</strong>是现场评估，使用简单的设备（只需一块手表和测量的路线）来测量健康指标，例如临界跑步速度 (CRS)、VO2max、乳酸阈值和跑步经济性。</p><p><strong>关键测试：</strong></p><ul><li>CRS 测试：3 分钟 + 9 分钟最大努力，确定训练区域</li><li>VO2max 现场测试：最长运行 12 分钟或 5K 计时赛</li><li>阈值测试：以最大可持续配速进行 30 分钟计时赛</li><li>跑步经济：设定心率下的次最大配速</li><li>测试频率：基础/构建阶段每 6-8 周一次</li></ul></div></div><div class="article-intro"><p>跑步表现测试是了解您当前的健身水平、设置适当的训练区域以及跟踪一段时间内的进步情况的重要工具。与需要昂贵设备和专业设施的实验室测试不同，现场测试只需手表和 GPS 设备即可在任何赛道或测量路线上进行。</p><p>本指南涵盖了竞技跑步者和教练使用的最有效的跑步表现测试，包括<a href="/zh/crs/">临界运行速度 (CRS)</a>,<a href="/zh/vo2max-testing/">VO2max 现场测试</a>,<a href="/zh/lactate-threshold-testing/">乳酸阈值评估</a>，并进行经济评估。您将了解何时进行测试、如何正确执行每个测试以及如何解释结果以优化您的训练。</p></div><nav class="article-toc"><h2>内容</h2><ul><li><a href="#why-test">为什么性能测试很重要</a></li><li><a href="#test-types">运行性能测试的类型</a></li><li><a href="#crs-test">临界运行速度 (CRS) 测试</a></li><li><a href="#vo2max-tests">VO2max 现场测试</a></li><li><a href="#threshold-tests">乳酸阈值测试</a></li><li><a href="#economy-assessment">运行经济评估</a></li><li><a href="#testing-protocol">测试协议和最佳实践</a></li><li><a href="#interpreting-results">解释你的结果</a></li><li><a href="#testing-schedule">何时测试</a></li><li><a href="#using-data">使用测试数据进行训练</a></li><li><a href="#faq">常见问题解答</a></li></ul></nav><section id="why-test"><h2>为什么性能测试很重要</h2><p>定期的性能测试提供了主观评估无法比拟的客观数据。如果不进行测试，您实际上是在盲目训练——猜测适当的训练强度，并且无法明确跟踪改进情况。</p><h3>性能测试的主要好处</h3><ul><li><strong>准确的训练区域：</strong>测试根据您的实际生理机能建立精确的强度区域，而不是通用公式或最大心率的百分比</li><li><strong>目标进度跟踪：</strong>定期测试消除了猜测并显示了特定指标的具体改进（或缺乏）</li><li><strong>训练优化：</strong>测试结果揭示了优点和缺点，允许有针对性的培训来解决限制因素</li><li><strong>动机和责任：</strong>预定的测试创建训练结构并提供比赛日之后的切实目标</li><li><strong>预警系统：</strong>测试结果下降可能表明训练过度、恢复不足或需要进行训练调整</li><li><strong>性价比高：</strong>现场测试以零成本提供实验室测试中 80-90% 的信息</li></ul><p>最成功的跑步者会定期进行测试（通常在训练期间每 6-8 周进行一次），以确保他们的训练区域随着健康状况的变化而保持准确。在我们的指南中了解有关使用此数据的更多信息<a href="/zh/training-zones/">训练区</a>。</p></section><section id="test-types"><h2>运行性能测试的类型</h2><p>不同的测试衡量跑步表现的不同方面。了解每个测试揭示的内容有助于您选择适合您目标的测试。</p><table><thead><tr><th>测试类型</th><th>它衡量什么</th><th>所需时间</th><th>最适合</th></tr></thead><tbody><tr><td><strong>CRS 测试</strong></td><td>有氧-无氧边界，可持续配速</td><td>20-30分钟</td><td>所有距离、训练区域设置</td></tr><tr><td><strong>Cooper 12 分钟测试</strong></td><td>VO2max 估计，有氧能力</td><td>15分钟</td><td>有氧健身评估</td></tr><tr><td><strong>1.5 英里计时赛</strong></td><td>VO2max，无氧能力</td><td>10-15分钟</td><td>中长跑运动员</td></tr><tr><td><strong>30 分钟阈值测试</strong></td><td>乳酸阈值步速/HR</td><td>35-40分钟</td><td>长跑运动员、训练区</td></tr><tr><td><strong>10K 计时赛</strong></td><td>乳酸阈值、竞赛健身</td><td>35-60分钟</td><td>5K马拉松运动员</td></tr><tr><td><strong>次最大经济测试</strong></td><td>跑步经济趋势</td><td>30-40分钟</td><td>跟踪效率改进</td></tr></tbody></table><p>大多数跑步者受益于定期执行 2-3 种测试类型：针对训练区的 CRS 测试、针对有氧能力跟踪的 VO2max 测试以及针对特定比赛健康状况的阈值测试。</p></section><section id="crs-test"><h2>临界运行速度 (CRS) 测试</h2><p>的<a href="/zh/crs/">CRS测试</a>可以说是对跑步者来说最有价值的单一表现测试。它可以确定您的有氧-无氧过渡速度——理论上您可以无限期维持而不积累乳酸的最快速度。</p><h3>Prueba CRS 协议</h3><p><strong>准备工作：</strong></p><ul><li>在跑道或精确测量的平坦赛道上进行测试</li><li>休息良好（48小时前没有进行艰苦训练）</li><li>热身：15分钟轻松跑+3-4步</li><li>理想条件：50-65°F，最小风</li></ul><p><strong>测试结构：</strong></p><ol><li><strong>试验一：</strong>尽可能快地跑3分钟，记录所跑的距离</li><li><strong>恢复：</strong>30分钟轻松步行/慢跑</li><li><strong>试验2：</strong>尽可能快地跑 7 分钟，记录所跑的距离</li></ol><p><strong>计算CRS：</strong></p><pre>CRS (m/min) = (D7 - D3) / (7 - 3)
+
+Where:
+D7 = Distance covered in 7-minute trial (meters)
+D3 = Distance covered in 3-minute trial (meters)</pre><h3>计算示例</h3><table><thead><tr><th>试用</th><th>距离</th><th>计算</th></tr></thead><tbody><tr><td>3分钟试用</td><td>900米</td><td>D3=900m</td></tr><tr><td>7 分钟试用</td><td>1,980 米</td><td>D7 = 1,980m</td></tr><tr><td><strong>CRS 结果</strong></td><td colspan="2"><strong>(1,980 - 900) / (7 - 3) = 270 m/min = 3:42/km = 5:57/英里</strong></td></tr></tbody></table><p>一旦您拥有 CRS，您就可以使用我们的<a href="/zh/training-zones/">训练区计算器</a>并跟踪训练压力<a href="/zh/rtss-calculator/">rTSS 计算</a>。</p><h3>CRS 测试技巧</h3><ul><li>稍微保守地调整 3 分钟试验的节奏——应该感觉“非常困难”，但不是全力以赴</li><li>7 分钟的试验开始时应与 3 分钟的配速类似，随着疲劳的出现逐渐减慢</li><li>GPS 精度很重要——轨道测试最可靠</li><li>记录两次试验的心率以建立心率训练区</li><li>每 6-8 周重新测试一次以跟踪改进情况</li></ul></section><section id="vo2max-tests"><h2>VO2max 现场测试</h2><p><a href="/zh/what-is-vo2max/">保护6X</a>代表您的最大有氧能力——心血管系统的上限。虽然实验室测试提供了黄金标准，但现场测试可以估计 VO2max 的准确度在 3-5% 范围内。</p><h3>库珀 12 分钟测试</h3><p>Cooper 测试是一种简单且经过充分验证的 VO2max 估计方法。在跑道上在 12 分钟内跑得尽可能远。</p><p><strong>协议：</strong></p><ol><li>彻底热身（15 分钟轻松 + 跨步）</li><li>在 12 分钟内跑得尽可能远</li><li>记录总距离（以米为单位）</li></ol><p><strong>计算 VO2max：</strong></p><pre>VO2max (ml/kg/min) = (Distance in meters - 504.9) / 44.73</pre><h3>库珀测试结果</h3><table><thead><tr><th>距离（12 分钟）</th><th>估计VO2max</th><th>性能水平</th></tr></thead><tbody><tr><td>2,400m（1.49 英里）</td><td>42.4毫升/公斤/分钟</td><td>休闲跑者</td></tr><tr><td>2,800m（1.74 英里）</td><td>51.3毫升/公斤/分钟</td><td>竞技俱乐部跑步者</td></tr><tr><td>3,200m（1.99 英里）</td><td>60.2毫升/公斤/分钟</td><td>地区层面</td></tr><tr><td>3,600m（2.24 英里）</td><td>69.2 毫升/公斤/分钟</td><td>国家级</td></tr><tr><td>4,000m（2.49 英里）</td><td>78.1毫升/公斤/分钟</td><td>精英级别</td></tr></tbody></table><h3>1.5 英里（2.4 公里）计时赛</h3><p>作为 Cooper 测试的替代方案，1.5 英里计时赛提供了类似的 VO2max 估计，并具有基于距离的目标。</p><p><strong>协议：</strong></p><ol><li>彻底热身</li><li>尽可能快地跑 1.5 英里（在标准跑道上跑 6 圈）</li><li>以分钟和秒为单位记录时间</li></ol><p><strong>计算 VO2max：</strong></p><pre>VO2max (ml/kg/min) = 483 / Time in minutes + 3.5</pre><h3>VO2max 测试基准</h3><table><thead><tr><th>1.5 英里时间</th><th>估计VO2max</th><th>等效比赛时间</th></tr></thead><tbody><tr><td>11:00</td><td>47.4毫升/公斤/分钟</td><td>5K：24:30 | 10K：51:00 |高模：1:54</td></tr><tr><td>10:00</td><td>51.8毫升/公斤/分钟</td><td>5K：22:00 | 10K：46:00 |高模：1:42</td></tr><tr><td>9:00</td><td>57.2毫升/公斤/分钟</td><td>5K：19:30 | 10K：41:00 |下午：1:30</td></tr><tr><td>8:00</td><td>63.9 毫升/公斤/分钟</td><td>5K：17:15 | 10K：36:00 |高模：1:19</td></tr><tr><td>7:00</td><td>72.5毫升/公斤/分钟</td><td>5K：15:00 | 10K：31:30 |下午：1:09</td></tr></tbody></table><p>欲了解更多详细信息<a href="/zh/vo2max-testing/">VO2max 测试方法</a>和解释，请参阅我们的完整指南。</p></section><section id="threshold-tests"><h2>乳酸阈值测试</h2><p>你的<a href="/zh/lactate-threshold-testing/">乳酸阈值</a>代表您可以维持大约 50-60 分钟的最快配速，对于大多数跑步者来说大约是 10K 到半程马拉松的配速。该指标对于设置节奏跑和阈值训练的训练强度至关重要。</p><h3>30 分钟阈值测试</h3><p>30 分钟测试是乳酸阈值现场测试的黄金标准。简单、实用，与实验室阈值测试相关性强。</p><p><strong>协议：</strong></p><ol><li>彻底热身（15-20 分钟轻松 + 4-5 步）</li><li>以最大持续努力进行 30 分钟计时赛</li><li>避免开始太快——自始至终节奏应该“舒适”</li><li>记录平均步速和平均心率</li></ol><p><strong>解释结果：</strong></p><ul><li><strong>阈值配速：</strong>整个 30 分钟的平均配速</li><li><strong>乳酸阈心率 (LTHR)：</strong>最后 20 分钟的平均心率</li><li><strong>阈值功率：</strong>如果使用跑步功率计，则为 30 分钟的平均功率</li></ul><h3>10K 计时赛</h3><p>10K 比赛或计时赛有双重职责：针对比赛的体能评估和阈值标记。</p><p><strong>协议：</strong></p><ol><li>标准比赛热身（15 分钟轻松+跨步）</li><li>比赛时跑 10K（不是训练时）</li><li>记录时间、平均配速、平均心率</li></ol><p><strong>10K 起的阈值估计：</strong></p><ul><li><strong>阈值配速：</strong>10K 配速 + 每英里 10-15 秒</li><li><strong>长寿命：</strong>比赛最后 5 公里的平均心率</li><li><strong>VO2max 步速：</strong>10K 配速 - 每英里 15-20 秒</li></ul><h3>阈值测试比较</h3><table><thead><tr><th>测试类型</th><th>持续时间</th><th>努力程度</th><th>优点</th><th>最佳使用</th></tr></thead><tbody><tr><td>30 分钟 TT</td><td>30分钟</td><td>舒适坚硬</td><td>纯粹的阈值评估，更容易节奏</td><td>训练区域设置</td></tr><tr><td>10K 赛跑</td><td>35-60分钟</td><td>比赛努力</td><td>针对特定比赛的双重目的测试</td><td>巅峰体能评估</td></tr><tr><td>20 分钟 TT</td><td>20分钟</td><td>非常难</td><td>持续时间更短，疲劳更少</td><td>频繁测试</td></tr></tbody></table><p>使用阈值测试结果来设置您的<a href="/zh/tempo-runs-zone3/">3区节奏节奏</a>并确保整个训练周期中阈值训练的适当强度。</p></section><section id="economy-assessment"><h2>运行经济评估</h2><p><a href="/zh/running-economy/">跑步经济</a>衡量您在给定速度下使用氧气的效率。虽然实验室测试提供了精确的氧气成本测量，但现场评估可以跟踪随着时间的推移经济的改善。</p><h3>次最大经济测试协议</h3><p>该测试以标准化步速跟踪心率，以监测经济变化。随着经济的改善，心率也会以同样的速度下降。</p><p><strong>协议：</strong></p><ol><li><strong>热身：</strong>15分钟轻松跑</li><li><strong>测试部分：</strong>以三种标准配速中的每一种跑 5 分钟：<ul><li>配速 1：轻松配速（阈值配速的 60-65%）</li><li>步速 2：中等步速（阈值步速的 75-80%）</li><li>配速 3：马拉松配速（阈值配速的 85-90%）</li></ul></li><li><strong>恢复：</strong>各段之间 3 分钟轻松</li><li><strong>记录：</strong>每个分段最后 3 分钟的平均心率</li></ol><h3>经济跟踪示例</h3><table><thead><tr><th>考试日期</th><th>轻松节奏人力资源</th><th>中等心率</th><th>马拉松心率</th><th>经济趋势</th></tr></thead><tbody><tr><td>1月1日</td><td>140 次/分钟</td><td>156 次/分钟</td><td>168 次/分钟</td><td>基线</td></tr><tr><td>2月15日</td><td>136 次/分钟</td><td>152 次/分钟</td><td>164 次/分钟</td><td>+3% 改善</td></tr><tr><td>4月1日</td><td>134 次/分钟</td><td>149 次/分钟</td><td>161 次/分钟</td><td>+5% 改善</td></tr><tr><td>5月15日</td><td>133 次/分钟</td><td>148 次/分钟</td><td>160 次/分钟</td><td>+6% 改进</td></tr></tbody></table><p><strong>解释变化：</strong></p><ul><li><strong>降低心率：</strong>经济改善——以同样的速度使用更少的能源</li><li><strong>稳定的人力资源：</strong>经济平稳期——可能需要针对经济的特定培训</li><li><strong>增加人力资源：</strong>疲劳、训练不足或训练过度——调整训练负荷</li></ul><p>在我们的指南中了解有关提高效率的更多信息<a href="/zh/running-efficiency-biomechanics/">跑步生物力学</a>。</p></section><section id="testing-protocol"><h2>测试协议和最佳实践</h2><p>一致的测试协议可确保随着时间的推移获得可靠、可比较的结果。条件或准备工作的微小变化都会显着影响性能。</p><h3>测试前准备</h3><ul><li><strong>恢复：</strong>测试前48-72小时内无需进行艰苦训练</li><li><strong>睡眠：</strong>前一天晚上充分休息（7-9小时）</li><li><strong>营养：</strong>正常饮食，避免空腹或过量饮食测试</li><li><strong>保湿：</strong>水分充足但不过分</li><li><strong>时间安排：</strong>在一天的同一时间测试一致性</li><li><strong>条件：</strong>避免极热、极冷、风或海拔变化</li></ul><h3>预热协议</h3><p>标准化的热身可以让您的身体做好最大努力的准备，同时不会引起疲劳：</p><ol><li><strong>10分钟：</strong>非常轻松的慢跑（对话节奏）</li><li><strong>5分钟：</strong>逐渐进展到中等速度</li><li><strong>5分钟：</strong>动态伸展和活动性工作</li><li><strong>4-5步：</strong>80-100m 加速至接近测试速度</li><li><strong>3-5分钟：</strong>轻松洗牌和最后的心理准备</li></ol><h3>测试环境</h3><table><thead><tr><th>因素</th><th>理想条件</th><th>不理想时的影响</th></tr></thead><tbody><tr><td><strong>表面</strong></td><td>轨道或平坦的铺砌路径</td><td>在不平坦的地形上每英里 ±5-10 秒</td></tr><tr><td><strong>温度</strong></td><td>50-65°F (10-18°C)</td><td>75°F 以上时性能为 -5%，40°F 以下时为 -3%</td></tr><tr><td><strong>风</strong></td><td>平静或微风</td><td>中风时每英里 -10-15 秒</td></tr><tr><td><strong>海拔</strong></td><td>海平面至 1,000 英尺</td><td>基线以上每 1,000 英尺 -2% 性能</td></tr><tr><td><strong>湿度</strong></td><td>30-60%</td><td>湿度高于 70% 时性能为 -2-5%</td></tr></tbody></table><h3>数据记录</h3><p>记录每次测试的综合数据：</p><ul><li>测试日期和时间</li><li>天气状况（温度、风力、湿度）</li><li>课程/地点详情</li><li>最近的训练（前一周的训练量和强度）</li><li>睡眠质量和时间</li><li>感知努力 (RPE 1-10)</li><li>任何异常因素（压力、疾病、伤害等）</li></ul></section><section id="interpreting-results"><h2>解释你的结果</h2><p>如果没有上下文，原始测试数据就没有什么意义。了解您的结果表明健康状况以及如何将其用于训练决策至关重要。</p><h3>CRS 解读</h3><table><thead><tr><th>保护0X（米/分钟）</th><th>CRS 步伐</th><th>性能水平</th><th>典型比赛时间</th></tr></thead><tbody><tr><td>200-220</td><td>4:32-5:00/公里</td><td>初学者</td><td>5K：28-32 分钟 | 10K：60-68分钟</td></tr><tr><td>220-250</td><td>4:00-4:32/公里</td><td>休闲</td><td>5K：24-28 分钟 | 10K：50-60分钟</td></tr><tr><td>250-280</td><td>3:34-4:00/公里</td><td>竞技俱乐部</td><td>5K：20-24 分钟 | 10K：42-50分钟</td></tr><tr><td>280-310</td><td>3:13-3:34/公里</td><td>地区层面</td><td>5K：17:30-20 分钟 | 10K：36-42分钟</td></tr><tr><td>310-340</td><td>2:56-3:13/公里</td><td>国家级</td><td>5K：15-17:30 分钟 | 10K：31-36分钟</td></tr><tr><td>340+</td><td>&lt;3:56/公里</td><td>精英</td><td>5K：&lt;15 分钟 | 10K：&lt;31分钟</td></tr></tbody></table><h3>VO2max 按年龄和性别的解释</h3><table><thead><tr><th>分类</th><th>男子20-29岁</th><th>男士 40-49</th><th>女子 20-29 岁</th><th>女性 40-49</th></tr></thead><tbody><tr><td>高级</td><td>&gt;55</td><td>&gt;52</td><td>&gt;49</td><td>&gt;45</td></tr><tr><td>优秀</td><td>51-55</td><td>47-52</td><td>45-49</td><td>41-45</td></tr><tr><td>好</td><td>45-51</td><td>42-47</td><td>39-45</td><td>35-41</td></tr><tr><td>公平</td><td>39-45</td><td>36-42</td><td>33-39</td><td>29-35</td></tr><tr><td>可怜</td><td>&lt;39</td><td>&lt;36</td><td>&lt;33</td><td>&lt;29</td></tr></tbody></table><p><em>数值单位为毫升/千克/分钟。资料来源：美国运动医学学院</em></p><h3>阈值配速基准</h3><p>对于不同水平的跑步者，乳酸阈值通常出现在 VO2max 配速的以下百分比处：</p><ul><li><strong>初学者跑步者：</strong>VO2max 速度的 75-80%</li><li><strong>训练有素的跑步者：</strong>VO2max 速度的 80-85%</li><li><strong>训练有素的跑步者：</strong>VO2max 速度的 85-90%</li><li><strong>精英跑者：</strong>VO2max 速度的 90-95%</li></ul><p>如果您的阈值相对于 VO2max 低于预期，则表明通过阈值特定训练有改善的潜力。</p><h3>改善率</h3><p>预期改进率有助于设定现实的目标并确定何时需要进行培训调整：</p><table><thead><tr><th>公制</th><th>初学者（0-2岁）</th><th>中级（2-5年）</th><th>高级（5年以上）</th></tr></thead><tbody><tr><td><strong>保护0X</strong></td><td>每 3 个月 +5-10%</td><td>每 3 个月 +2-5%</td><td>每 3 个月 +1-2%</td></tr><tr><td><strong>保护6X</strong></td><td>每 6 个月 +8-15%</td><td>每 6 个月 +3-6%</td><td>每 6 个月 +1-3%</td></tr><tr><td><strong>阈值</strong></td><td>每 6 个月 +6-12%</td><td>每 6 个月 +3-6%</td><td>每 6 个月 +1-3%</td></tr><tr><td><strong>经济</strong></td><td>每年+5-8%</td><td>每年+2-4%</td><td>每年+1-2%</td></tr></tbody></table></section><section id="testing-schedule"><h2>何时测试</h2><p>性能测试的策略性时机可以最大限度地发挥其价值，同时最大限度地减少对训练和比赛的干扰。</p><h3>按训练阶段划分的测试频率</h3><table><thead><tr><th>训练阶段</th><th>推荐测试</th><th>频率</th><th>目的</th></tr></thead><tbody><tr><td><strong>基地建设</strong></td><td>CRS测试，经济评估</td><td>每 6-8 周一次</td><td>监控有氧运动发展，调整区域</td></tr><tr><td><strong>构建阶段</strong></td><td>阈值测试、CRS测试</td><td>每 4-6 周一次</td><td>跟踪阈值改进、区域更新</td></tr><tr><td><strong>峰值/比值</strong></td><td>VO2max 测试、阈值测试</td><td>每 3-4 周一次</td><td>评估比赛准备情况，微调节奏</td></tr><tr><td><strong>锥度</strong></td><td>仅运行光锐化</td><td>没有测试</td><td>为比赛保持新鲜感</td></tr><tr><td><strong>恢复/淡季</strong></td><td>CRS测试</td><td>结束时一次</td><td>建立新的训练区</td></tr></tbody></table><h3>培训周内进行测试</h3><p><strong>每周计划中的最佳测试时间：</strong></p><ul><li><strong>第一天（星期一）：</strong>恢复日——无测试</li><li><strong>第 2-3 天：</strong>轻度训练——适合经济考验</li><li><strong>第 4-5 天：</strong>恢复良好——最适合最大测试（CRS、VO2max、阈值）</li><li><strong>第 6-7 天：</strong>周末——如果休息良好，适合进行较长时间的测试</li></ul><p><strong>考前训练调整：</strong></p><ul><li>考试前48小时内不要进行剧烈运动</li><li>测试周减少 30-40% 的数量</li><li>保持之前锻炼的强度但减少训练量</li><li>将测试周视为一个迷你锥度</li></ul><h3>年度测试日历示例</h3><p>对于以秋季马拉松和春季热身赛为目标的跑步者：</p><table><thead><tr><th>月份</th><th>训练阶段</th><th>测试</th><th>注释</th></tr></thead><tbody><tr><td>一月</td><td>基地建设</td><td>CRS 测试，经济基线</td><td>建立节后训练区</td></tr><tr><td>三月</td><td>基地建设</td><td>CRS重新测试</td><td>8 周基础后更新区域</td></tr><tr><td>四月</td><td>构建阶段</td><td>10K 赛跑（阈值测试）</td><td>春季调剂比赛</td></tr><tr><td>六月</td><td>构建/特定</td><td>CRS、VO2max现场测试</td><td>中期评估</td></tr><tr><td>八月</td><td>峰值/比值</td><td>30 分钟阈值测试</td><td>马拉松赛前最后区域验证</td></tr><tr><td>十月</td><td>竞赛</td><td>马拉松比赛日</td><td>终极性能测试</td></tr><tr><td>十二月</td><td>恢复/淡季</td><td>CRS测试</td><td>下一个训练周期的基线</td></tr></tbody></table><p>在我们的指南中了解有关构建培训年的更多信息<a href="/zh/marathon-periodization/">马拉松分期</a>。</p></section><section id="using-data"><h2>使用测试数据进行训练</h2><p>如果应用得当，性能测试数据会从有趣的数字转变为可操作的培训指导。</p><h3>根据测试结果设置训练区域</h3><p>获得 CRS 和阈值数据后，建立所有五个训练区域：</p><table><thead><tr><th>专区</th><th>CRS 的%</th><th>阈值的百分比</th><th>示例（CRS=270m/min，3:42/km）</th></tr></thead><tbody><tr><td><strong>1 区（恢复）</strong></td><td>60-70%</td><td>55-65%</td><td>5:17-6:10/公里（8:30-9:56/英里）</td></tr><tr><td><strong>2区（有氧）</strong></td><td>70-85%</td><td>65-78%</td><td>4:21-5:17/公里（7:01-8:30/英里）</td></tr><tr><td><strong>区域 3（节奏）</strong></td><td>85-95%</td><td>78-88%</td><td>3:54-4:21/公里（6:16-7:01/英里）</td></tr><tr><td><strong>区域 4（阈值）</strong></td><td>95-105%</td><td>88-100%</td><td>3:32-3:54/公里（5:41-6:16/英里）</td></tr><tr><td><strong>5 区 (VO2max)</strong></td><td>105-120%</td><td>100-115%</td><td>3:05-3:32/公里（4:58-5:41/英里）</td></tr></tbody></table><p>使用我们的<a href="/zh/training-zones/">训练区计算器</a>根据您的测试结果进行精确的区域计算。</p><h3>确定培训重点领域</h3><p>测试结果揭示了需要注意的特定领域：</p><ul><li><strong>VO2max 相对于阈值较低：</strong>需要更多有氧基础训练（2 区）和 VO2max 间隔</li><li><strong>相对于 VO2max 的阈值低：</strong>增加阈值训练量（节奏跑、巡航间隔）</li><li><strong>尽管 VO2max/阈值良好，但经济状况不佳：</strong>注重跑姿、力量训练和技术训练</li><li><strong>CRS 改进平台：</strong>可能需要增加训练量或调整强度分布</li></ul><h3>根据测试趋势调整培训</h3><table><thead><tr><th>测试结果模式</th><th>解读</th><th>训练调整</th></tr></thead><tbody><tr><td>持续改进</td><td>培训有效</td><td>继续当前的方法</td></tr><tr><td>2-3 次测试后达到稳定水平</td><td>适应完成，需要新的刺激</td><td>进度训练：增加训练量、改变强度组合或添加新元素</td></tr><tr><td>业绩下滑</td><td>训练过度、恢复不充分或生病</td><td>减少训练负荷30-50%，专注于恢复，检查其他问题</td></tr><tr><td>日常变化较大</td><td>恢复或测试协议不一致</td><td>提高一致性：睡眠、营养、压力管理、测试条件</td></tr></tbody></table><h3>跟踪训练压力分数 (TSS)</h3><p>使用测试中的 CRS 进行计算<a href="/zh/rtss-calculator/">rTSS（跑步训练压力分数）</a>每次锻炼。这可以量化训练负荷并帮助管理疲劳：</p><pre>rTSS = (Duration in seconds × Intensity Factor² × 100) / 3600
+
+Where Intensity Factor (IF) = Workout pace / CRS pace</pre><p>基于测试衍生的 CRS 的每周 TSS 指南：</p><ul><li><strong>基地建设：</strong>每周 200-400 rTSS，2 区 80%+</li><li><strong>构建阶段：</strong>每周 300-500 rTSS，2 区 70-80%</li><li><strong>峰值阶段：</strong>每周 350-600 rTSS，针对具体比赛的强度</li><li><strong>锥度：</strong>每周 TSS 减少 30-50%</li></ul><p>了解有关管理训练负荷的更多信息<a href="/zh/training-load/">训练负荷指南</a>。</p></section><section id="faq"><h2>常见问题解答</h2><div class="faq-item"><h3>我应该多久进行一次性能测试？</h3><p>在基础建设期间每 6-8 周进行一次测试，在构建阶段每 4-6 周进行一次测试，在特定准备期间每 3-4 周进行一次测试。避免在减量期（目标比赛前 2-3 周）进行测试。更频繁的测试可以提供更好的数据，但需要仔细融入训练中以避免过度疲劳。</p></div><div class="faq-item"><h3>我可以在一次测试中进行多项测试吗？</h3><p>您可以在一次会话中将经济评估与阈值或 CRS 测试结合起来，因为经济测试是次最大的。但是，避免在同一天组合最大测试（CRS + VO2max，或阈值 + VO2max）——第一次测试造成的疲劳会影响第二次测试。如果您必须测试多个指标，请将它们间隔 48-72 小时以获得准确的结果。</p></div><div class="faq-item"><h3>如果我的测试结果比预期差怎么办？</h3><p>测试表现不佳可能是由于恢复不足、累积疲劳、条件不佳、疾病或只是糟糕的一天造成的。调整训练前，恢复5-7天后重新测试。如果结果仍然不佳，请将训练负荷减少 30-40%，持续 1-2 周，确保充足的睡眠和营养，然后重新测试。持续的不良结果需要进行医学评估。</p></div><div class="faq-item"><h3>现场测试与实验室测试一样准确吗？</h3><p>与大多数指标的实验室测试相比，现场测试的准确度为 85-95%。 CRS 测试在实验室得出的临界功率/速度的 2-3% 范围内。 VO2max 现场估计值在 3-5% 范围内。阈值测试的准确性取决于节奏能力 - 节奏良好的测试在实验室值的 1-2% 范围内。轻微的准确性损失被便利性、成本节省和频繁测试的能力所抵消。</p></div><div class="faq-item"><h3>我应该在跑步机上还是户外进行测试？</h3><p>通常首选在赛道上进行户外测试：它针对实际的跑步力学，GPS/手表提供准确的数据，并且条件与比赛情况相匹配。当天气不允许时，跑步机测试是可以接受的，但将等级设置为 1% 以匹配户外活动，如果可能的话校准跑步机速度，并保持一致的测试环境。不要直接比较跑步机和户外测试结果——选择一种方法并坚持下去。</p></div><div class="faq-item"><h3>如何在测试结果中考虑温度和天气？</h3><p>温度对性能有显着影响：高于 60°F 每 10°F，性能预期为 -2%，低于 40°F 每 10°F，性能为 -1.5%。在温和条件下，风的成本约为每英里 -5-10 秒。记录每次测试的天气数据，并相应地调整预期或仅比较在类似条件下进行的测试。考虑在室内赛道上进行测试以获得最大的一致性。</p></div><div class="faq-item"><h3>我可以使用比赛结果而不是专门的测试吗？</h3><p>是的，比赛结果可以替代表现测试：10K 比赛提供了出色的阈值数据，5K 比赛揭示了 VO2max 能力，半程马拉松配速表明了有氧能力。然而，比赛努力与测试努力不同（更多的情感投入、可变节奏、竞争激增），因此在设置训练区域时请谨慎使用比赛数据。在受控条件下进行的专门测试可以为日常训练决策提供更可靠的数据。</p></div><div class="faq-item"><h3>性能测试之前我应该进行哪些热身？</h3><p>标准化的热身至关重要：10 分钟非常轻松的慢跑，5 分钟逐渐过渡到中等配速，5 分钟动态拉伸，4-5 步 80-100m 的步幅达到接近测试的配速，然后 3-5 分钟轻松的放松。总热身时间：25-30 分钟。较长的热身时间（最多 40 分钟）可能有利于某些运动员进行阈值和 VO2max 测试。切勿在没有热身的情况下进行测试——结果将会受到严重影响。</p></div><div class="faq-item"><h3>我如何知道我是否正确安排了测试进度？</h3><p>对于 CRS 测试：3 分钟的试验应该感觉“非常困难但可持续”，评级为 8-9/10 的努力。 7 分钟的试验开始时类似，但逐渐减慢。对于阈值测试：努力应该自始至终“舒适地努力”，7-8/10。您应该能够说 2-3 个单词，但不能说出完整的句子。如果你在最后 25% 的速度大幅减慢，或者结束时感觉自己可以更加努力，那么节奏就已经偏离了。经验可以改善节奏——预计 2-3 个测试周期后会有更好的结果。</p></div><div class="faq-item"><h3>我应该根据我的测试结果进行不同的训练吗？</h3><p>绝对地。测试揭示了个人的优势和劣势，应指导培训重点。如果 VO2max 相对于阈值较低，则优先考虑有氧基础和 VO2max 工作。如果阈值滞后于 VO2max，请增加节奏和阈值训练量。尽管生理指标良好，但经济状况不佳表明需要进行形式训练、力量训练和技术改进。通用训练计划无法考虑个人生理机能——基于测试的个性化是优化训练的关键。</p></div></section><section id="scientific-references"><h2>科学参考文献</h2><p>性能测试方案基于运动生理学和运动科学领域经过验证的研究：</p><div class="callout callout-info"><h3>重点研究论文</h3><ul><li><strong>临界速度测试：</strong><a href="https://pubmed.ncbi.nlm.nih.gov/8775547/" rel="noopener" target="_blank">琼斯 AM，杜斯特 JH。 “1% 的跑步机等级最准确地反映了户外跑步的能量消耗。”体育科学杂志。 1996年</a>- 临界速度协议验证</li><li><strong>现场测试可靠性：</strong><a href="https://pubmed.ncbi.nlm.nih.gov/15947721/" rel="noopener" target="_blank">帕沃莱宁 L 等人。 “神经肌肉特征和肌肉力量是 5 公里跑步表现的决定因素。”医学科学运动锻炼。 1999年</a>- 现场测试精度</li><li><strong>阈值测试：</strong><a href="https://pubmed.ncbi.nlm.nih.gov/8887211/" rel="noopener" target="_blank">Beneke R.“最大乳酸稳态的方法学方面——对性能测试的影响。”欧洲应用生理学杂志。 2003年</a>- 乳酸阈值协议</li><li><strong>运行经济性测试：</strong><a href="https://pubmed.ncbi.nlm.nih.gov/15076777/" rel="noopener" target="_blank">桑德斯·PU 等人。 “影响训练有素的长跑运动员跑步经济性的因素。”运动医学。 2004年</a>- 经济测量方法</li><li><strong>测试重复性：</strong><a href="https://pubmed.ncbi.nlm.nih.gov/17685687/" rel="noopener" target="_blank">霍普金斯 WG 等人。 “运动医学和运动科学研究的渐进统计。”医学科学运动锻炼。 2009年</a>- 性能测试可靠性</li></ul></div></section><div class="article-footer"><p>准备好测试你的表现了吗？从<a href="/zh/crs/">CRS 计算器</a>建立您的训练区域，然后跟踪您的进度<a href="/zh/rtss-calculator/">rTSS 计算</a>。如需全面的运行分析和性能跟踪，请下载<a href="/zh/">保护18X</a>—您私人的、基于科学的训练伴侣。</p></div></article><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "运行性能测试：现场测试完整指南",
+  "description": "跑步表现测试的完整指南：CRS 测试、VO2max 现场测试、乳酸阈值评估、跑步经济性评估、测试方案以及使用数据进行训练优化。",
+  "datePublished": "2025-01-27",
+  "dateModified": "2025-01-27",
+  "author": {
+    "@type": "Person",
+    "name": "保护18X团队"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "保护18X",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://run.analyticszone.app/static/images/logo.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://run.analyticszone.app/en/running-performance-tests/"
+  },
+  "keywords": [
+    "running performance tests",
+    "running field tests",
+    "CRS test",
+    "vo2max test",
+    "threshold test",
+    "running economy test",
+    "performance testing protocol",
+    "training zones",
+    "running analytics"
+  ]
+}</script><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "我应该多久进行一次性能测试？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "在基础建设期间每 6-8 周进行一次测试，在构建阶段每 4-6 周进行一次测试，在特定准备期间每 3-4 周进行一次测试。避免在减量期（目标比赛前 2-3 周）进行测试。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "我可以在一次测试中进行多项测试吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "您可以将经济评估与阈值或 CRS 测试结合起来。但是，避免在同一天组合最大测试（CRS + VO2max，或阈值 + VO2max）——第一次测试造成的疲劳会影响第二次测试。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "如果我的测试结果比预期差怎么办？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "测试表现不佳可能是由于恢复不足、累积疲劳、条件不佳、疾病或只是糟糕的一天造成的。调整训练前，恢复5-7天后重新测试。如果结果仍然不佳，请将训练负荷减少 30-40%。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "现场测试与实验室测试一样准确吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "与实验室测试相比，现场测试的准确度为 85-95%。 CRS 测试在实验室值的 2-3% 范围内，VO2max 估计在 3-5% 范围内，阈值测试在节奏良好的情况下在 1-2% 范围内。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "我应该在跑步机上还是户外进行测试？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "通常首选在跑道上进行户外测试，因为它特定于实际的跑步力学。当天气不允许户外测试时，跑步机测试是可以接受的，但将等级设置为 1% 以匹配户外活动并保持一致的测试环境。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "如何在测试结果中考虑温度和天气？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "60°F 以上每 10°F 预计性能为 -2%，40°F 以下每 10°F 性能为 -1.5%。风的成本约为每英里 -5-10 秒。每次测试时记录天气数据并相应调整预期。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "我可以使用比赛结果而不是专门的测试吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "是的，比赛结果可以替代性能测试：10K 比赛提供出色的阈值数据，5K 比赛则揭示 VO2max 功能。然而，在受控条件下的专门测试可以为训练区域设置提供更可靠的数据。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "性能测试之前我应该​​进行哪些热身？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "10 分钟非常轻松的慢跑，5 分钟渐进式跑步，5 分钟动态拉伸，4-5 步迈出接近测试的速度，然后 3-5 分钟轻松放松。总热身时间：25-30 分钟。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "我如何知道我是否正确安排了测试进度？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "对于 CRS 测试，3 分钟的试用应该感觉 8-9/10 的努力。对于阈值测试，自始至终的努力程度应为 7-8/10 — 您应该能够说 2-3 个单词，但不能说出完整的句子。如果你在最后 25% 的速度大幅减慢，那么节奏就出现了问题。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "我应该根据我的测试结果进行不同的训练吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "绝对地。测试揭示个人的优势和劣势。如果 VO2max 相对于阈值较低，则优先考虑有氧基础。如果阈值滞后于 VO2max，则增加节奏训练。经济不景气表明需要进行形式训练和力量训练。"
+      }
+    }
+  ]
+}</script><section class="eeat-author bg-light divider-top-lg divider-bottom-lg" aria-label="Author and Reviewer Information"><div class="container container-narrow"><div class="eeat-card" style="display: flex; gap: 1.5rem; align-items: center; padding: 1.5rem; background: var(--color-bg-alt, #f8f9fa); border-radius: 8px; border: 1px solid var(--color-border, #e9ecef); margin-top: 3rem; margin-bottom: 2rem;"><div class="eeat-avatar" style="font-size: 2.5rem; line-height: 1; flex-shrink: 0;" aria-hidden="true">👨‍🔬</div><div class="eeat-details"><h3 style="margin: 0 0 0.5rem 0; font-size: 1.125rem; font-weight: 600;">
+          Expertly Reviewed by 
+          <span itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">AnalyticsZone Team</span></span></h3><p style="margin: 0 0 0.5rem 0; font-size: 0.95rem; color: var(--color-body-text, #4a5568); line-height: 1.5;">
+          This content has been written and reviewed by a sports data metrics expert to ensure technical accuracy and adherence to the latest sports science methodologies.
+        </p></div></div></div></section><section class="ai-citation-block divider-top-xl" data-ai-ready="true" data-ai-page="running-performance-tests"><div class="container ai-citation-shell"><h2 class="ai-citation-title">运行性能测试：现场测试完整指南 - Run Analytics - Running Analytics App |</h2><p class="ai-citation-answer">Published: January 27, 2025 | Updated: January 29, 2025. Running Performance Tests: Complete Guide to Field Testing</p><ul class="ai-citation-facts" role="list"><li class="ai-citation-fact"><span class="ai-citation-icon" aria-hidden="true">📅</span><span>2026-03-24</span></li><li class="ai-citation-fact ai-citation-keywords"><span class="ai-citation-icon" aria-hidden="true">🏷️</span><span>运行性能测试 · 运行现场测试 · CRS测试 · 最大摄氧量测试运行 · 阈值测试</span></li><li class="ai-citation-fact"><span class="ai-citation-icon" aria-hidden="true">🔬</span><a href="../../zh/bibliography/">
+          
+          参考文献
+          
+        </a></li></ul></div></section></main><footer class="site-footer"><div class="container"><div class="footer-top"><div class="footer-brand-section"><h2>Run Analytics</h2><p>Track Critical Running Speed, Training Stress Score, and performance metrics with Run Analytics. Science-based iOS app for runners, triathletes &amp; coaches. 7-day free trial.</p></div><div class="footer-download"><h3 class="footer-heading">下载</h3><div class="footer-badges"><a href="https://apps.apple.com/us/app/run-analytics/id6754524015" target="_blank" rel="noopener"
+                        aria-label="在 App Store 上下载"><img src="../../assets/images/badge-app-store.svg"
+                            alt="在 App Store 上下载" width="135"
+                            height="40" loading="lazy"></a><a href="https://play.google.com/store/apps/details?id=com.arnohealth.runanalytics" target="_blank" rel="noopener"
+                        aria-label="在 Google Play 上获取"><img src="../../assets/images/badge-google-play.svg"
+                            alt="在 Google Play 上获取" width="135"
+                            height="40" loading="lazy"></a></div></div></div><div class="footer-languages"><h3 class="footer-heading">可用于</h3><div class="lang-grid"><a href="/af/" class="lang-link"
+                    hreflang="af" >
+                    Afrikaans
+                </a><a href="/am/" class="lang-link"
+                    hreflang="am" >
+                    አማርኛ
+                </a><a href="/ar/" class="lang-link"
+                    hreflang="ar" dir="rtl" >
+                    العربية
+                </a><a href="/bg/" class="lang-link"
+                    hreflang="bg" >
+                    Български
+                </a><a href="/bn/" class="lang-link"
+                    hreflang="bn" >
+                    বাংলা
+                </a><a href="/ca/" class="lang-link"
+                    hreflang="ca" >
+                    Català
+                </a><a href="/cs/" class="lang-link"
+                    hreflang="cs" >
+                    Čeština
+                </a><a href="/da/" class="lang-link"
+                    hreflang="da" >
+                    Dansk
+                </a><a href="/de/" class="lang-link"
+                    hreflang="de" >
+                    Deutsch
+                </a><a href="/el/" class="lang-link"
+                    hreflang="el" >
+                    Ελληνικά
+                </a><a href="/en/" class="lang-link"
+                    hreflang="en" >
+                    English
+                </a><a href="/es/" class="lang-link"
+                    hreflang="es" >
+                    Español
+                </a><a href="/et/" class="lang-link"
+                    hreflang="et" >
+                    Eesti
+                </a><a href="/fa/" class="lang-link"
+                    hreflang="fa" dir="rtl" >
+                    فارسی
+                </a><a href="/fi/" class="lang-link"
+                    hreflang="fi" >
+                    Suomi
+                </a><a href="/fr/" class="lang-link"
+                    hreflang="fr" >
+                    Français
+                </a><a href="/gu/" class="lang-link"
+                    hreflang="gu" >
+                    ગુજરાતી
+                </a><a href="/ha/" class="lang-link"
+                    hreflang="ha" >
+                    Hausa
+                </a><a href="/he/" class="lang-link"
+                    hreflang="he" dir="rtl" >
+                    עברית
+                </a><a href="/hi/" class="lang-link"
+                    hreflang="hi" >
+                    हिन्दी
+                </a><a href="/hr/" class="lang-link"
+                    hreflang="hr" >
+                    Hrvatski
+                </a><a href="/hu/" class="lang-link"
+                    hreflang="hu" >
+                    Magyar
+                </a><a href="/id/" class="lang-link"
+                    hreflang="id" >
+                    Bahasa Indonesia
+                </a><a href="/is/" class="lang-link"
+                    hreflang="is" >
+                    Íslenska
+                </a><a href="/it/" class="lang-link"
+                    hreflang="it" >
+                    Italiano
+                </a><a href="/ja/" class="lang-link"
+                    hreflang="ja" >
+                    日本語
+                </a><a href="/km/" class="lang-link"
+                    hreflang="km" >
+                    ភាសាខ្មែរ
+                </a><a href="/kn/" class="lang-link"
+                    hreflang="kn" >
+                    ಕನ್ನಡ
+                </a><a href="/ko/" class="lang-link"
+                    hreflang="ko" >
+                    한국어
+                </a><a href="/lt/" class="lang-link"
+                    hreflang="lt" >
+                    Lietuvių
+                </a><a href="/lv/" class="lang-link"
+                    hreflang="lv" >
+                    Latviešu
+                </a><a href="/ms/" class="lang-link"
+                    hreflang="ms" >
+                    Bahasa Melayu
+                </a><a href="/my/" class="lang-link"
+                    hreflang="my" >
+                    မြန်မာစာ
+                </a><a href="/nb/" class="lang-link"
+                    hreflang="nb" >
+                    Norsk Bokmål
+                </a><a href="/nl/" class="lang-link"
+                    hreflang="nl" >
+                    Nederlands
+                </a><a href="/pl/" class="lang-link"
+                    hreflang="pl" >
+                    Polski
+                </a><a href="/pt/" class="lang-link"
+                    hreflang="pt" >
+                    Português
+                </a><a href="/pt-br/" class="lang-link"
+                    hreflang="pt-br" >
+                    Português (Brasil)
+                </a><a href="/ro/" class="lang-link"
+                    hreflang="ro" >
+                    Română
+                </a><a href="/ru/" class="lang-link"
+                    hreflang="ru" >
+                    Русский
+                </a><a href="/sk/" class="lang-link"
+                    hreflang="sk" >
+                    Slovenčina
+                </a><a href="/sl/" class="lang-link"
+                    hreflang="sl" >
+                    Slovenščina
+                </a><a href="/sr/" class="lang-link"
+                    hreflang="sr" >
+                    Srpski
+                </a><a href="/sv/" class="lang-link"
+                    hreflang="sv" >
+                    Svenska
+                </a><a href="/sw/" class="lang-link"
+                    hreflang="sw" >
+                    Kiswahili
+                </a><a href="/ta/" class="lang-link"
+                    hreflang="ta" >
+                    தமிழ்
+                </a><a href="/te/" class="lang-link"
+                    hreflang="te" >
+                    తెలుగు
+                </a><a href="/th/" class="lang-link"
+                    hreflang="th" >
+                    ไทย
+                </a><a href="/tl/" class="lang-link"
+                    hreflang="tl" >
+                    Tagalog
+                </a><a href="/tr/" class="lang-link"
+                    hreflang="tr" >
+                    Türkçe
+                </a><a href="/uk/" class="lang-link"
+                    hreflang="uk" >
+                    Українська
+                </a><a href="/ur/" class="lang-link"
+                    hreflang="ur" dir="rtl" >
+                    اردو
+                </a><a href="/vi/" class="lang-link"
+                    hreflang="vi" >
+                    Tiếng Việt
+                </a><a href="/yo/" class="lang-link"
+                    hreflang="yo" >
+                    Yorùbá
+                </a><a href="/zh/" class="lang-link active"
+                    hreflang="zh" >
+                    中文
+                </a></div></div><div class="footer-divider"></div><div class="footer-bottom"><p class="copyright">
+                &copy; 2026 Run Analytics. 保留所有权利
+            </p><ul class="footer-legal"><li><a href="/zh/privacy/">隐私政策</a></li><li><a href="/zh/terms/">服务条款</a></li></ul></div></div></footer><div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="Cookie consent" aria-live="polite"><div class="cookie-banner-content"><div><p>本网站使用cookies来改善您的体验。</p><a href="/zh/privacy/" class="text-sm">了解更多</a></div><div class="cookie-banner-actions"><button id="cookie-decline" class="btn btn-secondary btn-small">拒绝</button><button id="cookie-accept" class="btn btn-primary btn-small">接受</button></div></div></div><script src="../../assets/js/core.min.js?v=62ba6be7" defer></script><script src="../../assets/js/search.min.js?v=62ba6be7" defer></script><script src="../../assets/js/analytics.min.js" data-ga-id="G-Y138VB4523" defer></script><script>if ('serviceWorker' in navigator) { navigator.serviceWorker.register('../../sw.js') }</script></body></html>

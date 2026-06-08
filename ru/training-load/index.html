@@ -1,0 +1,947 @@
+<!DOCTYPE html><html lang="ru" dir="ltr"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=optional"
+    rel="stylesheet"><title>Беговая тренировочная нагрузка: rTSS, CTL, ATL и TSB. Объяснение</title><meta name="description" content="Узнайте, как использовать rTSS, CTL, ATL и TSB для отслеживания беговой усталости, физической формы и времени снижения нагрузки с помощью реалистичных CRS и..."><meta name="author" content="AnalyticsZone Team"><meta name="keywords" content="беговая тренировочная нагрузка, rTSS, CTL ATL TSB работает, усталость от бега и фитнес, время конусности бега, CRS тренировочная нагрузка"><link rel="canonical" href="https://run.analyticszone.app/ru/training-load/"><meta property="article:published_time" content="2025-01-15T10:00:00Z"><meta property="article:modified_time" content="2026-04-02T14:30:00Z"><meta property="article:author" content="AnalyticsZone Team"><meta property="og:type" content="article"><meta property="og:url" content="https://run.analyticszone.app/ru/training-load/"><meta property="og:title" content="Беговая тренировочная нагрузка: rTSS, CTL, ATL и TSB. Объяснение"><meta property="og:description" content="Узнайте, как использовать rTSS, CTL, ATL и TSB для отслеживания беговой усталости, физической формы и времени снижения нагрузки с помощью реалистичных CRS и..."><meta property="og:image" content="https://run.analyticszone.app/assets/images/og-image.svg"><meta property="og:locale" content="ru_RU"><meta property="og:site_name" content="Run Analytics"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:url" content="https://run.analyticszone.app/ru/training-load/"><meta name="twitter:title" content="Беговая тренировочная нагрузка: rTSS, CTL, ATL и TSB. Объяснение"><meta name="twitter:description" content="Узнайте, как использовать rTSS, CTL, ATL и TSB для отслеживания беговой усталости, физической формы и времени снижения нагрузки с помощью реалистичных CRS и..."><meta name="twitter:image" content="https://run.analyticszone.app/assets/images/og-image.svg"><meta name="twitter:site" content="@runanalytics"><meta name="twitter:creator" content="@runanalytics"><link rel="alternate" hreflang="af"
+    href="https://run.analyticszone.app/af/training-load/"><link rel="alternate" hreflang="am"
+    href="https://run.analyticszone.app/am/training-load/"><link rel="alternate" hreflang="ar"
+    href="https://run.analyticszone.app/ar/training-load/"><link rel="alternate" hreflang="bg"
+    href="https://run.analyticszone.app/bg/training-load/"><link rel="alternate" hreflang="bn"
+    href="https://run.analyticszone.app/bn/training-load/"><link rel="alternate" hreflang="ca"
+    href="https://run.analyticszone.app/ca/training-load/"><link rel="alternate" hreflang="cs"
+    href="https://run.analyticszone.app/cs/training-load/"><link rel="alternate" hreflang="da"
+    href="https://run.analyticszone.app/da/training-load/"><link rel="alternate" hreflang="de"
+    href="https://run.analyticszone.app/de/training-load/"><link rel="alternate" hreflang="el"
+    href="https://run.analyticszone.app/el/training-load/"><link rel="alternate" hreflang="en"
+    href="https://run.analyticszone.app/en/training-load/"><link rel="alternate" hreflang="es"
+    href="https://run.analyticszone.app/es/training-load/"><link rel="alternate" hreflang="et"
+    href="https://run.analyticszone.app/et/training-load/"><link rel="alternate" hreflang="fa"
+    href="https://run.analyticszone.app/fa/training-load/"><link rel="alternate" hreflang="fi"
+    href="https://run.analyticszone.app/fi/training-load/"><link rel="alternate" hreflang="fr"
+    href="https://run.analyticszone.app/fr/training-load/"><link rel="alternate" hreflang="gu"
+    href="https://run.analyticszone.app/gu/training-load/"><link rel="alternate" hreflang="ha"
+    href="https://run.analyticszone.app/ha/training-load/"><link rel="alternate" hreflang="he"
+    href="https://run.analyticszone.app/he/training-load/"><link rel="alternate" hreflang="hi"
+    href="https://run.analyticszone.app/hi/training-load/"><link rel="alternate" hreflang="hr"
+    href="https://run.analyticszone.app/hr/training-load/"><link rel="alternate" hreflang="hu"
+    href="https://run.analyticszone.app/hu/training-load/"><link rel="alternate" hreflang="id"
+    href="https://run.analyticszone.app/id/training-load/"><link rel="alternate" hreflang="is"
+    href="https://run.analyticszone.app/is/training-load/"><link rel="alternate" hreflang="it"
+    href="https://run.analyticszone.app/it/training-load/"><link rel="alternate" hreflang="ja"
+    href="https://run.analyticszone.app/ja/training-load/"><link rel="alternate" hreflang="km"
+    href="https://run.analyticszone.app/km/training-load/"><link rel="alternate" hreflang="kn"
+    href="https://run.analyticszone.app/kn/training-load/"><link rel="alternate" hreflang="ko"
+    href="https://run.analyticszone.app/ko/training-load/"><link rel="alternate" hreflang="lt"
+    href="https://run.analyticszone.app/lt/training-load/"><link rel="alternate" hreflang="lv"
+    href="https://run.analyticszone.app/lv/training-load/"><link rel="alternate" hreflang="ms"
+    href="https://run.analyticszone.app/ms/training-load/"><link rel="alternate" hreflang="my"
+    href="https://run.analyticszone.app/my/training-load/"><link rel="alternate" hreflang="nb"
+    href="https://run.analyticszone.app/nb/training-load/"><link rel="alternate" hreflang="nl"
+    href="https://run.analyticszone.app/nl/training-load/"><link rel="alternate" hreflang="pl"
+    href="https://run.analyticszone.app/pl/training-load/"><link rel="alternate" hreflang="pt"
+    href="https://run.analyticszone.app/pt/training-load/"><link rel="alternate" hreflang="pt-br"
+    href="https://run.analyticszone.app/pt-br/training-load/"><link rel="alternate" hreflang="ro"
+    href="https://run.analyticszone.app/ro/training-load/"><link rel="alternate" hreflang="ru"
+    href="https://run.analyticszone.app/ru/training-load/"><link rel="alternate" hreflang="sk"
+    href="https://run.analyticszone.app/sk/training-load/"><link rel="alternate" hreflang="sl"
+    href="https://run.analyticszone.app/sl/training-load/"><link rel="alternate" hreflang="sr"
+    href="https://run.analyticszone.app/sr/training-load/"><link rel="alternate" hreflang="sv"
+    href="https://run.analyticszone.app/sv/training-load/"><link rel="alternate" hreflang="sw"
+    href="https://run.analyticszone.app/sw/training-load/"><link rel="alternate" hreflang="ta"
+    href="https://run.analyticszone.app/ta/training-load/"><link rel="alternate" hreflang="te"
+    href="https://run.analyticszone.app/te/training-load/"><link rel="alternate" hreflang="th"
+    href="https://run.analyticszone.app/th/training-load/"><link rel="alternate" hreflang="tl"
+    href="https://run.analyticszone.app/tl/training-load/"><link rel="alternate" hreflang="tr"
+    href="https://run.analyticszone.app/tr/training-load/"><link rel="alternate" hreflang="uk"
+    href="https://run.analyticszone.app/uk/training-load/"><link rel="alternate" hreflang="ur"
+    href="https://run.analyticszone.app/ur/training-load/"><link rel="alternate" hreflang="vi"
+    href="https://run.analyticszone.app/vi/training-load/"><link rel="alternate" hreflang="yo"
+    href="https://run.analyticszone.app/yo/training-load/"><link rel="alternate" hreflang="zh"
+    href="https://run.analyticszone.app/zh/training-load/"><link rel="alternate" hreflang="x-default"
+    href="https://run.analyticszone.app/en/training-load/"><link rel="icon" type="image/png" sizes="32x32" href="../../assets/images/icons/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="../../assets/images/icons/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="../../assets/images/icons/apple-touch-icon.png"><link rel="manifest" href="../../manifest.json"><meta name="theme-color" content="#2563EB"><meta name="robots" content="index, follow"><meta name="apple-itunes-app" content="app-id=6754524015"><style>
+/* Critical CSS - Above the fold styles for fast LCP */
+:root {
+  --color-primary: #0066CC;
+  --color-text: #1a1a1a;
+  --color-text-muted: #666;
+  --color-bg: #ffffff;
+  --color-bg-alt: #f8f9fa;
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+}
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  color: var(--color-text);
+  background: var(--color-bg);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Skip link - Accessibility */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--color-primary);
+  color: #fff;
+  padding: 8px 16px;
+  z-index: 1000;
+  text-decoration: none;
+}
+.skip-link:focus {
+  top: 0;
+}
+
+/* Header - Critical for LCP */
+.site-header {
+  background: var(--color-bg);
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0.75rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.site-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: var(--color-text);
+  font-weight: 600;
+  font-size: 1.125rem;
+}
+
+.site-logo img, .site-logo svg {
+  width: 32px;
+  height: 32px;
+}
+
+/* Navigation */
+.main-nav {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .main-nav {
+    display: flex;
+    gap: 1.5rem;
+  }
+  .main-nav a {
+    color: var(--color-text);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9375rem;
+    transition: color 0.2s;
+  }
+  .main-nav a:hover {
+    color: var(--color-primary);
+  }
+}
+
+/* Mobile menu button */
+.menu-toggle {
+  display: flex;
+  background: none;
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .menu-toggle {
+    display: none;
+  }
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Main content */
+main.main-content {
+  flex: 1;
+}
+
+/* Hero section - Critical for LCP */
+.hero {
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .hero {
+    padding: 4rem 2rem;
+  }
+}
+
+.hero h1 {
+  font-size: clamp(1.75rem, 5vw, 3rem);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  color: var(--color-text);
+}
+
+.hero .lead, .hero p {
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  color: var(--color-text-muted);
+  max-width: 700px;
+  margin: 0 auto 1.5rem;
+}
+
+/* Buttons - Critical for CTA */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: var(--radius-md);
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-primary {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: #0052a3;
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+}
+
+.btn-large {
+  padding: 1rem 2rem;
+  font-size: 1.125rem;
+}
+
+/* Utility classes */
+.hidden { display: none !important; }
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Images - prevent CLS with aspect-ratio */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+img[width][height] {
+  aspect-ratio: attr(width) / attr(height);
+}
+
+.lazy-image {
+  background: var(--color-bg-alt);
+  transition: opacity 0.3s;
+}
+
+.lazy-image:not(.loaded) {
+  opacity: 0;
+}
+
+.lazy-image.loaded {
+  opacity: 1;
+}
+
+/* App badges - fixed dimensions to prevent CLS */
+.app-badge img {
+  width: 140px;
+  height: 42px;
+}
+
+/* Logo - fixed dimensions */
+.site-logo img {
+  width: 32px;
+  height: 32px;
+}
+
+/* Reduce motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+</style><link rel="preconnect" href="https://www.googletagmanager.com"><link rel="dns-prefetch" href="https://www.googletagmanager.com"><link rel="stylesheet" href="../../assets/css/main.min.css?v=62ba6be7"><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Run Analytics",
+  "url": "https://run.analyticszone.app",
+  "logo": "https://run.analyticszone.app/assets/images/logo.png",
+  "description": "Track Critical Running Speed, Training Stress Score, and performance metrics with Run Analytics. Science-based iOS app for runners, triathletes &amp; coaches. 7-day free trial.",
+  
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "Customer Support",
+    "email": "analyticszone+run@onmedic.org"
+  },
+  
+  "sameAs": [
+    
+    
+      
+    
+    
+      
+    
+    
+      
+    
+    
+    "https://twitter.com/runanalytics",
+    
+    "https://apps.apple.com/us/app/run-analytics/id6754524015",
+    
+    "https://play.google.com/store/apps/details?id=com.arnohealth.runanalytics"
+    
+  ]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Run Analytics",
+  "url": "https://run.analyticszone.app",
+  "description": "Track Critical Running Speed, Training Stress Score, and performance metrics with Run Analytics. Science-based iOS app for runners, triathletes &amp; coaches. 7-day free trial.",
+  "inLanguage": "ru"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Run Analytics",
+  "description": "Track Critical Running Speed, Training Stress Score, and performance metrics with Run Analytics. Science-based iOS app for runners, triathletes &amp; coaches. 7-day free trial.",
+  "url": "https://run.analyticszone.app",
+  "applicationCategory": ["HealthApplication", "FitnessApplication"],
+  "operatingSystem": "iOS, Android",
+  "author": {
+    "@type": "Organization",
+    "name": "AnalyticsZone Team"
+  },
+  "downloadUrl": "https://apps.apple.com/us/app/run-analytics/id6754524015"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Главная",
+      "item": "https://run.analyticszone.app/ru/"
+    },
+    
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Обучение",
+      "item": "https://run.analyticszone.app/ru/getting-started/"
+    },
+    
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Нагрузка",
+      "item": "https://run.analyticszone.app/ru/training-load/"
+    }
+    
+  ]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Беговая тренировочная нагрузка: rTSS, CTL, ATL и TSB. Объяснение",
+  "description": "Узнайте, как использовать rTSS, CTL, ATL и TSB для отслеживания беговой усталости, физической формы и времени снижения нагрузки с помощью реалистичных CRS и...",
+  "url": "https://run.analyticszone.app/ru/training-load/",
+  "inLanguage": "ru",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "Run Analytics",
+    "url": "https://run.analyticszone.app"
+  },
+  "datePublished": "2025-01-15",
+  "dateModified": "2026-04-02",
+  "keywords": ["беговая тренировочная нагрузка", "rTSS", "CTL ATL TSB работает", "усталость от бега и фитнес", "время конусности бега", "CRS тренировочная нагрузка"],
+  "about": [
+    {
+      "@type": "Thing",
+      "name": "беговая тренировочная нагрузка"
+    }, 
+  
+    {
+      "@type": "Thing",
+      "name": "rTSS"
+    }, 
+  
+    {
+      "@type": "Thing",
+      "name": "CTL ATL TSB работает"
+    }, 
+  
+    {
+      "@type": "Thing",
+      "name": "усталость от бега и фитнес"
+    }, 
+  
+    {
+      "@type": "Thing",
+      "name": "время конусности бега"
+    }, 
+  
+    {
+      "@type": "Thing",
+      "name": "CRS тренировочная нагрузка"
+    }
+  ]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Беговая тренировочная нагрузка: rTSS, CTL, ATL и TSB. Объяснение",
+  "description": "Узнайте, как использовать rTSS, CTL, ATL и TSB для отслеживания беговой усталости, физической формы и времени снижения нагрузки с помощью реалистичных CRS и...",
+  "author": {
+    "@type": "Person",
+    "name": "AnalyticsZone Team"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Run Analytics",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://run.analyticszone.app/assets/images/logo.png"
+    }
+  },
+  "datePublished": "2025-01-15",
+  "dateModified": "2026-04-02",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://run.analyticszone.app/ru/training-load/"
+  }
+}
+</script><script>
+    (function () {
+      let theme = localStorage.getItem('theme');
+      // Older builds could persist a per-subdomain `theme=light` value without a UI
+      // to keep it consistent across apps. Treat it as stale and fall back to the OS.
+      if (theme === 'light') {
+        try { localStorage.removeItem('theme'); } catch (e) { /* ignore */ }
+        theme = null;
+      }
+
+      if (theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark-mode');
+      }
+    })();
+  </script></head><body><a href="#main-content" class="skip-link">Перейти к контенту</a><header class="site-header"><div class="container"><div class="header-inner"><a href="/ru/" class="site-logo"><picture><source srcset="../../assets/images/logo-dark.png" type="image/png"
+                        media="(prefers-color-scheme: dark)"><img src="../../assets/images/logo.png" alt="Run Analytics - Running Analytics App | Critical Running Speed, TSS, CTL/ATL/TSB for iOS" width="56" height="56"></picture><span class="logo-text">Run Analytics</span></a><nav class="nav-primary" id="nav-primary" role="navigation" aria-label="Main navigation"><div class="nav-group-left"><ul><li><a href="/ru/" 
+                                aria-current="">
+                                Главная
+                            </a></li><li class="has-submenu" ><a href="/ru/getting-started/" class="nav-label">Обучение</a><ul class="submenu"><li><a href="/ru/getting-started/" 
+                                        aria-current="">
+                                        Начало
+                                    </a></li><li><a href="/ru/crs/" 
+                                        aria-current="">
+                                        CRS
+                                    </a></li><li><a href="/ru/training-zones/" 
+                                        aria-current="">
+                                        Зоны Тренировок
+                                    </a></li><li><a href="/ru/training-load/" class="active" 
+                                        aria-current="page">
+                                        Нагрузка
+                                    </a></li><li><a href="/ru/rtss-calculator/" 
+                                        aria-current="">
+                                        Калькулятор rTSS
+                                    </a></li></ul></li><li class="has-submenu" ><a href="/ru/research/" class="nav-label">Наука</a><ul class="submenu"><li><a href="/ru/research/" 
+                                        aria-current="">
+                                        Исследования
+                                    </a></li><li><a href="/ru/formulas/" 
+                                        aria-current="">
+                                        Формулы
+                                    </a></li><li><a href="/ru/efficiency/" 
+                                        aria-current="">
+                                        Эффективность
+                                    </a></li><li><a href="/ru/stride-mechanics/" 
+                                        aria-current="">
+                                        Техника
+                                    </a></li><li><a href="/ru/bibliography/" 
+                                        aria-current="">
+                                        Библиография
+                                    </a></li></ul></li><li><a href="/ru/contact/" 
+                                aria-current="">
+                                Контакты
+                            </a></li></ul><div class="search-container"><svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.35-4.35"></path></svg><input type="search" id="site-search" class="search-input" aria-expanded="false"
+                            aria-haspopup="listbox" aria-autocomplete="list" autocomplete="off" spellcheck="false" /><div id="search-results" class="search-results hidden" role="region" aria-live="polite"></div></div><select class="language-selector" id="language-select" aria-label="Выбрать язык"><option value="af" >
+                            Afrikaans
+                        </option><option value="am" >
+                            አማርኛ
+                        </option><option value="ar" >
+                            العربية
+                        </option><option value="bg" >
+                            Български
+                        </option><option value="bn" >
+                            বাংলা
+                        </option><option value="ca" >
+                            Català
+                        </option><option value="cs" >
+                            Čeština
+                        </option><option value="da" >
+                            Dansk
+                        </option><option value="de" >
+                            Deutsch
+                        </option><option value="el" >
+                            Ελληνικά
+                        </option><option value="en" >
+                            English
+                        </option><option value="es" >
+                            Español
+                        </option><option value="et" >
+                            Eesti
+                        </option><option value="fa" >
+                            فارسی
+                        </option><option value="fi" >
+                            Suomi
+                        </option><option value="fr" >
+                            Français
+                        </option><option value="gu" >
+                            ગુજરાતી
+                        </option><option value="ha" >
+                            Hausa
+                        </option><option value="he" >
+                            עברית
+                        </option><option value="hi" >
+                            हिन्दी
+                        </option><option value="hr" >
+                            Hrvatski
+                        </option><option value="hu" >
+                            Magyar
+                        </option><option value="id" >
+                            Bahasa Indonesia
+                        </option><option value="is" >
+                            Íslenska
+                        </option><option value="it" >
+                            Italiano
+                        </option><option value="ja" >
+                            日本語
+                        </option><option value="km" >
+                            ភាសាខ្មែរ
+                        </option><option value="kn" >
+                            ಕನ್ನಡ
+                        </option><option value="ko" >
+                            한국어
+                        </option><option value="lt" >
+                            Lietuvių
+                        </option><option value="lv" >
+                            Latviešu
+                        </option><option value="ms" >
+                            Bahasa Melayu
+                        </option><option value="my" >
+                            မြန်မာစာ
+                        </option><option value="nb" >
+                            Norsk Bokmål
+                        </option><option value="nl" >
+                            Nederlands
+                        </option><option value="pl" >
+                            Polski
+                        </option><option value="pt" >
+                            Português
+                        </option><option value="pt-br" >
+                            Português (Brasil)
+                        </option><option value="ro" >
+                            Română
+                        </option><option value="ru" selected>
+                            Русский
+                        </option><option value="sk" >
+                            Slovenčina
+                        </option><option value="sl" >
+                            Slovenščina
+                        </option><option value="sr" >
+                            Srpski
+                        </option><option value="sv" >
+                            Svenska
+                        </option><option value="sw" >
+                            Kiswahili
+                        </option><option value="ta" >
+                            தமிழ்
+                        </option><option value="te" >
+                            తెలుగు
+                        </option><option value="th" >
+                            ไทย
+                        </option><option value="tl" >
+                            Tagalog
+                        </option><option value="tr" >
+                            Türkçe
+                        </option><option value="uk" >
+                            Українська
+                        </option><option value="ur" >
+                            اردو
+                        </option><option value="vi" >
+                            Tiếng Việt
+                        </option><option value="yo" >
+                            Yorùbá
+                        </option><option value="zh" >
+                            中文
+                        </option></select></div><div class="nav-group-right"><div class="header-app-buttons"><a href="https://apps.apple.com/us/app/run-analytics/id6754524015" class="header-download-btn" target="_blank"
+                            rel="noopener" aria-label="Download on App Store" title="Download on App Store"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="currentColor"><path
+                                    d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z" /></svg></a><a href="https://play.google.com/store/apps/details?id=com.arnohealth.runanalytics" class="header-download-btn" target="_blank"
+                            rel="noopener" aria-label="Get it on Google Play" title="Get it on Google Play"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="currentColor"><path
+                                    d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.92 20.16,13.19L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M16.81,8.88L14.54,11.15L6.05,2.66L16.81,8.88Z" /></svg></a></div><div class="suite-menu-container"><button class="suite-menu-toggle" id="suite-menu-toggle" aria-label="See other apps"
+                            aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg></button><div class="suite-dropdown hidden" id="suite-dropdown"><div class="suite-dropdown-header">Other AnalyticsZone Apps</div><div class="suite-apps-grid"><a href="https://analyticszone.app" class="suite-app-link">AnalyticsZone</a><a href="https://swim.analyticszone.app" class="suite-app-link">Swim Analytics</a><a href="https://bike.analyticszone.app" class="suite-app-link">Bike Analytics</a><a href="https://walk.analyticszone.app" class="suite-app-link">Walk Analytics</a><a href="https://cardio.analyticszone.app" class="suite-app-link">Cardio Analytics</a><a href="https://health.analyticszone.app" class="suite-app-link">Health Analytics</a><a href="https://swimtrainer.analyticszone.app" class="suite-app-link">Swim Trainer</a><a href="https://hike.analyticszone.app" class="suite-app-link">Hike Analytics</a><a href="https://sleep.analyticszone.app" class="suite-app-link">Sleep Analytics</a><a href="https://paceva.analyticszone.app" class="suite-app-link">Paceva Analytics</a></div></div></div></div></nav><button class="menu-toggle" id="menu-toggle" aria-label="Переключить меню"
+                aria-expanded="false" aria-controls="nav-primary"><span></span><span></span><span></span></button></div></div></header><nav class="breadcrumbs" aria-label="Breadcrumb"><div class="container"><ol><li><a href="/ru/">Главная</a></li><li><a href="/ru/getting-started/">Обучение</a></li><li><span aria-current="page">Нагрузка</span></li></ol></div></nav><main id="main-content" class="main-content"><section class="page-hero"><div class="container"><h1>Беговая тренировочная нагрузка: rTSS, CTL, ATL и TSB. Объяснение</h1><p class="lead">Как количественно оценить стресс от бега, отслеживать физическую форму и усталость, а также рассчитать время снижения нагрузки, не угадывая</p></div></section><section class="section"><div class="container container-narrow"><div class="quick-answer" itemscope="" itemtype="https://schema.org/Answer"><h2>Быстрый ответ</h2><div itemprop="text"><p><strong>Беговая тренировочная нагрузка</strong> сочетает в себе <a href="/ru/training-stress-score/">rTSS</a>
+                    для индивидуально-сессионного стресса, <strong>CTL</strong> для долгосрочного фитнеса, <strong>ATL</strong> для
+                    кратковременная усталость и <strong>TSB</strong> для свежести. Лучше всего это работает, когда ваш <a href="/ru/crs/">Критическая скорость бега (CRS)</a>, <a href="/ru/training-zones/">тренировочные зоны</a>и данные о темпе реалистичны.</p><ul><li><strong>Лучшее использование:</strong> сравнивайте тренировки, контролируйте еженедельную нагрузку и недели сокращения времени</li><li><strong>Самый важный ввод:</strong> правдоподобный CRS или пороговый темп</li><li><strong>Самая большая ошибка:</strong> относиться к TSB как к расовой истине, когда сон, болезненность, жара и жизнь
+                        стресс говорит об обратном</li><li><strong>Обновление ритма:</strong> повторяйте тестирование CRS каждые 6–8 недель или после значимого тренировочного блока.</li></ul></div></div><div class="callout callout-success mb-xl"><h2>Ключевые выводы</h2><ul class="key-points"><li><strong>rTSS</strong> отвечает на вопрос, какой стресс создала одна пробежка</li><li><strong>CTL</strong> показывает нагрузку, к которой ваше тело адаптировалось за недели, а не дни</li><li><strong>ATL</strong> показывает, что еще осталось у тебя в ногах после недавней тренировки</li><li><strong>TSB</strong> помогает определить время и готовность к снижению дозы, а не управлять эго</li><li><strong>Кластер, который имеет значение:</strong><a href="/ru/crs/">CRS</a>, <a href="/ru/rtss-calculator/">rTSS калькулятор</a>, <a href="/ru/training-zones/">тренировочные зоны</a>и <a href="/ru/training-load-periodization/">периодизация</a></li></ul></div><p class="lead">Если вам нужна единая система, которая превращает беговой объем и интенсивность в решения, используйте тренировочную нагрузку.
+            Цель не в том, чтобы собрать больше цифр. Суть в том, чтобы узнать, был ли пробежка достаточно легкой, блок был ли
+            достаточно продуктивным, или сокращение действительно делает вас свежими.</p><p>Практические вопросы для бегунов просты:</p><ul><li>Насколько напряженным был сегодняшний забег?</li><li>К какой нагрузке я на самом деле адаптировался?</li><li>Несу ли я полезную усталость или слишком много усталости?</li><li>Когда мне следует давить, когда следует отступить, а когда следует участвовать в гонке?</li></ul><h2>Что измеряет беговая тренировочная нагрузка</h2><p><strong>Беговая тренировочная нагрузка</strong> представляет собой практическую основу для превращения пробежек в интерпретируемый стресс.
+            сигналы. В этих рамках <a href="/ru/training-stress-score/">rTSS</a> измеряет стоимость сеанса,
+            <strong>CTL</strong> измеряет долгосрочную тенденцию фитнеса, <strong>ATL</strong> измеряет недавнюю усталость и
+            <strong>TSB</strong> показывает разрыв между ними.
+        </p><div class="comparison-table-container"><table class="comparison-table"><thead><tr><th>Метрика</th><th>Что это вам говорит</th><th>Лучшее использование</th><th>Распространенная ошибка</th></tr></thead><tbody><tr class="highlight-row"><td><strong>rTSS</strong></td><td>Стоимость стресса за один забег</td><td>Сравните тренировки и общую недельную нагрузку</td><td>Подсчет очков против устаревших <a href="/ru/crs/">CRS</a></td></tr><tr><td><strong>CTL</strong></td><td>Нагрузка, к которой вы адаптировались за несколько недель</td><td>Отслеживайте долгосрочную физическую форму и работоспособность</td><td>Ожидаем, что через несколько дней он значительно изменится.</td></tr><tr><td><strong>ATL</strong></td><td>В ногах все еще чувствуется усталость от недавней работы.</td><td>Управляйте восстановлением между тяжелыми сеансами</td><td>Игнорирование повреждений, болей и жизненного стресса.</td></tr><tr><td><strong>TSB</strong></td><td>Ваш разрыв в свежести: фитнес минус усталость</td><td>Сроки сокращения, окна тестирования, готовность к гонкам</td><td>Используя одно положительное число в качестве доказательства вашей готовности</td></tr></tbody></table></div><div class="callout callout-info"><h3>Полезная ментальная модель</h3><p>Подумайте о <strong>rTSS как сегодняшняя стоимость</strong>, <strong>CTL в качестве вашего фитнес-банка</strong>, <strong>ATL как
+                    твой счет за усталость</strong>и <strong>TSB как ваш пробел в свежести</strong>. Ценность системы
+                находится в тренде, а не один изолированный номер.</p></div><h2>Какая тренировочная нагрузка хороша, а где нет</h2><div class="application-grid"><div class="application-item"><h3>📊 Сравнить тренировки</h3><p><a href="/ru/training-stress-score/">rTSS</a> позволяет сравнить легкий долгосрочный пробег, порог
+                    сессия и тренировка на холме по одной шкале вместо того, чтобы гадать на ощупь.</p></div><div class="application-item"><h3>🧭 Недели контрольной сборки</h3><p>CTL и ATL помогают вам решить, улучшает ли блок физическую форму или просто накапливает усталость перед ним.
+                    превращается в плохие тренировки или риск травм.</p></div><div class="application-item"><h3>🏁 Время для сокращения</h3><p>TSB становится полезным, когда вы подключаете его к <a href="/ru/training-load-periodization/">запланировано
+                        периодизация</a>, а не тогда, когда вы смотрите на диаграмму без контекста гонки.</p></div></div><div class="callout callout-warning"><h4>⚠️ Важно: бег оказывает более сильное воздействие</h4><p>То же значение TSS представляет собой больший физический стресс при беге, чем при езде на велосипеде, из-за ударных сил. бегун
+                накапливающий 400 TSS/неделю, испытывает аналогичную тренировочную адаптацию с велосипедистом с 600-700 TSS/неделю.
+                Беговая тренировочная нагрузка должна учитывать как сердечно-сосудистую, так и скелетно-мышечную нагрузку.</p><p>Положительный результат TSB не гарантирует форму дня соревнований, а отрицательный TSB не означает провала. Загружать модели делают
+                не полностью отражает недостаток сна, болезненность, ошибки заправки, жару или поломку техники. Сохраняйте номера грузов
+                привязан к <a href="/ru/efficiency/">показатели эффективности</a>, субъективные ощущения и реальная тренировка
+                качество.</p></div></div></section><section class="section"><div class="container"><h2 class="text-center mb-xl">Как рассчитывается показатель стресса для тренировок при беге (rTSS)</h2><div class="grid grid-2"><div><h3>Формула выполнения TSS</h3><div class="formula-box"><div class="formula">
+                        rTSS = (IF²) × Продолжительность (часы) × 100
+                    </div><div class="formula-explanation"><p>Где коэффициент интенсивности (IF) равен:</p><div class="formula">
+                            IF = NGS / CRS
+                        </div><p>Нормализованная ступенчатая скорость (NGS) учитывает вариабельность темпа и высоту подъема:</p><div class="formula">
+                            NGS ≈ Средняя скорость бега (с учетом рельефа)
+                        </div></div></div><div class="callout callout-tip mt-md"><h4>📊 Упрощенный метод на основе темпа</h4><p>Для бегунов без измерителей мощности используйте расчет на основе темпа или оценивайте тренировку с помощью <a href="/ru/rtss-calculator/">rTSS калькулятор</a>:</p><div class="formula">
+                        IF = пороговый темп / средний темп
+                    </div><p><strong>Пример:</strong> Если ваш темп CRS составляет 4:00/км и вы бежите со скоростью 4:20/км:</p><p>IF = 4:00/4:20 = 240/260 = 0,923</p><p><em>Примечание. Более медленный темп = более низкий IF (инвертировано из расчета скорости)</em></p></div></div><div><h3>Рабочий пример: темп бега</h3><div class="example-box"><h4>Профиль бегуна:</h4><ul><li>CRS Темп: 4:00/км (15 км/час)</li><li>CRS: пороговый темп в течение 1 часа.</li></ul><h4>Данные тренировки:</h4><ul><li>Общее расстояние: 10 км</li><li>Время движения: 43:20 (0,722 часа)</li><li>Средний темп: 4:20/км</li></ul><h4>Шаг 1: Рассчитайте среднюю скорость</h4><div class="calculation">
+                        Скорость = 10 км / 0,722 часа.<br/>
+                        Скорость = <strong>13,85 км/час</strong></div><h4>Шаг 2. Рассчитайте IF (скоростной метод).</h4><div class="calculation">
+                        IF = 13,85 / 15,0<br/>
+                        IF = <strong>0,923</strong></div><h4>Шаг 3: Рассчитайте IF (метод Темпа)</h4><div class="calculation">
+                        IF = 240 сек/км / 260 сек/км<br/>
+                        IF = <strong>0,923</strong> ✓
+                    </div><h4>Шаг 4: Рассчитайте rTSS</h4><div class="calculation">
+                        rTSS = (0,923²) × 0,722 × 100<br/>
+                        rTSS = 0,852 × 0,722 × 100<br/>
+                        rTSS = <strong>61,5</strong></div><p class="mt-md"><strong>Интерпретация:</strong> Этот темповый бег на 10 км с пороговым темпом 10%.
+                        генерирует 61,5 TSS — умеренный тренировочный стимул, типичный для качественных аэробных занятий.</p><p><a href="/ru/rtss-calculator/">Воспользуйтесь калькулятором rTSS.</a> если вы хотите счет без
+                        выполняя математические вычисления вручную.</p></div></div></div><div class="intensity-guide mt-xl"><h3>Выполнение TSS Рекомендации по интенсивности</h3><table class="intensity-table"><thead><tr><th>TSS Диапазон</th><th>Уровень интенсивности</th><th>Описание</th><th>Примеры тренировок</th></tr></thead><tbody><tr><td>&lt; 50</td><td>Легкое восстановление</td><td>Легкий бег, разговорный темп, активный отдых</td><td>30-45 минут лёгкого бега, восстановительная пробежка, шаги.</td></tr><tr><td>50-100</td><td>Умеренная тренировка</td><td>Типичный ежедневный объем тренировок, аэробная база</td><td>60-90 минут устойчивого бега, длительный легкий бег</td></tr><tr><td>100-200</td><td>Тяжелые тренировки</td><td>Качественные занятия с работой над темпом и порогом</td><td>90-120 минут с пороговыми интервалами, прогрессивный бег</td></tr><tr><td>200-300</td><td>очень сложно</td><td>Длинные забеги с качественным гоночным симулятором</td><td>2-3 часа длинных пробежек, работа в темпе полумарафона.</td></tr><tr><td>&gt; 300</td><td>Экстрим</td><td>День гонок, соревнования на сверхдистанции</td><td>Марафонские забеги, ультрас на 50 000+, забеги Ironman</td></tr></tbody></table></div><div class="callout callout-tip mt-lg"><h3>📊 Еженедельные цели TSS по текущему уровню</h3><ul><li><strong>Начинающие бегуны:</strong> 150-300 TSS/неделю (3-4 забега/неделю)</li><li><strong>Бегуны среднего уровня:</strong> 300-500 TSS/неделю (4-6 прогонов/неделю)</li><li><strong>Продвинутые бегуны:</strong> 500-700 TSS/неделю (6-8 сеансов/неделю)</li><li><strong>Элитные бегуны:</strong> 700-900+ TSS/нед. (8-12 сеансов/нед.)</li></ul><p>Они накапливаются в рамках вашей хронической тренировочной нагрузки (CTL), показателя физической подготовки, описанного ниже.Они должны
+                по-прежнему распространяться через реалистичные <a href="/ru/training-zones/">тренировочные зоны</a> и
+                разумный <a href="/ru/training-load-periodization/">план периодизации</a>.</p></div></div></section><section class="section section-alt"><div class="container"><h2 class="text-center mb-xl">Понимание CTL, ATL и TSB для бегунов</h2><p class="text-center lead">Диаграмма управления производительностью (PMC) визуализирует три взаимосвязанных показателя, которые
+            Расскажите полную историю вашей беговой тренировки: фитнес, усталость и форма.</p><div class="pmc-overview"><div class="grid grid-3"><div class="pmc-metric"><div class="metric-icon">📈</div><h3>CTL – Хроническая тренировочная нагрузка</h3><div class="metric-value-label">Ваш ФИТНЕС</div><p>42-дневное экспоненциально взвешенное среднее значение TSS за день. Представляет собой долгосрочную аэробную подготовку и
+                        адаптация тренировок от последовательного бега.</p><div class="formula-small">
+                        CTL сегодня = CTL вчера + (TSS сегодня - CTL вчера) × (1/42)
+                    </div></div><div class="pmc-metric"><div class="metric-icon">⚡</div><h3>ATL – Острая тренировочная нагрузка</h3><div class="metric-value-label">Ваша УСТАЛОСТЬ</div><p>Экспоненциально взвешенное среднее дневное значение TSS за 7 дней. Фиксирует недавний тренировочный стресс и
+                        накопившаяся усталость за прошедшую неделю бега.</p><div class="formula-small">
+                        ATL сегодня = ATL вчера + (TSS сегодня - ATL вчера) × (1/7)
+                    </div></div><div class="pmc-metric"><div class="metric-icon">🎯</div><h3>TSB - Тренировочный баланс стресса</h3><div class="metric-value-label">Ваша ФОРМА</div><p>Разница между вчерашней физической подготовкой и усталостью. Указывает на готовность действовать или необходимость
+                        отдохните перед следующей качественной пробежкой или гонкой.</p><div class="formula-small">
+                        TSB = CTL вчера - ATL вчера
+                    </div></div></div></div></div></section><section class="section"><div class="container"><h2>CTL: показатель вашей беговой подготовленности</h2><div class="grid grid-2"><div><h3>Что означает CTL для бегунов</h3><p>CTL количественно определяет беговую тренировочную нагрузку, которую испытывает ваше тело. <em>адаптирован к</em> за последние 6 недель. А
+                    более высокий CTL в работе означает:</p><ul><li>Повышенная аэробная способность и беговая выносливость</li><li>Способность справляться с большим объемом и интенсивностью тренировок</li><li>Улучшение нервно-мышечной и метаболической адаптации.</li><li>Более высокие показатели устойчивого бега</li><li>Лучшая устойчивость к воздействию напряжений от сил контакта с землей.</li></ul><div class="callout callout-info"><h4>Постоянная времени: 42 дня</h4><p>CTL имеет период полураспада ~14,7 дней. Через 42 дня примерно 36,8% (1/е) одной тренировки
+                        влияние остается в вашем расчете фитнеса.</p><p>Этот медленный спад означает, что беговая физическая форма развивается постепенно, но также и медленно угасает, защищая от
+                        разтренированность во время коротких перерывов на восстановление.</p></div></div><div><h3>Типичные значения CTL для бегунов</h3><div class="levels-comparison"><div class="level-card-compact"><strong>Начинающие бегуны:</strong><div class="value">15-35 CTL</div><p>Построение базовой физической формы, 3-4 пробежки в неделю.</p></div><div class="level-card-compact"><strong>Бегуны среднего уровня:</strong><div class="value">35-60 CTL</div><p>Постоянные тренировки, 4-6 пробежек в неделю.</p></div><div class="level-card-compact"><strong>Продвинутые бегуны:</strong><div class="value">60-85 CTL</div><p>Большой объем, 6-8 занятий в неделю.</p></div><div class="level-card-compact"><strong>Элитные бегуны:</strong><div class="value">85-120+ CTL</div><p>Профессиональная тренировочная нагрузка, 8-12+ занятий в неделю</p></div></div><div class="warning-box mt-md"><strong>⚠️ CTL Ограничения скорости для бегунов</strong><ul><li><strong>Новички:</strong> +2-4 CTL в неделю</li><li><strong>Промежуточный:</strong> +3-5 CTL в неделю</li><li><strong>Расширенный:</strong> +5-7 CTL в неделю</li></ul><p>Превышение этих показателей значительно увеличивает риск травм из-за высокой ударной нагрузки при беге.
+                        «Правило 10%» (увеличение еженедельного объема не более чем на 10%) соответствует этим темпам роста CTL.
+                    </p></div></div></div></div></section><section class="section section-alt"><div class="container"><h2>ATL: ваш показатель усталости при беге</h2><div class="content-split"><div><p>ATL отслеживает кратковременный тренировочный стресс — усталость, накопившуюся за последнюю неделю бега. Он поднимается
+                    быстро после тяжелых тренировок и быстро снижается во время отдыха, что делает его важным для управления восстановлением.
+                    между качественными сессиями.</p><h3>ATL Динамика беговых тренировок</h3><ul><li><strong>Быстрый ответ:</strong> 7-дневная постоянная времени (период полураспада ~ 2,4 дня)</li><li><strong>Колючий узор:</strong> Скачки после тяжелых тренировок, падения в дни восстановления.</li><li><strong>Индикатор восстановления:</strong> Падение ATL = рассеивание усталости между пробежками</li><li><strong>Предупреждение о перетренированности:</strong> Хронически повышенный ATL предполагает неадекватное восстановление.
+                    </li><li><strong>Ударное напряжение:</strong> Выполнение ATL влияет как на сердечно-сосудистую систему, так и на опорно-двигательный аппарат.
+                        усталость</li></ul><div class="callout callout-science"><h4>🔬 Модель фитнес-утомления для бега</h4><p>Каждый тренировочный забег дает два эффекта:</p><ol><li><strong>Фитнес-стимул</strong> (медленно строящийся, продолжительный)</li><li><strong>Усталость</strong> (быстро строящийся, быстро рассеивающийся)</li></ol><p>Беговые результаты = Фитнес – Усталость.PMC визуализирует эту модель, позволяя проводить научные исследования.
+                        периодизация и оптимальное время забега для бегунов.</p></div></div><div><h3>В устойчивом состоянии</h3><p>Когда тренировочная нагрузка одинакова от недели к неделе, CTL и ATL сходятся:</p><div class="example-box"><h4>Пример: 400 TSS/неделю последовательно.</h4><div class="calculation">
+                        Ежедневно TSS ≈ 57<br/>
+                        CTL приближается к ~57<br/>
+                        ATL приближается к ~57<br/>
+                        TSB приближается к 0
+                    </div><p><strong>Интерпретация:</strong> Фитнес и усталость сбалансированы. Никакого накапливающегося дефицита или
+                        профицит — устойчивое поддержание обучения.</p></div><h3>На этапах сборки</h3><p>При увеличении объема или интенсивности бега:</p><div class="example-box"><p>ATL повышается <em>быстрее</em> чем CTL из-за более короткой постоянной времени. TSB становится отрицательным (утомляемость &gt;
+                        фитнес). Это нормально и продуктивно — вы применяете перегрузку, чтобы стимулировать бег.
+                        адаптации.</p></div><h3>Во время спада для гонок</h3><p>При снижении тренировочной нагрузки перед соревнованиями:</p><div class="example-box"><p>ATL падает <em>быстрее</em> чем CTL. TSB становится положительным (тренированность &gt; утомляемость). Это
+                        Цель — прийти на соревнования свежими, с ногами, готовыми к выступлению, сохраняя при этом физическую форму.</p></div></div></div></div></section><section class="section"><div class="container"><h2>TSB: Баланс физической подготовки, усталости и готовность к гонкам</h2><p class="lead">TSB (Тренировочный баланс стресса) — это разница между вчерашней физической подготовкой (CTL) и
+            вчерашняя усталость (ATL). Для бегунов он показывает, бодры вы или устали, готовы к гонке или находитесь в
+            необходимость восстановительных дней.</p><div class="tsb-zones-container"><h3>TSB Интерпретационное руководство для бегунов</h3><table class="tsb-zones-table"><thead><tr><th>TSB Диапазон</th><th>Статус</th><th>Интерпретация</th><th>Рекомендуемое действие</th></tr></thead><tbody><tr class="tsb-critical"><td>&lt; -30</td><td><strong>Риск перетренированности</strong></td><td>Сильная усталость. Высокий риск травм.</td><td>Необходимо немедленное восстановление. Уменьшите громкость на 50%+. Учитывайте дни отдыха.</td></tr><tr class="tsb-training"><td>от -20 до -30</td><td><strong>Оптимальный тренировочный блок</strong></td><td>Продуктивная перегрузка. Построение фитнеса.</td><td>Продолжить план. Следите за признаками чрезмерной болезненности или усталости.</td></tr><tr class="tsb-moderate"><td>от -10 до -20</td><td><strong>Умеренная тренировочная нагрузка</strong></td><td>Стандартное накопление тренировок.</td><td>Нормальное обучение. Может обрабатывать качественные интервальные или темповые сессии.</td></tr><tr class="tsb-neutral"><td>от -10 до +15</td><td><strong>Переход/поддержание</strong></td><td>Сбалансированное состояние. Легкая усталость или свежесть.</td><td>Подходит для гонок B/C, недель тестирования или восстановления.</td></tr><tr class="tsb-fresh"><td>от +15 до +25</td><td><strong>Пиковая форма гонки</strong></td><td>Свежий и подходящий. Окно оптимальной производительности.</td><td>Гонки с приоритетом А. Ожидаемая максимальная производительность.</td></tr><tr class="tsb-very-fresh"><td>от +25 до +35</td><td><strong>Очень Свежий</strong></td><td>Отлично отдохнул. Подходит для коротких гонок.</td><td>Гонки на 5–10 км, гонки на время, трековые соревнования.</td></tr><tr class="tsb-detraining"><td>&gt; +35</td><td><strong>Детренировка</strong></td><td>Потеря физической формы из-за бездействия.</td><td>Возобновить обучение. Физическая форма ухудшается после длительного отдыха.</td></tr></tbody></table></div><div class="callout callout-tip mt-xl"><h3>🎯 Цель TSB по беговой дистанции</h3><ul><li><strong>Гонки на 5 км/10 км:</strong> TSB от +20 до +30 (7-10-дневное снижение для свежести)</li><li><strong>Полумарафон:</strong> TSB от +15 до +25 (снижение на 10–14 дней)</li><li><strong>Марафон:</strong> TSB от +10 до +20 (снижение дозы на 14–21 день с уменьшением объема)</li><li><strong>Ультрамарафон (50 тыс.+):</strong> TSB от +5 до +15 (снижение на 7–14 дней, сохранение объема, но уменьшение
+                    интенсивность)</li></ul><p><em>Для более коротких гонок требуется более высокий TSB для скорости/мощи. Более длинным расам нужен умеренный TSB, чтобы сохранить
+                    выносливость.</em></p></div></div></section><section class="section section-alt"><div class="container container-narrow"><h2>PMC Пример: Беговой тренировочный блок → Тейпер → Гонка</h2><div class="example-box"><h3>12-недельный тренировочный цикл марафона</h3><h4>Недели 1–3: Этап строительства базы</h4><ul><li>Еженедельно TSS: 300 → 350 → 400</li><li>CTL: Постепенно повышается с 40 → 48.</li><li>ATL: Отслеживает еженедельную нагрузку, колеблется 45-60</li><li>TSB: Слегка отрицательный (от -5 до -15), управляемый тренировочный стресс.</li><li><strong>Фокус:</strong> Развитие аэробной базы, легкие мили</li></ul><h4>Недели 4–7: этап сборки 1</h4><ul><li>Еженедельные TSS: 450 → 500 → 500 → 450 (неделя восстановления)</li><li>CTL: Продолжает расти 48 → 60.</li><li>ATL: Более высокие колебания 55-75</li><li>TSB: Более негативный (от -15 до -25), продуктивная перегрузка.</li><li><strong>Фокус:</strong> Добавление темповых пробежек, пороговых интервалов</li></ul><h4>Недели 8–11: Пиковая фаза</h4><ul><li>Еженедельно TSS: 500 → 550 → 550 → 500</li><li>CTL: Пик около 65.</li><li>ATL: самые высокие значения 65-80.</li><li>TSB: Самый отрицательный (от -20 до -30), максимальный фитнес-стимул.</li><li><strong>Фокус:</strong> Длинные пробежки с сегментами марафонского темпа, качественные тренировки</li></ul><h4>Неделя 12: Неделя восстановления</h4><ul><li>Еженедельно TSS: 300 (скидка 45%)</li><li>CTL: Небольшое падение до ~63 (физическая готовность сохранена)</li><li>ATL: Быстро падает до ~50.</li><li>TSB: Повышается от +5 до +10 (частичная свежесть)</li><li><strong>Фокус:</strong> Восстановительные пробежки, поглощающие тренировочные адаптации</li></ul><h4>Недели 13–14: Неделя тейпера + гонок</h4><ul><li>Неделя 13 TSS: 250, Неделя 14 TSS: 120 + гонка (всего ~250)</li><li>CTL: Плавное снижение до ~60 (минимальная потеря физической формы)</li><li>ATL: Быстрое падение до ~35 (устранена усталость)</li><li>TSB: Пик на <strong>от +20 до +25 в день соревнований</strong></li><li><strong>Результат:</strong> Свежие ноги, хорошая физическая форма, готовность к марафонским дистанциям</li></ul></div><div class="callout callout-success"><h3>✅ Почему тейпер помогает бегунам</h3><p>Различные постоянные времени (42 дня для CTL, 7 дней для ATL) создают эффект постепенности, оптимизирующий
+                беговая производительность:</p><ul><li>ATL реагирует быстро → Утомляемость от бега (как сердечно-сосудистая, так и скелетно-мышечная) исчезает в течение
+                    7-10 дней</li><li>CTL реагирует медленно → Адаптация к аэробной подготовке и бегу сохраняется в течение нескольких недель.</li><li>Результат: физическая форма сохраняется, а усталость и болезненность исчезают = свежие ноги для максимальной производительности на соревнованиях.
+                </li></ul></div></div></section><section class="section"><div class="container container-narrow"><h2>Практические рекомендации по управлению нагрузкой при беговых тренировках</h2><div class="guidelines-grid"><div class="guideline-item"><h3>1️⃣ Постоянно отслеживайте rTSS каждый день</h3><p>Регистрируйте TSS каждого прогона, чтобы построить точные тренды CTL/ATL/TSB. Отсутствие данных создает пробелы в фитнесе
+                    кривая. Используйте данные GPS-часов или расчеты на основе темпа для всех пробежек.</p></div><div class="guideline-item"><h3>2️⃣ Внимательно следите за скоростью изменения CTL.</h3><p>Постепенно увеличивайте CTL. Еженедельный прирост на 3–5 пунктов является приемлемым для большинства бегунов. Прыжки 10+
+                    очков влечет за собой перетренированность и травмы из-за ударного стресса при беге.</p></div><div class="guideline-item"><h3>3️⃣ Запланируйте недели восстановления</h3><p>Каждые 3-4 недели уменьшайте беговой объем на 30-40% в течение одной недели. Пусть TSB возрастает от -5 до +10. Это
+                    закрепляет фитнес-адаптации и предотвращает накопление усталости.</p></div><div class="guideline-item"><h3>4. Время для сокращения гонки</h3><p>Целевой показатель TSB от +15 до +25 в день соревнований для большинства дистанций. Начинайте постепенное снижение через 10–21 день в зависимости от расы.
+                    расстояние и текущий уровень TSB.</p></div><div class="guideline-item"><h3>5. Принимайте отрицательные TSB во время сборки.</h3><p>TSB от -20 до -25 на этапе построения тела является нормальным и продуктивным для бегунов. Это значит, что вы подаете заявку
+                    тренировочный стимул для адаптации без чрезмерного риска травм.</p></div><div class="guideline-item"><h3>6️⃣ Перестраивайте CTL постепенно после перерывов</h3><p>После травмы или перерыва в межсезонье не пытайтесь немедленно возобновить занятия с предыдущего CTL. Восстанавливайте постепенно
+                    по 3-5 баллов CTL в неделю, чтобы избежать повторного повреждения.</p></div><div class="guideline-item"><h3>7️⃣ Слушайте свое тело</h3><p>Показатели TSS являются ориентирами, а не абсолютными правилами. Постоянная болезненность, плохой сон или снижение работоспособности.
+                    несмотря на хорошие цифры TSB, указывают на необходимость дополнительного восстановления.</p></div><div class="guideline-item"><h3>8️⃣ Учитывайте небеговой стресс</h3><p>Жизненный стресс, плохой сон и перекрестные тренировки влияют на восстановление. Рассмотрите возможность снижения целевых показателей TSS во время
+                    периоды сильного стресса, даже если показатели, специфичные для бега, выглядят хорошо.</p></div></div></div></section><section class="section section-alt"><div class="container container-narrow"><h2>Часто задаваемые вопросы: Оценка тренировочного стресса для бега</h2><div class="faq-container"><div class="faq-item"><h3>Как рассчитать TSS для работы без измерителя мощности?</h3><p>Используйте метод, основанный на темпе: рассчитайте свой коэффициент интенсивности (IF), разделив пороговый темп на
+                    ваш средний темп бега. Затем примените формулу: rTSS = (ЕСЛИ²) × Продолжительность (часы) × 100. Для
+                    Например, если ваш пороговый темп составляет 4:00/км, и вы пробегаете 10 км со скоростью 4:30/км за 45 минут (0,75
+                    часы): IF = 4:00/4:30 = 0,889, поэтому rTSS = (0,889²) × 0,75 × 100 = 59,2 TSS.</p><p>Если вам нужен самый короткий рабочий процесс, используйте <a href="/ru/rtss-calculator/">rTSS калькулятор</a>
+                    после того, как вы установите реалистичный <a href="/ru/crs/">CRS</a>.</p></div><div class="faq-item"><h3>В чем разница между бегом TSS и ездой на велосипеде TSS?</h3><p>Оба используют одну и ту же формулу IF², но выполнение TSS представляет собой большее общее физическое напряжение из-за удара.
+                    силы от контакта с землей. Бегун с результатом 400 TSS/неделю испытывает аналогичную тренировочную адаптацию к
+                    велосипедист с 600-700 TSS/нед. При беге в качестве входных данных также используется темп/скорость, а не мощность в ваттах.
+                    требуется больше времени восстановления для того же значения TSS.</p></div><div class="faq-item"><h3>Какой недельный TSS подойдет для подготовки к марафону?</h3><p>Еженедельный бег TSS для подготовки к марафону зависит от опыта: Новички готовятся к первому марафону:
+                    250-400 TSS/неделю; Марафонцы среднего уровня: 400-550 TSS/неделю; Продвинутые/конкурентоспособные марафонцы:
+                    550-700+ TSS/нед. Пиковые недели могут достигать 600-800 TSS для опытных бегунов, а количество недель с понижением падает.
+                    до 200-300 TSS.</p><p>Гораздо важнее одной цифры то, как этот груз находится внутри вашего <a href="/ru/marathon-periodization/">марафонская сборка</a> и <a href="/ru/training-load-periodization/">периодизация</a>.</p></div><div class="faq-item"><h3>На какой TSB мне следует ориентироваться в забеге на 10 км?</h3><p>Для забега на 10 км установите TSB от +20 до +30 в день забега. Для достижения этой цели начните постепенное снижение дозы на 7–10 дней.
+                    более высокий TSB (больше свежести) полезен для более коротких гонок, где скорость и мощность имеют большее значение, чем
+                    выносливость. Начните уменьшать объем через 10 дней, сохраняя при этом некоторую интенсивность для сохранения.
+                    нервно-мышечная острота.</p></div><div class="faq-item"><h3>Могу ли я использовать TSS, если я не знаю свою критическую скорость бега?</h3><p>Зная свой <a href="/ru/crs/">Критическая скорость бега (CRS)</a> или пороговый темп
+                    необходим для точного расчета TSS, поскольку IF рассчитывается относительно этого значения. Если вы этого не сделаете
+                    узнайте свой CRS, проведите пороговый тест: либо 30-минутную гонку на время с полной отдачей (средний темп = CRS)
+                    или гоночный темп на 8 км. Альтернативно, оцените, используя время последних гонок: темп на 10 км + 10–15 секунд/км.
+                    приближается к CRS.</p><p>Как только CRS установлен, преобразуйте его в <a href="/ru/training-zones/">тренировочные зоны</a> так что твой
+                    легкая, пороговая и гоночная работа – все они рассчитаны на одну и ту же модель нагрузки.</p></div><div class="faq-item"><h3>Как быстро мне следует увеличить свой CTL?</h3><p>Увеличивайте бег CTL на 2–4 балла в неделю для новичков, на 3–5 баллов для бегунов среднего уровня и
+                    Максимум 5-7 баллов для продвинутых бегунов. Это соответствует «правилу 10%» для еженедельного пробега.
+                    увеличивает и минимизирует риск травм. Превышение этих показателей существенно увеличивает перетренированность и
+                    риск травм из-за высокой нагрузки при беге на мышцы, сухожилия и кости.</p></div><div class="faq-item"><h3>Что означает отрицательный TSB во время тренировки?</h3><p>Отрицательное значение TSB означает, что усталость (ATL) превышает физическую форму (CTL) — в настоящий момент вы утомлены недавним
+                    обучение. Это нормально и продуктивно на этапах сборки. TSB от -15 до -25 указывает на продуктивность
+                    тренировочный стресс. TSB ниже -30 предполагает риск перетренированности и необходимость восстановления. Отрицательный TSB во время
+                    создает стимул для адаптации к фитнесу, в то время как положительный TSB во время снижения нагрузки позволяет
+                    производительность.</p></div></div></div></section><section class="section"><div class="container container-narrow text-center"><h2>Используйте тренировочную нагрузку в качестве центра показателей бега</h2><p class="lead">Тренировочная нагрузка становится по-настоящему полезной, когда она связана с пороговым темпом, оценкой сессий,
+            тренировочные зоны и планирование гонок. Сама по себе диаграмма — это просто диаграмма.</p><div class="callout mt-xl"><h3>Создайте кластер вокруг этой страницы.</h3><p>Если тренировочная нагрузка является вашим центром, вам следует использовать следующие страницы:</p><ul><li><a href="/ru/crs/">Критическая скорость бега (CRS)</a> закрепить пороговый темп</li><li><a href="/ru/rtss-calculator/">rTSS Калькулятор</a> чтобы забить отдельные раны</li><li><a href="/ru/training-zones/">Тренировочные зоны</a> для преобразования CRS в намерение сеанса</li><li><a href="/ru/training-load-periodization/">Тренировочная нагрузка и периодизация</a> планировать
+                    блоки сборки, восстановления и конусности</li></ul></div><div class="mt-xl"><a class="btn btn-secondary" href="/ru/crs/">← Критическая скорость движения (CRS)</a><a class="btn btn-secondary" href="/ru/rtss-calculator/">rTSS Калькулятор</a><a class="btn btn-primary" href="/ru/training-load-periodization/">Тренировочная нагрузка и периодизация →</a></div></div></section><section class="eeat-author bg-light divider-top-lg divider-bottom-lg" aria-label="Author and Reviewer Information"><div class="container container-narrow"><div class="eeat-card" style="display: flex; gap: 1.5rem; align-items: center; padding: 1.5rem; background: var(--color-bg-alt, #f8f9fa); border-radius: 8px; border: 1px solid var(--color-border, #e9ecef); margin-top: 3rem; margin-bottom: 2rem;"><div class="eeat-avatar" style="font-size: 2.5rem; line-height: 1; flex-shrink: 0;" aria-hidden="true">👨‍🔬</div><div class="eeat-details"><h3 style="margin: 0 0 0.5rem 0; font-size: 1.125rem; font-weight: 600;">
+          Expertly Reviewed by 
+          <span itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">AnalyticsZone Team</span></span><span style="font-weight: 400; font-size: 1rem; color: var(--text-muted, #718096);">, MSc Sports Science</span></h3><p style="margin: 0 0 0.5rem 0; font-size: 0.95rem; color: var(--color-body-text, #4a5568); line-height: 1.5;">
+          This content has been written and reviewed by a sports data metrics expert to ensure technical accuracy and adherence to the latest sports science methodologies.
+        </p><a href="https://linkedin.com/in/albert-arno-39049774" target="_blank" rel="noopener noreferrer" style="font-size: 0.85rem; font-weight: 500; text-decoration: underline; color: var(--color-primary, #3182ce);">
+          🔗 Verify Credentials
+        </a></div></div></div></section><section class="ai-citation-block divider-top-xl" data-ai-ready="true" data-ai-page="training-load"><div class="container ai-citation-shell"><h2 class="ai-citation-title">Беговая тренировочная нагрузка: rTSS, CTL, ATL и TSB. Объяснение</h2><p class="ai-citation-answer">Тренировочная нагрузка при беге использует rTSS для оценки тренировок, CTL для отслеживания долгосрочной физической формы, ATL для отслеживания кратковременной усталости и TSB для оценки свежести тренировок и принятия решений о снижении нагрузки.</p><ul class="ai-citation-facts" role="list"><li class="ai-citation-fact"><span class="ai-citation-icon" aria-hidden="true">📅</span><span>2026-04-02</span></li><li class="ai-citation-fact ai-citation-keywords"><span class="ai-citation-icon" aria-hidden="true">🏷️</span><span>беговая тренировочная нагрузка · rTSS · CTL ATL TSB работает · усталость от бега и фитнес · время конусности бега</span></li><li class="ai-citation-fact"><span class="ai-citation-icon" aria-hidden="true">🔬</span><a href="../../ru/bibliography/">
+          
+          Библиография
+          
+        </a></li></ul></div></section></main><footer class="site-footer"><div class="container"><div class="footer-top"><div class="footer-brand-section"><h2>Run Analytics</h2><p>Track Critical Running Speed, Training Stress Score, and performance metrics with Run Analytics. Science-based iOS app for runners, triathletes &amp; coaches. 7-day free trial.</p></div><div class="footer-download"><h3 class="footer-heading">Скачать</h3><div class="footer-badges"><a href="https://apps.apple.com/us/app/run-analytics/id6754524015" target="_blank" rel="noopener"
+                        aria-label="Загрузите на App Store"><img src="../../assets/images/badge-app-store.svg"
+                            alt="Загрузите на App Store" width="135"
+                            height="40" loading="lazy"></a><a href="https://play.google.com/store/apps/details?id=com.arnohealth.runanalytics" target="_blank" rel="noopener"
+                        aria-label="Загрузите его в Google Play"><img src="../../assets/images/badge-google-play.svg"
+                            alt="Загрузите его в Google Play" width="135"
+                            height="40" loading="lazy"></a></div></div></div><div class="footer-languages"><h3 class="footer-heading">Доступно в</h3><div class="lang-grid"><a href="/af/" class="lang-link"
+                    hreflang="af" >
+                    Afrikaans
+                </a><a href="/am/" class="lang-link"
+                    hreflang="am" >
+                    አማርኛ
+                </a><a href="/ar/" class="lang-link"
+                    hreflang="ar" dir="rtl" >
+                    العربية
+                </a><a href="/bg/" class="lang-link"
+                    hreflang="bg" >
+                    Български
+                </a><a href="/bn/" class="lang-link"
+                    hreflang="bn" >
+                    বাংলা
+                </a><a href="/ca/" class="lang-link"
+                    hreflang="ca" >
+                    Català
+                </a><a href="/cs/" class="lang-link"
+                    hreflang="cs" >
+                    Čeština
+                </a><a href="/da/" class="lang-link"
+                    hreflang="da" >
+                    Dansk
+                </a><a href="/de/" class="lang-link"
+                    hreflang="de" >
+                    Deutsch
+                </a><a href="/el/" class="lang-link"
+                    hreflang="el" >
+                    Ελληνικά
+                </a><a href="/en/" class="lang-link"
+                    hreflang="en" >
+                    English
+                </a><a href="/es/" class="lang-link"
+                    hreflang="es" >
+                    Español
+                </a><a href="/et/" class="lang-link"
+                    hreflang="et" >
+                    Eesti
+                </a><a href="/fa/" class="lang-link"
+                    hreflang="fa" dir="rtl" >
+                    فارسی
+                </a><a href="/fi/" class="lang-link"
+                    hreflang="fi" >
+                    Suomi
+                </a><a href="/fr/" class="lang-link"
+                    hreflang="fr" >
+                    Français
+                </a><a href="/gu/" class="lang-link"
+                    hreflang="gu" >
+                    ગુજરાતી
+                </a><a href="/ha/" class="lang-link"
+                    hreflang="ha" >
+                    Hausa
+                </a><a href="/he/" class="lang-link"
+                    hreflang="he" dir="rtl" >
+                    עברית
+                </a><a href="/hi/" class="lang-link"
+                    hreflang="hi" >
+                    हिन्दी
+                </a><a href="/hr/" class="lang-link"
+                    hreflang="hr" >
+                    Hrvatski
+                </a><a href="/hu/" class="lang-link"
+                    hreflang="hu" >
+                    Magyar
+                </a><a href="/id/" class="lang-link"
+                    hreflang="id" >
+                    Bahasa Indonesia
+                </a><a href="/is/" class="lang-link"
+                    hreflang="is" >
+                    Íslenska
+                </a><a href="/it/" class="lang-link"
+                    hreflang="it" >
+                    Italiano
+                </a><a href="/ja/" class="lang-link"
+                    hreflang="ja" >
+                    日本語
+                </a><a href="/km/" class="lang-link"
+                    hreflang="km" >
+                    ភាសាខ្មែរ
+                </a><a href="/kn/" class="lang-link"
+                    hreflang="kn" >
+                    ಕನ್ನಡ
+                </a><a href="/ko/" class="lang-link"
+                    hreflang="ko" >
+                    한국어
+                </a><a href="/lt/" class="lang-link"
+                    hreflang="lt" >
+                    Lietuvių
+                </a><a href="/lv/" class="lang-link"
+                    hreflang="lv" >
+                    Latviešu
+                </a><a href="/ms/" class="lang-link"
+                    hreflang="ms" >
+                    Bahasa Melayu
+                </a><a href="/my/" class="lang-link"
+                    hreflang="my" >
+                    မြန်မာစာ
+                </a><a href="/nb/" class="lang-link"
+                    hreflang="nb" >
+                    Norsk Bokmål
+                </a><a href="/nl/" class="lang-link"
+                    hreflang="nl" >
+                    Nederlands
+                </a><a href="/pl/" class="lang-link"
+                    hreflang="pl" >
+                    Polski
+                </a><a href="/pt/" class="lang-link"
+                    hreflang="pt" >
+                    Português
+                </a><a href="/pt-br/" class="lang-link"
+                    hreflang="pt-br" >
+                    Português (Brasil)
+                </a><a href="/ro/" class="lang-link"
+                    hreflang="ro" >
+                    Română
+                </a><a href="/ru/" class="lang-link active"
+                    hreflang="ru" >
+                    Русский
+                </a><a href="/sk/" class="lang-link"
+                    hreflang="sk" >
+                    Slovenčina
+                </a><a href="/sl/" class="lang-link"
+                    hreflang="sl" >
+                    Slovenščina
+                </a><a href="/sr/" class="lang-link"
+                    hreflang="sr" >
+                    Srpski
+                </a><a href="/sv/" class="lang-link"
+                    hreflang="sv" >
+                    Svenska
+                </a><a href="/sw/" class="lang-link"
+                    hreflang="sw" >
+                    Kiswahili
+                </a><a href="/ta/" class="lang-link"
+                    hreflang="ta" >
+                    தமிழ்
+                </a><a href="/te/" class="lang-link"
+                    hreflang="te" >
+                    తెలుగు
+                </a><a href="/th/" class="lang-link"
+                    hreflang="th" >
+                    ไทย
+                </a><a href="/tl/" class="lang-link"
+                    hreflang="tl" >
+                    Tagalog
+                </a><a href="/tr/" class="lang-link"
+                    hreflang="tr" >
+                    Türkçe
+                </a><a href="/uk/" class="lang-link"
+                    hreflang="uk" >
+                    Українська
+                </a><a href="/ur/" class="lang-link"
+                    hreflang="ur" dir="rtl" >
+                    اردو
+                </a><a href="/vi/" class="lang-link"
+                    hreflang="vi" >
+                    Tiếng Việt
+                </a><a href="/yo/" class="lang-link"
+                    hreflang="yo" >
+                    Yorùbá
+                </a><a href="/zh/" class="lang-link"
+                    hreflang="zh" >
+                    中文
+                </a></div></div><div class="footer-divider"></div><div class="footer-bottom"><p class="copyright">
+                &copy; 2026 Run Analytics. Все права защищены
+            </p><ul class="footer-legal"><li><a href="/ru/privacy/">Конфиденциальность</a></li><li><a href="/ru/terms/">Условия</a></li></ul></div></div></footer><div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="Cookie consent" aria-live="polite"><div class="cookie-banner-content"><div><p>Этот сайт использует cookies для улучшения вашего опыта.</p><a href="/ru/privacy/" class="text-sm">Подробнее</a></div><div class="cookie-banner-actions"><button id="cookie-decline" class="btn btn-secondary btn-small">Отклонить</button><button id="cookie-accept" class="btn btn-primary btn-small">Принять</button></div></div></div><script src="../../assets/js/core.min.js?v=62ba6be7" defer></script><script src="../../assets/js/search.min.js?v=62ba6be7" defer></script><script src="../../assets/js/analytics.min.js" data-ga-id="G-Y138VB4523" defer></script><script>if ('serviceWorker' in navigator) { navigator.serviceWorker.register('../../sw.js') }</script></body></html>

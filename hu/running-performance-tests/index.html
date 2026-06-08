@@ -1,0 +1,939 @@
+<!DOCTYPE html><html lang="hu" dir="ltr"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=optional"
+    rel="stylesheet"><title>Futásteljesítmény-tesztek: Teljes útmutató a teszteléshez</title><meta name="description" content="Közzétéve: 2025. január 27. | Frissítve: 2025. január 29. Futásteljesítmény-tesztek: Teljes útmutató a teszteléshez"><meta name="author" content="AnalyticsZone Team"><meta name="keywords" content="futásteljesítmény tesztek, terep tesztek, CRS teszt, vo2max teszt futás, küszöbteszt, gazdaságossági teszt futtatása, teljesítményteszt, edzési zónák tesztelése"><link rel="canonical" href="https://run.analyticszone.app/hu/running-performance-tests/"><meta property="article:published_time" content="2025-01-27T10:00:00Z"><meta property="article:modified_time" content="2026-03-24T14:30:00Z"><meta property="article:author" content="AnalyticsZone Team"><meta property="og:type" content="article"><meta property="og:url" content="https://run.analyticszone.app/hu/running-performance-tests/"><meta property="og:title" content="Futásteljesítmény-tesztek: Teljes útmutató a teszteléshez"><meta property="og:description" content="Közzétéve: 2025. január 27. | Frissítve: 2025. január 29. Futásteljesítmény-tesztek: Teljes útmutató a teszteléshez"><meta property="og:image" content="https://run.analyticszone.app/assets/images/og-image.svg"><meta property="og:locale" content="hu_HU"><meta property="og:site_name" content="Run Analytics"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:url" content="https://run.analyticszone.app/hu/running-performance-tests/"><meta name="twitter:title" content="Futásteljesítmény-tesztek: Teljes útmutató a teszteléshez"><meta name="twitter:description" content="Közzétéve: 2025. január 27. | Frissítve: 2025. január 29. Futásteljesítmény-tesztek: Teljes útmutató a teszteléshez"><meta name="twitter:image" content="https://run.analyticszone.app/assets/images/og-image.svg"><meta name="twitter:site" content="@runanalytics"><meta name="twitter:creator" content="@runanalytics"><link rel="alternate" hreflang="af"
+    href="https://run.analyticszone.app/af/running-performance-tests/"><link rel="alternate" hreflang="am"
+    href="https://run.analyticszone.app/am/running-performance-tests/"><link rel="alternate" hreflang="ar"
+    href="https://run.analyticszone.app/ar/running-performance-tests/"><link rel="alternate" hreflang="bg"
+    href="https://run.analyticszone.app/bg/running-performance-tests/"><link rel="alternate" hreflang="bn"
+    href="https://run.analyticszone.app/bn/running-performance-tests/"><link rel="alternate" hreflang="ca"
+    href="https://run.analyticszone.app/ca/running-performance-tests/"><link rel="alternate" hreflang="cs"
+    href="https://run.analyticszone.app/cs/running-performance-tests/"><link rel="alternate" hreflang="da"
+    href="https://run.analyticszone.app/da/running-performance-tests/"><link rel="alternate" hreflang="de"
+    href="https://run.analyticszone.app/de/running-performance-tests/"><link rel="alternate" hreflang="el"
+    href="https://run.analyticszone.app/el/running-performance-tests/"><link rel="alternate" hreflang="en"
+    href="https://run.analyticszone.app/en/running-performance-tests/"><link rel="alternate" hreflang="es"
+    href="https://run.analyticszone.app/es/running-performance-tests/"><link rel="alternate" hreflang="et"
+    href="https://run.analyticszone.app/et/running-performance-tests/"><link rel="alternate" hreflang="fa"
+    href="https://run.analyticszone.app/fa/running-performance-tests/"><link rel="alternate" hreflang="fi"
+    href="https://run.analyticszone.app/fi/running-performance-tests/"><link rel="alternate" hreflang="fr"
+    href="https://run.analyticszone.app/fr/running-performance-tests/"><link rel="alternate" hreflang="gu"
+    href="https://run.analyticszone.app/gu/running-performance-tests/"><link rel="alternate" hreflang="ha"
+    href="https://run.analyticszone.app/ha/running-performance-tests/"><link rel="alternate" hreflang="he"
+    href="https://run.analyticszone.app/he/running-performance-tests/"><link rel="alternate" hreflang="hi"
+    href="https://run.analyticszone.app/hi/running-performance-tests/"><link rel="alternate" hreflang="hr"
+    href="https://run.analyticszone.app/hr/running-performance-tests/"><link rel="alternate" hreflang="hu"
+    href="https://run.analyticszone.app/hu/running-performance-tests/"><link rel="alternate" hreflang="id"
+    href="https://run.analyticszone.app/id/running-performance-tests/"><link rel="alternate" hreflang="is"
+    href="https://run.analyticszone.app/is/running-performance-tests/"><link rel="alternate" hreflang="it"
+    href="https://run.analyticszone.app/it/running-performance-tests/"><link rel="alternate" hreflang="ja"
+    href="https://run.analyticszone.app/ja/running-performance-tests/"><link rel="alternate" hreflang="km"
+    href="https://run.analyticszone.app/km/running-performance-tests/"><link rel="alternate" hreflang="kn"
+    href="https://run.analyticszone.app/kn/running-performance-tests/"><link rel="alternate" hreflang="ko"
+    href="https://run.analyticszone.app/ko/running-performance-tests/"><link rel="alternate" hreflang="lt"
+    href="https://run.analyticszone.app/lt/running-performance-tests/"><link rel="alternate" hreflang="lv"
+    href="https://run.analyticszone.app/lv/running-performance-tests/"><link rel="alternate" hreflang="ms"
+    href="https://run.analyticszone.app/ms/running-performance-tests/"><link rel="alternate" hreflang="my"
+    href="https://run.analyticszone.app/my/running-performance-tests/"><link rel="alternate" hreflang="nb"
+    href="https://run.analyticszone.app/nb/running-performance-tests/"><link rel="alternate" hreflang="nl"
+    href="https://run.analyticszone.app/nl/running-performance-tests/"><link rel="alternate" hreflang="pl"
+    href="https://run.analyticszone.app/pl/running-performance-tests/"><link rel="alternate" hreflang="pt"
+    href="https://run.analyticszone.app/pt/running-performance-tests/"><link rel="alternate" hreflang="pt-br"
+    href="https://run.analyticszone.app/pt-br/running-performance-tests/"><link rel="alternate" hreflang="ro"
+    href="https://run.analyticszone.app/ro/running-performance-tests/"><link rel="alternate" hreflang="ru"
+    href="https://run.analyticszone.app/ru/running-performance-tests/"><link rel="alternate" hreflang="sk"
+    href="https://run.analyticszone.app/sk/running-performance-tests/"><link rel="alternate" hreflang="sl"
+    href="https://run.analyticszone.app/sl/running-performance-tests/"><link rel="alternate" hreflang="sr"
+    href="https://run.analyticszone.app/sr/running-performance-tests/"><link rel="alternate" hreflang="sv"
+    href="https://run.analyticszone.app/sv/running-performance-tests/"><link rel="alternate" hreflang="sw"
+    href="https://run.analyticszone.app/sw/running-performance-tests/"><link rel="alternate" hreflang="ta"
+    href="https://run.analyticszone.app/ta/running-performance-tests/"><link rel="alternate" hreflang="te"
+    href="https://run.analyticszone.app/te/running-performance-tests/"><link rel="alternate" hreflang="th"
+    href="https://run.analyticszone.app/th/running-performance-tests/"><link rel="alternate" hreflang="tl"
+    href="https://run.analyticszone.app/tl/running-performance-tests/"><link rel="alternate" hreflang="tr"
+    href="https://run.analyticszone.app/tr/running-performance-tests/"><link rel="alternate" hreflang="uk"
+    href="https://run.analyticszone.app/uk/running-performance-tests/"><link rel="alternate" hreflang="ur"
+    href="https://run.analyticszone.app/ur/running-performance-tests/"><link rel="alternate" hreflang="vi"
+    href="https://run.analyticszone.app/vi/running-performance-tests/"><link rel="alternate" hreflang="yo"
+    href="https://run.analyticszone.app/yo/running-performance-tests/"><link rel="alternate" hreflang="zh"
+    href="https://run.analyticszone.app/zh/running-performance-tests/"><link rel="alternate" hreflang="x-default"
+    href="https://run.analyticszone.app/en/running-performance-tests/"><link rel="icon" type="image/png" sizes="32x32" href="../../assets/images/icons/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="../../assets/images/icons/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="../../assets/images/icons/apple-touch-icon.png"><link rel="manifest" href="../../manifest.json"><meta name="theme-color" content="#2563EB"><meta name="robots" content="index, follow"><meta name="apple-itunes-app" content="app-id=6754524015"><style>
+/* Critical CSS - Above the fold styles for fast LCP */
+:root {
+  --color-primary: #0066CC;
+  --color-text: #1a1a1a;
+  --color-text-muted: #666;
+  --color-bg: #ffffff;
+  --color-bg-alt: #f8f9fa;
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+}
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  color: var(--color-text);
+  background: var(--color-bg);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Skip link - Accessibility */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--color-primary);
+  color: #fff;
+  padding: 8px 16px;
+  z-index: 1000;
+  text-decoration: none;
+}
+.skip-link:focus {
+  top: 0;
+}
+
+/* Header - Critical for LCP */
+.site-header {
+  background: var(--color-bg);
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0.75rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.site-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: var(--color-text);
+  font-weight: 600;
+  font-size: 1.125rem;
+}
+
+.site-logo img, .site-logo svg {
+  width: 32px;
+  height: 32px;
+}
+
+/* Navigation */
+.main-nav {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .main-nav {
+    display: flex;
+    gap: 1.5rem;
+  }
+  .main-nav a {
+    color: var(--color-text);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9375rem;
+    transition: color 0.2s;
+  }
+  .main-nav a:hover {
+    color: var(--color-primary);
+  }
+}
+
+/* Mobile menu button */
+.menu-toggle {
+  display: flex;
+  background: none;
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .menu-toggle {
+    display: none;
+  }
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Main content */
+main.main-content {
+  flex: 1;
+}
+
+/* Hero section - Critical for LCP */
+.hero {
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .hero {
+    padding: 4rem 2rem;
+  }
+}
+
+.hero h1 {
+  font-size: clamp(1.75rem, 5vw, 3rem);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  color: var(--color-text);
+}
+
+.hero .lead, .hero p {
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  color: var(--color-text-muted);
+  max-width: 700px;
+  margin: 0 auto 1.5rem;
+}
+
+/* Buttons - Critical for CTA */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: var(--radius-md);
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-primary {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: #0052a3;
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+}
+
+.btn-large {
+  padding: 1rem 2rem;
+  font-size: 1.125rem;
+}
+
+/* Utility classes */
+.hidden { display: none !important; }
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Images - prevent CLS with aspect-ratio */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+img[width][height] {
+  aspect-ratio: attr(width) / attr(height);
+}
+
+.lazy-image {
+  background: var(--color-bg-alt);
+  transition: opacity 0.3s;
+}
+
+.lazy-image:not(.loaded) {
+  opacity: 0;
+}
+
+.lazy-image.loaded {
+  opacity: 1;
+}
+
+/* App badges - fixed dimensions to prevent CLS */
+.app-badge img {
+  width: 140px;
+  height: 42px;
+}
+
+/* Logo - fixed dimensions */
+.site-logo img {
+  width: 32px;
+  height: 32px;
+}
+
+/* Reduce motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+</style><link rel="preconnect" href="https://www.googletagmanager.com"><link rel="dns-prefetch" href="https://www.googletagmanager.com"><link rel="stylesheet" href="../../assets/css/main.min.css?v=62ba6be7"><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Run Analytics",
+  "url": "https://run.analyticszone.app",
+  "logo": "https://run.analyticszone.app/assets/images/logo.png",
+  "description": "Track Critical Running Speed, Training Stress Score, and performance metrics with Run Analytics. Science-based iOS app for runners, triathletes &amp; coaches. 7-day free trial.",
+  
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "Customer Support",
+    "email": "analyticszone+run@onmedic.org"
+  },
+  
+  "sameAs": [
+    
+    
+      
+    
+    
+      
+    
+    
+      
+    
+    
+    "https://twitter.com/runanalytics",
+    
+    "https://apps.apple.com/us/app/run-analytics/id6754524015",
+    
+    "https://play.google.com/store/apps/details?id=com.arnohealth.runanalytics"
+    
+  ]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Run Analytics",
+  "url": "https://run.analyticszone.app",
+  "description": "Track Critical Running Speed, Training Stress Score, and performance metrics with Run Analytics. Science-based iOS app for runners, triathletes &amp; coaches. 7-day free trial.",
+  "inLanguage": "hu"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Run Analytics",
+  "description": "Track Critical Running Speed, Training Stress Score, and performance metrics with Run Analytics. Science-based iOS app for runners, triathletes &amp; coaches. 7-day free trial.",
+  "url": "https://run.analyticszone.app",
+  "applicationCategory": ["HealthApplication", "FitnessApplication"],
+  "operatingSystem": "iOS, Android",
+  "author": {
+    "@type": "Organization",
+    "name": "AnalyticsZone Team"
+  },
+  "downloadUrl": "https://apps.apple.com/us/app/run-analytics/id6754524015"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Futásteljesítmény-tesztek: Teljes útmutató a teszteléshez",
+  "description": "Közzétéve: 2025. január 27. | Frissítve: 2025. január 29. Futásteljesítmény-tesztek: Teljes útmutató a teszteléshez",
+  "url": "https://run.analyticszone.app/hu/running-performance-tests/",
+  "inLanguage": "hu",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "Run Analytics",
+    "url": "https://run.analyticszone.app"
+  },
+  "datePublished": "2025-01-27",
+  "dateModified": "2026-03-24",
+  "keywords": ["futásteljesítmény tesztek", "terep tesztek", "CRS teszt", "vo2max teszt futás", "küszöbteszt", "gazdaságossági teszt futtatása", "teljesítményteszt", "edzési zónák tesztelése"],
+  "about": [
+    {
+      "@type": "Thing",
+      "name": "futásteljesítmény tesztek"
+    }, 
+  
+    {
+      "@type": "Thing",
+      "name": "terep tesztek"
+    }, 
+  
+    {
+      "@type": "Thing",
+      "name": "CRS teszt"
+    }, 
+  
+    {
+      "@type": "Thing",
+      "name": "vo2max teszt futás"
+    }, 
+  
+    {
+      "@type": "Thing",
+      "name": "küszöbteszt"
+    }, 
+  
+    {
+      "@type": "Thing",
+      "name": "gazdaságossági teszt futtatása"
+    }, 
+  
+    {
+      "@type": "Thing",
+      "name": "teljesítményteszt"
+    }, 
+  
+    {
+      "@type": "Thing",
+      "name": "edzési zónák tesztelése"
+    }
+  ]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Futásteljesítmény-tesztek: Teljes útmutató a teszteléshez",
+  "description": "Közzétéve: 2025. január 27. | Frissítve: 2025. január 29. Futásteljesítmény-tesztek: Teljes útmutató a teszteléshez",
+  "author": {
+    "@type": "Person",
+    "name": "AnalyticsZone Team"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Run Analytics",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://run.analyticszone.app/assets/images/logo.png"
+    }
+  },
+  "datePublished": "2025-01-27",
+  "dateModified": "2026-03-24",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://run.analyticszone.app/hu/running-performance-tests/"
+  }
+}
+</script><script>
+    (function () {
+      let theme = localStorage.getItem('theme');
+      // Older builds could persist a per-subdomain `theme=light` value without a UI
+      // to keep it consistent across apps. Treat it as stale and fall back to the OS.
+      if (theme === 'light') {
+        try { localStorage.removeItem('theme'); } catch (e) { /* ignore */ }
+        theme = null;
+      }
+
+      if (theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark-mode');
+      }
+    })();
+  </script></head><body><a href="#main-content" class="skip-link">Ugrás a tartalomra</a><header class="site-header"><div class="container"><div class="header-inner"><a href="/hu/" class="site-logo"><picture><source srcset="../../assets/images/logo-dark.png" type="image/png"
+                        media="(prefers-color-scheme: dark)"><img src="../../assets/images/logo.png" alt="Run Analytics - Running Analytics App | Critical Running Speed, TSS, CTL/ATL/TSB for iOS" width="56" height="56"></picture><span class="logo-text">Run Analytics</span></a><nav class="nav-primary" id="nav-primary" role="navigation" aria-label="Main navigation"><div class="nav-group-left"><ul><li><a href="/hu/" 
+                                aria-current="">
+                                Kezdőlap
+                            </a></li><li class="has-submenu" ><a href="/hu/getting-started/" class="nav-label">Tanulás</a><ul class="submenu"><li><a href="/hu/getting-started/" 
+                                        aria-current="">
+                                        Első lépések
+                                    </a></li><li><a href="/hu/crs/" 
+                                        aria-current="">
+                                        CRS
+                                    </a></li><li><a href="/hu/training-zones/" 
+                                        aria-current="">
+                                        Edzészónák
+                                    </a></li><li><a href="/hu/training-load/" 
+                                        aria-current="">
+                                        Edzésterhelés
+                                    </a></li><li><a href="/hu/rtss-calculator/" 
+                                        aria-current="">
+                                        rTSS kalkulátor
+                                    </a></li></ul></li><li class="has-submenu" ><a href="/hu/research/" class="nav-label">Tudomány</a><ul class="submenu"><li><a href="/hu/research/" 
+                                        aria-current="">
+                                        Kutatás
+                                    </a></li><li><a href="/hu/formulas/" 
+                                        aria-current="">
+                                        Képletek
+                                    </a></li><li><a href="/hu/efficiency/" 
+                                        aria-current="">
+                                        Hatékonyság
+                                    </a></li><li><a href="/hu/stride-mechanics/" 
+                                        aria-current="">
+                                        Lépésmechanika
+                                    </a></li><li><a href="/hu/bibliography/" 
+                                        aria-current="">
+                                        Bibliográfia
+                                    </a></li></ul></li><li><a href="/hu/contact/" 
+                                aria-current="">
+                                Kapcsolat
+                            </a></li></ul><div class="search-container"><svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.35-4.35"></path></svg><input type="search" id="site-search" class="search-input" aria-expanded="false"
+                            aria-haspopup="listbox" aria-autocomplete="list" autocomplete="off" spellcheck="false" /><div id="search-results" class="search-results hidden" role="region" aria-live="polite"></div></div><select class="language-selector" id="language-select" aria-label="Nyelv kiválasztása"><option value="af" >
+                            Afrikaans
+                        </option><option value="am" >
+                            አማርኛ
+                        </option><option value="ar" >
+                            العربية
+                        </option><option value="bg" >
+                            Български
+                        </option><option value="bn" >
+                            বাংলা
+                        </option><option value="ca" >
+                            Català
+                        </option><option value="cs" >
+                            Čeština
+                        </option><option value="da" >
+                            Dansk
+                        </option><option value="de" >
+                            Deutsch
+                        </option><option value="el" >
+                            Ελληνικά
+                        </option><option value="en" >
+                            English
+                        </option><option value="es" >
+                            Español
+                        </option><option value="et" >
+                            Eesti
+                        </option><option value="fa" >
+                            فارسی
+                        </option><option value="fi" >
+                            Suomi
+                        </option><option value="fr" >
+                            Français
+                        </option><option value="gu" >
+                            ગુજરાતી
+                        </option><option value="ha" >
+                            Hausa
+                        </option><option value="he" >
+                            עברית
+                        </option><option value="hi" >
+                            हिन्दी
+                        </option><option value="hr" >
+                            Hrvatski
+                        </option><option value="hu" selected>
+                            Magyar
+                        </option><option value="id" >
+                            Bahasa Indonesia
+                        </option><option value="is" >
+                            Íslenska
+                        </option><option value="it" >
+                            Italiano
+                        </option><option value="ja" >
+                            日本語
+                        </option><option value="km" >
+                            ភាសាខ្មែរ
+                        </option><option value="kn" >
+                            ಕನ್ನಡ
+                        </option><option value="ko" >
+                            한국어
+                        </option><option value="lt" >
+                            Lietuvių
+                        </option><option value="lv" >
+                            Latviešu
+                        </option><option value="ms" >
+                            Bahasa Melayu
+                        </option><option value="my" >
+                            မြန်မာစာ
+                        </option><option value="nb" >
+                            Norsk Bokmål
+                        </option><option value="nl" >
+                            Nederlands
+                        </option><option value="pl" >
+                            Polski
+                        </option><option value="pt" >
+                            Português
+                        </option><option value="pt-br" >
+                            Português (Brasil)
+                        </option><option value="ro" >
+                            Română
+                        </option><option value="ru" >
+                            Русский
+                        </option><option value="sk" >
+                            Slovenčina
+                        </option><option value="sl" >
+                            Slovenščina
+                        </option><option value="sr" >
+                            Srpski
+                        </option><option value="sv" >
+                            Svenska
+                        </option><option value="sw" >
+                            Kiswahili
+                        </option><option value="ta" >
+                            தமிழ்
+                        </option><option value="te" >
+                            తెలుగు
+                        </option><option value="th" >
+                            ไทย
+                        </option><option value="tl" >
+                            Tagalog
+                        </option><option value="tr" >
+                            Türkçe
+                        </option><option value="uk" >
+                            Українська
+                        </option><option value="ur" >
+                            اردو
+                        </option><option value="vi" >
+                            Tiếng Việt
+                        </option><option value="yo" >
+                            Yorùbá
+                        </option><option value="zh" >
+                            中文
+                        </option></select></div><div class="nav-group-right"><div class="header-app-buttons"><a href="https://apps.apple.com/us/app/run-analytics/id6754524015" class="header-download-btn" target="_blank"
+                            rel="noopener" aria-label="Download on App Store" title="Download on App Store"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="currentColor"><path
+                                    d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z" /></svg></a><a href="https://play.google.com/store/apps/details?id=com.arnohealth.runanalytics" class="header-download-btn" target="_blank"
+                            rel="noopener" aria-label="Get it on Google Play" title="Get it on Google Play"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="currentColor"><path
+                                    d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.92 20.16,13.19L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M16.81,8.88L14.54,11.15L6.05,2.66L16.81,8.88Z" /></svg></a></div><div class="suite-menu-container"><button class="suite-menu-toggle" id="suite-menu-toggle" aria-label="See other apps"
+                            aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg></button><div class="suite-dropdown hidden" id="suite-dropdown"><div class="suite-dropdown-header">Other AnalyticsZone Apps</div><div class="suite-apps-grid"><a href="https://analyticszone.app" class="suite-app-link">AnalyticsZone</a><a href="https://swim.analyticszone.app" class="suite-app-link">Swim Analytics</a><a href="https://bike.analyticszone.app" class="suite-app-link">Bike Analytics</a><a href="https://walk.analyticszone.app" class="suite-app-link">Walk Analytics</a><a href="https://cardio.analyticszone.app" class="suite-app-link">Cardio Analytics</a><a href="https://health.analyticszone.app" class="suite-app-link">Health Analytics</a><a href="https://swimtrainer.analyticszone.app" class="suite-app-link">Swim Trainer</a><a href="https://hike.analyticszone.app" class="suite-app-link">Hike Analytics</a><a href="https://sleep.analyticszone.app" class="suite-app-link">Sleep Analytics</a><a href="https://paceva.analyticszone.app" class="suite-app-link">Paceva Analytics</a></div></div></div></div></nav><button class="menu-toggle" id="menu-toggle" aria-label="Menü váltása"
+                aria-expanded="false" aria-controls="nav-primary"><span></span><span></span><span></span></button></div></div></header><main id="main-content" class="main-content"><article class="article-content"><header class="article-header"><h1>Teljesítménytesztek futtatása: Teljes útmutató a terepi teszteléshez</h1><p class="article-meta">Megjelent:<time datetime="2025-01-27">2025. január 27</time>| Frissítve:<time datetime="2025-01-29">2025. január 29</time></p></header><div class="quick-answer" itemscope="" itemtype="https://schema.org/Answer"><h2>Gyors válasz</h2><div itemprop="text"><p><strong>Teljesítménytesztek futtatása</strong>olyan terepi felmérések, amelyek olyan fitneszmérőszámokat mérnek, mint a kritikus futási sebesség (CRS), a VO2max, a laktátküszöb és a futási gazdaságosság egyszerű felszereléssel – csak egy óra és egy mért pálya.</p><p><strong>Főbb tesztek:</strong></p><ul><li>CRS Teszt: 3 perc + 9 perc max erőfeszítés, meghatározza az edzési zónákat</li><li>VO2max terepi teszt: 12 perces max futás vagy 5K időfutam</li><li>Küszöb teszt: 30 perces időfutam maximális fenntartható tempóval</li><li>Futástakarékosság: Szubmaximális tempó beállított pulzusszám mellett</li><li>Teszt gyakorisága: 6-8 hetente az alap/építési fázisban</li></ul></div></div><div class="article-intro"><p>A teljesítménytesztek futása alapvető eszközök az aktuális edzettségi szint megértéséhez, a megfelelő edzési zónák beállításához és az idő múlásával történő javulás nyomon követéséhez. Ellentétben a laboratóriumi vizsgálatokkal, amelyek drága berendezéseket és speciális eszközöket igényelnek, a terepi teszteket bármilyen pályán vagy mért pályán el lehet végezni, csak egy óra és GPS eszközzel.</p><p>Ez az útmutató a versenyző futók és edzők által használt leghatékonyabb futóteljesítmény-teszteket ismerteti, beleértve<a href="/hu/crs/">Kritikus futási sebesség (CRS)</a>,<a href="/hu/vo2max-testing/">VO2max terepi tesztek</a>,<a href="/hu/lactate-threshold-testing/">laktát küszöbértékek felmérése</a>és gazdaságossági értékelések futtatása. Megtanulja, hogy mikor kell tesztelni, hogyan kell megfelelően végrehajtani az egyes teszteket, és hogyan értelmezheti az eredményeket az edzés optimalizálása érdekében.</p></div><nav class="article-toc"><h2>Tartalom</h2><ul><li><a href="#why-test">Miért fontos a teljesítményteszt?</a></li><li><a href="#test-types">A futási teljesítménytesztek típusai</a></li><li><a href="#crs-test">Kritikus futási sebesség (CRS) teszt</a></li><li><a href="#vo2max-tests">VO2max terepi tesztek</a></li><li><a href="#threshold-tests">Laktát küszöbvizsgálatok</a></li><li><a href="#economy-assessment">Futó gazdaságossági értékelés</a></li><li><a href="#testing-protocol">Tesztelési protokoll és legjobb gyakorlatok</a></li><li><a href="#interpreting-results">Az eredmények értelmezése</a></li><li><a href="#testing-schedule">Mikor kell tesztelni</a></li><li><a href="#using-data">Tesztadatok használata edzéshez</a></li><li><a href="#faq">Gyakran Ismételt Kérdések</a></li></ul></nav><section id="why-test"><h2>Miért fontos a teljesítményteszt?</h2><p>A rendszeres teljesítménytesztek olyan objektív adatokat szolgáltatnak, amelyekkel a szubjektív értékelés nem fér össze. Tesztelés nélkül lényegében vakon edz – megfelelő edzésintenzitást találgat, és nem tudja határozottan nyomon követni a javulást.</p><h3>A teljesítményteszt legfontosabb előnyei</h3><ul><li><strong>Pontos edzési zónák:</strong>A tesztek pontos intenzitási zónákat határoznak meg az Ön tényleges fiziológiája, nem pedig általános képletek vagy a maximális pulzusszám százaléka alapján.</li><li><strong>Objektív előrehaladás nyomon követése:</strong>A rendszeres tesztelés megszünteti a találgatásokat, és konkrét javulást mutat (vagy annak hiányát) bizonyos mutatókban</li><li><strong>Képzés optimalizálás:</strong>A teszteredmények feltárják az erősségeket és a gyengeségeket, lehetővé téve a célzott edzést a korlátozó tényezők kezelésére</li><li><strong>Motiváció és felelősségvállalás:</strong>Az ütemezett tesztek képzési struktúrát hoznak létre, és kézzelfogható célokat biztosítanak a versenynapon túl</li><li><strong>Korai figyelmeztető rendszer:</strong>A csökkenő teszteredmények túledzettséget, nem megfelelő felépülést vagy edzésmódosítás szükségességét jelezhetik</li><li><strong>Költséghatékony:</strong>A helyszíni tesztek a laboratóriumi vizsgálatokból származó információk 80-90%-át nulla költséggel adják</li></ul><p>A legsikeresebb futók rendszeresen tesztelnek – jellemzően 6-8 hetente az edzésblokkok alatt –, hogy biztosítsák, hogy edzészónáik pontosak maradjanak az erőnlét változásaival. Tudjon meg többet ezen adatok használatáról a következő útmutatónkban<a href="/hu/training-zones/">edzési zónák</a>.</p></section><section id="test-types"><h2>A futási teljesítménytesztek típusai</h2><p>A különböző tesztek a futásteljesítmény különböző aspektusait mérik. Az egyes tesztek eredményeinek megértése segít kiválasztani a céljainak megfelelő teszteket.</p><table><thead><tr><th>Teszt típusa</th><th>Mit mér</th><th>Idő szükséges</th><th>Legjobb For</th></tr></thead><tbody><tr><td><strong>CRS teszt</strong></td><td>Aerob-anaerob határ, fenntartható tempó</td><td>20-30 perc</td><td>Minden táv, edzészóna beállítása</td></tr><tr><td><strong>Cooper 12 perces teszt</strong></td><td>VO2max becslés, aerob kapacitás</td><td>15 perc</td><td>Aerob erőnlét felmérése</td></tr><tr><td><strong>1,5 mérföldes időfutam</strong></td><td>VO2max, anaerob kapacitás</td><td>10-15 perc</td><td>Középtávfutók</td></tr><tr><td><strong>30 perces küszöb teszt</strong></td><td>Laktát küszöb ütem/HR</td><td>35-40 perc</td><td>Távfutók, edzőzónák</td></tr><tr><td><strong>10K időfutam</strong></td><td>Laktát küszöb, versenyedzettség</td><td>35-60 perc</td><td>5K maratoni futók</td></tr><tr><td><strong>Szubmaximális gazdaságossági teszt</strong></td><td>Futó gazdasági trendek</td><td>30-40 perc</td><td>Hatékonysági fejlesztések nyomon követése</td></tr></tbody></table><p>A legtöbb futó számára előnyös 2-3 teszttípus rendszeres elvégzése: egy CRS teszt az edzési zónákhoz, egy VO2max teszt az aerob kapacitás követéséhez és egy küszöbteszt a versenyspecifikus fitneszhez.</p></section><section id="crs-test"><h2>Kritikus futási sebesség (CRS) teszt</h2><p>A<a href="/hu/crs/">CRS teszt</a>vitathatatlanul a legértékesebb teljesítményteszt a futók számára. Azonosítja az aerob-anaerob átmenet sebességét – a leggyorsabb ütemet, amelyet elméletileg a végtelenségig fenntarthat a laktát felhalmozódása nélkül.</p><h3>Protocolo de Prueba CRS</h3><p><strong>Elkészítés:</strong></p><ul><li>Teszt pályán vagy pontosan mért síkpályán</li><li>Jól kipihent (nincs kemény edzés 48 órával korábban)</li><li>Bemelegítés: 15 perc könnyű futás + 3-4 lépés</li><li>Ideális körülmények: 50-65°F, minimális szél</li></ul><p><strong>Teszt szerkezete:</strong></p><ol><li><strong>1. próba:</strong>Fuss 3 percet a lehető leggyorsabban, rekordtávolsággal</li><li><strong>Helyreállítás:</strong>30 perc könnyű séta/kocogás</li><li><strong>2. próba:</strong>Fuss 7 percet a lehető leggyorsabban, rekordtávolsággal</li></ol><p><strong>A CRS kiszámítása:</strong></p><pre>CRS (m/min) = (D7 - D3) / (7 - 3)
+
+Where:
+D7 = Distance covered in 7-minute trial (meters)
+D3 = Distance covered in 3-minute trial (meters)</pre><h3>Példa számítás</h3><table><thead><tr><th>Próba</th><th>Távolság</th><th>Számítás</th></tr></thead><tbody><tr><td>3 perces próba</td><td>900 méter</td><td>D3 = 900 m</td></tr><tr><td>7 perces próba</td><td>1980 méter</td><td>D7 = 1980 m</td></tr><tr><td><strong>CRS Eredmény</strong></td><td colspan="2"><strong>(1980-900) / (7-3) = 270 m/perc = 3:42/km = 5:57/mérföld</strong></td></tr></tbody></table><p>Miután megvan a CRS, mind az öt edzészónát létrehozhatja a mi segítségével<a href="/hu/training-zones/">edzészóna kalkulátor</a>és nyomon követheti az edzési stresszt<a href="/hu/rtss-calculator/">rTSS számítások</a>.</p><h3>CRS teszt tippek</h3><ul><li>A 3 perces próba tempóját kissé konzervatívan ütemezze – "nagyon keménynek" kell éreznie magát, de nem teljesen</li><li>A 7 perces kísérletnek a 3 perces tempóhoz hasonlóan kell kezdődnie, fokozatosan lelassulva, ahogy a fáradtság jelentkezik.</li><li>A GPS pontossága számít – a nyomvonal tesztelése a legmegbízhatóbb</li><li>Mindkét kísérletnél rögzítse a pulzusszámot a HR edzési zónák kialakításához</li><li>6-8 hetente tesztelje újra a javulás nyomon követéséhez</li></ul></section><section id="vo2max-tests"><h2>VO2max terepi tesztek</h2><p><a href="/hu/what-is-vo2max/">VO2max</a>az Ön maximális aerob kapacitását jelenti – a szív- és érrendszer plafonját. Míg a laboratóriumi vizsgálatok jelentik az aranystandardot, a helyszíni tesztek 3-5%-os pontossággal tudják megbecsülni a VO2max-et.</p><h3>Cooper 12 perces teszt</h3><p>A Cooper-teszt egy egyszerű, jól validált módszer a VO2max becslésére. Fuss a lehető legmesszebbre pontosan 12 perc alatt egy pályán.</p><p><strong>Protokoll:</strong></p><ol><li>Alapos bemelegítés (15 perc könnyű + lépések)</li><li>Fuss a lehető legmesszebbre pontosan 12 perc alatt</li><li>Rekord teljes megtett távolságot méterben</li></ol><p><strong>A VO2max kiszámítása:</strong></p><pre>VO2max (ml/kg/min) = (Distance in meters - 504.9) / 44.73</pre><h3>Cooper-teszt eredményei</h3><table><thead><tr><th>Távolság (12 perc)</th><th>Becsült VO2max</th><th>Teljesítményszint</th></tr></thead><tbody><tr><td>2400 m (1,49 mérföld)</td><td>42,4 ml/kg/perc</td><td>Szabadidős futó</td></tr><tr><td>2800 m (1,74 mérföld)</td><td>51,3 ml/kg/perc</td><td>Versenyképes klubfutó</td></tr><tr><td>3200 m (1,99 mérföld)</td><td>60,2 ml/kg/perc</td><td>Regionális szint</td></tr><tr><td>3600 m (2,24 mérföld)</td><td>69,2 ml/kg/perc</td><td>Országos szinten</td></tr><tr><td>4000 m (2,49 mérföld)</td><td>78,1 ml/kg/perc</td><td>Elit szint</td></tr></tbody></table><h3>1,5 mérföld (2,4 km) időfutam</h3><p>A Cooper-teszt alternatívája, a 1,5 mérföldes időfutam hasonló VO2max becslést ad távolságalapú céllal.</p><p><strong>Protokoll:</strong></p><ol><li>Melegítse fel alaposan</li><li>Fuss 1,5 mérföldet (6 kör normál pályán), amilyen gyorsan csak lehet</li><li>Rögzítési idő percekben és másodpercekben</li></ol><p><strong>A VO2max kiszámítása:</strong></p><pre>VO2max (ml/kg/min) = 483 / Time in minutes + 3.5</pre><h3>VO2max teszt-benchmarkok</h3><table><thead><tr><th>1,5 mérföld idő</th><th>Becsült VO2max</th><th>Egyenértékű versenyidő</th></tr></thead><tbody><tr><td>11:00</td><td>47,4 ml/kg/perc</td><td>5K: 24:30 | 10K: 51:00 | HM: 1:54</td></tr><tr><td>10:00</td><td>51,8 ml/kg/perc</td><td>5K: 22:00 | 10K: 46:00 | HM: 1:42</td></tr><tr><td>9:00</td><td>57,2 ml/kg/perc</td><td>5K: 19:30 | 10K: 41:00 | HM: 1:30</td></tr><tr><td>8:00</td><td>63,9 ml/kg/perc</td><td>5K: 17:15 | 10K: 36:00 | HM: 1:19</td></tr><tr><td>7:00</td><td>72,5 ml/kg/perc</td><td>5K: 15:00 | 10K: 31:30 | HM: 1:09</td></tr></tbody></table><p>Részletesebb információkért a<a href="/hu/vo2max-testing/">VO2max tesztelési módszerek</a>és értelmezése, lásd teljes útmutatónkat.</p></section><section id="threshold-tests"><h2>Laktát küszöbvizsgálatok</h2><p>A te<a href="/hu/lactate-threshold-testing/">laktát küszöb</a>a leggyorsabb tempót képviseli, amelyet körülbelül 50-60 percig ki tud tartani – nagyjából 10 000-tól félmaratonig terjedő tempót a legtöbb futó számára.Ez a mérőszám kulcsfontosságú a tempófutások és a küszöb edzések edzésintenzitásának beállításához.</p><h3>30 perces küszöbteszt</h3><p>A 30 perces teszt a laktátküszöb arany standard terepi tesztje. Egyszerű, praktikus, és szorosan összefügg a laboratóriumi küszöbértékekkel.</p><p><strong>Protokoll:</strong></p><ol><li>Alapos bemelegítés (15-20 perc könnyű + 4-5 lépés)</li><li>Fuss le egy 30 perces időmérőt maximális kitartó erőfeszítéssel</li><li>Kerülje a túl gyors kezdést – a tempónak végig "kényelmesen keménynek" kell lennie</li><li>Rögzítse az átlagos tempót és az átlagos pulzusszámot</li></ol><p><strong>Eredmények tolmácsolása:</strong></p><ul><li><strong>Küszöb tempó:</strong>Átlagtempó a teljes 30 percben</li><li><strong>Laktátküszöbű pulzusszám (LTHR):</strong>Átlagos HR az utolsó 20 percben</li><li><strong>Küszöb teljesítmény:</strong>Ha üzemi teljesítménymérőt használ, akkor az átlagos teljesítmény 30 percig tart</li></ul><h3>10K időfutam</h3><p>A 10K-s verseny vagy időmérő kettős feladatot lát el: versenyspecifikus erőnléti értékelést és küszöbjelzőt.</p><p><strong>Protokoll:</strong></p><ol><li>Normál versenybemelegítés (15 perc könnyű + lépések)</li><li>Fuss 10K-t versenykifejezéssel (nem edzési erőfeszítéssel)</li><li>Rekordidő, átlagos tempó, átlagos HR</li></ol><p><strong>Becsült küszöbérték 10 000-tól:</strong></p><ul><li><strong>Küszöb tempó:</strong>10K tempó + 10-15 másodperc mérföldenként</li><li><strong>LTHR:</strong>Átlagos HR a verseny utolsó 5 km-ére</li><li><strong>VO2max tempó:</strong>10K tempó – mérföldenként 15-20 másodperc</li></ul><h3>Küszöb teszt összehasonlítása</h3><table><thead><tr><th>Teszt típusa</th><th>Időtartam</th><th>Erőfeszítési szint</th><th>Előnyök</th><th>Legjobb használat</th></tr></thead><tbody><tr><td>30 perc TT</td><td>30 perc</td><td>Kényelmesen kemény</td><td>Tiszta küszöbértékbecslés, könnyebb ütemezés</td><td>Edzési zóna beállítása</td></tr><tr><td>10K verseny</td><td>35-60 perc</td><td>Verseny erőfeszítés</td><td>Versenyspecifikus, kettős célú tesztelés</td><td>Csúcskondíció felmérés</td></tr><tr><td>20 perc TT</td><td>20 perc</td><td>Nagyon kemény</td><td>Rövidebb időtartam, kevesebb fáradtság</td><td>Gyakori tesztelés</td></tr></tbody></table><p>A küszöbvizsgálati eredmények segítségével állítsa be<a href="/hu/tempo-runs-zone3/">3. zóna tempótempó</a>és biztosítsa a megfelelő intenzitást a küszöbértékkel végzett edzésekhez az edzési ciklus során.</p></section><section id="economy-assessment"><h2>Futó gazdaságossági értékelés</h2><p><a href="/hu/running-economy/">Futó gazdaság</a>méri, hogy adott ütemben milyen hatékonyan használja az oxigént. Míg a laboratóriumi vizsgálatok pontos oxigénköltségmérést biztosítanak, a helyszíni felmérések nyomon követhetik a gazdaságosság időbeli javulását.</p><h3>Szubmaximális gazdaságossági vizsgálati protokoll</h3><p>Ez a teszt szabványos ütemben követi a pulzusszámot a gazdaságos változások nyomon követése érdekében. A gazdaságosság javulásával a pulzusszám ugyanolyan ütemben csökken.</p><p><strong>Protokoll:</strong></p><ol><li><strong>Bemelegítés:</strong>15 perc könnyű futás</li><li><strong>Tesztszegmensek:</strong>Fuss 5 percet a három szabványos tempó mindegyikével:<ul><li>1. ütem: Könnyű tempó (a küszöbtempó 60-65%-a)</li><li>2. ütem: Mérsékelt tempó (a küszöbtempó 75-80%-a)</li><li>3. ütem: Maratoni tempó (a küszöbtempó 85-90%-a)</li></ul></li><li><strong>Helyreállítás:</strong>3 perc könnyű a szakaszok között</li><li><strong>Feljegyzés:</strong>Átlagos HR minden szegmens utolsó 3 percében</li></ol><h3>Példa gazdaságos követésre</h3><table><thead><tr><th>Teszt dátuma</th><th>Easy Pace HR</th><th>Mérsékelt HR</th><th>Marathon HR</th><th>Gazdasági Trend</th></tr></thead><tbody><tr><td>január 1</td><td>140 bpm</td><td>156 bpm</td><td>168 bpm</td><td>Alapvonal</td></tr><tr><td>február 15</td><td>136 bpm</td><td>152 bpm</td><td>164 bpm</td><td>+3% javulás</td></tr><tr><td>ápr 1</td><td>134 bpm</td><td>149 bpm</td><td>161 bpm</td><td>+5% javulás</td></tr><tr><td>május 15</td><td>133 bpm</td><td>148 bpm</td><td>160 bpm</td><td>+6%-os javulás</td></tr></tbody></table><p><strong>Változások értelmezése:</strong></p><ul><li><strong>Csökkenő HR:</strong>Jobb gazdaságosság – ugyanolyan ütemben kevesebb energiát használ fel</li><li><strong>Stabil HR:</strong>Gazdasági fennsík – speciális gazdaságközpontú képzésre lehet szükség</li><li><strong>HR növelése:</strong>Fáradtság, kimerültség vagy túledzettség – állítsa be az edzésterhelést</li></ul><p>Tudjon meg többet a hatékonyság növeléséről az útmutatónkban<a href="/hu/running-efficiency-biomechanics/">fut biomechanika</a>.</p></section><section id="testing-protocol"><h2>Tesztelési protokoll és legjobb gyakorlatok</h2><p>A következetes tesztelési protokollok megbízható, idővel összehasonlítható eredményeket biztosítanak. A körülmények vagy a felkészülés kis eltérései jelentősen befolyásolhatják a teljesítményt.</p><h3>Teszt előtti előkészítés</h3><ul><li><strong>Helyreállítás:</strong>Nincs kemény edzés 48-72 órával a tesztelés előtt</li><li><strong>Alvás:</strong>Jól kipihent (7-9 óra) előző este</li><li><strong>Táplálkozás:</strong>Normál étkezés, kerülje a koplalt vagy túltáplált tesztelést</li><li><strong>Hidratálás:</strong>Jól hidratált, de nem túlhidratált</li><li><strong>Időzítés:</strong>Tesztelje a nap azonos szakában a konzisztenciát</li><li><strong>Feltételek:</strong>Kerülje a szélsőséges meleget, hideget, szelet vagy magasságváltozásokat</li></ul><h3>Bemelegítési protokoll</h3><p>A szabványos bemelegítés felkészíti testét a maximális erőfeszítésre, miközben nem okoz fáradtságot:</p><ol><li><strong>10 perc:</strong>Nagyon könnyű kocogás (beszélgetési tempó)</li><li><strong>5 perc:</strong>Fokozatos előrehaladás mérsékelt ütemre</li><li><strong>5 perc:</strong>Dinamikus nyújtás és mobilitás</li><li><strong>4-5 lépés:</strong>80-100 m-es gyorsulások a próbatempóhoz közel</li><li><strong>3-5 perc:</strong>Könnyű felrázás és végső mentális felkészülés</li></ol><h3>Tesztkörnyezet</h3><table><thead><tr><th>Tényező</th><th>Ideális Feltételek</th><th>Hatás, ha nem ideális</th></tr></thead><tbody><tr><td><strong>Felület</strong></td><td>Pálya vagy sík, burkolt út</td><td>±5-10 másodperc mérföldenként egyenetlen terepen</td></tr><tr><td><strong>Hőmérséklet</strong></td><td>50-65°F (10-18°C)</td><td>-5% teljesítmény 75°F felett, -3% 40°F alatt</td></tr><tr><td><strong>Szél</strong></td><td>Nyugodt vagy enyhe szellő</td><td>Mérsékelt szélben mérföldenként 10-15 másodperc</td></tr><tr><td><strong>Magasság</strong></td><td>Tengerszint 1000 lábig</td><td>-2% teljesítmény az alapvonal feletti 1000 lábonként</td></tr><tr><td><strong>Páratartalom</strong></td><td>30-60%</td><td>-2-5% teljesítmény 70% páratartalom felett</td></tr></tbody></table><h3>Adatrögzítés</h3><p>Rögzítsen átfogó adatokat minden tesztmenethez:</p><ul><li>A vizsgálat dátuma és időpontja</li><li>Időjárási viszonyok (hőmérséklet, szél, páratartalom)</li><li>Tanfolyam/helyszín részletei</li><li>Legutóbbi edzés (volumen és intenzitás az előző héten)</li><li>Az alvás minősége és órák</li><li>Érzékelt erőfeszítés (RPE 1-10)</li><li>Bármilyen szokatlan tényező (stressz, betegség, sérülés stb.)</li></ul></section><section id="interpreting-results"><h2>Az eredmények értelmezése</h2><p>A nyers tesztszámok kontextus nélkül keveset jelentenek. Kulcsfontosságú, hogy megértsük, mit jeleznek eredményei a fitneszről, és hogyan használhatjuk fel őket az edzési döntésekhez.</p><h3>CRS értelmezés</h3><table><thead><tr><th>CRS (m/perc)</th><th>CRS Pace</th><th>Teljesítményszint</th><th>Tipikus versenyidõk</th></tr></thead><tbody><tr><td>200-220</td><td>4:32-5:00/km</td><td>Kezdő</td><td>5K: 28-32 perc | 10K: 60-68 perc</td></tr><tr><td>220-250</td><td>4:00-4:32/km</td><td>Rekreációs</td><td>5K: 24-28 perc | 10K: 50-60 perc</td></tr><tr><td>250-280</td><td>3:34-4:00/km</td><td>Versenyképes klub</td><td>5K: 20-24 perc | 10K: 42-50 perc</td></tr><tr><td>280-310</td><td>3:13-3:34/km</td><td>Regionális szint</td><td>5K: 17:30-20 perc | 10K: 36-42 perc</td></tr><tr><td>310-340</td><td>2:56-3:13/km</td><td>Országos szinten</td><td>5K: 15-17:30 perc | 10K: 31-36 perc</td></tr><tr><td>340+</td><td>&lt;3:56/km</td><td>Elit</td><td>5K: &lt;15 perc | 10K: &lt;31 perc</td></tr></tbody></table><h3>VO2max Értelmezés életkor és nem szerint</h3><table><thead><tr><th>Osztályozás</th><th>Férfiak 20-29</th><th>Férfiak 40-49</th><th>Nők 20-29</th><th>Nők 40-49</th></tr></thead><tbody><tr><td>Felsőbbrendű</td><td>&gt;55</td><td>&gt;52</td><td>&gt;49</td><td>&gt;45</td></tr><tr><td>Kiváló</td><td>51-55</td><td>47-52</td><td>45-49</td><td>41-45</td></tr><tr><td>Jó</td><td>45-51</td><td>42-47</td><td>39-45</td><td>35-41</td></tr><tr><td>Fair</td><td>39-45</td><td>36-42</td><td>33-39</td><td>29-35</td></tr><tr><td>Szegény</td><td>&lt;39</td><td>&lt;36</td><td>&lt;33</td><td>&lt;29</td></tr></tbody></table><p><em>Értékek ml/kg/perc-ben. Forrás: American College of Sports Medicine</em></p><h3>Küszöb tempó referenciaértékei</h3><p>A laktát küszöb általában a VO2max tempó következő százalékainál jelentkezik a különböző futószinteknél:</p><ul><li><strong>Kezdő futók:</strong>A VO2max tempó 75-80%-a</li><li><strong>Képzett futók:</strong>A VO2max tempó 80-85%-a</li><li><strong>Jól képzett futók:</strong>A VO2max tempó 85-90%-a</li><li><strong>Elit futók:</strong>A VO2max tempó 90-95%-a</li></ul><p>Ha az Ön küszöbértéke alacsonyabb a vártnál a VO2max-hez képest, ez azt jelzi, hogy a küszöb-specifikus képzésen keresztül javítani lehet.</p><h3>Javulás mértéke</h3><p>A várható javulási arányok segítenek a reális célok kitűzésében és annak meghatározásában, hogy mikor van szükség edzésmódosításra:</p><table><thead><tr><th>Metrikus</th><th>Kezdő (0-2 év)</th><th>Középhaladó (2-5 év)</th><th>Haladó (5+ év)</th></tr></thead><tbody><tr><td><strong>CRS</strong></td><td>+5-10% 3 havonta</td><td>+2-5% 3 havonta</td><td>+1-2% 3 havonta</td></tr><tr><td><strong>VO2max</strong></td><td>+8-15% 6 hónaponként</td><td>+3-6% 6 hónaponként</td><td>+1-3% 6 hónaponként</td></tr><tr><td><strong>Küszöb</strong></td><td>+6-12% 6 hónaponként</td><td>+3-6% 6 hónaponként</td><td>+1-3% 6 hónaponként</td></tr><tr><td><strong>Gazdaság</strong></td><td>+5-8% évente</td><td>+2-4% évente</td><td>+1-2% évente</td></tr></tbody></table></section><section id="testing-schedule"><h2>Mikor kell tesztelni</h2><p>A teljesítménytesztek stratégiai időzítése maximalizálja azok értékét, miközben minimálisra csökkenti az edzés és a versenyzés zavarását.</p><h3>Tesztelési gyakoriság képzési fázisonként</h3><table><thead><tr><th>Képzési fázis</th><th>Ajánlott tesztek</th><th>Frekvencia</th><th>Cél</th></tr></thead><tbody><tr><td><strong>Bázisépület</strong></td><td>CRS teszt, gazdaságossági felmérés</td><td>6-8 hetente</td><td>Kövesse nyomon az aerob fejlődést, állítsa be a zónákat</td></tr><tr><td><strong>Építési fázis</strong></td><td>Küszöb teszt, CRS teszt</td><td>4-6 hetente</td><td>Kövesse nyomon a küszöb javulását, a zóna frissítéseit</td></tr><tr><td><strong>Csúcs/specifikus</strong></td><td>VO2max teszt, Küszöb teszt</td><td>3-4 hetente</td><td>Mérje fel a versenyre készültséget, finomhangolja az ingerlést</td></tr><tr><td><strong>Kúpos</strong></td><td>Csak enyhe élezés működik</td><td>Nincs tesztelés</td><td>Megőrzi frissességét a versenyhez</td></tr><tr><td><strong>Felépülés/szezonon kívül</strong></td><td>CRS teszt</td><td>Egyszer a végén</td><td>Új edzési zónák létrehozása</td></tr></tbody></table><h3>Tesztelés a képzési heteken belül</h3><p><strong>Optimális tesztidőzítés a heti ütemezésben:</strong></p><ul><li><strong>1. nap (hétfő):</strong>Gyógyulási nap – nincs vizsgálat</li><li><strong>2-3 nap:</strong>Könnyű edzés – gazdaságos tesztekhez alkalmas</li><li><strong>4-5. nap:</strong>Jól helyreállt – a legjobb a maximális tesztekhez (CRS, VO2max, küszöb)</li><li><strong>6-7. nap:</strong>Hétvége – jó a hosszabb tesztekhez, ha jól pihen</li></ul><p><strong>A teszt előtti edzésbeállítások:</strong></p><ul><li>Nincs kemény edzés 48 órával a vizsgálat előtt</li><li>Csökkentse a mennyiséget 30-40%-kal a tesztelési héten</li><li>Tartsa fenn az intenzitást az előző edzéseken, de csökkentse a hangerőt</li><li>Tekintsük a teszthetet mini-tapernek</li></ul><h3>Példa az éves tesztelési naptárra</h3><p>Egy őszi maratont megcélzó futó számára tavaszi ráhangoló versenyekkel:</p><table><thead><tr><th>hónap</th><th>Képzési fázis</th><th>Tesztek</th><th>Megjegyzések</th></tr></thead><tbody><tr><td>január</td><td>Bázisépület</td><td>CRS teszt, gazdaságos alapállapot</td><td>Ünnep utáni edzési zónák kialakítása</td></tr><tr><td>március</td><td>Bázisépület</td><td>CRS újrateszt</td><td>Frissítse a zónákat 8 hét után</td></tr><tr><td>április</td><td>Építési fázis</td><td>10K verseny (küszöb teszt)</td><td>Tavaszi ráhangoló verseny</td></tr><tr><td>június</td><td>Építés/specifikus</td><td>CRS, VO2max terepi teszt</td><td>Ciklusközi értékelés</td></tr><tr><td>augusztus</td><td>Csúcs/specifikus</td><td>30 perces küszöb teszt</td><td>Utolsó zóna igazolás maraton előtt</td></tr><tr><td>október</td><td>Verseny</td><td>Maratoni versenynap</td><td>Végső teljesítményteszt</td></tr><tr><td>december</td><td>Felépülés/szezonon kívül</td><td>CRS teszt</td><td>A következő edzési ciklus alaphelyzete</td></tr></tbody></table><p>Tudjon meg többet a képzési év felépítéséről az útmutatónkban<a href="/hu/marathon-periodization/">maratoni periodizálás</a>.</p></section><section id="using-data"><h2>Tesztadatok használata edzéshez</h2><p>A teljesítményteszt adatai érdekes számokból gyakorlatias edzési útmutatásokká alakulnak, ha megfelelően alkalmazzák őket.</p><h3>Edzési zónák beállítása a teszteredményekből</h3><p>A CRS és a küszöbadatok birtokában állítsa be mind az öt edzészónát:</p><table><thead><tr><th>Zóna</th><th>A CRS %-a</th><th>a küszöb %-a</th><th>Példa (CRS=270 m/perc, 3:42/km)</th></tr></thead><tbody><tr><td><strong>1. zóna (helyreállítás)</strong></td><td>60-70%</td><td>55-65%</td><td>5:17-6:10/km (8:30-9:56/mérföld)</td></tr><tr><td><strong>2. zóna (aerob)</strong></td><td>70-85%</td><td>65-78%</td><td>4:21-5:17/km (7:01-8:30/mérföld)</td></tr><tr><td><strong>3. zóna (Tempo)</strong></td><td>85-95%</td><td>78-88%</td><td>3:54-4:21/km (6:16-7:01/mérföld)</td></tr><tr><td><strong>4. zóna (küszöbérték)</strong></td><td>95-105%</td><td>88-100%</td><td>3:32-3:54/km (5:41-6:16/mérföld)</td></tr><tr><td><strong>5. zóna (VO2max)</strong></td><td>105-120%</td><td>100-115%</td><td>3:05-3:32/km (4:58-5:41/mérföld)</td></tr></tbody></table><p>Használd a mi<a href="/hu/training-zones/">edzészóna kalkulátor</a>a teszteredményeken alapuló pontos zónaszámításhoz.</p><h3>A képzési fókuszterületek meghatározása</h3><p>A teszteredmények bizonyos figyelmet igénylő területeket tárnak fel:</p><ul><li><strong>Alacsony VO2max a küszöbhöz képest:</strong>Több aerob alapmunkára (2. zóna) és VO2max intervallumokra van szüksége</li><li><strong>Alacsony küszöb a VO2max-hez képest:</strong>Növelje az edzési küszöbértéket (tempófutások, utazási intervallumok)</li><li><strong>Rossz gazdaságosság a jó VO2max/küszöb ellenére:</strong>Koncentráljon a futóformára, az erősítő edzésekre és a technikai gyakorlatokra</li><li><strong>CRS fejlesztési plató:</strong>Szükség lehet az edzés térfogatának növelésére vagy az intenzitáseloszlás módosítására</li></ul><h3>A képzés beállítása a teszttrendek alapján</h3><table><thead><tr><th>Teszt eredményminta</th><th>Értelmezés</th><th>Edzés beállítása</th></tr></thead><tbody><tr><td>Folyamatos fejlesztés</td><td>A képzés hatékony</td><td>Folytassa a jelenlegi megközelítést</td></tr><tr><td>Plató 2-3 teszt után</td><td>Az alkalmazkodás befejeződött, új inger kell</td><td>Edzés előrehaladása: növelje a hangerőt, módosítsa az intenzitáskeveréket, vagy adjon hozzá új elemeket</td></tr><tr><td>Csökkenő teljesítmény</td><td>Túledzés, nem megfelelő felépülés vagy betegség</td><td>Csökkentse az edzésterhelést 30-50%-kal, összpontosítson a felépülésre, ellenőrizze az egyéb problémákat</td></tr><tr><td>Magas napi változékonyság</td><td>Inkonzisztens helyreállítási vagy tesztelési protokoll</td><td>A következetesség javítása: alvás, táplálkozás, stresszkezelés, tesztkörülmények</td></tr></tbody></table><h3>Az edzési stresszpontszám követése (TSS)</h3><p>Használja a CRS tesztet a számításhoz<a href="/hu/rtss-calculator/">rTSS (futási edzési stresszpontszám)</a>minden edzéshez.Ez számszerűsíti az edzésterhelést és segít a fáradtság kezelésében:</p><pre>rTSS = (Duration in seconds × Intensity Factor² × 100) / 3600
+
+Where Intensity Factor (IF) = Workout pace / CRS pace</pre><p>Heti TSS irányelvek a teszteredetű CRS alapján:</p><ul><li><strong>Alapépület:</strong>200-400 rTSS hetente, 80%+ a 2. zónában</li><li><strong>Építési fázis:</strong>300-500 rTSS hetente, 70-80% a 2. zónában</li><li><strong>Csúcs fázis:</strong>350-600 rTSS hetente, versenyspecifikus intenzitás</li><li><strong>Kúpos:</strong>30-50%-os csökkenés a heti TSS-ben</li></ul><p>Tudjon meg többet az edzésterhelés kezeléséről oldalunkon<a href="/hu/training-load/">edzésterhelési útmutató</a>.</p></section><section id="faq"><h2>Gyakran Ismételt Kérdések</h2><div class="faq-item"><h3>Milyen gyakran kell teljesítményteszteket végeznem?</h3><p>Tesztelje 6-8 hetente az alapépítés során, 4-6 hetente az építési fázisokban és 3-4 hetente a konkrét előkészítés során. Kerülje a szűkítő időszakok alatti tesztelést (2-3 héttel a célversenyek előtt). A gyakoribb tesztelés jobb adatokat biztosít, de gondos beépítést igényel az edzésbe a túlzott fáradtság elkerülése érdekében.</p></div><div class="faq-item"><h3>Csinálhatok több tesztet egy munkamenetben?</h3><p>Egy munkamenetben kombinálhatja a gazdaságosság értékelését küszöbértékkel vagy CRS teszttel, mivel a gazdaságossági teszt szubmaximális. Kerülje azonban a maximális tesztek (CRS + VO2max vagy küszöbérték + VO2max) ugyanazon a napon történő kombinálását – az első tesztből eredő fáradtság veszélyezteti a másodikat. Ha több mérőszámot is tesztelnie kell, a pontos eredmények érdekében 48-72 órás különbséggel tegye őket.</p></div><div class="faq-item"><h3>Mi a teendő, ha a teszt eredménye rosszabb a vártnál?</h3><p>A gyenge tesztteljesítmény oka lehet a nem megfelelő felépülés, a kumulatív fáradtság, az optimálisnál alacsonyabb körülmények, a betegség vagy egyszerűen egy rossz nap. Az edzés beállítása előtt 5-7 napos gyógyulás után ismételje meg a tesztet. Ha az eredmények továbbra is gyengék, csökkentse az edzésterhelést 30-40%-kal 1-2 hétig, gondoskodjon megfelelő alvásról és táplálkozásról, és ismételje meg a tesztet. A tartósan rossz eredmények orvosi értékelést igényelnek.</p></div><div class="faq-item"><h3>A helyszíni vizsgálatok ugyanolyan pontosak, mint a laboratóriumi vizsgálatok?</h3><p>A helyszíni tesztek 85-95%-os pontosságot biztosítanak a laboratóriumi vizsgálatokhoz képest a legtöbb mérőszám esetében. A CRS tesztelése a laboratóriumi kritikus teljesítmény/sebesség 2-3%-án belül van. A VO2max mező becslései 3-5%-on belül vannak. A küszöbvizsgálati pontosság az ingerlési képességtől függ – a jó ütemű tesztek a laboratóriumi értékek 1-2%-án belül vannak. Az enyhe pontossági veszteséget ellensúlyozza a kényelem, a költségmegtakarítás és a gyakori tesztelés lehetősége.</p></div><div class="faq-item"><h3>Futópadon vagy szabadban teszteljem?</h3><p>A pályán végzett kültéri tesztelést általában előnyben részesítik: ez a tényleges futásmechanikára vonatkozik, a GPS/óra pontos adatokat szolgáltat, a körülmények pedig megfelelnek a versenyhelyzeteknek. A futópad tesztelése elfogadható, ha az időjárás kedvezőtlen, de állítsa be a fokozatot 1%-ra, hogy megfeleljen a kültéri erőfeszítésnek, kalibrálja a futópad sebességét, ha lehetséges, és tartsa fenn az állandó tesztelési környezetet. Ne hasonlítsa össze közvetlenül a futópad és a kültéri tesztek eredményeit – válasszon egy módszert, és tartsa be azt.</p></div><div class="faq-item"><h3>Hogyan vehetem figyelembe a hőmérsékletet és az időjárást a teszteredményekben?</h3><p>A hőmérséklet jelentősen befolyásolja a teljesítményt: -2%-os teljesítmény várható 60°F felett minden 10°F-nál, és -1,5%-os 10°F-nál 40°F alatt. Mérsékelt körülmények között mérföldenként körülbelül -5-10 másodperc a szél. Minden tesztnél rögzítse az időjárási adatokat, és ennek megfelelően módosítsa az elvárásokat, vagy csak hasonlítsa össze a hasonló körülmények között végzett teszteket. Fontolja meg a tesztelést beltéren, pályán a maximális konzisztencia érdekében.</p></div><div class="faq-item"><h3>Használhatom a versenyeredményeket dedikált tesztek helyett?</h3><p>Igen, a versenyeredmények helyettesíthetik a teljesítményteszteket: a 10K-os verseny kiváló küszöbadatokat, az 5K-s a VO2max képességeket, a félmaratoni tempó pedig az aerob kapacitást mutatja. A versenyen végzett erőfeszítések azonban eltérnek a teszt erőfeszítéseitől (több érzelmi befektetés, változó ingerlés, versenyszerű túlfeszültség), ezért óvatosan használja a versenyadatokat az edzési zónák beállításához. Az ellenőrzött körülmények között végzett dedikált tesztek megbízhatóbb adatokat szolgáltatnak a napi edzési döntésekhez.</p></div><div class="faq-item"><h3>Milyen legyen a bemelegítésem a teljesítménytesztek előtt?</h3><p>A szabványos bemelegítés kritikus: 10 perc nagyon könnyű kocogás, 5 perc fokozatos előrehaladás mérsékelt tempóba, 5 perc dinamikus nyújtás, 4-5 lépés 80-100 m-ről a teszthez közeli tempóig, majd 3-5 perc könnyű rázás. Teljes bemelegítés: 25-30 perc. A hosszabb bemelegítések (legfeljebb 40 perc) előnyösek lehetnek egyes sportolóknak a küszöb és a VO2max teszteknél. Soha ne végezzen tesztet bemelegítés nélkül – az eredmények jelentősen romlanak.</p></div><div class="faq-item"><h3>Honnan tudhatom, hogy megfelelően ütemeztem-e a tesztet?</h3><p>A CRS teszteknél: a 3 perces próba „nagyon keménynek, de fenntarthatónak” kell, hogy tűnjön, 8-9/10 erőfeszítéssel. A 7 perces próba hasonlóan indul, de fokozatosan lelassul. Küszöb teszteknél: az erőfeszítésnek végig "kényelmesen keménynek" kell lennie, 7-8/10. Képesnek kell lennie 2-3 szót beszélni, de nem teljes mondatokat. Ha drámaian lassul az utolsó 25%-ban, vagy úgy érzed, hogy sokkal keményebben is mehettél volna, az ingerlés kikapcsolt. A tapasztalat javítja az ingerlést – 2-3 tesztciklus után jobb eredményekre számíthat.</p></div><div class="faq-item"><h3>A teszteredményeim alapján másképp edzek?</h3><p>Abszolút. A tesztek feltárják azokat az egyéni erősségeket és gyengeségeket, amelyeknek az edzési hangsúlyt kell irányítaniuk. Ha a VO2max alacsony a küszöbértékhez képest, helyezze előnyben az aerob bázist és a VO2max munkát. Ha a küszöb elmarad a VO2max értéktől, növelje a tempót és a küszöbértéket. A jó fiziológiai markerek ellenére gyenge gazdaságosság azt jelzi, hogy formai munkára, erősítő edzésre és technika finomítására van szükség. Az általános edzéstervek nem tudják figyelembe venni az egyéni fiziológiát – a tesztalapú személyre szabás kulcsfontosságú az optimalizált edzéshez.</p></div></section><section id="scientific-references"><h2>Tudományos hivatkozások</h2><p>A teljesítménytesztelési protokollok validált gyakorlatélettani és sporttudományi kutatásokon alapulnak:</p><div class="callout callout-info"><h3>Kulcsfontosságú kutatási dokumentumok</h3><ul><li><strong>Kritikus sebességteszt:</strong><a href="https://pubmed.ncbi.nlm.nih.gov/8775547/" rel="noopener" target="_blank">Jones AM, Doust JH. "Az 1%-os futópad minőség tükrözi a legpontosabban a szabadtéri futás energiaköltségét." J Sports Sci. 1996</a>- Kritikus sebesség protokoll érvényesítése</li><li><strong>Terepi teszt megbízhatósága:</strong><a href="https://pubmed.ncbi.nlm.nih.gov/15947721/" rel="noopener" target="_blank">Paavolainen L et al. "A neuromuszkuláris jellemzők és az izomerő, mint az 5 km-es futásteljesítmény meghatározói." Med Sci Sports Exerc. 1999</a>- Terepvizsgálati pontosság</li><li><strong>Küszöb tesztelés:</strong><a href="https://pubmed.ncbi.nlm.nih.gov/8887211/" rel="noopener" target="_blank">Beneke R. "A maximális laktát-egyensúlyi állapot-hatások módszertani vonatkozásai a teljesítménytesztekhez." Eur J Appl Physiol. 2003</a>- Laktát küszöb protokollok</li><li><strong>Gazdaságos tesztelés futtatása:</strong><a href="https://pubmed.ncbi.nlm.nih.gov/15076777/" rel="noopener" target="_blank">Saunders PU et al. "A futás gazdaságosságát befolyásoló tényezők képzett távfutóknál." Sport Med. 2004</a>- Gazdaságos mérési módszerek</li><li><strong>Teszt ismételhetősége:</strong><a href="https://pubmed.ncbi.nlm.nih.gov/17685687/" rel="noopener" target="_blank">Hopkins WG et al. "Progresszív statisztika a sportorvosi és testmozgástudományi tanulmányokhoz." Med Sci Sports Exerc. 2009</a>- Teljesítményvizsgálat megbízhatósága</li></ul></div></section><div class="article-footer"><p>Készen állsz, hogy teszteld a teljesítményed? Kezdje a<a href="/hu/crs/">CRS számológép</a>edzési zónáinak meghatározásához, majd nyomon követheti előrehaladását a segítségével<a href="/hu/rtss-calculator/">rTSS számítások</a>. Az átfogó futáselemzés és a teljesítménykövetés érdekében töltse le<a href="/hu/">Run Analytics</a>– az Ön privát, tudományos alapokon nyugvó tréningtársa.</p></div></article><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Teljesítménytesztek futtatása: Teljes útmutató a terepi teszteléshez",
+  "description": "Teljes útmutató a teljesítménytesztek futtatásához: CRS tesztelés, VO2max terepi tesztek, laktát küszöbértékek felmérése, gazdaságossági értékelés futtatása, tesztelési protokollok és adatok felhasználása edzésoptimalizáláshoz.",
+  "datePublished": "2025-01-27",
+  "dateModified": "2025-01-27",
+  "author": {
+    "@type": "Person",
+    "name": "Run Analytics csapat"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Run Analytics",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://run.analyticszone.app/static/images/logo.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://run.analyticszone.app/en/running-performance-tests/"
+  },
+  "keywords": [
+    "running performance tests",
+    "running field tests",
+    "CRS test",
+    "vo2max test",
+    "threshold test",
+    "running economy test",
+    "performance testing protocol",
+    "training zones",
+    "running analytics"
+  ]
+}</script><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Milyen gyakran kell teljesítményteszteket végeznem?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Tesztelje 6-8 hetente az alapépítés során, 4-6 hetente az építési fázisokban és 3-4 hetente a konkrét előkészítés során. Kerülje a szűkítő időszakok alatti tesztelést (2-3 héttel a célversenyek előtt)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Csinálhatok több tesztet egy munkamenetben?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A gazdaságossági értékelést kombinálhatja küszöbértékkel vagy CRS teszttel. Kerülje azonban a maximális tesztek (CRS + VO2max vagy küszöbérték + VO2max) ugyanazon a napon történő kombinálását – az első tesztből eredő fáradtság veszélyezteti a másodikat."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Mi a teendő, ha a teszt eredménye rosszabb a vártnál?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A gyenge tesztteljesítmény oka lehet a nem megfelelő felépülés, a kumulatív fáradtság, az optimálisnál alacsonyabb körülmények, a betegség vagy egyszerűen egy rossz nap. Az edzés beállítása előtt 5-7 napos gyógyulás után ismételje meg a tesztet. Ha az eredmények rosszak maradnak, csökkentse az edzésterhelést 30-40%-kal."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "A helyszíni vizsgálatok ugyanolyan pontosak, mint a laboratóriumi vizsgálatok?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A terepi tesztek 85-95%-os pontosságot biztosítanak a laboratóriumi vizsgálatokhoz képest. A CRS teszt a laboratóriumi értékek 2-3%-án belül van, a VO2max becslése 3-5%-on belül, a küszöbvizsgálat pedig 1-2%-on belül van jó ütemben."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Futópadon vagy szabadban teszteljem?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A pályán végzett szabadtéri tesztelést általában előnyben részesítik, mivel ez a tényleges futásmechanikára jellemző. A futópadon végzett tesztelés elfogadható, ha az időjárás megtiltja a kültéri tesztelést, de állítsa be a fokozatot 1%-ra, hogy megfeleljen a kültéri erőfeszítéseknek és állandó tesztelési környezetet biztosítson."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Hogyan vehetem figyelembe a hőmérsékletet és az időjárást a teszteredményekben?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "-2% teljesítményre számítson minden 10 °F felett 60 °F felett, és -1,5% minden 10 °F alatt 40 °F alatt. A szél mérföldenként körülbelül -5-10 másodpercbe kerül. Minden tesztnél rögzítse az időjárási adatokat, és ennek megfelelően állítsa be az elvárásokat."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Használhatom a versenyeredményeket dedikált tesztek helyett?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Igen, a versenyeredmények helyettesíthetik a teljesítményteszteket: a 10K-os verseny kiváló küszöbadatokat, az 5K pedig a VO2max képességeit fedi fel. Az ellenőrzött körülmények között végzett dedikált tesztek azonban megbízhatóbb adatokat szolgáltatnak az edzészóna beállításához."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Milyen legyen a bemelegítésem a teljesítménytesztek előtt?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "10 perc nagyon könnyű kocogás, 5 perc fokozatos előrehaladás, 5 perc dinamikus nyújtás, 4-5 lépés közeli teszttempóig, majd 3-5 perc könnyű rázás. Teljes bemelegítés: 25-30 perc."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Honnan tudhatom, hogy megfelelően ütemeztem-e a tesztet?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A CRS teszteknél a 3 perces próba 8-9/10 erőfeszítést igényel. A küszöbteszteknél az erőfeszítésnek 7-8/10-nek kell lennie – 2-3 szót kell tudnia beszélni, de nem teljes mondatokat. Ha drámaian lassul az utolsó 25%-ban, az ingerlés kikapcsolt."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "A teszteredményeim alapján másképp edzek?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Teljesen. A tesztek feltárják az egyéni erősségeket és gyengeségeket. Ha a VO2max alacsony a küszöbértékhez képest, részesítse előnyben az aerob bázist. Ha a küszöb elmarad a VO2max értéktől, növelje a tempó edzést. A rossz gazdaságosság azt jelzi, hogy formai munkára és erősítő edzésre van szükség."
+      }
+    }
+  ]
+}</script><section class="eeat-author bg-light divider-top-lg divider-bottom-lg" aria-label="Author and Reviewer Information"><div class="container container-narrow"><div class="eeat-card" style="display: flex; gap: 1.5rem; align-items: center; padding: 1.5rem; background: var(--color-bg-alt, #f8f9fa); border-radius: 8px; border: 1px solid var(--color-border, #e9ecef); margin-top: 3rem; margin-bottom: 2rem;"><div class="eeat-avatar" style="font-size: 2.5rem; line-height: 1; flex-shrink: 0;" aria-hidden="true">👨‍🔬</div><div class="eeat-details"><h3 style="margin: 0 0 0.5rem 0; font-size: 1.125rem; font-weight: 600;">
+          Expertly Reviewed by 
+          <span itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">AnalyticsZone Team</span></span></h3><p style="margin: 0 0 0.5rem 0; font-size: 0.95rem; color: var(--color-body-text, #4a5568); line-height: 1.5;">
+          This content has been written and reviewed by a sports data metrics expert to ensure technical accuracy and adherence to the latest sports science methodologies.
+        </p></div></div></div></section><section class="ai-citation-block divider-top-xl" data-ai-ready="true" data-ai-page="running-performance-tests"><div class="container ai-citation-shell"><h2 class="ai-citation-title">Futásteljesítmény-tesztek: Teljes útmutató a teszteléshez</h2><p class="ai-citation-answer">Közzétéve: 2025. január 27. | Frissítve: 2025. január 29. Futásteljesítmény-tesztek: Teljes útmutató a teszteléshez</p><ul class="ai-citation-facts" role="list"><li class="ai-citation-fact"><span class="ai-citation-icon" aria-hidden="true">📅</span><span>2026-03-24</span></li><li class="ai-citation-fact ai-citation-keywords"><span class="ai-citation-icon" aria-hidden="true">🏷️</span><span>futásteljesítmény tesztek · terep tesztek · CRS teszt · vo2max teszt futás · küszöbteszt</span></li><li class="ai-citation-fact"><span class="ai-citation-icon" aria-hidden="true">🔬</span><a href="../../hu/bibliography/">
+          
+          Bibliográfia
+          
+        </a></li></ul></div></section></main><footer class="site-footer"><div class="container"><div class="footer-top"><div class="footer-brand-section"><h2>Run Analytics</h2><p>Track Critical Running Speed, Training Stress Score, and performance metrics with Run Analytics. Science-based iOS app for runners, triathletes &amp; coaches. 7-day free trial.</p></div><div class="footer-download"><h3 class="footer-heading">Letöltés</h3><div class="footer-badges"><a href="https://apps.apple.com/us/app/run-analytics/id6754524015" target="_blank" rel="noopener"
+                        aria-label="Töltse le a App Store-ről"><img src="../../assets/images/badge-app-store.svg"
+                            alt="Töltse le a App Store-ről" width="135"
+                            height="40" loading="lazy"></a><a href="https://play.google.com/store/apps/details?id=com.arnohealth.runanalytics" target="_blank" rel="noopener"
+                        aria-label="Szerezd meg a Google Playen"><img src="../../assets/images/badge-google-play.svg"
+                            alt="Szerezd meg a Google Playen" width="135"
+                            height="40" loading="lazy"></a></div></div></div><div class="footer-languages"><h3 class="footer-heading">Elérhető:</h3><div class="lang-grid"><a href="/af/" class="lang-link"
+                    hreflang="af" >
+                    Afrikaans
+                </a><a href="/am/" class="lang-link"
+                    hreflang="am" >
+                    አማርኛ
+                </a><a href="/ar/" class="lang-link"
+                    hreflang="ar" dir="rtl" >
+                    العربية
+                </a><a href="/bg/" class="lang-link"
+                    hreflang="bg" >
+                    Български
+                </a><a href="/bn/" class="lang-link"
+                    hreflang="bn" >
+                    বাংলা
+                </a><a href="/ca/" class="lang-link"
+                    hreflang="ca" >
+                    Català
+                </a><a href="/cs/" class="lang-link"
+                    hreflang="cs" >
+                    Čeština
+                </a><a href="/da/" class="lang-link"
+                    hreflang="da" >
+                    Dansk
+                </a><a href="/de/" class="lang-link"
+                    hreflang="de" >
+                    Deutsch
+                </a><a href="/el/" class="lang-link"
+                    hreflang="el" >
+                    Ελληνικά
+                </a><a href="/en/" class="lang-link"
+                    hreflang="en" >
+                    English
+                </a><a href="/es/" class="lang-link"
+                    hreflang="es" >
+                    Español
+                </a><a href="/et/" class="lang-link"
+                    hreflang="et" >
+                    Eesti
+                </a><a href="/fa/" class="lang-link"
+                    hreflang="fa" dir="rtl" >
+                    فارسی
+                </a><a href="/fi/" class="lang-link"
+                    hreflang="fi" >
+                    Suomi
+                </a><a href="/fr/" class="lang-link"
+                    hreflang="fr" >
+                    Français
+                </a><a href="/gu/" class="lang-link"
+                    hreflang="gu" >
+                    ગુજરાતી
+                </a><a href="/ha/" class="lang-link"
+                    hreflang="ha" >
+                    Hausa
+                </a><a href="/he/" class="lang-link"
+                    hreflang="he" dir="rtl" >
+                    עברית
+                </a><a href="/hi/" class="lang-link"
+                    hreflang="hi" >
+                    हिन्दी
+                </a><a href="/hr/" class="lang-link"
+                    hreflang="hr" >
+                    Hrvatski
+                </a><a href="/hu/" class="lang-link active"
+                    hreflang="hu" >
+                    Magyar
+                </a><a href="/id/" class="lang-link"
+                    hreflang="id" >
+                    Bahasa Indonesia
+                </a><a href="/is/" class="lang-link"
+                    hreflang="is" >
+                    Íslenska
+                </a><a href="/it/" class="lang-link"
+                    hreflang="it" >
+                    Italiano
+                </a><a href="/ja/" class="lang-link"
+                    hreflang="ja" >
+                    日本語
+                </a><a href="/km/" class="lang-link"
+                    hreflang="km" >
+                    ភាសាខ្មែរ
+                </a><a href="/kn/" class="lang-link"
+                    hreflang="kn" >
+                    ಕನ್ನಡ
+                </a><a href="/ko/" class="lang-link"
+                    hreflang="ko" >
+                    한국어
+                </a><a href="/lt/" class="lang-link"
+                    hreflang="lt" >
+                    Lietuvių
+                </a><a href="/lv/" class="lang-link"
+                    hreflang="lv" >
+                    Latviešu
+                </a><a href="/ms/" class="lang-link"
+                    hreflang="ms" >
+                    Bahasa Melayu
+                </a><a href="/my/" class="lang-link"
+                    hreflang="my" >
+                    မြန်မာစာ
+                </a><a href="/nb/" class="lang-link"
+                    hreflang="nb" >
+                    Norsk Bokmål
+                </a><a href="/nl/" class="lang-link"
+                    hreflang="nl" >
+                    Nederlands
+                </a><a href="/pl/" class="lang-link"
+                    hreflang="pl" >
+                    Polski
+                </a><a href="/pt/" class="lang-link"
+                    hreflang="pt" >
+                    Português
+                </a><a href="/pt-br/" class="lang-link"
+                    hreflang="pt-br" >
+                    Português (Brasil)
+                </a><a href="/ro/" class="lang-link"
+                    hreflang="ro" >
+                    Română
+                </a><a href="/ru/" class="lang-link"
+                    hreflang="ru" >
+                    Русский
+                </a><a href="/sk/" class="lang-link"
+                    hreflang="sk" >
+                    Slovenčina
+                </a><a href="/sl/" class="lang-link"
+                    hreflang="sl" >
+                    Slovenščina
+                </a><a href="/sr/" class="lang-link"
+                    hreflang="sr" >
+                    Srpski
+                </a><a href="/sv/" class="lang-link"
+                    hreflang="sv" >
+                    Svenska
+                </a><a href="/sw/" class="lang-link"
+                    hreflang="sw" >
+                    Kiswahili
+                </a><a href="/ta/" class="lang-link"
+                    hreflang="ta" >
+                    தமிழ்
+                </a><a href="/te/" class="lang-link"
+                    hreflang="te" >
+                    తెలుగు
+                </a><a href="/th/" class="lang-link"
+                    hreflang="th" >
+                    ไทย
+                </a><a href="/tl/" class="lang-link"
+                    hreflang="tl" >
+                    Tagalog
+                </a><a href="/tr/" class="lang-link"
+                    hreflang="tr" >
+                    Türkçe
+                </a><a href="/uk/" class="lang-link"
+                    hreflang="uk" >
+                    Українська
+                </a><a href="/ur/" class="lang-link"
+                    hreflang="ur" dir="rtl" >
+                    اردو
+                </a><a href="/vi/" class="lang-link"
+                    hreflang="vi" >
+                    Tiếng Việt
+                </a><a href="/yo/" class="lang-link"
+                    hreflang="yo" >
+                    Yorùbá
+                </a><a href="/zh/" class="lang-link"
+                    hreflang="zh" >
+                    中文
+                </a></div></div><div class="footer-divider"></div><div class="footer-bottom"><p class="copyright">
+                &copy; 2026 Run Analytics. Minden jog fenntartva
+            </p><ul class="footer-legal"><li><a href="/hu/privacy/">Adatvédelem</a></li><li><a href="/hu/terms/">Feltételek</a></li></ul></div></div></footer><div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="Cookie consent" aria-live="polite"><div class="cookie-banner-content"><div><p>Ez a weboldal sütiket használ az élmény javítására.</p><a href="/hu/privacy/" class="text-sm">Tudjon meg többet</a></div><div class="cookie-banner-actions"><button id="cookie-decline" class="btn btn-secondary btn-small">Elutasítom</button><button id="cookie-accept" class="btn btn-primary btn-small">Elfogadom</button></div></div></div><script src="../../assets/js/core.min.js?v=62ba6be7" defer></script><script src="../../assets/js/search.min.js?v=62ba6be7" defer></script><script src="../../assets/js/analytics.min.js" data-ga-id="G-Y138VB4523" defer></script><script>if ('serviceWorker' in navigator) { navigator.serviceWorker.register('../../sw.js') }</script></body></html>
