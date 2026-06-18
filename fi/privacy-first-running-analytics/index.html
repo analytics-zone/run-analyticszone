@@ -1,0 +1,777 @@
+<!DOCTYPE html><html lang="fi" dir="ltr"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=optional"
+    rel="stylesheet"><title>Yksityisyyteen perustuva juoksuanalyysi: Sinun tietosi,</title><meta name="description" content="Harjoittele älykkäämmin ilman yksityisyyden uhrausta. Tutustu siihen, kuinka paikallinen tietojen käsittely antaa sinulle täyden hallinnan juoksuanalyysiin."><meta name="author" content="AnalyticsZone Team"><meta name="keywords" content="yksityisyys juoksu sovellus, yksityisyys kuntoilu seuranta, paikallinen datan käsittely juoksu, GDPR kuntoilu sovellukset, sijainti yksityisyys juoksu, anonyymi juoksuanalyysi, ei pilvi juoksu sovellus, yksityinen juoksun seuranta"><link rel="canonical" href="https://run.analyticszone.app/fi/privacy-first-running-analytics/"><meta property="article:published_time" content="2025-01-15T10:00:00Z"><meta property="article:modified_time" content="2026-03-24T14:30:00Z"><meta property="article:author" content="AnalyticsZone Team"><meta property="og:type" content="article"><meta property="og:url" content="https://run.analyticszone.app/fi/privacy-first-running-analytics/"><meta property="og:title" content="Yksityisyyteen perustuva juoksuanalyysi: Sinun tietosi,"><meta property="og:description" content="Harjoittele älykkäämmin ilman yksityisyyden uhrausta. Tutustu siihen, kuinka paikallinen tietojen käsittely antaa sinulle täyden hallinnan juoksuanalyysiin."><meta property="og:image" content="https://run.analyticszone.app/assets/images/og-image.svg"><meta property="og:locale" content="fi_FI"><meta property="og:site_name" content="Run Analytics"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:url" content="https://run.analyticszone.app/fi/privacy-first-running-analytics/"><meta name="twitter:title" content="Yksityisyyteen perustuva juoksuanalyysi: Sinun tietosi,"><meta name="twitter:description" content="Harjoittele älykkäämmin ilman yksityisyyden uhrausta. Tutustu siihen, kuinka paikallinen tietojen käsittely antaa sinulle täyden hallinnan juoksuanalyysiin."><meta name="twitter:image" content="https://run.analyticszone.app/assets/images/og-image.svg"><meta name="twitter:site" content="@runanalytics"><meta name="twitter:creator" content="@runanalytics"><link rel="alternate" hreflang="ar"
+    href="https://run.analyticszone.app/ar/privacy-first-running-analytics/"><link rel="alternate" hreflang="de"
+    href="https://run.analyticszone.app/de/privacy-first-running-analytics/"><link rel="alternate" hreflang="en"
+    href="https://run.analyticszone.app/en/privacy-first-running-analytics/"><link rel="alternate" hreflang="es"
+    href="https://run.analyticszone.app/es/privacy-first-running-analytics/"><link rel="alternate" hreflang="fr"
+    href="https://run.analyticszone.app/fr/privacy-first-running-analytics/"><link rel="alternate" hreflang="hi"
+    href="https://run.analyticszone.app/hi/privacy-first-running-analytics/"><link rel="alternate" hreflang="id"
+    href="https://run.analyticszone.app/id/privacy-first-running-analytics/"><link rel="alternate" hreflang="it"
+    href="https://run.analyticszone.app/it/privacy-first-running-analytics/"><link rel="alternate" hreflang="ja"
+    href="https://run.analyticszone.app/ja/privacy-first-running-analytics/"><link rel="alternate" hreflang="ko"
+    href="https://run.analyticszone.app/ko/privacy-first-running-analytics/"><link rel="alternate" hreflang="nl"
+    href="https://run.analyticszone.app/nl/privacy-first-running-analytics/"><link rel="alternate" hreflang="pl"
+    href="https://run.analyticszone.app/pl/privacy-first-running-analytics/"><link rel="alternate" hreflang="pt"
+    href="https://run.analyticszone.app/pt/privacy-first-running-analytics/"><link rel="alternate" hreflang="pt-br"
+    href="https://run.analyticszone.app/pt-br/privacy-first-running-analytics/"><link rel="alternate" hreflang="ru"
+    href="https://run.analyticszone.app/ru/privacy-first-running-analytics/"><link rel="alternate" hreflang="sv"
+    href="https://run.analyticszone.app/sv/privacy-first-running-analytics/"><link rel="alternate" hreflang="tr"
+    href="https://run.analyticszone.app/tr/privacy-first-running-analytics/"><link rel="alternate" hreflang="zh"
+    href="https://run.analyticszone.app/zh/privacy-first-running-analytics/"><link rel="alternate" hreflang="x-default"
+    href="https://run.analyticszone.app/en/privacy-first-running-analytics/"><link rel="icon" type="image/png" sizes="32x32" href="../../assets/images/icons/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="../../assets/images/icons/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="../../assets/images/icons/apple-touch-icon.png"><link rel="manifest" href="../../manifest.json"><meta name="theme-color" content="#2563EB"><meta name="robots" content="noindex, follow"><meta name="apple-itunes-app" content="app-id=6754524015"><style>
+/* Critical CSS - Above the fold styles for fast LCP */
+:root {
+  --color-primary: #0066CC;
+  --color-text: #1a1a1a;
+  --color-text-muted: #666;
+  --color-bg: #ffffff;
+  --color-bg-alt: #f8f9fa;
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+}
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  color: var(--color-text);
+  background: var(--color-bg);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Skip link - Accessibility */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--color-primary);
+  color: #fff;
+  padding: 8px 16px;
+  z-index: 1000;
+  text-decoration: none;
+}
+.skip-link:focus {
+  top: 0;
+}
+
+/* Header - Critical for LCP */
+.site-header {
+  background: var(--color-bg);
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0.75rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.site-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: var(--color-text);
+  font-weight: 600;
+  font-size: 1.125rem;
+}
+
+.site-logo img, .site-logo svg {
+  width: 32px;
+  height: 32px;
+}
+
+/* Navigation */
+.main-nav {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .main-nav {
+    display: flex;
+    gap: 1.5rem;
+  }
+  .main-nav a {
+    color: var(--color-text);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9375rem;
+    transition: color 0.2s;
+  }
+  .main-nav a:hover {
+    color: var(--color-primary);
+  }
+}
+
+/* Mobile menu button */
+.menu-toggle {
+  display: flex;
+  background: none;
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .menu-toggle {
+    display: none;
+  }
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Main content */
+main.main-content {
+  flex: 1;
+}
+
+/* Hero section - Critical for LCP */
+.hero {
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .hero {
+    padding: 4rem 2rem;
+  }
+}
+
+.hero h1 {
+  font-size: clamp(1.75rem, 5vw, 3rem);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  color: var(--color-text);
+}
+
+.hero .lead, .hero p {
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  color: var(--color-text-muted);
+  max-width: 700px;
+  margin: 0 auto 1.5rem;
+}
+
+/* Buttons - Critical for CTA */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: var(--radius-md);
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-primary {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: #0052a3;
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+}
+
+.btn-large {
+  padding: 1rem 2rem;
+  font-size: 1.125rem;
+}
+
+/* Utility classes */
+.hidden { display: none !important; }
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Images - prevent CLS with aspect-ratio */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+img[width][height] {
+  aspect-ratio: attr(width) / attr(height);
+}
+
+.lazy-image {
+  background: var(--color-bg-alt);
+  transition: opacity 0.3s;
+}
+
+.lazy-image:not(.loaded) {
+  opacity: 0;
+}
+
+.lazy-image.loaded {
+  opacity: 1;
+}
+
+/* App badges - fixed dimensions to prevent CLS */
+.app-badge img {
+  width: 140px;
+  height: 42px;
+}
+
+/* Logo - fixed dimensions */
+.site-logo img {
+  width: 32px;
+  height: 32px;
+}
+
+/* Reduce motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+</style><link rel="preconnect" href="https://www.googletagmanager.com"><link rel="dns-prefetch" href="https://www.googletagmanager.com"><link rel="stylesheet" href="../../assets/css/main.min.css?v=1c7ace58"><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Run Analytics",
+  "url": "https://run.analyticszone.app",
+  "logo": "https://run.analyticszone.app/assets/images/logo.png",
+  "description": "Track Critical Running Speed, Training Stress Score, and performance metrics with Run Analytics. Science-based iOS app for runners, triathletes &amp; coaches. 7-day free trial.",
+  
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "Customer Support",
+    "email": "analyticszone+run@onmedic.org"
+  },
+  
+  "sameAs": [
+    
+    
+      
+    
+    
+      
+    
+    
+      
+    
+    
+    "https://twitter.com/runanalytics",
+    
+    "https://apps.apple.com/us/app/run-analytics/id6754524015",
+    
+    "https://play.google.com/store/apps/details?id=com.arnohealth.runanalytics"
+    
+  ]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Run Analytics",
+  "url": "https://run.analyticszone.app",
+  "description": "Track Critical Running Speed, Training Stress Score, and performance metrics with Run Analytics. Science-based iOS app for runners, triathletes &amp; coaches. 7-day free trial.",
+  "inLanguage": "fi"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Run Analytics",
+  "description": "Track Critical Running Speed, Training Stress Score, and performance metrics with Run Analytics. Science-based iOS app for runners, triathletes &amp; coaches. 7-day free trial.",
+  "url": "https://run.analyticszone.app",
+  "applicationCategory": ["HealthApplication", "FitnessApplication"],
+  "operatingSystem": "iOS, Android",
+  "author": {
+    "@type": "Organization",
+    "name": "AnalyticsZone Team"
+  },
+  "downloadUrl": "https://apps.apple.com/us/app/run-analytics/id6754524015"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Yksityisyyteen perustuva juoksuanalyysi: Sinun tietosi,",
+  "description": "Harjoittele älykkäämmin ilman yksityisyyden uhrausta. Tutustu siihen, kuinka paikallinen tietojen käsittely antaa sinulle täyden hallinnan juoksuanalyysiin.",
+  "url": "https://run.analyticszone.app/fi/privacy-first-running-analytics/",
+  "inLanguage": "fi",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "Run Analytics",
+    "url": "https://run.analyticszone.app"
+  },
+  "datePublished": "2025-01-15",
+  "dateModified": "2026-03-24",
+  "keywords": ["yksityisyys juoksu sovellus", "yksityisyys kuntoilu seuranta", "paikallinen datan käsittely juoksu", "GDPR kuntoilu sovellukset", "sijainti yksityisyys juoksu", "anonyymi juoksuanalyysi", "ei pilvi juoksu sovellus", "yksityinen juoksun seuranta"],
+  "about": [
+    {
+      "@type": "Thing",
+      "name": "yksityisyys juoksu sovellus"
+    }, 
+  
+    {
+      "@type": "Thing",
+      "name": "yksityisyys kuntoilu seuranta"
+    }, 
+  
+    {
+      "@type": "Thing",
+      "name": "paikallinen datan käsittely juoksu"
+    }, 
+  
+    {
+      "@type": "Thing",
+      "name": "GDPR kuntoilu sovellukset"
+    }, 
+  
+    {
+      "@type": "Thing",
+      "name": "sijainti yksityisyys juoksu"
+    }, 
+  
+    {
+      "@type": "Thing",
+      "name": "anonyymi juoksuanalyysi"
+    }, 
+  
+    {
+      "@type": "Thing",
+      "name": "ei pilvi juoksu sovellus"
+    }, 
+  
+    {
+      "@type": "Thing",
+      "name": "yksityinen juoksun seuranta"
+    }
+  ]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Yksityisyyteen perustuva juoksuanalyysi: Sinun tietosi,",
+  "description": "Harjoittele älykkäämmin ilman yksityisyyden uhrausta. Tutustu siihen, kuinka paikallinen tietojen käsittely antaa sinulle täyden hallinnan juoksuanalyysiin.",
+  "author": {
+    "@type": "Person",
+    "name": "AnalyticsZone Team"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Run Analytics",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://run.analyticszone.app/assets/images/logo.png"
+    }
+  },
+  "datePublished": "2025-01-15",
+  "dateModified": "2026-03-24",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://run.analyticszone.app/fi/privacy-first-running-analytics/"
+  }
+}
+</script><script>
+    (function () {
+      let theme = localStorage.getItem('theme');
+      // Older builds could persist a per-subdomain `theme=light` value without a UI
+      // to keep it consistent across apps. Treat it as stale and fall back to the OS.
+      if (theme === 'light') {
+        try { localStorage.removeItem('theme'); } catch (e) { /* ignore */ }
+        theme = null;
+      }
+
+      if (theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark-mode');
+      }
+    })();
+  </script></head><body><a href="#main-content" class="skip-link">Siirry sisältöön</a><header class="site-header"><div class="container"><div class="header-inner"><a href="/fi/" class="site-logo"><picture><source srcset="../../assets/images/logo-dark.png" type="image/png"
+                        media="(prefers-color-scheme: dark)"><img src="../../assets/images/logo.png" alt="Run Analytics - Running Analytics App | Critical Running Speed, TSS, CTL/ATL/TSB for iOS" width="56" height="56"></picture><span class="logo-text">Run Analytics</span></a><nav class="nav-primary" id="nav-primary" role="navigation" aria-label="Main navigation"><div class="nav-group-left"><ul><li><a href="/fi/" 
+                                aria-current="">
+                                Etusivu
+                            </a></li><li class="has-submenu" ><a href="/fi/getting-started/" class="nav-label">Opi</a><ul class="submenu"><li><a href="/fi/getting-started/" 
+                                        aria-current="">
+                                        Aloittaminen
+                                    </a></li><li><a href="/fi/crs/" 
+                                        aria-current="">
+                                        CRS
+                                    </a></li><li><a href="/fi/training-zones/" 
+                                        aria-current="">
+                                        Harjoitusalueet
+                                    </a></li><li><a href="/fi/training-load/" 
+                                        aria-current="">
+                                        Harjoituskuorma
+                                    </a></li><li><a href="/fi/rtss-calculator/" 
+                                        aria-current="">
+                                        rTSS Laskin
+                                    </a></li></ul></li><li class="has-submenu" ><a href="/fi/research/" class="nav-label">Tiede</a><ul class="submenu"><li><a href="/fi/research/" 
+                                        aria-current="">
+                                        Tutkimus
+                                    </a></li><li><a href="/fi/formulas/" 
+                                        aria-current="">
+                                        Kaavat
+                                    </a></li><li><a href="/fi/efficiency/" 
+                                        aria-current="">
+                                        Tehokkuus
+                                    </a></li><li><a href="/fi/stride-mechanics/" 
+                                        aria-current="">
+                                        Askelmekanikka
+                                    </a></li><li><a href="/fi/bibliography/" 
+                                        aria-current="">
+                                        Bibliografia
+                                    </a></li></ul></li><li><a href="/fi/contact/" 
+                                aria-current="">
+                                Ota yhteyttä
+                            </a></li></ul><div class="search-container"><svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.35-4.35"></path></svg><input type="search" id="site-search" class="search-input" aria-expanded="false"
+                            aria-haspopup="listbox" aria-autocomplete="list" autocomplete="off" spellcheck="false" /><div id="search-results" class="search-results hidden" role="region" aria-live="polite"></div></div><select class="language-selector" id="language-select" aria-label="Valitse kieli"><option value="af" >
+                            Afrikaans
+                        </option><option value="am" >
+                            አማርኛ
+                        </option><option value="ar" >
+                            العربية
+                        </option><option value="bg" >
+                            Български
+                        </option><option value="bn" >
+                            বাংলা
+                        </option><option value="ca" >
+                            Català
+                        </option><option value="cs" >
+                            Čeština
+                        </option><option value="da" >
+                            Dansk
+                        </option><option value="de" >
+                            Deutsch
+                        </option><option value="el" >
+                            Ελληνικά
+                        </option><option value="en" >
+                            English
+                        </option><option value="es" >
+                            Español
+                        </option><option value="et" >
+                            Eesti
+                        </option><option value="fa" >
+                            فارسی
+                        </option><option value="fi" selected>
+                            Suomi
+                        </option><option value="fr" >
+                            Français
+                        </option><option value="gu" >
+                            ગુજરાતી
+                        </option><option value="ha" >
+                            Hausa
+                        </option><option value="he" >
+                            עברית
+                        </option><option value="hi" >
+                            हिन्दी
+                        </option><option value="hr" >
+                            Hrvatski
+                        </option><option value="hu" >
+                            Magyar
+                        </option><option value="id" >
+                            Bahasa Indonesia
+                        </option><option value="is" >
+                            Íslenska
+                        </option><option value="it" >
+                            Italiano
+                        </option><option value="ja" >
+                            日本語
+                        </option><option value="km" >
+                            ភាសាខ្មែរ
+                        </option><option value="kn" >
+                            ಕನ್ನಡ
+                        </option><option value="ko" >
+                            한국어
+                        </option><option value="lt" >
+                            Lietuvių
+                        </option><option value="lv" >
+                            Latviešu
+                        </option><option value="ms" >
+                            Bahasa Melayu
+                        </option><option value="my" >
+                            မြန်မာစာ
+                        </option><option value="nb" >
+                            Norsk Bokmål
+                        </option><option value="nl" >
+                            Nederlands
+                        </option><option value="pl" >
+                            Polski
+                        </option><option value="pt" >
+                            Português
+                        </option><option value="pt-br" >
+                            Português (Brasil)
+                        </option><option value="ro" >
+                            Română
+                        </option><option value="ru" >
+                            Русский
+                        </option><option value="sk" >
+                            Slovenčina
+                        </option><option value="sl" >
+                            Slovenščina
+                        </option><option value="sr" >
+                            Srpski
+                        </option><option value="sv" >
+                            Svenska
+                        </option><option value="sw" >
+                            Kiswahili
+                        </option><option value="ta" >
+                            தமிழ்
+                        </option><option value="te" >
+                            తెలుగు
+                        </option><option value="th" >
+                            ไทย
+                        </option><option value="tl" >
+                            Tagalog
+                        </option><option value="tr" >
+                            Türkçe
+                        </option><option value="uk" >
+                            Українська
+                        </option><option value="ur" >
+                            اردو
+                        </option><option value="vi" >
+                            Tiếng Việt
+                        </option><option value="yo" >
+                            Yorùbá
+                        </option><option value="zh" >
+                            中文
+                        </option></select></div><div class="nav-group-right"><div class="header-app-buttons"><a href="https://apps.apple.com/us/app/run-analytics/id6754524015" class="header-download-btn" target="_blank"
+                            rel="noopener" aria-label="Download on App Store" title="Download on App Store"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="currentColor"><path
+                                    d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z" /></svg></a><a href="https://play.google.com/store/apps/details?id=com.arnohealth.runanalytics" class="header-download-btn" target="_blank"
+                            rel="noopener" aria-label="Get it on Google Play" title="Get it on Google Play"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="currentColor"><path
+                                    d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.92 20.16,13.19L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M16.81,8.88L14.54,11.15L6.05,2.66L16.81,8.88Z" /></svg></a></div><div class="suite-menu-container"><button class="suite-menu-toggle" id="suite-menu-toggle" aria-label="See other apps"
+                            aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg></button><div class="suite-dropdown hidden" id="suite-dropdown"><div class="suite-dropdown-header">Other AnalyticsZone Apps</div><div class="suite-apps-grid"><a href="https://analyticszone.app" class="suite-app-link">AnalyticsZone</a><a href="https://swim.analyticszone.app" class="suite-app-link">Swim Analytics</a><a href="https://bike.analyticszone.app" class="suite-app-link">Bike Analytics</a><a href="https://walk.analyticszone.app" class="suite-app-link">Walk Analytics</a><a href="https://cardio.analyticszone.app" class="suite-app-link">Cardio Analytics</a><a href="https://health.analyticszone.app" class="suite-app-link">Health Analytics</a><a href="https://swimtrainer.analyticszone.app" class="suite-app-link">Swim Trainer</a><a href="https://hike.analyticszone.app" class="suite-app-link">Hike Analytics</a><a href="https://sleep.analyticszone.app" class="suite-app-link">Sleep Analytics</a><a href="https://paceva.analyticszone.app" class="suite-app-link">Paceva Analytics</a></div></div></div></div></nav><button class="menu-toggle" id="menu-toggle" aria-label="Vaihda valikko"
+                aria-expanded="false" aria-controls="nav-primary"><span></span><span></span><span></span></button></div></div></header><main id="main-content" class="main-content"><section class="page-hero"><div class="container"><h1>Tietosuoja - Ensin suoritettava analyysi: tietosi, laitteesi</h1><p class="lead">Harjoittele älykkäämmin vaarantamatta yksityisyyttäsi. Tutustu siihen, kuinka paikallinen tietojenkäsittely antaa sinulle täydellisen hallinnan käynnissä olevasta analytiikkastasi ja samalla suojaat sijaintisi, terveystietosi ja henkilötietosi.</p></div></section><section class="section"><div class="container container-narrow"><div class="callout callout-success mb-xl"><h2>Key Takeaways</h2><ul class="key-points"><li><strong>Tietosi paljastavat elämäsi:</strong>Käynnissä olevat sovellukset keräävät GPS-sijainnin (koti/työ), terveystietoja ja harjoituskuvioita, jotka paljastavat, kun olet poissa kotoa</li><li><strong>Pilven tietosuojaongelma:</strong>Useimmat sovellukset lataavat tietosi palvelimille, tallentavat ne määräämättömäksi ajaksi ja jakavat ne kolmansien osapuolten kanssa – sinulla ei ole hallintaa latauksen jälkeen</li><li><strong>Tietosuoja ensimmäinen ratkaisu:</strong>Paikallinen tietojenkäsittely pitää KAIKKI analytiikkatiedot laitteellasi – ei pilvilatauksia, ei tilejä, ei seurantaa</li><li><strong>Run Analytics ero:</strong>100 % paikallista käsittelyä varten<a href="/fi/crs/">Kriittinen juoksunopeus</a>,<a href="/fi/training-load/">TSS/CTL/ATL/TSB</a>, ja<a href="/fi/training-zones/">harjoitusalueet</a>-käyttötietosi eivät koskaan poistu iPhone:stä</li><li><strong>Suunniteltu GDPR-yhteensopivuus:</strong>Kun sovellukset eivät kerää tietoja, ne eivät voi rikkoa tietosuojalakeja.</li></ul></div><article itemscope="" itemtype="https://schema.org/Article"><meta content="Privacy-First Running Analytics: Your Data, Your Device" itemprop="headline"/><meta content="Privacy-first running analytics with 100% local data processing. No cloud, no tracking, no account required. Your running data stays on your device." itemprop="description"/><meta content="2025-01-15T10:00:00Z" itemprop="datePublished"/><meta content="2025-10-29T18:00:00Z" itemprop="dateModified"/><meta content="Run Analytics" itemprop="author"/><p class="lead">Juoksutietosi kertovat tarinasi elämästäsi. GPS-jäljet ​​paljastavat missä asut ja työskentelet. Harjoittelumallit näkyvät, kun olet poissa kotoa. Syketiedot paljastavat kuntotasosi ja terveydentilasi. Useimmat käynnissä olevat sovellukset keräävät kaikki nämä tiedot, lataavat ne pilvipalvelimille ja tallentavat niitä määräämättömäksi ajaksi – usein jakaen ne kolmansien osapuolten kanssa, joista et ole koskaan kuullut.</p><p>Mutta älykäs harjoittelu ei vaadi yksityisyyden uhraamista. Tämä kattava opas paljastaa suosittujen käynnissä olevien sovellusten tietosuojaongelmat, selittää, kuinka paikallinen tietojenkäsittely toimii, ja näyttää, kuinka yksityisyyttä ensin suoritettava analytiikka suojaa arkaluontoisia tietojasi ja tarjoaa samalla edistyneitä mittareita, joita kilpailijat tarvitsevat.</p><h2 id="privacy-problem">Miksi yksityisyys on tärkeää juoksijoille</h2><p>Juoksusovelluksista on tullut välttämättömiä harjoitustyökaluja, mutta niiden tiedonkeruukäytännöt aiheuttavat vakavia tietosuojaongelmia, joita useimmat juoksijat eivät täysin ymmärrä. Toisin kuin tavallinen sovellusten käyttö, analytiikka paljastaa syvästi henkilökohtaisia ​​tietoja päivittäisestä elämästäsi, terveydentilastasi ja käyttäytymismalleistasi.</p><h3>Mitä tietoja käynnissä olevat sovellukset keräävät</h3><p>Kun käytät tyypillistä pilvipohjaista juoksusovellusta, tarjoat paljon muutakin kuin vain harjoitustilastoja:</p><div class="warning-box"><strong>⚠️ Tiedonkeruun todellisuus:</strong><ul><li><strong>GPS-sijaintitiedot:</strong>Tarkat koordinaatit jokaisen juoksun jokaiselle metrille, paljastaen kotiosoitteen, työpaikan, usein vierailevat paikat ja säännölliset reitit</li><li><strong>Ajalliset mallit:</strong>Harjoitusaikataulu näyttää päivittäiset aikataulut – kun heräät, kun olet töissä, kun olet poissa kotoa</li><li><strong>Terveysmittarit:</strong>Sykealueet, leposyke, sykkeen vaihtelu ja palautumismallit paljastavat kuntotason ja mahdolliset sairaudet</li><li><strong>Tehokkuustiedot:</strong>Vauhti-, etäisyys-, korkeus-, poljinnopeus- ja tehomittarit luovat kattavat kuntoprofiilit</li><li><strong>Laitteen tiedot:</strong>Puhelimen malli, käyttöjärjestelmä, IP-osoite ja käyttötavat</li><li><strong>Sosiaaliset tiedot:</strong>Nimi, sähköpostiosoite, profiilikuvat, yhteydet ja sosiaalinen vuorovaikutus</li></ul></div><p>Näitä tietoja ei ole olemassa erikseen. Yhdessä nämä datapisteet luovat elämästäsi yksityiskohtaisen profiilin, joka menee paljon pidemmälle kuin "juostin tänään 10 000".</p><h3>Miten tietojasi käytetään</h3><p>Pilvipohjaiset juoksusovellukset eivät kerää valtavia määriä dataa pelkästään harjoitusanalytiikan tarjoamiseksi. Tiedoillasi on kaupallista arvoa:</p><ul><li><strong>Kolmannen osapuolen tietojen jakaminen:</strong>Monet sovellukset myyvät anonymisoituja (tai oletettavasti anonymisoituja) harjoitustietoja mainostajille, tutkijoille ja tiedonvälittäjille. Jopa "anonymisoidut" sijaintitiedot voidaan tunnistaa uudelleen yksilöille</li><li><strong>Kohdennettu mainonta:</strong>Kuntotasosi, harjoitusmallisi ja juoksutavoitteesi kertovat mainosprofiileista, joita käytetään kohdistamaan sinulle kuntoilutuotteita ja -palveluita</li><li><strong>Vakuutusriskin arviointi:</strong>Sairausvakuutusyhtiöt hakevat yhä enemmän kuntotietoja.Jotkut tarjoavat "alennuksia" aktiivisuuden seurantatietojen jakamisesta, mikä luo painetta paljastaa tietoja</li><li><strong>Yrityksen älykkyys:</strong>Kootut harjoitustiedot paljastavat työntekijöiden kuntotottumuksia, jotka voivat vaikuttaa palkkaamiseen tai sairausvakuutuspäätöksiin</li><li><strong>Hallituksen pyynnöt:</strong>Pilviin tallennetut tiedot voidaan haastaa oikeudenkäyntiin, mikä paljastaa sijaintihistoriasi tai toimintamallisi</li></ul><h3>Todellisia tietosuojatapauksia</h3><p>Yksityisyyshuolet eivät ole teoreettisia – ne ovat ilmenneet dokumentoiduissa tapahtumissa:</p><div class="example-box"><h4>Tapaustutkimukset:</h4><p><strong>Strava Heat Map -tapahtuma (2018):</strong>Stravan yhteenlaskettu aktiivisuuslämpökartta paljasti vahingossa salaiset sotilastukikohdan sijainnit, kun sotilaiden harjoitukset jäljittelivät ääripartioreittejä. Tapahtuma osoitti, kuinka "anonymisoidut" tiedot voivat paljastaa arkaluonteisia tietoja.</p><p><strong>Fitness-sovelluksen tietomurto (2021):</strong>Suuri kuntoseuranta-alusta kärsi tietomurron, joka paljasti miljoonien käyttäjien GPS-reitit, sähköpostiosoitteet ja terveystiedot. Vuosien harjoitushistoria tuli julkisesti saataville.</p><p><strong>Sijainnin jäljitys:</strong>Tietoturvatutkijat osoittivat, kuinka julkisia harjoitustietoja voidaan käyttää kotiosoitteiden tunnistamiseen etsimällä reitin aloitus-/päätepisteitä. Tämä aiheuttaa turvallisuusongelmia varsinkin yksin harjoittaville juoksijoille.</p><p><strong>GDPR:n täytäntöönpanotoimet:</strong>Euroopan tietosuojaviranomaiset ovat rankaiseneet kuntosovelluksia riittämättömistä suostumusmekanismeista, liiallisesta tiedonkeruusta ja epäselvistä tietosuojakäytännöistä, mikä korostaa yleisiä noudattamisvirheitä.</p></div><p>Nämä tapaukset paljastavat perustavanlaatuisen ongelman: kun lataat tietoja pilvipalvelimiin, menetät hallinnan. Yritykset voivat muuttaa tietosuojakäytäntöjä, kärsiä rikkomuksista, tulla muiden yritysten haltuun tai kohdata viranomaisten tietopyyntöjä – ja historialliset tietosi ovat haavoittuvia riippumatta nykyisistä tietosuoja-asetuksistasi.</p><h2 id="local-vs-cloud">Paikallisen vs pilvikäsittelyn ymmärtäminen</h2><p>Arkkitehtoninen valinta paikallisen ja pilvitietojen käsittelyn välillä määrittää perusteellisesti yksityisyytesi. Tämän eron ymmärtäminen auttaa sinua tekemään tietoisia päätöksiä siitä, mihin käynnissä oleviin sovelluksiin voit luottaa arkaluontoiset tietosi.</p><h3>Kuinka pilvipohjaiset sovellukset toimivat</h3><p>Perinteiset analytiikka-alustat noudattavat keskitettyä mallia:</p><div class="protocol-card"><h3>📤 Pilvikäsittelyn kulku:</h3><ol class="protocol-steps"><li><strong>Tiedonsiirto:</strong>iPhone- tai GPS-kellosi tallentaa GPS-reittejä, sykkeen, vauhdin, poljinnopeuden ja muita harjoitusmittauksia</li><li><strong>Lataa:</strong>Raaka harjoitustiedot lähetetään yrityksen palvelimille Internet-yhteyden kautta – yleensä automaattisesti jokaisen harjoituksen jälkeen</li><li><strong>Palvelimen käsittely:</strong>Pilviinfrastruktuuri laskee analytiikan mittareita (rTSS, CTL/ATL, harjoitusalueet, suorituskykytrendit)</li><li><strong>Varastointi:</strong>Käsitellyt tulokset ja raakatiedot pysyvät yrityksen palvelimilla rajoituksetta (ellet poista manuaalisesti)</li><li><strong>Haku:</strong>Voit tarkastella tietojasi lataamalla ne palvelimilta takaisin laitteellesi tai verkkoselaimellesi</li></ol></div><p>Tämä arkkitehtuuri tarjoaa etuja yrityksille – keskitetty data mahdollistaa sosiaaliset ominaisuudet, laitteiden välisen synkronoinnin ja koneoppimisen eri käyttäjäryhmien välillä. Mutta se luo kriittisen tietosuojan heikkouden: tietosi ovat hallussasi yrityksen infrastruktuurissa.</p><h3>Kuinka paikallinen käsittely toimii</h3><p>Privacy-fir-arkkitehtuuri kääntää tämän mallin päinvastaiseksi käsittelemällä tietoja laitteessasi:</p><div class="callout callout-success"><h3>🔒 Paikallinen käsittelykulku:</h3><ol><li><strong>Tiedonsiirto:</strong>Harjoitustiedot on tallennettu Apple Health:llä paikallisesti tai tuotu GPS-kellotiedostoista</li><li><strong>Paikallinen tallennustila:</strong>Tiedot säilyvät iPhone:ssä Apple Health-tietokannassa (salattu, kun käytät iCloudia päästä päähän -salaus käytössä)</li><li><strong>Laitteen käsittely:</strong>Käynnissä oleva analytiikkasovellus lukee terveystietoja, laskee<a href="/fi/crs/">CRS</a>,<a href="/fi/training-load/">rTSS, CTL/ATL/TSB</a>,<a href="/fi/training-zones/">harjoitusalueet</a>, ja muita mittareita suoraan iPhone:n prosessorissa</li><li><strong>Paikalliset tulokset:</strong>Lasketut tiedot pysyvät laitteellasi – sovelluksen toiminnallisuus ei vaadi latausta</li><li><strong>Valinnainen vienti:</strong>SINÄ päätät, viedäkö/milloin tietoja, missä muodossa ja kuka ne vastaanottaa</li></ol></div><p>Tämä arkkitehtuuri tarkoittaa, että sovellukset eivät koskaan omista tietojasi – ne käsittelevät laitteessasi jo olevia tietoja ja tallentavat tulokset paikallisesti.Ei latausta, ei pilvitallennusta, ei yrityksen tietojen hallussapitoa.</p><h3>Paikallisen käsittelyn edut</h3><p>Privacy-fir-arkkitehtuuri tarjoaa etuja pelkän yksityisyyden lisäksi:</p><div class="application-grid"><div class="application-item"><h3>🛡️ Turvallisuusedut</h3><ul><li><strong>Ei rikkomisriskiä:</strong>Tietoa, joka ei saavuta palvelimia, ei voida varastaa tietomurron yhteydessä</li><li><strong>Ei luvatonta pääsyä:</strong>Yrityksen työntekijät eivät voi tarkastella harjoitushistoriaasi</li><li><strong>Ei kolmannen osapuolen jakamista:</strong>Sovellukset eivät voi myydä tietoja, joita heillä ei ole</li></ul></div><div class="application-item"><h3>⚡ Suorituskyvyn edut</h3><ul><li><strong>Välitön käsittely:</strong>Ei lataus-/latausviiveitä – laskelmat tapahtuvat välittömästi</li><li><strong>Offline-toiminnot:</strong>Täysi analytiikka toimii ilman Internet-yhteyttä</li><li><strong>Ei synkronointiongelmia:</strong>Tiedot ovat aina saatavilla laitteellasi</li></ul></div><div class="application-item"><h3>✅ Ohjauksen edut</h3><ul><li><strong>Täydellinen omistusoikeus:</strong>Voit hallita poistamista, vientiä ja jakamista</li><li><strong>Ei tilin lukitusta:</strong>Tiedot eivät ole loukussa patentoiduissa pilvijärjestelmissä</li><li><strong>Todellinen yksityisyys:</strong>Ei "lupaamme suojata tietojasi", vaan "meillä ei ole koskaan tietojasi"</li></ul></div></div><p>Tietosuoja etusijalla -lähestymistapa muuttaa vallan dynamiikkaa: sen sijaan, että luottaisit yrityksiin suojelemaan ladattuja tietojasi, säilytät täydellisen hallinnan, koska et koskaan luovuta hallussasi.</p><h2 id="runanalytics-privacy">Kuinka Run Analytics suojaa yksityisyyttäsi</h2><p>Run Analytics toteuttaa yksityisyyden ensisijaisen arkkitehtuurin alusta alkaen. Jokainen suunnittelupäätös asettaa etusijalle tietosuojan ja käyttäjien hallinnan, mikä tekee yksityisyydestä ydinominaisuuden eikä jälkikäteen.</p><h3>100 % paikallinen tietojenkäsittely</h3><p>Kaikki käynnissä olevat analytiikkalaskelmat tapahtuvat iPhone:ssä:</p><ul><li><strong><a href="/fi/crs/">Kriittinen käyntinopeus (CRS)</a>:</strong>Aerobisen kynnyslaskelmasi käsitellään paikallisesti käyttämällä testitietojasi</li><li><strong><a href="/fi/training-zones/">Harjoitusalueet</a>:</strong>Henkilökohtaiset intensiteettialueet (vyöhykkeet 1-7), jotka on johdettu CRS:stä kokonaan laitteessa</li><li><strong><a href="/fi/training-load/">Harjoittelun stressipisteet (rTSS)</a>:</strong>Harjoittelun intensiteetin kvantifiointi lasketaan käyttämällä paikallista CRS-viittausta</li><li><strong>CTL/ATL/TSB Seuranta:</strong>Suorituskyvyn hallintakaavion mittarit (krooninen harjoituskuormitus, akuutti harjoituskuormitus, harjoituksen stressitasapaino) lasketaan paikallisesta harjoitushistoriastasi</li><li><strong><a href="/fi/running-performance-metrics/">Suorituskykymittarit</a>:</strong>VO2max:n arviot, vauhtianalyysit ja tehokkuustrendit analysoidaan laitteellasi</li><li><strong><a href="/fi/running-efficiency-biomechanics/">Biomekaniikka-analyysi</a>:</strong>Askeltehokkuus, juoksutaloudellisuus ja lomakemittarit käsitelty paikallisesti</li></ul><p>Mikään laskenta ei vaadi Internet-yhteyttä. Tietoja ei lähetetä Run Analytics-palvelimille. Mikään ulkoinen käsittelyinfrastruktuuri ei koske tietoihisi.</p><h3>Tiliä ei vaadita</h3><p>Run Analytics eliminoi koko tiliinfrastruktuurin, joka luo tietosuoja-aukkoja:</p><div class="callout callout-info"><h3>🚫 Mitä emme vaadi:</h3><ul><li><strong>Ei rekisteröintiä:</strong>Ei ilmoittautumislomakkeita, ei henkilötietojen keräämistä</li><li><strong>Ei sähköpostiosoitetta:</strong>Emme koskaan pyydä tai säilytä sähköpostiasi</li><li><strong>Ei kirjautumista:</strong>Ei hallittavia tai mahdollisesti vaarantuvia salasanoja</li><li><strong>Ei profiilia:</strong>Ei julkista tai yksityistä profiilia, joka sisältää tietojasi</li><li><strong>Ei käyttäjätunnusta:</strong>Täydellinen nimettömyys – emme tiedä kuka olet</li></ul></div><p>Tämä ei ole vain mukavuutta – se on tietosuojatakuu. Tietomurrot eivät voi paljastaa tilitietojasi, jos tilejä ei ole olemassa. Identiteettivarkaudesta tulee mahdotonta, jos et ole koskaan antanut henkilöllisyyttä.</p><h3>Ei kolmannen osapuolen seurantaa</h3><p>Monet "ilmaiset" sovellukset ansaitsevat rahaa seuraamalla SDK:ita (Software Development Kits) mainosverkostoista ja analytiikkaalustoista. Nämä kolmannen osapuolen kirjastot valvovat sovellusten käyttöä, linkittävät toimintaa sovellusten välillä ja luovat mainosprofiileja.</p><p>Run Analytics sisältää ZERO kolmannen osapuolen seurantaa:</p><ul><li><strong>Ei mainonnan SDK:ita:</strong>Ei Facebook Pixel-, Google Analytics- tai mainosverkoston seurantalaitteita</li><li><strong>Ei käyttäytymisanalyysia:</strong>Ei Mixpanel-, Amplitude- tai käytönseurantapalveluita</li><li><strong>Ei kaatumisraportointipalveluita:</strong>Ei kolmannen osapuolen kaatumisanalytiikkaa, joka välittää laitetietoja</li><li><strong>Ei sosiaalisen median integrointia:</strong>Ei "Kirjaudu sisään Facebookilla" tai sosiaalisen jakamisen SDK:ita</li></ul><p>Voit varmistaa tämän tarkistamalla Applen Run Analytics:n App Privacy -merkinnät – ne näyttävät täsmälleen nolla tiedonkeruuluokkaa, mikä on harvinaisuus käynnissä olevien sovellusten joukossa.</p><h3>Päästä päähän -salaus varmuuskopioille</h3><p>Run Analytics-tietosi sijaitsevat Apple Health:ssä, joka tarjoaa valinnaisen iCloud-varmuuskopion päästä päähän -salauksella, kun otat lisätietosuojauksen käyttöön:</p><div class="protocol-card"><h3>🔐 Salattu varmuuskopiointi:</h3><ol class="protocol-steps"><li><strong>Paikallinen salaus:</strong>Terveystiedot salataan iPhone:llä ennen lähetystä</li><li><strong>Salattu siirto:</strong>Tiedot kulkevat iCloudiin salatun yhteyden kautta</li><li><strong>Salattu tallennustila:</strong>iCloud tallentaa salattuja tietoja – Apple ei voi purkaa niiden salausta</li><li><strong>Näppäinhallinta:</strong>Vain laitteet, joilla on kirjautumistiedot, voivat purkaa varmuuskopioiden salauksen</li></ol></div><p>Tämä tarkoittaa, että vaikka käyttäisit iCloud-varmuuskopiota laitteen siirtoon tai redundanssiin, käynnissä oleva analytiikka pysyy yksityisenä – Apple ei voi käyttää niitä, eivätkä myöskään viranomaisten pyynnöt ilman laitteen salasanaa.</p><h2 id="competitor-comparison">Sovellusten tietosuojan vertailu</h2><p>Kaikki käynnissä olevat sovellukset eivät käsittele tietoja samalla tavalla. Alustaen välisten erojen ymmärtäminen auttaa sinua tekemään tietoisia tietosuojapäätöksiä.</p><h3>Strava: Social-First, Privacy-Last</h3><p>Strava oli sosiaalisen kunnon seurannan edelläkävijä, mutta sen arkkitehtuuri asettaa jakamisen etusijalle yksityisyyden sijaan:</p><div class="comparison-table-container"><table class="comparison-table"><tbody><tr><th>Aspekti</th><th>Strava-lähestymistapa</th><th>Tietosuojavaikutus</th></tr><tr><td><strong>Tietojen käsittely</strong></td><td>100 % pilvipohjainen palvelinkäsittely</td><td>Kaikki harjoitustiedot ladattu, tallennettu toistaiseksi</td></tr><tr><td><strong>Tilivaatimus</strong></td><td>Pakollinen ilmoittautuminen sähköpostitse</td><td>Kaikkeen toimintaan sidotut henkilötiedot</td></tr><tr><td><strong>Sijaintitiedot</strong></td><td>Palvelimille tallennetut täydelliset GPS-reitit</td><td>Yrityksen saatavilla oleva kattava sijaintihistoria</td></tr><tr><td><strong>Sosiaaliset ominaisuudet</strong></td><td>Julkiset oletusprofiilit, toimintojen jakaminen</td><td>Seuraajille näkyvät harjoitukset; opt-out vaatii määrityksiä</td></tr><tr><td><strong>Kolmannen osapuolen jakaminen</strong></td><td>Tiedot jaetaan kumppaneiden kanssa ja kootaan tutkimusta varten</td><td>Rajoitettu hallinta myöhemmän datan käytön suhteen</td></tr><tr><td><strong>Yksityisyyden hallinta</strong></td><td>Yksityisyysvyöhykkeet piilottavat aloitus- ja loppupaikat</td><td>Vähentää, mutta ei poista sijainnin altistumista</td></tr></tbody></table></div><p><strong>Bottom Line:</strong>Stravan sosiaaliset ominaisuudet edellyttävät keskitettyä pilviinfrastruktuuria, mikä tekee todellisen yksityisyyden mahdottomaksi. Vaikka se on hyödyllinen kilpaileville juoksijoille, jotka haluavat sosiaalista motivaatiota, se on ristiriidassa yksityisyyden ensisijaisten periaatteiden kanssa.</p><h3>Garmin Connect: Pilvipohjainen</h3><p>Garmin tarjoaa kattavaa koulutusanalytiikkaa, mutta luottaa täysin pilvikäsittelyyn:</p><ul><li><strong>Palvelinriippuvuus:</strong>Kaikki edistyneet analytiikka (harjoittelun tila, harjoituskuormitus, VO2max-trendit) edellyttävät Garminin pilvialustaa</li><li><strong>Tilin lukitus:</strong>Historialliset tiedot, jotka on tallennettu yksinomaan Garminin palvelimille – vaikea viedä koko historiaa</li><li><strong>GPS-jäljen tallennus:</strong>Jokaisen harjoituksen GPS-tiedot ladataan ja säilytetään</li><li><strong>Kolmannen osapuolen integraatiot:</strong>Garmin Connect jakaa tietoja lukuisten kuntoilualustojen kanssa API-yhteyksien kautta</li><li><strong>Rajoitetut tietosuojavaihtoehdot:</strong>Voi asettaa toiminnot yksityisiksi, mutta tiedot ovat edelleen Garminin infrastruktuurissa</li></ul><p><strong>Bottom Line:</strong>Garminin ekosysteemi edellyttää kattavan harjoitushistorian luottamista yritykseen. Ei vaihtoehtoa vain paikalliseen analytiikkaan.</p><h3>Runalyze: Palvelinpohjainen käsittely</h3><p>Runalyze tarjoaa kehittynyttä koulutusanalytiikkaa, mutta käyttää perinteistä pilviarkkitehtuuria:</p><ul><li><strong>Pakollinen lataus:</strong>Kaikki harjoitustiedostot (.fit, .tcx, .gpx) on ladattava Runalyze-palvelimille analysointia varten</li><li><strong>Palvelimen tallennustila:</strong>Runalyze-infrastruktuuriin tallennettu täydellinen harjoitustietokanta</li><li><strong>Avoimen lähdekoodin läpinäkyvyys:</strong>Koodi on avoimen lähdekoodin, mikä mahdollistaa yksityisyyden vahvistamisen – merkittävä etu</li><li><strong>Oma isännöintivaihtoehto:</strong>Edistyneet käyttäjät voivat isännöidä omaa Runalyze-esiintymänsä tietojen täydelliseen hallintaan</li><li><strong>Rajoitettu kolmannen osapuolen jakaminen:</strong>Pienempi alusta, jossa on vähemmän kumppanuus-/datanjakosopimuksia</li></ul><p><strong>Bottom Line:</strong>Parempi yksityisyys kuin kaupallisilla alustoilla avoimen lähdekoodin mallin ja itseisännöintivaihtoehdon ansiosta, mutta isännöity vakioversio vaatii silti tietojen lataamisen.</p><h3>Run Analytics: Tietosuoja – ensimmäinen suunnittelu</h3><p>Run Analytics käyttää täysin erilaista arkkitehtonista lähestymistapaa:</p><div class="callout callout-success"><h3>✅ Run Analytics Tietosuojamalli:</h3><table class="comparison-table"><tbody><tr><th>Aspekti</th><th>Run Analytics -lähestymistapa</th><th>Tietosuojaetu</th></tr><tr class="highlight-row"><td><strong>Tietojen käsittely</strong></td><td>100 % paikallinen iPhone:ssäsi</td><td>Nolla tiedonsiirtoa – täydellinen yksityisyys</td></tr><tr class="highlight-row"><td><strong>Tilivaatimus</strong></td><td>Ei mitään – ei rekisteröintiä</td><td>Anonyymi käyttö – emme tiedä kuka olet</td></tr><tr class="highlight-row"><td><strong>Sijaintitiedot</strong></td><td>Pysyy Apple Health:ssä laitteessasi</td><td>Kukaan muu kuin sinä ei voi käyttää sijaintihistoriaa</td></tr><tr class="highlight-row"><td><strong>Sosiaaliset ominaisuudet</strong></td><td>Ei mitään – yksityisyys sosiaalisen edelle</td><td>Ei paineita jakaa, ei julkisen altistumisen riskiä</td></tr><tr class="highlight-row"><td><strong>Kolmannen osapuolen jakaminen</strong></td><td>Mahdotonta – meillä ei ole tietojasi</td><td>Nolla kolmannen osapuolen pääsyriskiä</td></tr><tr class="highlight-row"><td><strong>Yksityisyyden hallinta</strong></td><td>Valmis – hallitset kaikkia tietoja ja vientiä</td><td>Täydellinen omistus ja hallinta</td></tr></tbody></table></div><p><strong>Bottom Line:</strong>Run Analytics tarjoaa edistyneen harjoitusanalytiikan (CRS, rTSS, CTL/ATL/TSB, henkilökohtaiset vyöhykkeet) ilman tietojen lataamista. Yksityisyys ja toiminnallisuus ovat rinnakkain paikallisen käsittelyarkkitehtuurin kautta.</p><h2 id="location-privacy">Sijaintitietojesi suojaaminen</h2><p>Juoksuharjoittelun GPS-jäljet luovat kattavan sijaintihistorian, joka paljastaa arkaluontoisia tietoja elämäntavoistasi, mikä tekee sijainnin yksityisyydestä juoksijoille ratkaisevan tärkeän.</p><h3>GPS-seurannan riski</h3><p>Jokainen GPS-seuraama lenkki luo yksityiskohtaisen sijaintihistorian, joka paljastaa:</p><div class="warning-box"><strong>⚠️ Sijaintitiedot paljastuvat:</strong><ul><li><strong>Kotiosoite:</strong>Juoksee alkaen samasta paikasta päivästä toiseen tunnistaa asuinpaikkasi</li><li><strong>Työpaikka:</strong>Lounasajan juoksut tai töistä alkavat reitit paljastavat työpaikan</li><li><strong>Päivittäiset rutiinit:</strong>Säännölliset reitit ja ajoitusmallit osoittavat ennustettavia käyttäytymistottumuksia</li><li><strong>Poissaolomallit:</strong>Puutteet kotijuoksuissa osoittavat, milloin olet matkoilla tai poissa</li><li><strong>Sosiaaliset yhteydet:</strong>Juoksut muiden kanssa voivat paljastaa ihmissuhteita ja tapaamispaikkoja</li><li><strong>Yksityiset paikat:</strong>Lääketieteelliset tilat, palvontapaikat tai muut herkät kohteet</li></ul></div><p>Nämä tiedot aiheuttavat turvallisuushuolia – erityisesti yksin harjoittaville juoksijoille – ja yksityisyyttä koskevia huolenaiheita siitä, kenellä on pääsy kattavaan vuosien mittaiseen liikehistoriaan.</p><h3>Yksityisyysalueet ja turvallisuus</h3><p>Jotkut käynnissä olevat sovellukset tarjoavat "yksityisyysvyöhykkeitä", jotka piilottavat osia GPS-reiteistä tiettyjen osoitteiden lähellä:</p><ul><li><strong>Miten ne toimivat:</strong>Määritä pyöreät vyöhykkeet (yleensä 200-500 metrin säteellä) herkkien paikkojen ympärille; GPS-reitti piilotettu vyöhykkeen säteellä</li><li><strong>Rajoitukset:</strong>Piilota tiedot vain julkisilla näytöillä – täydet GPS-tiedot ladataan edelleen palvelimille ja ovat yrityksen käytettävissä</li><li><strong>Määritystaakka:</strong>Edellyttää jokaisen herkän sijainnin manuaalista tunnistamista ja määrittämistä</li><li><strong>Väärä turvallisuus:</strong>Luo vaikutelman yksityisyydestä, kun kaikki tiedot pysyvät pilvitallennustilassa</li></ul><p>Yksityisyysvyöhykkeet tarjoavat osittaisen suojan, mutta eivät ratkaise perusongelmaa: kun GPS-tiedot ladataan palvelimille, täydellinen sijaintihistoria on olemassa, sinun hallinnassasi.</p><h3>Run Analytics Sijaintiominaisuudet</h3><p>Run Analytics käsittelee sijaintitietoja Apple Health-integraation kautta:</p><div class="callout callout-success"><h3>🗺️ Sijainnin tietosuojaominaisuudet:</h3><ul><li><strong>Ei GPS-latausta:</strong>Harjoitusten sijaintitiedot pysyvät Apple Health:ssä iPhone:ssä – ei koskaan lähetetä Run Analytics-palvelimille</li><li><strong>Apple Health Suojaus:</strong>iOS-käyttöoikeudet vaativat nimenomaisen valtuutuksen sovelluksen pääsyyn terveystietoihin</li><li><strong>Valikoiva jakaminen:</strong>Kun viet harjoitustietoja, SINÄ valitset, sisällytetäänkö GPS-reitit vai viedäänkö vain yhteenvetotilastot</li><li><strong>Paikallinen reittianalyysi:</strong><a href="/fi/training-zones/">Harjoitusalue</a>laskelmat eivät vaadi GPS-tietoja – käytä vauhtia/sykettä Health-sovelluksesta ilman sijainnin altistumista</li><li><strong>Täydellinen valvonta:</strong>Poista harjoituksen sijaintitiedot Apple Health:stä milloin tahansa – poistot näkyvät välittömästi Run Analytics:ssä</li></ul></div><p>Tämä arkkitehtuuri tarkoittaa, että sijaintihistoriasi pysyy yksinomaisessa hallinnassasi. Haluatko jakaa tietyn harjoituksen valmentajasi kanssa? Vie vain se harjoitus. Haluatko analysoida harjoittelutrendejä paljastamatta reittejä? Vie CSV-tiedot ilman GPS-koordinaatteja. Täysi joustavuus, täydellinen hallinta.</p><h2 id="gdpr-compliance">GDPR ja tietooikeutesi</h2><p>Euroopan unionin yleinen tietosuoja-asetus (GDPR) asettaa kattavat tietosuojaoikeudet, ja sen periaatteet pätevät maailmanlaajuisesti, kun muut lainkäyttöalueet hyväksyvät samanlaisia tietosuojalakeja.</p><h3>Mitä GDPR takaa</h3><p>GDPR antaa yksilöille laajat oikeudet henkilötietoihin:</p><ul><li><strong>Käyttöoikeus:</strong>Yritysten on toimitettava kopiot kaikista tiedoista, joita niillä on sinusta</li><li><strong>Oikeus oikaisuun:</strong>Korjaa virheelliset henkilötiedot</li><li><strong>Oikeus poistoon ("Oikeus tulla unohdetuksi"):</strong>Vaadi henkilötietojen poistamista tietyissä olosuhteissa</li><li><strong>Oikeus tietojen siirrettävyyteen:</strong>Vastaanota henkilötiedot koneellisesti luettavassa muodossa siirrettäväksi toiseen palveluun</li><li><strong>Oikeus vastustaa:</strong>Vastusta käsittelyä markkinointi-, profilointi- tai tutkimustarkoituksiin</li><li><strong>Oikeus rajoittaa käsittelyä:</strong>Rajoita sitä, miten yritykset käyttävät tietojasi</li></ul><p>Nämä oikeudet suojaavat teoriassa käyttäjiä, mutta täytäntöönpano riippuu yritysten noudattamisesta – ja oikeuksien käyttäminen edellyttää usein monimutkaisten menettelyjen navigointia, viikkojen vastausten odottamista ja yritysten luottamista tietojen poistamiseen kaikista järjestelmistä, mukaan lukien varmuuskopiot.</p><h3>Miten Run Analytics noudattaa</h3><p>Run Analytics saavuttaa täydellisen GDPR-yhteensopivuuden arkkitehtonisen yksinkertaisuuden ansiosta:</p><div class="callout callout-info"><h3>📜 GDPR-yhteensopivuus Privacy-First Designin kautta:</h3><ul><li><strong>Ei tietojen keräämistä = Täydellinen vaatimustenmukaisuus:</strong>GDPR säätelee henkilötietojen käsittelyä – kun sovellukset eivät kerää tietoja, säädöksiä ei sovelleta</li><li><strong>Tietojen kohteen pyyntöjä ei vaadita:</strong>Emme voi pyytää pääsyä tietoihin, joita meillä ei ole; emme voi pyytää poistamaan tietoja, joita emme ole koskaan keränneet</li><li><strong>Ei suostumusmekanismeja:</strong>Evästebannereita tai suostumuslomakkeita ei tarvita, kun seurantaa ei ole</li><li><strong>Ei rikkomusilmoitusvelvollisuutta:</strong>Emme voi rikkoa tietoja, joita meillä ei ole</li><li><strong>Ei kansainvälisiä siirtoja:</strong>Tiedot pysyvät laitteellasi – ei rajat ylittävää tiedonsiirtoa</li></ul></div><p>Tämä ei ole sääntöjen noudattamista laillisilla keinoilla, vaan yksityisyyden perustavanlaatuisen kunnioittamisen kautta. Turvallisin tieto on dataa, jota ei koskaan kerätä.</p><h3>Oikeuksien käyttäminen</h3><p>Pilvipohjaisissa käynnissä olevissa sovelluksissa GDPR-oikeuksien käyttäminen vaatii yleensä:</p><div class="protocol-card"><h3>📋 Tyypillinen GDPR-pyyntöprosessi:</h3><ol class="protocol-steps"><li><strong>Lähetä pyyntö:</strong>Lähetä sähköpostia tietosuojatiimille tai käytä tilin asetuksia pyytääksesi tietojen käyttöä/poistoa</li><li><strong>Henkilöllisyyden vahvistus:</strong>Todista henkilöllisyys (turvallisuuden vuoksi)</li><li><strong>Odotusaika:</strong>Yrityksillä on 30 päivää aikaa vastata (voidaan pidentää 90 päivään)</li><li><strong>Tarkista vastaus:</strong>Vastaanota tietojen vienti- tai poistovahvistus</li><li><strong>Toivo todellista noudattamista:</strong>Luota siihen, että yritys todella poisti tiedot kaikista järjestelmistä, varmuuskopioista ja kolmannen osapuolen prosessoreista</li></ol></div><p>Run Analytics:n avulla ohitat koko prosessin: tietosi ovat jo yksinomaan laitteessasi. Haluatko poistaa kaiken? Poista sovellus ja Apple Health-harjoitustiedot. Haluatko viedä? Käytä sovelluksen vientitoimintoa milloin tahansa. Haluatko käyttää historiallisia tietoja? Kaikki on iPhone:ssäsi. Välitön, täydellinen valvonta ilman lupaa yrityksiltä.</p><h2 id="health-data-privacy">Terveystietojesi suojaaminen</h2><p>Juoksun suorituskykytiedot muodostavat terveystietoja – sykemittarit, kuntotasot ja harjoitusmallit paljastavat fyysisen kuntosi. Tämä herkkyys vaatii erityisiä yksityisyysnäkökohtia.</p><h3>Mitä terveystiedot paljastavat</h3><p>Analytiikan suorittaminen paljastaa yksityiskohtaisia terveystietoja:</p><ul><li><strong>Kardiovaskulaarinen kunto:</strong>Syketiedot, VO2max-arviot ja palautumismallit osoittavat sydämen terveyden</li><li><strong>Suorituskykytrendit:</strong>Vähenemässä<a href="/fi/running-performance-metrics/">suorituskykymittarit</a>voi olla merkki sairaudesta, ylikunnosta tai terveysongelmista</li><li><strong>Treenistressi:</strong><a href="/fi/training-load/">CTL/ATL/TSB seuranta</a>paljastaa väsymystason ja palautumiskyvyn</li><li><strong>Biomekaaniset kuviot:</strong>Askeleen epäsymmetria tai tehokkuuden muutokset voivat viitata vammoihin tai fyysisiin rajoituksiin</li><li><strong>Käyttäytymisen terveys:</strong>Häiriintyneet harjoitustavat tai äkilliset muutokset voivat heijastaa stressiä, mielenterveyttä tai elämänolosuhteita</li></ul><h3>Vakuutus- ja työllisyysasiat</h3><p>Terveystietojen yksityisyys ei ole vain henkilökohtaista mukavuutta - sillä on käytännön seurauksia:</p><div class="warning-box"><strong>⚠️ Tosimaailman huolenaiheet:</strong><ul><li><strong>Vakuutussyrjintä:</strong>Sairausvakuutusyhtiöt etsivät yhä enemmän kuntotietoja "hyvinvointiohjelmia varten". Huonot kuntomittarit voivat teoriassa vaikuttaa vakuutusmaksuihin tai kattavuuspäätöksiin</li><li><strong>Työllisyyden seulonta:</strong>Jotkut työnantajat käyttävät tiettyihin tehtäviin soveltuvuuskriteerejä. Kattavat terveystiedot voivat auttaa palkkaamispäätöksissä</li><li><strong>Henkivakuutus:</strong>Henkivakuutusyhtiöt voivat pyytää kuntoseurantatietoja hakuprosessin aikana. Osakkeiden vähentäminen voi nostaa vakuutusmaksuja</li><li><strong>Lääketieteellinen tietosuoja:</strong>Ajotiedot, jotka osoittavat äkillisen suorituskyvyn heikkenemisen, voivat paljastaa sairauksia, jotka haluat pitää yksityisinä</li><li><strong>Oikeudellinen löytö:</strong>Oikeudenkäynnissä vastustaja voi haastaa kuntosovelluksen tiedot haastaakseen loukkaantumisvaatimuksen tai määrittääkseen toimintamalleja</li></ul></div><p>Nämä skenaariot eivät ole hypoteettisia – ne ovat nousemassa esiin todellisuutta, kun kuntoseuranta tulee kaikkialle ja dataa kaipaavat teollisuudenalat etsivät hyötyä.</p><h3>Run Analytics terveystietojen käsittely</h3><p>Run Analytics suojaa terveystietoja Apple Health-integraation ja paikallisen käsittelyn avulla:</p><div class="callout callout-success"><h3>💚 Terveystietosuoja:</h3><ul><li><strong>Apple HealthKit Framework:</strong>Kaikkiin terveystietoihin pääsee käsiksi Applen suojatun Health-kehyksen kautta, jossa on tiukat tietosuojavalvontatoimenpiteet</li><li><strong>Yksityiskohtaiset käyttöoikeudet:</strong>iOS vaatii nimenomaisen valtuutuksen jokaiselle tietotyypille (harjoittelu, syke jne.) – sinä hallitset tarkalleen, mitä Run Analytics voi käyttää</li><li><strong>Vain paikallinen käsittely:</strong>Sykeanalyysi, suorituskykylaskelmat ja terveystrendit lasketaan laitteella</li><li><strong>Ei terveystietojen siirtoa:</strong>Sykkeesi, VO2max-arviosi ja kuntomittarisi eivät koskaan poistu iPhone:stäsi</li><li><strong>Välitön poisto:</strong>Poista sovelluksen pääsy terveystietoihin milloin tahansa iOS-asetuksista – peruuttaa välittömästi kaikki käyttöoikeudet</li><li><strong>Salattu iCloud-varmuuskopio:</strong>Kun käytät lisätietosuojausta, terveystiedot varmuuskopioidaan päästä päähän -salauksella</li></ul></div><p>Tämä lähestymistapa tarkoittaa, että terveystietosi pysyvät saman tiukan tietosuojan alaisina, joita Apple soveltaa kaikkeen terveystietoon – ilman ylimääräistä altistumista kolmansille osapuolille, jotka käyttävät sovellusyrityksiä.</p><h2 id="anonymous-analytics">Anonyymi käynnissä oleva analytiikka</h2><p>Todellinen anonyymi analytiikan suorittamisessa edellyttää kaikkien henkilökohtaisten tunnisteiden poistamista tiedonkeruu- ja käsittelyketjusta. Run Analytics saavuttaa tämän no-account-arkkitehtuurillaan.</p><h3>Ei tiliä, ei profiilia</h3><p>Useimmat käynnissä olevat sovellukset alkavat rekisteröinnillä – luomalla tilin, joka yhdistää kaiken tulevan toiminnan henkilöllisyytesi. Run Analytics eliminoi tämän kokonaan:</p><ul><li><strong>Nolla rekisteröinti:</strong>Lataa App Store:stä ja aloita käyttö välittömästi – ei lomakkeita, ei rekisteröitymisprosessia</li><li><strong>Ei henkilötietoja:</strong>Sovellus ei koskaan kysy nimeä, sähköpostiosoitetta, syntymäaikaa, sukupuolta tai muita tunnistetietoja</li><li><strong>Ei käyttäjätunnusta:</strong>Ei sisäistä käyttäjätunnusta, joka yhdistäisi tietoja istuntojen välillä</li><li><strong>Ei seurantatunnuksia:</strong>Ei laitteen sormenjälkiä tai yksilöllisiä tunnisteita käytön seurantaa varten</li></ul><h3>Sähköpostia ei vaadita</h3><p>Sähköpostiosoitteet luovat pysyviä linkkejä henkilöllisyytesi ja sovelluksesi käytön välille. Ne mahdollistavat:</p><ul><li><strong>Monialustainen seuranta:</strong>Sähköpostiosoitteet linkittävät toimintaan sovellusten ja verkkosivustojen välillä mainosverkostojen kautta</li><li><strong>Data Broker Matching:</strong>Tiedonvälittäjät ostavat sähköpostiin liittyviä tietoja rikastaakseen profiileja</li><li><strong>Markkinointilistat:</strong>Sähköpostilistat myydään, jaetaan tai vuodatetaan kolmansille osapuolille</li><li><strong>Rikkomusaltistuminen:</strong>Tietomurrot paljastavat sähköpostiosoitteet harjoitustietojen ohella</li></ul><p>Run Analytics ei koskaan pyydä sähköpostiosoitteita – se ei luo identiteettiyhteyttä, ei markkinointiluetteloita eikä loukkausriskiä.</p><h3>Täydellinen nimettömyys</h3><p>Ei tilejä, ei seurantaa ja paikallista käsittelyä yhdistelmä luo aidon anonymiteetin:</p><div class="callout callout-info"><h3>👤 Nimettömän käytön takuu:</h3><ul><li><strong>Emme tunne sinua:</strong>Run Analytics ei tiedä, kuka sovellusta käyttää – ei nimiä, sähköpostiosoitteita tai tunnisteita</li><li><strong>Profiilien luominen ei onnistu:</strong>Ilman käyttäjätunnuksia emme voi luoda käyttöprofiileja tai seurata käyttäytymistä ajan kuluessa</li><li><strong>Ei voida hakkeroida:</strong>Hakkerit eivät voi varastaa tietoja, joita ei ole yrityksen palvelimilla</li><li><strong>Ei voida haastaa:</strong>Viranomaiset tai lailliset käyttäjätietoja koskevat pyynnöt palauttavat tyhjiä tuloksia – meillä ei ole niitä</li><li><strong>Emme voi muuttaa mieltämme:</strong>Vaikka liiketoimintakäytännöt muuttuisivat, historiallisia tietoja ei ole olemassa hyödynnettäväksi</li></ul></div><p>Tämä ei ole nimettömyyttä sanoilla "emme linkitä tietoja sinuun" vaan rakenteellista anonymiteettiä sanoilla "emme voi linkittää tietoja sinuun, koska meillä ei ole niitä".</p><h2 id="privacy-future">Privacy-First Fitnessin tulevaisuus</h2><p>Privacy-first-analytics edustaa nousevaa trendiä, kun käyttäjät ovat tietoisia tiedonkeruukäytännöistä ja vaativat vaihtoehtoja, jotka kunnioittavat henkilökohtaisia tietoja.</p><h3>Kasvava käyttäjien tietoisuus</h3><p>Useat tekijät lisäävät yksityisyystietoisuutta:</p><ul><li><strong>Korkean profiilin rikkomukset:</strong>Säännölliset kuntosovellusten tietomurrot lisäävät tietoisuutta pilvitallennusriskeistä</li><li><strong>GDPR Koulutus:</strong>Eurooppalaiset tietosuojasäännökset ovat kouluttaneet maailmanlaajuista käyttäjäkuntaa tietooikeuksista</li><li><strong>Seurantaongelmat:</strong>Kasvava tietoisuus siitä, kuinka henkilötiedot ruokkivat mainontaa ja valvontaa</li><li><strong>Sosiaalisen median väsymys:</strong>Käyttäjät kyseenalaistavat yhä enemmän, palveleeko jatkuva tiedonjako heidän etujaan</li><li><strong>Sukupolvenvaihdos:</strong>Nuoremmat käyttäjät suhtautuvat tiedonkeruukäytäntöihin skeptisemmin</li></ul><h3>Applen tietosuojajohtajuus</h3><p>Applen tietosuojahankkeet luovat infrastruktuurin yksityisyyden ensisijaisille sovelluksille:</p><div class="application-grid"><div class="application-item"><h3>🍎 Applen tietosuojaominaisuudet</h3><ul><li><strong>Sovelluksen tietosuojatunnisteet:</strong>App Store-ravintomerkinnät näyttävät tarkalleen, mitä tietoja sovellukset keräävät</li><li><strong>Sovelluksen seurannan läpinäkyvyys:</strong>iOS vaatii nimenomaisen luvan sovellusten väliseen seurantaan</li><li><strong>Tietosuojaraportit:</strong>Näyttää, mitkä sovellukset käyttävät arkaluonteisia tietoja ja kuinka usein</li></ul></div><div class="application-item"><h3>🔐 Alustan ominaisuudet</h3><ul><li><strong>Laitteen käsittely:</strong>Neural Engine mahdollistaa kehittyneen paikallisen koneoppimisen</li><li><strong>HealthKit Security:</strong>Tiukat terveystietojen käytön hallinta ja salaus</li><li><strong>Lisätietosuoja:</strong>Päästä päähän -salaus iCloud-varmuuskopioille</li></ul></div><div class="application-item"><h3>📱 Ekosysteemiedut</h3><ul><li><strong>Kehittäjätyökalut:</strong>Sovellusliittymät, jotka mahdollistavat tietosuojan ensisijaisen sovelluskehityksen</li><li><strong>Käyttäjien odotukset:</strong>iOS-käyttäjät odottavat yhä enemmän yksityisyyttä kunnioittavia sovelluksia</li><li><strong>Kilpailuetu:</strong>Yksityisyydestä tulee App Store:n erottava tekijä</li></ul></div></div><p>Tämä ekosysteemin evoluutio tekee yksityisyyttä etusijalle kohdistavan analytiikan paitsi mahdollista, myös iOS-käyttäjien, jotka ymmärtävät alustan tietosuojasitoumukset, odottavat sitä yhä enemmän.</p><h3>Sääntelytrendit</h3><p>Tietosuojasäännökset laajenevat edelleen maailmanlaajuisesti:</p><ul><li><strong>GDPR (EU):</strong>Perustettu tietosuojan kultainen standardi, joka vaikuttaa maailmanlaajuisiin säädöksiin</li><li><strong>CCPA/CPRA (Kalifornia):</strong>California Consumer Privacy Act -laki myöntää Kalifornian asukkaille dataoikeudet</li><li><strong>LGPD (Brasilia):</strong>Brasilian yleinen tietosuojalaki heijastelee GDPR-periaatteita</li><li><strong>PIPEDA (Kanada):</strong>Henkilötietojen suojaa ja sähköisiä asiakirjoja koskeva laki</li><li><strong>Uusi lainsäädäntö:</strong>Kymmenet maat ja Yhdysvaltain osavaltiot harkitsevat kattavia tietosuojalakeja</li></ul><p>Sääntelypaine kannustaa yksityisyyden etusijalle: sovelluksille, jotka eivät kerää tietoja, ei ole nollavaatimustenmukaisuutta verrattuna pilvipohjaisiin vaihtoehtoihin, jotka noudattavat monimutkaisia usean oikeudenkäyttöalueen vaatimuksia.</p><h2 id="privacy-faqs">Yleisiä tietosuojakysymyksiä</h2><h3>Kuinka tarkkoja paikallinen analytiikka on ilman pilvi tekoälyä?</h3><p><strong>Tarkkuus riippuu menetelmästä, ei sijainnista.</strong>Pilvipohjaiset sovellukset eivät luonnostaan tarjoa parempaa tarkkuutta – ne vain käsittelevät tietoja etäpalvelimilla laitteesi sijaan. Run Analytics käyttää samoja tieteellisesti validoituja kaavoja<a href="/fi/crs/">CRS</a>,<a href="/fi/training-load/">rTSS</a>, ja<a href="/fi/training-zones/">harjoitusalueet</a>pilvialustoina. Laskelmat ovat identtiset; ne toimivat vain iPhone:n prosessorilla. Nykyaikaiset iPhonet tarjoavat enemmän laskentatehoa kuin kokonaiset palvelinfarmit vuosikymmenen takaa – paikallinen käsittely tarjoaa välittömiä tuloksia tarkkuudesta tinkimättä.</p><h3>Voinko jakaa harjoitukset yksityisesti valmentajani kanssa?</h3><p><strong>Kyllä – SINÄ hallitset jakamista.</strong>Run Analytics tarjoaa joustavia vientivaihtoehtoja: vie yksittäisiä harjoituksia tai ajanjaksoja JSON-, CSV-, HTML- tai PDF-muodossa. Lähetä viedyt tiedostot valmentajalle sähköpostitse, viestisovelluksissa tai valitsemasi pilvitallennustilassa. Toisin kuin pilviympäristöissä, joissa tiedot synkronoidaan automaattisesti palvelimille, sinä päätät tarkalleen, mitä jaat, milloin jaat ja kuka ne vastaanottaa. Valmentajasi saa analysoitavaksi tarvitsemansa harjoitustiedot ilman pysyvää pääsyä koko harjoitushistoriaasi.</p><h3>Entä varmuuskopiot, jos kadotan laitteeni?</h3><p><strong>Käytä iCloud Health -varmuuskopiointia lisätietosuojauksen kanssa.</strong>Apple Health varmuuskopioi iCloudiin, kun se on käytössä, mikä mahdollistaa laitteen siirron ja palautuksen. Lisätietosuojauksen ottaminen käyttöön lisää päästä päähän -salauksen – Apple ei voi purkaa terveystietojesi salausta, vain todennetut laitteet voivat käyttää niitä. Kun määrität uuden iPhone:n ja palautat sen iCloud-varmuuskopiosta, kaikki terveystietosi (mukaan lukien Run Analytics:n käyttämä harjoitushistoria) siirretään automaattisesti. Tämä tarjoaa redundanssin paljastamatta tietoja kolmansille osapuolille.</p><h3>Mitä tapahtuu, jos kadotan laitteeni?</h3><p><strong>Tavallinen iOS-suojaus suojaa tietojasi.</strong>iPhonet salaavat kaikki tiedot, mukaan lukien terveystiedot. Jos kadotat laitteesi: (1) Pyyhi se etänä Find My iPhone -sovelluksella tietojen poistamiseksi kokonaan tai (2) laite pysyy lukittuna pääsykoodillasi – luvattomat käyttäjät eivät pääse tietoihin. Jos iCloud Health -varmuuskopiointi oli käytössä, uusi laitteesi palauttaa kaikki harjoitustiedot. Ilman varmuuskopiointia tiedot menetetään – mutta se on yksityisyyden kompromissi: täydellinen hallinta tarkoittaa täydellistä vastuuta. Harkitse salattujen iCloud-varmuuskopioiden ottamista käyttöön redundanssia varten.</p><h3>Voinko viedä tietoja ulkoista analyysiä varten?</h3><p><strong>Kyllä – useita muotovaihtoehtoja.</strong>Run Analytics tarjoaa neljä vientimuotoa: (1)<strong>JSON</strong>ohjelmallinen analyysi ja kehittäjätyökalut, (2)<strong>CSV</strong>laskentataulukkoanalyysiin Excel/Numbers/Google Sheetsissa, (3)<strong>HTML</strong>luettavat raportit kaavioineen ja (4)<strong>PDF</strong>valmentajan jakamiseen tai tulostamiseen. Valitse tietyt ajanjaksot, valitse sisällytettävät tiedot ja vie iOS-jakoarkin kautta mihin tahansa kohteeseen. Tietosi pysyvät siirrettävissä – ei patentoituja formaatteja, ei vientirajoituksia, täydellinen joustavuus haluamillesi analyysityökaluille.</p><h2 id="conclusion">Johtopäätös: Yksityisyys ilman kompromisseja</h2><p>Älykäs harjoittelu ei vaadi yksityisyyden uhraamista. Nykyaikaiset iPhone-ominaisuudet mahdollistavat hienostuneen analytiikan paikallisen tietojenkäsittelyn avulla – ne tarjoavat samat edistyneet mittarit kuin pilvipohjaiset alustat ja pitävät arkaluontoiset tietosi yksinomaisessa hallinnassasi.</p><div class="callout callout-success"><h3>✅ Tietosuoja-ensisijaiset Analytics-edut:</h3><ul><li><strong>Täydellinen tietosuoja:</strong>Harjoitustiedot, GPS-reitit, sykemittarit ja suorituskykytrendit eivät koskaan poistu laitteestasi</li><li><strong>Täysi toiminnallisuus:</strong><a href="/fi/crs/">CRS-testaus</a>,<a href="/fi/training-zones/">henkilökohtaiset harjoitusalueet</a>,<a href="/fi/training-load/">rTSS/CTL/ATL/TSB seuranta</a>, ja kattava analytiikka – kaikki käsitellään paikallisesti</li><li><strong>Nolla tiliä:</strong>Ei rekisteröintiä, ei sähköpostia, ei salasanoja – aloita käyttö välittömästi täysin nimettömänä</li><li><strong>Sinun hallintasi:</strong>Päätä, mitä viedä, milloin jakaa ja kuka sen vastaanottaa – täytä tietojen omistajuus</li><li><strong>GDPR-yhteensopiva:</strong>Täydellinen yhteensopivuus yksityisyyden etusijalla olevan arkkitehtuurin ansiosta – emme voi rikkoa keräämättömien tietojen säädöksiä</li><li><strong>Applen integrointi:</strong>Hyödynnä iOS:n tietosuojaominaisuuksia, kuten HealthKit-suojausta ja salattuja varmuuskopioita</li></ul></div><p>Valinta yksityisyyden ja suorituskyvyn välillä on väärä. Run Analytics todistaa, että sinulla voi olla molemmat: tieteellisesti validoidut harjoitusmittarit, jotka on laskettu täydellisellä yksityisyyden suojalla. Tietosi, laitteesi, valintasi.</p></article></div></section><section class="section section-alt"><div class="container container-narrow"><h2>Yksityisyyden usein kysytyt kysymykset</h2><div class="faq-section" itemscope="" itemtype="https://schema.org/FAQPage"><div class="faq-item" itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question"><h3 itemprop="name">Onko Run Analytics todella yksityinen?</h3><div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer"><div itemprop="text"><p>Kyllä – 100 % yksityinen arkkitehtonisen suunnittelun kautta. Run Analytics käsittelee kaikki tiedot paikallisesti iPhone:ssä, eikä koskaan lataa harjoitustietoja, GPS-reittejä tai terveysmittareita ulkoisille palvelimille. Sovellus ei vaadi tiliä, ei kerää henkilökohtaisia ​​tietoja eikä sisällä nollaa kolmannen osapuolen seuranta-SDK:ta. Voit varmistaa tämän tarkistamalla Applen App Privacy -tarrat, joissa ei näy tiedonkeruukategorioita. Tämä ei ole luottamuksellista yksityisyyttä ("lupaamme suojata tietosi") vaan yksityisyyttä arkkitehtuurin kautta ("meillä ei ole koskaan tietojasi").</p></div></div></div><div class="faq-item" itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question"><h3 itemprop="name">Miten paikallinen käsittely toimii?</h3><div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer"><div itemprop="text"><p><strong>Paikallinen käsittely</strong>tarkoittaa, että kaikki laskelmat tapahtuvat iPhone:n prosessorilla etäpalvelimien sijaan. Run Analytics lukee harjoitustiedot Apple Health:stä (joka on tallennettu paikallisesti laitteellesi), suorittaa laskelmia<a href="/fi/crs/">CRS</a>,<a href="/fi/training-load/">rTSS, CTL/ATL/TSB</a>, ja<a href="/fi/training-zones/">harjoitusalueet</a>iPhone:n suorittimen avulla ja tallentaa tulokset sovelluksen paikalliseen tietokantaan. Tietoja ei siirretä Internetin kautta käsittelyä varten. Nykyaikaiset iPhonet tarjoavat enemmän kuin tarpeeksi laskentatehoa kehittyneeseen analytiikkaan ilman pilviriippuvuutta. Tulokset näkyvät välittömästi, koska lataus-/latausviivettä ei ole.</p></div></div></div><div class="faq-item" itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question"><h3 itemprop="name">Mitä tietoja Run Analytics kerää?</h3><div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer"><div itemprop="text"><p><strong>Ei mitään.</strong>Run Analytics ei kerää tietoja. Sovellus lukee harjoitustiedot Apple Health:stä (nimenomaisella luvallasi), mutta käsittelee ne paikallisesti välittämättä ulkoisille palvelimille. Tilin puuttuminen tarkoittaa, ettei sähköpostiosoitteita kerätä. Seuranta-SDK:iden puuttuminen tarkoittaa, ettei käyttäytymistietoja kerätä. Analytiikkapalveluiden puuttuminen tarkoittaa, ettei käyttötilastoja ole. Ei pilvikäsittelyä tarkoittaa, ettei harjoituslatauksia ole. Sovelluksella ei kirjaimellisesti ole teknisiä kykyjä kerätä tietoja – sen vastaanottamiseen ei ole palvelinpäätepisteitä. Tarkista App Store:n App Privacy -tarra varmistaaksesi: nolla tiedonkeruuluokkaa.</p></div></div></div><div class="faq-item" itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question"><h3 itemprop="name">Tarvitsenko tilin käyttääkseni Run Analytics:ää?</h3><div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer"><div itemprop="text"><p>Ei – tiliä ei vaadita. Lataa Run Analytics App Store:stä ja aloita käyttö välittömästi. Ei rekisteröintilomakkeita, ei sähköpostin vahvistusta, ei salasanan luomista, ei profiilin määrittämistä. Sovelluksella ei ole edes tiliinfrastruktuuria – sisäänkirjautumisnäyttöä ei ole, koska sisään ei ole mahdollista kirjautua mihinkään. Tämä tarjoaa sekä mukavuutta (välitön pääsy) että yksityisyyttä (täydellinen nimettömyys). Käyttösi on täysin paikallista laitteellesi ilman identiteettiyhteyttä mihinkään ulkoiseen järjestelmään.</p></div></div></div><div class="faq-item" itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question"><h3 itemprop="name">Voiko Run Analytics myydä tietoni?</h3><div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer"><div itemprop="text"><p><strong>Mahdotonta – meillä ei ole tietojasi myytäväksi.</strong>Run Analytics ei koskaan lataa harjoitustietojasi, GPS-reittejäsi tai terveysmittareitasi palvelimille. Kaikki käsittely tapahtuu paikallisesti iPhone:ssä. Yritykset voivat myydä vain hallussaan olevia tietoja, ja meillä ei ole nollaa käyttäjätietoja. Ei ole tietokantaa käyttäjien harjoituksista, ei GPS-reittien palvelintallennusta, ei terveystietojen kokoelmaa. Tämä arkkitehtoninen päätös tekee tietojen myymisestä teknisesti mahdotonta, ei vain politiikan kiellettyä. Se on vahvin mahdollinen takuu: emme voi myydä sitä, mitä meillä ei ole.</p></div></div></div><div class="faq-item" itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question"><h3 itemprop="name">Ovatko sijaintitietoni turvassa?</h3><div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer"><div itemprop="text"><p>Kyllä – sijaintitiedot säilyvät vain iPhone:ssä Apple Health:ssä. Run Analytics ei koskaan lataa GPS-reittejä tai koordinaatteja ulkoisille palvelimille. Sovellus voi lukea sijaintitietoja Healthista (luvallasi) etäisyyden ja vauhdin laskemiseksi, mutta kaikki käsittely tapahtuu paikallisesti. GPS-reitit pysyvät hallinnassasi Apple Health:ssä, suojattu iOS-salauksella ja pääsyohjauksilla. Kun viet harjoitustietoja, SINÄ voit valita, sisällytetäänkö sijaintitiedot vai jaetaanko vain yhteenvetotilastot. Täydellinen sijainnin yksityisyys vain paikallisen arkkitehtuurin avulla.</p></div></div></div><div class="faq-item" itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question"><h3 itemprop="name">Entä iCloud-varmuuskopiot?</h3><div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer"><div itemprop="text"><p>Apple Health-tiedot varmuuskopioidaan iCloudiin, kun otat Terveysvarmuuskopion käyttöön iOS-asetuksissa. Maksimaalista yksityisyyttä varten ota käyttöön<strong>Edistynyt tietosuoja</strong>-Tämä lisää päästä päähän -salauksen Health-varmuuskopioihin, mikä tarkoittaa, että Apple ei voi purkaa tietojesi salausta (vain todennetut laitteet voivat käyttää niitä). iCloud-varmuuskopiointi tarjoaa laitteen palautuksen ja siirron tinkimättä yksityisyydestä, kun se on määritetty oikein. Run Analytics-tiedot pysyvät Applen ekosysteemin yksityisyydensuojan piirissä – ei erillistä pilvipalvelua, ei kolmannen osapuolen varmuuskopioiden tarjoajia, täydellinen integraatio iOS-tietoturvamalliin.</p></div></div></div><div class="faq-item" itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question"><h3 itemprop="name">Miten tämä eroaa Stravasta?</h3><div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer"><div itemprop="text"><p><strong>Pohjimmiltaan erilaiset arkkitehtuurit:</strong>Strava edellyttää kaikkien harjoitustietojen lataamista palvelimilleen käsittelyä varten – GPS-jäljet, syke ja suorituskykymittarit, jotka kaikki on tallennettu Stravan pilviinfrastruktuuriin. Strava vaatii tilin rekisteröinnin (sähköpostiosoite), tarjoaa sosiaalisia ominaisuuksia (julkisia profiileja) ja jakaa tietoja kolmansien osapuolien kanssa. Run Analytics käsittelee kaiken paikallisesti iPhone:ssä, ei vaadi tiliä, lataa nollaa dataa eikä tarjoa sosiaalisia ominaisuuksia. Strava asettaa etusijalle sosiaalisen yhteyden; Run Analytics asettaa yksityisyyden etusijalle. Molemmat tarjoavat koulutusanalytiikkaa, mutta täysin päinvastaisten arkkitehtonisten lähestymistapojen kautta. Katso meidän<a href="#competitor-comparison">yksityiskohtainen vertailu</a>edellä.</p></div></div></div><div class="faq-item" itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question"><h3 itemprop="name">Vähentääkö yksityisyys tarkkuutta?</h3><div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer"><div itemprop="text"><p>Ei – yksityisyys etusijalla oleva arkkitehtuuri ei vaaranna tarkkuutta.<a href="/fi/running-performance-metrics/">Suorituskykymittarit</a>riippuvat laskentamenetelmästä, eivät käsittelypaikasta. Run Analytics käyttää samoja tieteellisesti validoituja kaavoja<a href="/fi/crs/">Kriittinen juoksunopeus</a>,<a href="/fi/training-load/">Harjoittelun stressipisteet</a>ja harjoitusvyöhykelaskenta pilvipohjaisina alustoina. Matematiikka on identtinen riippumatta siitä, suoritetaanko se etäpalvelimissa tai iPhone:ssä – paikallinen käsittely tapahtuu välittömästi ilman verkkoviiveitä. Nykyaikaiset iOS-laitteet tarjoavat valtavan laskentatehon analytiikkaan, joka aiemmin vaati palvelinfarmia. Yksityisyys ja tarkkuus ovat täydellisesti olemassa paikallisen käsittelyn ansiosta.</p></div></div></div><div class="faq-item" itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question"><h3 itemprop="name">Voinko viedä tietoni?</h3><div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer"><div itemprop="text"><p>Kyllä – täydellinen vientijoustavuus. Run Analytics tarjoaa useita vientimuotoja:<strong>JSON</strong>(ohjelmallinen analyysi),<strong>CSV</strong>(laskentataulukoita varten),<strong>HTML</strong>(luettavia raportteja varten) ja<strong>PDF</strong>(valmentajan jakamiseen). Valitse tietyt ajanjaksot, valitse sisällytettävät tiedot, päätä sisällytetäänkö GPS-tiedot ja vie iOS-jakoarkin kautta mihin tahansa kohteeseen (sähköposti, pilvitallennus, viestisovellukset). Tietosi pysyvät siirrettävissä ilman omaa muotoa tai toimittajan lukitusta. Vie milloin tahansa varmuuskopiointia, valmentajan jakamista tai ulkoista analysointia varten haluamillasi työkaluilla.</p></div></div></div></div></div></section><section class="section"><div class="container container-narrow"><h2>Ota käyttötietojesi tietosuoja hallintaasi</h2><div class="callout callout-success"><h3>Aloita harjoittelu täydellä yksityisyydellä</h3><p>Koe edistynyt analytiikka vaarantamatta yksityisyyttäsi. Run Analytics todistaa, että sinulla voi olla kehittyneitä harjoitusmittareita JA täydellinen tietojen hallinta:</p><ul><li><strong>Testaa CRS:si:</strong>Mittaa<a href="/fi/crs/">Kriittinen juoksunopeus</a>ja luo henkilökohtaisia harjoitusalueita – 100 % paikallisesti laitteellesi</li><li><strong>Seuraa harjoituskuormitusta:</strong>Monitor<a href="/fi/training-load/">rTSS, CTL, ATL ja TSB</a>optimoidaksesi harjoitusstressiä ja estääksesi ylikuntoutumisen – kaikki lasketaan yksityisesti</li><li><strong>Analysoi suorituskyky:</strong>Raita<a href="/fi/running-performance-metrics/">VO2max, kynnysvauhti ja juoksutalous</a>ilman pilvilatauksia</li><li><strong>Rakenneharjoitusalueet:</strong>Käytä<a href="/fi/training-zones-intensity/">7 tieteeseen perustuvaa harjoitusaluetta</a>tarkkaan harjoituksen intensiteetin hallintaan</li><li><strong>Lataa Run Analytics:</strong><a href="/fi/">Aloita 7 päivän ilmainen kokeilujaksosi</a>ja koe yksityisyys-ensisijainen analytiikka tänään</li></ul></div><div class="mt-xl text-center"><a class="btn btn-primary" href="https://apps.apple.com/es/app/runanalytics/id6754524015">Lataa Run Analytics (7 päivän ilmainen kokeiluversio) →</a><a class="btn btn-secondary" href="/fi/crs/">Laske CRS →</a></div></div></section><section class="eeat-author bg-light divider-top-lg divider-bottom-lg" aria-label="Author and Reviewer Information"><div class="container container-narrow"><div class="eeat-card" style="display: flex; gap: 1.5rem; align-items: center; padding: 1.5rem; background: var(--color-bg-alt, #f8f9fa); border-radius: 8px; border: 1px solid var(--color-border, #e9ecef); margin-top: 3rem; margin-bottom: 2rem;"><div class="eeat-avatar" style="font-size: 2.5rem; line-height: 1; flex-shrink: 0;" aria-hidden="true">👨‍🔬</div><div class="eeat-details"><h3 style="margin: 0 0 0.5rem 0; font-size: 1.125rem; font-weight: 600;">
+          Expertly Reviewed by 
+          <span itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">AnalyticsZone Team</span></span></h3><p style="margin: 0 0 0.5rem 0; font-size: 0.95rem; color: var(--color-body-text, #4a5568); line-height: 1.5;">
+          This content has been written and reviewed by a sports data metrics expert to ensure technical accuracy and adherence to the latest sports science methodologies.
+        </p></div></div></div></section><section class="ai-citation-block divider-top-xl" data-ai-ready="true" data-ai-page="privacy-first-running-analytics"><div class="container ai-citation-shell"><h2 class="ai-citation-title">Yksityisyyteen perustuva juoksuanalyysi: Sinun tietosi,</h2><p class="ai-citation-answer">Harjoittele älykkäämmin ilman yksityisyyden uhrausta. Tutustu siihen, kuinka paikallinen tietojen käsittely antaa sinulle täyden hallinnan juoksuanalyysiin.</p><ul class="ai-citation-facts" role="list"><li class="ai-citation-fact"><span class="ai-citation-icon" aria-hidden="true">📅</span><span>2026-03-24</span></li><li class="ai-citation-fact ai-citation-keywords"><span class="ai-citation-icon" aria-hidden="true">🏷️</span><span>yksityisyys juoksu sovellus · yksityisyys kuntoilu seuranta · paikallinen datan käsittely juoksu · GDPR kuntoilu sovellukset · sijainti yksityisyys juoksu</span></li><li class="ai-citation-fact"><span class="ai-citation-icon" aria-hidden="true">🔬</span><a href="../../fi/bibliography/">
+          
+          Bibliografia
+          
+        </a></li></ul></div></section></main><footer class="site-footer"><div class="container"><div class="footer-top"><div class="footer-brand-section"><h2>Run Analytics</h2><p>Track Critical Running Speed, Training Stress Score, and performance metrics with Run Analytics. Science-based iOS app for runners, triathletes &amp; coaches. 7-day free trial.</p></div><div class="footer-download"><h3 class="footer-heading">Lataa</h3><div class="footer-badges"><a href="https://apps.apple.com/us/app/run-analytics/id6754524015" target="_blank" rel="noopener"
+                        aria-label="Lataa App Store:llä"><img src="../../assets/images/badge-app-store.svg"
+                            alt="Lataa App Store:llä" width="135"
+                            height="40" loading="lazy"></a><a href="https://play.google.com/store/apps/details?id=com.arnohealth.runanalytics" target="_blank" rel="noopener"
+                        aria-label="Hanki se Google Playsta"><img src="../../assets/images/badge-google-play.svg"
+                            alt="Hanki se Google Playsta" width="135"
+                            height="40" loading="lazy"></a></div></div></div><div class="footer-languages"><h3 class="footer-heading">Saatavilla</h3><div class="lang-grid"><a href="/af/" class="lang-link"
+                    hreflang="af" >
+                    Afrikaans
+                </a><a href="/am/" class="lang-link"
+                    hreflang="am" >
+                    አማርኛ
+                </a><a href="/ar/" class="lang-link"
+                    hreflang="ar" dir="rtl" >
+                    العربية
+                </a><a href="/bg/" class="lang-link"
+                    hreflang="bg" >
+                    Български
+                </a><a href="/bn/" class="lang-link"
+                    hreflang="bn" >
+                    বাংলা
+                </a><a href="/ca/" class="lang-link"
+                    hreflang="ca" >
+                    Català
+                </a><a href="/cs/" class="lang-link"
+                    hreflang="cs" >
+                    Čeština
+                </a><a href="/da/" class="lang-link"
+                    hreflang="da" >
+                    Dansk
+                </a><a href="/de/" class="lang-link"
+                    hreflang="de" >
+                    Deutsch
+                </a><a href="/el/" class="lang-link"
+                    hreflang="el" >
+                    Ελληνικά
+                </a><a href="/en/" class="lang-link"
+                    hreflang="en" >
+                    English
+                </a><a href="/es/" class="lang-link"
+                    hreflang="es" >
+                    Español
+                </a><a href="/et/" class="lang-link"
+                    hreflang="et" >
+                    Eesti
+                </a><a href="/fa/" class="lang-link"
+                    hreflang="fa" dir="rtl" >
+                    فارسی
+                </a><a href="/fi/" class="lang-link active"
+                    hreflang="fi" >
+                    Suomi
+                </a><a href="/fr/" class="lang-link"
+                    hreflang="fr" >
+                    Français
+                </a><a href="/gu/" class="lang-link"
+                    hreflang="gu" >
+                    ગુજરાતી
+                </a><a href="/ha/" class="lang-link"
+                    hreflang="ha" >
+                    Hausa
+                </a><a href="/he/" class="lang-link"
+                    hreflang="he" dir="rtl" >
+                    עברית
+                </a><a href="/hi/" class="lang-link"
+                    hreflang="hi" >
+                    हिन्दी
+                </a><a href="/hr/" class="lang-link"
+                    hreflang="hr" >
+                    Hrvatski
+                </a><a href="/hu/" class="lang-link"
+                    hreflang="hu" >
+                    Magyar
+                </a><a href="/id/" class="lang-link"
+                    hreflang="id" >
+                    Bahasa Indonesia
+                </a><a href="/is/" class="lang-link"
+                    hreflang="is" >
+                    Íslenska
+                </a><a href="/it/" class="lang-link"
+                    hreflang="it" >
+                    Italiano
+                </a><a href="/ja/" class="lang-link"
+                    hreflang="ja" >
+                    日本語
+                </a><a href="/km/" class="lang-link"
+                    hreflang="km" >
+                    ភាសាខ្មែរ
+                </a><a href="/kn/" class="lang-link"
+                    hreflang="kn" >
+                    ಕನ್ನಡ
+                </a><a href="/ko/" class="lang-link"
+                    hreflang="ko" >
+                    한국어
+                </a><a href="/lt/" class="lang-link"
+                    hreflang="lt" >
+                    Lietuvių
+                </a><a href="/lv/" class="lang-link"
+                    hreflang="lv" >
+                    Latviešu
+                </a><a href="/ms/" class="lang-link"
+                    hreflang="ms" >
+                    Bahasa Melayu
+                </a><a href="/my/" class="lang-link"
+                    hreflang="my" >
+                    မြန်မာစာ
+                </a><a href="/nb/" class="lang-link"
+                    hreflang="nb" >
+                    Norsk Bokmål
+                </a><a href="/nl/" class="lang-link"
+                    hreflang="nl" >
+                    Nederlands
+                </a><a href="/pl/" class="lang-link"
+                    hreflang="pl" >
+                    Polski
+                </a><a href="/pt/" class="lang-link"
+                    hreflang="pt" >
+                    Português
+                </a><a href="/pt-br/" class="lang-link"
+                    hreflang="pt-br" >
+                    Português (Brasil)
+                </a><a href="/ro/" class="lang-link"
+                    hreflang="ro" >
+                    Română
+                </a><a href="/ru/" class="lang-link"
+                    hreflang="ru" >
+                    Русский
+                </a><a href="/sk/" class="lang-link"
+                    hreflang="sk" >
+                    Slovenčina
+                </a><a href="/sl/" class="lang-link"
+                    hreflang="sl" >
+                    Slovenščina
+                </a><a href="/sr/" class="lang-link"
+                    hreflang="sr" >
+                    Srpski
+                </a><a href="/sv/" class="lang-link"
+                    hreflang="sv" >
+                    Svenska
+                </a><a href="/sw/" class="lang-link"
+                    hreflang="sw" >
+                    Kiswahili
+                </a><a href="/ta/" class="lang-link"
+                    hreflang="ta" >
+                    தமிழ்
+                </a><a href="/te/" class="lang-link"
+                    hreflang="te" >
+                    తెలుగు
+                </a><a href="/th/" class="lang-link"
+                    hreflang="th" >
+                    ไทย
+                </a><a href="/tl/" class="lang-link"
+                    hreflang="tl" >
+                    Tagalog
+                </a><a href="/tr/" class="lang-link"
+                    hreflang="tr" >
+                    Türkçe
+                </a><a href="/uk/" class="lang-link"
+                    hreflang="uk" >
+                    Українська
+                </a><a href="/ur/" class="lang-link"
+                    hreflang="ur" dir="rtl" >
+                    اردو
+                </a><a href="/vi/" class="lang-link"
+                    hreflang="vi" >
+                    Tiếng Việt
+                </a><a href="/yo/" class="lang-link"
+                    hreflang="yo" >
+                    Yorùbá
+                </a><a href="/zh/" class="lang-link"
+                    hreflang="zh" >
+                    中文
+                </a></div></div><div class="footer-divider"></div><div class="footer-bottom"><p class="copyright">
+                &copy; 2026 Run Analytics. Kaikki oikeudet pidätetään
+            </p><ul class="footer-legal"><li><a href="/fi/privacy/">Tietosuoja</a></li><li><a href="/fi/terms/">Käyttöehdot</a></li></ul></div></div></footer><div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="Cookie consent" aria-live="polite"><div class="cookie-banner-content"><div><p>Tämä verkkosivusto käyttää evästeitä parantaakseen käyttökokemustasi.</p><a href="/fi/privacy/" class="text-sm">Lue lisää</a></div><div class="cookie-banner-actions"><button id="cookie-decline" class="btn btn-secondary btn-small">Hylkää</button><button id="cookie-accept" class="btn btn-primary btn-small">Hyväksy</button></div></div></div><script src="../../assets/js/core.min.js?v=1c7ace58" defer></script><script src="../../assets/js/search.min.js?v=1c7ace58" defer></script><script src="../../assets/js/analytics.min.js" data-ga-id="G-Y138VB4523" defer></script><script>if ('serviceWorker' in navigator) { navigator.serviceWorker.register('../../sw.js') }</script></body></html>

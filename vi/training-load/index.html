@@ -1,0 +1,910 @@
+<!DOCTYPE html><html lang="vi" dir="ltr"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=optional"
+    rel="stylesheet"><title>Tải trọng luyện tập chạy: rTSS, CTL, ATL và TSB Giải thích</title><meta name="description" content="Tìm hiểu cách sử dụng rTSS, CTL, ATL và TSB để theo dõi mức độ mệt mỏi khi chạy, thể lực và thời gian giảm dần với CRS và vùng luyện tập thực tế."><meta name="author" content="AnalyticsZone Team"><meta name="keywords" content="tải đào tạo chạy, rTSS, CTL ATL TSB đang chạy, chạy mệt mỏi và thể lực, chạy côn thời gian, CRS khối lượng đào tạo"><link rel="canonical" href="https://run.analyticszone.app/vi/training-load/"><meta property="article:published_time" content="2025-01-15T10:00:00Z"><meta property="article:modified_time" content="2026-04-02T14:30:00Z"><meta property="article:author" content="AnalyticsZone Team"><meta property="og:type" content="article"><meta property="og:url" content="https://run.analyticszone.app/vi/training-load/"><meta property="og:title" content="Tải trọng luyện tập chạy: rTSS, CTL, ATL và TSB Giải thích"><meta property="og:description" content="Tìm hiểu cách sử dụng rTSS, CTL, ATL và TSB để theo dõi mức độ mệt mỏi khi chạy, thể lực và thời gian giảm dần với CRS và vùng luyện tập thực tế."><meta property="og:image" content="https://run.analyticszone.app/assets/images/og-image.svg"><meta property="og:locale" content="vi_VN"><meta property="og:site_name" content="Run Analytics"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:url" content="https://run.analyticszone.app/vi/training-load/"><meta name="twitter:title" content="Tải trọng luyện tập chạy: rTSS, CTL, ATL và TSB Giải thích"><meta name="twitter:description" content="Tìm hiểu cách sử dụng rTSS, CTL, ATL và TSB để theo dõi mức độ mệt mỏi khi chạy, thể lực và thời gian giảm dần với CRS và vùng luyện tập thực tế."><meta name="twitter:image" content="https://run.analyticszone.app/assets/images/og-image.svg"><meta name="twitter:site" content="@runanalytics"><meta name="twitter:creator" content="@runanalytics"><link rel="alternate" hreflang="ar"
+    href="https://run.analyticszone.app/ar/training-load/"><link rel="alternate" hreflang="de"
+    href="https://run.analyticszone.app/de/training-load/"><link rel="alternate" hreflang="en"
+    href="https://run.analyticszone.app/en/training-load/"><link rel="alternate" hreflang="es"
+    href="https://run.analyticszone.app/es/training-load/"><link rel="alternate" hreflang="fr"
+    href="https://run.analyticszone.app/fr/training-load/"><link rel="alternate" hreflang="hi"
+    href="https://run.analyticszone.app/hi/training-load/"><link rel="alternate" hreflang="id"
+    href="https://run.analyticszone.app/id/training-load/"><link rel="alternate" hreflang="it"
+    href="https://run.analyticszone.app/it/training-load/"><link rel="alternate" hreflang="ja"
+    href="https://run.analyticszone.app/ja/training-load/"><link rel="alternate" hreflang="ko"
+    href="https://run.analyticszone.app/ko/training-load/"><link rel="alternate" hreflang="nl"
+    href="https://run.analyticszone.app/nl/training-load/"><link rel="alternate" hreflang="pl"
+    href="https://run.analyticszone.app/pl/training-load/"><link rel="alternate" hreflang="pt"
+    href="https://run.analyticszone.app/pt/training-load/"><link rel="alternate" hreflang="pt-br"
+    href="https://run.analyticszone.app/pt-br/training-load/"><link rel="alternate" hreflang="ru"
+    href="https://run.analyticszone.app/ru/training-load/"><link rel="alternate" hreflang="sv"
+    href="https://run.analyticszone.app/sv/training-load/"><link rel="alternate" hreflang="tr"
+    href="https://run.analyticszone.app/tr/training-load/"><link rel="alternate" hreflang="zh"
+    href="https://run.analyticszone.app/zh/training-load/"><link rel="alternate" hreflang="x-default"
+    href="https://run.analyticszone.app/en/training-load/"><link rel="icon" type="image/png" sizes="32x32" href="../../assets/images/icons/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="../../assets/images/icons/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="../../assets/images/icons/apple-touch-icon.png"><link rel="manifest" href="../../manifest.json"><meta name="theme-color" content="#2563EB"><meta name="robots" content="noindex, follow"><meta name="apple-itunes-app" content="app-id=6754524015"><style>
+/* Critical CSS - Above the fold styles for fast LCP */
+:root {
+  --color-primary: #0066CC;
+  --color-text: #1a1a1a;
+  --color-text-muted: #666;
+  --color-bg: #ffffff;
+  --color-bg-alt: #f8f9fa;
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+}
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  color: var(--color-text);
+  background: var(--color-bg);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Skip link - Accessibility */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--color-primary);
+  color: #fff;
+  padding: 8px 16px;
+  z-index: 1000;
+  text-decoration: none;
+}
+.skip-link:focus {
+  top: 0;
+}
+
+/* Header - Critical for LCP */
+.site-header {
+  background: var(--color-bg);
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0.75rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.site-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: var(--color-text);
+  font-weight: 600;
+  font-size: 1.125rem;
+}
+
+.site-logo img, .site-logo svg {
+  width: 32px;
+  height: 32px;
+}
+
+/* Navigation */
+.main-nav {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .main-nav {
+    display: flex;
+    gap: 1.5rem;
+  }
+  .main-nav a {
+    color: var(--color-text);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9375rem;
+    transition: color 0.2s;
+  }
+  .main-nav a:hover {
+    color: var(--color-primary);
+  }
+}
+
+/* Mobile menu button */
+.menu-toggle {
+  display: flex;
+  background: none;
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .menu-toggle {
+    display: none;
+  }
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Main content */
+main.main-content {
+  flex: 1;
+}
+
+/* Hero section - Critical for LCP */
+.hero {
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .hero {
+    padding: 4rem 2rem;
+  }
+}
+
+.hero h1 {
+  font-size: clamp(1.75rem, 5vw, 3rem);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  color: var(--color-text);
+}
+
+.hero .lead, .hero p {
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  color: var(--color-text-muted);
+  max-width: 700px;
+  margin: 0 auto 1.5rem;
+}
+
+/* Buttons - Critical for CTA */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: var(--radius-md);
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-primary {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: #0052a3;
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+}
+
+.btn-large {
+  padding: 1rem 2rem;
+  font-size: 1.125rem;
+}
+
+/* Utility classes */
+.hidden { display: none !important; }
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Images - prevent CLS with aspect-ratio */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+img[width][height] {
+  aspect-ratio: attr(width) / attr(height);
+}
+
+.lazy-image {
+  background: var(--color-bg-alt);
+  transition: opacity 0.3s;
+}
+
+.lazy-image:not(.loaded) {
+  opacity: 0;
+}
+
+.lazy-image.loaded {
+  opacity: 1;
+}
+
+/* App badges - fixed dimensions to prevent CLS */
+.app-badge img {
+  width: 140px;
+  height: 42px;
+}
+
+/* Logo - fixed dimensions */
+.site-logo img {
+  width: 32px;
+  height: 32px;
+}
+
+/* Reduce motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+</style><link rel="preconnect" href="https://www.googletagmanager.com"><link rel="dns-prefetch" href="https://www.googletagmanager.com"><link rel="stylesheet" href="../../assets/css/main.min.css?v=1c7ace58"><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Run Analytics",
+  "url": "https://run.analyticszone.app",
+  "logo": "https://run.analyticszone.app/assets/images/logo.png",
+  "description": "Track Critical Running Speed, Training Stress Score, and performance metrics with Run Analytics. Science-based iOS app for runners, triathletes &amp; coaches. 7-day free trial.",
+  
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "Customer Support",
+    "email": "analyticszone+run@onmedic.org"
+  },
+  
+  "sameAs": [
+    
+    
+      
+    
+    
+      
+    
+    
+      
+    
+    
+    "https://twitter.com/runanalytics",
+    
+    "https://apps.apple.com/us/app/run-analytics/id6754524015",
+    
+    "https://play.google.com/store/apps/details?id=com.arnohealth.runanalytics"
+    
+  ]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Run Analytics",
+  "url": "https://run.analyticszone.app",
+  "description": "Track Critical Running Speed, Training Stress Score, and performance metrics with Run Analytics. Science-based iOS app for runners, triathletes &amp; coaches. 7-day free trial.",
+  "inLanguage": "vi"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Run Analytics",
+  "description": "Track Critical Running Speed, Training Stress Score, and performance metrics with Run Analytics. Science-based iOS app for runners, triathletes &amp; coaches. 7-day free trial.",
+  "url": "https://run.analyticszone.app",
+  "applicationCategory": ["HealthApplication", "FitnessApplication"],
+  "operatingSystem": "iOS, Android",
+  "author": {
+    "@type": "Organization",
+    "name": "AnalyticsZone Team"
+  },
+  "downloadUrl": "https://apps.apple.com/us/app/run-analytics/id6754524015"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Trang chủ",
+      "item": "https://run.analyticszone.app/vi/"
+    },
+    
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Học tập",
+      "item": "https://run.analyticszone.app/vi/getting-started/"
+    },
+    
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Tải tập luyện",
+      "item": "https://run.analyticszone.app/vi/training-load/"
+    }
+    
+  ]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Tải trọng luyện tập chạy: rTSS, CTL, ATL và TSB Giải thích",
+  "description": "Tìm hiểu cách sử dụng rTSS, CTL, ATL và TSB để theo dõi mức độ mệt mỏi khi chạy, thể lực và thời gian giảm dần với CRS và vùng luyện tập thực tế.",
+  "url": "https://run.analyticszone.app/vi/training-load/",
+  "inLanguage": "vi",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "Run Analytics",
+    "url": "https://run.analyticszone.app"
+  },
+  "datePublished": "2025-01-15",
+  "dateModified": "2026-04-02",
+  "keywords": ["tải đào tạo chạy", "rTSS", "CTL ATL TSB đang chạy", "chạy mệt mỏi và thể lực", "chạy côn thời gian", "CRS khối lượng đào tạo"],
+  "about": [
+    {
+      "@type": "Thing",
+      "name": "tải đào tạo chạy"
+    }, 
+  
+    {
+      "@type": "Thing",
+      "name": "rTSS"
+    }, 
+  
+    {
+      "@type": "Thing",
+      "name": "CTL ATL TSB đang chạy"
+    }, 
+  
+    {
+      "@type": "Thing",
+      "name": "chạy mệt mỏi và thể lực"
+    }, 
+  
+    {
+      "@type": "Thing",
+      "name": "chạy côn thời gian"
+    }, 
+  
+    {
+      "@type": "Thing",
+      "name": "CRS khối lượng đào tạo"
+    }
+  ]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Tải trọng luyện tập chạy: rTSS, CTL, ATL và TSB Giải thích",
+  "description": "Tìm hiểu cách sử dụng rTSS, CTL, ATL và TSB để theo dõi mức độ mệt mỏi khi chạy, thể lực và thời gian giảm dần với CRS và vùng luyện tập thực tế.",
+  "author": {
+    "@type": "Person",
+    "name": "AnalyticsZone Team"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Run Analytics",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://run.analyticszone.app/assets/images/logo.png"
+    }
+  },
+  "datePublished": "2025-01-15",
+  "dateModified": "2026-04-02",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://run.analyticszone.app/vi/training-load/"
+  }
+}
+</script><script>
+    (function () {
+      let theme = localStorage.getItem('theme');
+      // Older builds could persist a per-subdomain `theme=light` value without a UI
+      // to keep it consistent across apps. Treat it as stale and fall back to the OS.
+      if (theme === 'light') {
+        try { localStorage.removeItem('theme'); } catch (e) { /* ignore */ }
+        theme = null;
+      }
+
+      if (theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark-mode');
+      }
+    })();
+  </script></head><body><a href="#main-content" class="skip-link">Chuyển đến nội dung</a><header class="site-header"><div class="container"><div class="header-inner"><a href="/vi/" class="site-logo"><picture><source srcset="../../assets/images/logo-dark.png" type="image/png"
+                        media="(prefers-color-scheme: dark)"><img src="../../assets/images/logo.png" alt="Run Analytics - Running Analytics App | Critical Running Speed, TSS, CTL/ATL/TSB for iOS" width="56" height="56"></picture><span class="logo-text">Run Analytics</span></a><nav class="nav-primary" id="nav-primary" role="navigation" aria-label="Main navigation"><div class="nav-group-left"><ul><li><a href="/vi/" 
+                                aria-current="">
+                                Trang chủ
+                            </a></li><li class="has-submenu" ><a href="/vi/getting-started/" class="nav-label">Học tập</a><ul class="submenu"><li><a href="/vi/getting-started/" 
+                                        aria-current="">
+                                        Bắt đầu
+                                    </a></li><li><a href="/vi/crs/" 
+                                        aria-current="">
+                                        CRS
+                                    </a></li><li><a href="/vi/training-zones/" 
+                                        aria-current="">
+                                        Vùng tập luyện
+                                    </a></li><li><a href="/vi/training-load/" class="active" 
+                                        aria-current="page">
+                                        Tải tập luyện
+                                    </a></li><li><a href="/vi/rtss-calculator/" 
+                                        aria-current="">
+                                        Máy tính rTSS
+                                    </a></li></ul></li><li class="has-submenu" ><a href="/vi/research/" class="nav-label">Khoa học</a><ul class="submenu"><li><a href="/vi/research/" 
+                                        aria-current="">
+                                        Nghiên cứu
+                                    </a></li><li><a href="/vi/formulas/" 
+                                        aria-current="">
+                                        Công thức
+                                    </a></li><li><a href="/vi/efficiency/" 
+                                        aria-current="">
+                                        Hiệu quả
+                                    </a></li><li><a href="/vi/stride-mechanics/" 
+                                        aria-current="">
+                                        Cơ học sải bước
+                                    </a></li><li><a href="/vi/bibliography/" 
+                                        aria-current="">
+                                        Thư mục
+                                    </a></li></ul></li><li><a href="/vi/contact/" 
+                                aria-current="">
+                                Liên hệ
+                            </a></li></ul><div class="search-container"><svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.35-4.35"></path></svg><input type="search" id="site-search" class="search-input" aria-expanded="false"
+                            aria-haspopup="listbox" aria-autocomplete="list" autocomplete="off" spellcheck="false" /><div id="search-results" class="search-results hidden" role="region" aria-live="polite"></div></div><select class="language-selector" id="language-select" aria-label="Chọn ngôn ngữ"><option value="af" >
+                            Afrikaans
+                        </option><option value="am" >
+                            አማርኛ
+                        </option><option value="ar" >
+                            العربية
+                        </option><option value="bg" >
+                            Български
+                        </option><option value="bn" >
+                            বাংলা
+                        </option><option value="ca" >
+                            Català
+                        </option><option value="cs" >
+                            Čeština
+                        </option><option value="da" >
+                            Dansk
+                        </option><option value="de" >
+                            Deutsch
+                        </option><option value="el" >
+                            Ελληνικά
+                        </option><option value="en" >
+                            English
+                        </option><option value="es" >
+                            Español
+                        </option><option value="et" >
+                            Eesti
+                        </option><option value="fa" >
+                            فارسی
+                        </option><option value="fi" >
+                            Suomi
+                        </option><option value="fr" >
+                            Français
+                        </option><option value="gu" >
+                            ગુજરાતી
+                        </option><option value="ha" >
+                            Hausa
+                        </option><option value="he" >
+                            עברית
+                        </option><option value="hi" >
+                            हिन्दी
+                        </option><option value="hr" >
+                            Hrvatski
+                        </option><option value="hu" >
+                            Magyar
+                        </option><option value="id" >
+                            Bahasa Indonesia
+                        </option><option value="is" >
+                            Íslenska
+                        </option><option value="it" >
+                            Italiano
+                        </option><option value="ja" >
+                            日本語
+                        </option><option value="km" >
+                            ភាសាខ្មែរ
+                        </option><option value="kn" >
+                            ಕನ್ನಡ
+                        </option><option value="ko" >
+                            한국어
+                        </option><option value="lt" >
+                            Lietuvių
+                        </option><option value="lv" >
+                            Latviešu
+                        </option><option value="ms" >
+                            Bahasa Melayu
+                        </option><option value="my" >
+                            မြန်မာစာ
+                        </option><option value="nb" >
+                            Norsk Bokmål
+                        </option><option value="nl" >
+                            Nederlands
+                        </option><option value="pl" >
+                            Polski
+                        </option><option value="pt" >
+                            Português
+                        </option><option value="pt-br" >
+                            Português (Brasil)
+                        </option><option value="ro" >
+                            Română
+                        </option><option value="ru" >
+                            Русский
+                        </option><option value="sk" >
+                            Slovenčina
+                        </option><option value="sl" >
+                            Slovenščina
+                        </option><option value="sr" >
+                            Srpski
+                        </option><option value="sv" >
+                            Svenska
+                        </option><option value="sw" >
+                            Kiswahili
+                        </option><option value="ta" >
+                            தமிழ்
+                        </option><option value="te" >
+                            తెలుగు
+                        </option><option value="th" >
+                            ไทย
+                        </option><option value="tl" >
+                            Tagalog
+                        </option><option value="tr" >
+                            Türkçe
+                        </option><option value="uk" >
+                            Українська
+                        </option><option value="ur" >
+                            اردو
+                        </option><option value="vi" selected>
+                            Tiếng Việt
+                        </option><option value="yo" >
+                            Yorùbá
+                        </option><option value="zh" >
+                            中文
+                        </option></select></div><div class="nav-group-right"><div class="header-app-buttons"><a href="https://apps.apple.com/us/app/run-analytics/id6754524015" class="header-download-btn" target="_blank"
+                            rel="noopener" aria-label="Download on App Store" title="Download on App Store"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="currentColor"><path
+                                    d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z" /></svg></a><a href="https://play.google.com/store/apps/details?id=com.arnohealth.runanalytics" class="header-download-btn" target="_blank"
+                            rel="noopener" aria-label="Get it on Google Play" title="Get it on Google Play"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="currentColor"><path
+                                    d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.92 20.16,13.19L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M16.81,8.88L14.54,11.15L6.05,2.66L16.81,8.88Z" /></svg></a></div><div class="suite-menu-container"><button class="suite-menu-toggle" id="suite-menu-toggle" aria-label="See other apps"
+                            aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg></button><div class="suite-dropdown hidden" id="suite-dropdown"><div class="suite-dropdown-header">Other AnalyticsZone Apps</div><div class="suite-apps-grid"><a href="https://analyticszone.app" class="suite-app-link">AnalyticsZone</a><a href="https://swim.analyticszone.app" class="suite-app-link">Swim Analytics</a><a href="https://bike.analyticszone.app" class="suite-app-link">Bike Analytics</a><a href="https://walk.analyticszone.app" class="suite-app-link">Walk Analytics</a><a href="https://cardio.analyticszone.app" class="suite-app-link">Cardio Analytics</a><a href="https://health.analyticszone.app" class="suite-app-link">Health Analytics</a><a href="https://swimtrainer.analyticszone.app" class="suite-app-link">Swim Trainer</a><a href="https://hike.analyticszone.app" class="suite-app-link">Hike Analytics</a><a href="https://sleep.analyticszone.app" class="suite-app-link">Sleep Analytics</a><a href="https://paceva.analyticszone.app" class="suite-app-link">Paceva Analytics</a></div></div></div></div></nav><button class="menu-toggle" id="menu-toggle" aria-label="Chuyển menu"
+                aria-expanded="false" aria-controls="nav-primary"><span></span><span></span><span></span></button></div></div></header><nav class="breadcrumbs" aria-label="Breadcrumb"><div class="container"><ol><li><a href="/vi/">Trang chủ</a></li><li><a href="/vi/getting-started/">Học tập</a></li><li><span aria-current="page">Tải tập luyện</span></li></ol></div></nav><main id="main-content" class="main-content"><section class="page-hero"><div class="container"><h1>Tải trọng luyện tập chạy: rTSS, CTL, ATL và TSB Giải thích</h1><p class="lead">Cách định lượng mức độ căng thẳng khi chạy, theo dõi thể lực và sự mệt mỏi cũng như thời gian giảm dần mà không cần đoán</p></div></section><section class="section"><div class="container container-narrow"><div class="quick-answer" itemscope="" itemtype="https://schema.org/Answer"><h2>Trả lời nhanh</h2><div itemprop="text"><p><strong>Tải trọng tập chạy</strong> kết hợp <a href="/vi/training-stress-score/">rTSS</a>
+                    đối với căng thẳng trong mỗi buổi tập, <strong>CTL</strong> để rèn luyện sức khỏe lâu dài, <strong>ATL</strong> cho
+                    mệt mỏi ngắn hạn, và <strong>TSB</strong> cho sự tươi mát. Nó hoạt động tốt nhất khi bạn <a href="/vi/crs/">Tốc độ chạy quan trọng (CRS)</a>, <a href="/vi/training-zones/">khu đào tạo</a>và dữ liệu tốc độ là thực tế.</p><ul><li><strong>Sử dụng tốt nhất:</strong> so sánh các bài tập, kiểm soát tải hàng tuần và giảm thời gian trong tuần</li><li><strong>Đầu vào quan trọng nhất:</strong> tốc độ ngưỡng đáng tin cậy CRS</li><li><strong>Sai lầm lớn nhất:</strong> coi TSB là sự thật về chủng tộc khi ngủ, đau nhức, nóng bức và cuộc sống
+                        căng thẳng nói khác đi</li><li><strong>Cập nhật nhịp điệu:</strong> kiểm tra lại CRS sau mỗi 6-8 tuần hoặc sau một đợt đào tạo có ý nghĩa</li></ul></div></div><div class="callout callout-success mb-xl"><h2>Bài học chính</h2><ul class="key-points"><li><strong>rTSS</strong> câu trả lời về mức độ căng thẳng mà một lần chạy tạo ra</li><li><strong>CTL</strong> cho thấy tải trọng mà cơ thể bạn đã thích nghi trong nhiều tuần chứ không phải vài ngày</li><li><strong>ATL</strong> cho thấy những gì vẫn còn ở chân bạn sau buổi tập luyện gần đây</li><li><strong>TSB</strong> giúp giảm bớt thời gian và sự sẵn sàng, không phải quản lý cái tôi</li><li><strong>Cụm quan trọng:</strong><a href="/vi/crs/">CRS</a>, <a href="/vi/rtss-calculator/">Máy tính rTSS</a>, <a href="/vi/training-zones/">khu đào tạo</a>và <a href="/vi/training-load-periodization/">định kỳ</a></li></ul></div><p class="lead">Nếu bạn muốn một hệ thống biến khối lượng và cường độ chạy thành quyết định, hãy sử dụng cường độ tập luyện.
+            Vấn đề không phải là thu thập thêm số lượng. Vấn đề là phải biết liệu một lần chạy có đủ dễ dàng hay không, một lần chặn có đủ dễ dàng hay không.
+            đủ năng suất, hoặc việc cắt côn thực sự khiến bạn tươi mới.</p><p>Đối với người chạy bộ, các câu hỏi thực tế rất đơn giản:</p><ul><li>Buổi chạy hôm nay căng thẳng thế nào?</li><li>Tôi thực sự đã thích nghi được với tải bao nhiêu?</li><li>Tôi đang mang theo sự mệt mỏi hữu ích hay mệt mỏi quá nhiều?</li><li>Khi nào tôi nên đẩy, khi nào tôi nên lùi lại và khi nào tôi nên chạy đua?</li></ul><h2>Các biện pháp đo tải trọng luyện tập chạy bộ là gì</h2><p><strong>Tải trọng tập chạy</strong> là một khuôn khổ thực tế để biến các cuộc chạy thành căng thẳng có thể giải thích được
+            tín hiệu. Trong khuôn khổ này, <a href="/vi/training-stress-score/">rTSS</a> đo lường chi phí phiên,
+            <strong>CTL</strong> đo lường xu hướng tập thể dục dài hạn, <strong>ATL</strong> đo sự mệt mỏi gần đây, và
+            <strong>TSB</strong> cho thấy khoảng cách giữa hai người.
+        </p><div class="comparison-table-container"><table class="comparison-table"><thead><tr><th>Số liệu</th><th>Nó nói gì với bạn</th><th>sử dụng tốt nhất</th><th>Lỗi thường gặp</th></tr></thead><tbody><tr class="highlight-row"><td><strong>rTSS</strong></td><td>Chi phí căng thẳng của một lần chạy</td><td>So sánh tập luyện và tổng tải hàng tuần</td><td>Tính điểm chạy theo lỗi thời <a href="/vi/crs/">CRS</a></td></tr><tr><td><strong>CTL</strong></td><td>Tải trọng bạn đã thích nghi trong nhiều tuần</td><td>Theo dõi thể lực và năng lực lâu dài</td><td>Mong đợi nó sẽ di chuyển có ý nghĩa trong một vài ngày</td></tr><tr><td><strong>ATL</strong></td><td>Đôi chân vẫn còn mỏi vì công việc gần đây</td><td>Quản lý phục hồi giữa các phiên cứng</td><td>Bỏ qua những tổn thương do va đập, đau nhức và căng thẳng trong cuộc sống</td></tr><tr><td><strong>TSB</strong></td><td>Khoảng cách tươi mới của bạn: thể lực trừ mệt mỏi</td><td>Thời gian côn, thời gian kiểm tra, mức độ sẵn sàng cho cuộc đua</td><td>Sử dụng một số dương làm bằng chứng bạn đã sẵn sàng</td></tr></tbody></table></div><div class="callout callout-info"><h3>Mô hình tinh thần hữu ích</h3><p>nghĩ về <strong>rTSS là giá hiện nay</strong>, <strong>CTL là ngân hàng thể dục của bạn</strong>, <strong>ATL như
+                    hóa đơn mệt mỏi của bạn</strong>và <strong>TSB là khoảng trống mới mẻ của bạn</strong>. Giá trị của hệ thống
+                đang trong xu hướng, không phải một con số biệt lập.</p></div><h2>Khối lượng đào tạo nào là tốt và nó thất bại ở đâu</h2><div class="application-grid"><div class="application-item"><h3>📊 So sánh các bài tập</h3><p><a href="/vi/training-stress-score/">rTSS</a> cho phép bạn so sánh ngưỡng, thời gian dài dễ dàng
+                    phiên và tập luyện trên đồi trên một thang đo thay vì chỉ đoán bằng cảm giác.</p></div><div class="application-item"><h3>🧭 Control Build Weeks</h3><p>CTL và ATL giúp bạn quyết định liệu một khối có đang nâng cao thể chất về phía trước hay chỉ đang dồn nén sự mệt mỏi trước nó
+                    biến thành những buổi tập kém hoặc có nguy cơ chấn thương.</p></div><div class="application-item"><h3>🏁 Thời gian giảm dần</h3><p>TSB trở nên hữu ích khi bạn kết nối nó với <a href="/vi/training-load-periodization/">kế hoạch
+                        định kỳ</a>, không phải khi bạn nhìn chằm chằm vào biểu đồ mà không có bối cảnh cuộc đua.</p></div></div><div class="callout callout-warning"><h4>⚠️ Quan trọng: Chạy bộ có tác động cao hơn</h4><p>Giá trị TSS tương tự thể hiện căng thẳng về thể chất khi chạy nhiều hơn so với đạp xe do lực tác động. Một Á hậu
+                tích lũy 400 TSS/tuần sẽ trải qua quá trình luyện tập tương tự như một vận động viên đua xe đạp với 600-700 TSS/tuần.
+                Cường độ tập luyện khi chạy phải tính đến cả căng thẳng về tim mạch và cơ xương.</p><p>TSB dương không đảm bảo hình thức trong ngày đua và TSB âm không có nghĩa là thất bại. Tải mô hình làm
+                không nắm bắt được đầy đủ tình trạng thiếu ngủ, đau nhức, lỗi nạp nhiên liệu, nóng bức hoặc hỏng hóc kỹ thuật. Giữ số tải
+                gắn liền với <a href="/vi/efficiency/">số liệu hiệu quả</a>, cảm nhận chủ quan và tập luyện thực tế
+                chất lượng.</p></div></div></section><section class="section"><div class="container"><h2 class="text-center mb-xl">Cách tính điểm căng thẳng khi tập chạy (rTSS)</h2><div class="grid grid-2"><div><h3>Công thức chạy TSS</h3><div class="formula-box"><div class="formula">
+                        rTSS = (IF²) × Thời lượng (giờ) × 100
+                    </div><div class="formula-explanation"><p>Trong đó Hệ số cường độ (IF) là:</p><div class="formula">
+                            IF = NGS / CRS
+                        </div><p>Tốc độ phân loại chuẩn hóa (NGS) tính đến sự thay đổi tốc độ và độ cao:</p><div class="formula">
+                            NGS ≈ Tốc độ chạy trung bình (được điều chỉnh theo địa hình)
+                        </div></div></div><div class="callout callout-tip mt-md"><h4>📊 Phương pháp đơn giản hóa dựa trên nhịp độ</h4><p>Đối với người chạy không có đồng hồ đo công suất, hãy sử dụng tính toán dựa trên tốc độ hoặc ghi điểm trong phiên chạy bằng <a href="/vi/rtss-calculator/">Máy tính rTSS</a>:</p><div class="formula">
+                        IF = Tốc độ ngưỡng / Tốc độ trung bình
+                    </div><p><strong>Ví dụ:</strong> Nếu tốc độ CRS của bạn là 4:00/km và bạn chạy với tốc độ 4:20/km:</p><p>IF = 4:00 / 4:20 = 240/260 = 0,923</p><p><em>Lưu ý: Tốc độ chậm hơn = thấp hơn IF (đảo ngược với tính toán tốc độ)</em></p></div></div><div><h3>Ví dụ đã hoạt động: Chạy nhịp độ</h3><div class="example-box"><h4>Hồ sơ người chạy:</h4><ul><li>CRS Tốc độ: 4:00/km (15 km/giờ)</li><li>CRS: Tốc độ ngưỡng trong 1 giờ</li></ul><h4>Dữ liệu tập luyện:</h4><ul><li>Tổng khoảng cách: 10 km</li><li>Thời gian di chuyển: 43:20 (0,722 giờ)</li><li>Tốc độ trung bình: 4:20/km</li></ul><h4>Bước 1: Tính tốc độ trung bình</h4><div class="calculation">
+                        Tốc độ = 10km/0,722 giờ<br/>
+                        Tốc độ = <strong>13,85 km/giờ</strong></div><h4>Bước 2: Tính IF (Phương pháp tốc độ)</h4><div class="calculation">
+                        IF = 13,85 / 15,0<br/>
+                        IF = <strong>0,923</strong></div><h4>Bước 3: Tính IF (Phương pháp nhịp độ)</h4><div class="calculation">
+                        IF = 240 giây/km / 260 giây/km<br/>
+                        IF = <strong>0,923</strong> ✓
+                    </div><h4>Bước 4: Tính rTSS</h4><div class="calculation">
+                        rTSS = (0,923²) × 0,722 × 100<br/>
+                        rTSS = 0,852 × 0,722 × 100<br/>
+                        rTSS = <strong>61,5</strong></div><p class="mt-md"><strong>Giải thích:</strong> Tốc độ 10km này chạy ở tốc độ ngưỡng 10%
+                        tạo ra 61,5 TSS—một kích thích tập luyện vừa phải điển hình của các buổi tập aerobic chất lượng.</p><p><a href="/vi/rtss-calculator/">Sử dụng máy tính rTSS</a> nếu bạn muốn có điểm mà không cần
+                        thực hiện phép tính bằng tay.</p></div></div></div><div class="intensity-guide mt-xl"><h3>Nguyên tắc chạy TSS Cường độ</h3><table class="intensity-table"><thead><tr><th>TSS Phạm vi</th><th>Mức cường độ</th><th>Mô tả</th><th>Bài tập mẫu</th></tr></thead><tbody><tr><td>&lt; 50</td><td>Phục hồi dễ dàng</td><td>Chạy nhẹ, tốc độ trò chuyện, nghỉ ngơi tích cực</td><td>30-45 phút chạy nhẹ, chạy bộ phục hồi, sải bước</td></tr><tr><td>50-100</td><td>Đào tạo vừa phải</td><td>Khối lượng tập luyện hàng ngày điển hình, cơ sở aerobic</td><td>Chạy ổn định 60-90 phút, chạy dài dễ dàng</td></tr><tr><td>100-200</td><td>Luyện tập chăm chỉ</td><td>Phiên chất lượng với nhịp độ/ngưỡng làm việc</td><td>90-120 phút với các khoảng ngưỡng, chạy tăng dần</td></tr><tr><td>200-300</td><td>Rất khó</td><td>Đường chạy dài với chất lượng, mô phỏng cuộc đua</td><td>Chạy dài 2-3 tiếng, chạy với tốc độ nửa marathon</td></tr><tr><td>&gt; 300</td><td>Cực đoan</td><td>Ngày đua, sự kiện cự ly siêu dài</td><td>Đua marathon, chạy siêu dài trên 50 km, chạy Ironman</td></tr></tbody></table></div><div class="callout callout-tip mt-lg"><h3>📊 Mục tiêu TSS hàng tuần theo cấp độ chạy</h3><ul><li><strong>Người chạy mới bắt đầu:</strong> 150-300 TSS/tuần (3-4 lần chạy/tuần)</li><li><strong>Người chạy trung cấp:</strong> 300-500 TSS/tuần (4-6 lần/tuần)</li><li><strong>Người chạy nâng cao:</strong> 500-700 TSS/tuần (6-8 buổi/tuần)</li><li><strong>Vận động viên ưu tú:</strong> 700-900+ TSS/tuần (8-12 buổi/tuần)</li></ul><p>Những thứ này tích lũy vào Khối lượng luyện tập mãn tính của bạn (CTL), chỉ số thể chất được giải thích bên dưới.Họ nên
+                vẫn được phân phối thông qua thực tế <a href="/vi/training-zones/">khu đào tạo</a> và một
+                hợp lý <a href="/vi/training-load-periodization/">kế hoạch định kỳ</a>.</p></div></div></section><section class="section section-alt"><div class="container"><h2 class="text-center mb-xl">Hiểu CTL, ATL và TSB dành cho người chạy</h2><p class="text-center lead">Biểu đồ quản lý hiệu suất (PMC) trực quan hóa ba số liệu được kết nối với nhau
+            kể toàn bộ câu chuyện về quá trình luyện tập chạy của bạn: thể lực, sự mệt mỏi và phong độ.</p><div class="pmc-overview"><div class="grid grid-3"><div class="pmc-metric"><div class="metric-icon">📈</div><h3>CTL - Tải trọng đào tạo mãn tính</h3><div class="metric-value-label">SỰ PHÙ HỢP CỦA BẠN</div><p>Mức trung bình theo cấp số nhân trong 42 ngày của TSS. Đại diện cho thể dục nhịp điệu lâu dài và
+                        đào tạo thích ứng từ việc chạy nhất quán.</p><div class="formula-small">
+                        CTL hôm nay = CTL hôm qua + (TSS hôm nay - CTL hôm qua) × (1/42)
+                    </div></div><div class="pmc-metric"><div class="metric-icon">⚡</div><h3>ATL - Tải trọng đào tạo cấp tính</h3><div class="metric-value-label">MỆT MỎI CỦA BẠN</div><p>Mức trung bình theo cấp số nhân trong 7 ngày của TSS. Ghi lại căng thẳng tập luyện gần đây và
+                        sự mệt mỏi tích tụ sau tuần chạy bộ vừa qua.</p><div class="formula-small">
+                        ATL hôm nay = ATL hôm qua + (TSS hôm nay - ATL hôm qua) × (1/7)
+                    </div></div><div class="pmc-metric"><div class="metric-icon">🎯</div><h3>TSB - Cân bằng căng thẳng trong luyện tập</h3><div class="metric-value-label">MẪU của bạn</div><p>Sự khác biệt giữa thể lực và sự mệt mỏi của ngày hôm qua. Cho biết sự sẵn sàng để thực hiện hoặc cần phải
+                        nghỉ ngơi trước cuộc chạy hoặc cuộc đua chất lượng tiếp theo của bạn.</p><div class="formula-small">
+                        TSB = CTL ngày hôm qua - ATL ngày hôm qua
+                    </div></div></div></div></div></section><section class="section"><div class="container"><h2>CTL: Chỉ số thể lực khi chạy của bạn</h2><div class="grid grid-2"><div><h3>CTL Đại diện cho người chạy bộ gì</h3><p>CTL định lượng cường độ luyện tập chạy mà cơ thể bạn có <em>thích nghi với</em> trong 6 tuần qua. A
+                    cao hơn CTL khi chạy có nghĩa là:</p><ul><li>Khả năng hiếu khí và độ bền khi chạy cao hơn</li><li>Khả năng xử lý khối lượng và cường độ tập luyện nhiều hơn</li><li>Cải thiện sự thích ứng thần kinh cơ và trao đổi chất</li><li>Hiệu suất chạy bền vững cao hơn</li><li>Khả năng chịu đựng tốt hơn trước ứng suất tác động từ lực tiếp xúc mặt đất</li></ul><div class="callout callout-info"><h4>Hằng số thời gian: 42 ngày</h4><p>CTL có chu kỳ bán rã ~14,7 ngày. Sau 42 ngày, khoảng 36,8% (1/e) số lần tập luyện
+                        tác động vẫn còn trong tính toán thể lực của bạn.</p><p>Sự suy giảm chậm này có nghĩa là thể lực chạy bộ được xây dựng dần dần nhưng cũng giảm dần dần—bảo vệ khỏi
+                        tập luyện trong thời gian nghỉ phục hồi ngắn.</p></div></div><div><h3>Giá trị CTL điển hình cho người chạy</h3><div class="levels-comparison"><div class="level-card-compact"><strong>Người chạy mới bắt đầu:</strong><div class="value">15-35 CTL</div><p>Xây dựng thể lực cơ bản, 3-4 lần chạy/tuần</p></div><div class="level-card-compact"><strong>Người chạy trung cấp:</strong><div class="value">35-60 CTL</div><p>Tập luyện đều đặn, 4-6 buổi/tuần</p></div><div class="level-card-compact"><strong>Người chạy nâng cao:</strong><div class="value">60-85 CTL</div><p>Khối lượng cao, 6-8 buổi/tuần</p></div><div class="level-card-compact"><strong>Vận động viên ưu tú:</strong><div class="value">85-120+ CTL</div><p>Khối lượng đào tạo chuyên nghiệp, 8-12+ buổi/tuần</p></div></div><div class="warning-box mt-md"><strong>⚠️ CTL Giới hạn tốc độ tăng tốc cho người chạy</strong><ul><li><strong>Người mới bắt đầu:</strong> +2-4 CTL mỗi tuần</li><li><strong>Trung cấp:</strong> +3-5 CTL mỗi tuần</li><li><strong>Nâng cao:</strong> +5-7 CTL mỗi tuần</li></ul><p>Vượt quá những tỷ lệ này sẽ làm tăng đáng kể nguy cơ chấn thương do áp lực tác động cao khi chạy.
+                        "Quy tắc 10%" (tăng khối lượng hàng tuần không quá 10%) phù hợp với tốc độ tăng dần CTL này.
+                    </p></div></div></div></div></section><section class="section section-alt"><div class="container"><h2>ATL: Chỉ số độ mệt mỏi khi chạy của bạn</h2><div class="content-split"><div><p>ATL theo dõi mức độ căng thẳng khi tập luyện ngắn hạn—sự mệt mỏi tích lũy trong tuần chạy bộ vừa qua. Nó tăng lên
+                    nhanh chóng sau khi tập luyện chăm chỉ và giảm nhanh chóng khi nghỉ ngơi, điều này rất cần thiết để quản lý quá trình phục hồi
+                    giữa các phiên chất lượng.</p><h3>ATL Động lực trong tập chạy</h3><ul><li><strong>Phản hồi nhanh:</strong> Hằng số thời gian 7 ngày (chu kỳ bán rã ~2,4 ngày)</li><li><strong>Mô hình nhọn:</strong> Tăng vọt sau những buổi tập vất vả, tụt dốc trong những ngày hồi phục</li><li><strong>Chỉ số phục hồi:</strong> Ngã ATL = xua tan mệt mỏi giữa các lần chạy</li><li><strong>Cảnh báo tập luyện quá sức:</strong> Tăng mãn tính ATL cho thấy khả năng phục hồi không đầy đủ
+                    </li><li><strong>Căng thẳng tác động:</strong> Chạy ATL phản ánh cả tim mạch và cơ xương
+                        mệt mỏi</li></ul><div class="callout callout-science"><h4>🔬 Mô hình chạy bộ giúp giảm mệt mỏi</h4><p>Mỗi lần tập luyện đều tạo ra hai tác dụng:</p><ol><li><strong>Kích thích tập thể dục</strong> (xây dựng chậm, lâu dài)</li><li><strong>Mệt mỏi</strong> (xây dựng nhanh, tiêu tan nhanh)</li></ol><p>Hiệu suất chạy = Thể lực - Mệt mỏi.PMC trực quan hóa mô hình này, cho phép khoa học
+                        định kỳ và thời gian chạy đua tối ưu cho người chạy.</p></div></div><div><h3>Ở trạng thái ổn định</h3><p>Khi khối lượng luyện tập chạy nhất quán hàng tuần, CTL và ATL hội tụ:</p><div class="example-box"><h4>Ví dụ: 400 TSS/tuần liên tục</h4><div class="calculation">
+                        Hàng ngày TSS ≈ 57<br/>
+                        CTL tiếp cận ~57<br/>
+                        ATL tiếp cận ~57<br/>
+                        TSB tiến tới 0
+                    </div><p><strong>Giải thích:</strong> Thể lực và sự mệt mỏi được cân bằng. Không có thâm hụt tích lũy hoặc
+                        thặng dư—duy trì đào tạo bền vững.</p></div><h3>Trong giai đoạn xây dựng</h3><p>Khi tăng khối lượng hoặc cường độ chạy:</p><div class="example-box"><p>ATL tăng <em>nhanh hơn</em> hơn CTL do hằng số thời gian ngắn hơn. TSB trở nên âm tính (mệt mỏi &gt;
+                        thể lực). Điều này là bình thường và hiệu quả—bạn đang áp dụng tình trạng quá tải để kích thích việc chạy bộ
+                        sự thích nghi.</p></div><h3>Trong quá trình giảm tốc độ cho các cuộc đua</h3><p>Khi giảm tải tập luyện trước khi thi đấu:</p><div class="example-box"><p>ATL giọt <em>nhanh hơn</em> hơn CTL. TSB trở nên tích cực (thể lực &gt; mệt mỏi). Đây là
+                        mục tiêu—đến ngày đua một cách tươi mới với đôi chân sẵn sàng thi đấu mà vẫn duy trì được thể lực.</p></div></div></div></div></section><section class="section"><div class="container"><h2>TSB: Cân bằng thể lực-mệt mỏi và sẵn sàng cho cuộc đua của bạn</h2><p class="lead">TSB (Cân bằng căng thẳng trong luyện tập) là sự khác biệt giữa thể lực của ngày hôm qua (CTL) và
+            sự mệt mỏi của ngày hôm qua (ATL). Đối với người chạy bộ, nó cho biết bạn đang khỏe mạnh hay mệt mỏi, sẵn sàng chạy đua hay đang trong trạng thái sẵn sàng.
+            cần những ngày phục hồi.</p><div class="tsb-zones-container"><h3>TSB Hướng dẫn giải thích cho người chạy</h3><table class="tsb-zones-table"><thead><tr><th>TSB Phạm vi</th><th>Trạng thái</th><th>Phiên dịch</th><th>Hành động được đề xuất</th></tr></thead><tbody><tr class="tsb-critical"><td>&lt; -30</td><td><strong>Rủi ro tập luyện quá sức</strong></td><td>Mệt mỏi cực độ. Nguy cơ chấn thương cao.</td><td>Cần phục hồi ngay lập tức. Giảm âm lượng 50%+. Hãy xem xét những ngày nghỉ ngơi.</td></tr><tr class="tsb-training"><td>-20 đến -30</td><td><strong>Khối đào tạo tối ưu</strong></td><td>Quá tải năng suất. Xây dựng thể lực.</td><td>Tiếp tục kế hoạch. Theo dõi các dấu hiệu đau nhức hoặc mệt mỏi quá mức.</td></tr><tr class="tsb-moderate"><td>-10 đến -20</td><td><strong>Tải trọng đào tạo vừa phải</strong></td><td>Tích lũy đào tạo tiêu chuẩn.</td><td>Đào tạo bình thường. Có thể xử lý các phiên chất lượng hoặc nhịp độ.</td></tr><tr class="tsb-neutral"><td>-10 đến +15</td><td><strong>Chuyển tiếp/bảo trì</strong></td><td>Trạng thái cân bằng. Mệt mỏi nhẹ hoặc sảng khoái.</td><td>Tốt cho các cuộc đua B/C, các tuần thử nghiệm hoặc phục hồi.</td></tr><tr class="tsb-fresh"><td>+15 đến +25</td><td><strong>Hình thức đua đỉnh cao</strong></td><td>Tươi và vừa vặn. Cửa sổ hiệu suất tối ưu</td><td>Các cuộc đua ưu tiên A. Hiệu suất chạy cao nhất dự kiến.</td></tr><tr class="tsb-very-fresh"><td>+25 đến +35</td><td><strong>Rất tươi</strong></td><td>Được nghỉ ngơi nhiều. Tốt cho các cuộc đua ngắn.</td><td>Các cuộc đua 5K-10K, thử nghiệm thời gian, sự kiện đường đua.</td></tr><tr class="tsb-detraining"><td>&gt; +35</td><td><strong>Detraining</strong></td><td>Mất thể lực do không hoạt động.</td><td>Tiếp tục đào tạo. Thể lực giảm sút do nghỉ ngơi kéo dài.</td></tr></tbody></table></div><div class="callout callout-tip mt-xl"><h3>🎯 Nhắm mục tiêu TSB bằng cách chạy cự ly</h3><ul><li><strong>Cuộc đua 5K/10K:</strong> TSB +20 đến +30 (giảm dần 7-10 ngày để có độ tươi)</li><li><strong>Nửa Marathon:</strong> TSB +15 đến +25 (giảm dần 10-14 ngày)</li><li><strong>Chạy marathon:</strong> TSB +10 đến +20 (giảm dần 14-21 ngày với giảm âm lượng)</li><li><strong>Siêu Marathon (50K+):</strong> TSB +5 đến +15 (giảm dần 7-14 ngày, duy trì khối lượng nhưng giảm
+                    cường độ)</li></ul><p><em>Các cuộc đua ngắn hơn cần TSB cao hơn về tốc độ/sức mạnh. Các cuộc đua dài hơn cần TSB vừa phải để giữ chân
+                    sức chịu đựng.</em></p></div></div></section><section class="section section-alt"><div class="container container-narrow"><h2>PMC Ví dụ: Khối tập chạy → Côn → Cuộc đua</h2><div class="example-box"><h3>Chu kỳ luyện tập Marathon 12 tuần</h3><h4>Tuần 1-3: Giai đoạn xây dựng cơ sở</h4><ul><li>Hàng tuần TSS: 300 → 350 → 400</li><li>CTL: Tăng dần từ 40 → 48</li><li>ATL: Theo dõi tải hàng tuần, dao động 45-60</li><li>TSB: Tiêu cực nhẹ (-5 đến -15), căng thẳng khi tập luyện có thể kiểm soát được</li><li><strong>Tập trung:</strong> Phát triển cơ sở hiếu khí, dặm dễ dàng</li></ul><h4>Tuần 4-7: Xây dựng Giai đoạn 1</h4><ul><li>Hàng tuần TSS: 450 → 500 → 500 → 450 (tuần phục hồi)</li><li>CTL: Tiếp tục tăng 48 → 60</li><li>ATL: Biến động cao hơn 55-75</li><li>TSB: Tiêu cực hơn (-15 đến -25), quá tải năng suất</li><li><strong>Tập trung:</strong> Thêm các bước chạy nhịp độ, các khoảng ngưỡng</li></ul><h4>Tuần 8-11: Giai đoạn cao điểm</h4><ul><li>Hàng tuần TSS: 500 → 550 → 550 → 500</li><li>CTL: Đạt đỉnh ở mức ~65</li><li>ATL: Giá trị cao nhất 65-80</li><li>TSB: Âm nhất (-20 đến -30), kích thích thể lực tối đa</li><li><strong>Tập trung:</strong> Những đường chạy dài với những phân đoạn tốc độ marathon, những buổi chạy chất lượng</li></ul><h4>Tuần 12: Tuần phục hồi</h4><ul><li>Hàng tuần TSS: 300 (giảm 45%)</li><li>CTL: Giảm nhẹ xuống ~63 (giữ thể lực)</li><li>ATL: Giảm nhanh xuống ~50</li><li>TSB: Tăng lên +5 đến +10 (độ tươi một phần)</li><li><strong>Tập trung:</strong> Chạy phục hồi, hấp thụ các điều chỉnh tập luyện</li></ul><h4>Tuần 13-14: Tuần côn + Tuần đua</h4><ul><li>Tuần 13 TSS: 250, Tuần 14 TSS: 120 + chủng tộc (tổng cộng ~ 250)</li><li>CTL: Giảm nhẹ xuống ~60 (mất thể lực tối thiểu)</li><li>ATL: Giảm nhanh xuống ~35 (loại bỏ mệt mỏi)</li><li>TSB: Đạt đỉnh tại <strong>+20 đến +25 vào ngày đua</strong></li><li><strong>Kết quả:</strong> Đôi chân tươi trẻ, thể lực dồi dào, sẵn sàng cho thành tích marathon đỉnh cao</li></ul></div><div class="callout callout-success"><h3>✅ Tại sao Taper lại có tác dụng với người chạy bộ</h3><p>Các hằng số thời gian khác nhau (42 ngày cho CTL, 7 ngày cho ATL) tạo ra hiệu ứng côn giúp tối ưu hóa
+                hiệu suất chạy:</p><ul><li>ATL phản ứng nhanh → Mệt mỏi khi chạy (cả tim mạch và cơ xương) biến mất trong vòng
+                    7-10 ngày</li><li>CTL phản hồi chậm → Thích nghi với việc tập thể dục nhịp điệu và chạy bộ trong nhiều tuần</li><li>Kết quả: Thể lực vẫn được duy trì trong khi sự mệt mỏi và đau nhức biến mất = đôi chân tươi tắn để có thành tích chạy đua đỉnh cao
+                </li></ul></div></div></section><section class="section"><div class="container container-narrow"><h2>Hướng dẫn quản lý tải tập luyện chạy thực tế</h2><div class="guidelines-grid"><div class="guideline-item"><h3>1️⃣ Theo dõi hàng ngày rTSS một cách nhất quán</h3><p>Ghi nhật ký TSS của mỗi lần chạy để xây dựng xu hướng CTL/ATL/TSB chính xác. Thiếu dữ liệu tạo ra khoảng trống về thể lực
+                    đường cong. Sử dụng dữ liệu đồng hồ GPS hoặc tính toán dựa trên tốc độ cho tất cả các lần chạy.</p></div><div class="guideline-item"><h3>2️⃣ Giám sát tốc độ tăng tốc CTL một cách cẩn thận</h3><p>Tăng dần CTL. Mức tăng 3-5 điểm hàng tuần là bền vững đối với hầu hết người chạy bộ. Nhảy 10+
+                    điểm có thể dẫn đến tập luyện quá sức và chấn thương do áp lực tác động khi chạy.</p></div><div class="guideline-item"><h3>3️⃣ Lên lịch các tuần phục hồi</h3><p>Cứ sau 3-4 tuần, giảm khối lượng chạy 30-40% trong một tuần. Đặt TSB tăng lên -5 đến +10. Cái này
+                    củng cố sự thích nghi về thể lực và ngăn ngừa sự mệt mỏi tích lũy.</p></div><div class="guideline-item"><h3>4️⃣ Thời gian giảm dần trong cuộc đua của bạn</h3><p>Mục tiêu TSB +15 đến +25 vào ngày đua ở hầu hết các cự ly. Bắt đầu giảm dần 10-21 ngày tùy theo chủng tộc
+                    khoảng cách và mức TSB hiện tại.</p></div><div class="guideline-item"><h3>5️⃣ Chấp nhận tiêu cực TSB Trong quá trình xây dựng</h3><p>TSB từ -20 đến -25 trong giai đoạn xây dựng là bình thường và hiệu quả đối với người chạy. Nó có nghĩa là bạn đang nộp đơn
+                    kích thích đào tạo để thích ứng mà không có nguy cơ chấn thương quá mức.</p></div><div class="guideline-item"><h3>6️⃣ Xây dựng lại CTL Dần dần sau khi nghỉ ngơi</h3><p>Sau chấn thương hoặc nghỉ thi đấu, đừng cố gắng tiếp tục lại CTL trước đó ngay lập tức. Xây dựng lại dần dần
+                    ở mức 3-5 CTL điểm mỗi tuần để tránh tái chấn thương.</p></div><div class="guideline-item"><h3>7️⃣ Hãy lắng nghe cơ thể bạn</h3><p>TSS số liệu là hướng dẫn, không phải là quy tắc tuyệt đối. Đau nhức dai dẳng, ngủ kém hoặc giảm hiệu suất
+                    mặc dù số lượng TSB tốt cho thấy cần phải phục hồi thêm.</p></div><div class="guideline-item"><h3>8️⃣ Tài khoản cho căng thẳng không chạy</h3><p>Căng thẳng trong cuộc sống, ngủ kém và tập luyện chéo ảnh hưởng đến quá trình phục hồi. Xem xét giảm mục tiêu TSS trong
+                    những giai đoạn căng thẳng cao độ ngay cả khi các chỉ số cụ thể về hoạt động có vẻ tốt.</p></div></div></div></section><section class="section section-alt"><div class="container container-narrow"><h2>Các câu hỏi thường gặp: Điểm căng thẳng khi luyện tập khi chạy</h2><div class="faq-container"><div class="faq-item"><h3>Làm cách nào để tính toán TSS khi chạy mà không có đồng hồ đo điện?</h3><p>Sử dụng phương pháp dựa trên tốc độ: Tính Hệ số cường độ của bạn (IF) bằng cách chia tốc độ ngưỡng của bạn cho
+                    tốc độ trung bình của bạn khi chạy. Sau đó áp dụng công thức: rTSS = (IF²) × Thời lượng (giờ) × 100. Đối với
+                    Ví dụ: nếu tốc độ ngưỡng của bạn là 4:00/km và bạn chạy 10km với tốc độ 4:30/km trong 45 phút (0,75
+                    giờ): IF = 4:00/4:30 = 0,889, do đó rTSS = (0,889²) × 0,75 × 100 = 59,2 TSS.</p><p>Nếu bạn muốn quy trình làm việc ngắn nhất, hãy sử dụng <a href="/vi/rtss-calculator/">Máy tính rTSS</a>
+                    sau khi bạn thiết lập một thực tế <a href="/vi/crs/">CRS</a>.</p></div><div class="faq-item"><h3>Sự khác biệt giữa chạy TSS và đạp xe TSS là gì?</h3><p>Cả hai đều sử dụng cùng một công thức IF², nhưng việc chạy TSS thể hiện mức độ căng thẳng về thể chất nhiều hơn do tác động
+                    lực do tiếp xúc với mặt đất. Một vận động viên chạy bộ với 400 TSS/tuần trải qua quá trình thích nghi tập luyện tương tự như một
+                    người đi xe đạp với 600-700 TSS/tuần. Chạy cũng sử dụng tốc độ/tốc độ làm đầu vào thay vì công suất và
+                    yêu cầu nhiều thời gian phục hồi hơn cho cùng một giá trị TSS.</p></div><div class="faq-item"><h3>TSS hàng tuần tốt cho việc luyện tập chạy marathon là gì?</h3><p>Chạy hàng tuần TSS để tập luyện marathon khác nhau tùy theo kinh nghiệm: Người mới bắt đầu chuẩn bị cho cuộc chạy marathon đầu tiên:
+                    250-400 TSS/tuần; Vận động viên marathon trung cấp: 400-550 TSS/tuần; Vận động viên marathon nâng cao/thi đấu:
+                    550-700+ TSS/tuần. Tuần cao điểm có thể đạt 600-800 TSS đối với người chạy nâng cao, với số tuần giảm dần
+                    đến 200-300 TSS.</p><p>Điều quan trọng hơn một con số là tải trọng đó nằm bên trong bạn như thế nào <a href="/vi/marathon-periodization/">xây dựng marathon</a> và <a href="/vi/training-load-periodization/">định kỳ</a>.</p></div><div class="faq-item"><h3>Tôi nên nhắm mục tiêu TSB nào cho cuộc đua 10K?</h3><p>Đối với cuộc đua 10K, hãy nhắm mục tiêu TSB từ +20 đến +30 vào ngày đua. Bắt đầu giảm dần 7-10 ngày để đạt được điều này. các
+                    cao hơn TSB (mới hơn) có lợi cho các cuộc đua ngắn hơn, nơi tốc độ và sức mạnh quan trọng hơn
+                    sức chịu đựng. Bắt đầu giảm âm lượng sau 10 ngày trong khi vẫn duy trì cường độ nhất định để duy trì
+                    độ sắc nét của thần kinh cơ.</p></div><div class="faq-item"><h3>Tôi có thể sử dụng TSS nếu tôi không biết Tốc độ chạy quan trọng của mình không?</h3><p>Biết bạn <a href="/vi/crs/">Tốc độ chạy quan trọng (CRS)</a> hoặc tốc độ ngưỡng là
+                    cần thiết để tính toán TSS chính xác vì IF được tính tương ứng với giá trị này. Nếu bạn không
+                    biết CRS của bạn, thực hiện bài kiểm tra ngưỡng: dùng thử toàn thời gian trong 30 phút (tốc độ trung bình = CRS)
+                    hoặc tốc độ đua 8km. Ngoài ra, hãy ước tính bằng cách sử dụng thời gian đua gần đây: tốc độ 10K + 10-15 giây/km
+                    xấp xỉ CRS.</p><p>Khi CRS được đặt, hãy chuyển đổi nó thành <a href="/vi/training-zones/">khu đào tạo</a> vậy bạn
+                    công việc dễ dàng, ngưỡng và tốc độ đua đều cung cấp cùng một mô hình tải.</p></div><div class="faq-item"><h3>Tôi nên tăng CTL của mình nhanh như thế nào?</h3><p>Tăng chạy CTL thêm 2-4 điểm mỗi tuần cho người mới bắt đầu, 3-5 điểm cho người chạy trung cấp và
+                    Tối đa 5-7 điểm cho người chạy nâng cao. Điều này phù hợp với "quy tắc 10%" cho số dặm đi được hàng tuần
+                    tăng và giảm thiểu nguy cơ chấn thương. Vượt quá những tỷ lệ này làm tăng đáng kể việc tập luyện quá sức và
+                    nguy cơ chấn thương do lực tác động mạnh khi chạy lên cơ, gân và xương.</p></div><div class="faq-item"><h3>Tiêu cực TSB có nghĩa là gì trong quá trình đào tạo?</h3><p>Âm TSB có nghĩa là mệt mỏi (ATL) vượt quá thể chất (CTL)—bạn hiện đang mệt mỏi vì gần đây
+                    đào tạo. Điều này là bình thường và hiệu quả trong giai đoạn xây dựng. TSB từ -15 đến -25 cho thấy năng suất
+                    căng thẳng tập luyện. TSB dưới -30 cho thấy nguy cơ tập luyện quá sức và cần phục hồi. Tiêu cực TSB trong
+                    các bản dựng tạo ra sự kích thích để thích ứng với thể lực trong khi TSB tích cực trong quá trình giảm dần cho phép
+                    hiệu suất.</p></div></div></div></section><section class="section"><div class="container container-narrow text-center"><h2>Sử dụng tải luyện tập làm trung tâm số liệu chạy bộ của bạn</h2><p class="lead">Khối lượng tập luyện trở nên thực sự hữu ích khi nó được kết nối với tốc độ ngưỡng, điểm số phiên,
+            khu tập luyện và lập kế hoạch cuộc đua. Bản thân nó, biểu đồ chỉ là một biểu đồ.</p><div class="callout mt-xl"><h3>Xây dựng cụm xung quanh trang này</h3><p>Nếu tải đào tạo là trung tâm của bạn thì các trang tiếp theo sẽ sử dụng là:</p><ul><li><a href="/vi/crs/">Tốc độ chạy quan trọng (CRS)</a> để neo tốc độ ngưỡng</li><li><a href="/vi/rtss-calculator/">rTSS Máy tính</a> để ghi điểm từng lượt chạy</li><li><a href="/vi/training-zones/">Khu huấn luyện</a> để chuyển đổi CRS thành mục đích phiên</li><li><a href="/vi/training-load-periodization/">Khối lượng đào tạo và định kỳ</a> lập kế hoạch
+                    xây dựng, phục hồi và khối côn</li></ul></div><div class="mt-xl"><a class="btn btn-secondary" href="/vi/crs/">← Tốc độ chạy tới hạn (CRS)</a><a class="btn btn-secondary" href="/vi/rtss-calculator/">rTSS Máy tính</a><a class="btn btn-primary" href="/vi/training-load-periodization/">Khối lượng đào tạo và định kỳ →</a></div></div></section><section class="eeat-author bg-light divider-top-lg divider-bottom-lg" aria-label="Author and Reviewer Information"><div class="container container-narrow"><div class="eeat-card" style="display: flex; gap: 1.5rem; align-items: center; padding: 1.5rem; background: var(--color-bg-alt, #f8f9fa); border-radius: 8px; border: 1px solid var(--color-border, #e9ecef); margin-top: 3rem; margin-bottom: 2rem;"><div class="eeat-avatar" style="font-size: 2.5rem; line-height: 1; flex-shrink: 0;" aria-hidden="true">👨‍🔬</div><div class="eeat-details"><h3 style="margin: 0 0 0.5rem 0; font-size: 1.125rem; font-weight: 600;">
+          Expertly Reviewed by 
+          <span itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">AnalyticsZone Team</span></span><span style="font-weight: 400; font-size: 1rem; color: var(--text-muted, #718096);">, MSc Sports Science</span></h3><p style="margin: 0 0 0.5rem 0; font-size: 0.95rem; color: var(--color-body-text, #4a5568); line-height: 1.5;">
+          This content has been written and reviewed by a sports data metrics expert to ensure technical accuracy and adherence to the latest sports science methodologies.
+        </p><a href="https://linkedin.com/in/albert-arno-39049774" target="_blank" rel="noopener noreferrer" style="font-size: 0.85rem; font-weight: 500; text-decoration: underline; color: var(--color-primary, #3182ce);">
+          🔗 Verify Credentials
+        </a></div></div></div></section><section class="ai-citation-block divider-top-xl" data-ai-ready="true" data-ai-page="training-load"><div class="container ai-citation-shell"><h2 class="ai-citation-title">Tải trọng luyện tập chạy: rTSS, CTL, ATL và TSB Giải thích</h2><p class="ai-citation-answer">Khối lượng luyện tập chạy bộ sử dụng rTSS để tính điểm các phiên, CTL để theo dõi thể lực lâu dài, ATL để theo dõi tình trạng mệt mỏi ngắn hạn và TSB để đánh giá mức độ mới mẻ cho các quyết định tập luyện và giảm dần.</p><ul class="ai-citation-facts" role="list"><li class="ai-citation-fact"><span class="ai-citation-icon" aria-hidden="true">📅</span><span>2026-04-02</span></li><li class="ai-citation-fact ai-citation-keywords"><span class="ai-citation-icon" aria-hidden="true">🏷️</span><span>tải đào tạo chạy · rTSS · CTL ATL TSB đang chạy · chạy mệt mỏi và thể lực · chạy côn thời gian</span></li><li class="ai-citation-fact"><span class="ai-citation-icon" aria-hidden="true">🔬</span><a href="../../vi/bibliography/">
+          
+          Thư mục
+          
+        </a></li></ul></div></section></main><footer class="site-footer"><div class="container"><div class="footer-top"><div class="footer-brand-section"><h2>Run Analytics</h2><p>Track Critical Running Speed, Training Stress Score, and performance metrics with Run Analytics. Science-based iOS app for runners, triathletes &amp; coaches. 7-day free trial.</p></div><div class="footer-download"><h3 class="footer-heading">Tải xuống</h3><div class="footer-badges"><a href="https://apps.apple.com/us/app/run-analytics/id6754524015" target="_blank" rel="noopener"
+                        aria-label="Tải xuống trên App Store"><img src="../../assets/images/badge-app-store.svg"
+                            alt="Tải xuống trên App Store" width="135"
+                            height="40" loading="lazy"></a><a href="https://play.google.com/store/apps/details?id=com.arnohealth.runanalytics" target="_blank" rel="noopener"
+                        aria-label="Tải nó trên Google Play"><img src="../../assets/images/badge-google-play.svg"
+                            alt="Tải nó trên Google Play" width="135"
+                            height="40" loading="lazy"></a></div></div></div><div class="footer-languages"><h3 class="footer-heading">Có sẵn ở</h3><div class="lang-grid"><a href="/af/" class="lang-link"
+                    hreflang="af" >
+                    Afrikaans
+                </a><a href="/am/" class="lang-link"
+                    hreflang="am" >
+                    አማርኛ
+                </a><a href="/ar/" class="lang-link"
+                    hreflang="ar" dir="rtl" >
+                    العربية
+                </a><a href="/bg/" class="lang-link"
+                    hreflang="bg" >
+                    Български
+                </a><a href="/bn/" class="lang-link"
+                    hreflang="bn" >
+                    বাংলা
+                </a><a href="/ca/" class="lang-link"
+                    hreflang="ca" >
+                    Català
+                </a><a href="/cs/" class="lang-link"
+                    hreflang="cs" >
+                    Čeština
+                </a><a href="/da/" class="lang-link"
+                    hreflang="da" >
+                    Dansk
+                </a><a href="/de/" class="lang-link"
+                    hreflang="de" >
+                    Deutsch
+                </a><a href="/el/" class="lang-link"
+                    hreflang="el" >
+                    Ελληνικά
+                </a><a href="/en/" class="lang-link"
+                    hreflang="en" >
+                    English
+                </a><a href="/es/" class="lang-link"
+                    hreflang="es" >
+                    Español
+                </a><a href="/et/" class="lang-link"
+                    hreflang="et" >
+                    Eesti
+                </a><a href="/fa/" class="lang-link"
+                    hreflang="fa" dir="rtl" >
+                    فارسی
+                </a><a href="/fi/" class="lang-link"
+                    hreflang="fi" >
+                    Suomi
+                </a><a href="/fr/" class="lang-link"
+                    hreflang="fr" >
+                    Français
+                </a><a href="/gu/" class="lang-link"
+                    hreflang="gu" >
+                    ગુજરાતી
+                </a><a href="/ha/" class="lang-link"
+                    hreflang="ha" >
+                    Hausa
+                </a><a href="/he/" class="lang-link"
+                    hreflang="he" dir="rtl" >
+                    עברית
+                </a><a href="/hi/" class="lang-link"
+                    hreflang="hi" >
+                    हिन्दी
+                </a><a href="/hr/" class="lang-link"
+                    hreflang="hr" >
+                    Hrvatski
+                </a><a href="/hu/" class="lang-link"
+                    hreflang="hu" >
+                    Magyar
+                </a><a href="/id/" class="lang-link"
+                    hreflang="id" >
+                    Bahasa Indonesia
+                </a><a href="/is/" class="lang-link"
+                    hreflang="is" >
+                    Íslenska
+                </a><a href="/it/" class="lang-link"
+                    hreflang="it" >
+                    Italiano
+                </a><a href="/ja/" class="lang-link"
+                    hreflang="ja" >
+                    日本語
+                </a><a href="/km/" class="lang-link"
+                    hreflang="km" >
+                    ភាសាខ្មែរ
+                </a><a href="/kn/" class="lang-link"
+                    hreflang="kn" >
+                    ಕನ್ನಡ
+                </a><a href="/ko/" class="lang-link"
+                    hreflang="ko" >
+                    한국어
+                </a><a href="/lt/" class="lang-link"
+                    hreflang="lt" >
+                    Lietuvių
+                </a><a href="/lv/" class="lang-link"
+                    hreflang="lv" >
+                    Latviešu
+                </a><a href="/ms/" class="lang-link"
+                    hreflang="ms" >
+                    Bahasa Melayu
+                </a><a href="/my/" class="lang-link"
+                    hreflang="my" >
+                    မြန်မာစာ
+                </a><a href="/nb/" class="lang-link"
+                    hreflang="nb" >
+                    Norsk Bokmål
+                </a><a href="/nl/" class="lang-link"
+                    hreflang="nl" >
+                    Nederlands
+                </a><a href="/pl/" class="lang-link"
+                    hreflang="pl" >
+                    Polski
+                </a><a href="/pt/" class="lang-link"
+                    hreflang="pt" >
+                    Português
+                </a><a href="/pt-br/" class="lang-link"
+                    hreflang="pt-br" >
+                    Português (Brasil)
+                </a><a href="/ro/" class="lang-link"
+                    hreflang="ro" >
+                    Română
+                </a><a href="/ru/" class="lang-link"
+                    hreflang="ru" >
+                    Русский
+                </a><a href="/sk/" class="lang-link"
+                    hreflang="sk" >
+                    Slovenčina
+                </a><a href="/sl/" class="lang-link"
+                    hreflang="sl" >
+                    Slovenščina
+                </a><a href="/sr/" class="lang-link"
+                    hreflang="sr" >
+                    Srpski
+                </a><a href="/sv/" class="lang-link"
+                    hreflang="sv" >
+                    Svenska
+                </a><a href="/sw/" class="lang-link"
+                    hreflang="sw" >
+                    Kiswahili
+                </a><a href="/ta/" class="lang-link"
+                    hreflang="ta" >
+                    தமிழ்
+                </a><a href="/te/" class="lang-link"
+                    hreflang="te" >
+                    తెలుగు
+                </a><a href="/th/" class="lang-link"
+                    hreflang="th" >
+                    ไทย
+                </a><a href="/tl/" class="lang-link"
+                    hreflang="tl" >
+                    Tagalog
+                </a><a href="/tr/" class="lang-link"
+                    hreflang="tr" >
+                    Türkçe
+                </a><a href="/uk/" class="lang-link"
+                    hreflang="uk" >
+                    Українська
+                </a><a href="/ur/" class="lang-link"
+                    hreflang="ur" dir="rtl" >
+                    اردو
+                </a><a href="/vi/" class="lang-link active"
+                    hreflang="vi" >
+                    Tiếng Việt
+                </a><a href="/yo/" class="lang-link"
+                    hreflang="yo" >
+                    Yorùbá
+                </a><a href="/zh/" class="lang-link"
+                    hreflang="zh" >
+                    中文
+                </a></div></div><div class="footer-divider"></div><div class="footer-bottom"><p class="copyright">
+                &copy; 2026 Run Analytics. Bản quyền được bảo lưu
+            </p><ul class="footer-legal"><li><a href="/vi/privacy/">Quyền riêng tư</a></li><li><a href="/vi/terms/">Điều khoản</a></li></ul></div></div></footer><div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="Cookie consent" aria-live="polite"><div class="cookie-banner-content"><div><p>Trang web này sử dụng cookie để cải thiện trải nghiệm của bạn.</p><a href="/vi/privacy/" class="text-sm">Tìm hiểu thêm</a></div><div class="cookie-banner-actions"><button id="cookie-decline" class="btn btn-secondary btn-small">Từ chối</button><button id="cookie-accept" class="btn btn-primary btn-small">Chấp nhận</button></div></div></div><script src="../../assets/js/core.min.js?v=1c7ace58" defer></script><script src="../../assets/js/search.min.js?v=1c7ace58" defer></script><script src="../../assets/js/analytics.min.js" data-ga-id="G-Y138VB4523" defer></script><script>if ('serviceWorker' in navigator) { navigator.serviceWorker.register('../../sw.js') }</script></body></html>

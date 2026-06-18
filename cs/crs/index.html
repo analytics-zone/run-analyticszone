@@ -1,0 +1,881 @@
+<!DOCTYPE html><html lang="cs" dir="ltr"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=optional"
+    rel="stylesheet"><title>Kalkulačka kritické rychlosti běhu - CRS test a zóny</title><meta name="description" content="Bezplatná kalkulačka CRS testu pro běžce. Změřte si kritickou rychlost běhu, zjistěte své tréninkové zóny a optimalizujte své tempo."><meta name="author" content="AnalyticsZone Team"><meta name="keywords" content="kritická rychlost běhu, CRS kalkulačka, tréninkové zóny, optimalizace tempa, optimalizace tempa"><link rel="canonical" href="https://run.analyticszone.app/cs/crs/"><meta property="article:published_time" content="2025-01-15T10:00:00Z"><meta property="article:modified_time" content="2026-03-24T14:30:00Z"><meta property="article:author" content="AnalyticsZone Team"><meta property="og:type" content="article"><meta property="og:url" content="https://run.analyticszone.app/cs/crs/"><meta property="og:title" content="Kalkulačka kritické rychlosti běhu - CRS test a zóny"><meta property="og:description" content="Bezplatná kalkulačka CRS testu pro běžce. Změřte si kritickou rychlost běhu, zjistěte své tréninkové zóny a optimalizujte své tempo."><meta property="og:image" content="https://run.analyticszone.app/assets/images/og-image.svg"><meta property="og:locale" content="cs_CZ"><meta property="og:site_name" content="Run Analytics"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:url" content="https://run.analyticszone.app/cs/crs/"><meta name="twitter:title" content="Kalkulačka kritické rychlosti běhu - CRS test a zóny"><meta name="twitter:description" content="Bezplatná kalkulačka CRS testu pro běžce. Změřte si kritickou rychlost běhu, zjistěte své tréninkové zóny a optimalizujte své tempo."><meta name="twitter:image" content="https://run.analyticszone.app/assets/images/og-image.svg"><meta name="twitter:site" content="@runanalytics"><meta name="twitter:creator" content="@runanalytics"><link rel="alternate" hreflang="ar"
+    href="https://run.analyticszone.app/ar/crs/"><link rel="alternate" hreflang="de"
+    href="https://run.analyticszone.app/de/crs/"><link rel="alternate" hreflang="en"
+    href="https://run.analyticszone.app/en/crs/"><link rel="alternate" hreflang="es"
+    href="https://run.analyticszone.app/es/crs/"><link rel="alternate" hreflang="fr"
+    href="https://run.analyticszone.app/fr/crs/"><link rel="alternate" hreflang="hi"
+    href="https://run.analyticszone.app/hi/crs/"><link rel="alternate" hreflang="id"
+    href="https://run.analyticszone.app/id/crs/"><link rel="alternate" hreflang="it"
+    href="https://run.analyticszone.app/it/crs/"><link rel="alternate" hreflang="ja"
+    href="https://run.analyticszone.app/ja/crs/"><link rel="alternate" hreflang="ko"
+    href="https://run.analyticszone.app/ko/crs/"><link rel="alternate" hreflang="nl"
+    href="https://run.analyticszone.app/nl/crs/"><link rel="alternate" hreflang="pl"
+    href="https://run.analyticszone.app/pl/crs/"><link rel="alternate" hreflang="pt"
+    href="https://run.analyticszone.app/pt/crs/"><link rel="alternate" hreflang="pt-br"
+    href="https://run.analyticszone.app/pt-br/crs/"><link rel="alternate" hreflang="ru"
+    href="https://run.analyticszone.app/ru/crs/"><link rel="alternate" hreflang="sv"
+    href="https://run.analyticszone.app/sv/crs/"><link rel="alternate" hreflang="tr"
+    href="https://run.analyticszone.app/tr/crs/"><link rel="alternate" hreflang="zh"
+    href="https://run.analyticszone.app/zh/crs/"><link rel="alternate" hreflang="x-default"
+    href="https://run.analyticszone.app/en/crs/"><link rel="icon" type="image/png" sizes="32x32" href="../../assets/images/icons/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="../../assets/images/icons/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="../../assets/images/icons/apple-touch-icon.png"><link rel="manifest" href="../../manifest.json"><meta name="theme-color" content="#2563EB"><meta name="robots" content="noindex, follow"><meta name="apple-itunes-app" content="app-id=6754524015"><style>
+/* Critical CSS - Above the fold styles for fast LCP */
+:root {
+  --color-primary: #0066CC;
+  --color-text: #1a1a1a;
+  --color-text-muted: #666;
+  --color-bg: #ffffff;
+  --color-bg-alt: #f8f9fa;
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+}
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  color: var(--color-text);
+  background: var(--color-bg);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Skip link - Accessibility */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--color-primary);
+  color: #fff;
+  padding: 8px 16px;
+  z-index: 1000;
+  text-decoration: none;
+}
+.skip-link:focus {
+  top: 0;
+}
+
+/* Header - Critical for LCP */
+.site-header {
+  background: var(--color-bg);
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0.75rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.site-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: var(--color-text);
+  font-weight: 600;
+  font-size: 1.125rem;
+}
+
+.site-logo img, .site-logo svg {
+  width: 32px;
+  height: 32px;
+}
+
+/* Navigation */
+.main-nav {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .main-nav {
+    display: flex;
+    gap: 1.5rem;
+  }
+  .main-nav a {
+    color: var(--color-text);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9375rem;
+    transition: color 0.2s;
+  }
+  .main-nav a:hover {
+    color: var(--color-primary);
+  }
+}
+
+/* Mobile menu button */
+.menu-toggle {
+  display: flex;
+  background: none;
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .menu-toggle {
+    display: none;
+  }
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Main content */
+main.main-content {
+  flex: 1;
+}
+
+/* Hero section - Critical for LCP */
+.hero {
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .hero {
+    padding: 4rem 2rem;
+  }
+}
+
+.hero h1 {
+  font-size: clamp(1.75rem, 5vw, 3rem);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  color: var(--color-text);
+}
+
+.hero .lead, .hero p {
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  color: var(--color-text-muted);
+  max-width: 700px;
+  margin: 0 auto 1.5rem;
+}
+
+/* Buttons - Critical for CTA */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: var(--radius-md);
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-primary {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: #0052a3;
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+}
+
+.btn-large {
+  padding: 1rem 2rem;
+  font-size: 1.125rem;
+}
+
+/* Utility classes */
+.hidden { display: none !important; }
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Images - prevent CLS with aspect-ratio */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+img[width][height] {
+  aspect-ratio: attr(width) / attr(height);
+}
+
+.lazy-image {
+  background: var(--color-bg-alt);
+  transition: opacity 0.3s;
+}
+
+.lazy-image:not(.loaded) {
+  opacity: 0;
+}
+
+.lazy-image.loaded {
+  opacity: 1;
+}
+
+/* App badges - fixed dimensions to prevent CLS */
+.app-badge img {
+  width: 140px;
+  height: 42px;
+}
+
+/* Logo - fixed dimensions */
+.site-logo img {
+  width: 32px;
+  height: 32px;
+}
+
+/* Reduce motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+</style><link rel="preconnect" href="https://www.googletagmanager.com"><link rel="dns-prefetch" href="https://www.googletagmanager.com"><link rel="stylesheet" href="../../assets/css/main.min.css?v=1c7ace58"><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Run Analytics",
+  "url": "https://run.analyticszone.app",
+  "logo": "https://run.analyticszone.app/assets/images/logo.png",
+  "description": "Track Critical Running Speed, Training Stress Score, and performance metrics with Run Analytics. Science-based iOS app for runners, triathletes &amp; coaches. 7-day free trial.",
+  
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "Customer Support",
+    "email": "analyticszone+run@onmedic.org"
+  },
+  
+  "sameAs": [
+    
+    
+      
+    
+    
+      
+    
+    
+      
+    
+    
+    "https://twitter.com/runanalytics",
+    
+    "https://apps.apple.com/us/app/run-analytics/id6754524015",
+    
+    "https://play.google.com/store/apps/details?id=com.arnohealth.runanalytics"
+    
+  ]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Run Analytics",
+  "url": "https://run.analyticszone.app",
+  "description": "Track Critical Running Speed, Training Stress Score, and performance metrics with Run Analytics. Science-based iOS app for runners, triathletes &amp; coaches. 7-day free trial.",
+  "inLanguage": "cs"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Run Analytics",
+  "description": "Track Critical Running Speed, Training Stress Score, and performance metrics with Run Analytics. Science-based iOS app for runners, triathletes &amp; coaches. 7-day free trial.",
+  "url": "https://run.analyticszone.app",
+  "applicationCategory": ["HealthApplication", "FitnessApplication"],
+  "operatingSystem": "iOS, Android",
+  "author": {
+    "@type": "Organization",
+    "name": "AnalyticsZone Team"
+  },
+  "downloadUrl": "https://apps.apple.com/us/app/run-analytics/id6754524015"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Domů",
+      "item": "https://run.analyticszone.app/cs/"
+    },
+    
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Učit se",
+      "item": "https://run.analyticszone.app/cs/getting-started/"
+    },
+    
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "CRS",
+      "item": "https://run.analyticszone.app/cs/crs/"
+    }
+    
+  ]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Kalkulačka kritické rychlosti běhu - CRS test a zóny",
+  "description": "Bezplatná kalkulačka CRS testu pro běžce. Změřte si kritickou rychlost běhu, zjistěte své tréninkové zóny a optimalizujte své tempo.",
+  "url": "https://run.analyticszone.app/cs/crs/",
+  "inLanguage": "cs",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "Run Analytics",
+    "url": "https://run.analyticszone.app"
+  },
+  "datePublished": "2025-01-15",
+  "dateModified": "2026-03-24",
+  "keywords": ["kritická rychlost běhu", "CRS kalkulačka", "tréninkové zóny", "optimalizace tempa", "optimalizace tempa"],
+  "about": [
+    {
+      "@type": "Thing",
+      "name": "kritická rychlost běhu"
+    }, 
+  
+    {
+      "@type": "Thing",
+      "name": "CRS kalkulačka"
+    }, 
+  
+    {
+      "@type": "Thing",
+      "name": "tréninkové zóny"
+    }, 
+  
+    {
+      "@type": "Thing",
+      "name": "optimalizace tempa"
+    }, 
+  
+    {
+      "@type": "Thing",
+      "name": "optimalizace tempa"
+    }
+  ]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Kalkulačka kritické rychlosti běhu - CRS test a zóny",
+  "description": "Bezplatná kalkulačka CRS testu pro běžce. Změřte si kritickou rychlost běhu, zjistěte své tréninkové zóny a optimalizujte své tempo.",
+  "author": {
+    "@type": "Person",
+    "name": "AnalyticsZone Team"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Run Analytics",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://run.analyticszone.app/assets/images/logo.png"
+    }
+  },
+  "datePublished": "2025-01-15",
+  "dateModified": "2026-03-24",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://run.analyticszone.app/cs/crs/"
+  }
+}
+</script><script>
+    (function () {
+      let theme = localStorage.getItem('theme');
+      // Older builds could persist a per-subdomain `theme=light` value without a UI
+      // to keep it consistent across apps. Treat it as stale and fall back to the OS.
+      if (theme === 'light') {
+        try { localStorage.removeItem('theme'); } catch (e) { /* ignore */ }
+        theme = null;
+      }
+
+      if (theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark-mode');
+      }
+    })();
+  </script></head><body><a href="#main-content" class="skip-link">Přejít na obsah</a><header class="site-header"><div class="container"><div class="header-inner"><a href="/cs/" class="site-logo"><picture><source srcset="../../assets/images/logo-dark.png" type="image/png"
+                        media="(prefers-color-scheme: dark)"><img src="../../assets/images/logo.png" alt="Run Analytics - Running Analytics App | Critical Running Speed, TSS, CTL/ATL/TSB for iOS" width="56" height="56"></picture><span class="logo-text">Run Analytics</span></a><nav class="nav-primary" id="nav-primary" role="navigation" aria-label="Main navigation"><div class="nav-group-left"><ul><li><a href="/cs/" 
+                                aria-current="">
+                                Domů
+                            </a></li><li class="has-submenu" ><a href="/cs/getting-started/" class="nav-label">Učit se</a><ul class="submenu"><li><a href="/cs/getting-started/" 
+                                        aria-current="">
+                                        Začínáme
+                                    </a></li><li><a href="/cs/crs/" class="active" 
+                                        aria-current="page">
+                                        CRS
+                                    </a></li><li><a href="/cs/training-zones/" 
+                                        aria-current="">
+                                        Tréninkové zóny
+                                    </a></li><li><a href="/cs/training-load/" 
+                                        aria-current="">
+                                        Tréninková zátěž
+                                    </a></li><li><a href="/cs/rtss-calculator/" 
+                                        aria-current="">
+                                        rTSS Kalkulačka
+                                    </a></li></ul></li><li class="has-submenu" ><a href="/cs/research/" class="nav-label">Věda</a><ul class="submenu"><li><a href="/cs/research/" 
+                                        aria-current="">
+                                        Výzkum
+                                    </a></li><li><a href="/cs/formulas/" 
+                                        aria-current="">
+                                        Vzorce
+                                    </a></li><li><a href="/cs/efficiency/" 
+                                        aria-current="">
+                                        Efektivita
+                                    </a></li><li><a href="/cs/stride-mechanics/" 
+                                        aria-current="">
+                                        Mechanika běhu
+                                    </a></li><li><a href="/cs/bibliography/" 
+                                        aria-current="">
+                                        Bibliografie
+                                    </a></li></ul></li><li><a href="/cs/contact/" 
+                                aria-current="">
+                                Kontakt
+                            </a></li></ul><div class="search-container"><svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.35-4.35"></path></svg><input type="search" id="site-search" class="search-input" aria-expanded="false"
+                            aria-haspopup="listbox" aria-autocomplete="list" autocomplete="off" spellcheck="false" /><div id="search-results" class="search-results hidden" role="region" aria-live="polite"></div></div><select class="language-selector" id="language-select" aria-label="Vybrat jazyk"><option value="af" >
+                            Afrikaans
+                        </option><option value="am" >
+                            አማርኛ
+                        </option><option value="ar" >
+                            العربية
+                        </option><option value="bg" >
+                            Български
+                        </option><option value="bn" >
+                            বাংলা
+                        </option><option value="ca" >
+                            Català
+                        </option><option value="cs" selected>
+                            Čeština
+                        </option><option value="da" >
+                            Dansk
+                        </option><option value="de" >
+                            Deutsch
+                        </option><option value="el" >
+                            Ελληνικά
+                        </option><option value="en" >
+                            English
+                        </option><option value="es" >
+                            Español
+                        </option><option value="et" >
+                            Eesti
+                        </option><option value="fa" >
+                            فارسی
+                        </option><option value="fi" >
+                            Suomi
+                        </option><option value="fr" >
+                            Français
+                        </option><option value="gu" >
+                            ગુજરાતી
+                        </option><option value="ha" >
+                            Hausa
+                        </option><option value="he" >
+                            עברית
+                        </option><option value="hi" >
+                            हिन्दी
+                        </option><option value="hr" >
+                            Hrvatski
+                        </option><option value="hu" >
+                            Magyar
+                        </option><option value="id" >
+                            Bahasa Indonesia
+                        </option><option value="is" >
+                            Íslenska
+                        </option><option value="it" >
+                            Italiano
+                        </option><option value="ja" >
+                            日本語
+                        </option><option value="km" >
+                            ភាសាខ្មែរ
+                        </option><option value="kn" >
+                            ಕನ್ನಡ
+                        </option><option value="ko" >
+                            한국어
+                        </option><option value="lt" >
+                            Lietuvių
+                        </option><option value="lv" >
+                            Latviešu
+                        </option><option value="ms" >
+                            Bahasa Melayu
+                        </option><option value="my" >
+                            မြန်မာစာ
+                        </option><option value="nb" >
+                            Norsk Bokmål
+                        </option><option value="nl" >
+                            Nederlands
+                        </option><option value="pl" >
+                            Polski
+                        </option><option value="pt" >
+                            Português
+                        </option><option value="pt-br" >
+                            Português (Brasil)
+                        </option><option value="ro" >
+                            Română
+                        </option><option value="ru" >
+                            Русский
+                        </option><option value="sk" >
+                            Slovenčina
+                        </option><option value="sl" >
+                            Slovenščina
+                        </option><option value="sr" >
+                            Srpski
+                        </option><option value="sv" >
+                            Svenska
+                        </option><option value="sw" >
+                            Kiswahili
+                        </option><option value="ta" >
+                            தமிழ்
+                        </option><option value="te" >
+                            తెలుగు
+                        </option><option value="th" >
+                            ไทย
+                        </option><option value="tl" >
+                            Tagalog
+                        </option><option value="tr" >
+                            Türkçe
+                        </option><option value="uk" >
+                            Українська
+                        </option><option value="ur" >
+                            اردو
+                        </option><option value="vi" >
+                            Tiếng Việt
+                        </option><option value="yo" >
+                            Yorùbá
+                        </option><option value="zh" >
+                            中文
+                        </option></select></div><div class="nav-group-right"><div class="header-app-buttons"><a href="https://apps.apple.com/us/app/run-analytics/id6754524015" class="header-download-btn" target="_blank"
+                            rel="noopener" aria-label="Download on App Store" title="Download on App Store"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="currentColor"><path
+                                    d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z" /></svg></a><a href="https://play.google.com/store/apps/details?id=com.arnohealth.runanalytics" class="header-download-btn" target="_blank"
+                            rel="noopener" aria-label="Get it on Google Play" title="Get it on Google Play"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="currentColor"><path
+                                    d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.92 20.16,13.19L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M16.81,8.88L14.54,11.15L6.05,2.66L16.81,8.88Z" /></svg></a></div><div class="suite-menu-container"><button class="suite-menu-toggle" id="suite-menu-toggle" aria-label="See other apps"
+                            aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg></button><div class="suite-dropdown hidden" id="suite-dropdown"><div class="suite-dropdown-header">Other AnalyticsZone Apps</div><div class="suite-apps-grid"><a href="https://analyticszone.app" class="suite-app-link">AnalyticsZone</a><a href="https://swim.analyticszone.app" class="suite-app-link">Swim Analytics</a><a href="https://bike.analyticszone.app" class="suite-app-link">Bike Analytics</a><a href="https://walk.analyticszone.app" class="suite-app-link">Walk Analytics</a><a href="https://cardio.analyticszone.app" class="suite-app-link">Cardio Analytics</a><a href="https://health.analyticszone.app" class="suite-app-link">Health Analytics</a><a href="https://swimtrainer.analyticszone.app" class="suite-app-link">Swim Trainer</a><a href="https://hike.analyticszone.app" class="suite-app-link">Hike Analytics</a><a href="https://sleep.analyticszone.app" class="suite-app-link">Sleep Analytics</a><a href="https://paceva.analyticszone.app" class="suite-app-link">Paceva Analytics</a></div></div></div></div></nav><button class="menu-toggle" id="menu-toggle" aria-label="Přepnout menu"
+                aria-expanded="false" aria-controls="nav-primary"><span></span><span></span><span></span></button></div></div></header><nav class="breadcrumbs" aria-label="Breadcrumb"><div class="container"><ol><li><a href="/cs/">Domů</a></li><li><a href="/cs/getting-started/">Učit se</a></li><li><span aria-current="page">CRS</span></li></ol></div></nav><main id="main-content" class="main-content"><section class="page-hero"><div class="container"><h1>Kritická rychlost běhu (CRS)</h1><p class="lead">Základy tréninku běhu založeného na datech</p></div></section><section class="section"><div class="container container-narrow"><div class="callout callout-success mb-xl"><h2>Klíčové věci</h2><ul class="key-points"><li><strong>co:</strong>Kritická rychlost běhu (CRS) je vaše maximální udržitelné tempo běhu
+                    aerobní práh, kde můžete udržet úsilí po dobu 30 a více minut</li><li><strong>Jak vypočítat:</strong>Proveďte časovky na 1200 m a 3600 m, poté použijte lineární
+                    vztah vzdálenost-čas k nalezení sklonu (CRS)</li><li><strong>Proč na tom záleží:</strong>CRS umožňuje personalizaci<a href="/cs/training-zones/">tréninkové zóny</a>, přesné<a href="/cs/training-load/">TSS výpočty</a>a objektivní sledování kondice</li><li><strong>Typické hodnoty:</strong>Elitní běžci: 18-22s/100m | Soutěžní: 22-26s/100m | Fitness
+                    běžci: 26-32s/100m</li><li><strong>Frekvence testování:</strong>Opakujte test každých 6-8 týdnů, abyste aktualizovali zóny jako svůj běžecký práh
+                    tempo se zlepšuje</li></ul></div><div class="callout callout-info mb-xl"><h2>Co je kritická rychlost běhu?</h2><p><strong>Kritická rychlost běhu (CRS)</strong>je teoretická maximální rychlost jízdy, kterou můžete
+                udržovat bez vyčerpání. Představuje vaše aerobní prahové tempo běhu, obvykle odpovídající
+                do 4 mmol/l krevního laktátu a udržitelný po dobu přibližně 30-60 minut. CRS se vypočítá pomocí dvou
+                časovky s maximálním úsilím (např. 1200 m a 3600 m) k určení přizpůsobených tréninkových zón pro tempo
+                optimalizace.</p></div><p class="lead">Kritická rychlost běhu představuje teoretickou maximální rychlost běhu, kterou můžete udržet
+            nepřetržitě bez vyčerpání. Je to váš aerobní práh – intenzita, při které se rovná produkce laktátu
+            clearance laktátu.</p><div class="callout callout-info"><h3>🎯 Fyziologický význam</h3><p>CRS úzce odpovídá:</p><ul><li><strong>Laktátový práh 2 (LT2)</strong>- Druhý ventilační práh</li><li><strong>Maximální rovnovážný stav laktátu (MLSS)</strong>- Nejvyšší udržitelná hladina laktátu</li><li><strong>Funkční prahové tempo (FTP)</strong>- Běh ekvivalentní cyklistice FTP</li><li><strong>~4 mmol/l krevního laktátu</strong>- Tradiční popisovač OBLA</li></ul></div><h3>Proč na CRS záleží</h3><p>Kritická rychlost běhu je<strong>základní metrika</strong>který odemkne veškerou pokročilou tréninkovou zátěž
+            analýza:</p><ul><li><strong><a href="/cs/training-zones/">Tréninkové zóny</a>:</strong>Přizpůsobuje zóny intenzity
+                na základě vaší fyziologie</li><li><strong><a href="/cs/training-load/">rTSS Výpočet</a>:</strong>Umožňuje přesné školení
+                Kvantifikace skóre stresu</li><li><strong><a href="/cs/training-load/">CTL/ATL/TSB</a>:</strong>Vyžadováno pro výkon
+                Metriky manažerského grafu</li><li><strong>Sledování pokroku:</strong>Objektivní měřítko zlepšení aerobní kondice</li></ul><div class="warning-box"><strong>⚠️ Kritická závislost:</strong>Bez platného testu CRS, pokročilé metriky tréninkového zatížení (rTSS,
+            CTL, ATL, TSB) nelze vypočítat. Nepřesný CRS poškodí všechny následné tréninkové analýzy.</div><div class="callout callout-primary mt-xl"><h3>📱 Run Analytics automatizuje všechny analýzy založené na CRS</h3><p>Zatímco tato příručka vysvětluje vědu za CRS,<strong>Run Analytics automaticky vypočítá a
+                    sleduje vaši kritickou rychlost běhu</strong>z vašich tréninkových dat – žádné ruční výpočty nebo testování
+                požadované protokoly.</p><p><strong>Aplikace zvládá:</strong></p><ul><li>Automatická detekce CRS z tréninkových dat</li><li>Personalizovaná tréninková zóna se aktualizuje, jak se váš CRS zlepšuje</li><li>Sledování rTSS, CTL, ATL a TSB v reálném čase</li><li>Historické grafy postupu CRS</li></ul><p><a class="btn btn-accent btn-small" href="/cs/">Stáhněte si Run Analytics zdarma →</a></p></div></div></section><section class="section section-gray"><div class="container container-narrow"><h2>Kritická rychlost běhu vs. jiné metriky</h2><p class="lead">Pochopení toho, jak se CRS porovnává s jinými ukazateli běžeckého výkonu, vám pomůže vybrat si
+            správnou metriku pro vaše tréninkové cíle.</p><div class="comparison-table-container"><table class="comparison-table"><thead><tr><th>Metrické</th><th>Co to měří</th><th>Testovací metoda</th><th>Udržitelná doba trvání</th><th>Nejlepší případ použití</th></tr></thead><tbody><tr class="highlight-row"><td><strong>Kritická rychlost běhu (CRS)</strong></td><td>Aerobní prahové tempo (4 mmol/l laktátu)</td><td>Časovky na 1200m + 3600m</td><td>30-60 minut</td><td>Tréninkové zóny, výpočet TSS, běh aerobního prahu</td></tr><tr><td><strong><a href="/cs/what-is-vo2max/">VO₂max</a></strong></td><td>Maximální příjem kyslíku</td><td><a href="/cs/vo2max-testing/">Laboratorní test nebo maximální úsilí 12 minut</a></td><td>6-8 minut</td><td>Celková úroveň zdatnosti, intervaly vysoké intenzity</td></tr><tr><td><strong><a href="/cs/lactate-threshold-testing/">Laktátový práh (LT)</a></strong></td><td>Místo, kde se hromadí laktát (2-4 mmol/l)</td><td>Laboratorní krevní test na laktát</td><td>30-60 minut</td><td>Předpověď tempa závodu,<a href="/cs/tempo-runs-zone3/">tempo běží</a></td></tr><tr><td><strong>Funkční prahové tempo (FTP)</strong></td><td>Nejlepší 60minutové tempo</td><td>60minutová časovka nebo 20minutový test</td><td>60 minut</td><td>Vytrvalostní trénink, práce v maratonském tempu</td></tr><tr><td><strong>5K závodní tempo</strong></td><td>Trvalé závodní úsilí</td><td>5K závod nebo časovka</td><td>15-25 minut</td><td>Závodně specifický trénink, stimulační strategie</td></tr></tbody></table></div><div class="callout callout-tip mt-lg"><h3>Proč zvolit CRS?</h3><p>Na rozdíl od VO₂max (vyžaduje laboratorní testování) nebo laktátového prahu (vyžaduje vzorky krve), kritický běh
+                rychlost lze měřit na jakékoli trati pouhými stopkami. Poskytuje stejné informace o školení jako
+                drahé laboratorní testy a přitom jsou praktické pro pravidelné opakované testování každých 6-8 týdnů. Zjistěte více o všech<a href="/cs/running-performance-tests/">běžící metody testování výkonu</a>a kdy na to
+                použít každý.</p></div></div></section><section class="section section-alt"><div class="container"><h2 class="text-center mb-xl">CRS testovací protokol</h2><div class="grid grid-2"><div class="protocol-card"><h3>📋 Standardní protokol</h3><ol class="protocol-steps"><li><strong>Rozcvička</strong><p>15–20 minut snadného běhu, dynamické cvičení a 4–6 kroků pro přípravu na vysokou intenzitu
+                            úsilí.</p></li><li><strong>Časovka na 1200 m</strong><p>Maximální trvalé úsilí (3 kola na 400m trati). Zaznamenejte celkový čas. Cíl: co nejrychleji
+                            průměrné tempo.</p></li><li><strong>Kompletní zotavení</strong><p><span class="highlight-text">15-30 minut</span>snadného běhání nebo chůze/odpočinku. To umožňuje
+                            pro odstranění laktátu a aerobní regeneraci.</p></li><li><strong>Časovka na 3600 m</strong><p>Maximální úsilí (9 kol na 400m trati). Udržujte rovnoměrné tempo. To lze provést na a
+                            v případě potřeby samostatný den.</p></li></ol></div><div class="protocol-card"><h3>⚠️ Časté chyby</h3><div class="mistake-list"><div class="mistake-item"><h4>Nedostatečné zotavení</h4><p><strong>Problém:</strong>Únava uměle zpomaluje 3600m čas</p><p><strong>výsledek:</strong>Vypočtená hodnota CRS se stane<em>rychlejší než realita</em>, vedoucí k
+                            přetrénované zóny</p><p><strong>Řešení:</strong>Odpočívejte, dokud HR neklesne pod 120 tepů za minutu nebo dokud nebude dýchání plné
+                            zotavil</p></div><div class="mistake-item"><h4>Špatná rychlost na 1200 m</h4><p><strong>Problém:</strong>Příliš rychlý start způsobuje dramatické zpomalení</p><p><strong>výsledek:</strong>1200 m čas neodráží skutečné udržitelné tempo</p><p><strong>Řešení:</strong>Zaměřte se na sudé nebo záporné rozdělení (druhá polovina ≤ první polovina)</p></div><div class="mistake-item"><h4>Nekonzistentní podmínky</h4><p><strong>Problém:</strong>Testování na různých terénech nebo v extrémním větru.</p><p><strong>Řešení:</strong>Vždy testujte na ploché dráze za podobných povětrnostních podmínek
+                            podélná přesnost.</p></div></div></div></div><div class="callout callout-tip mt-xl"><h3>🔄 Frekvence opakovaného testování</h3><p>Každých znovu otestujte CRS<strong>6-8 týdnů</strong>aktualizovat tréninkové zóny, jak se zlepšuje kondice. Vaše zóny
+                by se měl postupně zrychlovat, jak se přizpůsobujete tréninku.</p></div></div></section><section class="section"><div class="container container-narrow"><h2>Výpočtový vzorec CRS</h2><div class="formula-box"><h3>Vzorec</h3><div class="formula">CRS (m/s) = (D₂ – D₁) / (T₂ – T₁)</div><div class="formula-explanation"><p>kde:</p><ul><li>D₁ = kratší vzdálenost (např. 1200 metrů)</li><li>D₂ = delší vzdálenost (např. 3600 metrů)</li><li>T₁ = čas pro D₁ (v sekundách)</li><li>T₂ = čas pro D₂ (v sekundách)</li></ul></div><h3 class="mt-lg">Zjednodušený koncept vzdálenost-čas</h3><p>CRS je sklon čáry vykreslující vzdálenost vs. čas pro dvě nebo více maximálních sil.</p></div><h3>Zpracovaný příklad</h3><div class="example-box"><h4>Výsledky testu:</h4><ul><li>3600 m čas:<strong>14:24</strong>(864 sekund)</li><li>1200 m čas:<strong>4:12</strong>(252 sekund)</li></ul><h4>Krok 1: Vypočítejte CRS v m/s</h4><div class="calculation">CRS = (3600–1200) / (864–252)<br/>CRS = 2400 / 612<br/>CRS =<strong>3,92 m/s</strong></div><h4>Krok 2: Převeďte na tempo na 100 m</h4><div class="calculation">Tempo = 100 / 3,92<br/>Tempo = 25,5 sekundy<br/>Tempo =<strong>25,5s na 100m</strong>(4:15/km)</div></div><h2 class="mt-3xl">Zdarma Kalkulačka kritické rychlosti běhu</h2><p class="lead">Okamžitě si spočítejte svou kritickou rychlost běhu a přizpůsobené tréninkové zóny s naším CRS
+            kalkulačka</p><div class="crs-calculator"><form id="cssCalculatorForm"><div class="calculator-inputs"><div class="form-group"><label class="form-label" for="timeLong">Doba delší vzdálenosti (např. 3600 m) (mm:ss)</label><input aria-describedby="timeLong-help" aria-required="true" class="form-input" id="timeLong" pattern="[0-9]{1,2}:[0-5][0-9]" placeholder="14:24" type="text"/><small class="form-help" id="timeLong-help">Formát: minuty:sekundy (např. 14:24)</small></div><div class="form-group"><label class="form-label" for="timeShort">Kratší vzdálenost (např. 1200 m) (mm:ss)</label><input aria-describedby="timeShort-help" aria-required="true" class="form-input" id="timeShort" pattern="[0-9]{1,2}:[0-5][0-9]" placeholder="4:12" type="text"/><small class="form-help" id="timeShort-help">Formát: minuty:sekundy (např. 4:12)</small></div><div class="calculator-buttons"><button class="btn btn-primary" id="calculateBtn" type="submit">Vypočítejte CRS</button><button class="btn btn-ghost" id="resetBtn" type="reset">Jasný</button></div></div></form><div aria-live="polite" class="calculator-results hidden" id="cssResults"><h3>Vaše výsledky</h3><div class="results-summary"><div class="result-item"><div class="result-label">Kritická rychlost běhu</div><div class="crs-result-value" id="crsValue">--</div></div><div class="result-item"><div class="result-label">CRS Tempo na 100m</div><div class="crs-result-value" id="crsPace">--</div></div></div><div class="zones-result"><h4>Vaše osobní tréninkové zóny</h4><p class="mb-md text-secondary">Na základě vašeho CRS jsou zde vaše tréninkové zóny v tempu na 100 m:</p><div id="zonesTable"></div></div></div><div class="callout callout-tip mt-md"><p><strong>💡 Automatické sledování:</strong>Run Analytics vypočítá váš CRS automaticky z tréninku
+                    data a sleduje je v průběhu času – není potřeba žádné ruční testování nebo výpočty. Aplikace také aktualizuje váš
+                    tréninkové zóny, jak se váš CRS zlepšuje.<a href="/cs/">Zjistěte více →</a></p></div></div><h3 class="mt-xl">Alternativa: 3minutové a 12minutové testy</h3><p>Hojně používanou alternativou je doběhnout co nejdál za 3 minuty a 12 minut. Rozdíl v
+            vzdálenost dělená rozdílem v čase dává váš CRS.</p></div></section><section class="section section-alt"><div class="container"><h2 class="mb-xl">Tréninkové zóny založené na kritické rychlosti běhu</h2><div class="callout callout-info"><p><strong>Poznámka:</strong>Při běhu se tempo měří jako<em>čas na vzdálenost</em>. Proto a<strong>vyšší procento = pomalejší tempo</strong>a a<strong>nižší procento = rychlejší tempo</strong>.
+                To je inverzní k silovým sportům, jako je cyklistika, kde vyšší % = větší úsilí. Další informace o<a href="/cs/training-zones/">jak tyto tréninkové zóny používat</a>efektivně.</p></div><div class="zones-table-container"><table class="zones-table"><thead><tr><th>Zóna</th><th>Jméno</th><th>% tempa CRS</th><th>Příklad pro CRS 1:40/100m</th><th>RPE</th><th>Fyziologický účel</th></tr></thead><tbody><tr class="zone-1"><td><strong>1</strong></td><td>Zotavení</td><td>&gt;120 %</td><td>&gt;30s/100m</td><td>2-3/10</td><td>Aktivní regenerace, lehká aerobní údržba</td></tr><tr class="zone-2"><td><strong>2</strong></td><td>Aerobní základ</td><td>108–120 %</td><td>27-30s/100m</td><td>4-5/10</td><td>Budování aerobní kapacity, oxidace tuků</td></tr><tr class="zone-3"><td><strong>3</strong></td><td>Tempo</td><td>102–108 %</td><td>25-27s/100m</td><td>6-7/10</td><td>Maratonský tempový trénink, svalová vytrvalost</td></tr><tr class="zone-4"><td><strong>4</strong></td><td>Práh (CRS)</td><td>97–102 %</td><td>24-25s/100m</td><td>7-8/10</td><td>Zlepšení laktátového prahu</td></tr><tr class="zone-5"><td><strong>5</strong></td><td>VO₂max</td><td>&lt;97 %</td><td>&lt;24s/100m</td><td>9-10/10</td><td>Intervalový trénink, rozvoj VO₂max</td></tr></tbody></table></div><div class="callout callout-tip mt-lg"><h3>🎯 Výhody zónového školení</h3><p>Použití zón na bázi CRS transformuje subjektivní trénink „pocitu“ na objektivní, opakovatelné tréninky. Každý
+                zóna se zaměřuje na specifické fyziologické adaptace:</p><ul><li><strong>Zóna 2:</strong>Sestavení aerobního motoru (60-70 % týdenního objemu)</li><li><strong>Zóna 3:</strong>Zvyšte efektivitu závodního tempa (15-20 % objemu)</li><li><strong>Zóna 4:</strong>Posuňte práh laktátu výše (10-15 % objemu)</li><li><strong>Zóna 5:</strong>Vyvinout špičkovou rychlost a výkon (5-10 % objemu)</li></ul></div></div></section><section class="section"><div class="container container-narrow"><h2>Typické hodnoty kritické rychlosti běhu podle úrovně</h2><div class="levels-comparison"><div class="level-card"><h3>🥇 Elitní běžci na dálku</h3><div class="pace-value">5,0-5,5 m/s</div><div class="pace-equivalent">18-20s na 100m</div><p>Tempo 3:00-3:20 min/km. Profesionální maratonci a elitní běžci na střední tratě.</p></div><div class="level-card"><h3>🏃 Soutěžní běžci</h3><div class="pace-value">4,0-5,0 m/s</div><div class="pace-equivalent">20-25s na 100m</div><p>Tempo 3:20-4:10 min/km. Silní kluboví běžci, maratonci pod 3:00, závodní věkové skupiny.</p></div><div class="level-card"><h3>👟 Pravidelní fitness běžci</h3><div class="pace-value">3,2-4,0 m/s</div><div class="pace-equivalent">25-31s na 100m</div><p>Tempo 4:10-5:10 min/km. Důsledný trénink 3-5 dní/týden. Standardní cílové časy na 5 km maratonu.</p></div><div class="level-card"><h3>🌱 Rozvíjející se běžci</h3><div class="pace-value">&lt;3,2 m/s</div><div class="pace-equivalent">&gt;31s na 100m</div><p>Tempo nad 5:10 min/km. Bezpečně budovat aerobní základnu a zvyšovat týdenní kilometrový výkon.</p></div></div></div></section><section class="section section-alt"><div class="container container-narrow"><h2>Vědecké ověření</h2><div class="research-highlight"><h3>Wakayoshi a kol. (1992-1993) - Základní výzkum</h3><p>Klíčové studie Kohjiho Wakayoshi na univerzitě v Osace prokázaly CRS jako platnou a praktickou alternativu
+                laboratorní vyšetření laktátu:</p><ul class="research-findings"><li><strong>Silná korelace s VO₂ na anaerobním prahu</strong>(r &gt; 0,90)</li><li><strong>Vynikající prediktor výkonu na 10K a maratonu</strong></li><li><strong>Odpovídá maximálnímu ustálenému stavu laktátu (MLSS)</strong></li><li><strong>Nezávislé na anaerobní kapacitě (W')</strong></li></ul><div class="citation"><p><strong>Klíčové dokumenty:</strong></p><ol><li>Wakayoshi K, a kol. (1992). "Stanovení a platnost kritické rychlosti jako indexu
+                        běžecký výkon v soutěžním běžci."<em>European Journal of Applied Physiology</em>,
+                        64(2), 153-157.</li><li>Wakayoshi K, a kol. (1992). „Jednoduchá metoda pro určení kritické rychlosti jako běžecké únavy
+                        prahu v soutěžním běhu."<em>Mezinárodní žurnál sportovní medicíny</em>, 13(5),
+                        367-371.</li><li>Wakayoshi K, a kol. (1993). „Představuje kritická rychlost běhu intenzitu cvičení při?
+                        maximální laktátový rovnovážný stav?"<em>European Journal of Applied Physiology</em>66(1), 90-95.</li></ol></div></div><div class="callout callout-science"><h3>🔬 Proč funguje kritická rychlost běhu</h3><p>Kritická rychlost běhu představuje hranici mezi<strong>těžké a těžké cvičení
+                    domény</strong>. Pod CRS zůstává produkce laktátu a clearance vyvážená – můžete utíkat
+                prodloužené lhůty. Nad CRS se laktát postupně hromadí až do vyčerpání během 20-40 minut.</p><p>Díky tomu je CRS perfektní intenzita pro:</p><ul><li>Nastavení udržitelných závodních temp pro 5K až maratonské závody</li><li>Předepisování<a href="/cs/training-zones/">prahový intervalový trénink</a></li><li>Sledování zlepšení aerobní kondice v průběhu času</li><li>Počítání<a href="/cs/training-load/">tréninkové zatížení a potřeby regenerace</a></li></ul></div></div></section><section class="section"><div class="container container-narrow"><h2 class="mt-3xl">Jak otestovat svou kritickou rychlost běhu</h2><div class="howto-section" itemscope="" itemtype="https://schema.org/HowTo"><meta content="How to Test Your Critical Running Speed" itemprop="name"/><meta content="Follow this step-by-step protocol to accurately measure your Critical Running Speed (CRS) for optimal pace optimization" itemprop="description"/><div class="howto-step" itemprop="step" itemscope="" itemtype="https://schema.org/HowToStep"><meta content="1" itemprop="position"/><h3 itemprop="name">Krok 1: Správně se zahřejte</h3><div itemprop="itemListElement" itemscope="" itemtype="https://schema.org/HowToDirection"><div itemprop="text"><p>Dokončete 15–20 minut snadného běhu, dynamických protažení a 4–6 kroků. Toto připravuje
+                            vaše svaly a kardiovaskulární systém pro maximální úsilí.</p></div></div></div><div class="howto-step" itemprop="step" itemscope="" itemtype="https://schema.org/HowToStep"><meta content="2" itemprop="position"/><h3 itemprop="name">Krok 2: Proveďte časovku na 1200 m</h3><div itemprop="itemListElement" itemscope="" itemtype="https://schema.org/HowToDirection"><div itemprop="text"><p>Uběhněte 1200 metrů (3 kola na 400m trati) s maximálním trvalým úsilím. Zaznamenejte svůj čas do
+                            za druhé. Zaměřte se
+                            na udržení konzistentní vysoké intenzity po celou dobu TT.</p></div></div></div><div class="howto-step" itemprop="step" itemscope="" itemtype="https://schema.org/HowToStep"><meta content="3" itemprop="position"/><h3 itemprop="name">Krok 3: Úplné obnovení</h3><div itemprop="itemListElement" itemscope="" itemtype="https://schema.org/HowToDirection"><div itemprop="text"><p>Odpočívejte 15-30 minut. Můžete chodit nebo běhat velmi pomalu. Je nezbytné nechat své srdce
+                            pokles frekvence a vaše nohy se výrazně zotaví před dalším úsilím.</p></div></div></div><div class="howto-step" itemprop="step" itemscope="" itemtype="https://schema.org/HowToStep"><meta content="4" itemprop="position"/><h3 itemprop="name">Krok 4: Proveďte časovku na 3600 m</h3><div itemprop="itemListElement" itemscope="" itemtype="https://schema.org/HowToDirection"><div itemprop="text"><p>Uběhněte 3600 metrů (9 kol na 400m trati) s maximálním úsilím. Toto je vytrvalostní složka
+                            testu.
+                            Udržujte nejrychlejší tempo, které dokážete udržet po celou vzdálenost.</p></div></div></div><div class="howto-step" itemprop="step" itemscope="" itemtype="https://schema.org/HowToStep"><meta content="5" itemprop="position"/><h3 itemprop="name">Krok 5: Spočítejte si CRS</h3><div itemprop="itemListElement" itemscope="" itemtype="https://schema.org/HowToDirection"><div itemprop="text"><p>Použijte lineární vzorec: (D2 - D1) / (T2 - T1). Například: (3600 – 1200) / (864s – 252s) =
+                            2400 / 612 = 3,92 m/s. Převod na tempo: 100 / 3,92 = 25,5 s/100 m.</p></div></div></div></div><h2>Praktické aplikace kritické rychlosti běhu</h2><div class="application-grid"><div class="application-item"><h3>1️⃣ Odemkněte metriky tréninkového zatížení</h3><p>Kritická rychlost běhu je jmenovatelem ve výpočtu Intensity Factor pro<a href="/cs/training-load/">rTSS (skóre stresu při běžeckém tréninku)</a>. Bez toho, ty
+                    nemůže kvantifikovat tréninkový stres nebo sledovat trendy v kondici/únavě.</p></div><div class="application-item"><h3>2️⃣ Personalizujte tréninkové zóny</h3><p>Obecné tabulky tempa neberou v úvahu individuální fyziologii.<a href="/cs/training-zones/">Tréninkové zóny založené na CRS</a>zajistit, aby každý běžec trénoval v
+                    jejich optimální intenzita pro běh aerobního prahu.</p></div><div class="application-item"><h3>3️⃣ Sledujte pokrok ve fitness</h3><p>Opakujte test každých 6-8 týdnů. Zlepšení kritické rychlosti běhu (rychlejší tempo) ukazuje na úspěšný aerob
+                    adaptace. Stagnující CRS navrhuje přizpůsobení tréninkových potřeb.</p></div><div class="application-item"><h3>4️⃣ Předvídejte výkon závodu</h3><p>Tempo CRS se blíží vašemu udržitelnému prahovému tempu. Použijte jej k nastavení realistických cílů pro 5K, 10K a
+                    závody na půlmaratonu.</p></div><div class="application-item"><h3>5️⃣ Navrhněte prahové cvičení</h3><p>Klasické sady CRS: 10×400 @ CRS tempo (60s odpočinek), 4×1200 @ 98% CRS (90s odpočinek). Vytvořte clearance laktátu
+                    kapacita.</p></div><div class="application-item"><h3>6️⃣ Optimalizujte strategii zúžení</h3><p>Sledujte CRS před a po zúžení. Úspěšné zúžení udržuje nebo mírně zlepšuje CRS
+                    snížení únavy (zvýšený TSB).</p></div></div><h2 class="mt-3xl">Často kladené otázky o kritické rychlosti běhu</h2><div class="faq-section" itemscope="" itemtype="https://schema.org/FAQPage"><div class="faq-item" itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question"><h3 itemprop="name">Co je kritická rychlost běhu (CRS)?</h3><div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer"><div itemprop="text"><p>Kritická rychlost běhu je maximální rychlost běhu, kterou dokážete udržet přibližně 30-60
+                            minut bez hromadící se únavy. Představuje váš aerobní práh – bod, kde
+                            produkce laktátu se rovná clearance laktátu (typicky 4 mmol/l laktátu v krvi). CRS je
+                            počítá se ze dvou časových zkoušek s maximálním úsilím a slouží jako základ pro personalizované<a href="/cs/training-zones/">tréninkové zóny</a>a<a href="/cs/training-load/">TSS výpočty</a>.</p></div></div></div><div class="faq-item" itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question"><h3 itemprop="name">Jak vypočítám svůj CRS?</h3><div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer"><div itemprop="text"><p>Pro výpočet kritické rychlosti běhu: (1) Správně se zahřejte, (2) Vyviňte maximální úsilí
+                            1200 m časovka, (3) Odpočinek po dobu 15-30 minut, (4) Proveďte maximální úsilí na 3600 m časovka,
+                            (5) Použijte vzorec:<strong>CRS (m/s) = (D2 - D1) / (T2 - T1)</strong>. Převeďte výsledek
+                            rychlost na 100 m nebo na km. Použijte naši bezplatnou kalkulačku CRS výše pro okamžité výsledky.</p></div></div></div><div class="faq-item" itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question"><h3 itemprop="name">Jak často bych měl testovat svůj CRS?</h3><div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer"><div itemprop="text"><p>Otestujte svou kritickou rychlost běhu každých 6-8 týdnů, abyste aktualizovali své tréninkové zóny jako své
+                            kondice se zlepšuje. Při intenzivním testování může být vhodné častější testování (každé 4 týdny).
+                            tréninkové bloky, zatímco pro udržovací fáze funguje méně časté testování (10-12 týdnů).
+                            Vaše tempo na prahu běhu by se mělo postupně zlepšovat důsledným tréninkem,
+                            ukazující na pozitivní aerobní adaptace.</p></div></div></div><div class="faq-item" itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question"><h3 itemprop="name">Je CRS stejný jako laktátový práh nebo FTP?</h3><div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer"><div itemprop="text"><p>CRS je velmi podobný, ale ne identický. Kritická rychlost běhu odpovídá vaší sekundě
+                            laktátový práh (LT2, kolem 4 mmol/l), který je o něco vyšší než první laktát
+                            prahová hodnota (LT1, 2 mmol/l). Je srovnatelná s funkční prahovou rychlostí (FTP), ale FTP je
+                            na základě 60minutového úsilí, zatímco CRS se počítá z kratších časových zkoušek. Obvykle CRS
+                            představuje tempo udržitelné po dobu 30-40 minut, takže je ideální pro závodní tempo 5K
+                            příprava a
+                            trénink prahu.</p></div></div></div><div class="faq-item" itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question"><h3 itemprop="name">Jaký je dobrý CRS pro začátečníky?</h3><div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer"><div itemprop="text"><p>Pro vyvíjející se běžce je typický CRS nad 31 s na 100 m (&gt;5:10 min/km). Fitness běžci
+                            typicky dosáhnout 25-31 s na 100 m (4:10-5:10 min/km). Nesrovnávejte se s elitou
+                            sportovci – zaměřte se na zlepšení svého vlastního CRS prostřednictvím strukturovaného tréninku. Jakýkoli CRS je platný
+                            výchozí bod pro optimalizaci tempa.</p></div></div></div><div class="faq-item" itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question"><h3 itemprop="name">Mohu použít CRS pro maratonský trénink?</h3><div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer"><div itemprop="text"><p>Ano, ale s úpravami. CRS představuje tempo, které můžete udržet po dobu 30-40 minut, což je
+                            příliš intenzivní na celé maratony. Tréninkové zóny založené na CRS jsou však pro maraton vynikající
+                            příprava: Zóna 2 buduje váš aerobní základ, Zóna 3 rozvíjí vytrvalost specifickou pro závod a
+                            Zóna 4 (u CRS) zlepšuje váš laktátový práh. Tempo maratonu obvykle klesá
+                            105–110 % vašeho tempa CRS (pomalejší než prahová hodnota). Použijte CRS ke strukturování vašeho tréninku, nikoli
+                            jako vaše závodní tempo.</p></div></div></div><div class="faq-item" itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question"><h3 itemprop="name">Proč je regenerace mezi časovkami tak důležitá?</h3><div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer"><div itemprop="text"><p>Pokud se mezi dvěma časovkami dostatečně nevzpamatujete, únava se uměle zpomalí
+                            podruhé, takže vypočítaná kritická rychlost běhu vypadá rychleji než realita.
+                            To vede k příliš agresivním tréninkovým zónám. Zajistěte alespoň 15-30 minut odpočinku popř
+                            zvážit provedení testů v různé dny ve stejném týdnu.</p></div></div></div><div class="faq-item" itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question"><h3 itemprop="name">Mohu místo testování odhadnout CRS z časů závodů?</h3><div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer"><div itemprop="text"><p>Zatímco CRS můžete přiblížit ze závodního výkonu, přímé testování je přesnější. Pokud vy
+                            musí odhadnout: vezměte svůj poslední 10 000 čas a použijte toto tempo na 100 m minus ~1 sekundu, nebo
+                            použijte 103-105 % svého půlmaratonského tempa. Test 1200m + 3600m však poskytuje
+                            přesná data potřebná pro efektivní trénink.</p></div></div></div></div><div class="callout mt-2xl"><h3>Uplatněte své znalosti CRS</h3><p>Nyní, když rozumíte kritické rychlosti běhu, proveďte následující kroky k optimalizaci tréninku:</p><ul><li><a href="/cs/training-load/">Vypočítat tréninkové stresové skóre (TSS)</a>na základě vašeho CRS na
+                    kvantifikovat intenzitu tréninku</li><li><a href="/cs/training-zones/">Prozkoumejte 7 tréninkových zón</a>a naučit se strukturovat
+                    tréninky pro konkrétní adaptace</li><li><a href="/cs/formulas/">Zobrazit všechny vzorce</a>pro kompletní použití v Run Analytics
+                    transparentnost</li><li><a href="/cs/">Stáhněte si Run Analytics</a>automaticky sledovat CRS, TSS a výkon
+                    trendy</li></ul></div><div class="mt-xl text-center"><a class="btn btn-primary" href="/cs/training-load/">Další informace o výpočtu rTSS →</a><a class="btn btn-secondary" href="/cs/formulas/">Zobrazit všechny vzorce →</a></div></div></section><section class="eeat-author bg-light divider-top-lg divider-bottom-lg" aria-label="Author and Reviewer Information"><div class="container container-narrow"><div class="eeat-card" style="display: flex; gap: 1.5rem; align-items: center; padding: 1.5rem; background: var(--color-bg-alt, #f8f9fa); border-radius: 8px; border: 1px solid var(--color-border, #e9ecef); margin-top: 3rem; margin-bottom: 2rem;"><div class="eeat-avatar" style="font-size: 2.5rem; line-height: 1; flex-shrink: 0;" aria-hidden="true">👨‍🔬</div><div class="eeat-details"><h3 style="margin: 0 0 0.5rem 0; font-size: 1.125rem; font-weight: 600;">
+          Expertly Reviewed by 
+          <span itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">AnalyticsZone Team</span></span></h3><p style="margin: 0 0 0.5rem 0; font-size: 0.95rem; color: var(--color-body-text, #4a5568); line-height: 1.5;">
+          This content has been written and reviewed by a sports data metrics expert to ensure technical accuracy and adherence to the latest sports science methodologies.
+        </p></div></div></div></section><section class="ai-citation-block divider-top-xl" data-ai-ready="true" data-ai-page="crs"><div class="container ai-citation-shell"><h2 class="ai-citation-title">Kalkulačka kritické rychlosti běhu - CRS test a zóny</h2><p class="ai-citation-answer">Bezplatná kalkulačka CRS testu pro běžce. Změřte si kritickou rychlost běhu, zjistěte své tréninkové zóny a optimalizujte své tempo.</p><ul class="ai-citation-facts" role="list"><li class="ai-citation-fact"><span class="ai-citation-icon" aria-hidden="true">📅</span><span>2026-03-24</span></li><li class="ai-citation-fact ai-citation-keywords"><span class="ai-citation-icon" aria-hidden="true">🏷️</span><span>kritická rychlost běhu · CRS kalkulačka · tréninkové zóny · optimalizace tempa · optimalizace tempa</span></li><li class="ai-citation-fact"><span class="ai-citation-icon" aria-hidden="true">🔬</span><a href="../../cs/bibliography/">
+          
+          Bibliografie
+          
+        </a></li></ul></div></section></main><footer class="site-footer"><div class="container"><div class="footer-top"><div class="footer-brand-section"><h2>Run Analytics</h2><p>Track Critical Running Speed, Training Stress Score, and performance metrics with Run Analytics. Science-based iOS app for runners, triathletes &amp; coaches. 7-day free trial.</p></div><div class="footer-download"><h3 class="footer-heading">Stáhnout</h3><div class="footer-badges"><a href="https://apps.apple.com/us/app/run-analytics/id6754524015" target="_blank" rel="noopener"
+                        aria-label="Stáhněte si na App Store"><img src="../../assets/images/badge-app-store.svg"
+                            alt="Stáhněte si na App Store" width="135"
+                            height="40" loading="lazy"></a><a href="https://play.google.com/store/apps/details?id=com.arnohealth.runanalytics" target="_blank" rel="noopener"
+                        aria-label="Získejte ji na Google Play"><img src="../../assets/images/badge-google-play.svg"
+                            alt="Získejte ji na Google Play" width="135"
+                            height="40" loading="lazy"></a></div></div></div><div class="footer-languages"><h3 class="footer-heading">Dostupné v</h3><div class="lang-grid"><a href="/af/" class="lang-link"
+                    hreflang="af" >
+                    Afrikaans
+                </a><a href="/am/" class="lang-link"
+                    hreflang="am" >
+                    አማርኛ
+                </a><a href="/ar/" class="lang-link"
+                    hreflang="ar" dir="rtl" >
+                    العربية
+                </a><a href="/bg/" class="lang-link"
+                    hreflang="bg" >
+                    Български
+                </a><a href="/bn/" class="lang-link"
+                    hreflang="bn" >
+                    বাংলা
+                </a><a href="/ca/" class="lang-link"
+                    hreflang="ca" >
+                    Català
+                </a><a href="/cs/" class="lang-link active"
+                    hreflang="cs" >
+                    Čeština
+                </a><a href="/da/" class="lang-link"
+                    hreflang="da" >
+                    Dansk
+                </a><a href="/de/" class="lang-link"
+                    hreflang="de" >
+                    Deutsch
+                </a><a href="/el/" class="lang-link"
+                    hreflang="el" >
+                    Ελληνικά
+                </a><a href="/en/" class="lang-link"
+                    hreflang="en" >
+                    English
+                </a><a href="/es/" class="lang-link"
+                    hreflang="es" >
+                    Español
+                </a><a href="/et/" class="lang-link"
+                    hreflang="et" >
+                    Eesti
+                </a><a href="/fa/" class="lang-link"
+                    hreflang="fa" dir="rtl" >
+                    فارسی
+                </a><a href="/fi/" class="lang-link"
+                    hreflang="fi" >
+                    Suomi
+                </a><a href="/fr/" class="lang-link"
+                    hreflang="fr" >
+                    Français
+                </a><a href="/gu/" class="lang-link"
+                    hreflang="gu" >
+                    ગુજરાતી
+                </a><a href="/ha/" class="lang-link"
+                    hreflang="ha" >
+                    Hausa
+                </a><a href="/he/" class="lang-link"
+                    hreflang="he" dir="rtl" >
+                    עברית
+                </a><a href="/hi/" class="lang-link"
+                    hreflang="hi" >
+                    हिन्दी
+                </a><a href="/hr/" class="lang-link"
+                    hreflang="hr" >
+                    Hrvatski
+                </a><a href="/hu/" class="lang-link"
+                    hreflang="hu" >
+                    Magyar
+                </a><a href="/id/" class="lang-link"
+                    hreflang="id" >
+                    Bahasa Indonesia
+                </a><a href="/is/" class="lang-link"
+                    hreflang="is" >
+                    Íslenska
+                </a><a href="/it/" class="lang-link"
+                    hreflang="it" >
+                    Italiano
+                </a><a href="/ja/" class="lang-link"
+                    hreflang="ja" >
+                    日本語
+                </a><a href="/km/" class="lang-link"
+                    hreflang="km" >
+                    ភាសាខ្មែរ
+                </a><a href="/kn/" class="lang-link"
+                    hreflang="kn" >
+                    ಕನ್ನಡ
+                </a><a href="/ko/" class="lang-link"
+                    hreflang="ko" >
+                    한국어
+                </a><a href="/lt/" class="lang-link"
+                    hreflang="lt" >
+                    Lietuvių
+                </a><a href="/lv/" class="lang-link"
+                    hreflang="lv" >
+                    Latviešu
+                </a><a href="/ms/" class="lang-link"
+                    hreflang="ms" >
+                    Bahasa Melayu
+                </a><a href="/my/" class="lang-link"
+                    hreflang="my" >
+                    မြန်မာစာ
+                </a><a href="/nb/" class="lang-link"
+                    hreflang="nb" >
+                    Norsk Bokmål
+                </a><a href="/nl/" class="lang-link"
+                    hreflang="nl" >
+                    Nederlands
+                </a><a href="/pl/" class="lang-link"
+                    hreflang="pl" >
+                    Polski
+                </a><a href="/pt/" class="lang-link"
+                    hreflang="pt" >
+                    Português
+                </a><a href="/pt-br/" class="lang-link"
+                    hreflang="pt-br" >
+                    Português (Brasil)
+                </a><a href="/ro/" class="lang-link"
+                    hreflang="ro" >
+                    Română
+                </a><a href="/ru/" class="lang-link"
+                    hreflang="ru" >
+                    Русский
+                </a><a href="/sk/" class="lang-link"
+                    hreflang="sk" >
+                    Slovenčina
+                </a><a href="/sl/" class="lang-link"
+                    hreflang="sl" >
+                    Slovenščina
+                </a><a href="/sr/" class="lang-link"
+                    hreflang="sr" >
+                    Srpski
+                </a><a href="/sv/" class="lang-link"
+                    hreflang="sv" >
+                    Svenska
+                </a><a href="/sw/" class="lang-link"
+                    hreflang="sw" >
+                    Kiswahili
+                </a><a href="/ta/" class="lang-link"
+                    hreflang="ta" >
+                    தமிழ்
+                </a><a href="/te/" class="lang-link"
+                    hreflang="te" >
+                    తెలుగు
+                </a><a href="/th/" class="lang-link"
+                    hreflang="th" >
+                    ไทย
+                </a><a href="/tl/" class="lang-link"
+                    hreflang="tl" >
+                    Tagalog
+                </a><a href="/tr/" class="lang-link"
+                    hreflang="tr" >
+                    Türkçe
+                </a><a href="/uk/" class="lang-link"
+                    hreflang="uk" >
+                    Українська
+                </a><a href="/ur/" class="lang-link"
+                    hreflang="ur" dir="rtl" >
+                    اردو
+                </a><a href="/vi/" class="lang-link"
+                    hreflang="vi" >
+                    Tiếng Việt
+                </a><a href="/yo/" class="lang-link"
+                    hreflang="yo" >
+                    Yorùbá
+                </a><a href="/zh/" class="lang-link"
+                    hreflang="zh" >
+                    中文
+                </a></div></div><div class="footer-divider"></div><div class="footer-bottom"><p class="copyright">
+                &copy; 2026 Run Analytics. Všechna práva vyhrazena
+            </p><ul class="footer-legal"><li><a href="/cs/privacy/">Soukromí</a></li><li><a href="/cs/terms/">Podmínky</a></li></ul></div></div></footer><div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="Cookie consent" aria-live="polite"><div class="cookie-banner-content"><div><p>Tato webová stránka používá soubory cookie ke zlepšení vašeho zážitku.</p><a href="/cs/privacy/" class="text-sm">Dozvědět se více</a></div><div class="cookie-banner-actions"><button id="cookie-decline" class="btn btn-secondary btn-small">Odmítnout</button><button id="cookie-accept" class="btn btn-primary btn-small">Přijmout</button></div></div></div><script src="../../assets/js/core.min.js?v=1c7ace58" defer></script><script src="../../assets/js/search.min.js?v=1c7ace58" defer></script><script src="../../assets/js/analytics.min.js" data-ga-id="G-Y138VB4523" defer></script><script>if ('serviceWorker' in navigator) { navigator.serviceWorker.register('../../sw.js') }</script></body></html>

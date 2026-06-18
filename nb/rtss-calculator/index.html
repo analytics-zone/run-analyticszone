@@ -1,0 +1,843 @@
+<!DOCTYPE html><html lang="nb" dir="ltr"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=optional"
+    rel="stylesheet"><title>Gratis sTSS-kalkulator for løping - Treningsbelastning</title><meta name="description" content="Beregn din Stress Score for løpeøkter. Kvantifiser treningsintensitet ved hjelp av CRS-tempo og varighet."><meta name="author" content="AnalyticsZone Team"><meta name="keywords" content="TSS kalkulator, sTSS løping, treningsbelastning, rTSS, gratis kalkulator"><link rel="canonical" href="https://run.analyticszone.app/nb/rtss-calculator/"><meta property="article:published_time" content="2025-10-08T10:00:00Z"><meta property="article:modified_time" content="2026-03-24T14:30:00Z"><meta property="article:author" content="AnalyticsZone Team"><meta property="og:type" content="article"><meta property="og:url" content="https://run.analyticszone.app/nb/rtss-calculator/"><meta property="og:title" content="Gratis sTSS-kalkulator for løping - Treningsbelastning"><meta property="og:description" content="Beregn din Stress Score for løpeøkter. Kvantifiser treningsintensitet ved hjelp av CRS-tempo og varighet."><meta property="og:image" content="https://run.analyticszone.app/assets/images/og-image.svg"><meta property="og:locale" content="nb_NO"><meta property="og:site_name" content="Run Analytics"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:url" content="https://run.analyticszone.app/nb/rtss-calculator/"><meta name="twitter:title" content="Gratis sTSS-kalkulator for løping - Treningsbelastning"><meta name="twitter:description" content="Beregn din Stress Score for løpeøkter. Kvantifiser treningsintensitet ved hjelp av CRS-tempo og varighet."><meta name="twitter:image" content="https://run.analyticszone.app/assets/images/og-image.svg"><meta name="twitter:site" content="@runanalytics"><meta name="twitter:creator" content="@runanalytics"><link rel="alternate" hreflang="ar"
+    href="https://run.analyticszone.app/ar/rtss-calculator/"><link rel="alternate" hreflang="de"
+    href="https://run.analyticszone.app/de/rtss-calculator/"><link rel="alternate" hreflang="en"
+    href="https://run.analyticszone.app/en/rtss-calculator/"><link rel="alternate" hreflang="es"
+    href="https://run.analyticszone.app/es/rtss-calculator/"><link rel="alternate" hreflang="fr"
+    href="https://run.analyticszone.app/fr/rtss-calculator/"><link rel="alternate" hreflang="hi"
+    href="https://run.analyticszone.app/hi/rtss-calculator/"><link rel="alternate" hreflang="id"
+    href="https://run.analyticszone.app/id/rtss-calculator/"><link rel="alternate" hreflang="it"
+    href="https://run.analyticszone.app/it/rtss-calculator/"><link rel="alternate" hreflang="ja"
+    href="https://run.analyticszone.app/ja/rtss-calculator/"><link rel="alternate" hreflang="ko"
+    href="https://run.analyticszone.app/ko/rtss-calculator/"><link rel="alternate" hreflang="nl"
+    href="https://run.analyticszone.app/nl/rtss-calculator/"><link rel="alternate" hreflang="pl"
+    href="https://run.analyticszone.app/pl/rtss-calculator/"><link rel="alternate" hreflang="pt"
+    href="https://run.analyticszone.app/pt/rtss-calculator/"><link rel="alternate" hreflang="pt-br"
+    href="https://run.analyticszone.app/pt-br/rtss-calculator/"><link rel="alternate" hreflang="ru"
+    href="https://run.analyticszone.app/ru/rtss-calculator/"><link rel="alternate" hreflang="sv"
+    href="https://run.analyticszone.app/sv/rtss-calculator/"><link rel="alternate" hreflang="tr"
+    href="https://run.analyticszone.app/tr/rtss-calculator/"><link rel="alternate" hreflang="zh"
+    href="https://run.analyticszone.app/zh/rtss-calculator/"><link rel="alternate" hreflang="x-default"
+    href="https://run.analyticszone.app/en/rtss-calculator/"><link rel="icon" type="image/png" sizes="32x32" href="../../assets/images/icons/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="../../assets/images/icons/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="../../assets/images/icons/apple-touch-icon.png"><link rel="manifest" href="../../manifest.json"><meta name="theme-color" content="#2563EB"><meta name="robots" content="noindex, follow"><meta name="apple-itunes-app" content="app-id=6754524015"><style>
+/* Critical CSS - Above the fold styles for fast LCP */
+:root {
+  --color-primary: #0066CC;
+  --color-text: #1a1a1a;
+  --color-text-muted: #666;
+  --color-bg: #ffffff;
+  --color-bg-alt: #f8f9fa;
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+}
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  color: var(--color-text);
+  background: var(--color-bg);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Skip link - Accessibility */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--color-primary);
+  color: #fff;
+  padding: 8px 16px;
+  z-index: 1000;
+  text-decoration: none;
+}
+.skip-link:focus {
+  top: 0;
+}
+
+/* Header - Critical for LCP */
+.site-header {
+  background: var(--color-bg);
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0.75rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.site-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: var(--color-text);
+  font-weight: 600;
+  font-size: 1.125rem;
+}
+
+.site-logo img, .site-logo svg {
+  width: 32px;
+  height: 32px;
+}
+
+/* Navigation */
+.main-nav {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .main-nav {
+    display: flex;
+    gap: 1.5rem;
+  }
+  .main-nav a {
+    color: var(--color-text);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9375rem;
+    transition: color 0.2s;
+  }
+  .main-nav a:hover {
+    color: var(--color-primary);
+  }
+}
+
+/* Mobile menu button */
+.menu-toggle {
+  display: flex;
+  background: none;
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .menu-toggle {
+    display: none;
+  }
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Main content */
+main.main-content {
+  flex: 1;
+}
+
+/* Hero section - Critical for LCP */
+.hero {
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .hero {
+    padding: 4rem 2rem;
+  }
+}
+
+.hero h1 {
+  font-size: clamp(1.75rem, 5vw, 3rem);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  color: var(--color-text);
+}
+
+.hero .lead, .hero p {
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  color: var(--color-text-muted);
+  max-width: 700px;
+  margin: 0 auto 1.5rem;
+}
+
+/* Buttons - Critical for CTA */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: var(--radius-md);
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-primary {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: #0052a3;
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+}
+
+.btn-large {
+  padding: 1rem 2rem;
+  font-size: 1.125rem;
+}
+
+/* Utility classes */
+.hidden { display: none !important; }
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Images - prevent CLS with aspect-ratio */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+img[width][height] {
+  aspect-ratio: attr(width) / attr(height);
+}
+
+.lazy-image {
+  background: var(--color-bg-alt);
+  transition: opacity 0.3s;
+}
+
+.lazy-image:not(.loaded) {
+  opacity: 0;
+}
+
+.lazy-image.loaded {
+  opacity: 1;
+}
+
+/* App badges - fixed dimensions to prevent CLS */
+.app-badge img {
+  width: 140px;
+  height: 42px;
+}
+
+/* Logo - fixed dimensions */
+.site-logo img {
+  width: 32px;
+  height: 32px;
+}
+
+/* Reduce motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+</style><link rel="preconnect" href="https://www.googletagmanager.com"><link rel="dns-prefetch" href="https://www.googletagmanager.com"><link rel="stylesheet" href="../../assets/css/main.min.css?v=1c7ace58"><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Run Analytics",
+  "url": "https://run.analyticszone.app",
+  "logo": "https://run.analyticszone.app/assets/images/logo.png",
+  "description": "Track Critical Running Speed, Training Stress Score, and performance metrics with Run Analytics. Science-based iOS app for runners, triathletes &amp; coaches. 7-day free trial.",
+  
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "Customer Support",
+    "email": "analyticszone+run@onmedic.org"
+  },
+  
+  "sameAs": [
+    
+    
+      
+    
+    
+      
+    
+    
+      
+    
+    
+    "https://twitter.com/runanalytics",
+    
+    "https://apps.apple.com/us/app/run-analytics/id6754524015",
+    
+    "https://play.google.com/store/apps/details?id=com.arnohealth.runanalytics"
+    
+  ]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Run Analytics",
+  "url": "https://run.analyticszone.app",
+  "description": "Track Critical Running Speed, Training Stress Score, and performance metrics with Run Analytics. Science-based iOS app for runners, triathletes &amp; coaches. 7-day free trial.",
+  "inLanguage": "nb"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Run Analytics",
+  "description": "Track Critical Running Speed, Training Stress Score, and performance metrics with Run Analytics. Science-based iOS app for runners, triathletes &amp; coaches. 7-day free trial.",
+  "url": "https://run.analyticszone.app",
+  "applicationCategory": ["HealthApplication", "FitnessApplication"],
+  "operatingSystem": "iOS, Android",
+  "author": {
+    "@type": "Organization",
+    "name": "AnalyticsZone Team"
+  },
+  "downloadUrl": "https://apps.apple.com/us/app/run-analytics/id6754524015"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Hjem",
+      "item": "https://run.analyticszone.app/nb/"
+    },
+    
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Lær",
+      "item": "https://run.analyticszone.app/nb/getting-started/"
+    },
+    
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "rTSS Kalkulator",
+      "item": "https://run.analyticszone.app/nb/rtss-calculator/"
+    }
+    
+  ]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Gratis sTSS-kalkulator for løping - Treningsbelastning",
+  "description": "Beregn din Stress Score for løpeøkter. Kvantifiser treningsintensitet ved hjelp av CRS-tempo og varighet.",
+  "url": "https://run.analyticszone.app/nb/rtss-calculator/",
+  "inLanguage": "nb",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "Run Analytics",
+    "url": "https://run.analyticszone.app"
+  },
+  "datePublished": "2025-10-08",
+  "dateModified": "2026-03-24",
+  "keywords": ["TSS kalkulator", "sTSS løping", "treningsbelastning", "rTSS", "gratis kalkulator"],
+  "about": [
+    {
+      "@type": "Thing",
+      "name": "TSS kalkulator"
+    }, 
+  
+    {
+      "@type": "Thing",
+      "name": "sTSS løping"
+    }, 
+  
+    {
+      "@type": "Thing",
+      "name": "treningsbelastning"
+    }, 
+  
+    {
+      "@type": "Thing",
+      "name": "rTSS"
+    }, 
+  
+    {
+      "@type": "Thing",
+      "name": "gratis kalkulator"
+    }
+  ]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Gratis sTSS-kalkulator for løping - Treningsbelastning",
+  "description": "Beregn din Stress Score for løpeøkter. Kvantifiser treningsintensitet ved hjelp av CRS-tempo og varighet.",
+  "author": {
+    "@type": "Person",
+    "name": "AnalyticsZone Team"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Run Analytics",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://run.analyticszone.app/assets/images/logo.png"
+    }
+  },
+  "datePublished": "2025-10-08",
+  "dateModified": "2026-03-24",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://run.analyticszone.app/nb/rtss-calculator/"
+  }
+}
+</script><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Gratis sTSS-kalkulator for løping - Treningsbelastning",
+  "description": "Beregn din Stress Score for løpeøkter. Kvantifiser treningsintensitet ved hjelp av CRS-tempo og varighet.",
+  "url": "https://run.analyticszone.app/nb/rtss-calculator/",
+  "applicationCategory": "HealthApplication",
+  "operatingSystem": "WebBrowser",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  }
+}
+</script><script>
+    (function () {
+      let theme = localStorage.getItem('theme');
+      // Older builds could persist a per-subdomain `theme=light` value without a UI
+      // to keep it consistent across apps. Treat it as stale and fall back to the OS.
+      if (theme === 'light') {
+        try { localStorage.removeItem('theme'); } catch (e) { /* ignore */ }
+        theme = null;
+      }
+
+      if (theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark-mode');
+      }
+    })();
+  </script></head><body><a href="#main-content" class="skip-link">Hopp til innhold</a><header class="site-header"><div class="container"><div class="header-inner"><a href="/nb/" class="site-logo"><picture><source srcset="../../assets/images/logo-dark.png" type="image/png"
+                        media="(prefers-color-scheme: dark)"><img src="../../assets/images/logo.png" alt="Run Analytics - Running Analytics App | Critical Running Speed, TSS, CTL/ATL/TSB for iOS" width="56" height="56"></picture><span class="logo-text">Run Analytics</span></a><nav class="nav-primary" id="nav-primary" role="navigation" aria-label="Main navigation"><div class="nav-group-left"><ul><li><a href="/nb/" 
+                                aria-current="">
+                                Hjem
+                            </a></li><li class="has-submenu" ><a href="/nb/getting-started/" class="nav-label">Lær</a><ul class="submenu"><li><a href="/nb/getting-started/" 
+                                        aria-current="">
+                                        Komme I Gang
+                                    </a></li><li><a href="/nb/crs/" 
+                                        aria-current="">
+                                        CRS
+                                    </a></li><li><a href="/nb/training-zones/" 
+                                        aria-current="">
+                                        Treningssoner
+                                    </a></li><li><a href="/nb/training-load/" 
+                                        aria-current="">
+                                        Treningsbelastning
+                                    </a></li><li><a href="/nb/rtss-calculator/" class="active" 
+                                        aria-current="page">
+                                        rTSS Kalkulator
+                                    </a></li></ul></li><li class="has-submenu" ><a href="/nb/research/" class="nav-label">Vitenskap</a><ul class="submenu"><li><a href="/nb/research/" 
+                                        aria-current="">
+                                        Forskning
+                                    </a></li><li><a href="/nb/formulas/" 
+                                        aria-current="">
+                                        Formler
+                                    </a></li><li><a href="/nb/efficiency/" 
+                                        aria-current="">
+                                        Effektivitet
+                                    </a></li><li><a href="/nb/stride-mechanics/" 
+                                        aria-current="">
+                                        Løpeteknikk
+                                    </a></li><li><a href="/nb/bibliography/" 
+                                        aria-current="">
+                                        Bibliografi
+                                    </a></li></ul></li><li><a href="/nb/contact/" 
+                                aria-current="">
+                                Kontakt
+                            </a></li></ul><div class="search-container"><svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.35-4.35"></path></svg><input type="search" id="site-search" class="search-input" aria-expanded="false"
+                            aria-haspopup="listbox" aria-autocomplete="list" autocomplete="off" spellcheck="false" /><div id="search-results" class="search-results hidden" role="region" aria-live="polite"></div></div><select class="language-selector" id="language-select" aria-label="Velg språk"><option value="af" >
+                            Afrikaans
+                        </option><option value="am" >
+                            አማርኛ
+                        </option><option value="ar" >
+                            العربية
+                        </option><option value="bg" >
+                            Български
+                        </option><option value="bn" >
+                            বাংলা
+                        </option><option value="ca" >
+                            Català
+                        </option><option value="cs" >
+                            Čeština
+                        </option><option value="da" >
+                            Dansk
+                        </option><option value="de" >
+                            Deutsch
+                        </option><option value="el" >
+                            Ελληνικά
+                        </option><option value="en" >
+                            English
+                        </option><option value="es" >
+                            Español
+                        </option><option value="et" >
+                            Eesti
+                        </option><option value="fa" >
+                            فارسی
+                        </option><option value="fi" >
+                            Suomi
+                        </option><option value="fr" >
+                            Français
+                        </option><option value="gu" >
+                            ગુજરાતી
+                        </option><option value="ha" >
+                            Hausa
+                        </option><option value="he" >
+                            עברית
+                        </option><option value="hi" >
+                            हिन्दी
+                        </option><option value="hr" >
+                            Hrvatski
+                        </option><option value="hu" >
+                            Magyar
+                        </option><option value="id" >
+                            Bahasa Indonesia
+                        </option><option value="is" >
+                            Íslenska
+                        </option><option value="it" >
+                            Italiano
+                        </option><option value="ja" >
+                            日本語
+                        </option><option value="km" >
+                            ភាសាខ្មែរ
+                        </option><option value="kn" >
+                            ಕನ್ನಡ
+                        </option><option value="ko" >
+                            한국어
+                        </option><option value="lt" >
+                            Lietuvių
+                        </option><option value="lv" >
+                            Latviešu
+                        </option><option value="ms" >
+                            Bahasa Melayu
+                        </option><option value="my" >
+                            မြန်မာစာ
+                        </option><option value="nb" selected>
+                            Norsk Bokmål
+                        </option><option value="nl" >
+                            Nederlands
+                        </option><option value="pl" >
+                            Polski
+                        </option><option value="pt" >
+                            Português
+                        </option><option value="pt-br" >
+                            Português (Brasil)
+                        </option><option value="ro" >
+                            Română
+                        </option><option value="ru" >
+                            Русский
+                        </option><option value="sk" >
+                            Slovenčina
+                        </option><option value="sl" >
+                            Slovenščina
+                        </option><option value="sr" >
+                            Srpski
+                        </option><option value="sv" >
+                            Svenska
+                        </option><option value="sw" >
+                            Kiswahili
+                        </option><option value="ta" >
+                            தமிழ்
+                        </option><option value="te" >
+                            తెలుగు
+                        </option><option value="th" >
+                            ไทย
+                        </option><option value="tl" >
+                            Tagalog
+                        </option><option value="tr" >
+                            Türkçe
+                        </option><option value="uk" >
+                            Українська
+                        </option><option value="ur" >
+                            اردو
+                        </option><option value="vi" >
+                            Tiếng Việt
+                        </option><option value="yo" >
+                            Yorùbá
+                        </option><option value="zh" >
+                            中文
+                        </option></select></div><div class="nav-group-right"><div class="header-app-buttons"><a href="https://apps.apple.com/us/app/run-analytics/id6754524015" class="header-download-btn" target="_blank"
+                            rel="noopener" aria-label="Download on App Store" title="Download on App Store"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="currentColor"><path
+                                    d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z" /></svg></a><a href="https://play.google.com/store/apps/details?id=com.arnohealth.runanalytics" class="header-download-btn" target="_blank"
+                            rel="noopener" aria-label="Get it on Google Play" title="Get it on Google Play"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="currentColor"><path
+                                    d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.92 20.16,13.19L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M16.81,8.88L14.54,11.15L6.05,2.66L16.81,8.88Z" /></svg></a></div><div class="suite-menu-container"><button class="suite-menu-toggle" id="suite-menu-toggle" aria-label="See other apps"
+                            aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg></button><div class="suite-dropdown hidden" id="suite-dropdown"><div class="suite-dropdown-header">Other AnalyticsZone Apps</div><div class="suite-apps-grid"><a href="https://analyticszone.app" class="suite-app-link">AnalyticsZone</a><a href="https://swim.analyticszone.app" class="suite-app-link">Swim Analytics</a><a href="https://bike.analyticszone.app" class="suite-app-link">Bike Analytics</a><a href="https://walk.analyticszone.app" class="suite-app-link">Walk Analytics</a><a href="https://cardio.analyticszone.app" class="suite-app-link">Cardio Analytics</a><a href="https://health.analyticszone.app" class="suite-app-link">Health Analytics</a><a href="https://swimtrainer.analyticszone.app" class="suite-app-link">Swim Trainer</a><a href="https://hike.analyticszone.app" class="suite-app-link">Hike Analytics</a><a href="https://sleep.analyticszone.app" class="suite-app-link">Sleep Analytics</a><a href="https://paceva.analyticszone.app" class="suite-app-link">Paceva Analytics</a></div></div></div></div></nav><button class="menu-toggle" id="menu-toggle" aria-label="Veksle meny"
+                aria-expanded="false" aria-controls="nav-primary"><span></span><span></span><span></span></button></div></div></header><nav class="breadcrumbs" aria-label="Breadcrumb"><div class="container"><ol><li><a href="/nb/">Hjem</a></li><li><a href="/nb/getting-started/">Lær</a></li><li><span aria-current="page">rTSS Kalkulator</span></li></ol></div></nav><main id="main-content" class="main-content"><section class="page-hero"><div class="container"><h1>Kjør gratis rTSS-kalkulator</h1><p class="lead">Beregn treningsstresspoeng for løpetrening - Den eneste gratis rTSS-kalkulatoren</p></div></section><section class="section"><div class="container container-narrow"><div class="callout callout-info mb-xl"><h2>Hva er å kjøre rTSS (rTSS)?</h2><p><strong>Løpsstressscore (rTSS)</strong>kvantifiserer treningsbelastningen til en løpetrening
+                ved å kombinere intensitet og varighet. Den er tilpasset fra sykkelsportens TSS-metodikk, ved å bruke din Critical
+                Run Speed (CRS) som terskeltempo. En 1-times treningsøkt i CRS-tempo = 100 rTSS.</p></div><h2 class="mt-3xl">Gratis kalkulator rTSS</h2><p class="lead mb-xl">Beregn treningsstress for enhver løpetrening. Krever ditt CRS-tempo.</p><div class="crs-calculator"><form id="rtssCalculatorForm"><div class="calculator-inputs"><div class="form-group"><label class="form-label" for="crsPace">CRS-tempoet ditt (mm:ss per km)</label><input aria-describedby="crsPace-help" aria-required="true" class="form-input" id="crsPace" pattern="[0-9]{1,2}:[0-5][0-9]" placeholder="4:15" type="text"/><small class="form-help" id="crsPace-help">Terskeltempoet ditt fra CRS-testen (f.eks.
+                            4:15)</small><div class="form-error" id="crsPace-error"></div></div><div class="form-group"><label class="form-label" for="workoutDuration">Treningsvarighet (minutter)</label><input aria-describedby="duration-help" aria-required="true" class="form-input" id="workoutDuration" max="300" min="1" placeholder="60" type="number"/><small class="form-help" id="duration-help">Total treningstid inkludert hvile (1-300
+                            minutter)</small><div class="form-error" id="duration-error"></div></div><div class="form-group"><label class="form-label" for="avgPace">Gjennomsnittlig treningstempo (mm:ss per km)</label><input aria-describedby="pace-help" aria-required="true" class="form-input" id="avgPace" pattern="[0-9]{1,2}:[0-5][0-9]" placeholder="4:45" type="text"/><small class="form-help" id="pace-help">Det gjennomsnittlige tempoet ditt under treningen (f.eks.
+                            4:45)</small><div class="form-error" id="pace-error"></div></div><div class="calculator-buttons"><button class="btn btn-primary" id="calculateRtssBtn" type="submit">Beregn rTSS</button><button class="btn btn-ghost" id="resetRtssBtn" type="reset">Klart</button></div></div></form><div aria-live="polite" class="calculator-results hidden" id="rtssResults"><h3>Din treningsstresspoeng</h3><div class="results-summary"><div class="result-item"><div class="result-label">rTSS</div><div class="crs-result-value" id="rtssValue">--</div></div><div class="result-item"><div class="result-label">Intensitetsfaktor (IF)</div><div class="crs-result-value" id="intensityFactor">--</div></div></div><div class="zones-result"><h4>Tolkning av treningsbelastning</h4><p class="mb-md text-secondary" id="rtssInterpretation">
+Fylles av JavaScript
+</p></div></div></div><h2 class="mt-3xl">Hvordan rTSS beregnes</h2><div class="formula-box"><h3>Formel</h3><div class="formula">rTSS = (Varighet i timer) × (Intensitetsfaktor)² × 100</div><div class="formula-explanation"><p>Hvor:</p><ul><li><strong>Intensitetsfaktor (IF)</strong>= CRS Tempo / Gjennomsnittlig treningstempo</li><li><strong>Varighet</strong>= Total treningstid i timer</li><li><strong>CRS Tempo</strong>= Ditt terskeltempo fra CRS-testen</li></ul></div></div><h3 class="mt-xl">Eksempel på arbeid</h3><div class="example-box"><h4>Treningsdetaljer:</h4><ul><li>CRS Tempo:<strong>4:15/km</strong>(255 sekunder)</li><li>Treningsvarighet:<strong>60 minutter</strong>(1 time)</li><li>Gjennomsnittlig tempo:<strong>4:45/km</strong>(285 sekunder)</li></ul><h4>Trinn 1: Beregn intensitetsfaktor</h4><div class="calculation">IF = CRS Tempo / Treningstempo<br/>IF = 255 / 285<br/>IF =<strong>0,895</strong></div><h4>Trinn 2: Beregn rTSS</h4><div class="calculation">rTSS = 1,0 timer × (0,895)² × 100<br/>rTSS = 1,0 × 0,801 × 100<br/>rTSS =<strong>80</strong></div><p class="mt-md"><strong>Tolkning:</strong>Denne 60-minutters treningsøkten i lett tempo (langsommere enn CRS)
+                generert 72 rTSS - en moderat treningsbelastning egnet for aerob basebygging.</p></div><h2 class="mt-3xl">Forstå rTSS-verdier</h2><div class="zones-table-container"><table class="zones-table"><thead><tr><th>rTSS-serien</th><th>Treningsbelastning</th><th>Gjenopprettingstid</th><th>Eksempel på trening</th></tr></thead><tbody><tr><td>&lt; 50</td><td>Lavt</td><td>Samme dag</td><td>Enkel 30-minutters løping, teknikkøvelser</td></tr><tr><td>50-100</td><td>Moderat</td><td>1 dag</td><td>60-min utholdenhet, jevnt tempo</td></tr><tr><td>100-200</td><td>Høy</td><td>1-2 dager</td><td>90-minutters terskelsett, løpstempointervaller</td></tr><tr><td>200-300</td><td>Veldig høy</td><td>2-3 dager</td><td>2-timers hard trening, flere terskelblokker</td></tr><tr><td>&gt; 300</td><td>Ekstrem</td><td>3+ dager</td><td>Langt løp (&gt;2 timer), ultrautholdenhet</td></tr></tbody></table></div><h2 class="mt-3xl">Ukentlige retningslinjer for rTSS</h2><p class="mb-md">Target ukentlig rTSS avhenger av treningsnivået og målene dine:</p><div class="grid grid-2 mb-xl"><div class="card"><h3 class="card-title">Fritidsløpere</h3><div class="card-content"><p class="mb-sm"><strong>Ukentlig rTSS:</strong>150-300</p><p>2-3 treningsøkter per uke, 50-100 rTSS hver. Fokus på teknikk og bygge aerobic base.</p></div></div><div class="card"><h3 class="card-title">Treningsløpere / triatleter</h3><div class="card-content"><p class="mb-sm"><strong>Ukentlig rTSS:</strong>300-500</p><p>3-4 treningsøkter per uke, 75-125 rTSS hver. Blanding av aerob utholdenhet og terskelarbeid.</p></div></div><div class="card"><h3 class="card-title">Konkurransedyktige Masters-løpere</h3><div class="card-content"><p class="mb-sm"><strong>Ukentlig rTSS:</strong>500-800</p><p>4-6 treningsøkter per uke, 80-150 rTSS hver. Strukturert trening med periodisering.</p></div></div><div class="card"><h3 class="card-title">Elite / Collegiate Løpere</h3><div class="card-content"><p class="mb-sm"><strong>Ukentlig rTSS:</strong>800-1200+</p><p>8-12 treningsøkter per uke, doble dager. Høyt volum med gjenopprettingsstyring kritisk.</p></div></div></div><div class="callout callout-warning"><h3>⚠️ Viktige merknader</h3><ul><li><strong>Krever nøyaktig CRS:</strong>Din CRS må være oppdatert (testet innen 6-8 uker) for
+                    nøyaktig rTSS.</li><li><strong>Forenklet beregning:</strong>Denne kalkulatoren bruker gjennomsnittlig tempo. Avansert rTSS-bruk
+                    Normalisert gradert tempo (NGP) som står for intervallstrukturen.</li><li><strong>Ikke for teknikkarbeid:</strong>rTSS måler kun fysisk treningsstress, ikke ferdigheter
+                    utvikling.</li><li><strong>Individuell variasjon:</strong>Samme rTSS føles annerledes for forskjellige løpere. Juster
+                    retningslinjer basert på restitusjonen din.</li></ul></div><h2 class="mt-3xl">Hvorfor rTSS betyr noe</h2><p class="mb-md">Treningsstresspoeng er grunnlaget for:</p><ul class="mb-xl"><li><strong>CTL (kronisk treningsbelastning):</strong>Ditt kondisjonsnivå - 42-dagers eksponentielt vektet gjennomsnitt
+                av daglig rTSS</li><li><strong>ATL (akutt treningsbelastning):</strong>Din tretthet - 7-dagers eksponentielt vektet gjennomsnitt av daglig
+                rTSS</li><li><strong>TSB (trening av stressbalanse):</strong>Skjemaet ditt - TSB = CTL - ATL (positiv = fersk, negativ
+                = sliten)</li><li><strong>Periodisering:</strong>Planlegg treningsfaser (base, build, peak, taper) ved å bruke målet CTL
+                progresjoner</li><li><strong>Gjenopprettingsbehandling:</strong>Vit når du skal presse og når du skal hvile basert på TSB</li></ul><div class="callout callout-tip"><h3>Profftips: Spor CTL</h3><p>Ta opp rTSS daglig i et regneark eller treningslogg. Beregn 42-dagers gjennomsnitt (CTL) ukentlig. Mål
+                5-10 CTL-poeng øker per uke under basebygging. Oppretthold eller reduser CTL litt under nedtrapping
+                (1-2 uker før løp).</p></div><h2 class="mt-3xl">Ofte stilte spørsmål</h2><div class="faq-section" itemscope="" itemtype="https://schema.org/FAQPage"><div class="faq-item" itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question"><h3 itemprop="name">Hva er å kjøre TSS (rTSS)?</h3><div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer"><div itemprop="text"><p>Løpetrening Stress Score (rTSS) er en beregning som kvantifiserer treningsbelastningen til en
+                            løpetrening ved å kombinere både intensitet og varighet. Den er tilpasset fra sykkelsportens TSS
+                            metodikk, ved å bruke din kritiske løpshastighet (CRS) som terskeltempo. En treningsøkt på 1 time
+                            ved CRS-tempo tilsvarer 100 rTSS.</p></div></div></div><div class="faq-item" itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question"><h3 itemprop="name">Hvordan beregner jeg min rTSS?</h3><div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer"><div itemprop="text"><p>Bruk kalkulatoren ovenfor ved å angi CRS-tempoet ditt (fra en CRS-test), total treningsvarighet,
+                            og gjennomsnittlig tempo under treningen. Formelen er: rTSS = Varighet (timer) × Intensitet
+                            Faktor³ × 100, der Intensitetsfaktor = CRS Tempo / Gjennomsnittlig treningstempo.</p></div></div></div><div class="faq-item" itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question"><h3 itemprop="name">Trenger jeg CRS for å beregne rTSS?</h3><div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer"><div itemprop="text"><p>Ja, din kritiske løpshastighet (CRS) kreves for å beregne intensitetsfaktoren, som er
+                            avgjørende for rTSS-beregning. CRS representerer terskeltempoet ditt og bør testes
+                            hver 6-8 uke. Du kan finne din CRS ved å bruke vår<a href="/nb/crs/">CRS
+                                kalkulator</a>.</p></div></div></div><div class="faq-item" itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question"><h3 itemprop="name">Hva er en god rTSS-score for én treningsøkt?</h3><div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer"><div itemprop="text"><p>Det avhenger av treningsintensiteten: Enkel trening scorer vanligvis under 50 rTSS, moderat
+                            treningsøkter 50-100 rTSS, harde treningsøkter 100-200 rTSS, og veldig harde treningsøkter over 200 rTSS. Den
+                            passende poengsum avhenger av treningsmålene dine og nåværende kondisjonsnivå.</p></div></div></div><div class="faq-item" itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question"><h3 itemprop="name">Hvor mye rTSS bør jeg gjøre per uke?</h3><div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer"><div itemprop="text"><p>Ukentlige rTSS-mål varierer etter nivå: Fritidsløpere: 150-300, Fitness
+                            løpere/triatleter: 300-500, Konkurransemestere: 500-800, Elite/Collegiate: 800-1200+.
+                            Start konservativt og øk gradvis for å unngå overtrening.</p></div></div></div><div class="faq-item" itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question"><h3 itemprop="name">Er det å kjøre TSS det samme som å sykle TSS?</h3><div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer"><div itemprop="text"><p>Konseptet og formelen er det samme, men rTSS er tilpasset løping. I stedet for å bruke strøm
+                            (FTP) som å sykle TSS, bruker rTSS tempo med CRS som terskel. Begge måler treningsbelastning
+                            Varighet × Intensitetsfaktor² × 100.</p></div></div></div><div class="faq-item" itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question"><h3 itemprop="name">Tar rTSS hensyn til terreng eller bakker?</h3><div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer"><div itemprop="text"><p>Standard rTSS basert på gjennomsnittlig GPS-tempo tar ikke hensyn til bakker. For stiløping eller
+                            kuperte ruter, bruk av avansert verktøy<strong>Normalisert gradert tempo (NGP)</strong>eller hjertefrekvens
+                            intervaller for å gi en mer nøyaktig representasjon av treningsstresset.</p></div></div></div><div class="faq-item" itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question"><h3 itemprop="name">Hva er forskjellen mellom rTSS og CTL/ATL/TSB?</h3><div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer"><div itemprop="text"><p>rTSS måler en enkelt treningsøkts treningsbelastning.CTL (Chronic Training Load) er din langsiktige
+                            fitness, ATL (akutt treningsbelastning) er din nylige tretthet, og TSB (trening av stressbalanse)
+                            er din friskhet. Disse beregningene bruker rTSS-verdier over tid for å spore treningstilstanden din.
+                            Lær mer i vår<a href="/nb/training-load/">Treningsbelastningsguide</a>.</p></div></div></div></div><h2 class="mt-3xl">Relaterte ressurser</h2><div class="grid grid-3"><div class="card"><h3 class="card-title">CRS-test</h3><div class="card-content"><p>Trenger du CRS-tempoet ditt? Bruk vår gratis CRS-kalkulator med 5K og 3K testtider.</p><a class="btn btn-secondary btn-small mt-md" href="/nb/crs/">CRS Kalkulator →</a></div></div><div class="card"><h3 class="card-title">Treningsbelastningsveiledning</h3><div class="card-content"><p>Lær om CTL, ATL, TSB og ytelsesstyringsdiagrammer.</p><a class="btn btn-secondary btn-small mt-md" href="/nb/training-load/">Treningsbelastning →</a></div></div><div class="card"><h3 class="card-title">Run Analytics App</h3><div class="card-content"><p>Automatisk rTSS-beregning for alle treningsøkter. Spor CTL/ATL/TSB-trender over tid.</p><a class="btn btn-secondary btn-small mt-md" href="/nb/">Lær mer →</a></div></div></div><div class="mt-xl text-center"><p class="mb-md"><strong>Ønsker du automatisk rTSS-sporing?</strong></p><a class="btn btn-primary btn-large" href="https://apps.apple.com/us/app/run-analytics/id6754524015" rel="noopener" target="_blank">Last ned Run Analytics gratis</a></div></div></section><script src="../../assets/js/rtss-calculator.min.js"></script><section class="eeat-author bg-light divider-top-lg divider-bottom-lg" aria-label="Author and Reviewer Information"><div class="container container-narrow"><div class="eeat-card" style="display: flex; gap: 1.5rem; align-items: center; padding: 1.5rem; background: var(--color-bg-alt, #f8f9fa); border-radius: 8px; border: 1px solid var(--color-border, #e9ecef); margin-top: 3rem; margin-bottom: 2rem;"><div class="eeat-avatar" style="font-size: 2.5rem; line-height: 1; flex-shrink: 0;" aria-hidden="true">👨‍🔬</div><div class="eeat-details"><h3 style="margin: 0 0 0.5rem 0; font-size: 1.125rem; font-weight: 600;">
+          Expertly Reviewed by 
+          <span itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">AnalyticsZone Team</span></span></h3><p style="margin: 0 0 0.5rem 0; font-size: 0.95rem; color: var(--color-body-text, #4a5568); line-height: 1.5;">
+          This content has been written and reviewed by a sports data metrics expert to ensure technical accuracy and adherence to the latest sports science methodologies.
+        </p></div></div></div></section><section class="ai-citation-block divider-top-xl" data-ai-ready="true" data-ai-page="rtss-calculator"><div class="container ai-citation-shell"><h2 class="ai-citation-title">Gratis sTSS-kalkulator for løping - Treningsbelastning</h2><p class="ai-citation-answer">Beregn din Stress Score for løpeøkter. Kvantifiser treningsintensitet ved hjelp av CRS-tempo og varighet.</p><ul class="ai-citation-facts" role="list"><li class="ai-citation-fact"><span class="ai-citation-icon" aria-hidden="true">📅</span><span>2026-03-24</span></li><li class="ai-citation-fact ai-citation-keywords"><span class="ai-citation-icon" aria-hidden="true">🏷️</span><span>TSS kalkulator · sTSS løping · treningsbelastning · rTSS · gratis kalkulator</span></li><li class="ai-citation-fact"><span class="ai-citation-icon" aria-hidden="true">🔬</span><a href="../../nb/bibliography/">
+          
+          Bibliografi
+          
+        </a></li></ul></div></section></main><footer class="site-footer"><div class="container"><div class="footer-top"><div class="footer-brand-section"><h2>Run Analytics</h2><p>Track Critical Running Speed, Training Stress Score, and performance metrics with Run Analytics. Science-based iOS app for runners, triathletes &amp; coaches. 7-day free trial.</p></div><div class="footer-download"><h3 class="footer-heading">Last ned</h3><div class="footer-badges"><a href="https://apps.apple.com/us/app/run-analytics/id6754524015" target="_blank" rel="noopener"
+                        aria-label="Last ned på App Store"><img src="../../assets/images/badge-app-store.svg"
+                            alt="Last ned på App Store" width="135"
+                            height="40" loading="lazy"></a><a href="https://play.google.com/store/apps/details?id=com.arnohealth.runanalytics" target="_blank" rel="noopener"
+                        aria-label="Få den på Google Play"><img src="../../assets/images/badge-google-play.svg"
+                            alt="Få den på Google Play" width="135"
+                            height="40" loading="lazy"></a></div></div></div><div class="footer-languages"><h3 class="footer-heading">Tilgjengelig i</h3><div class="lang-grid"><a href="/af/" class="lang-link"
+                    hreflang="af" >
+                    Afrikaans
+                </a><a href="/am/" class="lang-link"
+                    hreflang="am" >
+                    አማርኛ
+                </a><a href="/ar/" class="lang-link"
+                    hreflang="ar" dir="rtl" >
+                    العربية
+                </a><a href="/bg/" class="lang-link"
+                    hreflang="bg" >
+                    Български
+                </a><a href="/bn/" class="lang-link"
+                    hreflang="bn" >
+                    বাংলা
+                </a><a href="/ca/" class="lang-link"
+                    hreflang="ca" >
+                    Català
+                </a><a href="/cs/" class="lang-link"
+                    hreflang="cs" >
+                    Čeština
+                </a><a href="/da/" class="lang-link"
+                    hreflang="da" >
+                    Dansk
+                </a><a href="/de/" class="lang-link"
+                    hreflang="de" >
+                    Deutsch
+                </a><a href="/el/" class="lang-link"
+                    hreflang="el" >
+                    Ελληνικά
+                </a><a href="/en/" class="lang-link"
+                    hreflang="en" >
+                    English
+                </a><a href="/es/" class="lang-link"
+                    hreflang="es" >
+                    Español
+                </a><a href="/et/" class="lang-link"
+                    hreflang="et" >
+                    Eesti
+                </a><a href="/fa/" class="lang-link"
+                    hreflang="fa" dir="rtl" >
+                    فارسی
+                </a><a href="/fi/" class="lang-link"
+                    hreflang="fi" >
+                    Suomi
+                </a><a href="/fr/" class="lang-link"
+                    hreflang="fr" >
+                    Français
+                </a><a href="/gu/" class="lang-link"
+                    hreflang="gu" >
+                    ગુજરાતી
+                </a><a href="/ha/" class="lang-link"
+                    hreflang="ha" >
+                    Hausa
+                </a><a href="/he/" class="lang-link"
+                    hreflang="he" dir="rtl" >
+                    עברית
+                </a><a href="/hi/" class="lang-link"
+                    hreflang="hi" >
+                    हिन्दी
+                </a><a href="/hr/" class="lang-link"
+                    hreflang="hr" >
+                    Hrvatski
+                </a><a href="/hu/" class="lang-link"
+                    hreflang="hu" >
+                    Magyar
+                </a><a href="/id/" class="lang-link"
+                    hreflang="id" >
+                    Bahasa Indonesia
+                </a><a href="/is/" class="lang-link"
+                    hreflang="is" >
+                    Íslenska
+                </a><a href="/it/" class="lang-link"
+                    hreflang="it" >
+                    Italiano
+                </a><a href="/ja/" class="lang-link"
+                    hreflang="ja" >
+                    日本語
+                </a><a href="/km/" class="lang-link"
+                    hreflang="km" >
+                    ភាសាខ្មែរ
+                </a><a href="/kn/" class="lang-link"
+                    hreflang="kn" >
+                    ಕನ್ನಡ
+                </a><a href="/ko/" class="lang-link"
+                    hreflang="ko" >
+                    한국어
+                </a><a href="/lt/" class="lang-link"
+                    hreflang="lt" >
+                    Lietuvių
+                </a><a href="/lv/" class="lang-link"
+                    hreflang="lv" >
+                    Latviešu
+                </a><a href="/ms/" class="lang-link"
+                    hreflang="ms" >
+                    Bahasa Melayu
+                </a><a href="/my/" class="lang-link"
+                    hreflang="my" >
+                    မြန်မာစာ
+                </a><a href="/nb/" class="lang-link active"
+                    hreflang="nb" >
+                    Norsk Bokmål
+                </a><a href="/nl/" class="lang-link"
+                    hreflang="nl" >
+                    Nederlands
+                </a><a href="/pl/" class="lang-link"
+                    hreflang="pl" >
+                    Polski
+                </a><a href="/pt/" class="lang-link"
+                    hreflang="pt" >
+                    Português
+                </a><a href="/pt-br/" class="lang-link"
+                    hreflang="pt-br" >
+                    Português (Brasil)
+                </a><a href="/ro/" class="lang-link"
+                    hreflang="ro" >
+                    Română
+                </a><a href="/ru/" class="lang-link"
+                    hreflang="ru" >
+                    Русский
+                </a><a href="/sk/" class="lang-link"
+                    hreflang="sk" >
+                    Slovenčina
+                </a><a href="/sl/" class="lang-link"
+                    hreflang="sl" >
+                    Slovenščina
+                </a><a href="/sr/" class="lang-link"
+                    hreflang="sr" >
+                    Srpski
+                </a><a href="/sv/" class="lang-link"
+                    hreflang="sv" >
+                    Svenska
+                </a><a href="/sw/" class="lang-link"
+                    hreflang="sw" >
+                    Kiswahili
+                </a><a href="/ta/" class="lang-link"
+                    hreflang="ta" >
+                    தமிழ்
+                </a><a href="/te/" class="lang-link"
+                    hreflang="te" >
+                    తెలుగు
+                </a><a href="/th/" class="lang-link"
+                    hreflang="th" >
+                    ไทย
+                </a><a href="/tl/" class="lang-link"
+                    hreflang="tl" >
+                    Tagalog
+                </a><a href="/tr/" class="lang-link"
+                    hreflang="tr" >
+                    Türkçe
+                </a><a href="/uk/" class="lang-link"
+                    hreflang="uk" >
+                    Українська
+                </a><a href="/ur/" class="lang-link"
+                    hreflang="ur" dir="rtl" >
+                    اردو
+                </a><a href="/vi/" class="lang-link"
+                    hreflang="vi" >
+                    Tiếng Việt
+                </a><a href="/yo/" class="lang-link"
+                    hreflang="yo" >
+                    Yorùbá
+                </a><a href="/zh/" class="lang-link"
+                    hreflang="zh" >
+                    中文
+                </a></div></div><div class="footer-divider"></div><div class="footer-bottom"><p class="copyright">
+                &copy; 2026 Run Analytics. Alle rettigheter reservert
+            </p><ul class="footer-legal"><li><a href="/nb/privacy/">Personvern</a></li><li><a href="/nb/terms/">Vilkår</a></li></ul></div></div></footer><div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="Cookie consent" aria-live="polite"><div class="cookie-banner-content"><div><p>Dette nettstedet bruker informasjonskapsler for å forbedre opplevelsen din.</p><a href="/nb/privacy/" class="text-sm">Lær mer</a></div><div class="cookie-banner-actions"><button id="cookie-decline" class="btn btn-secondary btn-small">Avvis</button><button id="cookie-accept" class="btn btn-primary btn-small">Aksepter</button></div></div></div><script src="../../assets/js/core.min.js?v=1c7ace58" defer></script><script src="../../assets/js/search.min.js?v=1c7ace58" defer></script><script src="../../assets/js/analytics.min.js" data-ga-id="G-Y138VB4523" defer></script><script>if ('serviceWorker' in navigator) { navigator.serviceWorker.register('../../sw.js') }</script></body></html>

@@ -1,0 +1,881 @@
+<!DOCTYPE html><html lang="zh" dir="ltr"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=optional"
+    rel="stylesheet"><title>临界跑步速度 (CRS) | Run Analytics - Running Analytics App |</title><meta name="description" content="数据驱动跑步训练的基础. 临界跑步速度 (CRS) | Run Analytics - Running Analytics App | Critical 临界跑步速度 (CRS) | Run Analytics - Running Analytics App | Critical"><meta name="author" content="AnalyticsZone Team"><meta name="keywords" content="临界游泳速度, CRS计算器, 游泳训练区间, CRS测试, 阈值配速"><link rel="canonical" href="https://run.analyticszone.app/zh/crs/"><meta property="article:published_time" content="2025-01-15T10:00:00Z"><meta property="article:modified_time" content="2026-03-24T14:30:00Z"><meta property="article:author" content="AnalyticsZone Team"><meta property="og:type" content="article"><meta property="og:url" content="https://run.analyticszone.app/zh/crs/"><meta property="og:title" content="临界跑步速度 (CRS) | Run Analytics - Running Analytics App |"><meta property="og:description" content="数据驱动跑步训练的基础. 临界跑步速度 (CRS) | Run Analytics - Running Analytics App | Critical 临界跑步速度 (CRS) | Run Analytics - Running Analytics App | Critical"><meta property="og:image" content="https://run.analyticszone.app/assets/images/og-image.svg"><meta property="og:locale" content="zh_CN"><meta property="og:site_name" content="Run Analytics"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:url" content="https://run.analyticszone.app/zh/crs/"><meta name="twitter:title" content="临界跑步速度 (CRS) | Run Analytics - Running Analytics App |"><meta name="twitter:description" content="数据驱动跑步训练的基础. 临界跑步速度 (CRS) | Run Analytics - Running Analytics App | Critical 临界跑步速度 (CRS) | Run Analytics - Running Analytics App | Critical"><meta name="twitter:image" content="https://run.analyticszone.app/assets/images/og-image.svg"><meta name="twitter:site" content="@runanalytics"><meta name="twitter:creator" content="@runanalytics"><link rel="alternate" hreflang="ar"
+    href="https://run.analyticszone.app/ar/crs/"><link rel="alternate" hreflang="de"
+    href="https://run.analyticszone.app/de/crs/"><link rel="alternate" hreflang="en"
+    href="https://run.analyticszone.app/en/crs/"><link rel="alternate" hreflang="es"
+    href="https://run.analyticszone.app/es/crs/"><link rel="alternate" hreflang="fr"
+    href="https://run.analyticszone.app/fr/crs/"><link rel="alternate" hreflang="hi"
+    href="https://run.analyticszone.app/hi/crs/"><link rel="alternate" hreflang="id"
+    href="https://run.analyticszone.app/id/crs/"><link rel="alternate" hreflang="it"
+    href="https://run.analyticszone.app/it/crs/"><link rel="alternate" hreflang="ja"
+    href="https://run.analyticszone.app/ja/crs/"><link rel="alternate" hreflang="ko"
+    href="https://run.analyticszone.app/ko/crs/"><link rel="alternate" hreflang="nl"
+    href="https://run.analyticszone.app/nl/crs/"><link rel="alternate" hreflang="pl"
+    href="https://run.analyticszone.app/pl/crs/"><link rel="alternate" hreflang="pt"
+    href="https://run.analyticszone.app/pt/crs/"><link rel="alternate" hreflang="pt-br"
+    href="https://run.analyticszone.app/pt-br/crs/"><link rel="alternate" hreflang="ru"
+    href="https://run.analyticszone.app/ru/crs/"><link rel="alternate" hreflang="sv"
+    href="https://run.analyticszone.app/sv/crs/"><link rel="alternate" hreflang="tr"
+    href="https://run.analyticszone.app/tr/crs/"><link rel="alternate" hreflang="zh"
+    href="https://run.analyticszone.app/zh/crs/"><link rel="alternate" hreflang="x-default"
+    href="https://run.analyticszone.app/en/crs/"><link rel="icon" type="image/png" sizes="32x32" href="../../assets/images/icons/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="../../assets/images/icons/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="../../assets/images/icons/apple-touch-icon.png"><link rel="manifest" href="../../manifest.json"><meta name="theme-color" content="#2563EB"><meta name="robots" content="index, follow"><meta name="apple-itunes-app" content="app-id=6754524015"><style>
+/* Critical CSS - Above the fold styles for fast LCP */
+:root {
+  --color-primary: #0066CC;
+  --color-text: #1a1a1a;
+  --color-text-muted: #666;
+  --color-bg: #ffffff;
+  --color-bg-alt: #f8f9fa;
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+}
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  color: var(--color-text);
+  background: var(--color-bg);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Skip link - Accessibility */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--color-primary);
+  color: #fff;
+  padding: 8px 16px;
+  z-index: 1000;
+  text-decoration: none;
+}
+.skip-link:focus {
+  top: 0;
+}
+
+/* Header - Critical for LCP */
+.site-header {
+  background: var(--color-bg);
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0.75rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.site-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: var(--color-text);
+  font-weight: 600;
+  font-size: 1.125rem;
+}
+
+.site-logo img, .site-logo svg {
+  width: 32px;
+  height: 32px;
+}
+
+/* Navigation */
+.main-nav {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .main-nav {
+    display: flex;
+    gap: 1.5rem;
+  }
+  .main-nav a {
+    color: var(--color-text);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9375rem;
+    transition: color 0.2s;
+  }
+  .main-nav a:hover {
+    color: var(--color-primary);
+  }
+}
+
+/* Mobile menu button */
+.menu-toggle {
+  display: flex;
+  background: none;
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .menu-toggle {
+    display: none;
+  }
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Main content */
+main.main-content {
+  flex: 1;
+}
+
+/* Hero section - Critical for LCP */
+.hero {
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .hero {
+    padding: 4rem 2rem;
+  }
+}
+
+.hero h1 {
+  font-size: clamp(1.75rem, 5vw, 3rem);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  color: var(--color-text);
+}
+
+.hero .lead, .hero p {
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  color: var(--color-text-muted);
+  max-width: 700px;
+  margin: 0 auto 1.5rem;
+}
+
+/* Buttons - Critical for CTA */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: var(--radius-md);
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-primary {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: #0052a3;
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+}
+
+.btn-large {
+  padding: 1rem 2rem;
+  font-size: 1.125rem;
+}
+
+/* Utility classes */
+.hidden { display: none !important; }
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Images - prevent CLS with aspect-ratio */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+img[width][height] {
+  aspect-ratio: attr(width) / attr(height);
+}
+
+.lazy-image {
+  background: var(--color-bg-alt);
+  transition: opacity 0.3s;
+}
+
+.lazy-image:not(.loaded) {
+  opacity: 0;
+}
+
+.lazy-image.loaded {
+  opacity: 1;
+}
+
+/* App badges - fixed dimensions to prevent CLS */
+.app-badge img {
+  width: 140px;
+  height: 42px;
+}
+
+/* Logo - fixed dimensions */
+.site-logo img {
+  width: 32px;
+  height: 32px;
+}
+
+/* Reduce motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+</style><link rel="preconnect" href="https://www.googletagmanager.com"><link rel="dns-prefetch" href="https://www.googletagmanager.com"><link rel="stylesheet" href="../../assets/css/main.min.css?v=1c7ace58"><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Run Analytics",
+  "url": "https://run.analyticszone.app",
+  "logo": "https://run.analyticszone.app/assets/images/logo.png",
+  "description": "Track Critical Running Speed, Training Stress Score, and performance metrics with Run Analytics. Science-based iOS app for runners, triathletes &amp; coaches. 7-day free trial.",
+  
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "Customer Support",
+    "email": "analyticszone+run@onmedic.org"
+  },
+  
+  "sameAs": [
+    
+    
+      
+    
+    
+      
+    
+    
+      
+    
+    
+    "https://twitter.com/runanalytics",
+    
+    "https://apps.apple.com/us/app/run-analytics/id6754524015",
+    
+    "https://play.google.com/store/apps/details?id=com.arnohealth.runanalytics"
+    
+  ]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Run Analytics",
+  "url": "https://run.analyticszone.app",
+  "description": "Track Critical Running Speed, Training Stress Score, and performance metrics with Run Analytics. Science-based iOS app for runners, triathletes &amp; coaches. 7-day free trial.",
+  "inLanguage": "zh"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Run Analytics",
+  "description": "Track Critical Running Speed, Training Stress Score, and performance metrics with Run Analytics. Science-based iOS app for runners, triathletes &amp; coaches. 7-day free trial.",
+  "url": "https://run.analyticszone.app",
+  "applicationCategory": ["HealthApplication", "FitnessApplication"],
+  "operatingSystem": "iOS, Android",
+  "author": {
+    "@type": "Organization",
+    "name": "AnalyticsZone Team"
+  },
+  "downloadUrl": "https://apps.apple.com/us/app/run-analytics/id6754524015"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "首页",
+      "item": "https://run.analyticszone.app/zh/"
+    },
+    
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "学习",
+      "item": "https://run.analyticszone.app/zh/getting-started/"
+    },
+    
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "CRS",
+      "item": "https://run.analyticszone.app/zh/crs/"
+    }
+    
+  ]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "临界跑步速度 (CRS) | Run Analytics - Running Analytics App |",
+  "description": "数据驱动跑步训练的基础. 临界跑步速度 (CRS) | Run Analytics - Running Analytics App | Critical 临界跑步速度 (CRS) | Run Analytics - Running Analytics App | Critical",
+  "url": "https://run.analyticszone.app/zh/crs/",
+  "inLanguage": "zh",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "Run Analytics",
+    "url": "https://run.analyticszone.app"
+  },
+  "datePublished": "2025-01-15",
+  "dateModified": "2026-03-24",
+  "keywords": ["临界游泳速度", "CRS计算器", "游泳训练区间", "CRS测试", "阈值配速"],
+  "about": [
+    {
+      "@type": "Thing",
+      "name": "临界游泳速度"
+    }, 
+  
+    {
+      "@type": "Thing",
+      "name": "CRS计算器"
+    }, 
+  
+    {
+      "@type": "Thing",
+      "name": "游泳训练区间"
+    }, 
+  
+    {
+      "@type": "Thing",
+      "name": "CRS测试"
+    }, 
+  
+    {
+      "@type": "Thing",
+      "name": "阈值配速"
+    }
+  ]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "临界跑步速度 (CRS) | Run Analytics - Running Analytics App |",
+  "description": "数据驱动跑步训练的基础. 临界跑步速度 (CRS) | Run Analytics - Running Analytics App | Critical 临界跑步速度 (CRS) | Run Analytics - Running Analytics App | Critical",
+  "author": {
+    "@type": "Person",
+    "name": "AnalyticsZone Team"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Run Analytics",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://run.analyticszone.app/assets/images/logo.png"
+    }
+  },
+  "datePublished": "2025-01-15",
+  "dateModified": "2026-03-24",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://run.analyticszone.app/zh/crs/"
+  }
+}
+</script><script>
+    (function () {
+      let theme = localStorage.getItem('theme');
+      // Older builds could persist a per-subdomain `theme=light` value without a UI
+      // to keep it consistent across apps. Treat it as stale and fall back to the OS.
+      if (theme === 'light') {
+        try { localStorage.removeItem('theme'); } catch (e) { /* ignore */ }
+        theme = null;
+      }
+
+      if (theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark-mode');
+      }
+    })();
+  </script></head><body><a href="#main-content" class="skip-link">跳到内容</a><header class="site-header"><div class="container"><div class="header-inner"><a href="/zh/" class="site-logo"><picture><source srcset="../../assets/images/logo-dark.png" type="image/png"
+                        media="(prefers-color-scheme: dark)"><img src="../../assets/images/logo.png" alt="Run Analytics - Running Analytics App | Critical Running Speed, TSS, CTL/ATL/TSB for iOS" width="56" height="56"></picture><span class="logo-text">Run Analytics</span></a><nav class="nav-primary" id="nav-primary" role="navigation" aria-label="Main navigation"><div class="nav-group-left"><ul><li><a href="/zh/" 
+                                aria-current="">
+                                首页
+                            </a></li><li class="has-submenu" ><a href="/zh/getting-started/" class="nav-label">学习</a><ul class="submenu"><li><a href="/zh/getting-started/" 
+                                        aria-current="">
+                                        入门指南
+                                    </a></li><li><a href="/zh/crs/" class="active" 
+                                        aria-current="page">
+                                        CRS
+                                    </a></li><li><a href="/zh/training-zones/" 
+                                        aria-current="">
+                                        训练区间
+                                    </a></li><li><a href="/zh/training-load/" 
+                                        aria-current="">
+                                        训练负荷
+                                    </a></li><li><a href="/zh/rtss-calculator/" 
+                                        aria-current="">
+                                        rTSS计算器
+                                    </a></li></ul></li><li class="has-submenu" ><a href="/zh/research/" class="nav-label">科学</a><ul class="submenu"><li><a href="/zh/research/" 
+                                        aria-current="">
+                                        研究
+                                    </a></li><li><a href="/zh/formulas/" 
+                                        aria-current="">
+                                        公式
+                                    </a></li><li><a href="/zh/efficiency/" 
+                                        aria-current="">
+                                        效率
+                                    </a></li><li><a href="/zh/stride-mechanics/" 
+                                        aria-current="">
+                                        步幅力学
+                                    </a></li><li><a href="/zh/bibliography/" 
+                                        aria-current="">
+                                        参考文献
+                                    </a></li></ul></li><li><a href="/zh/contact/" 
+                                aria-current="">
+                                联系我们
+                            </a></li></ul><div class="search-container"><svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.35-4.35"></path></svg><input type="search" id="site-search" class="search-input" aria-expanded="false"
+                            aria-haspopup="listbox" aria-autocomplete="list" autocomplete="off" spellcheck="false" /><div id="search-results" class="search-results hidden" role="region" aria-live="polite"></div></div><select class="language-selector" id="language-select" aria-label="选择语言"><option value="af" >
+                            Afrikaans
+                        </option><option value="am" >
+                            አማርኛ
+                        </option><option value="ar" >
+                            العربية
+                        </option><option value="bg" >
+                            Български
+                        </option><option value="bn" >
+                            বাংলা
+                        </option><option value="ca" >
+                            Català
+                        </option><option value="cs" >
+                            Čeština
+                        </option><option value="da" >
+                            Dansk
+                        </option><option value="de" >
+                            Deutsch
+                        </option><option value="el" >
+                            Ελληνικά
+                        </option><option value="en" >
+                            English
+                        </option><option value="es" >
+                            Español
+                        </option><option value="et" >
+                            Eesti
+                        </option><option value="fa" >
+                            فارسی
+                        </option><option value="fi" >
+                            Suomi
+                        </option><option value="fr" >
+                            Français
+                        </option><option value="gu" >
+                            ગુજરાતી
+                        </option><option value="ha" >
+                            Hausa
+                        </option><option value="he" >
+                            עברית
+                        </option><option value="hi" >
+                            हिन्दी
+                        </option><option value="hr" >
+                            Hrvatski
+                        </option><option value="hu" >
+                            Magyar
+                        </option><option value="id" >
+                            Bahasa Indonesia
+                        </option><option value="is" >
+                            Íslenska
+                        </option><option value="it" >
+                            Italiano
+                        </option><option value="ja" >
+                            日本語
+                        </option><option value="km" >
+                            ភាសាខ្មែរ
+                        </option><option value="kn" >
+                            ಕನ್ನಡ
+                        </option><option value="ko" >
+                            한국어
+                        </option><option value="lt" >
+                            Lietuvių
+                        </option><option value="lv" >
+                            Latviešu
+                        </option><option value="ms" >
+                            Bahasa Melayu
+                        </option><option value="my" >
+                            မြန်မာစာ
+                        </option><option value="nb" >
+                            Norsk Bokmål
+                        </option><option value="nl" >
+                            Nederlands
+                        </option><option value="pl" >
+                            Polski
+                        </option><option value="pt" >
+                            Português
+                        </option><option value="pt-br" >
+                            Português (Brasil)
+                        </option><option value="ro" >
+                            Română
+                        </option><option value="ru" >
+                            Русский
+                        </option><option value="sk" >
+                            Slovenčina
+                        </option><option value="sl" >
+                            Slovenščina
+                        </option><option value="sr" >
+                            Srpski
+                        </option><option value="sv" >
+                            Svenska
+                        </option><option value="sw" >
+                            Kiswahili
+                        </option><option value="ta" >
+                            தமிழ்
+                        </option><option value="te" >
+                            తెలుగు
+                        </option><option value="th" >
+                            ไทย
+                        </option><option value="tl" >
+                            Tagalog
+                        </option><option value="tr" >
+                            Türkçe
+                        </option><option value="uk" >
+                            Українська
+                        </option><option value="ur" >
+                            اردو
+                        </option><option value="vi" >
+                            Tiếng Việt
+                        </option><option value="yo" >
+                            Yorùbá
+                        </option><option value="zh" selected>
+                            中文
+                        </option></select></div><div class="nav-group-right"><div class="header-app-buttons"><a href="https://apps.apple.com/us/app/run-analytics/id6754524015" class="header-download-btn" target="_blank"
+                            rel="noopener" aria-label="Download on App Store" title="Download on App Store"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="currentColor"><path
+                                    d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z" /></svg></a><a href="https://play.google.com/store/apps/details?id=com.arnohealth.runanalytics" class="header-download-btn" target="_blank"
+                            rel="noopener" aria-label="Get it on Google Play" title="Get it on Google Play"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="currentColor"><path
+                                    d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.92 20.16,13.19L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M16.81,8.88L14.54,11.15L6.05,2.66L16.81,8.88Z" /></svg></a></div><div class="suite-menu-container"><button class="suite-menu-toggle" id="suite-menu-toggle" aria-label="See other apps"
+                            aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg></button><div class="suite-dropdown hidden" id="suite-dropdown"><div class="suite-dropdown-header">Other AnalyticsZone Apps</div><div class="suite-apps-grid"><a href="https://analyticszone.app" class="suite-app-link">AnalyticsZone</a><a href="https://swim.analyticszone.app" class="suite-app-link">Swim Analytics</a><a href="https://bike.analyticszone.app" class="suite-app-link">Bike Analytics</a><a href="https://walk.analyticszone.app" class="suite-app-link">Walk Analytics</a><a href="https://cardio.analyticszone.app" class="suite-app-link">Cardio Analytics</a><a href="https://health.analyticszone.app" class="suite-app-link">Health Analytics</a><a href="https://swimtrainer.analyticszone.app" class="suite-app-link">Swim Trainer</a><a href="https://hike.analyticszone.app" class="suite-app-link">Hike Analytics</a><a href="https://sleep.analyticszone.app" class="suite-app-link">Sleep Analytics</a><a href="https://paceva.analyticszone.app" class="suite-app-link">Paceva Analytics</a></div></div></div></div></nav><button class="menu-toggle" id="menu-toggle" aria-label="切换菜单"
+                aria-expanded="false" aria-controls="nav-primary"><span></span><span></span><span></span></button></div></div></header><nav class="breadcrumbs" aria-label="Breadcrumb"><div class="container"><ol><li><a href="/zh/">首页</a></li><li><a href="/zh/getting-started/">学习</a></li><li><span aria-current="page">CRS</span></li></ol></div></nav><main id="main-content" class="main-content"><section class="page-hero"><div class="container"><h1>临界运行速度 (CRS)</h1><p class="lead">数据驱动跑步训练的基础</p></div></section><section class="section"><div class="container container-narrow"><div class="callout callout-success mb-xl"><h2>要点</h2><ul class="key-points"><li><strong>什么：</strong>临界跑步速度 (CRS) 是您的最大可持续跑步配速 —
+                    有氧阈值，您可以维持 30 分钟以上的努力</li><li><strong>如何计算：</strong>进行1200m和3600m计时试验，然后使用线性
+                    用于查找斜率的距离-时间关系 (CRS)</li><li><strong>为什么它很重要：</strong>CRS 实现个性化<a href="/zh/training-zones/">训练区</a>,准确的<a href="/zh/training-load/">TSS 计算</a>，以及客观的健身追踪</li><li><strong>典型值：</strong>精英跑者：18-22s/100m |竞技：22-26秒/100米 |健身
+                    跑步者：26-32秒/100米</li><li><strong>测试频率：</strong>每 6-8 周重新测试一次，以更新区域作为您的跑步阈值
+                    步伐提高</li></ul></div><div class="callout callout-info mb-xl"><h2>什么是临界运行速度？</h2><p><strong>临界运行速度（CRS）</strong>是理论上可以运行的最大速度
+                保持不疲惫。它代表您的有氧阈值跑步配速，通常对应
+                血乳酸降至 4 mmol/L，可持续约 30-60 分钟。 CRS 使用两个计算
+                最大努力计时赛（例如 1200m 和 3600m）以确定个性化配速训练区
+                优化。</p></div><p class="lead">临界运行速度代表理论上你能维持的最大运行速度
+            持续不断，不至于精疲力尽。这是您的有氧阈值——乳酸生成量等于的强度
+            乳酸清除率。</p><div class="callout callout-info"><h3>🎯生理意义</h3><p>CRS 密切对应于：</p><ul><li><strong>乳酸阈值 2 (LT2)</strong>- 第二通气阈值</li><li><strong>最大乳酸稳态 (MLSS)</strong>- 最高的可持续乳酸水平</li><li><strong>功能阈值步速 (FTP)</strong>- 跑步相当于骑自行车 FTP</li><li><strong>~4 mmol/L 血乳酸</strong>- 传统OBLA标记</li></ul></div><h3>为什么 CRS 很重要</h3><p>临界运行速度为<strong>基础指标</strong>解锁所有高级训练负荷
+            分析：</p><ul><li><strong><a href="/zh/training-zones/">训练区</a>：</strong>个性化强度区域
+                根据您的生理机能</li><li><strong><a href="/zh/training-load/">rTSS 计算</a>：</strong>实现准确的训练
+                压力评分量化</li><li><strong><a href="/zh/training-load/">保护2X/保护3X/保护4X</a>：</strong>性能所需
+                管理图表指标</li><li><strong>进度跟踪：</strong>有氧健身改善的客观衡量标准</li></ul><div class="warning-box"><strong>⚠️ 关键依赖：</strong>如果没有有效的 CRS 测试，高级训练负载指标（rTSS、
+            CTL、ATL、TSB) 无法计算。不准确的 CRS 将破坏所有后续的训练分析。</div><div class="callout callout-primary mt-xl"><h3>📱 Run Analytics 自动化所有基于 CRS 的分析</h3><p>虽然本指南解释了 CRS 背后的科学原理，<strong>Run Analytics自动计算并
+                    追踪您的临界跑步速度</strong>来自您的锻炼数据——无需手动计算或测试
+                需要协议。</p><p><strong>该应用程序处理：</strong></p><ul><li>根据训练数据自动检测 CRS</li><li>随着 CRS 的改进，个性化训练区也会更新</li><li>实时 rTSS、CTL、ATL 和 TSB 跟踪</li><li>历史 CRS 进展图表</li></ul><p><a class="btn btn-accent btn-small" href="/zh/">免费下载 Run Analytics →</a></p></div></div></section><section class="section section-gray"><div class="container container-narrow"><h2>临界运行速度与其他指标</h2><p class="lead">了解 CRS 与其他运行性能指标的比较有助于您选择
+            适合您训练目标的正确指标。</p><div class="comparison-table-container"><table class="comparison-table"><thead><tr><th>公制</th><th>它衡量什么</th><th>测试方法</th><th>可持续持续时间</th><th>最佳用例</th></tr></thead><tbody><tr class="highlight-row"><td><strong>临界运行速度 (CRS)</strong></td><td>有氧阈配速（4 mmol/L 乳酸）</td><td>1200m + 3600m 计时赛</td><td>30-60分钟</td><td>训练区、TSS 计算、有氧阈值跑步</td></tr><tr><td><strong><a href="/zh/what-is-vo2max/">保护5X</a></strong></td><td>最大摄氧量</td><td><a href="/zh/vo2max-testing/">实验室测试或 12 分钟最大努力</a></td><td>6-8分钟</td><td>整体健身水平、高强度间歇</td></tr><tr><td><strong><a href="/zh/lactate-threshold-testing/">乳酸阈值 (LT)</a></strong></td><td>乳酸积累点 (2-4 mmol/L)</td><td>实验室血乳酸测试</td><td>30-60分钟</td><td>比赛配速预测，<a href="/zh/tempo-runs-zone3/">节奏跑</a></td></tr><tr><td><strong>功能阈值步速 (FTP)</strong></td><td>60分钟最佳配速努力</td><td>60 分钟计时赛或 20 分钟测试</td><td>60分钟</td><td>耐力训练、马拉松配速训练</td></tr><tr><td><strong>5K 比赛配速</strong></td><td>持续的比赛努力</td><td>5K 比赛或计时赛</td><td>15-25分钟</td><td>针对比赛的训练、配速策略</td></tr></tbody></table></div><div class="callout callout-tip mt-lg"><h3>为什么选择CRS？</h3><p>与 VO₂max（需要实验室测试）或乳酸阈值（需要血液样本）不同，关键跑步
+                只需使用秒表即可测量任何赛道上的速度。它提供了与以下相同的培训见解
+                昂贵的实验室测试，同时每 6-8 周定期重新测试很实用。了解更多关于所有<a href="/zh/running-performance-tests/">运行性能测试方法</a>以及何时
+                使用每个。</p></div></div></section><section class="section section-alt"><div class="container"><h2 class="text-center mb-xl">CRS 测试协议</h2><div class="grid grid-2"><div class="protocol-card"><h3>📋 标准协议</h3><ol class="protocol-steps"><li><strong>热身</strong><p>15-20 分钟轻松跑步、动态训练和 4-6 步，为高强度做准备
+                            努力。</p></li><li><strong>1200m 计时赛</strong><p>最大持续努力（在 400m 跑道上跑 3 圈）。记录总时间。目标：最快
+                            平均步速。</p></li><li><strong>完全康复</strong><p><span class="highlight-text">15-30分钟</span>轻松慢跑或步行/休息。这允许
+                            用于乳酸清除和有氧恢复。</p></li><li><strong>3600m 计时赛</strong><p>最大努力（在 400m 赛道上跑 9 圈）。保持均匀的节奏。这可以在
+                            如果需要的话单独一天。</p></li></ol></div><div class="protocol-card"><h3>⚠️常见错误</h3><div class="mistake-list"><div class="mistake-item"><h4>恢复不足</h4><p><strong>问题：</strong>疲劳人为减慢3600m时间</p><p><strong>结果：</strong>计算出的CRS变为<em>比现实更快</em>，导致
+                            过度训练区</p><p><strong>解决方案：</strong>休息直至 HR 降至 120 bpm 以下或直至呼吸充分
+                            恢复了</p></div><div class="mistake-item"><h4>1200m配速不佳</h4><p><strong>问题：</strong>启动太快会导致速度急剧减慢</p><p><strong>结果：</strong>1200m 时间并不能反映真正的可持续配速</p><p><strong>解决方案：</strong>争取平分或负分（下半场 ≤ 上半场）</p></div><div class="mistake-item"><h4>条件不一致</h4><p><strong>问题：</strong>在不同地形或极端风力下进行测试。</p><p><strong>解决方案：</strong>始终在类似天气条件下在平坦的赛道上进行测试
+                            纵向精度。</p></div></div></div></div><div class="callout callout-tip mt-xl"><h3>🔄 重新测试频率</h3><p>每隔一段时间重新测试 CRS<strong>6-8周</strong>随着健康状况的改善更新训练区域。您的区域
+                当您适应训练时，应该会逐渐变得更快。</p></div></div></section><section class="section"><div class="container container-narrow"><h2>CRS计算公式</h2><div class="formula-box"><h3>公式</h3><div class="formula">CRS (m/s) = (D2 - D1) / (T2 - T1)</div><div class="formula-explanation"><p>其中：</p><ul><li>D₁ = 较短距离（例如 1200 米）</li><li>D2 = 更长的距离（例如 3600 米）</li><li>T₁ = D₁ 的时间（以秒为单位）</li><li>T2 = D2 的时间（以秒为单位）</li></ul></div><h3 class="mt-lg">简化的距离-时间概念</h3><p>CRS 是针对两个或多个最大努力绘制距离与时间的线的斜率。</p></div><h3>工作示例</h3><div class="example-box"><h4>测试结果：</h4><ul><li>3600m时间：<strong>14:24</strong>（864 秒）</li><li>1200m 时间：<strong>4:12</strong>（252 秒）</li></ul><h4>步骤 1：计算 CRS（以 m/s 为单位）</h4><div class="calculation">保护0X = (3600 - 1200) / (864 - 252)<br/>保护0X = 2400 / 612<br/>保护0X =<strong>3.92米/秒</strong></div><h4>步骤 2：转换为每 100m 配速</h4><div class="calculation">配速 = 100 / 3.92<br/>配速 = 25.5 秒<br/>步速=<strong>每100m 25.5s</strong>(4:15/公里)</div></div><h2 class="mt-3xl">免费临界运行速度计算器</h2><p class="lead">使用我们的 CRS 立即计算您的临界跑步速度和个性化训练区域
+            计算器</p><div class="crs-calculator"><form id="cssCalculatorForm"><div class="calculator-inputs"><div class="form-group"><label class="form-label" for="timeLong">较长距离时间（例如，3600m）（mm:ss）</label><input aria-describedby="timeLong-help" aria-required="true" class="form-input" id="timeLong" pattern="[0-9]{1,2}:[0-5][0-9]" placeholder="14:24" type="text"/><small class="form-help" id="timeLong-help">格式：分:秒（例如 14:24）</small></div><div class="form-group"><label class="form-label" for="timeShort">较短距离时间（例如，1200m）（mm:ss）</label><input aria-describedby="timeShort-help" aria-required="true" class="form-input" id="timeShort" pattern="[0-9]{1,2}:[0-5][0-9]" placeholder="4:12" type="text"/><small class="form-help" id="timeShort-help">格式：分:秒（例如 4:12）</small></div><div class="calculator-buttons"><button class="btn btn-primary" id="calculateBtn" type="submit">计算CRS</button><button class="btn btn-ghost" id="resetBtn" type="reset">清除</button></div></div></form><div aria-live="polite" class="calculator-results hidden" id="cssResults"><h3>您的结果</h3><div class="results-summary"><div class="result-item"><div class="result-label">临界运行速度</div><div class="crs-result-value" id="crsValue">--</div></div><div class="result-item"><div class="result-label">CRS 每 100m 步速</div><div class="crs-result-value" id="crsPace">--</div></div></div><div class="zones-result"><h4>您的个性化培训区</h4><p class="mb-md text-secondary">根据您的 CRS，以下是您每 100m 配速的训练区域：</p><div id="zonesTable"></div></div></div><div class="callout callout-tip mt-md"><p><strong>💡自动跟踪：</strong>Run Analytics 根据锻炼情况自动计算您的 CRS
+                    数据并随着时间的推移进行跟踪——无需手动测试或计算。该应用程序还会更新您的
+                    随着您的 CRS 的提高而进行的训练区域。<a href="/zh/">了解更多→</a></p></div></div><h3 class="mt-xl">替代方案：3 分钟和 12 分钟测试</h3><p>一种广泛使用的替代方案是尽可能在 3 分钟和 12 分钟内跑步。差异在于
+            距离除以时间差即可得到 CRS。</p></div></section><section class="section section-alt"><div class="container"><h2 class="mb-xl">基于临界跑步速度的训练区域</h2><div class="callout callout-info"><p><strong>注意：</strong>在跑步中，配速的测量方法为<em>每距离时间</em>。因此，一个<strong>百分比越高=节奏越慢</strong>，和一个<strong>百分比越低=步伐越快</strong>。
+                这与骑自行车等基于力量的运动相反，其中较高的百分比=更努力的努力。了解更多关于<a href="/zh/training-zones/">如何使用这些训练区</a>有效地。</p></div><div class="zones-table-container"><table class="zones-table"><thead><tr><th>专区</th><th>名称</th><th>CRS 步速的百分比</th><th>CRS 1:40/100m 示例</th><th>保护12X</th><th>生理目的</th></tr></thead><tbody><tr class="zone-1"><td><strong>1</strong></td><td>恢复</td><td>&gt;120%</td><td>&gt;30秒/100m</td><td>2-3/10</td><td>积极恢复、轻度有氧维持</td></tr><tr class="zone-2"><td><strong>2</strong></td><td>有氧基础</td><td>108-120%</td><td>27-30秒/100m</td><td>4-5/10</td><td>建立有氧能力，脂肪氧化</td></tr><tr class="zone-3"><td><strong>3</strong></td><td>节奏</td><td>102-108%</td><td>25-27秒/100m</td><td>6-7/10</td><td>马拉松配速训练、肌肉耐力</td></tr><tr class="zone-4"><td><strong>4</strong></td><td>阈值（CRS）</td><td>97-102%</td><td>24-25秒/100m</td><td>7-8/10</td><td>乳酸阈值改善</td></tr><tr class="zone-5"><td><strong>5</strong></td><td>保护5X</td><td>&lt;97%</td><td>&lt;24秒/100m</td><td>9-10/10</td><td>间歇训练、VO₂max 开发</td></tr></tbody></table></div><div class="callout callout-tip mt-lg"><h3>🎯 分区培训的好处</h3><p>使用基于 CRS 的区域可将主观“感觉”训练转变为客观、可重复的锻炼。每个
+                区域针对特定的生理适应：</p><ul><li><strong>2区：</strong>建立有氧引擎（每周训练量的 60-70%）</li><li><strong>3区：</strong>提高比赛配速效率（体积的 15-20%）</li><li><strong>4区：</strong>提高乳酸阈值（体积的 10-15%）</li><li><strong>5区：</strong>开发高端速度和功率（体积的 5-10%）</li></ul></div></div></section><section class="section"><div class="container container-narrow"><h2>按级别划分的典型临界运行速度值</h2><div class="levels-comparison"><div class="level-card"><h3>🥇 精英长跑运动员</h3><div class="pace-value">5.0-5.5米/秒</div><div class="pace-equivalent">每100m 18-20秒</div><p>3:00-3:20 分钟/公里配速。职业马拉松运动员和精英中长跑运动员。</p></div><div class="level-card"><h3>🏃 竞技跑步者</h3><div class="pace-value">4.0-5.0米/秒</div><div class="pace-equivalent">每100m 20-25秒</div><p>配速 3:20-4:10 分钟/公里。实力雄厚的俱乐部跑步运动员、3:00 以下的马拉松运动员、竞争激烈的年龄组运动员。</p></div><div class="level-card"><h3>👟 经常健身的跑步者</h3><div class="pace-value">3.2-4.0米/秒</div><div class="pace-equivalent">每100m 25-31秒</div><p>配速 4:10-5:10 分钟/公里。每周持续训练 3-5 天。标准 5 公里马拉松目标时间。</p></div><div class="level-card"><h3>🌱 发展跑步者</h3><div class="pace-value">&lt;3.2米/秒</div><div class="pace-equivalent">&gt;31s/100m</div><p>配速超过 5 分 10 分/公里。建立有氧基础并安全增加每周里程。</p></div></div></div></section><section class="section section-alt"><div class="container container-narrow"><h2>科学验证</h2><div class="research-highlight"><h3>Wakayoshi 等人。 (1992-1993) - 基础研究</h3><p>Kohji Wakayoshi 在大阪大学的开创性研究证明 CRS 是一种有效、实用的替代方案
+                实验室乳酸检测：</p><ul class="research-findings"><li><strong>与无氧阈值 VO2 强相关</strong>（r &gt; 0.90）</li><li><strong>10K 和马拉松成绩的出色预测器</strong></li><li><strong>对应于最大乳酸稳态 (MLSS)</strong></li><li><strong>与无氧能力 (W') 无关</strong></li></ul><div class="citation"><p><strong>重点论文：</strong></p><ol><li>Wakayoshi K 等人。 （1992）。 “作为指标的临界速度的确定和有效性
+                        竞技跑步者的跑步表现。”<em>欧洲应用生理学杂志</em>,
+                        64(2), 153-157。</li><li>Wakayoshi K 等人。 （1992）。 “一种确定跑步疲劳临界速度的简单方法
+                        竞技跑步的门槛。”<em>国际运动医学杂志</em>, 13(5),
+                        367-371。</li><li>Wakayoshi K 等人。 （1993）。 “临界跑步速度代表运动强度吗？
+                        最大乳酸稳态？”<em>欧洲应用生理学杂志</em>，66（1），90-95。</li></ol></div></div><div class="callout callout-science"><h3>🔬 为什么临界运行速度有效</h3><p>临界运行速度代表了两者之间的界限<strong>剧烈运动
+                    域</strong>。低于 CRS，乳酸的产生和清除保持平衡 - 您可以跑步
+                延长的时间。高于 CRS，乳酸逐渐积累，直至在 20-40 分钟内耗尽。</p><p>这使得 CRS 成为以下方面的完美强度：</p><ul><li>为 5 公里到马拉松赛事设定可持续的比赛配速</li><li>处方<a href="/zh/training-zones/">阈值区间训练</a></li><li>监测一段时间内有氧健身的改善情况</li><li>计算<a href="/zh/training-load/">训练负荷和恢复需求</a></li></ul></div></div></section><section class="section"><div class="container container-narrow"><h2 class="mt-3xl">如何测试你的临界跑步速度</h2><div class="howto-section" itemscope="" itemtype="https://schema.org/HowTo"><meta content="How to Test Your Critical Running Speed" itemprop="name"/><meta content="Follow this step-by-step protocol to accurately measure your Critical Running Speed (CRS) for optimal pace optimization" itemprop="description"/><div class="howto-step" itemprop="step" itemscope="" itemtype="https://schema.org/HowToStep"><meta content="1" itemprop="position"/><h3 itemprop="name">第 1 步：适当热身</h3><div itemprop="itemListElement" itemscope="" itemtype="https://schema.org/HowToDirection"><div itemprop="text"><p>完成 15-20 分钟的轻松跑步、动态伸展运动和 4-6 步。这准备
+                            您的肌肉和心血管系统尽最大努力。</p></div></div></div><div class="howto-step" itemprop="step" itemscope="" itemtype="https://schema.org/HowToStep"><meta content="2" itemprop="position"/><h3 itemprop="name">第2步：进行1200m计时赛</h3><div itemprop="itemListElement" itemscope="" itemtype="https://schema.org/HowToDirection"><div itemprop="text"><p>以最大持续努力跑 1200 米（在 400m 跑道上跑 3 圈）。将您的时间记录到
+                            第二。焦点
+                            在整个TT中保持一致的高强度。</p></div></div></div><div class="howto-step" itemprop="step" itemscope="" itemtype="https://schema.org/HowToStep"><meta content="3" itemprop="position"/><h3 itemprop="name">第 3 步：完全恢复</h3><div itemprop="itemListElement" itemscope="" itemtype="https://schema.org/HowToDirection"><div itemprop="text"><p>休息15-30分钟。您可以非常缓慢地步行或慢跑。重要的是要让你的心
+                            速度下降，您的双腿在下一次努力之前会显着恢复。</p></div></div></div><div class="howto-step" itemprop="step" itemscope="" itemtype="https://schema.org/HowToStep"><meta content="4" itemprop="position"/><h3 itemprop="name">第四步：进行3600m计时赛</h3><div itemprop="itemListElement" itemscope="" itemtype="https://schema.org/HowToDirection"><div itemprop="text"><p>以最大努力跑 3600 米（在 400m 跑道上跑 9 圈）。这是耐力成分
+                            测试的。
+                            在整个距离中保持您能保持的最快配速。</p></div></div></div><div class="howto-step" itemprop="step" itemscope="" itemtype="https://schema.org/HowToStep"><meta content="5" itemprop="position"/><h3 itemprop="name">第 5 步：计算您的 CRS</h3><div itemprop="itemListElement" itemscope="" itemtype="https://schema.org/HowToDirection"><div itemprop="text"><p>使用线性公式：(D2 - D1) / (T2 - T1)。例如：(3600 - 1200) / (864s - 252s) =
+                            2400 / 612 = 3.92 m/s。换算成步速：100 / 3.92 = 25.5s/100m。</p></div></div></div></div><h2>临界运行速度的实际应用</h2><div class="application-grid"><div class="application-item"><h3>1️⃣ 解锁训练负荷指标</h3><p>临界运行速度是强度因子计算中的分母<a href="/zh/training-load/">rTSS（跑步训练压力分数）</a>。没有它，你
+                    无法量化锻炼压力或跟踪健身/疲劳趋势。</p></div><div class="application-item"><h3>2️⃣ 个性化训练区域</h3><p>通用配速图不考虑个人生理机能。<a href="/zh/training-zones/">基于 CRS 的训练区</a>确保每个跑步者都训练
+                    有氧阈值跑步的最佳强度。</p></div><div class="application-item"><h3>3️⃣ 监控健身进度</h3><p>每 6-8 周重新测试一次。提高临界跑步速度（更快的配速）表明有氧运动成功
+                    适应。 CRS 停滞表明训练需要调整。</p></div><div class="application-item"><h3>4️⃣ 预测比赛表现</h3><p>CRS 步速接近您的可持续阈值步速。使用它为 5K、10K 和
+                    半程马拉松项目。</p></div><div class="application-item"><h3>5️⃣ 设计阈值锻炼</h3><p>经典 CRS 组：10×400 @ CRS 速度（休息 60 秒），4×1200 @ 98% CRS（休息 90 秒）。建立乳酸清除率
+                    容量。</p></div><div class="application-item"><h3>6️⃣优化锥度策略</h3><p>跟踪锥度前后的 CRS。成功的锥化可维持或略微改善 CRS，同时
+                    减少疲劳（增加 TSB）。</p></div></div><h2 class="mt-3xl">关于临界运行速度的常见问题</h2><div class="faq-section" itemscope="" itemtype="https://schema.org/FAQPage"><div class="faq-item" itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question"><h3 itemprop="name">什么是临界运行速度（CRS）？</h3><div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer"><div itemprop="text"><p>临界跑步速度是您可以维持约 30-60 秒的最大跑步配速
+                            分钟而不累积疲劳。它代表您的有氧阈值，即
+                            乳酸产量等于乳酸清除率（通常为 4 mmol/L 血乳酸）。 CRS 是
+                            根据两次最大努力计时试验计算得出，并作为个性化的基础<a href="/zh/training-zones/">训练区</a>和<a href="/zh/training-load/">TSS 计算</a>。</p></div></div></div><div class="faq-item" itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question"><h3 itemprop="name">如何计算我的 CRS？</h3><div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer"><div itemprop="text"><p>要计算您的临界跑步速度：(1) 适当热身，(2) 尽最大努力
+                            1200m 计时赛，(3) 休息 15-30 分钟，(4) 进行最大努力 3600m 计时赛，
+                            (5) 使用公式：<strong>CRS (米/秒) = (D2 - D1) / (T2 - T1)</strong>。转换结果
+                            每 100m 或每公里配速。使用上面的免费 CRS 计算器即可获得即时结果。</p></div></div></div><div class="faq-item" itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question"><h3 itemprop="name">我应该多久测试一次 CRS？</h3><div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer"><div itemprop="text"><p>每 6-8 周重新测试您的临界跑步速度，以更新您的训练区域
+                            身体素质得到改善。在密集训练期间可能需要更频繁的测试（每 4 周一次）
+                            训练块，而不太频繁的测试（10-12 周）适用于维护阶段。
+                            您的跑步阈配速应该通过持续的训练逐渐提高，
+                            表明积极的有氧适应。</p></div></div></div><div class="faq-item" itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question"><h3 itemprop="name">CRS 与乳酸阈值或 FTP 相同吗？</h3><div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer"><div itemprop="text"><p>CRS 非常相似但不完全相同。临界运行速度对应于你的第二个
+                            乳酸阈值（LT2，约4 mmol/L），略高于第一个乳酸
+                            阈值（LT1，2 mmol/L）。它与功能阈值步速 (FTP) 相当，但 FTP 是
+                            基于 60 分钟的努力，而 CRS 是根据更短的时间试验计算得出的。通常保护0X
+                            代表可持续 30-40 分钟的配速，非常适合 5 公里比赛配速
+                            准备和
+                            阈值训练。</p></div></div></div><div class="faq-item" itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question"><h3 itemprop="name">对于初学者来说，什么是好的 CRS？</h3><div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer"><div itemprop="text"><p>对于正在发育的跑步者，典型的 CRS 为每 100m 31 秒以上（&gt;5:10 分钟/公里）。健身跑者
+                            通常达到每 100m 25-31 秒（4:10-5:10 分钟/公里）。不要将自己与精英比较
+                            运动员——通过结构化训练专注于提高自己的 CRS。任何 CRS 都是有效的
+                            步速优化的起点。</p></div></div></div><div class="faq-item" itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question"><h3 itemprop="name">我可以使用 CRS 进行马拉松训练吗？</h3><div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer"><div itemprop="text"><p>是的，但需要修改。 CRS代表您可以保持30-40分钟的配速，即
+                            对于全程马拉松来说太激烈了。然而，基于 CRS 的训练区非常适合马拉松
+                            准备：2 区建立您的有氧基础，3 区培养特定比赛的耐力，以及
+                            区域 4（位于 CRS）可提高您的乳酸阈值。马拉松配速通常会落在
+                            CRS 速度的 105-110%（低于阈值）。使用 CRS 来构建您的训练，而不是
+                            作为你的比赛配速。</p></div></div></div><div class="faq-item" itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question"><h3 itemprop="name">为什么计时赛之间的恢复如此重要？</h3><div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer"><div itemprop="text"><p>如果您在两次计时赛之间没有充分恢复，疲劳会人为减慢
+                            你的第二次，使得计算出的临界运行速度显得比实际速度更快。
+                            这会导致训练区域过于激进。确保至少 15-30 分钟的休息或
+                            考虑在同一周的不同日期进行测试。</p></div></div></div><div class="faq-item" itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question"><h3 itemprop="name">我可以根据比赛时间而不是测试来估计 CRS 吗？</h3><div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer"><div itemprop="text"><p>虽然您可以根据比赛表现来估算 CRS，但直接测试更为准确。如果你
+                            必须估计：取您最近最好的 10K 时间并使用该配速每 100m 减约 1 秒，或者
+                            使用半程马拉松配速的 103-105%。然而，1200m + 3600m 测试提供了
+                            有效培训所需的精确数据。</p></div></div></div></div><div class="callout mt-2xl"><h3>应用您的 CRS 知识</h3><p>现在您已经了解了关键跑步速度，请采取以下步骤来优化您的训练：</p><ul><li><a href="/zh/training-load/">计算训练压力分数 (TSS)</a>基于您的CRS
+                    量化锻炼强度</li><li><a href="/zh/training-zones/">探索 7 个训练区</a>并学习如何构建
+                    特定适应训练</li><li><a href="/zh/formulas/">查看所有公式</a>用于Run Analytics以完成
+                    透明度</li><li><a href="/zh/">下载Run Analytics</a>自动跟踪 CRS、TSS 和性能
+                    趋势</li></ul></div><div class="mt-xl text-center"><a class="btn btn-primary" href="/zh/training-load/">了解 rTSS 计算 →</a><a class="btn btn-secondary" href="/zh/formulas/">查看所有公式 →</a></div></div></section><section class="eeat-author bg-light divider-top-lg divider-bottom-lg" aria-label="Author and Reviewer Information"><div class="container container-narrow"><div class="eeat-card" style="display: flex; gap: 1.5rem; align-items: center; padding: 1.5rem; background: var(--color-bg-alt, #f8f9fa); border-radius: 8px; border: 1px solid var(--color-border, #e9ecef); margin-top: 3rem; margin-bottom: 2rem;"><div class="eeat-avatar" style="font-size: 2.5rem; line-height: 1; flex-shrink: 0;" aria-hidden="true">👨‍🔬</div><div class="eeat-details"><h3 style="margin: 0 0 0.5rem 0; font-size: 1.125rem; font-weight: 600;">
+          Expertly Reviewed by 
+          <span itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">AnalyticsZone Team</span></span></h3><p style="margin: 0 0 0.5rem 0; font-size: 0.95rem; color: var(--color-body-text, #4a5568); line-height: 1.5;">
+          This content has been written and reviewed by a sports data metrics expert to ensure technical accuracy and adherence to the latest sports science methodologies.
+        </p></div></div></div></section><section class="ai-citation-block divider-top-xl" data-ai-ready="true" data-ai-page="crs"><div class="container ai-citation-shell"><h2 class="ai-citation-title">临界跑步速度 (CRS) | Run Analytics - Running Analytics App |</h2><p class="ai-citation-answer">数据驱动跑步训练的基础. 临界跑步速度 (CRS) | Run Analytics - Running Analytics App | Critical 临界跑步速度 (CRS) | Run Analytics - Running Analytics App | Critical</p><ul class="ai-citation-facts" role="list"><li class="ai-citation-fact"><span class="ai-citation-icon" aria-hidden="true">📅</span><span>2026-03-24</span></li><li class="ai-citation-fact ai-citation-keywords"><span class="ai-citation-icon" aria-hidden="true">🏷️</span><span>临界游泳速度 · CRS计算器 · 游泳训练区间 · CRS测试 · 阈值配速</span></li><li class="ai-citation-fact"><span class="ai-citation-icon" aria-hidden="true">🔬</span><a href="../../zh/bibliography/">
+          
+          参考文献
+          
+        </a></li></ul></div></section></main><footer class="site-footer"><div class="container"><div class="footer-top"><div class="footer-brand-section"><h2>Run Analytics</h2><p>Track Critical Running Speed, Training Stress Score, and performance metrics with Run Analytics. Science-based iOS app for runners, triathletes &amp; coaches. 7-day free trial.</p></div><div class="footer-download"><h3 class="footer-heading">下载</h3><div class="footer-badges"><a href="https://apps.apple.com/us/app/run-analytics/id6754524015" target="_blank" rel="noopener"
+                        aria-label="在 App Store 上下载"><img src="../../assets/images/badge-app-store.svg"
+                            alt="在 App Store 上下载" width="135"
+                            height="40" loading="lazy"></a><a href="https://play.google.com/store/apps/details?id=com.arnohealth.runanalytics" target="_blank" rel="noopener"
+                        aria-label="在 Google Play 上获取"><img src="../../assets/images/badge-google-play.svg"
+                            alt="在 Google Play 上获取" width="135"
+                            height="40" loading="lazy"></a></div></div></div><div class="footer-languages"><h3 class="footer-heading">可用于</h3><div class="lang-grid"><a href="/af/" class="lang-link"
+                    hreflang="af" >
+                    Afrikaans
+                </a><a href="/am/" class="lang-link"
+                    hreflang="am" >
+                    አማርኛ
+                </a><a href="/ar/" class="lang-link"
+                    hreflang="ar" dir="rtl" >
+                    العربية
+                </a><a href="/bg/" class="lang-link"
+                    hreflang="bg" >
+                    Български
+                </a><a href="/bn/" class="lang-link"
+                    hreflang="bn" >
+                    বাংলা
+                </a><a href="/ca/" class="lang-link"
+                    hreflang="ca" >
+                    Català
+                </a><a href="/cs/" class="lang-link"
+                    hreflang="cs" >
+                    Čeština
+                </a><a href="/da/" class="lang-link"
+                    hreflang="da" >
+                    Dansk
+                </a><a href="/de/" class="lang-link"
+                    hreflang="de" >
+                    Deutsch
+                </a><a href="/el/" class="lang-link"
+                    hreflang="el" >
+                    Ελληνικά
+                </a><a href="/en/" class="lang-link"
+                    hreflang="en" >
+                    English
+                </a><a href="/es/" class="lang-link"
+                    hreflang="es" >
+                    Español
+                </a><a href="/et/" class="lang-link"
+                    hreflang="et" >
+                    Eesti
+                </a><a href="/fa/" class="lang-link"
+                    hreflang="fa" dir="rtl" >
+                    فارسی
+                </a><a href="/fi/" class="lang-link"
+                    hreflang="fi" >
+                    Suomi
+                </a><a href="/fr/" class="lang-link"
+                    hreflang="fr" >
+                    Français
+                </a><a href="/gu/" class="lang-link"
+                    hreflang="gu" >
+                    ગુજરાતી
+                </a><a href="/ha/" class="lang-link"
+                    hreflang="ha" >
+                    Hausa
+                </a><a href="/he/" class="lang-link"
+                    hreflang="he" dir="rtl" >
+                    עברית
+                </a><a href="/hi/" class="lang-link"
+                    hreflang="hi" >
+                    हिन्दी
+                </a><a href="/hr/" class="lang-link"
+                    hreflang="hr" >
+                    Hrvatski
+                </a><a href="/hu/" class="lang-link"
+                    hreflang="hu" >
+                    Magyar
+                </a><a href="/id/" class="lang-link"
+                    hreflang="id" >
+                    Bahasa Indonesia
+                </a><a href="/is/" class="lang-link"
+                    hreflang="is" >
+                    Íslenska
+                </a><a href="/it/" class="lang-link"
+                    hreflang="it" >
+                    Italiano
+                </a><a href="/ja/" class="lang-link"
+                    hreflang="ja" >
+                    日本語
+                </a><a href="/km/" class="lang-link"
+                    hreflang="km" >
+                    ភាសាខ្មែរ
+                </a><a href="/kn/" class="lang-link"
+                    hreflang="kn" >
+                    ಕನ್ನಡ
+                </a><a href="/ko/" class="lang-link"
+                    hreflang="ko" >
+                    한국어
+                </a><a href="/lt/" class="lang-link"
+                    hreflang="lt" >
+                    Lietuvių
+                </a><a href="/lv/" class="lang-link"
+                    hreflang="lv" >
+                    Latviešu
+                </a><a href="/ms/" class="lang-link"
+                    hreflang="ms" >
+                    Bahasa Melayu
+                </a><a href="/my/" class="lang-link"
+                    hreflang="my" >
+                    မြန်မာစာ
+                </a><a href="/nb/" class="lang-link"
+                    hreflang="nb" >
+                    Norsk Bokmål
+                </a><a href="/nl/" class="lang-link"
+                    hreflang="nl" >
+                    Nederlands
+                </a><a href="/pl/" class="lang-link"
+                    hreflang="pl" >
+                    Polski
+                </a><a href="/pt/" class="lang-link"
+                    hreflang="pt" >
+                    Português
+                </a><a href="/pt-br/" class="lang-link"
+                    hreflang="pt-br" >
+                    Português (Brasil)
+                </a><a href="/ro/" class="lang-link"
+                    hreflang="ro" >
+                    Română
+                </a><a href="/ru/" class="lang-link"
+                    hreflang="ru" >
+                    Русский
+                </a><a href="/sk/" class="lang-link"
+                    hreflang="sk" >
+                    Slovenčina
+                </a><a href="/sl/" class="lang-link"
+                    hreflang="sl" >
+                    Slovenščina
+                </a><a href="/sr/" class="lang-link"
+                    hreflang="sr" >
+                    Srpski
+                </a><a href="/sv/" class="lang-link"
+                    hreflang="sv" >
+                    Svenska
+                </a><a href="/sw/" class="lang-link"
+                    hreflang="sw" >
+                    Kiswahili
+                </a><a href="/ta/" class="lang-link"
+                    hreflang="ta" >
+                    தமிழ்
+                </a><a href="/te/" class="lang-link"
+                    hreflang="te" >
+                    తెలుగు
+                </a><a href="/th/" class="lang-link"
+                    hreflang="th" >
+                    ไทย
+                </a><a href="/tl/" class="lang-link"
+                    hreflang="tl" >
+                    Tagalog
+                </a><a href="/tr/" class="lang-link"
+                    hreflang="tr" >
+                    Türkçe
+                </a><a href="/uk/" class="lang-link"
+                    hreflang="uk" >
+                    Українська
+                </a><a href="/ur/" class="lang-link"
+                    hreflang="ur" dir="rtl" >
+                    اردو
+                </a><a href="/vi/" class="lang-link"
+                    hreflang="vi" >
+                    Tiếng Việt
+                </a><a href="/yo/" class="lang-link"
+                    hreflang="yo" >
+                    Yorùbá
+                </a><a href="/zh/" class="lang-link active"
+                    hreflang="zh" >
+                    中文
+                </a></div></div><div class="footer-divider"></div><div class="footer-bottom"><p class="copyright">
+                &copy; 2026 Run Analytics. 保留所有权利
+            </p><ul class="footer-legal"><li><a href="/zh/privacy/">隐私政策</a></li><li><a href="/zh/terms/">服务条款</a></li></ul></div></div></footer><div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="Cookie consent" aria-live="polite"><div class="cookie-banner-content"><div><p>本网站使用cookies来改善您的体验。</p><a href="/zh/privacy/" class="text-sm">了解更多</a></div><div class="cookie-banner-actions"><button id="cookie-decline" class="btn btn-secondary btn-small">拒绝</button><button id="cookie-accept" class="btn btn-primary btn-small">接受</button></div></div></div><script src="../../assets/js/core.min.js?v=1c7ace58" defer></script><script src="../../assets/js/search.min.js?v=1c7ace58" defer></script><script src="../../assets/js/analytics.min.js" data-ga-id="G-Y138VB4523" defer></script><script>if ('serviceWorker' in navigator) { navigator.serviceWorker.register('../../sw.js') }</script></body></html>

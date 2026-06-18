@@ -1,0 +1,910 @@
+<!DOCTYPE html><html lang="da" dir="ltr"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=optional"
+    rel="stylesheet"><title>Løbetræningsbelastning: rTSS, CTL, ATL og TSB Forklaret</title><meta name="description" content="Lær, hvordan du bruger rTSS, CTL, ATL og TSB til at spore løbetræthed, kondition og nedtrapning med realistiske CRS og træningszoner."><meta name="author" content="AnalyticsZone Team"><meta name="keywords" content="løbetræningsbelastning, rTSS, CTL ATL TSB kører, løbetræthed og kondition, kørende taper timing, CRS træningsbelastning"><link rel="canonical" href="https://run.analyticszone.app/da/training-load/"><meta property="article:published_time" content="2025-01-15T10:00:00Z"><meta property="article:modified_time" content="2026-04-02T14:30:00Z"><meta property="article:author" content="AnalyticsZone Team"><meta property="og:type" content="article"><meta property="og:url" content="https://run.analyticszone.app/da/training-load/"><meta property="og:title" content="Løbetræningsbelastning: rTSS, CTL, ATL og TSB Forklaret"><meta property="og:description" content="Lær, hvordan du bruger rTSS, CTL, ATL og TSB til at spore løbetræthed, kondition og nedtrapning med realistiske CRS og træningszoner."><meta property="og:image" content="https://run.analyticszone.app/assets/images/og-image.svg"><meta property="og:locale" content="da_DK"><meta property="og:site_name" content="Run Analytics"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:url" content="https://run.analyticszone.app/da/training-load/"><meta name="twitter:title" content="Løbetræningsbelastning: rTSS, CTL, ATL og TSB Forklaret"><meta name="twitter:description" content="Lær, hvordan du bruger rTSS, CTL, ATL og TSB til at spore løbetræthed, kondition og nedtrapning med realistiske CRS og træningszoner."><meta name="twitter:image" content="https://run.analyticszone.app/assets/images/og-image.svg"><meta name="twitter:site" content="@runanalytics"><meta name="twitter:creator" content="@runanalytics"><link rel="alternate" hreflang="ar"
+    href="https://run.analyticszone.app/ar/training-load/"><link rel="alternate" hreflang="de"
+    href="https://run.analyticszone.app/de/training-load/"><link rel="alternate" hreflang="en"
+    href="https://run.analyticszone.app/en/training-load/"><link rel="alternate" hreflang="es"
+    href="https://run.analyticszone.app/es/training-load/"><link rel="alternate" hreflang="fr"
+    href="https://run.analyticszone.app/fr/training-load/"><link rel="alternate" hreflang="hi"
+    href="https://run.analyticszone.app/hi/training-load/"><link rel="alternate" hreflang="id"
+    href="https://run.analyticszone.app/id/training-load/"><link rel="alternate" hreflang="it"
+    href="https://run.analyticszone.app/it/training-load/"><link rel="alternate" hreflang="ja"
+    href="https://run.analyticszone.app/ja/training-load/"><link rel="alternate" hreflang="ko"
+    href="https://run.analyticszone.app/ko/training-load/"><link rel="alternate" hreflang="nl"
+    href="https://run.analyticszone.app/nl/training-load/"><link rel="alternate" hreflang="pl"
+    href="https://run.analyticszone.app/pl/training-load/"><link rel="alternate" hreflang="pt"
+    href="https://run.analyticszone.app/pt/training-load/"><link rel="alternate" hreflang="pt-br"
+    href="https://run.analyticszone.app/pt-br/training-load/"><link rel="alternate" hreflang="ru"
+    href="https://run.analyticszone.app/ru/training-load/"><link rel="alternate" hreflang="sv"
+    href="https://run.analyticszone.app/sv/training-load/"><link rel="alternate" hreflang="tr"
+    href="https://run.analyticszone.app/tr/training-load/"><link rel="alternate" hreflang="zh"
+    href="https://run.analyticszone.app/zh/training-load/"><link rel="alternate" hreflang="x-default"
+    href="https://run.analyticszone.app/en/training-load/"><link rel="icon" type="image/png" sizes="32x32" href="../../assets/images/icons/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="../../assets/images/icons/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="../../assets/images/icons/apple-touch-icon.png"><link rel="manifest" href="../../manifest.json"><meta name="theme-color" content="#2563EB"><meta name="robots" content="noindex, follow"><meta name="apple-itunes-app" content="app-id=6754524015"><style>
+/* Critical CSS - Above the fold styles for fast LCP */
+:root {
+  --color-primary: #0066CC;
+  --color-text: #1a1a1a;
+  --color-text-muted: #666;
+  --color-bg: #ffffff;
+  --color-bg-alt: #f8f9fa;
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+}
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  color: var(--color-text);
+  background: var(--color-bg);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Skip link - Accessibility */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--color-primary);
+  color: #fff;
+  padding: 8px 16px;
+  z-index: 1000;
+  text-decoration: none;
+}
+.skip-link:focus {
+  top: 0;
+}
+
+/* Header - Critical for LCP */
+.site-header {
+  background: var(--color-bg);
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0.75rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.site-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: var(--color-text);
+  font-weight: 600;
+  font-size: 1.125rem;
+}
+
+.site-logo img, .site-logo svg {
+  width: 32px;
+  height: 32px;
+}
+
+/* Navigation */
+.main-nav {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .main-nav {
+    display: flex;
+    gap: 1.5rem;
+  }
+  .main-nav a {
+    color: var(--color-text);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9375rem;
+    transition: color 0.2s;
+  }
+  .main-nav a:hover {
+    color: var(--color-primary);
+  }
+}
+
+/* Mobile menu button */
+.menu-toggle {
+  display: flex;
+  background: none;
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .menu-toggle {
+    display: none;
+  }
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Main content */
+main.main-content {
+  flex: 1;
+}
+
+/* Hero section - Critical for LCP */
+.hero {
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .hero {
+    padding: 4rem 2rem;
+  }
+}
+
+.hero h1 {
+  font-size: clamp(1.75rem, 5vw, 3rem);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  color: var(--color-text);
+}
+
+.hero .lead, .hero p {
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  color: var(--color-text-muted);
+  max-width: 700px;
+  margin: 0 auto 1.5rem;
+}
+
+/* Buttons - Critical for CTA */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: var(--radius-md);
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-primary {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: #0052a3;
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+}
+
+.btn-large {
+  padding: 1rem 2rem;
+  font-size: 1.125rem;
+}
+
+/* Utility classes */
+.hidden { display: none !important; }
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Images - prevent CLS with aspect-ratio */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+img[width][height] {
+  aspect-ratio: attr(width) / attr(height);
+}
+
+.lazy-image {
+  background: var(--color-bg-alt);
+  transition: opacity 0.3s;
+}
+
+.lazy-image:not(.loaded) {
+  opacity: 0;
+}
+
+.lazy-image.loaded {
+  opacity: 1;
+}
+
+/* App badges - fixed dimensions to prevent CLS */
+.app-badge img {
+  width: 140px;
+  height: 42px;
+}
+
+/* Logo - fixed dimensions */
+.site-logo img {
+  width: 32px;
+  height: 32px;
+}
+
+/* Reduce motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+</style><link rel="preconnect" href="https://www.googletagmanager.com"><link rel="dns-prefetch" href="https://www.googletagmanager.com"><link rel="stylesheet" href="../../assets/css/main.min.css?v=1c7ace58"><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Run Analytics",
+  "url": "https://run.analyticszone.app",
+  "logo": "https://run.analyticszone.app/assets/images/logo.png",
+  "description": "Track Critical Running Speed, Training Stress Score, and performance metrics with Run Analytics. Science-based iOS app for runners, triathletes &amp; coaches. 7-day free trial.",
+  
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "Customer Support",
+    "email": "analyticszone+run@onmedic.org"
+  },
+  
+  "sameAs": [
+    
+    
+      
+    
+    
+      
+    
+    
+      
+    
+    
+    "https://twitter.com/runanalytics",
+    
+    "https://apps.apple.com/us/app/run-analytics/id6754524015",
+    
+    "https://play.google.com/store/apps/details?id=com.arnohealth.runanalytics"
+    
+  ]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Run Analytics",
+  "url": "https://run.analyticszone.app",
+  "description": "Track Critical Running Speed, Training Stress Score, and performance metrics with Run Analytics. Science-based iOS app for runners, triathletes &amp; coaches. 7-day free trial.",
+  "inLanguage": "da"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Run Analytics",
+  "description": "Track Critical Running Speed, Training Stress Score, and performance metrics with Run Analytics. Science-based iOS app for runners, triathletes &amp; coaches. 7-day free trial.",
+  "url": "https://run.analyticszone.app",
+  "applicationCategory": ["HealthApplication", "FitnessApplication"],
+  "operatingSystem": "iOS, Android",
+  "author": {
+    "@type": "Organization",
+    "name": "AnalyticsZone Team"
+  },
+  "downloadUrl": "https://apps.apple.com/us/app/run-analytics/id6754524015"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Hjem",
+      "item": "https://run.analyticszone.app/da/"
+    },
+    
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Lær",
+      "item": "https://run.analyticszone.app/da/getting-started/"
+    },
+    
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Træningsbelastning",
+      "item": "https://run.analyticszone.app/da/training-load/"
+    }
+    
+  ]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Løbetræningsbelastning: rTSS, CTL, ATL og TSB Forklaret",
+  "description": "Lær, hvordan du bruger rTSS, CTL, ATL og TSB til at spore løbetræthed, kondition og nedtrapning med realistiske CRS og træningszoner.",
+  "url": "https://run.analyticszone.app/da/training-load/",
+  "inLanguage": "da",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "Run Analytics",
+    "url": "https://run.analyticszone.app"
+  },
+  "datePublished": "2025-01-15",
+  "dateModified": "2026-04-02",
+  "keywords": ["løbetræningsbelastning", "rTSS", "CTL ATL TSB kører", "løbetræthed og kondition", "kørende taper timing", "CRS træningsbelastning"],
+  "about": [
+    {
+      "@type": "Thing",
+      "name": "løbetræningsbelastning"
+    }, 
+  
+    {
+      "@type": "Thing",
+      "name": "rTSS"
+    }, 
+  
+    {
+      "@type": "Thing",
+      "name": "CTL ATL TSB kører"
+    }, 
+  
+    {
+      "@type": "Thing",
+      "name": "løbetræthed og kondition"
+    }, 
+  
+    {
+      "@type": "Thing",
+      "name": "kørende taper timing"
+    }, 
+  
+    {
+      "@type": "Thing",
+      "name": "CRS træningsbelastning"
+    }
+  ]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Løbetræningsbelastning: rTSS, CTL, ATL og TSB Forklaret",
+  "description": "Lær, hvordan du bruger rTSS, CTL, ATL og TSB til at spore løbetræthed, kondition og nedtrapning med realistiske CRS og træningszoner.",
+  "author": {
+    "@type": "Person",
+    "name": "AnalyticsZone Team"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Run Analytics",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://run.analyticszone.app/assets/images/logo.png"
+    }
+  },
+  "datePublished": "2025-01-15",
+  "dateModified": "2026-04-02",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://run.analyticszone.app/da/training-load/"
+  }
+}
+</script><script>
+    (function () {
+      let theme = localStorage.getItem('theme');
+      // Older builds could persist a per-subdomain `theme=light` value without a UI
+      // to keep it consistent across apps. Treat it as stale and fall back to the OS.
+      if (theme === 'light') {
+        try { localStorage.removeItem('theme'); } catch (e) { /* ignore */ }
+        theme = null;
+      }
+
+      if (theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark-mode');
+      }
+    })();
+  </script></head><body><a href="#main-content" class="skip-link">Spring til indhold</a><header class="site-header"><div class="container"><div class="header-inner"><a href="/da/" class="site-logo"><picture><source srcset="../../assets/images/logo-dark.png" type="image/png"
+                        media="(prefers-color-scheme: dark)"><img src="../../assets/images/logo.png" alt="Run Analytics - Running Analytics App | Critical Running Speed, TSS, CTL/ATL/TSB for iOS" width="56" height="56"></picture><span class="logo-text">Run Analytics</span></a><nav class="nav-primary" id="nav-primary" role="navigation" aria-label="Main navigation"><div class="nav-group-left"><ul><li><a href="/da/" 
+                                aria-current="">
+                                Hjem
+                            </a></li><li class="has-submenu" ><a href="/da/getting-started/" class="nav-label">Lær</a><ul class="submenu"><li><a href="/da/getting-started/" 
+                                        aria-current="">
+                                        Kom I Gang
+                                    </a></li><li><a href="/da/crs/" 
+                                        aria-current="">
+                                        CRS
+                                    </a></li><li><a href="/da/training-zones/" 
+                                        aria-current="">
+                                        Træningszoner
+                                    </a></li><li><a href="/da/training-load/" class="active" 
+                                        aria-current="page">
+                                        Træningsbelastning
+                                    </a></li><li><a href="/da/rtss-calculator/" 
+                                        aria-current="">
+                                        rTSS Beregner
+                                    </a></li></ul></li><li class="has-submenu" ><a href="/da/research/" class="nav-label">Videnskab</a><ul class="submenu"><li><a href="/da/research/" 
+                                        aria-current="">
+                                        Forskning
+                                    </a></li><li><a href="/da/formulas/" 
+                                        aria-current="">
+                                        Formler
+                                    </a></li><li><a href="/da/efficiency/" 
+                                        aria-current="">
+                                        Effektivitet
+                                    </a></li><li><a href="/da/stride-mechanics/" 
+                                        aria-current="">
+                                        Løbe-mekanik
+                                    </a></li><li><a href="/da/bibliography/" 
+                                        aria-current="">
+                                        Bibliografi
+                                    </a></li></ul></li><li><a href="/da/contact/" 
+                                aria-current="">
+                                Kontakt
+                            </a></li></ul><div class="search-container"><svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.35-4.35"></path></svg><input type="search" id="site-search" class="search-input" aria-expanded="false"
+                            aria-haspopup="listbox" aria-autocomplete="list" autocomplete="off" spellcheck="false" /><div id="search-results" class="search-results hidden" role="region" aria-live="polite"></div></div><select class="language-selector" id="language-select" aria-label="Vælg sprog"><option value="af" >
+                            Afrikaans
+                        </option><option value="am" >
+                            አማርኛ
+                        </option><option value="ar" >
+                            العربية
+                        </option><option value="bg" >
+                            Български
+                        </option><option value="bn" >
+                            বাংলা
+                        </option><option value="ca" >
+                            Català
+                        </option><option value="cs" >
+                            Čeština
+                        </option><option value="da" selected>
+                            Dansk
+                        </option><option value="de" >
+                            Deutsch
+                        </option><option value="el" >
+                            Ελληνικά
+                        </option><option value="en" >
+                            English
+                        </option><option value="es" >
+                            Español
+                        </option><option value="et" >
+                            Eesti
+                        </option><option value="fa" >
+                            فارسی
+                        </option><option value="fi" >
+                            Suomi
+                        </option><option value="fr" >
+                            Français
+                        </option><option value="gu" >
+                            ગુજરાતી
+                        </option><option value="ha" >
+                            Hausa
+                        </option><option value="he" >
+                            עברית
+                        </option><option value="hi" >
+                            हिन्दी
+                        </option><option value="hr" >
+                            Hrvatski
+                        </option><option value="hu" >
+                            Magyar
+                        </option><option value="id" >
+                            Bahasa Indonesia
+                        </option><option value="is" >
+                            Íslenska
+                        </option><option value="it" >
+                            Italiano
+                        </option><option value="ja" >
+                            日本語
+                        </option><option value="km" >
+                            ភាសាខ្មែរ
+                        </option><option value="kn" >
+                            ಕನ್ನಡ
+                        </option><option value="ko" >
+                            한국어
+                        </option><option value="lt" >
+                            Lietuvių
+                        </option><option value="lv" >
+                            Latviešu
+                        </option><option value="ms" >
+                            Bahasa Melayu
+                        </option><option value="my" >
+                            မြန်မာစာ
+                        </option><option value="nb" >
+                            Norsk Bokmål
+                        </option><option value="nl" >
+                            Nederlands
+                        </option><option value="pl" >
+                            Polski
+                        </option><option value="pt" >
+                            Português
+                        </option><option value="pt-br" >
+                            Português (Brasil)
+                        </option><option value="ro" >
+                            Română
+                        </option><option value="ru" >
+                            Русский
+                        </option><option value="sk" >
+                            Slovenčina
+                        </option><option value="sl" >
+                            Slovenščina
+                        </option><option value="sr" >
+                            Srpski
+                        </option><option value="sv" >
+                            Svenska
+                        </option><option value="sw" >
+                            Kiswahili
+                        </option><option value="ta" >
+                            தமிழ்
+                        </option><option value="te" >
+                            తెలుగు
+                        </option><option value="th" >
+                            ไทย
+                        </option><option value="tl" >
+                            Tagalog
+                        </option><option value="tr" >
+                            Türkçe
+                        </option><option value="uk" >
+                            Українська
+                        </option><option value="ur" >
+                            اردو
+                        </option><option value="vi" >
+                            Tiếng Việt
+                        </option><option value="yo" >
+                            Yorùbá
+                        </option><option value="zh" >
+                            中文
+                        </option></select></div><div class="nav-group-right"><div class="header-app-buttons"><a href="https://apps.apple.com/us/app/run-analytics/id6754524015" class="header-download-btn" target="_blank"
+                            rel="noopener" aria-label="Download on App Store" title="Download on App Store"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="currentColor"><path
+                                    d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z" /></svg></a><a href="https://play.google.com/store/apps/details?id=com.arnohealth.runanalytics" class="header-download-btn" target="_blank"
+                            rel="noopener" aria-label="Get it on Google Play" title="Get it on Google Play"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="currentColor"><path
+                                    d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.92 20.16,13.19L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M16.81,8.88L14.54,11.15L6.05,2.66L16.81,8.88Z" /></svg></a></div><div class="suite-menu-container"><button class="suite-menu-toggle" id="suite-menu-toggle" aria-label="See other apps"
+                            aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg></button><div class="suite-dropdown hidden" id="suite-dropdown"><div class="suite-dropdown-header">Other AnalyticsZone Apps</div><div class="suite-apps-grid"><a href="https://analyticszone.app" class="suite-app-link">AnalyticsZone</a><a href="https://swim.analyticszone.app" class="suite-app-link">Swim Analytics</a><a href="https://bike.analyticszone.app" class="suite-app-link">Bike Analytics</a><a href="https://walk.analyticszone.app" class="suite-app-link">Walk Analytics</a><a href="https://cardio.analyticszone.app" class="suite-app-link">Cardio Analytics</a><a href="https://health.analyticszone.app" class="suite-app-link">Health Analytics</a><a href="https://swimtrainer.analyticszone.app" class="suite-app-link">Swim Trainer</a><a href="https://hike.analyticszone.app" class="suite-app-link">Hike Analytics</a><a href="https://sleep.analyticszone.app" class="suite-app-link">Sleep Analytics</a><a href="https://paceva.analyticszone.app" class="suite-app-link">Paceva Analytics</a></div></div></div></div></nav><button class="menu-toggle" id="menu-toggle" aria-label="Skift menu"
+                aria-expanded="false" aria-controls="nav-primary"><span></span><span></span><span></span></button></div></div></header><nav class="breadcrumbs" aria-label="Breadcrumb"><div class="container"><ol><li><a href="/da/">Hjem</a></li><li><a href="/da/getting-started/">Lær</a></li><li><span aria-current="page">Træningsbelastning</span></li></ol></div></nav><main id="main-content" class="main-content"><section class="page-hero"><div class="container"><h1>Løbetræningsbelastning: rTSS, CTL, ATL og TSB Forklaret</h1><p class="lead">Sådan kvantificerer du løbestress, sporer kondition og træthed og tager tid til en nedtrapning uden at gætte</p></div></section><section class="section"><div class="container container-narrow"><div class="quick-answer" itemscope="" itemtype="https://schema.org/Answer"><h2>Hurtigt svar</h2><div itemprop="text"><p><strong>Løbetræningsbelastning</strong> kombinerer <a href="/da/training-stress-score/">rTSS</a>
+                    for individuel session stress, <strong>CTL</strong> for langsigtet fitness, <strong>ATL</strong> for
+                    kortvarig træthed, og <strong>TSB</strong> for friskhed. Det fungerer bedst, når din <a href="/da/crs/">Kritisk løbehastighed (CRS)</a>, <a href="/da/training-zones/">træningszoner</a>, og tempodata er realistiske.</p><ul><li><strong>Bedste brug:</strong> sammenlign træningspas, kontroller den ugentlige belastning og tidsnedskærende uger</li><li><strong>Vigtigste input:</strong> et troværdigt CRS eller tærskeltempo</li><li><strong>Største fejl:</strong> at behandle TSB som racesandhed når søvn, ømhed, varme og liv
+                        stress siger noget andet</li><li><strong>Opdater rytme:</strong> gentest CRS hver 6.-8. uge eller efter en meningsfuld træningsblok</li></ul></div></div><div class="callout callout-success mb-xl"><h2>Nøgle takeaways</h2><ul class="key-points"><li><strong>rTSS</strong> svarer på, hvor meget stress et enkelt løb skabte</li><li><strong>CTL</strong> viser den belastning, din krop har tilpasset sig over uger, ikke dage</li><li><strong>ATL</strong> viser, hvad der stadig er i dine ben fra den seneste træning</li><li><strong>TSB</strong> hjælper med taper timing og parathed, ikke ego management</li><li><strong>Klyngen, der betyder noget:</strong><a href="/da/crs/">CRS</a>, <a href="/da/rtss-calculator/">rTSS lommeregner</a>, <a href="/da/training-zones/">træningszoner</a>, og <a href="/da/training-load-periodization/">periodisering</a></li></ul></div><p class="lead">Hvis du vil have ét system, der gør løbevolumen og intensitet til beslutninger, så brug træningsbelastning.
+            Pointen er ikke at samle flere tal. Pointen er at vide, om et løb var let nok, en blokering var
+            produktiv nok, eller en taper gør dig faktisk frisk.</p><p>For løbere er de praktiske spørgsmål enkle:</p><ul><li>Hvor stressende var dagens løbetur?</li><li>Hvor meget belastning har jeg egentlig tilpasset mig?</li><li>Bærer jeg nyttig træthed eller for meget træthed?</li><li>Hvornår skal jeg presse, hvornår skal jeg bakke, og hvornår skal jeg køre?</li></ul><h2>Hvilken Løbetræningsbelastning måler</h2><p><strong>Løbetræningsbelastning</strong> er en praktisk ramme for at vende kørsler til fortolkelig stress
+            signaler. Inden for denne ramme, <a href="/da/training-stress-score/">rTSS</a> måler sessionsomkostninger,
+            <strong>CTL</strong> måler langsigtet fitness trend, <strong>ATL</strong> måler nylig træthed, og
+            <strong>TSB</strong> viser kløften mellem de to.
+        </p><div class="comparison-table-container"><table class="comparison-table"><thead><tr><th>Metrisk</th><th>Hvad det fortæller dig</th><th>Bedste brug</th><th>Almindelig fejl</th></tr></thead><tbody><tr class="highlight-row"><td><strong>rTSS</strong></td><td>Stressomkostningerne ved et løb</td><td>Sammenlign træning og samlet ugentlig belastning</td><td>Scoring løber mod forældet <a href="/da/crs/">CRS</a></td></tr><tr><td><strong>CTL</strong></td><td>Belastningen du har tilpasset dig over uger</td><td>Spor langsigtet kondition og kapacitet</td><td>Forventer, at det vil bevæge sig meningsfuldt om et par dage</td></tr><tr><td><strong>ATL</strong></td><td>Trætheden stadig i dine ben fra det seneste arbejde</td><td>Administrer restitution mellem hårde sessioner</td><td>Ignorer påvirkningsskader, ømhed og livsstress</td></tr><tr><td><strong>TSB</strong></td><td>Dit friskhedsgab: fitness minus træthed</td><td>Taper timing, testvinduer, løbsparathed</td><td>Brug et positivt tal som bevis på, at du er klar</td></tr></tbody></table></div><div class="callout callout-info"><h3>Nyttig mental model</h3><p>Tænk på <strong>rTSS som dagens udgift</strong>, <strong>CTL som din fitnessbank</strong>, <strong>ATL som
+                    din træthedsregning</strong>, og <strong>TSB som dit friskhedsgab</strong>. Værdien af systemet
+                er i trenden, ikke ét enkelt tal.</p></div><h2>Hvad træningsbelastning er god til, og hvor den fejler</h2><div class="application-grid"><div class="application-item"><h3>📊 Sammenlign træningspas</h3><p><a href="/da/training-stress-score/">rTSS</a> lader dig sammenligne en let lang løb, tærskel
+                    session og bakketræning på én skala i stedet for at gætte ved at føle sig alene.</p></div><div class="application-item"><h3>🧭 Kontroller byggeuger</h3><p>CTL og ATL hjælper dig med at beslutte, om en blok flytter fitness fremad eller bare stabler træthed før den
+                    bliver til dårlige sessioner eller skadesrisiko.</p></div><div class="application-item"><h3>🏁 Time the Taper</h3><p>TSB bliver nyttig, når du tilslutter den til <a href="/da/training-load-periodization/">planlagt
+                        periodisering</a>, ikke når du stirrer på diagrammet uden en racekontekst.</p></div></div><div class="callout callout-warning"><h4>⚠️ Vigtigt: Løb har større effekt</h4><p>Den samme TSS-værdi repræsenterer mere fysisk stress ved løb end ved cykling på grund af stødkræfter. En løber
+                akkumulerer 400 TSS/uge oplever tilsvarende træningstilpasning til en cyklist med 600-700 TSS/uge.
+                Løbetræningsbelastning skal tage højde for både kardiovaskulær og muskuloskeletal stress.</p><p>En positiv TSB garanterer ikke løbsdagsform, og en negativ TSB betyder ikke fiasko. Load modeller gør
+                ikke fuldt ud fange søvngæld, ømhed, brændstoffejl, varme eller tekniknedbrud. Behold belastningsnumre
+                bundet til <a href="/da/efficiency/">effektivitetsmålinger</a>, subjektiv følelse og faktisk træning
+                kvalitet.</p></div></div></section><section class="section"><div class="container"><h2 class="text-center mb-xl">Hvordan løbetræningsstressscore (rTSS) beregnes</h2><div class="grid grid-2"><div><h3>Formlen for løb TSS</h3><div class="formula-box"><div class="formula">
+                        rTSS = (IF²) × Varighed (timer) × 100
+                    </div><div class="formula-explanation"><p>Hvor intensitetsfaktor (IF) er:</p><div class="formula">
+                            IF = NGS / CRS
+                        </div><p>Normalized Graded Speed (NGS) tager højde for tempovariabilitet og elevation:</p><div class="formula">
+                            NGS ≈ Gennemsnitlig løbehastighed (justeret for terræn)
+                        </div></div></div><div class="callout callout-tip mt-md"><h4>📊 Tempobaseret forenklet metode</h4><p>For løbere uden kraftmålere, brug tempo-baseret beregning eller score sessionen med <a href="/da/rtss-calculator/">rTSS lommeregner</a>:</p><div class="formula">
+                        IF = Tærskeltempo / Gennemsnitstempo
+                    </div><p><strong>Eksempel:</strong> Hvis dit CRS tempo er 4:00/km, og du løber med 4:20/km:</p><p>IF = 4:00 / 4:20 = 240/260 = 0,923</p><p><em>Bemærk: Langsommere tempo = lavere IF (inverteret fra hastighedsberegning)</em></p></div></div><div><h3>Bearbejdet eksempel: Tempo Run</h3><div class="example-box"><h4>Løberprofil:</h4><ul><li>CRS Tempo: 4:00/km (15 km/t)</li><li>CRS: Tærskeltempo i 1 time</li></ul><h4>Træningsdata:</h4><ul><li>Samlet distance: 10 km</li><li>Flyttetid: 43:20 (0,722 timer)</li><li>Gennemsnitsfart: 4:20/km</li></ul><h4>Trin 1: Beregn gennemsnitshastighed</h4><div class="calculation">
+                        Hastighed = 10 km / 0,722 timer<br/>
+                        Hastighed = <strong>13,85 km/t</strong></div><h4>Trin 2: Beregn IF (Hastighedsmetode)</h4><div class="calculation">
+                        IF = 13,85 / 15,0<br/>
+                        IF = <strong>0,923</strong></div><h4>Trin 3: Beregn IF (Tempometode)</h4><div class="calculation">
+                        IF = 240 sek/km / 260 sek/km<br/>
+                        IF = <strong>0,923</strong> ✓
+                    </div><h4>Trin 4: Beregn rTSS</h4><div class="calculation">
+                        rTSS = (0,923²) × 0,722 × 100<br/>
+                        rTSS = 0,852 × 0,722 × 100<br/>
+                        rTSS = <strong>61,5</strong></div><p class="mt-md"><strong>Fortolkning:</strong> Dette 10 km tempoløb i tærskel-10% tempo
+                        genereret 61,5 TSS—en moderat træningsstimulus, der er typisk for aerobic-sessioner af høj kvalitet.</p><p><a href="/da/rtss-calculator/">Brug rTSS lommeregneren</a> hvis du vil have scoret uden
+                        laver regnestykket manuelt.</p></div></div></div><div class="intensity-guide mt-xl"><h3>Kører TSS Intensitetsretningslinjer</h3><table class="intensity-table"><thead><tr><th>TSS Rækkevidde</th><th>Intensitetsniveau</th><th>Beskrivelse</th><th>Eksempel træning</th></tr></thead><tbody><tr><td>&lt; 50</td><td>Nem gendannelse</td><td>Let løb, samtaletempo, aktiv hvile</td><td>30-45 min let løb, restitution jog, skridt</td></tr><tr><td>50-100</td><td>Moderat træning</td><td>Typisk daglig træningsvolumen, aerob base</td><td>60-90 min konstant løb, lang let løb</td></tr><tr><td>100-200</td><td>Hård træning</td><td>Kvalitetssessioner med tempo/tærskelarbejde</td><td>90-120min med tærskelintervaller, progressionsløb</td></tr><tr><td>200-300</td><td>Meget hårdt</td><td>Lange løbeture med kvalitet, løbssimulering</td><td>2-3 timer lange løbeture, halvmarathon tempo arbejde</td></tr><tr><td>&gt; 300</td><td>Ekstrem</td><td>Løbsdag, ultradistancebegivenheder</td><td>Marathonløb, 50k+ ultras, Ironman-løb</td></tr></tbody></table></div><div class="callout callout-tip mt-lg"><h3>📊 Ugentlige TSS Mål efter løbeniveau</h3><ul><li><strong>Begyndere løbere:</strong> 150-300 TSS/uge (3-4 løb/uge)</li><li><strong>Mellemliggende løbere:</strong> 300-500 TSS/uge (4-6 løb/uge)</li><li><strong>Avancerede løbere:</strong> 500-700 TSS/uge (6-8 sessioner/uge)</li><li><strong>Eliteløbere:</strong> 700-900+ TSS/uge (8-12 sessioner/uge)</li></ul><p>Disse akkumuleres mod din kroniske træningsbelastning (CTL), fitnessmålingen forklaret nedenfor.Det burde de
+                stadig distribueres gennem realistiske <a href="/da/training-zones/">træningszoner</a> og en
+                fornuftigt <a href="/da/training-load-periodization/">periodiseringsplan</a>.</p></div></div></section><section class="section section-alt"><div class="container"><h2 class="text-center mb-xl">Forstå CTL, ATL og TSB for løbere</h2><p class="text-center lead">Performance Management Chart (PMC) visualiserer tre indbyrdes forbundne målinger, der
+            fortæl hele historien om din løbetræning: kondition, træthed og form.</p><div class="pmc-overview"><div class="grid grid-3"><div class="pmc-metric"><div class="metric-icon">📈</div><h3>CTL - Kronisk træningsbelastning</h3><div class="metric-value-label">Din FITNESS</div><p>42-dages eksponentielt vægtet gennemsnit af daglige TSS. Repræsenterer langsigtet aerob fitness og
+                        træningstilpasning fra konsekvent løb.</p><div class="formula-small">
+                        CTL i dag = CTL i går + (TSS i dag - CTL i går) × (1/42)
+                    </div></div><div class="pmc-metric"><div class="metric-icon">⚡</div><h3>ATL - Akut træningsbelastning</h3><div class="metric-value-label">Din TRÆThed</div><p>7-dages eksponentielt vægtet gennemsnit af daglige TSS. Fanger nylig træningsstress og
+                        akkumuleret træthed fra den seneste uges løb.</p><div class="formula-small">
+                        ATL i dag = ATL i går + (TSS i dag - ATL i går) × (1/7)
+                    </div></div><div class="pmc-metric"><div class="metric-icon">🎯</div><h3>TSB - Træning af stressbalance</h3><div class="metric-value-label">Din FORM</div><p>Forskellen mellem gårsdagens kondition og træthed. Indikerer parathed til at udføre eller behov for
+                        hvile før dit næste kvalitetsløb eller løb.</p><div class="formula-small">
+                        TSB = CTL i går - ATL i går
+                    </div></div></div></div></div></section><section class="section"><div class="container"><h2>CTL: Din Running Fitness Metric</h2><div class="grid grid-2"><div><h3>Hvad CTL repræsenterer for løbere</h3><p>CTL kvantificerer den løbetræningsbelastning din krop har <em>tilpasset til</em> over de seneste 6 uger. A
+                    højere CTL i løb betyder:</p><ul><li>Større aerob kapacitet og løbeudholdenhed</li><li>Evne til at håndtere mere træningsvolumen og intensitet</li><li>Forbedrede neuromuskulære og metaboliske tilpasninger</li><li>Højere bæredygtig løbeevne</li><li>Bedre tolerance over for stødbelastning fra jordkontaktkræfter</li></ul><div class="callout callout-info"><h4>Tidskonstant: 42 dage</h4><p>CTL har en halveringstid på ~14,7 dage. Efter 42 dage, ca. 36,8 % (1/e) af en enkelt træning
+                        effekt forbliver i din konditionsberegning.</p><p>Dette langsomme forfald betyder, at løbekonditionen opbygges gradvist, men også forsvinder langsomt - beskytter mod
+                        aftræning under korte restitutionspauser.</p></div></div><div><h3>Typiske CTL Værdier for løbere</h3><div class="levels-comparison"><div class="level-card-compact"><strong>Begyndere løbere:</strong><div class="value">15-35 CTL</div><p>Opbygning af basiskondition, 3-4 løbeture/uge</p></div><div class="level-card-compact"><strong>Mellemliggende løbere:</strong><div class="value">35-60 CTL</div><p>Konsekvent træning, 4-6 løbeture/uge</p></div><div class="level-card-compact"><strong>Avancerede løbere:</strong><div class="value">60-85 CTL</div><p>Høj volumen, 6-8 sessioner/uge</p></div><div class="level-card-compact"><strong>Eliteløbere:</strong><div class="value">85-120+ CTL</div><p>Professionel træningsbelastning, 8-12+ sessioner/uge</p></div></div><div class="warning-box mt-md"><strong>⚠️ CTL Rampehastighedsgrænser for løbere</strong><ul><li><strong>Begyndere:</strong> +2-4 CTL om ugen</li><li><strong>Mellemliggende:</strong> +3-5 CTL om ugen</li><li><strong>Avanceret:</strong> +5-7 CTL om ugen</li></ul><p>Overskridelse af disse hastigheder øger markant skadesrisikoen på grund af løbs høje stødbelastning.
+                        "10%-reglen" (øg den ugentlige volumen med højst 10%) stemmer overens med disse CTL rampehastigheder.
+                    </p></div></div></div></div></section><section class="section section-alt"><div class="container"><h2>ATL: Din Running Fatigue Metric</h2><div class="content-split"><div><p>ATL sporer kortvarig træningsstress – den træthed, der er akkumuleret i løbet af den seneste uges løb. Det stiger
+                    hurtigt efter hård træning og falder hurtigt under hvile, hvilket gør det vigtigt for at klare restitutionen
+                    mellem kvalitetssessioner.</p><h3>ATL Dynamik i løbetræning</h3><ul><li><strong>Hurtigt svar:</strong> 7-dages tidskonstant (halveringstid ~2,4 dage)</li><li><strong>Spiky mønster:</strong> Hopper efter hårde sessioner, falder under restitutionsdage</li><li><strong>Gendannelsesindikator:</strong> Faldende ATL = fjerner træthed mellem løb</li><li><strong>Advarsel om overtræning:</strong> Kronisk forhøjet ATL tyder på utilstrækkelig genopretning
+                    </li><li><strong>Påvirkningsstress:</strong> Løb ATL afspejler både kardiovaskulær og muskuloskeletale
+                        træthed</li></ul><div class="callout callout-science"><h4>🔬 Fitness-træthedsmodellen til løb</h4><p>Hvert træningsløb giver to effekter:</p><ol><li><strong>Fitness stimulans</strong> (langsomt opbyggende, langtidsholdbar)</li><li><strong>Træthed</strong> (hurtigt opbyggende, hurtigt forsvindende)</li></ol><p>Løbepræstation = Fitness - Træthed.PMC visualiserer denne model, hvilket muliggør videnskabelig
+                        periodisering og optimal løbstiming for løbere.</p></div></div><div><h3>Ved Steady State</h3><p>Når løbetræningsbelastningen er konsistent fra uge til uge, konvergerer CTL og ATL:</p><div class="example-box"><h4>Eksempel: 400 TSS/uge konsekvent</h4><div class="calculation">
+                        Daglig TSS ≈ 57<br/>
+                        CTL nærmer sig ~57<br/>
+                        ATL nærmer sig ~57<br/>
+                        TSB nærmer sig 0
+                    </div><p><strong>Fortolkning:</strong> Kondition og træthed er afbalanceret. Intet akkumulerende underskud el
+                        overskud - bæredygtig træningsvedligeholdelse.</p></div><h3>Under byggefaser</h3><p>Når du øger løbevolumen eller intensiteten:</p><div class="example-box"><p>ATL stiger <em>hurtigere</em> end CTL på grund af kortere tidskonstant. TSB bliver negativ (træthed &gt;
+                        fitness). Dette er normalt og produktivt – du påfører overbelastning for at stimulere løb
+                        tilpasninger.</p></div><h3>Under Taper for Races</h3><p>Når du reducerer træningsbelastningen før konkurrence:</p><div class="example-box"><p>ATL falder <em>hurtigere</em> end CTL. TSB bliver positiv (fitness &gt; træthed). Dette er
+                        mål – ankom frisk til løbsdagen med benene klar til at præstere, mens du bevarer konditionen.</p></div></div></div></div></section><section class="section"><div class="container"><h2>TSB: Din fitness-træthedsbalance og løbsparathed</h2><p class="lead">TSB (Træning af stressbalance) er forskellen mellem gårsdagens kondition (CTL) og
+            gårsdagens træthed (ATL). For løbere angiver det, om du er frisk eller træt, klar til at løbe eller ind
+            behov for restitutionsdage.</p><div class="tsb-zones-container"><h3>TSB Tolkevejledning for løbere</h3><table class="tsb-zones-table"><thead><tr><th>TSB Rækkevidde</th><th>Status</th><th>Fortolkning</th><th>Anbefalet handling</th></tr></thead><tbody><tr class="tsb-critical"><td>&lt; -30</td><td><strong>Risiko for overtræning</strong></td><td>Ekstrem træthed. Høj risiko for skader.</td><td>Øjeblikkelig genopretning nødvendig. Reducer volumen 50%+. Overvej hviledage.</td></tr><tr class="tsb-training"><td>-20 til -30</td><td><strong>Optimal træningsblok</strong></td><td>Produktiv overbelastning. Opbygning af fitness.</td><td>Fortsæt planen. Overvåg for overdreven ømhed eller træthedstegn.</td></tr><tr class="tsb-moderate"><td>-10 til -20</td><td><strong>Moderat træningsbelastning</strong></td><td>Standard træningsophobning.</td><td>Normal træning. Kan håndtere kvalitetsinterval- eller temposessioner.</td></tr><tr class="tsb-neutral"><td>-10 til +15</td><td><strong>Overgang/vedligeholdelse</strong></td><td>Balanceret tilstand. Let træthed eller friskhed.</td><td>God til B/C-løb, test- eller restitutionsuger.</td></tr><tr class="tsb-fresh"><td>+15 til +25</td><td><strong>Peak Race Form</strong></td><td>Frisk og pasform. Optimalt ydelsesvindue.</td><td>A-prioritet løb. Forventet maksimal løbeydelse.</td></tr><tr class="tsb-very-fresh"><td>+25 til +35</td><td><strong>Meget frisk</strong></td><td>Meget udhvilet. God til korte løb.</td><td>5K-10K løb, tidskørsel, banebegivenheder.</td></tr><tr class="tsb-detraining"><td>&gt; +35</td><td><strong>Aftræning</strong></td><td>At miste konditionen på grund af inaktivitet.</td><td>Genoptag træningen. Konditionen falder fra forlænget hvile.</td></tr></tbody></table></div><div class="callout callout-tip mt-xl"><h3>🎯 Mål TSB ved at løbe løbsdistance</h3><ul><li><strong>5K/10K løb:</strong> TSB +20 til +30 (7-10 dages nedskæring for friskhed)</li><li><strong>Halvmarathon:</strong> TSB +15 til +25 (10-14 dages nedskæring)</li><li><strong>Marathon:</strong> TSB +10 til +20 (14-21 dages nedtrapning med volumenreduktion)</li><li><strong>Ultra Marathon (50K+):</strong> TSB +5 til +15 (7-14 dages nedtrapning, bevar lydstyrken, men reducer
+                    intensitet)</li></ul><p><em>Kortere løb kræver højere TSB for hastighed/kraft. Længere løb kræver moderate TSB for at bevare
+                    udholdenhed.</em></p></div></div></section><section class="section section-alt"><div class="container container-narrow"><h2>PMC Eksempel: Løbetræningsblok → Taper → Løb</h2><div class="example-box"><h3>12-ugers marathon træningscyklus</h3><h4>Uge 1-3: Grundbygningsfase</h4><ul><li>Ugentligt TSS: 300 → 350 → 400</li><li>CTL: Stiger gradvist fra 40 → 48</li><li>ATL: Sporer ugentlig belastning, svinger 45-60</li><li>TSB: Let negativ (-5 til -15), overskuelig træningsstress</li><li><strong>Fokus:</strong> Aerob baseudvikling, lette miles</li></ul><h4>Uge 4-7: Byggefase 1</h4><ul><li>Ugentlig TSS: 450 → 500 → 500 → 450 (restitutionsuge)</li><li>CTL: Fortsætter med at stige 48 → 60</li><li>ATL: Højere udsving 55-75</li><li>TSB: Mere negativ (-15 til -25), produktiv overbelastning</li><li><strong>Fokus:</strong> Tilføjelse af tempoløb, tærskelintervaller</li></ul><h4>Uge 8-11: Peak Phase</h4><ul><li>Ugentlig TSS: 500 → 550 → 550 → 500</li><li>CTL: Topper ved ~65</li><li>ATL: Højeste værdier 65-80</li><li>TSB: Mest negativ (-20 til -30), maksimal fitnessstimulus</li><li><strong>Fokus:</strong> Lange løbeture med maratontemposegmenter, kvalitetssessioner</li></ul><h4>Uge 12: Restitutionsuge</h4><ul><li>Ugentlig TSS: 300 (45 % reduktion)</li><li>CTL: Et lille fald til ~63 (kondition bevares)</li><li>ATL: Falder hurtigt til ~50</li><li>TSB: Stiger til +5 til +10 (delvis friskhed)</li><li><strong>Fokus:</strong> Restitutionsløb, der absorberer træningstilpasninger</li></ul><h4>Uge 13-14: Taper + Race Week</h4><ul><li>Uge 13 TSS: 250, uge 14 TSS: 120 + løb (~250 i alt)</li><li>CTL: Blidt fald til ~60 (minimalt fitnesstab)</li><li>ATL: Hurtigt fald til ~35 (træthed elimineret)</li><li>TSB: Topper kl <strong>+20 til +25 på løbsdagen</strong></li><li><strong>Resultat:</strong> Friske ben, bevaret kondition, klar til maksimal maratonpræstation</li></ul></div><div class="callout callout-success"><h3>✅ Hvorfor Taper virker for løbere</h3><p>De forskellige tidskonstanter (42 dage for CTL, 7 dage for ATL) skaber den tapereffekt, der optimerer
+                løbeydelse:</p><ul><li>ATL reagerer hurtigt → Løbetræthed (både kardiovaskulær og muskuloskeletal) forsvinder inden for
+                    7-10 dage</li><li>CTL reagerer langsomt → Aerob kondition og løbstilpasninger varer ved i ugevis</li><li>Resultat: Konditionen forbliver, mens træthed og ømhed forsvinder = friske ben for maksimal løbspræstation
+                </li></ul></div></div></section><section class="section"><div class="container container-narrow"><h2>Praktisk løbetræning Retningslinjer for belastningsstyring</h2><div class="guidelines-grid"><div class="guideline-item"><h3>1️⃣ Spor dagligt rTSS konsekvent</h3><p>Log hvert løbs TSS for at opbygge nøjagtige CTL/ATL/TSB trends. Manglende data skaber huller i konditionen
+                    kurve. Brug GPS-urdata eller tempobaserede beregninger til alle løbeture.</p></div><div class="guideline-item"><h3>2️⃣ Overvåg CTL Rampesats omhyggeligt</h3><p>Øg CTL gradvist. En 3-5 point ugentlig stigning er holdbar for de fleste løbere. Springer 10+
+                    point inviterer til overtræning og skader på grund af løbs påvirkningsstress.</p></div><div class="guideline-item"><h3>3️⃣ Planlæg restitutionsuger</h3><p>Hver 3.-4. uge reduceres løbevolumen med 30-40 % i en uge. Lad TSB stige til -5 til +10. Dette
+                    konsoliderer fitnesstilpasninger og forhindrer kumulativ træthed.</p></div><div class="guideline-item"><h3>4️⃣ Time Your Race Taper</h3><p>Mål TSB +15 til +25 på løbsdagen for de fleste distancer. Begynd nedtrapning 10-21 dage ud afhængig af race
+                    afstand og nuværende TSB niveau.</p></div><div class="guideline-item"><h3>5️⃣ Accepter negativ TSB under opbygning</h3><p>TSB på -20 til -25 under byggefaser er normalt og produktivt for løbere. Det betyder, at du ansøger
+                    træningsstimulans til tilpasning uden for stor skadesrisiko.</p></div><div class="guideline-item"><h3>6️⃣ Genopbygg CTL gradvist efter pauser</h3><p>Efter skader eller pauser uden for sæsonen, prøv ikke at genoptage den tidligere CTL med det samme. Genopbygg gradvist
+                    med 3-5 CTL point om ugen for at undgå genskade.</p></div><div class="guideline-item"><h3>7️⃣ Lyt til din krop</h3><p>TSS metrics er guider, ikke absolutte regler. Vedvarende ømhed, dårlig søvn eller faldende ydeevne
+                    trods gode TSB-tal indikerer behov for yderligere genopretning.</p></div><div class="guideline-item"><h3>8️⃣ Konto for ikke-løbende stress</h3><p>Livsstress, dårlig søvn og cross-træning påvirker restitutionen. Overvej at reducere TSS-målene i løbet af
+                    perioder med høj stress, selvom løbespecifikke målinger ser gode ud.</p></div></div></div></section><section class="section section-alt"><div class="container container-narrow"><h2>Ofte stillede spørgsmål: Træningsstressscore for løb</h2><div class="faq-container"><div class="faq-item"><h3>Hvordan beregner jeg TSS for at køre uden effektmåler?</h3><p>Brug den tempobaserede metode: Beregn din intensitetsfaktor (IF) ved at dividere dit tærskeltempo med
+                    dit gennemsnitlige tempo for løbeturen. Anvend derefter formlen: rTSS = (IF²) × Varighed (timer) × 100. For
+                    for eksempel, hvis dit tærskeltempo er 4:00/km og du løber 10 km i 4:30/km tempo på 45 minutter (0,75
+                    timer): IF = 4:00/4:30 = 0,889, så rTSS = (0,889²) × 0,75 × 100 = 59,2 TSS.</p><p>Hvis du vil have den korteste arbejdsgang, skal du bruge <a href="/da/rtss-calculator/">rTSS lommeregner</a>
+                    efter du har indstillet en realistisk <a href="/da/crs/">CRS</a>.</p></div><div class="faq-item"><h3>Hvad er forskellen mellem at løbe TSS og at cykle TSS?</h3><p>Begge bruger den samme IF²-formel, men at køre TSS repræsenterer mere total fysisk stress på grund af påvirkning
+                    kræfter fra jordkontakt. En løber med 400 TSS/uge oplever lignende træningstilpasning som en
+                    cyklist med 600-700 TSS/uge. Løb bruger også tempo/hastighed som input i stedet for power watt, og
+                    kræver mere restitutionstid for den samme TSS-værdi.</p></div><div class="faq-item"><h3>Hvad er en god ugentlig TSS til maratontræning?</h3><p>Ugentlig løb TSS for maratontræning varierer efter erfaring: Begyndere, der bygger til første maraton:
+                    250-400 TSS/uge; Mellemliggende maratonløbere: 400-550 TSS/uge; Avancerede/konkurrencedygtige maratonløbere:
+                    550-700+ TSS/uge. Spidsuger kan nå op på 600-800 TSS for avancerede løbere, med nedadgående uger
+                    til 200-300 TSS.</p><p>Det, der betyder mere end ét tal, er, hvordan den belastning sidder inde i dit <a href="/da/marathon-periodization/">opbygning af maraton</a> og <a href="/da/training-load-periodization/">periodisering</a>.</p></div><div class="faq-item"><h3>Hvilken TSB skal jeg målrette mod til et 10K-løb?</h3><p>For et 10K-løb, mål TSB på +20 til +30 på løbsdagen. Begynd en 7-10 dages nedtrapning for at opnå dette. Den
+                    højere TSB (mere friskhed) er gavnligt til kortere løb, hvor fart og kraft betyder mere end
+                    udholdenhed. Begynd at reducere volumen 10 dage ud, mens du bevarer en vis intensitet for at bevare
+                    neuromuskulær skarphed.</p></div><div class="faq-item"><h3>Kan jeg bruge TSS, hvis jeg ikke kender min kritiske løbehastighed?</h3><p>At kende din <a href="/da/crs/">Kritisk løbehastighed (CRS)</a> eller tærskeltempo er
+                    afgørende for nøjagtig TSS-beregning, da IF beregnes i forhold til denne værdi. Hvis du ikke gør det
+                    kend din CRS, udfør en tærskeltest: enten en 30-minutters tidskørsel (gennemsnitligt tempo = CRS)
+                    eller et 8 km løbstempo. Alternativt kan du estimere ved at bruge de seneste løbstider: 10K tempo + 10-15 sekunder/km
+                    tilnærmer CRS.</p><p>Når CRS er indstillet, konverteres det til <a href="/da/training-zones/">træningszoner</a> så din
+                    let-, tærskel- og race-tempo arbejde leverer alle den samme belastningsmodel.</p></div><div class="faq-item"><h3>Hvor hurtigt skal jeg øge min CTL?</h3><p>Øg løb CTL med 2-4 point om ugen for begyndere, 3-5 point for mellemløbere og
+                    5-7 point maksimum for avancerede løbere. Dette stemmer overens med "10%-reglen" for ugentlige kilometertal
+                    øger og minimerer risikoen for skader. Overskridelse af disse satser øger markant overtræning og
+                    skadesrisiko på grund af løbs høje påvirkningsbelastning på muskler, sener og knogler.</p></div><div class="faq-item"><h3>Hvad betyder negativ TSB under træning?</h3><p>Negativ TSB betyder, at træthed (ATL) overstiger fitness (CTL) – du er i øjeblikket træt af de seneste
+                    træning. Dette er normalt og produktivt i byggefaserne. TSB af -15 til -25 angiver produktiv
+                    træningsstress. TSB under -30 antyder risiko for overtræning og behov for restitution. Negativ TSB under
+                    builds skaber stimulans til fitnesstilpasninger, mens positive TSB under nedtrapning tillader det
+                    ydeevne.</p></div></div></div></section><section class="section"><div class="container container-narrow text-center"><h2>Brug træningsbelastning som din løbemålingshub</h2><p class="lead">Træningsbelastning bliver virkelig nyttig, når den er forbundet med tærskeltempo, sessionsscoring,
+            træningszoner og løbsplanlægning. I sig selv er diagrammet kun et diagram.</p><div class="callout mt-xl"><h3>Byg klyngen omkring denne side</h3><p>Hvis træningsbelastningen er din hub, er de næste sider, du skal bruge:</p><ul><li><a href="/da/crs/">Kritisk løbehastighed (CRS)</a> at forankre tærskeltempo</li><li><a href="/da/rtss-calculator/">rTSS Lommeregner</a> at score individuelle løb</li><li><a href="/da/training-zones/">Træningszoner</a> at konvertere CRS til sessionsintention</li><li><a href="/da/training-load-periodization/">Træningsbelastning og periodisering</a> at planlægge
+                    bygge-, gendannelses- og tilspidsningsblokke</li></ul></div><div class="mt-xl"><a class="btn btn-secondary" href="/da/crs/">← Kritisk løbehastighed (CRS)</a><a class="btn btn-secondary" href="/da/rtss-calculator/">rTSS Lommeregner</a><a class="btn btn-primary" href="/da/training-load-periodization/">Træningsbelastning og periodisering →</a></div></div></section><section class="eeat-author bg-light divider-top-lg divider-bottom-lg" aria-label="Author and Reviewer Information"><div class="container container-narrow"><div class="eeat-card" style="display: flex; gap: 1.5rem; align-items: center; padding: 1.5rem; background: var(--color-bg-alt, #f8f9fa); border-radius: 8px; border: 1px solid var(--color-border, #e9ecef); margin-top: 3rem; margin-bottom: 2rem;"><div class="eeat-avatar" style="font-size: 2.5rem; line-height: 1; flex-shrink: 0;" aria-hidden="true">👨‍🔬</div><div class="eeat-details"><h3 style="margin: 0 0 0.5rem 0; font-size: 1.125rem; font-weight: 600;">
+          Expertly Reviewed by 
+          <span itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">AnalyticsZone Team</span></span><span style="font-weight: 400; font-size: 1rem; color: var(--text-muted, #718096);">, MSc Sports Science</span></h3><p style="margin: 0 0 0.5rem 0; font-size: 0.95rem; color: var(--color-body-text, #4a5568); line-height: 1.5;">
+          This content has been written and reviewed by a sports data metrics expert to ensure technical accuracy and adherence to the latest sports science methodologies.
+        </p><a href="https://linkedin.com/in/albert-arno-39049774" target="_blank" rel="noopener noreferrer" style="font-size: 0.85rem; font-weight: 500; text-decoration: underline; color: var(--color-primary, #3182ce);">
+          🔗 Verify Credentials
+        </a></div></div></div></section><section class="ai-citation-block divider-top-xl" data-ai-ready="true" data-ai-page="training-load"><div class="container ai-citation-shell"><h2 class="ai-citation-title">Løbetræningsbelastning: rTSS, CTL, ATL og TSB Forklaret</h2><p class="ai-citation-answer">Løbetræningsbelastning bruger rTSS til at score sessioner, CTL til at spore langsigtet kondition, ATL til at spore kortvarig træthed og TSB til at måle friskhed til træning og nedtrapningsbeslutninger.</p><ul class="ai-citation-facts" role="list"><li class="ai-citation-fact"><span class="ai-citation-icon" aria-hidden="true">📅</span><span>2026-04-02</span></li><li class="ai-citation-fact ai-citation-keywords"><span class="ai-citation-icon" aria-hidden="true">🏷️</span><span>løbetræningsbelastning · rTSS · CTL ATL TSB kører · løbetræthed og kondition · kørende taper timing</span></li><li class="ai-citation-fact"><span class="ai-citation-icon" aria-hidden="true">🔬</span><a href="../../da/bibliography/">
+          
+          Bibliografi
+          
+        </a></li></ul></div></section></main><footer class="site-footer"><div class="container"><div class="footer-top"><div class="footer-brand-section"><h2>Run Analytics</h2><p>Track Critical Running Speed, Training Stress Score, and performance metrics with Run Analytics. Science-based iOS app for runners, triathletes &amp; coaches. 7-day free trial.</p></div><div class="footer-download"><h3 class="footer-heading">Download</h3><div class="footer-badges"><a href="https://apps.apple.com/us/app/run-analytics/id6754524015" target="_blank" rel="noopener"
+                        aria-label="Download på App Store"><img src="../../assets/images/badge-app-store.svg"
+                            alt="Download på App Store" width="135"
+                            height="40" loading="lazy"></a><a href="https://play.google.com/store/apps/details?id=com.arnohealth.runanalytics" target="_blank" rel="noopener"
+                        aria-label="Få det på Google Play"><img src="../../assets/images/badge-google-play.svg"
+                            alt="Få det på Google Play" width="135"
+                            height="40" loading="lazy"></a></div></div></div><div class="footer-languages"><h3 class="footer-heading">Tilgængelig i</h3><div class="lang-grid"><a href="/af/" class="lang-link"
+                    hreflang="af" >
+                    Afrikaans
+                </a><a href="/am/" class="lang-link"
+                    hreflang="am" >
+                    አማርኛ
+                </a><a href="/ar/" class="lang-link"
+                    hreflang="ar" dir="rtl" >
+                    العربية
+                </a><a href="/bg/" class="lang-link"
+                    hreflang="bg" >
+                    Български
+                </a><a href="/bn/" class="lang-link"
+                    hreflang="bn" >
+                    বাংলা
+                </a><a href="/ca/" class="lang-link"
+                    hreflang="ca" >
+                    Català
+                </a><a href="/cs/" class="lang-link"
+                    hreflang="cs" >
+                    Čeština
+                </a><a href="/da/" class="lang-link active"
+                    hreflang="da" >
+                    Dansk
+                </a><a href="/de/" class="lang-link"
+                    hreflang="de" >
+                    Deutsch
+                </a><a href="/el/" class="lang-link"
+                    hreflang="el" >
+                    Ελληνικά
+                </a><a href="/en/" class="lang-link"
+                    hreflang="en" >
+                    English
+                </a><a href="/es/" class="lang-link"
+                    hreflang="es" >
+                    Español
+                </a><a href="/et/" class="lang-link"
+                    hreflang="et" >
+                    Eesti
+                </a><a href="/fa/" class="lang-link"
+                    hreflang="fa" dir="rtl" >
+                    فارسی
+                </a><a href="/fi/" class="lang-link"
+                    hreflang="fi" >
+                    Suomi
+                </a><a href="/fr/" class="lang-link"
+                    hreflang="fr" >
+                    Français
+                </a><a href="/gu/" class="lang-link"
+                    hreflang="gu" >
+                    ગુજરાતી
+                </a><a href="/ha/" class="lang-link"
+                    hreflang="ha" >
+                    Hausa
+                </a><a href="/he/" class="lang-link"
+                    hreflang="he" dir="rtl" >
+                    עברית
+                </a><a href="/hi/" class="lang-link"
+                    hreflang="hi" >
+                    हिन्दी
+                </a><a href="/hr/" class="lang-link"
+                    hreflang="hr" >
+                    Hrvatski
+                </a><a href="/hu/" class="lang-link"
+                    hreflang="hu" >
+                    Magyar
+                </a><a href="/id/" class="lang-link"
+                    hreflang="id" >
+                    Bahasa Indonesia
+                </a><a href="/is/" class="lang-link"
+                    hreflang="is" >
+                    Íslenska
+                </a><a href="/it/" class="lang-link"
+                    hreflang="it" >
+                    Italiano
+                </a><a href="/ja/" class="lang-link"
+                    hreflang="ja" >
+                    日本語
+                </a><a href="/km/" class="lang-link"
+                    hreflang="km" >
+                    ភាសាខ្មែរ
+                </a><a href="/kn/" class="lang-link"
+                    hreflang="kn" >
+                    ಕನ್ನಡ
+                </a><a href="/ko/" class="lang-link"
+                    hreflang="ko" >
+                    한국어
+                </a><a href="/lt/" class="lang-link"
+                    hreflang="lt" >
+                    Lietuvių
+                </a><a href="/lv/" class="lang-link"
+                    hreflang="lv" >
+                    Latviešu
+                </a><a href="/ms/" class="lang-link"
+                    hreflang="ms" >
+                    Bahasa Melayu
+                </a><a href="/my/" class="lang-link"
+                    hreflang="my" >
+                    မြန်မာစာ
+                </a><a href="/nb/" class="lang-link"
+                    hreflang="nb" >
+                    Norsk Bokmål
+                </a><a href="/nl/" class="lang-link"
+                    hreflang="nl" >
+                    Nederlands
+                </a><a href="/pl/" class="lang-link"
+                    hreflang="pl" >
+                    Polski
+                </a><a href="/pt/" class="lang-link"
+                    hreflang="pt" >
+                    Português
+                </a><a href="/pt-br/" class="lang-link"
+                    hreflang="pt-br" >
+                    Português (Brasil)
+                </a><a href="/ro/" class="lang-link"
+                    hreflang="ro" >
+                    Română
+                </a><a href="/ru/" class="lang-link"
+                    hreflang="ru" >
+                    Русский
+                </a><a href="/sk/" class="lang-link"
+                    hreflang="sk" >
+                    Slovenčina
+                </a><a href="/sl/" class="lang-link"
+                    hreflang="sl" >
+                    Slovenščina
+                </a><a href="/sr/" class="lang-link"
+                    hreflang="sr" >
+                    Srpski
+                </a><a href="/sv/" class="lang-link"
+                    hreflang="sv" >
+                    Svenska
+                </a><a href="/sw/" class="lang-link"
+                    hreflang="sw" >
+                    Kiswahili
+                </a><a href="/ta/" class="lang-link"
+                    hreflang="ta" >
+                    தமிழ்
+                </a><a href="/te/" class="lang-link"
+                    hreflang="te" >
+                    తెలుగు
+                </a><a href="/th/" class="lang-link"
+                    hreflang="th" >
+                    ไทย
+                </a><a href="/tl/" class="lang-link"
+                    hreflang="tl" >
+                    Tagalog
+                </a><a href="/tr/" class="lang-link"
+                    hreflang="tr" >
+                    Türkçe
+                </a><a href="/uk/" class="lang-link"
+                    hreflang="uk" >
+                    Українська
+                </a><a href="/ur/" class="lang-link"
+                    hreflang="ur" dir="rtl" >
+                    اردو
+                </a><a href="/vi/" class="lang-link"
+                    hreflang="vi" >
+                    Tiếng Việt
+                </a><a href="/yo/" class="lang-link"
+                    hreflang="yo" >
+                    Yorùbá
+                </a><a href="/zh/" class="lang-link"
+                    hreflang="zh" >
+                    中文
+                </a></div></div><div class="footer-divider"></div><div class="footer-bottom"><p class="copyright">
+                &copy; 2026 Run Analytics. Alle rettigheder forbeholdes
+            </p><ul class="footer-legal"><li><a href="/da/privacy/">Privatliv</a></li><li><a href="/da/terms/">Betingelser</a></li></ul></div></div></footer><div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="Cookie consent" aria-live="polite"><div class="cookie-banner-content"><div><p>Dette websted bruger cookies for at forbedre din oplevelse.</p><a href="/da/privacy/" class="text-sm">Lær mere</a></div><div class="cookie-banner-actions"><button id="cookie-decline" class="btn btn-secondary btn-small">Afvis</button><button id="cookie-accept" class="btn btn-primary btn-small">Accepter</button></div></div></div><script src="../../assets/js/core.min.js?v=1c7ace58" defer></script><script src="../../assets/js/search.min.js?v=1c7ace58" defer></script><script src="../../assets/js/analytics.min.js" data-ga-id="G-Y138VB4523" defer></script><script>if ('serviceWorker' in navigator) { navigator.serviceWorker.register('../../sw.js') }</script></body></html>

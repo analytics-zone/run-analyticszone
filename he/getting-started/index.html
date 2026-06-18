@@ -1,0 +1,841 @@
+<!DOCTYPE html><html lang="he" dir="rtl"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=optional"
+    rel="stylesheet"><title>התחלת עבודה עם Run Analytics - מדריך הגדרה מלא | הדרכת מבחן</title><meta name="description" content="מדריך הגדרת Run Analytics מלא. למד כיצד לבצע מבחן CRS, להזין תוצאות, לעקוב אחר אימונים ולהבין מדדי rTSS, CTL/ATL/TSB. הדרכה שלב אחר שלב עם פתרון בעיות."><meta name="author" content="AnalyticsZone Team"><meta name="keywords" content="מדריך Run Analytics, הדרכת מבחן CRS, הדרכת אפליקציית שחייה, איך להשתמש Run Analytics, מדריך אנליטיקת שחייה"><link rel="canonical" href="https://run.analyticszone.app/he/getting-started/"><meta property="article:published_time" content="2025-10-08T10:00:00Z"><meta property="article:modified_time" content="2026-03-24T14:30:00Z"><meta property="article:author" content="AnalyticsZone Team"><meta property="og:type" content="article"><meta property="og:url" content="https://run.analyticszone.app/he/getting-started/"><meta property="og:title" content="התחלת עבודה עם Run Analytics - מדריך הגדרה מלא | הדרכת מבחן"><meta property="og:description" content="מדריך הגדרת Run Analytics מלא. למד כיצד לבצע מבחן CRS, להזין תוצאות, לעקוב אחר אימונים ולהבין מדדי rTSS, CTL/ATL/TSB. הדרכה שלב אחר שלב עם פתרון בעיות."><meta property="og:image" content="https://run.analyticszone.app/assets/images/og-image.svg"><meta property="og:locale" content="he_IL"><meta property="og:site_name" content="Run Analytics"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:url" content="https://run.analyticszone.app/he/getting-started/"><meta name="twitter:title" content="התחלת עבודה עם Run Analytics - מדריך הגדרה מלא | הדרכת מבחן"><meta name="twitter:description" content="מדריך הגדרת Run Analytics מלא. למד כיצד לבצע מבחן CRS, להזין תוצאות, לעקוב אחר אימונים ולהבין מדדי rTSS, CTL/ATL/TSB. הדרכה שלב אחר שלב עם פתרון בעיות."><meta name="twitter:image" content="https://run.analyticszone.app/assets/images/og-image.svg"><meta name="twitter:site" content="@runanalytics"><meta name="twitter:creator" content="@runanalytics"><link rel="alternate" hreflang="ar"
+    href="https://run.analyticszone.app/ar/getting-started/"><link rel="alternate" hreflang="de"
+    href="https://run.analyticszone.app/de/getting-started/"><link rel="alternate" hreflang="en"
+    href="https://run.analyticszone.app/en/getting-started/"><link rel="alternate" hreflang="es"
+    href="https://run.analyticszone.app/es/getting-started/"><link rel="alternate" hreflang="fr"
+    href="https://run.analyticszone.app/fr/getting-started/"><link rel="alternate" hreflang="hi"
+    href="https://run.analyticszone.app/hi/getting-started/"><link rel="alternate" hreflang="id"
+    href="https://run.analyticszone.app/id/getting-started/"><link rel="alternate" hreflang="it"
+    href="https://run.analyticszone.app/it/getting-started/"><link rel="alternate" hreflang="ja"
+    href="https://run.analyticszone.app/ja/getting-started/"><link rel="alternate" hreflang="ko"
+    href="https://run.analyticszone.app/ko/getting-started/"><link rel="alternate" hreflang="nl"
+    href="https://run.analyticszone.app/nl/getting-started/"><link rel="alternate" hreflang="pl"
+    href="https://run.analyticszone.app/pl/getting-started/"><link rel="alternate" hreflang="pt"
+    href="https://run.analyticszone.app/pt/getting-started/"><link rel="alternate" hreflang="pt-br"
+    href="https://run.analyticszone.app/pt-br/getting-started/"><link rel="alternate" hreflang="ru"
+    href="https://run.analyticszone.app/ru/getting-started/"><link rel="alternate" hreflang="sv"
+    href="https://run.analyticszone.app/sv/getting-started/"><link rel="alternate" hreflang="tr"
+    href="https://run.analyticszone.app/tr/getting-started/"><link rel="alternate" hreflang="zh"
+    href="https://run.analyticszone.app/zh/getting-started/"><link rel="alternate" hreflang="x-default"
+    href="https://run.analyticszone.app/en/getting-started/"><link rel="icon" type="image/png" sizes="32x32" href="../../assets/images/icons/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="../../assets/images/icons/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="../../assets/images/icons/apple-touch-icon.png"><link rel="manifest" href="../../manifest.json"><meta name="theme-color" content="#2563EB"><meta name="robots" content="noindex, follow"><meta name="apple-itunes-app" content="app-id=6754524015"><style>
+/* Critical CSS - Above the fold styles for fast LCP */
+:root {
+  --color-primary: #0066CC;
+  --color-text: #1a1a1a;
+  --color-text-muted: #666;
+  --color-bg: #ffffff;
+  --color-bg-alt: #f8f9fa;
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+}
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  color: var(--color-text);
+  background: var(--color-bg);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Skip link - Accessibility */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--color-primary);
+  color: #fff;
+  padding: 8px 16px;
+  z-index: 1000;
+  text-decoration: none;
+}
+.skip-link:focus {
+  top: 0;
+}
+
+/* Header - Critical for LCP */
+.site-header {
+  background: var(--color-bg);
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0.75rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.site-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: var(--color-text);
+  font-weight: 600;
+  font-size: 1.125rem;
+}
+
+.site-logo img, .site-logo svg {
+  width: 32px;
+  height: 32px;
+}
+
+/* Navigation */
+.main-nav {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .main-nav {
+    display: flex;
+    gap: 1.5rem;
+  }
+  .main-nav a {
+    color: var(--color-text);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9375rem;
+    transition: color 0.2s;
+  }
+  .main-nav a:hover {
+    color: var(--color-primary);
+  }
+}
+
+/* Mobile menu button */
+.menu-toggle {
+  display: flex;
+  background: none;
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .menu-toggle {
+    display: none;
+  }
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Main content */
+main.main-content {
+  flex: 1;
+}
+
+/* Hero section - Critical for LCP */
+.hero {
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .hero {
+    padding: 4rem 2rem;
+  }
+}
+
+.hero h1 {
+  font-size: clamp(1.75rem, 5vw, 3rem);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  color: var(--color-text);
+}
+
+.hero .lead, .hero p {
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  color: var(--color-text-muted);
+  max-width: 700px;
+  margin: 0 auto 1.5rem;
+}
+
+/* Buttons - Critical for CTA */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: var(--radius-md);
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-primary {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: #0052a3;
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+}
+
+.btn-large {
+  padding: 1rem 2rem;
+  font-size: 1.125rem;
+}
+
+/* Utility classes */
+.hidden { display: none !important; }
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Images - prevent CLS with aspect-ratio */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+img[width][height] {
+  aspect-ratio: attr(width) / attr(height);
+}
+
+.lazy-image {
+  background: var(--color-bg-alt);
+  transition: opacity 0.3s;
+}
+
+.lazy-image:not(.loaded) {
+  opacity: 0;
+}
+
+.lazy-image.loaded {
+  opacity: 1;
+}
+
+/* App badges - fixed dimensions to prevent CLS */
+.app-badge img {
+  width: 140px;
+  height: 42px;
+}
+
+/* Logo - fixed dimensions */
+.site-logo img {
+  width: 32px;
+  height: 32px;
+}
+
+/* Reduce motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+</style><link rel="preconnect" href="https://www.googletagmanager.com"><link rel="dns-prefetch" href="https://www.googletagmanager.com"><link rel="stylesheet" href="../../assets/css/main.min.css?v=1c7ace58"><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Run Analytics",
+  "url": "https://run.analyticszone.app",
+  "logo": "https://run.analyticszone.app/assets/images/logo.png",
+  "description": "Track Critical Running Speed, Training Stress Score, and performance metrics with Run Analytics. Science-based iOS app for runners, triathletes &amp; coaches. 7-day free trial.",
+  
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "Customer Support",
+    "email": "analyticszone+run@onmedic.org"
+  },
+  
+  "sameAs": [
+    
+    
+      
+    
+    
+      
+    
+    
+      
+    
+    
+    "https://twitter.com/runanalytics",
+    
+    "https://apps.apple.com/us/app/run-analytics/id6754524015",
+    
+    "https://play.google.com/store/apps/details?id=com.arnohealth.runanalytics"
+    
+  ]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Run Analytics",
+  "url": "https://run.analyticszone.app",
+  "description": "Track Critical Running Speed, Training Stress Score, and performance metrics with Run Analytics. Science-based iOS app for runners, triathletes &amp; coaches. 7-day free trial.",
+  "inLanguage": "he"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Run Analytics",
+  "description": "Track Critical Running Speed, Training Stress Score, and performance metrics with Run Analytics. Science-based iOS app for runners, triathletes &amp; coaches. 7-day free trial.",
+  "url": "https://run.analyticszone.app",
+  "applicationCategory": ["HealthApplication", "FitnessApplication"],
+  "operatingSystem": "iOS, Android",
+  "author": {
+    "@type": "Organization",
+    "name": "AnalyticsZone Team"
+  },
+  "downloadUrl": "https://apps.apple.com/us/app/run-analytics/id6754524015"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "דף הבית",
+      "item": "https://run.analyticszone.app/he/"
+    },
+    
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "למידה",
+      "item": "https://run.analyticszone.app/he/getting-started/"
+    },
+    
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "מתחילים כאן",
+      "item": "https://run.analyticszone.app/he/getting-started/"
+    }
+    
+  ]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "התחלת עבודה עם Run Analytics - מדריך הגדרה מלא | הדרכת מבחן",
+  "description": "מדריך הגדרת Run Analytics מלא. למד כיצד לבצע מבחן CRS, להזין תוצאות, לעקוב אחר אימונים ולהבין מדדי rTSS, CTL/ATL/TSB. הדרכה שלב אחר שלב עם פתרון בעיות.",
+  "url": "https://run.analyticszone.app/he/getting-started/",
+  "inLanguage": "he",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "Run Analytics",
+    "url": "https://run.analyticszone.app"
+  },
+  "datePublished": "2025-10-08",
+  "dateModified": "2026-03-24",
+  "keywords": ["מדריך Run Analytics", "הדרכת מבחן CRS", "הדרכת אפליקציית שחייה", "איך להשתמש Run Analytics", "מדריך אנליטיקת שחייה"],
+  "about": [
+    {
+      "@type": "Thing",
+      "name": "מדריך Run Analytics"
+    }, 
+  
+    {
+      "@type": "Thing",
+      "name": "הדרכת מבחן CRS"
+    }, 
+  
+    {
+      "@type": "Thing",
+      "name": "הדרכת אפליקציית שחייה"
+    }, 
+  
+    {
+      "@type": "Thing",
+      "name": "איך להשתמש Run Analytics"
+    }, 
+  
+    {
+      "@type": "Thing",
+      "name": "מדריך אנליטיקת שחייה"
+    }
+  ]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "התחלת עבודה עם Run Analytics - מדריך הגדרה מלא | הדרכת מבחן",
+  "description": "מדריך הגדרת Run Analytics מלא. למד כיצד לבצע מבחן CRS, להזין תוצאות, לעקוב אחר אימונים ולהבין מדדי rTSS, CTL/ATL/TSB. הדרכה שלב אחר שלב עם פתרון בעיות.",
+  "author": {
+    "@type": "Person",
+    "name": "AnalyticsZone Team"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Run Analytics",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://run.analyticszone.app/assets/images/logo.png"
+    }
+  },
+  "datePublished": "2025-10-08",
+  "dateModified": "2026-03-24",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://run.analyticszone.app/he/getting-started/"
+  }
+}
+</script><script>
+    (function () {
+      let theme = localStorage.getItem('theme');
+      // Older builds could persist a per-subdomain `theme=light` value without a UI
+      // to keep it consistent across apps. Treat it as stale and fall back to the OS.
+      if (theme === 'light') {
+        try { localStorage.removeItem('theme'); } catch (e) { /* ignore */ }
+        theme = null;
+      }
+
+      if (theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark-mode');
+      }
+    })();
+  </script></head><body><a href="#main-content" class="skip-link">דלג לתוכן</a><header class="site-header"><div class="container"><div class="header-inner"><a href="/he/" class="site-logo"><picture><source srcset="../../assets/images/logo-dark.png" type="image/png"
+                        media="(prefers-color-scheme: dark)"><img src="../../assets/images/logo.png" alt="Run Analytics - Running Analytics App | Critical Running Speed, TSS, CTL/ATL/TSB for iOS" width="56" height="56"></picture><span class="logo-text">Run Analytics</span></a><nav class="nav-primary" id="nav-primary" role="navigation" aria-label="Main navigation"><div class="nav-group-left"><ul><li><a href="/he/" 
+                                aria-current="">
+                                דף הבית
+                            </a></li><li class="has-submenu" ><a href="/he/getting-started/" class="nav-label">למידה</a><ul class="submenu"><li><a href="/he/getting-started/" class="active" 
+                                        aria-current="page">
+                                        מתחילים כאן
+                                    </a></li><li><a href="/he/crs/" 
+                                        aria-current="">
+                                        CRS
+                                    </a></li><li><a href="/he/training-zones/" 
+                                        aria-current="">
+                                        טווחי אימון
+                                    </a></li><li><a href="/he/training-load/" 
+                                        aria-current="">
+                                        עומס אימונים
+                                    </a></li><li><a href="/he/rtss-calculator/" 
+                                        aria-current="">
+                                        מחשבון rTSS
+                                    </a></li></ul></li><li class="has-submenu" ><a href="/he/research/" class="nav-label">מדע</a><ul class="submenu"><li><a href="/he/research/" 
+                                        aria-current="">
+                                        מחקר
+                                    </a></li><li><a href="/he/formulas/" 
+                                        aria-current="">
+                                        נוסחאות
+                                    </a></li><li><a href="/he/efficiency/" 
+                                        aria-current="">
+                                        יעילות
+                                    </a></li><li><a href="/he/stride-mechanics/" 
+                                        aria-current="">
+                                        מכניקת צעדים
+                                    </a></li><li><a href="/he/bibliography/" 
+                                        aria-current="">
+                                        ביבליוגרפיה
+                                    </a></li></ul></li><li><a href="/he/contact/" 
+                                aria-current="">
+                                צור קשר
+                            </a></li></ul><div class="search-container"><svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.35-4.35"></path></svg><input type="search" id="site-search" class="search-input" aria-expanded="false"
+                            aria-haspopup="listbox" aria-autocomplete="list" autocomplete="off" spellcheck="false" /><div id="search-results" class="search-results hidden" role="region" aria-live="polite"></div></div><select class="language-selector" id="language-select" aria-label="בחר שפה"><option value="af" >
+                            Afrikaans
+                        </option><option value="am" >
+                            አማርኛ
+                        </option><option value="ar" >
+                            العربية
+                        </option><option value="bg" >
+                            Български
+                        </option><option value="bn" >
+                            বাংলা
+                        </option><option value="ca" >
+                            Català
+                        </option><option value="cs" >
+                            Čeština
+                        </option><option value="da" >
+                            Dansk
+                        </option><option value="de" >
+                            Deutsch
+                        </option><option value="el" >
+                            Ελληνικά
+                        </option><option value="en" >
+                            English
+                        </option><option value="es" >
+                            Español
+                        </option><option value="et" >
+                            Eesti
+                        </option><option value="fa" >
+                            فارسی
+                        </option><option value="fi" >
+                            Suomi
+                        </option><option value="fr" >
+                            Français
+                        </option><option value="gu" >
+                            ગુજરાતી
+                        </option><option value="ha" >
+                            Hausa
+                        </option><option value="he" selected>
+                            עברית
+                        </option><option value="hi" >
+                            हिन्दी
+                        </option><option value="hr" >
+                            Hrvatski
+                        </option><option value="hu" >
+                            Magyar
+                        </option><option value="id" >
+                            Bahasa Indonesia
+                        </option><option value="is" >
+                            Íslenska
+                        </option><option value="it" >
+                            Italiano
+                        </option><option value="ja" >
+                            日本語
+                        </option><option value="km" >
+                            ភាសាខ្មែរ
+                        </option><option value="kn" >
+                            ಕನ್ನಡ
+                        </option><option value="ko" >
+                            한국어
+                        </option><option value="lt" >
+                            Lietuvių
+                        </option><option value="lv" >
+                            Latviešu
+                        </option><option value="ms" >
+                            Bahasa Melayu
+                        </option><option value="my" >
+                            မြန်မာစာ
+                        </option><option value="nb" >
+                            Norsk Bokmål
+                        </option><option value="nl" >
+                            Nederlands
+                        </option><option value="pl" >
+                            Polski
+                        </option><option value="pt" >
+                            Português
+                        </option><option value="pt-br" >
+                            Português (Brasil)
+                        </option><option value="ro" >
+                            Română
+                        </option><option value="ru" >
+                            Русский
+                        </option><option value="sk" >
+                            Slovenčina
+                        </option><option value="sl" >
+                            Slovenščina
+                        </option><option value="sr" >
+                            Srpski
+                        </option><option value="sv" >
+                            Svenska
+                        </option><option value="sw" >
+                            Kiswahili
+                        </option><option value="ta" >
+                            தமிழ்
+                        </option><option value="te" >
+                            తెలుగు
+                        </option><option value="th" >
+                            ไทย
+                        </option><option value="tl" >
+                            Tagalog
+                        </option><option value="tr" >
+                            Türkçe
+                        </option><option value="uk" >
+                            Українська
+                        </option><option value="ur" >
+                            اردو
+                        </option><option value="vi" >
+                            Tiếng Việt
+                        </option><option value="yo" >
+                            Yorùbá
+                        </option><option value="zh" >
+                            中文
+                        </option></select></div><div class="nav-group-right"><div class="header-app-buttons"><a href="https://apps.apple.com/us/app/run-analytics/id6754524015" class="header-download-btn" target="_blank"
+                            rel="noopener" aria-label="Download on App Store" title="Download on App Store"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="currentColor"><path
+                                    d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z" /></svg></a><a href="https://play.google.com/store/apps/details?id=com.arnohealth.runanalytics" class="header-download-btn" target="_blank"
+                            rel="noopener" aria-label="Get it on Google Play" title="Get it on Google Play"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="currentColor"><path
+                                    d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.92 20.16,13.19L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M16.81,8.88L14.54,11.15L6.05,2.66L16.81,8.88Z" /></svg></a></div><div class="suite-menu-container"><button class="suite-menu-toggle" id="suite-menu-toggle" aria-label="See other apps"
+                            aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg></button><div class="suite-dropdown hidden" id="suite-dropdown"><div class="suite-dropdown-header">Other AnalyticsZone Apps</div><div class="suite-apps-grid"><a href="https://analyticszone.app" class="suite-app-link">AnalyticsZone</a><a href="https://swim.analyticszone.app" class="suite-app-link">Swim Analytics</a><a href="https://bike.analyticszone.app" class="suite-app-link">Bike Analytics</a><a href="https://walk.analyticszone.app" class="suite-app-link">Walk Analytics</a><a href="https://cardio.analyticszone.app" class="suite-app-link">Cardio Analytics</a><a href="https://health.analyticszone.app" class="suite-app-link">Health Analytics</a><a href="https://swimtrainer.analyticszone.app" class="suite-app-link">Swim Trainer</a><a href="https://hike.analyticszone.app" class="suite-app-link">Hike Analytics</a><a href="https://sleep.analyticszone.app" class="suite-app-link">Sleep Analytics</a><a href="https://paceva.analyticszone.app" class="suite-app-link">Paceva Analytics</a></div></div></div></div></nav><button class="menu-toggle" id="menu-toggle" aria-label="תפריט"
+                aria-expanded="false" aria-controls="nav-primary"><span></span><span></span><span></span></button></div></div></header><nav class="breadcrumbs" aria-label="Breadcrumb"><div class="container"><ol><li><a href="/he/">דף הבית</a></li><li><a href="/he/getting-started/">למידה</a></li><li><span aria-current="page">מתחילים כאן</span></li></ol></div></nav><main id="main-content" class="main-content"><section class="page-hero"><div class="container"><h1>תחילת העבודה עם Run Analytics</h1><p class="lead">המדריך המלא שלך למעקב אחר ביצועי ריצה, בדיקות CRS וניתוח עומסי אימונים</p></div></section><section class="section"><div class="container container-narrow"><div class="callout callout-info mb-xl"><h2>ברוכים הבאים לריצה מבוססת נתונים</h2><p>Run Analytics הופך את אימוני הריצה שלך לתובנות מעשיות באמצעות<strong>מהירות ריצה קריטית
+                    (CRS)</strong>,<strong>ציון מתח אימון (rTSS)</strong>, ו<strong>ניהול ביצועים
+                    תרשים (PMC)</strong>מדדים. מדריך זה ייקח אותך מההגדרה הראשונה לעומס אימון מתקדם
+                ניתוח ב-4 שלבים פשוטים.</p></div><h2>התחלה מהירה (5 דקות)</h2><div class="steps-container"><div class="step-card"><div class="step-number">1</div><div class="step-content"><h3>הורד והתקן</h3><p>הורד את Run Analytics מה-App Store והענק הרשאה לגשת ל-Apple Health. האפליקציה
+                        מסנכרן את אימוני הריצה באופן אוטומטי - אין צורך ברישום ידני.</p><a class="btn btn-secondary btn-small mt-sm" href="https://apps.apple.com/us/app/run-analytics/id6754524015" rel="noopener" target="_blank">הורד את האפליקציה →</a></div></div><div class="step-card"><div class="step-number">2</div><div class="step-content"><h3>בצע בדיקת CRS</h3><p>השלם ניסוי זמן של 5K ו-3K כדי לקבוע את מהירות הריצה הקריטית שלך. זה הבסיס של
+                        לא ניתן לחשב את כל המדדים - ללא CRS, rTSS ואזורי אימון.</p><a class="btn btn-secondary btn-small mt-sm" href="#crs-test-guide">פרוטוקולו דה פרובה CRS ↓</a></div></div><div class="step-card"><div class="step-number">3</div><div class="step-content"><h3>הזן את תוצאות CRS</h3><p>הזן את 5K ו-3K פעמים באפליקציה. Run Analytics מחשב את CRS, אזורי קצב ומתאים אישית
+                        כל המדדים לפיזיולוגיה שלך. עדכן כל 6-8 שבועות ככל שהכושר משתפר.</p></div></div><div class="step-card"><div class="step-number">4</div><div class="step-content"><h3>התחל לעקוב אחר אימונים</h3><p>הפעל עם Apple Watch ואפליקציית הבריאות. Run Analytics מייבא אוטומטית אימונים, מחשב
+                        rTSS, מעדכן את CTL/ATL/TSB, ועוקב אחר התקדמות. אין צורך בהזנת נתונים ידנית.</p></div></div></div></div></section><section class="section section-alt" id="crs-test-guide"><div class="container"><h2 class="mb-xl text-center">השלם את פרוטוקול הבדיקה של CRS</h2><div class="grid grid-2"><div class="card"><h3 class="card-title">📋 מה שאתה צריך</h3><div class="card-content"><ul><li><strong>גישה למסלול:</strong>מסלול אתלטיקה 400 מ' או כביש שטוח</li><li><strong>תזמון:</strong>שעון עצר, שעון ריצה או Apple Watch</li><li><strong>זמן חימום:</strong>15-20 דקות לפני הבדיקה</li><li><strong>שחזור:</strong>5-10 דקות בין ניסוי</li><li><strong>מאמץ:</strong>קצב בר-קיימא מקסימלי (לא ספרינט גמור)</li></ul></div></div><div class="card"><h3 class="card-title">⏱️ תנאי יום המבחן</h3><div class="card-content"><ul><li><strong>נח:</strong>אין אימונים קשים 24-48 שעות לפני כן</li><li><strong>לחות:</strong>לחות היטב, אכילה נורמלית</li><li><strong>תנאים:</strong>רוח יבשה וחלשה אידיאלית (הימנע מחום/קור קיצוניים)</li><li><strong>שעה ביום:</strong>כשאתה בדרך כלל מתאמן הכי טוב</li><li><strong>ציוד:</strong>ציוד ריצה רגיל (נעליים, בגדים נוחים)</li></ul></div></div></div><h3 class="mt-3xl">מבחן CRS שלב אחר שלב</h3><div class="timeline"><div class="timeline-item"><div class="timeline-marker">חימום</div><div class="timeline-content"><h4>15-20 דקות</h4><p>ריצה קלה של 400-800 מטר, תרגילים והצטברות מתקדמת. כלול 2-3×50 בקצב הולך וגובר (60%,
+                        75%, 85% מאמץ). מנוחה 2-3 דקות לפני הבדיקה.</p></div></div><div class="timeline-item"><div class="timeline-marker">משפט 1</div><div class="timeline-content"><h4>1200 מ' מאמץ מרבי</h4><p>רוץ 1200 מ' (3 הקפות במסלול של 400 מ') בקצב המהיר ביותר שאתה יכול להחזיק לאורך המרחק המלא.
+                        זה לא ספרינט - צעד בעצמך. שיא זמן ב<strong>mm:ss</strong>פורמט (למשל, 4:30).</p><div class="tip-box mt-sm"><strong>טיפ לקצב:</strong>כוון לפיצולים אפילו של 100 מ'. 200 מ' שניים צריכים להיות ≤ 200 מ' הראשונים
+                        (אידיאל פיצול שלילי).</div></div></div><div class="timeline-item"><div class="timeline-marker">התאוששות</div><div class="timeline-content"><h4>5-10 דקות</h4><p><strong>שלב קריטי:</strong>ריצה קלה או מנוחה מלאה. המתן עד שקצב הלב יורד למטה
+                        120 פעימות לדקה והנשימה התאוששה לחלוטין. התאוששות לא מספקת = CRS לא מדויק.</p></div></div><div class="timeline-item"><div class="timeline-marker">משפט 2</div><div class="timeline-content"><h4>400 מ' מאמץ מקסימלי</h4><p>מאמץ מרבי בר-קיימא למשך 400 מטר (הקפה אחת). זה אמור להרגיש קשה יותר לכל 100 מטר מאשר 1200 מטר.
+                        שיא זמן ב<strong>mm:ss</strong>פורמט (למשל, 1:20).</p><div class="tip-box mt-sm"><strong>בדיקת אימות:</strong>קצב 400 מ' להקפה צריך להיות מהיר משמעותית מ-1200 מ'
+                        קצב להקפה. אם לא, ההתאוששות לא הייתה מספקת או שהקצב כבוי.</div></div></div><div class="timeline-item"><div class="timeline-marker">התקררות</div><div class="timeline-content"><h4>10-15 דקות</h4><p>300-500 מ' ריצה קלה, מתיחה. רשמו את הזמנים שלכם מיד - אל תסמכו על הזיכרון.</p></div></div></div><div class="callout callout-warning mt-xl"><h3>⚠️ טעויות נפוצות בבדיקת CRS</h3><ul><li><strong>יוצא מהר מדי בניסיון ארוך יותר:</strong>תוצאות פיצוץ, CRS לא מדויק. השתמש אפילו
+                    קצב.</li><li><strong>התאוששות לא מספקת בין ניסויים:</strong>עייפות מאטה את הניסיון השני, מה שהופך את CRS
+                    מהיר באופן מלאכותי → אזורים מאומנים יתר על המידה.</li><li><strong>שטח לא עקבי:</strong>שימוש בגבעות לניסוי אחד ושטוח לשנייה הטיה
+                    חישובים. השתמש תמיד בקרקע שטוחה.</li><li><strong>בדיקה כאשר עייפות:</strong>עומס אימונים כבד 24-48 שעות לפני = תוצאות מדוכאות. מבחן
+                    כאשר טרי.</li><li><strong>לא מקליט מיד:</strong>הזיכרון אינו אמין. רשום זמנים לפני ההתקררות.</li></ul></div></div></section><section class="section"><div class="container container-narrow"><h2>הזנת תוצאות CRS ב-Run Analytics</h2><div class="screenshot-guide"><div class="step-item"><h3>שלב 1: פתח את הגדרות CRS</h3><p>באפליקציית Run Analytics, עבור אל<strong>הגדרות ← מהירות ריצה קריטית</strong>. הקש על "בצע CRS Test" או
+                    "עדכון CRS".</p></div><div class="step-item"><h3>שלב 2: זמני קלט</h3><p>הזן את זמן 1200 מטר שלך (למשל,<code>4:30</code>) וזמן 400 מ' (למשל,<code>1:20</code>). השתמש ב-
+                    פורמט מדויק מוצג. הקש על "חשב".</p></div><div class="step-item"><h3>שלב 3: סקור את התוצאות</h3><p>האפליקציה מציגה:</p><ul><li><strong>מהירות CRS:</strong>4.00 מ' לשנייה</li><li><strong>קצב CRS:</strong>4:10 לק"מ</li><li><strong>אזורי אימון:</strong>6 אזורים מותאמים אישית (אזור 1-6)</li><li><strong>קו בסיס rTSS:</strong>כעת מופעל עבור כל האימונים</li></ul></div><div class="step-item"><h3>שלב 4: שמירה וסנכרון</h3><p>הקש על "שמור CRS". האפליקציה מיד:</p><ul><li>מחשב מחדש את אזורי האימון</li><li>מעדכן רטרואקטיבית את rTSS עבור 90 הימים האחרונים</li><li>התאמה של חישובי CTL/ATL/TSB</li><li>מאפשר ניתוח אימון מבוסס אזור</li></ul></div></div><div class="callout callout-tip mt-xl"><h3>💡 טיפ מקצועי: בדיקת CRS היסטורית</h3><p>אם אתה כבר מכיר את ה-CRS שלך מבדיקות קודמות, אתה יכול להזין את הזמנים האלה ישירות. עם זאת, עבור רוב
+                תוצאות מדויקות, בצע בדיקה חדשה כל 6-8 שבועות. CRS שלך אמור להשתפר (להיות מהיר יותר) כאימון
+                מתקדם.</p></div></div></section><section class="section section-alt"><div class="container"><h2 class="mb-xl text-center">הבנת המדדים שלך</h2><div class="grid grid-2"><div class="card"><h3 class="card-title">מהירות ריצה קריטית (CRS)</h3><div class="card-content"><p><strong>מה זה:</strong>קצב הסף האירובי שלך - המהירות המהירה ביותר שאתה יכול לעמוד בה
+                        ~60 דקות ללא תשישות.</p><p><strong>מה זה אומר:</strong>CRS = 4:10/ק"מ אומר שאתה יכול להחזיק בקצב של 4:10 עבור מתמשך
+                        מאמצי סף.</p><p><strong>כיצד להשתמש:</strong>בסיס לכל אזורי האימון וחישוב rTSS. עדכן כל 6-8
+                        שבועות.</p><a class="btn btn-secondary btn-small mt-md" href="/he/crs/">למד CRS →</a></div></div><div class="card"><h3 class="card-title">אזורי אימון</h3><div class="card-content"><p><strong>מה הם:</strong>6 טווחי אינטנסיביות המבוססים על ה-CRS שלך, מהתאוששות (אזור 1) ועד
+                        אנאירובי (אזור 6).</p><p><strong>למה הם מתכוונים:</strong>כל אזור מכוון להתאמות פיזיולוגיות ספציפיות (אירובי
+                        בסיס, סף, VO₂max).</p><p><strong>כיצד להשתמש:</strong>עקוב אחר המרשמים של האזור לאימון מובנה. מופעי אפליקציה
+                        זמן-באזור עבור כל אימון.</p><a class="btn btn-secondary btn-small mt-md" href="/he/training-zones/">אזורי אימון ←</a></div></div><div class="card"><h3 class="card-title">ציון מתח אימון ריצה (rTSS)</h3><div class="card-content"><p><strong>מה זה:</strong>מתח אימון כמותי המשלב עוצמה ומשך זמן. שעה אחת
+                        בקצב CRS = 100 rTSS.</p><p><strong>מה זה אומר:</strong>rTSS 50 = התאוששות קלה, rTSS 100 = בינונית, rTSS 200+ = מאוד
+                        הפעלה קשה.</p><p><strong>כיצד להשתמש:</strong>עקוב אחר rTSS יומי/שבועי לניהול עומס האימונים. כוון ל-5-10 rTSS
+                        עלייה לשבוע מקסימום.</p><a class="btn btn-secondary btn-small mt-md" href="/he/training-load/">מדריך rTSS ←</a></div></div><div class="card"><h3 class="card-title">CTL / ATL / TSB</h3><div class="card-content"><p><strong>מה הם:</strong></p><ul><li><strong>CTL:</strong>עומס אימון כרוני (כושר) - rTSS ממוצע ל-42 יום</li><li><strong>ATL:</strong>עומס אימון אקוטי (עייפות) - rTSS ממוצע למשך 7 ימים</li><li><strong>TSB:</strong>אימון איזון מתח (צורה) = CTL - ATL</li></ul><p><strong>כיצד להשתמש:</strong>חיובי TSB = טרי/מתחדד, שלילי TSB = עייף. מירוץ כאשר TSB
+                        = +5 עד +25.</p></div></div></div><div class="callout mt-xl"><h3>📊 יעדי השבוע הראשון שלך</h3><p>לאחר כניסה ל-CRS והשלמת 3-5 אימונים:</p><ul><li><strong>בדוק את ערכי rTSS:</strong>אשר שהם תואמים את תפיסת המאמץ (קל ~50, בינוני ~100,
+                    קשה ~150+)</li><li><strong>סקירת התפלגות אזור:</strong>האם אתה מבלה 60-70% באזור 2 (בסיס אירובי)?</li><li><strong>קבע את קו הבסיס CTL:</strong>ה-rTSS הממוצע של השבוע הראשון שלך הופך לכושר ראשוני
+                    קו בסיס</li><li><strong>זיהוי דפוסים:</strong>אילו אימונים מייצרים את ה-rTSS הגבוה ביותר? האם אתה מתאושש
+                    בצורה מספקת?</li></ul></div></div></section><section class="section"><div class="container container-narrow"><h2>מסע משתמש טיפוסי (8 השבועות הראשונים)</h2><div class="timeline"><div class="timeline-item"><div class="timeline-content"><h3>שבוע 1-2: קבע קו בסיס</h3><ul><li>בצע בדיקת CRS והזן תוצאות</li><li>השלם 3-5 אימוני אימון רגילים</li><li>שים לב לערכי rTSS ופיזור האזורים</li><li>קבע CTL ראשוני (רמת כושר)</li><li><strong>מטרה:</strong>הבן מדדים, עדיין אין שינויים</li></ul></div></div><div class="timeline-item"><div class="timeline-content"><h3>שבוע 3-4: החל אזורים</h3><ul><li>השתמש באזורי CRS בתכנון האימון</li><li>הפעל בכוונה את אזור 2 עבור סטים אירוביים</li><li>עקוב אחר סכומי rTSS שבועיים (שאפו לעקביות)</li><li>צג TSB (צריך להיות מעט שלילי = אימון)</li><li><strong>מטרה:</strong>להתאמן לפי אזורים, לא להרגיש</li></ul></div></div><div class="timeline-item"><div class="timeline-content"><h3>שבוע 5-6: עומס יתר מתקדם</h3><ul><li>הגדל את rTSS השבועי ב-5-10% מהבסיס</li><li>הוסף מפגש סף אחד (אזור 4) בשבוע</li><li>CTL אמור לעלות בהדרגה (שיפור הכושר)</li><li>ATL עשוי לעלות בשבועות קשים (רגיל)</li><li><strong>מטרה:</strong>התקדמות כושר מבוקרת</li></ul></div></div><div class="timeline-item"><div class="timeline-content"><h3>שבוע 7-8: בדיקה מחדש והתאמת</h3><ul><li>בצע מבחן CRS שני (צריך להיות מהיר יותר)</li><li>עדכון אזורים באפליקציה (הקצב משתפר)</li><li>השווה CTL שבוע 1 לעומת שבוע 8 (צריך להיות +10-20)</li><li>התקדמות סקירה: האם הזמנים צונחים? מרגיש יותר קל?</li><li><strong>מטרה:</strong>אימות יעילות האימון</li></ul></div></div></div><div class="callout callout-success mt-xl"><h3>✅ מדדי הצלחה</h3><p>לאחר 8 שבועות של אימון מובנה עם Run Analytics, אתה אמור לראות:</p><ul><li><strong>שיפור CRS:</strong>קצב CRS מהיר ב-1-3% (למשל, 1:49 → 1:47)</li><li><strong>עלייה של CTL:</strong>+15-25 נקודות (למשל, 30 → 50 CTL)</li><li><strong>עקבי rTSS:</strong>סכומים שבועיים בתוך 10-15% שונות</li><li><strong>קצב טוב יותר:</strong>פיצולים אחידים יותר, כיול מאמץ טוב יותר</li><li><strong>התאוששות משופרת:</strong>TSB מחזור באופן צפוי (-10 עד +5)</li></ul></div></div></section><section class="section section-alt"><div class="container container-narrow"><h2>פתרון בעיות ושאלות נפוצות</h2><div class="faq-item"><h3>ה-rTSS שלי נראה גבוה/נמוך מדי למאמץ אימון</h3><p><strong>סיבה:</strong>CRS מיושן או לא מדויק.</p><p><strong>פתרון:</strong>בדוק מחדש את CRS. אם בדקתם כשהם עייפים או קצבתם בצורה גרועה, CRS יטעה. א
+                בדיקת CRS נכונה היא קריטית עבור כל המדדים במורד הזרם.</p></div><div class="faq-item"><h3>האפליקציה מציגה "לא מוגדר CRS"</h3><p><strong>סיבה:</strong>בדיקת CRS לא הושלמה או לא נשמרה.</p><p><strong>פתרון:</strong>עבור אל הגדרות ← מהירות ריצה קריטית ← בצע בדיקה. הזן גם 5K וגם 3K
+                פעמים ולאחר מכן הקש על שמור.</p></div><div class="faq-item"><h3>אימונים לא מסתנכרנים מ-Apple Watch</h3><p><strong>סיבה:</strong>לא ניתנו הרשאות לאפליקציית בריאות או אימון לא מסווג כ"ריצה".</p><p><strong>פתרון:</strong>בדוק הגדרות ← פרטיות ← בריאות ← Run Analytics ← אפשר קריאה לאימונים.
+                ודא שסוג האימון של Apple Watch הוא "ריצה חיצונית", "ריצה פנימית" או "ריצת מסלול".</p></div><div class="faq-item"><h3>CTL לא עולה למרות אימון עקבי</h3><p><strong>סיבה:</strong>rTSS כולל תדר נמוך מדי או לא עקבי.</p><p><strong>פתרון:</strong>CTL הוא ממוצע משוקלל אקספוננציאלי של 42 יום. זה עולה לאט. הגדל מדי שבוע
+                rTSS ב-5-10%, ושמור על 4+ אימונים בשבוע לצמיחה עקבית של CTL.</p></div><div class="faq-item"><h3>באיזו תדירות עלי לבדוק מחדש את CRS?</h3><p><strong>המלצה:</strong>כל 6-8 שבועות בשלבי בסיס/בנייה. בדיקה חוזרת לאחר מחלה, פציעה,
+                הפסקה ארוכה, או כאשר אזורים מרגישים באופן עקבי קל/קשה מדי.</p></div><div class="faq-item"><h3>האם אני יכול להשתמש ב-Run Analytics לריצת שבילים?</h3><p><strong>כן, עם הגבלות:</strong>CRS נבדק בדרך כלל על קרקע שטוחה. לריצת שבילים עם
+                שינוי גובה משמעותי, ניתן לזלזל ב-rTSS אם רק משתמשים בקצב. אנחנו עובדים על
+                שילוב קצב מותאם ציונים (GAP) עבור עדכונים עתידיים.</p></div></div></section><section class="section"><div class="container container-narrow"><h2>השלבים הבאים</h2><div class="grid grid-3"><div class="card"><h3 class="card-title">למד אזורי אימון</h3><div class="card-content"><p>הבן כיצד להתאמן באזור 2 (בסיס אירובי), אזור 4 (סף), אזור 5 (VO₂max) ואזור 6
+                        (אנאירובי) עבור
+                        התאמות ספציפיות.</p><a class="btn btn-secondary btn-small mt-md" href="/he/training-zones/">אזורי אימון ←</a></div></div><div class="card"><h3 class="card-title">חשב rTSS</h3><div class="card-content"><p>הבן כיצד להתאמן באזור 2 (בסיס אירובי), אזור 4 (סף), אזור 5 (VO₂max) ואזור 6
+                        (אנאירובי) עבור
+                        התאמות ספציפיות.</p><a class="btn btn-secondary btn-small mt-md" href="/he/rtss-calculator/">מחשבון rTSS
+                        →</a></div></div><div class="card"><h3 class="card-title">צלול עמוק יותר לתוך מדדים</h3><div class="card-content"><p>חקור את המדע מאחורי CRS, rTSS, CTL/ATL/TSB עם הפניות מחקר שנבדקו עמיתים.</p><a class="btn btn-secondary btn-small mt-md" href="/he/research/">מחקר →</a></div></div></div><div class="mt-xl text-center"><p class="mb-md"><strong>מוכן להתחיל במעקב?</strong></p><a class="btn btn-primary btn-large" href="https://apps.apple.com/us/app/run-analytics/id6754524015" rel="noopener" target="_blank">הורד את Run Analytics בחינם</a><p class="mt-sm text-secondary">ניסיון חינם למשך 7 ימים • אין צורך בכרטיס אשראי • iOS 16+</p></div></div></section><section class="eeat-author bg-light divider-top-lg divider-bottom-lg" aria-label="Author and Reviewer Information"><div class="container container-narrow"><div class="eeat-card" style="display: flex; gap: 1.5rem; align-items: center; padding: 1.5rem; background: var(--color-bg-alt, #f8f9fa); border-radius: 8px; border: 1px solid var(--color-border, #e9ecef); margin-top: 3rem; margin-bottom: 2rem;"><div class="eeat-avatar" style="font-size: 2.5rem; line-height: 1; flex-shrink: 0;" aria-hidden="true">👨‍🔬</div><div class="eeat-details"><h3 style="margin: 0 0 0.5rem 0; font-size: 1.125rem; font-weight: 600;">
+          Expertly Reviewed by 
+          <span itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">AnalyticsZone Team</span></span></h3><p style="margin: 0 0 0.5rem 0; font-size: 0.95rem; color: var(--color-body-text, #4a5568); line-height: 1.5;">
+          This content has been written and reviewed by a sports data metrics expert to ensure technical accuracy and adherence to the latest sports science methodologies.
+        </p></div></div></div></section><section class="ai-citation-block divider-top-xl" data-ai-ready="true" data-ai-page="getting-started"><div class="container ai-citation-shell"><h2 class="ai-citation-title">התחלת עבודה עם Run Analytics - מדריך הגדרה מלא | הדרכת מבחן</h2><p class="ai-citation-answer">מדריך הגדרת Run Analytics מלא. למד כיצד לבצע מבחן CRS, להזין תוצאות, לעקוב אחר אימונים ולהבין מדדי rTSS, CTL/ATL/TSB. הדרכה שלב אחר שלב עם פתרון בעיות.</p><ul class="ai-citation-facts" role="list"><li class="ai-citation-fact"><span class="ai-citation-icon" aria-hidden="true">📅</span><span>2026-03-24</span></li><li class="ai-citation-fact ai-citation-keywords"><span class="ai-citation-icon" aria-hidden="true">🏷️</span><span>מדריך Run Analytics · הדרכת מבחן CRS · הדרכת אפליקציית שחייה · איך להשתמש Run Analytics · מדריך אנליטיקת שחייה</span></li><li class="ai-citation-fact"><span class="ai-citation-icon" aria-hidden="true">🔬</span><a href="../../he/bibliography/">
+          
+          ביבליוגרפיה
+          
+        </a></li></ul><nav class="ai-citation-links" aria-label="התחלת עבודה עם Run Analytics - מדריך הגדרה מלא | הדרכת מבחן"><a class="ai-related-link" href="../../he/research/">
+        מחקר
+      </a><a class="ai-related-link" href="../../he/contact/">
+        צור קשר
+      </a></nav></div></section></main><footer class="site-footer"><div class="container"><div class="footer-top"><div class="footer-brand-section"><h2>Run Analytics</h2><p>Track Critical Running Speed, Training Stress Score, and performance metrics with Run Analytics. Science-based iOS app for runners, triathletes &amp; coaches. 7-day free trial.</p></div><div class="footer-download"><h3 class="footer-heading">הורדה</h3><div class="footer-badges"><a href="https://apps.apple.com/us/app/run-analytics/id6754524015" target="_blank" rel="noopener"
+                        aria-label="הורדה ב-App Store"><img src="../../assets/images/badge-app-store.svg"
+                            alt="הורדה ב-App Store" width="135"
+                            height="40" loading="lazy"></a><a href="https://play.google.com/store/apps/details?id=com.arnohealth.runanalytics" target="_blank" rel="noopener"
+                        aria-label="הורדה ב-Google Play"><img src="../../assets/images/badge-google-play.svg"
+                            alt="הורדה ב-Google Play" width="135"
+                            height="40" loading="lazy"></a></div></div></div><div class="footer-languages"><h3 class="footer-heading">זמין ב-</h3><div class="lang-grid"><a href="/af/" class="lang-link"
+                    hreflang="af" >
+                    Afrikaans
+                </a><a href="/am/" class="lang-link"
+                    hreflang="am" >
+                    አማርኛ
+                </a><a href="/ar/" class="lang-link"
+                    hreflang="ar" dir="rtl" >
+                    العربية
+                </a><a href="/bg/" class="lang-link"
+                    hreflang="bg" >
+                    Български
+                </a><a href="/bn/" class="lang-link"
+                    hreflang="bn" >
+                    বাংলা
+                </a><a href="/ca/" class="lang-link"
+                    hreflang="ca" >
+                    Català
+                </a><a href="/cs/" class="lang-link"
+                    hreflang="cs" >
+                    Čeština
+                </a><a href="/da/" class="lang-link"
+                    hreflang="da" >
+                    Dansk
+                </a><a href="/de/" class="lang-link"
+                    hreflang="de" >
+                    Deutsch
+                </a><a href="/el/" class="lang-link"
+                    hreflang="el" >
+                    Ελληνικά
+                </a><a href="/en/" class="lang-link"
+                    hreflang="en" >
+                    English
+                </a><a href="/es/" class="lang-link"
+                    hreflang="es" >
+                    Español
+                </a><a href="/et/" class="lang-link"
+                    hreflang="et" >
+                    Eesti
+                </a><a href="/fa/" class="lang-link"
+                    hreflang="fa" dir="rtl" >
+                    فارسی
+                </a><a href="/fi/" class="lang-link"
+                    hreflang="fi" >
+                    Suomi
+                </a><a href="/fr/" class="lang-link"
+                    hreflang="fr" >
+                    Français
+                </a><a href="/gu/" class="lang-link"
+                    hreflang="gu" >
+                    ગુજરાતી
+                </a><a href="/ha/" class="lang-link"
+                    hreflang="ha" >
+                    Hausa
+                </a><a href="/he/" class="lang-link active"
+                    hreflang="he" dir="rtl" >
+                    עברית
+                </a><a href="/hi/" class="lang-link"
+                    hreflang="hi" >
+                    हिन्दी
+                </a><a href="/hr/" class="lang-link"
+                    hreflang="hr" >
+                    Hrvatski
+                </a><a href="/hu/" class="lang-link"
+                    hreflang="hu" >
+                    Magyar
+                </a><a href="/id/" class="lang-link"
+                    hreflang="id" >
+                    Bahasa Indonesia
+                </a><a href="/is/" class="lang-link"
+                    hreflang="is" >
+                    Íslenska
+                </a><a href="/it/" class="lang-link"
+                    hreflang="it" >
+                    Italiano
+                </a><a href="/ja/" class="lang-link"
+                    hreflang="ja" >
+                    日本語
+                </a><a href="/km/" class="lang-link"
+                    hreflang="km" >
+                    ភាសាខ្មែរ
+                </a><a href="/kn/" class="lang-link"
+                    hreflang="kn" >
+                    ಕನ್ನಡ
+                </a><a href="/ko/" class="lang-link"
+                    hreflang="ko" >
+                    한국어
+                </a><a href="/lt/" class="lang-link"
+                    hreflang="lt" >
+                    Lietuvių
+                </a><a href="/lv/" class="lang-link"
+                    hreflang="lv" >
+                    Latviešu
+                </a><a href="/ms/" class="lang-link"
+                    hreflang="ms" >
+                    Bahasa Melayu
+                </a><a href="/my/" class="lang-link"
+                    hreflang="my" >
+                    မြန်မာစာ
+                </a><a href="/nb/" class="lang-link"
+                    hreflang="nb" >
+                    Norsk Bokmål
+                </a><a href="/nl/" class="lang-link"
+                    hreflang="nl" >
+                    Nederlands
+                </a><a href="/pl/" class="lang-link"
+                    hreflang="pl" >
+                    Polski
+                </a><a href="/pt/" class="lang-link"
+                    hreflang="pt" >
+                    Português
+                </a><a href="/pt-br/" class="lang-link"
+                    hreflang="pt-br" >
+                    Português (Brasil)
+                </a><a href="/ro/" class="lang-link"
+                    hreflang="ro" >
+                    Română
+                </a><a href="/ru/" class="lang-link"
+                    hreflang="ru" >
+                    Русский
+                </a><a href="/sk/" class="lang-link"
+                    hreflang="sk" >
+                    Slovenčina
+                </a><a href="/sl/" class="lang-link"
+                    hreflang="sl" >
+                    Slovenščina
+                </a><a href="/sr/" class="lang-link"
+                    hreflang="sr" >
+                    Srpski
+                </a><a href="/sv/" class="lang-link"
+                    hreflang="sv" >
+                    Svenska
+                </a><a href="/sw/" class="lang-link"
+                    hreflang="sw" >
+                    Kiswahili
+                </a><a href="/ta/" class="lang-link"
+                    hreflang="ta" >
+                    தமிழ்
+                </a><a href="/te/" class="lang-link"
+                    hreflang="te" >
+                    తెలుగు
+                </a><a href="/th/" class="lang-link"
+                    hreflang="th" >
+                    ไทย
+                </a><a href="/tl/" class="lang-link"
+                    hreflang="tl" >
+                    Tagalog
+                </a><a href="/tr/" class="lang-link"
+                    hreflang="tr" >
+                    Türkçe
+                </a><a href="/uk/" class="lang-link"
+                    hreflang="uk" >
+                    Українська
+                </a><a href="/ur/" class="lang-link"
+                    hreflang="ur" dir="rtl" >
+                    اردو
+                </a><a href="/vi/" class="lang-link"
+                    hreflang="vi" >
+                    Tiếng Việt
+                </a><a href="/yo/" class="lang-link"
+                    hreflang="yo" >
+                    Yorùbá
+                </a><a href="/zh/" class="lang-link"
+                    hreflang="zh" >
+                    中文
+                </a></div></div><div class="footer-divider"></div><div class="footer-bottom"><p class="copyright">
+                &copy; 2026 Run Analytics. כל הזכויות שמורות
+            </p><ul class="footer-legal"><li><a href="/he/privacy/">פרטיות</a></li><li><a href="/he/terms/">תנאים</a></li></ul></div></div></footer><div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="Cookie consent" aria-live="polite"><div class="cookie-banner-content"><div><p>אתר זה משתמש בעוגיות כדי לשפר את החוויה שלך.</p><a href="/he/privacy/" class="text-sm">קרא עוד</a></div><div class="cookie-banner-actions"><button id="cookie-decline" class="btn btn-secondary btn-small">סירוב</button><button id="cookie-accept" class="btn btn-primary btn-small">אישור</button></div></div></div><script src="../../assets/js/core.min.js?v=1c7ace58" defer></script><script src="../../assets/js/search.min.js?v=1c7ace58" defer></script><script src="../../assets/js/analytics.min.js" data-ga-id="G-Y138VB4523" defer></script><script>if ('serviceWorker' in navigator) { navigator.serviceWorker.register('../../sw.js') }</script></body></html>

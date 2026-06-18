@@ -1,0 +1,910 @@
+<!DOCTYPE html><html lang="nl" dir="ltr"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=optional"
+    rel="stylesheet"><title>Hardlooptrainingsbelasting: rTSS, CTL, ATL en TSB Uitleg</title><meta name="description" content="Leer hoe u rTSS, CTL, ATL en TSB kunt gebruiken om hardloopvermoeidheid, conditie en taper-timing bij te houden met realistische CRS en trainingszones."><meta name="author" content="AnalyticsZone Team"><meta name="keywords" content="trainingsbelasting lopen, rTSS, CTL ATL TSB actief, hardloopvermoeidheid en conditie, lopende tapse timing, CRS trainingsbelasting"><link rel="canonical" href="https://run.analyticszone.app/nl/training-load/"><meta property="article:published_time" content="2025-01-15T10:00:00Z"><meta property="article:modified_time" content="2026-04-02T14:30:00Z"><meta property="article:author" content="AnalyticsZone Team"><meta property="og:type" content="article"><meta property="og:url" content="https://run.analyticszone.app/nl/training-load/"><meta property="og:title" content="Hardlooptrainingsbelasting: rTSS, CTL, ATL en TSB Uitleg"><meta property="og:description" content="Leer hoe u rTSS, CTL, ATL en TSB kunt gebruiken om hardloopvermoeidheid, conditie en taper-timing bij te houden met realistische CRS en trainingszones."><meta property="og:image" content="https://run.analyticszone.app/assets/images/og-image.svg"><meta property="og:locale" content="nl_NL"><meta property="og:site_name" content="Run Analytics"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:url" content="https://run.analyticszone.app/nl/training-load/"><meta name="twitter:title" content="Hardlooptrainingsbelasting: rTSS, CTL, ATL en TSB Uitleg"><meta name="twitter:description" content="Leer hoe u rTSS, CTL, ATL en TSB kunt gebruiken om hardloopvermoeidheid, conditie en taper-timing bij te houden met realistische CRS en trainingszones."><meta name="twitter:image" content="https://run.analyticszone.app/assets/images/og-image.svg"><meta name="twitter:site" content="@runanalytics"><meta name="twitter:creator" content="@runanalytics"><link rel="alternate" hreflang="ar"
+    href="https://run.analyticszone.app/ar/training-load/"><link rel="alternate" hreflang="de"
+    href="https://run.analyticszone.app/de/training-load/"><link rel="alternate" hreflang="en"
+    href="https://run.analyticszone.app/en/training-load/"><link rel="alternate" hreflang="es"
+    href="https://run.analyticszone.app/es/training-load/"><link rel="alternate" hreflang="fr"
+    href="https://run.analyticszone.app/fr/training-load/"><link rel="alternate" hreflang="hi"
+    href="https://run.analyticszone.app/hi/training-load/"><link rel="alternate" hreflang="id"
+    href="https://run.analyticszone.app/id/training-load/"><link rel="alternate" hreflang="it"
+    href="https://run.analyticszone.app/it/training-load/"><link rel="alternate" hreflang="ja"
+    href="https://run.analyticszone.app/ja/training-load/"><link rel="alternate" hreflang="ko"
+    href="https://run.analyticszone.app/ko/training-load/"><link rel="alternate" hreflang="nl"
+    href="https://run.analyticszone.app/nl/training-load/"><link rel="alternate" hreflang="pl"
+    href="https://run.analyticszone.app/pl/training-load/"><link rel="alternate" hreflang="pt"
+    href="https://run.analyticszone.app/pt/training-load/"><link rel="alternate" hreflang="pt-br"
+    href="https://run.analyticszone.app/pt-br/training-load/"><link rel="alternate" hreflang="ru"
+    href="https://run.analyticszone.app/ru/training-load/"><link rel="alternate" hreflang="sv"
+    href="https://run.analyticszone.app/sv/training-load/"><link rel="alternate" hreflang="tr"
+    href="https://run.analyticszone.app/tr/training-load/"><link rel="alternate" hreflang="zh"
+    href="https://run.analyticszone.app/zh/training-load/"><link rel="alternate" hreflang="x-default"
+    href="https://run.analyticszone.app/en/training-load/"><link rel="icon" type="image/png" sizes="32x32" href="../../assets/images/icons/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="../../assets/images/icons/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="../../assets/images/icons/apple-touch-icon.png"><link rel="manifest" href="../../manifest.json"><meta name="theme-color" content="#2563EB"><meta name="robots" content="index, follow"><meta name="apple-itunes-app" content="app-id=6754524015"><style>
+/* Critical CSS - Above the fold styles for fast LCP */
+:root {
+  --color-primary: #0066CC;
+  --color-text: #1a1a1a;
+  --color-text-muted: #666;
+  --color-bg: #ffffff;
+  --color-bg-alt: #f8f9fa;
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+}
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  color: var(--color-text);
+  background: var(--color-bg);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Skip link - Accessibility */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--color-primary);
+  color: #fff;
+  padding: 8px 16px;
+  z-index: 1000;
+  text-decoration: none;
+}
+.skip-link:focus {
+  top: 0;
+}
+
+/* Header - Critical for LCP */
+.site-header {
+  background: var(--color-bg);
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0.75rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.site-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: var(--color-text);
+  font-weight: 600;
+  font-size: 1.125rem;
+}
+
+.site-logo img, .site-logo svg {
+  width: 32px;
+  height: 32px;
+}
+
+/* Navigation */
+.main-nav {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .main-nav {
+    display: flex;
+    gap: 1.5rem;
+  }
+  .main-nav a {
+    color: var(--color-text);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9375rem;
+    transition: color 0.2s;
+  }
+  .main-nav a:hover {
+    color: var(--color-primary);
+  }
+}
+
+/* Mobile menu button */
+.menu-toggle {
+  display: flex;
+  background: none;
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .menu-toggle {
+    display: none;
+  }
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Main content */
+main.main-content {
+  flex: 1;
+}
+
+/* Hero section - Critical for LCP */
+.hero {
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .hero {
+    padding: 4rem 2rem;
+  }
+}
+
+.hero h1 {
+  font-size: clamp(1.75rem, 5vw, 3rem);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  color: var(--color-text);
+}
+
+.hero .lead, .hero p {
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  color: var(--color-text-muted);
+  max-width: 700px;
+  margin: 0 auto 1.5rem;
+}
+
+/* Buttons - Critical for CTA */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: var(--radius-md);
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-primary {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: #0052a3;
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+}
+
+.btn-large {
+  padding: 1rem 2rem;
+  font-size: 1.125rem;
+}
+
+/* Utility classes */
+.hidden { display: none !important; }
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Images - prevent CLS with aspect-ratio */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+img[width][height] {
+  aspect-ratio: attr(width) / attr(height);
+}
+
+.lazy-image {
+  background: var(--color-bg-alt);
+  transition: opacity 0.3s;
+}
+
+.lazy-image:not(.loaded) {
+  opacity: 0;
+}
+
+.lazy-image.loaded {
+  opacity: 1;
+}
+
+/* App badges - fixed dimensions to prevent CLS */
+.app-badge img {
+  width: 140px;
+  height: 42px;
+}
+
+/* Logo - fixed dimensions */
+.site-logo img {
+  width: 32px;
+  height: 32px;
+}
+
+/* Reduce motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+</style><link rel="preconnect" href="https://www.googletagmanager.com"><link rel="dns-prefetch" href="https://www.googletagmanager.com"><link rel="stylesheet" href="../../assets/css/main.min.css?v=1c7ace58"><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Run Analytics",
+  "url": "https://run.analyticszone.app",
+  "logo": "https://run.analyticszone.app/assets/images/logo.png",
+  "description": "Track Critical Running Speed, Training Stress Score, and performance metrics with Run Analytics. Science-based iOS app for runners, triathletes &amp; coaches. 7-day free trial.",
+  
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "Customer Support",
+    "email": "analyticszone+run@onmedic.org"
+  },
+  
+  "sameAs": [
+    
+    
+      
+    
+    
+      
+    
+    
+      
+    
+    
+    "https://twitter.com/runanalytics",
+    
+    "https://apps.apple.com/us/app/run-analytics/id6754524015",
+    
+    "https://play.google.com/store/apps/details?id=com.arnohealth.runanalytics"
+    
+  ]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Run Analytics",
+  "url": "https://run.analyticszone.app",
+  "description": "Track Critical Running Speed, Training Stress Score, and performance metrics with Run Analytics. Science-based iOS app for runners, triathletes &amp; coaches. 7-day free trial.",
+  "inLanguage": "nl"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Run Analytics",
+  "description": "Track Critical Running Speed, Training Stress Score, and performance metrics with Run Analytics. Science-based iOS app for runners, triathletes &amp; coaches. 7-day free trial.",
+  "url": "https://run.analyticszone.app",
+  "applicationCategory": ["HealthApplication", "FitnessApplication"],
+  "operatingSystem": "iOS, Android",
+  "author": {
+    "@type": "Organization",
+    "name": "AnalyticsZone Team"
+  },
+  "downloadUrl": "https://apps.apple.com/us/app/run-analytics/id6754524015"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Start",
+      "item": "https://run.analyticszone.app/nl/"
+    },
+    
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Leren",
+      "item": "https://run.analyticszone.app/nl/getting-started/"
+    },
+    
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Trainingsbelasting",
+      "item": "https://run.analyticszone.app/nl/training-load/"
+    }
+    
+  ]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Hardlooptrainingsbelasting: rTSS, CTL, ATL en TSB Uitleg",
+  "description": "Leer hoe u rTSS, CTL, ATL en TSB kunt gebruiken om hardloopvermoeidheid, conditie en taper-timing bij te houden met realistische CRS en trainingszones.",
+  "url": "https://run.analyticszone.app/nl/training-load/",
+  "inLanguage": "nl",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "Run Analytics",
+    "url": "https://run.analyticszone.app"
+  },
+  "datePublished": "2025-01-15",
+  "dateModified": "2026-04-02",
+  "keywords": ["trainingsbelasting lopen", "rTSS", "CTL ATL TSB actief", "hardloopvermoeidheid en conditie", "lopende tapse timing", "CRS trainingsbelasting"],
+  "about": [
+    {
+      "@type": "Thing",
+      "name": "trainingsbelasting lopen"
+    }, 
+  
+    {
+      "@type": "Thing",
+      "name": "rTSS"
+    }, 
+  
+    {
+      "@type": "Thing",
+      "name": "CTL ATL TSB actief"
+    }, 
+  
+    {
+      "@type": "Thing",
+      "name": "hardloopvermoeidheid en conditie"
+    }, 
+  
+    {
+      "@type": "Thing",
+      "name": "lopende tapse timing"
+    }, 
+  
+    {
+      "@type": "Thing",
+      "name": "CRS trainingsbelasting"
+    }
+  ]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Hardlooptrainingsbelasting: rTSS, CTL, ATL en TSB Uitleg",
+  "description": "Leer hoe u rTSS, CTL, ATL en TSB kunt gebruiken om hardloopvermoeidheid, conditie en taper-timing bij te houden met realistische CRS en trainingszones.",
+  "author": {
+    "@type": "Person",
+    "name": "AnalyticsZone Team"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Run Analytics",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://run.analyticszone.app/assets/images/logo.png"
+    }
+  },
+  "datePublished": "2025-01-15",
+  "dateModified": "2026-04-02",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://run.analyticszone.app/nl/training-load/"
+  }
+}
+</script><script>
+    (function () {
+      let theme = localStorage.getItem('theme');
+      // Older builds could persist a per-subdomain `theme=light` value without a UI
+      // to keep it consistent across apps. Treat it as stale and fall back to the OS.
+      if (theme === 'light') {
+        try { localStorage.removeItem('theme'); } catch (e) { /* ignore */ }
+        theme = null;
+      }
+
+      if (theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark-mode');
+      }
+    })();
+  </script></head><body><a href="#main-content" class="skip-link">Spring naar inhoud</a><header class="site-header"><div class="container"><div class="header-inner"><a href="/nl/" class="site-logo"><picture><source srcset="../../assets/images/logo-dark.png" type="image/png"
+                        media="(prefers-color-scheme: dark)"><img src="../../assets/images/logo.png" alt="Run Analytics - Running Analytics App | Critical Running Speed, TSS, CTL/ATL/TSB for iOS" width="56" height="56"></picture><span class="logo-text">Run Analytics</span></a><nav class="nav-primary" id="nav-primary" role="navigation" aria-label="Main navigation"><div class="nav-group-left"><ul><li><a href="/nl/" 
+                                aria-current="">
+                                Start
+                            </a></li><li class="has-submenu" ><a href="/nl/getting-started/" class="nav-label">Leren</a><ul class="submenu"><li><a href="/nl/getting-started/" 
+                                        aria-current="">
+                                        Aan de Slag
+                                    </a></li><li><a href="/nl/crs/" 
+                                        aria-current="">
+                                        CRS
+                                    </a></li><li><a href="/nl/training-zones/" 
+                                        aria-current="">
+                                        Trainingszones
+                                    </a></li><li><a href="/nl/training-load/" class="active" 
+                                        aria-current="page">
+                                        Trainingsbelasting
+                                    </a></li><li><a href="/nl/rtss-calculator/" 
+                                        aria-current="">
+                                        rTSS Rekenmachine
+                                    </a></li></ul></li><li class="has-submenu" ><a href="/nl/research/" class="nav-label">Wetenschap</a><ul class="submenu"><li><a href="/nl/research/" 
+                                        aria-current="">
+                                        Onderzoek
+                                    </a></li><li><a href="/nl/formulas/" 
+                                        aria-current="">
+                                        Formules
+                                    </a></li><li><a href="/nl/efficiency/" 
+                                        aria-current="">
+                                        Efficiëntie
+                                    </a></li><li><a href="/nl/stride-mechanics/" 
+                                        aria-current="">
+                                        Slagtechniek
+                                    </a></li><li><a href="/nl/bibliography/" 
+                                        aria-current="">
+                                        Bibliografie
+                                    </a></li></ul></li><li><a href="/nl/contact/" 
+                                aria-current="">
+                                Contact
+                            </a></li></ul><div class="search-container"><svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.35-4.35"></path></svg><input type="search" id="site-search" class="search-input" aria-expanded="false"
+                            aria-haspopup="listbox" aria-autocomplete="list" autocomplete="off" spellcheck="false" /><div id="search-results" class="search-results hidden" role="region" aria-live="polite"></div></div><select class="language-selector" id="language-select" aria-label="Selecteer taal"><option value="af" >
+                            Afrikaans
+                        </option><option value="am" >
+                            አማርኛ
+                        </option><option value="ar" >
+                            العربية
+                        </option><option value="bg" >
+                            Български
+                        </option><option value="bn" >
+                            বাংলা
+                        </option><option value="ca" >
+                            Català
+                        </option><option value="cs" >
+                            Čeština
+                        </option><option value="da" >
+                            Dansk
+                        </option><option value="de" >
+                            Deutsch
+                        </option><option value="el" >
+                            Ελληνικά
+                        </option><option value="en" >
+                            English
+                        </option><option value="es" >
+                            Español
+                        </option><option value="et" >
+                            Eesti
+                        </option><option value="fa" >
+                            فارسی
+                        </option><option value="fi" >
+                            Suomi
+                        </option><option value="fr" >
+                            Français
+                        </option><option value="gu" >
+                            ગુજરાતી
+                        </option><option value="ha" >
+                            Hausa
+                        </option><option value="he" >
+                            עברית
+                        </option><option value="hi" >
+                            हिन्दी
+                        </option><option value="hr" >
+                            Hrvatski
+                        </option><option value="hu" >
+                            Magyar
+                        </option><option value="id" >
+                            Bahasa Indonesia
+                        </option><option value="is" >
+                            Íslenska
+                        </option><option value="it" >
+                            Italiano
+                        </option><option value="ja" >
+                            日本語
+                        </option><option value="km" >
+                            ភាសាខ្មែរ
+                        </option><option value="kn" >
+                            ಕನ್ನಡ
+                        </option><option value="ko" >
+                            한국어
+                        </option><option value="lt" >
+                            Lietuvių
+                        </option><option value="lv" >
+                            Latviešu
+                        </option><option value="ms" >
+                            Bahasa Melayu
+                        </option><option value="my" >
+                            မြန်မာစာ
+                        </option><option value="nb" >
+                            Norsk Bokmål
+                        </option><option value="nl" selected>
+                            Nederlands
+                        </option><option value="pl" >
+                            Polski
+                        </option><option value="pt" >
+                            Português
+                        </option><option value="pt-br" >
+                            Português (Brasil)
+                        </option><option value="ro" >
+                            Română
+                        </option><option value="ru" >
+                            Русский
+                        </option><option value="sk" >
+                            Slovenčina
+                        </option><option value="sl" >
+                            Slovenščina
+                        </option><option value="sr" >
+                            Srpski
+                        </option><option value="sv" >
+                            Svenska
+                        </option><option value="sw" >
+                            Kiswahili
+                        </option><option value="ta" >
+                            தமிழ்
+                        </option><option value="te" >
+                            తెలుగు
+                        </option><option value="th" >
+                            ไทย
+                        </option><option value="tl" >
+                            Tagalog
+                        </option><option value="tr" >
+                            Türkçe
+                        </option><option value="uk" >
+                            Українська
+                        </option><option value="ur" >
+                            اردو
+                        </option><option value="vi" >
+                            Tiếng Việt
+                        </option><option value="yo" >
+                            Yorùbá
+                        </option><option value="zh" >
+                            中文
+                        </option></select></div><div class="nav-group-right"><div class="header-app-buttons"><a href="https://apps.apple.com/us/app/run-analytics/id6754524015" class="header-download-btn" target="_blank"
+                            rel="noopener" aria-label="Download on App Store" title="Download on App Store"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="currentColor"><path
+                                    d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z" /></svg></a><a href="https://play.google.com/store/apps/details?id=com.arnohealth.runanalytics" class="header-download-btn" target="_blank"
+                            rel="noopener" aria-label="Get it on Google Play" title="Get it on Google Play"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="currentColor"><path
+                                    d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.92 20.16,13.19L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M16.81,8.88L14.54,11.15L6.05,2.66L16.81,8.88Z" /></svg></a></div><div class="suite-menu-container"><button class="suite-menu-toggle" id="suite-menu-toggle" aria-label="See other apps"
+                            aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg></button><div class="suite-dropdown hidden" id="suite-dropdown"><div class="suite-dropdown-header">Other AnalyticsZone Apps</div><div class="suite-apps-grid"><a href="https://analyticszone.app" class="suite-app-link">AnalyticsZone</a><a href="https://swim.analyticszone.app" class="suite-app-link">Swim Analytics</a><a href="https://bike.analyticszone.app" class="suite-app-link">Bike Analytics</a><a href="https://walk.analyticszone.app" class="suite-app-link">Walk Analytics</a><a href="https://cardio.analyticszone.app" class="suite-app-link">Cardio Analytics</a><a href="https://health.analyticszone.app" class="suite-app-link">Health Analytics</a><a href="https://swimtrainer.analyticszone.app" class="suite-app-link">Swim Trainer</a><a href="https://hike.analyticszone.app" class="suite-app-link">Hike Analytics</a><a href="https://sleep.analyticszone.app" class="suite-app-link">Sleep Analytics</a><a href="https://paceva.analyticszone.app" class="suite-app-link">Paceva Analytics</a></div></div></div></div></nav><button class="menu-toggle" id="menu-toggle" aria-label="Menu openen/sluiten"
+                aria-expanded="false" aria-controls="nav-primary"><span></span><span></span><span></span></button></div></div></header><nav class="breadcrumbs" aria-label="Breadcrumb"><div class="container"><ol><li><a href="/nl/">Start</a></li><li><a href="/nl/getting-started/">Leren</a></li><li><span aria-current="page">Trainingsbelasting</span></li></ol></div></nav><main id="main-content" class="main-content"><section class="page-hero"><div class="container"><h1>Hardlooptrainingsbelasting: rTSS, CTL, ATL en TSB Uitleg</h1><p class="lead">Hoe u hardloopstress kunt kwantificeren, conditie en vermoeidheid kunt bijhouden en een afbouw kunt timen zonder te raden</p></div></section><section class="section"><div class="container container-narrow"><div class="quick-answer" itemscope="" itemtype="https://schema.org/Answer"><h2>Snel antwoord</h2><div itemprop="text"><p><strong>Hardlooptraining</strong> combineert <a href="/nl/training-stress-score/">rTSS</a>
+                    voor stress bij individuele sessies, <strong>CTL</strong> voor langdurige fitheid, <strong>ATL</strong> voor
+                    vermoeidheid op korte termijn, en <strong>TSB</strong> voor versheid. Het werkt het beste als uw <a href="/nl/crs/">Kritische rijsnelheid (CRS)</a>, <a href="/nl/training-zones/">trainingszones</a>en tempogegevens zijn realistisch.</p><ul><li><strong>Beste gebruik:</strong> vergelijk trainingen, controleer de wekelijkse belasting en verminder weken</li><li><strong>Belangrijkste invoer:</strong> een geloofwaardig CRS- of drempeltempo</li><li><strong>Grootste fout:</strong> TSB behandelen als raswaarheid als het gaat om slaap, pijn, hitte en leven
+                        stress zegt iets anders</li><li><strong>Ritme bijwerken:</strong> hertest CRS elke 6-8 weken of na een zinvol trainingsblok</li></ul></div></div><div class="callout callout-success mb-xl"><h2>Belangrijkste afhaalrestaurants</h2><ul class="key-points"><li><strong>rTSS</strong> geeft antwoord op hoeveel stress een enkele run veroorzaakte</li><li><strong>CTL</strong> toont de belasting waaraan uw lichaam zich in de loop van weken, niet dagen, heeft aangepast</li><li><strong>ATL</strong> laat zien wat er nog in je benen zit van een recente training</li><li><strong>TSB</strong> helpt bij het afbouwen van de timing en gereedheid, niet bij egomanagement</li><li><strong>Het cluster dat ertoe doet:</strong><a href="/nl/crs/">CRS</a>, <a href="/nl/rtss-calculator/">rTSS rekenmachine</a>, <a href="/nl/training-zones/">trainingszones</a>, en <a href="/nl/training-load-periodization/">periodisering</a></li></ul></div><p class="lead">Als je één systeem wilt dat hardloopvolume en -intensiteit omzet in beslissingen, gebruik dan trainingsbelasting.
+            Het gaat er niet om meer cijfers te verzamelen. Het gaat erom te weten of een run gemakkelijk genoeg was, een blok dat wel was
+            productief genoeg, of een afbouw maakt je juist fris.</p><p>Voor hardlopers zijn de praktische vragen eenvoudig:</p><ul><li>Hoe stressvol was de run van vandaag?</li><li>Aan hoeveel belasting heb ik mij eigenlijk aangepast?</li><li>Heb ik last van nuttige vermoeidheid of te veel vermoeidheid?</li><li>Wanneer moet ik pushen, wanneer moet ik me terugtrekken en wanneer moet ik racen?</li></ul><h2>Wat de hardlooptrainingsbelasting meet</h2><p><strong>Hardlooptraining</strong> is een praktisch raamwerk om runs om te zetten in interpreteerbare stress
+            signalen. In dit kader <a href="/nl/training-stress-score/">rTSS</a> meet sessiekosten,
+            <strong>CTL</strong> meet de fitnesstrend op de lange termijn, <strong>ATL</strong> meet recente vermoeidheid, en
+            <strong>TSB</strong> toont de kloof tussen de twee.
+        </p><div class="comparison-table-container"><table class="comparison-table"><thead><tr><th>Metrisch</th><th>Wat het je vertelt</th><th>Beste gebruik</th><th>Veel voorkomende fout</th></tr></thead><tbody><tr class="highlight-row"><td><strong>rTSS</strong></td><td>De stresskosten van één run</td><td>Vergelijk trainingen en totale wekelijkse belasting</td><td>Scoren loopt tegen verouderd <a href="/nl/crs/">CRS</a></td></tr><tr><td><strong>CTL</strong></td><td>De belasting waaraan u zich in de loop van de weken heeft aangepast</td><td>Houd de conditie en capaciteit op de lange termijn bij</td><td>Ik verwacht dat het binnen een paar dagen betekenisvol zal bewegen</td></tr><tr><td><strong>ATL</strong></td><td>De vermoeidheid die nog steeds in je benen zit van recent werk</td><td>Beheer het herstel tussen zware sessies</td><td>Het negeren van impactschade, pijn en levensstress</td></tr><tr><td><strong>TSB</strong></td><td>Jouw frisheidskloof: fitness minus vermoeidheid</td><td>Taper-timing, ramen testen, racebereidheid</td><td>Met één positief getal als bewijs bent u klaar</td></tr></tbody></table></div><div class="callout callout-info"><h3>Nuttig mentaal model</h3><p>Denk aan <strong>rTSS als de kosten van vandaag</strong>, <strong>CTL als uw fitnessbank</strong>, <strong>ATL als
+                    uw vermoeidheidsrekening</strong>, en <strong>TSB als uw versheidskloof</strong>. De waarde van het systeem
+                is in de trend, niet één geïsoleerd getal.</p></div><h2>Waar trainingsbelasting goed voor is en waar het faalt</h2><div class="application-grid"><div class="application-item"><h3>📊 Vergelijk trainingen</h3><p><a href="/nl/training-stress-score/">rTSS</a> Hiermee kunt u een eenvoudige lange termijndrempel vergelijken
+                    sessie en heuveltraining op één schaal in plaats van te raden door je alleen te voelen.</p></div><div class="application-item"><h3>🧭 Beheer bouwweken</h3><p>CTL en ATL helpen u te beslissen of een blok de conditie vooruit helpt of alleen maar vermoeidheid ervoor stapelt
+                    verandert in slechte sessies of blessurerisico.</p></div><div class="application-item"><h3>🏁Time the Taper</h3><p>TSB wordt handig wanneer u er verbinding mee maakt <a href="/nl/training-load-periodization/">gepland
+                        periodisering</a>, niet als je naar de kaart staart zonder racecontext.</p></div></div><div class="callout callout-warning"><h4>⚠️Belangrijk: de grotere impact van hardlopen</h4><p>Dezelfde TSS-waarde vertegenwoordigt meer fysieke belasting bij hardlopen dan bij fietsen als gevolg van impactkrachten. Een hardloper
+                Bij een accumulatie van 400 TSS/week is de trainingsaanpassing vergelijkbaar met die van een wielrenner met 600-700 TSS/week.
+                Bij hardlooptraining moet rekening worden gehouden met zowel cardiovasculaire als musculoskeletale stress.</p><p>Een positieve TSB garandeert geen wedstrijddagvorm, en een negatieve TSB betekent geen mislukking. Laadmodellen wel
+                slaaptekort, pijn, brandstoffouten, hitte of defecten aan de techniek niet volledig in kaart worden gebracht. Bewaar ladingsnummers
+                gebonden aan <a href="/nl/efficiency/">efficiëntiestatistieken</a>, subjectief gevoel en daadwerkelijke training
+                kwaliteit.</p></div></div></section><section class="section"><div class="container"><h2 class="text-center mb-xl">Hoe de hardlooptrainingstressscore (rTSS) wordt berekend</h2><div class="grid grid-2"><div><h3>De formule voor hardlopen TSS</h3><div class="formula-box"><div class="formula">
+                        rTSS = (IF²) × Duur (uren) × 100
+                    </div><div class="formula-explanation"><p>Waarbij de intensiteitsfactor (IF) is:</p><div class="formula">
+                            IF = NGS / CRS
+                        </div><p>Normalized Graded Speed (NGS) houdt rekening met tempovariabiliteit en hoogteverschillen:</p><div class="formula">
+                            NGS ≈ Gemiddelde loopsnelheid (aangepast voor terrein)
+                        </div></div></div><div class="callout callout-tip mt-md"><h4>📊 Op tempo gebaseerde vereenvoudigde methode</h4><p>Voor hardlopers zonder vermogensmeters: gebruik een op tempo gebaseerde berekening of scoor de sessie met de <a href="/nl/rtss-calculator/">rTSS rekenmachine</a>:</p><div class="formula">
+                        IF = Drempeltempo / Gemiddeld tempo
+                    </div><p><strong>Voorbeeld:</strong> Als uw CRS tempo 4:00/km is en u hardloopt op 4:20/km:</p><p>IF = 4:00 / 4:20 = 240/260 = 0,923</p><p><em>Let op: langzamer tempo = lager IF (omgekeerd uit snelheidsberekening)</em></p></div></div><div><h3>Uitgewerkt voorbeeld: Tempo Run</h3><div class="example-box"><h4>Runner profiel:</h4><ul><li>CRS Tempo: 4:00/km (15 km/uur)</li><li>CRS: Drempeltempo gedurende 1 uur</li></ul><h4>Trainingsgegevens:</h4><ul><li>Totale afstand: 10 km</li><li>Beweegtijd: 43:20 (0,722 uur)</li><li>Gemiddeld tempo: 4:20/km</li></ul><h4>Stap 1: Bereken de gemiddelde snelheid</h4><div class="calculation">
+                        Snelheid = 10 km / 0,722 uur<br/>
+                        Snelheid = <strong>13,85 km/uur</strong></div><h4>Stap 2: Bereken IF (snelheidsmethode)</h4><div class="calculation">
+                        IF = 13,85 / 15,0<br/>
+                        IF = <strong>0,923</strong></div><h4>Stap 3: Bereken IF (Pace-methode)</h4><div class="calculation">
+                        IF = 240 sec/km / 260 sec/km<br/>
+                        IF = <strong>0,923</strong> ✓
+                    </div><h4>Stap 4: Bereken rTSS</h4><div class="calculation">
+                        rTSS = (0,923²) × 0,722 × 100<br/>
+                        rTSS = 0,852 × 0,722 × 100<br/>
+                        rTSS = <strong>61,5</strong></div><p class="mt-md"><strong>Interpretatie:</strong> Dit tempo van 10 km wordt uitgevoerd met een drempelwaarde van 10%
+                        genereerde 61,5 TSS – een gematigde trainingsstimulus die typerend is voor hoogwaardige aërobe sessies.</p><p><a href="/nl/rtss-calculator/">Gebruik de rTSS rekenmachine</a> als je de partituur zonder wilt
+                        de wiskunde handmatig uitvoeren.</p></div></div></div><div class="intensity-guide mt-xl"><h3>Running TSS Intensiteitsrichtlijnen</h3><table class="intensity-table"><thead><tr><th>TSS Bereik</th><th>Intensiteitsniveau</th><th>Beschrijving</th><th>Voorbeeld trainingen</th></tr></thead><tbody><tr><td>&lt; 50</td><td>Gemakkelijk herstel</td><td>Licht hardlopen, gemoedelijk tempo, actieve rust</td><td>30-45 minuten rustig hardlopen, hersteljoggen, stappen</td></tr><tr><td>50-100</td><td>Matige training</td><td>Typisch dagelijks trainingsvolume, aërobe basis</td><td>60-90 minuten gestaag hardlopen, lang, gemakkelijk rennen</td></tr><tr><td>100-200</td><td>Hard trainen</td><td>Kwaliteitssessies met tempo/drempelwerk</td><td>90-120 minuten met drempelintervallen, progressieruns</td></tr><tr><td>200-300</td><td>Heel moeilijk</td><td>Lange runs met kwaliteit, racesimulatie</td><td>2-3 uur lange runs, tempowerk op de halve marathon</td></tr><tr><td>&gt; 300</td><td>Extreem</td><td>Racedag, ultra-afstandsevenementen</td><td>Marathonraces, 50 km+ ultras, Ironman-runs</td></tr></tbody></table></div><div class="callout callout-tip mt-lg"><h3>📊 Wekelijkse TSS Doelen per hardloopniveau</h3><ul><li><strong>Beginnende lopers:</strong> 150-300 TSS/week (3-4 ritten/week)</li><li><strong>Gemiddelde lopers:</strong> 300-500 TSS/week (4-6 ritten/week)</li><li><strong>Gevorderde lopers:</strong> 500-700 TSS/week (6-8 sessies/week)</li><li><strong>Elite-lopers:</strong> 700-900+ TSS/week (8-12 sessies/week)</li></ul><p>Deze worden opgeteld bij uw chronische trainingsbelasting (CTL), de fitnessstatistiek die hieronder wordt uitgelegd.Dat zouden ze moeten doen
+                nog steeds worden verspreid via realistisch <a href="/nl/training-zones/">trainingszones</a> en een
+                verstandig <a href="/nl/training-load-periodization/">periodiseringsplan</a>.</p></div></div></section><section class="section section-alt"><div class="container"><h2 class="text-center mb-xl">CTL, ATL en TSB begrijpen voor hardlopers</h2><p class="text-center lead">Het Prestatiemanagementdiagram (PMC) visualiseert drie onderling verbonden statistieken
+            vertel het complete verhaal van je hardlooptraining: conditie, vermoeidheid en vorm.</p><div class="pmc-overview"><div class="grid grid-3"><div class="pmc-metric"><div class="metric-icon">📈</div><h3>CTL - Chronische trainingsbelasting</h3><div class="metric-value-label">Jouw GESCHIKTHEID</div><p>Exponentieel gewogen gemiddelde over 42 dagen van dagelijkse TSS. Vertegenwoordigt aerobe conditie op lange termijn en
+                        trainingsaanpassing door consistent hardlopen.</p><div class="formula-small">
+                        CTL vandaag = CTL gisteren + (TSS vandaag - CTL gisteren) × (1/42)
+                    </div></div><div class="pmc-metric"><div class="metric-icon">⚡</div><h3>ATL - Acute trainingsbelasting</h3><div class="metric-value-label">Jouw VERMOEIDHEID</div><p>Exponentieel gewogen gemiddelde over zeven dagen van dagelijkse TSS. Legt recente trainingsstress vast en
+                        opgebouwde vermoeidheid van de afgelopen week hardlopen.</p><div class="formula-small">
+                        ATL vandaag = ATL gisteren + (TSS vandaag - ATL gisteren) × (1/7)
+                    </div></div><div class="pmc-metric"><div class="metric-icon">🎯</div><h3>TSB - Stressbalans trainen</h3><div class="metric-value-label">Jouw FORMULIER</div><p>Verschil tussen conditie en vermoeidheid van gisteren. Geeft de bereidheid aan om te presteren of de noodzaak om dit te doen
+                        rust uit voor je volgende kwaliteitsrun of race.</p><div class="formula-small">
+                        TSB = CTL gisteren - ATL gisteren
+                    </div></div></div></div></div></section><section class="section"><div class="container"><h2>CTL: Uw hardloopfitnessstatistiek</h2><div class="grid grid-2"><div><h3>Wat CTL vertegenwoordigt voor hardlopers</h3><p>CTL kwantificeert de looptrainingsbelasting die uw lichaam heeft <em>aangepast aan</em> gedurende de afgelopen 6 weken. EEN
+                    hogere CTL bij hardlopen betekent:</p><ul><li>Grotere aërobe capaciteit en hardloopuithoudingsvermogen</li><li>Mogelijkheid om meer trainingsvolume en -intensiteit aan te kunnen</li><li>Verbeterde neuromusculaire en metabolische aanpassingen</li><li>Hogere duurzame hardloopprestaties</li><li>Betere tolerantie voor impactspanning door grondcontactkrachten</li></ul><div class="callout callout-info"><h4>Tijdconstante: 42 dagen</h4><p>CTL heeft een halfwaardetijd van ~14,7 dagen. Na 42 dagen ongeveer 36,8% (1/e) van een enkele training
+                        impact blijft in uw fitnessberekening.</p><p>Dit langzame verval betekent dat de hardloopconditie geleidelijk toeneemt, maar ook langzaam afneemt – ter bescherming tegen
+                        detraining tijdens korte herstelpauzes.</p></div></div><div><h3>Typische CTL waarden voor hardlopers</h3><div class="levels-comparison"><div class="level-card-compact"><strong>Beginnende lopers:</strong><div class="value">15-35 CTL</div><p>Basisconditie opbouwen, 3-4 runs/week</p></div><div class="level-card-compact"><strong>Gemiddelde lopers:</strong><div class="value">35-60 CTL</div><p>Consistente training, 4-6 runs/week</p></div><div class="level-card-compact"><strong>Gevorderde lopers:</strong><div class="value">60-85 CTL</div><p>Hoog volume, 6-8 sessies/week</p></div><div class="level-card-compact"><strong>Elite-lopers:</strong><div class="value">85-120+ CTL</div><p>Professionele trainingsbelasting, 8-12+ sessies/week</p></div></div><div class="warning-box mt-md"><strong>⚠️ CTL Limieten voor snelheidsverhoging voor hardlopers</strong><ul><li><strong>Beginners:</strong> +2-4 CTL per week</li><li><strong>Gemiddeld:</strong> +3-5 CTL per week</li><li><strong>Geavanceerd:</strong> +5-7 CTL per week</li></ul><p>Als u deze snelheden overschrijdt, neemt het risico op blessures aanzienlijk toe als gevolg van de hoge impactbelasting van het hardlopen.
+                        De "10%-regel" (verhoog het wekelijkse volume met niet meer dan 10%) komt overeen met deze CTL-verhogingspercentages.
+                    </p></div></div></div></div></section><section class="section section-alt"><div class="container"><h2>ATL: Uw hardloopvermoeidheidsstatistiek</h2><div class="content-split"><div><p>ATL houdt trainingsstress op de korte termijn bij: de vermoeidheid die zich in de afgelopen hardloopweek heeft opgebouwd. Het stijgt
+                    snel na zware training en daalt snel tijdens rust, waardoor het essentieel is voor het beheer van het herstel
+                    tussen kwaliteitssessies.</p><h3>ATL Dynamiek in hardlooptraining</h3><ul><li><strong>Snelle reactie:</strong> Tijdconstante van 7 dagen (halfwaardetijd ~2,4 dagen)</li><li><strong>Stekelig patroon:</strong> Springt na zware sessies, zakt tijdens hersteldagen</li><li><strong>Herstelindicator:</strong> Vallen ATL = vermoeidheid tussen runs wegnemen</li><li><strong>Waarschuwing voor overtraining:</strong> Chronisch verhoogde ATL duidt op onvoldoende herstel
+                    </li><li><strong>Impactstress:</strong> Hardlopen ATL weerspiegelt zowel het cardiovasculaire als het bewegingsapparaat
+                        vermoeidheid</li></ul><div class="callout callout-science"><h4>🔬 Het fitness-vermoeidheidsmodel voor hardlopen</h4><p>Elke trainingsrun heeft twee effecten:</p><ol><li><strong>Fitnessstimulatie</strong> (langzaam opbouwend, langdurig)</li><li><strong>Vermoeidheid</strong> (snel opbouwend, snel verdwijnend)</li></ol><p>Hardloopprestaties = Fitness - Vermoeidheid.De PMC visualiseert dit model en maakt wetenschappelijk onderzoek mogelijk
+                        periodisering en optimale racetiming voor hardlopers.</p></div></div><div><h3>Bij SteadyState</h3><p>Als de hardlooptraining van week tot week consistent is, convergeren CTL en ATL:</p><div class="example-box"><h4>Voorbeeld: consistent 400 TSS/week</h4><div class="calculation">
+                        Dagelijks TSS ≈ 57<br/>
+                        CTL benadert ~57<br/>
+                        ATL benadert ~57<br/>
+                        TSB benadert 0
+                    </div><p><strong>Interpretatie:</strong> Fitness en vermoeidheid zijn in balans. Geen ophopend tekort of
+                        surplus – duurzaam trainingsonderhoud.</p></div><h3>Tijdens bouwfasen</h3><p>Bij het verhogen van het hardloopvolume of de intensiteit:</p><div class="example-box"><p>ATL stijgt <em>sneller</em> dan CTL vanwege kortere tijdconstante. TSB wordt negatief (vermoeidheid &gt;
+                        geschiktheid). Dit is normaal en productief: u gebruikt overbelasting om hardlopen te stimuleren
+                        aanpassingen.</p></div><h3>Tijdens Taper for Races</h3><p>Bij het verminderen van de trainingsbelasting vóór de wedstrijd:</p><div class="example-box"><p>ATL daalt <em>sneller</em> dan CTL. TSB wordt positief (fitheid &gt; vermoeidheid). Dit is de
+                        doel: fris op de racedag aankomen met benen klaar om te presteren met behoud van conditie.</p></div></div></div></div></section><section class="section"><div class="container"><h2>TSB: Uw conditie-vermoeidheidsbalans en racebereidheid</h2><p class="lead">TSB (Training Stress Balans) is het verschil tussen de conditie van gisteren (CTL) en
+            vermoeidheid van gisteren (ATL). Voor hardlopers geeft het aan of je fris of vermoeid bent, klaar om te racen of al bezig bent
+            behoefte aan hersteldagen.</p><div class="tsb-zones-container"><h3>TSB Interpretatiegids voor hardlopers</h3><table class="tsb-zones-table"><thead><tr><th>TSB Bereik</th><th>Status</th><th>Interpretatie</th><th>Aanbevolen actie</th></tr></thead><tbody><tr class="tsb-critical"><td>&lt; -30</td><td><strong>Risico op overtraining</strong></td><td>Extreme vermoeidheid. Hoog letselrisico.</td><td>Onmiddellijk herstel nodig. Verlaag het volume met 50%+. Denk aan rustdagen.</td></tr><tr class="tsb-training"><td>-20 tot -30</td><td><strong>Optimaal trainingsblok</strong></td><td>Productieve overbelasting. Fitness opbouwen.</td><td>Ga door met plannen. Controleer op tekenen van overmatige pijn of vermoeidheid.</td></tr><tr class="tsb-moderate"><td>-10 tot -20</td><td><strong>Matige trainingsbelasting</strong></td><td>Standaard trainingsaccumulatie.</td><td>Normale opleiding. Kan kwaliteitsinterval- of temposessies aan.</td></tr><tr class="tsb-neutral"><td>-10 tot +15</td><td><strong>Overgang/Onderhoud</strong></td><td>Evenwichtige staat. Lichte vermoeidheid of frisheid.</td><td>Goed voor B/C-races, testen of herstelweken.</td></tr><tr class="tsb-fresh"><td>+15 tot +25</td><td><strong>Piek racevorm</strong></td><td>Fresh and fit. Optimaal prestatievenster.</td><td>Races met A-prioriteit. Verwachte topprestaties.</td></tr><tr class="tsb-very-fresh"><td>+25 tot +35</td><td><strong>Zeer vers</strong></td><td>Zeer uitgerust. Goed voor korte races.</td><td>5K-10K races, tijdritten, baanevenementen.</td></tr><tr class="tsb-detraining"><td>&gt; +35</td><td><strong>Aftrainen</strong></td><td>Conditie verliezen door inactiviteit.</td><td>Hervat de training. De conditie neemt af door langdurige rust.</td></tr></tbody></table></div><div class="callout callout-tip mt-xl"><h3>🎯 Target TSB op hardloopafstand</h3><ul><li><strong>5K/10K-races:</strong> TSB +20 tot +30 (7-10 dagen afbouwen voor versheid)</li><li><strong>Halve marathon:</strong> TSB +15 tot +25 (afbouw over 10-14 dagen)</li><li><strong>Marathon:</strong> TSB +10 tot +20 (afbouw over 14-21 dagen met volumereductie)</li><li><strong>Ultramarathon (50K+):</strong> TSB +5 tot +15 (7-14 dagen afbouwen, volume behouden maar verminderen
+                    intensiteit)</li></ul><p><em>Kortere races hebben hogere TSB nodig voor snelheid/kracht. Langere races hebben gematigde TSB nodig om te behouden
+                    uithoudingsvermogen.</em></p></div></div></section><section class="section section-alt"><div class="container container-narrow"><h2>PMC Voorbeeld: trainingsblok hardlopen → Taper → Race</h2><div class="example-box"><h3>Marathontrainingscyclus van 12 weken</h3><h4>Weken 1-3: Basisbouwfase</h4><ul><li>Wekelijks TSS: 300 → 350 → 400</li><li>CTL: Stijgt geleidelijk van 40 → 48</li><li>ATL: Houdt de wekelijkse belasting bij, schommelt tussen 45 en 60</li><li>TSB: Licht negatief (-5 tot -15), beheersbare trainingsstress</li><li><strong>Nadruk:</strong> Aërobe basisontwikkeling, gemakkelijke kilometers</li></ul><h4>Weken 4-7: Bouwfase 1</h4><ul><li>Wekelijks TSS: 450 → 500 → 500 → 450 (herstelweek)</li><li>CTL: Blijft stijgen 48 → 60</li><li>ATL: Hogere fluctuaties 55-75</li><li>TSB: Meer negatief (-15 tot -25), productieve overbelasting</li><li><strong>Nadruk:</strong> Temporuns en drempelintervallen toevoegen</li></ul><h4>Weken 8-11: Piekfase</h4><ul><li>Wekelijks TSS: 500 → 550 → 550 → 500</li><li>CTL: pieken bij ~65</li><li>ATL: Hoogste waarden 65-80</li><li>TSB: Meest negatieve (-20 tot -30), maximale fitnessprikkel</li><li><strong>Nadruk:</strong> Lange runs met marathontemposegmenten, kwaliteitssessies</li></ul><h4>Week 12: Herstelweek</h4><ul><li>Wekelijks TSS: 300 (45% korting)</li><li>CTL: Lichte daling naar ~63 (fitness behouden)</li><li>ATL: Daalt snel naar ~50</li><li>TSB: Stijgt naar +5 tot +10 (gedeeltelijke frisheid)</li><li><strong>Nadruk:</strong> Herstellopen, waarbij trainingsaanpassingen worden geabsorbeerd</li></ul><h4>Week 13-14: Taper + Raceweek</h4><ul><li>Week 13 TSS: 250, Week 14 TSS: 120 + race (~250 totaal)</li><li>CTL: Zachte daling tot ~60 (minimaal fitnessverlies)</li><li>ATL: Snelle daling naar ~35 (vermoeidheid geëlimineerd)</li><li>TSB: Pieken bij <strong>+20 tot +25 op de racedag</strong></li><li><strong>Resultaat:</strong> Frisse benen, behouden conditie, klaar voor maximale marathonprestaties</li></ul></div><div class="callout callout-success"><h3>✅ Why Taper Works for Runners</h3><p>De verschillende tijdconstanten (42 dagen voor CTL, 7 dagen voor ATL) creëren het tapereffect dat de
+                hardloopprestaties:</p><ul><li>ATL reageert snel → Hardloopvermoeidheid (zowel cardiovasculair als bewegingsapparaat) verdwijnt binnen
+                    7-10 dagen</li><li>CTL reageert langzaam → Aërobe conditie en hardloopaanpassingen blijven wekenlang aanhouden</li><li>Resultaat: De conditie blijft behouden terwijl vermoeidheid en pijn verdwijnen = frisse benen voor topraceprestaties
+                </li></ul></div></div></section><section class="section"><div class="container container-narrow"><h2>Praktische hardlooptraining Richtlijnen voor belastingbeheer</h2><div class="guidelines-grid"><div class="guideline-item"><h3>1️⃣ Dagelijks bijhouden rTSS Consequent</h3><p>Registreer de TSS van elke run om nauwkeurige CTL/ATL/TSB trends op te stellen. Ontbrekende gegevens zorgen voor hiaten in de fitheid
+                    bocht. Gebruik GPS-horlogegegevens of op tempo gebaseerde berekeningen voor alle hardloopsessies.</p></div><div class="guideline-item"><h3>2️⃣ Controleer CTL Oploopsnelheid zorgvuldig</h3><p>Verhoog CTL geleidelijk. Een wekelijkse stijging van 3-5 punten is voor de meeste hardlopers duurzaam. Springen 10+
+                    Punten nodigen uit tot overtraining en blessures als gevolg van de impactstress van het hardlopen.</p></div><div class="guideline-item"><h3>3️⃣ Plan herstelweken</h3><p>Verlaag elke 3-4 weken het loopvolume met 30-40% gedurende een week. Laat TSB stijgen naar -5 tot +10. Dit
+                    consolideert fitnessaanpassingen en voorkomt cumulatieve vermoeidheid.</p></div><div class="guideline-item"><h3>4️⃣ Time je race-taper</h3><p>Streef naar TSB +15 tot +25 op de racedag voor de meeste afstanden. Begin met afbouwen van 10-21 dagen, afhankelijk van de race
+                    afstand en huidig TSB niveau.</p></div><div class="guideline-item"><h3>5️⃣ Accepteer negatief TSB tijdens het bouwen</h3><p>TSB van -20 tot -25 tijdens de opbouwfasen is normaal en productief voor hardlopers. Het betekent dat je solliciteert
+                    trainingsstimulans voor aanpassing zonder overmatig blessurerisico.</p></div><div class="guideline-item"><h3>6️⃣ Herbouw CTL Geleidelijk na pauzes</h3><p>Probeer na een blessure of een pauze buiten het seizoen niet onmiddellijk de vorige CTL te hervatten. Geleidelijk opnieuw opbouwen
+                    met 3-5 CTL punten per week om opnieuw letsel te voorkomen.</p></div><div class="guideline-item"><h3>7️⃣ Luister naar je lichaam</h3><p>TSS-statistieken zijn richtlijnen, geen absolute regels. Aanhoudende pijn, slechte slaap of afnemende prestaties
+                    ondanks goede TSB cijfers wijzen op de noodzaak van aanvullend herstel.</p></div><div class="guideline-item"><h3>8️⃣ Houd rekening met niet-hardloopstress</h3><p>Levensstress, slechte slaap en crosstraining beïnvloeden het herstel. Overweeg om de TSS-doelen te verlagen tijdens
+                    perioden met hoge stress, zelfs als hardloopspecifieke statistieken er goed uitzien.</p></div></div></div></section><section class="section section-alt"><div class="container container-narrow"><h2>Veelgestelde vragen: Trainingsstressscore voor hardlopen</h2><div class="faq-container"><div class="faq-item"><h3>How do I calculate TSS for running without a power meter?</h3><p>Gebruik de op tempo gebaseerde methode: Bereken uw intensiteitsfactor (IF) door uw drempeltempo te delen door
+                    uw gemiddelde tempo tijdens het hardlopen. Pas dan de formule toe: rTSS = (IF²) × Duur (uren) × 100. Voor
+                    Als uw drempeltempo bijvoorbeeld 4:00/km is en u 10 km hardloopt in een tempo van 4:30/km in 45 minuten (0,75
+                    uur): IF = 4:00/4:30 = 0,889, dus rTSS = (0,889²) × 0,75 × 100 = 59,2 TSS.</p><p>Als u de kortste workflow wilt, gebruikt u de <a href="/nl/rtss-calculator/">rTSS rekenmachine</a>
+                    nadat u een realistisch getal hebt ingesteld <a href="/nl/crs/">CRS</a>.</p></div><div class="faq-item"><h3>Wat is het verschil tussen hardlopen TSS en fietsen TSS?</h3><p>Beide gebruiken dezelfde IF²-formule, maar hardlopen TSS betekent meer totale fysieke stress als gevolg van impact
+                    krachten door grondcontact. Een hardloper met 400 TSS/week ervaart een vergelijkbare trainingsaanpassing als a
+                    fietser met 600-700 TSS/week. Hardlopen gebruikt ook tempo/snelheid als input in plaats van wattvermogen, en
+                    vereist meer hersteltijd voor dezelfde TSS-waarde.</p></div><div class="faq-item"><h3>Wat is een goede wekelijkse TSS voor marathontraining?</h3><p>Wekelijks hardlopen TSS voor marathontraining varieert per ervaring: Beginners bouwen op naar eerste marathon:
+                    250-400 TSS/week; Gemiddelde marathonlopers: 400-550 TSS/week; Gevorderde/competitieve marathonlopers:
+                    550-700+ TSS/week. Piekweken kunnen oplopen tot 600-800 TSS voor gevorderde hardlopers, terwijl de afbouwweken afnemen
+                    tot 200-300 TSS.</p><p>Wat belangrijker is dan één cijfer, is hoe die lading in uw lichaam zit <a href="/nl/marathon-periodization/">marathon opbouwen</a> en <a href="/nl/training-load-periodization/">periodisering</a>.</p></div><div class="faq-item"><h3>Op welke TSB moet ik mij richten voor een race van 10 km?</h3><p>Voor een race van 10 km streeft u naar TSB van +20 tot +30 op de racedag. Begin om dit te bereiken met een afbouw van 7-10 dagen. De
+                    hogere TSB (meer frisheid) is gunstig voor kortere races waar snelheid en kracht belangrijker zijn
+                    uithoudingsvermogen. Begin 10 dagen lang met het verminderen van het volume, terwijl u een zekere intensiteit behoudt
+                    neuromusculaire scherpte.</p></div><div class="faq-item"><h3>Kan ik TSS gebruiken als ik mijn kritische hardloopsnelheid niet weet?</h3><p>Het kennen van jouw <a href="/nl/crs/">Kritische rijsnelheid (CRS)</a> of drempeltempo is
+                    essentieel voor een nauwkeurige berekening van TSS, aangezien IF relatief ten opzichte van deze waarde wordt berekend. Als je dat niet doet
+                    ken uw CRS, voer een drempeltest uit: ofwel een volledige tijdrit van 30 minuten (gemiddeld tempo = CRS)
+                    of een racetempo van 8 km. U kunt ook een schatting maken op basis van recente racetijden: 10 km tempo + 10-15 seconden/km
+                    benadert CRS.</p><p>Zodra CRS is ingesteld, converteert u deze naar <a href="/nl/training-zones/">trainingszones</a> dus jouw
+                    eenvoudig, drempel- en racetempowerk voeden allemaal hetzelfde belastingsmodel.</p></div><div class="faq-item"><h3>Hoe snel moet ik mijn CTL verhogen?</h3><p>Verhoog het hardlopen CTL met 2-4 punten per week voor beginners, 3-5 punten voor gemiddelde hardlopers, en
+                    Maximaal 5-7 punten voor gevorderde lopers. Dit komt overeen met de "10%-regel" voor wekelijkse kilometers
+                    verhoogt en minimaliseert het letselrisico. Als u deze percentages overschrijdt, neemt de overtraining aanzienlijk toe
+                    risico op blessures als gevolg van de hoge belasting van hardlopen op spieren, pezen en botten.</p></div><div class="faq-item"><h3>Wat betekent negatief TSB tijdens de training?</h3><p>Negatief TSB betekent dat vermoeidheid (ATL) groter is dan conditie (CTL) – u bent momenteel vermoeid door de recente
+                    opleiding. Dit is normaal en productief tijdens de bouwfasen. TSB van -15 tot -25 duidt op productief
+                    trainingsstress. TSB lager dan -30 duidt op het risico van overtraining en de noodzaak van herstel. Negatief TSB tijdens
+                    builds creëren de stimulans voor fitnessaanpassingen, terwijl positieve TSB tijdens afbouw dit mogelijk maakt
+                    prestatie.</p></div></div></div></section><section class="section"><div class="container container-narrow text-center"><h2>Gebruik trainingsbelasting als hub voor uw hardloopstatistieken</h2><p class="lead">Trainingsbelasting wordt echt nuttig als deze wordt gekoppeld aan het drempeltempo, sessiescores,
+            trainingszones en raceplanning. Op zichzelf is de grafiek slechts een grafiek.</p><div class="callout mt-xl"><h3>Bouw het cluster rond deze pagina</h3><p>Als trainingsbelasting uw hub is, zijn de volgende pagina's die u kunt gebruiken:</p><ul><li><a href="/nl/crs/">Kritische rijsnelheid (CRS)</a> drempeltempo te verankeren</li><li><a href="/nl/rtss-calculator/">rTSS Rekenmachine</a> om individuele runs te scoren</li><li><a href="/nl/training-zones/">Trainingszones</a> om CRS om te zetten in sessie-intentie</li><li><a href="/nl/training-load-periodization/">Trainingsbelasting en periodisering</a> plannen
+                    bouw-, herstel- en taperblokken</li></ul></div><div class="mt-xl"><a class="btn btn-secondary" href="/nl/crs/">← Kritische rijsnelheid (CRS)</a><a class="btn btn-secondary" href="/nl/rtss-calculator/">rTSS Rekenmachine</a><a class="btn btn-primary" href="/nl/training-load-periodization/">Trainingsbelasting en periodisering →</a></div></div></section><section class="eeat-author bg-light divider-top-lg divider-bottom-lg" aria-label="Author and Reviewer Information"><div class="container container-narrow"><div class="eeat-card" style="display: flex; gap: 1.5rem; align-items: center; padding: 1.5rem; background: var(--color-bg-alt, #f8f9fa); border-radius: 8px; border: 1px solid var(--color-border, #e9ecef); margin-top: 3rem; margin-bottom: 2rem;"><div class="eeat-avatar" style="font-size: 2.5rem; line-height: 1; flex-shrink: 0;" aria-hidden="true">👨‍🔬</div><div class="eeat-details"><h3 style="margin: 0 0 0.5rem 0; font-size: 1.125rem; font-weight: 600;">
+          Expertly Reviewed by 
+          <span itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">AnalyticsZone Team</span></span><span style="font-weight: 400; font-size: 1rem; color: var(--text-muted, #718096);">, MSc Sports Science</span></h3><p style="margin: 0 0 0.5rem 0; font-size: 0.95rem; color: var(--color-body-text, #4a5568); line-height: 1.5;">
+          This content has been written and reviewed by a sports data metrics expert to ensure technical accuracy and adherence to the latest sports science methodologies.
+        </p><a href="https://linkedin.com/in/albert-arno-39049774" target="_blank" rel="noopener noreferrer" style="font-size: 0.85rem; font-weight: 500; text-decoration: underline; color: var(--color-primary, #3182ce);">
+          🔗 Verify Credentials
+        </a></div></div></div></section><section class="ai-citation-block divider-top-xl" data-ai-ready="true" data-ai-page="training-load"><div class="container ai-citation-shell"><h2 class="ai-citation-title">Hardlooptrainingsbelasting: rTSS, CTL, ATL en TSB Uitleg</h2><p class="ai-citation-answer">Hardlooptrainingsbelasting gebruikt rTSS om sessies te scoren, CTL om de fitheid op de lange termijn bij te houden, ATL om vermoeidheid op de korte termijn bij te houden, en TSB om de frisheid voor trainingen en afbouwbeslissingen te meten.</p><ul class="ai-citation-facts" role="list"><li class="ai-citation-fact"><span class="ai-citation-icon" aria-hidden="true">📅</span><span>2026-04-02</span></li><li class="ai-citation-fact ai-citation-keywords"><span class="ai-citation-icon" aria-hidden="true">🏷️</span><span>trainingsbelasting lopen · rTSS · CTL ATL TSB actief · hardloopvermoeidheid en conditie · lopende tapse timing</span></li><li class="ai-citation-fact"><span class="ai-citation-icon" aria-hidden="true">🔬</span><a href="../../nl/bibliography/">
+          
+          Bibliografie
+          
+        </a></li></ul></div></section></main><footer class="site-footer"><div class="container"><div class="footer-top"><div class="footer-brand-section"><h2>Run Analytics</h2><p>Track Critical Running Speed, Training Stress Score, and performance metrics with Run Analytics. Science-based iOS app for runners, triathletes &amp; coaches. 7-day free trial.</p></div><div class="footer-download"><h3 class="footer-heading">Downloaden</h3><div class="footer-badges"><a href="https://apps.apple.com/us/app/run-analytics/id6754524015" target="_blank" rel="noopener"
+                        aria-label="Download in de App Store"><img src="../../assets/images/badge-app-store.svg"
+                            alt="Download in de App Store" width="135"
+                            height="40" loading="lazy"></a><a href="https://play.google.com/store/apps/details?id=com.arnohealth.runanalytics" target="_blank" rel="noopener"
+                        aria-label="ONTDEK HET OP Google Play"><img src="../../assets/images/badge-google-play.svg"
+                            alt="ONTDEK HET OP Google Play" width="135"
+                            height="40" loading="lazy"></a></div></div></div><div class="footer-languages"><h3 class="footer-heading">Beschikbaar in</h3><div class="lang-grid"><a href="/af/" class="lang-link"
+                    hreflang="af" >
+                    Afrikaans
+                </a><a href="/am/" class="lang-link"
+                    hreflang="am" >
+                    አማርኛ
+                </a><a href="/ar/" class="lang-link"
+                    hreflang="ar" dir="rtl" >
+                    العربية
+                </a><a href="/bg/" class="lang-link"
+                    hreflang="bg" >
+                    Български
+                </a><a href="/bn/" class="lang-link"
+                    hreflang="bn" >
+                    বাংলা
+                </a><a href="/ca/" class="lang-link"
+                    hreflang="ca" >
+                    Català
+                </a><a href="/cs/" class="lang-link"
+                    hreflang="cs" >
+                    Čeština
+                </a><a href="/da/" class="lang-link"
+                    hreflang="da" >
+                    Dansk
+                </a><a href="/de/" class="lang-link"
+                    hreflang="de" >
+                    Deutsch
+                </a><a href="/el/" class="lang-link"
+                    hreflang="el" >
+                    Ελληνικά
+                </a><a href="/en/" class="lang-link"
+                    hreflang="en" >
+                    English
+                </a><a href="/es/" class="lang-link"
+                    hreflang="es" >
+                    Español
+                </a><a href="/et/" class="lang-link"
+                    hreflang="et" >
+                    Eesti
+                </a><a href="/fa/" class="lang-link"
+                    hreflang="fa" dir="rtl" >
+                    فارسی
+                </a><a href="/fi/" class="lang-link"
+                    hreflang="fi" >
+                    Suomi
+                </a><a href="/fr/" class="lang-link"
+                    hreflang="fr" >
+                    Français
+                </a><a href="/gu/" class="lang-link"
+                    hreflang="gu" >
+                    ગુજરાતી
+                </a><a href="/ha/" class="lang-link"
+                    hreflang="ha" >
+                    Hausa
+                </a><a href="/he/" class="lang-link"
+                    hreflang="he" dir="rtl" >
+                    עברית
+                </a><a href="/hi/" class="lang-link"
+                    hreflang="hi" >
+                    हिन्दी
+                </a><a href="/hr/" class="lang-link"
+                    hreflang="hr" >
+                    Hrvatski
+                </a><a href="/hu/" class="lang-link"
+                    hreflang="hu" >
+                    Magyar
+                </a><a href="/id/" class="lang-link"
+                    hreflang="id" >
+                    Bahasa Indonesia
+                </a><a href="/is/" class="lang-link"
+                    hreflang="is" >
+                    Íslenska
+                </a><a href="/it/" class="lang-link"
+                    hreflang="it" >
+                    Italiano
+                </a><a href="/ja/" class="lang-link"
+                    hreflang="ja" >
+                    日本語
+                </a><a href="/km/" class="lang-link"
+                    hreflang="km" >
+                    ភាសាខ្មែរ
+                </a><a href="/kn/" class="lang-link"
+                    hreflang="kn" >
+                    ಕನ್ನಡ
+                </a><a href="/ko/" class="lang-link"
+                    hreflang="ko" >
+                    한국어
+                </a><a href="/lt/" class="lang-link"
+                    hreflang="lt" >
+                    Lietuvių
+                </a><a href="/lv/" class="lang-link"
+                    hreflang="lv" >
+                    Latviešu
+                </a><a href="/ms/" class="lang-link"
+                    hreflang="ms" >
+                    Bahasa Melayu
+                </a><a href="/my/" class="lang-link"
+                    hreflang="my" >
+                    မြန်မာစာ
+                </a><a href="/nb/" class="lang-link"
+                    hreflang="nb" >
+                    Norsk Bokmål
+                </a><a href="/nl/" class="lang-link active"
+                    hreflang="nl" >
+                    Nederlands
+                </a><a href="/pl/" class="lang-link"
+                    hreflang="pl" >
+                    Polski
+                </a><a href="/pt/" class="lang-link"
+                    hreflang="pt" >
+                    Português
+                </a><a href="/pt-br/" class="lang-link"
+                    hreflang="pt-br" >
+                    Português (Brasil)
+                </a><a href="/ro/" class="lang-link"
+                    hreflang="ro" >
+                    Română
+                </a><a href="/ru/" class="lang-link"
+                    hreflang="ru" >
+                    Русский
+                </a><a href="/sk/" class="lang-link"
+                    hreflang="sk" >
+                    Slovenčina
+                </a><a href="/sl/" class="lang-link"
+                    hreflang="sl" >
+                    Slovenščina
+                </a><a href="/sr/" class="lang-link"
+                    hreflang="sr" >
+                    Srpski
+                </a><a href="/sv/" class="lang-link"
+                    hreflang="sv" >
+                    Svenska
+                </a><a href="/sw/" class="lang-link"
+                    hreflang="sw" >
+                    Kiswahili
+                </a><a href="/ta/" class="lang-link"
+                    hreflang="ta" >
+                    தமிழ்
+                </a><a href="/te/" class="lang-link"
+                    hreflang="te" >
+                    తెలుగు
+                </a><a href="/th/" class="lang-link"
+                    hreflang="th" >
+                    ไทย
+                </a><a href="/tl/" class="lang-link"
+                    hreflang="tl" >
+                    Tagalog
+                </a><a href="/tr/" class="lang-link"
+                    hreflang="tr" >
+                    Türkçe
+                </a><a href="/uk/" class="lang-link"
+                    hreflang="uk" >
+                    Українська
+                </a><a href="/ur/" class="lang-link"
+                    hreflang="ur" dir="rtl" >
+                    اردو
+                </a><a href="/vi/" class="lang-link"
+                    hreflang="vi" >
+                    Tiếng Việt
+                </a><a href="/yo/" class="lang-link"
+                    hreflang="yo" >
+                    Yorùbá
+                </a><a href="/zh/" class="lang-link"
+                    hreflang="zh" >
+                    中文
+                </a></div></div><div class="footer-divider"></div><div class="footer-bottom"><p class="copyright">
+                &copy; 2026 Run Analytics. Alle rechten voorbehouden
+            </p><ul class="footer-legal"><li><a href="/nl/privacy/">Privacy</a></li><li><a href="/nl/terms/">Voorwaarden</a></li></ul></div></div></footer><div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="Cookie consent" aria-live="polite"><div class="cookie-banner-content"><div><p>Deze website gebruikt cookies om je ervaring te verbeteren.</p><a href="/nl/privacy/" class="text-sm">Meer informatie</a></div><div class="cookie-banner-actions"><button id="cookie-decline" class="btn btn-secondary btn-small">Weigeren</button><button id="cookie-accept" class="btn btn-primary btn-small">Accepteren</button></div></div></div><script src="../../assets/js/core.min.js?v=1c7ace58" defer></script><script src="../../assets/js/search.min.js?v=1c7ace58" defer></script><script src="../../assets/js/analytics.min.js" data-ga-id="G-Y138VB4523" defer></script><script>if ('serviceWorker' in navigator) { navigator.serviceWorker.register('../../sw.js') }</script></body></html>

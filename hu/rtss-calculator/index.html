@@ -1,0 +1,843 @@
+<!DOCTYPE html><html lang="hu" dir="ltr"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=optional"
+    rel="stylesheet"><title>Ingyenes Futó TSS Kalkulátor | Run Analytics - Running</title><meta name="description" content="Számítsa ki az edzésterhelési pontszámot futó edzésekhez - Az egyetlen ingyenes sTSS kalkulátor. Ingyenes Futó TSS Kalkulátor | Run Analytics - Running."><meta name="author" content="AnalyticsZone Team"><meta name="keywords" content="futó TSS kalkulátor, sTSS kalkulátor, edzésterhelési pontszám, futó edzésterhelés, ingyenes TSS"><link rel="canonical" href="https://run.analyticszone.app/hu/rtss-calculator/"><meta property="article:published_time" content="2025-01-15T10:00:00Z"><meta property="article:modified_time" content="2026-03-24T14:30:00Z"><meta property="article:author" content="AnalyticsZone Team"><meta property="og:type" content="article"><meta property="og:url" content="https://run.analyticszone.app/hu/rtss-calculator/"><meta property="og:title" content="Ingyenes Futó TSS Kalkulátor | Run Analytics - Running"><meta property="og:description" content="Számítsa ki az edzésterhelési pontszámot futó edzésekhez - Az egyetlen ingyenes sTSS kalkulátor. Ingyenes Futó TSS Kalkulátor | Run Analytics - Running."><meta property="og:image" content="https://run.analyticszone.app/assets/images/og-image.svg"><meta property="og:locale" content="hu_HU"><meta property="og:site_name" content="Run Analytics"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:url" content="https://run.analyticszone.app/hu/rtss-calculator/"><meta name="twitter:title" content="Ingyenes Futó TSS Kalkulátor | Run Analytics - Running"><meta name="twitter:description" content="Számítsa ki az edzésterhelési pontszámot futó edzésekhez - Az egyetlen ingyenes sTSS kalkulátor. Ingyenes Futó TSS Kalkulátor | Run Analytics - Running."><meta name="twitter:image" content="https://run.analyticszone.app/assets/images/og-image.svg"><meta name="twitter:site" content="@runanalytics"><meta name="twitter:creator" content="@runanalytics"><link rel="alternate" hreflang="ar"
+    href="https://run.analyticszone.app/ar/rtss-calculator/"><link rel="alternate" hreflang="de"
+    href="https://run.analyticszone.app/de/rtss-calculator/"><link rel="alternate" hreflang="en"
+    href="https://run.analyticszone.app/en/rtss-calculator/"><link rel="alternate" hreflang="es"
+    href="https://run.analyticszone.app/es/rtss-calculator/"><link rel="alternate" hreflang="fr"
+    href="https://run.analyticszone.app/fr/rtss-calculator/"><link rel="alternate" hreflang="hi"
+    href="https://run.analyticszone.app/hi/rtss-calculator/"><link rel="alternate" hreflang="id"
+    href="https://run.analyticszone.app/id/rtss-calculator/"><link rel="alternate" hreflang="it"
+    href="https://run.analyticszone.app/it/rtss-calculator/"><link rel="alternate" hreflang="ja"
+    href="https://run.analyticszone.app/ja/rtss-calculator/"><link rel="alternate" hreflang="ko"
+    href="https://run.analyticszone.app/ko/rtss-calculator/"><link rel="alternate" hreflang="nl"
+    href="https://run.analyticszone.app/nl/rtss-calculator/"><link rel="alternate" hreflang="pl"
+    href="https://run.analyticszone.app/pl/rtss-calculator/"><link rel="alternate" hreflang="pt"
+    href="https://run.analyticszone.app/pt/rtss-calculator/"><link rel="alternate" hreflang="pt-br"
+    href="https://run.analyticszone.app/pt-br/rtss-calculator/"><link rel="alternate" hreflang="ru"
+    href="https://run.analyticszone.app/ru/rtss-calculator/"><link rel="alternate" hreflang="sv"
+    href="https://run.analyticszone.app/sv/rtss-calculator/"><link rel="alternate" hreflang="tr"
+    href="https://run.analyticszone.app/tr/rtss-calculator/"><link rel="alternate" hreflang="zh"
+    href="https://run.analyticszone.app/zh/rtss-calculator/"><link rel="alternate" hreflang="x-default"
+    href="https://run.analyticszone.app/en/rtss-calculator/"><link rel="icon" type="image/png" sizes="32x32" href="../../assets/images/icons/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="../../assets/images/icons/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="../../assets/images/icons/apple-touch-icon.png"><link rel="manifest" href="../../manifest.json"><meta name="theme-color" content="#2563EB"><meta name="robots" content="noindex, follow"><meta name="apple-itunes-app" content="app-id=6754524015"><style>
+/* Critical CSS - Above the fold styles for fast LCP */
+:root {
+  --color-primary: #0066CC;
+  --color-text: #1a1a1a;
+  --color-text-muted: #666;
+  --color-bg: #ffffff;
+  --color-bg-alt: #f8f9fa;
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+}
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  color: var(--color-text);
+  background: var(--color-bg);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Skip link - Accessibility */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--color-primary);
+  color: #fff;
+  padding: 8px 16px;
+  z-index: 1000;
+  text-decoration: none;
+}
+.skip-link:focus {
+  top: 0;
+}
+
+/* Header - Critical for LCP */
+.site-header {
+  background: var(--color-bg);
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0.75rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.site-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: var(--color-text);
+  font-weight: 600;
+  font-size: 1.125rem;
+}
+
+.site-logo img, .site-logo svg {
+  width: 32px;
+  height: 32px;
+}
+
+/* Navigation */
+.main-nav {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .main-nav {
+    display: flex;
+    gap: 1.5rem;
+  }
+  .main-nav a {
+    color: var(--color-text);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9375rem;
+    transition: color 0.2s;
+  }
+  .main-nav a:hover {
+    color: var(--color-primary);
+  }
+}
+
+/* Mobile menu button */
+.menu-toggle {
+  display: flex;
+  background: none;
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .menu-toggle {
+    display: none;
+  }
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Main content */
+main.main-content {
+  flex: 1;
+}
+
+/* Hero section - Critical for LCP */
+.hero {
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .hero {
+    padding: 4rem 2rem;
+  }
+}
+
+.hero h1 {
+  font-size: clamp(1.75rem, 5vw, 3rem);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  color: var(--color-text);
+}
+
+.hero .lead, .hero p {
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  color: var(--color-text-muted);
+  max-width: 700px;
+  margin: 0 auto 1.5rem;
+}
+
+/* Buttons - Critical for CTA */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: var(--radius-md);
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-primary {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: #0052a3;
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+}
+
+.btn-large {
+  padding: 1rem 2rem;
+  font-size: 1.125rem;
+}
+
+/* Utility classes */
+.hidden { display: none !important; }
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Images - prevent CLS with aspect-ratio */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+img[width][height] {
+  aspect-ratio: attr(width) / attr(height);
+}
+
+.lazy-image {
+  background: var(--color-bg-alt);
+  transition: opacity 0.3s;
+}
+
+.lazy-image:not(.loaded) {
+  opacity: 0;
+}
+
+.lazy-image.loaded {
+  opacity: 1;
+}
+
+/* App badges - fixed dimensions to prevent CLS */
+.app-badge img {
+  width: 140px;
+  height: 42px;
+}
+
+/* Logo - fixed dimensions */
+.site-logo img {
+  width: 32px;
+  height: 32px;
+}
+
+/* Reduce motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+</style><link rel="preconnect" href="https://www.googletagmanager.com"><link rel="dns-prefetch" href="https://www.googletagmanager.com"><link rel="stylesheet" href="../../assets/css/main.min.css?v=1c7ace58"><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Run Analytics",
+  "url": "https://run.analyticszone.app",
+  "logo": "https://run.analyticszone.app/assets/images/logo.png",
+  "description": "Track Critical Running Speed, Training Stress Score, and performance metrics with Run Analytics. Science-based iOS app for runners, triathletes &amp; coaches. 7-day free trial.",
+  
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "Customer Support",
+    "email": "analyticszone+run@onmedic.org"
+  },
+  
+  "sameAs": [
+    
+    
+      
+    
+    
+      
+    
+    
+      
+    
+    
+    "https://twitter.com/runanalytics",
+    
+    "https://apps.apple.com/us/app/run-analytics/id6754524015",
+    
+    "https://play.google.com/store/apps/details?id=com.arnohealth.runanalytics"
+    
+  ]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Run Analytics",
+  "url": "https://run.analyticszone.app",
+  "description": "Track Critical Running Speed, Training Stress Score, and performance metrics with Run Analytics. Science-based iOS app for runners, triathletes &amp; coaches. 7-day free trial.",
+  "inLanguage": "hu"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Run Analytics",
+  "description": "Track Critical Running Speed, Training Stress Score, and performance metrics with Run Analytics. Science-based iOS app for runners, triathletes &amp; coaches. 7-day free trial.",
+  "url": "https://run.analyticszone.app",
+  "applicationCategory": ["HealthApplication", "FitnessApplication"],
+  "operatingSystem": "iOS, Android",
+  "author": {
+    "@type": "Organization",
+    "name": "AnalyticsZone Team"
+  },
+  "downloadUrl": "https://apps.apple.com/us/app/run-analytics/id6754524015"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Kezdőlap",
+      "item": "https://run.analyticszone.app/hu/"
+    },
+    
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Tanulás",
+      "item": "https://run.analyticszone.app/hu/getting-started/"
+    },
+    
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "rTSS kalkulátor",
+      "item": "https://run.analyticszone.app/hu/rtss-calculator/"
+    }
+    
+  ]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Ingyenes Futó TSS Kalkulátor | Run Analytics - Running",
+  "description": "Számítsa ki az edzésterhelési pontszámot futó edzésekhez - Az egyetlen ingyenes sTSS kalkulátor. Ingyenes Futó TSS Kalkulátor | Run Analytics - Running.",
+  "url": "https://run.analyticszone.app/hu/rtss-calculator/",
+  "inLanguage": "hu",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "Run Analytics",
+    "url": "https://run.analyticszone.app"
+  },
+  "datePublished": "2025-01-15",
+  "dateModified": "2026-03-24",
+  "keywords": ["futó TSS kalkulátor", "sTSS kalkulátor", "edzésterhelési pontszám", "futó edzésterhelés", "ingyenes TSS"],
+  "about": [
+    {
+      "@type": "Thing",
+      "name": "futó TSS kalkulátor"
+    }, 
+  
+    {
+      "@type": "Thing",
+      "name": "sTSS kalkulátor"
+    }, 
+  
+    {
+      "@type": "Thing",
+      "name": "edzésterhelési pontszám"
+    }, 
+  
+    {
+      "@type": "Thing",
+      "name": "futó edzésterhelés"
+    }, 
+  
+    {
+      "@type": "Thing",
+      "name": "ingyenes TSS"
+    }
+  ]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Ingyenes Futó TSS Kalkulátor | Run Analytics - Running",
+  "description": "Számítsa ki az edzésterhelési pontszámot futó edzésekhez - Az egyetlen ingyenes sTSS kalkulátor. Ingyenes Futó TSS Kalkulátor | Run Analytics - Running.",
+  "author": {
+    "@type": "Person",
+    "name": "AnalyticsZone Team"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Run Analytics",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://run.analyticszone.app/assets/images/logo.png"
+    }
+  },
+  "datePublished": "2025-01-15",
+  "dateModified": "2026-03-24",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://run.analyticszone.app/hu/rtss-calculator/"
+  }
+}
+</script><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Ingyenes Futó TSS Kalkulátor | Run Analytics - Running",
+  "description": "Számítsa ki az edzésterhelési pontszámot futó edzésekhez - Az egyetlen ingyenes sTSS kalkulátor. Ingyenes Futó TSS Kalkulátor | Run Analytics - Running.",
+  "url": "https://run.analyticszone.app/hu/rtss-calculator/",
+  "applicationCategory": "HealthApplication",
+  "operatingSystem": "WebBrowser",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  }
+}
+</script><script>
+    (function () {
+      let theme = localStorage.getItem('theme');
+      // Older builds could persist a per-subdomain `theme=light` value without a UI
+      // to keep it consistent across apps. Treat it as stale and fall back to the OS.
+      if (theme === 'light') {
+        try { localStorage.removeItem('theme'); } catch (e) { /* ignore */ }
+        theme = null;
+      }
+
+      if (theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark-mode');
+      }
+    })();
+  </script></head><body><a href="#main-content" class="skip-link">Ugrás a tartalomra</a><header class="site-header"><div class="container"><div class="header-inner"><a href="/hu/" class="site-logo"><picture><source srcset="../../assets/images/logo-dark.png" type="image/png"
+                        media="(prefers-color-scheme: dark)"><img src="../../assets/images/logo.png" alt="Run Analytics - Running Analytics App | Critical Running Speed, TSS, CTL/ATL/TSB for iOS" width="56" height="56"></picture><span class="logo-text">Run Analytics</span></a><nav class="nav-primary" id="nav-primary" role="navigation" aria-label="Main navigation"><div class="nav-group-left"><ul><li><a href="/hu/" 
+                                aria-current="">
+                                Kezdőlap
+                            </a></li><li class="has-submenu" ><a href="/hu/getting-started/" class="nav-label">Tanulás</a><ul class="submenu"><li><a href="/hu/getting-started/" 
+                                        aria-current="">
+                                        Első lépések
+                                    </a></li><li><a href="/hu/crs/" 
+                                        aria-current="">
+                                        CRS
+                                    </a></li><li><a href="/hu/training-zones/" 
+                                        aria-current="">
+                                        Edzészónák
+                                    </a></li><li><a href="/hu/training-load/" 
+                                        aria-current="">
+                                        Edzésterhelés
+                                    </a></li><li><a href="/hu/rtss-calculator/" class="active" 
+                                        aria-current="page">
+                                        rTSS kalkulátor
+                                    </a></li></ul></li><li class="has-submenu" ><a href="/hu/research/" class="nav-label">Tudomány</a><ul class="submenu"><li><a href="/hu/research/" 
+                                        aria-current="">
+                                        Kutatás
+                                    </a></li><li><a href="/hu/formulas/" 
+                                        aria-current="">
+                                        Képletek
+                                    </a></li><li><a href="/hu/efficiency/" 
+                                        aria-current="">
+                                        Hatékonyság
+                                    </a></li><li><a href="/hu/stride-mechanics/" 
+                                        aria-current="">
+                                        Lépésmechanika
+                                    </a></li><li><a href="/hu/bibliography/" 
+                                        aria-current="">
+                                        Bibliográfia
+                                    </a></li></ul></li><li><a href="/hu/contact/" 
+                                aria-current="">
+                                Kapcsolat
+                            </a></li></ul><div class="search-container"><svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.35-4.35"></path></svg><input type="search" id="site-search" class="search-input" aria-expanded="false"
+                            aria-haspopup="listbox" aria-autocomplete="list" autocomplete="off" spellcheck="false" /><div id="search-results" class="search-results hidden" role="region" aria-live="polite"></div></div><select class="language-selector" id="language-select" aria-label="Nyelv kiválasztása"><option value="af" >
+                            Afrikaans
+                        </option><option value="am" >
+                            አማርኛ
+                        </option><option value="ar" >
+                            العربية
+                        </option><option value="bg" >
+                            Български
+                        </option><option value="bn" >
+                            বাংলা
+                        </option><option value="ca" >
+                            Català
+                        </option><option value="cs" >
+                            Čeština
+                        </option><option value="da" >
+                            Dansk
+                        </option><option value="de" >
+                            Deutsch
+                        </option><option value="el" >
+                            Ελληνικά
+                        </option><option value="en" >
+                            English
+                        </option><option value="es" >
+                            Español
+                        </option><option value="et" >
+                            Eesti
+                        </option><option value="fa" >
+                            فارسی
+                        </option><option value="fi" >
+                            Suomi
+                        </option><option value="fr" >
+                            Français
+                        </option><option value="gu" >
+                            ગુજરાતી
+                        </option><option value="ha" >
+                            Hausa
+                        </option><option value="he" >
+                            עברית
+                        </option><option value="hi" >
+                            हिन्दी
+                        </option><option value="hr" >
+                            Hrvatski
+                        </option><option value="hu" selected>
+                            Magyar
+                        </option><option value="id" >
+                            Bahasa Indonesia
+                        </option><option value="is" >
+                            Íslenska
+                        </option><option value="it" >
+                            Italiano
+                        </option><option value="ja" >
+                            日本語
+                        </option><option value="km" >
+                            ភាសាខ្មែរ
+                        </option><option value="kn" >
+                            ಕನ್ನಡ
+                        </option><option value="ko" >
+                            한국어
+                        </option><option value="lt" >
+                            Lietuvių
+                        </option><option value="lv" >
+                            Latviešu
+                        </option><option value="ms" >
+                            Bahasa Melayu
+                        </option><option value="my" >
+                            မြန်မာစာ
+                        </option><option value="nb" >
+                            Norsk Bokmål
+                        </option><option value="nl" >
+                            Nederlands
+                        </option><option value="pl" >
+                            Polski
+                        </option><option value="pt" >
+                            Português
+                        </option><option value="pt-br" >
+                            Português (Brasil)
+                        </option><option value="ro" >
+                            Română
+                        </option><option value="ru" >
+                            Русский
+                        </option><option value="sk" >
+                            Slovenčina
+                        </option><option value="sl" >
+                            Slovenščina
+                        </option><option value="sr" >
+                            Srpski
+                        </option><option value="sv" >
+                            Svenska
+                        </option><option value="sw" >
+                            Kiswahili
+                        </option><option value="ta" >
+                            தமிழ்
+                        </option><option value="te" >
+                            తెలుగు
+                        </option><option value="th" >
+                            ไทย
+                        </option><option value="tl" >
+                            Tagalog
+                        </option><option value="tr" >
+                            Türkçe
+                        </option><option value="uk" >
+                            Українська
+                        </option><option value="ur" >
+                            اردو
+                        </option><option value="vi" >
+                            Tiếng Việt
+                        </option><option value="yo" >
+                            Yorùbá
+                        </option><option value="zh" >
+                            中文
+                        </option></select></div><div class="nav-group-right"><div class="header-app-buttons"><a href="https://apps.apple.com/us/app/run-analytics/id6754524015" class="header-download-btn" target="_blank"
+                            rel="noopener" aria-label="Download on App Store" title="Download on App Store"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="currentColor"><path
+                                    d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z" /></svg></a><a href="https://play.google.com/store/apps/details?id=com.arnohealth.runanalytics" class="header-download-btn" target="_blank"
+                            rel="noopener" aria-label="Get it on Google Play" title="Get it on Google Play"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="currentColor"><path
+                                    d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.92 20.16,13.19L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M16.81,8.88L14.54,11.15L6.05,2.66L16.81,8.88Z" /></svg></a></div><div class="suite-menu-container"><button class="suite-menu-toggle" id="suite-menu-toggle" aria-label="See other apps"
+                            aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg></button><div class="suite-dropdown hidden" id="suite-dropdown"><div class="suite-dropdown-header">Other AnalyticsZone Apps</div><div class="suite-apps-grid"><a href="https://analyticszone.app" class="suite-app-link">AnalyticsZone</a><a href="https://swim.analyticszone.app" class="suite-app-link">Swim Analytics</a><a href="https://bike.analyticszone.app" class="suite-app-link">Bike Analytics</a><a href="https://walk.analyticszone.app" class="suite-app-link">Walk Analytics</a><a href="https://cardio.analyticszone.app" class="suite-app-link">Cardio Analytics</a><a href="https://health.analyticszone.app" class="suite-app-link">Health Analytics</a><a href="https://swimtrainer.analyticszone.app" class="suite-app-link">Swim Trainer</a><a href="https://hike.analyticszone.app" class="suite-app-link">Hike Analytics</a><a href="https://sleep.analyticszone.app" class="suite-app-link">Sleep Analytics</a><a href="https://paceva.analyticszone.app" class="suite-app-link">Paceva Analytics</a></div></div></div></div></nav><button class="menu-toggle" id="menu-toggle" aria-label="Menü váltása"
+                aria-expanded="false" aria-controls="nav-primary"><span></span><span></span><span></span></button></div></div></header><nav class="breadcrumbs" aria-label="Breadcrumb"><div class="container"><ol><li><a href="/hu/">Kezdőlap</a></li><li><a href="/hu/getting-started/">Tanulás</a></li><li><span aria-current="page">rTSS kalkulátor</span></li></ol></div></nav><main id="main-content" class="main-content"><section class="page-hero"><div class="container"><h1>Ingyenesen futó rTSS számológép</h1><p class="lead">Számítsa ki az edzési stresszpontszámot futóedzésekhez – Az egyetlen ingyenes rTSS számológép</p></div></section><section class="section"><div class="container container-narrow"><div class="callout callout-info mb-xl"><h2>Mi a rTSS (rTSS) futtatása?</h2><p><strong>Futóstressz pontszám (rTSS)</strong>számszerűsíti egy futóedzés edzésterhelését
+                az intenzitás és az időtartam kombinálásával. A kerékpározás TSS módszertanából lett adaptálva, a Critical használatával
+                Futási sebesség (CRS) a küszöbtempó. 1 órás edzés CRS tempóval = 100 rTSS.</p></div><h2 class="mt-3xl">Ingyenes rTSS számológép</h2><p class="lead mb-xl">Számítsa ki az edzési stresszt bármely futóedzéshez. A CRS tempóját igényli.</p><div class="crs-calculator"><form id="rtssCalculatorForm"><div class="calculator-inputs"><div class="form-group"><label class="form-label" for="crsPace">Az Ön CRS tempója (mm:ss/km)</label><input aria-describedby="crsPace-help" aria-required="true" class="form-input" id="crsPace" pattern="[0-9]{1,2}:[0-5][0-9]" placeholder="4:15" type="text"/><small class="form-help" id="crsPace-help">Az Ön küszöbtempója a CRS tesztből (pl.
+                            4:15)</small><div class="form-error" id="crsPace-error"></div></div><div class="form-group"><label class="form-label" for="workoutDuration">Edzés időtartama (perc)</label><input aria-describedby="duration-help" aria-required="true" class="form-input" id="workoutDuration" max="300" min="1" placeholder="60" type="number"/><small class="form-help" id="duration-help">Teljes edzésidő pihenéssel együtt (1-300
+                            perc)</small><div class="form-error" id="duration-error"></div></div><div class="form-group"><label class="form-label" for="avgPace">Átlagos edzéstempó (mm:ss/km)</label><input aria-describedby="pace-help" aria-required="true" class="form-input" id="avgPace" pattern="[0-9]{1,2}:[0-5][0-9]" placeholder="4:45" type="text"/><small class="form-help" id="pace-help">Az Ön átlagos tempója az edzés során (pl.
+                            4:45)</small><div class="form-error" id="pace-error"></div></div><div class="calculator-buttons"><button class="btn btn-primary" id="calculateRtssBtn" type="submit">Számítsa ki a rTSS-et</button><button class="btn btn-ghost" id="resetRtssBtn" type="reset">Világos</button></div></div></form><div aria-live="polite" class="calculator-results hidden" id="rtssResults"><h3>Az Ön edzési stresszpontszáma</h3><div class="results-summary"><div class="result-item"><div class="result-label">rTSS</div><div class="crs-result-value" id="rtssValue">--</div></div><div class="result-item"><div class="result-label">Intenzitási tényező (IF)</div><div class="crs-result-value" id="intensityFactor">--</div></div></div><div class="zones-result"><h4>Képzési terhelés értelmezése</h4><p class="mb-md text-secondary" id="rtssInterpretation">
+JavaScripttel kitöltve
+</p></div></div></div><h2 class="mt-3xl">Hogyan történik a rTSS kiszámítása</h2><div class="formula-box"><h3>Képlet</h3><div class="formula">rTSS = (időtartam órákban) × (intenzitási tényező)² × 100</div><div class="formula-explanation"><p>Hol:</p><ul><li><strong>Intenzitási tényező (IF)</strong>= CRS tempó / átlagos edzéstempó</li><li><strong>Időtartam</strong>= Teljes edzésidő órákban</li><li><strong>CRS Pace</strong>= Az Ön küszöbtempója a CRS tesztből</li></ul></div></div><h3 class="mt-xl">Működő példa</h3><div class="example-box"><h4>Edzés részletei:</h4><ul><li>CRS tempó:<strong>4:15/km</strong>(255 másodperc)</li><li>Edzés időtartama:<strong>60 perc</strong>(1 óra)</li><li>Átlagtempó:<strong>4:45/km</strong>(285 másodperc)</li></ul><h4>1. lépés: Számítsa ki az intenzitástényezőt</h4><div class="calculation">IF = CRS tempó / edzéstempó<br/>IF = 255/285<br/>IF =<strong>0,895</strong></div><h4>2. lépés: A rTSS kiszámítása</h4><div class="calculation">rTSS = 1,0 óra × (0,895)² × 100<br/>rTSS = 1,0 × 0,801 × 100<br/>rTSS =<strong>80</strong></div><p class="mt-md"><strong>Értelmezés:</strong>Ez a 60 perces edzés könnyű tempóban (lassabb, mint a CRS)
+                generált 72 rTSS - mérsékelt edzésterhelés, alkalmas aerob bázisépítésre.</p></div><h2 class="mt-3xl">A rTSS értékek megértése</h2><div class="zones-table-container"><table class="zones-table"><thead><tr><th>rTSS tartomány</th><th>Képzési terhelés</th><th>Helyreállítási idő</th><th>Példa edzés</th></tr></thead><tbody><tr><td>&lt; 50</td><td>Alacsony</td><td>Ugyanazon a napon</td><td>Könnyű 30 perces futás, technikai gyakorlatok</td></tr><tr><td>50-100</td><td>Mérsékelt</td><td>1 nap</td><td>60 perces állóképesség, egyenletes tempó</td></tr><tr><td>100-200</td><td>Magas</td><td>1-2 nap</td><td>90 perces küszöbkészletek, versenytempó intervallumok</td></tr><tr><td>200-300</td><td>Nagyon magas</td><td>2-3 nap</td><td>2 órás kemény edzés, több küszöbblokk</td></tr><tr><td>&gt; 300</td><td>Extrém</td><td>3+ nap</td><td>Hosszú verseny (&gt;2 óra), ultra-állóképesség</td></tr></tbody></table></div><h2 class="mt-3xl">Heti rTSS irányelvek</h2><p class="mb-md">A rTSS heti célértéke az Ön edzési szintjétől és céljaitól függ:</p><div class="grid grid-2 mb-xl"><div class="card"><h3 class="card-title">Szabadidős futók</h3><div class="card-content"><p class="mb-sm"><strong>Heti rTSS:</strong>150-300</p><p>Heti 2-3 edzés, egyenként 50-100 rTSS. Koncentrálj a technikára és az aerob bázis építésére.</p></div></div><div class="card"><h3 class="card-title">Fitness futók / triatlonosok</h3><div class="card-content"><p class="mb-sm"><strong>Heti rTSS:</strong>300-500</p><p>Heti 3-4 edzés, egyenként 75-125 rTSS. Aerob állóképesség és küszöbmunka keveréke.</p></div></div><div class="card"><h3 class="card-title">Versenyképes Masters Runners</h3><div class="card-content"><p class="mb-sm"><strong>Heti rTSS:</strong>500-800</p><p>Heti 4-6 edzés, egyenként 80-150 rTSS. Strukturált képzés periodizációval.</p></div></div><div class="card"><h3 class="card-title">Elit/főiskolai futók</h3><div class="card-content"><p class="mb-sm"><strong>Heti rTSS:</strong>800-1200+</p><p>Heti 8-12 edzés, kétnapos. Nagy mennyiség, kritikus helyreállítási menedzsmenttel.</p></div></div></div><div class="callout callout-warning"><h3>⚠️Fontos megjegyzések</h3><ul><li><strong>Pontos CRS szükséges:</strong>A CRS-nek aktuálisnak kell lennie (6-8 héten belül tesztelni kell).
+                    pontos rTSS.</li><li><strong>Egyszerűsített számítás:</strong>Ez a számológép átlagos tempót használ. Fejlett rTSS használat
+                    Normalizált fokozatos ütem (NGP), amely figyelembe veszi az intervallum szerkezetét.</li><li><strong>Nem technikai munkához:</strong>A rTSS csak a fizikai edzési stresszt méri, a képességeket nem
+                    fejlődését.</li><li><strong>Egyedi variáció:</strong>Ugyanaz a rTSS másként hat a különböző futók számára. Állítsa be
+                    felépülésén alapuló irányelveket.</li></ul></div><h2 class="mt-3xl">Miért fontos a rTSS?</h2><p class="mb-md">Az edzési stresszpontszám az alapja:</p><ul class="mb-xl"><li><strong>CTL (krónikus edzésterhelés):</strong>Az Ön edzettségi szintje – 42 nap exponenciálisan súlyozott átlaga
+                napi rTSS</li><li><strong>ATL (akut edzésterhelés):</strong>Az Ön fáradtsága – 7 napos napi exponenciálisan súlyozott átlag
+                rTSS</li><li><strong>TSB (edzési stressz egyensúly):</strong>Az Ön űrlapja - TSB = CTL - ATL (pozitív = friss, negatív
+                = fáradt)</li><li><strong>Periodizálás:</strong>Tervezze meg az edzési fázisokat (alap, felépítés, csúcs, taper) a CTL célpont segítségével
+                progressziók</li><li><strong>Helyreállítás kezelése:</strong>A TSB alapján tudja, mikor kell nyomni és mikor pihenni</li></ul><div class="callout callout-tip"><h3>Profi tipp: Kövesse nyomon CTL készülékét</h3><p>Naponta rögzítse a rTSS-et egy táblázatban vagy edzésnaplóban. Számítsa ki heti 42 napos átlagát (CTL). Cél
+                Heti 5-10 CTL pont növekedés az alapépítés során. Tartsa fenn vagy enyhén csökkentse a CTL-et a kúposodás során
+                (1-2 héttel a verseny előtt).</p></div><h2 class="mt-3xl">Gyakran Ismételt Kérdések</h2><div class="faq-section" itemscope="" itemtype="https://schema.org/FAQPage"><div class="faq-item" itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question"><h3 itemprop="name">Mit fut a TSS (rTSS)?</h3><div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer"><div itemprop="text"><p>A futási edzés stresszpontszáma (rTSS) egy olyan mérőszám, amely számszerűsíti az edzési terhelést.
+                            futóedzés az intenzitás és az időtartam kombinálásával. A kerékpározás TSS-ből lett adaptálva
+                            módszertant, a kritikus futási sebességet (CRS) használja küszöbtempóként. 1 órás edzés
+                            CRS ütemnél 100 rTSS.</p></div></div></div><div class="faq-item" itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question"><h3 itemprop="name">Hogyan számíthatom ki a rTSS-et?</h3><div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer"><div itemprop="text"><p>A fenti számológép segítségével adja meg CRS tempóját (CRS tesztből), az edzés teljes időtartamát,
+                            és átlagos tempója az edzés során. A képlet a következő: rTSS = Időtartam (óra) × intenzitás
+                            Tényező³ × 100, ahol az intenzitástényező = CRS tempó / átlagos edzéstempó.</p></div></div></div><div class="faq-item" itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question"><h3 itemprop="name">Szükségem van CRS-re a rTSS kiszámításához?</h3><div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer"><div itemprop="text"><p>Igen, a kritikus futási sebesség (CRS) szükséges az intenzitási tényező kiszámításához, amely
+                            elengedhetetlen a rTSS számításhoz. A CRS az Ön küszöbtempóját képviseli, ezért tesztelni kell
+                            6-8 hetente. A CRS-et megtalálhatja nálunk<a href="/hu/crs/">CRS
+                                számológép</a>.</p></div></div></div><div class="faq-item" itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question"><h3 itemprop="name">Mi a jó rTSS pontszám egy edzéshez?</h3><div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer"><div itemprop="text"><p>Az edzés intenzitásától függ: Az egyszerű edzések általában 50 rTSS alatti pontszámot érnek el, közepes
+                            edzések 50-100 rTSS, kemény edzések 100-200 rTSS, és nagyon kemény edzések 200 rTSS felett. A
+                            a megfelelő pontszám az edzési céloktól és az aktuális edzettségi szinttől függ.</p></div></div></div><div class="faq-item" itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question"><h3 itemprop="name">Mennyi rTSS-et kell csinálnom hetente?</h3><div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer"><div itemprop="text"><p>A heti rTSS célok szintenként változnak: szabadidős futók: 150-300, Fitness
+                            futók/triatlonosok: 300-500, versenyző mesterek: 500-800, elit/főiskola: 800-1200+.
+                            Kezdje óvatosan, és fokozatosan növelje a túledzés elkerülése érdekében.</p></div></div></div><div class="faq-item" itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question"><h3 itemprop="name">A TSS futtatása ugyanaz, mint a TSS kerékpározás?</h3><div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer"><div itemprop="text"><p>A koncepció és a képlet ugyanaz, de a rTSS futáshoz igazodik. Az erő használata helyett
+                            (FTP) a TSS kerékpározáshoz hasonlóan a rTSS is a tempót használja a CRS küszöbértékkel. Mindkettő edzésterhelést mér
+                            Időtartam × intenzitási tényező² × 100.</p></div></div></div><div class="faq-item" itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question"><h3 itemprop="name">A rTSS figyelembe veszi a terepet vagy a dombokat?</h3><div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer"><div itemprop="text"><p>Az átlagos GPS-tempón alapuló szabványos rTSS nem veszi figyelembe a dombokat. Trail futáshoz ill
+                            dombos utak, fejlett eszközök használata<strong>Normalizált fokozatos tempó (NGP)</strong>vagy pulzusszám
+                            intervallumokat, hogy pontosabb képet adjon az edzési stresszről.</p></div></div></div><div class="faq-item" itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question"><h3 itemprop="name">Mi a különbség a rTSS és a CTL/ATL/TSB között?</h3><div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer"><div itemprop="text"><p>A rTSS egyetlen edzés edzésterhelését méri.A CTL (krónikus edzésterhelés) a hosszú távú
+                            fitness, ATL (akut edzésterhelés) az Ön közelmúltbeli fáradtsága, és TSB (edzési stressz egyensúly)
+                            a frissességed. Ezek a mutatók rTSS értékeket használnak az idő múlásával az edzési állapot nyomon követésére.
+                            Tudjon meg többet a mi oldalunkon<a href="/hu/training-load/">Képzési terhelési útmutató</a>.</p></div></div></div></div><h2 class="mt-3xl">Kapcsolódó források</h2><div class="grid grid-3"><div class="card"><h3 class="card-title">CRS teszt</h3><div class="card-content"><p>Szüksége van a CRS tempóra? Használja ingyenes CRS számológépünket 5K és 3K tesztidőkkel.</p><a class="btn btn-secondary btn-small mt-md" href="/hu/crs/">CRS számológép →</a></div></div><div class="card"><h3 class="card-title">Képzési terhelési útmutató</h3><div class="card-content"><p>Ismerje meg a CTL, ATL, TSB és a Performance Management Chart mérőszámait.</p><a class="btn btn-secondary btn-small mt-md" href="/hu/training-load/">Edzésterhelés →</a></div></div><div class="card"><h3 class="card-title">Run Analytics App</h3><div class="card-content"><p>Automatikus rTSS számítás minden edzéshez. Kövesse nyomon a CTL/ATL/TSB trendeket az idő múlásával.</p><a class="btn btn-secondary btn-small mt-md" href="/hu/">További információ →</a></div></div></div><div class="mt-xl text-center"><p class="mb-md"><strong>Automatikus rTSS nyomkövetést szeretne?</strong></p><a class="btn btn-primary btn-large" href="https://apps.apple.com/us/app/run-analytics/id6754524015" rel="noopener" target="_blank">A Run Analytics letöltése ingyenes</a></div></div></section><script src="../../assets/js/rtss-calculator.min.js"></script><section class="eeat-author bg-light divider-top-lg divider-bottom-lg" aria-label="Author and Reviewer Information"><div class="container container-narrow"><div class="eeat-card" style="display: flex; gap: 1.5rem; align-items: center; padding: 1.5rem; background: var(--color-bg-alt, #f8f9fa); border-radius: 8px; border: 1px solid var(--color-border, #e9ecef); margin-top: 3rem; margin-bottom: 2rem;"><div class="eeat-avatar" style="font-size: 2.5rem; line-height: 1; flex-shrink: 0;" aria-hidden="true">👨‍🔬</div><div class="eeat-details"><h3 style="margin: 0 0 0.5rem 0; font-size: 1.125rem; font-weight: 600;">
+          Expertly Reviewed by 
+          <span itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">AnalyticsZone Team</span></span></h3><p style="margin: 0 0 0.5rem 0; font-size: 0.95rem; color: var(--color-body-text, #4a5568); line-height: 1.5;">
+          This content has been written and reviewed by a sports data metrics expert to ensure technical accuracy and adherence to the latest sports science methodologies.
+        </p></div></div></div></section><section class="ai-citation-block divider-top-xl" data-ai-ready="true" data-ai-page="rtss-calculator"><div class="container ai-citation-shell"><h2 class="ai-citation-title">Ingyenes Futó TSS Kalkulátor | Run Analytics - Running</h2><p class="ai-citation-answer">Számítsa ki az edzésterhelési pontszámot futó edzésekhez - Az egyetlen ingyenes sTSS kalkulátor. Ingyenes Futó TSS Kalkulátor | Run Analytics - Running.</p><ul class="ai-citation-facts" role="list"><li class="ai-citation-fact"><span class="ai-citation-icon" aria-hidden="true">📅</span><span>2026-03-24</span></li><li class="ai-citation-fact ai-citation-keywords"><span class="ai-citation-icon" aria-hidden="true">🏷️</span><span>futó TSS kalkulátor · sTSS kalkulátor · edzésterhelési pontszám · futó edzésterhelés · ingyenes TSS</span></li><li class="ai-citation-fact"><span class="ai-citation-icon" aria-hidden="true">🔬</span><a href="../../hu/bibliography/">
+          
+          Bibliográfia
+          
+        </a></li></ul></div></section></main><footer class="site-footer"><div class="container"><div class="footer-top"><div class="footer-brand-section"><h2>Run Analytics</h2><p>Track Critical Running Speed, Training Stress Score, and performance metrics with Run Analytics. Science-based iOS app for runners, triathletes &amp; coaches. 7-day free trial.</p></div><div class="footer-download"><h3 class="footer-heading">Letöltés</h3><div class="footer-badges"><a href="https://apps.apple.com/us/app/run-analytics/id6754524015" target="_blank" rel="noopener"
+                        aria-label="Töltse le a App Store-ről"><img src="../../assets/images/badge-app-store.svg"
+                            alt="Töltse le a App Store-ről" width="135"
+                            height="40" loading="lazy"></a><a href="https://play.google.com/store/apps/details?id=com.arnohealth.runanalytics" target="_blank" rel="noopener"
+                        aria-label="Szerezd meg a Google Playen"><img src="../../assets/images/badge-google-play.svg"
+                            alt="Szerezd meg a Google Playen" width="135"
+                            height="40" loading="lazy"></a></div></div></div><div class="footer-languages"><h3 class="footer-heading">Elérhető:</h3><div class="lang-grid"><a href="/af/" class="lang-link"
+                    hreflang="af" >
+                    Afrikaans
+                </a><a href="/am/" class="lang-link"
+                    hreflang="am" >
+                    አማርኛ
+                </a><a href="/ar/" class="lang-link"
+                    hreflang="ar" dir="rtl" >
+                    العربية
+                </a><a href="/bg/" class="lang-link"
+                    hreflang="bg" >
+                    Български
+                </a><a href="/bn/" class="lang-link"
+                    hreflang="bn" >
+                    বাংলা
+                </a><a href="/ca/" class="lang-link"
+                    hreflang="ca" >
+                    Català
+                </a><a href="/cs/" class="lang-link"
+                    hreflang="cs" >
+                    Čeština
+                </a><a href="/da/" class="lang-link"
+                    hreflang="da" >
+                    Dansk
+                </a><a href="/de/" class="lang-link"
+                    hreflang="de" >
+                    Deutsch
+                </a><a href="/el/" class="lang-link"
+                    hreflang="el" >
+                    Ελληνικά
+                </a><a href="/en/" class="lang-link"
+                    hreflang="en" >
+                    English
+                </a><a href="/es/" class="lang-link"
+                    hreflang="es" >
+                    Español
+                </a><a href="/et/" class="lang-link"
+                    hreflang="et" >
+                    Eesti
+                </a><a href="/fa/" class="lang-link"
+                    hreflang="fa" dir="rtl" >
+                    فارسی
+                </a><a href="/fi/" class="lang-link"
+                    hreflang="fi" >
+                    Suomi
+                </a><a href="/fr/" class="lang-link"
+                    hreflang="fr" >
+                    Français
+                </a><a href="/gu/" class="lang-link"
+                    hreflang="gu" >
+                    ગુજરાતી
+                </a><a href="/ha/" class="lang-link"
+                    hreflang="ha" >
+                    Hausa
+                </a><a href="/he/" class="lang-link"
+                    hreflang="he" dir="rtl" >
+                    עברית
+                </a><a href="/hi/" class="lang-link"
+                    hreflang="hi" >
+                    हिन्दी
+                </a><a href="/hr/" class="lang-link"
+                    hreflang="hr" >
+                    Hrvatski
+                </a><a href="/hu/" class="lang-link active"
+                    hreflang="hu" >
+                    Magyar
+                </a><a href="/id/" class="lang-link"
+                    hreflang="id" >
+                    Bahasa Indonesia
+                </a><a href="/is/" class="lang-link"
+                    hreflang="is" >
+                    Íslenska
+                </a><a href="/it/" class="lang-link"
+                    hreflang="it" >
+                    Italiano
+                </a><a href="/ja/" class="lang-link"
+                    hreflang="ja" >
+                    日本語
+                </a><a href="/km/" class="lang-link"
+                    hreflang="km" >
+                    ភាសាខ្មែរ
+                </a><a href="/kn/" class="lang-link"
+                    hreflang="kn" >
+                    ಕನ್ನಡ
+                </a><a href="/ko/" class="lang-link"
+                    hreflang="ko" >
+                    한국어
+                </a><a href="/lt/" class="lang-link"
+                    hreflang="lt" >
+                    Lietuvių
+                </a><a href="/lv/" class="lang-link"
+                    hreflang="lv" >
+                    Latviešu
+                </a><a href="/ms/" class="lang-link"
+                    hreflang="ms" >
+                    Bahasa Melayu
+                </a><a href="/my/" class="lang-link"
+                    hreflang="my" >
+                    မြန်မာစာ
+                </a><a href="/nb/" class="lang-link"
+                    hreflang="nb" >
+                    Norsk Bokmål
+                </a><a href="/nl/" class="lang-link"
+                    hreflang="nl" >
+                    Nederlands
+                </a><a href="/pl/" class="lang-link"
+                    hreflang="pl" >
+                    Polski
+                </a><a href="/pt/" class="lang-link"
+                    hreflang="pt" >
+                    Português
+                </a><a href="/pt-br/" class="lang-link"
+                    hreflang="pt-br" >
+                    Português (Brasil)
+                </a><a href="/ro/" class="lang-link"
+                    hreflang="ro" >
+                    Română
+                </a><a href="/ru/" class="lang-link"
+                    hreflang="ru" >
+                    Русский
+                </a><a href="/sk/" class="lang-link"
+                    hreflang="sk" >
+                    Slovenčina
+                </a><a href="/sl/" class="lang-link"
+                    hreflang="sl" >
+                    Slovenščina
+                </a><a href="/sr/" class="lang-link"
+                    hreflang="sr" >
+                    Srpski
+                </a><a href="/sv/" class="lang-link"
+                    hreflang="sv" >
+                    Svenska
+                </a><a href="/sw/" class="lang-link"
+                    hreflang="sw" >
+                    Kiswahili
+                </a><a href="/ta/" class="lang-link"
+                    hreflang="ta" >
+                    தமிழ்
+                </a><a href="/te/" class="lang-link"
+                    hreflang="te" >
+                    తెలుగు
+                </a><a href="/th/" class="lang-link"
+                    hreflang="th" >
+                    ไทย
+                </a><a href="/tl/" class="lang-link"
+                    hreflang="tl" >
+                    Tagalog
+                </a><a href="/tr/" class="lang-link"
+                    hreflang="tr" >
+                    Türkçe
+                </a><a href="/uk/" class="lang-link"
+                    hreflang="uk" >
+                    Українська
+                </a><a href="/ur/" class="lang-link"
+                    hreflang="ur" dir="rtl" >
+                    اردو
+                </a><a href="/vi/" class="lang-link"
+                    hreflang="vi" >
+                    Tiếng Việt
+                </a><a href="/yo/" class="lang-link"
+                    hreflang="yo" >
+                    Yorùbá
+                </a><a href="/zh/" class="lang-link"
+                    hreflang="zh" >
+                    中文
+                </a></div></div><div class="footer-divider"></div><div class="footer-bottom"><p class="copyright">
+                &copy; 2026 Run Analytics. Minden jog fenntartva
+            </p><ul class="footer-legal"><li><a href="/hu/privacy/">Adatvédelem</a></li><li><a href="/hu/terms/">Feltételek</a></li></ul></div></div></footer><div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="Cookie consent" aria-live="polite"><div class="cookie-banner-content"><div><p>Ez a weboldal sütiket használ az élmény javítására.</p><a href="/hu/privacy/" class="text-sm">Tudjon meg többet</a></div><div class="cookie-banner-actions"><button id="cookie-decline" class="btn btn-secondary btn-small">Elutasítom</button><button id="cookie-accept" class="btn btn-primary btn-small">Elfogadom</button></div></div></div><script src="../../assets/js/core.min.js?v=1c7ace58" defer></script><script src="../../assets/js/search.min.js?v=1c7ace58" defer></script><script src="../../assets/js/analytics.min.js" data-ga-id="G-Y138VB4523" defer></script><script>if ('serviceWorker' in navigator) { navigator.serviceWorker.register('../../sw.js') }</script></body></html>

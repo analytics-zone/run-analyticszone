@@ -1,0 +1,902 @@
+<!DOCTYPE html><html lang="de" dir="ltr"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=optional"
+    rel="stylesheet"><title>Laufleistungstests: Vollständiger Leitfaden für Feldtests</title><meta name="description" content="Veröffentlicht: 27. Januar 2025 | Aktualisiert: 29. Januar 2025. Laufleistungstests: Vollständiger Leitfaden für Feldtests"><meta name="author" content="AnalyticsZone Team"><meta name="keywords" content="Durchführung von Leistungstests, Durchführung von Feldtests, CRS Test, vo2max-Testlauf, Schwellentest, Laufökonomietest, Leistungstests, Testen der Trainingszonen"><link rel="canonical" href="https://run.analyticszone.app/de/running-performance-tests/"><meta property="article:published_time" content="2025-01-27T10:00:00Z"><meta property="article:modified_time" content="2026-02-06T14:30:00Z"><meta property="article:author" content="AnalyticsZone Team"><meta property="og:type" content="article"><meta property="og:url" content="https://run.analyticszone.app/de/running-performance-tests/"><meta property="og:title" content="Laufleistungstests: Vollständiger Leitfaden für Feldtests"><meta property="og:description" content="Veröffentlicht: 27. Januar 2025 | Aktualisiert: 29. Januar 2025. Laufleistungstests: Vollständiger Leitfaden für Feldtests"><meta property="og:image" content="https://run.analyticszone.app/assets/images/og-image.svg"><meta property="og:locale" content="de_DE"><meta property="og:site_name" content="Run Analytics"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:url" content="https://run.analyticszone.app/de/running-performance-tests/"><meta name="twitter:title" content="Laufleistungstests: Vollständiger Leitfaden für Feldtests"><meta name="twitter:description" content="Veröffentlicht: 27. Januar 2025 | Aktualisiert: 29. Januar 2025. Laufleistungstests: Vollständiger Leitfaden für Feldtests"><meta name="twitter:image" content="https://run.analyticszone.app/assets/images/og-image.svg"><meta name="twitter:site" content="@runanalytics"><meta name="twitter:creator" content="@runanalytics"><link rel="alternate" hreflang="ar"
+    href="https://run.analyticszone.app/ar/running-performance-tests/"><link rel="alternate" hreflang="de"
+    href="https://run.analyticszone.app/de/running-performance-tests/"><link rel="alternate" hreflang="en"
+    href="https://run.analyticszone.app/en/running-performance-tests/"><link rel="alternate" hreflang="es"
+    href="https://run.analyticszone.app/es/running-performance-tests/"><link rel="alternate" hreflang="fr"
+    href="https://run.analyticszone.app/fr/running-performance-tests/"><link rel="alternate" hreflang="hi"
+    href="https://run.analyticszone.app/hi/running-performance-tests/"><link rel="alternate" hreflang="id"
+    href="https://run.analyticszone.app/id/running-performance-tests/"><link rel="alternate" hreflang="it"
+    href="https://run.analyticszone.app/it/running-performance-tests/"><link rel="alternate" hreflang="ja"
+    href="https://run.analyticszone.app/ja/running-performance-tests/"><link rel="alternate" hreflang="ko"
+    href="https://run.analyticszone.app/ko/running-performance-tests/"><link rel="alternate" hreflang="nl"
+    href="https://run.analyticszone.app/nl/running-performance-tests/"><link rel="alternate" hreflang="pl"
+    href="https://run.analyticszone.app/pl/running-performance-tests/"><link rel="alternate" hreflang="pt"
+    href="https://run.analyticszone.app/pt/running-performance-tests/"><link rel="alternate" hreflang="pt-br"
+    href="https://run.analyticszone.app/pt-br/running-performance-tests/"><link rel="alternate" hreflang="ru"
+    href="https://run.analyticszone.app/ru/running-performance-tests/"><link rel="alternate" hreflang="sv"
+    href="https://run.analyticszone.app/sv/running-performance-tests/"><link rel="alternate" hreflang="tr"
+    href="https://run.analyticszone.app/tr/running-performance-tests/"><link rel="alternate" hreflang="zh"
+    href="https://run.analyticszone.app/zh/running-performance-tests/"><link rel="alternate" hreflang="x-default"
+    href="https://run.analyticszone.app/en/running-performance-tests/"><link rel="icon" type="image/png" sizes="32x32" href="../../assets/images/icons/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="../../assets/images/icons/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="../../assets/images/icons/apple-touch-icon.png"><link rel="manifest" href="../../manifest.json"><meta name="theme-color" content="#2563EB"><meta name="robots" content="index, follow"><meta name="apple-itunes-app" content="app-id=6754524015"><style>
+/* Critical CSS - Above the fold styles for fast LCP */
+:root {
+  --color-primary: #0066CC;
+  --color-text: #1a1a1a;
+  --color-text-muted: #666;
+  --color-bg: #ffffff;
+  --color-bg-alt: #f8f9fa;
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+}
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  color: var(--color-text);
+  background: var(--color-bg);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Skip link - Accessibility */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--color-primary);
+  color: #fff;
+  padding: 8px 16px;
+  z-index: 1000;
+  text-decoration: none;
+}
+.skip-link:focus {
+  top: 0;
+}
+
+/* Header - Critical for LCP */
+.site-header {
+  background: var(--color-bg);
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0.75rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.site-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: var(--color-text);
+  font-weight: 600;
+  font-size: 1.125rem;
+}
+
+.site-logo img, .site-logo svg {
+  width: 32px;
+  height: 32px;
+}
+
+/* Navigation */
+.main-nav {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .main-nav {
+    display: flex;
+    gap: 1.5rem;
+  }
+  .main-nav a {
+    color: var(--color-text);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9375rem;
+    transition: color 0.2s;
+  }
+  .main-nav a:hover {
+    color: var(--color-primary);
+  }
+}
+
+/* Mobile menu button */
+.menu-toggle {
+  display: flex;
+  background: none;
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .menu-toggle {
+    display: none;
+  }
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Main content */
+main.main-content {
+  flex: 1;
+}
+
+/* Hero section - Critical for LCP */
+.hero {
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .hero {
+    padding: 4rem 2rem;
+  }
+}
+
+.hero h1 {
+  font-size: clamp(1.75rem, 5vw, 3rem);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  color: var(--color-text);
+}
+
+.hero .lead, .hero p {
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  color: var(--color-text-muted);
+  max-width: 700px;
+  margin: 0 auto 1.5rem;
+}
+
+/* Buttons - Critical for CTA */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: var(--radius-md);
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-primary {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: #0052a3;
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+}
+
+.btn-large {
+  padding: 1rem 2rem;
+  font-size: 1.125rem;
+}
+
+/* Utility classes */
+.hidden { display: none !important; }
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Images - prevent CLS with aspect-ratio */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+img[width][height] {
+  aspect-ratio: attr(width) / attr(height);
+}
+
+.lazy-image {
+  background: var(--color-bg-alt);
+  transition: opacity 0.3s;
+}
+
+.lazy-image:not(.loaded) {
+  opacity: 0;
+}
+
+.lazy-image.loaded {
+  opacity: 1;
+}
+
+/* App badges - fixed dimensions to prevent CLS */
+.app-badge img {
+  width: 140px;
+  height: 42px;
+}
+
+/* Logo - fixed dimensions */
+.site-logo img {
+  width: 32px;
+  height: 32px;
+}
+
+/* Reduce motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+</style><link rel="preconnect" href="https://www.googletagmanager.com"><link rel="dns-prefetch" href="https://www.googletagmanager.com"><link rel="stylesheet" href="../../assets/css/main.min.css?v=1c7ace58"><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Run Analytics",
+  "url": "https://run.analyticszone.app",
+  "logo": "https://run.analyticszone.app/assets/images/logo.png",
+  "description": "Track Critical Running Speed, Training Stress Score, and performance metrics with Run Analytics. Science-based iOS app for runners, triathletes &amp; coaches. 7-day free trial.",
+  
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "Customer Support",
+    "email": "analyticszone+run@onmedic.org"
+  },
+  
+  "sameAs": [
+    
+    
+      
+    
+    
+      
+    
+    
+      
+    
+    
+    "https://twitter.com/runanalytics",
+    
+    "https://apps.apple.com/us/app/run-analytics/id6754524015",
+    
+    "https://play.google.com/store/apps/details?id=com.arnohealth.runanalytics"
+    
+  ]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Run Analytics",
+  "url": "https://run.analyticszone.app",
+  "description": "Track Critical Running Speed, Training Stress Score, and performance metrics with Run Analytics. Science-based iOS app for runners, triathletes &amp; coaches. 7-day free trial.",
+  "inLanguage": "de"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Run Analytics",
+  "description": "Track Critical Running Speed, Training Stress Score, and performance metrics with Run Analytics. Science-based iOS app for runners, triathletes &amp; coaches. 7-day free trial.",
+  "url": "https://run.analyticszone.app",
+  "applicationCategory": ["HealthApplication", "FitnessApplication"],
+  "operatingSystem": "iOS, Android",
+  "author": {
+    "@type": "Organization",
+    "name": "AnalyticsZone Team"
+  },
+  "downloadUrl": "https://apps.apple.com/us/app/run-analytics/id6754524015"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Laufleistungstests: Vollständiger Leitfaden für Feldtests",
+  "description": "Veröffentlicht: 27. Januar 2025 | Aktualisiert: 29. Januar 2025. Laufleistungstests: Vollständiger Leitfaden für Feldtests",
+  "url": "https://run.analyticszone.app/de/running-performance-tests/",
+  "inLanguage": "de",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "Run Analytics",
+    "url": "https://run.analyticszone.app"
+  },
+  "datePublished": "2025-01-27",
+  "dateModified": "2026-02-06",
+  "keywords": ["Durchführung von Leistungstests", "Durchführung von Feldtests", "CRS Test", "vo2max-Testlauf", "Schwellentest", "Laufökonomietest", "Leistungstests", "Testen der Trainingszonen"],
+  "about": [
+    {
+      "@type": "Thing",
+      "name": "Durchführung von Leistungstests"
+    }, 
+  
+    {
+      "@type": "Thing",
+      "name": "Durchführung von Feldtests"
+    }, 
+  
+    {
+      "@type": "Thing",
+      "name": "CRS Test"
+    }, 
+  
+    {
+      "@type": "Thing",
+      "name": "vo2max-Testlauf"
+    }, 
+  
+    {
+      "@type": "Thing",
+      "name": "Schwellentest"
+    }, 
+  
+    {
+      "@type": "Thing",
+      "name": "Laufökonomietest"
+    }, 
+  
+    {
+      "@type": "Thing",
+      "name": "Leistungstests"
+    }, 
+  
+    {
+      "@type": "Thing",
+      "name": "Testen der Trainingszonen"
+    }
+  ]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Laufleistungstests: Vollständiger Leitfaden für Feldtests",
+  "description": "Veröffentlicht: 27. Januar 2025 | Aktualisiert: 29. Januar 2025. Laufleistungstests: Vollständiger Leitfaden für Feldtests",
+  "author": {
+    "@type": "Person",
+    "name": "AnalyticsZone Team"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Run Analytics",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://run.analyticszone.app/assets/images/logo.png"
+    }
+  },
+  "datePublished": "2025-01-27",
+  "dateModified": "2026-02-06",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://run.analyticszone.app/de/running-performance-tests/"
+  }
+}
+</script><script>
+    (function () {
+      let theme = localStorage.getItem('theme');
+      // Older builds could persist a per-subdomain `theme=light` value without a UI
+      // to keep it consistent across apps. Treat it as stale and fall back to the OS.
+      if (theme === 'light') {
+        try { localStorage.removeItem('theme'); } catch (e) { /* ignore */ }
+        theme = null;
+      }
+
+      if (theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark-mode');
+      }
+    })();
+  </script></head><body><a href="#main-content" class="skip-link">Zum Inhalt springen</a><header class="site-header"><div class="container"><div class="header-inner"><a href="/de/" class="site-logo"><picture><source srcset="../../assets/images/logo-dark.png" type="image/png"
+                        media="(prefers-color-scheme: dark)"><img src="../../assets/images/logo.png" alt="Run Analytics - Running Analytics App | Critical Running Speed, TSS, CTL/ATL/TSB for iOS" width="56" height="56"></picture><span class="logo-text">Run Analytics</span></a><nav class="nav-primary" id="nav-primary" role="navigation" aria-label="Main navigation"><div class="nav-group-left"><ul><li><a href="/de/" 
+                                aria-current="">
+                                Startseite
+                            </a></li><li class="has-submenu" ><a href="/de/getting-started/" class="nav-label">Lernen</a><ul class="submenu"><li><a href="/de/getting-started/" 
+                                        aria-current="">
+                                        Erste Schritte
+                                    </a></li><li><a href="/de/crs/" 
+                                        aria-current="">
+                                        CRS
+                                    </a></li><li><a href="/de/training-zones/" 
+                                        aria-current="">
+                                        Trainingszonen
+                                    </a></li><li><a href="/de/training-load/" 
+                                        aria-current="">
+                                        Trainingsbelastung
+                                    </a></li><li><a href="/de/rtss-calculator/" 
+                                        aria-current="">
+                                        rTSS Rechner
+                                    </a></li></ul></li><li class="has-submenu" ><a href="/de/research/" class="nav-label">Wissenschaft</a><ul class="submenu"><li><a href="/de/research/" 
+                                        aria-current="">
+                                        Forschung
+                                    </a></li><li><a href="/de/formulas/" 
+                                        aria-current="">
+                                        Formeln
+                                    </a></li><li><a href="/de/efficiency/" 
+                                        aria-current="">
+                                        Effizienz
+                                    </a></li><li><a href="/de/stride-mechanics/" 
+                                        aria-current="">
+                                        Technik
+                                    </a></li><li><a href="/de/bibliography/" 
+                                        aria-current="">
+                                        Bibliographie
+                                    </a></li></ul></li><li><a href="/de/contact/" 
+                                aria-current="">
+                                Kontakt
+                            </a></li></ul><div class="search-container"><svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.35-4.35"></path></svg><input type="search" id="site-search" class="search-input" aria-expanded="false"
+                            aria-haspopup="listbox" aria-autocomplete="list" autocomplete="off" spellcheck="false" /><div id="search-results" class="search-results hidden" role="region" aria-live="polite"></div></div><select class="language-selector" id="language-select" aria-label="Sprache auswählen"><option value="af" >
+                            Afrikaans
+                        </option><option value="am" >
+                            አማርኛ
+                        </option><option value="ar" >
+                            العربية
+                        </option><option value="bg" >
+                            Български
+                        </option><option value="bn" >
+                            বাংলা
+                        </option><option value="ca" >
+                            Català
+                        </option><option value="cs" >
+                            Čeština
+                        </option><option value="da" >
+                            Dansk
+                        </option><option value="de" selected>
+                            Deutsch
+                        </option><option value="el" >
+                            Ελληνικά
+                        </option><option value="en" >
+                            English
+                        </option><option value="es" >
+                            Español
+                        </option><option value="et" >
+                            Eesti
+                        </option><option value="fa" >
+                            فارسی
+                        </option><option value="fi" >
+                            Suomi
+                        </option><option value="fr" >
+                            Français
+                        </option><option value="gu" >
+                            ગુજરાતી
+                        </option><option value="ha" >
+                            Hausa
+                        </option><option value="he" >
+                            עברית
+                        </option><option value="hi" >
+                            हिन्दी
+                        </option><option value="hr" >
+                            Hrvatski
+                        </option><option value="hu" >
+                            Magyar
+                        </option><option value="id" >
+                            Bahasa Indonesia
+                        </option><option value="is" >
+                            Íslenska
+                        </option><option value="it" >
+                            Italiano
+                        </option><option value="ja" >
+                            日本語
+                        </option><option value="km" >
+                            ភាសាខ្មែរ
+                        </option><option value="kn" >
+                            ಕನ್ನಡ
+                        </option><option value="ko" >
+                            한국어
+                        </option><option value="lt" >
+                            Lietuvių
+                        </option><option value="lv" >
+                            Latviešu
+                        </option><option value="ms" >
+                            Bahasa Melayu
+                        </option><option value="my" >
+                            မြန်မာစာ
+                        </option><option value="nb" >
+                            Norsk Bokmål
+                        </option><option value="nl" >
+                            Nederlands
+                        </option><option value="pl" >
+                            Polski
+                        </option><option value="pt" >
+                            Português
+                        </option><option value="pt-br" >
+                            Português (Brasil)
+                        </option><option value="ro" >
+                            Română
+                        </option><option value="ru" >
+                            Русский
+                        </option><option value="sk" >
+                            Slovenčina
+                        </option><option value="sl" >
+                            Slovenščina
+                        </option><option value="sr" >
+                            Srpski
+                        </option><option value="sv" >
+                            Svenska
+                        </option><option value="sw" >
+                            Kiswahili
+                        </option><option value="ta" >
+                            தமிழ்
+                        </option><option value="te" >
+                            తెలుగు
+                        </option><option value="th" >
+                            ไทย
+                        </option><option value="tl" >
+                            Tagalog
+                        </option><option value="tr" >
+                            Türkçe
+                        </option><option value="uk" >
+                            Українська
+                        </option><option value="ur" >
+                            اردو
+                        </option><option value="vi" >
+                            Tiếng Việt
+                        </option><option value="yo" >
+                            Yorùbá
+                        </option><option value="zh" >
+                            中文
+                        </option></select></div><div class="nav-group-right"><div class="header-app-buttons"><a href="https://apps.apple.com/us/app/run-analytics/id6754524015" class="header-download-btn" target="_blank"
+                            rel="noopener" aria-label="Download on App Store" title="Download on App Store"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="currentColor"><path
+                                    d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z" /></svg></a><a href="https://play.google.com/store/apps/details?id=com.arnohealth.runanalytics" class="header-download-btn" target="_blank"
+                            rel="noopener" aria-label="Get it on Google Play" title="Get it on Google Play"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="currentColor"><path
+                                    d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.92 20.16,13.19L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M16.81,8.88L14.54,11.15L6.05,2.66L16.81,8.88Z" /></svg></a></div><div class="suite-menu-container"><button class="suite-menu-toggle" id="suite-menu-toggle" aria-label="See other apps"
+                            aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg></button><div class="suite-dropdown hidden" id="suite-dropdown"><div class="suite-dropdown-header">Other AnalyticsZone Apps</div><div class="suite-apps-grid"><a href="https://analyticszone.app" class="suite-app-link">AnalyticsZone</a><a href="https://swim.analyticszone.app" class="suite-app-link">Swim Analytics</a><a href="https://bike.analyticszone.app" class="suite-app-link">Bike Analytics</a><a href="https://walk.analyticszone.app" class="suite-app-link">Walk Analytics</a><a href="https://cardio.analyticszone.app" class="suite-app-link">Cardio Analytics</a><a href="https://health.analyticszone.app" class="suite-app-link">Health Analytics</a><a href="https://swimtrainer.analyticszone.app" class="suite-app-link">Swim Trainer</a><a href="https://hike.analyticszone.app" class="suite-app-link">Hike Analytics</a><a href="https://sleep.analyticszone.app" class="suite-app-link">Sleep Analytics</a><a href="https://paceva.analyticszone.app" class="suite-app-link">Paceva Analytics</a></div></div></div></div></nav><button class="menu-toggle" id="menu-toggle" aria-label="Menü umschalten"
+                aria-expanded="false" aria-controls="nav-primary"><span></span><span></span><span></span></button></div></div></header><main id="main-content" class="main-content"><article class="article-content"><header class="article-header"><h1>Laufleistungstests: Vollständiger Leitfaden für Feldtests</h1><p class="article-meta">Veröffentlicht:<time datetime="2025-01-27">27. Januar 2025</time>| Aktualisiert:<time datetime="2025-01-29">29. Januar 2025</time></p></header><div class="quick-answer" itemscope="" itemtype="https://schema.org/Answer"><h2>Schnelle Antwort</h2><div itemprop="text"><p><strong>Durchführung von Leistungstests</strong>sind Feldbewertungen, die Fitnessmetriken wie kritische Laufgeschwindigkeit (CRS), VO2max, Laktatschwelle und Laufökonomie mithilfe einfacher Geräte messen – nur eine Uhr und eine gemessene Strecke.</p><p><strong>Schlüsseltests:</strong></p><ul><li>CRS-Test: 3 Min. + 9 Min. maximale Anstrengung, bestimmt Trainingszonen</li><li>VO2max-Feldtest: 12-minütiger Maximallauf oder 5-km-Zeitfahren</li><li>Schwellentest: 30-minütiges Zeitfahren bei maximaler Dauergeschwindigkeit</li><li>Laufökonomie: Submaximales Tempo bei eingestellter Herzfrequenz</li><li>Testhäufigkeit: Alle 6–8 Wochen während der Basis-/Bauphase</li></ul></div></div><div class="article-intro"><p>Laufleistungstests sind wichtige Hilfsmittel, um Ihr aktuelles Fitnessniveau zu verstehen, geeignete Trainingszonen festzulegen und Verbesserungen im Laufe der Zeit zu verfolgen. Im Gegensatz zu Labortests, die teure Ausrüstung und spezielle Einrichtungen erfordern, können Feldtests auf jeder Strecke oder gemessenen Strecke nur mit einer Uhr und einem GPS-Gerät durchgeführt werden.</p><p>Dieser Leitfaden behandelt die effektivsten Laufleistungstests, die von Wettkampfläufern und Trainern verwendet werden, darunter<a href="/de/crs/">Kritische Laufgeschwindigkeit (CRS)</a>, <a href="/de/vo2max-testing/">VO2max-Feldtests</a>, <a href="/de/lactate-threshold-testing/">Beurteilung der Laktatschwelle</a>und laufende Wirtschaftsbewertungen. Sie erfahren, wann Sie testen müssen, wie Sie jeden Test richtig durchführen und wie Sie Ihre Ergebnisse interpretieren, um Ihr Training zu optimieren.</p></div><nav class="article-toc"><h2>Inhalt</h2><ul><li><a href="#why-test">Warum Leistungstests wichtig sind</a></li><li><a href="#test-types">Arten von Laufleistungstests</a></li><li><a href="#crs-test">Kritischer Laufgeschwindigkeitstest (CRS).</a></li><li><a href="#vo2max-tests">VO2max-Feldtests</a></li><li><a href="#threshold-tests">Laktatschwellentests</a></li><li><a href="#economy-assessment">Bewertung der laufenden Wirtschaftlichkeit</a></li><li><a href="#testing-protocol">Testprotokoll und Best Practices</a></li><li><a href="#interpreting-results">Interpretation Ihrer Ergebnisse</a></li><li><a href="#testing-schedule">Wann testen?</a></li><li><a href="#using-data">Verwendung von Testdaten für das Training</a></li><li><a href="#faq">Häufig gestellte Fragen</a></li></ul></nav><section id="why-test"><h2>Warum Leistungstests wichtig sind</h2><p>Regelmäßige Leistungstests liefern objektive Daten, mit denen die subjektive Beurteilung nicht mithalten kann. Ohne Tests trainieren Sie im Grunde genommen blind – Sie schätzen die richtige Trainingsintensität ein und sind nicht in der Lage, Verbesserungen definitiv zu verfolgen.</p><h3>Hauptvorteile von Leistungstests</h3><ul><li><strong>Genaue Trainingszonen:</strong>Tests legen präzise Intensitätszonen fest, die auf Ihrer tatsächlichen Physiologie basieren, nicht auf generischen Formeln oder Prozentsätzen der maximalen Herzfrequenz</li><li><strong>Zielverfolgung des Fortschritts:</strong>Regelmäßige Tests beseitigen Vermutungen und zeigen konkrete Verbesserungen (oder deren Fehlen) bei bestimmten Kennzahlen</li><li><strong>Trainingsoptimierung:</strong>Die Testergebnisse zeigen Stärken und Schwächen auf und ermöglichen so ein gezieltes Training zur Beseitigung von Einschränkungen</li><li><strong>Motivation und Verantwortung:</strong>Geplante Tests schaffen eine Trainingsstruktur und liefern greifbare Ziele über den Renntag hinaus</li><li><strong>Frühwarnsystem:</strong>Sinkende Testergebnisse können auf Übertraining, unzureichende Erholung oder die Notwendigkeit einer Trainingsanpassung hinweisen</li><li><strong>Kostengünstig:</strong>Feldtests liefern 80–90 % der Informationen aus Labortests zum Nulltarif</li></ul><p>Die erfolgreichsten Läufer testen regelmäßig – normalerweise alle 6–8 Wochen während der Trainingsblöcke – um sicherzustellen, dass ihre Trainingszonen auch bei Fitnessänderungen korrekt bleiben. Erfahren Sie mehr über die Verwendung dieser Daten in unserem Leitfaden<a href="/de/training-zones/">Trainingszonen</a>.</p></section><section id="test-types"><h2>Arten von Laufleistungstests</h2><p>Verschiedene Tests messen unterschiedliche Aspekte der Laufleistung. Wenn Sie verstehen, was die einzelnen Tests aussagen, können Sie die richtigen Tests für Ihre Ziele auswählen.</p><table><thead><tr><th>Testtyp</th><th>Was es misst</th><th>Zeitbedarf</th><th>Am besten für</th></tr></thead><tbody><tr><td><strong>CRS-Test</strong></td><td>Aerob-anaerobe Grenze, nachhaltiges Tempo</td><td>20-30 Minuten</td><td>Alle Distanzen, Trainingszoneneinstellung</td></tr><tr><td><strong>Cooper 12-Minuten-Test</strong></td><td>VO2max-Schätzung, aerobe Kapazität</td><td>15 Minuten</td><td>Beurteilung der aeroben Fitness</td></tr><tr><td><strong>1,5-Meilen-Zeitfahren</strong></td><td>VO2max, anaerobe Kapazität</td><td>10-15 Minuten</td><td>Mittelstreckenläufer</td></tr><tr><td><strong>30-Minuten-Schwellentest</strong></td><td>Laktatschwellentempo/HF</td><td>35-40 Minuten</td><td>Distanzläufer, Trainingszonen</td></tr><tr><td><strong>10-km-Zeitfahren</strong></td><td>Laktatschwelle, Rennfitness</td><td>35-60 Minuten</td><td>5-km-Marathonläufer</td></tr><tr><td><strong>Submaximaler Ökonomietest</strong></td><td>Trends in der Laufwirtschaft</td><td>30-40 Minuten</td><td>Effizienzverbesserungen verfolgen</td></tr></tbody></table><p>Die meisten Läufer profitieren davon, regelmäßig zwei bis drei Testtypen durchzuführen: einen CRS-Test für Trainingszonen, einen VO2max-Test zur Verfolgung der aeroben Kapazität und einen Schwellenwerttest für die rennspezifische Fitness.</p></section><section id="crs-test"><h2>Kritischer Laufgeschwindigkeitstest (CRS).</h2><p>Der<a href="/de/crs/">CRS-Test</a>ist wohl der wertvollste Einzelleistungstest für Läufer. Es ermittelt Ihre aerob-anaerobe Übergangsgeschwindigkeit – das schnellste Tempo, das Sie theoretisch auf unbestimmte Zeit durchhalten können, ohne Laktat anzusammeln.</p><h3>Prüfprotokoll CRS</h3><p><strong>Vorbereitung:</strong></p><ul><li>Testen Sie auf einer Rennstrecke oder einem genau vermessenen ebenen Kurs</li><li>Gut ausgeruht (kein hartes Training 48 Stunden vorher)</li><li>Aufwärmen: 15 Minuten leichtes Laufen + 3-4 Schritte</li><li>Ideale Bedingungen: 50-65°F, minimaler Wind</li></ul><p><strong>Teststruktur:</strong></p><ol><li><strong>Versuch 1:</strong>Laufen Sie 3 Minuten so schnell wie möglich und notieren Sie die zurückgelegte Strecke</li><li><strong>Erholung:</strong>30 Minuten leichtes Gehen/Joggen</li><li><strong>Versuch 2:</strong>Laufen Sie 7 Minuten so schnell wie möglich und notieren Sie die zurückgelegte Distanz</li></ol><p><strong>Berechnen Sie CRS:</strong></p><pre>CRS (m/min) = (D7 - D3) / (7 - 3)
+
+Where:
+D7 = Distance covered in 7-minute trial (meters)
+D3 = Distance covered in 3-minute trial (meters)</pre><h3>Beispielrechnung</h3><table><thead><tr><th>Versuch</th><th>Distanz</th><th>Berechnung</th></tr></thead><tbody><tr><td>3-Minuten-Testversion</td><td>900 Meter</td><td>D3 = 900m</td></tr><tr><td>7-Minuten-Testversion</td><td>1.980 Meter</td><td>D7 = 1.980 m</td></tr><tr><td><strong>CRS Ergebnis</strong></td><td colspan="2"><strong>(1.980 - 900) / (7 - 3) = 270 m/min = 3:42/km = 5:57/Meile</strong></td></tr></tbody></table><p>Sobald Sie Ihren CRS haben, können Sie mit unserem alle fünf Trainingszonen einrichten<a href="/de/training-zones/">Trainingszonenrechner</a>und verfolgen Sie den Trainingsstress mit<a href="/de/rtss-calculator/">rTSS-Berechnungen</a>.</p><h3>CRS-Testtipps</h3><ul><li>Gehen Sie den dreiminütigen Versuch etwas vorsichtiger an – es sollte sich „sehr schwer“ anfühlen, aber nicht übertrieben</li><li>Der 7-Minuten-Test sollte ähnlich wie das 3-Minuten-Tempo beginnen und mit zunehmender Ermüdung allmählich langsamer werden</li><li>GPS-Genauigkeit ist wichtig – Streckentests sind am zuverlässigsten</li><li>Zeichnen Sie die Herzfrequenz für beide Versuche auf, um HR-Trainingszonen festzulegen</li><li>Führen Sie den Test alle 6–8 Wochen erneut durch, um Verbesserungen zu verfolgen</li></ul></section><section id="vo2max-tests"><h2>VO2max-Feldtests</h2><p><a href="/de/what-is-vo2max/">VO2max</a>stellt Ihre maximale aerobe Kapazität dar – die Obergrenze Ihres Herz-Kreislauf-Systems. Während Labortests den Goldstandard liefern, können Feldtests VO2max mit einer Genauigkeit von 3–5 % schätzen.</p><h3>Cooper 12-Minuten-Test</h3><p>Der Cooper-Test ist eine einfache, gut validierte Methode zur Schätzung von VO2max. Laufen Sie in genau 12 Minuten so weit wie möglich auf einer Strecke.</p><p><strong>Protokoll:</strong></p><ol><li>Gründlich aufwärmen (15 Minuten leicht + Schritte)</li><li>Laufen Sie in genau 12 Minuten so weit wie möglich</li><li>Notieren Sie die zurückgelegte Gesamtstrecke in Metern</li></ol><p><strong>Berechnen Sie VO2max:</strong></p><pre>VO2max (ml/kg/min) = (Distance in meters - 504.9) / 44.73</pre><h3>Cooper-Testergebnisse</h3><table><thead><tr><th>Distanz (12 Min.)</th><th>Geschätzter VO2max</th><th>Leistungsniveau</th></tr></thead><tbody><tr><td>2.400 m (1,49 Meilen)</td><td>42,4 ml/kg/min</td><td>Freizeitläufer</td></tr><tr><td>2.800 m (1,74 Meilen)</td><td>51,3 ml/kg/min</td><td>Leistungsfähiger Vereinsläufer</td></tr><tr><td>3.200 m (1,99 Meilen)</td><td>60,2 ml/kg/min</td><td>Regionale Ebene</td></tr><tr><td>3.600 m (2,24 Meilen)</td><td>69,2 ml/kg/min</td><td>Nationale Ebene</td></tr><tr><td>4.000 m (2,49 Meilen)</td><td>78,1 ml/kg/min</td><td>Elite-Level</td></tr></tbody></table><h3>1,5 Meilen (2,4 km) Zeitfahren</h3><p>Als Alternative zum Cooper-Test bietet das 1,5-Meilen-Zeitfahren eine ähnliche VO2max-Schätzung mit einem entfernungsbasierten Ziel.</p><p><strong>Protokoll:</strong></p><ol><li>Gründlich aufwärmen</li><li>Laufen Sie 1,5 Meilen (6 Runden auf der Standardstrecke) so schnell wie möglich</li><li>Zeichnen Sie die Zeit in Minuten und Sekunden auf</li></ol><p><strong>Berechnen Sie VO2max:</strong></p><pre>VO2max (ml/kg/min) = 483 / Time in minutes + 3.5</pre><h3>VO2max-Test-Benchmarks</h3><table><thead><tr><th>1,5-Meilen-Zeit</th><th>Geschätzter VO2max</th><th>Äquivalente Rennzeiten</th></tr></thead><tbody><tr><td>11:00</td><td>47,4 ml/kg/min</td><td>5K: 24:30 | 10K: 51:00 | HM: 1:54</td></tr><tr><td>10:00</td><td>51,8 ml/kg/min</td><td>5K: 22:00 | 10K: 46:00 | HM: 1:42</td></tr><tr><td>9:00</td><td>57,2 ml/kg/min</td><td>5K: 19:30 | 10K: 41:00 | HM: 1:30</td></tr><tr><td>8:00</td><td>63,9 ml/kg/min</td><td>5K: 17:15 | 10K: 36:00 | HM: 1:19</td></tr><tr><td>7:00</td><td>72,5 ml/kg/min</td><td>5K: 15:00 | 10K: 31:30 | HM: 1:09</td></tr></tbody></table><p>Nähere Informationen zu<a href="/de/vo2max-testing/">VO2max-Testmethoden</a>Informationen und Interpretation finden Sie in unserem vollständigen Leitfaden.</p></section><section id="threshold-tests"><h2>Laktatschwellentests</h2><p>Dein<a href="/de/lactate-threshold-testing/">Laktatschwelle</a>stellt das schnellste Tempo dar, das Sie etwa 50 bis 60 Minuten lang durchhalten können – für die meisten Läufer etwa 10 km bis zum Halbmarathon. Diese Metrik ist entscheidend für die Festlegung der Trainingsintensitäten für Tempoläufe und Schwellentrainings.</p><h3>30-Minuten-Schwellentest</h3><p>Der 30-Minuten-Test ist der Goldstandard-Feldtest zur Bestimmung der Laktatschwelle. Es ist einfach, praktisch und korreliert stark mit Laborschwellentests.</p><p><strong>Protokoll:</strong></p><ol><li>Gründlich aufwärmen (15–20 Minuten leicht + 4–5 Schritte)</li><li>Führen Sie ein 30-minütiges Zeitfahren mit maximaler Dauerleistung durch</li><li>Vermeiden Sie es, zu schnell zu beginnen – das Tempo sollte durchgehend „angenehm hoch“ sein</li><li>Zeichnen Sie das durchschnittliche Tempo und die durchschnittliche Herzfrequenz auf</li></ol><p><strong>Ergebnisse interpretieren:</strong></p><ul><li><strong>Schwellentempo:</strong>Durchschnittliches Tempo für die gesamten 30 Minuten</li><li><strong>Laktatschwellenherzfrequenz (LTHR):</strong>Durchschnittliche Herzfrequenz für die letzten 20 Minuten</li><li><strong>Schwellenleistung:</strong>Wenn Sie einen Laufleistungsmesser verwenden, ermitteln Sie die durchschnittliche Leistung für 30 Minuten</li></ul><h3>10-km-Zeitfahren</h3><p>Ein 10-km-Rennen oder Zeitfahren dient einer doppelten Aufgabe: einer rennspezifischen Fitnessbewertung und einem Schwellenwertmarker.</p><p><strong>Protokoll:</strong></p><ol><li>Standard-Rennaufwärmphase (15 Minuten leicht + Schritte)</li><li>10 km im Wettkampfaufwand laufen (kein Trainingsaufwand)</li><li>Rekordzeit, durchschnittliches Tempo, durchschnittliche Herzfrequenz</li></ol><p><strong>Schwellenschätzungen ab 10.000:</strong></p><ul><li><strong>Schwellentempo:</strong>10-km-Tempo + 10-15 Sekunden pro Meile</li><li><strong>LTHR:</strong>Durchschnittliche Herzfrequenz für die letzten 5 km des Rennens</li><li><strong>VO2max-Tempo:</strong>10-km-Tempo – 15–20 Sekunden pro Meile</li></ul><h3>Vergleich der Schwellenwerttests</h3><table><thead><tr><th>Testtyp</th><th>Dauer</th><th>Aufwandsniveau</th><th>Vorteile</th><th>Beste Verwendung</th></tr></thead><tbody><tr><td>30-Minuten-TT</td><td>30 Minuten</td><td>Angenehm hart</td><td>Reine Schwellenbewertung, einfacher zu steuern</td><td>Einstellung der Trainingszone</td></tr><tr><td>10-km-Rennen</td><td>35-60 Minuten</td><td>Renneinsatz</td><td>Rassenspezifische Tests mit doppeltem Zweck</td><td>Beurteilung der Spitzenfitness</td></tr><tr><td>20-Minuten-TT</td><td>20 Minuten</td><td>Sehr schwer</td><td>Kürzere Dauer, weniger Ermüdung</td><td>Häufige Tests</td></tr></tbody></table><p>Verwenden Sie die Ergebnisse des Schwellenwerttests, um Ihren Wert festzulegen<a href="/de/tempo-runs-zone3/">Tempo der Zone 3</a>und stellen Sie während Ihres gesamten Trainingszyklus die richtige Intensität für Schwellentrainings sicher.</p></section><section id="economy-assessment"><h2>Bewertung der laufenden Wirtschaftlichkeit</h2><p><a href="/de/running-economy/">Laufökonomie</a>misst, wie effizient Sie Sauerstoff bei einem bestimmten Tempo nutzen. Während Labortests präzise Sauerstoffkostenmessungen liefern, können Feldbewertungen wirtschaftliche Verbesserungen im Laufe der Zeit verfolgen.</p><h3>Testprotokoll für submaximale Wirtschaftlichkeit</h3><p>Dieser Test verfolgt die Herzfrequenz in standardisierten Schritten, um wirtschaftliche Veränderungen zu überwachen. Wenn sich die Wirtschaft verbessert, sinkt die Herzfrequenz im gleichen Tempo.</p><p><strong>Protokoll:</strong></p><ol><li><strong>Sich warm laufen:</strong>15 Minuten lockeres Laufen</li><li><strong>Testsegmente:</strong>Laufen Sie jeweils 5 Minuten in drei standardisierten Geschwindigkeiten:<ul><li>Tempo 1: Leichtes Tempo (60–65 % des Schwellentempos)</li><li>Tempo 2: Moderates Tempo (75–80 % des Schwellentempos)</li><li>Tempo 3: Marathontempo (85–90 % des Schwellentempos)</li></ul></li><li><strong>Erholung:</strong>3 Minuten locker zwischen den Abschnitten</li><li><strong>Aufzeichnen:</strong>Durchschnittliche Herzfrequenz für die letzten 3 Minuten jedes Segments</li></ol><h3>Beispiel für Wirtschaftsverfolgung</h3><table><thead><tr><th>Testdatum</th><th>Easy Pace HR</th><th>Moderate Personalabteilung</th><th>Marathon HR</th><th>Wirtschaftstrend</th></tr></thead><tbody><tr><td>1. Jan</td><td>140 Schläge pro Minute</td><td>156 Schläge pro Minute</td><td>168 Schläge pro Minute</td><td>Grundlinie</td></tr><tr><td>15. Februar</td><td>136 Schläge pro Minute</td><td>152 Schläge pro Minute</td><td>164 Schläge pro Minute</td><td>+3 % Verbesserung</td></tr><tr><td>1. April</td><td>134 Schläge pro Minute</td><td>149 Schläge pro Minute</td><td>161 Schläge pro Minute</td><td>+5 % Verbesserung</td></tr><tr><td>15. Mai</td><td>133 Schläge pro Minute</td><td>148 Schläge pro Minute</td><td>160 Schläge pro Minute</td><td>+6 % Verbesserung</td></tr></tbody></table><p><strong>Interpretation von Änderungen:</strong></p><ul><li><strong>Abnehmende HR:</strong>Verbesserte Wirtschaftlichkeit – Sie verbrauchen bei gleicher Geschwindigkeit weniger Energie</li><li><strong>Stabile HR:</strong>Wirtschaftsplateau – möglicherweise ist eine spezielle, auf die Wirtschaft ausgerichtete Schulung erforderlich</li><li><strong>HR erhöhen:</strong>Ermüdung, Entlastung oder Übertraining – passen Sie die Trainingsbelastung an</li></ul><p>Erfahren Sie mehr über die Verbesserung Ihrer Effizienz in unserem Leitfaden zu<a href="/de/running-efficiency-biomechanics/">Laufende Biomechanik</a>.</p></section><section id="testing-protocol"><h2>Testprotokoll und Best Practices</h2><p>Konsistente Testprotokolle gewährleisten zuverlässige, vergleichbare Ergebnisse im Laufe der Zeit. Kleine Abweichungen bei den Bedingungen oder der Vorbereitung können die Leistung erheblich beeinträchtigen.</p><h3>Vorbereitung vor dem Test</h3><ul><li><strong>Erholung:</strong>Kein hartes Training 48–72 Stunden vor dem Test</li><li><strong>Schlafen:</strong>Gut ausgeruht (7-9 Stunden) am Vorabend</li><li><strong>Ernährung:</strong>Normales Essen, vermeiden Sie Tests im nüchternen oder überfütterten Zustand</li><li><strong>Flüssigkeitszufuhr:</strong>Gut hydriert, aber nicht überhydriert</li><li><strong>Timing:</strong>Zur gleichen Tageszeit auf Konsistenz testen</li><li><strong>Bedingungen:</strong>Vermeiden Sie extreme Hitze, Kälte, Wind oder Höhenunterschiede</li></ul><h3>Aufwärmprotokoll</h3><p>Ein standardisiertes Aufwärmen bereitet Ihren Körper auf maximale Anstrengung vor, ohne dass es zu Ermüdungserscheinungen kommt:</p><ol><li><strong>10 Minuten:</strong>Sehr leichtes Joggen (Konversationstempo)</li><li><strong>5 Minuten:</strong>Allmählicher Übergang zu moderatem Tempo</li><li><strong>5 Minuten:</strong>Dynamische Dehn- und Mobilitätsarbeit</li><li><strong>4-5 Schritte:</strong>80–100 m Beschleunigung auf nahezu Testgeschwindigkeit</li><li><strong>3-5 Minuten:</strong>Einfaches Ausschütteln und abschließende mentale Vorbereitung</li></ol><h3>Testumgebung</h3><table><thead><tr><th>Faktor</th><th>Ideale Bedingungen</th><th>Auswirkungen, wenn nicht ideal</th></tr></thead><tbody><tr><td><strong>Oberfläche</strong></td><td>Gleis oder flacher, gepflasterter Weg</td><td>±5–10 Sekunden pro Meile auf unebenem Gelände</td></tr><tr><td><strong>Temperatur</strong></td><td>10–18 °C (50–65 °F)</td><td>-5 % Leistung über 75 °F, -3 % unter 40 °F</td></tr><tr><td><strong>Wind</strong></td><td>Ruhige oder leichte Brise</td><td>-10-15 Sekunden pro Meile bei mäßigem Wind</td></tr><tr><td><strong>Elevation</strong></td><td>Meeresspiegel bis 1.000 Fuß</td><td>-2 % Leistung pro 1.000 Fuß über der Grundlinie</td></tr><tr><td><strong>Luftfeuchtigkeit</strong></td><td>30-60%</td><td>-2-5 % Leistung über 70 % Luftfeuchtigkeit</td></tr></tbody></table><h3>Datenaufzeichnung</h3><p>Erfassen Sie umfassende Daten für jede Testsitzung:</p><ul><li>Datum und Uhrzeit des Tests</li><li>Wetterbedingungen (Temperatur, Wind, Luftfeuchtigkeit)</li><li>Details zum Kurs/Ort</li><li>Letztes Training (Volumen und Intensität vor der Woche)</li><li>Schlafqualität und Stunden</li><li>Wahrgenommener Aufwand (RPE 1-10)</li><li>Alle ungewöhnlichen Faktoren (Stress, Krankheit, Verletzung usw.)</li></ul></section><section id="interpreting-results"><h2>Interpretation Ihrer Ergebnisse</h2><p>Rohe Testzahlen bedeuten ohne Kontext wenig. Es ist wichtig zu verstehen, was Ihre Ergebnisse über die Fitness aussagen und wie Sie sie für Trainingsentscheidungen nutzen können.</p><h3>CRS-Interpretation</h3><table><thead><tr><th>CRS (m/min)</th><th>CRS Tempo</th><th>Leistungsniveau</th><th>Typische Rennzeiten</th></tr></thead><tbody><tr><td>200-220</td><td>4:32-5:00/km</td><td>Anfänger</td><td>5K: 28-32min | 10 km: 60–68 Minuten</td></tr><tr><td>220-250</td><td>4:00-4:32/km</td><td>Freizeit</td><td>5K: 24-28min | 10 km: 50–60 Minuten</td></tr><tr><td>250-280</td><td>3:34-4:00/km</td><td>Wettbewerbsfähiger Verein</td><td>5K: 20-24min | 10 km: 42–50 Minuten</td></tr><tr><td>280-310</td><td>3:13-3:34/km</td><td>Regionale Ebene</td><td>5K: 17:30-20min | 10 km: 36–42 Minuten</td></tr><tr><td>310-340</td><td>2:56-3:13/km</td><td>Nationale Ebene</td><td>5K: 15-17:30min | 10 km: 31–36 Minuten</td></tr><tr><td>340+</td><td>&lt;3:56/km</td><td>Elite</td><td>5K: &lt;15min | 10 km: &lt;31 Min</td></tr></tbody></table><h3>VO2max-Interpretation nach Alter und Geschlecht</h3><table><thead><tr><th>Einstufung</th><th>Männer 20-29</th><th>Männer 40-49</th><th>Frauen 20-29</th><th>Frauen 40-49</th></tr></thead><tbody><tr><td>Vorgesetzter</td><td>&gt;55</td><td>&gt;52</td><td>&gt;49</td><td>&gt;45</td></tr><tr><td>Exzellent</td><td>51-55</td><td>47-52</td><td>45-49</td><td>41-45</td></tr><tr><td>Gut</td><td>45-51</td><td>42-47</td><td>39-45</td><td>35-41</td></tr><tr><td>Gerecht</td><td>39-45</td><td>36-42</td><td>33-39</td><td>29-35</td></tr><tr><td>Arm</td><td>&lt;39</td><td>&lt;36</td><td>&lt;33</td><td>&lt;29</td></tr></tbody></table><p><em>Werte in ml/kg/min. Quelle: American College of Sports Medicine</em></p><h3>Schwellenwert-Tempo-Benchmarks</h3><p>Die Laktatschwelle liegt typischerweise bei den folgenden Prozentsätzen des VO2max-Tempos für verschiedene Läuferniveaus:</p><ul><li><strong>Anfängerläufer:</strong>75–80 % der VO2max-Geschwindigkeit</li><li><strong>Ausgebildete Läufer:</strong>80-85 % der VO2max-Geschwindigkeit</li><li><strong>Gut trainierte Läufer:</strong>85-90 % der VO2max-Geschwindigkeit</li><li><strong>Eliteläufer:</strong>90-95 % der VO2max-Geschwindigkeit</li></ul><p>Wenn Ihr Schwellenwert im Vergleich zu VO2max niedriger als erwartet ist, deutet dies auf Verbesserungspotenzial durch schwellenspezifisches Training hin.</p><h3>Verbesserungsrate</h3><p>Erwartete Verbesserungsraten helfen dabei, realistische Ziele festzulegen und zu erkennen, wann Trainingsanpassungen erforderlich sind:</p><table><thead><tr><th>Metrisch</th><th>Anfänger (0-2 Jahre)</th><th>Mittelstufe (2-5 Jahre)</th><th>Fortgeschrittene (5+ Jahre)</th></tr></thead><tbody><tr><td><strong>CRS</strong></td><td>+5-10 % alle 3 Monate</td><td>+2-5 % pro 3 Monate</td><td>+1-2 % alle 3 Monate</td></tr><tr><td><strong>VO2max</strong></td><td>+8-15 % pro 6 Monate</td><td>+3-6 % pro 6 Monate</td><td>+1-3 % pro 6 Monate</td></tr><tr><td><strong>Schwelle</strong></td><td>+6-12 % pro 6 Monate</td><td>+3-6 % pro 6 Monate</td><td>+1-3 % pro 6 Monate</td></tr><tr><td><strong>Wirtschaft</strong></td><td>+5-8% pro Jahr</td><td>+2-4 % pro Jahr</td><td>+1-2 % pro Jahr</td></tr></tbody></table></section><section id="testing-schedule"><h2>Wann testen?</h2><p>Die strategische Planung von Leistungstests maximiert deren Wert und minimiert gleichzeitig die Beeinträchtigung von Training und Rennen.</p><h3>Testhäufigkeit nach Trainingsphase</h3><table><thead><tr><th>Trainingsphase</th><th>Empfohlene Tests</th><th>Frequenz</th><th>Zweck</th></tr></thead><tbody><tr><td><strong>Basisgebäude</strong></td><td>CRS-Test, Wirtschaftlichkeitsbewertung</td><td>Alle 6-8 Wochen</td><td>Überwachen Sie die aerobe Entwicklung und passen Sie die Zonen an</td></tr><tr><td><strong>Bauphase</strong></td><td>Schwellentest, CRS-Test</td><td>Alle 4-6 Wochen</td><td>Verfolgen Sie Schwellenwertverbesserungen und Zonenaktualisierungen</td></tr><tr><td><strong>Spitze/Spezifisch</strong></td><td>VO2max-Test, Schwellenwerttest</td><td>Alle 3-4 Wochen</td><td>Bewerten Sie die Rennbereitschaft und optimieren Sie das Tempo</td></tr><tr><td><strong>Konisch</strong></td><td>Nur leichte Schleifdurchgänge</td><td>Keine Tests</td><td>Bewahren Sie die Frische für den Rennsport auf</td></tr><tr><td><strong>Erholung/Nebensaison</strong></td><td>CRS-Test</td><td>Einmal am Ende</td><td>Richten Sie neue Trainingszonen ein</td></tr></tbody></table><h3>Prüfung innerhalb von Trainingswochen</h3><p><strong>Optimaler Testzeitpunkt im Wochenplan:</strong></p><ul><li><strong>Tag 1 (Montag):</strong>Erholungstag – keine Tests</li><li><strong>Tag 2-3:</strong>Leichtes Training – geeignet für Spartests</li><li><strong>Tag 4-5:</strong>Gut erholt – am besten für maximale Tests (CRS, VO2max, Schwellenwert)</li><li><strong>Tag 6-7:</strong>Wochenende – gut ausgeruht für längere Tests</li></ul><p><strong>Anpassungen des Trainings vor dem Test:</strong></p><ul><li>Keine harten Trainingseinheiten 48 Stunden vor dem Test</li><li>Reduzieren Sie die Lautstärke in der Testwoche um 30–40 %</li><li>Behalten Sie die Intensität bei den vorangegangenen Trainingseinheiten bei, reduzieren Sie jedoch die Lautstärke</li><li>Betrachten Sie die Testwoche als Mini-Taper</li></ul><h3>Beispiel für einen jährlichen Testkalender</h3><p>Für einen Läufer, der einen Herbstmarathon mit Vorbereitungsrennen im Frühjahr anstrebt:</p><table><thead><tr><th>Monat</th><th>Trainingsphase</th><th>Tests</th><th>Notizen</th></tr></thead><tbody><tr><td>Januar</td><td>Basisgebäude</td><td>CRS-Test, Economy-Basislinie</td><td>Richten Sie Trainingszonen nach den Ferien ein</td></tr><tr><td>Marsch</td><td>Basisgebäude</td><td>CRS erneut testen</td><td>Aktualisierung der Zonen nach 8 Wochen</td></tr><tr><td>April</td><td>Bauphase</td><td>10-km-Rennen (Schwellentest)</td><td>Frühlings-Tuning-Rennen</td></tr><tr><td>Juni</td><td>Bauart/spezifisch</td><td>CRS, VO2max Feldtest</td><td>Beurteilung in der Mitte des Zyklus</td></tr><tr><td>August</td><td>Spitze/Spezifisch</td><td>30-minütiger Schwellentest</td><td>Letzte Zonenüberprüfung vor dem Marathon</td></tr><tr><td>Oktober</td><td>Wettrennen</td><td>Marathon-Renntag</td><td>Ultimativer Leistungstest</td></tr><tr><td>Dezember</td><td>Erholung/Nebensaison</td><td>CRS-Test</td><td>Grundlinie für den nächsten Trainingszyklus</td></tr></tbody></table><p>Erfahren Sie mehr über die Strukturierung Ihres Ausbildungsjahres in unserem Ratgeber<a href="/de/marathon-periodization/">Marathon-Periodisierung</a>.</p></section><section id="using-data"><h2>Verwendung von Testdaten für das Training</h2><p>Leistungstestdaten verwandeln sich bei richtiger Anwendung von interessanten Zahlen in umsetzbare Trainingsempfehlungen.</p><h3>Trainingszonen anhand von Testergebnissen festlegen</h3><p>Sobald Sie CRS- und Schwellenwertdaten haben, richten Sie alle fünf Trainingszonen ein:</p><table><thead><tr><th>Zone</th><th>% von CRS</th><th>% des Schwellenwerts</th><th>Beispiel (CRS=270m/min, 3:42/km)</th></tr></thead><tbody><tr><td><strong>Zone 1 (Erholung)</strong></td><td>60-70%</td><td>55-65%</td><td>5:17–6:10/km (8:30–9:56/Meile)</td></tr><tr><td><strong>Zone 2 (Aerobic)</strong></td><td>70-85%</td><td>65-78%</td><td>4:21–5:17/km (7:01–8:30/Meile)</td></tr><tr><td><strong>Zone 3 (Tempo)</strong></td><td>85-95%</td><td>78-88%</td><td>3:54–4:21/km (6:16–7:01/Meile)</td></tr><tr><td><strong>Zone 4 (Schwelle)</strong></td><td>95-105%</td><td>88-100%</td><td>3:32–3:54/km (5:41–6:16/Meile)</td></tr><tr><td><strong>Zone 5 (VO2max)</strong></td><td>105-120%</td><td>100-115%</td><td>3:05–3:32/km (4:58–5:41/Meile)</td></tr></tbody></table><p>Nutzen Sie unsere<a href="/de/training-zones/">Trainingszonenrechner</a>für präzise Zonenberechnungen basierend auf Ihren Testergebnissen.</p><h3>Identifizieren von Schulungsschwerpunkten</h3><p>Die Testergebnisse zeigen, dass bestimmte Bereiche Aufmerksamkeit erfordern:</p><ul><li><strong>Niedriger VO2max relativ zum Schwellenwert:</strong>Benötigen Sie mehr aerobes Basistraining (Zone 2) und VO2max-Intervalle</li><li><strong>Niedriger Schwellenwert im Vergleich zu VO2max:</strong>Erhöhen Sie das Schwellentrainingsvolumen (Tempoläufe, Kreuzfahrtintervalle)</li><li><strong>Schlechte Wirtschaft trotz gutem VO2max/Schwellenwert:</strong>Konzentrieren Sie sich auf Laufform, Krafttraining und Technikübungen</li><li><strong>CRS-Verbesserungsplateau:</strong>Möglicherweise ist eine Erhöhung des Trainingsvolumens oder eine Anpassung der Intensitätsverteilung erforderlich</li></ul><h3>Anpassen des Trainings basierend auf Testtrends</h3><table><thead><tr><th>Testergebnismuster</th><th>Interpretation</th><th>Trainingsanpassung</th></tr></thead><tbody><tr><td>Konsequente Verbesserung</td><td>Training ist effektiv</td><td>Setzen Sie den aktuellen Ansatz fort</td></tr><tr><td>Plateau nach 2-3 Tests</td><td>Anpassung abgeschlossen, neue Impulse nötig</td><td>Fortschrittliches Training: Lautstärke erhöhen, Intensitätsmix ändern oder neue Elemente hinzufügen</td></tr><tr><td>Nachlassende Leistung</td><td>Übertraining, unzureichende Erholung oder Krankheit</td><td>Reduzieren Sie die Trainingsbelastung um 30–50 %, konzentrieren Sie sich auf die Erholung und prüfen Sie, ob andere Probleme vorliegen</td></tr><tr><td>Hohe tägliche Variabilität</td><td>Inkonsistentes Wiederherstellungs- oder Testprotokoll</td><td>Konsistenz verbessern: Schlaf, Ernährung, Stressbewältigung, Testbedingungen</td></tr></tbody></table><h3>Verfolgung des Trainingsstress-Scores (TSS)</h3><p>Verwenden Sie zur Berechnung Ihr CRS aus dem Test<a href="/de/rtss-calculator/">rTSS (Trainingsstress-Score beim Laufen)</a>für jedes Training. Dies quantifiziert die Trainingsbelastung und hilft bei der Bewältigung von Müdigkeit:</p><pre>rTSS = (Duration in seconds × Intensity Factor² × 100) / 3600
+
+Where Intensity Factor (IF) = Workout pace / CRS pace</pre><p>Wöchentliche TSS-Richtlinien basierend auf testabgeleiteten CRS:</p><ul><li><strong>Basisgebäude:</strong>200–400 rTSS pro Woche, 80 %+ in Zone 2</li><li><strong>Bauphase:</strong>300–500 rTSS pro Woche, 70–80 % in Zone 2</li><li><strong>Spitzenphase:</strong>350–600 rTSS pro Woche, rassenspezifische Intensität</li><li><strong>Konus:</strong>30–50 % Reduzierung des wöchentlichen TSS</li></ul><p>Erfahren Sie mehr über die Verwaltung der Trainingsbelastung in unserem<a href="/de/training-load/">Leitfaden zur Trainingsbelastung</a>.</p></section><section id="faq"><h2>Häufig gestellte Fragen</h2><div class="faq-item"><h3>Wie oft sollte ich Leistungstests durchführen?</h3><p>Testen Sie alle 6–8 Wochen während des Basisaufbaus, alle 4–6 Wochen während der Aufbauphasen und alle 3–4 Wochen während der spezifischen Vorbereitung. Vermeiden Sie Tests während der Tapering-Phasen (2–3 Wochen vor Zielrennen). Häufigere Tests liefern bessere Daten, erfordern jedoch eine sorgfältige Integration in das Training, um übermäßige Ermüdung zu vermeiden.</p></div><div class="faq-item"><h3>Kann ich mehrere Tests in einer Sitzung durchführen?</h3><p>Sie können die Wirtschaftlichkeitsbewertung mit einem Schwellenwert- oder CRS-Test in einer Sitzung kombinieren, da die Wirtschaftlichkeitsprüfung submaximal ist. Vermeiden Sie jedoch die Kombination maximaler Tests (CRS + VO2max oder Schwellenwert + VO2max) am selben Tag – die Ermüdung durch den ersten Test beeinträchtigt den zweiten. Wenn Sie mehrere Messwerte testen müssen, sollten Sie für genaue Ergebnisse einen Abstand von 48 bis 72 Stunden einhalten.</p></div><div class="faq-item"><h3>Was passiert, wenn meine Testergebnisse schlechter ausfallen als erwartet?</h3><p>Eine schlechte Testleistung kann auf unzureichende Erholung, zunehmende Müdigkeit, suboptimale Bedingungen, Krankheit oder einfach einen schlechten Tag zurückzuführen sein. Bevor Sie das Training anpassen, wiederholen Sie den Test nach 5–7 Tagen Erholung. Wenn die Ergebnisse weiterhin schlecht sind, reduzieren Sie die Trainingsbelastung 1–2 Wochen lang um 30–40 %, sorgen Sie für ausreichend Schlaf und Ernährung und wiederholen Sie den Test. Anhaltend schlechte Ergebnisse erfordern eine ärztliche Untersuchung.</p></div><div class="faq-item"><h3>Sind Feldtests genauso genau wie Labortests?</h3><p>Feldtests bieten für die meisten Metriken eine Genauigkeit von 85–95 % im Vergleich zu Labortests. Die CRS-Tests liegen innerhalb von 2–3 % der im Labor ermittelten kritischen Leistung/Geschwindigkeit. Die Feldschätzungen von VO2max liegen innerhalb von 3–5 %. Die Genauigkeit des Schwellenwerttests hängt von der Stimulationsfähigkeit ab – gut getaktete Tests liegen innerhalb von 1–2 % der Laborwerte. Der leichte Genauigkeitsverlust wird durch Komfort, Kosteneinsparungen und die Möglichkeit häufiger Tests ausgeglichen.</p></div><div class="faq-item"><h3>Soll ich den Test auf einem Laufband oder im Freien durchführen?</h3><p>Outdoor-Tests auf einer Rennstrecke werden im Allgemeinen bevorzugt: Sie richten sich speziell an die tatsächlichen Laufmechaniker, GPS/Uhr liefert genaue Daten und die Bedingungen entsprechen den Rennsituationen. Laufbandtests sind akzeptabel, wenn das Wetter unerschwinglich ist, aber stellen Sie die Steigung auf 1 % ein, um der Anstrengung im Freien zu entsprechen, kalibrieren Sie die Laufbandgeschwindigkeit, wenn möglich, und sorgen Sie für eine konsistente Testumgebung. Vergleichen Sie Laufband- und Outdoor-Testergebnisse nicht direkt – wählen Sie eine Methode und bleiben Sie dabei.</p></div><div class="faq-item"><h3>Wie berücksichtige ich Temperatur und Wetter in den Testergebnissen?</h3><p>Die Temperatur wirkt sich erheblich auf die Leistung aus: Erwarten Sie -2 % Leistung für jede 10 °F über 60 °F und -1,5 % für jede 10 °F unter 40 °F. Der Wind kostet bei gemäßigten Bedingungen etwa -5-10 Sekunden pro Meile. Zeichnen Sie bei jedem Test Wetterdaten auf und passen Sie entweder die Erwartungen entsprechend an oder vergleichen Sie nur Tests, die unter ähnlichen Bedingungen durchgeführt wurden. Erwägen Sie Tests drinnen auf einer Rennbahn, um maximale Konsistenz zu erreichen.</p></div><div class="faq-item"><h3>Kann ich Rennergebnisse anstelle spezieller Tests verwenden?</h3><p>Ja, Rennergebnisse können Leistungstests ersetzen: Ein 10-km-Lauf liefert hervorragende Schwellenwertdaten, ein 5-km-Lauf zeigt die VO2max-Fähigkeiten und das Halbmarathon-Tempo zeigt die aerobe Kapazität an. Der Rennaufwand unterscheidet sich jedoch vom Testaufwand (höhere emotionale Investition, wechselndes Tempo, Wettkampfanstiege), daher sollten Sie die Renndaten beim Festlegen von Trainingszonen mit Vorsicht verwenden. Spezielle Tests unter kontrollierten Bedingungen liefern zuverlässigere Daten für alltägliche Trainingsentscheidungen.</p></div><div class="faq-item"><h3>Wie sollte ich mich vor Leistungstests aufwärmen?</h3><p>Ein standardisiertes Aufwärmen ist von entscheidender Bedeutung: 10 Minuten ganz leichtes Joggen, 5 Minuten allmählicher Übergang zu mäßigem Tempo, 5 Minuten dynamisches Dehnen, 4–5 Schritte von 80–100 m bis nahezu zum Testtempo, dann 3–5 Minuten leichtes Durchschütteln. Gesamtaufwärmzeit: 25–30 Minuten. Längere Aufwärmübungen (bis zu 40 Minuten) können für einige Sportler bei Schwellen- und VO2max-Tests von Vorteil sein. Testen Sie niemals ohne Aufwärmen – die Ergebnisse werden erheblich beeinträchtigt.</p></div><div class="faq-item"><h3>Woher weiß ich, ob ich einen Test richtig durchgeführt habe?</h3><p>Für CRS-Tests: Der dreiminütige Test sollte sich „sehr hart, aber nachhaltig“ anfühlen und mit einer Aufwandsbewertung von 8–9/10 bewertet werden. Der 7-Minuten-Test beginnt ähnlich, wird aber allmählich langsamer. Für Schwellentests: Die Anstrengung sollte durchgehend „angenehm hart“ sein, 7-8/10. Sie sollten in der Lage sein, 2-3 Wörter, aber keine ganzen Sätze zu sprechen. Wenn Sie in den letzten 25 % stark langsamer wurden oder am Ende das Gefühl hatten, Sie hätten viel härter fahren können, war das Tempo falsch. Erfahrung verbessert das Tempo – erwarten Sie bessere Ergebnisse nach 2–3 Testzyklen.</p></div><div class="faq-item"><h3>Sollte ich aufgrund meiner Testergebnisse anders trainieren?</h3><p>Absolut. Tests offenbaren individuelle Stärken und Schwächen, die den Trainingsschwerpunkt leiten sollten. Wenn VO2max im Verhältnis zum Schwellenwert niedrig ist, priorisieren Sie die aerobe Basis- und VO2max-Arbeit. Wenn der Schwellenwert hinter VO2max zurückbleibt, erhöhen Sie das Tempo und das Schwellentrainingsvolumen. Eine schlechte Wirtschaftlichkeit trotz guter physiologischer Indikatoren weist auf die Notwendigkeit von Formarbeit, Krafttraining und Verfeinerung der Technik hin. Generische Trainingspläne können die individuelle Physiologie nicht berücksichtigen – testbasierte Personalisierung ist der Schlüssel zu optimiertem Training.</p></div></section><section id="scientific-references"><h2>Wissenschaftliche Referenzen</h2><p>Leistungstestprotokolle basieren auf validierten Forschungsergebnissen in der Trainingsphysiologie und Sportwissenschaft:</p><div class="callout callout-info"><h3>Wichtige Forschungsarbeiten</h3><ul><li><strong>Kritische Geschwindigkeitstests:</strong><a href="https://pubmed.ncbi.nlm.nih.gov/8775547/" rel="noopener" target="_blank">Jones AM, Doust JH. „Eine Laufbandnote von 1 % spiegelt am genauesten die Energiekosten des Laufens im Freien wider.“ J Sportwissenschaft. 1996</a>- Validierung des kritischen Geschwindigkeitsprotokolls</li><li><strong>Zuverlässigkeit im Feldtest:</strong><a href="https://pubmed.ncbi.nlm.nih.gov/15947721/" rel="noopener" target="_blank">Paavolainen L et al. „Neuromuskuläre Eigenschaften und Muskelkraft als Determinanten der 5-km-Laufleistung.“ Med Sci Sportübung. 1999</a>- Genauigkeit der Feldtests</li><li><strong>Schwellentest:</strong><a href="https://pubmed.ncbi.nlm.nih.gov/8887211/" rel="noopener" target="_blank">Beneke R. „Methodologische Aspekte der maximalen Laktat-Steady-State-Auswirkungen auf Leistungstests.“ Eur J Appl Physiol. 2003</a>- Laktatschwellenprotokolle</li><li><strong>Ausführen von Economy-Tests:</strong><a href="https://pubmed.ncbi.nlm.nih.gov/15076777/" rel="noopener" target="_blank">Saunders PU et al. „Faktoren, die die Laufökonomie bei trainierten Langstreckenläufern beeinflussen.“ Sportmed. 2004</a>- Methoden zur Messung der Wirtschaftlichkeit</li><li><strong>Testwiederholbarkeit:</strong><a href="https://pubmed.ncbi.nlm.nih.gov/17685687/" rel="noopener" target="_blank">Hopkins WG et al. „Progressive Statistik für Studien in Sportmedizin und Bewegungswissenschaft.“ Med Sci Sportübung. 2009</a>- Zuverlässigkeit der Leistungstests</li></ul></div></section><div class="article-footer"><p>Sind Sie bereit, Ihre Leistung zu testen? Beginnen Sie mit dem<a href="/de/crs/">CRS-Rechner</a>Legen Sie Ihre Trainingszonen fest und verfolgen Sie dann Ihre Fortschritte mit<a href="/de/rtss-calculator/">rTSS-Berechnungen</a>. Für umfassende Laufanalysen und Leistungsverfolgung laden Sie es herunter<a href="/de/">Run Analytics</a>– Ihr privater, wissenschaftlich fundierter Trainingsbegleiter.</p></div></article><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Ausführen von Leistungstests: Vollständiger Leitfaden für Feldtests",
+  "description": "Vollständiger Leitfaden für Laufleistungstests: CRS-Tests, VO2max-Feldtests, Bewertungen der Laktatschwelle, Bewertung der Laufökonomie, Testprotokolle und Verwendung von Daten zur Trainingsoptimierung.",
+  "datePublished": "2025-01-27",
+  "dateModified": "2025-01-27",
+  "author": {
+    "@type": "Person",
+    "name": "Run Analytics-Team"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Run Analytics",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://run.analyticszone.app/static/images/logo.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://run.analyticszone.app/de/running-performance-tests/"
+  },
+  "keywords": [
+    "running performance tests",
+    "running field tests",
+    "CRS test",
+    "vo2max test",
+    "threshold test",
+    "running economy test",
+    "performance testing protocol",
+    "training zones",
+    "running analytics"
+  ]
+}</script><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Wie oft sollte ich Leistungstests durchführen?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Testen Sie alle 6–8 Wochen während des Basisaufbaus, alle 4–6 Wochen während der Aufbauphasen und alle 3–4 Wochen während der spezifischen Vorbereitung. Vermeiden Sie Tests während der Tapering-Phasen (2–3 Wochen vor Zielrennen)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Kann ich mehrere Tests in einer Sitzung durchführen?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sie können die Wirtschaftlichkeitsbewertung mit einem Schwellenwert- oder CRS-Test kombinieren. Vermeiden Sie jedoch die Kombination maximaler Tests (CRS + VO2max oder Schwellenwert + VO2max) am selben Tag – die Ermüdung durch den ersten Test beeinträchtigt den zweiten."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Was passiert, wenn meine Testergebnisse schlechter ausfallen als erwartet?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Eine schlechte Testleistung kann auf unzureichende Erholung, zunehmende Müdigkeit, suboptimale Bedingungen, Krankheit oder einfach einen schlechten Tag zurückzuführen sein. Bevor Sie das Training anpassen, wiederholen Sie den Test nach 5–7 Tagen Erholung. Wenn die Ergebnisse weiterhin schlecht sind, reduzieren Sie die Trainingsbelastung um 30–40 %."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Sind Feldtests genauso genau wie Labortests?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Feldtests bieten im Vergleich zu Labortests eine Genauigkeit von 85–95 %. CRS-Tests liegen innerhalb von 2–3 % der Laborwerte, VO2max-Schätzungen innerhalb von 3–5 % und Schwellentests innerhalb von 1–2 % bei gutem Tempo."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Soll ich den Test auf einem Laufband oder im Freien durchführen?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Im Allgemeinen werden Outdoor-Tests auf einer Rennstrecke bevorzugt, da es sich hierbei speziell um die tatsächliche Laufmechanik handelt. Laufbandtests sind akzeptabel, wenn das Wetter Tests im Freien nicht zulässt. Stellen Sie die Steigung jedoch auf 1 % ein, um den Anstrengungen im Freien gerecht zu werden und eine konsistente Testumgebung aufrechtzuerhalten."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Wie berücksichtige ich Temperatur und Wetter in den Testergebnissen?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Erwarten Sie -2 % Leistung für jede 10 °F über 60 °F und -1,5 % für jede 10 °F unter 40 °F. Wind kostet ungefähr -5-10 Sekunden pro Meile. Zeichnen Sie bei jedem Test Wetterdaten auf und passen Sie die Erwartungen entsprechend an."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Kann ich Rennergebnisse anstelle spezieller Tests verwenden?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ja, Rennergebnisse können Leistungstests ersetzen: Ein 10-km-Rennen liefert hervorragende Schwellenwertdaten, ein 5-km-Rennen offenbart die Fähigkeiten von VO2max. Spezielle Tests unter kontrollierten Bedingungen liefern jedoch zuverlässigere Daten für die Einstellung der Trainingszone."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Wie sollte ich mich vor Leistungstests aufwärmen?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "10 Minuten ganz leichtes Joggen, 5 Minuten langsames Fortschreiten, 5 Minuten dynamisches Dehnen, 4–5 Schritte bis nahezu zum Testtempo, dann 3–5 Minuten leichtes Durchschütteln. Gesamtaufwärmzeit: 25–30 Minuten."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Woher weiß ich, ob ich einen Test richtig durchgeführt habe?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Bei CRS-Tests sollte der 3-Minuten-Test 8–9/10 Aufwand erfordern. Bei Schwellenwerttests sollte der Aufwand durchgehend bei 7-8/10 liegen – Sie sollten in der Lage sein, 2-3 Wörter, aber keine ganzen Sätze zu sprechen. Wenn Sie in den letzten 25 % stark langsamer fahren, ist die Geschwindigkeit gestört."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Sollte ich aufgrund meiner Testergebnisse anders trainieren?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Absolut. Tests offenbaren individuelle Stärken und Schwächen. Wenn VO2max im Verhältnis zum Schwellenwert niedrig ist, priorisieren Sie die aerobe Basis. Wenn der Schwellenwert hinter VO2max zurückbleibt, erhöhen Sie das Trainingstempo. Eine schlechte Wirtschaftslage weist auf die Notwendigkeit von Formarbeit und Krafttraining hin."
+      }
+    }
+  ]
+}</script><section class="eeat-author bg-light divider-top-lg divider-bottom-lg" aria-label="Author and Reviewer Information"><div class="container container-narrow"><div class="eeat-card" style="display: flex; gap: 1.5rem; align-items: center; padding: 1.5rem; background: var(--color-bg-alt, #f8f9fa); border-radius: 8px; border: 1px solid var(--color-border, #e9ecef); margin-top: 3rem; margin-bottom: 2rem;"><div class="eeat-avatar" style="font-size: 2.5rem; line-height: 1; flex-shrink: 0;" aria-hidden="true">👨‍🔬</div><div class="eeat-details"><h3 style="margin: 0 0 0.5rem 0; font-size: 1.125rem; font-weight: 600;">
+          Expertly Reviewed by 
+          <span itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">AnalyticsZone Team</span></span></h3><p style="margin: 0 0 0.5rem 0; font-size: 0.95rem; color: var(--color-body-text, #4a5568); line-height: 1.5;">
+          This content has been written and reviewed by a sports data metrics expert to ensure technical accuracy and adherence to the latest sports science methodologies.
+        </p></div></div></div></section><section class="ai-citation-block divider-top-xl" data-ai-ready="true" data-ai-page="running-performance-tests"><div class="container ai-citation-shell"><h2 class="ai-citation-title">Laufleistungstests: Vollständiger Leitfaden für Feldtests</h2><p class="ai-citation-answer">Veröffentlicht: 27. Januar 2025 | Aktualisiert: 29. Januar 2025. Laufleistungstests: Vollständiger Leitfaden für Feldtests</p><ul class="ai-citation-facts" role="list"><li class="ai-citation-fact"><span class="ai-citation-icon" aria-hidden="true">📅</span><span>2026-02-06</span></li><li class="ai-citation-fact ai-citation-keywords"><span class="ai-citation-icon" aria-hidden="true">🏷️</span><span>Durchführung von Leistungstests · Durchführung von Feldtests · CRS Test · vo2max-Testlauf · Schwellentest</span></li><li class="ai-citation-fact"><span class="ai-citation-icon" aria-hidden="true">🔬</span><a href="../../de/bibliography/">
+          
+          Bibliographie
+          
+        </a></li></ul></div></section></main><footer class="site-footer"><div class="container"><div class="footer-top"><div class="footer-brand-section"><h2>Run Analytics</h2><p>Track Critical Running Speed, Training Stress Score, and performance metrics with Run Analytics. Science-based iOS app for runners, triathletes &amp; coaches. 7-day free trial.</p></div><div class="footer-download"><h3 class="footer-heading">Herunterladen</h3><div class="footer-badges"><a href="https://apps.apple.com/us/app/run-analytics/id6754524015" target="_blank" rel="noopener"
+                        aria-label="Laden im App Store"><img src="../../assets/images/badge-app-store.svg"
+                            alt="Laden im App Store" width="135"
+                            height="40" loading="lazy"></a><a href="https://play.google.com/store/apps/details?id=com.arnohealth.runanalytics" target="_blank" rel="noopener"
+                        aria-label="JETZT BEI Google Play"><img src="../../assets/images/badge-google-play.svg"
+                            alt="JETZT BEI Google Play" width="135"
+                            height="40" loading="lazy"></a></div></div></div><div class="footer-languages"><h3 class="footer-heading">Verfügbar in</h3><div class="lang-grid"><a href="/af/" class="lang-link"
+                    hreflang="af" >
+                    Afrikaans
+                </a><a href="/am/" class="lang-link"
+                    hreflang="am" >
+                    አማርኛ
+                </a><a href="/ar/" class="lang-link"
+                    hreflang="ar" dir="rtl" >
+                    العربية
+                </a><a href="/bg/" class="lang-link"
+                    hreflang="bg" >
+                    Български
+                </a><a href="/bn/" class="lang-link"
+                    hreflang="bn" >
+                    বাংলা
+                </a><a href="/ca/" class="lang-link"
+                    hreflang="ca" >
+                    Català
+                </a><a href="/cs/" class="lang-link"
+                    hreflang="cs" >
+                    Čeština
+                </a><a href="/da/" class="lang-link"
+                    hreflang="da" >
+                    Dansk
+                </a><a href="/de/" class="lang-link active"
+                    hreflang="de" >
+                    Deutsch
+                </a><a href="/el/" class="lang-link"
+                    hreflang="el" >
+                    Ελληνικά
+                </a><a href="/en/" class="lang-link"
+                    hreflang="en" >
+                    English
+                </a><a href="/es/" class="lang-link"
+                    hreflang="es" >
+                    Español
+                </a><a href="/et/" class="lang-link"
+                    hreflang="et" >
+                    Eesti
+                </a><a href="/fa/" class="lang-link"
+                    hreflang="fa" dir="rtl" >
+                    فارسی
+                </a><a href="/fi/" class="lang-link"
+                    hreflang="fi" >
+                    Suomi
+                </a><a href="/fr/" class="lang-link"
+                    hreflang="fr" >
+                    Français
+                </a><a href="/gu/" class="lang-link"
+                    hreflang="gu" >
+                    ગુજરાતી
+                </a><a href="/ha/" class="lang-link"
+                    hreflang="ha" >
+                    Hausa
+                </a><a href="/he/" class="lang-link"
+                    hreflang="he" dir="rtl" >
+                    עברית
+                </a><a href="/hi/" class="lang-link"
+                    hreflang="hi" >
+                    हिन्दी
+                </a><a href="/hr/" class="lang-link"
+                    hreflang="hr" >
+                    Hrvatski
+                </a><a href="/hu/" class="lang-link"
+                    hreflang="hu" >
+                    Magyar
+                </a><a href="/id/" class="lang-link"
+                    hreflang="id" >
+                    Bahasa Indonesia
+                </a><a href="/is/" class="lang-link"
+                    hreflang="is" >
+                    Íslenska
+                </a><a href="/it/" class="lang-link"
+                    hreflang="it" >
+                    Italiano
+                </a><a href="/ja/" class="lang-link"
+                    hreflang="ja" >
+                    日本語
+                </a><a href="/km/" class="lang-link"
+                    hreflang="km" >
+                    ភាសាខ្មែរ
+                </a><a href="/kn/" class="lang-link"
+                    hreflang="kn" >
+                    ಕನ್ನಡ
+                </a><a href="/ko/" class="lang-link"
+                    hreflang="ko" >
+                    한국어
+                </a><a href="/lt/" class="lang-link"
+                    hreflang="lt" >
+                    Lietuvių
+                </a><a href="/lv/" class="lang-link"
+                    hreflang="lv" >
+                    Latviešu
+                </a><a href="/ms/" class="lang-link"
+                    hreflang="ms" >
+                    Bahasa Melayu
+                </a><a href="/my/" class="lang-link"
+                    hreflang="my" >
+                    မြန်မာစာ
+                </a><a href="/nb/" class="lang-link"
+                    hreflang="nb" >
+                    Norsk Bokmål
+                </a><a href="/nl/" class="lang-link"
+                    hreflang="nl" >
+                    Nederlands
+                </a><a href="/pl/" class="lang-link"
+                    hreflang="pl" >
+                    Polski
+                </a><a href="/pt/" class="lang-link"
+                    hreflang="pt" >
+                    Português
+                </a><a href="/pt-br/" class="lang-link"
+                    hreflang="pt-br" >
+                    Português (Brasil)
+                </a><a href="/ro/" class="lang-link"
+                    hreflang="ro" >
+                    Română
+                </a><a href="/ru/" class="lang-link"
+                    hreflang="ru" >
+                    Русский
+                </a><a href="/sk/" class="lang-link"
+                    hreflang="sk" >
+                    Slovenčina
+                </a><a href="/sl/" class="lang-link"
+                    hreflang="sl" >
+                    Slovenščina
+                </a><a href="/sr/" class="lang-link"
+                    hreflang="sr" >
+                    Srpski
+                </a><a href="/sv/" class="lang-link"
+                    hreflang="sv" >
+                    Svenska
+                </a><a href="/sw/" class="lang-link"
+                    hreflang="sw" >
+                    Kiswahili
+                </a><a href="/ta/" class="lang-link"
+                    hreflang="ta" >
+                    தமிழ்
+                </a><a href="/te/" class="lang-link"
+                    hreflang="te" >
+                    తెలుగు
+                </a><a href="/th/" class="lang-link"
+                    hreflang="th" >
+                    ไทย
+                </a><a href="/tl/" class="lang-link"
+                    hreflang="tl" >
+                    Tagalog
+                </a><a href="/tr/" class="lang-link"
+                    hreflang="tr" >
+                    Türkçe
+                </a><a href="/uk/" class="lang-link"
+                    hreflang="uk" >
+                    Українська
+                </a><a href="/ur/" class="lang-link"
+                    hreflang="ur" dir="rtl" >
+                    اردو
+                </a><a href="/vi/" class="lang-link"
+                    hreflang="vi" >
+                    Tiếng Việt
+                </a><a href="/yo/" class="lang-link"
+                    hreflang="yo" >
+                    Yorùbá
+                </a><a href="/zh/" class="lang-link"
+                    hreflang="zh" >
+                    中文
+                </a></div></div><div class="footer-divider"></div><div class="footer-bottom"><p class="copyright">
+                &copy; 2026 Run Analytics. Alle Rechte vorbehalten
+            </p><ul class="footer-legal"><li><a href="/de/privacy/">Datenschutz</a></li><li><a href="/de/terms/">Nutzungsbedingungen</a></li></ul></div></div></footer><div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="Cookie consent" aria-live="polite"><div class="cookie-banner-content"><div><p>Diese Website verwendet Cookies, um Ihre Erfahrung zu verbessern.</p><a href="/de/privacy/" class="text-sm">Mehr erfahren</a></div><div class="cookie-banner-actions"><button id="cookie-decline" class="btn btn-secondary btn-small">Ablehnen</button><button id="cookie-accept" class="btn btn-primary btn-small">Akzeptieren</button></div></div></div><script src="../../assets/js/core.min.js?v=1c7ace58" defer></script><script src="../../assets/js/search.min.js?v=1c7ace58" defer></script><script src="../../assets/js/analytics.min.js" data-ga-id="G-Y138VB4523" defer></script><script>if ('serviceWorker' in navigator) { navigator.serviceWorker.register('../../sw.js') }</script></body></html>

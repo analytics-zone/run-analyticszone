@@ -1,0 +1,881 @@
+<!DOCTYPE html><html lang="da" dir="ltr"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=optional"
+    rel="stylesheet"><title>Kritisk Løbehastighed Beregner - CRS Test &amp; Zoner</title><meta name="description" content="Gratis CRS test beregner til løbere. Mål Kritisk Løbehastighed i 2 forsøg, opdag træningszoner og optimer dit tempo."><meta name="author" content="AnalyticsZone Team"><meta name="keywords" content="kritisk løbehastighed, CRS beregner, løbeperformance, træningszoner, tempooptimering"><link rel="canonical" href="https://run.analyticszone.app/da/crs/"><meta property="article:published_time" content="2025-01-15T10:00:00Z"><meta property="article:modified_time" content="2026-03-24T14:30:00Z"><meta property="article:author" content="AnalyticsZone Team"><meta property="og:type" content="article"><meta property="og:url" content="https://run.analyticszone.app/da/crs/"><meta property="og:title" content="Kritisk Løbehastighed Beregner - CRS Test &amp; Zoner"><meta property="og:description" content="Gratis CRS test beregner til løbere. Mål Kritisk Løbehastighed i 2 forsøg, opdag træningszoner og optimer dit tempo."><meta property="og:image" content="https://run.analyticszone.app/assets/images/og-image.svg"><meta property="og:locale" content="da_DK"><meta property="og:site_name" content="Run Analytics"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:url" content="https://run.analyticszone.app/da/crs/"><meta name="twitter:title" content="Kritisk Løbehastighed Beregner - CRS Test &amp; Zoner"><meta name="twitter:description" content="Gratis CRS test beregner til løbere. Mål Kritisk Løbehastighed i 2 forsøg, opdag træningszoner og optimer dit tempo."><meta name="twitter:image" content="https://run.analyticszone.app/assets/images/og-image.svg"><meta name="twitter:site" content="@runanalytics"><meta name="twitter:creator" content="@runanalytics"><link rel="alternate" hreflang="ar"
+    href="https://run.analyticszone.app/ar/crs/"><link rel="alternate" hreflang="de"
+    href="https://run.analyticszone.app/de/crs/"><link rel="alternate" hreflang="en"
+    href="https://run.analyticszone.app/en/crs/"><link rel="alternate" hreflang="es"
+    href="https://run.analyticszone.app/es/crs/"><link rel="alternate" hreflang="fr"
+    href="https://run.analyticszone.app/fr/crs/"><link rel="alternate" hreflang="hi"
+    href="https://run.analyticszone.app/hi/crs/"><link rel="alternate" hreflang="id"
+    href="https://run.analyticszone.app/id/crs/"><link rel="alternate" hreflang="it"
+    href="https://run.analyticszone.app/it/crs/"><link rel="alternate" hreflang="ja"
+    href="https://run.analyticszone.app/ja/crs/"><link rel="alternate" hreflang="ko"
+    href="https://run.analyticszone.app/ko/crs/"><link rel="alternate" hreflang="nl"
+    href="https://run.analyticszone.app/nl/crs/"><link rel="alternate" hreflang="pl"
+    href="https://run.analyticszone.app/pl/crs/"><link rel="alternate" hreflang="pt"
+    href="https://run.analyticszone.app/pt/crs/"><link rel="alternate" hreflang="pt-br"
+    href="https://run.analyticszone.app/pt-br/crs/"><link rel="alternate" hreflang="ru"
+    href="https://run.analyticszone.app/ru/crs/"><link rel="alternate" hreflang="sv"
+    href="https://run.analyticszone.app/sv/crs/"><link rel="alternate" hreflang="tr"
+    href="https://run.analyticszone.app/tr/crs/"><link rel="alternate" hreflang="zh"
+    href="https://run.analyticszone.app/zh/crs/"><link rel="alternate" hreflang="x-default"
+    href="https://run.analyticszone.app/en/crs/"><link rel="icon" type="image/png" sizes="32x32" href="../../assets/images/icons/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="../../assets/images/icons/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="../../assets/images/icons/apple-touch-icon.png"><link rel="manifest" href="../../manifest.json"><meta name="theme-color" content="#2563EB"><meta name="robots" content="noindex, follow"><meta name="apple-itunes-app" content="app-id=6754524015"><style>
+/* Critical CSS - Above the fold styles for fast LCP */
+:root {
+  --color-primary: #0066CC;
+  --color-text: #1a1a1a;
+  --color-text-muted: #666;
+  --color-bg: #ffffff;
+  --color-bg-alt: #f8f9fa;
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+}
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  color: var(--color-text);
+  background: var(--color-bg);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Skip link - Accessibility */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--color-primary);
+  color: #fff;
+  padding: 8px 16px;
+  z-index: 1000;
+  text-decoration: none;
+}
+.skip-link:focus {
+  top: 0;
+}
+
+/* Header - Critical for LCP */
+.site-header {
+  background: var(--color-bg);
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0.75rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.site-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: var(--color-text);
+  font-weight: 600;
+  font-size: 1.125rem;
+}
+
+.site-logo img, .site-logo svg {
+  width: 32px;
+  height: 32px;
+}
+
+/* Navigation */
+.main-nav {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .main-nav {
+    display: flex;
+    gap: 1.5rem;
+  }
+  .main-nav a {
+    color: var(--color-text);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9375rem;
+    transition: color 0.2s;
+  }
+  .main-nav a:hover {
+    color: var(--color-primary);
+  }
+}
+
+/* Mobile menu button */
+.menu-toggle {
+  display: flex;
+  background: none;
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .menu-toggle {
+    display: none;
+  }
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Main content */
+main.main-content {
+  flex: 1;
+}
+
+/* Hero section - Critical for LCP */
+.hero {
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .hero {
+    padding: 4rem 2rem;
+  }
+}
+
+.hero h1 {
+  font-size: clamp(1.75rem, 5vw, 3rem);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  color: var(--color-text);
+}
+
+.hero .lead, .hero p {
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  color: var(--color-text-muted);
+  max-width: 700px;
+  margin: 0 auto 1.5rem;
+}
+
+/* Buttons - Critical for CTA */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: var(--radius-md);
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-primary {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: #0052a3;
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+}
+
+.btn-large {
+  padding: 1rem 2rem;
+  font-size: 1.125rem;
+}
+
+/* Utility classes */
+.hidden { display: none !important; }
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Images - prevent CLS with aspect-ratio */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+img[width][height] {
+  aspect-ratio: attr(width) / attr(height);
+}
+
+.lazy-image {
+  background: var(--color-bg-alt);
+  transition: opacity 0.3s;
+}
+
+.lazy-image:not(.loaded) {
+  opacity: 0;
+}
+
+.lazy-image.loaded {
+  opacity: 1;
+}
+
+/* App badges - fixed dimensions to prevent CLS */
+.app-badge img {
+  width: 140px;
+  height: 42px;
+}
+
+/* Logo - fixed dimensions */
+.site-logo img {
+  width: 32px;
+  height: 32px;
+}
+
+/* Reduce motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+</style><link rel="preconnect" href="https://www.googletagmanager.com"><link rel="dns-prefetch" href="https://www.googletagmanager.com"><link rel="stylesheet" href="../../assets/css/main.min.css?v=1c7ace58"><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Run Analytics",
+  "url": "https://run.analyticszone.app",
+  "logo": "https://run.analyticszone.app/assets/images/logo.png",
+  "description": "Track Critical Running Speed, Training Stress Score, and performance metrics with Run Analytics. Science-based iOS app for runners, triathletes &amp; coaches. 7-day free trial.",
+  
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "Customer Support",
+    "email": "analyticszone+run@onmedic.org"
+  },
+  
+  "sameAs": [
+    
+    
+      
+    
+    
+      
+    
+    
+      
+    
+    
+    "https://twitter.com/runanalytics",
+    
+    "https://apps.apple.com/us/app/run-analytics/id6754524015",
+    
+    "https://play.google.com/store/apps/details?id=com.arnohealth.runanalytics"
+    
+  ]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Run Analytics",
+  "url": "https://run.analyticszone.app",
+  "description": "Track Critical Running Speed, Training Stress Score, and performance metrics with Run Analytics. Science-based iOS app for runners, triathletes &amp; coaches. 7-day free trial.",
+  "inLanguage": "da"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Run Analytics",
+  "description": "Track Critical Running Speed, Training Stress Score, and performance metrics with Run Analytics. Science-based iOS app for runners, triathletes &amp; coaches. 7-day free trial.",
+  "url": "https://run.analyticszone.app",
+  "applicationCategory": ["HealthApplication", "FitnessApplication"],
+  "operatingSystem": "iOS, Android",
+  "author": {
+    "@type": "Organization",
+    "name": "AnalyticsZone Team"
+  },
+  "downloadUrl": "https://apps.apple.com/us/app/run-analytics/id6754524015"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Hjem",
+      "item": "https://run.analyticszone.app/da/"
+    },
+    
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Lær",
+      "item": "https://run.analyticszone.app/da/getting-started/"
+    },
+    
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "CRS",
+      "item": "https://run.analyticszone.app/da/crs/"
+    }
+    
+  ]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Kritisk Løbehastighed Beregner - CRS Test &amp; Zoner",
+  "description": "Gratis CRS test beregner til løbere. Mål Kritisk Løbehastighed i 2 forsøg, opdag træningszoner og optimer dit tempo.",
+  "url": "https://run.analyticszone.app/da/crs/",
+  "inLanguage": "da",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "Run Analytics",
+    "url": "https://run.analyticszone.app"
+  },
+  "datePublished": "2025-01-15",
+  "dateModified": "2026-03-24",
+  "keywords": ["kritisk løbehastighed", "CRS beregner", "løbeperformance", "træningszoner", "tempooptimering"],
+  "about": [
+    {
+      "@type": "Thing",
+      "name": "kritisk løbehastighed"
+    }, 
+  
+    {
+      "@type": "Thing",
+      "name": "CRS beregner"
+    }, 
+  
+    {
+      "@type": "Thing",
+      "name": "løbeperformance"
+    }, 
+  
+    {
+      "@type": "Thing",
+      "name": "træningszoner"
+    }, 
+  
+    {
+      "@type": "Thing",
+      "name": "tempooptimering"
+    }
+  ]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Kritisk Løbehastighed Beregner - CRS Test &amp; Zoner",
+  "description": "Gratis CRS test beregner til løbere. Mål Kritisk Løbehastighed i 2 forsøg, opdag træningszoner og optimer dit tempo.",
+  "author": {
+    "@type": "Person",
+    "name": "AnalyticsZone Team"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Run Analytics",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://run.analyticszone.app/assets/images/logo.png"
+    }
+  },
+  "datePublished": "2025-01-15",
+  "dateModified": "2026-03-24",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://run.analyticszone.app/da/crs/"
+  }
+}
+</script><script>
+    (function () {
+      let theme = localStorage.getItem('theme');
+      // Older builds could persist a per-subdomain `theme=light` value without a UI
+      // to keep it consistent across apps. Treat it as stale and fall back to the OS.
+      if (theme === 'light') {
+        try { localStorage.removeItem('theme'); } catch (e) { /* ignore */ }
+        theme = null;
+      }
+
+      if (theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark-mode');
+      }
+    })();
+  </script></head><body><a href="#main-content" class="skip-link">Spring til indhold</a><header class="site-header"><div class="container"><div class="header-inner"><a href="/da/" class="site-logo"><picture><source srcset="../../assets/images/logo-dark.png" type="image/png"
+                        media="(prefers-color-scheme: dark)"><img src="../../assets/images/logo.png" alt="Run Analytics - Running Analytics App | Critical Running Speed, TSS, CTL/ATL/TSB for iOS" width="56" height="56"></picture><span class="logo-text">Run Analytics</span></a><nav class="nav-primary" id="nav-primary" role="navigation" aria-label="Main navigation"><div class="nav-group-left"><ul><li><a href="/da/" 
+                                aria-current="">
+                                Hjem
+                            </a></li><li class="has-submenu" ><a href="/da/getting-started/" class="nav-label">Lær</a><ul class="submenu"><li><a href="/da/getting-started/" 
+                                        aria-current="">
+                                        Kom I Gang
+                                    </a></li><li><a href="/da/crs/" class="active" 
+                                        aria-current="page">
+                                        CRS
+                                    </a></li><li><a href="/da/training-zones/" 
+                                        aria-current="">
+                                        Træningszoner
+                                    </a></li><li><a href="/da/training-load/" 
+                                        aria-current="">
+                                        Træningsbelastning
+                                    </a></li><li><a href="/da/rtss-calculator/" 
+                                        aria-current="">
+                                        rTSS Beregner
+                                    </a></li></ul></li><li class="has-submenu" ><a href="/da/research/" class="nav-label">Videnskab</a><ul class="submenu"><li><a href="/da/research/" 
+                                        aria-current="">
+                                        Forskning
+                                    </a></li><li><a href="/da/formulas/" 
+                                        aria-current="">
+                                        Formler
+                                    </a></li><li><a href="/da/efficiency/" 
+                                        aria-current="">
+                                        Effektivitet
+                                    </a></li><li><a href="/da/stride-mechanics/" 
+                                        aria-current="">
+                                        Løbe-mekanik
+                                    </a></li><li><a href="/da/bibliography/" 
+                                        aria-current="">
+                                        Bibliografi
+                                    </a></li></ul></li><li><a href="/da/contact/" 
+                                aria-current="">
+                                Kontakt
+                            </a></li></ul><div class="search-container"><svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.35-4.35"></path></svg><input type="search" id="site-search" class="search-input" aria-expanded="false"
+                            aria-haspopup="listbox" aria-autocomplete="list" autocomplete="off" spellcheck="false" /><div id="search-results" class="search-results hidden" role="region" aria-live="polite"></div></div><select class="language-selector" id="language-select" aria-label="Vælg sprog"><option value="af" >
+                            Afrikaans
+                        </option><option value="am" >
+                            አማርኛ
+                        </option><option value="ar" >
+                            العربية
+                        </option><option value="bg" >
+                            Български
+                        </option><option value="bn" >
+                            বাংলা
+                        </option><option value="ca" >
+                            Català
+                        </option><option value="cs" >
+                            Čeština
+                        </option><option value="da" selected>
+                            Dansk
+                        </option><option value="de" >
+                            Deutsch
+                        </option><option value="el" >
+                            Ελληνικά
+                        </option><option value="en" >
+                            English
+                        </option><option value="es" >
+                            Español
+                        </option><option value="et" >
+                            Eesti
+                        </option><option value="fa" >
+                            فارسی
+                        </option><option value="fi" >
+                            Suomi
+                        </option><option value="fr" >
+                            Français
+                        </option><option value="gu" >
+                            ગુજરાતી
+                        </option><option value="ha" >
+                            Hausa
+                        </option><option value="he" >
+                            עברית
+                        </option><option value="hi" >
+                            हिन्दी
+                        </option><option value="hr" >
+                            Hrvatski
+                        </option><option value="hu" >
+                            Magyar
+                        </option><option value="id" >
+                            Bahasa Indonesia
+                        </option><option value="is" >
+                            Íslenska
+                        </option><option value="it" >
+                            Italiano
+                        </option><option value="ja" >
+                            日本語
+                        </option><option value="km" >
+                            ភាសាខ្មែរ
+                        </option><option value="kn" >
+                            ಕನ್ನಡ
+                        </option><option value="ko" >
+                            한국어
+                        </option><option value="lt" >
+                            Lietuvių
+                        </option><option value="lv" >
+                            Latviešu
+                        </option><option value="ms" >
+                            Bahasa Melayu
+                        </option><option value="my" >
+                            မြန်မာစာ
+                        </option><option value="nb" >
+                            Norsk Bokmål
+                        </option><option value="nl" >
+                            Nederlands
+                        </option><option value="pl" >
+                            Polski
+                        </option><option value="pt" >
+                            Português
+                        </option><option value="pt-br" >
+                            Português (Brasil)
+                        </option><option value="ro" >
+                            Română
+                        </option><option value="ru" >
+                            Русский
+                        </option><option value="sk" >
+                            Slovenčina
+                        </option><option value="sl" >
+                            Slovenščina
+                        </option><option value="sr" >
+                            Srpski
+                        </option><option value="sv" >
+                            Svenska
+                        </option><option value="sw" >
+                            Kiswahili
+                        </option><option value="ta" >
+                            தமிழ்
+                        </option><option value="te" >
+                            తెలుగు
+                        </option><option value="th" >
+                            ไทย
+                        </option><option value="tl" >
+                            Tagalog
+                        </option><option value="tr" >
+                            Türkçe
+                        </option><option value="uk" >
+                            Українська
+                        </option><option value="ur" >
+                            اردو
+                        </option><option value="vi" >
+                            Tiếng Việt
+                        </option><option value="yo" >
+                            Yorùbá
+                        </option><option value="zh" >
+                            中文
+                        </option></select></div><div class="nav-group-right"><div class="header-app-buttons"><a href="https://apps.apple.com/us/app/run-analytics/id6754524015" class="header-download-btn" target="_blank"
+                            rel="noopener" aria-label="Download on App Store" title="Download on App Store"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="currentColor"><path
+                                    d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z" /></svg></a><a href="https://play.google.com/store/apps/details?id=com.arnohealth.runanalytics" class="header-download-btn" target="_blank"
+                            rel="noopener" aria-label="Get it on Google Play" title="Get it on Google Play"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="currentColor"><path
+                                    d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.92 20.16,13.19L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M16.81,8.88L14.54,11.15L6.05,2.66L16.81,8.88Z" /></svg></a></div><div class="suite-menu-container"><button class="suite-menu-toggle" id="suite-menu-toggle" aria-label="See other apps"
+                            aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg></button><div class="suite-dropdown hidden" id="suite-dropdown"><div class="suite-dropdown-header">Other AnalyticsZone Apps</div><div class="suite-apps-grid"><a href="https://analyticszone.app" class="suite-app-link">AnalyticsZone</a><a href="https://swim.analyticszone.app" class="suite-app-link">Swim Analytics</a><a href="https://bike.analyticszone.app" class="suite-app-link">Bike Analytics</a><a href="https://walk.analyticszone.app" class="suite-app-link">Walk Analytics</a><a href="https://cardio.analyticszone.app" class="suite-app-link">Cardio Analytics</a><a href="https://health.analyticszone.app" class="suite-app-link">Health Analytics</a><a href="https://swimtrainer.analyticszone.app" class="suite-app-link">Swim Trainer</a><a href="https://hike.analyticszone.app" class="suite-app-link">Hike Analytics</a><a href="https://sleep.analyticszone.app" class="suite-app-link">Sleep Analytics</a><a href="https://paceva.analyticszone.app" class="suite-app-link">Paceva Analytics</a></div></div></div></div></nav><button class="menu-toggle" id="menu-toggle" aria-label="Skift menu"
+                aria-expanded="false" aria-controls="nav-primary"><span></span><span></span><span></span></button></div></div></header><nav class="breadcrumbs" aria-label="Breadcrumb"><div class="container"><ol><li><a href="/da/">Hjem</a></li><li><a href="/da/getting-started/">Lær</a></li><li><span aria-current="page">CRS</span></li></ol></div></nav><main id="main-content" class="main-content"><section class="page-hero"><div class="container"><h1>Kritisk kørehastighed (CRS)</h1><p class="lead">Grundlaget for datadrevet løbetræning</p></div></section><section class="section"><div class="container container-narrow"><div class="callout callout-success mb-xl"><h2>Nøgle takeaways</h2><ul class="key-points"><li><strong>Hvad:</strong>Kritisk løbehastighed (CRS) er dit maksimale bæredygtige løbetempo - den
+                    aerob tærskel, hvor du kan opretholde indsatsen i 30+ minutter</li><li><strong>Sådan udregner du:</strong>Udfør 1200m og 3600m tidsforsøg, og brug derefter den lineære
+                    afstand-tidsforhold for at finde hældningen (CRS)</li><li><strong>Hvorfor det betyder noget:</strong>CRS muliggør personlig<a href="/da/training-zones/">træningszoner</a>, nøjagtig<a href="/da/training-load/">TSS beregninger</a>og objektiv fitnesssporing</li><li><strong>Typiske værdier:</strong>Eliteløbere: 18-22s/100m | Konkurrencedygtig: 22-26s/100m | Fitness
+                    løbere: 26-32s/100m</li><li><strong>Testfrekvens:</strong>Gentest hver 6.-8. uge for at opdatere zoner som din løbegrænse
+                    tempo forbedres</li></ul></div><div class="callout callout-info mb-xl"><h2>Hvad er kritisk løbehastighed?</h2><p><strong>Kritisk kørehastighed (CRS)</strong>er den teoretiske maksimale løbehastighed, du kan
+                vedligeholde uden udmattelse. Det repræsenterer dit aerobe løbetempo, typisk tilsvarende
+                til 4 mmol/L blodlaktat og holdbar i cirka 30-60 minutter. CRS beregnes ved hjælp af to
+                max-effort tidskørsel (f.eks. 1200m og 3600m) for at bestemme personlige træningszoner for tempo
+                optimering.</p></div><p class="lead">Kritisk løbehastighed repræsenterer den teoretiske maksimale løbehastighed, du kan opretholde
+            kontinuerligt uden udmattelse. Det er din aerobe tærskel - den intensitet, hvor laktatproduktionen er lig
+            laktat clearance.</p><div class="callout callout-info"><h3>🎯 Fysiologisk betydning</h3><p>CRS svarer nøje til:</p><ul><li><strong>Laktattærskel 2 (LT2)</strong>- Anden ventilationstærskel</li><li><strong>Maksimal laktatstabilitet (MLSS)</strong>- Højeste bæredygtige laktatniveau</li><li><strong>Funktionelt tærskeltempo (FTP)</strong>- Løb svarende til at cykle FTP</li><li><strong>~4 mmol/L blodlaktat</strong>- Traditionel OBLA markør</li></ul></div><h3>Hvorfor CRS betyder noget</h3><p>Kritisk kørehastighed er<strong>grundlæggende metrik</strong>der låser op for al avanceret træningsbelastning
+            analyse:</p><ul><li><strong><a href="/da/training-zones/">Træningszoner</a>:</strong>Tilpasser intensitetszoner
+                baseret på din fysiologi</li><li><strong><a href="/da/training-load/">rTSS Beregning</a>:</strong>Muliggør præcis træning
+                Kvantificering af stressscore</li><li><strong><a href="/da/training-load/">CTL/ATL/TSB</a>:</strong>Påkrævet for ydeevne
+                Ledelsesdiagrammetrics</li><li><strong>Fremskridtssporing:</strong>Objektivt mål for forbedring af aerob kondition</li></ul><div class="warning-box"><strong>⚠️ Kritisk afhængighed:</strong>Uden en gyldig CRS-test, avancerede træningsbelastningsmålinger (rTSS,
+            CTL, ATL, TSB) kan ikke beregnes. En unøjagtig CRS vil ødelægge al efterfølgende træningsanalyse.</div><div class="callout callout-primary mt-xl"><h3>📱 Run Analytics automatiserer alle CRS-baserede analyser</h3><p>Mens denne guide forklarer videnskaben bag CRS,<strong>Run Analytics beregner automatisk og
+                    sporer din kritiske løbehastighed</strong>fra dine træningsdata – ingen manuelle beregninger eller test
+                krævede protokoller.</p><p><strong>Appen håndterer:</strong></p><ul><li>Automatisk CRS-detektion fra træningsdata</li><li>Personlig træningszone opdateres, efterhånden som din CRS forbedres</li><li>Sporing af rTSS, CTL, ATL og TSB i realtid</li><li>Historiske CRS-progressionsdiagrammer</li></ul><p><a class="btn btn-accent btn-small" href="/da/">Download Run Analytics gratis →</a></p></div></div></section><section class="section section-gray"><div class="container container-narrow"><h2>Kritisk løbehastighed vs. andre målinger</h2><p class="lead">At forstå, hvordan CRS kan sammenlignes med andre løbepræstationsindikatorer, hjælper dig med at vælge
+            rigtige metrik til dine træningsmål.</p><div class="comparison-table-container"><table class="comparison-table"><thead><tr><th>Metrisk</th><th>Hvad det måler</th><th>Testmetode</th><th>Bæredygtig varighed</th><th>Bedste brugssag</th></tr></thead><tbody><tr class="highlight-row"><td><strong>Kritisk kørehastighed (CRS)</strong></td><td>Aerobt tærskeltempo (4 mmol/L laktat)</td><td>1200m + 3600m tidskørsel</td><td>30-60 minutter</td><td>Træningszoner, TSS-beregning, aerob tærskelløb</td></tr><tr><td><strong><a href="/da/what-is-vo2max/">VO₂max</a></strong></td><td>Maksimal iltoptagelse</td><td><a href="/da/vo2max-testing/">Laboratorietest eller 12-min maksimal indsats</a></td><td>6-8 minutter</td><td>Samlet konditionsniveau, højintensive intervaller</td></tr><tr><td><strong><a href="/da/lactate-threshold-testing/">Laktattærskel (LT)</a></strong></td><td>Punkt hvor laktat akkumuleres (2-4 mmol/L)</td><td>Laboratorieblod laktattest</td><td>30-60 minutter</td><td>Forudsigelse af løbstempo,<a href="/da/tempo-runs-zone3/">tempoløb</a></td></tr><tr><td><strong>Funktionelt tærskeltempo (FTP)</strong></td><td>Bedste 60-minutters tempoindsats</td><td>60 minutters tidskørsel eller 20 minutters test</td><td>60 minutter</td><td>Udholdenhedstræning, maraton tempo arbejde</td></tr><tr><td><strong>5K Race Pace</strong></td><td>Vedvarende løbsindsats</td><td>5K løb eller tidskørsel</td><td>15-25 minutter</td><td>Race-specifik træning, pacing-strategi</td></tr></tbody></table></div><div class="callout callout-tip mt-lg"><h3>Hvorfor vælge CRS?</h3><p>I modsætning til VO₂max (kræver laboratorietest) eller lactat-tærskel (kræver blodprøver), kritisk løb
+                hastigheden kan måles på ethvert spor med blot et stopur. Det giver den samme træningsindsigt som
+                dyre laboratorietests, samtidig med at det er praktisk til regelmæssig gentest hver 6.-8. uge. Lær mere om alle<a href="/da/running-performance-tests/">at køre præstationstestmetoder</a>og hvornår
+                bruge hver.</p></div></div></section><section class="section section-alt"><div class="container"><h2 class="text-center mb-xl">CRS testprotokol</h2><div class="grid grid-2"><div class="protocol-card"><h3>📋 Standardprotokol</h3><ol class="protocol-steps"><li><strong>Opvarmning</strong><p>15-20 minutter let løb, dynamiske øvelser og 4-6 skridt for at forberede sig på høj intensitet
+                            indsats.</p></li><li><strong>1200m tidskørsel</strong><p>Maksimal vedvarende indsats (3 omgange på en 400m bane). Optag samlet tid. Mål: hurtigst muligt
+                            gennemsnitligt tempo.</p></li><li><strong>Fuldstændig gendannelse</strong><p><span class="highlight-text">15-30 minutter</span>let jogging eller gå/hvile. Dette tillader
+                            for laktatclearance og aerob restitution.</p></li><li><strong>3600m tidskørsel</strong><p>Maksimal indsats (9 omgange på en 400m bane). Oprethold jævnt tempo. Dette kan gøres på en
+                            separat dag hvis nødvendigt.</p></li></ol></div><div class="protocol-card"><h3>⚠️ Almindelige fejl</h3><div class="mistake-list"><div class="mistake-item"><h4>Utilstrækkelig restitution</h4><p><strong>Problem:</strong>Træthed bremser kunstigt 3600m tid</p><p><strong>Resultat:</strong>Beregnet CRS bliver<em>hurtigere end virkeligheden</em>, der fører til
+                            overtrænede zoner</p><p><strong>Løsning:</strong>Hvil, indtil HR falder til under 120 slag/min, eller indtil vejrtrækningen er fuld
+                            genvundet</p></div><div class="mistake-item"><h4>Dårlig pacing på 1200m</h4><p><strong>Problem:</strong>At starte for hurtigt forårsager dramatisk opbremsning</p><p><strong>Resultat:</strong>1200m tid afspejler ikke ægte bæredygtigt tempo</p><p><strong>Løsning:</strong>Sigt efter lige opdelinger eller negativ opdeling (anden halvdel ≤ første halvdel)</p></div><div class="mistake-item"><h4>Inkonsekvente forhold</h4><p><strong>Problem:</strong>Test på forskelligt terræn eller i ekstrem vind.</p><p><strong>Løsning:</strong>Test altid på en flad bane under lignende vejrforhold for
+                            langsgående nøjagtighed.</p></div></div></div></div><div class="callout callout-tip mt-xl"><h3>🔄 Gentestningsfrekvens</h3><p>Gentest CRS hver<strong>6-8 uger</strong>at opdatere træningszoner, efterhånden som konditionen forbedres. Dine zoner
+                skal gradvist blive hurtigere, efterhånden som du tilpasser dig træningen.</p></div></div></section><section class="section"><div class="container container-narrow"><h2>CRS Beregningsformel</h2><div class="formula-box"><h3>Formel</h3><div class="formula">CRS (m/s) = (D₂ - D₁) / (T₂ - T₁)</div><div class="formula-explanation"><p>Hvor:</p><ul><li>D₁ = Kortere afstand (f.eks. 1200 meter)</li><li>D₂ = Længere afstand (f.eks. 3600 meter)</li><li>T₁ = Tid for D₁ (i sekunder)</li><li>T₂ = Tid for D₂ (i sekunder)</li></ul></div><h3 class="mt-lg">Forenklet Distance-Time Concept</h3><p>CRS er hældningen af linjens plotning af afstand vs. tid for to eller flere maksimale anstrengelser.</p></div><h3>Bearbejdet eksempel</h3><div class="example-box"><h4>Testresultater:</h4><ul><li>3600m tid:<strong>14:24</strong>(864 sekunder)</li><li>1200m tid:<strong>4:12</strong>(252 sekunder)</li></ul><h4>Trin 1: Beregn CRS i m/s</h4><div class="calculation">CRS = (3600 - 1200) / (864 - 252)<br/>CRS = 2400 / 612<br/>CRS =<strong>3,92 m/s</strong></div><h4>Trin 2: Konverter til tempo pr. 100m</h4><div class="calculation">Tempo = 100 / 3,92<br/>Tempo = 25,5 sekunder<br/>Tempo =<strong>25,5 s pr. 100m</strong>(4:15/km)</div></div><h2 class="mt-3xl">Gratis Lommeregner for kritisk løbehastighed</h2><p class="lead">Beregn din kritiske løbehastighed og dine personlige træningszoner med det samme med vores CRS
+            lommeregner</p><div class="crs-calculator"><form id="cssCalculatorForm"><div class="calculator-inputs"><div class="form-group"><label class="form-label" for="timeLong">Længere afstandstid (f.eks. 3600 m) (mm:ss)</label><input aria-describedby="timeLong-help" aria-required="true" class="form-input" id="timeLong" pattern="[0-9]{1,2}:[0-5][0-9]" placeholder="14:24" type="text"/><small class="form-help" id="timeLong-help">Format: minutter:sekunder (f.eks. 14:24)</small></div><div class="form-group"><label class="form-label" for="timeShort">Kortere afstandstid (f.eks. 1200m) (mm:ss)</label><input aria-describedby="timeShort-help" aria-required="true" class="form-input" id="timeShort" pattern="[0-9]{1,2}:[0-5][0-9]" placeholder="4:12" type="text"/><small class="form-help" id="timeShort-help">Format: minutter:sekunder (f.eks. 4:12)</small></div><div class="calculator-buttons"><button class="btn btn-primary" id="calculateBtn" type="submit">Beregn CRS</button><button class="btn btn-ghost" id="resetBtn" type="reset">Klar</button></div></div></form><div aria-live="polite" class="calculator-results hidden" id="cssResults"><h3>Dine resultater</h3><div class="results-summary"><div class="result-item"><div class="result-label">Kritisk løbehastighed</div><div class="crs-result-value" id="crsValue">--</div></div><div class="result-item"><div class="result-label">CRS Tempo pr. 100m</div><div class="crs-result-value" id="crsPace">--</div></div></div><div class="zones-result"><h4>Dine personlige træningszoner</h4><p class="mb-md text-secondary">Baseret på din CRS er her dine træningszoner i tempo pr. 100m:</p><div id="zonesTable"></div></div></div><div class="callout callout-tip mt-md"><p><strong>💡 Automatisk sporing:</strong>Run Analytics beregner din CRS automatisk fra træning
+                    data og sporer dem over tid - ingen manuel test eller beregninger er nødvendige. Appen opdaterer også din
+                    træningszoner, efterhånden som din CRS forbedres.<a href="/da/">Lær mere →</a></p></div></div><h3 class="mt-xl">Alternativ: 3-min og 12-min test</h3><p>Et meget brugt alternativ er at køre så langt som muligt på 3 minutter og 12 minutter. Forskellen i
+            afstand divideret med forskellen i tid giver din CRS.</p></div></section><section class="section section-alt"><div class="container"><h2 class="mb-xl">Træningszoner baseret på kritisk løbehastighed</h2><div class="callout callout-info"><p><strong>Bemærk:</strong>I løb måles tempo som<em>tid pr. distance</em>. Derfor, en<strong>højere procent = langsommere tempo</strong>, og en<strong>lavere procent = hurtigere tempo</strong>.
+                Dette er omvendt til kraftbaserede sportsgrene som cykling, hvor højere % = hårdere indsats. Få mere at vide om<a href="/da/training-zones/">hvordan man bruger disse træningszoner</a>effektivt.</p></div><div class="zones-table-container"><table class="zones-table"><thead><tr><th>Zone</th><th>Navn</th><th>% af CRS-tempo</th><th>Eksempel på CRS 1:40/100m</th><th>RPE</th><th>Fysiologisk formål</th></tr></thead><tbody><tr class="zone-1"><td><strong>1</strong></td><td>Genopretning</td><td>&gt;120 %</td><td>&gt;30s/100m</td><td>2-3/10</td><td>Aktiv restitution, let aerob vedligeholdelse</td></tr><tr class="zone-2"><td><strong>2</strong></td><td>Aerob base</td><td>108-120 %</td><td>27-30s/100m</td><td>4-5/10</td><td>Opbyg aerob kapacitet, fedtoxidation</td></tr><tr class="zone-3"><td><strong>3</strong></td><td>Tempo</td><td>102-108 %</td><td>25-27s/100m</td><td>6-7/10</td><td>Marathon tempotræning, muskulær udholdenhed</td></tr><tr class="zone-4"><td><strong>4</strong></td><td>Tærskel (CRS)</td><td>97-102 %</td><td>24-25s/100m</td><td>7-8/10</td><td>Forbedring af laktat-tærskel</td></tr><tr class="zone-5"><td><strong>5</strong></td><td>VO₂max</td><td>&lt;97 %</td><td>&lt;24s/100m</td><td>9-10/10</td><td>Intervaltræning, VO₂max udvikling</td></tr></tbody></table></div><div class="callout callout-tip mt-lg"><h3>🎯 Zonebaserede træningsfordele</h3><p>Brug af CRS-baserede zoner forvandler subjektiv "følelsestræning" til objektiv, gentagelig træning. hver
+                zone retter sig mod specifikke fysiologiske tilpasninger:</p><ul><li><strong>Zone 2:</strong>Byg aerob motor (60-70 % af ugentligt volumen)</li><li><strong>Zone 3:</strong>Forbedre effektiviteten i løbets tempo (15-20 % af volumen)</li><li><strong>Zone 4:</strong>Skub laktat-tærsklen højere (10-15 % af volumen)</li><li><strong>Zone 5:</strong>Udvikl tophastighed og kraft (5-10% af volumen)</li></ul></div></div></section><section class="section"><div class="container container-narrow"><h2>Typiske kritiske kørehastighedsværdier efter niveau</h2><div class="levels-comparison"><div class="level-card"><h3>🥇 Elite distanceløbere</h3><div class="pace-value">5,0-5,5 m/s</div><div class="pace-equivalent">18-20s pr. 100m</div><p>3:00-3:20 min/km tempo. Professionelle maratonløbere og elite-mellemdistanceløbere.</p></div><div class="level-card"><h3>🏃 Konkurrencedygtige løbere</h3><div class="pace-value">4,0-5,0 m/s</div><div class="pace-equivalent">20-25s pr. 100m</div><p>3:20-4:10 min/km tempo. Stærke klubløbere, under 3:00 maratonløbere, konkurrencedygtige aldersgrupper.</p></div><div class="level-card"><h3>👟 Almindelige fitnessløbere</h3><div class="pace-value">3,2-4,0 m/s</div><div class="pace-equivalent">25-31s pr. 100m</div><p>4:10-5:10 min/km tempo. Konsekvent træning 3-5 dage/uge. Standard 5K-marathon måltider.</p></div><div class="level-card"><h3>🌱 Udvikling af løbere</h3><div class="pace-value">&lt;3,2 m/s</div><div class="pace-equivalent">&gt;31s pr. 100m</div><p>Over 5:10 min/km tempo. Opbygning af aerobic base og øget ugentligt kilometertal sikkert.</p></div></div></div></section><section class="section section-alt"><div class="container container-narrow"><h2>Videnskabelig validering</h2><div class="research-highlight"><h3>Wakayoshi et al. (1992-1993) - Grundforskning</h3><p>Kohji Wakayoshi's banebrydende studier ved Osaka University etablerede CRS som et gyldigt, praktisk alternativ
+                til laboratorielaktattestning:</p><ul class="research-findings"><li><strong>Stærk korrelation med VO₂ ved anaerob tærskel</strong>(r &gt; 0,90)</li><li><strong>Fremragende forudsigelse af 10K og marathon præstation</strong></li><li><strong>Svarer til Maksimal Lactat Steady State (MLSS)</strong></li><li><strong>Uafhængig af anaerob kapacitet (W')</strong></li></ul><div class="citation"><p><strong>Nøglepapirer:</strong></p><ol><li>Wakayoshi K, et al. (1992). "Bestemmelse og gyldighed af kritisk hastighed som et indeks for
+                        løbepræstation hos den konkurrencedygtige løber."<em>European Journal of Applied Physiology</em>,
+                        64(2), 153-157.</li><li>Wakayoshi K, et al. (1992). "En simpel metode til at bestemme kritisk hastighed som løbetræthed
+                        tærskel i konkurrenceløb."<em>International Journal of Sports Medicine</em>, 13(5),
+                        367-371.</li><li>Wakayoshi K, et al. (1993). "Repræsenterer kritisk løbehastighed træningsintensitet kl
+                        maksimal laktat steady state?"<em>European Journal of Applied Physiology</em>66(1), 90-95.</li></ol></div></div><div class="callout callout-science"><h3>🔬 Hvorfor kritisk løbehastighed virker</h3><p>Kritisk kørehastighed repræsenterer grænsen mellem<strong>tung og hård træning
+                    domæner</strong>. Under CRS forbliver laktatproduktion og clearance afbalanceret - du kan løbe efter
+                længere perioder. Over CRS ophobes laktat gradvist indtil udmattelse inden for 20-40 minutter.</p><p>Dette gør CRS til den perfekte intensitet til:</p><ul><li>Sætter bæredygtige løbstempo til 5K til maraton-begivenheder</li><li>Udskrivning<a href="/da/training-zones/">tærskelintervaltræning</a></li><li>Overvågning af aerobe konditionsforbedringer over tid</li><li>Beregner<a href="/da/training-load/">træningsbelastning og restitutionsbehov</a></li></ul></div></div></section><section class="section"><div class="container container-narrow"><h2 class="mt-3xl">Sådan tester du din kritiske løbehastighed</h2><div class="howto-section" itemscope="" itemtype="https://schema.org/HowTo"><meta content="How to Test Your Critical Running Speed" itemprop="name"/><meta content="Follow this step-by-step protocol to accurately measure your Critical Running Speed (CRS) for optimal pace optimization" itemprop="description"/><div class="howto-step" itemprop="step" itemscope="" itemtype="https://schema.org/HowToStep"><meta content="1" itemprop="position"/><h3 itemprop="name">Trin 1: Varm ordentligt op</h3><div itemprop="itemListElement" itemscope="" itemtype="https://schema.org/HowToDirection"><div itemprop="text"><p>Gennemfør 15-20 minutters let løb, dynamiske stræk og 4-6 skridt. Dette forbereder
+                            dine muskler og kardiovaskulære system for maksimal indsats.</p></div></div></div><div class="howto-step" itemprop="step" itemscope="" itemtype="https://schema.org/HowToStep"><meta content="2" itemprop="position"/><h3 itemprop="name">Trin 2: Udfør 1200m tidskørsel</h3><div itemprop="itemListElement" itemscope="" itemtype="https://schema.org/HowToDirection"><div itemprop="text"><p>Løb 1200 meter (3 omgange på en 400m bane) med maksimal vedvarende indsats. Registrer din tid til
+                            sekund. Fokus
+                            på at opretholde en ensartet, høj intensitet gennem hele TT.</p></div></div></div><div class="howto-step" itemprop="step" itemscope="" itemtype="https://schema.org/HowToStep"><meta content="3" itemprop="position"/><h3 itemprop="name">Trin 3: Gendan fuldstændigt</h3><div itemprop="itemListElement" itemscope="" itemtype="https://schema.org/HowToDirection"><div itemprop="text"><p>Hvil i 15-30 minutter. Du kan gå eller jogge meget langsomt. Det er vigtigt at lade dit hjerte
+                            ratefald og dine ben restituerer sig betydeligt inden næste indsats.</p></div></div></div><div class="howto-step" itemprop="step" itemscope="" itemtype="https://schema.org/HowToStep"><meta content="4" itemprop="position"/><h3 itemprop="name">Trin 4: Udfør 3600m Time Trial</h3><div itemprop="itemListElement" itemscope="" itemtype="https://schema.org/HowToDirection"><div itemprop="text"><p>Løb 3600 meter (9 omgange på en 400m bane) med maksimal indsats. Dette er udholdenhedskomponenten
+                            af testen.
+                            Hold det hurtigste tempo, du kan holde på hele distancen.</p></div></div></div><div class="howto-step" itemprop="step" itemscope="" itemtype="https://schema.org/HowToStep"><meta content="5" itemprop="position"/><h3 itemprop="name">Trin 5: Beregn din CRS</h3><div itemprop="itemListElement" itemscope="" itemtype="https://schema.org/HowToDirection"><div itemprop="text"><p>Brug den lineære formel: (D2 - D1) / (T2 - T1). For eksempel: (3600 - 1200) / (864s - 252s) =
+                            2400 / 612 = 3,92 m/s. Konverter til tempo: 100 / 3,92 = 25,5s/100m.</p></div></div></div></div><h2>Praktiske anvendelser af kritisk løbehastighed</h2><div class="application-grid"><div class="application-item"><h3>1️⃣ Lås op for træningsbelastningsmålinger</h3><p>Kritisk løbehastighed er nævneren i intensitetsfaktorberegningen for<a href="/da/training-load/">rTSS (Stressscore for løbetræning)</a>. Uden det, dig
+                    kan ikke kvantificere træningsstress eller spore fitness/træthedstendenser.</p></div><div class="application-item"><h3>2️⃣ Tilpas træningszoner</h3><p>Generiske tempodiagrammer tager ikke højde for individuel fysiologi.<a href="/da/training-zones/">CRS-baserede træningszoner</a>sikre, at hver løber træner kl
+                    deres optimale intensitet til aerob tærskelløb.</p></div><div class="application-item"><h3>3️⃣ Overvåg fitnessprogression</h3><p>Gentest hver 6.-8. uge. Forbedring af kritisk løbehastighed (hurtigere tempo) indikerer vellykket aerobic
+                    tilpasning. Stagnerende CRS foreslår justering af træningsbehov.</p></div><div class="application-item"><h3>4️⃣ Forudsig løbspræstation</h3><p>CRS-tempoet tilnærmer dit bæredygtige tærskeltempo. Brug den til at sætte realistiske mål for 5K, 10K og
+                    halvmarathon arrangementer.</p></div><div class="application-item"><h3>5️⃣ Design Threshold Workouts</h3><p>Klassiske CRS sæt: 10×400 @ CRS tempo (60s hvile), 4×1200 @ 98% CRS (90s hvile). Opbyg lactat clearance
+                    kapacitet.</p></div><div class="application-item"><h3>6️⃣ Optimize Taper Strategy</h3><p>Spor CRS før og efter taper. En vellykket taper opretholder eller forbedrer en smule CRS mens
+                    reducerer træthed (øget TSB).</p></div></div><h2 class="mt-3xl">Ofte stillede spørgsmål om kritisk løbehastighed</h2><div class="faq-section" itemscope="" itemtype="https://schema.org/FAQPage"><div class="faq-item" itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question"><h3 itemprop="name">Hvad er kritisk kørehastighed (CRS)?</h3><div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer"><div itemprop="text"><p>Kritisk løbehastighed er det maksimale løbetempo, du kan opretholde i cirka 30-60
+                            minutter uden at akkumulere træthed. Det repræsenterer din aerobe tærskel - punktet hvor
+                            laktatproduktion er lig med laktatclearance (typisk 4 mmol/L blodlaktat). CRS er
+                            beregnet ud fra to max-effort tidsforsøg og fungerer som grundlaget for personaliseret<a href="/da/training-zones/">træningszoner</a>og<a href="/da/training-load/">TSS beregninger</a>.</p></div></div></div><div class="faq-item" itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question"><h3 itemprop="name">Hvordan beregner jeg min CRS?</h3><div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer"><div itemprop="text"><p>For at beregne din kritiske løbehastighed: (1) Varm ordentligt op, (2) Udfør en maksimal indsats
+                            1200m tidskørsel, (3) Hvil i 15-30 minutter, (4) Udfør en maksimal anstrengelse 3600m tidskørsel,
+                            (5) Brug formlen:<strong>CRS (m/s) = (D2 - D1) / (T2 - T1)</strong>. Konverter resultatet
+                            at pace pr. 100m eller pr. km. Brug vores gratis CRS-beregner ovenfor for øjeblikkelige resultater.</p></div></div></div><div class="faq-item" itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question"><h3 itemprop="name">Hvor ofte skal jeg teste min CRS?</h3><div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer"><div itemprop="text"><p>Gentest din kritiske løbehastighed hver 6.-8. uge for at opdatere dine træningszoner som dine
+                            konditionen forbedres. Hyppigere test (hver 4. uge) kan være passende under intensiv
+                            træningsblokke, mens mindre hyppige tests (10-12 uger) virker til vedligeholdelsesfaser.
+                            Dit løbetærskeltempo bør gradvist forbedres med konsekvent træning,
+                            indikerer positive aerobe tilpasninger.</p></div></div></div><div class="faq-item" itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question"><h3 itemprop="name">Er CRS det samme som laktat-tærskel eller FTP?</h3><div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer"><div itemprop="text"><p>CRS er meget ens, men ikke identisk. Kritisk løbehastighed svarer til dit sekund
+                            laktattærskel (LT2, omkring 4 mmol/L), som er lidt højere end den første laktat
+                            tærskel (LT1, 2 mmol/L). Det kan sammenlignes med Functional Threshold Pace (FTP), men FTP er
+                            baseret på en 60-minutters indsats, mens CRS er beregnet ud fra kortere tidsforsøg. CRS typisk
+                            repræsenterer et tempo, der er holdbart i 30-40 minutter, hvilket gør det ideelt til 5K racertempo
+                            forberedelse og
+                            tærskeltræning.</p></div></div></div><div class="faq-item" itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question"><h3 itemprop="name">Hvad er en god CRS for begyndere?</h3><div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer"><div itemprop="text"><p>For udviklende løbere er en typisk CRS over 31s pr. 100m (&gt;5:10 min/km). Fitness løbere
+                            opnår typisk 25-31s pr. 100m (4:10-5:10 min/km). Sammenlign ikke dig selv med elite
+                            atleter – fokuser på at forbedre din egen CRS gennem struktureret træning. Enhver CRS er en gyldig
+                            udgangspunkt for tempooptimering.</p></div></div></div><div class="faq-item" itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question"><h3 itemprop="name">Kan jeg bruge CRS til maratontræning?</h3><div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer"><div itemprop="text"><p>Ja, men med modifikationer. CRS repræsenterer et tempo, du kan holde i 30-40 minutter, dvs
+                            for intens til hele maraton. CRS-baserede træningszoner er dog fremragende til maraton
+                            forberedelse: Zone 2 bygger din aerobe base, Zone 3 udvikler race-specifik udholdenhed, og
+                            Zone 4 (ved CRS) forbedrer din laktat-tærskel. Marathontempoet falder typisk rundt
+                            105-110 % af dit CRS-tempo (langsommere end tærsklen). Brug CRS til at strukturere din træning, ikke
+                            som dit løbstempo.</p></div></div></div><div class="faq-item" itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question"><h3 itemprop="name">Hvorfor er restitution mellem tidsforsøg så vigtig?</h3><div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer"><div itemprop="text"><p>Hvis du ikke restituerer tilstrækkeligt mellem de to tidsforsøg, vil trætheden kunstigt aftage
+                            din anden gang, hvilket får den beregnede kritiske kørehastighed til at fremstå hurtigere end virkeligheden.
+                            Dette fører til alt for aggressive træningszoner. Sørg for mindst 15-30 minutters hvile eller
+                            overveje at udføre testene på forskellige dage i samme uge.</p></div></div></div><div class="faq-item" itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question"><h3 itemprop="name">Kan jeg estimere CRS ud fra løbstider i stedet for at teste?</h3><div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer"><div itemprop="text"><p>Selvom du kan beregne CRS ud fra racepræstationer, er direkte test mere præcis. Hvis du
+                            skal estimere: Tag din bedste seneste 10K-tid og brug det tempo pr. 100m minus ~1 sekund, eller
+                            brug 103-105 % af dit halvmarathontempo. Imidlertid giver 1200m + 3600m testen
+                            præcise data, der er nødvendige for effektiv træning.</p></div></div></div></div><div class="callout mt-2xl"><h3>Anvend din CRS-viden</h3><p>Nu hvor du forstår kritisk løbehastighed, skal du tage de næste trin for at optimere din træning:</p><ul><li><a href="/da/training-load/">Beregn træningsstressscore (TSS)</a>baseret på din CRS til
+                    kvantificere træningsintensiteten</li><li><a href="/da/training-zones/">Udforsk de 7 træningszoner</a>og lære at strukturere
+                    træning til specifikke tilpasninger</li><li><a href="/da/formulas/">Se alle formler</a>brugt i Run Analytics for komplet
+                    gennemsigtighed</li><li><a href="/da/">Download Run Analytics</a>for automatisk at spore CRS, TSS og ydeevne
+                    tendenser</li></ul></div><div class="mt-xl text-center"><a class="btn btn-primary" href="/da/training-load/">Lær om rTSS-beregning →</a><a class="btn btn-secondary" href="/da/formulas/">Se alle formler →</a></div></div></section><section class="eeat-author bg-light divider-top-lg divider-bottom-lg" aria-label="Author and Reviewer Information"><div class="container container-narrow"><div class="eeat-card" style="display: flex; gap: 1.5rem; align-items: center; padding: 1.5rem; background: var(--color-bg-alt, #f8f9fa); border-radius: 8px; border: 1px solid var(--color-border, #e9ecef); margin-top: 3rem; margin-bottom: 2rem;"><div class="eeat-avatar" style="font-size: 2.5rem; line-height: 1; flex-shrink: 0;" aria-hidden="true">👨‍🔬</div><div class="eeat-details"><h3 style="margin: 0 0 0.5rem 0; font-size: 1.125rem; font-weight: 600;">
+          Expertly Reviewed by 
+          <span itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">AnalyticsZone Team</span></span></h3><p style="margin: 0 0 0.5rem 0; font-size: 0.95rem; color: var(--color-body-text, #4a5568); line-height: 1.5;">
+          This content has been written and reviewed by a sports data metrics expert to ensure technical accuracy and adherence to the latest sports science methodologies.
+        </p></div></div></div></section><section class="ai-citation-block divider-top-xl" data-ai-ready="true" data-ai-page="crs"><div class="container ai-citation-shell"><h2 class="ai-citation-title">Kritisk Løbehastighed Beregner - CRS Test &amp; Zoner</h2><p class="ai-citation-answer">Gratis CRS test beregner til løbere. Mål Kritisk Løbehastighed i 2 forsøg, opdag træningszoner og optimer dit tempo.</p><ul class="ai-citation-facts" role="list"><li class="ai-citation-fact"><span class="ai-citation-icon" aria-hidden="true">📅</span><span>2026-03-24</span></li><li class="ai-citation-fact ai-citation-keywords"><span class="ai-citation-icon" aria-hidden="true">🏷️</span><span>kritisk løbehastighed · CRS beregner · løbeperformance · træningszoner · tempooptimering</span></li><li class="ai-citation-fact"><span class="ai-citation-icon" aria-hidden="true">🔬</span><a href="../../da/bibliography/">
+          
+          Bibliografi
+          
+        </a></li></ul></div></section></main><footer class="site-footer"><div class="container"><div class="footer-top"><div class="footer-brand-section"><h2>Run Analytics</h2><p>Track Critical Running Speed, Training Stress Score, and performance metrics with Run Analytics. Science-based iOS app for runners, triathletes &amp; coaches. 7-day free trial.</p></div><div class="footer-download"><h3 class="footer-heading">Download</h3><div class="footer-badges"><a href="https://apps.apple.com/us/app/run-analytics/id6754524015" target="_blank" rel="noopener"
+                        aria-label="Download på App Store"><img src="../../assets/images/badge-app-store.svg"
+                            alt="Download på App Store" width="135"
+                            height="40" loading="lazy"></a><a href="https://play.google.com/store/apps/details?id=com.arnohealth.runanalytics" target="_blank" rel="noopener"
+                        aria-label="Få det på Google Play"><img src="../../assets/images/badge-google-play.svg"
+                            alt="Få det på Google Play" width="135"
+                            height="40" loading="lazy"></a></div></div></div><div class="footer-languages"><h3 class="footer-heading">Tilgængelig i</h3><div class="lang-grid"><a href="/af/" class="lang-link"
+                    hreflang="af" >
+                    Afrikaans
+                </a><a href="/am/" class="lang-link"
+                    hreflang="am" >
+                    አማርኛ
+                </a><a href="/ar/" class="lang-link"
+                    hreflang="ar" dir="rtl" >
+                    العربية
+                </a><a href="/bg/" class="lang-link"
+                    hreflang="bg" >
+                    Български
+                </a><a href="/bn/" class="lang-link"
+                    hreflang="bn" >
+                    বাংলা
+                </a><a href="/ca/" class="lang-link"
+                    hreflang="ca" >
+                    Català
+                </a><a href="/cs/" class="lang-link"
+                    hreflang="cs" >
+                    Čeština
+                </a><a href="/da/" class="lang-link active"
+                    hreflang="da" >
+                    Dansk
+                </a><a href="/de/" class="lang-link"
+                    hreflang="de" >
+                    Deutsch
+                </a><a href="/el/" class="lang-link"
+                    hreflang="el" >
+                    Ελληνικά
+                </a><a href="/en/" class="lang-link"
+                    hreflang="en" >
+                    English
+                </a><a href="/es/" class="lang-link"
+                    hreflang="es" >
+                    Español
+                </a><a href="/et/" class="lang-link"
+                    hreflang="et" >
+                    Eesti
+                </a><a href="/fa/" class="lang-link"
+                    hreflang="fa" dir="rtl" >
+                    فارسی
+                </a><a href="/fi/" class="lang-link"
+                    hreflang="fi" >
+                    Suomi
+                </a><a href="/fr/" class="lang-link"
+                    hreflang="fr" >
+                    Français
+                </a><a href="/gu/" class="lang-link"
+                    hreflang="gu" >
+                    ગુજરાતી
+                </a><a href="/ha/" class="lang-link"
+                    hreflang="ha" >
+                    Hausa
+                </a><a href="/he/" class="lang-link"
+                    hreflang="he" dir="rtl" >
+                    עברית
+                </a><a href="/hi/" class="lang-link"
+                    hreflang="hi" >
+                    हिन्दी
+                </a><a href="/hr/" class="lang-link"
+                    hreflang="hr" >
+                    Hrvatski
+                </a><a href="/hu/" class="lang-link"
+                    hreflang="hu" >
+                    Magyar
+                </a><a href="/id/" class="lang-link"
+                    hreflang="id" >
+                    Bahasa Indonesia
+                </a><a href="/is/" class="lang-link"
+                    hreflang="is" >
+                    Íslenska
+                </a><a href="/it/" class="lang-link"
+                    hreflang="it" >
+                    Italiano
+                </a><a href="/ja/" class="lang-link"
+                    hreflang="ja" >
+                    日本語
+                </a><a href="/km/" class="lang-link"
+                    hreflang="km" >
+                    ភាសាខ្មែរ
+                </a><a href="/kn/" class="lang-link"
+                    hreflang="kn" >
+                    ಕನ್ನಡ
+                </a><a href="/ko/" class="lang-link"
+                    hreflang="ko" >
+                    한국어
+                </a><a href="/lt/" class="lang-link"
+                    hreflang="lt" >
+                    Lietuvių
+                </a><a href="/lv/" class="lang-link"
+                    hreflang="lv" >
+                    Latviešu
+                </a><a href="/ms/" class="lang-link"
+                    hreflang="ms" >
+                    Bahasa Melayu
+                </a><a href="/my/" class="lang-link"
+                    hreflang="my" >
+                    မြန်မာစာ
+                </a><a href="/nb/" class="lang-link"
+                    hreflang="nb" >
+                    Norsk Bokmål
+                </a><a href="/nl/" class="lang-link"
+                    hreflang="nl" >
+                    Nederlands
+                </a><a href="/pl/" class="lang-link"
+                    hreflang="pl" >
+                    Polski
+                </a><a href="/pt/" class="lang-link"
+                    hreflang="pt" >
+                    Português
+                </a><a href="/pt-br/" class="lang-link"
+                    hreflang="pt-br" >
+                    Português (Brasil)
+                </a><a href="/ro/" class="lang-link"
+                    hreflang="ro" >
+                    Română
+                </a><a href="/ru/" class="lang-link"
+                    hreflang="ru" >
+                    Русский
+                </a><a href="/sk/" class="lang-link"
+                    hreflang="sk" >
+                    Slovenčina
+                </a><a href="/sl/" class="lang-link"
+                    hreflang="sl" >
+                    Slovenščina
+                </a><a href="/sr/" class="lang-link"
+                    hreflang="sr" >
+                    Srpski
+                </a><a href="/sv/" class="lang-link"
+                    hreflang="sv" >
+                    Svenska
+                </a><a href="/sw/" class="lang-link"
+                    hreflang="sw" >
+                    Kiswahili
+                </a><a href="/ta/" class="lang-link"
+                    hreflang="ta" >
+                    தமிழ்
+                </a><a href="/te/" class="lang-link"
+                    hreflang="te" >
+                    తెలుగు
+                </a><a href="/th/" class="lang-link"
+                    hreflang="th" >
+                    ไทย
+                </a><a href="/tl/" class="lang-link"
+                    hreflang="tl" >
+                    Tagalog
+                </a><a href="/tr/" class="lang-link"
+                    hreflang="tr" >
+                    Türkçe
+                </a><a href="/uk/" class="lang-link"
+                    hreflang="uk" >
+                    Українська
+                </a><a href="/ur/" class="lang-link"
+                    hreflang="ur" dir="rtl" >
+                    اردو
+                </a><a href="/vi/" class="lang-link"
+                    hreflang="vi" >
+                    Tiếng Việt
+                </a><a href="/yo/" class="lang-link"
+                    hreflang="yo" >
+                    Yorùbá
+                </a><a href="/zh/" class="lang-link"
+                    hreflang="zh" >
+                    中文
+                </a></div></div><div class="footer-divider"></div><div class="footer-bottom"><p class="copyright">
+                &copy; 2026 Run Analytics. Alle rettigheder forbeholdes
+            </p><ul class="footer-legal"><li><a href="/da/privacy/">Privatliv</a></li><li><a href="/da/terms/">Betingelser</a></li></ul></div></div></footer><div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="Cookie consent" aria-live="polite"><div class="cookie-banner-content"><div><p>Dette websted bruger cookies for at forbedre din oplevelse.</p><a href="/da/privacy/" class="text-sm">Lær mere</a></div><div class="cookie-banner-actions"><button id="cookie-decline" class="btn btn-secondary btn-small">Afvis</button><button id="cookie-accept" class="btn btn-primary btn-small">Accepter</button></div></div></div><script src="../../assets/js/core.min.js?v=1c7ace58" defer></script><script src="../../assets/js/search.min.js?v=1c7ace58" defer></script><script src="../../assets/js/analytics.min.js" data-ga-id="G-Y138VB4523" defer></script><script>if ('serviceWorker' in navigator) { navigator.serviceWorker.register('../../sw.js') }</script></body></html>

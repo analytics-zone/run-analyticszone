@@ -1,0 +1,881 @@
+<!DOCTYPE html><html lang="pt" dir="ltr"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=optional"
+    rel="stylesheet"><title>Velocidade Crítica de Corrida (VCC)</title><meta name="description" content="A Fundação do Treino de Corrida Orientado por Dados. Velocidade Crítica de Corrida (VCC) Velocidade Crítica de Corrida (VCC)"><meta name="author" content="AnalyticsZone Team"><meta name="keywords" content="velocidade crítica nado, calculadora CRS, zonas treino natação, teste CRS, ritmo limiar"><link rel="canonical" href="https://run.analyticszone.app/pt/crs/"><meta property="article:published_time" content="2025-01-15T10:00:00Z"><meta property="article:modified_time" content="2026-02-06T14:30:00Z"><meta property="article:author" content="AnalyticsZone Team"><meta property="og:type" content="article"><meta property="og:url" content="https://run.analyticszone.app/pt/crs/"><meta property="og:title" content="Velocidade Crítica de Corrida (VCC)"><meta property="og:description" content="A Fundação do Treino de Corrida Orientado por Dados. Velocidade Crítica de Corrida (VCC) Velocidade Crítica de Corrida (VCC)"><meta property="og:image" content="https://run.analyticszone.app/assets/images/og-image.svg"><meta property="og:locale" content="pt_PT"><meta property="og:site_name" content="Run Analytics"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:url" content="https://run.analyticszone.app/pt/crs/"><meta name="twitter:title" content="Velocidade Crítica de Corrida (VCC)"><meta name="twitter:description" content="A Fundação do Treino de Corrida Orientado por Dados. Velocidade Crítica de Corrida (VCC) Velocidade Crítica de Corrida (VCC)"><meta name="twitter:image" content="https://run.analyticszone.app/assets/images/og-image.svg"><meta name="twitter:site" content="@runanalytics"><meta name="twitter:creator" content="@runanalytics"><link rel="alternate" hreflang="ar"
+    href="https://run.analyticszone.app/ar/crs/"><link rel="alternate" hreflang="de"
+    href="https://run.analyticszone.app/de/crs/"><link rel="alternate" hreflang="en"
+    href="https://run.analyticszone.app/en/crs/"><link rel="alternate" hreflang="es"
+    href="https://run.analyticszone.app/es/crs/"><link rel="alternate" hreflang="fr"
+    href="https://run.analyticszone.app/fr/crs/"><link rel="alternate" hreflang="hi"
+    href="https://run.analyticszone.app/hi/crs/"><link rel="alternate" hreflang="id"
+    href="https://run.analyticszone.app/id/crs/"><link rel="alternate" hreflang="it"
+    href="https://run.analyticszone.app/it/crs/"><link rel="alternate" hreflang="ja"
+    href="https://run.analyticszone.app/ja/crs/"><link rel="alternate" hreflang="ko"
+    href="https://run.analyticszone.app/ko/crs/"><link rel="alternate" hreflang="nl"
+    href="https://run.analyticszone.app/nl/crs/"><link rel="alternate" hreflang="pl"
+    href="https://run.analyticszone.app/pl/crs/"><link rel="alternate" hreflang="pt"
+    href="https://run.analyticszone.app/pt/crs/"><link rel="alternate" hreflang="pt-br"
+    href="https://run.analyticszone.app/pt-br/crs/"><link rel="alternate" hreflang="ru"
+    href="https://run.analyticszone.app/ru/crs/"><link rel="alternate" hreflang="sv"
+    href="https://run.analyticszone.app/sv/crs/"><link rel="alternate" hreflang="tr"
+    href="https://run.analyticszone.app/tr/crs/"><link rel="alternate" hreflang="zh"
+    href="https://run.analyticszone.app/zh/crs/"><link rel="alternate" hreflang="x-default"
+    href="https://run.analyticszone.app/en/crs/"><link rel="icon" type="image/png" sizes="32x32" href="../../assets/images/icons/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="../../assets/images/icons/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="../../assets/images/icons/apple-touch-icon.png"><link rel="manifest" href="../../manifest.json"><meta name="theme-color" content="#2563EB"><meta name="robots" content="index, follow"><meta name="apple-itunes-app" content="app-id=6754524015"><style>
+/* Critical CSS - Above the fold styles for fast LCP */
+:root {
+  --color-primary: #0066CC;
+  --color-text: #1a1a1a;
+  --color-text-muted: #666;
+  --color-bg: #ffffff;
+  --color-bg-alt: #f8f9fa;
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+}
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  color: var(--color-text);
+  background: var(--color-bg);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Skip link - Accessibility */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--color-primary);
+  color: #fff;
+  padding: 8px 16px;
+  z-index: 1000;
+  text-decoration: none;
+}
+.skip-link:focus {
+  top: 0;
+}
+
+/* Header - Critical for LCP */
+.site-header {
+  background: var(--color-bg);
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0.75rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.site-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: var(--color-text);
+  font-weight: 600;
+  font-size: 1.125rem;
+}
+
+.site-logo img, .site-logo svg {
+  width: 32px;
+  height: 32px;
+}
+
+/* Navigation */
+.main-nav {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .main-nav {
+    display: flex;
+    gap: 1.5rem;
+  }
+  .main-nav a {
+    color: var(--color-text);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9375rem;
+    transition: color 0.2s;
+  }
+  .main-nav a:hover {
+    color: var(--color-primary);
+  }
+}
+
+/* Mobile menu button */
+.menu-toggle {
+  display: flex;
+  background: none;
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .menu-toggle {
+    display: none;
+  }
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Main content */
+main.main-content {
+  flex: 1;
+}
+
+/* Hero section - Critical for LCP */
+.hero {
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .hero {
+    padding: 4rem 2rem;
+  }
+}
+
+.hero h1 {
+  font-size: clamp(1.75rem, 5vw, 3rem);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  color: var(--color-text);
+}
+
+.hero .lead, .hero p {
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  color: var(--color-text-muted);
+  max-width: 700px;
+  margin: 0 auto 1.5rem;
+}
+
+/* Buttons - Critical for CTA */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: var(--radius-md);
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-primary {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: #0052a3;
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+}
+
+.btn-large {
+  padding: 1rem 2rem;
+  font-size: 1.125rem;
+}
+
+/* Utility classes */
+.hidden { display: none !important; }
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Images - prevent CLS with aspect-ratio */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+img[width][height] {
+  aspect-ratio: attr(width) / attr(height);
+}
+
+.lazy-image {
+  background: var(--color-bg-alt);
+  transition: opacity 0.3s;
+}
+
+.lazy-image:not(.loaded) {
+  opacity: 0;
+}
+
+.lazy-image.loaded {
+  opacity: 1;
+}
+
+/* App badges - fixed dimensions to prevent CLS */
+.app-badge img {
+  width: 140px;
+  height: 42px;
+}
+
+/* Logo - fixed dimensions */
+.site-logo img {
+  width: 32px;
+  height: 32px;
+}
+
+/* Reduce motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+</style><link rel="preconnect" href="https://www.googletagmanager.com"><link rel="dns-prefetch" href="https://www.googletagmanager.com"><link rel="stylesheet" href="../../assets/css/main.min.css?v=1c7ace58"><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Run Analytics",
+  "url": "https://run.analyticszone.app",
+  "logo": "https://run.analyticszone.app/assets/images/logo.png",
+  "description": "Track Critical Running Speed, Training Stress Score, and performance metrics with Run Analytics. Science-based iOS app for runners, triathletes &amp; coaches. 7-day free trial.",
+  
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "Customer Support",
+    "email": "analyticszone+run@onmedic.org"
+  },
+  
+  "sameAs": [
+    
+    
+      
+    
+    
+      
+    
+    
+      
+    
+    
+    "https://twitter.com/runanalytics",
+    
+    "https://apps.apple.com/us/app/run-analytics/id6754524015",
+    
+    "https://play.google.com/store/apps/details?id=com.arnohealth.runanalytics"
+    
+  ]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Run Analytics",
+  "url": "https://run.analyticszone.app",
+  "description": "Track Critical Running Speed, Training Stress Score, and performance metrics with Run Analytics. Science-based iOS app for runners, triathletes &amp; coaches. 7-day free trial.",
+  "inLanguage": "pt"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Run Analytics",
+  "description": "Track Critical Running Speed, Training Stress Score, and performance metrics with Run Analytics. Science-based iOS app for runners, triathletes &amp; coaches. 7-day free trial.",
+  "url": "https://run.analyticszone.app",
+  "applicationCategory": ["HealthApplication", "FitnessApplication"],
+  "operatingSystem": "iOS, Android",
+  "author": {
+    "@type": "Organization",
+    "name": "AnalyticsZone Team"
+  },
+  "downloadUrl": "https://apps.apple.com/us/app/run-analytics/id6754524015"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Início",
+      "item": "https://run.analyticszone.app/pt/"
+    },
+    
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Aprender",
+      "item": "https://run.analyticszone.app/pt/getting-started/"
+    },
+    
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "CRS",
+      "item": "https://run.analyticszone.app/pt/crs/"
+    }
+    
+  ]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Velocidade Crítica de Corrida (VCC)",
+  "description": "A Fundação do Treino de Corrida Orientado por Dados. Velocidade Crítica de Corrida (VCC) Velocidade Crítica de Corrida (VCC)",
+  "url": "https://run.analyticszone.app/pt/crs/",
+  "inLanguage": "pt",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "Run Analytics",
+    "url": "https://run.analyticszone.app"
+  },
+  "datePublished": "2025-01-15",
+  "dateModified": "2026-02-06",
+  "keywords": ["velocidade crítica nado", "calculadora CRS", "zonas treino natação", "teste CRS", "ritmo limiar"],
+  "about": [
+    {
+      "@type": "Thing",
+      "name": "velocidade crítica nado"
+    }, 
+  
+    {
+      "@type": "Thing",
+      "name": "calculadora CRS"
+    }, 
+  
+    {
+      "@type": "Thing",
+      "name": "zonas treino natação"
+    }, 
+  
+    {
+      "@type": "Thing",
+      "name": "teste CRS"
+    }, 
+  
+    {
+      "@type": "Thing",
+      "name": "ritmo limiar"
+    }
+  ]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Velocidade Crítica de Corrida (VCC)",
+  "description": "A Fundação do Treino de Corrida Orientado por Dados. Velocidade Crítica de Corrida (VCC) Velocidade Crítica de Corrida (VCC)",
+  "author": {
+    "@type": "Person",
+    "name": "AnalyticsZone Team"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Run Analytics",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://run.analyticszone.app/assets/images/logo.png"
+    }
+  },
+  "datePublished": "2025-01-15",
+  "dateModified": "2026-02-06",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://run.analyticszone.app/pt/crs/"
+  }
+}
+</script><script>
+    (function () {
+      let theme = localStorage.getItem('theme');
+      // Older builds could persist a per-subdomain `theme=light` value without a UI
+      // to keep it consistent across apps. Treat it as stale and fall back to the OS.
+      if (theme === 'light') {
+        try { localStorage.removeItem('theme'); } catch (e) { /* ignore */ }
+        theme = null;
+      }
+
+      if (theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark-mode');
+      }
+    })();
+  </script></head><body><a href="#main-content" class="skip-link">Ir para o conteúdo</a><header class="site-header"><div class="container"><div class="header-inner"><a href="/pt/" class="site-logo"><picture><source srcset="../../assets/images/logo-dark.png" type="image/png"
+                        media="(prefers-color-scheme: dark)"><img src="../../assets/images/logo.png" alt="Run Analytics - Running Analytics App | Critical Running Speed, TSS, CTL/ATL/TSB for iOS" width="56" height="56"></picture><span class="logo-text">Run Analytics</span></a><nav class="nav-primary" id="nav-primary" role="navigation" aria-label="Main navigation"><div class="nav-group-left"><ul><li><a href="/pt/" 
+                                aria-current="">
+                                Início
+                            </a></li><li class="has-submenu" ><a href="/pt/getting-started/" class="nav-label">Aprender</a><ul class="submenu"><li><a href="/pt/getting-started/" 
+                                        aria-current="">
+                                        Começar
+                                    </a></li><li><a href="/pt/crs/" class="active" 
+                                        aria-current="page">
+                                        CRS
+                                    </a></li><li><a href="/pt/training-zones/" 
+                                        aria-current="">
+                                        Zonas de Treino
+                                    </a></li><li><a href="/pt/training-load/" 
+                                        aria-current="">
+                                        Carga de Treino
+                                    </a></li><li><a href="/pt/rtss-calculator/" 
+                                        aria-current="">
+                                        Calculadora rTSS
+                                    </a></li></ul></li><li class="has-submenu" ><a href="/pt/research/" class="nav-label">Ciência</a><ul class="submenu"><li><a href="/pt/research/" 
+                                        aria-current="">
+                                        Pesquisa
+                                    </a></li><li><a href="/pt/formulas/" 
+                                        aria-current="">
+                                        Fórmulas
+                                    </a></li><li><a href="/pt/efficiency/" 
+                                        aria-current="">
+                                        Eficiência
+                                    </a></li><li><a href="/pt/stride-mechanics/" 
+                                        aria-current="">
+                                        Mecânica da Braçada
+                                    </a></li><li><a href="/pt/bibliography/" 
+                                        aria-current="">
+                                        Bibliografia
+                                    </a></li></ul></li><li><a href="/pt/contact/" 
+                                aria-current="">
+                                Contato
+                            </a></li></ul><div class="search-container"><svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.35-4.35"></path></svg><input type="search" id="site-search" class="search-input" aria-expanded="false"
+                            aria-haspopup="listbox" aria-autocomplete="list" autocomplete="off" spellcheck="false" /><div id="search-results" class="search-results hidden" role="region" aria-live="polite"></div></div><select class="language-selector" id="language-select" aria-label="Selecionar idioma"><option value="af" >
+                            Afrikaans
+                        </option><option value="am" >
+                            አማርኛ
+                        </option><option value="ar" >
+                            العربية
+                        </option><option value="bg" >
+                            Български
+                        </option><option value="bn" >
+                            বাংলা
+                        </option><option value="ca" >
+                            Català
+                        </option><option value="cs" >
+                            Čeština
+                        </option><option value="da" >
+                            Dansk
+                        </option><option value="de" >
+                            Deutsch
+                        </option><option value="el" >
+                            Ελληνικά
+                        </option><option value="en" >
+                            English
+                        </option><option value="es" >
+                            Español
+                        </option><option value="et" >
+                            Eesti
+                        </option><option value="fa" >
+                            فارسی
+                        </option><option value="fi" >
+                            Suomi
+                        </option><option value="fr" >
+                            Français
+                        </option><option value="gu" >
+                            ગુજરાતી
+                        </option><option value="ha" >
+                            Hausa
+                        </option><option value="he" >
+                            עברית
+                        </option><option value="hi" >
+                            हिन्दी
+                        </option><option value="hr" >
+                            Hrvatski
+                        </option><option value="hu" >
+                            Magyar
+                        </option><option value="id" >
+                            Bahasa Indonesia
+                        </option><option value="is" >
+                            Íslenska
+                        </option><option value="it" >
+                            Italiano
+                        </option><option value="ja" >
+                            日本語
+                        </option><option value="km" >
+                            ភាសាខ្មែរ
+                        </option><option value="kn" >
+                            ಕನ್ನಡ
+                        </option><option value="ko" >
+                            한국어
+                        </option><option value="lt" >
+                            Lietuvių
+                        </option><option value="lv" >
+                            Latviešu
+                        </option><option value="ms" >
+                            Bahasa Melayu
+                        </option><option value="my" >
+                            မြန်မာစာ
+                        </option><option value="nb" >
+                            Norsk Bokmål
+                        </option><option value="nl" >
+                            Nederlands
+                        </option><option value="pl" >
+                            Polski
+                        </option><option value="pt" selected>
+                            Português
+                        </option><option value="pt-br" >
+                            Português (Brasil)
+                        </option><option value="ro" >
+                            Română
+                        </option><option value="ru" >
+                            Русский
+                        </option><option value="sk" >
+                            Slovenčina
+                        </option><option value="sl" >
+                            Slovenščina
+                        </option><option value="sr" >
+                            Srpski
+                        </option><option value="sv" >
+                            Svenska
+                        </option><option value="sw" >
+                            Kiswahili
+                        </option><option value="ta" >
+                            தமிழ்
+                        </option><option value="te" >
+                            తెలుగు
+                        </option><option value="th" >
+                            ไทย
+                        </option><option value="tl" >
+                            Tagalog
+                        </option><option value="tr" >
+                            Türkçe
+                        </option><option value="uk" >
+                            Українська
+                        </option><option value="ur" >
+                            اردو
+                        </option><option value="vi" >
+                            Tiếng Việt
+                        </option><option value="yo" >
+                            Yorùbá
+                        </option><option value="zh" >
+                            中文
+                        </option></select></div><div class="nav-group-right"><div class="header-app-buttons"><a href="https://apps.apple.com/us/app/run-analytics/id6754524015" class="header-download-btn" target="_blank"
+                            rel="noopener" aria-label="Download on App Store" title="Download on App Store"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="currentColor"><path
+                                    d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z" /></svg></a><a href="https://play.google.com/store/apps/details?id=com.arnohealth.runanalytics" class="header-download-btn" target="_blank"
+                            rel="noopener" aria-label="Get it on Google Play" title="Get it on Google Play"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="currentColor"><path
+                                    d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.92 20.16,13.19L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M16.81,8.88L14.54,11.15L6.05,2.66L16.81,8.88Z" /></svg></a></div><div class="suite-menu-container"><button class="suite-menu-toggle" id="suite-menu-toggle" aria-label="See other apps"
+                            aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg></button><div class="suite-dropdown hidden" id="suite-dropdown"><div class="suite-dropdown-header">Other AnalyticsZone Apps</div><div class="suite-apps-grid"><a href="https://analyticszone.app" class="suite-app-link">AnalyticsZone</a><a href="https://swim.analyticszone.app" class="suite-app-link">Swim Analytics</a><a href="https://bike.analyticszone.app" class="suite-app-link">Bike Analytics</a><a href="https://walk.analyticszone.app" class="suite-app-link">Walk Analytics</a><a href="https://cardio.analyticszone.app" class="suite-app-link">Cardio Analytics</a><a href="https://health.analyticszone.app" class="suite-app-link">Health Analytics</a><a href="https://swimtrainer.analyticszone.app" class="suite-app-link">Swim Trainer</a><a href="https://hike.analyticszone.app" class="suite-app-link">Hike Analytics</a><a href="https://sleep.analyticszone.app" class="suite-app-link">Sleep Analytics</a><a href="https://paceva.analyticszone.app" class="suite-app-link">Paceva Analytics</a></div></div></div></div></nav><button class="menu-toggle" id="menu-toggle" aria-label="Alternar menu"
+                aria-expanded="false" aria-controls="nav-primary"><span></span><span></span><span></span></button></div></div></header><nav class="breadcrumbs" aria-label="Breadcrumb"><div class="container"><ol><li><a href="/pt/">Início</a></li><li><a href="/pt/getting-started/">Aprender</a></li><li><span aria-current="page">CRS</span></li></ol></div></nav><main id="main-content" class="main-content"><section class="page-hero"><div class="container"><h1>Velocidade Crítica de Corrida (VCC)</h1><p class="lead">A Fundação do Treino de Corrida Orientado por Dados</p></div></section><section class="section"><div class="container container-narrow"><div class="callout callout-success mb-xl"><h2>Principais conclusões</h2><ul class="key-points"><li><strong>O que:</strong>A velocidade crítica de corrida (CRS) é o seu ritmo de corrida máximo sustentável - o
+                    limiar aeróbico onde você pode manter o esforço por mais de 30 minutos</li><li><strong>Como calcular:</strong>Realize contra-relógio de 1200m e 3600m e, em seguida, use o linear
+                    relação distância-tempo para encontrar a inclinação (CRS)</li><li><strong>Por que é importante:</strong>O CRS permite zonas de treinamento personalizadas<a href="/pt/training-zones/"></a>, cálculos precisos do<a href="/pt/training-load/">TSS</a>e monitoramento objetivo de condicionamento físico</li><li><strong>Valores típicos:</strong>Corredores de elite: 18-22s/100m | Competitivo: 22-26s/100m | Fitness
+                    corredores: 26-32s/100m</li><li><strong>Frequência de teste:</strong>Teste novamente a cada 6-8 semanas para atualizar as zonas como seu limite de corrida
+                    o ritmo melhora</li></ul></div><div class="callout callout-info mb-xl"><h2>O que é velocidade crítica de corrida?</h2><p><strong>Velocidade crítica de corrida (CRS)</strong>é a velocidade máxima teórica de corrida que você pode
+                manter sem exaustão. Representa o ritmo de corrida do seu limiar aeróbico, normalmente correspondendo
+                a 4 mmol/L de lactato sanguíneo e sustentável por aproximadamente 30-60 minutos. CRS é calculado usando dois
+                contra-relógio de esforço máximo (por exemplo, 1200m e 3600m) para determinar zonas de treinamento personalizadas para ritmo
+                otimização.</p></div><p class="lead">A velocidade crítica de corrida representa a velocidade máxima teórica de corrida que você pode manter
+            continuamente sem exaustão. É o seu limiar aeróbico – a intensidade em que a produção de lactato é igual
+            depuração de lactato.</p><div class="callout callout-info"><h3>🎯 Significância fisiológica</h3><p>CRS corresponde aproximadamente a:</p><ul><li><strong>Limiar de lactato 2 (LT2)</strong>- Segundo limiar ventilatório</li><li><strong>Estado estável máximo de lactato (MLSS)</strong>- Nível mais alto de lactato sustentável</li><li><strong>Ritmo de limiar funcional (FTP)</strong>- Corrida equivalente a ciclismo FTP</li><li><strong>~4 mmol/L de lactato sanguíneo</strong>- Marcador OBLA tradicional</li></ul></div><h3>Por que o CRS é importante</h3><p>A velocidade crítica de corrida é a<strong>métrica fundamental</strong>que desbloqueia toda a carga de treinamento avançado
+            análise:</p><ul><li><strong><a href="/pt/training-zones/">Zonas de treinamento</a>:</strong>Personaliza zonas de intensidade
+                com base na sua fisiologia</li><li><strong><a href="/pt/training-load/">Cálculo rTSS</a>:</strong>Permite treinamento preciso
+                Quantificação da pontuação de estresse</li><li><strong><a href="/pt/training-load/">CTL/ATL/TSB</a>:</strong>Necessário para desempenho
+                Métricas do gráfico de gerenciamento</li><li><strong>Acompanhamento de progresso:</strong>Medida objetiva de melhoria da aptidão aeróbica</li></ul><div class="warning-box"><strong>⚠️ Dependência crítica:</strong>Sem um teste CRS válido, métricas avançadas de carga de treinamento (rTSS,
+            CTL, ATL, TSB) não pode ser calculado. Um CRS impreciso corromperá todas as análises de treinamento subsequentes.</div><div class="callout callout-primary mt-xl"><h3>📱 Run Analytics automatiza todas as análises baseadas em CRS</h3><p>Embora este guia explique a ciência por trás do CRS,<strong>Run Analytics calcula e
+                    rastreia sua velocidade crítica de corrida</strong>a partir dos dados do seu treino, sem cálculos ou testes manuais
+                protocolos necessários.</p><p><strong>O aplicativo lida com:</strong></p><ul><li>Detecção automática de CRS a partir de dados de treinamento</li><li>Atualizações personalizadas da zona de treinamento à medida que seu CRS melhora</li><li>Rastreamento de rTSS, CTL, ATL e TSB em tempo real</li><li>Gráficos históricos de progressão do CRS</li></ul><p><a class="btn btn-accent btn-small" href="/pt/">Baixe Run Analytics gratuitamente →</a></p></div></div></section><section class="section section-gray"><div class="container container-narrow"><h2>Velocidade crítica de corrida versus outras métricas</h2><p class="lead">Compreender como o CRS se compara a outros indicadores de desempenho de corrida ajuda você a escolher o
+            métrica certa para seus objetivos de treinamento.</p><div class="comparison-table-container"><table class="comparison-table"><thead><tr><th>Métrica</th><th>O que mede</th><th>Método de teste</th><th>Duração sustentável</th><th>Melhor caso de uso</th></tr></thead><tbody><tr class="highlight-row"><td><strong>Velocidade crítica de corrida (CRS)</strong></td><td>Ritmo de limiar aeróbico (4 mmol/L de lactato)</td><td>Contra-relógio de 1200m + 3600m</td><td>30-60 minutos</td><td>Zonas de treinamento, cálculo TSS, corrida de limiar aeróbico</td></tr><tr><td><strong><a href="/pt/what-is-vo2max/">VO₂max</a></strong></td><td>Consumo máximo de oxigênio</td><td><a href="/pt/vo2max-testing/">Teste de laboratório ou esforço máximo de 12 minutos</a></td><td>6-8 minutos</td><td>Nível geral de condicionamento físico, intervalos de alta intensidade</td></tr><tr><td><strong><a href="/pt/lactate-threshold-testing/">Limiar de lactato (LT)</a></strong></td><td>Ponto onde o lactato se acumula (2-4 mmol/L)</td><td>Teste laboratorial de lactato sanguíneo</td><td>30-60 minutos</td><td>Previsão do ritmo de corrida,<a href="/pt/tempo-runs-zone3/">tempo runs</a></td></tr><tr><td><strong>Funcional Threshold Pace (FTP)</strong></td><td>Melhor esforço de ritmo de 60 minutos</td><td>Contra-relógio de 60 minutos ou teste de 20 minutos</td><td>60 minutos</td><td>Treinamento de resistência, trabalho de ritmo de maratona</td></tr><tr><td><strong>Ritmo de corrida de 5 km</strong></td><td>Esforço de corrida sustentado</td><td>Corrida de 5 km ou contra-relógio</td><td>15-25 minutos</td><td>Treinamento específico para corrida, estratégia de ritmo</td></tr></tbody></table></div><div class="callout callout-tip mt-lg"><h3>Por que escolher o CRS?</h3><p>Ao contrário do VO₂max (requer testes de laboratório) ou limiar de lactato (requer amostras de sangue), corrida crítica
+                a velocidade pode ser medida em qualquer pista com apenas um cronômetro. Ele fornece os mesmos insights de treinamento que
+                testes de laboratório caros, ao mesmo tempo que são práticos para retestes regulares a cada 6-8 semanas. Saiba mais sobre todos<a href="/pt/running-performance-tests/">métodos de teste de desempenho em execução</a>e quando
+                use cada um.</p></div></div></section><section class="section section-alt"><div class="container"><h2 class="text-center mb-xl">Protocolo de teste CRS</h2><div class="grid grid-2"><div class="protocol-card"><h3>📋 Protocolo padrão</h3><ol class="protocol-steps"><li><strong>Aquecimento</strong><p>15-20 minutos de corrida fácil, exercícios dinâmicos e 4-6 passadas para se preparar para alta intensidade
+                            esforço.</p></li><li><strong>Contrarrelógio 1200m</strong><p>Esforço máximo sustentado (3 voltas em pista de 400m). Registre o tempo total. Objetivo: o mais rápido possível
+                            ritmo médio.</p></li><li><strong>Recuperação completa</strong><p><span class="highlight-text">15-30 minutos</span>de corrida leve ou caminhada/descanso. Isso permite
+                            para depuração de lactato e recuperação aeróbica.</p></li><li><strong>Contrarrelógio 3600m</strong><p>Esforço máximo (9 voltas em pista de 400m). Mantenha um ritmo uniforme. Isto pode ser feito em um
+                            dia separado, se necessário.</p></li></ol></div><div class="protocol-card"><h3>⚠️ Erros comuns</h3><div class="mistake-list"><div class="mistake-item"><h4>Recuperação insuficiente</h4><p><strong>Problema:</strong>A fadiga retarda artificialmente o tempo de 3600m</p><p><strong>Resultado:</strong>O CRS calculado torna-se<em>mais rápido que a realidade</em>, levando a
+                            zonas de overtrained</p><p><strong>Solução:</strong>Descanse até que a FC caia abaixo de 120 bpm ou até que a respiração esteja completa
+                            recuperado</p></div><div class="mistake-item"><h4>Ritmo ruim em 1200 m</h4><p><strong>Problema:</strong>Começar muito rápido causa desaceleração dramática</p><p><strong>Resultado:</strong>O tempo de 1200 m não reflete o verdadeiro ritmo sustentável</p><p><strong>Solução:</strong>Procure divisões iguais ou divisões negativas (segunda metade ≤ primeira metade)</p></div><div class="mistake-item"><h4>Condições inconsistentes</h4><p><strong>Problema:</strong>Testes em terrenos diferentes ou com vento extremo.</p><p><strong>Solução:</strong>Sempre teste em uma pista plana em condições climáticas semelhantes para
+                            precisão longitudinal.</p></div></div></div></div><div class="callout callout-tip mt-xl"><h3>🔄 Frequência de novo teste</h3><p>Teste novamente o CRS a cada<strong>6-8 semanas</strong>para atualizar as zonas de treinamento à medida que o condicionamento físico melhora. Suas zonas
+                deve tornar-se progressivamente mais rápido à medida que você se adapta ao treinamento.</p></div></div></section><section class="section"><div class="container container-narrow"><h2>Fórmula de cálculo CRS</h2><div class="formula-box"><h3>Fórmula</h3><div class="formula">CRS (m/s) = (D₂ - D₁) / (T₂ - T₁)</div><div class="formula-explanation"><p>Onde:</p><ul><li>D₁ = Distância mais curta (por exemplo, 1200 metros)</li><li>D₂ = Distância mais longa (por exemplo, 3600 metros)</li><li>T₁ = Tempo para D₁ (em segundos)</li><li>T₂ = Tempo para D₂ (em segundos)</li></ul></div><h3 class="mt-lg">Conceito simplificado de distância-tempo</h3><p>CRS é a inclinação da linha traçando distância versus tempo para dois ou mais esforços máximos.</p></div><h3>Exemplo resolvido</h3><div class="example-box"><h4>Resultados do teste:</h4><ul><li>Tempo de 3600m:<strong>14:24</strong>(864 segundos)</li><li>Tempo de 1200m:<strong>4:12</strong>(252 segundos)</li></ul><h4>Etapa 1: Calcular CRS em m/s</h4><div class="calculation">CRS = (3600 - 1200) / (864 - 252)<br/>CRS = 2400/612<br/>CRS =<strong>3,92 m/s</strong></div><h4>Etapa 2: Converter para ritmo por 100 m</h4><div class="calculation">Ritmo = 100 / 3,92<br/>Ritmo = 25,5 segundos<br/>Ritmo =<strong>25,5s por 100m</strong>(4:15/km)</div></div><h2 class="mt-3xl">Calculadora gratuita de velocidade crítica de corrida</h2><p class="lead">Calcule sua velocidade crítica de corrida e zonas de treinamento personalizadas instantaneamente com nosso CRS
+            calculadora</p><div class="crs-calculator"><form id="cssCalculatorForm"><div class="calculator-inputs"><div class="form-group"><label class="form-label" for="timeLong">Tempo de distância mais longo (por exemplo, 3600m) (mm:ss)</label><input aria-describedby="timeLong-help" aria-required="true" class="form-input" id="timeLong" pattern="[0-9]{1,2}:[0-5][0-9]" placeholder="14:24" type="text"/><small class="form-help" id="timeLong-help">Formato: minutos:segundos (por exemplo, 14:24)</small></div><div class="form-group"><label class="form-label" for="timeShort">Tempo de distância mais curto (por exemplo, 1200m) (mm:ss)</label><input aria-describedby="timeShort-help" aria-required="true" class="form-input" id="timeShort" pattern="[0-9]{1,2}:[0-5][0-9]" placeholder="4:12" type="text"/><small class="form-help" id="timeShort-help">Formato: minutos:segundos (por exemplo, 4:12)</small></div><div class="calculator-buttons"><button class="btn btn-primary" id="calculateBtn" type="submit">Calcular CRS</button><button class="btn btn-ghost" id="resetBtn" type="reset">Limpar</button></div></div></form><div aria-live="polite" class="calculator-results hidden" id="cssResults"><h3>Seus resultados</h3><div class="results-summary"><div class="result-item"><div class="result-label">Velocidade crítica de execução</div><div class="crs-result-value" id="crsValue">--</div></div><div class="result-item"><div class="result-label">CRS Ritmo por 100 m</div><div class="crs-result-value" id="crsPace">--</div></div></div><div class="zones-result"><h4>Suas zonas de treinamento personalizadas</h4><p class="mb-md text-secondary">Com base no seu CRS, aqui estão suas zonas de treinamento em ritmo por 100 m:</p><div id="zonesTable"></div></div></div><div class="callout callout-tip mt-md"><p><strong>💡 Rastreamento Automático:</strong>Run Analytics calcula seu CRS automaticamente a partir do treino
+                    dados e rastreia-os ao longo do tempo – sem necessidade de testes ou cálculos manuais. O aplicativo também atualiza seu
+                    zonas de treinamento à medida que seu CRS melhora.<a href="/pt/">Saiba mais →</a></p></div></div><h3 class="mt-xl">Alternativa: testes de 3 e 12 minutos</h3><p>Uma alternativa amplamente utilizada é correr a maior distância possível em 3 minutos e 12 minutos. A diferença em
+            a distância dividida pela diferença de tempo dá o seu CRS.</p></div></section><section class="section section-alt"><div class="container"><h2 class="mb-xl">Zonas de treinamento baseadas na velocidade crítica de corrida</h2><div class="callout callout-info"><p><strong>Observação:</strong>Na corrida, o ritmo é medido como<em>tempo por distância</em>. Portanto, um<strong>porcentagem mais alta = ritmo mais lento</strong>e uma porcentagem<strong>mais baixa = ritmo mais rápido</strong>.
+                Isso é inverso aos esportes baseados em força, como o ciclismo, onde maior% = maior esforço. Saiba mais sobre<a href="/pt/training-zones/">como usar essas zonas de treinamento</a>de forma eficaz.</p></div><div class="zones-table-container"><table class="zones-table"><thead><tr><th>Zona</th><th>Nome</th><th>% do ritmo CRS</th><th>Exemplo para CRS 1:40/100m</th><th>RPE</th><th>Finalidade fisiológica</th></tr></thead><tbody><tr class="zone-1"><td><strong>1</strong></td><td>Recuperação</td><td>&gt;120%</td><td>&gt;30s/100m</td><td>2-3/10</td><td>Recuperação ativa, manutenção aeróbica leve</td></tr><tr class="zone-2"><td><strong>2</strong></td><td>Base aeróbica</td><td>108-120%</td><td>27-30s/100m</td><td>4-5/10</td><td>Aumentar capacidade aeróbica, oxidação de gordura</td></tr><tr class="zone-3"><td><strong>3</strong></td><td>Tempo</td><td>102-108%</td><td>25-27s/100m</td><td>6-7/10</td><td>Treinamento em ritmo de maratona, resistência muscular</td></tr><tr class="zone-4"><td><strong>4</strong></td><td>Limiar (CRS)</td><td>97-102%</td><td>24-25s/100m</td><td>7-8/10</td><td>Melhoria do limiar de lactato</td></tr><tr class="zone-5"><td><strong>5</strong></td><td>VO₂max</td><td>&lt;97%</td><td>&lt;24s/100m</td><td>9-10/10</td><td>Treinamento intervalado, desenvolvimento VO₂max</td></tr></tbody></table></div><div class="callout callout-tip mt-lg"><h3>🎯 Benefícios do treinamento baseado em zonas</h3><p>O uso de zonas baseadas em CRS transforma o treinamento de "sensação" subjetivo em exercícios objetivos e repetíveis. Cada
+                zona visa adaptações fisiológicas específicas:</p><ul><li><strong>Zona 2:</strong>Desenvolver motor aeróbico (60-70% do volume semanal)</li><li><strong>Zona 3:</strong>Melhorar a eficiência do ritmo de corrida (15-20% do volume)</li><li><strong>Zona 4:</strong>Aumentar o limite de lactato (10-15% do volume)</li><li><strong>Zona 5:</strong>Desenvolver velocidade e potência máximas (5-10% de volume)</li></ul></div></div></section><section class="section"><div class="container container-narrow"><h2>Valores típicos de velocidade crítica de corrida por nível</h2><div class="levels-comparison"><div class="level-card"><h3>🥇 Corredores de distância de elite</h3><div class="pace-value">5,0-5,5 m/s</div><div class="pace-equivalent">18-20s por 100m</div><p>ritmo de 3:00-3:20 min/km. Maratonistas profissionais e corredores de meia distância de elite.</p></div><div class="level-card"><h3>🏃 Corredores competitivos</h3><div class="pace-value">4,0-5,0 m/s</div><div class="pace-equivalent">20-25s por 100m</div><p>ritmo de 3:20-4:10 min/km. Corredores de clube fortes, maratonistas abaixo das 3:00, grupos de idade competitivos.</p></div><div class="level-card"><h3>👟 Corredores de fitness regulares</h3><div class="pace-value">3,2-4,0 m/s</div><div class="pace-equivalent">25-31s por 100m</div><p>ritmo de 4:10-5:10 min/km. Treinamento consistente 3-5 dias/semana. Tempos padrão de meta da maratona de 5 km.</p></div><div class="level-card"><h3>🌱 Corredores em desenvolvimento</h3><div class="pace-value">&lt;3,2 m/s</div><div class="pace-equivalent">&gt;31s por 100m</div><p>Acima de 5:10 min/km de ritmo. Construindo base aeróbica e aumentando a quilometragem semanal com segurança.</p></div></div></div></section><section class="section section-alt"><div class="container container-narrow"><h2>Validação Científica</h2><div class="research-highlight"><h3>Wakayoshi et al. (1992-1993) - Pesquisa Fundamental</h3><p>Os estudos seminais de Kohji Wakayoshi na Universidade de Osaka estabeleceram o CRS como uma alternativa prática e válida
+                para testes laboratoriais de lactato:</p><ul class="research-findings"><li><strong>Forte correlação com VO₂ no limiar anaeróbico</strong>(r &gt; 0,90)</li><li><strong>Excelente preditor de desempenho em 10K e maratona</strong></li><li><strong>Corresponde ao estado estável máximo de lactato (MLSS)</strong></li><li><strong>Independente da capacidade anaeróbica (W')</strong></li></ul><div class="citation"><p><strong>Principais artigos:</strong></p><ol><li>Wakayoshi K, et al. (1992). "Determinação e validade da velocidade crítica como um índice de
+                        desempenho de corrida no corredor competitivo."<em>Jornal Europeu de Fisiologia Aplicada</em>,
+                        64(2), 153-157.</li><li>Wakayoshi K, et al. (1992)."Um método simples para determinar a velocidade crítica como fadiga de corrida
+                        limiar na corrida competitiva."<em>Revista Internacional de Medicina Esportiva</em>, 13(5),
+                        367-371.</li><li>Wakayoshi K, et al. (1993). "A velocidade crítica de corrida representa a intensidade do exercício em
+                        estado estacionário máximo de lactato?"<em>Jornal Europeu de Fisiologia Aplicada</em>, 66(1), 90-95.</li></ol></div></div><div class="callout callout-science"><h3>🔬 Por que a velocidade crítica de corrida funciona</h3><p>A velocidade crítica de corrida representa o limite entre o<strong>exercício pesado e severo
+                    domínios</strong>. Abaixo do CRS, a produção e a eliminação de lactato permanecem equilibradas – você pode correr por
+                períodos prolongados. Acima do CRS, o lactato se acumula progressivamente até a exaustão em 20-40 minutos.</p><p>Isso torna o CRS a intensidade perfeita para:</p><ul><li>Definir ritmos de corrida sustentáveis para eventos de 5 km a maratona</li><li>Prescrever<a href="/pt/training-zones/">treinamento intervalado de limite</a></li><li>Monitorar melhorias de condicionamento aeróbico ao longo do tempo</li><li>Calcular<a href="/pt/training-load/">carga de treinamento e necessidades de recuperação</a></li></ul></div></div></section><section class="section"><div class="container container-narrow"><h2 class="mt-3xl">Como testar sua velocidade crítica de corrida</h2><div class="howto-section" itemscope="" itemtype="https://schema.org/HowTo"><meta content="How to Test Your Critical Running Speed" itemprop="name"/><meta content="Follow this step-by-step protocol to accurately measure your Critical Running Speed (CRS) for optimal pace optimization" itemprop="description"/><div class="howto-step" itemprop="step" itemscope="" itemtype="https://schema.org/HowToStep"><meta content="1" itemprop="position"/><h3 itemprop="name">Etapa 1: aquecimento adequado</h3><div itemprop="itemListElement" itemscope="" itemtype="https://schema.org/HowToDirection"><div itemprop="text"><p>Complete 15-20 minutos de corrida fácil, alongamentos dinâmicos, e 4-6 passadas. Isso prepara
+                            seus músculos e sistema cardiovascular para esforço máximo.</p></div></div></div><div class="howto-step" itemprop="step" itemscope="" itemtype="https://schema.org/HowToStep"><meta content="2" itemprop="position"/><h3 itemprop="name">Etapa 2: Realize o contra-relógio de 1200 m.</h3><div itemprop="itemListElement" itemscope="" itemtype="https://schema.org/HowToDirection"><div itemprop="text"><p>Corra 1.200 metros (3 voltas em uma pista de 400 m) com esforço máximo sustentado. Registre seu tempo no
+                            segundo. Foco
+                            em manter uma intensidade alta e consistente durante todo o TT.</p></div></div></div><div class="howto-step" itemprop="step" itemscope="" itemtype="https://schema.org/HowToStep"><meta content="3" itemprop="position"/><h3 itemprop="name">Etapa 3: Recuperação completa</h3><div itemprop="itemListElement" itemscope="" itemtype="https://schema.org/HowToDirection"><div itemprop="text"><p>Descanse por 15 a 30 minutos. Você pode caminhar ou correr muito lentamente. É essencial deixar seu coração
+                            a taxa cai e suas pernas se recuperam significativamente antes do próximo esforço.</p></div></div></div><div class="howto-step" itemprop="step" itemscope="" itemtype="https://schema.org/HowToStep"><meta content="4" itemprop="position"/><h3 itemprop="name">Etapa 4: Realize o contra-relógio de 3600m</h3><div itemprop="itemListElement" itemscope="" itemtype="https://schema.org/HowToDirection"><div itemprop="text"><p>Corra 3600 metros (9 voltas em uma pista de 400m) com esforço máximo. Este é o componente de resistência
+                            do teste.
+                            Mantenha o ritmo mais rápido que puder durante toda a distância.</p></div></div></div><div class="howto-step" itemprop="step" itemscope="" itemtype="https://schema.org/HowToStep"><meta content="5" itemprop="position"/><h3 itemprop="name">Etapa 5: Calcule seu CRS</h3><div itemprop="itemListElement" itemscope="" itemtype="https://schema.org/HowToDirection"><div itemprop="text"><p>Use a fórmula linear: (D2 - D1) / (T2 - T1). Por exemplo: (3600 - 1200) / (864s - 252s) =
+                            2400/612 = 3,92m/s. Converter para ritmo: 100 / 3,92 = 25,5s/100m.</p></div></div></div></div><h2>Aplicações práticas da velocidade crítica de corrida</h2><div class="application-grid"><div class="application-item"><h3>1️⃣ Desbloquear métricas de carga de treinamento</h3><p>A velocidade crítica de corrida é o denominador no cálculo do fator de intensidade para<a href="/pt/training-load/">rTSS (Pontuação de estresse de treinamento de corrida)</a>. Sem isso, você
+                    não consegue quantificar o estresse do treino ou monitorar tendências de condicionamento físico/fadiga.</p></div><div class="application-item"><h3>2️⃣ Personalize zonas de treinamento</h3><p>Os gráficos de ritmo genéricos não levam em conta a fisiologia individual.<a href="/pt/training-zones/">Zonas de treinamento baseadas em CRS</a>garantem que cada corredor treine em
+                    sua intensidade ideal para corrida com limiar aeróbico.</p></div><div class="application-item"><h3>3️⃣ Monitore a progressão do condicionamento físico</h3><p>Teste novamente a cada 6-8 semanas. Melhorar a velocidade crítica de corrida (ritmo mais rápido) indica exercícios aeróbicos bem-sucedidos
+                    adaptação. Stagnant CRS sugere ajuste de necessidades de treinamento.</p></div><div class="application-item"><h3>4️⃣ Preveja o desempenho da corrida</h3><p>O ritmo do CRS se aproxima do seu ritmo limite sustentável. Use-o para definir metas realistas para 5K, 10K e
+                    eventos de meia maratona.</p></div><div class="application-item"><h3>5️⃣ Design de exercícios de limite</h3><p>Conjuntos clássicos do CRS: ritmo 10×400 @ CRS (descanso dos 60s), 4×1200 @ 98% CRS (descanso dos 90s). Aumentar a depuração de lactato
+                    capacidade.</p></div><div class="application-item"><h3>6️⃣ Otimize a estratégia de redução gradual</h3><p>Acompanhe o CRS antes e depois da redução gradual. Uma redução gradual bem-sucedida mantém ou melhora ligeiramente o CRS enquanto
+                    reduzindo a fadiga (aumento do TSB).</p></div></div><h2 class="mt-3xl">Perguntas frequentes sobre velocidade crítica de execução</h2><div class="faq-section" itemscope="" itemtype="https://schema.org/FAQPage"><div class="faq-item" itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question"><h3 itemprop="name">O que é velocidade crítica de execução (CRS)?</h3><div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer"><div itemprop="text"><p>A velocidade crítica de corrida é o ritmo máximo de corrida que você pode sustentar por aproximadamente 30-60 minutos.
+                            minutos sem acumular fadiga. Representa o seu limiar aeróbico – o ponto onde
+                            a produção de lactato é igual à depuração de lactato (normalmente 4 mmol/L de lactato sanguíneo). CRS é
+                            calculado a partir de dois contra-relógio de esforço máximo e serve como base para cálculos personalizados de<a href="/pt/training-zones/">zonas de treinamento</a>e<a href="/pt/training-load/">TSS</a>.</p></div></div></div><div class="faq-item" itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question"><h3 itemprop="name">Como calculo meu CRS?</h3><div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer"><div itemprop="text"><p>Para calcular sua velocidade crítica de corrida: (1) Aqueça adequadamente, (2) Faça um esforço máximo
+                            Contra-relógio de 1200m, (3) Descanse por 15-30 minutos, (4) Realize um contra-relógio de esforço máximo de 3600m,
+                            (5) Use a fórmula:<strong>CRS (m/s) = (D2 - D1) / (T2 - T1)</strong>. Converta o resultado
+                            para andar por 100 m ou por km. Use nossa calculadora CRS gratuita acima para obter resultados instantâneos.</p></div></div></div><div class="faq-item" itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question"><h3 itemprop="name">Com que frequência devo testar meu CRS?</h3><div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer"><div itemprop="text"><p>Teste novamente sua velocidade crítica de corrida a cada 6-8 semanas para atualizar suas zonas de treinamento conforme sua
+                            o condicionamento físico melhora. Testes mais frequentes (a cada 4 semanas) podem ser apropriados durante períodos intensivos.
+                            blocos de treinamento, enquanto testes menos frequentes (10-12 semanas) funcionam para fases de manutenção.
+                            Seu ritmo limite de corrida deve melhorar progressivamente com treinamento consistente,
+                            indicando adaptações aeróbicas positivas.</p></div></div></div><div class="faq-item" itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question"><h3 itemprop="name">CRS é o mesmo que limite de lactato ou FTP?</h3><div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer"><div itemprop="text"><p>CRS é muito semelhante, mas não idêntico. A velocidade crítica de corrida corresponde ao seu segundo
+                            limiar de lactato (LT2, cerca de 4 mmol/L), que é ligeiramente superior ao primeiro
+                            limiar (LT1, 2 mmol/L). É comparável ao Ritmo Limiar Funcional (FTP), mas o FTP é
+                            com base em um esforço de 60 minutos, enquanto o CRS é calculado a partir de testes de tempo mais curtos. CRS normalmente
+                            representa um ritmo sustentável por 30-40 minutos, tornando-o ideal para ritmo de corrida de 5 km
+                            preparação e
+                            treinamento de limite.</p></div></div></div><div class="faq-item" itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question"><h3 itemprop="name">O que é um bom CRS para iniciantes?</h3><div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer"><div itemprop="text"><p>Para corredores em desenvolvimento, um CRS típico está acima de 31s por 100m (&gt;5:10 min/km). Corredores de fitness
+                            normalmente atinge 25-31s por 100m (4:10-5:10 min/km). Não se compare à elite
+                            atletas – concentre-se em melhorar seu próprio CRS por meio de treinamento estruturado. Qualquer CRS é válido
+                            ponto de partida para otimização do ritmo.</p></div></div></div><div class="faq-item" itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question"><h3 itemprop="name">Posso usar o CRS para treinar maratona?</h3><div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer"><div itemprop="text"><p>Sim, mas com modificações. CRS representa um ritmo que você pode manter por 30 a 40 minutos, que é
+                            muito intenso para maratonas completas. No entanto, as zonas de treinamento baseadas no CRS são excelentes para maratonas
+                            preparação: a Zona 2 constrói sua base aeróbica, a Zona 3 desenvolve resistência específica da corrida e
+                            A Zona 4 (no CRS) melhora o seu limiar de lactato. O ritmo da maratona normalmente cai
+                            105-110% do seu ritmo CRS (mais lento que o limite). Use CRS para estruturar seu treinamento, não
+                            como seu ritmo de corrida.</p></div></div></div><div class="faq-item" itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question"><h3 itemprop="name">Por que a recuperação entre os contra-relógio é tão importante?</h3><div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer"><div itemprop="text"><p>Se você não se recuperar o suficiente entre os dois contra-relógio, a fadiga diminuirá artificialmente
+                            pela segunda vez, fazendo com que a velocidade crítica calculada pareça mais rápida que a realidade.
+                            Isso leva a zonas de treinamento excessivamente agressivas. Garanta pelo menos 15-30 minutos de descanso ou
+                            considere realizar os testes em dias diferentes na mesma semana.</p></div></div></div><div class="faq-item" itemprop="mainEntity" itemscope="" itemtype="https://schema.org/Question"><h3 itemprop="name">Posso estimar o CRS a partir dos tempos de corrida em vez de testes?</h3><div itemprop="acceptedAnswer" itemscope="" itemtype="https://schema.org/Answer"><div itemprop="text"><p>Embora você possa aproximar o CRS do desempenho da corrida, o teste direto é mais preciso. Se você
+                            deve estimar: pegue seu melhor tempo recente de 10K e use esse ritmo a cada 100m menos aproximadamente 1 segundo, ou
+                            use 103-105% do seu ritmo de meia maratona. No entanto, o teste de 1200m + 3600m fornece a
+                            dados precisos necessários para um treinamento eficaz.</p></div></div></div></div><div class="callout mt-2xl"><h3>Aplique seu conhecimento do CRS</h3><p>Agora que você entende a velocidade crítica de corrida, execute as próximas etapas para otimizar seu treinamento:</p><ul><li><a href="/pt/training-load/">Calcule a pontuação de estresse de treinamento (TSS)</a>com base em seu CRS para
+                    quantificar a intensidade do treino</li><li><a href="/pt/training-zones/">Explore as 7 zonas de treino</a>e aprenda como estruturar
+                    treinos para adaptações específicas</li><li><a href="/pt/formulas/">Veja todas as fórmulas</a>usadas no Run Analytics para obter informações completas
+                    transparência</li><li><a href="/pt/">Baixe Run Analytics</a>para rastrear automaticamente CRS, TSS e desempenho
+                    tendências</li></ul></div><div class="mt-xl text-center"><a class="btn btn-primary" href="/pt/training-load/">Saiba mais sobre o cálculo do rTSS →</a><a class="btn btn-secondary" href="/pt/formulas/">Ver todas as fórmulas →</a></div></div></section><section class="eeat-author bg-light divider-top-lg divider-bottom-lg" aria-label="Author and Reviewer Information"><div class="container container-narrow"><div class="eeat-card" style="display: flex; gap: 1.5rem; align-items: center; padding: 1.5rem; background: var(--color-bg-alt, #f8f9fa); border-radius: 8px; border: 1px solid var(--color-border, #e9ecef); margin-top: 3rem; margin-bottom: 2rem;"><div class="eeat-avatar" style="font-size: 2.5rem; line-height: 1; flex-shrink: 0;" aria-hidden="true">👨‍🔬</div><div class="eeat-details"><h3 style="margin: 0 0 0.5rem 0; font-size: 1.125rem; font-weight: 600;">
+          Expertly Reviewed by 
+          <span itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">AnalyticsZone Team</span></span></h3><p style="margin: 0 0 0.5rem 0; font-size: 0.95rem; color: var(--color-body-text, #4a5568); line-height: 1.5;">
+          This content has been written and reviewed by a sports data metrics expert to ensure technical accuracy and adherence to the latest sports science methodologies.
+        </p></div></div></div></section><section class="ai-citation-block divider-top-xl" data-ai-ready="true" data-ai-page="crs"><div class="container ai-citation-shell"><h2 class="ai-citation-title">Velocidade Crítica de Corrida (VCC)</h2><p class="ai-citation-answer">A Fundação do Treino de Corrida Orientado por Dados. Velocidade Crítica de Corrida (VCC) Velocidade Crítica de Corrida (VCC)</p><ul class="ai-citation-facts" role="list"><li class="ai-citation-fact"><span class="ai-citation-icon" aria-hidden="true">📅</span><span>2026-02-06</span></li><li class="ai-citation-fact ai-citation-keywords"><span class="ai-citation-icon" aria-hidden="true">🏷️</span><span>velocidade crítica nado · calculadora CRS · zonas treino natação · teste CRS · ritmo limiar</span></li><li class="ai-citation-fact"><span class="ai-citation-icon" aria-hidden="true">🔬</span><a href="../../pt/bibliography/">
+          
+          Bibliografia
+          
+        </a></li></ul></div></section></main><footer class="site-footer"><div class="container"><div class="footer-top"><div class="footer-brand-section"><h2>Run Analytics</h2><p>Track Critical Running Speed, Training Stress Score, and performance metrics with Run Analytics. Science-based iOS app for runners, triathletes &amp; coaches. 7-day free trial.</p></div><div class="footer-download"><h3 class="footer-heading">Baixar</h3><div class="footer-badges"><a href="https://apps.apple.com/us/app/run-analytics/id6754524015" target="_blank" rel="noopener"
+                        aria-label="Descarregar na App Store"><img src="../../assets/images/badge-app-store.svg"
+                            alt="Descarregar na App Store" width="135"
+                            height="40" loading="lazy"></a><a href="https://play.google.com/store/apps/details?id=com.arnohealth.runanalytics" target="_blank" rel="noopener"
+                        aria-label="DISPONÍVEL NO Google Play"><img src="../../assets/images/badge-google-play.svg"
+                            alt="DISPONÍVEL NO Google Play" width="135"
+                            height="40" loading="lazy"></a></div></div></div><div class="footer-languages"><h3 class="footer-heading">Disponível em</h3><div class="lang-grid"><a href="/af/" class="lang-link"
+                    hreflang="af" >
+                    Afrikaans
+                </a><a href="/am/" class="lang-link"
+                    hreflang="am" >
+                    አማርኛ
+                </a><a href="/ar/" class="lang-link"
+                    hreflang="ar" dir="rtl" >
+                    العربية
+                </a><a href="/bg/" class="lang-link"
+                    hreflang="bg" >
+                    Български
+                </a><a href="/bn/" class="lang-link"
+                    hreflang="bn" >
+                    বাংলা
+                </a><a href="/ca/" class="lang-link"
+                    hreflang="ca" >
+                    Català
+                </a><a href="/cs/" class="lang-link"
+                    hreflang="cs" >
+                    Čeština
+                </a><a href="/da/" class="lang-link"
+                    hreflang="da" >
+                    Dansk
+                </a><a href="/de/" class="lang-link"
+                    hreflang="de" >
+                    Deutsch
+                </a><a href="/el/" class="lang-link"
+                    hreflang="el" >
+                    Ελληνικά
+                </a><a href="/en/" class="lang-link"
+                    hreflang="en" >
+                    English
+                </a><a href="/es/" class="lang-link"
+                    hreflang="es" >
+                    Español
+                </a><a href="/et/" class="lang-link"
+                    hreflang="et" >
+                    Eesti
+                </a><a href="/fa/" class="lang-link"
+                    hreflang="fa" dir="rtl" >
+                    فارسی
+                </a><a href="/fi/" class="lang-link"
+                    hreflang="fi" >
+                    Suomi
+                </a><a href="/fr/" class="lang-link"
+                    hreflang="fr" >
+                    Français
+                </a><a href="/gu/" class="lang-link"
+                    hreflang="gu" >
+                    ગુજરાતી
+                </a><a href="/ha/" class="lang-link"
+                    hreflang="ha" >
+                    Hausa
+                </a><a href="/he/" class="lang-link"
+                    hreflang="he" dir="rtl" >
+                    עברית
+                </a><a href="/hi/" class="lang-link"
+                    hreflang="hi" >
+                    हिन्दी
+                </a><a href="/hr/" class="lang-link"
+                    hreflang="hr" >
+                    Hrvatski
+                </a><a href="/hu/" class="lang-link"
+                    hreflang="hu" >
+                    Magyar
+                </a><a href="/id/" class="lang-link"
+                    hreflang="id" >
+                    Bahasa Indonesia
+                </a><a href="/is/" class="lang-link"
+                    hreflang="is" >
+                    Íslenska
+                </a><a href="/it/" class="lang-link"
+                    hreflang="it" >
+                    Italiano
+                </a><a href="/ja/" class="lang-link"
+                    hreflang="ja" >
+                    日本語
+                </a><a href="/km/" class="lang-link"
+                    hreflang="km" >
+                    ភាសាខ្មែរ
+                </a><a href="/kn/" class="lang-link"
+                    hreflang="kn" >
+                    ಕನ್ನಡ
+                </a><a href="/ko/" class="lang-link"
+                    hreflang="ko" >
+                    한국어
+                </a><a href="/lt/" class="lang-link"
+                    hreflang="lt" >
+                    Lietuvių
+                </a><a href="/lv/" class="lang-link"
+                    hreflang="lv" >
+                    Latviešu
+                </a><a href="/ms/" class="lang-link"
+                    hreflang="ms" >
+                    Bahasa Melayu
+                </a><a href="/my/" class="lang-link"
+                    hreflang="my" >
+                    မြန်မာစာ
+                </a><a href="/nb/" class="lang-link"
+                    hreflang="nb" >
+                    Norsk Bokmål
+                </a><a href="/nl/" class="lang-link"
+                    hreflang="nl" >
+                    Nederlands
+                </a><a href="/pl/" class="lang-link"
+                    hreflang="pl" >
+                    Polski
+                </a><a href="/pt/" class="lang-link active"
+                    hreflang="pt" >
+                    Português
+                </a><a href="/pt-br/" class="lang-link"
+                    hreflang="pt-br" >
+                    Português (Brasil)
+                </a><a href="/ro/" class="lang-link"
+                    hreflang="ro" >
+                    Română
+                </a><a href="/ru/" class="lang-link"
+                    hreflang="ru" >
+                    Русский
+                </a><a href="/sk/" class="lang-link"
+                    hreflang="sk" >
+                    Slovenčina
+                </a><a href="/sl/" class="lang-link"
+                    hreflang="sl" >
+                    Slovenščina
+                </a><a href="/sr/" class="lang-link"
+                    hreflang="sr" >
+                    Srpski
+                </a><a href="/sv/" class="lang-link"
+                    hreflang="sv" >
+                    Svenska
+                </a><a href="/sw/" class="lang-link"
+                    hreflang="sw" >
+                    Kiswahili
+                </a><a href="/ta/" class="lang-link"
+                    hreflang="ta" >
+                    தமிழ்
+                </a><a href="/te/" class="lang-link"
+                    hreflang="te" >
+                    తెలుగు
+                </a><a href="/th/" class="lang-link"
+                    hreflang="th" >
+                    ไทย
+                </a><a href="/tl/" class="lang-link"
+                    hreflang="tl" >
+                    Tagalog
+                </a><a href="/tr/" class="lang-link"
+                    hreflang="tr" >
+                    Türkçe
+                </a><a href="/uk/" class="lang-link"
+                    hreflang="uk" >
+                    Українська
+                </a><a href="/ur/" class="lang-link"
+                    hreflang="ur" dir="rtl" >
+                    اردو
+                </a><a href="/vi/" class="lang-link"
+                    hreflang="vi" >
+                    Tiếng Việt
+                </a><a href="/yo/" class="lang-link"
+                    hreflang="yo" >
+                    Yorùbá
+                </a><a href="/zh/" class="lang-link"
+                    hreflang="zh" >
+                    中文
+                </a></div></div><div class="footer-divider"></div><div class="footer-bottom"><p class="copyright">
+                &copy; 2026 Run Analytics. Todos os direitos reservados
+            </p><ul class="footer-legal"><li><a href="/pt/privacy/">Privacidade</a></li><li><a href="/pt/terms/">Termos</a></li></ul></div></div></footer><div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="Cookie consent" aria-live="polite"><div class="cookie-banner-content"><div><p>Este site usa cookies para melhorar a tua experiência.</p><a href="/pt/privacy/" class="text-sm">Sabe mais</a></div><div class="cookie-banner-actions"><button id="cookie-decline" class="btn btn-secondary btn-small">Recusar</button><button id="cookie-accept" class="btn btn-primary btn-small">Aceitar</button></div></div></div><script src="../../assets/js/core.min.js?v=1c7ace58" defer></script><script src="../../assets/js/search.min.js?v=1c7ace58" defer></script><script src="../../assets/js/analytics.min.js" data-ga-id="G-Y138VB4523" defer></script><script>if ('serviceWorker' in navigator) { navigator.serviceWorker.register('../../sw.js') }</script></body></html>
